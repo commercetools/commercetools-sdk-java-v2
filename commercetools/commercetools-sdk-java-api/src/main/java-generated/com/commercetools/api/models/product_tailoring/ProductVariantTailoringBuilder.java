@@ -36,7 +36,7 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     private java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes;
 
     /**
-     *  <p>The <code>id</code> of the tailored ProductVariant.</p>
+     *  <p>The <code>id</code> of the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -47,7 +47,7 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     }
 
     /**
-     *  <p>Images of the tailored Product Variant. If present, these images will override the images of the corresponding ProductVariant in total.</p>
+     *  <p>Images of the tailored Product Variant. If present, these images will override the images of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in total.</p>
      * @param images value to be set
      * @return Builder
      */
@@ -58,7 +58,7 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     }
 
     /**
-     *  <p>Images of the tailored Product Variant. If present, these images will override the images of the corresponding ProductVariant in total.</p>
+     *  <p>Images of the tailored Product Variant. If present, these images will override the images of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in total.</p>
      * @param images value to be set
      * @return Builder
      */
@@ -70,7 +70,7 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     }
 
     /**
-     *  <p>Images of the tailored Product Variant. If present, these images will override the images of the corresponding ProductVariant in total.</p>
+     *  <p>Images of the tailored Product Variant. If present, these images will override the images of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in total.</p>
      * @param images value to be set
      * @return Builder
      */
@@ -85,7 +85,7 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     }
 
     /**
-     *  <p>Images of the tailored Product Variant. If present, these images will override the images of the corresponding ProductVariant in total.</p>
+     *  <p>Images of the tailored Product Variant. If present, these images will override the images of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in total.</p>
      * @param builder function to build the images value
      * @return Builder
      */
@@ -100,7 +100,7 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     }
 
     /**
-     *  <p>Images of the tailored Product Variant. If present, these images will override the images of the corresponding ProductVariant in total.</p>
+     *  <p>Images of the tailored Product Variant. If present, these images will override the images of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in total.</p>
      * @param builder function to build the images value
      * @return Builder
      */
@@ -113,7 +113,7 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     }
 
     /**
-     *  <p>Images of the tailored Product Variant. If present, these images will override the images of the corresponding ProductVariant in total.</p>
+     *  <p>Images of the tailored Product Variant. If present, these images will override the images of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in total.</p>
      * @param builder function to build the images value
      * @return Builder
      */
@@ -124,7 +124,7 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     }
 
     /**
-     *  <p>Images of the tailored Product Variant. If present, these images will override the images of the corresponding ProductVariant in total.</p>
+     *  <p>Images of the tailored Product Variant. If present, these images will override the images of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in total.</p>
      * @param builder function to build the images value
      * @return Builder
      */
@@ -135,7 +135,7 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     }
 
     /**
-     *  <p>Media assets of the tailored Product Variant. If present, these assets will override the assets of the corresponding ProductVariant in total.</p>
+     *  <p>Media assets of the tailored Product Variant. If present, these assets will override the assets of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in total.</p>
      * @param assets value to be set
      * @return Builder
      */
@@ -146,7 +146,7 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     }
 
     /**
-     *  <p>Media assets of the tailored Product Variant. If present, these assets will override the assets of the corresponding ProductVariant in total.</p>
+     *  <p>Media assets of the tailored Product Variant. If present, these assets will override the assets of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in total.</p>
      * @param assets value to be set
      * @return Builder
      */
@@ -158,7 +158,7 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     }
 
     /**
-     *  <p>Media assets of the tailored Product Variant. If present, these assets will override the assets of the corresponding ProductVariant in total.</p>
+     *  <p>Media assets of the tailored Product Variant. If present, these assets will override the assets of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in total.</p>
      * @param assets value to be set
      * @return Builder
      */
@@ -173,7 +173,7 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     }
 
     /**
-     *  <p>Media assets of the tailored Product Variant. If present, these assets will override the assets of the corresponding ProductVariant in total.</p>
+     *  <p>Media assets of the tailored Product Variant. If present, these assets will override the assets of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in total.</p>
      * @param builder function to build the assets value
      * @return Builder
      */
@@ -188,7 +188,7 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     }
 
     /**
-     *  <p>Media assets of the tailored Product Variant. If present, these assets will override the assets of the corresponding ProductVariant in total.</p>
+     *  <p>Media assets of the tailored Product Variant. If present, these assets will override the assets of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in total.</p>
      * @param builder function to build the assets value
      * @return Builder
      */
@@ -201,7 +201,7 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     }
 
     /**
-     *  <p>Media assets of the tailored Product Variant. If present, these assets will override the assets of the corresponding ProductVariant in total.</p>
+     *  <p>Media assets of the tailored Product Variant. If present, these assets will override the assets of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in total.</p>
      * @param builder function to build the assets value
      * @return Builder
      */
@@ -212,7 +212,7 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     }
 
     /**
-     *  <p>Media assets of the tailored Product Variant. If present, these assets will override the assets of the corresponding ProductVariant in total.</p>
+     *  <p>Media assets of the tailored Product Variant. If present, these assets will override the assets of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in total.</p>
      * @param builder function to build the assets value
      * @return Builder
      */
@@ -223,7 +223,7 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     }
 
     /**
-     *  <p>Attributes of the tailored Product Variant. If present, these Attributes are selectively merged into the <code>attributes</code> of the corresponding ProductVariant:</p>
+     *  <p>Attributes of the tailored Product Variant. If present, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>:</p>
      *  <ul>
      *   <li>If the ProductVariant contains an Attribute with the same <code>name</code>, its <code>value</code> is overwritten,</li>
      *   <li>otherwise the Attribute and its value are added to the ProductVariant.</li>
@@ -239,7 +239,7 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     }
 
     /**
-     *  <p>Attributes of the tailored Product Variant. If present, these Attributes are selectively merged into the <code>attributes</code> of the corresponding ProductVariant:</p>
+     *  <p>Attributes of the tailored Product Variant. If present, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>:</p>
      *  <ul>
      *   <li>If the ProductVariant contains an Attribute with the same <code>name</code>, its <code>value</code> is overwritten,</li>
      *   <li>otherwise the Attribute and its value are added to the ProductVariant.</li>
@@ -255,7 +255,7 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     }
 
     /**
-     *  <p>Attributes of the tailored Product Variant. If present, these Attributes are selectively merged into the <code>attributes</code> of the corresponding ProductVariant:</p>
+     *  <p>Attributes of the tailored Product Variant. If present, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>:</p>
      *  <ul>
      *   <li>If the ProductVariant contains an Attribute with the same <code>name</code>, its <code>value</code> is overwritten,</li>
      *   <li>otherwise the Attribute and its value are added to the ProductVariant.</li>
@@ -274,7 +274,7 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     }
 
     /**
-     *  <p>Attributes of the tailored Product Variant. If present, these Attributes are selectively merged into the <code>attributes</code> of the corresponding ProductVariant:</p>
+     *  <p>Attributes of the tailored Product Variant. If present, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>:</p>
      *  <ul>
      *   <li>If the ProductVariant contains an Attribute with the same <code>name</code>, its <code>value</code> is overwritten,</li>
      *   <li>otherwise the Attribute and its value are added to the ProductVariant.</li>
@@ -295,7 +295,7 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     }
 
     /**
-     *  <p>Attributes of the tailored Product Variant. If present, these Attributes are selectively merged into the <code>attributes</code> of the corresponding ProductVariant:</p>
+     *  <p>Attributes of the tailored Product Variant. If present, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>:</p>
      *  <ul>
      *   <li>If the ProductVariant contains an Attribute with the same <code>name</code>, its <code>value</code> is overwritten,</li>
      *   <li>otherwise the Attribute and its value are added to the ProductVariant.</li>
@@ -314,7 +314,7 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     }
 
     /**
-     *  <p>Attributes of the tailored Product Variant. If present, these Attributes are selectively merged into the <code>attributes</code> of the corresponding ProductVariant:</p>
+     *  <p>Attributes of the tailored Product Variant. If present, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>:</p>
      *  <ul>
      *   <li>If the ProductVariant contains an Attribute with the same <code>name</code>, its <code>value</code> is overwritten,</li>
      *   <li>otherwise the Attribute and its value are added to the ProductVariant.</li>
@@ -330,7 +330,7 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     }
 
     /**
-     *  <p>Attributes of the tailored Product Variant. If present, these Attributes are selectively merged into the <code>attributes</code> of the corresponding ProductVariant:</p>
+     *  <p>Attributes of the tailored Product Variant. If present, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>:</p>
      *  <ul>
      *   <li>If the ProductVariant contains an Attribute with the same <code>name</code>, its <code>value</code> is overwritten,</li>
      *   <li>otherwise the Attribute and its value are added to the ProductVariant.</li>
@@ -346,7 +346,7 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     }
 
     /**
-     *  <p>The <code>id</code> of the tailored ProductVariant.</p>
+     *  <p>The <code>id</code> of the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return id
      */
 
@@ -355,7 +355,7 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     }
 
     /**
-     *  <p>Images of the tailored Product Variant. If present, these images will override the images of the corresponding ProductVariant in total.</p>
+     *  <p>Images of the tailored Product Variant. If present, these images will override the images of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in total.</p>
      * @return images
      */
 
@@ -365,7 +365,7 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     }
 
     /**
-     *  <p>Media assets of the tailored Product Variant. If present, these assets will override the assets of the corresponding ProductVariant in total.</p>
+     *  <p>Media assets of the tailored Product Variant. If present, these assets will override the assets of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in total.</p>
      * @return assets
      */
 
@@ -375,7 +375,7 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     }
 
     /**
-     *  <p>Attributes of the tailored Product Variant. If present, these Attributes are selectively merged into the <code>attributes</code> of the corresponding ProductVariant:</p>
+     *  <p>Attributes of the tailored Product Variant. If present, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>:</p>
      *  <ul>
      *   <li>If the ProductVariant contains an Attribute with the same <code>name</code>, its <code>value</code> is overwritten,</li>
      *   <li>otherwise the Attribute and its value are added to the ProductVariant.</li>

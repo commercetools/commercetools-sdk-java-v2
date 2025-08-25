@@ -146,7 +146,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     *  <p>Reference to a Customer associated with the Payment.</p>
+     *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> associated with the Payment.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -154,7 +154,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     *  <p>Anonymous session associated with the Payment.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">Anonymous session</a> associated with the Payment.</p>
      */
 
     public String getAnonymousId() {
@@ -162,7 +162,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on PaymentMethodInfo must be unique.</p>
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfo" rel="nofollow">PaymentMethodInfo</a> must be unique.</p>
      */
 
     public String getInterfaceId() {
@@ -170,7 +170,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> gross total.</p>
      */
 
     public com.commercetools.api.models.common.CentPrecisionMoney getAmountPlanned() {
@@ -194,7 +194,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionType</a> and a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">TransactionState</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.payment.Transaction> getTransactions() {

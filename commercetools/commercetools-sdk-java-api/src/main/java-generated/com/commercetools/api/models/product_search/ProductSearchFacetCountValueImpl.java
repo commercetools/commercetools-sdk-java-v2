@@ -51,7 +51,7 @@ public class ProductSearchFacetCountValueImpl implements ProductSearchFacetCount
     }
 
     /**
-     *  <p>Name of the count facet to appear in the ProductSearchFacetResultCount.</p>
+     *  <p>Name of the count facet to appear in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchFacetResultCount" rel="nofollow">ProductSearchFacetResultCount</a>.</p>
      */
 
     public String getName() {

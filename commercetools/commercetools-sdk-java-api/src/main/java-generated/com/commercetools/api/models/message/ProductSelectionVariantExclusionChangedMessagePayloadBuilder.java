@@ -32,7 +32,7 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
     private com.commercetools.api.models.product_selection.ProductVariantExclusion newVariantExclusion;
 
     /**
-     *  <p>Product for which the Product Variant Exclusion changed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the Product Variant Exclusion changed.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Product for which the Product Variant Exclusion changed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the Product Variant Exclusion changed.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Product for which the Product Variant Exclusion changed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the Product Variant Exclusion changed.</p>
      * @param product value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Product Variant Exclusion before the Set Variant Exclusion update action.</p>
+     *  <p>Product Variant Exclusion before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantExclusionAction" rel="nofollow">Set Variant Exclusion</a> update action.</p>
      * @param builder function to build the oldVariantExclusion value
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Product Variant Exclusion before the Set Variant Exclusion update action.</p>
+     *  <p>Product Variant Exclusion before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantExclusionAction" rel="nofollow">Set Variant Exclusion</a> update action.</p>
      * @param builder function to build the oldVariantExclusion value
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Product Variant Exclusion before the Set Variant Exclusion update action.</p>
+     *  <p>Product Variant Exclusion before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantExclusionAction" rel="nofollow">Set Variant Exclusion</a> update action.</p>
      * @param oldVariantExclusion value to be set
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Product Variant Exclusion after the Set Variant Exclusion update action.</p>
+     *  <p>Product Variant Exclusion after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantExclusionAction" rel="nofollow">Set Variant Exclusion</a> update action.</p>
      * @param builder function to build the newVariantExclusion value
      * @return Builder
      */
@@ -121,7 +121,7 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Product Variant Exclusion after the Set Variant Exclusion update action.</p>
+     *  <p>Product Variant Exclusion after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantExclusionAction" rel="nofollow">Set Variant Exclusion</a> update action.</p>
      * @param builder function to build the newVariantExclusion value
      * @return Builder
      */
@@ -134,7 +134,7 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Product Variant Exclusion after the Set Variant Exclusion update action.</p>
+     *  <p>Product Variant Exclusion after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantExclusionAction" rel="nofollow">Set Variant Exclusion</a> update action.</p>
      * @param newVariantExclusion value to be set
      * @return Builder
      */
@@ -146,7 +146,7 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Product for which the Product Variant Exclusion changed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the Product Variant Exclusion changed.</p>
      * @return product
      */
 
@@ -155,7 +155,7 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Product Variant Exclusion before the Set Variant Exclusion update action.</p>
+     *  <p>Product Variant Exclusion before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantExclusionAction" rel="nofollow">Set Variant Exclusion</a> update action.</p>
      * @return oldVariantExclusion
      */
 
@@ -164,7 +164,7 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Product Variant Exclusion after the Set Variant Exclusion update action.</p>
+     *  <p>Product Variant Exclusion after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantExclusionAction" rel="nofollow">Set Variant Exclusion</a> update action.</p>
      * @return newVariantExclusion
      */
 

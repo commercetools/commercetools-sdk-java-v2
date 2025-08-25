@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Create InventoryEntry request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/inventory:POST" rel="nofollow">Create InventoryEntry</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface InventoryEntryCreatedMessage extends Message {
     String INVENTORY_ENTRY_CREATED = "InventoryEntryCreated";
 
     /**
-     *  <p>InventoryEntry that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> that was created.</p>
      * @return inventoryEntry
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface InventoryEntryCreatedMessage extends Message {
     public InventoryEntry getInventoryEntry();
 
     /**
-     *  <p>InventoryEntry that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> that was created.</p>
      * @param inventoryEntry value to be set
      */
 

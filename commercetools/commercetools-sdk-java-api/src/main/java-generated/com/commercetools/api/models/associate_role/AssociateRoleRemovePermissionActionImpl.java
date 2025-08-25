@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Removing a Permission from an AssociateRole generates an AssociateRolePermissionRemoved Message.</p>
+ *  <p>Removing a Permission from an <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a> generates an <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRolePermissionRemovedMessage" rel="nofollow">AssociateRolePermissionRemoved</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssociateRoleRemovePermissionActionImpl implements AssociateRoleRemovePermissionAction, ModelBase {

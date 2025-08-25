@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Adding a Custom Field to a Recurring Order generates the RecurringOrderCustomFieldAdded Message, removing one generates the RecurringOrderCustomFieldRemoved Message, and updating an existing one generates the RecurringOrderCustomFieldChanged Message.</p>
+ *  <p>Adding a Custom Field to a Recurring Order generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderCustomFieldAddedMessage" rel="nofollow">RecurringOrderCustomFieldAdded</a> Message, removing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderCustomFieldRemovedMessage" rel="nofollow">RecurringOrderCustomFieldRemoved</a> Message, and updating an existing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderCustomFieldChangedMessage" rel="nofollow">RecurringOrderCustomFieldChanged</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RecurringOrderSetCustomFieldActionImpl implements RecurringOrderSetCustomFieldAction, ModelBase {
@@ -55,7 +55,7 @@ public class RecurringOrderSetCustomFieldActionImpl implements RecurringOrderSet
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      */
 
     public String getName() {
@@ -63,7 +63,7 @@ public class RecurringOrderSetCustomFieldActionImpl implements RecurringOrderSet
     }
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      */
 
     public java.lang.Object getValue() {

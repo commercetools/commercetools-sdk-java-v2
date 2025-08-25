@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>ResourceIdentifier to a ProductTailoring.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTailoringResourceIdentifierImpl implements ProductTailoringResourceIdentifier, ModelBase {
@@ -47,7 +47,7 @@ public class ProductTailoringResourceIdentifierImpl implements ProductTailoringR
     }
 
     /**
-     *  <p>Type of referenced resource. If given, it must match the expected ReferenceTypeId of the referenced resource.</p>
+     *  <p>Type of referenced resource. If given, it must match the expected <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferenceTypeId" rel="nofollow">ReferenceTypeId</a> of the referenced resource.</p>
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
@@ -55,7 +55,7 @@ public class ProductTailoringResourceIdentifierImpl implements ProductTailoringR
     }
 
     /**
-     *  <p>Unique identifier of the referenced ProductTailoring. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a>. Either <code>id</code> or <code>key</code> is required.</p>
      */
 
     public String getId() {
@@ -63,7 +63,7 @@ public class ProductTailoringResourceIdentifierImpl implements ProductTailoringR
     }
 
     /**
-     *  <p>User-defined unique identifier of the referenced ProductTailoring. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>User-defined unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a>. Either <code>id</code> or <code>key</code> is required.</p>
      */
 
     public String getKey() {

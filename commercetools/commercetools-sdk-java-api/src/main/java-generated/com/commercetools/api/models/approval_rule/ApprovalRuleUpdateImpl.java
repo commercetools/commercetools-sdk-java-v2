@@ -43,7 +43,7 @@ public class ApprovalRuleUpdateImpl implements ApprovalRuleUpdate, ModelBase {
     }
 
     /**
-     *  <p>Expected version of the ApprovalRule to which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> to which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      */
 
     public Long getVersion() {
@@ -51,7 +51,7 @@ public class ApprovalRuleUpdateImpl implements ApprovalRuleUpdate, ModelBase {
     }
 
     /**
-     *  <p>Update actions to be performed on the ApprovalRule.</p>
+     *  <p>Update actions to be performed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.approval_rule.ApprovalRuleUpdateAction> getActions() {

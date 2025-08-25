@@ -55,7 +55,7 @@ public class CheckoutMessagePaymentsPayloadBaseDataImpl implements CheckoutMessa
     }
 
     /**
-     *  <p><code>key</code> of the Project where the payment was made.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> where the payment was made.</p>
      */
 
     public String getProjectKey() {
@@ -63,7 +63,7 @@ public class CheckoutMessagePaymentsPayloadBaseDataImpl implements CheckoutMessa
     }
 
     /**
-     *  <p>The Payment on which the change or action was performed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.payment.PaymentReference getPayment() {
@@ -71,7 +71,7 @@ public class CheckoutMessagePaymentsPayloadBaseDataImpl implements CheckoutMessa
     }
 
     /**
-     *  <p><code>id</code> of the Transaction.</p>
+     *  <p><code>id</code> of the <span>Transaction</span>.</p>
      */
 
     public String getTransactionId() {
@@ -79,7 +79,7 @@ public class CheckoutMessagePaymentsPayloadBaseDataImpl implements CheckoutMessa
     }
 
     /**
-     *  <p>The Cart on which the change or action was performed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.cart.CartReference getCart() {
@@ -87,7 +87,7 @@ public class CheckoutMessagePaymentsPayloadBaseDataImpl implements CheckoutMessa
     }
 
     /**
-     *  <p>The Order on which the change or action was performed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.order.OrderReference getOrder() {

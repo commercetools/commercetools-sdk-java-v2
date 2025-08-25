@@ -24,7 +24,7 @@ public class MyCartChangeLineItemsOrderActionBuilder implements Builder<MyCartCh
     private java.util.List<String> lineItemOrder;
 
     /**
-     *  <p>All existing LineItem <code>id</code>s of the Cart in the desired new order.</p>
+     *  <p>All existing <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>id</code>s of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> in the desired new order.</p>
      * @param lineItemOrder value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class MyCartChangeLineItemsOrderActionBuilder implements Builder<MyCartCh
     }
 
     /**
-     *  <p>All existing LineItem <code>id</code>s of the Cart in the desired new order.</p>
+     *  <p>All existing <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>id</code>s of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> in the desired new order.</p>
      * @param lineItemOrder value to be set
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class MyCartChangeLineItemsOrderActionBuilder implements Builder<MyCartCh
     }
 
     /**
-     *  <p>All existing LineItem <code>id</code>s of the Cart in the desired new order.</p>
+     *  <p>All existing <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>id</code>s of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> in the desired new order.</p>
      * @param lineItemOrder value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class MyCartChangeLineItemsOrderActionBuilder implements Builder<MyCartCh
     }
 
     /**
-     *  <p>All existing LineItem <code>id</code>s of the Cart in the desired new order.</p>
+     *  <p>All existing <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>id</code>s of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> in the desired new order.</p>
      * @return lineItemOrder
      */
 

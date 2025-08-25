@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Delete InventoryEntry request.</p>
+ *  <p>Generated after a successful <span>Delete InventoryEntry</span> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntryDeletedMessagePayloadImpl implements InventoryEntryDeletedMessagePayload, ModelBase {
@@ -55,7 +55,7 @@ public class InventoryEntryDeletedMessagePayloadImpl implements InventoryEntryDe
     }
 
     /**
-     *  <p>The <code>sku</code> of the InventoryEntry that was deleted.</p>
+     *  <p>The <code>sku</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> that was deleted.</p>
      */
 
     public String getSku() {
@@ -63,7 +63,7 @@ public class InventoryEntryDeletedMessagePayloadImpl implements InventoryEntryDe
     }
 
     /**
-     *  <p>Reference to the Channel where the InventoryEntry was deleted.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> where the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> was deleted.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Company Name update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCompanyNameAction" rel="nofollow">Set Company Name</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerCompanyNameSetMessagePayloadImpl implements CustomerCompanyNameSetMessagePayload, ModelBase {
@@ -51,7 +51,7 @@ public class CustomerCompanyNameSetMessagePayloadImpl implements CustomerCompany
     }
 
     /**
-     *  <p>The <code>companyName</code> that was set during the Set Company Name update action.</p>
+     *  <p>The <code>companyName</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCompanyNameAction" rel="nofollow">Set Company Name</a> update action.</p>
      */
 
     public String getCompanyName() {

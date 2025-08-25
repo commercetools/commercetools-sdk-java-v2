@@ -16,10 +16,10 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Authenticates a global Customer not associated with a Store. For more information, see Global versus Store-specific Customers. If the Customer is registered in a Store, use the Authenticate (sign in) Customer in Store method.</p>
- *  <p>Triggers Cart merge during sign-in.</p>
- *  <p>A Cart returned in the CustomerSignInResult has any invalid Line Items removed and is updated with the latest prices, taxes, and discounts. During these updates, the following errors can be returned: MatchingPriceNotFound and MissingTaxRateForCountry.</p>
- *  <p>If an account with the given credentials is not found, an InvalidCredentials error is returned.</p>
+ *  <p>Authenticates a global Customer not associated with a Store. For more information, see <span>Global versus Store-specific Customers</span>. If the Customer is registered in a Store, use the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/login:POST" rel="nofollow">Authenticate (sign in) Customer in Store</a> method.</p>
+ *  <p>Triggers <span>Cart merge during sign-in</span>.</p>
+ *  <p>A Cart returned in the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSignInResult" rel="nofollow">CustomerSignInResult</a> has any invalid Line Items removed and is <span>updated</span> with the latest prices, taxes, and discounts. During these updates, the following errors can be returned: <a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a>.</p>
+ *  <p>If an account with the given credentials is not found, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidCredentialsError" rel="nofollow">InvalidCredentials</a> error is returned.</p>
  *
  * <hr>
  * <div class=code-example>

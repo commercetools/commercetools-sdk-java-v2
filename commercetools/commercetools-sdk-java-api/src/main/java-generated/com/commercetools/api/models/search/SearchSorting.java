@@ -42,7 +42,7 @@ public interface SearchSorting {
     public String getField();
 
     /**
-     *  <p>String value specifying linguistic and regional preferences using the IETF language tag format, as described in BCP 47. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
+     *  <p>String value specifying linguistic and regional preferences using the <span>IETF language tag format</span>, as described in <span>BCP 47</span>. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
      * @return language
      */
 
@@ -74,7 +74,7 @@ public interface SearchSorting {
     public SearchFieldType getFieldType();
 
     /**
-     *  <p>Allows you to apply a sort filter.</p>
+     *  <p>Allows you to apply a <span>sort filter</span>.</p>
      * @return filter
      */
     @Valid
@@ -89,7 +89,7 @@ public interface SearchSorting {
     public void setField(final String field);
 
     /**
-     *  <p>String value specifying linguistic and regional preferences using the IETF language tag format, as described in BCP 47. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
+     *  <p>String value specifying linguistic and regional preferences using the <span>IETF language tag format</span>, as described in <span>BCP 47</span>. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
      * @param language value to be set
      */
 
@@ -117,7 +117,7 @@ public interface SearchSorting {
     public void setFieldType(final SearchFieldType fieldType);
 
     /**
-     *  <p>Allows you to apply a sort filter.</p>
+     *  <p>Allows you to apply a <span>sort filter</span>.</p>
      * @param filter value to be set
      */
 

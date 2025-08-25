@@ -84,8 +84,8 @@ public interface ReviewDraft extends com.commercetools.api.models.CustomizableDr
     public String getText();
 
     /**
-     *  <p>Draft type to create a Reference or a KeyReference to a resource. Provide either the <code>id</code> or (wherever supported) the <code>key</code> of the resource to reference, but depending on the API endpoint the response returns either a Reference or a KeyReference. For example, the field <code>parent</code> of a CategoryDraft takes a ResourceIdentifier for its value while the value of the corresponding field of a Category is a Reference.</p>
-     *  <p>Each resource type has its corresponding ResourceIdentifier, like ChannelResourceIdentifier.</p>
+     *  <p>Draft type to create a <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> or a <a href="https://docs.commercetools.com/apis/ctp:api:type:KeyReference" rel="nofollow">KeyReference</a> to a resource. Provide either the <code>id</code> or (wherever supported) the <code>key</code> of the resource to reference, but depending on the API endpoint the response returns either a Reference or a KeyReference. For example, the field <code>parent</code> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:CategoryDraft" rel="nofollow">CategoryDraft</a> takes a ResourceIdentifier for its value while the value of the corresponding field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> is a Reference.</p>
+     *  <p>Each resource type has its corresponding ResourceIdentifier, like <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelResourceIdentifier" rel="nofollow">ChannelResourceIdentifier</a>.</p>
      * @return target
      */
     @Valid
@@ -93,7 +93,7 @@ public interface ReviewDraft extends com.commercetools.api.models.CustomizableDr
     public ResourceIdentifier getTarget();
 
     /**
-     *  <p>State of the Review. Used for approval processes, see Review approval process for details.</p>
+     *  <p>State of the Review. Used for approval processes, see <span>Review approval process</span> for details.</p>
      * @return state
      */
     @Valid
@@ -167,15 +167,15 @@ public interface ReviewDraft extends com.commercetools.api.models.CustomizableDr
     public void setText(final String text);
 
     /**
-     *  <p>Draft type to create a Reference or a KeyReference to a resource. Provide either the <code>id</code> or (wherever supported) the <code>key</code> of the resource to reference, but depending on the API endpoint the response returns either a Reference or a KeyReference. For example, the field <code>parent</code> of a CategoryDraft takes a ResourceIdentifier for its value while the value of the corresponding field of a Category is a Reference.</p>
-     *  <p>Each resource type has its corresponding ResourceIdentifier, like ChannelResourceIdentifier.</p>
+     *  <p>Draft type to create a <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> or a <a href="https://docs.commercetools.com/apis/ctp:api:type:KeyReference" rel="nofollow">KeyReference</a> to a resource. Provide either the <code>id</code> or (wherever supported) the <code>key</code> of the resource to reference, but depending on the API endpoint the response returns either a Reference or a KeyReference. For example, the field <code>parent</code> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:CategoryDraft" rel="nofollow">CategoryDraft</a> takes a ResourceIdentifier for its value while the value of the corresponding field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> is a Reference.</p>
+     *  <p>Each resource type has its corresponding ResourceIdentifier, like <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelResourceIdentifier" rel="nofollow">ChannelResourceIdentifier</a>.</p>
      * @param target value to be set
      */
 
     public void setTarget(final ResourceIdentifier target);
 
     /**
-     *  <p>State of the Review. Used for approval processes, see Review approval process for details.</p>
+     *  <p>State of the Review. Used for approval processes, see <span>Review approval process</span> for details.</p>
      * @param state value to be set
      */
 

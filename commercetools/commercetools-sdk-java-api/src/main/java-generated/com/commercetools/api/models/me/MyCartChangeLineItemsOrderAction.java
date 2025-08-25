@@ -38,7 +38,7 @@ public interface MyCartChangeLineItemsOrderAction extends MyCartUpdateAction {
     String CHANGE_LINE_ITEMS_ORDER = "changeLineItemsOrder";
 
     /**
-     *  <p>All existing LineItem <code>id</code>s of the Cart in the desired new order.</p>
+     *  <p>All existing <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>id</code>s of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> in the desired new order.</p>
      * @return lineItemOrder
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface MyCartChangeLineItemsOrderAction extends MyCartUpdateAction {
     public List<String> getLineItemOrder();
 
     /**
-     *  <p>All existing LineItem <code>id</code>s of the Cart in the desired new order.</p>
+     *  <p>All existing <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>id</code>s of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> in the desired new order.</p>
      * @param lineItemOrder values to be set
      */
 
@@ -54,7 +54,7 @@ public interface MyCartChangeLineItemsOrderAction extends MyCartUpdateAction {
     public void setLineItemOrder(final String... lineItemOrder);
 
     /**
-     *  <p>All existing LineItem <code>id</code>s of the Cart in the desired new order.</p>
+     *  <p>All existing <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>id</code>s of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> in the desired new order.</p>
      * @param lineItemOrder values to be set
      */
 

@@ -19,7 +19,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when the indexing of Product information is deactivated in a Project.</p>
- *  <p>To activate indexing, call Change Product Search Indexing Enabled and set <code>enabled</code> to <code>true</code>.</p>
+ *  <p>To activate indexing, call <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectChangeProductSearchIndexingEnabledAction" rel="nofollow">Change Product Search Indexing Enabled</a> and set <code>enabled</code> to <code>true</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLSearchDeactivatedErrorImpl implements GraphQLSearchDeactivatedError, ModelBase {

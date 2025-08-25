@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Discounts the CartDiscountTarget by an absolute amount (not allowed for MultiBuyLineItemsTarget and MultiBuyCustomLineItemsTarget).</p>
+ *  <p>Discounts the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountTarget" rel="nofollow">CartDiscountTarget</a> by an absolute amount (not allowed for <a href="https://docs.commercetools.com/apis/ctp:api:type:MultiBuyLineItemsTarget" rel="nofollow">MultiBuyLineItemsTarget</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MultiBuyCustomLineItemsTarget" rel="nofollow">MultiBuyCustomLineItemsTarget</a>).</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountValueAbsoluteImpl implements CartDiscountValueAbsolute, ModelBase {
@@ -64,7 +64,7 @@ public class CartDiscountValueAbsoluteImpl implements CartDiscountValueAbsolute,
     }
 
     /**
-     *  <p>Determines how the discount is applied on CartDiscountLineItemTarget and CartDiscountCustomLineItemTarget.</p>
+     *  <p>Determines how the discount is applied on <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountLineItemsTarget" rel="nofollow">CartDiscountLineItemTarget</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemTarget</a>.</p>
      */
 
     public com.commercetools.api.models.cart_discount.DiscountApplicationMode getApplicationMode() {

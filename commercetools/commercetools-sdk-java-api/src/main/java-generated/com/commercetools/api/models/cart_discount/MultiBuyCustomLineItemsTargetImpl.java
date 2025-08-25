@@ -67,7 +67,7 @@ public class MultiBuyCustomLineItemsTargetImpl implements MultiBuyCustomLineItem
     }
 
     /**
-     *  <p>Valid CustomLineItems target predicate. The Discount will be applied to Custom Line Items that are matched by the predicate.</p>
+     *  <p>Valid <span>CustomLineItems target predicate</span>. The Discount will be applied to Custom Line Items that are matched by the predicate.</p>
      */
 
     public String getPredicate() {

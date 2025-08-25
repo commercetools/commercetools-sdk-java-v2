@@ -43,7 +43,7 @@ public class TextLineItemValueImpl implements TextLineItemValue, ModelBase {
     }
 
     /**
-     *  <p><code>id</code> of the TextLineItem.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a>.</p>
      */
 
     public String getId() {

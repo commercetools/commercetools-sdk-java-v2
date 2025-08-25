@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Add Quantity, Remove Quantity or Change Quantity update action. Inventory changes as a result of Order creation do not trigger this message.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntryAddQuantityAction" rel="nofollow">Add Quantity</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntryRemoveQuantityAction" rel="nofollow">Remove Quantity</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntryChangeQuantityAction" rel="nofollow">Change Quantity</a> update action. Inventory changes as a result of <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders:POST" rel="nofollow">Order creation</a> do not trigger this message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -50,7 +50,7 @@ public interface InventoryEntryQuantitySetMessage extends Message {
     String INVENTORY_ENTRY_QUANTITY_SET = "InventoryEntryQuantitySet";
 
     /**
-     *  <p>Quantity on stock for the InventoryEntry before the quantity was updated.</p>
+     *  <p>Quantity on stock for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> before the quantity was updated.</p>
      * @return oldQuantityOnStock
      */
     @NotNull
@@ -58,7 +58,7 @@ public interface InventoryEntryQuantitySetMessage extends Message {
     public Long getOldQuantityOnStock();
 
     /**
-     *  <p>Quantity on stock for the InventoryEntry after the quantity was updated.</p>
+     *  <p>Quantity on stock for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> after the quantity was updated.</p>
      * @return newQuantityOnStock
      */
     @NotNull
@@ -66,7 +66,7 @@ public interface InventoryEntryQuantitySetMessage extends Message {
     public Long getNewQuantityOnStock();
 
     /**
-     *  <p>Available quantity for the InventoryEntry before the quantity was updated.</p>
+     *  <p>Available quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> before the quantity was updated.</p>
      * @return oldAvailableQuantity
      */
     @NotNull
@@ -74,7 +74,7 @@ public interface InventoryEntryQuantitySetMessage extends Message {
     public Long getOldAvailableQuantity();
 
     /**
-     *  <p>Available quantity for the InventoryEntry after the quantity was updated.</p>
+     *  <p>Available quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> after the quantity was updated.</p>
      * @return newAvailableQuantity
      */
     @NotNull
@@ -82,7 +82,7 @@ public interface InventoryEntryQuantitySetMessage extends Message {
     public Long getNewAvailableQuantity();
 
     /**
-     *  <p>Reference to the Channel where the InventoryEntry quantity was set.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> where the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> quantity was set.</p>
      * @return supplyChannel
      */
     @Valid
@@ -90,35 +90,35 @@ public interface InventoryEntryQuantitySetMessage extends Message {
     public ChannelReference getSupplyChannel();
 
     /**
-     *  <p>Quantity on stock for the InventoryEntry before the quantity was updated.</p>
+     *  <p>Quantity on stock for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> before the quantity was updated.</p>
      * @param oldQuantityOnStock value to be set
      */
 
     public void setOldQuantityOnStock(final Long oldQuantityOnStock);
 
     /**
-     *  <p>Quantity on stock for the InventoryEntry after the quantity was updated.</p>
+     *  <p>Quantity on stock for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> after the quantity was updated.</p>
      * @param newQuantityOnStock value to be set
      */
 
     public void setNewQuantityOnStock(final Long newQuantityOnStock);
 
     /**
-     *  <p>Available quantity for the InventoryEntry before the quantity was updated.</p>
+     *  <p>Available quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> before the quantity was updated.</p>
      * @param oldAvailableQuantity value to be set
      */
 
     public void setOldAvailableQuantity(final Long oldAvailableQuantity);
 
     /**
-     *  <p>Available quantity for the InventoryEntry after the quantity was updated.</p>
+     *  <p>Available quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> after the quantity was updated.</p>
      * @param newAvailableQuantity value to be set
      */
 
     public void setNewAvailableQuantity(final Long newAvailableQuantity);
 
     /**
-     *  <p>Reference to the Channel where the InventoryEntry quantity was set.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> where the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> quantity was set.</p>
      * @param supplyChannel value to be set
      */
 

@@ -16,7 +16,7 @@ import jakarta.validation.constraints.NotNull;
 
 /**
  *  <p>Returned when an enum value cannot be removed from an Attribute as it is being used by a Product.</p>
- *  <p>The error is returned as a failed response to the Remove EnumValues from AttributeDefinition update action.</p>
+ *  <p>The error is returned as a failed response to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeRemoveEnumValuesAction" rel="nofollow">Remove EnumValues from AttributeDefinition</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

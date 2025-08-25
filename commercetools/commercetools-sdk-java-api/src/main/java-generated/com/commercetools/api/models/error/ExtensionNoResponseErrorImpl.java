@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Returned when the API Extension does not respond within the time limit, or could not be reached.</p>
+ *  <p>Returned when the API Extension does not respond within the <span>time limit</span>, or could not be reached.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExtensionNoResponseErrorImpl implements ExtensionNoResponseError, ModelBase {

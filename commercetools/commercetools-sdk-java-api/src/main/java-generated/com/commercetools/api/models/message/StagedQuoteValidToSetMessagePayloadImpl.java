@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Valid To update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteSetValidToAction" rel="nofollow">Set Valid To</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedQuoteValidToSetMessagePayloadImpl implements StagedQuoteValidToSetMessagePayload, ModelBase {
@@ -51,7 +51,7 @@ public class StagedQuoteValidToSetMessagePayloadImpl implements StagedQuoteValid
     }
 
     /**
-     *  <p>Expiration date for the Staged Quote after the Set Valid To update action.</p>
+     *  <p>Expiration date for the Staged Quote after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteSetValidToAction" rel="nofollow">Set Valid To</a> update action.</p>
      */
 
     public java.time.ZonedDateTime getValidTo() {

@@ -20,22 +20,22 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creates an Order from a Cart in a Store for the Customer or anonymous user. The <code>customerId</code> or <code>anonymousId</code> field on the Order is automatically set based on the customer:{id} or anonymous_id:{id} scope.</p>
+ *  <p>Creates an Order from a Cart in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> for the Customer or anonymous user. The <code>customerId</code> or <code>anonymousId</code> field on the Order is automatically set based on the <span>customer:{id}</span> or <span>anonymous_id:{id}</span> scope.</p>
  *  <p>The Cart must have a shipping address and an active Shipping Method set.</p>
- *  <p>When creating B2B Orders, the Customer must have the <code>CreateMyOrdersFromMyCarts</code> Permission.</p>
- *  <p>If the Cart's <code>customerId</code> does not match the customer:{id} scope, or the <code>anonymousId</code> does not match the anonymous_id:{id} scope, a ResourceNotFound error is returned.</p>
- *  <p>Creating an Order produces the OrderCreated Message.</p>
+ *  <p>When creating <span>B2B Orders</span>, the Customer must have the <code>CreateMyOrdersFromMyCarts</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Permission" rel="nofollow">Permission</a>.</p>
+ *  <p>If the Cart's <code>customerId</code> does not match the <span>customer:{id}</span> scope, or the <code>anonymousId</code> does not match the <span>anonymous_id:{id}</span> scope, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error is returned.</p>
+ *  <p>Creating an Order produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderCreatedMessage" rel="nofollow">OrderCreated</a> Message.</p>
  *  <p>Specific Error Codes:</p>
  *  <ul>
- *   <li>AssociateMissingPermission</li>
- *   <li>CountryNotConfiguredInStore</li>
- *   <li>DiscountCodeNonApplicable</li>
- *   <li>InvalidItemShippingDetails</li>
- *   <li>MatchingPriceNotFound</li>
- *   <li>MissingTaxRateForCountry</li>
- *   <li>OutOfStock</li>
- *   <li>PriceChanged</li>
- *   <li>ShippingMethodDoesNotMatchCart</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateMissingPermissionError" rel="nofollow">AssociateMissingPermission</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CountryNotConfiguredInStoreError" rel="nofollow">CountryNotConfiguredInStore</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeNonApplicableError" rel="nofollow">DiscountCodeNonApplicable</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidItemShippingDetailsError" rel="nofollow">InvalidItemShippingDetails</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OutOfStockError" rel="nofollow">OutOfStock</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:PriceChangedError" rel="nofollow">PriceChanged</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethodDoesNotMatchCartError" rel="nofollow">ShippingMethodDoesNotMatchCart</a></li>
  *  </ul>
  *
  * <hr>

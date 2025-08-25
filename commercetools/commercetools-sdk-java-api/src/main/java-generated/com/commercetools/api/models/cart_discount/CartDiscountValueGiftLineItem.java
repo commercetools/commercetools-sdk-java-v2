@@ -52,7 +52,7 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue, CartDi
     public ProductReference getProduct();
 
     /**
-     *  <p>ProductVariant of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> of the Product.</p>
      * @return variantId
      */
     @NotNull
@@ -60,7 +60,7 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue, CartDi
     public Long getVariantId();
 
     /**
-     *  <p>Channel must have the ChannelRoleEnum <code>InventorySupply</code>.</p>
+     *  <p>Channel must have the <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>InventorySupply</code>.</p>
      * @return supplyChannel
      */
     @Valid
@@ -68,7 +68,7 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue, CartDi
     public ChannelReference getSupplyChannel();
 
     /**
-     *  <p>Channel must have the ChannelRoleEnum <code>ProductDistribution</code>.</p>
+     *  <p>Channel must have the <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>ProductDistribution</code>.</p>
      * @return distributionChannel
      */
     @Valid
@@ -84,21 +84,21 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue, CartDi
     public void setProduct(final ProductReference product);
 
     /**
-     *  <p>ProductVariant of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> of the Product.</p>
      * @param variantId value to be set
      */
 
     public void setVariantId(final Long variantId);
 
     /**
-     *  <p>Channel must have the ChannelRoleEnum <code>InventorySupply</code>.</p>
+     *  <p>Channel must have the <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>InventorySupply</code>.</p>
      * @param supplyChannel value to be set
      */
 
     public void setSupplyChannel(final ChannelReference supplyChannel);
 
     /**
-     *  <p>Channel must have the ChannelRoleEnum <code>ProductDistribution</code>.</p>
+     *  <p>Channel must have the <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>ProductDistribution</code>.</p>
      * @param distributionChannel value to be set
      */
 

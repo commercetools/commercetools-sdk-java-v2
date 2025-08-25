@@ -25,7 +25,7 @@ public class RecurringOrderCreatedMessagePayloadBuilder implements Builder<Recur
     private com.commercetools.api.models.recurring_order.RecurringOrder order;
 
     /**
-     *  <p>RecurringOrder that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was created.</p>
      * @param builder function to build the order value
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class RecurringOrderCreatedMessagePayloadBuilder implements Builder<Recur
     }
 
     /**
-     *  <p>RecurringOrder that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was created.</p>
      * @param builder function to build the order value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class RecurringOrderCreatedMessagePayloadBuilder implements Builder<Recur
     }
 
     /**
-     *  <p>RecurringOrder that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was created.</p>
      * @param order value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class RecurringOrderCreatedMessagePayloadBuilder implements Builder<Recur
     }
 
     /**
-     *  <p>RecurringOrder that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was created.</p>
      * @return order
      */
 

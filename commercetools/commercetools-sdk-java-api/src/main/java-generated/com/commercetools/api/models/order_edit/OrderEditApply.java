@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>If the <code>editVersion</code> and/or <code>resourceVersion</code> do not match the actual version, a ConcurrentModification error will be returned.</p>
+ *  <p>If the <code>editVersion</code> and/or <code>resourceVersion</code> do not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface OrderEditApply {
     public Long getEditVersion();
 
     /**
-     *  <p>Current <code>version</code> of the Order to which the OrderEdit is applied.</p>
+     *  <p>Current <code>version</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> to which the OrderEdit is applied.</p>
      * @return resourceVersion
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface OrderEditApply {
     public void setEditVersion(final Long editVersion);
 
     /**
-     *  <p>Current <code>version</code> of the Order to which the OrderEdit is applied.</p>
+     *  <p>Current <code>version</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> to which the OrderEdit is applied.</p>
      * @param resourceVersion value to be set
      */
 

@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Set Customer Email update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerEmailAction" rel="nofollow">Set Customer Email</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +35,7 @@ public interface OrderCustomerEmailSetMessagePayload extends OrderMessagePayload
     String ORDER_CUSTOMER_EMAIL_SET = "OrderCustomerEmailSet";
 
     /**
-     *  <p>Email address on the Order after the Set Customer Email update action.</p>
+     *  <p>Email address on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerEmailAction" rel="nofollow">Set Customer Email</a> update action.</p>
      * @return email
      */
 
@@ -43,7 +43,7 @@ public interface OrderCustomerEmailSetMessagePayload extends OrderMessagePayload
     public String getEmail();
 
     /**
-     *  <p>Email address on the Order before the Set Customer Email update action.</p>
+     *  <p>Email address on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerEmailAction" rel="nofollow">Set Customer Email</a> update action.</p>
      * @return oldEmail
      */
 
@@ -51,14 +51,14 @@ public interface OrderCustomerEmailSetMessagePayload extends OrderMessagePayload
     public String getOldEmail();
 
     /**
-     *  <p>Email address on the Order after the Set Customer Email update action.</p>
+     *  <p>Email address on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerEmailAction" rel="nofollow">Set Customer Email</a> update action.</p>
      * @param email value to be set
      */
 
     public void setEmail(final String email);
 
     /**
-     *  <p>Email address on the Order before the Set Customer Email update action.</p>
+     *  <p>Email address on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerEmailAction" rel="nofollow">Set Customer Email</a> update action.</p>
      * @param oldEmail value to be set
      */
 

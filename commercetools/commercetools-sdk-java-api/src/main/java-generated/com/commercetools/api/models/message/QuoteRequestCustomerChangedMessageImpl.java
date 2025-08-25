@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Change Customer update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestChangeCustomerAction" rel="nofollow">Change Customer</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class QuoteRequestCustomerChangedMessageImpl implements QuoteRequestCustomerChangedMessage, ModelBase {
@@ -143,7 +143,7 @@ public class QuoteRequestCustomerChangedMessageImpl implements QuoteRequestCusto
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -159,7 +159,7 @@ public class QuoteRequestCustomerChangedMessageImpl implements QuoteRequestCusto
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -175,7 +175,7 @@ public class QuoteRequestCustomerChangedMessageImpl implements QuoteRequestCusto
     }
 
     /**
-     *  <p>The Buyer who now owns the Quote Request.</p>
+     *  <p>The <span>Buyer</span> who now owns the Quote Request.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -183,7 +183,7 @@ public class QuoteRequestCustomerChangedMessageImpl implements QuoteRequestCusto
     }
 
     /**
-     *  <p>The previous Buyer.</p>
+     *  <p>The previous <span>Buyer</span>.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getPreviousCustomer() {

@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Change Value update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceChangeValueAction" rel="nofollow">Change Value</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -48,7 +48,7 @@ public interface StandalonePriceValueChangedMessage extends Message {
     String STANDALONE_PRICE_VALUE_CHANGED = "StandalonePriceValueChanged";
 
     /**
-     *  <p>The new value of the updated StandalonePrice.</p>
+     *  <p>The new value of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @return value
      */
     @NotNull
@@ -57,7 +57,7 @@ public interface StandalonePriceValueChangedMessage extends Message {
     public TypedMoney getValue();
 
     /**
-     *  <p>Whether the new value was applied to the current or the staged representation of the StandalonePrice. Staged changes are stored on the StagedStandalonePrice.</p>
+     *  <p>Whether the new value was applied to the current or the staged representation of the StandalonePrice. Staged changes are stored on the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedStandalonePrice" rel="nofollow">StagedStandalonePrice</a>.</p>
      * @return staged
      */
     @NotNull
@@ -65,7 +65,7 @@ public interface StandalonePriceValueChangedMessage extends Message {
     public Boolean getStaged();
 
     /**
-     *  <p>The old value of the updated StandalonePrice. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
+     *  <p>The old value of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
      * @return oldValue
      */
     @Valid
@@ -73,21 +73,21 @@ public interface StandalonePriceValueChangedMessage extends Message {
     public TypedMoney getOldValue();
 
     /**
-     *  <p>The new value of the updated StandalonePrice.</p>
+     *  <p>The new value of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param value value to be set
      */
 
     public void setValue(final TypedMoney value);
 
     /**
-     *  <p>Whether the new value was applied to the current or the staged representation of the StandalonePrice. Staged changes are stored on the StagedStandalonePrice.</p>
+     *  <p>Whether the new value was applied to the current or the staged representation of the StandalonePrice. Staged changes are stored on the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedStandalonePrice" rel="nofollow">StagedStandalonePrice</a>.</p>
      * @param staged value to be set
      */
 
     public void setStaged(final Boolean staged);
 
     /**
-     *  <p>The old value of the updated StandalonePrice. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
+     *  <p>The old value of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
      * @param oldValue value to be set
      */
 

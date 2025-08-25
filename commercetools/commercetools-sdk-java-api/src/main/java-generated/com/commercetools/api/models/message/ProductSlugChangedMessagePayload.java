@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Change Slug update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface ProductSlugChangedMessagePayload extends MessagePayload {
     String PRODUCT_SLUG_CHANGED = "ProductSlugChanged";
 
     /**
-     *  <p>The slug of the Product after the Change Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
      * @return slug
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface ProductSlugChangedMessagePayload extends MessagePayload {
     public LocalizedString getSlug();
 
     /**
-     *  <p>The slug of the Product before the Change Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
      * @return oldSlug
      */
     @Valid
@@ -57,14 +57,14 @@ public interface ProductSlugChangedMessagePayload extends MessagePayload {
     public LocalizedString getOldSlug();
 
     /**
-     *  <p>The slug of the Product after the Change Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
      * @param slug value to be set
      */
 
     public void setSlug(final LocalizedString slug);
 
     /**
-     *  <p>The slug of the Product before the Change Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
      * @param oldSlug value to be set
      */
 

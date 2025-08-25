@@ -187,7 +187,7 @@ public class OrderPurchaseOrderNumberSetMessageBuilder implements Builder<OrderP
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -199,7 +199,7 @@ public class OrderPurchaseOrderNumberSetMessageBuilder implements Builder<OrderP
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -261,7 +261,7 @@ public class OrderPurchaseOrderNumberSetMessageBuilder implements Builder<OrderP
     }
 
     /**
-     *  <p>Purchase order number on the Order after the Set Purchase Order Number update action.</p>
+     *  <p>Purchase order number on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetPurchaseOrderNumberAction" rel="nofollow">Set Purchase Order Number</a> update action.</p>
      * @param purchaseOrderNumber value to be set
      * @return Builder
      */
@@ -272,7 +272,7 @@ public class OrderPurchaseOrderNumberSetMessageBuilder implements Builder<OrderP
     }
 
     /**
-     *  <p>Purchase order number on the Order before the Set Purchase Order Number update action.</p>
+     *  <p>Purchase order number on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetPurchaseOrderNumberAction" rel="nofollow">Set Purchase Order Number</a> update action.</p>
      * @param oldPurchaseOrderNumber value to be set
      * @return Builder
      */
@@ -349,7 +349,7 @@ public class OrderPurchaseOrderNumberSetMessageBuilder implements Builder<OrderP
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -377,7 +377,7 @@ public class OrderPurchaseOrderNumberSetMessageBuilder implements Builder<OrderP
     }
 
     /**
-     *  <p>Purchase order number on the Order after the Set Purchase Order Number update action.</p>
+     *  <p>Purchase order number on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetPurchaseOrderNumberAction" rel="nofollow">Set Purchase Order Number</a> update action.</p>
      * @return purchaseOrderNumber
      */
 
@@ -387,7 +387,7 @@ public class OrderPurchaseOrderNumberSetMessageBuilder implements Builder<OrderP
     }
 
     /**
-     *  <p>Purchase order number on the Order before the Set Purchase Order Number update action.</p>
+     *  <p>Purchase order number on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetPurchaseOrderNumberAction" rel="nofollow">Set Purchase Order Number</a> update action.</p>
      * @return oldPurchaseOrderNumber
      */
 

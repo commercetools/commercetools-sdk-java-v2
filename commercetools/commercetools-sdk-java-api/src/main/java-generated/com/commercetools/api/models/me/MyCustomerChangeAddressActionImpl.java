@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Changing an address of the Customer produces the CustomerAddressChanged Message.</p>
+ *  <p>Changing an address of the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddressChangedMessage" rel="nofollow">CustomerAddressChanged</a> Message.</p>
  *  <p>Either <code>addressId</code> or <code>addressKey</code> is required.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -60,7 +60,7 @@ public class MyCustomerChangeAddressActionImpl implements MyCustomerChangeAddres
     }
 
     /**
-     *  <p><code>id</code> of the Address to change.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to change.</p>
      */
 
     public String getAddressId() {
@@ -68,7 +68,7 @@ public class MyCustomerChangeAddressActionImpl implements MyCustomerChangeAddres
     }
 
     /**
-     *  <p><code>key</code> of the Address to change.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to change.</p>
      */
 
     public String getAddressKey() {

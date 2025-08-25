@@ -32,7 +32,7 @@ import jakarta.validation.constraints.NotNull;
 public interface CustomerCreatePasswordResetToken {
 
     /**
-     *  <p>Email address of the Customer treated as case-insensitive.</p>
+     *  <p>Email address of the Customer treated as <span>case-insensitive</span>.</p>
      * @return email
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface CustomerCreatePasswordResetToken {
     public Boolean getInvalidateOlderTokens();
 
     /**
-     *  <p>Email address of the Customer treated as case-insensitive.</p>
+     *  <p>Email address of the Customer treated as <span>case-insensitive</span>.</p>
      * @param email value to be set
      */
 

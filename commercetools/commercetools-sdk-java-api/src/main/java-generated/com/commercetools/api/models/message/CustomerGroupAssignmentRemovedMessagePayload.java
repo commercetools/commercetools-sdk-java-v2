@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Remove CustomerGroupAssignment update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerRemoveCustomerGroupAssignmentAction" rel="nofollow">Remove CustomerGroupAssignment</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface CustomerGroupAssignmentRemovedMessagePayload extends MessagePay
     String CUSTOMER_GROUP_ASSIGNMENT_REMOVED = "CustomerGroupAssignmentRemoved";
 
     /**
-     *  <p>Customer Group removed during the Remove CustomerGroupAssignment update action.</p>
+     *  <p>Customer Group removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerRemoveCustomerGroupAssignmentAction" rel="nofollow">Remove CustomerGroupAssignment</a> update action.</p>
      * @return customerGroupAssignment
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface CustomerGroupAssignmentRemovedMessagePayload extends MessagePay
     public CustomerGroupAssignment getCustomerGroupAssignment();
 
     /**
-     *  <p>Customer Group removed during the Remove CustomerGroupAssignment update action.</p>
+     *  <p>Customer Group removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerRemoveCustomerGroupAssignmentAction" rel="nofollow">Remove CustomerGroupAssignment</a> update action.</p>
      * @param customerGroupAssignment value to be set
      */
 

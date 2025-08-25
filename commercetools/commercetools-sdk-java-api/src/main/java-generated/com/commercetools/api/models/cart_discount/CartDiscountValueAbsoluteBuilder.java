@@ -119,7 +119,7 @@ public class CartDiscountValueAbsoluteBuilder implements Builder<CartDiscountVal
     }
 
     /**
-     *  <p>Determines how the discount is applied on CartDiscountLineItemTarget and CartDiscountCustomLineItemTarget.</p>
+     *  <p>Determines how the discount is applied on <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountLineItemsTarget" rel="nofollow">CartDiscountLineItemTarget</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemTarget</a>.</p>
      * @param applicationMode value to be set
      * @return Builder
      */
@@ -140,7 +140,7 @@ public class CartDiscountValueAbsoluteBuilder implements Builder<CartDiscountVal
     }
 
     /**
-     *  <p>Determines how the discount is applied on CartDiscountLineItemTarget and CartDiscountCustomLineItemTarget.</p>
+     *  <p>Determines how the discount is applied on <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountLineItemsTarget" rel="nofollow">CartDiscountLineItemTarget</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemTarget</a>.</p>
      * @return applicationMode
      */
 

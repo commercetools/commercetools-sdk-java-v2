@@ -58,7 +58,7 @@ public class ProductSetProductPriceCustomTypeActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Embedded Price.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Price with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Embedded Price.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -70,7 +70,7 @@ public class ProductSetProductPriceCustomTypeActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Embedded Price.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Price with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Embedded Price.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class ProductSetProductPriceCustomTypeActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Embedded Price.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Price with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Embedded Price.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class ProductSetProductPriceCustomTypeActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Embedded Price.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Embedded Price.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -106,7 +106,7 @@ public class ProductSetProductPriceCustomTypeActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Embedded Price.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Embedded Price.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -118,7 +118,7 @@ public class ProductSetProductPriceCustomTypeActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Embedded Price.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Embedded Price.</p>
      * @param fields value to be set
      * @return Builder
      */
@@ -149,7 +149,7 @@ public class ProductSetProductPriceCustomTypeActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Embedded Price.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Price with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Embedded Price.</p>
      * @return type
      */
 
@@ -159,7 +159,7 @@ public class ProductSetProductPriceCustomTypeActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Embedded Price.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Embedded Price.</p>
      * @return fields
      */
 

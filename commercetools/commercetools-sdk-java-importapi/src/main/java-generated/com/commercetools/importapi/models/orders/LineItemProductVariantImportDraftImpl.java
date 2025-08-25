@@ -56,7 +56,7 @@ public class LineItemProductVariantImportDraftImpl implements LineItemProductVar
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.product</code>. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
+     *  <p>Maps to <code>ProductVariant.product</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
      */
 
     public com.commercetools.importapi.models.common.ProductVariantKeyReference getProductVariant() {

@@ -56,7 +56,7 @@ public class ApprovalRuleSetCustomTypeActionImpl implements ApprovalRuleSetCusto
     }
 
     /**
-     *  <p>Defines the Type that extends the ApprovalRule with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ApprovalRule.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the ApprovalRule with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the ApprovalRule.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -64,7 +64,7 @@ public class ApprovalRuleSetCustomTypeActionImpl implements ApprovalRuleSetCusto
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the ApprovalRule.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the ApprovalRule.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

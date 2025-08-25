@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Request Quote Renegotiation update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestQuoteRenegotiationAction" rel="nofollow">Request Quote Renegotiation</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,7 +42,7 @@ public interface QuoteRenegotiationRequestedMessage extends Message {
     String QUOTE_RENEGOTIATION_REQUESTED = "QuoteRenegotiationRequested";
 
     /**
-     *  <p>Message from the Buyer regarding the Quote renegotiation request.</p>
+     *  <p>Message from the <span>Buyer</span> regarding the Quote renegotiation request.</p>
      * @return buyerComment
      */
 
@@ -50,7 +50,7 @@ public interface QuoteRenegotiationRequestedMessage extends Message {
     public String getBuyerComment();
 
     /**
-     *  <p>Message from the Buyer regarding the Quote renegotiation request.</p>
+     *  <p>Message from the <span>Buyer</span> regarding the Quote renegotiation request.</p>
      * @param buyerComment value to be set
      */
 

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Setting the RecurringOrderState generates the RecurringOrderStateChanged Message.</p>
+ *  <p>Setting the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderState" rel="nofollow">RecurringOrderState</a> generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderStateChangedMessage" rel="nofollow">RecurringOrderStateChanged</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RecurringOrderSetStateActionImpl implements RecurringOrderSetStateAction, ModelBase {

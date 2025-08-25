@@ -20,8 +20,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creates a ProductTailoring in the Store specified by <code>storeKey</code>. When using this endpoint the ProductTailoring's <code>store</code> field is always set to the Store specified in the path parameter.</p>
- *  <p>Generates the ProductTailoringCreated Message.</p>
+ *  <p>Creates a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> specified by <code>storeKey</code>. When using this endpoint the ProductTailoring's <code>store</code> field is always set to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> specified in the path parameter.</p>
+ *  <p>Generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringCreatedMessage" rel="nofollow">ProductTailoringCreated</a> Message.</p>
  *
  * <hr>
  * <div class=code-example>

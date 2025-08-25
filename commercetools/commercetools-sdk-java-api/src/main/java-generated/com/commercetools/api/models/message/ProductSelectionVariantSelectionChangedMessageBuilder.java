@@ -192,7 +192,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -204,7 +204,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -266,7 +266,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
     }
 
     /**
-     *  <p>Product for which the Product Variant Selection changed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the Product Variant Selection changed.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -278,7 +278,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
     }
 
     /**
-     *  <p>Product for which the Product Variant Selection changed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the Product Variant Selection changed.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -290,7 +290,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
     }
 
     /**
-     *  <p>Product for which the Product Variant Selection changed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the Product Variant Selection changed.</p>
      * @param product value to be set
      * @return Builder
      */
@@ -302,7 +302,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
     }
 
     /**
-     *  <p>Product Variant Selection before the Set Variant Selection update action.</p>
+     *  <p>Product Variant Selection before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantSelectionAction" rel="nofollow">Set Variant Selection</a> update action.</p>
      * @param oldVariantSelection value to be set
      * @return Builder
      */
@@ -314,7 +314,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
     }
 
     /**
-     *  <p>Product Variant Selection before the Set Variant Selection update action.</p>
+     *  <p>Product Variant Selection before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantSelectionAction" rel="nofollow">Set Variant Selection</a> update action.</p>
      * @param builder function to build the oldVariantSelection value
      * @return Builder
      */
@@ -328,7 +328,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
     }
 
     /**
-     *  <p>Product Variant Selection after the Set Variant Selection update action.</p>
+     *  <p>Product Variant Selection after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantSelectionAction" rel="nofollow">Set Variant Selection</a> update action.</p>
      * @param newVariantSelection value to be set
      * @return Builder
      */
@@ -340,7 +340,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
     }
 
     /**
-     *  <p>Product Variant Selection after the Set Variant Selection update action.</p>
+     *  <p>Product Variant Selection after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantSelectionAction" rel="nofollow">Set Variant Selection</a> update action.</p>
      * @param builder function to build the newVariantSelection value
      * @return Builder
      */
@@ -419,7 +419,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -447,7 +447,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
     }
 
     /**
-     *  <p>Product for which the Product Variant Selection changed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the Product Variant Selection changed.</p>
      * @return product
      */
 
@@ -456,7 +456,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
     }
 
     /**
-     *  <p>Product Variant Selection before the Set Variant Selection update action.</p>
+     *  <p>Product Variant Selection before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantSelectionAction" rel="nofollow">Set Variant Selection</a> update action.</p>
      * @return oldVariantSelection
      */
 
@@ -465,7 +465,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
     }
 
     /**
-     *  <p>Product Variant Selection after the Set Variant Selection update action.</p>
+     *  <p>Product Variant Selection after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantSelectionAction" rel="nofollow">Set Variant Selection</a> update action.</p>
      * @return newVariantSelection
      */
 

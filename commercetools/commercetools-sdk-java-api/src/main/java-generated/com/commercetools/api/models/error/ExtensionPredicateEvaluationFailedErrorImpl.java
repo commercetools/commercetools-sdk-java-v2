@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Returned when the predicate defined in the ExtensionTrigger could not be evaluated due to a missing field.</p>
+ *  <p>Returned when the predicate defined in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ExtensionTrigger" rel="nofollow">ExtensionTrigger</a> could not be evaluated due to a missing field.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExtensionPredicateEvaluationFailedErrorImpl implements ExtensionPredicateEvaluationFailedError, ModelBase {

@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Set Variant Exclusion update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantExclusionAction" rel="nofollow">Set Variant Exclusion</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -43,7 +43,7 @@ public interface ProductSelectionVariantExclusionChangedMessagePayload extends M
     String PRODUCT_SELECTION_VARIANT_EXCLUSION_CHANGED = "ProductSelectionVariantExclusionChanged";
 
     /**
-     *  <p>Product for which the Product Variant Exclusion changed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the Product Variant Exclusion changed.</p>
      * @return product
      */
     @NotNull
@@ -52,7 +52,7 @@ public interface ProductSelectionVariantExclusionChangedMessagePayload extends M
     public ProductReference getProduct();
 
     /**
-     *  <p>Product Variant Exclusion before the Set Variant Exclusion update action.</p>
+     *  <p>Product Variant Exclusion before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantExclusionAction" rel="nofollow">Set Variant Exclusion</a> update action.</p>
      * @return oldVariantExclusion
      */
     @NotNull
@@ -61,7 +61,7 @@ public interface ProductSelectionVariantExclusionChangedMessagePayload extends M
     public ProductVariantExclusion getOldVariantExclusion();
 
     /**
-     *  <p>Product Variant Exclusion after the Set Variant Exclusion update action.</p>
+     *  <p>Product Variant Exclusion after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantExclusionAction" rel="nofollow">Set Variant Exclusion</a> update action.</p>
      * @return newVariantExclusion
      */
     @NotNull
@@ -70,21 +70,21 @@ public interface ProductSelectionVariantExclusionChangedMessagePayload extends M
     public ProductVariantExclusion getNewVariantExclusion();
 
     /**
-     *  <p>Product for which the Product Variant Exclusion changed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the Product Variant Exclusion changed.</p>
      * @param product value to be set
      */
 
     public void setProduct(final ProductReference product);
 
     /**
-     *  <p>Product Variant Exclusion before the Set Variant Exclusion update action.</p>
+     *  <p>Product Variant Exclusion before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantExclusionAction" rel="nofollow">Set Variant Exclusion</a> update action.</p>
      * @param oldVariantExclusion value to be set
      */
 
     public void setOldVariantExclusion(final ProductVariantExclusion oldVariantExclusion);
 
     /**
-     *  <p>Product Variant Exclusion after the Set Variant Exclusion update action.</p>
+     *  <p>Product Variant Exclusion after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantExclusionAction" rel="nofollow">Set Variant Exclusion</a> update action.</p>
      * @param newVariantExclusion value to be set
      */
 

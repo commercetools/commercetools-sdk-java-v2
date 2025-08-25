@@ -52,7 +52,7 @@ public class AssociateImpl implements Associate, ModelBase {
     }
 
     /**
-     *  <p>The Customer that acts as an Associate in the Business Unit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {

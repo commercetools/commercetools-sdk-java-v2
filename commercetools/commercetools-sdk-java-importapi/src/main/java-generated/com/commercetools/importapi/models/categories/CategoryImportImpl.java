@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Represents the data used to import a Category. Once imported, this data is persisted as a Category in the Project.</p>
+ *  <p>Represents the data used to import a Category. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> in the Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryImportImpl implements CategoryImport, ModelBase {
@@ -82,7 +82,7 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier. If a Category with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      */
 
     public String getKey() {
@@ -114,7 +114,7 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>Category.parent</code>. If the referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Category is created.</p>
+     *  <p>Maps to <code>Category.parent</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Category is created.</p>
      */
 
     public com.commercetools.importapi.models.common.CategoryKeyReference getParent() {

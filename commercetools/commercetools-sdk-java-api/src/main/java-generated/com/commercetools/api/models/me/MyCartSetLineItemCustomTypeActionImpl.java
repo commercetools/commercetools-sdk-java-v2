@@ -63,7 +63,7 @@ public class MyCartSetLineItemCustomTypeActionImpl implements MyCartSetLineItemC
     }
 
     /**
-     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemId() {
@@ -71,7 +71,7 @@ public class MyCartSetLineItemCustomTypeActionImpl implements MyCartSetLineItemC
     }
 
     /**
-     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemKey() {
@@ -79,7 +79,7 @@ public class MyCartSetLineItemCustomTypeActionImpl implements MyCartSetLineItemC
     }
 
     /**
-     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Line Item.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the LineItem with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Line Item.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -87,7 +87,7 @@ public class MyCartSetLineItemCustomTypeActionImpl implements MyCartSetLineItemC
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Line Item.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Line Item.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

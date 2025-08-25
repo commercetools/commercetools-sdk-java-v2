@@ -21,8 +21,8 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set Asset Sources on Categories.</li>
- *   <li>Set Asset Sources on Products.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CategorySetAssetSourcesAction" rel="nofollow">Set Asset Sources</a> on Categories.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetAssetSourcesAction" rel="nofollow">Set Asset Sources</a> on Products.</li>
  *  </ul>
  *
  * <hr>

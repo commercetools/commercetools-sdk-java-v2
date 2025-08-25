@@ -27,7 +27,7 @@ public class QuoteStateChangedMessagePayloadBuilder implements Builder<QuoteStat
     private com.commercetools.api.models.quote.QuoteState oldQuoteState;
 
     /**
-     *  <p>State of the Quote after the Change Quote State update action.</p>
+     *  <p>State of the Quote after the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteChangeQuoteStateAction" rel="nofollow">Change Quote State</a> update action.</p>
      * @param quoteState value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class QuoteStateChangedMessagePayloadBuilder implements Builder<QuoteStat
     }
 
     /**
-     *  <p>State of the Quote before the Change Quote State update action.</p>
+     *  <p>State of the Quote before the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteChangeQuoteStateAction" rel="nofollow">Change Quote State</a> update action.</p>
      * @param oldQuoteState value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class QuoteStateChangedMessagePayloadBuilder implements Builder<QuoteStat
     }
 
     /**
-     *  <p>State of the Quote after the Change Quote State update action.</p>
+     *  <p>State of the Quote after the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteChangeQuoteStateAction" rel="nofollow">Change Quote State</a> update action.</p>
      * @return quoteState
      */
 
@@ -60,7 +60,7 @@ public class QuoteStateChangedMessagePayloadBuilder implements Builder<QuoteStat
     }
 
     /**
-     *  <p>State of the Quote before the Change Quote State update action.</p>
+     *  <p>State of the Quote before the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteChangeQuoteStateAction" rel="nofollow">Change Quote State</a> update action.</p>
      * @return oldQuoteState
      */
 

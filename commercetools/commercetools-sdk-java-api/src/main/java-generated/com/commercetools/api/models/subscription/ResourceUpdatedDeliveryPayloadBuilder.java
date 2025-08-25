@@ -42,7 +42,7 @@ public class ResourceUpdatedDeliveryPayloadBuilder implements Builder<ResourceUp
     private java.time.ZonedDateTime modifiedAt;
 
     /**
-     *  <p><code>key</code> of the Project. Useful for processing notifications if the Destination receives them from multiple Projects.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Useful for processing notifications if the Destination receives them from multiple Projects.</p>
      * @param projectKey value to be set
      * @return Builder
      */
@@ -149,7 +149,7 @@ public class ResourceUpdatedDeliveryPayloadBuilder implements Builder<ResourceUp
     }
 
     /**
-     *  <p><code>key</code> of the Project. Useful for processing notifications if the Destination receives them from multiple Projects.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Useful for processing notifications if the Destination receives them from multiple Projects.</p>
      * @return projectKey
      */
 

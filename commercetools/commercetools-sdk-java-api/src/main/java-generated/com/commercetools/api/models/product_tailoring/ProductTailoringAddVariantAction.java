@@ -18,7 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Either <code>id</code> or <code>sku</code> is required to reference a ProductVariant that exists. Produces the ProductVariantTailoringAdded Message.</p>
+ *  <p>Either <code>id</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that exists. Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoringAddedMessage" rel="nofollow">ProductVariantTailoringAdded</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

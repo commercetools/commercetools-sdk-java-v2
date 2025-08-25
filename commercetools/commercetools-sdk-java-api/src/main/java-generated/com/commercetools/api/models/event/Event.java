@@ -18,7 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Base representation of an Event containing common fields to all Event Types.</p>
+ *  <p>Base representation of an Event containing common fields to all <span>Event Types</span>.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern

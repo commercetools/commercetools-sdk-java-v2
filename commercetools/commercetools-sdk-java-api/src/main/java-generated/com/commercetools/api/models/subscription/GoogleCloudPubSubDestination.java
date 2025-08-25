@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Destination for Google Cloud Pub/Sub that can be used for Pull subscriptions as well as for Push subscriptions. The <code>topic</code> must give the <code>pubsub.topics.publish</code> permission to the service account <code>subscriptions@commercetools-platform.iam.gserviceaccount.com</code>. If used with the CloudEventsFormat, the notification conforms to the PubSub Protocol Binding of the Structured Content Mode.</p>
+ *  <p>Destination for <span>Google Cloud Pub/Sub</span> that can be used for <span>Pull subscriptions</span> as well as for <span>Push subscriptions</span>. The <code>topic</code> must give the <code>pubsub.topics.publish</code> permission to the service account <code>subscriptions@commercetools-platform.iam.gserviceaccount.com</code>. If used with the <span>CloudEventsFormat</span>, the notification conforms to the <span>PubSub Protocol Binding</span> of the <span>Structured Content Mode</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

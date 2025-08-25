@@ -29,7 +29,7 @@ public class QuoteRequestCustomerChangedMessagePayloadBuilder
     private com.commercetools.api.models.customer.CustomerReference previousCustomer;
 
     /**
-     *  <p>The Buyer who now owns the Quote Request.</p>
+     *  <p>The <span>Buyer</span> who now owns the Quote Request.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class QuoteRequestCustomerChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The Buyer who now owns the Quote Request.</p>
+     *  <p>The <span>Buyer</span> who now owns the Quote Request.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class QuoteRequestCustomerChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The Buyer who now owns the Quote Request.</p>
+     *  <p>The <span>Buyer</span> who now owns the Quote Request.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class QuoteRequestCustomerChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The previous Buyer.</p>
+     *  <p>The previous <span>Buyer</span>.</p>
      * @param builder function to build the previousCustomer value
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class QuoteRequestCustomerChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The previous Buyer.</p>
+     *  <p>The previous <span>Buyer</span>.</p>
      * @param builder function to build the previousCustomer value
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class QuoteRequestCustomerChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The previous Buyer.</p>
+     *  <p>The previous <span>Buyer</span>.</p>
      * @param previousCustomer value to be set
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class QuoteRequestCustomerChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The Buyer who now owns the Quote Request.</p>
+     *  <p>The <span>Buyer</span> who now owns the Quote Request.</p>
      * @return customer
      */
 
@@ -111,7 +111,7 @@ public class QuoteRequestCustomerChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The previous Buyer.</p>
+     *  <p>The previous <span>Buyer</span>.</p>
      * @return previousCustomer
      */
 

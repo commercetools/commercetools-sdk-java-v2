@@ -29,7 +29,7 @@ public class ApprovalRuleRequestersSetMessagePayloadBuilder
     private java.util.List<com.commercetools.api.models.approval_rule.RuleRequester> oldRequesters;
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param requesters value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ApprovalRuleRequestersSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param requesters value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ApprovalRuleRequestersSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param requesters value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class ApprovalRuleRequestersSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param builder function to build the requesters value
      * @return Builder
      */
@@ -84,7 +84,7 @@ public class ApprovalRuleRequestersSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param builder function to build the requesters value
      * @return Builder
      */
@@ -98,7 +98,7 @@ public class ApprovalRuleRequestersSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param builder function to build the requesters value
      * @return Builder
      */
@@ -109,7 +109,7 @@ public class ApprovalRuleRequestersSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param builder function to build the requesters value
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class ApprovalRuleRequestersSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param oldRequesters value to be set
      * @return Builder
      */
@@ -132,7 +132,7 @@ public class ApprovalRuleRequestersSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param oldRequesters value to be set
      * @return Builder
      */
@@ -144,7 +144,7 @@ public class ApprovalRuleRequestersSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param oldRequesters value to be set
      * @return Builder
      */
@@ -159,7 +159,7 @@ public class ApprovalRuleRequestersSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param builder function to build the oldRequesters value
      * @return Builder
      */
@@ -175,7 +175,7 @@ public class ApprovalRuleRequestersSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param builder function to build the oldRequesters value
      * @return Builder
      */
@@ -189,7 +189,7 @@ public class ApprovalRuleRequestersSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param builder function to build the oldRequesters value
      * @return Builder
      */
@@ -200,7 +200,7 @@ public class ApprovalRuleRequestersSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param builder function to build the oldRequesters value
      * @return Builder
      */
@@ -211,7 +211,7 @@ public class ApprovalRuleRequestersSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @return requesters
      */
 
@@ -220,7 +220,7 @@ public class ApprovalRuleRequestersSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @return oldRequesters
      */
 

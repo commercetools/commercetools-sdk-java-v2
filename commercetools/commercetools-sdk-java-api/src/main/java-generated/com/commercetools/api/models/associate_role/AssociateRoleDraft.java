@@ -50,7 +50,7 @@ public interface AssociateRoleDraft extends io.vrap.rmf.base.client.Draft<Associ
     public String getName();
 
     /**
-     *  <p>Whether the AssociateRole can be assigned to an Associate by a buyer.</p>
+     *  <p>Whether the AssociateRole can be assigned to an Associate by a <span>buyer</span>.</p>
      * @return buyerAssignable
      */
 
@@ -88,7 +88,7 @@ public interface AssociateRoleDraft extends io.vrap.rmf.base.client.Draft<Associ
     public void setName(final String name);
 
     /**
-     *  <p>Whether the AssociateRole can be assigned to an Associate by a buyer.</p>
+     *  <p>Whether the AssociateRole can be assigned to an Associate by a <span>buyer</span>.</p>
      * @param buyerAssignable value to be set
      */
 

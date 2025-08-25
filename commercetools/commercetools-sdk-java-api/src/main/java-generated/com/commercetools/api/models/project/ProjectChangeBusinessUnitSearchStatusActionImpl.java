@@ -53,7 +53,7 @@ public class ProjectChangeBusinessUnitSearchStatusActionImpl
     }
 
     /**
-     *  <p>Activates or deactivates the Search Business Units feature. Activation will trigger building a search index for the Business Units in the Project.</p>
+     *  <p>Activates or deactivates the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/business-units/search:POST" rel="nofollow">Search Business Units</a> feature. Activation will trigger building a search index for the Business Units in the Project.</p>
      */
 
     public com.commercetools.api.models.project.BusinessUnitSearchStatus getStatus() {

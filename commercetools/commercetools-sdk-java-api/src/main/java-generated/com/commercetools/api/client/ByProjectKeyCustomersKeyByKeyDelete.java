@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Deleting a Customer produces the CustomerDeleted Message.</p>
+ *  <p>Deleting a Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerDeletedMessage" rel="nofollow">CustomerDeleted</a> Message.</p>
  *
  * <hr>
  * <div class=code-example>

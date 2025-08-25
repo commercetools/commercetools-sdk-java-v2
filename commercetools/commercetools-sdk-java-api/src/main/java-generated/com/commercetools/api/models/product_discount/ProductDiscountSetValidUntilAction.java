@@ -36,7 +36,7 @@ public interface ProductDiscountSetValidUntilAction extends ProductDiscountUpdat
     String SET_VALID_UNTIL = "setValidUntil";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. Take <span>Eventual Consistency</span> into account for calculated undiscounted values.</p>
      * @return validUntil
      */
 
@@ -44,7 +44,7 @@ public interface ProductDiscountSetValidUntilAction extends ProductDiscountUpdat
     public ZonedDateTime getValidUntil();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. Take <span>Eventual Consistency</span> into account for calculated undiscounted values.</p>
      * @param validUntil value to be set
      */
 

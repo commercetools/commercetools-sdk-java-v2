@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Reference to a CartDiscount.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountReferenceImpl implements CartDiscountReference, ModelBase {
@@ -56,7 +56,7 @@ public class CartDiscountReferenceImpl implements CartDiscountReference, ModelBa
     }
 
     /**
-     *  <p>Unique identifier of the referenced CartDiscount.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a>.</p>
      */
 
     public String getId() {
@@ -64,7 +64,7 @@ public class CartDiscountReferenceImpl implements CartDiscountReference, ModelBa
     }
 
     /**
-     *  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>
+     *  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with <span>Reference Expansion</span> for CartDiscounts.</p>
      */
 
     public com.commercetools.api.models.cart_discount.CartDiscount getObj() {

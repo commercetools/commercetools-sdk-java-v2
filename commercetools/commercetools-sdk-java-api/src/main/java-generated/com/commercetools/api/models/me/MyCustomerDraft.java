@@ -40,7 +40,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
         io.vrap.rmf.base.client.Draft<MyCustomerDraft> {
 
     /**
-     *  <p>Email address of the Customer that is unique for an entire Project or Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
+     *  <p>Email address of the Customer that is <span>unique</span> for an entire Project or Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
      * @return email
      */
     @NotNull
@@ -152,7 +152,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>Preferred language of the Customer. Must be one of the languages supported by the Project.</p>
+     *  <p>Preferred language of the Customer. Must be one of the languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return locale
      */
 
@@ -160,7 +160,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
     public String getLocale();
 
     /**
-     *  <p>Sets the Stores for the Customer.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> for the Customer.</p>
      * @return stores
      */
     @Valid
@@ -168,7 +168,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
     public List<StoreResourceIdentifier> getStores();
 
     /**
-     *  <p>Email address of the Customer that is unique for an entire Project or Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
+     *  <p>Email address of the Customer that is <span>unique</span> for an entire Project or Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
      * @param email value to be set
      */
 
@@ -274,14 +274,14 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
     public void setCustom(final CustomFieldsDraft custom);
 
     /**
-     *  <p>Preferred language of the Customer. Must be one of the languages supported by the Project.</p>
+     *  <p>Preferred language of the Customer. Must be one of the languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param locale value to be set
      */
 
     public void setLocale(final String locale);
 
     /**
-     *  <p>Sets the Stores for the Customer.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> for the Customer.</p>
      * @param stores values to be set
      */
 
@@ -289,7 +289,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
     public void setStores(final StoreResourceIdentifier... stores);
 
     /**
-     *  <p>Sets the Stores for the Customer.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> for the Customer.</p>
      * @param stores values to be set
      */
 

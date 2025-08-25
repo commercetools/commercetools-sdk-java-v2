@@ -21,7 +21,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Deletes a Recurrence Policy in the Project.</p>
- *  <p>A Recurrence Policy can be deleted only if it is not referenced by any Embedded Price, Standalone Price, or (Custom) Line Item, otherwise a ReferenceExists error is returned.</p>
+ *  <p>A Recurrence Policy can be deleted only if it is not referenced by any Embedded Price, Standalone Price, or (Custom) Line Item, otherwise a <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferenceExistsError" rel="nofollow">ReferenceExists</a> error is returned.</p>
  *
  * <hr>
  * <div class=code-example>

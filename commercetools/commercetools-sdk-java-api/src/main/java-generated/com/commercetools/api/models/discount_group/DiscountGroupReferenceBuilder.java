@@ -30,7 +30,7 @@ public class DiscountGroupReferenceBuilder implements Builder<DiscountGroupRefer
     private com.commercetools.api.models.discount_group.DiscountGroup obj;
 
     /**
-     *  <p>Unique identifier of the referenced DiscountGroup.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroup" rel="nofollow">DiscountGroup</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class DiscountGroupReferenceBuilder implements Builder<DiscountGroupRefer
     }
 
     /**
-     *  <p>Contains the representation of the expanded DiscountGroup. Only present in responses to requests with Reference Expansion for DiscountGroups.</p>
+     *  <p>Contains the representation of the expanded DiscountGroup. Only present in responses to requests with <span>Reference Expansion</span> for DiscountGroups.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class DiscountGroupReferenceBuilder implements Builder<DiscountGroupRefer
     }
 
     /**
-     *  <p>Contains the representation of the expanded DiscountGroup. Only present in responses to requests with Reference Expansion for DiscountGroups.</p>
+     *  <p>Contains the representation of the expanded DiscountGroup. Only present in responses to requests with <span>Reference Expansion</span> for DiscountGroups.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class DiscountGroupReferenceBuilder implements Builder<DiscountGroupRefer
     }
 
     /**
-     *  <p>Contains the representation of the expanded DiscountGroup. Only present in responses to requests with Reference Expansion for DiscountGroups.</p>
+     *  <p>Contains the representation of the expanded DiscountGroup. Only present in responses to requests with <span>Reference Expansion</span> for DiscountGroups.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class DiscountGroupReferenceBuilder implements Builder<DiscountGroupRefer
     }
 
     /**
-     *  <p>Unique identifier of the referenced DiscountGroup.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroup" rel="nofollow">DiscountGroup</a>.</p>
      * @return id
      */
 
@@ -86,7 +86,7 @@ public class DiscountGroupReferenceBuilder implements Builder<DiscountGroupRefer
     }
 
     /**
-     *  <p>Contains the representation of the expanded DiscountGroup. Only present in responses to requests with Reference Expansion for DiscountGroups.</p>
+     *  <p>Contains the representation of the expanded DiscountGroup. Only present in responses to requests with <span>Reference Expansion</span> for DiscountGroups.</p>
      * @return obj
      */
 

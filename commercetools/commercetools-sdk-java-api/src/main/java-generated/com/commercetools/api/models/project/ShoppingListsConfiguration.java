@@ -29,7 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ShoppingListsConfiguration {
 
     /**
-     *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the ShoppingListDraft. This field may not be present on Projects created before January 2020.</p>
+     *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListDraft" rel="nofollow">ShoppingListDraft</a>. This field may not be present on Projects created before January 2020.</p>
      * @return deleteDaysAfterLastModification
      */
 
@@ -37,7 +37,7 @@ public interface ShoppingListsConfiguration {
     public Long getDeleteDaysAfterLastModification();
 
     /**
-     *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the ShoppingListDraft. This field may not be present on Projects created before January 2020.</p>
+     *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListDraft" rel="nofollow">ShoppingListDraft</a>. This field may not be present on Projects created before January 2020.</p>
      * @param deleteDaysAfterLastModification value to be set
      */
 

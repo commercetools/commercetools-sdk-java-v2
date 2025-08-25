@@ -51,7 +51,7 @@ public class MyCartChangeLineItemsOrderActionImpl implements MyCartChangeLineIte
     }
 
     /**
-     *  <p>All existing LineItem <code>id</code>s of the Cart in the desired new order.</p>
+     *  <p>All existing <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>id</code>s of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> in the desired new order.</p>
      */
 
     public java.util.List<String> getLineItemOrder() {

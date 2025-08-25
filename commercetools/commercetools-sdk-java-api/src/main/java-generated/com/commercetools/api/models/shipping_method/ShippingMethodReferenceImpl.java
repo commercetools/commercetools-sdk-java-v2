@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Reference to a ShippingMethod.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingMethodReferenceImpl implements ShippingMethodReference, ModelBase {
@@ -56,7 +56,7 @@ public class ShippingMethodReferenceImpl implements ShippingMethodReference, Mod
     }
 
     /**
-     *  <p>Unique identifier of the referenced ShippingMethod.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a>.</p>
      */
 
     public String getId() {
@@ -64,7 +64,7 @@ public class ShippingMethodReferenceImpl implements ShippingMethodReference, Mod
     }
 
     /**
-     *  <p>Contains the representation of the expanded ShippingMethod. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
+     *  <p>Contains the representation of the expanded ShippingMethod. Only present in responses to requests with <span>Reference Expansion</span> for ShippingMethods.</p>
      */
 
     public com.commercetools.api.models.shipping_method.ShippingMethod getObj() {

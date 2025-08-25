@@ -29,7 +29,7 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
     private com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion;
 
     /**
-     *  <p>Product that was excluded from the Product Selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that was excluded from the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a>.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Product that was excluded from the Product Selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that was excluded from the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a>.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Product that was excluded from the Product Selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that was excluded from the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a>.</p>
      * @param product value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Product Variant Exclusion after the Exclude Product update action.</p>
+     *  <p>Product Variant Exclusion after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionExcludeProductAction" rel="nofollow">Exclude Product</a> update action.</p>
      * @param builder function to build the variantExclusion value
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Product Variant Exclusion after the Exclude Product update action.</p>
+     *  <p>Product Variant Exclusion after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionExcludeProductAction" rel="nofollow">Exclude Product</a> update action.</p>
      * @param builder function to build the variantExclusion value
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Product Variant Exclusion after the Exclude Product update action.</p>
+     *  <p>Product Variant Exclusion after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionExcludeProductAction" rel="nofollow">Exclude Product</a> update action.</p>
      * @param variantExclusion value to be set
      * @return Builder
      */
@@ -104,7 +104,7 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Product that was excluded from the Product Selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that was excluded from the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a>.</p>
      * @return product
      */
 
@@ -113,7 +113,7 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Product Variant Exclusion after the Exclude Product update action.</p>
+     *  <p>Product Variant Exclusion after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionExcludeProductAction" rel="nofollow">Exclude Product</a> update action.</p>
      * @return variantExclusion
      */
 

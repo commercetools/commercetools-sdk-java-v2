@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>This action generates the PaymentMethodPaymentInterfaceSet Message.</p>
+ *  <p>This action generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodPaymentInterfaceSetMessage" rel="nofollow">PaymentMethodPaymentInterfaceSet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentMethodSetPaymentInterfaceActionImpl implements PaymentMethodSetPaymentInterfaceAction, ModelBase {

@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The request body to import OrderPatches. The data to be imported are represented by OrderPatchImport.</p>
+ *  <p>The request body to <a href="https://docs.commercetools.com/apis/ctp:import:endpoint:/{projectKey}/order-patches/import-containers/{importContainerKey}:POST" rel="nofollow">import OrderPatches</a>. The data to be imported are represented by <a href="https://docs.commercetools.com/apis/ctp:import:type:OrderPatchImport" rel="nofollow">OrderPatchImport</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

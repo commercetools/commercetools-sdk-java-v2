@@ -46,7 +46,7 @@ public interface ProductPagedSearchResponse {
     public Long getTotal();
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @return offset
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface ProductPagedSearchResponse {
     public Integer getOffset();
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @return limit
      */
     @NotNull
@@ -62,7 +62,7 @@ public interface ProductPagedSearchResponse {
     public Integer getLimit();
 
     /**
-     *  <p>Results for facets when requested.</p>
+     *  <p>Results for <span>facets</span> when requested.</p>
      * @return facets
      */
     @NotNull
@@ -87,21 +87,21 @@ public interface ProductPagedSearchResponse {
     public void setTotal(final Long total);
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @param offset value to be set
      */
 
     public void setOffset(final Integer offset);
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @param limit value to be set
      */
 
     public void setLimit(final Integer limit);
 
     /**
-     *  <p>Results for facets when requested.</p>
+     *  <p>Results for <span>facets</span> when requested.</p>
      * @param facets values to be set
      */
 
@@ -109,7 +109,7 @@ public interface ProductPagedSearchResponse {
     public void setFacets(final ProductSearchFacetResult... facets);
 
     /**
-     *  <p>Results for facets when requested.</p>
+     *  <p>Results for <span>facets</span> when requested.</p>
      * @param facets values to be set
      */
 

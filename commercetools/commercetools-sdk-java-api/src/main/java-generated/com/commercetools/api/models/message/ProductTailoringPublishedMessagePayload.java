@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Product Tailoring Publish update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringPublishAction" rel="nofollow">Product Tailoring Publish</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Change Associate update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeAssociateAction" rel="nofollow">Change Associate</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitAssociateChangedMessageImpl implements BusinessUnitAssociateChangedMessage, ModelBase {
@@ -139,7 +139,7 @@ public class BusinessUnitAssociateChangedMessageImpl implements BusinessUnitAsso
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -155,7 +155,7 @@ public class BusinessUnitAssociateChangedMessageImpl implements BusinessUnitAsso
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -171,7 +171,7 @@ public class BusinessUnitAssociateChangedMessageImpl implements BusinessUnitAsso
     }
 
     /**
-     *  <p>The Associate that was updated.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> that was updated.</p>
      */
 
     public com.commercetools.api.models.business_unit.Associate getAssociate() {

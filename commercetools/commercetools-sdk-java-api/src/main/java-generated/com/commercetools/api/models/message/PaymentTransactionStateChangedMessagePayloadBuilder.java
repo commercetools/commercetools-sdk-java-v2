@@ -28,7 +28,7 @@ public class PaymentTransactionStateChangedMessagePayloadBuilder
     private com.commercetools.api.models.payment.TransactionState state;
 
     /**
-     *  <p>Unique identifier for the Transaction for which the Transaction State changed.</p>
+     *  <p>Unique identifier for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a> for which the <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">Transaction State</a> changed.</p>
      * @param transactionId value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class PaymentTransactionStateChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Transaction State after the Change Transaction State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">Transaction State</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentChangeTransactionStateAction" rel="nofollow">Change Transaction State</a> update action.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class PaymentTransactionStateChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Unique identifier for the Transaction for which the Transaction State changed.</p>
+     *  <p>Unique identifier for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a> for which the <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">Transaction State</a> changed.</p>
      * @return transactionId
      */
 
@@ -60,7 +60,7 @@ public class PaymentTransactionStateChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Transaction State after the Change Transaction State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">Transaction State</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentChangeTransactionStateAction" rel="nofollow">Change Transaction State</a> update action.</p>
      * @return state
      */
 

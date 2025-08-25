@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Produces the Line Item State Transition Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemStateTransitionMessage" rel="nofollow">Line Item State Transition</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderTransitionLineItemStateActionImpl
@@ -71,7 +71,7 @@ public class StagedOrderTransitionLineItemStateActionImpl
     }
 
     /**
-     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemId() {
@@ -79,7 +79,7 @@ public class StagedOrderTransitionLineItemStateActionImpl
     }
 
     /**
-     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemKey() {
@@ -87,7 +87,7 @@ public class StagedOrderTransitionLineItemStateActionImpl
     }
 
     /**
-     *  <p>Number of Line Items that should transition State.</p>
+     *  <p>Number of Line Items that should transition <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      */
 
     public Long getQuantity() {
@@ -95,7 +95,7 @@ public class StagedOrderTransitionLineItemStateActionImpl
     }
 
     /**
-     *  <p>State the Line Item should transition from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the Line Item should transition from.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getFromState() {
@@ -103,7 +103,7 @@ public class StagedOrderTransitionLineItemStateActionImpl
     }
 
     /**
-     *  <p>State the Line Item should transition to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the Line Item should transition to.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getToState() {
@@ -111,7 +111,7 @@ public class StagedOrderTransitionLineItemStateActionImpl
     }
 
     /**
-     *  <p>Date and time (UTC) to perform the State transition.</p>
+     *  <p>Date and time (UTC) to perform the <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition.</p>
      */
 
     public java.time.ZonedDateTime getActualTransitionDate() {

@@ -39,7 +39,7 @@ public class AttributeReferenceImpl implements AttributeReference, ModelBase {
     }
 
     /**
-     *  <p>The Attribute's <code>name</code> as given in its AttributeDefinition.</p>
+     *  <p>The Attribute's <code>name</code> as given in its <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      */
 
     public String getKey() {

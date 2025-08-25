@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Adding or updating a Custom Type on a PaymentMethodInfo generates the PaymentMethodInfoCustomTypeSet Message, removing one generates the PaymentMethodInfoCustomTypeRemoved Message.</p>
+ *  <p>Adding or updating a Custom Type on a PaymentMethodInfo generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoCustomTypeSetMessage" rel="nofollow">PaymentMethodInfoCustomTypeSet</a> Message, removing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoCustomTypeRemovedMessage" rel="nofollow">PaymentMethodInfoCustomTypeRemoved</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface MyPaymentSetMethodInfoCustomTypeAction extends MyPaymentUpdateA
     String SET_METHOD_INFO_CUSTOM_TYPE = "setMethodInfoCustomType";
 
     /**
-     *  <p>Defines the Type that extends the <code>paymentMethodInfo</code> with Custom Fields.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>paymentMethodInfo</code> with <span>Custom Fields</span>.</p>
      * @return type
      */
     @Valid
@@ -47,7 +47,7 @@ public interface MyPaymentSetMethodInfoCustomTypeAction extends MyPaymentUpdateA
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>paymentMethodInfo</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <code>paymentMethodInfo</code>.</p>
      * @return fields
      */
     @Valid
@@ -55,14 +55,14 @@ public interface MyPaymentSetMethodInfoCustomTypeAction extends MyPaymentUpdateA
     public FieldContainer getFields();
 
     /**
-     *  <p>Defines the Type that extends the <code>paymentMethodInfo</code> with Custom Fields.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>paymentMethodInfo</code> with <span>Custom Fields</span>.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>paymentMethodInfo</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <code>paymentMethodInfo</code>.</p>
      * @param fields value to be set
      */
 

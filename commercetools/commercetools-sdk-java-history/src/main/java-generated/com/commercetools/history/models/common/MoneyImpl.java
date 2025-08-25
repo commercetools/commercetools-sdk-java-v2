@@ -51,7 +51,7 @@ public class MoneyImpl implements Money, ModelBase {
     }
 
     /**
-     *  <p>Currency code compliant to ISO 4217.</p>
+     *  <p>Currency code compliant to <span>ISO 4217</span>.</p>
      */
 
     public String getCurrencyCode() {

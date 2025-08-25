@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Adding a Transaction to a Payment generates the PaymentTransactionAdded Message. Once a Transaction is added to the Payment, it can no longer be updated or deleted using the My Payments API.</p>
+ *  <p>Adding a Transaction to a Payment generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentTransactionAddedMessage" rel="nofollow">PaymentTransactionAdded</a> Message. Once a Transaction is added to the Payment, it can no longer be updated or deleted using the My Payments API.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyPaymentAddTransactionActionImpl implements MyPaymentAddTransactionAction, ModelBase {

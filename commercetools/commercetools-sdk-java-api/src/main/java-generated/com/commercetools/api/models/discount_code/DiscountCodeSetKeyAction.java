@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>This action generates a DiscountCodeKeySet Message.</p>
+ *  <p>This action generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeKeySetMessage" rel="nofollow">DiscountCodeKeySet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

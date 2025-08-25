@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The <code>data</code> of the Import Container Deleted Event.</p>
+ *  <p>The <code>data</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ImportContainerDeletedEvent" rel="nofollow">Import Container Deleted Event</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -19,8 +19,8 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set Meta Title on Categories.</li>
- *   <li>Set Meta Title on Products.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CategorySetMetaTitleAction" rel="nofollow">Set Meta Title</a> on Categories.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetMetaTitleAction" rel="nofollow">Set Meta Title</a> on Products.</li>
  *  </ul>
  *
  * <hr>

@@ -69,7 +69,7 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
     }
 
     /**
-     *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
+     *  <p>Unique identifiers of the Line Items for which the Price or <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> has changed.</p>
      * @param lineItems value to be set
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
     }
 
     /**
-     *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
+     *  <p>Unique identifiers of the Line Items for which the Price or <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> has changed.</p>
      * @param lineItems value to be set
      * @return Builder
      */
@@ -91,7 +91,7 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
     }
 
     /**
-     *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
+     *  <p>Unique identifiers of the Line Items for which the Price or <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> has changed.</p>
      * @param lineItems value to be set
      * @return Builder
      */
@@ -105,7 +105,7 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
     }
 
     /**
-     *  <p><code>true</code> if the ShippingRate has changed.</p>
+     *  <p><code>true</code> if the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> has changed.</p>
      * @param shipping value to be set
      * @return Builder
      */
@@ -134,7 +134,7 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
     }
 
     /**
-     *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
+     *  <p>Unique identifiers of the Line Items for which the Price or <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> has changed.</p>
      * @return lineItems
      */
 
@@ -143,7 +143,7 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
     }
 
     /**
-     *  <p><code>true</code> if the ShippingRate has changed.</p>
+     *  <p><code>true</code> if the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> has changed.</p>
      * @return shipping
      */
 

@@ -20,12 +20,12 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Retrieves an Order with the provided <code>id</code> in a Store for the authenticated Customer or anonymous user. Returns a <code>200</code> status if successful.</p>
- *  <p>A ResourceNotFound error is returned in the following scenarios:</p>
+ *  <p>Retrieves an Order with the provided <code>id</code> in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> for the authenticated Customer or anonymous user. Returns a <code>200</code> status if successful.</p>
+ *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error is returned in the following scenarios:</p>
  *  <ul>
  *   <li>If no Orders exists in the Store with the provided <code>id</code>.</li>
  *   <li>If an Order exists but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store.</li>
- *   <li>If an Order exists but does not have a <code>customerId</code> that matches the customer:{id} scope, or <code>anonymousId</code> that matches the anonymous_id:{id} scope.</li>
+ *   <li>If an Order exists but does not have a <code>customerId</code> that matches the <span>customer:{id}</span> scope, or <code>anonymousId</code> that matches the <span>anonymous_id:{id}</span> scope.</li>
  *  </ul>
  *
  * <hr>

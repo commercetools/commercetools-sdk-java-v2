@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Publishes the <code>staged</code> data of the ProductTailoring to <code>current</code>. Sets <code>hasStagedChanges</code> to <code>false</code>. Generates the ProductTailoringPublished Message.</p>
+ *  <p>Publishes the <code>staged</code> data of the ProductTailoring to <code>current</code>. Sets <code>hasStagedChanges</code> to <code>false</code>. Generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringPublishedMessage" rel="nofollow">ProductTailoringPublished</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

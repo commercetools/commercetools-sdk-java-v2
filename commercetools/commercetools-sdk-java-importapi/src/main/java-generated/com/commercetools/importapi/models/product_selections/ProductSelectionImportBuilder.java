@@ -39,7 +39,7 @@ public class ProductSelectionImportBuilder implements Builder<ProductSelectionIm
     private java.util.List<com.commercetools.importapi.models.product_selections.ProductSelectionAssignment> assignments;
 
     /**
-     *  <p>User-defined unique identifier. If an ProductSelection with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If an <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">ProductSelection</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -228,7 +228,7 @@ public class ProductSelectionImportBuilder implements Builder<ProductSelectionIm
     }
 
     /**
-     *  <p>User-defined unique identifier. If an ProductSelection with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If an <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">ProductSelection</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @return key
      */
 

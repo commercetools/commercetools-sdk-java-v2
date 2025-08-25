@@ -86,7 +86,7 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
     }
 
     /**
-     *  <p>Unique name for the ShippingMethod within a Project.</p>
+     *  <p>Unique name for the ShippingMethod within a <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      */
 
     public String getName() {
@@ -118,7 +118,7 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
     }
 
     /**
-     *  <p>TaxCategory for all ZoneRates of the ShippingMethod.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> for all ZoneRates of the ShippingMethod.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
@@ -126,7 +126,7 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
     }
 
     /**
-     *  <p>Defines ShippingRates (prices) for specific zones.</p>
+     *  <p>Defines <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> (prices) for specific zones.</p>
      */
 
     public java.util.List<com.commercetools.api.models.shipping_method.ZoneRateDraft> getZoneRates() {
@@ -142,7 +142,7 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
     }
 
     /**
-     *  <p>If set to <code>true</code>, the ShippingMethod will be the Project's default ShippingMethod. When retrieving matching Shipping Methods, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p>
+     *  <p>If set to <code>true</code>, the ShippingMethod will be the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>'s default ShippingMethod. When retrieving <span>matching Shipping Methods</span>, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p>
      */
 
     public Boolean getIsDefault() {
@@ -150,7 +150,7 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
     }
 
     /**
-     *  <p>Valid Cart predicate to select a ShippingMethod for a Cart.</p>
+     *  <p>Valid <span>Cart predicate</span> to select a ShippingMethod for a Cart.</p>
      */
 
     public String getPredicate() {

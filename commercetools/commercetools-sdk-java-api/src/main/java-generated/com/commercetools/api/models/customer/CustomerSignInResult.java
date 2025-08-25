@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface CustomerSignInResult {
 
     /**
-     *  <p>Customer signed up or signed in after authentication.</p>
+     *  <p>Customer <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers:POST" rel="nofollow">signed up</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/login:POST" rel="nofollow">signed in</a> after authentication.</p>
      * @return customer
      */
     @NotNull
@@ -51,7 +51,7 @@ public interface CustomerSignInResult {
     public Cart getCart();
 
     /**
-     *  <p>Customer signed up or signed in after authentication.</p>
+     *  <p>Customer <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers:POST" rel="nofollow">signed up</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/login:POST" rel="nofollow">signed in</a> after authentication.</p>
      * @param customer value to be set
      */
 

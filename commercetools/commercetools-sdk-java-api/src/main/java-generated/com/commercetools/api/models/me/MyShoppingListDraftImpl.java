@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>A MyShoppingListDraft is the object submitted as payload to the Create MyShoppingList request. The <code>customer</code> field of ShoppingList is automatically set with a password flow token. The <code>anonymousId</code> is automatically set with a token for an anonymous session. The <code>key</code> and <code>slug</code> fields can not be set.</p>
+ *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:MyShoppingListDraft" rel="nofollow">MyShoppingListDraft</a> is the object submitted as payload to the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/shopping-lists:POST" rel="nofollow">Create MyShoppingList request</a>. The <code>customer</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a> is automatically set with a <span>password flow token</span>. The <code>anonymousId</code> is automatically set with a <span>token for an anonymous session</span>. The <code>key</code> and <code>slug</code> fields can not be set.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
@@ -63,7 +63,7 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
     }
 
     /**
-     *  <p>Name of the ShoppingList.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -79,7 +79,7 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
     }
 
     /**
-     *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">Line Items</a> (containing Products) to add to the ShoppingList.</p>
      */
 
     public java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> getLineItems() {
@@ -87,7 +87,7 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
     }
 
     /**
-     *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">Line Items</a> (containing text values) to add to the ShoppingList.</p>
      */
 
     public java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> getTextLineItems() {
@@ -103,7 +103,7 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
     }
 
     /**
-     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the default value configured in the Project is used.</p>
+     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListsConfiguration" rel="nofollow">default value</a> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is used.</p>
      */
 
     public Long getDeleteDaysAfterLastModification() {
@@ -111,7 +111,7 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
     }
 
     /**
-     *  <p>Assigns the new ShoppingList to the Store. The Store assignment can not be modified.</p>
+     *  <p>Assigns the new ShoppingList to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. The Store assignment can not be modified.</p>
      */
 
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {

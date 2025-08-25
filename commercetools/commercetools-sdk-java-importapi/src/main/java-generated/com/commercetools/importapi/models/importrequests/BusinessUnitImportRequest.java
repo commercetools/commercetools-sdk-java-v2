@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The request body to import Business Units. Contains data for Business Units to be created or updated in a Project.</p>
+ *  <p>The request body to <a href="https://docs.commercetools.com/apis/ctp:import:endpoint:/{projectKey}/business-units/import-containers/{importContainerKey}:POST" rel="nofollow">import Business Units</a>. Contains data for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Units</a> to be created or updated in a Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface BusinessUnitImportRequest extends ImportRequest {
     String BUSINESS_UNIT = "business-unit";
 
     /**
-     *  <p>The Business Unit import resources of this request. Can contain CompanyBusinessUnitImport or DivisionBusinessUnitImport.</p>
+     *  <p>The Business Unit import resources of this request. Can contain <a href="https://docs.commercetools.com/apis/ctp:import:type:CompanyBusinessUnitImport" rel="nofollow">CompanyBusinessUnitImport</a> or <a href="https://docs.commercetools.com/apis/ctp:import:type:DivisionBusinessUnitImport" rel="nofollow">DivisionBusinessUnitImport</a>.</p>
      * @return resources
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface BusinessUnitImportRequest extends ImportRequest {
     public List<BusinessUnitImport> getResources();
 
     /**
-     *  <p>The Business Unit import resources of this request. Can contain CompanyBusinessUnitImport or DivisionBusinessUnitImport.</p>
+     *  <p>The Business Unit import resources of this request. Can contain <a href="https://docs.commercetools.com/apis/ctp:import:type:CompanyBusinessUnitImport" rel="nofollow">CompanyBusinessUnitImport</a> or <a href="https://docs.commercetools.com/apis/ctp:import:type:DivisionBusinessUnitImport" rel="nofollow">DivisionBusinessUnitImport</a>.</p>
      * @param resources values to be set
      */
 
@@ -58,7 +58,7 @@ public interface BusinessUnitImportRequest extends ImportRequest {
     public void setResources(final BusinessUnitImport... resources);
 
     /**
-     *  <p>The Business Unit import resources of this request. Can contain CompanyBusinessUnitImport or DivisionBusinessUnitImport.</p>
+     *  <p>The Business Unit import resources of this request. Can contain <a href="https://docs.commercetools.com/apis/ctp:import:type:CompanyBusinessUnitImport" rel="nofollow">CompanyBusinessUnitImport</a> or <a href="https://docs.commercetools.com/apis/ctp:import:type:DivisionBusinessUnitImport" rel="nofollow">DivisionBusinessUnitImport</a>.</p>
      * @param resources values to be set
      */
 

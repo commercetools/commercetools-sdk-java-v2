@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Generated after a Product Discount is successfully applied to a StandalonePrice.</p>
+ *  <p>Generated after a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">Product Discount</a> is successfully applied to a StandalonePrice.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -45,7 +45,7 @@ public interface StandalonePriceDiscountSetMessage extends Message {
     String STANDALONE_PRICE_DISCOUNT_SET = "StandalonePriceDiscountSet";
 
     /**
-     *  <p>The new <code>discounted</code> value of the updated StandalonePrice.</p>
+     *  <p>The new <code>discounted</code> value of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @return discounted
      */
     @Valid
@@ -53,7 +53,7 @@ public interface StandalonePriceDiscountSetMessage extends Message {
     public DiscountedPrice getDiscounted();
 
     /**
-     *  <p>The new <code>discounted</code> value of the updated StandalonePrice.</p>
+     *  <p>The new <code>discounted</code> value of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param discounted value to be set
      */
 

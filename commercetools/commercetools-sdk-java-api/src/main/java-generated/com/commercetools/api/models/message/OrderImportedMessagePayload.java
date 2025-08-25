@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Order Import.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/import:POST" rel="nofollow">Order Import</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface OrderImportedMessagePayload extends OrderMessagePayload {
     String ORDER_IMPORTED = "OrderImported";
 
     /**
-     *  <p>Order that was imported.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that was imported.</p>
      * @return order
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface OrderImportedMessagePayload extends OrderMessagePayload {
     public Order getOrder();
 
     /**
-     *  <p>Order that was imported.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that was imported.</p>
      * @param order value to be set
      */
 

@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Field type for CentPrecisionMoney values.</p>
+ *  <p>Field type for <a href="https://docs.commercetools.com/apis/ctp:api:type:CentPrecisionMoney" rel="nofollow">CentPrecisionMoney</a> values.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

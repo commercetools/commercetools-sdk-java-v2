@@ -19,8 +19,8 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Change the state of CustomLineItem according to allowed transitions on Orders.</li>
- *   <li>Change the state of CustomLineItem according to allowed transitions on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderTransitionCustomLineItemStateAction" rel="nofollow">Change the state of CustomLineItem according to allowed transitions</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderTransitionCustomLineItemStateAction" rel="nofollow">Change the state of CustomLineItem according to allowed transitions</a> on Staged Orders.</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -94,7 +94,7 @@ public class TransitionCustomLineItemStateChangeImpl implements TransitionCustom
     }
 
     /**
-     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      */
 
     public String getLineItemId() {
@@ -102,7 +102,7 @@ public class TransitionCustomLineItemStateChangeImpl implements TransitionCustom
     }
 
     /**
-     *  <p><code>id</code> of the State involved in the transition.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> involved in the transition.</p>
      */
 
     public String getStateId() {

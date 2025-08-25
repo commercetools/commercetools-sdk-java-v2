@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Produces the ProductPriceExternalDiscountSet Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPriceExternalDiscountSetMessage" rel="nofollow">ProductPriceExternalDiscountSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
     String SET_DISCOUNTED_PRICE = "setDiscountedPrice";
 
     /**
-     *  <p>The <code>id</code> of the Price to set the Discount.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> to set the Discount.</p>
      * @return priceId
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
     public Boolean getStaged();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. The referenced ProductDiscount must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. The referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
      * @return discounted
      */
     @Valid
@@ -64,7 +64,7 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
     public DiscountedPriceDraft getDiscounted();
 
     /**
-     *  <p>The <code>id</code> of the Price to set the Discount.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> to set the Discount.</p>
      * @param priceId value to be set
      */
 
@@ -78,7 +78,7 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
     public void setStaged(final Boolean staged);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. The referenced ProductDiscount must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. The referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
      * @param discounted value to be set
      */
 

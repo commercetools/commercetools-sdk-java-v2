@@ -51,7 +51,7 @@ public class MyCustomerSetLocaleActionImpl implements MyCustomerSetLocaleAction,
     }
 
     /**
-     *  <p>Value to set. Must be one of the languages supported by the Project.</p>
+     *  <p>Value to set. Must be one of the languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      */
 
     public String getLocale() {

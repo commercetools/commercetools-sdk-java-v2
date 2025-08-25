@@ -16,8 +16,8 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Updates the label of a single enum <code>value</code> in an AttributeEnumType AttributeDefinition, or AttributeSetType of AttributeEnumType AttributeDefinition.</p>
- *  <p>All Products will be updated to the new label in an eventually consistent way.</p>
+ *  <p>Updates the label of a single enum <code>value</code> in an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeEnumType" rel="nofollow">AttributeEnumType</a> AttributeDefinition, or <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeSetType" rel="nofollow">AttributeSetType</a> of AttributeEnumType AttributeDefinition.</p>
+ *  <p>All Products will be updated to the new label in an <span>eventually consistent</span> way.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

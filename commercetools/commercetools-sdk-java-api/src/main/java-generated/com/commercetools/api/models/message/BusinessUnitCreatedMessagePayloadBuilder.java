@@ -25,7 +25,7 @@ public class BusinessUnitCreatedMessagePayloadBuilder implements Builder<Busines
     private com.commercetools.api.models.business_unit.BusinessUnit businessUnit;
 
     /**
-     *  <p>The Business Unit that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> that was created.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class BusinessUnitCreatedMessagePayloadBuilder implements Builder<Busines
     }
 
     /**
-     *  <p>The Business Unit that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> that was created.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class BusinessUnitCreatedMessagePayloadBuilder implements Builder<Busines
     }
 
     /**
-     *  <p>The Business Unit that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> that was created.</p>
      * @return businessUnit
      */
 

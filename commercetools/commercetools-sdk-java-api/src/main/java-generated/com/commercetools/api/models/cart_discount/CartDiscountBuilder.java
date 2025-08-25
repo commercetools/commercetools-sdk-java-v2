@@ -310,7 +310,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
-     *  <p>Valid Cart Predicate.</p>
+     *  <p>Valid <span>Cart Predicate</span>.</p>
      * @param cartPredicate value to be set
      * @return Builder
      */
@@ -361,8 +361,8 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <ul>
-     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
-     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *   <li>If a value exists, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
      *  </ul>
      * @param stores value to be set
      * @return Builder
@@ -375,8 +375,8 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <ul>
-     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
-     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *   <li>If a value exists, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
      *  </ul>
      * @param stores value to be set
      * @return Builder
@@ -390,8 +390,8 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <ul>
-     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
-     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *   <li>If a value exists, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
      *  </ul>
      * @param stores value to be set
      * @return Builder
@@ -407,8 +407,8 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <ul>
-     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
-     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *   <li>If a value exists, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
      *  </ul>
      * @param builder function to build the stores value
      * @return Builder
@@ -425,8 +425,8 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <ul>
-     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
-     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *   <li>If a value exists, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
      *  </ul>
      * @param builder function to build the stores value
      * @return Builder
@@ -441,8 +441,8 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <ul>
-     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
-     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *   <li>If a value exists, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
      *  </ul>
      * @param builder function to build the stores value
      * @return Builder
@@ -455,8 +455,8 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <ul>
-     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
-     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *   <li>If a value exists, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
      *  </ul>
      * @param builder function to build the stores value
      * @return Builder
@@ -501,7 +501,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
-     *  <p>Indicates if the Discount is used in connection with a DiscountCode.</p>
+     *  <p>Indicates if the Discount is used in connection with a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
      * @param requiresDiscountCode value to be set
      * @return Builder
      */
@@ -757,7 +757,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
-     *  <p>Valid Cart Predicate.</p>
+     *  <p>Valid <span>Cart Predicate</span>.</p>
      * @return cartPredicate
      */
 
@@ -789,8 +789,8 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <ul>
-     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
-     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *   <li>If a value exists, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
      *  </ul>
      * @return stores
      */
@@ -829,7 +829,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
-     *  <p>Indicates if the Discount is used in connection with a DiscountCode.</p>
+     *  <p>Indicates if the Discount is used in connection with a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
      * @return requiresDiscountCode
      */
 

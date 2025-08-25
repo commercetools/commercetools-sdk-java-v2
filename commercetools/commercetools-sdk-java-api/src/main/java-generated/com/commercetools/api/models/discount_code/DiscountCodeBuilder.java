@@ -284,7 +284,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the DiscountCode added to the Cart to apply the related CartDiscounts.</p>
+     *  <p>User-defined unique identifier of the DiscountCode <span>added to the Cart</span> to apply the related <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a>.</p>
      * @param code value to be set
      * @return Builder
      */
@@ -687,7 +687,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the DiscountCode added to the Cart to apply the related CartDiscounts.</p>
+     *  <p>User-defined unique identifier of the DiscountCode <span>added to the Cart</span> to apply the related <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a>.</p>
      * @return code
      */
 

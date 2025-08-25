@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Add InterfaceInteraction update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentAddInterfaceInteractionAction" rel="nofollow">Add InterfaceInteraction</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface PaymentInteractionAddedMessagePayload extends MessagePayload {
     String PAYMENT_INTERACTION_ADDED = "PaymentInteractionAdded";
 
     /**
-     *  <p>The interface interaction that was added to the Payment.</p>
+     *  <p>The interface interaction that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p>
      * @return interaction
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface PaymentInteractionAddedMessagePayload extends MessagePayload {
     public CustomFields getInteraction();
 
     /**
-     *  <p>The interface interaction that was added to the Payment.</p>
+     *  <p>The interface interaction that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p>
      * @param interaction value to be set
      */
 

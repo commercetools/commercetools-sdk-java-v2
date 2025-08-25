@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Setting a company name produces the CustomerCompanyNameSet Message.</p>
+ *  <p>Setting a company name produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerCompanyNameSetMessage" rel="nofollow">CustomerCompanyNameSet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetCompanyNameActionImpl implements CustomerSetCompanyNameAction, ModelBase {

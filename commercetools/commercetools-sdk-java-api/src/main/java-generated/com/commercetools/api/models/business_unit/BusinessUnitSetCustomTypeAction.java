@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Adding or updating a Custom Type on a Business Unit generates the BusinessUnitCustomTypeSet Message, removing one generates the BusinessUnitCustomTypeRemoved Message.</p>
+ *  <p>Adding or updating a Custom Type on a Business Unit generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitCustomTypeSetMessage" rel="nofollow">BusinessUnitCustomTypeSet</a> Message, removing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitCustomTypeRemovedMessage" rel="nofollow">BusinessUnitCustomTypeRemoved</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface BusinessUnitSetCustomTypeAction extends BusinessUnitUpdateActio
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
-     *  <p>Defines the Type that extends the BusinessUnit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the BusinessUnit.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the BusinessUnit with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the BusinessUnit.</p>
      * @return type
      */
     @Valid
@@ -47,7 +47,7 @@ public interface BusinessUnitSetCustomTypeAction extends BusinessUnitUpdateActio
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields for the BusinessUnit.</p>
+     *  <p>Sets the <span>Custom Fields</span> for the BusinessUnit.</p>
      * @return fields
      */
     @Valid
@@ -55,14 +55,14 @@ public interface BusinessUnitSetCustomTypeAction extends BusinessUnitUpdateActio
     public FieldContainer getFields();
 
     /**
-     *  <p>Defines the Type that extends the BusinessUnit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the BusinessUnit.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the BusinessUnit with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the BusinessUnit.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields for the BusinessUnit.</p>
+     *  <p>Sets the <span>Custom Fields</span> for the BusinessUnit.</p>
      * @param fields value to be set
      */
 

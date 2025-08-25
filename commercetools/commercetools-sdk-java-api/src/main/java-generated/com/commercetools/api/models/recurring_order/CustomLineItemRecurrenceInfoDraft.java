@@ -35,7 +35,7 @@ public interface CustomLineItemRecurrenceInfoDraft
         extends io.vrap.rmf.base.client.Draft<CustomLineItemRecurrenceInfoDraft> {
 
     /**
-     *  <p>ResourceIdentifier to a RecurrencePolicy.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a RecurrencePolicy.</p>
      * @return recurrencePolicy
      */
     @NotNull
@@ -44,7 +44,7 @@ public interface CustomLineItemRecurrenceInfoDraft
     public RecurrencePolicyResourceIdentifier getRecurrencePolicy();
 
     /**
-     *  <p>ResourceIdentifier to a RecurrencePolicy.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a RecurrencePolicy.</p>
      * @param recurrencePolicy value to be set
      */
 

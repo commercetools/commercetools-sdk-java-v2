@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>KeyReference to a Store.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:KeyReference" rel="nofollow">KeyReference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface StoreKeyReference extends KeyReference {
     String STORE = "store";
 
     /**
-     *  <p>Unique and immutable key of the referenced Store.</p>
+     *  <p>Unique and immutable key of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @return key
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface StoreKeyReference extends KeyReference {
     public String getKey();
 
     /**
-     *  <p>Unique and immutable key of the referenced Store.</p>
+     *  <p>Unique and immutable key of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param key value to be set
      */
 

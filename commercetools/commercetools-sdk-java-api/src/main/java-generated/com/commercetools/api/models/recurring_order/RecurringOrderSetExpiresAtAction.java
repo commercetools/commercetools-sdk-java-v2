@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Setting the expiration date and time generates the RecurringOrderExpiresAtSet Message.</p>
+ *  <p>Setting the expiration date and time generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderExpiresAtSetMessage" rel="nofollow">RecurringOrderExpiresAtSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,7 +37,7 @@ public interface RecurringOrderSetExpiresAtAction extends RecurringOrderUpdateAc
 
     /**
      *  <p>Date and time (UTC) the Recurring Order should expire. If empty, any existing value will be removed.</p>
-     *  <p>If the date or time is extended or removed when the RecurringOrderState is <code>Expired</code>, the state will be updated to <code>Active</code>.</p>
+     *  <p>If the date or time is extended or removed when the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderState" rel="nofollow">RecurringOrderState</a> is <code>Expired</code>, the state will be updated to <code>Active</code>.</p>
      * @return expiresAt
      */
 
@@ -46,7 +46,7 @@ public interface RecurringOrderSetExpiresAtAction extends RecurringOrderUpdateAc
 
     /**
      *  <p>Date and time (UTC) the Recurring Order should expire. If empty, any existing value will be removed.</p>
-     *  <p>If the date or time is extended or removed when the RecurringOrderState is <code>Expired</code>, the state will be updated to <code>Active</code>.</p>
+     *  <p>If the date or time is extended or removed when the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderState" rel="nofollow">RecurringOrderState</a> is <code>Expired</code>, the state will be updated to <code>Active</code>.</p>
      * @param expiresAt value to be set
      */
 

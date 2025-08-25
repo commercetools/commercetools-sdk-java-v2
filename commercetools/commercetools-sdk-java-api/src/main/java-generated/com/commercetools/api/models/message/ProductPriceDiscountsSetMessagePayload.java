@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a Price is updated due to a Product Discount.</p>
+ *  <p>Generated after a Price is updated due to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">Product Discount</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface ProductPriceDiscountsSetMessagePayload extends MessagePayload {
     String PRODUCT_PRICE_DISCOUNTS_SET = "ProductPriceDiscountsSet";
 
     /**
-     *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     *  <p>Array containing details about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were updated.</p>
      * @return updatedPrices
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface ProductPriceDiscountsSetMessagePayload extends MessagePayload {
     public List<ProductPriceDiscountsSetUpdatedPrice> getUpdatedPrices();
 
     /**
-     *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     *  <p>Array containing details about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were updated.</p>
      * @param updatedPrices values to be set
      */
 
@@ -57,7 +57,7 @@ public interface ProductPriceDiscountsSetMessagePayload extends MessagePayload {
     public void setUpdatedPrices(final ProductPriceDiscountsSetUpdatedPrice... updatedPrices);
 
     /**
-     *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     *  <p>Array containing details about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were updated.</p>
      * @param updatedPrices values to be set
      */
 

@@ -141,7 +141,7 @@ public interface CartDiscount
     public CartDiscountValue getValue();
 
     /**
-     *  <p>Valid Cart Predicate.</p>
+     *  <p>Valid <span>Cart Predicate</span>.</p>
      * @return cartPredicate
      */
     @NotNull
@@ -169,8 +169,8 @@ public interface CartDiscount
 
     /**
      *  <ul>
-     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
-     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *   <li>If a value exists, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
      *  </ul>
      * @return stores
      */
@@ -204,7 +204,7 @@ public interface CartDiscount
     public ZonedDateTime getValidUntil();
 
     /**
-     *  <p>Indicates if the Discount is used in connection with a DiscountCode.</p>
+     *  <p>Indicates if the Discount is used in connection with a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
      * @return requiresDiscountCode
      */
     @NotNull
@@ -315,7 +315,7 @@ public interface CartDiscount
     public void setValue(final CartDiscountValue value);
 
     /**
-     *  <p>Valid Cart Predicate.</p>
+     *  <p>Valid <span>Cart Predicate</span>.</p>
      * @param cartPredicate value to be set
      */
 
@@ -340,8 +340,8 @@ public interface CartDiscount
 
     /**
      *  <ul>
-     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
-     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *   <li>If a value exists, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
      *  </ul>
      * @param stores values to be set
      */
@@ -351,8 +351,8 @@ public interface CartDiscount
 
     /**
      *  <ul>
-     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
-     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *   <li>If a value exists, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
      *  </ul>
      * @param stores values to be set
      */
@@ -381,7 +381,7 @@ public interface CartDiscount
     public void setValidUntil(final ZonedDateTime validUntil);
 
     /**
-     *  <p>Indicates if the Discount is used in connection with a DiscountCode.</p>
+     *  <p>Indicates if the Discount is used in connection with a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
      * @param requiresDiscountCode value to be set
      */
 

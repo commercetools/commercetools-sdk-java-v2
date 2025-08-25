@@ -16,7 +16,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The current status of ImportOperations in an ImportContainer.</p>
+ *  <p>The current status of <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperations</a> in an <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainer</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ImportSummary {
 
     /**
-     *  <p>The current ProcessingStates of ImportOperations in an ImportContainer.</p>
+     *  <p>The current <a href="https://docs.commercetools.com/apis/ctp:import:type:ProcessingState" rel="nofollow">ProcessingStates</a> of ImportOperations in an ImportContainer.</p>
      * @return states
      */
     @NotNull
@@ -51,7 +51,7 @@ public interface ImportSummary {
     public Long getTotal();
 
     /**
-     *  <p>The current ProcessingStates of ImportOperations in an ImportContainer.</p>
+     *  <p>The current <a href="https://docs.commercetools.com/apis/ctp:import:type:ProcessingState" rel="nofollow">ProcessingStates</a> of ImportOperations in an ImportContainer.</p>
      * @param states value to be set
      */
 

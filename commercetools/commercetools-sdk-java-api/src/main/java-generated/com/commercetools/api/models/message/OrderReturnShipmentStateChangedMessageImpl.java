@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set ReturnShipmentState update action on Orders and Order Edits.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetReturnShipmentStateAction" rel="nofollow">Set ReturnShipmentState</a> update action on <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">Order Edits</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderReturnShipmentStateChangedMessageImpl implements OrderReturnShipmentStateChangedMessage, ModelBase {
@@ -143,7 +143,7 @@ public class OrderReturnShipmentStateChangedMessageImpl implements OrderReturnSh
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -159,7 +159,7 @@ public class OrderReturnShipmentStateChangedMessageImpl implements OrderReturnSh
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -175,7 +175,7 @@ public class OrderReturnShipmentStateChangedMessageImpl implements OrderReturnSh
     }
 
     /**
-     *  <p>Unique identifier of the ReturnItem.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
      */
 
     public String getReturnItemId() {
@@ -183,7 +183,7 @@ public class OrderReturnShipmentStateChangedMessageImpl implements OrderReturnSh
     }
 
     /**
-     *  <p>State of the ReturnItem after the Set Return Shipment State update action.</p>
+     *  <p>State of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetReturnShipmentStateAction" rel="nofollow">Set Return Shipment State</a> update action.</p>
      */
 
     public com.commercetools.api.models.order.ReturnShipmentState getReturnShipmentState() {

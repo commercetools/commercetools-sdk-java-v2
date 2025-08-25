@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Change Value update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceChangeValueAction" rel="nofollow">Change Value</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceValueChangedMessageImpl implements StandalonePriceValueChangedMessage, ModelBase {
@@ -147,7 +147,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -163,7 +163,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -179,7 +179,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
     }
 
     /**
-     *  <p>The new value of the updated StandalonePrice.</p>
+     *  <p>The new value of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      */
 
     public com.commercetools.api.models.common.TypedMoney getValue() {
@@ -187,7 +187,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
     }
 
     /**
-     *  <p>Whether the new value was applied to the current or the staged representation of the StandalonePrice. Staged changes are stored on the StagedStandalonePrice.</p>
+     *  <p>Whether the new value was applied to the current or the staged representation of the StandalonePrice. Staged changes are stored on the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedStandalonePrice" rel="nofollow">StagedStandalonePrice</a>.</p>
      */
 
     public Boolean getStaged() {
@@ -195,7 +195,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
     }
 
     /**
-     *  <p>The old value of the updated StandalonePrice. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
+     *  <p>The old value of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
      */
 
     public com.commercetools.api.models.common.TypedMoney getOldValue() {

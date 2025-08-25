@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Reference to a CustomObject.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomObject" rel="nofollow">CustomObject</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface CustomObjectReference extends Reference, com.commercetools.api.
     String KEY_VALUE_DOCUMENT = "key-value-document";
 
     /**
-     *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
+     *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with <span>Reference Expansion</span> for CustomObjects.</p>
      * @return obj
      */
     @Valid
@@ -49,7 +49,7 @@ public interface CustomObjectReference extends Reference, com.commercetools.api.
     public CustomObject getObj();
 
     /**
-     *  <p>Unique identifier of the referenced CustomObject.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomObject" rel="nofollow">CustomObject</a>.</p>
      * @return id
      */
     @NotNull
@@ -57,14 +57,14 @@ public interface CustomObjectReference extends Reference, com.commercetools.api.
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
+     *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with <span>Reference Expansion</span> for CustomObjects.</p>
      * @param obj value to be set
      */
 
     public void setObj(final CustomObject obj);
 
     /**
-     *  <p>Unique identifier of the referenced CustomObject.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomObject" rel="nofollow">CustomObject</a>.</p>
      * @param id value to be set
      */
 

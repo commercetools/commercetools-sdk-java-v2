@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if one or more Recurring Orders exist for the provided query predicate. Returns a <code>200</code> status if any Recurring Orders match the query predicate, or a NotFound error otherwise.</p>
+ *  <p>Checks if one or more Recurring Orders exist for the provided query predicate. Returns a <code>200</code> status if any Recurring Orders match the query predicate, or a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">NotFound</a> error otherwise.</p>
  *
  * <hr>
  * <div class=code-example>

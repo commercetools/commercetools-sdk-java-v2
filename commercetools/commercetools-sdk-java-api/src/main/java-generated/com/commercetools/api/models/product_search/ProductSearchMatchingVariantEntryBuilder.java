@@ -29,7 +29,7 @@ public class ProductSearchMatchingVariantEntryBuilder implements Builder<Product
     private String sku;
 
     /**
-     *  <p><code>id</code> of the ProductVariant that matches the search query.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that matches the search query.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class ProductSearchMatchingVariantEntryBuilder implements Builder<Product
     }
 
     /**
-     *  <p><code>id</code> of the ProductVariant that matches the search query.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that matches the search query.</p>
      * @return id
      */
 

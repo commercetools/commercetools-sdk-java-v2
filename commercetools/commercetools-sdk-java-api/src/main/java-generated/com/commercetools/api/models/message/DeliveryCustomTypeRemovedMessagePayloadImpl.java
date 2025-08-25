@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after removing a Custom Type from a Delivery using the Set Custom Type update action with empty parameters.</p>
+ *  <p>Generated after removing a Custom Type from a Delivery using the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetDeliveryCustomTypeAction" rel="nofollow">Set Custom Type</a> update action with empty parameters.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DeliveryCustomTypeRemovedMessagePayloadImpl implements DeliveryCustomTypeRemovedMessagePayload, ModelBase {
@@ -55,7 +55,7 @@ public class DeliveryCustomTypeRemovedMessagePayloadImpl implements DeliveryCust
     }
 
     /**
-     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a> that was removed. Absent if there was no previous Custom Type present.</p>
      */
 
     public String getPreviousTypeId() {
@@ -63,7 +63,7 @@ public class DeliveryCustomTypeRemovedMessagePayloadImpl implements DeliveryCust
     }
 
     /**
-     *  <p>Unique identifier of the Delivery.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      */
 
     public String getDeliveryId() {

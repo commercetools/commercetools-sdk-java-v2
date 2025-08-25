@@ -35,7 +35,7 @@ import jakarta.validation.constraints.NotNull;
 public interface TextLineItemValue {
 
     /**
-     *  <p><code>id</code> of the TextLineItem.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a>.</p>
      * @return id
      */
     @NotNull
@@ -52,7 +52,7 @@ public interface TextLineItemValue {
     public LocalizedString getName();
 
     /**
-     *  <p><code>id</code> of the TextLineItem.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a>.</p>
      * @param id value to be set
      */
 

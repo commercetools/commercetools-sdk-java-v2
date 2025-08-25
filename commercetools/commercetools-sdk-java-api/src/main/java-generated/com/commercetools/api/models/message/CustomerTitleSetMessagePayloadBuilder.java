@@ -26,7 +26,7 @@ public class CustomerTitleSetMessagePayloadBuilder implements Builder<CustomerTi
     private String title;
 
     /**
-     *  <p>The <code>title</code> that was set during the Set Title update action.</p>
+     *  <p>The <code>title</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetTitleAction" rel="nofollow">Set Title</a> update action.</p>
      * @param title value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class CustomerTitleSetMessagePayloadBuilder implements Builder<CustomerTi
     }
 
     /**
-     *  <p>The <code>title</code> that was set during the Set Title update action.</p>
+     *  <p>The <code>title</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetTitleAction" rel="nofollow">Set Title</a> update action.</p>
      * @return title
      */
 

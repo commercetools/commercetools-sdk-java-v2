@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Retrieves a Cart with the provided <code>id</code>. To ensure the Cart is up-to-date with current values (such as Prices and Discounts), use the Recalculate update action.</p>
+ *  <p>Retrieves a Cart with the provided <code>id</code>. To ensure the Cart is up-to-date with current values (such as Prices and Discounts), use the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRecalculateAction" rel="nofollow">Recalculate</a> update action.</p>
  *
  * <hr>
  * <div class=code-example>

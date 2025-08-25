@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Returned when an Associate is missing a Permission on a B2B resource.</p>
+ *  <p>Returned when an <span>Associate</span> is missing a <span>Permission</span> on a <span>B2B resource</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLAssociateMissingPermissionErrorImpl implements GraphQLAssociateMissingPermissionError, ModelBase {
@@ -77,7 +77,7 @@ public class GraphQLAssociateMissingPermissionErrorImpl implements GraphQLAssoci
     }
 
     /**
-     *  <p>ResourceIdentifier to the Associate that tried to perform the action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> that tried to perform the action.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerResourceIdentifier getAssociate() {
@@ -85,7 +85,7 @@ public class GraphQLAssociateMissingPermissionErrorImpl implements GraphQLAssoci
     }
 
     /**
-     *  <p>ResourceIdentifier to the BusinessUnit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit() {
@@ -93,7 +93,7 @@ public class GraphQLAssociateMissingPermissionErrorImpl implements GraphQLAssoci
     }
 
     /**
-     *  <p>ResourceIdentifier of the Associate on whose behalf the action is performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerResourceIdentifier" rel="nofollow">ResourceIdentifier</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> on whose behalf the action is performed.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerResourceIdentifier getAssociateOnBehalf() {
@@ -101,7 +101,7 @@ public class GraphQLAssociateMissingPermissionErrorImpl implements GraphQLAssoci
     }
 
     /**
-     *  <p>The Permissions that the Associate performing the action lacks. At least one of these Permissions is needed.</p>
+     *  <p>The Permissions that the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> performing the action lacks. At least one of these Permissions is needed.</p>
      */
 
     public java.util.List<com.commercetools.api.models.associate_role.Permission> getPermissions() {

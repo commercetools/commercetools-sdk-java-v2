@@ -39,7 +39,7 @@ public interface CartSetShippingCustomTypeAction extends CartUpdateAction {
     String SET_SHIPPING_CUSTOM_TYPE = "setShippingCustomType";
 
     /**
-     *  <p>The <code>shippingKey</code> of the Shipping to customize. Used to specify which Shipping Method to customize on a Cart with <code>Multiple</code> ShippingMode. Leave this empty to customize the one and only ShippingMethod on a <code>Single</code> ShippingMode Cart.</p>
+     *  <p>The <code>shippingKey</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Shipping" rel="nofollow">Shipping</a> to customize. Used to specify which Shipping Method to customize on a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Leave this empty to customize the one and only ShippingMethod on a <code>Single</code> ShippingMode Cart.</p>
      * @return shippingKey
      */
 
@@ -47,7 +47,7 @@ public interface CartSetShippingCustomTypeAction extends CartUpdateAction {
     public String getShippingKey();
 
     /**
-     *  <p>Defines the Type that extends the specified ShippingMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the specified ShippingMethod with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
      * @return type
      */
     @Valid
@@ -55,7 +55,7 @@ public interface CartSetShippingCustomTypeAction extends CartUpdateAction {
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>shippingMethod</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <code>shippingMethod</code>.</p>
      * @return fields
      */
     @Valid
@@ -63,21 +63,21 @@ public interface CartSetShippingCustomTypeAction extends CartUpdateAction {
     public FieldContainer getFields();
 
     /**
-     *  <p>The <code>shippingKey</code> of the Shipping to customize. Used to specify which Shipping Method to customize on a Cart with <code>Multiple</code> ShippingMode. Leave this empty to customize the one and only ShippingMethod on a <code>Single</code> ShippingMode Cart.</p>
+     *  <p>The <code>shippingKey</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Shipping" rel="nofollow">Shipping</a> to customize. Used to specify which Shipping Method to customize on a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Leave this empty to customize the one and only ShippingMethod on a <code>Single</code> ShippingMode Cart.</p>
      * @param shippingKey value to be set
      */
 
     public void setShippingKey(final String shippingKey);
 
     /**
-     *  <p>Defines the Type that extends the specified ShippingMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the specified ShippingMethod with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>shippingMethod</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <code>shippingMethod</code>.</p>
      * @param fields value to be set
      */
 

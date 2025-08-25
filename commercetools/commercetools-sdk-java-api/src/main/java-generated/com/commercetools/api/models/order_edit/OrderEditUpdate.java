@@ -36,7 +36,7 @@ public interface OrderEditUpdate extends
         com.commercetools.api.models.ResourceUpdate<OrderEditUpdate, OrderEditUpdateAction, OrderEditUpdateBuilder> {
 
     /**
-     *  <p>Expected version of the Order Edit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the Order Edit on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @return version
      */
     @NotNull
@@ -53,7 +53,7 @@ public interface OrderEditUpdate extends
     public List<OrderEditUpdateAction> getActions();
 
     /**
-     *  <p>If set to <code>true</code>, the Order Edit is applied on the Order without persisting it.</p>
+     *  <p>If set to <code>true</code>, the Order Edit is applied on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> without persisting it.</p>
      * @return dryRun
      */
 
@@ -61,7 +61,7 @@ public interface OrderEditUpdate extends
     public Boolean getDryRun();
 
     /**
-     *  <p>Expected version of the Order Edit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the Order Edit on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @param version value to be set
      */
 
@@ -83,7 +83,7 @@ public interface OrderEditUpdate extends
     public void setActions(final List<OrderEditUpdateAction> actions);
 
     /**
-     *  <p>If set to <code>true</code>, the Order Edit is applied on the Order without persisting it.</p>
+     *  <p>If set to <code>true</code>, the Order Edit is applied on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> without persisting it.</p>
      * @param dryRun value to be set
      */
 

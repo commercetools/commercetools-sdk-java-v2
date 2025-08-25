@@ -42,7 +42,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     private com.commercetools.api.models.product.FacetResults facets;
 
     /**
-     *  <p>The maximum number of results returned on a page.</p>
+     *  <p>The maximum number of results returned on a <span>page</span>.</p>
      * @param limit value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>The starting point for the retrieved paginated result.</p>
+     *  <p>The starting point for the retrieved <span>paginated</span> result.</p>
      * @param offset value to be set
      * @return Builder
      */
@@ -86,7 +86,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the matching variants are marked as such.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjections</a> where at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the <span>matching variants</span> are marked as such.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -98,7 +98,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the matching variants are marked as such.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjections</a> where at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the <span>matching variants</span> are marked as such.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -110,7 +110,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the matching variants are marked as such.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjections</a> where at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the <span>matching variants</span> are marked as such.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -125,7 +125,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the matching variants are marked as such.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjections</a> where at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the <span>matching variants</span> are marked as such.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -140,7 +140,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the matching variants are marked as such.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjections</a> where at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the <span>matching variants</span> are marked as such.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -153,7 +153,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the matching variants are marked as such.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjections</a> where at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the <span>matching variants</span> are marked as such.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -164,7 +164,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the matching variants are marked as such.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjections</a> where at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the <span>matching variants</span> are marked as such.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -175,7 +175,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Facet results for each facet expression specified in the search request.</p>
+     *  <p>Facet results for each <span>facet expression</span> specified in the search request.</p>
      *  <p>Only present if at least one <code>facet</code> parameter was provided with the search request.</p>
      * @param builder function to build the facets value
      * @return Builder
@@ -188,7 +188,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Facet results for each facet expression specified in the search request.</p>
+     *  <p>Facet results for each <span>facet expression</span> specified in the search request.</p>
      *  <p>Only present if at least one <code>facet</code> parameter was provided with the search request.</p>
      * @param builder function to build the facets value
      * @return Builder
@@ -201,7 +201,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Facet results for each facet expression specified in the search request.</p>
+     *  <p>Facet results for each <span>facet expression</span> specified in the search request.</p>
      *  <p>Only present if at least one <code>facet</code> parameter was provided with the search request.</p>
      * @param facets value to be set
      * @return Builder
@@ -214,7 +214,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>The maximum number of results returned on a page.</p>
+     *  <p>The maximum number of results returned on a <span>page</span>.</p>
      * @return limit
      */
 
@@ -223,7 +223,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>The starting point for the retrieved paginated result.</p>
+     *  <p>The starting point for the retrieved <span>paginated</span> result.</p>
      * @return offset
      */
 
@@ -251,7 +251,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the matching variants are marked as such.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjections</a> where at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the <span>matching variants</span> are marked as such.</p>
      * @return results
      */
 
@@ -260,7 +260,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Facet results for each facet expression specified in the search request.</p>
+     *  <p>Facet results for each <span>facet expression</span> specified in the search request.</p>
      *  <p>Only present if at least one <code>facet</code> parameter was provided with the search request.</p>
      * @return facets
      */

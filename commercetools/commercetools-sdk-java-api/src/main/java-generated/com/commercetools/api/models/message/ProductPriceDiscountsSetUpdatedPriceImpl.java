@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Details about an Embedded Price that was updated due to a Discount. Specific to Product Price Discounts Set Message.</p>
+ *  <p>Details about an <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Price</a> that was updated due to a Discount. Specific to <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPriceDiscountsSetMessage" rel="nofollow">Product Price Discounts Set</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDiscountsSetUpdatedPrice, ModelBase {
@@ -58,7 +58,7 @@ public class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDis
     }
 
     /**
-     *  <p>Unique identifier of the ProductVariant for which the Discount was set.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which the Discount was set.</p>
      */
 
     public Integer getVariantId() {
@@ -66,7 +66,7 @@ public class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDis
     }
 
     /**
-     *  <p>Key of the ProductVariant for which Discount was set.</p>
+     *  <p>Key of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which Discount was set.</p>
      */
 
     public String getVariantKey() {
@@ -74,7 +74,7 @@ public class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDis
     }
 
     /**
-     *  <p>SKU of the ProductVariant for which Discount was set.</p>
+     *  <p>SKU of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which Discount was set.</p>
      */
 
     public String getSku() {
@@ -82,7 +82,7 @@ public class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDis
     }
 
     /**
-     *  <p>Unique identifier of the Price.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</p>
      */
 
     public String getPriceId() {
@@ -90,7 +90,7 @@ public class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDis
     }
 
     /**
-     *  <p>Discounted Price for the ProductVariant for which Discount was set.</p>
+     *  <p>Discounted Price for the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which Discount was set.</p>
      */
 
     public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
@@ -98,7 +98,7 @@ public class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDis
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged ProductProjection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjection</a>.</p>
      */
 
     public Boolean getStaged() {

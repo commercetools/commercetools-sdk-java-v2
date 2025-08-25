@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Defines an allowed value of a CustomFieldEnumType field.</p>
+ *  <p>Defines an allowed value of a <a href="https://docs.commercetools.com/apis/ctp:import:type:CustomFieldEnumType" rel="nofollow">CustomFieldEnumType</a> field.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldEnumValueImpl implements CustomFieldEnumValue, ModelBase {

@@ -46,7 +46,7 @@ public interface ChangeTargetLineItemsChangeValue extends ChangeTargetChangeValu
     public String getType();
 
     /**
-     *  <p>Valid LineItem target predicate.</p>
+     *  <p>Valid <span>LineItem target predicate</span>.</p>
      * @return predicate
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface ChangeTargetLineItemsChangeValue extends ChangeTargetChangeValu
     public String getPredicate();
 
     /**
-     *  <p>Valid LineItem target predicate.</p>
+     *  <p>Valid <span>LineItem target predicate</span>.</p>
      * @param predicate value to be set
      */
 

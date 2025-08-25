@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Purchase Order Number update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetPurchaseOrderNumberAction" rel="nofollow">Set Purchase Order Number</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderPurchaseOrderNumberSetMessageImpl implements OrderPurchaseOrderNumberSetMessage, ModelBase {
@@ -143,7 +143,7 @@ public class OrderPurchaseOrderNumberSetMessageImpl implements OrderPurchaseOrde
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -159,7 +159,7 @@ public class OrderPurchaseOrderNumberSetMessageImpl implements OrderPurchaseOrde
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -175,7 +175,7 @@ public class OrderPurchaseOrderNumberSetMessageImpl implements OrderPurchaseOrde
     }
 
     /**
-     *  <p>Purchase order number on the Order after the Set Purchase Order Number update action.</p>
+     *  <p>Purchase order number on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetPurchaseOrderNumberAction" rel="nofollow">Set Purchase Order Number</a> update action.</p>
      */
 
     public String getPurchaseOrderNumber() {
@@ -183,7 +183,7 @@ public class OrderPurchaseOrderNumberSetMessageImpl implements OrderPurchaseOrde
     }
 
     /**
-     *  <p>Purchase order number on the Order before the Set Purchase Order Number update action.</p>
+     *  <p>Purchase order number on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetPurchaseOrderNumberAction" rel="nofollow">Set Purchase Order Number</a> update action.</p>
      */
 
     public String getOldPurchaseOrderNumber() {

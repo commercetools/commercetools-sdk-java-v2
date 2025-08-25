@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Delete DiscountCode request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/discount-codes/{id}:DELETE" rel="nofollow">Delete DiscountCode</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

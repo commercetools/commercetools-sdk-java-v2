@@ -56,7 +56,7 @@ public class MyCustomerSetDefaultBillingAddressActionImpl
     }
 
     /**
-     *  <p><code>id</code> of the Address to become the default billing address.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become the default billing address.</p>
      */
 
     public String getAddressId() {
@@ -64,7 +64,7 @@ public class MyCustomerSetDefaultBillingAddressActionImpl
     }
 
     /**
-     *  <p><code>key</code> of the Address to become the default billing address.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become the default billing address.</p>
      */
 
     public String getAddressKey() {

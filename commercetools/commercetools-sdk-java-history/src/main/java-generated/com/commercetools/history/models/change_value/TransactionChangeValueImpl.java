@@ -47,7 +47,7 @@ public class TransactionChangeValueImpl implements TransactionChangeValue, Model
     }
 
     /**
-     *  <p><code>id</code> of the Transaction.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>.</p>
      */
 
     public String getId() {

@@ -19,8 +19,8 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Change Value on Cart Discounts.</li>
- *   <li>Change Value on Product Discounts.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountChangeValueAction" rel="nofollow">Change Value</a> on Cart Discounts.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountChangeValueAction" rel="nofollow">Change Value</a> on Product Discounts.</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>PagedQueryResult with results containing an array of ProductTailoring.</p>
+ *  <p><span>PagedQueryResult</span> with results containing an array of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTailoringPagedQueryResponseImpl implements ProductTailoringPagedQueryResponse, ModelBase {
@@ -54,7 +54,7 @@ public class ProductTailoringPagedQueryResponseImpl implements ProductTailoringP
     }
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      */
 
     public Long getLimit() {
@@ -62,7 +62,7 @@ public class ProductTailoringPagedQueryResponseImpl implements ProductTailoringP
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      */
 
     public Long getOffset() {
@@ -78,7 +78,7 @@ public class ProductTailoringPagedQueryResponseImpl implements ProductTailoringP
     }
 
     /**
-     *  <p>Total number of results matching the query. Present only when the <code>withTotal</code> query parameter is set to <code>true</code>. This number is an estimation that is not strongly consistent. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     *  <p>Total number of results matching the query. Present only when the <code>withTotal</code> query parameter is set to <code>true</code>. This number is an estimation that is not <span>strongly consistent</span>. When the results are filtered with a <span>Query Predicate</span>, <code>total</code> is subject to a <span>limit</span>.</p>
      */
 
     public Long getTotal() {
@@ -86,7 +86,7 @@ public class ProductTailoringPagedQueryResponseImpl implements ProductTailoringP
     }
 
     /**
-     *  <p>ProductTailoring list matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> list matching the query.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoring> getResults() {

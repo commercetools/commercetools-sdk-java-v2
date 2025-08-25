@@ -55,7 +55,7 @@ public interface StagedQuoteDraft
     public Long getQuoteRequestVersion();
 
     /**
-     *  <p>If <code>true</code>, the <code>quoteRequestState</code> of the referenced QuoteRequest will be set to <code>Accepted</code>.</p>
+     *  <p>If <code>true</code>, the <code>quoteRequestState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> will be set to <code>Accepted</code>.</p>
      * @return quoteRequestStateToAccepted
      */
 
@@ -71,10 +71,10 @@ public interface StagedQuoteDraft
     public String getKey();
 
     /**
-     *  <p>Custom Fields to be added to the StagedQuote.</p>
+     *  <p><span>Custom Fields</span> to be added to the StagedQuote.</p>
      *  <ul>
-     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced QuoteRequest and added to the StagedQuote.</li>
-     *   <li>If empty, the Custom Fields on the referenced QuoteRequest are added to the StagedQuote automatically.</li>
+     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> and added to the StagedQuote.</li>
+     *   <li>If empty, the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> are added to the StagedQuote automatically.</li>
      *  </ul>
      * @return custom
      */
@@ -83,7 +83,7 @@ public interface StagedQuoteDraft
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      * @return state
      */
     @Valid
@@ -105,7 +105,7 @@ public interface StagedQuoteDraft
     public void setQuoteRequestVersion(final Long quoteRequestVersion);
 
     /**
-     *  <p>If <code>true</code>, the <code>quoteRequestState</code> of the referenced QuoteRequest will be set to <code>Accepted</code>.</p>
+     *  <p>If <code>true</code>, the <code>quoteRequestState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> will be set to <code>Accepted</code>.</p>
      * @param quoteRequestStateToAccepted value to be set
      */
 
@@ -119,10 +119,10 @@ public interface StagedQuoteDraft
     public void setKey(final String key);
 
     /**
-     *  <p>Custom Fields to be added to the StagedQuote.</p>
+     *  <p><span>Custom Fields</span> to be added to the StagedQuote.</p>
      *  <ul>
-     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced QuoteRequest and added to the StagedQuote.</li>
-     *   <li>If empty, the Custom Fields on the referenced QuoteRequest are added to the StagedQuote automatically.</li>
+     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> and added to the StagedQuote.</li>
+     *   <li>If empty, the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> are added to the StagedQuote automatically.</li>
      *  </ul>
      * @param custom value to be set
      */
@@ -130,7 +130,7 @@ public interface StagedQuoteDraft
     public void setCustom(final CustomFieldsDraft custom);
 
     /**
-     *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      * @param state value to be set
      */
 

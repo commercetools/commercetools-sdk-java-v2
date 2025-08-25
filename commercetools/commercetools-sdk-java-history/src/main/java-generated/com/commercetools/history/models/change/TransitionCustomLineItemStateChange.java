@@ -20,8 +20,8 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Change the state of CustomLineItem according to allowed transitions on Orders.</li>
- *   <li>Change the state of CustomLineItem according to allowed transitions on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderTransitionCustomLineItemStateAction" rel="nofollow">Change the state of CustomLineItem according to allowed transitions</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderTransitionCustomLineItemStateAction" rel="nofollow">Change the state of CustomLineItem according to allowed transitions</a> on Staged Orders.</li>
  *  </ul>
  *
  * <hr>
@@ -83,7 +83,7 @@ public interface TransitionCustomLineItemStateChange extends Change {
     public List<ItemState> getNextValue();
 
     /**
-     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @return lineItemId
      */
     @NotNull
@@ -91,7 +91,7 @@ public interface TransitionCustomLineItemStateChange extends Change {
     public String getLineItemId();
 
     /**
-     *  <p><code>id</code> of the State involved in the transition.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> involved in the transition.</p>
      * @return stateId
      */
     @NotNull
@@ -136,14 +136,14 @@ public interface TransitionCustomLineItemStateChange extends Change {
     public void setNextValue(final List<ItemState> nextValue);
 
     /**
-     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
 
     /**
-     *  <p><code>id</code> of the State involved in the transition.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> involved in the transition.</p>
      * @param stateId value to be set
      */
 

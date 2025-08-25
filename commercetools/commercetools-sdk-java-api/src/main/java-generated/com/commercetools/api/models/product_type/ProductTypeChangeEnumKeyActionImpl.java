@@ -17,9 +17,9 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Updates the key of a single enum <code>value</code> in an AttributeEnumType AttributeDefinition, AttributeLocalizedEnumType AttributeDefinition, AttributeSetType of AttributeEnumType AttributeDefinition, or AttributeSetType of AttributeLocalizedEnumType AttributeDefinition.</p>
- *  <p>If the AttributeDefinition does not contain an enum with the referenced key, a EnumKeyDoesNotExist error is returned.</p>
- *  <p>All Products will be updated to the new key in an eventually consistent way.</p>
+ *  <p>Updates the key of a single enum <code>value</code> in an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeEnumType" rel="nofollow">AttributeEnumType</a> AttributeDefinition, <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumType" rel="nofollow">AttributeLocalizedEnumType</a> AttributeDefinition, <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeSetType" rel="nofollow">AttributeSetType</a> of AttributeEnumType AttributeDefinition, or AttributeSetType of AttributeLocalizedEnumType AttributeDefinition.</p>
+ *  <p>If the AttributeDefinition does not contain an enum with the referenced key, a <a href="https://docs.commercetools.com/apis/ctp:api:type:EnumKeyDoesNotExistError" rel="nofollow">EnumKeyDoesNotExist</a> error is returned.</p>
+ *  <p>All Products will be updated to the new key in an <span>eventually consistent</span> way.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangeEnumKeyActionImpl implements ProductTypeChangeEnumKeyAction, ModelBase {

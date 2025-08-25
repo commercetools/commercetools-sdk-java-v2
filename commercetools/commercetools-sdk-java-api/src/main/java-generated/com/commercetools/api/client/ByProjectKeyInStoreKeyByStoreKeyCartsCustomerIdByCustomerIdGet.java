@@ -20,9 +20,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Retrieves the most recently modified active Cart of a Customer with CartOrigin <code>Customer</code>. If no active Cart exists, this method returns a ResourceNotFound error.</p>
- *  <p>If the Cart exists in the Project but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</p>
- *  <p>To ensure the Cart is up-to-date with current values (such as Prices and Discounts), use the Recalculate update action.</p>
+ *  <p>Retrieves the most recently modified <a href="https://docs.commercetools.com/apis/ctp:api:type:CartState" rel="nofollow">active Cart</a> of a Customer with <a href="https://docs.commercetools.com/apis/ctp:api:type:CartOrigin" rel="nofollow">CartOrigin</a> <code>Customer</code>. If no active Cart exists, this method returns a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error.</p>
+ *  <p>If the Cart exists in the Project but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store, this method returns a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error.</p>
+ *  <p>To ensure the Cart is up-to-date with current values (such as Prices and Discounts), use the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRecalculateAction" rel="nofollow">Recalculate</a> update action.</p>
  *
  * <hr>
  * <div class=code-example>

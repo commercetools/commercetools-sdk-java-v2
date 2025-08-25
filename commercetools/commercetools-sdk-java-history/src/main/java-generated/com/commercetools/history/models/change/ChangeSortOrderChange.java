@@ -17,8 +17,8 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Change Sort Order on Cart Discounts.</li>
- *   <li>Change Sort Order on Product Discounts.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountChangeSortOrderAction" rel="nofollow">Change Sort Order</a> on Cart Discounts.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountChangeSortOrderAction" rel="nofollow">Change Sort Order</a> on Product Discounts.</li>
  *  </ul>
  *
  * <hr>

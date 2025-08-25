@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Transition LineItem State update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderTransitionLineItemStateAction" rel="nofollow">Transition LineItem State</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateTransitionMessagePayload, ModelBase {
@@ -71,7 +71,7 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
     }
 
     /**
-     *  <p>Unique identifier of the Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
      */
 
     public String getLineItemId() {
@@ -87,7 +87,7 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
     }
 
     /**
-     *  <p>Date and time (UTC) the transition of the Line Item State was performed.</p>
+     *  <p>Date and time (UTC) the transition of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> was performed.</p>
      */
 
     public java.time.ZonedDateTime getTransitionDate() {
@@ -95,7 +95,7 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
     }
 
     /**
-     *  <p>Number of Line Items for which the State was transitioned.</p>
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Items</a> for which the <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> was transitioned.</p>
      */
 
     public Long getQuantity() {
@@ -103,7 +103,7 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
     }
 
     /**
-     *  <p>State the Line Item was transitioned from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> was transitioned from.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getFromState() {
@@ -111,7 +111,7 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
     }
 
     /**
-     *  <p>State the Line Item was transitioned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> was transitioned to.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getToState() {

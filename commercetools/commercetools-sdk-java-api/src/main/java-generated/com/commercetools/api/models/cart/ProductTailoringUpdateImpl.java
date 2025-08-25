@@ -43,7 +43,7 @@ public class ProductTailoringUpdateImpl implements ProductTailoringUpdate, Model
     }
 
     /**
-     *  <p>Expected version of the ProductTailoring on which the changes apply. If the expected version does not match the actual version, a 409 Conflict is returned.</p>
+     *  <p>Expected version of the ProductTailoring on which the changes apply. If the expected version does not match the actual version, a <span>409 Conflict</span> is returned.</p>
      */
 
     public Long getVersion() {

@@ -21,7 +21,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Either the scope <code>manage_products:{projectKey}</code> or <code>manage_categories:{projectKey}</code> is required.</p>
+ *  <p>Either the <span>scope</span> <code>manage_products:{projectKey}</code> or <code>manage_categories:{projectKey}</code> is required.</p>
  *
  * <hr>
  * <div class=code-example>

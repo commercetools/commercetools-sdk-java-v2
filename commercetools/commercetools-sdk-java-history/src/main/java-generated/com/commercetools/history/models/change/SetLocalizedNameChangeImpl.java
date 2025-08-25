@@ -19,9 +19,9 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set Name on Discount Codes.</li>
- *   <li>Set State Name on States.</li>
- *   <li>Set Name on Stores.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeSetNameAction" rel="nofollow">Set Name</a> on Discount Codes.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StateSetNameAction" rel="nofollow">Set State Name</a> on States.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetNameAction" rel="nofollow">Set Name</a> on Stores.</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

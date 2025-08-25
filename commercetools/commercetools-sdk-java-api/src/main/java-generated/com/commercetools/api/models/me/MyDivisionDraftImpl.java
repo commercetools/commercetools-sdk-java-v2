@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Draft type to model divisions that are part of the Company or a higher-order Division. Contains the fields and values of the generic MyBusinessUnitDraft that are used specifically for creating a Division.</p>
+ *  <p>Draft type to model divisions that are part of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Company" rel="nofollow">Company</a> or a higher-order <a href="https://docs.commercetools.com/apis/ctp:api:type:Division" rel="nofollow">Division</a>. Contains the fields and values of the generic <a href="https://docs.commercetools.com/apis/ctp:api:type:MyBusinessUnitDraft" rel="nofollow">MyBusinessUnitDraft</a> that are used specifically for creating a Division.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyDivisionDraftImpl implements MyDivisionDraft, ModelBase {
@@ -127,7 +127,7 @@ public class MyDivisionDraftImpl implements MyDivisionDraft, ModelBase {
     }
 
     /**
-     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p>
      */
 
     public java.util.List<Integer> getShippingAddresses() {
@@ -143,7 +143,7 @@ public class MyDivisionDraftImpl implements MyDivisionDraft, ModelBase {
     }
 
     /**
-     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p>
      */
 
     public java.util.List<Integer> getBillingAddresses() {

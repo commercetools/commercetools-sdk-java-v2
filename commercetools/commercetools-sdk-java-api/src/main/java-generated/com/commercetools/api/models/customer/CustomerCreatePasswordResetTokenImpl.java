@@ -47,7 +47,7 @@ public class CustomerCreatePasswordResetTokenImpl implements CustomerCreatePassw
     }
 
     /**
-     *  <p>Email address of the Customer treated as case-insensitive.</p>
+     *  <p>Email address of the Customer treated as <span>case-insensitive</span>.</p>
      */
 
     public String getEmail() {

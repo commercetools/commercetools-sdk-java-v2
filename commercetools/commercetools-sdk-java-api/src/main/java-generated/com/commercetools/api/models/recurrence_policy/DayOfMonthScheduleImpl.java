@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Schedule of a Recurring Order that occurs on a specific day of each month. This type is returned in the RecurrencePolicy for an active Recurring Order.</p>
+ *  <p>Schedule of a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> that occurs on a specific day of each month. This type is returned in the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a> for an active <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DayOfMonthScheduleImpl implements DayOfMonthSchedule, ModelBase {
@@ -51,7 +51,7 @@ public class DayOfMonthScheduleImpl implements DayOfMonthSchedule, ModelBase {
     }
 
     /**
-     *  <p>The day of the month when the Recurring Order is created. If the value is greater than the number of days in a given month, the order is created on the last day of the month.</p>
+     *  <p>The day of the month when the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> is created. If the value is greater than the number of days in a given month, the order is created on the last day of the month.</p>
      */
 
     public Integer getDay() {

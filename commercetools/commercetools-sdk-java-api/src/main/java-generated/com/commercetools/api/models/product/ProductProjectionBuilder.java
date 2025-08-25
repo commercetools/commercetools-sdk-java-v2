@@ -96,7 +96,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
 
     /**
-     *  <p>Unique identifier of the Product.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Current version of the Product.</p>
+     *  <p>Current version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -140,7 +140,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Product.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -151,7 +151,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>The ProductType defining the Attributes of the Product.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a> defining the Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param builder function to build the productType value
      * @return Builder
      */
@@ -164,7 +164,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>The ProductType defining the Attributes of the Product.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a> defining the Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param builder function to build the productType value
      * @return Builder
      */
@@ -176,7 +176,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>The ProductType defining the Attributes of the Product.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a> defining the Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param productType value to be set
      * @return Builder
      */
@@ -188,7 +188,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Name of the Product.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -200,7 +200,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Name of the Product.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -212,7 +212,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Name of the Product.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -223,7 +223,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Description of the Product.</p>
+     *  <p>Description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param builder function to build the description value
      * @return Builder
      */
@@ -235,7 +235,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Description of the Product.</p>
+     *  <p>Description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param builder function to build the description value
      * @return Builder
      */
@@ -247,7 +247,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Description of the Product.</p>
+     *  <p>Description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param description value to be set
      * @return Builder
      */
@@ -259,7 +259,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different locales. Matches the pattern <code>[a-zA-Z0-9_\-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in the Project.</p>
+     *  <p>User-defined identifier used in a deep-link URL for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. Must be unique across a Project, but can be the same for Products in different locales. Matches the pattern <code>[a-zA-Z0-9_\-]{2,256}</code>. For <span>good performance</span>, indexes are provided for the first 15 <code>languages</code> set in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -271,7 +271,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different locales. Matches the pattern <code>[a-zA-Z0-9_\-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in the Project.</p>
+     *  <p>User-defined identifier used in a deep-link URL for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. Must be unique across a Project, but can be the same for Products in different locales. Matches the pattern <code>[a-zA-Z0-9_\-]{2,256}</code>. For <span>good performance</span>, indexes are provided for the first 15 <code>languages</code> set in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -283,7 +283,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different locales. Matches the pattern <code>[a-zA-Z0-9_\-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in the Project.</p>
+     *  <p>User-defined identifier used in a deep-link URL for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. Must be unique across a Project, but can be the same for Products in different locales. Matches the pattern <code>[a-zA-Z0-9_\-]{2,256}</code>. For <span>good performance</span>, indexes are provided for the first 15 <code>languages</code> set in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param slug value to be set
      * @return Builder
      */
@@ -294,7 +294,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Categories assigned to the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param categories value to be set
      * @return Builder
      */
@@ -306,7 +306,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Categories assigned to the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param categories value to be set
      * @return Builder
      */
@@ -318,7 +318,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Categories assigned to the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param categories value to be set
      * @return Builder
      */
@@ -333,7 +333,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Categories assigned to the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param builder function to build the categories value
      * @return Builder
      */
@@ -348,7 +348,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Categories assigned to the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param builder function to build the categories value
      * @return Builder
      */
@@ -361,7 +361,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Categories assigned to the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param builder function to build the categories value
      * @return Builder
      */
@@ -372,7 +372,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Categories assigned to the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param builder function to build the categories value
      * @return Builder
      */
@@ -383,7 +383,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Order of Product in Categories.</p>
+     *  <p>Order of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> in <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a>.</p>
      * @param builder function to build the categoryOrderHints value
      * @return Builder
      */
@@ -396,7 +396,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Order of Product in Categories.</p>
+     *  <p>Order of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> in <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a>.</p>
      * @param builder function to build the categoryOrderHints value
      * @return Builder
      */
@@ -408,7 +408,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Order of Product in Categories.</p>
+     *  <p>Order of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> in <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a>.</p>
      * @param categoryOrderHints value to be set
      * @return Builder
      */
@@ -420,7 +420,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Title of the Product displayed in search results.</p>
+     *  <p>Title of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> displayed in search results.</p>
      * @param builder function to build the metaTitle value
      * @return Builder
      */
@@ -432,7 +432,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Title of the Product displayed in search results.</p>
+     *  <p>Title of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> displayed in search results.</p>
      * @param builder function to build the metaTitle value
      * @return Builder
      */
@@ -444,7 +444,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Title of the Product displayed in search results.</p>
+     *  <p>Title of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> displayed in search results.</p>
      * @param metaTitle value to be set
      * @return Builder
      */
@@ -456,7 +456,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Description of the Product displayed in search results below the meta title.</p>
+     *  <p>Description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> displayed in search results below the meta title.</p>
      * @param builder function to build the metaDescription value
      * @return Builder
      */
@@ -468,7 +468,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Description of the Product displayed in search results below the meta title.</p>
+     *  <p>Description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> displayed in search results below the meta title.</p>
      * @param builder function to build the metaDescription value
      * @return Builder
      */
@@ -480,7 +480,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Description of the Product displayed in search results below the meta title.</p>
+     *  <p>Description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> displayed in search results below the meta title.</p>
      * @param metaDescription value to be set
      * @return Builder
      */
@@ -492,7 +492,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Keywords that give additional information about the Product to search engines.</p>
+     *  <p>Keywords that give additional information about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> to search engines.</p>
      * @param builder function to build the metaKeywords value
      * @return Builder
      */
@@ -504,7 +504,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Keywords that give additional information about the Product to search engines.</p>
+     *  <p>Keywords that give additional information about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> to search engines.</p>
      * @param builder function to build the metaKeywords value
      * @return Builder
      */
@@ -516,7 +516,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Keywords that give additional information about the Product to search engines.</p>
+     *  <p>Keywords that give additional information about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> to search engines.</p>
      * @param metaKeywords value to be set
      * @return Builder
      */
@@ -528,7 +528,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
+     *  <p>Used by <span>Search Term Suggestions</span>, but is also considered for a <span>full text search</span> in the Product Projection Search API.</p>
      * @param builder function to build the searchKeywords value
      * @return Builder
      */
@@ -540,7 +540,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
+     *  <p>Used by <span>Search Term Suggestions</span>, but is also considered for a <span>full text search</span> in the Product Projection Search API.</p>
      * @param builder function to build the searchKeywords value
      * @return Builder
      */
@@ -552,7 +552,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
+     *  <p>Used by <span>Search Term Suggestions</span>, but is also considered for a <span>full text search</span> in the Product Projection Search API.</p>
      * @param searchKeywords value to be set
      * @return Builder
      */
@@ -575,7 +575,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p><code>true</code> if the Product is published.</p>
+     *  <p><code>true</code> if the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:CurrentStaged" rel="nofollow">published</a>.</p>
      * @param published value to be set
      * @return Builder
      */
@@ -586,7 +586,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>The Master Variant of the Product.</p>
+     *  <p>The Master Variant of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param builder function to build the masterVariant value
      * @return Builder
      */
@@ -598,7 +598,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>The Master Variant of the Product.</p>
+     *  <p>The Master Variant of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param builder function to build the masterVariant value
      * @return Builder
      */
@@ -610,7 +610,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>The Master Variant of the Product.</p>
+     *  <p>The Master Variant of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param masterVariant value to be set
      * @return Builder
      */
@@ -710,7 +710,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>The TaxCategory of the Product.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -723,7 +723,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>The TaxCategory of the Product.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -735,7 +735,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>The TaxCategory of the Product.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param taxCategory value to be set
      * @return Builder
      */
@@ -747,7 +747,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>State of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -759,7 +759,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>State of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -771,7 +771,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>State of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -782,7 +782,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Review statistics of the Product.</p>
+     *  <p>Review statistics of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param builder function to build the reviewRatingStatistics value
      * @return Builder
      */
@@ -796,7 +796,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Review statistics of the Product.</p>
+     *  <p>Review statistics of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param builder function to build the reviewRatingStatistics value
      * @return Builder
      */
@@ -809,7 +809,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Review statistics of the Product.</p>
+     *  <p>Review statistics of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param reviewRatingStatistics value to be set
      * @return Builder
      */
@@ -821,7 +821,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Indicates whether the Prices of the Product Projection are embedded or standalone. Projecting Prices only works with <code>Embedded</code>, there is currently no support for <code>Standalone</code>.</p>
+     *  <p>Indicates whether the Prices of the Product Projection are <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">embedded</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">standalone</a>. <span>Projecting Prices</span> only works with <code>Embedded</code>, there is currently no support for <code>Standalone</code>.</p>
      * @param priceMode value to be set
      * @return Builder
      */
@@ -833,7 +833,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionDraft" rel="nofollow">AttributeDefinition</a>.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -844,7 +844,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionDraft" rel="nofollow">AttributeDefinition</a>.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -856,7 +856,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionDraft" rel="nofollow">AttributeDefinition</a>.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -870,7 +870,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionDraft" rel="nofollow">AttributeDefinition</a>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -885,7 +885,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionDraft" rel="nofollow">AttributeDefinition</a>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -898,7 +898,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionDraft" rel="nofollow">AttributeDefinition</a>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -909,7 +909,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionDraft" rel="nofollow">AttributeDefinition</a>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -920,7 +920,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Unique identifier of the Product.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return id
      */
 
@@ -929,7 +929,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Current version of the Product.</p>
+     *  <p>Current version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return version
      */
 
@@ -956,7 +956,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Product.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return key
      */
 
@@ -966,7 +966,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>The ProductType defining the Attributes of the Product.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a> defining the Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return productType
      */
 
@@ -975,7 +975,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Name of the Product.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return name
      */
 
@@ -984,7 +984,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Description of the Product.</p>
+     *  <p>Description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return description
      */
 
@@ -994,7 +994,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different locales. Matches the pattern <code>[a-zA-Z0-9_\-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in the Project.</p>
+     *  <p>User-defined identifier used in a deep-link URL for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. Must be unique across a Project, but can be the same for Products in different locales. Matches the pattern <code>[a-zA-Z0-9_\-]{2,256}</code>. For <span>good performance</span>, indexes are provided for the first 15 <code>languages</code> set in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return slug
      */
 
@@ -1003,7 +1003,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Categories assigned to the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return categories
      */
 
@@ -1012,7 +1012,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Order of Product in Categories.</p>
+     *  <p>Order of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> in <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a>.</p>
      * @return categoryOrderHints
      */
 
@@ -1022,7 +1022,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Title of the Product displayed in search results.</p>
+     *  <p>Title of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> displayed in search results.</p>
      * @return metaTitle
      */
 
@@ -1032,7 +1032,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Description of the Product displayed in search results below the meta title.</p>
+     *  <p>Description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> displayed in search results below the meta title.</p>
      * @return metaDescription
      */
 
@@ -1042,7 +1042,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Keywords that give additional information about the Product to search engines.</p>
+     *  <p>Keywords that give additional information about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> to search engines.</p>
      * @return metaKeywords
      */
 
@@ -1052,7 +1052,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
+     *  <p>Used by <span>Search Term Suggestions</span>, but is also considered for a <span>full text search</span> in the Product Projection Search API.</p>
      * @return searchKeywords
      */
 
@@ -1072,7 +1072,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p><code>true</code> if the Product is published.</p>
+     *  <p><code>true</code> if the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:CurrentStaged" rel="nofollow">published</a>.</p>
      * @return published
      */
 
@@ -1082,7 +1082,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>The Master Variant of the Product.</p>
+     *  <p>The Master Variant of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return masterVariant
      */
 
@@ -1100,7 +1100,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>The TaxCategory of the Product.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return taxCategory
      */
 
@@ -1110,7 +1110,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>State of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return state
      */
 
@@ -1120,7 +1120,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Review statistics of the Product.</p>
+     *  <p>Review statistics of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return reviewRatingStatistics
      */
 
@@ -1130,7 +1130,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Indicates whether the Prices of the Product Projection are embedded or standalone. Projecting Prices only works with <code>Embedded</code>, there is currently no support for <code>Standalone</code>.</p>
+     *  <p>Indicates whether the Prices of the Product Projection are <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">embedded</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">standalone</a>. <span>Projecting Prices</span> only works with <code>Embedded</code>, there is currently no support for <code>Standalone</code>.</p>
      * @return priceMode
      */
 
@@ -1140,7 +1140,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionDraft" rel="nofollow">AttributeDefinition</a>.</p>
      * @return attributes
      */
 

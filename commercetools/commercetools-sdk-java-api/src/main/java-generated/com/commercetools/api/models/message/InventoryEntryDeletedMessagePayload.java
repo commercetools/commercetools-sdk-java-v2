@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Delete InventoryEntry request.</p>
+ *  <p>Generated after a successful <span>Delete InventoryEntry</span> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface InventoryEntryDeletedMessagePayload extends MessagePayload {
     String INVENTORY_ENTRY_DELETED = "InventoryEntryDeleted";
 
     /**
-     *  <p>The <code>sku</code> of the InventoryEntry that was deleted.</p>
+     *  <p>The <code>sku</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> that was deleted.</p>
      * @return sku
      */
     @NotNull
@@ -48,7 +48,7 @@ public interface InventoryEntryDeletedMessagePayload extends MessagePayload {
     public String getSku();
 
     /**
-     *  <p>Reference to the Channel where the InventoryEntry was deleted.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> where the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> was deleted.</p>
      * @return supplyChannel
      */
     @Valid
@@ -56,14 +56,14 @@ public interface InventoryEntryDeletedMessagePayload extends MessagePayload {
     public ChannelReference getSupplyChannel();
 
     /**
-     *  <p>The <code>sku</code> of the InventoryEntry that was deleted.</p>
+     *  <p>The <code>sku</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> that was deleted.</p>
      * @param sku value to be set
      */
 
     public void setSku(final String sku);
 
     /**
-     *  <p>Reference to the Channel where the InventoryEntry was deleted.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> where the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> was deleted.</p>
      * @param supplyChannel value to be set
      */
 

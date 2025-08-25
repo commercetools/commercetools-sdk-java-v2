@@ -25,7 +25,7 @@ public class CustomerCreatedMessagePayloadBuilder implements Builder<CustomerCre
     private com.commercetools.api.models.customer.Customer customer;
 
     /**
-     *  <p>Customer that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that was created.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class CustomerCreatedMessagePayloadBuilder implements Builder<CustomerCre
     }
 
     /**
-     *  <p>Customer that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that was created.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class CustomerCreatedMessagePayloadBuilder implements Builder<CustomerCre
     }
 
     /**
-     *  <p>Customer that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that was created.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class CustomerCreatedMessagePayloadBuilder implements Builder<CustomerCre
     }
 
     /**
-     *  <p>Customer that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that was created.</p>
      * @return customer
      */
 

@@ -16,7 +16,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Setting the RecurringOrderState generates the RecurringOrderStateChanged Message.</p>
+ *  <p>Setting the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderState" rel="nofollow">RecurringOrderState</a> generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderStateChangedMessage" rel="nofollow">RecurringOrderStateChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

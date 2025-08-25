@@ -148,7 +148,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     public StagedQuoteReference getStagedQuote();
 
     /**
-     *  <p>The Buyer who owns the Quote.</p>
+     *  <p>The <span>Buyer</span> who owns the Quote.</p>
      * @return customer
      */
     @Valid
@@ -172,7 +172,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     public ZonedDateTime getValidTo();
 
     /**
-     *  <p>Message from the Seller included in the offer.</p>
+     *  <p>Message from the <span>Seller</span> included in the offer.</p>
      * @return sellerComment
      */
 
@@ -180,7 +180,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     public String getSellerComment();
 
     /**
-     *  <p>Message from the Buyer included in the renegotiation request.</p>
+     *  <p>Message from the <span>Buyer</span> included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestQuoteRenegotiationAction" rel="nofollow">renegotiation request</a>.</p>
      * @return buyerComment
      */
 
@@ -188,7 +188,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     public String getBuyerComment();
 
     /**
-     *  <p>The Store to which the Buyer belongs.</p>
+     *  <p>The Store to which the <span>Buyer</span> belongs.</p>
      * @return store
      */
     @Valid
@@ -231,7 +231,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     public TaxedPrice getTaxedPrice();
 
     /**
-     *  <p>Used to determine the eligible ShippingMethods and rates as well as the tax rate of the Line Items.</p>
+     *  <p>Used to determine the eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethods</a> and rates as well as the tax rate of the Line Items.</p>
      * @return shippingAddress
      */
     @Valid
@@ -247,7 +247,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     public Address getBillingAddress();
 
     /**
-     *  <p>Inventory mode of the Cart referenced in the QuoteRequestDraft.</p>
+     *  <p>Inventory mode of the Cart referenced in the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestDraft" rel="nofollow">QuoteRequestDraft</a>.</p>
      * @return inventoryMode
      */
 
@@ -255,7 +255,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     public InventoryMode getInventoryMode();
 
     /**
-     *  <p>Tax mode of the Cart referenced in the QuoteRequestDraft.</p>
+     *  <p>Tax mode of the Cart referenced in the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestDraft" rel="nofollow">QuoteRequestDraft</a>.</p>
      * @return taxMode
      */
     @NotNull
@@ -263,7 +263,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     public TaxMode getTaxMode();
 
     /**
-     *  <p>When calculating total prices on LineItems and CustomLineItems, the selected mode is used for rounding.</p>
+     *  <p>When calculating total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, the selected mode is used for rounding.</p>
      * @return priceRoundingMode
      */
     @NotNull
@@ -295,7 +295,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     public String getCountry();
 
     /**
-     *  <p>Set automatically once the ShippingMethod is set.</p>
+     *  <p>Set automatically once the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> is set.</p>
      * @return shippingInfo
      */
     @Valid
@@ -311,7 +311,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     public PaymentInfo getPaymentInfo();
 
     /**
-     *  <p>Used to select a ShippingRatePriceTier.</p>
+     *  <p>Used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>.</p>
      * @return shippingRateInput
      */
     @Valid
@@ -351,7 +351,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     public QuoteState getQuoteState();
 
     /**
-     *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Quote. This reference can point to a State in a custom workflow.</p>
      * @return state
      */
     @Valid
@@ -359,7 +359,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     public StateReference getState();
 
     /**
-     *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
+     *  <p>The Purchase Order Number is typically set by the <span>Buyer</span> on a <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> to track the purchase order during the <span>quote and order flow</span>.</p>
      * @return purchaseOrderNumber
      */
 
@@ -367,7 +367,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     public String getPurchaseOrderNumber();
 
     /**
-     *  <p>The BusinessUnit for the Quote. Only available for B2B-enabled Projects.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> for the Quote. Only available for <span>B2B</span>-enabled Projects.</p>
      * @return businessUnit
      */
     @Valid
@@ -438,7 +438,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     public void setStagedQuote(final StagedQuoteReference stagedQuote);
 
     /**
-     *  <p>The Buyer who owns the Quote.</p>
+     *  <p>The <span>Buyer</span> who owns the Quote.</p>
      * @param customer value to be set
      */
 
@@ -459,21 +459,21 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     public void setValidTo(final ZonedDateTime validTo);
 
     /**
-     *  <p>Message from the Seller included in the offer.</p>
+     *  <p>Message from the <span>Seller</span> included in the offer.</p>
      * @param sellerComment value to be set
      */
 
     public void setSellerComment(final String sellerComment);
 
     /**
-     *  <p>Message from the Buyer included in the renegotiation request.</p>
+     *  <p>Message from the <span>Buyer</span> included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestQuoteRenegotiationAction" rel="nofollow">renegotiation request</a>.</p>
      * @param buyerComment value to be set
      */
 
     public void setBuyerComment(final String buyerComment);
 
     /**
-     *  <p>The Store to which the Buyer belongs.</p>
+     *  <p>The Store to which the <span>Buyer</span> belongs.</p>
      * @param store value to be set
      */
 
@@ -524,7 +524,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     public void setTaxedPrice(final TaxedPrice taxedPrice);
 
     /**
-     *  <p>Used to determine the eligible ShippingMethods and rates as well as the tax rate of the Line Items.</p>
+     *  <p>Used to determine the eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethods</a> and rates as well as the tax rate of the Line Items.</p>
      * @param shippingAddress value to be set
      */
 
@@ -538,21 +538,21 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     public void setBillingAddress(final Address billingAddress);
 
     /**
-     *  <p>Inventory mode of the Cart referenced in the QuoteRequestDraft.</p>
+     *  <p>Inventory mode of the Cart referenced in the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestDraft" rel="nofollow">QuoteRequestDraft</a>.</p>
      * @param inventoryMode value to be set
      */
 
     public void setInventoryMode(final InventoryMode inventoryMode);
 
     /**
-     *  <p>Tax mode of the Cart referenced in the QuoteRequestDraft.</p>
+     *  <p>Tax mode of the Cart referenced in the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestDraft" rel="nofollow">QuoteRequestDraft</a>.</p>
      * @param taxMode value to be set
      */
 
     public void setTaxMode(final TaxMode taxMode);
 
     /**
-     *  <p>When calculating total prices on LineItems and CustomLineItems, the selected mode is used for rounding.</p>
+     *  <p>When calculating total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, the selected mode is used for rounding.</p>
      * @param priceRoundingMode value to be set
      */
 
@@ -580,7 +580,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     public void setCountry(final String country);
 
     /**
-     *  <p>Set automatically once the ShippingMethod is set.</p>
+     *  <p>Set automatically once the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> is set.</p>
      * @param shippingInfo value to be set
      */
 
@@ -594,7 +594,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     public void setPaymentInfo(final PaymentInfo paymentInfo);
 
     /**
-     *  <p>Used to select a ShippingRatePriceTier.</p>
+     *  <p>Used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>.</p>
      * @param shippingRateInput value to be set
      */
 
@@ -645,21 +645,21 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     public void setQuoteState(final QuoteState quoteState);
 
     /**
-     *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Quote. This reference can point to a State in a custom workflow.</p>
      * @param state value to be set
      */
 
     public void setState(final StateReference state);
 
     /**
-     *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
+     *  <p>The Purchase Order Number is typically set by the <span>Buyer</span> on a <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> to track the purchase order during the <span>quote and order flow</span>.</p>
      * @param purchaseOrderNumber value to be set
      */
 
     public void setPurchaseOrderNumber(final String purchaseOrderNumber);
 
     /**
-     *  <p>The BusinessUnit for the Quote. Only available for B2B-enabled Projects.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> for the Quote. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param businessUnit value to be set
      */
 

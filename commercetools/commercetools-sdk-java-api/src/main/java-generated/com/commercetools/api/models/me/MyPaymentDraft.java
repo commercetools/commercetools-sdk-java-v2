@@ -37,7 +37,7 @@ public interface MyPaymentDraft extends MyPaymentDraftMixin,
         com.commercetools.api.models.CustomizableDraft<MyPaymentDraft>, io.vrap.rmf.base.client.Draft<MyPaymentDraft> {
 
     /**
-     *  <p>Money value the Payment intends to receive from the customer. The value usually matches the Cart or Order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value usually matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> gross total.</p>
      * @return amountPlanned
      */
     @NotNull
@@ -62,7 +62,7 @@ public interface MyPaymentDraft extends MyPaymentDraftMixin,
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>Financial transactions of the TransactionTypes <code>Authorization</code> or <code>Charge</code>.</p>
+     *  <p>Financial transactions of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionTypes</a> <code>Authorization</code> or <code>Charge</code>.</p>
      * @return transaction
      */
     @Valid
@@ -70,7 +70,7 @@ public interface MyPaymentDraft extends MyPaymentDraftMixin,
     public MyTransactionDraft getTransaction();
 
     /**
-     *  <p>Money value the Payment intends to receive from the customer. The value usually matches the Cart or Order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value usually matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> gross total.</p>
      * @param amountPlanned value to be set
      */
 
@@ -91,7 +91,7 @@ public interface MyPaymentDraft extends MyPaymentDraftMixin,
     public void setCustom(final CustomFieldsDraft custom);
 
     /**
-     *  <p>Financial transactions of the TransactionTypes <code>Authorization</code> or <code>Charge</code>.</p>
+     *  <p>Financial transactions of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionTypes</a> <code>Authorization</code> or <code>Charge</code>.</p>
      * @param transaction value to be set
      */
 

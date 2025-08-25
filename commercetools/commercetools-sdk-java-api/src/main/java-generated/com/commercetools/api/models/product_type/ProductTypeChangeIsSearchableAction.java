@@ -47,7 +47,7 @@ public interface ProductTypeChangeIsSearchableAction extends ProductTypeUpdateAc
     public String getAttributeName();
 
     /**
-     *  <p>Determines whether the Attribute's values can be used in full-text search queries, filters, and facets. See AttributeDefinition for details.</p>
+     *  <p>Determines whether the Attribute's values can be used in full-text search queries, filters, and facets. See <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> for details.</p>
      * @return isSearchable
      */
     @NotNull
@@ -62,7 +62,7 @@ public interface ProductTypeChangeIsSearchableAction extends ProductTypeUpdateAc
     public void setAttributeName(final String attributeName);
 
     /**
-     *  <p>Determines whether the Attribute's values can be used in full-text search queries, filters, and facets. See AttributeDefinition for details.</p>
+     *  <p>Determines whether the Attribute's values can be used in full-text search queries, filters, and facets. See <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> for details.</p>
      * @param isSearchable value to be set
      */
 

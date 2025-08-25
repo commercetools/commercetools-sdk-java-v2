@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>A localized enum value must be unique within the enum, else a DuplicateEnumValues error is returned.</p>
+ *  <p>A localized enum value must be unique within the enum, else a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateEnumValuesError" rel="nofollow">DuplicateEnumValues</a> error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

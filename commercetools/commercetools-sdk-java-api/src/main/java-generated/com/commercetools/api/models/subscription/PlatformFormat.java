@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>The PlatformFormat uses constructs that are similar to the ones used in the REST API, for example, on the Messages Query HTTP API.</p>
+ *  <p>The PlatformFormat uses constructs that are similar to the ones used in the REST API, for example, on the <span>Messages Query HTTP API</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

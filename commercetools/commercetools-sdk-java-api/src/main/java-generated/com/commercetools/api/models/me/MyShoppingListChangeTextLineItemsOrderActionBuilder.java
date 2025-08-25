@@ -25,7 +25,7 @@ public class MyShoppingListChangeTextLineItemsOrderActionBuilder
     private java.util.List<String> textLineItemOrder;
 
     /**
-     *  <p>All existing TextLineItem <code>id</code>s in the desired new order.</p>
+     *  <p>All existing <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a> <code>id</code>s in the desired new order.</p>
      * @param textLineItemOrder value to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class MyShoppingListChangeTextLineItemsOrderActionBuilder
     }
 
     /**
-     *  <p>All existing TextLineItem <code>id</code>s in the desired new order.</p>
+     *  <p>All existing <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a> <code>id</code>s in the desired new order.</p>
      * @param textLineItemOrder value to be set
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class MyShoppingListChangeTextLineItemsOrderActionBuilder
     }
 
     /**
-     *  <p>All existing TextLineItem <code>id</code>s in the desired new order.</p>
+     *  <p>All existing <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a> <code>id</code>s in the desired new order.</p>
      * @param textLineItemOrder value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class MyShoppingListChangeTextLineItemsOrderActionBuilder
     }
 
     /**
-     *  <p>All existing TextLineItem <code>id</code>s in the desired new order.</p>
+     *  <p>All existing <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a> <code>id</code>s in the desired new order.</p>
      * @return textLineItemOrder
      */
 

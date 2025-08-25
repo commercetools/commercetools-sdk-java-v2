@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Generated after a successful Set Name update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetNameAction" rel="nofollow">Set Name</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -46,7 +46,7 @@ public interface StoreNameSetMessage extends Message {
     String STORE_NAME_SET = "StoreNameSet";
 
     /**
-     *  <p>Name of the Store set during the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @return name
      */
     @Valid
@@ -54,7 +54,7 @@ public interface StoreNameSetMessage extends Message {
     public LocalizedString getName();
 
     /**
-     *  <p>Names set for the Store in different locales.</p>
+     *  <p>Names set for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> in different locales.</p>
      * @return nameAllLocales
      */
     @Valid
@@ -62,14 +62,14 @@ public interface StoreNameSetMessage extends Message {
     public List<LocalizedString> getNameAllLocales();
 
     /**
-     *  <p>Name of the Store set during the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @param name value to be set
      */
 
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>Names set for the Store in different locales.</p>
+     *  <p>Names set for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> in different locales.</p>
      * @param nameAllLocales values to be set
      */
 
@@ -77,7 +77,7 @@ public interface StoreNameSetMessage extends Message {
     public void setNameAllLocales(final LocalizedString... nameAllLocales);
 
     /**
-     *  <p>Names set for the Store in different locales.</p>
+     *  <p>Names set for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> in different locales.</p>
      * @param nameAllLocales values to be set
      */
 

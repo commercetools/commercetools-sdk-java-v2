@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Add Country, Remove Country, or Set Countries update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreAddCountryAction" rel="nofollow">Add Country</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreRemoveCountryAction" rel="nofollow">Remove Country</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetCountriesAction" rel="nofollow">Set Countries</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreCountriesChangedMessageImpl implements StoreCountriesChangedMessage, ModelBase {
@@ -142,7 +142,7 @@ public class StoreCountriesChangedMessageImpl implements StoreCountriesChangedMe
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -158,7 +158,7 @@ public class StoreCountriesChangedMessageImpl implements StoreCountriesChangedMe
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -174,7 +174,7 @@ public class StoreCountriesChangedMessageImpl implements StoreCountriesChangedMe
     }
 
     /**
-     *  <p>Countries added to the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.store_country.StoreCountry> getAddedCountries() {
@@ -182,7 +182,7 @@ public class StoreCountriesChangedMessageImpl implements StoreCountriesChangedMe
     }
 
     /**
-     *  <p>Countries removed from the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.store_country.StoreCountry> getRemovedCountries() {

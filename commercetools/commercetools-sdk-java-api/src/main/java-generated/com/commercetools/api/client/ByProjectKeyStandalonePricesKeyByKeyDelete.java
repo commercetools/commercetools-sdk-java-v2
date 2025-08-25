@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Produces the StandalonePriceDeleted Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceDeletedMessage" rel="nofollow">StandalonePriceDeleted</a> Message.</p>
  *
  * <hr>
  * <div class=code-example>

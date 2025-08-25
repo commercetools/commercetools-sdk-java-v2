@@ -54,7 +54,7 @@ public class ReviewSetTargetActionImpl implements ReviewSetTargetAction, ModelBa
     }
 
     /**
-     *  <p>Value to set, specified as ProductResourceIdentifier or ChannelResourceIdentifier, respectively. If empty, any existing value will be removed.</p>
+     *  <p>Value to set, specified as <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductResourceIdentifier" rel="nofollow">ProductResourceIdentifier</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelResourceIdentifier" rel="nofollow">ChannelResourceIdentifier</a>, respectively. If empty, any existing value will be removed.</p>
      */
 
     public java.lang.Object getTarget() {

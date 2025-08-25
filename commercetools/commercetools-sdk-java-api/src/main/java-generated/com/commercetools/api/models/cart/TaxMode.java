@@ -18,29 +18,29 @@ public interface TaxMode extends JsonEnum {
 
     /**
     <ul>
-     <li><p>Tax Rates are selected automatically from the TaxCategories based on the Cart <code>shippingAddress</code>. This is the default tax mode for a new Cart.</p></li>
+     <li><p>Tax Rates are selected automatically from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategories</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> <code>shippingAddress</code>. This is the default tax mode for a new Cart.</p></li>
      <li><p>The <code>totalNet</code>, <code>totalGross</code>, and <code>taxPortions</code> fields are calculated based on the <code>taxRoundingMode</code>.</p></li>
     </ul> */
     TaxMode PLATFORM = TaxModeEnum.PLATFORM;
     /**
     <ul>
-     <li><p>Tax Rates are set externally with ExternalTaxRateDraft. A Cart can be ordered only if all Line Items, Custom Line Items, and the Shipping Method have an external Tax Rate set.</p></li>
+     <li><p>Tax Rates are set externally with <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>. A Cart can be ordered only if all Line Items, Custom Line Items, and the Shipping Method have an external Tax Rate set.</p></li>
      <li><p>The <code>totalNet</code>, <code>totalGross</code>, and <code>taxPortions</code> fields are calculated based on the <code>taxRoundingMode</code>.</p></li>
     </ul> */
     TaxMode EXTERNAL = TaxModeEnum.EXTERNAL;
     /**
     <ul>
-     <li><p>Tax amounts, Tax Rates, and tax portions are set externally with ExternalTaxAmountDraft. A Cart can be ordered only if the Cart and all Line Items, Custom Line Items, and the Shipping Method have an external tax amount and rate set.</p></li>
-     <li><p>The Cart <code>taxedPrice</code> field must be set using Set Cart Total Tax. The Cart <code>taxedShippingPrice</code> field is always empty in this tax mode.</p></li>
+     <li><p>Tax amounts, Tax Rates, and tax portions are set externally with <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxAmountDraft" rel="nofollow">ExternalTaxAmountDraft</a>. A Cart can be ordered only if the Cart and all Line Items, Custom Line Items, and the Shipping Method have an external tax amount and rate set.</p></li>
+     <li><p>The Cart <code>taxedPrice</code> field must be set using <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetCartTotalTaxAction" rel="nofollow">Set Cart Total Tax</a>. The Cart <code>taxedShippingPrice</code> field is always empty in this tax mode.</p></li>
      <li><p>Price-affecting update actions on Carts require external recalculation of the total gross price. In these cases, <code>taxedPrice</code> and <code>taxRate</code> are removed and must be set again. The order in which the individual update actions are issued is important:</p>
       <ol>
        <li><p>Issue the price-affecting update action(s).</p></li>
-       <li><p>Update the tax amounts using Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount.</p>
+       <li><p>Update the tax amounts using <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetLineItemTaxAmountAction" rel="nofollow">Set LineItem TaxAmount</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetCustomLineItemTaxAmountAction" rel="nofollow">Set CustomLineItem TaxAmount</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingMethodTaxAmountAction" rel="nofollow">Set ShippingMethod TaxAmount</a>.</p>
         <ul>
-         <li><p>If the update action changes the Line Item price, for Line Items with <code>Platform</code> LineItemPriceMode, you must issue Set LineItem TaxAmount in a <em>separate</em> request.</p></li>
-         <li><p>If the update action removes the externally set tax amount for the Shipping Method, you must issue Set ShippingMethod TaxAmount in a <em>separate</em> request.</p></li>
+         <li><p>If the update action changes the Line Item price, for Line Items with <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:type:LineItemPriceMode" rel="nofollow">LineItemPriceMode</a>, you must issue <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetLineItemTaxAmountAction" rel="nofollow">Set LineItem TaxAmount</a> in a <em>separate</em> request.</p></li>
+         <li><p>If the update action removes the externally set tax amount for the Shipping Method, you must issue <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingMethodTaxAmountAction" rel="nofollow">Set ShippingMethod TaxAmount</a> in a <em>separate</em> request.</p></li>
         </ul></li>
-       <li><p>Update the <code>taxedPrice</code> on Cart using Set Cart Total Tax.</p></li>
+       <li><p>Update the <code>taxedPrice</code> on Cart using <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetCartTotalTaxAction" rel="nofollow">Set Cart Total Tax</a>.</p></li>
       </ol></li>
      <li><p>Tax-inclusive pricing should be avoided when using TaxMode <code>ExternalAmount</code> because <code>taxedItemPrice.totalNet</code> is automatically set by the platform to the Line Item's <code>totalPrice</code>.</p></li>
     </ul> */
@@ -48,7 +48,7 @@ public interface TaxMode extends JsonEnum {
     /**
     <ul>
      <li>No taxes are added to the Cart.</li>
-     <li>This tax mode cannot be set on the My Carts API.</li>
+     <li>This tax mode cannot be set on the <span>My Carts</span> API.</li>
     </ul> */
     TaxMode DISABLED = TaxModeEnum.DISABLED;
 

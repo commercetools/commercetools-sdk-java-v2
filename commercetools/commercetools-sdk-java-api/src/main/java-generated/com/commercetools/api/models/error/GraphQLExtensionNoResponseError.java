@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Returned when the API Extension does not respond within the time limit, or could not be reached.</p>
+ *  <p>Returned when the API Extension does not respond within the <span>time limit</span>, or could not be reached.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

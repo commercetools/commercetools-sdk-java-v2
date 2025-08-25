@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if an Order exists with the provided <code>id</code> in a BusinessUnit. Returns a <code>200</code> status if the Order exists, or a <code>404</code> status otherwise.</p>
+ *  <p>Checks if an Order exists with the provided <code>id</code> in a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>. Returns a <code>200</code> status if the Order exists, or a <code>404</code> status otherwise.</p>
  *
  * <hr>
  * <div class=code-example>

@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Result of a distinct facet or a ranges facet.</p>
+ *  <p>Result of a <span>distinct facet</span> or a <span>ranges facet</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

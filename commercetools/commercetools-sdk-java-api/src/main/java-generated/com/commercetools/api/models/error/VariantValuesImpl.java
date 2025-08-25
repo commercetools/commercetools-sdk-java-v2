@@ -47,7 +47,7 @@ public class VariantValuesImpl implements VariantValues, ModelBase {
     }
 
     /**
-     *  <p>SKU of the ProductVariant.</p>
+     *  <p>SKU of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      */
 
     public String getSku() {
@@ -55,7 +55,7 @@ public class VariantValuesImpl implements VariantValues, ModelBase {
     }
 
     /**
-     *  <p>Embedded Prices of the ProductVariant.</p>
+     *  <p>Embedded Prices of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {
@@ -63,7 +63,7 @@ public class VariantValuesImpl implements VariantValues, ModelBase {
     }
 
     /**
-     *  <p>Attributes of the ProductVariant.</p>
+     *  <p>Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {

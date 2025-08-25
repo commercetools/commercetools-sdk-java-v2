@@ -52,7 +52,7 @@ public class ShoppingListSetBusinessUnitActionImpl implements ShoppingListSetBus
     }
 
     /**
-     *  <p>The Business Unit to assign to the Shopping List, which must have access to the Store that is set on the Shopping List.</p>
+     *  <p>The Business Unit to assign to the Shopping List, which must have access to the <span>Store</span> that is set on the Shopping List.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit() {

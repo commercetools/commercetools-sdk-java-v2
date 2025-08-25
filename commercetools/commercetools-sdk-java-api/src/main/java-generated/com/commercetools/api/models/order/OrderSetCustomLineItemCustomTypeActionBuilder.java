@@ -36,7 +36,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -47,7 +47,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
     }
 
     /**
-     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemKey value to be set
      * @return Builder
      */
@@ -58,7 +58,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Defines the Type that extends the Custom Line Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Custom Line Item.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Custom Line Item with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Custom Line Item.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -70,7 +70,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Defines the Type that extends the Custom Line Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Custom Line Item.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Custom Line Item with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Custom Line Item.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Defines the Type that extends the Custom Line Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Custom Line Item.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Custom Line Item with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Custom Line Item.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Custom Line Item.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Custom Line Item.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -106,7 +106,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Custom Line Item.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Custom Line Item.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -118,7 +118,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Custom Line Item.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Custom Line Item.</p>
      * @param fields value to be set
      * @return Builder
      */
@@ -130,7 +130,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
     }
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
 
@@ -140,7 +140,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
     }
 
     /**
-     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemKey
      */
 
@@ -150,7 +150,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Defines the Type that extends the Custom Line Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Custom Line Item.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Custom Line Item with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Custom Line Item.</p>
      * @return type
      */
 
@@ -160,7 +160,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Custom Line Item.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Custom Line Item.</p>
      * @return fields
      */
 

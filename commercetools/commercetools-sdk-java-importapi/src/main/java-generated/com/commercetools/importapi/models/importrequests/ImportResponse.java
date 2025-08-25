@@ -35,7 +35,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ImportResponse {
 
     /**
-     *  <p>The identifiers and status of the ImportOperations created by the ImportRequest.</p>
+     *  <p>The identifiers and status of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperations</a> created by the ImportRequest.</p>
      * @return operationStatus
      */
     @NotNull
@@ -44,7 +44,7 @@ public interface ImportResponse {
     public List<ImportOperationStatus> getOperationStatus();
 
     /**
-     *  <p>The identifiers and status of the ImportOperations created by the ImportRequest.</p>
+     *  <p>The identifiers and status of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperations</a> created by the ImportRequest.</p>
      * @param operationStatus values to be set
      */
 
@@ -52,7 +52,7 @@ public interface ImportResponse {
     public void setOperationStatus(final ImportOperationStatus... operationStatus);
 
     /**
-     *  <p>The identifiers and status of the ImportOperations created by the ImportRequest.</p>
+     *  <p>The identifiers and status of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperations</a> created by the ImportRequest.</p>
      * @param operationStatus values to be set
      */
 

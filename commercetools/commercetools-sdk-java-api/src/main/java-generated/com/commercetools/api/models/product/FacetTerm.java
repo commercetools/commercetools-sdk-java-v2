@@ -32,7 +32,7 @@ import jakarta.validation.constraints.NotNull;
 public interface FacetTerm {
 
     /**
-     *  <p>Value for the field specified in the term facet expression for which at least one ProductVariant could be found.</p>
+     *  <p>Value for the field specified in the <span>term facet expression</span> for which at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> could be found.</p>
      * @return term
      */
     @NotNull
@@ -40,7 +40,7 @@ public interface FacetTerm {
     public Object getTerm();
 
     /**
-     *  <p>Number of ProductVariants for which the <code>term</code> applies.</p>
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> for which the <code>term</code> applies.</p>
      * @return count
      */
     @NotNull
@@ -48,7 +48,7 @@ public interface FacetTerm {
     public Long getCount();
 
     /**
-     *  <p>Number of Products for which the <code>term</code> applies. Only available if the <code>counting products</code> extension is enabled.</p>
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a> for which the <code>term</code> applies. Only available if the <code>counting products</code> <span>extension</span> is enabled.</p>
      * @return productCount
      */
 
@@ -56,21 +56,21 @@ public interface FacetTerm {
     public Long getProductCount();
 
     /**
-     *  <p>Value for the field specified in the term facet expression for which at least one ProductVariant could be found.</p>
+     *  <p>Value for the field specified in the <span>term facet expression</span> for which at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> could be found.</p>
      * @param term value to be set
      */
 
     public void setTerm(final Object term);
 
     /**
-     *  <p>Number of ProductVariants for which the <code>term</code> applies.</p>
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> for which the <code>term</code> applies.</p>
      * @param count value to be set
      */
 
     public void setCount(final Long count);
 
     /**
-     *  <p>Number of Products for which the <code>term</code> applies. Only available if the <code>counting products</code> extension is enabled.</p>
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a> for which the <code>term</code> applies. Only available if the <code>counting products</code> <span>extension</span> is enabled.</p>
      * @param productCount value to be set
      */
 

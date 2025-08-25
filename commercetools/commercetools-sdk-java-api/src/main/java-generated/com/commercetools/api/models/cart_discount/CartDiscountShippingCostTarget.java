@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Discount is applied to the shipping costs of the Cart.</p>
+ *  <p>Discount is applied to the shipping costs of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

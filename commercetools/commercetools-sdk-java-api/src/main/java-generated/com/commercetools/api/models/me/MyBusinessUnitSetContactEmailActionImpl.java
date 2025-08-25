@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Setting the contact email on a Business Unit generates a BusinessUnitContactEmailSet Message.</p>
+ *  <p>Setting the contact email on a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitContactEmailSetMessage" rel="nofollow">BusinessUnitContactEmailSet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyBusinessUnitSetContactEmailActionImpl implements MyBusinessUnitSetContactEmailAction, ModelBase {

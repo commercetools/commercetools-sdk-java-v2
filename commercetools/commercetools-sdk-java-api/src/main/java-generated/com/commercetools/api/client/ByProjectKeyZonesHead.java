@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if one or more Zones exist for the provided query predicate. Returns a <code>200 OK</code> status if any Zones match the query predicate, or a Not Found error otherwise.</p>
+ *  <p>Checks if one or more Zones exist for the provided query predicate. Returns a <code>200 OK</code> status if any Zones match the query predicate, or a <span>Not Found</span> error otherwise.</p>
  *
  * <hr>
  * <div class=code-example>

@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>An address can only be removed if it is not referenced in any ItemShippingTarget of the Cart. In such case, change the Line Item shipping address to a different <code>addressKey</code> first using the Set LineItemShippingDetails update action, before you remove the obsolete address.</p>
+ *  <p>An address can only be removed if it is not referenced in any <a href="https://docs.commercetools.com/apis/ctp:api:type:ItemShippingTarget" rel="nofollow">ItemShippingTarget</a> of the Cart. In such case, change the Line Item shipping address to a different <code>addressKey</code> first using the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetLineItemShippingDetailsAction" rel="nofollow">Set LineItemShippingDetails</a> update action, before you remove the obsolete address.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

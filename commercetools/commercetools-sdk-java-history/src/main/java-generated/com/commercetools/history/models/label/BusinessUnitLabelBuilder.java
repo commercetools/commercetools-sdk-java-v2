@@ -27,7 +27,7 @@ public class BusinessUnitLabelBuilder implements Builder<BusinessUnitLabel> {
     private String name;
 
     /**
-     *  <p>User-defined unique identifier of the Business Unit.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class BusinessUnitLabelBuilder implements Builder<BusinessUnitLabel> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Business Unit.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return key
      */
 

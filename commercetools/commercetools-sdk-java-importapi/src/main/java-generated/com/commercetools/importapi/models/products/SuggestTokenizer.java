@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The tokenizer defines the tokens that are used for search term suggestions.</p>
+ *  <p>The tokenizer defines the tokens that are used for <span>search term suggestions</span>.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern

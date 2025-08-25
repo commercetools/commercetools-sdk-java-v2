@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The request body to import Business Units. Contains data for Business Units to be created or updated in a Project.</p>
+ *  <p>The request body to <a href="https://docs.commercetools.com/apis/ctp:import:endpoint:/{projectKey}/business-units/import-containers/{importContainerKey}:POST" rel="nofollow">import Business Units</a>. Contains data for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Units</a> to be created or updated in a Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitImportRequestImpl implements BusinessUnitImportRequest, ModelBase {
@@ -53,7 +53,7 @@ public class BusinessUnitImportRequestImpl implements BusinessUnitImportRequest,
     }
 
     /**
-     *  <p>The Business Unit import resources of this request. Can contain CompanyBusinessUnitImport or DivisionBusinessUnitImport.</p>
+     *  <p>The Business Unit import resources of this request. Can contain <a href="https://docs.commercetools.com/apis/ctp:import:type:CompanyBusinessUnitImport" rel="nofollow">CompanyBusinessUnitImport</a> or <a href="https://docs.commercetools.com/apis/ctp:import:type:DivisionBusinessUnitImport" rel="nofollow">DivisionBusinessUnitImport</a>.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.business_units.BusinessUnitImport> getResources() {

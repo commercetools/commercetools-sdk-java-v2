@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Adds a DirectDiscount, but only if no DiscountCode has been added to the Order. Either a Discount Code or a Direct Discount can exist on a Order at the same time.</p>
+ *  <p>Adds a <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">DirectDiscount</a>, but only if no <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> has been added to the Order. Either a Discount Code or a Direct Discount can exist on a Order at the same time.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetDirectDiscountsActionImpl implements StagedOrderSetDirectDiscountsAction, ModelBase {

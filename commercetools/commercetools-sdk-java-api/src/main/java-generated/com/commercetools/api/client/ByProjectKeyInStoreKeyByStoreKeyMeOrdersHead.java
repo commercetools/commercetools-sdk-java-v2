@@ -20,12 +20,12 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if one or more Orders exist for the provided query predicate in a Store for the authenticated Customer or anonymous user. Returns a <code>200</code> status if successful.</p>
- *  <p>A Not Found error is returned in the following scenarios:</p>
+ *  <p>Checks if one or more Orders exist for the provided query predicate in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> for the authenticated Customer or anonymous user. Returns a <code>200</code> status if successful.</p>
+ *  <p>A <span>Not Found</span> error is returned in the following scenarios:</p>
  *  <ul>
  *   <li>If no Orders exist in the Store that match the Query Predicate.</li>
  *   <li>If an Order matches the Query Predicate, but no <code>store</code> is specified, or the <code>store</code> field references a different Store.</li>
- *   <li>If an Order matches the Query Predicate, but does not have a <code>customerId</code> that matches the customer:{id} scope, or an <code>anonymousId</code> that matches the anonymous_id:{id} scope.</li>
+ *   <li>If an Order matches the Query Predicate, but does not have a <code>customerId</code> that matches the <span>customer:{id}</span> scope, or an <code>anonymousId</code> that matches the <span>anonymous_id:{id}</span> scope.</li>
  *  </ul>
  *
  * <hr>

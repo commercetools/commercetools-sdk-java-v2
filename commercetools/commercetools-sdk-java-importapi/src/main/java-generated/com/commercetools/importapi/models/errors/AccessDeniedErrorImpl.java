@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>This is the generic error code for access denied. In case of a wrong scope, an InvalidScopeError will be returned.</p>
+ *  <p>This is the generic error code for access denied. In case of a wrong scope, an <span>InvalidScopeError</span> will be returned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AccessDeniedErrorImpl implements AccessDeniedError, ModelBase {

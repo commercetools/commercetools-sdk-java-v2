@@ -20,13 +20,13 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Retrieves the Customer's most recently modified active Cart in a Store. Returns a <code>200</code> status if successful.</p>
- *  <p>Carts with <code>Merchant</code> or <code>Quote</code> CartOrigin are ignored.</p>
- *  <p>A ResourceNotFound error is returned in the following scenarios:</p>
+ *  <p>Retrieves the Customer's most recently modified <a href="https://docs.commercetools.com/apis/ctp:api:type:CartState" rel="nofollow">active Cart</a> in a Store. Returns a <code>200</code> status if successful.</p>
+ *  <p>Carts with <code>Merchant</code> or <code>Quote</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:CartOrigin" rel="nofollow">CartOrigin</a> are ignored.</p>
+ *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error is returned in the following scenarios:</p>
  *  <ul>
  *   <li>If no active Cart exists.</li>
  *   <li>If an active Cart exists but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store.</li>
- *   <li>If an active Cart exists but does not have a <code>customerId</code> that matches the customer:{id} scope, or <code>anonymousId</code> that matches the anonymous_id:{id} scope.</li>
+ *   <li>If an active Cart exists but does not have a <code>customerId</code> that matches the <span>customer:{id}</span> scope, or <code>anonymousId</code> that matches the <span>anonymous_id:{id}</span> scope.</li>
  *  </ul>
  *
  * <hr>

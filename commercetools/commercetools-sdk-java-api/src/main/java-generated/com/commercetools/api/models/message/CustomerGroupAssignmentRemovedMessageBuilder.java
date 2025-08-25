@@ -184,7 +184,7 @@ public class CustomerGroupAssignmentRemovedMessageBuilder implements Builder<Cus
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -196,7 +196,7 @@ public class CustomerGroupAssignmentRemovedMessageBuilder implements Builder<Cus
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -258,7 +258,7 @@ public class CustomerGroupAssignmentRemovedMessageBuilder implements Builder<Cus
     }
 
     /**
-     *  <p>Customer Group removed during the Remove CustomerGroupAssignment update action.</p>
+     *  <p>Customer Group removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerRemoveCustomerGroupAssignmentAction" rel="nofollow">Remove CustomerGroupAssignment</a> update action.</p>
      * @param builder function to build the customerGroupAssignment value
      * @return Builder
      */
@@ -272,7 +272,7 @@ public class CustomerGroupAssignmentRemovedMessageBuilder implements Builder<Cus
     }
 
     /**
-     *  <p>Customer Group removed during the Remove CustomerGroupAssignment update action.</p>
+     *  <p>Customer Group removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerRemoveCustomerGroupAssignmentAction" rel="nofollow">Remove CustomerGroupAssignment</a> update action.</p>
      * @param builder function to build the customerGroupAssignment value
      * @return Builder
      */
@@ -285,7 +285,7 @@ public class CustomerGroupAssignmentRemovedMessageBuilder implements Builder<Cus
     }
 
     /**
-     *  <p>Customer Group removed during the Remove CustomerGroupAssignment update action.</p>
+     *  <p>Customer Group removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerRemoveCustomerGroupAssignmentAction" rel="nofollow">Remove CustomerGroupAssignment</a> update action.</p>
      * @param customerGroupAssignment value to be set
      * @return Builder
      */
@@ -362,7 +362,7 @@ public class CustomerGroupAssignmentRemovedMessageBuilder implements Builder<Cus
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -390,7 +390,7 @@ public class CustomerGroupAssignmentRemovedMessageBuilder implements Builder<Cus
     }
 
     /**
-     *  <p>Customer Group removed during the Remove CustomerGroupAssignment update action.</p>
+     *  <p>Customer Group removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerRemoveCustomerGroupAssignmentAction" rel="nofollow">Remove CustomerGroupAssignment</a> update action.</p>
      * @return customerGroupAssignment
      */
 

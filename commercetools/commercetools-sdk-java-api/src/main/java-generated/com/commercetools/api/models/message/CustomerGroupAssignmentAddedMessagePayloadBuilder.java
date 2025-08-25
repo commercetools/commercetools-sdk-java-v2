@@ -26,7 +26,7 @@ public class CustomerGroupAssignmentAddedMessagePayloadBuilder
     private com.commercetools.api.models.customer.CustomerGroupAssignment customerGroupAssignment;
 
     /**
-     *  <p>Customer Group assigned to the Customer during the Add CustomerGroupAssignment update action.</p>
+     *  <p>Customer Group assigned to the Customer during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddCustomerGroupAssignmentAction" rel="nofollow">Add CustomerGroupAssignment</a> update action.</p>
      * @param builder function to build the customerGroupAssignment value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class CustomerGroupAssignmentAddedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Customer Group assigned to the Customer during the Add CustomerGroupAssignment update action.</p>
+     *  <p>Customer Group assigned to the Customer during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddCustomerGroupAssignmentAction" rel="nofollow">Add CustomerGroupAssignment</a> update action.</p>
      * @param builder function to build the customerGroupAssignment value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class CustomerGroupAssignmentAddedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Customer Group assigned to the Customer during the Add CustomerGroupAssignment update action.</p>
+     *  <p>Customer Group assigned to the Customer during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddCustomerGroupAssignmentAction" rel="nofollow">Add CustomerGroupAssignment</a> update action.</p>
      * @param customerGroupAssignment value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class CustomerGroupAssignmentAddedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Customer Group assigned to the Customer during the Add CustomerGroupAssignment update action.</p>
+     *  <p>Customer Group assigned to the Customer during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddCustomerGroupAssignmentAction" rel="nofollow">Add CustomerGroupAssignment</a> update action.</p>
      * @return customerGroupAssignment
      */
 

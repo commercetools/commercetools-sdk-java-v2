@@ -19,9 +19,9 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set Valid Until on Cart Discounts.</li>
- *   <li>Set Valid Until on Discount Codes.</li>
- *   <li>Set Valid Until on Product Discounts.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountSetValidUntilAction" rel="nofollow">Set Valid Until</a> on Cart Discounts.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeSetValidUntilAction" rel="nofollow">Set Valid Until</a> on Discount Codes.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountSetValidUntilAction" rel="nofollow">Set Valid Until</a> on Product Discounts.</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

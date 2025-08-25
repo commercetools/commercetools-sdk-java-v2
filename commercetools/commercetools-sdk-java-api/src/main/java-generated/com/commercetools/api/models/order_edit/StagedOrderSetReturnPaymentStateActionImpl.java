@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>To set a ReturnPaymentState, the Order <code>returnInfo</code> must have at least one ReturnItem.</p>
+ *  <p>To set a <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnPaymentState" rel="nofollow">ReturnPaymentState</a>, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> <code>returnInfo</code> must have at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetReturnPaymentStateActionImpl implements StagedOrderSetReturnPaymentStateAction, ModelBase {
@@ -59,7 +59,7 @@ public class StagedOrderSetReturnPaymentStateActionImpl implements StagedOrderSe
     }
 
     /**
-     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      */
 
     public String getReturnItemId() {
@@ -67,7 +67,7 @@ public class StagedOrderSetReturnPaymentStateActionImpl implements StagedOrderSe
     }
 
     /**
-     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      */
 
     public String getReturnItemKey() {
@@ -75,7 +75,7 @@ public class StagedOrderSetReturnPaymentStateActionImpl implements StagedOrderSe
     }
 
     /**
-     *  <p>New Payment status of the ReturnItem.</p>
+     *  <p>New Payment status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
      */
 
     public com.commercetools.api.models.order.ReturnPaymentState getPaymentState() {

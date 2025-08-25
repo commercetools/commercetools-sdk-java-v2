@@ -51,7 +51,7 @@ public class TypeRemoveFieldDefinitionActionImpl implements TypeRemoveFieldDefin
     }
 
     /**
-     *  <p><code>name</code> of the FieldDefinition to remove. The removal of a FieldDefinition deletes asynchronously all Custom Fields using the FieldDefinition as well.</p>
+     *  <p><code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a> to remove. The removal of a FieldDefinition deletes <span>asynchronously</span> all Custom Fields using the FieldDefinition as well.</p>
      */
 
     public String getFieldName() {

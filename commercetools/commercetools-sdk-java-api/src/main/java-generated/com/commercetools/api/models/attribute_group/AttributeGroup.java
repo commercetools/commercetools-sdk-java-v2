@@ -110,7 +110,7 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
     public LocalizedString getDescription();
 
     /**
-     *  <p>Attributes with unique values.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">Attributes</a> with unique values.</p>
      * @return attributes
      */
     @NotNull
@@ -183,7 +183,7 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
     public void setDescription(final LocalizedString description);
 
     /**
-     *  <p>Attributes with unique values.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">Attributes</a> with unique values.</p>
      * @param attributes values to be set
      */
 
@@ -191,7 +191,7 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
     public void setAttributes(final AttributeReference... attributes);
 
     /**
-     *  <p>Attributes with unique values.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">Attributes</a> with unique values.</p>
      * @param attributes values to be set
      */
 

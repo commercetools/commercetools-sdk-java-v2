@@ -53,7 +53,7 @@ public class ProjectChangeBusinessUnitStatusOnCreationActionImpl
     }
 
     /**
-     *  <p>Status for Business Units created using the My Business Unit endpoint.</p>
+     *  <p>Status for Business Units created using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/business-units:POST" rel="nofollow">My Business Unit endpoint</a>.</p>
      */
 
     public com.commercetools.api.models.project.BusinessUnitConfigurationStatus getStatus() {

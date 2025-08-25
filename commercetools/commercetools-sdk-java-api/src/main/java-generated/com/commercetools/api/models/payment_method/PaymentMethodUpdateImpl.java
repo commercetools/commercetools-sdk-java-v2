@@ -43,7 +43,7 @@ public class PaymentMethodUpdateImpl implements PaymentMethodUpdate, ModelBase {
     }
 
     /**
-     *  <p>Expected version of the PaymentMethod on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the PaymentMethod on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      */
 
     public Long getVersion() {

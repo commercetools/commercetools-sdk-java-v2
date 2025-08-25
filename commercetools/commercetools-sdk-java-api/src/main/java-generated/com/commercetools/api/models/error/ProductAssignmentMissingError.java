@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Returned when a Product is not assigned to the Product Selection. The error is returned as a failed response either to the Set Variant Selection or to the Set Variant Exclusion update action.</p>
+ *  <p>Returned when a Product is not assigned to the Product Selection. The error is returned as a failed response either to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantSelectionAction" rel="nofollow">Set Variant Selection</a> or to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantExclusionAction" rel="nofollow">Set Variant Exclusion</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -57,7 +57,7 @@ public interface ProductAssignmentMissingError extends ErrorObject {
     public String getMessage();
 
     /**
-     *  <p>Reference to the Product for which the error was returned.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the error was returned.</p>
      * @return product
      */
     @NotNull
@@ -73,7 +73,7 @@ public interface ProductAssignmentMissingError extends ErrorObject {
     public void setMessage(final String message);
 
     /**
-     *  <p>Reference to the Product for which the error was returned.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the error was returned.</p>
      * @param product value to be set
      */
 

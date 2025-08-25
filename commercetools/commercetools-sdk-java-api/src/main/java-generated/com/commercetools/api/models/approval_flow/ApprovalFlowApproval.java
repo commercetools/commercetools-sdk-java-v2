@@ -36,7 +36,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ApprovalFlowApproval {
 
     /**
-     *  <p>Associate who approved the Approval Flow.</p>
+     *  <p>Associate who approved the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @return approver
      */
     @NotNull
@@ -45,7 +45,7 @@ public interface ApprovalFlowApproval {
     public Associate getApprover();
 
     /**
-     *  <p>Date and time (UTC) the Approval Flow was approved.</p>
+     *  <p>Date and time (UTC) the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> was approved.</p>
      * @return approvedAt
      */
     @NotNull
@@ -53,14 +53,14 @@ public interface ApprovalFlowApproval {
     public ZonedDateTime getApprovedAt();
 
     /**
-     *  <p>Associate who approved the Approval Flow.</p>
+     *  <p>Associate who approved the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @param approver value to be set
      */
 
     public void setApprover(final Associate approver);
 
     /**
-     *  <p>Date and time (UTC) the Approval Flow was approved.</p>
+     *  <p>Date and time (UTC) the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> was approved.</p>
      * @param approvedAt value to be set
      */
 

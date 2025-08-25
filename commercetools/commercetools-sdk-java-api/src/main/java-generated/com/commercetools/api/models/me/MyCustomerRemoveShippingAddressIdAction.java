@@ -35,7 +35,7 @@ public interface MyCustomerRemoveShippingAddressIdAction extends MyCustomerUpdat
     String REMOVE_SHIPPING_ADDRESS_ID = "removeShippingAddressId";
 
     /**
-     *  <p><code>id</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>shippingAddressesIds</code>.</p>
      * @return addressId
      */
 
@@ -43,7 +43,7 @@ public interface MyCustomerRemoveShippingAddressIdAction extends MyCustomerUpdat
     public String getAddressId();
 
     /**
-     *  <p><code>key</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>shippingAddressesIds</code>.</p>
      * @return addressKey
      */
 
@@ -51,14 +51,14 @@ public interface MyCustomerRemoveShippingAddressIdAction extends MyCustomerUpdat
     public String getAddressKey();
 
     /**
-     *  <p><code>id</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>shippingAddressesIds</code>.</p>
      * @param addressId value to be set
      */
 
     public void setAddressId(final String addressId);
 
     /**
-     *  <p><code>key</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>shippingAddressesIds</code>.</p>
      * @param addressKey value to be set
      */
 

@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>PagedQueryResult with results containing an array of ImportContainer.</p>
+ *  <p><span>PagedQueryResult</span> with results containing an array of <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainer</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ImportContainerPagedResponse {
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @return limit
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface ImportContainerPagedResponse {
     public Integer getLimit();
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @return offset
      */
     @NotNull
@@ -70,7 +70,7 @@ public interface ImportContainerPagedResponse {
     public Long getTotal();
 
     /**
-     *  <p>ImportContainers matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainers</a> matching the query.</p>
      * @return results
      */
     @NotNull
@@ -79,14 +79,14 @@ public interface ImportContainerPagedResponse {
     public List<ImportContainer> getResults();
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @param limit value to be set
      */
 
     public void setLimit(final Integer limit);
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @param offset value to be set
      */
 
@@ -107,7 +107,7 @@ public interface ImportContainerPagedResponse {
     public void setTotal(final Long total);
 
     /**
-     *  <p>ImportContainers matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainers</a> matching the query.</p>
      * @param results values to be set
      */
 
@@ -115,7 +115,7 @@ public interface ImportContainerPagedResponse {
     public void setResults(final ImportContainer... results);
 
     /**
-     *  <p>ImportContainers matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainers</a> matching the query.</p>
      * @param results values to be set
      */
 

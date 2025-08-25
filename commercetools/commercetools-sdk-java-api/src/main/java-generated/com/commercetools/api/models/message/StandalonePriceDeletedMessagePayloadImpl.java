@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Delete StandalonePrice request.</p>
+ *  <p>Generated after a successful <span>Delete StandalonePrice</span> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceDeletedMessagePayloadImpl implements StandalonePriceDeletedMessagePayload, ModelBase {
@@ -51,7 +51,7 @@ public class StandalonePriceDeletedMessagePayloadImpl implements StandalonePrice
     }
 
     /**
-     *  <p>SKU of the ProductVariant to which the deleted Standalone Price was associated.</p>
+     *  <p>SKU of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to which the deleted Standalone Price was associated.</p>
      */
 
     public String getSku() {

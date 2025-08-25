@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Deletes an Import Container in the Project.</p>
- *  <p>Generates the ImportContainerDeleted Event.</p>
+ *  <p>Generates the <span>ImportContainerDeleted</span> Event.</p>
  *
  * <hr>
  * <div class=code-example>

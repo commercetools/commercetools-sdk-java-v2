@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Create InventoryEntry request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/inventory:POST" rel="nofollow">Create InventoryEntry</a> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntryCreatedMessagePayloadImpl implements InventoryEntryCreatedMessagePayload, ModelBase {
@@ -52,7 +52,7 @@ public class InventoryEntryCreatedMessagePayloadImpl implements InventoryEntryCr
     }
 
     /**
-     *  <p>InventoryEntry that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> that was created.</p>
      */
 
     public com.commercetools.api.models.inventory.InventoryEntry getInventoryEntry() {

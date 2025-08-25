@@ -24,7 +24,7 @@ public class CustomerEmailChangedMessagePayloadBuilder implements Builder<Custom
     private String email;
 
     /**
-     *  <p>The <code>email</code> that was set during the Change Email update action.</p>
+     *  <p>The <code>email</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p>
      * @param email value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class CustomerEmailChangedMessagePayloadBuilder implements Builder<Custom
     }
 
     /**
-     *  <p>The <code>email</code> that was set during the Change Email update action.</p>
+     *  <p>The <code>email</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p>
      * @return email
      */
 

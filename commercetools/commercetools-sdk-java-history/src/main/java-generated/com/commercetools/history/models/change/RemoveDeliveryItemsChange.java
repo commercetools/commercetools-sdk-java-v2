@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the Remove Delivery update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderRemoveDeliveryAction" rel="nofollow">Remove Delivery</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

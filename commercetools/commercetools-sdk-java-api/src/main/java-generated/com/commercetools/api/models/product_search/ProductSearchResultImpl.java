@@ -47,7 +47,7 @@ public class ProductSearchResultImpl implements ProductSearchResult, ModelBase {
     }
 
     /**
-     *  <p><code>id</code> of the Product that matches the search query.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that matches the search query.</p>
      */
 
     public String getId() {
@@ -55,7 +55,7 @@ public class ProductSearchResultImpl implements ProductSearchResult, ModelBase {
     }
 
     /**
-     *  <p>Information about which Product Variants match the search query. Only present if <code>markMatchingVariants</code> is set to <code>true</code> in the ProductSearchRequest.</p>
+     *  <p>Information about which Product Variants match the search query. Only present if <code>markMatchingVariants</code> is set to <code>true</code> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchRequest" rel="nofollow">ProductSearchRequest</a>.</p>
      */
 
     public com.commercetools.api.models.product_search.ProductSearchMatchingVariants getMatchingVariants() {
@@ -63,7 +63,7 @@ public class ProductSearchResultImpl implements ProductSearchResult, ModelBase {
     }
 
     /**
-     *  <p>Projected data of the Product with <code>id</code>. Only present if data integration with Product Projection parameters is requested.</p>
+     *  <p>Projected data of the Product with <code>id</code>. Only present if data integration <span>with Product Projection parameters</span> is requested.</p>
      */
 
     public com.commercetools.api.models.product.ProductProjection getProductProjection() {

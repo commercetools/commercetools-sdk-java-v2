@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Setting the default billing address on a Business Unit generates the BusinessUnitDefaultBillingAddressSet Message.</p>
+ *  <p>Setting the default billing address on a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitDefaultBillingAddressSetMessage" rel="nofollow">BusinessUnitDefaultBillingAddressSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

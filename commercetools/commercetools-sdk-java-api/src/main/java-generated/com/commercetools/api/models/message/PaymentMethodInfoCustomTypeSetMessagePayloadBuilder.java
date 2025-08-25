@@ -67,7 +67,7 @@ public class PaymentMethodInfoCustomTypeSetMessagePayloadBuilder
     }
 
     /**
-     *  <p><code>id</code> of the previous Type. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the previous <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>. Absent if there was no previous Custom Type present.</p>
      * @param oldTypeId value to be set
      * @return Builder
      */
@@ -87,7 +87,7 @@ public class PaymentMethodInfoCustomTypeSetMessagePayloadBuilder
     }
 
     /**
-     *  <p><code>id</code> of the previous Type. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the previous <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>. Absent if there was no previous Custom Type present.</p>
      * @return oldTypeId
      */
 

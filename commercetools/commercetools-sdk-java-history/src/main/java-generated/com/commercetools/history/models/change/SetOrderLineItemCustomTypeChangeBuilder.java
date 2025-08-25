@@ -120,7 +120,7 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
     }
 
     /**
-     *  <p>Name of the Product the updated Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -132,7 +132,7 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
     }
 
     /**
-     *  <p>Name of the Product the updated Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -144,7 +144,7 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
     }
 
     /**
-     *  <p>Name of the Product the updated Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
      * @param lineItem value to be set
      * @return Builder
      */
@@ -156,7 +156,7 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
     }
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     *  <p><code>sku</code> or <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param variant value to be set
      * @return Builder
      */
@@ -194,7 +194,7 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
     }
 
     /**
-     *  <p>Name of the Product the updated Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
      * @return lineItem
      */
 
@@ -203,7 +203,7 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
     }
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     *  <p><code>sku</code> or <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return variant
      */
 

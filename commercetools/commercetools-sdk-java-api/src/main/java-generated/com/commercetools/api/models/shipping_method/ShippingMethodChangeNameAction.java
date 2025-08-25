@@ -38,7 +38,7 @@ public interface ShippingMethodChangeNameAction extends ShippingMethodUpdateActi
     String CHANGE_NAME = "changeName";
 
     /**
-     *  <p>Unique value to set within a Project. Must not be empty.</p>
+     *  <p>Unique value to set within a <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Must not be empty.</p>
      * @return name
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface ShippingMethodChangeNameAction extends ShippingMethodUpdateActi
     public String getName();
 
     /**
-     *  <p>Unique value to set within a Project. Must not be empty.</p>
+     *  <p>Unique value to set within a <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Must not be empty.</p>
      * @param name value to be set
      */
 

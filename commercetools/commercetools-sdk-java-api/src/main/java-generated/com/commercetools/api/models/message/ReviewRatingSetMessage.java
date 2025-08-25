@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Set Rating update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewSetRatingAction" rel="nofollow">Set Rating</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface ReviewRatingSetMessage extends Message {
     String REVIEW_RATING_SET = "ReviewRatingSet";
 
     /**
-     *  <p>The <code>rating</code> of the Review before the Set Rating update action.</p>
+     *  <p>The <code>rating</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewSetRatingAction" rel="nofollow">Set Rating</a> update action.</p>
      * @return oldRating
      */
 
@@ -55,7 +55,7 @@ public interface ReviewRatingSetMessage extends Message {
     public Double getOldRating();
 
     /**
-     *  <p>The <code>rating</code> of the Review after the Set Rating update action.</p>
+     *  <p>The <code>rating</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewSetRatingAction" rel="nofollow">Set Rating</a> update action.</p>
      * @return newRating
      */
 
@@ -63,7 +63,7 @@ public interface ReviewRatingSetMessage extends Message {
     public Double getNewRating();
 
     /**
-     *  <p>Whether the Review was taken into account in the ratings statistics of the target.</p>
+     *  <p>Whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> was taken into account in the ratings statistics of the target.</p>
      * @return includedInStatistics
      */
     @NotNull
@@ -71,7 +71,7 @@ public interface ReviewRatingSetMessage extends Message {
     public Boolean getIncludedInStatistics();
 
     /**
-     *  <p>Reference to the resource that the Review belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource that the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> belongs to.</p>
      * @return target
      */
     @Valid
@@ -79,28 +79,28 @@ public interface ReviewRatingSetMessage extends Message {
     public Reference getTarget();
 
     /**
-     *  <p>The <code>rating</code> of the Review before the Set Rating update action.</p>
+     *  <p>The <code>rating</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewSetRatingAction" rel="nofollow">Set Rating</a> update action.</p>
      * @param oldRating value to be set
      */
 
     public void setOldRating(final Double oldRating);
 
     /**
-     *  <p>The <code>rating</code> of the Review after the Set Rating update action.</p>
+     *  <p>The <code>rating</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewSetRatingAction" rel="nofollow">Set Rating</a> update action.</p>
      * @param newRating value to be set
      */
 
     public void setNewRating(final Double newRating);
 
     /**
-     *  <p>Whether the Review was taken into account in the ratings statistics of the target.</p>
+     *  <p>Whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> was taken into account in the ratings statistics of the target.</p>
      * @param includedInStatistics value to be set
      */
 
     public void setIncludedInStatistics(final Boolean includedInStatistics);
 
     /**
-     *  <p>Reference to the resource that the Review belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource that the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> belongs to.</p>
      * @param target value to be set
      */
 

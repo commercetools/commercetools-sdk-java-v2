@@ -42,7 +42,7 @@ public class ReplicaMyCartDraftImpl implements ReplicaMyCartDraft, ModelBase {
     }
 
     /**
-     *  <p>Reference to a Cart or Order that is replicated.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that is replicated.</p>
      */
 
     public java.lang.Object getReference() {

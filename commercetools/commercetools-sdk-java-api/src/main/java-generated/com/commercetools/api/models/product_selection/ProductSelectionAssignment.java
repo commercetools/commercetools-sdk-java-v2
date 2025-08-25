@@ -19,8 +19,8 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Given the mode of Product Selection, this assignment refers to, it may contain:</p>
  *  <ul>
- *   <li><code>variantSelection</code> field for a Product Selection with <code>Individual</code> ProductSelectionMode.</li>
- *   <li><code>variantExclusion</code> field for a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</li>
+ *   <li><code>variantSelection</code> field for a Product Selection with <code>Individual</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</li>
+ *   <li><code>variantExclusion</code> field for a Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</li>
  *  </ul>
  *
  * <hr>
@@ -58,7 +58,7 @@ public interface ProductSelectionAssignment {
 
     /**
      *  <p>Defines which particular Variants of the Product are included in the Product Selection. If undefined all Variants of the referenced Product are included.</p>
-     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
      * @return variantSelection
      */
     @Valid
@@ -67,7 +67,7 @@ public interface ProductSelectionAssignment {
 
     /**
      *  <p>Defines which particular Variants of the Product are excluded from the Product Selection. If undefined all Variants of the referenced Product are excluded.</p>
-     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
      * @return variantExclusion
      */
     @Valid
@@ -90,7 +90,7 @@ public interface ProductSelectionAssignment {
 
     /**
      *  <p>Defines which particular Variants of the Product are included in the Product Selection. If undefined all Variants of the referenced Product are included.</p>
-     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
      * @param variantSelection value to be set
      */
 
@@ -98,7 +98,7 @@ public interface ProductSelectionAssignment {
 
     /**
      *  <p>Defines which particular Variants of the Product are excluded from the Product Selection. If undefined all Variants of the referenced Product are excluded.</p>
-     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
      * @param variantExclusion value to be set
      */
 

@@ -18,11 +18,11 @@ public interface ReturnPaymentState extends JsonEnum {
 
     /**
     <p>Initial state for Return Items for which payment cannot be refunded.</p>
-    <p>Return Items have the <code>Advised</code> ReturnShipmentState.</p> */
+    <p>Return Items have the <code>Advised</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnShipmentState" rel="nofollow">ReturnShipmentState</a>.</p> */
     ReturnPaymentState NON_REFUNDABLE = ReturnPaymentStateEnum.NON_REFUNDABLE;
     /**
     <p>Initial state for Return Items for which payment can be refunded.</p>
-    <p>Return Items have the <code>Returned</code> ReturnShipmentState.</p> */
+    <p>Return Items have the <code>Returned</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnShipmentState" rel="nofollow">ReturnShipmentState</a>.</p> */
     ReturnPaymentState INITIAL = ReturnPaymentStateEnum.INITIAL;
     /**
     <p>The payment for the Return Items is refunded.</p> */

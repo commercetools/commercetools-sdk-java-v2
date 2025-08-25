@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface MyQuoteRequestDraft extends io.vrap.rmf.base.client.Draft<MyQuoteRequestDraft> {
 
     /**
-     *  <p><code>id</code> of the Cart from which the Quote Request is created. Carts with Discount Codes and Carts with <code>Multiple</code> ShippingMode are not supported. The Cart must have a <code>shippingAddress</code> defined, otherwise an InvalidOperation error is returned when creating a Quote Request.</p>
+     *  <p><code>id</code> of the Cart from which the Quote Request is created. Carts with <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">Discount Codes</a> and Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a> are not supported. The Cart must have a <code>shippingAddress</code> defined, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned when <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/quote-requests:POST" rel="nofollow">creating a Quote Request</a>.</p>
      * @return cartId
      */
     @NotNull
@@ -57,7 +57,7 @@ public interface MyQuoteRequestDraft extends io.vrap.rmf.base.client.Draft<MyQuo
     public String getComment();
 
     /**
-     *  <p><code>id</code> of the Cart from which the Quote Request is created. Carts with Discount Codes and Carts with <code>Multiple</code> ShippingMode are not supported. The Cart must have a <code>shippingAddress</code> defined, otherwise an InvalidOperation error is returned when creating a Quote Request.</p>
+     *  <p><code>id</code> of the Cart from which the Quote Request is created. Carts with <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">Discount Codes</a> and Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a> are not supported. The Cart must have a <code>shippingAddress</code> defined, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned when <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/quote-requests:POST" rel="nofollow">creating a Quote Request</a>.</p>
      * @param cartId value to be set
      */
 

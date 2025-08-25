@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Values for <code>from</code> and <code>to</code> must be a number or DateTime.</p>
+ *  <p>Values for <code>from</code> and <code>to</code> must be a number or <a href="https://docs.commercetools.com/apis/ctp:api:type:DateTime" rel="nofollow">DateTime</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSearchFacetRangesFacetRangeImpl implements ProductSearchFacetRangesFacetRange, ModelBase {

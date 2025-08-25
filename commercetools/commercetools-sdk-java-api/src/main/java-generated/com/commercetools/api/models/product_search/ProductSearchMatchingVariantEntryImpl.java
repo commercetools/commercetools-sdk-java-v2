@@ -42,7 +42,7 @@ public class ProductSearchMatchingVariantEntryImpl implements ProductSearchMatch
     }
 
     /**
-     *  <p><code>id</code> of the ProductVariant that matches the search query.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that matches the search query.</p>
      */
 
     public Integer getId() {

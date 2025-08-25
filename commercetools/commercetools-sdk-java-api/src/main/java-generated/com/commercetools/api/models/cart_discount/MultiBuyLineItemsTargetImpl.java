@@ -67,7 +67,7 @@ public class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarget, Mod
     }
 
     /**
-     *  <p>Valid LineItem target predicate. The Discount will be applied to Line Items that are matched by the predicate.</p>
+     *  <p>Valid <span>LineItem target predicate</span>. The Discount will be applied to Line Items that are matched by the predicate.</p>
      */
 
     public String getPredicate() {

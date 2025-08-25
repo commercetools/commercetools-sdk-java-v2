@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Reference to a StandalonePrice.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface StandalonePriceReference extends Reference {
     String STANDALONE_PRICE = "standalone-price";
 
     /**
-     *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>
+     *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with <span>Reference Expansion</span> for StandalonePrice.</p>
      * @return obj
      */
     @Valid
@@ -47,7 +47,7 @@ public interface StandalonePriceReference extends Reference {
     public StandalonePrice getObj();
 
     /**
-     *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>
+     *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with <span>Reference Expansion</span> for StandalonePrice.</p>
      * @param obj value to be set
      */
 

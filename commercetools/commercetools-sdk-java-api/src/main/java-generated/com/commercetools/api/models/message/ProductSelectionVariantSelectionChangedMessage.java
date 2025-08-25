@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Set Variant Selection update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantSelectionAction" rel="nofollow">Set Variant Selection</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -50,7 +50,7 @@ public interface ProductSelectionVariantSelectionChangedMessage extends Message 
     String PRODUCT_SELECTION_VARIANT_SELECTION_CHANGED = "ProductSelectionVariantSelectionChanged";
 
     /**
-     *  <p>Product for which the Product Variant Selection changed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the Product Variant Selection changed.</p>
      * @return product
      */
     @NotNull
@@ -59,7 +59,7 @@ public interface ProductSelectionVariantSelectionChangedMessage extends Message 
     public ProductReference getProduct();
 
     /**
-     *  <p>Product Variant Selection before the Set Variant Selection update action.</p>
+     *  <p>Product Variant Selection before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantSelectionAction" rel="nofollow">Set Variant Selection</a> update action.</p>
      * @return oldVariantSelection
      */
     @NotNull
@@ -68,7 +68,7 @@ public interface ProductSelectionVariantSelectionChangedMessage extends Message 
     public ProductVariantSelection getOldVariantSelection();
 
     /**
-     *  <p>Product Variant Selection after the Set Variant Selection update action.</p>
+     *  <p>Product Variant Selection after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantSelectionAction" rel="nofollow">Set Variant Selection</a> update action.</p>
      * @return newVariantSelection
      */
     @NotNull
@@ -77,21 +77,21 @@ public interface ProductSelectionVariantSelectionChangedMessage extends Message 
     public ProductVariantSelection getNewVariantSelection();
 
     /**
-     *  <p>Product for which the Product Variant Selection changed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the Product Variant Selection changed.</p>
      * @param product value to be set
      */
 
     public void setProduct(final ProductReference product);
 
     /**
-     *  <p>Product Variant Selection before the Set Variant Selection update action.</p>
+     *  <p>Product Variant Selection before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantSelectionAction" rel="nofollow">Set Variant Selection</a> update action.</p>
      * @param oldVariantSelection value to be set
      */
 
     public void setOldVariantSelection(final ProductVariantSelection oldVariantSelection);
 
     /**
-     *  <p>Product Variant Selection after the Set Variant Selection update action.</p>
+     *  <p>Product Variant Selection after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantSelectionAction" rel="nofollow">Set Variant Selection</a> update action.</p>
      * @param newVariantSelection value to be set
      */
 

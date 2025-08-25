@@ -28,7 +28,7 @@ public class LineItemRecurrenceInfoBuilder implements Builder<LineItemRecurrence
     private com.commercetools.api.models.recurring_order.PriceSelectionMode priceSelectionMode;
 
     /**
-     *  <p>Reference to a RecurrencePolicy.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a RecurrencePolicy.</p>
      * @param builder function to build the recurrencePolicy value
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class LineItemRecurrenceInfoBuilder implements Builder<LineItemRecurrence
     }
 
     /**
-     *  <p>Reference to a RecurrencePolicy.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a RecurrencePolicy.</p>
      * @param builder function to build the recurrencePolicy value
      * @return Builder
      */
@@ -55,7 +55,7 @@ public class LineItemRecurrenceInfoBuilder implements Builder<LineItemRecurrence
     }
 
     /**
-     *  <p>Reference to a RecurrencePolicy.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a RecurrencePolicy.</p>
      * @param recurrencePolicy value to be set
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class LineItemRecurrenceInfoBuilder implements Builder<LineItemRecurrence
     }
 
     /**
-     *  <p>Reference to a RecurrencePolicy.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a RecurrencePolicy.</p>
      * @return recurrencePolicy
      */
 

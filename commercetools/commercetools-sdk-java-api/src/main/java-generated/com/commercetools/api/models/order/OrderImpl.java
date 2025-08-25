@@ -291,7 +291,7 @@ public class OrderImpl implements Order, ModelBase {
 
     /**
      *  <p>User-defined identifier of a purchase Order.</p>
-     *  <p>It is typically set by the Buyer and can be used with Quotes to track the purchase Order during the quote and order flow.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> and can be used with <span>Quotes</span> to track the purchase Order during the <span>quote and order flow</span>.</p>
      */
 
     public String getPurchaseOrderNumber() {
@@ -299,7 +299,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p><code>id</code> of the Customer that the Order belongs to.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that the Order belongs to.</p>
      */
 
     public String getCustomerId() {
@@ -315,7 +315,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Order belongs to. Used for Line Item price selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Customer Group of the Customer that the Order belongs to. Used for <span>Line Item price selection</span>.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
@@ -323,7 +323,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p>Anonymous session associated with the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">Anonymous session</a> associated with the Order.</p>
      */
 
     public String getAnonymousId() {
@@ -331,7 +331,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p>Reference to a Business Unit the Order belongs to. Only available for B2B-enabled Projects.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Business Unit the Order belongs to. Only available for <span>B2B</span>-enabled Projects.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
@@ -339,7 +339,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p>Reference to a Store the Order belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Store the Order belongs to.</p>
      */
 
     public com.commercetools.api.models.store.StoreKeyReference getStore() {
@@ -347,7 +347,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p>Line Items that are part of the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> that are part of the Order.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.LineItem> getLineItems() {
@@ -355,7 +355,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p>Custom Line Items that are part of the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> that are part of the Order.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.CustomLineItem> getCustomLineItems() {
@@ -363,8 +363,8 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
-     *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     *  <p>Sum of the <code>totalPrice</code> field of all <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and if available, the <code>price</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a>. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
+     *  <p>Taxes are included if <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> <code>includedInPrice</code> is <code>true</code> for each price.</p>
      */
 
     public com.commercetools.api.models.common.CentPrecisionMoney getTotalPrice() {
@@ -373,8 +373,8 @@ public class OrderImpl implements Order, ModelBase {
 
     /**
      *  <ul>
-     *   <li>For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-     *   <li>For <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *   <li>For <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it is automatically set when a <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetShippingAddressAction" rel="nofollow">shipping address is set</a>.</li>
+     *   <li>For <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
      *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      */
@@ -384,7 +384,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+     *  <p>Sum of the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> across all Shipping Methods.</p>
      *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      */
 
@@ -401,7 +401,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p>Indicates how the total prices on LineItems and CustomLineItems are rounded when calculated.</p>
+     *  <p>Indicates how the total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a> are rounded when calculated.</p>
      */
 
     public com.commercetools.api.models.cart.RoundingMode getPriceRoundingMode() {
@@ -449,7 +449,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p>Shipping address associated with the Order. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address associated with the Order. Determines eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> rates and Tax Rates of Line Items.</p>
      */
 
     public com.commercetools.api.models.common.Address getShippingAddress() {
@@ -465,7 +465,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p><code>key</code> of the ShippingMethod for <code>Single</code> ShippingMode.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> for <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      */
 
     public String getShippingKey() {
@@ -473,7 +473,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p>Shipping-related information for <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
+     *  <p>Shipping-related information for <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set when a <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingMethodAction" rel="nofollow">Shipping Method is set</a>.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingInfo getShippingInfo() {
@@ -481,10 +481,10 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <p>Input used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>:</p>
      *  <ul>
-     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
-     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
+     *   <li>If <code>CartClassification</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ClassificationShippingRateInput" rel="nofollow">ClassificationShippingRateInput</a>.</li>
+     *   <li>If <code>CartScore</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ScoreShippingRateInput" rel="nofollow">ScoreShippingRateInput</a>.</li>
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
      */
@@ -494,7 +494,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields of the Shipping Method for <code>Single</code> ShippingMode.</p>
+     *  <p>Custom Fields of the Shipping Method for <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getShippingCustomFields() {
@@ -502,7 +502,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p>Shipping-related information for <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     *  <p>Shipping-related information for <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Updated automatically each time a new <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.Shipping> getShipping() {
@@ -510,7 +510,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p>Additional shipping addresses of the Order as specified by LineItems using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Additional shipping addresses of the Order as specified by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Address> getItemShippingAddresses() {
@@ -534,7 +534,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Order.</p>
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemMode" rel="nofollow">LineItemMode</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">removed</a> from the Order.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> getRefusedGifts() {
@@ -550,7 +550,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p>Used for Line Item price selection.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
      */
 
     public String getCountry() {
@@ -558,7 +558,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p>Languages of the Order. Can only contain languages supported by the Project.</p>
+     *  <p>Languages of the Order. Can only contain languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      */
 
     public String getLocale() {
@@ -574,7 +574,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p>Reference to the Cart for an Order created from Cart. The referenced Cart will have the <code>Ordered</code> CartState.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Cart for an <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders:POST" rel="nofollow">Order created from Cart</a>. The referenced Cart will have the <code>Ordered</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:CartState" rel="nofollow">CartState</a>.</p>
      */
 
     public com.commercetools.api.models.cart.CartReference getCart() {
@@ -582,7 +582,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p>Reference to the Quote for an Order created from Quote.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Quote for an <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/quotes:POST" rel="nofollow">Order created from Quote</a>.</p>
      */
 
     public com.commercetools.api.models.quote.QuoteReference getQuote() {
@@ -590,7 +590,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p>Reference to the RecurringOrder that generated this Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the RecurringOrder that generated this Order.</p>
      */
 
     public com.commercetools.api.models.recurring_order.RecurringOrderReference getRecurringOrder() {
@@ -622,7 +622,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p>State of the Order. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Order. This reference can point to a State in a custom workflow.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -630,7 +630,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with Update SyncInfo update action.</p>
+     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderUpdateSyncInfoAction" rel="nofollow">Update SyncInfo</a> update action.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.SyncInfo> getSyncInfo() {
@@ -670,7 +670,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p>User-defined date and time (UTC) of the Order. Present only on an Order created using Order Import.</p>
+     *  <p>User-defined date and time (UTC) of the Order. Present only on an Order created using <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/import:POST" rel="nofollow">Order Import</a>.</p>
      */
 
     public java.time.ZonedDateTime getCompletedAt() {

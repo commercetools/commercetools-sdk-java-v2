@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Create Customer request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers:POST" rel="nofollow">Create Customer</a> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerCreatedMessagePayloadImpl implements CustomerCreatedMessagePayload, ModelBase {
@@ -52,7 +52,7 @@ public class CustomerCreatedMessagePayloadImpl implements CustomerCreatedMessage
     }
 
     /**
-     *  <p>Customer that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that was created.</p>
      */
 
     public com.commercetools.api.models.customer.Customer getCustomer() {

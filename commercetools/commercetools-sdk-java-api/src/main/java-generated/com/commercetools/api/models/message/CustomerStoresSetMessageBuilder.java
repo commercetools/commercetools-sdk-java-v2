@@ -187,7 +187,7 @@ public class CustomerStoresSetMessageBuilder implements Builder<CustomerStoresSe
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -198,7 +198,7 @@ public class CustomerStoresSetMessageBuilder implements Builder<CustomerStoresSe
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -260,7 +260,7 @@ public class CustomerStoresSetMessageBuilder implements Builder<CustomerStoresSe
     }
 
     /**
-     *  <p>The Stores the Customer is associated with after the Set Stores update action.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> is associated with after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -272,7 +272,7 @@ public class CustomerStoresSetMessageBuilder implements Builder<CustomerStoresSe
     }
 
     /**
-     *  <p>The Stores the Customer is associated with after the Set Stores update action.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> is associated with after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -284,7 +284,7 @@ public class CustomerStoresSetMessageBuilder implements Builder<CustomerStoresSe
     }
 
     /**
-     *  <p>The Stores the Customer is associated with after the Set Stores update action.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> is associated with after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -299,7 +299,7 @@ public class CustomerStoresSetMessageBuilder implements Builder<CustomerStoresSe
     }
 
     /**
-     *  <p>The Stores the Customer is associated with after the Set Stores update action.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> is associated with after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -314,7 +314,7 @@ public class CustomerStoresSetMessageBuilder implements Builder<CustomerStoresSe
     }
 
     /**
-     *  <p>The Stores the Customer is associated with after the Set Stores update action.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> is associated with after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -327,7 +327,7 @@ public class CustomerStoresSetMessageBuilder implements Builder<CustomerStoresSe
     }
 
     /**
-     *  <p>The Stores the Customer is associated with after the Set Stores update action.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> is associated with after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -338,7 +338,7 @@ public class CustomerStoresSetMessageBuilder implements Builder<CustomerStoresSe
     }
 
     /**
-     *  <p>The Stores the Customer is associated with after the Set Stores update action.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> is associated with after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -349,7 +349,7 @@ public class CustomerStoresSetMessageBuilder implements Builder<CustomerStoresSe
     }
 
     /**
-     *  <p>The Stores the Customer was associated with before the Set Stores update action.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> was associated with before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @param oldStores value to be set
      * @return Builder
      */
@@ -361,7 +361,7 @@ public class CustomerStoresSetMessageBuilder implements Builder<CustomerStoresSe
     }
 
     /**
-     *  <p>The Stores the Customer was associated with before the Set Stores update action.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> was associated with before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @param oldStores value to be set
      * @return Builder
      */
@@ -373,7 +373,7 @@ public class CustomerStoresSetMessageBuilder implements Builder<CustomerStoresSe
     }
 
     /**
-     *  <p>The Stores the Customer was associated with before the Set Stores update action.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> was associated with before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @param oldStores value to be set
      * @return Builder
      */
@@ -388,7 +388,7 @@ public class CustomerStoresSetMessageBuilder implements Builder<CustomerStoresSe
     }
 
     /**
-     *  <p>The Stores the Customer was associated with before the Set Stores update action.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> was associated with before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @param builder function to build the oldStores value
      * @return Builder
      */
@@ -403,7 +403,7 @@ public class CustomerStoresSetMessageBuilder implements Builder<CustomerStoresSe
     }
 
     /**
-     *  <p>The Stores the Customer was associated with before the Set Stores update action.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> was associated with before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @param builder function to build the oldStores value
      * @return Builder
      */
@@ -416,7 +416,7 @@ public class CustomerStoresSetMessageBuilder implements Builder<CustomerStoresSe
     }
 
     /**
-     *  <p>The Stores the Customer was associated with before the Set Stores update action.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> was associated with before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @param builder function to build the oldStores value
      * @return Builder
      */
@@ -427,7 +427,7 @@ public class CustomerStoresSetMessageBuilder implements Builder<CustomerStoresSe
     }
 
     /**
-     *  <p>The Stores the Customer was associated with before the Set Stores update action.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> was associated with before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @param builder function to build the oldStores value
      * @return Builder
      */
@@ -503,7 +503,7 @@ public class CustomerStoresSetMessageBuilder implements Builder<CustomerStoresSe
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -531,7 +531,7 @@ public class CustomerStoresSetMessageBuilder implements Builder<CustomerStoresSe
     }
 
     /**
-     *  <p>The Stores the Customer is associated with after the Set Stores update action.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> is associated with after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @return stores
      */
 
@@ -540,7 +540,7 @@ public class CustomerStoresSetMessageBuilder implements Builder<CustomerStoresSe
     }
 
     /**
-     *  <p>The Stores the Customer was associated with before the Set Stores update action.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> was associated with before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @return oldStores
      */
 

@@ -27,7 +27,7 @@ public class ShoppingListSetCustomerActionBuilder implements Builder<ShoppingLis
     private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
 
     /**
-     *  <p>The Customer the ShoppingList should be associated to. If empty, any existing value will be removed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> the ShoppingList should be associated to. If empty, any existing value will be removed.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class ShoppingListSetCustomerActionBuilder implements Builder<ShoppingLis
     }
 
     /**
-     *  <p>The Customer the ShoppingList should be associated to. If empty, any existing value will be removed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> the ShoppingList should be associated to. If empty, any existing value will be removed.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ShoppingListSetCustomerActionBuilder implements Builder<ShoppingLis
     }
 
     /**
-     *  <p>The Customer the ShoppingList should be associated to. If empty, any existing value will be removed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> the ShoppingList should be associated to. If empty, any existing value will be removed.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class ShoppingListSetCustomerActionBuilder implements Builder<ShoppingLis
     }
 
     /**
-     *  <p>The Customer the ShoppingList should be associated to. If empty, any existing value will be removed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> the ShoppingList should be associated to. If empty, any existing value will be removed.</p>
      * @return customer
      */
 

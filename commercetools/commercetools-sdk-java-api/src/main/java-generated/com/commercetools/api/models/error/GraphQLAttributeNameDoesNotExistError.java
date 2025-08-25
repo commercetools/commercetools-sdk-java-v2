@@ -15,8 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Returned when an AttributeDefinition does not exist for an Attribute <code>name</code>.</p>
- *  <p>The error is returned as a failed response to the Change AttributeDefinition Name update action.</p>
+ *  <p>Returned when an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> does not exist for an Attribute <code>name</code>.</p>
+ *  <p>The error is returned as a failed response to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeChangeAttributeNameAction" rel="nofollow">Change AttributeDefinition Name</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -47,8 +47,8 @@ public class EnumSetAttributeImpl implements EnumSetAttribute, ModelBase {
     }
 
     /**
-     *  <p>Required if used for ProductVariantImport. Must not be set if used for ProductVariantPatch.</p>
-     *  <p>Must match <code>name</code> of an AttributeDefinition of the Product Type.</p>
+     *  <p>Required if used for <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantImport" rel="nofollow">ProductVariantImport</a>. Must not be set if used for <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantPatch" rel="nofollow">ProductVariantPatch</a>.</p>
+     *  <p>Must match <code>name</code> of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> of the Product Type.</p>
      */
 
     public String getName() {
@@ -56,7 +56,7 @@ public class EnumSetAttributeImpl implements EnumSetAttribute, ModelBase {
     }
 
     /**
-     *  <p>Must match <code>type</code> of an AttributeDefinition of the Product Type. The type is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     *  <p>Must match <code>type</code> of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> of the Product Type. The type is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
      */
 
     public String getType() {
@@ -64,7 +64,7 @@ public class EnumSetAttributeImpl implements EnumSetAttribute, ModelBase {
     }
 
     /**
-     *  <p>A set of enum values, each represented by its key. Each key must match the key of an AttributePlainEnumValue in the Product Type.</p>
+     *  <p>A set of enum values, each represented by its key. Each key must match the key of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributePlainEnumValue" rel="nofollow">AttributePlainEnumValue</a> in the Product Type.</p>
      */
 
     public java.util.List<String> getValue() {

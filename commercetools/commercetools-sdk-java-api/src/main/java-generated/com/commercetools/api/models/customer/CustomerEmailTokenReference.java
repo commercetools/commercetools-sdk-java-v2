@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Reference to a CustomerToken for email verification.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerToken" rel="nofollow">CustomerToken</a> for email verification.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface CustomerEmailTokenReference extends Reference {
     String CUSTOMER_EMAIL_TOKEN = "customer-email-token";
 
     /**
-     *  <p>Unique identifier of the referenced CustomerToken.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerToken" rel="nofollow">CustomerToken</a>.</p>
      * @return id
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface CustomerEmailTokenReference extends Reference {
     public String getId();
 
     /**
-     *  <p>Unique identifier of the referenced CustomerToken.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerToken" rel="nofollow">CustomerToken</a>.</p>
      * @param id value to be set
      */
 

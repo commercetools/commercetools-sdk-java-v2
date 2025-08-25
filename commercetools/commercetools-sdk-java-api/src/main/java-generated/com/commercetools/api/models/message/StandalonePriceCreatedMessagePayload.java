@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Create StandalonePrice request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/standalone-prices:POST" rel="nofollow">Create StandalonePrice</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface StandalonePriceCreatedMessagePayload extends MessagePayload {
     String STANDALONE_PRICE_CREATED = "StandalonePriceCreated";
 
     /**
-     *  <p>Standalone Price that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Price</a> that was created.</p>
      * @return standalonePrice
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface StandalonePriceCreatedMessagePayload extends MessagePayload {
     public StandalonePrice getStandalonePrice();
 
     /**
-     *  <p>Standalone Price that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Price</a> that was created.</p>
      * @param standalonePrice value to be set
      */
 

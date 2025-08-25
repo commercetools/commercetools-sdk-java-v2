@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the Add EnumValue to FieldDefinition update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:TypeAddEnumValueAction" rel="nofollow">Add EnumValue to FieldDefinition</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -67,7 +67,7 @@ public interface AddEnumValueChange extends Change {
     public EnumValue getNextValue();
 
     /**
-     *  <p>Name of the updated FieldDefinition.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>.</p>
      * @return fieldName
      */
     @NotNull
@@ -89,7 +89,7 @@ public interface AddEnumValueChange extends Change {
     public void setNextValue(final EnumValue nextValue);
 
     /**
-     *  <p>Name of the updated FieldDefinition.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>.</p>
      * @param fieldName value to be set
      */
 

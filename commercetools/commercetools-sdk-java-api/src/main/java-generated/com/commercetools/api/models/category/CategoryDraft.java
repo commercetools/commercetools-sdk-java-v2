@@ -48,7 +48,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
     public LocalizedString getName();
 
     /**
-     *  <p>User-defined identifier used as a deep-link URL to the related Category. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     *  <p>User-defined identifier used as a deep-link URL to the related Category. A Category can have the same slug for different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>, but it must be unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @return slug
      */
     @NotNull
@@ -130,7 +130,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>User-defined unique identifier for the Category.</p>
-     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Categories with the Import API and the Merchant Center.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Categories with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
      * @return key
      */
 
@@ -145,7 +145,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>User-defined identifier used as a deep-link URL to the related Category. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     *  <p>User-defined identifier used as a deep-link URL to the related Category. A Category can have the same slug for different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>, but it must be unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @param slug value to be set
      */
 
@@ -224,7 +224,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>User-defined unique identifier for the Category.</p>
-     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Categories with the Import API and the Merchant Center.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Categories with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
      * @param key value to be set
      */
 

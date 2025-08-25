@@ -74,7 +74,7 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
     public String getKey();
 
     /**
-     *  <p>Reference to the Order updated with this edit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Order updated with this edit.</p>
      * @return resource
      */
     @NotNull
@@ -170,7 +170,7 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
     public void setKey(final String key);
 
     /**
-     *  <p>Reference to the Order updated with this edit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Order updated with this edit.</p>
      * @param resource value to be set
      */
 

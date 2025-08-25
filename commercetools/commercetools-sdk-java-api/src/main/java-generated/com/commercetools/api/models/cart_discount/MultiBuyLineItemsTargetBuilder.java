@@ -38,7 +38,7 @@ public class MultiBuyLineItemsTargetBuilder implements Builder<MultiBuyLineItems
     private com.commercetools.api.models.cart_discount.SelectionMode selectionMode;
 
     /**
-     *  <p>Valid LineItem target predicate. The Discount will be applied to Line Items that are matched by the predicate.</p>
+     *  <p>Valid <span>LineItem target predicate</span>. The Discount will be applied to Line Items that are matched by the predicate.</p>
      * @param predicate value to be set
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class MultiBuyLineItemsTargetBuilder implements Builder<MultiBuyLineItems
     }
 
     /**
-     *  <p>Valid LineItem target predicate. The Discount will be applied to Line Items that are matched by the predicate.</p>
+     *  <p>Valid <span>LineItem target predicate</span>. The Discount will be applied to Line Items that are matched by the predicate.</p>
      * @return predicate
      */
 

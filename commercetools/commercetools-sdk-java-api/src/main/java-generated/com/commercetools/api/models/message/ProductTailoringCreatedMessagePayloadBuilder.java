@@ -157,7 +157,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The description of the Product Tailoring at the time of creation.</p>
+     *  <p>The description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param builder function to build the description value
      * @return Builder
      */
@@ -169,7 +169,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The description of the Product Tailoring at the time of creation.</p>
+     *  <p>The description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param builder function to build the description value
      * @return Builder
      */
@@ -181,7 +181,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The description of the Product Tailoring at the time of creation.</p>
+     *  <p>The description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param description value to be set
      * @return Builder
      */
@@ -193,7 +193,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The name of the Product Tailoring at the time of creation.</p>
+     *  <p>The name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -205,7 +205,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The name of the Product Tailoring at the time of creation.</p>
+     *  <p>The name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -217,7 +217,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The name of the Product Tailoring at the time of creation.</p>
+     *  <p>The name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -229,7 +229,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The slug of the Product Tailoring at the time of creation.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -241,7 +241,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The slug of the Product Tailoring at the time of creation.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -253,7 +253,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The slug of the Product Tailoring at the time of creation.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param slug value to be set
      * @return Builder
      */
@@ -265,7 +265,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The metaTitle of the Product Tailoring at the time of creation.</p>
+     *  <p>The metaTitle of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param builder function to build the metaTitle value
      * @return Builder
      */
@@ -277,7 +277,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The metaTitle of the Product Tailoring at the time of creation.</p>
+     *  <p>The metaTitle of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param builder function to build the metaTitle value
      * @return Builder
      */
@@ -289,7 +289,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The metaTitle of the Product Tailoring at the time of creation.</p>
+     *  <p>The metaTitle of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param metaTitle value to be set
      * @return Builder
      */
@@ -301,7 +301,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The metaDescription of the Product Tailoring at the time of creation.</p>
+     *  <p>The metaDescription of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param builder function to build the metaDescription value
      * @return Builder
      */
@@ -313,7 +313,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The metaDescription of the Product Tailoring at the time of creation.</p>
+     *  <p>The metaDescription of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param builder function to build the metaDescription value
      * @return Builder
      */
@@ -325,7 +325,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The metaDescription of the Product Tailoring at the time of creation.</p>
+     *  <p>The metaDescription of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param metaDescription value to be set
      * @return Builder
      */
@@ -337,7 +337,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The metaKeywords of the Product Tailoring at the time of creation.</p>
+     *  <p>The metaKeywords of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param builder function to build the metaKeywords value
      * @return Builder
      */
@@ -349,7 +349,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The metaKeywords of the Product Tailoring at the time of creation.</p>
+     *  <p>The metaKeywords of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param builder function to build the metaKeywords value
      * @return Builder
      */
@@ -361,7 +361,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The metaKeywords of the Product Tailoring at the time of creation.</p>
+     *  <p>The metaKeywords of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param metaKeywords value to be set
      * @return Builder
      */
@@ -373,7 +373,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The variants of the Product Tailoring at the time of creation.</p>
+     *  <p>The variants of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param variants value to be set
      * @return Builder
      */
@@ -385,7 +385,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The variants of the Product Tailoring at the time of creation.</p>
+     *  <p>The variants of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param variants value to be set
      * @return Builder
      */
@@ -397,7 +397,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The variants of the Product Tailoring at the time of creation.</p>
+     *  <p>The variants of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param variants value to be set
      * @return Builder
      */
@@ -412,7 +412,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The variants of the Product Tailoring at the time of creation.</p>
+     *  <p>The variants of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param builder function to build the variants value
      * @return Builder
      */
@@ -428,7 +428,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The variants of the Product Tailoring at the time of creation.</p>
+     *  <p>The variants of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param builder function to build the variants value
      * @return Builder
      */
@@ -442,7 +442,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The variants of the Product Tailoring at the time of creation.</p>
+     *  <p>The variants of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param builder function to build the variants value
      * @return Builder
      */
@@ -454,7 +454,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The variants of the Product Tailoring at the time of creation.</p>
+     *  <p>The variants of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param builder function to build the variants value
      * @return Builder
      */
@@ -466,7 +466,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -478,7 +478,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -490,7 +490,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -505,7 +505,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -522,7 +522,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -537,7 +537,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -549,7 +549,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -610,7 +610,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The description of the Product Tailoring at the time of creation.</p>
+     *  <p>The description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @return description
      */
 
@@ -620,7 +620,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The name of the Product Tailoring at the time of creation.</p>
+     *  <p>The name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @return name
      */
 
@@ -630,7 +630,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The slug of the Product Tailoring at the time of creation.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @return slug
      */
 
@@ -640,7 +640,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The metaTitle of the Product Tailoring at the time of creation.</p>
+     *  <p>The metaTitle of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @return metaTitle
      */
 
@@ -650,7 +650,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The metaDescription of the Product Tailoring at the time of creation.</p>
+     *  <p>The metaDescription of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @return metaDescription
      */
 
@@ -660,7 +660,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The metaKeywords of the Product Tailoring at the time of creation.</p>
+     *  <p>The metaKeywords of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @return metaKeywords
      */
 
@@ -670,7 +670,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The variants of the Product Tailoring at the time of creation.</p>
+     *  <p>The variants of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @return variants
      */
 
@@ -680,7 +680,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
      * @return attributes
      */
 

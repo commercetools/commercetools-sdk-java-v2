@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Reference to a ProductTailoring.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTailoringReferenceImpl implements ProductTailoringReference, ModelBase {
@@ -56,7 +56,7 @@ public class ProductTailoringReferenceImpl implements ProductTailoringReference,
     }
 
     /**
-     *  <p>Unique identifier of the referenced ProductTailoring.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a>.</p>
      */
 
     public String getId() {
@@ -64,7 +64,7 @@ public class ProductTailoringReferenceImpl implements ProductTailoringReference,
     }
 
     /**
-     *  <p>Contains the representation of the expanded ProductTailoring. Only present in responses to requests with Reference Expansion for ProductTailoring.</p>
+     *  <p>Contains the representation of the expanded ProductTailoring. Only present in responses to requests with <span>Reference Expansion</span> for ProductTailoring.</p>
      */
 
     public com.commercetools.api.models.product_tailoring.ProductTailoring getObj() {

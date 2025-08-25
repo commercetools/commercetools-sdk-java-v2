@@ -55,7 +55,7 @@ public class CustomerAddShippingAddressIdActionImpl implements CustomerAddShippi
     }
 
     /**
-     *  <p><code>id</code> of the Address to become a shipping address.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become a shipping address.</p>
      */
 
     public String getAddressId() {
@@ -63,7 +63,7 @@ public class CustomerAddShippingAddressIdActionImpl implements CustomerAddShippi
     }
 
     /**
-     *  <p><code>key</code> of the Address to become a shipping address.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become a shipping address.</p>
      */
 
     public String getAddressKey() {

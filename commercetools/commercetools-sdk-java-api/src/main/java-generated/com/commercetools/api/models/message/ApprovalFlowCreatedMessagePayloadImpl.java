@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after an Approval Flow is created.</p>
+ *  <p>Generated after an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> is created.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ApprovalFlowCreatedMessagePayloadImpl implements ApprovalFlowCreatedMessagePayload, ModelBase {
@@ -52,7 +52,7 @@ public class ApprovalFlowCreatedMessagePayloadImpl implements ApprovalFlowCreate
     }
 
     /**
-     *  <p>The Approval Flow that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> that was created.</p>
      */
 
     public com.commercetools.api.models.approval_flow.ApprovalFlow getApprovalFlow() {

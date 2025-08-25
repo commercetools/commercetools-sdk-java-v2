@@ -29,7 +29,7 @@ public class RecurrencePolicyResourceIdentifierBuilder implements Builder<Recurr
     private String key;
 
     /**
-     *  <p>Unique identifier of the referenced RecurrencePolicy. Required if <code>key</code> is absent.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a>. Required if <code>key</code> is absent.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class RecurrencePolicyResourceIdentifierBuilder implements Builder<Recurr
     }
 
     /**
-     *  <p>User-defined unique identifier of the referenced RecurrencePolicy. Required if <code>id</code> is absent.</p>
+     *  <p>User-defined unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a>. Required if <code>id</code> is absent.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class RecurrencePolicyResourceIdentifierBuilder implements Builder<Recurr
     }
 
     /**
-     *  <p>Unique identifier of the referenced RecurrencePolicy. Required if <code>key</code> is absent.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a>. Required if <code>key</code> is absent.</p>
      * @return id
      */
 
@@ -61,7 +61,7 @@ public class RecurrencePolicyResourceIdentifierBuilder implements Builder<Recurr
     }
 
     /**
-     *  <p>User-defined unique identifier of the referenced RecurrencePolicy. Required if <code>id</code> is absent.</p>
+     *  <p>User-defined unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a>. Required if <code>id</code> is absent.</p>
      * @return key
      */
 

@@ -26,7 +26,7 @@ public class StandalonePriceTierRemovedMessagePayloadBuilder
     private com.commercetools.api.models.common.PriceTier removedTier;
 
     /**
-     *  <p>The Price Tier that has been removed from the array field <code>tiers</code> for the StandalonePrice.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">Price Tier</a> that has been removed from the array field <code>tiers</code> for the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param builder function to build the removedTier value
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class StandalonePriceTierRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The Price Tier that has been removed from the array field <code>tiers</code> for the StandalonePrice.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">Price Tier</a> that has been removed from the array field <code>tiers</code> for the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param builder function to build the removedTier value
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class StandalonePriceTierRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The Price Tier that has been removed from the array field <code>tiers</code> for the StandalonePrice.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">Price Tier</a> that has been removed from the array field <code>tiers</code> for the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param removedTier value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class StandalonePriceTierRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The Price Tier that has been removed from the array field <code>tiers</code> for the StandalonePrice.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">Price Tier</a> that has been removed from the array field <code>tiers</code> for the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @return removedTier
      */
 

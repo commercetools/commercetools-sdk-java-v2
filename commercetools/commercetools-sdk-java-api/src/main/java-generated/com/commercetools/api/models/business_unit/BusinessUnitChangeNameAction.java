@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Updating the name on a Business Unit generates a BusinessUnitNameChanged Message.</p>
+ *  <p>Updating the name on a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitNameChangedMessage" rel="nofollow">BusinessUnitNameChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

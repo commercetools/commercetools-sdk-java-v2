@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>To set the schedule, the Recurring Order must be active, with no active Skip Configuration and with available prices for all Cart items for the new schedule. Setting the schedule generates the RecurringOrderScheduleSet Message.</p>
+ *  <p>To set the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicySchedule" rel="nofollow">schedule</a>, the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> must be active, with no active <a href="https://docs.commercetools.com/apis/ctp:api:type:SkipConfiguration" rel="nofollow">Skip Configuration</a> and with available prices for all Cart items for the new schedule. Setting the schedule generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderScheduleSetMessage" rel="nofollow">RecurringOrderScheduleSet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RecurringOrderSetScheduleActionImpl implements RecurringOrderSetScheduleAction, ModelBase {

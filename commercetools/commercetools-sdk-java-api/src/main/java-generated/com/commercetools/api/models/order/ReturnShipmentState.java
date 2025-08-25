@@ -18,11 +18,11 @@ public interface ReturnShipmentState extends JsonEnum {
 
     /**
     <p>Initial state for Return Items that are non-refundable.</p>
-    <p>Return Items of this state will have the <code>NonRefundable</code> ReturnPaymentState.</p> */
+    <p>Return Items of this state will have the <code>NonRefundable</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnPaymentState" rel="nofollow">ReturnPaymentState</a>.</p> */
     ReturnShipmentState ADVISED = ReturnShipmentStateEnum.ADVISED;
     /**
     <p>Initial state for Return Items that are refundable.</p>
-    <p>Return Items of this state will have the <code>Initial</code> ReturnPaymentState.</p> */
+    <p>Return Items of this state will have the <code>Initial</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnPaymentState" rel="nofollow">ReturnPaymentState</a>.</p> */
     ReturnShipmentState RETURNED = ReturnShipmentStateEnum.RETURNED;
     /**
     <p>A state indicating that the Return Items are restocked in inventory.</p> */

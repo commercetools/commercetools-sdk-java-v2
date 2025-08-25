@@ -56,7 +56,7 @@ public interface TaxedPrice {
 
     /**
      *  <p>Taxable portions added to the total net price.</p>
-     *  <p>Calculated from the TaxRates.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
      * @return taxPortions
      */
     @NotNull
@@ -89,7 +89,7 @@ public interface TaxedPrice {
 
     /**
      *  <p>Taxable portions added to the total net price.</p>
-     *  <p>Calculated from the TaxRates.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
      * @param taxPortions values to be set
      */
 
@@ -98,7 +98,7 @@ public interface TaxedPrice {
 
     /**
      *  <p>Taxable portions added to the total net price.</p>
-     *  <p>Calculated from the TaxRates.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
      * @param taxPortions values to be set
      */
 

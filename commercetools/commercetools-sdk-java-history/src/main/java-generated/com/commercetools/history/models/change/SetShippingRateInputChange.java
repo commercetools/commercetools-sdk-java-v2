@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the Set Shipping Rate Input update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingRateInputAction" rel="nofollow">Set Shipping Rate Input</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

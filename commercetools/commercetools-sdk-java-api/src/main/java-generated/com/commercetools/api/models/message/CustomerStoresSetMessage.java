@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Set Stores update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -49,7 +49,7 @@ public interface CustomerStoresSetMessage extends Message {
     String CUSTOMER_STORES_SET = "CustomerStoresSet";
 
     /**
-     *  <p>The Stores the Customer is associated with after the Set Stores update action.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> is associated with after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @return stores
      */
     @NotNull
@@ -58,7 +58,7 @@ public interface CustomerStoresSetMessage extends Message {
     public List<StoreKeyReference> getStores();
 
     /**
-     *  <p>The Stores the Customer was associated with before the Set Stores update action.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> was associated with before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @return oldStores
      */
     @NotNull
@@ -67,7 +67,7 @@ public interface CustomerStoresSetMessage extends Message {
     public List<StoreKeyReference> getOldStores();
 
     /**
-     *  <p>The Stores the Customer is associated with after the Set Stores update action.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> is associated with after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @param stores values to be set
      */
 
@@ -75,14 +75,14 @@ public interface CustomerStoresSetMessage extends Message {
     public void setStores(final StoreKeyReference... stores);
 
     /**
-     *  <p>The Stores the Customer is associated with after the Set Stores update action.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> is associated with after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @param stores values to be set
      */
 
     public void setStores(final List<StoreKeyReference> stores);
 
     /**
-     *  <p>The Stores the Customer was associated with before the Set Stores update action.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> was associated with before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @param oldStores values to be set
      */
 
@@ -90,7 +90,7 @@ public interface CustomerStoresSetMessage extends Message {
     public void setOldStores(final StoreKeyReference... oldStores);
 
     /**
-     *  <p>The Stores the Customer was associated with before the Set Stores update action.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> was associated with before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      * @param oldStores values to be set
      */
 

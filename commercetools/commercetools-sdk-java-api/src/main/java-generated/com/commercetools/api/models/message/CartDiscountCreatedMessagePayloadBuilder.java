@@ -25,7 +25,7 @@ public class CartDiscountCreatedMessagePayloadBuilder implements Builder<CartDis
     private com.commercetools.api.models.cart_discount.CartDiscount cartDiscount;
 
     /**
-     *  <p>The Cart Discount that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discount</a> that was created.</p>
      * @param builder function to build the cartDiscount value
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class CartDiscountCreatedMessagePayloadBuilder implements Builder<CartDis
     }
 
     /**
-     *  <p>The Cart Discount that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discount</a> that was created.</p>
      * @param builder function to build the cartDiscount value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class CartDiscountCreatedMessagePayloadBuilder implements Builder<CartDis
     }
 
     /**
-     *  <p>The Cart Discount that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discount</a> that was created.</p>
      * @param cartDiscount value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class CartDiscountCreatedMessagePayloadBuilder implements Builder<CartDis
     }
 
     /**
-     *  <p>The Cart Discount that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discount</a> that was created.</p>
      * @return cartDiscount
      */
 

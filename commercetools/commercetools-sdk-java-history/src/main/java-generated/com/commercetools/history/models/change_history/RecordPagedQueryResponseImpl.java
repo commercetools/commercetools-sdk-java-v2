@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>PagedQueryResult with <code>results</code> containing an array of Record.</p>
+ *  <p><span>PagedQueryResult</span> with <code>results</code> containing an array of <a href="https://docs.commercetools.com/apis/ctp:history:type:Record" rel="nofollow">Record</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RecordPagedQueryResponseImpl implements RecordPagedQueryResponse, ModelBase {
@@ -53,7 +53,7 @@ public class RecordPagedQueryResponseImpl implements RecordPagedQueryResponse, M
     }
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      */
 
     public Integer getLimit() {
@@ -69,7 +69,7 @@ public class RecordPagedQueryResponseImpl implements RecordPagedQueryResponse, M
     }
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>
+     *  <p>Total number of results matching the query. This number is an estimation and not <span>strongly consistent</span>.</p>
      */
 
     public Integer getTotal() {
@@ -77,7 +77,7 @@ public class RecordPagedQueryResponseImpl implements RecordPagedQueryResponse, M
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      */
 
     public Integer getOffset() {

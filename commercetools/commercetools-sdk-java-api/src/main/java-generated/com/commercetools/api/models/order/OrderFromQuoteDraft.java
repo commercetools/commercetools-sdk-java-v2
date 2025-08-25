@@ -36,8 +36,8 @@ import jakarta.validation.constraints.NotNull;
 public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<OrderFromQuoteDraft> {
 
     /**
-     *  <p>ResourceIdentifier to the Quote from which the Order is created.</p>
-     *  <p>The Quote must have the <code>Pending</code> state and must be valid (not past the <code>validTo</code> date).</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Quote from which the Order is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> must have the <code>Pending</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteState" rel="nofollow">state</a> and must be valid (not past the <code>validTo</code> date).</p>
      * @return quote
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
     public QuoteResourceIdentifier getQuote();
 
     /**
-     *  <p><code>version</code> of the Quote from which the Order is created.</p>
+     *  <p><code>version</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> from which the Order is created.</p>
      * @return version
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
     public Long getVersion();
 
     /**
-     *  <p>If <code>true</code>, the <code>quoteState</code> of the referenced Quote will be set to <code>Accepted</code>.</p>
+     *  <p>If <code>true</code>, the <code>quoteState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> will be set to <code>Accepted</code>.</p>
      * @return quoteStateToAccepted
      */
 
@@ -102,22 +102,22 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
     public StateResourceIdentifier getState();
 
     /**
-     *  <p>ResourceIdentifier to the Quote from which the Order is created.</p>
-     *  <p>The Quote must have the <code>Pending</code> state and must be valid (not past the <code>validTo</code> date).</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Quote from which the Order is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> must have the <code>Pending</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteState" rel="nofollow">state</a> and must be valid (not past the <code>validTo</code> date).</p>
      * @param quote value to be set
      */
 
     public void setQuote(final QuoteResourceIdentifier quote);
 
     /**
-     *  <p><code>version</code> of the Quote from which the Order is created.</p>
+     *  <p><code>version</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> from which the Order is created.</p>
      * @param version value to be set
      */
 
     public void setVersion(final Long version);
 
     /**
-     *  <p>If <code>true</code>, the <code>quoteState</code> of the referenced Quote will be set to <code>Accepted</code>.</p>
+     *  <p>If <code>true</code>, the <code>quoteState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> will be set to <code>Accepted</code>.</p>
      * @param quoteStateToAccepted value to be set
      */
 

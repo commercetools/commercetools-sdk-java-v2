@@ -24,7 +24,7 @@ public class StandalonePriceDeletedMessagePayloadBuilder implements Builder<Stan
     private String sku;
 
     /**
-     *  <p>SKU of the ProductVariant to which the deleted Standalone Price was associated.</p>
+     *  <p>SKU of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to which the deleted Standalone Price was associated.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class StandalonePriceDeletedMessagePayloadBuilder implements Builder<Stan
     }
 
     /**
-     *  <p>SKU of the ProductVariant to which the deleted Standalone Price was associated.</p>
+     *  <p>SKU of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to which the deleted Standalone Price was associated.</p>
      * @return sku
      */
 

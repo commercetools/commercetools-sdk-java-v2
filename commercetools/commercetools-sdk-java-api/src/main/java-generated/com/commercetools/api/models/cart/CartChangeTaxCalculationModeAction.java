@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Changing the tax calculation mode leads to recalculation of taxes.</p>
+ *  <p>Changing the tax calculation mode leads to <span>recalculation of taxes</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

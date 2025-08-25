@@ -17,10 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AnonymousCartSignInMode extends JsonEnum {
 
     /**
-    <p>If set, the content of an anonymous Cart is merged during sign-in with the Customer's most recently modified active Cart.</p> */
+    <p>If set, the content of an anonymous <span>Cart is merged during sign-in</span> with the Customer's most recently modified active Cart.</p> */
     AnonymousCartSignInMode MERGE_WITH_EXISTING_CUSTOMER_CART = AnonymousCartSignInModeEnum.MERGE_WITH_EXISTING_CUSTOMER_CART;
     /**
-    <p>If set, an anonymous Cart is used as the new active Customer Cart, and no LineItems or CustomLineItems are merged.</p> */
+    <p>If set, an anonymous Cart is used as the new active Customer Cart, and no <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a> are merged.</p> */
     AnonymousCartSignInMode USE_AS_NEW_ACTIVE_CUSTOMER_CART = AnonymousCartSignInModeEnum.USE_AS_NEW_ACTIVE_CUSTOMER_CART;
 
     /**

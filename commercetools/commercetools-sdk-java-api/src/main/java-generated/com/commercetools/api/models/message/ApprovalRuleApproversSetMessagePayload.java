@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Set Approvers update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetApproversAction" rel="nofollow">Set Approvers</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface ApprovalRuleApproversSetMessagePayload extends MessagePayload {
     String APPROVAL_RULE_APPROVERS_SET = "ApprovalRuleApproversSet";
 
     /**
-     *  <p>Approver hierarchy of the ApprovalRule after the Set Approvers update action.</p>
+     *  <p>Approver hierarchy of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetApproversAction" rel="nofollow">Set Approvers</a> update action.</p>
      * @return approvers
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface ApprovalRuleApproversSetMessagePayload extends MessagePayload {
     public ApproverHierarchy getApprovers();
 
     /**
-     *  <p>Approver hierarchy of the ApprovalRule before the Set Approvers update action.</p>
+     *  <p>Approver hierarchy of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetApproversAction" rel="nofollow">Set Approvers</a> update action.</p>
      * @return oldApprovers
      */
     @NotNull
@@ -59,14 +59,14 @@ public interface ApprovalRuleApproversSetMessagePayload extends MessagePayload {
     public ApproverHierarchy getOldApprovers();
 
     /**
-     *  <p>Approver hierarchy of the ApprovalRule after the Set Approvers update action.</p>
+     *  <p>Approver hierarchy of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetApproversAction" rel="nofollow">Set Approvers</a> update action.</p>
      * @param approvers value to be set
      */
 
     public void setApprovers(final ApproverHierarchy approvers);
 
     /**
-     *  <p>Approver hierarchy of the ApprovalRule before the Set Approvers update action.</p>
+     *  <p>Approver hierarchy of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetApproversAction" rel="nofollow">Set Approvers</a> update action.</p>
      * @param oldApprovers value to be set
      */
 

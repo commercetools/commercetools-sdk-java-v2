@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Set Company Name update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCompanyNameAction" rel="nofollow">Set Company Name</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +35,7 @@ public interface CustomerCompanyNameSetMessagePayload extends MessagePayload {
     String CUSTOMER_COMPANY_NAME_SET = "CustomerCompanyNameSet";
 
     /**
-     *  <p>The <code>companyName</code> that was set during the Set Company Name update action.</p>
+     *  <p>The <code>companyName</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCompanyNameAction" rel="nofollow">Set Company Name</a> update action.</p>
      * @return companyName
      */
 
@@ -43,7 +43,7 @@ public interface CustomerCompanyNameSetMessagePayload extends MessagePayload {
     public String getCompanyName();
 
     /**
-     *  <p>The <code>companyName</code> that was set during the Set Company Name update action.</p>
+     *  <p>The <code>companyName</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCompanyNameAction" rel="nofollow">Set Company Name</a> update action.</p>
      * @param companyName value to be set
      */
 

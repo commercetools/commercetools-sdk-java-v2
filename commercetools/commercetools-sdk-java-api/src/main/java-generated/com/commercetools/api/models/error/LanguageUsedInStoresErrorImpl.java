@@ -19,7 +19,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when a language cannot be removed from a Project as it is being used by a Store.</p>
- *  <p>The error is returned as a failed response to the Change Languages update action.</p>
+ *  <p>The error is returned as a failed response to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectChangeLanguagesAction" rel="nofollow">Change Languages</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LanguageUsedInStoresErrorImpl implements LanguageUsedInStoresError, ModelBase {

@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Changing the password produces the CustomerPasswordUpdated Message with <code>reset=false</code>.</p>
+ *  <p>Changing the password produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerPasswordUpdatedMessage" rel="nofollow">CustomerPasswordUpdated</a> Message with <code>reset=false</code>.</p>
  *
  * <hr>
  * <div class=code-example>

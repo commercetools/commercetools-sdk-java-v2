@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Add CustomerGroupAssignment update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddCustomerGroupAssignmentAction" rel="nofollow">Add CustomerGroupAssignment</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface CustomerGroupAssignmentAddedMessage extends Message {
     String CUSTOMER_GROUP_ASSIGNMENT_ADDED = "CustomerGroupAssignmentAdded";
 
     /**
-     *  <p>Customer Group assigned to the Customer during the Add CustomerGroupAssignment update action.</p>
+     *  <p>Customer Group assigned to the Customer during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddCustomerGroupAssignmentAction" rel="nofollow">Add CustomerGroupAssignment</a> update action.</p>
      * @return customerGroupAssignment
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface CustomerGroupAssignmentAddedMessage extends Message {
     public CustomerGroupAssignment getCustomerGroupAssignment();
 
     /**
-     *  <p>Customer Group assigned to the Customer during the Add CustomerGroupAssignment update action.</p>
+     *  <p>Customer Group assigned to the Customer during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddCustomerGroupAssignmentAction" rel="nofollow">Add CustomerGroupAssignment</a> update action.</p>
      * @param customerGroupAssignment value to be set
      */
 

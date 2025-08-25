@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Produces the Order Payment State Changed Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderPaymentStateChangedMessage" rel="nofollow">Order Payment State Changed</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

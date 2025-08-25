@@ -58,7 +58,7 @@ public class OrderPagedSearchResponseImpl implements OrderPagedSearchResponse, M
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      */
 
     public Long getOffset() {
@@ -66,7 +66,7 @@ public class OrderPagedSearchResponseImpl implements OrderPagedSearchResponse, M
     }
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      */
 
     public Long getLimit() {

@@ -18,8 +18,8 @@ import jakarta.validation.constraints.NotNull;
  *  <p>Returned when the provided email token of the Customer has expired.</p>
  *  <p>The error is returned as a failed response to:</p>
  *  <ul>
- *   <li>Get Customer by email token and Get Customer in Store by email token requests</li>
- *   <li>Verify email of Customer and Verify email of Customer in Store requests</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers/email-token={emailToken}:GET" rel="nofollow">Get Customer by email token</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/customers/email-token={emailToken}:GET" rel="nofollow">Get Customer in Store by email token</a> requests</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers/email/confirm:POST" rel="nofollow">Verify email of Customer</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/customers/email/confirm:POST" rel="nofollow">Verify email of Customer in Store</a> requests</li>
  *  </ul>
  *
  * <hr>

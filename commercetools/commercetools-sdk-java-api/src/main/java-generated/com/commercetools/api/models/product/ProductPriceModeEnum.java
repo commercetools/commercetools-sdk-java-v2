@@ -11,16 +11,16 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>This mode determines the type of Prices used for price selection by Line Items and Products. For more information about the difference between the Prices, see Pricing.</p>
+ *  <p>This mode determines the type of Prices used for <span>price selection</span> by Line Items and Products. For more information about the difference between the Prices, see <span>Pricing</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ProductPriceModeEnum extends JsonEnum {
 
     /**
-    <p>Composable Commerce uses the Embedded Prices located inside the <code>prices</code> field in ProductVariant.</p> */
+    <p>Composable Commerce uses the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> located inside the <code>prices</code> field in <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p> */
     ProductPriceModeEnum EMBEDDED = ProductPriceModeEnumEnum.EMBEDDED;
     /**
-    <p>Composable Commerce uses StandalonePrices, which are associated with the ProductVariant through the <code>sku</code> field.</p> */
+    <p>Composable Commerce uses <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrices</a>, which are associated with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> through the <code>sku</code> field.</p> */
     ProductPriceModeEnum STANDALONE = ProductPriceModeEnumEnum.STANDALONE;
 
     /**

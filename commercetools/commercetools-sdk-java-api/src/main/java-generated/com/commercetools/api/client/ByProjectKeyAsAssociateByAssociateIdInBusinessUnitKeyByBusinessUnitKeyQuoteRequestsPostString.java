@@ -21,7 +21,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creates a QuoteRequest in a BusinessUnit. Creating QuoteRequest fails with an InvalidOperation if the Cart does not reference the same BusinessUnit as the <code>businessUnitKey</code> path parameter.</p>
+ *  <p>Creates a QuoteRequest in a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>. Creating QuoteRequest fails with an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> if the Cart does not reference the same BusinessUnit as the <code>businessUnitKey</code> path parameter.</p>
  *
  * <hr>
  * <div class=code-example>

@@ -36,7 +36,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ProductTailoringUpdate {
 
     /**
-     *  <p>Expected version of the ProductTailoring on which the changes apply. If the expected version does not match the actual version, a 409 Conflict is returned.</p>
+     *  <p>Expected version of the ProductTailoring on which the changes apply. If the expected version does not match the actual version, a <span>409 Conflict</span> is returned.</p>
      * @return version
      */
     @NotNull
@@ -53,7 +53,7 @@ public interface ProductTailoringUpdate {
     public List<ProductTailoringUpdateAction> getActions();
 
     /**
-     *  <p>Expected version of the ProductTailoring on which the changes apply. If the expected version does not match the actual version, a 409 Conflict is returned.</p>
+     *  <p>Expected version of the ProductTailoring on which the changes apply. If the expected version does not match the actual version, a <span>409 Conflict</span> is returned.</p>
      * @param version value to be set
      */
 

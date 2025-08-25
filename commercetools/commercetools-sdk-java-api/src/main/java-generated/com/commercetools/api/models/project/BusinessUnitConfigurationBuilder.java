@@ -30,7 +30,7 @@ public class BusinessUnitConfigurationBuilder implements Builder<BusinessUnitCon
     private com.commercetools.api.models.associate_role.AssociateRoleKeyReference myBusinessUnitAssociateRoleOnCreation;
 
     /**
-     *  <p>Status of Business Units created using the My Business Unit endpoint.</p>
+     *  <p>Status of Business Units created using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/business-units:POST" rel="nofollow">My Business Unit endpoint</a>.</p>
      * @param myBusinessUnitStatusOnCreation value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class BusinessUnitConfigurationBuilder implements Builder<BusinessUnitCon
     }
 
     /**
-     *  <p>Default Associate Role assigned to the Associate creating a Business Unit using the My Business Unit endpoint.</p>
+     *  <p>Default <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a> assigned to the Associate creating a Business Unit using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/business-units:POST" rel="nofollow">My Business Unit endpoint</a>.</p>
      * @param builder function to build the myBusinessUnitAssociateRoleOnCreation value
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class BusinessUnitConfigurationBuilder implements Builder<BusinessUnitCon
     }
 
     /**
-     *  <p>Default Associate Role assigned to the Associate creating a Business Unit using the My Business Unit endpoint.</p>
+     *  <p>Default <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a> assigned to the Associate creating a Business Unit using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/business-units:POST" rel="nofollow">My Business Unit endpoint</a>.</p>
      * @param builder function to build the myBusinessUnitAssociateRoleOnCreation value
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class BusinessUnitConfigurationBuilder implements Builder<BusinessUnitCon
     }
 
     /**
-     *  <p>Default Associate Role assigned to the Associate creating a Business Unit using the My Business Unit endpoint.</p>
+     *  <p>Default <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a> assigned to the Associate creating a Business Unit using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/business-units:POST" rel="nofollow">My Business Unit endpoint</a>.</p>
      * @param myBusinessUnitAssociateRoleOnCreation value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class BusinessUnitConfigurationBuilder implements Builder<BusinessUnitCon
     }
 
     /**
-     *  <p>Status of Business Units created using the My Business Unit endpoint.</p>
+     *  <p>Status of Business Units created using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/business-units:POST" rel="nofollow">My Business Unit endpoint</a>.</p>
      * @return myBusinessUnitStatusOnCreation
      */
 
@@ -90,7 +90,7 @@ public class BusinessUnitConfigurationBuilder implements Builder<BusinessUnitCon
     }
 
     /**
-     *  <p>Default Associate Role assigned to the Associate creating a Business Unit using the My Business Unit endpoint.</p>
+     *  <p>Default <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a> assigned to the Associate creating a Business Unit using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/business-units:POST" rel="nofollow">My Business Unit endpoint</a>.</p>
      * @return myBusinessUnitAssociateRoleOnCreation
      */
 

@@ -35,7 +35,7 @@ import jakarta.validation.constraints.NotNull;
 public interface FieldDefinitionOrderValue {
 
     /**
-     *  <p>Name of the FieldDefinition.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>.</p>
      * @return name
      */
     @NotNull
@@ -52,7 +52,7 @@ public interface FieldDefinitionOrderValue {
     public LocalizedString getLabel();
 
     /**
-     *  <p>Name of the FieldDefinition.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>.</p>
      * @param name value to be set
      */
 

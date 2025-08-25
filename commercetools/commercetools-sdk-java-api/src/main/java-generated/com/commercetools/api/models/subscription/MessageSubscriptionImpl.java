@@ -17,8 +17,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Messages will be delivered even if the Messages Query HTTP API is not enabled.</p>
- *  <p>For MessageSubscriptions, the format of the payload is MessageDeliveryPayload.</p>
+ *  <p>Messages will be delivered even if the Messages Query HTTP API <span>is not enabled</span>.</p>
+ *  <p>For MessageSubscriptions, the format of the payload is <a href="https://docs.commercetools.com/apis/ctp:api:type:MessageDeliveryPayload" rel="nofollow">MessageDeliveryPayload</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MessageSubscriptionImpl implements MessageSubscription, ModelBase {

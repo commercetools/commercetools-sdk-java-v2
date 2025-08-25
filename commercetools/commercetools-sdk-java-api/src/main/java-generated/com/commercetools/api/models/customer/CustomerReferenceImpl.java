@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Reference to a Customer.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerReferenceImpl implements CustomerReference, ModelBase {
@@ -56,7 +56,7 @@ public class CustomerReferenceImpl implements CustomerReference, ModelBase {
     }
 
     /**
-     *  <p>Unique identifier of the referenced Customer.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>.</p>
      */
 
     public String getId() {
@@ -64,7 +64,7 @@ public class CustomerReferenceImpl implements CustomerReference, ModelBase {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with Reference Expansion for Customers.</p>
+     *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with <a href="https://docs.commercetools.com/apis/ctp:api:type:Expansion" rel="nofollow">Reference Expansion</a> for Customers.</p>
      */
 
     public com.commercetools.api.models.customer.Customer getObj() {

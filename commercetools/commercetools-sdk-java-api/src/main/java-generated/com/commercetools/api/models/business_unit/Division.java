@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Business Unit type to model divisions that are part of the Company or a higher-order Division. Contains specific fields and values that differentiate a Division from the generic BusinessUnit.</p>
+ *  <p>Business Unit type to model divisions that are part of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Company" rel="nofollow">Company</a> or a higher-order Division. Contains specific fields and values that differentiate a Division from the generic <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

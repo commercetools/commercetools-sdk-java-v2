@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Remove Address update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitRemoveAddressAction" rel="nofollow">Remove Address</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitAddressRemovedMessagePayloadImpl
@@ -53,7 +53,7 @@ public class BusinessUnitAddressRemovedMessagePayloadImpl
     }
 
     /**
-     *  <p>The address that was removed from the Business Unit.</p>
+     *  <p>The address that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      */
 
     public com.commercetools.api.models.common.Address getAddress() {

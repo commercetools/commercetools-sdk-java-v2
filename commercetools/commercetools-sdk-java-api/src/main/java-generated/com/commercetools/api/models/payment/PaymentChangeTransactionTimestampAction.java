@@ -40,7 +40,7 @@ public interface PaymentChangeTransactionTimestampAction extends PaymentUpdateAc
     String CHANGE_TRANSACTION_TIMESTAMP = "changeTransactionTimestamp";
 
     /**
-     *  <p>Unique identifier of the Transaction.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>.</p>
      * @return transactionId
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface PaymentChangeTransactionTimestampAction extends PaymentUpdateAc
     public ZonedDateTime getTimestamp();
 
     /**
-     *  <p>Unique identifier of the Transaction.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>.</p>
      * @param transactionId value to be set
      */
 

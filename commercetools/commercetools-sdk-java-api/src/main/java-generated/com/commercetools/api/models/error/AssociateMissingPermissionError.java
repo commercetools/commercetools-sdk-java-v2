@@ -19,7 +19,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Returned when an Associate is missing a Permission on a B2B resource.</p>
+ *  <p>Returned when an <span>Associate</span> is missing a <span>Permission</span> on a <span>B2B resource</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -55,7 +55,7 @@ public interface AssociateMissingPermissionError extends ErrorObject {
     /**
      *  <ul>
      *   <li>When an action is performed by an Associate: <code>"Associate '$idOfAssociate' has no rights to $action in business-unit '$idOrKeyOfBusinessUnit'. Needs '$requiredPermission'."</code></li>
-     *   <li>When an action is performed for another Associate, like viewing their Cart: <code>"Associate '$idOfAssociate' has no rights to $action for customer '$idOfCustomer' in business-unit '$idOrKeyOfBusinessUnit'. Needs '$requiredPermission'."</code></li>
+     *   <li>When an action is performed for another Associate, like <span>viewing their Cart</span>: <code>"Associate '$idOfAssociate' has no rights to $action for customer '$idOfCustomer' in business-unit '$idOrKeyOfBusinessUnit'. Needs '$requiredPermission'."</code></li>
      *   <li>When viewing an entity: <code>"Associate '$idOfAssociate' has no rights to $action in business-unit '$idOrKeyOfBusinessUnit'. Needs '$requiredViewMyPermission' or '$requiredViewOthersPermission'."</code></li>
      *  </ul>
      * @return message
@@ -65,7 +65,7 @@ public interface AssociateMissingPermissionError extends ErrorObject {
     public String getMessage();
 
     /**
-     *  <p>ResourceIdentifier to the Associate that tried to perform the action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> that tried to perform the action.</p>
      * @return associate
      */
     @NotNull
@@ -74,7 +74,7 @@ public interface AssociateMissingPermissionError extends ErrorObject {
     public CustomerResourceIdentifier getAssociate();
 
     /**
-     *  <p>ResourceIdentifier to the BusinessUnit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
      * @return businessUnit
      */
     @NotNull
@@ -83,7 +83,7 @@ public interface AssociateMissingPermissionError extends ErrorObject {
     public BusinessUnitResourceIdentifier getBusinessUnit();
 
     /**
-     *  <p>ResourceIdentifier of the Associate on whose behalf the action is performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerResourceIdentifier" rel="nofollow">ResourceIdentifier</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> on whose behalf the action is performed.</p>
      * @return associateOnBehalf
      */
     @Valid
@@ -91,7 +91,7 @@ public interface AssociateMissingPermissionError extends ErrorObject {
     public CustomerResourceIdentifier getAssociateOnBehalf();
 
     /**
-     *  <p>The Permissions that the Associate performing the action lacks. At least one of these Permissions is needed.</p>
+     *  <p>The Permissions that the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> performing the action lacks. At least one of these Permissions is needed.</p>
      * @return permissions
      */
     @NotNull
@@ -101,7 +101,7 @@ public interface AssociateMissingPermissionError extends ErrorObject {
     /**
      *  <ul>
      *   <li>When an action is performed by an Associate: <code>"Associate '$idOfAssociate' has no rights to $action in business-unit '$idOrKeyOfBusinessUnit'. Needs '$requiredPermission'."</code></li>
-     *   <li>When an action is performed for another Associate, like viewing their Cart: <code>"Associate '$idOfAssociate' has no rights to $action for customer '$idOfCustomer' in business-unit '$idOrKeyOfBusinessUnit'. Needs '$requiredPermission'."</code></li>
+     *   <li>When an action is performed for another Associate, like <span>viewing their Cart</span>: <code>"Associate '$idOfAssociate' has no rights to $action for customer '$idOfCustomer' in business-unit '$idOrKeyOfBusinessUnit'. Needs '$requiredPermission'."</code></li>
      *   <li>When viewing an entity: <code>"Associate '$idOfAssociate' has no rights to $action in business-unit '$idOrKeyOfBusinessUnit'. Needs '$requiredViewMyPermission' or '$requiredViewOthersPermission'."</code></li>
      *  </ul>
      * @param message value to be set
@@ -110,28 +110,28 @@ public interface AssociateMissingPermissionError extends ErrorObject {
     public void setMessage(final String message);
 
     /**
-     *  <p>ResourceIdentifier to the Associate that tried to perform the action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> that tried to perform the action.</p>
      * @param associate value to be set
      */
 
     public void setAssociate(final CustomerResourceIdentifier associate);
 
     /**
-     *  <p>ResourceIdentifier to the BusinessUnit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
      * @param businessUnit value to be set
      */
 
     public void setBusinessUnit(final BusinessUnitResourceIdentifier businessUnit);
 
     /**
-     *  <p>ResourceIdentifier of the Associate on whose behalf the action is performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerResourceIdentifier" rel="nofollow">ResourceIdentifier</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> on whose behalf the action is performed.</p>
      * @param associateOnBehalf value to be set
      */
 
     public void setAssociateOnBehalf(final CustomerResourceIdentifier associateOnBehalf);
 
     /**
-     *  <p>The Permissions that the Associate performing the action lacks. At least one of these Permissions is needed.</p>
+     *  <p>The Permissions that the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> performing the action lacks. At least one of these Permissions is needed.</p>
      * @param permissions values to be set
      */
 
@@ -139,7 +139,7 @@ public interface AssociateMissingPermissionError extends ErrorObject {
     public void setPermissions(final Permission... permissions);
 
     /**
-     *  <p>The Permissions that the Associate performing the action lacks. At least one of these Permissions is needed.</p>
+     *  <p>The Permissions that the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> performing the action lacks. At least one of these Permissions is needed.</p>
      * @param permissions values to be set
      */
 

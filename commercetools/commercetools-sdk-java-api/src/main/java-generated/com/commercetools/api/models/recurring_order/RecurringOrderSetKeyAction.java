@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>This update action generates the RecurringOrderKeySet Message.</p>
+ *  <p>This update action generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderKeySetMessage" rel="nofollow">RecurringOrderKeySet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

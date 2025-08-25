@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Defines the new state for the Recurring Order—for possible values, see RecurringOrderActive, RecurringOrderPaused, RecurringOrderExpired, and RecurringOrderCanceled.</p>
+ *  <p>Defines the new state for the Recurring Order—for possible values, see <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderActive" rel="nofollow">RecurringOrderActive</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderPaused" rel="nofollow">RecurringOrderPaused</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderExpired" rel="nofollow">RecurringOrderExpired</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderCanceled" rel="nofollow">RecurringOrderCanceled</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RecurringOrderStateDraftImpl implements RecurringOrderStateDraft, ModelBase {

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after an Approval Rule is created.</p>
+ *  <p>Generated after an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">Approval Rule</a> is created.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ApprovalRuleCreatedMessagePayloadImpl implements ApprovalRuleCreatedMessagePayload, ModelBase {
@@ -52,7 +52,7 @@ public class ApprovalRuleCreatedMessagePayloadImpl implements ApprovalRuleCreate
     }
 
     /**
-     *  <p>The Approval Rule that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">Approval Rule</a> that was created.</p>
      */
 
     public com.commercetools.api.models.approval_rule.ApprovalRule getApprovalRule() {

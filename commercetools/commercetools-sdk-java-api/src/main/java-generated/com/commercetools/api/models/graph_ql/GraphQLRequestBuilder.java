@@ -33,7 +33,7 @@ public class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
     private com.commercetools.api.models.graph_ql.GraphQLVariablesMap variables;
 
     /**
-     *  <p>String representation of the <em>Source Text</em> of the <em>Document</em> that is specified in the Language section of the GraphQL specification.</p>
+     *  <p>String representation of the <em>Source Text</em> of the <em>Document</em> that is specified in the <span>Language section of the GraphQL specification</span>.</p>
      * @param query value to be set
      * @return Builder
      */
@@ -91,7 +91,7 @@ public class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
     }
 
     /**
-     *  <p>String representation of the <em>Source Text</em> of the <em>Document</em> that is specified in the Language section of the GraphQL specification.</p>
+     *  <p>String representation of the <em>Source Text</em> of the <em>Document</em> that is specified in the <span>Language section of the GraphQL specification</span>.</p>
      * @return query
      */
 

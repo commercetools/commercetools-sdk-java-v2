@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Defines the new state for the Recurring Order—for possible values, see RecurringOrderActive, RecurringOrderPaused, RecurringOrderExpired, and RecurringOrderCanceled.</p>
+ *  <p>Defines the new state for the Recurring Order—for possible values, see <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderActive" rel="nofollow">RecurringOrderActive</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderPaused" rel="nofollow">RecurringOrderPaused</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderExpired" rel="nofollow">RecurringOrderExpired</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderCanceled" rel="nofollow">RecurringOrderCanceled</a>.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern

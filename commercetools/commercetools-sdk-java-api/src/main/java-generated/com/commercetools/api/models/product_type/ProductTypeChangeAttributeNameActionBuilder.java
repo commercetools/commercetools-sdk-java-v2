@@ -38,8 +38,8 @@ public class ProductTypeChangeAttributeNameActionBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>New user-defined name of the Attribute that is unique to the Project.</p>
-     *  <p>When using the same <code>name</code> for an Attribute in two or more ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes. If not, an AttributeDefinitionAlreadyExists error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
+     *  <p>New user-defined name of the Attribute that is unique to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
+     *  <p>When using the same <code>name</code> for an Attribute in two or more ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes. If not, an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionAlreadyExistsError" rel="nofollow">AttributeDefinitionAlreadyExists</a> error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
      * @param newAttributeName value to be set
      * @return Builder
      */
@@ -59,8 +59,8 @@ public class ProductTypeChangeAttributeNameActionBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>New user-defined name of the Attribute that is unique to the Project.</p>
-     *  <p>When using the same <code>name</code> for an Attribute in two or more ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes. If not, an AttributeDefinitionAlreadyExists error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
+     *  <p>New user-defined name of the Attribute that is unique to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
+     *  <p>When using the same <code>name</code> for an Attribute in two or more ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes. If not, an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionAlreadyExistsError" rel="nofollow">AttributeDefinitionAlreadyExists</a> error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
      * @return newAttributeName
      */
 

@@ -44,7 +44,7 @@ public class DiscountedLineItemPortionDraftImpl implements DiscountedLineItemPor
     }
 
     /**
-     *  <p>A CartDiscountReference or DirectDiscountReference for the discount applicable on the Line Item.</p>
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> for the discount applicable on the Line Item.</p>
      */
 
     public com.commercetools.api.models.common.Reference getDiscount() {

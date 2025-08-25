@@ -30,7 +30,7 @@ public class CategoryReferenceBuilder implements Builder<CategoryReference> {
     private com.commercetools.api.models.category.Category obj;
 
     /**
-     *  <p>Unique identifier of the referenced Category.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class CategoryReferenceBuilder implements Builder<CategoryReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Category. Only present in responses to requests with Reference Expansion for Categories.</p>
+     *  <p>Contains the representation of the expanded Category. Only present in responses to requests with <span>Reference Expansion</span> for Categories.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class CategoryReferenceBuilder implements Builder<CategoryReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Category. Only present in responses to requests with Reference Expansion for Categories.</p>
+     *  <p>Contains the representation of the expanded Category. Only present in responses to requests with <span>Reference Expansion</span> for Categories.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class CategoryReferenceBuilder implements Builder<CategoryReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Category. Only present in responses to requests with Reference Expansion for Categories.</p>
+     *  <p>Contains the representation of the expanded Category. Only present in responses to requests with <span>Reference Expansion</span> for Categories.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class CategoryReferenceBuilder implements Builder<CategoryReference> {
     }
 
     /**
-     *  <p>Unique identifier of the referenced Category.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a>.</p>
      * @return id
      */
 
@@ -85,7 +85,7 @@ public class CategoryReferenceBuilder implements Builder<CategoryReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Category. Only present in responses to requests with Reference Expansion for Categories.</p>
+     *  <p>Contains the representation of the expanded Category. Only present in responses to requests with <span>Reference Expansion</span> for Categories.</p>
      * @return obj
      */
 

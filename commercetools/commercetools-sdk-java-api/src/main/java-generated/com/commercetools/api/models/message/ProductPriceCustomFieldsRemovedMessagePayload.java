@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after removing a Custom Type from a Price using the Set Price Custom Type update action.</p>
+ *  <p>Generated after removing a Custom Type from a Price using the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetProductPriceCustomTypeAction" rel="nofollow">Set Price Custom Type</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface ProductPriceCustomFieldsRemovedMessagePayload extends MessagePa
     String PRODUCT_PRICE_CUSTOM_FIELDS_REMOVED = "ProductPriceCustomFieldsRemoved";
 
     /**
-     *  <p>Unique identifier of the Price from which the Custom Type was removed.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> from which the Custom Type was removed.</p>
      * @return priceId
      */
     @NotNull
@@ -48,7 +48,7 @@ public interface ProductPriceCustomFieldsRemovedMessagePayload extends MessagePa
     public String getPriceId();
 
     /**
-     *  <p>Unique identifier of the ProductVariant to which the Price belongs.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to which the Price belongs.</p>
      * @return variantId
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface ProductPriceCustomFieldsRemovedMessagePayload extends MessagePa
     public Long getVariantId();
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @return staged
      */
     @NotNull
@@ -64,21 +64,21 @@ public interface ProductPriceCustomFieldsRemovedMessagePayload extends MessagePa
     public Boolean getStaged();
 
     /**
-     *  <p>Unique identifier of the Price from which the Custom Type was removed.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> from which the Custom Type was removed.</p>
      * @param priceId value to be set
      */
 
     public void setPriceId(final String priceId);
 
     /**
-     *  <p>Unique identifier of the ProductVariant to which the Price belongs.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to which the Price belongs.</p>
      * @param variantId value to be set
      */
 
     public void setVariantId(final Long variantId);
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @param staged value to be set
      */
 

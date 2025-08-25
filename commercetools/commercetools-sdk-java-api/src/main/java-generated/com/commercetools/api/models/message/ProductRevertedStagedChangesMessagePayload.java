@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Revert Staged Changes update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRevertStagedChangesAction" rel="nofollow">Revert Staged Changes</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface ProductRevertedStagedChangesMessagePayload extends MessagePaylo
     String PRODUCT_REVERTED_STAGED_CHANGES = "ProductRevertedStagedChanges";
 
     /**
-     *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
+     *  <p>List of image URLs that were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRevertStagedChangesAction" rel="nofollow">Revert Staged Changes</a> update action.</p>
      * @return removedImageUrls
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface ProductRevertedStagedChangesMessagePayload extends MessagePaylo
     public List<String> getRemovedImageUrls();
 
     /**
-     *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
+     *  <p>List of image URLs that were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRevertStagedChangesAction" rel="nofollow">Revert Staged Changes</a> update action.</p>
      * @param removedImageUrls values to be set
      */
 
@@ -54,7 +54,7 @@ public interface ProductRevertedStagedChangesMessagePayload extends MessagePaylo
     public void setRemovedImageUrls(final String... removedImageUrls);
 
     /**
-     *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
+     *  <p>List of image URLs that were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRevertStagedChangesAction" rel="nofollow">Revert Staged Changes</a> update action.</p>
      * @param removedImageUrls values to be set
      */
 

@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Reference to a DirectDiscount.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">DirectDiscount</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface DirectDiscountReference extends Reference {
     String DIRECT_DISCOUNT = "direct-discount";
 
     /**
-     *  <p>Unique identifier of the referenced DirectDiscount.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">DirectDiscount</a>.</p>
      * @return id
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface DirectDiscountReference extends Reference {
     public String getId();
 
     /**
-     *  <p>Unique identifier of the referenced DirectDiscount.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">DirectDiscount</a>.</p>
      * @param id value to be set
      */
 

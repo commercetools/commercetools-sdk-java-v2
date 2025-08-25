@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Sets the key of an Embedded Price. Produces the ProductPriceKeySet Message.</p>
+ *  <p>Sets the key of an <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Price</a>. Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPriceKeySetMessage" rel="nofollow">ProductPriceKeySet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface ProductSetPriceKeyAction extends ProductUpdateAction {
     String SET_PRICE_KEY = "setPriceKey";
 
     /**
-     *  <p>The <code>id</code> of the Price to set the key.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> to set the key.</p>
      * @return priceId
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface ProductSetPriceKeyAction extends ProductUpdateAction {
     public String getPriceId();
 
     /**
-     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     *  <p>If <code>true</code>, only the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Price</a> is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      * @return staged
      */
 
@@ -62,14 +62,14 @@ public interface ProductSetPriceKeyAction extends ProductUpdateAction {
     public String getKey();
 
     /**
-     *  <p>The <code>id</code> of the Price to set the key.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> to set the key.</p>
      * @param priceId value to be set
      */
 
     public void setPriceId(final String priceId);
 
     /**
-     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     *  <p>If <code>true</code>, only the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Price</a> is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      * @param staged value to be set
      */
 

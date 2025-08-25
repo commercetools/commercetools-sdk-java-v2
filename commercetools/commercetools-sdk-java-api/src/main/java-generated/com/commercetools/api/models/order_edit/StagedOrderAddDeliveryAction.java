@@ -21,8 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>A Delivery can only be added to an Order if its <code>shippingInfo</code> (for <code>shippingMode</code> = <code>Single</code>), or its <code>shipping</code> (for <code>shippingMode</code> = <code>Multiple</code>) exists.</p>
- *  <p>Produces the Delivery Added Message.</p>
+ *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> can only be added to an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> if its <code>shippingInfo</code> (for <code>shippingMode</code> = <code>Single</code>), or its <code>shipping</code> (for <code>shippingMode</code> = <code>Multiple</code>) exists.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryAddedMessage" rel="nofollow">Delivery Added</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -45,7 +45,7 @@ public interface StagedOrderAddDeliveryAction
     String ADD_DELIVERY = "addDelivery";
 
     /**
-     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @return deliveryKey
      */
 
@@ -53,7 +53,7 @@ public interface StagedOrderAddDeliveryAction
     public String getDeliveryKey();
 
     /**
-     *  <p><code>key</code> of the ShippingMethod, required for <code>Multiple</code> ShippingMode.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a>, required for <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingKey
      */
 
@@ -78,7 +78,7 @@ public interface StagedOrderAddDeliveryAction
 
     /**
      *  <p>Parcels of the Delivery.</p>
-     *  <p>If provided, this update action also produces the Parcel Added To Delivery Message.</p>
+     *  <p>If provided, this update action also produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelAddedToDeliveryMessage" rel="nofollow">Parcel Added To Delivery</a> Message.</p>
      * @return parcels
      */
     @Valid
@@ -94,14 +94,14 @@ public interface StagedOrderAddDeliveryAction
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param deliveryKey value to be set
      */
 
     public void setDeliveryKey(final String deliveryKey);
 
     /**
-     *  <p><code>key</code> of the ShippingMethod, required for <code>Multiple</code> ShippingMode.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a>, required for <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingKey value to be set
      */
 
@@ -131,7 +131,7 @@ public interface StagedOrderAddDeliveryAction
 
     /**
      *  <p>Parcels of the Delivery.</p>
-     *  <p>If provided, this update action also produces the Parcel Added To Delivery Message.</p>
+     *  <p>If provided, this update action also produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelAddedToDeliveryMessage" rel="nofollow">Parcel Added To Delivery</a> Message.</p>
      * @param parcels values to be set
      */
 
@@ -140,7 +140,7 @@ public interface StagedOrderAddDeliveryAction
 
     /**
      *  <p>Parcels of the Delivery.</p>
-     *  <p>If provided, this update action also produces the Parcel Added To Delivery Message.</p>
+     *  <p>If provided, this update action also produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelAddedToDeliveryMessage" rel="nofollow">Parcel Added To Delivery</a> Message.</p>
      * @param parcels values to be set
      */
 

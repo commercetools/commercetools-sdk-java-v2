@@ -16,12 +16,12 @@ import jakarta.validation.constraints.NotNull;
 
 /**
  *  <p>Returned when the Price or Tax Rate of some Line Items or Shipping Rate of some Shipping Methods changed since they were last added to the Cart.</p>
- *  <p>When a Cart is frozen, the error can be returned as a failed response to all update actions on Carts and My Carts.</p>
+ *  <p>When a Cart is frozen, the error can be returned as a failed response to all update actions on <a href="https://docs.commercetools.com/apis/ctp:api:type:CartUpdateAction" rel="nofollow">Carts</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MyCartUpdateAction" rel="nofollow">My Carts</a>.</p>
  *  <p>The error is also returned as a failed response to:</p>
  *  <ul>
- *   <li>Create Order from Cart and Create Order in Store from Cart requests on Orders.</li>
- *   <li>Create Order from Cart and Create Order in Store from Cart requests on My Orders.</li>
- *   <li>Create Order from Cart in BusinessUnit request on Associate Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders:POST" rel="nofollow">Create Order from Cart</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/orders:POST" rel="nofollow">Create Order in Store from Cart</a> requests on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/orders:POST" rel="nofollow">Create Order from Cart</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/me/orders:POST" rel="nofollow">Create Order in Store from Cart</a> requests on My Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/as-associate/{associateId}/in-business-unit/key={businessUnitKey}/orders:POST" rel="nofollow">Create Order from Cart in BusinessUnit</a> request on Associate Orders.</li>
  *  </ul>
  *
  * <hr>
@@ -54,7 +54,7 @@ public interface GraphQLPriceChangedError extends GraphQLErrorObject {
     public String getCode();
 
     /**
-     *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
+     *  <p>Unique identifiers of the Line Items for which the Price or <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> has changed.</p>
      * @return lineItems
      */
     @NotNull
@@ -62,7 +62,7 @@ public interface GraphQLPriceChangedError extends GraphQLErrorObject {
     public List<String> getLineItems();
 
     /**
-     *  <p><code>true</code> if the ShippingRate has changed.</p>
+     *  <p><code>true</code> if the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> has changed.</p>
      * @return shipping
      */
     @NotNull
@@ -70,7 +70,7 @@ public interface GraphQLPriceChangedError extends GraphQLErrorObject {
     public Boolean getShipping();
 
     /**
-     *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
+     *  <p>Unique identifiers of the Line Items for which the Price or <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> has changed.</p>
      * @param lineItems values to be set
      */
 
@@ -78,14 +78,14 @@ public interface GraphQLPriceChangedError extends GraphQLErrorObject {
     public void setLineItems(final String... lineItems);
 
     /**
-     *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
+     *  <p>Unique identifiers of the Line Items for which the Price or <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> has changed.</p>
      * @param lineItems values to be set
      */
 
     public void setLineItems(final List<String> lineItems);
 
     /**
-     *  <p><code>true</code> if the ShippingRate has changed.</p>
+     *  <p><code>true</code> if the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> has changed.</p>
      * @param shipping value to be set
      */
 

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after adding a Custom Type to a Customer using the Set Custom Type update action.</p>
+ *  <p>Generated after adding a Custom Type to a Customer using the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomTypeAction" rel="nofollow">Set Custom Type</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerCustomTypeSetMessageImpl implements CustomerCustomTypeSetMessage, ModelBase {
@@ -142,7 +142,7 @@ public class CustomerCustomTypeSetMessageImpl implements CustomerCustomTypeSetMe
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -158,7 +158,7 @@ public class CustomerCustomTypeSetMessageImpl implements CustomerCustomTypeSetMe
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -182,7 +182,7 @@ public class CustomerCustomTypeSetMessageImpl implements CustomerCustomTypeSetMe
     }
 
     /**
-     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the previous <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a>. Absent if there was no previous Custom Type present.</p>
      */
 
     public String getPreviousTypeId() {

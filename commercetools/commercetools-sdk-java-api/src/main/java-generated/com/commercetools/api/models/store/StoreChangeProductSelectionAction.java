@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>ProductSelection in a Store can be activated or deactivated using this update action.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">ProductSelection</a> in a Store can be activated or deactivated using this update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

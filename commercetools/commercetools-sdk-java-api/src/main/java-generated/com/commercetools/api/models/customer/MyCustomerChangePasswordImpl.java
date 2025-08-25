@@ -56,7 +56,7 @@ public class MyCustomerChangePasswordImpl implements MyCustomerChangePassword, M
 
     /**
      *  <p>Current password of the Customer.</p>
-     *  <p>If the current password does not match, an InvalidCurrentPassword error is returned.</p>
+     *  <p>If the current password does not match, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidCurrentPasswordError" rel="nofollow">InvalidCurrentPassword</a> error is returned.</p>
      */
 
     public String getCurrentPassword() {

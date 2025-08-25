@@ -11,7 +11,7 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Specifies the status of the Customer Search index. You can change the status using the Change Customer Search Status update action.</p>
+ *  <p>Specifies the status of the <span>Customer Search</span> index. You can change the status using the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectChangeCustomerSearchStatusAction" rel="nofollow">Change Customer Search Status</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface CustomerSearchStatus extends JsonEnum {

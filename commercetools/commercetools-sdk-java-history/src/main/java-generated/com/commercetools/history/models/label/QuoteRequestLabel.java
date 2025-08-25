@@ -57,7 +57,7 @@ public interface QuoteRequestLabel extends Label {
     public String getKey();
 
     /**
-     *  <p>The Buyer who raised the Quote Request.</p>
+     *  <p>The <span>Buyer</span> who raised the Quote Request.</p>
      * @return customer
      */
     @NotNull
@@ -73,7 +73,7 @@ public interface QuoteRequestLabel extends Label {
     public void setKey(final String key);
 
     /**
-     *  <p>The Buyer who raised the Quote Request.</p>
+     *  <p>The <span>Buyer</span> who raised the Quote Request.</p>
      * @param customer value to be set
      */
 

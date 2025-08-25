@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Set Name update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRoleSetNameAction" rel="nofollow">Set Name</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface AssociateRoleNameSetMessagePayload extends MessagePayload {
     String ASSOCIATE_ROLE_NAME_SET = "AssociateRoleNameSet";
 
     /**
-     *  <p>Updated name of the AssociateRole.</p>
+     *  <p>Updated name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a>.</p>
      * @return name
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface AssociateRoleNameSetMessagePayload extends MessagePayload {
     public String getName();
 
     /**
-     *  <p>Updated name of the AssociateRole.</p>
+     *  <p>Updated name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a>.</p>
      * @param name value to be set
      */
 

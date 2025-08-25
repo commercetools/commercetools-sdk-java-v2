@@ -34,7 +34,7 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
     private com.commercetools.api.models.channel.ChannelReference distributionChannel;
 
     /**
-     *  <p>Unique identifier of the Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Distribution Channel that was set.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Distribution Channel</a> that was set.</p>
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Distribution Channel that was set.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Distribution Channel</a> that was set.</p>
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Distribution Channel that was set.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Distribution Channel</a> that was set.</p>
      * @param distributionChannel value to be set
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Unique identifier of the Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
      * @return lineItemId
      */
 
@@ -112,7 +112,7 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Distribution Channel that was set.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Distribution Channel</a> that was set.</p>
      * @return distributionChannel
      */
 

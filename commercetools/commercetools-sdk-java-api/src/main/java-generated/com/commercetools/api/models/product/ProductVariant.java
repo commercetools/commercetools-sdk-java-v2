@@ -55,7 +55,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
 
     /**
      *  <p>User-defined unique identifier of the ProductVariant.</p>
-     *  <p>This is different from Product <code>key</code>.</p>
+     *  <p>This is different from <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> <code>key</code>.</p>
      * @return key
      */
 
@@ -71,7 +71,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public List<Price> getPrices();
 
     /**
-     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @return attributes
      */
     @Valid
@@ -79,7 +79,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public List<Attribute> getAttributes();
 
     /**
-     *  <p>Only available when price selection is used. Cannot be used in a Query Predicate.</p>
+     *  <p>Only available when <span>price selection</span> is used. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
      * @return price
      */
     @Valid
@@ -103,7 +103,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public List<Asset> getAssets();
 
     /**
-     *  <p>Set if the Product Variant is tracked by Inventory. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is eventually consistent).</p>
+     *  <p>Set if the Product Variant is tracked by <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">Inventory</a>. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is <span>eventually consistent</span>).</p>
      * @return availability
      */
     @Valid
@@ -111,7 +111,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public ProductVariantAvailability getAvailability();
 
     /**
-     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a Product Projection Search request.</p>
+     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearch" rel="nofollow">Product Projection Search</a> request.</p>
      * @return isMatchingVariant
      */
 
@@ -119,7 +119,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public Boolean getIsMatchingVariant();
 
     /**
-     *  <p>Only available in response to a Product Projection Search request with Product price selection. Can be used to sort, filter, and facet.</p>
+     *  <p>Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearch" rel="nofollow">Product Projection Search</a> request with <span>Product price selection</span>. Can be used to sort, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">filter</a>, and facet.</p>
      * @return scopedPrice
      */
     @Valid
@@ -127,7 +127,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public ScopedPrice getScopedPrice();
 
     /**
-     *  <p>Only available in response to a Product Projection Search request with Product price selection.</p>
+     *  <p>Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">Product Projection Search</a> request with <span>Product price selection</span>.</p>
      * @return scopedPriceDiscounted
      */
 
@@ -135,7 +135,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public Boolean getScopedPriceDiscounted();
 
     /**
-     *  <p>Only available when Product price selection is used. Cannot be used in a Query Predicate.</p>
+     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
      * @return recurrencePrices
      */
     @Valid
@@ -158,7 +158,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
 
     /**
      *  <p>User-defined unique identifier of the ProductVariant.</p>
-     *  <p>This is different from Product <code>key</code>.</p>
+     *  <p>This is different from <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> <code>key</code>.</p>
      * @param key value to be set
      */
 
@@ -180,7 +180,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public void setPrices(final List<Price> prices);
 
     /**
-     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @param attributes values to be set
      */
 
@@ -188,14 +188,14 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public void setAttributes(final Attribute... attributes);
 
     /**
-     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @param attributes values to be set
      */
 
     public void setAttributes(final List<Attribute> attributes);
 
     /**
-     *  <p>Only available when price selection is used. Cannot be used in a Query Predicate.</p>
+     *  <p>Only available when <span>price selection</span> is used. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
      * @param price value to be set
      */
 
@@ -232,35 +232,35 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public void setAssets(final List<Asset> assets);
 
     /**
-     *  <p>Set if the Product Variant is tracked by Inventory. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is eventually consistent).</p>
+     *  <p>Set if the Product Variant is tracked by <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">Inventory</a>. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is <span>eventually consistent</span>).</p>
      * @param availability value to be set
      */
 
     public void setAvailability(final ProductVariantAvailability availability);
 
     /**
-     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a Product Projection Search request.</p>
+     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearch" rel="nofollow">Product Projection Search</a> request.</p>
      * @param isMatchingVariant value to be set
      */
 
     public void setIsMatchingVariant(final Boolean isMatchingVariant);
 
     /**
-     *  <p>Only available in response to a Product Projection Search request with Product price selection. Can be used to sort, filter, and facet.</p>
+     *  <p>Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearch" rel="nofollow">Product Projection Search</a> request with <span>Product price selection</span>. Can be used to sort, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">filter</a>, and facet.</p>
      * @param scopedPrice value to be set
      */
 
     public void setScopedPrice(final ScopedPrice scopedPrice);
 
     /**
-     *  <p>Only available in response to a Product Projection Search request with Product price selection.</p>
+     *  <p>Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">Product Projection Search</a> request with <span>Product price selection</span>.</p>
      * @param scopedPriceDiscounted value to be set
      */
 
     public void setScopedPriceDiscounted(final Boolean scopedPriceDiscounted);
 
     /**
-     *  <p>Only available when Product price selection is used. Cannot be used in a Query Predicate.</p>
+     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
      * @param recurrencePrices values to be set
      */
 
@@ -268,7 +268,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public void setRecurrencePrices(final Price... recurrencePrices);
 
     /**
-     *  <p>Only available when Product price selection is used. Cannot be used in a Query Predicate.</p>
+     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
      * @param recurrencePrices values to be set
      */
 

@@ -64,7 +64,7 @@ public class ChangeValueGiftLineItemChangeValueImpl implements ChangeValueGiftLi
     }
 
     /**
-     *  <p>Reference to a Product.</p>
+     *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      */
 
     public com.commercetools.history.models.common.Reference getProduct() {
@@ -72,7 +72,7 @@ public class ChangeValueGiftLineItemChangeValueImpl implements ChangeValueGiftLi
     }
 
     /**
-     *  <p><code>id</code> of the ProductVariant.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      */
 
     public Integer getVariantId() {
@@ -80,7 +80,7 @@ public class ChangeValueGiftLineItemChangeValueImpl implements ChangeValueGiftLi
     }
 
     /**
-     *  <p>Channel with ChannelRoleEnum <code>InventorySupply</code>.</p>
+     *  <p>Channel with <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>InventorySupply</code>.</p>
      */
 
     public com.commercetools.history.models.common.Reference getSupplyChannel() {
@@ -88,7 +88,7 @@ public class ChangeValueGiftLineItemChangeValueImpl implements ChangeValueGiftLi
     }
 
     /**
-     *  <p>Channel with ChannelRoleEnum <code>ProductDistribution</code>.</p>
+     *  <p>Channel with <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>ProductDistribution</code>.</p>
      */
 
     public com.commercetools.history.models.common.Reference getDistributionChannel() {

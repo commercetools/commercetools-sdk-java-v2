@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Reference to a ShoppingList.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListReferenceImpl implements ShoppingListReference, ModelBase {
@@ -56,7 +56,7 @@ public class ShoppingListReferenceImpl implements ShoppingListReference, ModelBa
     }
 
     /**
-     *  <p>Unique identifier of the referenced ShoppingList.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      */
 
     public String getId() {
@@ -64,7 +64,7 @@ public class ShoppingListReferenceImpl implements ShoppingListReference, ModelBa
     }
 
     /**
-     *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>
+     *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with <span>Reference Expansion</span> for ShoppingLists.</p>
      */
 
     public com.commercetools.api.models.shopping_list.ShoppingList getObj() {

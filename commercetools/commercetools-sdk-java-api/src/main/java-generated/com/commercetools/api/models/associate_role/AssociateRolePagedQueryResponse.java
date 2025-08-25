@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>PagedQueryResult with results containing an array of AssociateRole.</p>
+ *  <p><span>PagedQueryResult</span> with results containing an array of <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface AssociateRolePagedQueryResponse
         extends com.commercetools.api.models.ResourcePagedQueryResponse<AssociateRole> {
 
     /**
-     *  <p>Number of requested results.</p>
+     *  <p>Number of requested <span>results</span>.</p>
      * @return limit
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface AssociateRolePagedQueryResponse
     public Long getLimit();
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of elements <span>skipped</span>.</p>
      * @return offset
      */
     @NotNull
@@ -62,7 +62,7 @@ public interface AssociateRolePagedQueryResponse
     public Long getCount();
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     *  <p>Total number of results matching the query. This number is an estimation that is not <span>strongly consistent</span>. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a <span>Query Predicate</span>, <code>total</code> is subject to a <span>limit</span>.</p>
      * @return total
      */
 
@@ -70,7 +70,7 @@ public interface AssociateRolePagedQueryResponse
     public Long getTotal();
 
     /**
-     *  <p>AssociateRoles matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRoles</a> matching the query.</p>
      * @return results
      */
     @NotNull
@@ -79,14 +79,14 @@ public interface AssociateRolePagedQueryResponse
     public List<AssociateRole> getResults();
 
     /**
-     *  <p>Number of requested results.</p>
+     *  <p>Number of requested <span>results</span>.</p>
      * @param limit value to be set
      */
 
     public void setLimit(final Long limit);
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of elements <span>skipped</span>.</p>
      * @param offset value to be set
      */
 
@@ -100,14 +100,14 @@ public interface AssociateRolePagedQueryResponse
     public void setCount(final Long count);
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     *  <p>Total number of results matching the query. This number is an estimation that is not <span>strongly consistent</span>. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a <span>Query Predicate</span>, <code>total</code> is subject to a <span>limit</span>.</p>
      * @param total value to be set
      */
 
     public void setTotal(final Long total);
 
     /**
-     *  <p>AssociateRoles matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRoles</a> matching the query.</p>
      * @param results values to be set
      */
 
@@ -115,7 +115,7 @@ public interface AssociateRolePagedQueryResponse
     public void setResults(final AssociateRole... results);
 
     /**
-     *  <p>AssociateRoles matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRoles</a> matching the query.</p>
      * @param results values to be set
      */
 

@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Generated after a successful Set CustomerGroupAssignments update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface CustomerGroupAssignmentsSetMessagePayload extends MessagePayloa
     String CUSTOMER_GROUP_ASSIGNMENTS_SET = "CustomerGroupAssignmentsSet";
 
     /**
-     *  <p>Customer Groups assigned to the Customer during the Set CustomerGroupAssignments update action.</p>
+     *  <p>Customer Groups assigned to the Customer during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</p>
      * @return customerGroupAssignments
      */
     @Valid
@@ -47,7 +47,7 @@ public interface CustomerGroupAssignmentsSetMessagePayload extends MessagePayloa
     public List<CustomerGroupAssignment> getCustomerGroupAssignments();
 
     /**
-     *  <p>Customer Groups assigned to the Customer during the Set CustomerGroupAssignments update action.</p>
+     *  <p>Customer Groups assigned to the Customer during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</p>
      * @param customerGroupAssignments values to be set
      */
 
@@ -55,7 +55,7 @@ public interface CustomerGroupAssignmentsSetMessagePayload extends MessagePayloa
     public void setCustomerGroupAssignments(final CustomerGroupAssignment... customerGroupAssignments);
 
     /**
-     *  <p>Customer Groups assigned to the Customer during the Set CustomerGroupAssignments update action.</p>
+     *  <p>Customer Groups assigned to the Customer during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</p>
      * @param customerGroupAssignments values to be set
      */
 

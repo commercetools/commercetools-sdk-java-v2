@@ -33,7 +33,7 @@ public class StagedOrderSetShippingCustomTypeActionBuilder implements Builder<St
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>The <code>shippingKey</code> of the Shipping to customize. Used to specify which Shipping Method to customize on a Order with <code>Multiple</code> ShippingMode. Leave this empty to customize the one and only ShippingMethod on a <code>Single</code> ShippingMode Order.</p>
+     *  <p>The <code>shippingKey</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Shipping" rel="nofollow">Shipping</a> to customize. Used to specify which Shipping Method to customize on a Order with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Leave this empty to customize the one and only ShippingMethod on a <code>Single</code> ShippingMode Order.</p>
      * @param shippingKey value to be set
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class StagedOrderSetShippingCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     *  <p>Defines the Type that extends the specified ShippingMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the specified ShippingMethod with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class StagedOrderSetShippingCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     *  <p>Defines the Type that extends the specified ShippingMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the specified ShippingMethod with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class StagedOrderSetShippingCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     *  <p>Defines the Type that extends the specified ShippingMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the specified ShippingMethod with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class StagedOrderSetShippingCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>shippingMethod</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <code>shippingMethod</code>.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class StagedOrderSetShippingCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>shippingMethod</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <code>shippingMethod</code>.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -104,7 +104,7 @@ public class StagedOrderSetShippingCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>shippingMethod</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <code>shippingMethod</code>.</p>
      * @param fields value to be set
      * @return Builder
      */
@@ -116,7 +116,7 @@ public class StagedOrderSetShippingCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     *  <p>The <code>shippingKey</code> of the Shipping to customize. Used to specify which Shipping Method to customize on a Order with <code>Multiple</code> ShippingMode. Leave this empty to customize the one and only ShippingMethod on a <code>Single</code> ShippingMode Order.</p>
+     *  <p>The <code>shippingKey</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Shipping" rel="nofollow">Shipping</a> to customize. Used to specify which Shipping Method to customize on a Order with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Leave this empty to customize the one and only ShippingMethod on a <code>Single</code> ShippingMode Order.</p>
      * @return shippingKey
      */
 
@@ -126,7 +126,7 @@ public class StagedOrderSetShippingCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     *  <p>Defines the Type that extends the specified ShippingMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the specified ShippingMethod with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
      * @return type
      */
 
@@ -136,7 +136,7 @@ public class StagedOrderSetShippingCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>shippingMethod</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <code>shippingMethod</code>.</p>
      * @return fields
      */
 

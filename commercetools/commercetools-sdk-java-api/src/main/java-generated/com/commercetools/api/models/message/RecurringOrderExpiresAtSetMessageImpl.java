@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Expires At update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetExpiresAtAction" rel="nofollow">Set Expires At</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RecurringOrderExpiresAtSetMessageImpl implements RecurringOrderExpiresAtSetMessage, ModelBase {
@@ -143,7 +143,7 @@ public class RecurringOrderExpiresAtSetMessageImpl implements RecurringOrderExpi
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -159,7 +159,7 @@ public class RecurringOrderExpiresAtSetMessageImpl implements RecurringOrderExpi
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -175,7 +175,7 @@ public class RecurringOrderExpiresAtSetMessageImpl implements RecurringOrderExpi
     }
 
     /**
-     *  <p>Expiration date and time of the Recurring Order after the Set Expires At update action.</p>
+     *  <p>Expiration date and time of the Recurring Order after the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetExpiresAtAction" rel="nofollow">Set Expires At</a> update action.</p>
      */
 
     public java.time.ZonedDateTime getNewExpiresAt() {
@@ -183,7 +183,7 @@ public class RecurringOrderExpiresAtSetMessageImpl implements RecurringOrderExpi
     }
 
     /**
-     *  <p>Expiration date and time of the Recurring Order before the Set Expires At update action.</p>
+     *  <p>Expiration date and time of the Recurring Order before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetExpiresAtAction" rel="nofollow">Set Expires At</a> update action.</p>
      */
 
     public java.time.ZonedDateTime getOldExpiresAt() {

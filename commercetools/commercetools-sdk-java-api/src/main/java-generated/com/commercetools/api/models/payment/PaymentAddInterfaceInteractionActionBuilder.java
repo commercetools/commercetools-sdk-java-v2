@@ -30,7 +30,7 @@ public class PaymentAddInterfaceInteractionActionBuilder implements Builder<Paym
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>ResourceIdentifier of a Type.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class PaymentAddInterfaceInteractionActionBuilder implements Builder<Paym
     }
 
     /**
-     *  <p>ResourceIdentifier of a Type.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class PaymentAddInterfaceInteractionActionBuilder implements Builder<Paym
     }
 
     /**
-     *  <p>ResourceIdentifier of a Type.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class PaymentAddInterfaceInteractionActionBuilder implements Builder<Paym
     }
 
     /**
-     *  <p>Custom Fields as per FieldDefinitions of the Type.</p>
+     *  <p><span>Custom Fields</span> as per <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class PaymentAddInterfaceInteractionActionBuilder implements Builder<Paym
     }
 
     /**
-     *  <p>Custom Fields as per FieldDefinitions of the Type.</p>
+     *  <p><span>Custom Fields</span> as per <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class PaymentAddInterfaceInteractionActionBuilder implements Builder<Paym
     }
 
     /**
-     *  <p>Custom Fields as per FieldDefinitions of the Type.</p>
+     *  <p><span>Custom Fields</span> as per <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param fields value to be set
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class PaymentAddInterfaceInteractionActionBuilder implements Builder<Paym
     }
 
     /**
-     *  <p>ResourceIdentifier of a Type.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @return type
      */
 
@@ -111,7 +111,7 @@ public class PaymentAddInterfaceInteractionActionBuilder implements Builder<Paym
     }
 
     /**
-     *  <p>Custom Fields as per FieldDefinitions of the Type.</p>
+     *  <p><span>Custom Fields</span> as per <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @return fields
      */
 

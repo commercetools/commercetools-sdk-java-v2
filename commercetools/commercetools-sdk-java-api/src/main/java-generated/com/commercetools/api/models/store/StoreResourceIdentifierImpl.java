@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>ResourceIdentifier to a Store. Either <code>id</code> or <code>key</code> is required. If both are set, an InvalidJsonInput error is returned.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. Either <code>id</code> or <code>key</code> is required. If both are set, an <span>InvalidJsonInput</span> error is returned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreResourceIdentifierImpl implements StoreResourceIdentifier, ModelBase {
@@ -47,7 +47,7 @@ public class StoreResourceIdentifierImpl implements StoreResourceIdentifier, Mod
     }
 
     /**
-     *  <p>Type of referenced resource. If given, it must match the expected ReferenceTypeId of the referenced resource.</p>
+     *  <p>Type of referenced resource. If given, it must match the expected <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferenceTypeId" rel="nofollow">ReferenceTypeId</a> of the referenced resource.</p>
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
@@ -55,7 +55,7 @@ public class StoreResourceIdentifierImpl implements StoreResourceIdentifier, Mod
     }
 
     /**
-     *  <p>Unique ID of the referenced Store. Required if <code>key</code> is absent.</p>
+     *  <p>Unique ID of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. Required if <code>key</code> is absent.</p>
      */
 
     public String getId() {
@@ -63,7 +63,7 @@ public class StoreResourceIdentifierImpl implements StoreResourceIdentifier, Mod
     }
 
     /**
-     *  <p>Unique key of the referenced Store. Required if <code>id</code> is absent.</p>
+     *  <p>Unique key of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. Required if <code>id</code> is absent.</p>
      */
 
     public String getKey() {

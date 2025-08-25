@@ -33,7 +33,7 @@ public class ApprovalFlowRejectedMessagePayloadBuilder implements Builder<Approv
     private com.commercetools.api.models.order.OrderReference order;
 
     /**
-     *  <p>Reference to the Customer who rejected the Approval Flow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who rejected the <span>Approval Flow</span>.</p>
      * @param builder function to build the associate value
      * @return Builder
      */
@@ -45,7 +45,7 @@ public class ApprovalFlowRejectedMessagePayloadBuilder implements Builder<Approv
     }
 
     /**
-     *  <p>Reference to the Customer who rejected the Approval Flow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who rejected the <span>Approval Flow</span>.</p>
      * @param builder function to build the associate value
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class ApprovalFlowRejectedMessagePayloadBuilder implements Builder<Approv
     }
 
     /**
-     *  <p>Reference to the Customer who rejected the Approval Flow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who rejected the <span>Approval Flow</span>.</p>
      * @param associate value to be set
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class ApprovalFlowRejectedMessagePayloadBuilder implements Builder<Approv
     }
 
     /**
-     *  <p>Description of the reason why the Approval Flow was rejected.</p>
+     *  <p>Description of the reason why the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> was rejected.</p>
      * @param rejectionReason value to be set
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class ApprovalFlowRejectedMessagePayloadBuilder implements Builder<Approv
     }
 
     /**
-     *  <p>Reference to the Order that received the rejection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that received the rejection.</p>
      * @param builder function to build the order value
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class ApprovalFlowRejectedMessagePayloadBuilder implements Builder<Approv
     }
 
     /**
-     *  <p>Reference to the Order that received the rejection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that received the rejection.</p>
      * @param builder function to build the order value
      * @return Builder
      */
@@ -104,7 +104,7 @@ public class ApprovalFlowRejectedMessagePayloadBuilder implements Builder<Approv
     }
 
     /**
-     *  <p>Reference to the Order that received the rejection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that received the rejection.</p>
      * @param order value to be set
      * @return Builder
      */
@@ -116,7 +116,7 @@ public class ApprovalFlowRejectedMessagePayloadBuilder implements Builder<Approv
     }
 
     /**
-     *  <p>Reference to the Customer who rejected the Approval Flow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who rejected the <span>Approval Flow</span>.</p>
      * @return associate
      */
 
@@ -125,7 +125,7 @@ public class ApprovalFlowRejectedMessagePayloadBuilder implements Builder<Approv
     }
 
     /**
-     *  <p>Description of the reason why the Approval Flow was rejected.</p>
+     *  <p>Description of the reason why the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> was rejected.</p>
      * @return rejectionReason
      */
 
@@ -135,7 +135,7 @@ public class ApprovalFlowRejectedMessagePayloadBuilder implements Builder<Approv
     }
 
     /**
-     *  <p>Reference to the Order that received the rejection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that received the rejection.</p>
      * @return order
      */
 

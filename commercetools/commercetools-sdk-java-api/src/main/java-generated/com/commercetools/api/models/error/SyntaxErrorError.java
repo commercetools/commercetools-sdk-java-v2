@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Returned when a Discount predicate, API Extension predicate, or search query does not have the correct syntax.</p>
+ *  <p>Returned when a <span>Discount predicate</span>, <span>API Extension predicate</span>, or <span>search query</span> does not have the correct syntax.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -52,8 +52,8 @@ public interface ReturnItemDraft extends com.commercetools.api.models.Customizab
     public Long getQuantity();
 
     /**
-     *  <p><code>id</code> of the LineItem to return.</p>
-     *  <p>Required if Line Items are returned, to create a LineItemReturnItem.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to return.</p>
+     *  <p>Required if Line Items are returned, to create a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemReturnItem" rel="nofollow">LineItemReturnItem</a>.</p>
      * @return lineItemId
      */
 
@@ -61,8 +61,8 @@ public interface ReturnItemDraft extends com.commercetools.api.models.Customizab
     public String getLineItemId();
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to return.</p>
-     *  <p>Required if Custom Line Items are returned, to create a CustomLineItemReturnItem.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to return.</p>
+     *  <p>Required if Custom Line Items are returned, to create a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItemReturnItem" rel="nofollow">CustomLineItemReturnItem</a>.</p>
      * @return customLineItemId
      */
 
@@ -108,16 +108,16 @@ public interface ReturnItemDraft extends com.commercetools.api.models.Customizab
     public void setQuantity(final Long quantity);
 
     /**
-     *  <p><code>id</code> of the LineItem to return.</p>
-     *  <p>Required if Line Items are returned, to create a LineItemReturnItem.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to return.</p>
+     *  <p>Required if Line Items are returned, to create a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemReturnItem" rel="nofollow">LineItemReturnItem</a>.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to return.</p>
-     *  <p>Required if Custom Line Items are returned, to create a CustomLineItemReturnItem.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to return.</p>
+     *  <p>Required if Custom Line Items are returned, to create a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItemReturnItem" rel="nofollow">CustomLineItemReturnItem</a>.</p>
      * @param customLineItemId value to be set
      */
 

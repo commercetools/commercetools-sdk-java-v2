@@ -29,7 +29,7 @@ public class PaymentInterfaceIdSetMessagePayloadBuilder implements Builder<Payme
     private String oldInterfaceId;
 
     /**
-     *  <p>Interface ID of the Payment after the Set InterfaceId update action.</p>
+     *  <p>Interface ID of the Payment after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetInterfaceIdAction" rel="nofollow">Set InterfaceId</a> update action.</p>
      * @param interfaceId value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class PaymentInterfaceIdSetMessagePayloadBuilder implements Builder<Payme
     }
 
     /**
-     *  <p>Interface ID of the Payment before the Set InterfaceId update action.</p>
+     *  <p>Interface ID of the Payment before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetInterfaceIdAction" rel="nofollow">Set InterfaceId</a> update action.</p>
      * @param oldInterfaceId value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class PaymentInterfaceIdSetMessagePayloadBuilder implements Builder<Payme
     }
 
     /**
-     *  <p>Interface ID of the Payment after the Set InterfaceId update action.</p>
+     *  <p>Interface ID of the Payment after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetInterfaceIdAction" rel="nofollow">Set InterfaceId</a> update action.</p>
      * @return interfaceId
      */
 
@@ -61,7 +61,7 @@ public class PaymentInterfaceIdSetMessagePayloadBuilder implements Builder<Payme
     }
 
     /**
-     *  <p>Interface ID of the Payment before the Set InterfaceId update action.</p>
+     *  <p>Interface ID of the Payment before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetInterfaceIdAction" rel="nofollow">Set InterfaceId</a> update action.</p>
      * @return oldInterfaceId
      */
 

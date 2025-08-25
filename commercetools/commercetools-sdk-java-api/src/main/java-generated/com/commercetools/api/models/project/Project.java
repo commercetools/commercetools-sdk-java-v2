@@ -107,7 +107,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
     public String getTrialUntil();
 
     /**
-     *  <p>Holds the configuration for the Messages Query feature.</p>
+     *  <p>Holds the configuration for the <span>Messages Query</span> feature.</p>
      * @return messages
      */
     @NotNull
@@ -116,7 +116,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
     public MessagesConfiguration getMessages();
 
     /**
-     *  <p>Holds the configuration for the Carts feature.</p>
+     *  <p>Holds the configuration for the <span>Carts</span> feature.</p>
      * @return carts
      */
     @NotNull
@@ -125,7 +125,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
     public CartsConfiguration getCarts();
 
     /**
-     *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
+     *  <p>Holds the configuration for the <span>Shopping Lists</span> feature. This field may not be present on Projects created before January 2020.</p>
      * @return shoppingLists
      */
     @Valid
@@ -133,7 +133,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
     public ShoppingListsConfiguration getShoppingLists();
 
     /**
-     *  <p>Holds the configuration for the tiered shipping rates feature.</p>
+     *  <p>Holds the configuration for the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">tiered shipping rates</a> feature.</p>
      * @return shippingRateInputType
      */
     @Valid
@@ -141,7 +141,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
     public ShippingRateInputType getShippingRateInputType();
 
     /**
-     *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
+     *  <p>Represents a RFC 7662 compliant <span>OAuth 2.0 Token Introspection</span> endpoint.</p>
      * @return externalOAuth
      */
     @Valid
@@ -157,7 +157,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
     public SearchIndexingConfiguration getSearchIndexing();
 
     /**
-     *  <p>Holds configuration specific to Business Units.</p>
+     *  <p>Holds configuration specific to <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Units</a>.</p>
      * @return businessUnits
      */
     @Valid
@@ -245,35 +245,35 @@ public interface Project extends com.commercetools.api.models.WithKey {
     public void setTrialUntil(final String trialUntil);
 
     /**
-     *  <p>Holds the configuration for the Messages Query feature.</p>
+     *  <p>Holds the configuration for the <span>Messages Query</span> feature.</p>
      * @param messages value to be set
      */
 
     public void setMessages(final MessagesConfiguration messages);
 
     /**
-     *  <p>Holds the configuration for the Carts feature.</p>
+     *  <p>Holds the configuration for the <span>Carts</span> feature.</p>
      * @param carts value to be set
      */
 
     public void setCarts(final CartsConfiguration carts);
 
     /**
-     *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
+     *  <p>Holds the configuration for the <span>Shopping Lists</span> feature. This field may not be present on Projects created before January 2020.</p>
      * @param shoppingLists value to be set
      */
 
     public void setShoppingLists(final ShoppingListsConfiguration shoppingLists);
 
     /**
-     *  <p>Holds the configuration for the tiered shipping rates feature.</p>
+     *  <p>Holds the configuration for the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">tiered shipping rates</a> feature.</p>
      * @param shippingRateInputType value to be set
      */
 
     public void setShippingRateInputType(final ShippingRateInputType shippingRateInputType);
 
     /**
-     *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
+     *  <p>Represents a RFC 7662 compliant <span>OAuth 2.0 Token Introspection</span> endpoint.</p>
      * @param externalOAuth value to be set
      */
 
@@ -287,7 +287,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
     public void setSearchIndexing(final SearchIndexingConfiguration searchIndexing);
 
     /**
-     *  <p>Holds configuration specific to Business Units.</p>
+     *  <p>Holds configuration specific to <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Units</a>.</p>
      * @param businessUnits value to be set
      */
 

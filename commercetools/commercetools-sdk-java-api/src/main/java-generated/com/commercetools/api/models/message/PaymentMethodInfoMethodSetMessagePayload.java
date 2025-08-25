@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Set MethodInfo Method update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoMethodAction" rel="nofollow">Set MethodInfo Method</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +35,7 @@ public interface PaymentMethodInfoMethodSetMessagePayload extends MessagePayload
     String PAYMENT_METHOD_INFO_METHOD_SET = "PaymentMethodInfoMethodSet";
 
     /**
-     *  <p>Payment Method after the Set MethodInfo Method update action.</p>
+     *  <p>Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoMethodAction" rel="nofollow">Set MethodInfo Method</a> update action.</p>
      * @return method
      */
 
@@ -43,7 +43,7 @@ public interface PaymentMethodInfoMethodSetMessagePayload extends MessagePayload
     public String getMethod();
 
     /**
-     *  <p>Payment Method before the Set MethodInfo Method update action.</p>
+     *  <p>Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoMethodAction" rel="nofollow">Set MethodInfo Method</a> update action.</p>
      * @return oldMethod
      */
 
@@ -51,14 +51,14 @@ public interface PaymentMethodInfoMethodSetMessagePayload extends MessagePayload
     public String getOldMethod();
 
     /**
-     *  <p>Payment Method after the Set MethodInfo Method update action.</p>
+     *  <p>Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoMethodAction" rel="nofollow">Set MethodInfo Method</a> update action.</p>
      * @param method value to be set
      */
 
     public void setMethod(final String method);
 
     /**
-     *  <p>Payment Method before the Set MethodInfo Method update action.</p>
+     *  <p>Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoMethodAction" rel="nofollow">Set MethodInfo Method</a> update action.</p>
      * @param oldMethod value to be set
      */
 

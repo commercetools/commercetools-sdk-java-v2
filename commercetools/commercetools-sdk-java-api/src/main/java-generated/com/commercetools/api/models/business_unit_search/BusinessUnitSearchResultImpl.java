@@ -43,7 +43,7 @@ public class BusinessUnitSearchResultImpl implements BusinessUnitSearchResult, M
     }
 
     /**
-     *  <p><code>id</code> of the BusinessUnit matching the search query.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> matching the search query.</p>
      */
 
     public String getId() {

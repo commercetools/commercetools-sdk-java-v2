@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Remove Address update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerRemoveAddressAction" rel="nofollow">Remove Address</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerAddressRemovedMessagePayloadImpl implements CustomerAddressRemovedMessagePayload, ModelBase {
@@ -52,7 +52,7 @@ public class CustomerAddressRemovedMessagePayloadImpl implements CustomerAddress
     }
 
     /**
-     *  <p>Address that was removed during the Remove Address update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> that was removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerRemoveAddressAction" rel="nofollow">Remove Address</a> update action.</p>
      */
 
     public com.commercetools.api.models.common.Address getAddress() {

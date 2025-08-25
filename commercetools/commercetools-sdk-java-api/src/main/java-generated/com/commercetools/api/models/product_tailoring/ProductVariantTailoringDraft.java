@@ -18,7 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Either <code>id</code> or <code>sku</code> is required to reference a ProductVariant that exists.</p>
+ *  <p>Either <code>id</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that exists.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ import jakarta.validation.Valid;
 public interface ProductVariantTailoringDraft extends io.vrap.rmf.base.client.Draft<ProductVariantTailoringDraft> {
 
     /**
-     *  <p>The <code>id</code> of the ProductVariant to be tailored.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to be tailored.</p>
      * @return id
      */
 
@@ -42,7 +42,7 @@ public interface ProductVariantTailoringDraft extends io.vrap.rmf.base.client.Dr
     public Long getId();
 
     /**
-     *  <p>The <code>sku</code> of the ProductVariant to be tailored.</p>
+     *  <p>The <code>sku</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to be tailored.</p>
      * @return sku
      */
 
@@ -66,7 +66,7 @@ public interface ProductVariantTailoringDraft extends io.vrap.rmf.base.client.Dr
     public List<Asset> getAssets();
 
     /**
-     *  <p>Attributes of the tailored Product Variant according to the respective AttributeDefinition. If provided, these Attributes are selectively merged into the <code>attributes</code> of the corresponding ProductVariant:</p>
+     *  <p>Attributes of the tailored Product Variant according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>. If provided, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>:</p>
      *  <ul>
      *   <li>If the ProductVariant contains an Attribute with the same <code>name</code>, its <code>value</code> is overwritten,</li>
      *   <li>otherwise the Attribute and its value are added to the ProductVariant.</li>
@@ -78,14 +78,14 @@ public interface ProductVariantTailoringDraft extends io.vrap.rmf.base.client.Dr
     public List<ProductTailoringAttribute> getAttributes();
 
     /**
-     *  <p>The <code>id</code> of the ProductVariant to be tailored.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to be tailored.</p>
      * @param id value to be set
      */
 
     public void setId(final Long id);
 
     /**
-     *  <p>The <code>sku</code> of the ProductVariant to be tailored.</p>
+     *  <p>The <code>sku</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to be tailored.</p>
      * @param sku value to be set
      */
 
@@ -122,7 +122,7 @@ public interface ProductVariantTailoringDraft extends io.vrap.rmf.base.client.Dr
     public void setAssets(final List<Asset> assets);
 
     /**
-     *  <p>Attributes of the tailored Product Variant according to the respective AttributeDefinition. If provided, these Attributes are selectively merged into the <code>attributes</code> of the corresponding ProductVariant:</p>
+     *  <p>Attributes of the tailored Product Variant according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>. If provided, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>:</p>
      *  <ul>
      *   <li>If the ProductVariant contains an Attribute with the same <code>name</code>, its <code>value</code> is overwritten,</li>
      *   <li>otherwise the Attribute and its value are added to the ProductVariant.</li>
@@ -134,7 +134,7 @@ public interface ProductVariantTailoringDraft extends io.vrap.rmf.base.client.Dr
     public void setAttributes(final ProductTailoringAttribute... attributes);
 
     /**
-     *  <p>Attributes of the tailored Product Variant according to the respective AttributeDefinition. If provided, these Attributes are selectively merged into the <code>attributes</code> of the corresponding ProductVariant:</p>
+     *  <p>Attributes of the tailored Product Variant according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>. If provided, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>:</p>
      *  <ul>
      *   <li>If the ProductVariant contains an Attribute with the same <code>name</code>, its <code>value</code> is overwritten,</li>
      *   <li>otherwise the Attribute and its value are added to the ProductVariant.</li>

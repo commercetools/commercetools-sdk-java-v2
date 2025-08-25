@@ -38,7 +38,7 @@ public interface EnumField extends CustomField {
     String ENUM = "Enum";
 
     /**
-     *  <p>The key of the enum value. Must be a <code>key</code> of one of the CustomFieldEnumValues defined in the CustomFieldEnumType.</p>
+     *  <p>The key of the enum value. Must be a <code>key</code> of one of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldEnumValue" rel="nofollow">CustomFieldEnumValues</a> defined in the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldEnumType" rel="nofollow">CustomFieldEnumType</a>.</p>
      * @return value
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface EnumField extends CustomField {
     public String getValue();
 
     /**
-     *  <p>The key of the enum value. Must be a <code>key</code> of one of the CustomFieldEnumValues defined in the CustomFieldEnumType.</p>
+     *  <p>The key of the enum value. Must be a <code>key</code> of one of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldEnumValue" rel="nofollow">CustomFieldEnumValues</a> defined in the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldEnumType" rel="nofollow">CustomFieldEnumType</a>.</p>
      * @param value value to be set
      */
 

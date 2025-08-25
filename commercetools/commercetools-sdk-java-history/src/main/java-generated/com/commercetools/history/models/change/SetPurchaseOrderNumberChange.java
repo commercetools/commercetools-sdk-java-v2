@@ -17,8 +17,8 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set Purchase Order Number on Orders.</li>
- *   <li>Set Purchase Order Number on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetPurchaseOrderNumberAction" rel="nofollow">Set Purchase Order Number</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetPurchaseOrderNumberAction" rel="nofollow">Set Purchase Order Number</a> on Staged Orders.</li>
  *  </ul>
  *
  * <hr>

@@ -39,7 +39,7 @@ public class RemoveParcelFromDeliveryDraftImpl implements RemoveParcelFromDelive
     }
 
     /**
-     *  <p><code>id</code> of the Parcel to be removed from the Delivery.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a> to be removed from the Delivery.</p>
      */
 
     public String getParcelId() {

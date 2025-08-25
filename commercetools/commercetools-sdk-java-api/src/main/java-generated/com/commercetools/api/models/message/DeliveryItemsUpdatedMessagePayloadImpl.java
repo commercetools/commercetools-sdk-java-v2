@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Delivery Items update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetDeliveryItemsAction" rel="nofollow">Set Delivery Items</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DeliveryItemsUpdatedMessagePayloadImpl implements DeliveryItemsUpdatedMessagePayload, ModelBase {
@@ -63,7 +63,7 @@ public class DeliveryItemsUpdatedMessagePayloadImpl implements DeliveryItemsUpda
     }
 
     /**
-     *  <p>Unique identifier of the Delivery.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      */
 
     public String getDeliveryId() {
@@ -71,7 +71,7 @@ public class DeliveryItemsUpdatedMessagePayloadImpl implements DeliveryItemsUpda
     }
 
     /**
-     *  <p>Delivery Items after the Set Delivery Items update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryItem" rel="nofollow">Delivery Items</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetDeliveryItemsAction" rel="nofollow">Set Delivery Items</a> update action.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
@@ -79,7 +79,7 @@ public class DeliveryItemsUpdatedMessagePayloadImpl implements DeliveryItemsUpda
     }
 
     /**
-     *  <p>Delivery Items before the Set Delivery Items update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryItem" rel="nofollow">Delivery Items</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetDeliveryItemsAction" rel="nofollow">Set Delivery Items</a> update action.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getOldItems() {
@@ -87,7 +87,7 @@ public class DeliveryItemsUpdatedMessagePayloadImpl implements DeliveryItemsUpda
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      */
 
     public String getShippingKey() {

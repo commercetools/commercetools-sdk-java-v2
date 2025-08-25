@@ -59,7 +59,7 @@ public class GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder
     }
 
     /**
-     *  <p>Reference to the Product for which the error was returned.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the error was returned.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -71,7 +71,7 @@ public class GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder
     }
 
     /**
-     *  <p>Reference to the Product for which the error was returned.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the error was returned.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder
     }
 
     /**
-     *  <p>Reference to the Product for which the error was returned.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the error was returned.</p>
      * @param product value to be set
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder
     }
 
     /**
-     *  <p>Existing Product Variant Selection or Exclusion for the Product in the Product Selection.</p>
+     *  <p>Existing Product Variant Selection or Exclusion for the <span>Product</span> in the <span>Product Selection</span>.</p>
      * @param existingVariantSelection value to be set
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder
     }
 
     /**
-     *  <p>Existing Product Variant Selection or Exclusion for the Product in the Product Selection.</p>
+     *  <p>Existing Product Variant Selection or Exclusion for the <span>Product</span> in the <span>Product Selection</span>.</p>
      * @param builder function to build the existingVariantSelection value
      * @return Builder
      */
@@ -130,7 +130,7 @@ public class GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder
     }
 
     /**
-     *  <p>Reference to the Product for which the error was returned.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the error was returned.</p>
      * @return product
      */
 
@@ -139,7 +139,7 @@ public class GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder
     }
 
     /**
-     *  <p>Existing Product Variant Selection or Exclusion for the Product in the Product Selection.</p>
+     *  <p>Existing Product Variant Selection or Exclusion for the <span>Product</span> in the <span>Product Selection</span>.</p>
      * @return existingVariantSelection
      */
 

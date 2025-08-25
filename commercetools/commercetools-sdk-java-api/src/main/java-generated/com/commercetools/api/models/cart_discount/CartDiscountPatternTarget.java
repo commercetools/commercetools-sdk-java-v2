@@ -18,7 +18,7 @@ import jakarta.validation.constraints.NotNull;
 
 /**
  *  <p>Pattern targets can be used to model Buy and Get discounts.</p>
- *  <p>Unlike CartDiscountLineItemsTarget and CartDiscountCustomLineItemsTarget, it does not apply to a (Custom) Line Item as a whole, but to individual units of a (Custom) Line Item. The discounts can apply multiple times on the same cart, but each unit can be discounted only once.</p>
+ *  <p>Unlike <span>CartDiscountLineItemsTarget</span> and <span>CartDiscountCustomLineItemsTarget</span>, it does not apply to a (Custom) Line Item as a whole, but to individual units of a (Custom) Line Item. The discounts can apply multiple times on the same cart, but each unit can be discounted only once.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

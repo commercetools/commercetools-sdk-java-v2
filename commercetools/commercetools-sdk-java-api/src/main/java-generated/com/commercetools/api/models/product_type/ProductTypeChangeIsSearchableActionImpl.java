@@ -63,7 +63,7 @@ public class ProductTypeChangeIsSearchableActionImpl implements ProductTypeChang
     }
 
     /**
-     *  <p>Determines whether the Attribute's values can be used in full-text search queries, filters, and facets. See AttributeDefinition for details.</p>
+     *  <p>Determines whether the Attribute's values can be used in full-text search queries, filters, and facets. See <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> for details.</p>
      */
 
     public Boolean getIsSearchable() {

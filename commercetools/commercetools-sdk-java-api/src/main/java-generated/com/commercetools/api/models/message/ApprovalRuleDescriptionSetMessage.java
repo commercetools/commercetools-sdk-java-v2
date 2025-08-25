@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Set Description update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,7 +42,7 @@ public interface ApprovalRuleDescriptionSetMessage extends Message {
     String APPROVAL_RULE_DESCRIPTION_SET = "ApprovalRuleDescriptionSet";
 
     /**
-     *  <p>Description of the ApprovalRule after the Set Description update action.</p>
+     *  <p>Description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
      * @return description
      */
 
@@ -50,7 +50,7 @@ public interface ApprovalRuleDescriptionSetMessage extends Message {
     public String getDescription();
 
     /**
-     *  <p>Description of the ApprovalRule before the Set Description update action.</p>
+     *  <p>Description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
      * @return oldDescription
      */
 
@@ -58,14 +58,14 @@ public interface ApprovalRuleDescriptionSetMessage extends Message {
     public String getOldDescription();
 
     /**
-     *  <p>Description of the ApprovalRule after the Set Description update action.</p>
+     *  <p>Description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
      * @param description value to be set
      */
 
     public void setDescription(final String description);
 
     /**
-     *  <p>Description of the ApprovalRule before the Set Description update action.</p>
+     *  <p>Description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
      * @param oldDescription value to be set
      */
 

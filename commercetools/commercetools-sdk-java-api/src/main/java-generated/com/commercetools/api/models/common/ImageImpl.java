@@ -47,7 +47,7 @@ public class ImageImpl implements Image, ModelBase {
     }
 
     /**
-     *  <p>URL of the image in its original size that must be unique within a single ProductVariant.</p>
+     *  <p>URL of the image in its original size that must be unique within a single <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      */
 
     public String getUrl() {

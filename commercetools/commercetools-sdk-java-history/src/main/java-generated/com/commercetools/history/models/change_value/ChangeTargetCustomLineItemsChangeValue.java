@@ -46,7 +46,7 @@ public interface ChangeTargetCustomLineItemsChangeValue extends ChangeTargetChan
     public String getType();
 
     /**
-     *  <p>Valid CustomLineItem target predicate.</p>
+     *  <p>Valid <span>CustomLineItem target predicate</span>.</p>
      * @return predicate
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface ChangeTargetCustomLineItemsChangeValue extends ChangeTargetChan
     public String getPredicate();
 
     /**
-     *  <p>Valid CustomLineItem target predicate.</p>
+     *  <p>Valid <span>CustomLineItem target predicate</span>.</p>
      * @param predicate value to be set
      */
 

@@ -24,7 +24,7 @@ public class LocalizedEnumSetFieldBuilder implements Builder<LocalizedEnumSetFie
     private java.util.List<String> value;
 
     /**
-     *  <p>JSON array of localized enum values, each represented by its key. Each key must match the key of an CustomFieldLocalizedEnumValue in the CustomFieldLocalizedEnumType. The order of items in the array is not fixed.</p>
+     *  <p>JSON array of localized enum values, each represented by its key. Each key must match the key of an <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumValue" rel="nofollow">CustomFieldLocalizedEnumValue</a> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumType" rel="nofollow">CustomFieldLocalizedEnumType</a>. The order of items in the array is not fixed.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class LocalizedEnumSetFieldBuilder implements Builder<LocalizedEnumSetFie
     }
 
     /**
-     *  <p>JSON array of localized enum values, each represented by its key. Each key must match the key of an CustomFieldLocalizedEnumValue in the CustomFieldLocalizedEnumType. The order of items in the array is not fixed.</p>
+     *  <p>JSON array of localized enum values, each represented by its key. Each key must match the key of an <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumValue" rel="nofollow">CustomFieldLocalizedEnumValue</a> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumType" rel="nofollow">CustomFieldLocalizedEnumType</a>. The order of items in the array is not fixed.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class LocalizedEnumSetFieldBuilder implements Builder<LocalizedEnumSetFie
     }
 
     /**
-     *  <p>JSON array of localized enum values, each represented by its key. Each key must match the key of an CustomFieldLocalizedEnumValue in the CustomFieldLocalizedEnumType. The order of items in the array is not fixed.</p>
+     *  <p>JSON array of localized enum values, each represented by its key. Each key must match the key of an <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumValue" rel="nofollow">CustomFieldLocalizedEnumValue</a> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumType" rel="nofollow">CustomFieldLocalizedEnumType</a>. The order of items in the array is not fixed.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class LocalizedEnumSetFieldBuilder implements Builder<LocalizedEnumSetFie
     }
 
     /**
-     *  <p>JSON array of localized enum values, each represented by its key. Each key must match the key of an CustomFieldLocalizedEnumValue in the CustomFieldLocalizedEnumType. The order of items in the array is not fixed.</p>
+     *  <p>JSON array of localized enum values, each represented by its key. Each key must match the key of an <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumValue" rel="nofollow">CustomFieldLocalizedEnumValue</a> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumType" rel="nofollow">CustomFieldLocalizedEnumType</a>. The order of items in the array is not fixed.</p>
      * @return value
      */
 

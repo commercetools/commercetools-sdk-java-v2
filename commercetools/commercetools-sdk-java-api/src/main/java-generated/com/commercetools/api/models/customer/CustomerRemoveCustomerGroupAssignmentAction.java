@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Unassigns a Customer Group from a Customer. This action generates the CustomerGroupAssignmentRemoved Message.</p>
+ *  <p>Unassigns a Customer Group from a Customer. This action generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroupAssignmentRemovedMessage" rel="nofollow">CustomerGroupAssignmentRemoved</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

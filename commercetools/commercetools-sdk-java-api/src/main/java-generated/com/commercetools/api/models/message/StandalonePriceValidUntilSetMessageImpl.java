@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Valid Until update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidUntilAction" rel="nofollow">Set Valid Until</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceValidUntilSetMessageImpl implements StandalonePriceValidUntilSetMessage, ModelBase {
@@ -143,7 +143,7 @@ public class StandalonePriceValidUntilSetMessageImpl implements StandalonePriceV
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -159,7 +159,7 @@ public class StandalonePriceValidUntilSetMessageImpl implements StandalonePriceV
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -175,7 +175,7 @@ public class StandalonePriceValidUntilSetMessageImpl implements StandalonePriceV
     }
 
     /**
-     *  <p>Value of StandalonePrice <code>validUntil</code> after the Set Valid Until update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validUntil</code> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidUntilAction" rel="nofollow">Set Valid Until</a> update action.</p>
      */
 
     public java.time.ZonedDateTime getValidUntil() {
@@ -183,7 +183,7 @@ public class StandalonePriceValidUntilSetMessageImpl implements StandalonePriceV
     }
 
     /**
-     *  <p>Value of StandalonePrice <code>validUntil</code> before the Set Valid Until update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validUntil</code> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidUntilAction" rel="nofollow">Set Valid Until</a> update action.</p>
      */
 
     public java.time.ZonedDateTime getPreviousValidUntil() {

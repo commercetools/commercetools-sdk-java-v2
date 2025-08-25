@@ -56,7 +56,7 @@ public class StagedQuoteSetCustomTypeActionImpl implements StagedQuoteSetCustomT
     }
 
     /**
-     *  <p>Defines the Type that extends the StagedQuote with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedQuote.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the StagedQuote with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the StagedQuote.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -64,7 +64,7 @@ public class StagedQuoteSetCustomTypeActionImpl implements StagedQuoteSetCustomT
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the StagedQuote.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the StagedQuote.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

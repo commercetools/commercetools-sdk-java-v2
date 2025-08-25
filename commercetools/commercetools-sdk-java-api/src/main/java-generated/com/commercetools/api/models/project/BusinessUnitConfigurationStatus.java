@@ -11,16 +11,16 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Default value for Business Unit Status configured though Project settings.</p>
+ *  <p>Default value for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitStatus" rel="nofollow">Business Unit Status</a> configured though <span>Project settings</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface BusinessUnitConfigurationStatus extends JsonEnum {
 
     /**
-    <p>The Business Unit can be used in Orders, Carts, and Quotes and can be updated using the My Business Unit endpoint.</p> */
+    <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> can be used in <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, and <span>Quotes</span> and can be updated using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/business-units:POST" rel="nofollow">My Business Unit endpoint</a>.</p> */
     BusinessUnitConfigurationStatus ACTIVE = BusinessUnitConfigurationStatusEnum.ACTIVE;
     /**
-    <p>The Business Unit cannot be used in Orders, Carts, and Quotes and cannot be updated using the My Business Unit endpoint.</p> */
+    <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> cannot be used in <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, and <span>Quotes</span> and cannot be updated using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/business-units:POST" rel="nofollow">My Business Unit endpoint</a>.</p> */
     BusinessUnitConfigurationStatus INACTIVE = BusinessUnitConfigurationStatusEnum.INACTIVE;
 
     /**

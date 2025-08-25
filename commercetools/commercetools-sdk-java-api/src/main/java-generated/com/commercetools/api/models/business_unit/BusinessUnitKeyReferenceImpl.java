@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>KeyReference to a BusinessUnit.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:KeyReference" rel="nofollow">KeyReference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitKeyReferenceImpl implements BusinessUnitKeyReference, ModelBase {
@@ -52,7 +52,7 @@ public class BusinessUnitKeyReferenceImpl implements BusinessUnitKeyReference, M
     }
 
     /**
-     *  <p>Unique and immutable key of the referenced BusinessUnit.</p>
+     *  <p>Unique and immutable key of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
      */
 
     public String getKey() {

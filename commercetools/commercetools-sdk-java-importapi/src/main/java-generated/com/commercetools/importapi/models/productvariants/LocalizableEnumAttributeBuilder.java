@@ -29,8 +29,8 @@ public class LocalizableEnumAttributeBuilder implements Builder<LocalizableEnumA
     private String value;
 
     /**
-     *  <p>Required if used for ProductVariantImport. Must not be set if used for ProductVariantPatch.</p>
-     *  <p>Must match <code>name</code> of an AttributeDefinition of the Product Type.</p>
+     *  <p>Required if used for <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantImport" rel="nofollow">ProductVariantImport</a>. Must not be set if used for <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantPatch" rel="nofollow">ProductVariantPatch</a>.</p>
+     *  <p>Must match <code>name</code> of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> of the Product Type.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class LocalizableEnumAttributeBuilder implements Builder<LocalizableEnumA
     }
 
     /**
-     *  <p>The key of the localized enum value. Must match the key of an AttributeLocalizedEnumValue in the Product Type.</p>
+     *  <p>The key of the localized enum value. Must match the key of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumValue" rel="nofollow">AttributeLocalizedEnumValue</a> in the Product Type.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -52,8 +52,8 @@ public class LocalizableEnumAttributeBuilder implements Builder<LocalizableEnumA
     }
 
     /**
-     *  <p>Required if used for ProductVariantImport. Must not be set if used for ProductVariantPatch.</p>
-     *  <p>Must match <code>name</code> of an AttributeDefinition of the Product Type.</p>
+     *  <p>Required if used for <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantImport" rel="nofollow">ProductVariantImport</a>. Must not be set if used for <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantPatch" rel="nofollow">ProductVariantPatch</a>.</p>
+     *  <p>Must match <code>name</code> of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> of the Product Type.</p>
      * @return name
      */
 
@@ -63,7 +63,7 @@ public class LocalizableEnumAttributeBuilder implements Builder<LocalizableEnumA
     }
 
     /**
-     *  <p>The key of the localized enum value. Must match the key of an AttributeLocalizedEnumValue in the Product Type.</p>
+     *  <p>The key of the localized enum value. Must match the key of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumValue" rel="nofollow">AttributeLocalizedEnumValue</a> in the Product Type.</p>
      * @return value
      */
 

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The status of a new ImportOperation.</p>
+ *  <p>The status of a new <span>ImportOperation</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportOperationStatusImpl implements ImportOperationStatus, ModelBase {
@@ -47,7 +47,7 @@ public class ImportOperationStatusImpl implements ImportOperationStatus, ModelBa
     }
 
     /**
-     *  <p><code>id</code> of the ImportOperation.</p>
+     *  <p><code>id</code> of the <span>ImportOperation</span>.</p>
      */
 
     public String getOperationId() {
@@ -55,7 +55,7 @@ public class ImportOperationStatusImpl implements ImportOperationStatus, ModelBa
     }
 
     /**
-     *  <p>Validation state of the ImportOperation.</p>
+     *  <p>Validation state of the <span>ImportOperation</span>.</p>
      */
 
     public com.commercetools.importapi.models.importoperations.ImportOperationState getState() {
@@ -63,7 +63,7 @@ public class ImportOperationStatusImpl implements ImportOperationStatus, ModelBa
     }
 
     /**
-     *  <p>Errors for the ImportOperation.</p>
+     *  <p><span>Errors</span> for the <span>ImportOperation</span>.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.errors.ErrorObject> getErrors() {

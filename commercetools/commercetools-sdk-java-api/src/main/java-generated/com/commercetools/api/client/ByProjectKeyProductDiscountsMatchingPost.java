@@ -16,8 +16,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>This endpoint can be used to simulate which Product Discounts would be applied if a specified Product Variant had a specified Price. Given Product and Product Variant IDs and a Price, this endpoint will return the ProductDiscount that would have been applied to that Price.</p>
- *  <p>If a Product Discount could not be found that could be applied to the Price of a Product Variant, a NoMatchingProductDiscountFound error is returned.</p>
+ *  <p>This endpoint can be used to simulate which Product Discounts would be applied if a specified Product Variant had a specified Price. Given Product and Product Variant IDs and a Price, this endpoint will return the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> that would have been applied to that Price.</p>
+ *  <p>If a Product Discount could not be found that could be applied to the Price of a Product Variant, a <a href="https://docs.commercetools.com/apis/ctp:api:type:NoMatchingProductDiscountFoundError" rel="nofollow">NoMatchingProductDiscountFound</a> error is returned.</p>
  *
  * <hr>
  * <div class=code-example>

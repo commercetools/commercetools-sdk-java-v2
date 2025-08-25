@@ -19,7 +19,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when the query times out.</p>
- *  <p>If a query constantly times out, please check if it follows the performance best practices.</p>
+ *  <p>If a query constantly times out, please check if it follows the <span>performance best practices</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLQueryTimedOutErrorImpl implements GraphQLQueryTimedOutError, ModelBase {

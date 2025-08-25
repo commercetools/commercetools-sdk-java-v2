@@ -24,7 +24,7 @@ public class ProjectChangeTaxRoundingModeActionBuilder implements Builder<Projec
     private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
 
     /**
-     *  <p>Project-level default rounding mode for tax calculation. See CartsConfiguration.</p>
+     *  <p>Project-level default rounding mode for tax calculation. See <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">CartsConfiguration</a>.</p>
      * @param taxRoundingMode value to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class ProjectChangeTaxRoundingModeActionBuilder implements Builder<Projec
     }
 
     /**
-     *  <p>Project-level default rounding mode for tax calculation. See CartsConfiguration.</p>
+     *  <p>Project-level default rounding mode for tax calculation. See <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">CartsConfiguration</a>.</p>
      * @return taxRoundingMode
      */
 

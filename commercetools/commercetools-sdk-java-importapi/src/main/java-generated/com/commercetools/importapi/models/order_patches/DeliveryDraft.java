@@ -37,7 +37,7 @@ import jakarta.validation.constraints.NotNull;
 public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDraft> {
 
     /**
-     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @return items
      */
     @NotNull
@@ -63,7 +63,7 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
     public List<DeliveryParcelDraft> getParcels();
 
     /**
-     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param items values to be set
      */
 
@@ -71,7 +71,7 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
     public void setItems(final DeliveryItem... items);
 
     /**
-     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param items values to be set
      */
 

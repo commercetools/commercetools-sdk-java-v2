@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Delete PaymentMethod request.</p>
+ *  <p>Generated after a successful <span>Delete PaymentMethod</span> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface PaymentMethodDeletedMessagePayload extends MessagePayload {
     String PAYMENT_METHOD_DELETED = "PaymentMethodDeleted";
 
     /**
-     *  <p>The PaymentMethod that was deleted.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethod" rel="nofollow">PaymentMethod</a> that was deleted.</p>
      * @return paymentMethod
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface PaymentMethodDeletedMessagePayload extends MessagePayload {
     public PaymentMethod getPaymentMethod();
 
     /**
-     *  <p>The PaymentMethod that was deleted.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethod" rel="nofollow">PaymentMethod</a> that was deleted.</p>
      * @param paymentMethod value to be set
      */
 

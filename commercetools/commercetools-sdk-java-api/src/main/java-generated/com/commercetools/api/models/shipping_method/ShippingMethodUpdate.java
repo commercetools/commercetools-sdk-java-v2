@@ -44,7 +44,7 @@ public interface ShippingMethodUpdate extends
     public Long getVersion();
 
     /**
-     *  <p>Update actions to be performed on the ShippingMethod.</p>
+     *  <p>Update actions to be performed on the <span>ShippingMethod</span>.</p>
      * @return actions
      */
     @NotNull
@@ -60,7 +60,7 @@ public interface ShippingMethodUpdate extends
     public void setVersion(final Long version);
 
     /**
-     *  <p>Update actions to be performed on the ShippingMethod.</p>
+     *  <p>Update actions to be performed on the <span>ShippingMethod</span>.</p>
      * @param actions values to be set
      */
 
@@ -68,7 +68,7 @@ public interface ShippingMethodUpdate extends
     public void setActions(final ShippingMethodUpdateAction... actions);
 
     /**
-     *  <p>Update actions to be performed on the ShippingMethod.</p>
+     *  <p>Update actions to be performed on the <span>ShippingMethod</span>.</p>
      * @param actions values to be set
      */
 

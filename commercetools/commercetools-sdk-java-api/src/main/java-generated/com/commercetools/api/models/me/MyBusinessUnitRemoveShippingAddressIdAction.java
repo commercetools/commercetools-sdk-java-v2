@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Removing a shipping address from a Business Unit generates a BusinessUnitShippingAddressRemoved Message.</p>
+ *  <p>Removing a shipping address from a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitShippingAddressRemovedMessage" rel="nofollow">BusinessUnitShippingAddressRemoved</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

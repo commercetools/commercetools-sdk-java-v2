@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Updating the Permissions on an AssociateRole generates an AssociateRolePermissionsSet Message.</p>
+ *  <p>Updating the Permissions on an <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a> generates an <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRolePermissionsSetMessage" rel="nofollow">AssociateRolePermissionsSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Transition State update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedQuoteStateTransitionMessageImpl implements StagedQuoteStateTransitionMessage, ModelBase {
@@ -147,7 +147,7 @@ public class StagedQuoteStateTransitionMessageImpl implements StagedQuoteStateTr
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -163,7 +163,7 @@ public class StagedQuoteStateTransitionMessageImpl implements StagedQuoteStateTr
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -179,7 +179,7 @@ public class StagedQuoteStateTransitionMessageImpl implements StagedQuoteStateTr
     }
 
     /**
-     *  <p>State of the Quote after the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -187,7 +187,7 @@ public class StagedQuoteStateTransitionMessageImpl implements StagedQuoteStateTr
     }
 
     /**
-     *  <p>State of the Quote before the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getOldState() {
@@ -195,7 +195,7 @@ public class StagedQuoteStateTransitionMessageImpl implements StagedQuoteStateTr
     }
 
     /**
-     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     *  <p>Whether <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition validations were turned off during the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      */
 
     public Boolean getForce() {

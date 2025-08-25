@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The CloudEventsFormat can be used with any Destination, and the payload is delivered in the <code>JSON Event Format</code>. AzureEventGridDestination offers native support to filter and route CloudEvents.</p>
+ *  <p>The CloudEventsFormat can be used with any <span>Destination</span>, and the payload is delivered in the <code>JSON Event Format</code>. <a href="https://docs.commercetools.com/apis/ctp:api:type:AzureEventGridDestination" rel="nofollow">AzureEventGridDestination</a> offers native support to filter and route CloudEvents.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CloudEventsFormatImpl implements CloudEventsFormat, ModelBase {

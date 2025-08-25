@@ -20,8 +20,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Deleting a Customer produces the CustomerDeleted Message.</p>
- *  <p>If the Customer exists in the Project but the <code>stores</code> field references a different Store, this method returns a ResourceNotFound error.</p>
+ *  <p>Deleting a Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerDeletedMessage" rel="nofollow">CustomerDeleted</a> Message.</p>
+ *  <p>If the Customer exists in the Project but the <code>stores</code> field references a different Store, this method returns a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error.</p>
  *
  * <hr>
  * <div class=code-example>

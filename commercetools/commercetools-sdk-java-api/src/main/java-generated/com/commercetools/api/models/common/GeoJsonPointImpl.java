@@ -51,7 +51,7 @@ public class GeoJsonPointImpl implements GeoJsonPoint, ModelBase {
     }
 
     /**
-     *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the Point.</p>
+     *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the <span>Point</span>.</p>
      */
 
     public java.util.List<Double> getCoordinates() {

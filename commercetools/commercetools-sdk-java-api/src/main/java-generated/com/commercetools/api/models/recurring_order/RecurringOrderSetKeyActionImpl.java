@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>This update action generates the RecurringOrderKeySet Message.</p>
+ *  <p>This update action generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderKeySetMessage" rel="nofollow">RecurringOrderKeySet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RecurringOrderSetKeyActionImpl implements RecurringOrderSetKeyAction, ModelBase {

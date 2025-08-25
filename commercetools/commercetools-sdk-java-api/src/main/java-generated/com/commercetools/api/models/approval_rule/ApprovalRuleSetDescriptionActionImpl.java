@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Setting the description for an Approval Rule generates an ApprovalRuleDescriptionSet Message.</p>
+ *  <p>Setting the description for an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">Approval Rule</a> generates an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleDescriptionSetMessage" rel="nofollow">ApprovalRuleDescriptionSet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ApprovalRuleSetDescriptionActionImpl implements ApprovalRuleSetDescriptionAction, ModelBase {

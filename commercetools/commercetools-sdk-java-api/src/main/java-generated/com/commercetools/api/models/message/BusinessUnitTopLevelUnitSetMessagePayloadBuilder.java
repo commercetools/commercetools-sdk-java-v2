@@ -29,7 +29,7 @@ public class BusinessUnitTopLevelUnitSetMessagePayloadBuilder
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference oldTopLevelUnit;
 
     /**
-     *  <p>Top-level unit of the Business Unit after the Set Unit Type or Change Parent Unit update action.</p>
+     *  <p>Top-level unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      * @param builder function to build the topLevelUnit value
      * @return Builder
      */
@@ -43,7 +43,7 @@ public class BusinessUnitTopLevelUnitSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Top-level unit of the Business Unit after the Set Unit Type or Change Parent Unit update action.</p>
+     *  <p>Top-level unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      * @param builder function to build the topLevelUnit value
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class BusinessUnitTopLevelUnitSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Top-level unit of the Business Unit after the Set Unit Type or Change Parent Unit update action.</p>
+     *  <p>Top-level unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      * @param topLevelUnit value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class BusinessUnitTopLevelUnitSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Top-level unit of the Business Unit before the Set Unit Type or Change Parent Unit update action.</p>
+     *  <p>Top-level unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      * @param builder function to build the oldTopLevelUnit value
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class BusinessUnitTopLevelUnitSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Top-level unit of the Business Unit before the Set Unit Type or Change Parent Unit update action.</p>
+     *  <p>Top-level unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      * @param builder function to build the oldTopLevelUnit value
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class BusinessUnitTopLevelUnitSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Top-level unit of the Business Unit before the Set Unit Type or Change Parent Unit update action.</p>
+     *  <p>Top-level unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      * @param oldTopLevelUnit value to be set
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class BusinessUnitTopLevelUnitSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Top-level unit of the Business Unit after the Set Unit Type or Change Parent Unit update action.</p>
+     *  <p>Top-level unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      * @return topLevelUnit
      */
 
@@ -116,7 +116,7 @@ public class BusinessUnitTopLevelUnitSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Top-level unit of the Business Unit before the Set Unit Type or Change Parent Unit update action.</p>
+     *  <p>Top-level unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      * @return oldTopLevelUnit
      */
 

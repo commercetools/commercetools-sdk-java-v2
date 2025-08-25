@@ -40,7 +40,7 @@ public class ImportResponseImpl implements ImportResponse, ModelBase {
     }
 
     /**
-     *  <p>The identifiers and status of the ImportOperations created by the ImportRequest.</p>
+     *  <p>The identifiers and status of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperations</a> created by the ImportRequest.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.importoperations.ImportOperationStatus> getOperationStatus() {

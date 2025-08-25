@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Changing the <code>buyerAssignable</code> value of an AssociateRole generates an AssociateRoleBuyerAssignableChanged Message.</p>
+ *  <p>Changing the <code>buyerAssignable</code> value of an AssociateRole generates an <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRoleBuyerAssignableChangedMessage" rel="nofollow">AssociateRoleBuyerAssignableChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

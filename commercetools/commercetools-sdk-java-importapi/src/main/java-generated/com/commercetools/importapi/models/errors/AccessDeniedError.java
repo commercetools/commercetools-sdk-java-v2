@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>This is the generic error code for access denied. In case of a wrong scope, an InvalidScopeError will be returned.</p>
+ *  <p>This is the generic error code for access denied. In case of a wrong scope, an <span>InvalidScopeError</span> will be returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

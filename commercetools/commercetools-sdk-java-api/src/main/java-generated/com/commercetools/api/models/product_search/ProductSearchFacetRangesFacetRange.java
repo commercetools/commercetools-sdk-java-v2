@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Values for <code>from</code> and <code>to</code> must be a number or DateTime.</p>
+ *  <p>Values for <code>from</code> and <code>to</code> must be a number or <a href="https://docs.commercetools.com/apis/ctp:api:type:DateTime" rel="nofollow">DateTime</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

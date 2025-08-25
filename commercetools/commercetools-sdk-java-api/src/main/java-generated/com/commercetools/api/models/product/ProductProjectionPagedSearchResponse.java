@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The response returned to a Product Projection Search request. The object contains the query results with Product Projections where at least one ProductVariant matches the search query, as well as the facet results, if requested.</p>
+ *  <p>The response returned to a <span>Product Projection Search</span> request. The object contains the <span>query results</span> with Product Projections where at least one ProductVariant matches the search query, as well as the <span>facet results</span>, if requested.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface ProductProjectionPagedSearchResponse
         extends com.commercetools.api.models.ResourcePagedQueryResponse<ProductProjection> {
 
     /**
-     *  <p>The maximum number of results returned on a page.</p>
+     *  <p>The maximum number of results returned on a <span>page</span>.</p>
      * @return limit
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface ProductProjectionPagedSearchResponse
     public Long getLimit();
 
     /**
-     *  <p>The starting point for the retrieved paginated result.</p>
+     *  <p>The starting point for the retrieved <span>paginated</span> result.</p>
      * @return offset
      */
     @NotNull
@@ -70,7 +70,7 @@ public interface ProductProjectionPagedSearchResponse
     public Long getTotal();
 
     /**
-     *  <p>ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the matching variants are marked as such.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjections</a> where at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the <span>matching variants</span> are marked as such.</p>
      * @return results
      */
     @NotNull
@@ -79,7 +79,7 @@ public interface ProductProjectionPagedSearchResponse
     public List<ProductProjection> getResults();
 
     /**
-     *  <p>Facet results for each facet expression specified in the search request.</p>
+     *  <p>Facet results for each <span>facet expression</span> specified in the search request.</p>
      *  <p>Only present if at least one <code>facet</code> parameter was provided with the search request.</p>
      * @return facets
      */
@@ -88,14 +88,14 @@ public interface ProductProjectionPagedSearchResponse
     public FacetResults getFacets();
 
     /**
-     *  <p>The maximum number of results returned on a page.</p>
+     *  <p>The maximum number of results returned on a <span>page</span>.</p>
      * @param limit value to be set
      */
 
     public void setLimit(final Long limit);
 
     /**
-     *  <p>The starting point for the retrieved paginated result.</p>
+     *  <p>The starting point for the retrieved <span>paginated</span> result.</p>
      * @param offset value to be set
      */
 
@@ -116,7 +116,7 @@ public interface ProductProjectionPagedSearchResponse
     public void setTotal(final Long total);
 
     /**
-     *  <p>ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the matching variants are marked as such.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjections</a> where at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the <span>matching variants</span> are marked as such.</p>
      * @param results values to be set
      */
 
@@ -124,14 +124,14 @@ public interface ProductProjectionPagedSearchResponse
     public void setResults(final ProductProjection... results);
 
     /**
-     *  <p>ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the matching variants are marked as such.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjections</a> where at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the <span>matching variants</span> are marked as such.</p>
      * @param results values to be set
      */
 
     public void setResults(final List<ProductProjection> results);
 
     /**
-     *  <p>Facet results for each facet expression specified in the search request.</p>
+     *  <p>Facet results for each <span>facet expression</span> specified in the search request.</p>
      *  <p>Only present if at least one <code>facet</code> parameter was provided with the search request.</p>
      * @param facets value to be set
      */

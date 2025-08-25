@@ -29,7 +29,7 @@ public class RecurringOrderKeySetMessagePayloadBuilder implements Builder<Recurr
     private String oldKey;
 
     /**
-     *  <p><code>key</code> value of the RecurringOrder after the Set Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class RecurringOrderKeySetMessagePayloadBuilder implements Builder<Recurr
     }
 
     /**
-     *  <p><code>key</code> value of the RecurringOrder before the Set Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
      * @param oldKey value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class RecurringOrderKeySetMessagePayloadBuilder implements Builder<Recurr
     }
 
     /**
-     *  <p><code>key</code> value of the RecurringOrder after the Set Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
      * @return key
      */
 
@@ -61,7 +61,7 @@ public class RecurringOrderKeySetMessagePayloadBuilder implements Builder<Recurr
     }
 
     /**
-     *  <p><code>key</code> value of the RecurringOrder before the Set Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
      * @return oldKey
      */
 

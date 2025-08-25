@@ -30,7 +30,7 @@ public class TypeReferenceBuilder implements Builder<TypeReference> {
     private com.commercetools.api.models.type.Type obj;
 
     /**
-     *  <p>Unique identifier of the referenced Type.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class TypeReferenceBuilder implements Builder<TypeReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Type. Only present in responses to requests with Reference Expansion for Types.</p>
+     *  <p>Contains the representation of the expanded Type. Only present in responses to requests with <a href="https://docs.commercetools.com/apis/ctp:api:type:Expansion" rel="nofollow">Reference Expansion</a> for Types.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class TypeReferenceBuilder implements Builder<TypeReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Type. Only present in responses to requests with Reference Expansion for Types.</p>
+     *  <p>Contains the representation of the expanded Type. Only present in responses to requests with <a href="https://docs.commercetools.com/apis/ctp:api:type:Expansion" rel="nofollow">Reference Expansion</a> for Types.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class TypeReferenceBuilder implements Builder<TypeReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Type. Only present in responses to requests with Reference Expansion for Types.</p>
+     *  <p>Contains the representation of the expanded Type. Only present in responses to requests with <a href="https://docs.commercetools.com/apis/ctp:api:type:Expansion" rel="nofollow">Reference Expansion</a> for Types.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class TypeReferenceBuilder implements Builder<TypeReference> {
     }
 
     /**
-     *  <p>Unique identifier of the referenced Type.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @return id
      */
 
@@ -85,7 +85,7 @@ public class TypeReferenceBuilder implements Builder<TypeReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Type. Only present in responses to requests with Reference Expansion for Types.</p>
+     *  <p>Contains the representation of the expanded Type. Only present in responses to requests with <a href="https://docs.commercetools.com/apis/ctp:api:type:Expansion" rel="nofollow">Reference Expansion</a> for Types.</p>
      * @return obj
      */
 

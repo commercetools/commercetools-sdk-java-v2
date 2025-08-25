@@ -77,7 +77,7 @@ public interface RecurringOrder extends BaseResource {
     public Long getVersion();
 
     /**
-     *  <p>Reference to the Cart for a RecurringOrder. The referenced Cart will have the <code>RecurringOrder</code> CartOrigin.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Cart for a RecurringOrder. The referenced Cart will have the <code>RecurringOrder</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:CartOrigin" rel="nofollow">CartOrigin</a>.</p>
      * @return cart
      */
     @NotNull
@@ -86,7 +86,7 @@ public interface RecurringOrder extends BaseResource {
     public CartReference getCart();
 
     /**
-     *  <p>Reference to the original Order that generated this RecurringOrder.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the original <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that generated this RecurringOrder.</p>
      * @return originOrder
      */
     @NotNull
@@ -143,7 +143,7 @@ public interface RecurringOrder extends BaseResource {
     public SkipConfiguration getSkipConfiguration();
 
     /**
-     *  <p>Reference to a Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Store.</p>
      * @return store
      */
     @Valid
@@ -151,7 +151,7 @@ public interface RecurringOrder extends BaseResource {
     public StoreKeyReference getStore();
 
     /**
-     *  <p>Reference to the Business Unit that the RecurringOrder belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Business Unit that the RecurringOrder belongs to.</p>
      * @return businessUnit
      */
     @Valid
@@ -159,7 +159,7 @@ public interface RecurringOrder extends BaseResource {
     public BusinessUnitKeyReference getBusinessUnit();
 
     /**
-     *  <p>State of the RecurringOrder in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the RecurringOrder in a custom workflow.</p>
      * @return state
      */
     @Valid
@@ -184,7 +184,7 @@ public interface RecurringOrder extends BaseResource {
     public RecurrencePolicySchedule getSchedule();
 
     /**
-     *  <p>The Customer that the RecurringOrder belongs to.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that the RecurringOrder belongs to.</p>
      * @return customer
      */
     @Valid
@@ -261,14 +261,14 @@ public interface RecurringOrder extends BaseResource {
     public void setVersion(final Long version);
 
     /**
-     *  <p>Reference to the Cart for a RecurringOrder. The referenced Cart will have the <code>RecurringOrder</code> CartOrigin.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Cart for a RecurringOrder. The referenced Cart will have the <code>RecurringOrder</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:CartOrigin" rel="nofollow">CartOrigin</a>.</p>
      * @param cart value to be set
      */
 
     public void setCart(final CartReference cart);
 
     /**
-     *  <p>Reference to the original Order that generated this RecurringOrder.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the original <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that generated this RecurringOrder.</p>
      * @param originOrder value to be set
      */
 
@@ -317,21 +317,21 @@ public interface RecurringOrder extends BaseResource {
     public void setSkipConfiguration(final SkipConfiguration skipConfiguration);
 
     /**
-     *  <p>Reference to a Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Store.</p>
      * @param store value to be set
      */
 
     public void setStore(final StoreKeyReference store);
 
     /**
-     *  <p>Reference to the Business Unit that the RecurringOrder belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Business Unit that the RecurringOrder belongs to.</p>
      * @param businessUnit value to be set
      */
 
     public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);
 
     /**
-     *  <p>State of the RecurringOrder in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the RecurringOrder in a custom workflow.</p>
      * @param state value to be set
      */
 
@@ -352,7 +352,7 @@ public interface RecurringOrder extends BaseResource {
     public void setSchedule(final RecurrencePolicySchedule schedule);
 
     /**
-     *  <p>The Customer that the RecurringOrder belongs to.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that the RecurringOrder belongs to.</p>
      * @param customer value to be set
      */
 

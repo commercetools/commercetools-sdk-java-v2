@@ -67,7 +67,7 @@ public class InvalidStateTransitionErrorImpl implements InvalidStateTransitionEr
     }
 
     /**
-     *  <p>Every Import Operation is assigned one of the following states.</p>
+     *  <p>Every <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">Import Operation</a> is assigned one of the following states.</p>
      */
 
     public com.commercetools.importapi.models.common.ProcessingState getCurrentState() {
@@ -75,7 +75,7 @@ public class InvalidStateTransitionErrorImpl implements InvalidStateTransitionEr
     }
 
     /**
-     *  <p>Every Import Operation is assigned one of the following states.</p>
+     *  <p>Every <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">Import Operation</a> is assigned one of the following states.</p>
      */
 
     public com.commercetools.importapi.models.common.ProcessingState getNewState() {

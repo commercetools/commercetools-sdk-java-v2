@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Set or remove the <code>key</code> of an Asset.</p>
+ *  <p>Set or remove the <code>key</code> of an <a href="https://docs.commercetools.com/apis/ctp:api:type:Asset" rel="nofollow">Asset</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

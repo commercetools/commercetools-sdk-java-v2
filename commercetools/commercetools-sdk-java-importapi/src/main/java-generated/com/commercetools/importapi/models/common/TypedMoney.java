@@ -63,7 +63,7 @@ public interface TypedMoney {
     public Long getCentAmount();
 
     /**
-     *  <p>The currency code compliant to ISO 4217.</p>
+     *  <p>The currency code compliant to <span>ISO 4217</span>.</p>
      * @return currencyCode
      */
     @NotNull
@@ -89,7 +89,7 @@ public interface TypedMoney {
     public void setCentAmount(final Long centAmount);
 
     /**
-     *  <p>The currency code compliant to ISO 4217.</p>
+     *  <p>The currency code compliant to <span>ISO 4217</span>.</p>
      * @param currencyCode value to be set
      */
 

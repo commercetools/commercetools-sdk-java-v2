@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Reference to an AttributeGroup.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeGroup" rel="nofollow">AttributeGroup</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeGroupReferenceImpl implements AttributeGroupReference, ModelBase {
@@ -56,7 +56,7 @@ public class AttributeGroupReferenceImpl implements AttributeGroupReference, Mod
     }
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced AttributeGroup.</p>
+     *  <p>Platform-generated unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeGroup" rel="nofollow">AttributeGroup</a>.</p>
      */
 
     public String getId() {
@@ -64,7 +64,7 @@ public class AttributeGroupReferenceImpl implements AttributeGroupReference, Mod
     }
 
     /**
-     *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with Reference Expansion for AttributeGroup.</p>
+     *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with <span>Reference Expansion</span> for AttributeGroup.</p>
      */
 
     public com.commercetools.api.models.attribute_group.AttributeGroup getObj() {

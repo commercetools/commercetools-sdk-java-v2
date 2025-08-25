@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface RuleRequester {
 
     /**
-     *  <p>The Associate Role that an Associate must hold for the Approval Rule to apply to the Orders they create.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a> that an <a href="https://docs.commercetools.com/apis/ctp:api:type" rel="nofollow">Associate</a> must hold for the Approval Rule to apply to the Orders they create.</p>
      * @return associateRole
      */
     @NotNull
@@ -43,7 +43,7 @@ public interface RuleRequester {
     public AssociateRoleKeyReference getAssociateRole();
 
     /**
-     *  <p>The Associate Role that an Associate must hold for the Approval Rule to apply to the Orders they create.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a> that an <a href="https://docs.commercetools.com/apis/ctp:api:type" rel="nofollow">Associate</a> must hold for the Approval Rule to apply to the Orders they create.</p>
      * @param associateRole value to be set
      */
 

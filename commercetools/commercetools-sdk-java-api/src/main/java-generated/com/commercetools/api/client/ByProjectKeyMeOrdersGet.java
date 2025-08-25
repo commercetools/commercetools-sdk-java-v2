@@ -21,10 +21,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Retrieves Orders for the authenticated Customer or anonymous user.</p>
- *  <p>A ResourceNotFound error is returned in the following scenarios:</p>
+ *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error is returned in the following scenarios:</p>
  *  <ul>
  *   <li>If no Orders exist for the provided query predicate.</li>
- *   <li>If an Order exists but does not have a <code>customerId</code> that matches the customer:{id} scope, or <code>anonymousId</code> that matches the anonymous_id:{id} scope.</li>
+ *   <li>If an Order exists but does not have a <code>customerId</code> that matches the <span>customer:{id}</span> scope, or <code>anonymousId</code> that matches the <span>anonymous_id:{id}</span> scope.</li>
  *  </ul>
  *
  * <hr>

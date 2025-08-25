@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>This payload is sent for an EventSubscription.</p>
+ *  <p>This payload is sent for an <a href="https://docs.commercetools.com/apis/ctp:api:type:EventSubscription" rel="nofollow">EventSubscription</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

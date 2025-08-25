@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Produces the Line Item State Transition Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemStateTransitionMessage" rel="nofollow">Line Item State Transition</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -43,7 +43,7 @@ public interface OrderTransitionLineItemStateAction extends OrderUpdateAction {
     String TRANSITION_LINE_ITEM_STATE = "transitionLineItemState";
 
     /**
-     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
@@ -51,7 +51,7 @@ public interface OrderTransitionLineItemStateAction extends OrderUpdateAction {
     public String getLineItemId();
 
     /**
-     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemKey
      */
 
@@ -59,7 +59,7 @@ public interface OrderTransitionLineItemStateAction extends OrderUpdateAction {
     public String getLineItemKey();
 
     /**
-     *  <p>Number of Line Items that should transition State.</p>
+     *  <p>Number of Line Items that should transition <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      * @return quantity
      */
     @NotNull
@@ -67,7 +67,7 @@ public interface OrderTransitionLineItemStateAction extends OrderUpdateAction {
     public Long getQuantity();
 
     /**
-     *  <p>State the Line Item should transition from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the Line Item should transition from.</p>
      * @return fromState
      */
     @NotNull
@@ -76,7 +76,7 @@ public interface OrderTransitionLineItemStateAction extends OrderUpdateAction {
     public StateResourceIdentifier getFromState();
 
     /**
-     *  <p>State the Line Item should transition to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the Line Item should transition to.</p>
      * @return toState
      */
     @NotNull
@@ -85,7 +85,7 @@ public interface OrderTransitionLineItemStateAction extends OrderUpdateAction {
     public StateResourceIdentifier getToState();
 
     /**
-     *  <p>Date and time (UTC) to perform the State transition.</p>
+     *  <p>Date and time (UTC) to perform the <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition.</p>
      * @return actualTransitionDate
      */
 
@@ -93,42 +93,42 @@ public interface OrderTransitionLineItemStateAction extends OrderUpdateAction {
     public ZonedDateTime getActualTransitionDate();
 
     /**
-     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
 
     /**
-     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemKey value to be set
      */
 
     public void setLineItemKey(final String lineItemKey);
 
     /**
-     *  <p>Number of Line Items that should transition State.</p>
+     *  <p>Number of Line Items that should transition <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      * @param quantity value to be set
      */
 
     public void setQuantity(final Long quantity);
 
     /**
-     *  <p>State the Line Item should transition from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the Line Item should transition from.</p>
      * @param fromState value to be set
      */
 
     public void setFromState(final StateResourceIdentifier fromState);
 
     /**
-     *  <p>State the Line Item should transition to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the Line Item should transition to.</p>
      * @param toState value to be set
      */
 
     public void setToState(final StateResourceIdentifier toState);
 
     /**
-     *  <p>Date and time (UTC) to perform the State transition.</p>
+     *  <p>Date and time (UTC) to perform the <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition.</p>
      * @param actualTransitionDate value to be set
      */
 

@@ -43,7 +43,7 @@ public class CustomerSignInResultImpl implements CustomerSignInResult, ModelBase
     }
 
     /**
-     *  <p>Customer signed up or signed in after authentication.</p>
+     *  <p>Customer <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers:POST" rel="nofollow">signed up</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/login:POST" rel="nofollow">signed in</a> after authentication.</p>
      */
 
     public com.commercetools.api.models.customer.Customer getCustomer() {

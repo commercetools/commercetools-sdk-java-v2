@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after successfully applying an OrderEdit.</p>
+ *  <p>Generated after successfully <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/edits/{id}/apply:POST" rel="nofollow">applying an OrderEdit</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,7 +42,7 @@ public interface OrderEditAppliedMessagePayload extends OrderMessagePayload {
     String ORDER_EDIT_APPLIED = "OrderEditApplied";
 
     /**
-     *  <p>OrderEdit that was applied.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a> that was applied.</p>
      * @return edit
      */
     @NotNull
@@ -51,7 +51,7 @@ public interface OrderEditAppliedMessagePayload extends OrderMessagePayload {
     public OrderEdit getEdit();
 
     /**
-     *  <p>Information about a successfully applied OrderEdit.</p>
+     *  <p>Information about a successfully applied <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>.</p>
      * @return result
      */
     @NotNull
@@ -60,14 +60,14 @@ public interface OrderEditAppliedMessagePayload extends OrderMessagePayload {
     public OrderEditApplied getResult();
 
     /**
-     *  <p>OrderEdit that was applied.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a> that was applied.</p>
      * @param edit value to be set
      */
 
     public void setEdit(final OrderEdit edit);
 
     /**
-     *  <p>Information about a successfully applied OrderEdit.</p>
+     *  <p>Information about a successfully applied <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>.</p>
      * @param result value to be set
      */
 

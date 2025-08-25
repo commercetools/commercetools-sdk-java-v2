@@ -32,7 +32,7 @@ import jakarta.validation.constraints.NotNull;
 public interface AttributeReference extends com.commercetools.api.models.WithKey {
 
     /**
-     *  <p>The Attribute's <code>name</code> as given in its AttributeDefinition.</p>
+     *  <p>The Attribute's <code>name</code> as given in its <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @return key
      */
     @NotNull
@@ -40,7 +40,7 @@ public interface AttributeReference extends com.commercetools.api.models.WithKey
     public String getKey();
 
     /**
-     *  <p>The Attribute's <code>name</code> as given in its AttributeDefinition.</p>
+     *  <p>The Attribute's <code>name</code> as given in its <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @param key value to be set
      */
 

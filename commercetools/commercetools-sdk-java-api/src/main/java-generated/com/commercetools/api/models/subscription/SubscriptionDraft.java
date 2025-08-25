@@ -76,7 +76,7 @@ public interface SubscriptionDraft
     public List<EventSubscription> getEvents();
 
     /**
-     *  <p>Format in which the payload is delivered. When not provided, the PlatformFormat is selected by default.</p>
+     *  <p>Format in which the payload is delivered. When not provided, the <a href="https://docs.commercetools.com/apis/ctp:api:type:PlatformFormat" rel="nofollow">PlatformFormat</a> is selected by default.</p>
      * @return format
      */
     @Valid
@@ -143,7 +143,7 @@ public interface SubscriptionDraft
     public void setEvents(final List<EventSubscription> events);
 
     /**
-     *  <p>Format in which the payload is delivered. When not provided, the PlatformFormat is selected by default.</p>
+     *  <p>Format in which the payload is delivered. When not provided, the <a href="https://docs.commercetools.com/apis/ctp:api:type:PlatformFormat" rel="nofollow">PlatformFormat</a> is selected by default.</p>
      * @param format value to be set
      */
 

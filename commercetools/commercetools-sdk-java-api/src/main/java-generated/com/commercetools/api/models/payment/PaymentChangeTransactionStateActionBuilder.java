@@ -27,7 +27,7 @@ public class PaymentChangeTransactionStateActionBuilder implements Builder<Payme
     private com.commercetools.api.models.payment.TransactionState state;
 
     /**
-     *  <p>Unique identifier of the Transaction.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>.</p>
      * @param transactionId value to be set
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class PaymentChangeTransactionStateActionBuilder implements Builder<Payme
     }
 
     /**
-     *  <p>Unique identifier of the Transaction.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>.</p>
      * @return transactionId
      */
 

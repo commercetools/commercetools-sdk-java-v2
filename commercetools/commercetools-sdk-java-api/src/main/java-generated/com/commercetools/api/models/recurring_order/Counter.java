@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Configuration to track skips for a RecurringOrder.</p>
+ *  <p>Configuration to track skips for a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

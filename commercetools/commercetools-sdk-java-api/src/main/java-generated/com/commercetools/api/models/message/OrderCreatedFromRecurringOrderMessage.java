@@ -49,7 +49,7 @@ public interface OrderCreatedFromRecurringOrderMessage extends OrderMessage {
     String ORDER_CREATED_FROM_RECURRING_ORDER = "OrderCreatedFromRecurringOrder";
 
     /**
-     *  <p>Order that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that was created.</p>
      * @return order
      */
     @NotNull
@@ -58,7 +58,7 @@ public interface OrderCreatedFromRecurringOrderMessage extends OrderMessage {
     public Order getOrder();
 
     /**
-     *  <p>Reference to the origin Recurring Order.</p>
+     *  <p>Reference to the origin <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @return recurringOrderRef
      */
     @NotNull
@@ -67,14 +67,14 @@ public interface OrderCreatedFromRecurringOrderMessage extends OrderMessage {
     public RecurringOrderReference getRecurringOrderRef();
 
     /**
-     *  <p>Order that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that was created.</p>
      * @param order value to be set
      */
 
     public void setOrder(final Order order);
 
     /**
-     *  <p>Reference to the origin Recurring Order.</p>
+     *  <p>Reference to the origin <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @param recurringOrderRef value to be set
      */
 

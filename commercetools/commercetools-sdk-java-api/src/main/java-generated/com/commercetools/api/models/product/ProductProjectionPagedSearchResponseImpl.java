@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The response returned to a Product Projection Search request. The object contains the query results with Product Projections where at least one ProductVariant matches the search query, as well as the facet results, if requested.</p>
+ *  <p>The response returned to a <span>Product Projection Search</span> request. The object contains the <span>query results</span> with Product Projections where at least one ProductVariant matches the search query, as well as the <span>facet results</span>, if requested.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductProjectionPagedSearchResponseImpl implements ProductProjectionPagedSearchResponse, ModelBase {
@@ -58,7 +58,7 @@ public class ProductProjectionPagedSearchResponseImpl implements ProductProjecti
     }
 
     /**
-     *  <p>The maximum number of results returned on a page.</p>
+     *  <p>The maximum number of results returned on a <span>page</span>.</p>
      */
 
     public Long getLimit() {
@@ -66,7 +66,7 @@ public class ProductProjectionPagedSearchResponseImpl implements ProductProjecti
     }
 
     /**
-     *  <p>The starting point for the retrieved paginated result.</p>
+     *  <p>The starting point for the retrieved <span>paginated</span> result.</p>
      */
 
     public Long getOffset() {
@@ -90,7 +90,7 @@ public class ProductProjectionPagedSearchResponseImpl implements ProductProjecti
     }
 
     /**
-     *  <p>ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the matching variants are marked as such.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjections</a> where at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the <span>matching variants</span> are marked as such.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.ProductProjection> getResults() {
@@ -98,7 +98,7 @@ public class ProductProjectionPagedSearchResponseImpl implements ProductProjecti
     }
 
     /**
-     *  <p>Facet results for each facet expression specified in the search request.</p>
+     *  <p>Facet results for each <span>facet expression</span> specified in the search request.</p>
      *  <p>Only present if at least one <code>facet</code> parameter was provided with the search request.</p>
      */
 

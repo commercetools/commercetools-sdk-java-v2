@@ -18,8 +18,8 @@ import jakarta.validation.constraints.NotNull;
 
 /**
  *  <p>This action has no effect if a given supply channel is already present in a Store.</p>
- *  <p>Adding a supply channel produces the StoreSupplyChannelsChanged Message.</p>
- *  <p>Adding a Channel without the <code>InventorySupply</code> ChannelRoleEnum returns a MissingRoleOnChannel error.</p>
+ *  <p>Adding a supply channel produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSupplyChannelsChangedMessage" rel="nofollow">StoreSupplyChannelsChanged</a> Message.</p>
+ *  <p>Adding a <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> without the <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> returns a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

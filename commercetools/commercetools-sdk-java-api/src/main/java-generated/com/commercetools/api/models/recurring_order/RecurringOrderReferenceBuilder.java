@@ -30,7 +30,7 @@ public class RecurringOrderReferenceBuilder implements Builder<RecurringOrderRef
     private com.commercetools.api.models.recurring_order.RecurringOrder obj;
 
     /**
-     *  <p>Unique identifier of the referenced RecurringOrder.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class RecurringOrderReferenceBuilder implements Builder<RecurringOrderRef
     }
 
     /**
-     *  <p>Contains the representation of the expanded RecurringOrder. Only present in responses to requests with Reference Expansion for RecurringOrders.</p>
+     *  <p>Contains the representation of the expanded RecurringOrder. Only present in responses to requests with <span>Reference Expansion</span> for RecurringOrders.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class RecurringOrderReferenceBuilder implements Builder<RecurringOrderRef
     }
 
     /**
-     *  <p>Contains the representation of the expanded RecurringOrder. Only present in responses to requests with Reference Expansion for RecurringOrders.</p>
+     *  <p>Contains the representation of the expanded RecurringOrder. Only present in responses to requests with <span>Reference Expansion</span> for RecurringOrders.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class RecurringOrderReferenceBuilder implements Builder<RecurringOrderRef
     }
 
     /**
-     *  <p>Contains the representation of the expanded RecurringOrder. Only present in responses to requests with Reference Expansion for RecurringOrders.</p>
+     *  <p>Contains the representation of the expanded RecurringOrder. Only present in responses to requests with <span>Reference Expansion</span> for RecurringOrders.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class RecurringOrderReferenceBuilder implements Builder<RecurringOrderRef
     }
 
     /**
-     *  <p>Unique identifier of the referenced RecurringOrder.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a>.</p>
      * @return id
      */
 
@@ -86,7 +86,7 @@ public class RecurringOrderReferenceBuilder implements Builder<RecurringOrderRef
     }
 
     /**
-     *  <p>Contains the representation of the expanded RecurringOrder. Only present in responses to requests with Reference Expansion for RecurringOrders.</p>
+     *  <p>Contains the representation of the expanded RecurringOrder. Only present in responses to requests with <span>Reference Expansion</span> for RecurringOrders.</p>
      * @return obj
      */
 

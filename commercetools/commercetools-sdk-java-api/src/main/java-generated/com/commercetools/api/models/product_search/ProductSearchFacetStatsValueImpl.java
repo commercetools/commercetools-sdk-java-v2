@@ -55,7 +55,7 @@ public class ProductSearchFacetStatsValueImpl implements ProductSearchFacetStats
     }
 
     /**
-     *  <p>Name of the stats facet to appear in the ProductSearchFacetResultStats.</p>
+     *  <p>Name of the stats facet to appear in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchFacetResultStats" rel="nofollow">ProductSearchFacetResultStats</a>.</p>
      */
 
     public String getName() {
@@ -79,7 +79,7 @@ public class ProductSearchFacetStatsValueImpl implements ProductSearchFacetStats
     }
 
     /**
-     *  <p>The searchable Product field to facet on.</p>
+     *  <p>The <span>searchable Product field</span> to facet on.</p>
      */
 
     public String getField() {

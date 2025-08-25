@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Sets the key on a Standalone Price. Produces the StandalonePriceKeySet Message.</p>
+ *  <p>Sets the key on a Standalone Price. Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceKeySetMessage" rel="nofollow">StandalonePriceKeySet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

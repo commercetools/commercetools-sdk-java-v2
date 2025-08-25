@@ -41,7 +41,7 @@ public interface ShippingMethodRemoveShippingRateAction extends ShippingMethodUp
     String REMOVE_SHIPPING_RATE = "removeShippingRate";
 
     /**
-     *  <p>Zone from which the ShippingRate should be removed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> from which the ShippingRate should be removed.</p>
      * @return zone
      */
     @NotNull
@@ -59,7 +59,7 @@ public interface ShippingMethodRemoveShippingRateAction extends ShippingMethodUp
     public ShippingRateDraft getShippingRate();
 
     /**
-     *  <p>Zone from which the ShippingRate should be removed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> from which the ShippingRate should be removed.</p>
      * @param zone value to be set
      */
 

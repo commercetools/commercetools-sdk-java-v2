@@ -32,7 +32,7 @@ public class OrderSetReturnShipmentStateActionBuilder implements Builder<OrderSe
     private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
 
     /**
-     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @param returnItemId value to be set
      * @return Builder
      */
@@ -43,7 +43,7 @@ public class OrderSetReturnShipmentStateActionBuilder implements Builder<OrderSe
     }
 
     /**
-     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @param returnItemKey value to be set
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class OrderSetReturnShipmentStateActionBuilder implements Builder<OrderSe
     }
 
     /**
-     *  <p>New shipment state of the ReturnItem.</p>
+     *  <p>New shipment state of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
      * @param shipmentState value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class OrderSetReturnShipmentStateActionBuilder implements Builder<OrderSe
     }
 
     /**
-     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @return returnItemId
      */
 
@@ -76,7 +76,7 @@ public class OrderSetReturnShipmentStateActionBuilder implements Builder<OrderSe
     }
 
     /**
-     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @return returnItemKey
      */
 
@@ -86,7 +86,7 @@ public class OrderSetReturnShipmentStateActionBuilder implements Builder<OrderSe
     }
 
     /**
-     *  <p>New shipment state of the ReturnItem.</p>
+     *  <p>New shipment state of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
      * @return shipmentState
      */
 

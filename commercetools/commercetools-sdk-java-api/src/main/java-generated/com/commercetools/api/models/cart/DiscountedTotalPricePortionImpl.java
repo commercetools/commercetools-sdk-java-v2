@@ -44,7 +44,7 @@ public class DiscountedTotalPricePortionImpl implements DiscountedTotalPricePort
     }
 
     /**
-     *  <p>A CartDiscountReference or DirectDiscountReference to the discount applied on the Cart <code>totalPrice</code>.</p>
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> to the discount applied on the Cart <code>totalPrice</code>.</p>
      */
 
     public com.commercetools.api.models.common.Reference getDiscount() {

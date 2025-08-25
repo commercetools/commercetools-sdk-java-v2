@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set MethodInfo Method update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoMethodAction" rel="nofollow">Set MethodInfo Method</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentMethodInfoMethodSetMessageImpl implements PaymentMethodInfoMethodSetMessage, ModelBase {
@@ -142,7 +142,7 @@ public class PaymentMethodInfoMethodSetMessageImpl implements PaymentMethodInfoM
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -158,7 +158,7 @@ public class PaymentMethodInfoMethodSetMessageImpl implements PaymentMethodInfoM
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -174,7 +174,7 @@ public class PaymentMethodInfoMethodSetMessageImpl implements PaymentMethodInfoM
     }
 
     /**
-     *  <p>Payment Method after the Set MethodInfo Method update action.</p>
+     *  <p>Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoMethodAction" rel="nofollow">Set MethodInfo Method</a> update action.</p>
      */
 
     public String getMethod() {
@@ -182,7 +182,7 @@ public class PaymentMethodInfoMethodSetMessageImpl implements PaymentMethodInfoM
     }
 
     /**
-     *  <p>Payment Method before the Set MethodInfo Method update action.</p>
+     *  <p>Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoMethodAction" rel="nofollow">Set MethodInfo Method</a> update action.</p>
      */
 
     public String getOldMethod() {

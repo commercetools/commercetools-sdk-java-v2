@@ -36,7 +36,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ShoppingListLineItemValue {
 
     /**
-     *  <p><code>id</code> of the ShoppingListLineItem.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">ShoppingListLineItem</a>.</p>
      * @return id
      */
     @NotNull
@@ -53,7 +53,7 @@ public interface ShoppingListLineItemValue {
     public LocalizedString getName();
 
     /**
-     *  <p><code>id</code> of the ProductVariant the ShoppingListLineItem refers to.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> the ShoppingListLineItem refers to.</p>
      * @return variantId
      */
     @NotNull
@@ -61,7 +61,7 @@ public interface ShoppingListLineItemValue {
     public Integer getVariantId();
 
     /**
-     *  <p><code>id</code> of the ShoppingListLineItem.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">ShoppingListLineItem</a>.</p>
      * @param id value to be set
      */
 
@@ -75,7 +75,7 @@ public interface ShoppingListLineItemValue {
     public void setName(final LocalizedString name);
 
     /**
-     *  <p><code>id</code> of the ProductVariant the ShoppingListLineItem refers to.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> the ShoppingListLineItem refers to.</p>
      * @param variantId value to be set
      */
 

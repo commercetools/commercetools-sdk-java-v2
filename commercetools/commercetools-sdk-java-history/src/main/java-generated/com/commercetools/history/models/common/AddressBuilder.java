@@ -239,7 +239,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Two-digit country code as per <span>ISO 3166-1 alpha-2</span>.</p>
      * @param country value to be set
      * @return Builder
      */
@@ -488,7 +488,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Two-digit country code as per <span>ISO 3166-1 alpha-2</span>.</p>
      * @return country
      */
 

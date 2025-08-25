@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Images update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTailoringImagesSetMessageImpl implements ProductTailoringImagesSetMessage, ModelBase {
@@ -159,7 +159,7 @@ public class ProductTailoringImagesSetMessageImpl implements ProductTailoringIma
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -175,7 +175,7 @@ public class ProductTailoringImagesSetMessageImpl implements ProductTailoringIma
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -223,7 +223,7 @@ public class ProductTailoringImagesSetMessageImpl implements ProductTailoringIma
     }
 
     /**
-     *  <p>Images on the tailored Product Variant before the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Image> getOldImages() {
@@ -231,7 +231,7 @@ public class ProductTailoringImagesSetMessageImpl implements ProductTailoringIma
     }
 
     /**
-     *  <p>Images on the tailored Product Variant after the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Image> getImages() {

@@ -52,7 +52,7 @@ public class StagedOrderAddPaymentActionImpl implements StagedOrderAddPaymentAct
     }
 
     /**
-     *  <p>Payment to add to the PaymentInfo. Must not be assigned to another Order or active Cart already.</p>
+     *  <p>Payment to add to the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentInfo" rel="nofollow">PaymentInfo</a>. Must not be assigned to another Order or active Cart already.</p>
      */
 
     public com.commercetools.api.models.payment.PaymentResourceIdentifier getPayment() {

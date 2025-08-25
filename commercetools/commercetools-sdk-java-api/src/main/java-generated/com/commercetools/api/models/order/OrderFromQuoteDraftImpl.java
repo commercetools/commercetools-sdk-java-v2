@@ -68,8 +68,8 @@ public class OrderFromQuoteDraftImpl implements OrderFromQuoteDraft, ModelBase {
     }
 
     /**
-     *  <p>ResourceIdentifier to the Quote from which the Order is created.</p>
-     *  <p>The Quote must have the <code>Pending</code> state and must be valid (not past the <code>validTo</code> date).</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Quote from which the Order is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> must have the <code>Pending</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteState" rel="nofollow">state</a> and must be valid (not past the <code>validTo</code> date).</p>
      */
 
     public com.commercetools.api.models.quote.QuoteResourceIdentifier getQuote() {
@@ -77,7 +77,7 @@ public class OrderFromQuoteDraftImpl implements OrderFromQuoteDraft, ModelBase {
     }
 
     /**
-     *  <p><code>version</code> of the Quote from which the Order is created.</p>
+     *  <p><code>version</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> from which the Order is created.</p>
      */
 
     public Long getVersion() {
@@ -85,7 +85,7 @@ public class OrderFromQuoteDraftImpl implements OrderFromQuoteDraft, ModelBase {
     }
 
     /**
-     *  <p>If <code>true</code>, the <code>quoteState</code> of the referenced Quote will be set to <code>Accepted</code>.</p>
+     *  <p>If <code>true</code>, the <code>quoteState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> will be set to <code>Accepted</code>.</p>
      */
 
     public Boolean getQuoteStateToAccepted() {

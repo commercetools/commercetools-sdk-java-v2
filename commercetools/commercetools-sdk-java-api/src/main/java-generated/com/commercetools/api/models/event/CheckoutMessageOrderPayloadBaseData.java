@@ -40,7 +40,7 @@ import jakarta.validation.constraints.NotNull;
 public interface CheckoutMessageOrderPayloadBaseData {
 
     /**
-     *  <p><code>key</code> of the Project where the order would belong to.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> where the order would belong to.</p>
      * @return projectKey
      */
     @NotNull
@@ -48,7 +48,7 @@ public interface CheckoutMessageOrderPayloadBaseData {
     public String getProjectKey();
 
     /**
-     *  <p>The Cart on which the change or action was performed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> on which the change or action was performed.</p>
      * @return cart
      */
     @NotNull
@@ -57,7 +57,7 @@ public interface CheckoutMessageOrderPayloadBaseData {
     public CartReference getCart();
 
     /**
-     *  <p>The Payments on which the change or action was performed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payments</a> on which the change or action was performed.</p>
      * @return payments
      */
     @NotNull
@@ -75,21 +75,21 @@ public interface CheckoutMessageOrderPayloadBaseData {
     public List<ErrorObject> getErrors();
 
     /**
-     *  <p><code>key</code> of the Project where the order would belong to.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> where the order would belong to.</p>
      * @param projectKey value to be set
      */
 
     public void setProjectKey(final String projectKey);
 
     /**
-     *  <p>The Cart on which the change or action was performed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> on which the change or action was performed.</p>
      * @param cart value to be set
      */
 
     public void setCart(final CartReference cart);
 
     /**
-     *  <p>The Payments on which the change or action was performed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payments</a> on which the change or action was performed.</p>
      * @param payments values to be set
      */
 
@@ -97,7 +97,7 @@ public interface CheckoutMessageOrderPayloadBaseData {
     public void setPayments(final PaymentReference... payments);
 
     /**
-     *  <p>The Payments on which the change or action was performed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payments</a> on which the change or action was performed.</p>
      * @param payments values to be set
      */
 

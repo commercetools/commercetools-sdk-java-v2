@@ -25,7 +25,7 @@ public class ApprovalRuleCreatedMessagePayloadBuilder implements Builder<Approva
     private com.commercetools.api.models.approval_rule.ApprovalRule approvalRule;
 
     /**
-     *  <p>The Approval Rule that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">Approval Rule</a> that was created.</p>
      * @param builder function to build the approvalRule value
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class ApprovalRuleCreatedMessagePayloadBuilder implements Builder<Approva
     }
 
     /**
-     *  <p>The Approval Rule that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">Approval Rule</a> that was created.</p>
      * @param builder function to build the approvalRule value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class ApprovalRuleCreatedMessagePayloadBuilder implements Builder<Approva
     }
 
     /**
-     *  <p>The Approval Rule that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">Approval Rule</a> that was created.</p>
      * @param approvalRule value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class ApprovalRuleCreatedMessagePayloadBuilder implements Builder<Approva
     }
 
     /**
-     *  <p>The Approval Rule that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">Approval Rule</a> that was created.</p>
      * @return approvalRule
      */
 

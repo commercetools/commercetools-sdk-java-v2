@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Deleting a Discount Code produces the DiscountCodeDeleted Message.</p>
+ *  <p>Deleting a Discount Code produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeDeletedMessage" rel="nofollow">DiscountCodeDeleted</a> Message.</p>
  *  <p>Deprecated OAuth 2.0 Scope: <code>manage_orders:{projectKey}</code></p>
  *
  * <hr>

@@ -44,7 +44,7 @@ public class ApprovalFlowApprovalImpl implements ApprovalFlowApproval, ModelBase
     }
 
     /**
-     *  <p>Associate who approved the Approval Flow.</p>
+     *  <p>Associate who approved the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      */
 
     public com.commercetools.api.models.business_unit.Associate getApprover() {
@@ -52,7 +52,7 @@ public class ApprovalFlowApprovalImpl implements ApprovalFlowApproval, ModelBase
     }
 
     /**
-     *  <p>Date and time (UTC) the Approval Flow was approved.</p>
+     *  <p>Date and time (UTC) the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> was approved.</p>
      */
 
     public java.time.ZonedDateTime getApprovedAt() {

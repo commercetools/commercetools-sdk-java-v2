@@ -19,9 +19,9 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set Customer on Payments.</li>
- *   <li>Set Customer on Reviews.</li>
- *   <li>Set Customer on Shopping Lists.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetCustomerAction" rel="nofollow">Set Customer</a> on Payments.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewSetCustomerAction" rel="nofollow">Set Customer</a> on Reviews.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListSetCustomerAction" rel="nofollow">Set Customer</a> on Shopping Lists.</li>
  *  </ul>
  *
  * <hr>

@@ -53,7 +53,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
         com.commercetools.api.models.DomainResource<ProductProjection>, com.commercetools.api.models.WithKey {
 
     /**
-     *  <p>Unique identifier of the Product.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return id
      */
     @NotNull
@@ -61,7 +61,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public String getId();
 
     /**
-     *  <p>Current version of the Product.</p>
+     *  <p>Current version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return version
      */
     @NotNull
@@ -69,7 +69,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public Long getVersion();
 
     /**
-     *  <p>User-defined unique identifier of the Product.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return key
      */
 
@@ -93,7 +93,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>The ProductType defining the Attributes of the Product.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a> defining the Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return productType
      */
     @NotNull
@@ -102,7 +102,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public ProductTypeReference getProductType();
 
     /**
-     *  <p>Name of the Product.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return name
      */
     @NotNull
@@ -111,7 +111,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public LocalizedString getName();
 
     /**
-     *  <p>Description of the Product.</p>
+     *  <p>Description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return description
      */
     @Valid
@@ -119,7 +119,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public LocalizedString getDescription();
 
     /**
-     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different locales. Matches the pattern <code>[a-zA-Z0-9_\-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in the Project.</p>
+     *  <p>User-defined identifier used in a deep-link URL for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. Must be unique across a Project, but can be the same for Products in different locales. Matches the pattern <code>[a-zA-Z0-9_\-]{2,256}</code>. For <span>good performance</span>, indexes are provided for the first 15 <code>languages</code> set in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return slug
      */
     @NotNull
@@ -128,7 +128,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public LocalizedString getSlug();
 
     /**
-     *  <p>Categories assigned to the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return categories
      */
     @NotNull
@@ -137,7 +137,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public List<CategoryReference> getCategories();
 
     /**
-     *  <p>Order of Product in Categories.</p>
+     *  <p>Order of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> in <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a>.</p>
      * @return categoryOrderHints
      */
     @Valid
@@ -145,7 +145,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public CategoryOrderHints getCategoryOrderHints();
 
     /**
-     *  <p>Title of the Product displayed in search results.</p>
+     *  <p>Title of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> displayed in search results.</p>
      * @return metaTitle
      */
     @Valid
@@ -153,7 +153,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public LocalizedString getMetaTitle();
 
     /**
-     *  <p>Description of the Product displayed in search results below the meta title.</p>
+     *  <p>Description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> displayed in search results below the meta title.</p>
      * @return metaDescription
      */
     @Valid
@@ -161,7 +161,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public LocalizedString getMetaDescription();
 
     /**
-     *  <p>Keywords that give additional information about the Product to search engines.</p>
+     *  <p>Keywords that give additional information about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> to search engines.</p>
      * @return metaKeywords
      */
     @Valid
@@ -169,7 +169,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public LocalizedString getMetaKeywords();
 
     /**
-     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
+     *  <p>Used by <span>Search Term Suggestions</span>, but is also considered for a <span>full text search</span> in the Product Projection Search API.</p>
      * @return searchKeywords
      */
     @Valid
@@ -185,7 +185,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public Boolean getHasStagedChanges();
 
     /**
-     *  <p><code>true</code> if the Product is published.</p>
+     *  <p><code>true</code> if the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:CurrentStaged" rel="nofollow">published</a>.</p>
      * @return published
      */
 
@@ -193,7 +193,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public Boolean getPublished();
 
     /**
-     *  <p>The Master Variant of the Product.</p>
+     *  <p>The Master Variant of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return masterVariant
      */
     @NotNull
@@ -211,7 +211,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public List<ProductVariant> getVariants();
 
     /**
-     *  <p>The TaxCategory of the Product.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return taxCategory
      */
     @Valid
@@ -219,7 +219,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public TaxCategoryReference getTaxCategory();
 
     /**
-     *  <p>State of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return state
      */
     @Valid
@@ -227,7 +227,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public StateReference getState();
 
     /**
-     *  <p>Review statistics of the Product.</p>
+     *  <p>Review statistics of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return reviewRatingStatistics
      */
     @Valid
@@ -235,7 +235,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public ReviewRatingStatistics getReviewRatingStatistics();
 
     /**
-     *  <p>Indicates whether the Prices of the Product Projection are embedded or standalone. Projecting Prices only works with <code>Embedded</code>, there is currently no support for <code>Standalone</code>.</p>
+     *  <p>Indicates whether the Prices of the Product Projection are <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">embedded</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">standalone</a>. <span>Projecting Prices</span> only works with <code>Embedded</code>, there is currently no support for <code>Standalone</code>.</p>
      * @return priceMode
      */
 
@@ -243,7 +243,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public ProductPriceModeEnum getPriceMode();
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionDraft" rel="nofollow">AttributeDefinition</a>.</p>
      * @return attributes
      */
     @NotNull
@@ -252,21 +252,21 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public List<Attribute> getAttributes();
 
     /**
-     *  <p>Unique identifier of the Product.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     *  <p>Current version of the Product.</p>
+     *  <p>Current version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param version value to be set
      */
 
     public void setVersion(final Long version);
 
     /**
-     *  <p>User-defined unique identifier of the Product.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param key value to be set
      */
 
@@ -287,35 +287,35 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
     /**
-     *  <p>The ProductType defining the Attributes of the Product.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a> defining the Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param productType value to be set
      */
 
     public void setProductType(final ProductTypeReference productType);
 
     /**
-     *  <p>Name of the Product.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param name value to be set
      */
 
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>Description of the Product.</p>
+     *  <p>Description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param description value to be set
      */
 
     public void setDescription(final LocalizedString description);
 
     /**
-     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different locales. Matches the pattern <code>[a-zA-Z0-9_\-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in the Project.</p>
+     *  <p>User-defined identifier used in a deep-link URL for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. Must be unique across a Project, but can be the same for Products in different locales. Matches the pattern <code>[a-zA-Z0-9_\-]{2,256}</code>. For <span>good performance</span>, indexes are provided for the first 15 <code>languages</code> set in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param slug value to be set
      */
 
     public void setSlug(final LocalizedString slug);
 
     /**
-     *  <p>Categories assigned to the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param categories values to be set
      */
 
@@ -323,42 +323,42 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public void setCategories(final CategoryReference... categories);
 
     /**
-     *  <p>Categories assigned to the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param categories values to be set
      */
 
     public void setCategories(final List<CategoryReference> categories);
 
     /**
-     *  <p>Order of Product in Categories.</p>
+     *  <p>Order of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> in <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a>.</p>
      * @param categoryOrderHints value to be set
      */
 
     public void setCategoryOrderHints(final CategoryOrderHints categoryOrderHints);
 
     /**
-     *  <p>Title of the Product displayed in search results.</p>
+     *  <p>Title of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> displayed in search results.</p>
      * @param metaTitle value to be set
      */
 
     public void setMetaTitle(final LocalizedString metaTitle);
 
     /**
-     *  <p>Description of the Product displayed in search results below the meta title.</p>
+     *  <p>Description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> displayed in search results below the meta title.</p>
      * @param metaDescription value to be set
      */
 
     public void setMetaDescription(final LocalizedString metaDescription);
 
     /**
-     *  <p>Keywords that give additional information about the Product to search engines.</p>
+     *  <p>Keywords that give additional information about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> to search engines.</p>
      * @param metaKeywords value to be set
      */
 
     public void setMetaKeywords(final LocalizedString metaKeywords);
 
     /**
-     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
+     *  <p>Used by <span>Search Term Suggestions</span>, but is also considered for a <span>full text search</span> in the Product Projection Search API.</p>
      * @param searchKeywords value to be set
      */
 
@@ -372,14 +372,14 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public void setHasStagedChanges(final Boolean hasStagedChanges);
 
     /**
-     *  <p><code>true</code> if the Product is published.</p>
+     *  <p><code>true</code> if the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:CurrentStaged" rel="nofollow">published</a>.</p>
      * @param published value to be set
      */
 
     public void setPublished(final Boolean published);
 
     /**
-     *  <p>The Master Variant of the Product.</p>
+     *  <p>The Master Variant of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param masterVariant value to be set
      */
 
@@ -401,35 +401,35 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public void setVariants(final List<ProductVariant> variants);
 
     /**
-     *  <p>The TaxCategory of the Product.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param taxCategory value to be set
      */
 
     public void setTaxCategory(final TaxCategoryReference taxCategory);
 
     /**
-     *  <p>State of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param state value to be set
      */
 
     public void setState(final StateReference state);
 
     /**
-     *  <p>Review statistics of the Product.</p>
+     *  <p>Review statistics of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param reviewRatingStatistics value to be set
      */
 
     public void setReviewRatingStatistics(final ReviewRatingStatistics reviewRatingStatistics);
 
     /**
-     *  <p>Indicates whether the Prices of the Product Projection are embedded or standalone. Projecting Prices only works with <code>Embedded</code>, there is currently no support for <code>Standalone</code>.</p>
+     *  <p>Indicates whether the Prices of the Product Projection are <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">embedded</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">standalone</a>. <span>Projecting Prices</span> only works with <code>Embedded</code>, there is currently no support for <code>Standalone</code>.</p>
      * @param priceMode value to be set
      */
 
     public void setPriceMode(final ProductPriceModeEnum priceMode);
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionDraft" rel="nofollow">AttributeDefinition</a>.</p>
      * @param attributes values to be set
      */
 
@@ -437,7 +437,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public void setAttributes(final Attribute... attributes);
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionDraft" rel="nofollow">AttributeDefinition</a>.</p>
      * @param attributes values to be set
      */
 

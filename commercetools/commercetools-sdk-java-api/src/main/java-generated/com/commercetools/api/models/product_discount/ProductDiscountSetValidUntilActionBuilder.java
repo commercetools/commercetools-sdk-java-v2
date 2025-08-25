@@ -26,7 +26,7 @@ public class ProductDiscountSetValidUntilActionBuilder implements Builder<Produc
     private java.time.ZonedDateTime validUntil;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. Take <span>Eventual Consistency</span> into account for calculated undiscounted values.</p>
      * @param validUntil value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class ProductDiscountSetValidUntilActionBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. Take <span>Eventual Consistency</span> into account for calculated undiscounted values.</p>
      * @return validUntil
      */
 

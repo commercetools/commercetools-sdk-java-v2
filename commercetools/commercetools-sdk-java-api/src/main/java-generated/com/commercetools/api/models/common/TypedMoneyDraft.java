@@ -13,10 +13,10 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Base polymorphic money type containing common fields for Money and HighPrecisionMoneyDraft.</p>
+ *  <p>Base polymorphic money type containing common fields for <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">Money</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
  *  <ul>
- *   <li>To set money in cent precision, use Money.</li>
- *   <li>To set money in high precision, use HighPrecisionMoneyDraft.</li>
+ *   <li>To set money in cent precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">Money</a>.</li>
+ *   <li>To set money in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</li>
  *  </ul>
  *
  * <hr>

@@ -42,7 +42,7 @@ public class ParcelChangeValueImpl implements ParcelChangeValue, ModelBase {
     }
 
     /**
-     *  <p><code>id</code> of the Parcel.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      */
 
     public String getId() {

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Represents a Division, a sub-unit of a Company or another Division.</p>
+ *  <p>Represents a <a href="https://docs.commercetools.com/apis/ctp:api:type:Division" rel="nofollow">Division</a>, a sub-unit of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Company" rel="nofollow">Company</a> or another Division.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DivisionBusinessUnitImportImpl implements DivisionBusinessUnitImport, ModelBase {
@@ -110,7 +110,7 @@ public class DivisionBusinessUnitImportImpl implements DivisionBusinessUnitImpor
     }
 
     /**
-     *  <p>User-defined unique identifier. If a BusinessUnit with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      */
 
     public String getKey() {

@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Creates tokens by splitting the <code>text</code> field in SearchKeyword by whitespaces.</p>
+ *  <p>Creates tokens by splitting the <code>text</code> field in <a href="https://docs.commercetools.com/apis/ctp:api:type:SearchKeyword" rel="nofollow">SearchKeyword</a> by whitespaces.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class WhitespaceTokenizerImpl implements WhitespaceTokenizer, ModelBase {

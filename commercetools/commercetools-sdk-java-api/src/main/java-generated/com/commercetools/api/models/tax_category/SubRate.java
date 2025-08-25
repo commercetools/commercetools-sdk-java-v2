@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>It is used to calculate the taxPortions field in a Cart or Order.</p>
+ *  <p>It is used to calculate the <span>taxPortions</span> field in a Cart or Order.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

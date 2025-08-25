@@ -20,7 +20,7 @@ public interface ProductPublishScope extends JsonEnum {
     <p>Publishes a Product that causes the <em>staged</em> projection of the Product to override the <em>current</em> projection. If the Product is published for the first time, the <em>current</em> projection is created. This is the default scope.</p> */
     ProductPublishScope ALL = ProductPublishScopeEnum.ALL;
     /**
-    <p>Publishes the Prices of the Product (only if the Product is already published). All Product Variants' Prices in the <em>staged</em> projection are published into the <em>current</em> projection with the same <code>id</code>. Prices in a <em>staged</em> Product Variant that has no <em>current</em> projection are not published. Prices in a <em>current</em> Product Variant that has no <em>staged</em> projection are unchanged. The <code>hasStagedChanges</code> flag is updated according to whether the <em>staged</em> and <em>current</em> projections still differ after the prices are published.</p> */
+    <p>Publishes the Prices of the Product (only if the Product is already published). All Product Variants' Prices in the <em>staged</em> projection are published into the <em>current</em> projection with the same <code>id</code>. Prices in a <em>staged</em> Product Variant that has no <em>current</em> projection are not published. Prices in a <em>current</em> Product Variant that has no <em>staged</em> projection are unchanged. The <code>hasStagedChanges</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">flag</a> is updated according to whether the <em>staged</em> and <em>current</em> projections still differ after the prices are published.</p> */
     ProductPublishScope PRICES = ProductPublishScopeEnum.PRICES;
 
     /**

@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Defines an allowed value of a CustomFieldEnumType field.</p>
+ *  <p>Defines an allowed value of a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldEnumType" rel="nofollow">CustomFieldEnumType</a> field.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

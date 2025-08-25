@@ -52,7 +52,7 @@ public class AssociateDraftImpl implements AssociateDraft, ModelBase {
     }
 
     /**
-     *  <p>The Customer to be part of the Business Unit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> to be part of the Business Unit.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {

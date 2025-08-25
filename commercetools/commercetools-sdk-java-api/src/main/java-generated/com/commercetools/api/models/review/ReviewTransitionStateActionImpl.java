@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Transition to a new State. This update action produces the Review State Transition Message.</p>
+ *  <p>Transition to a new State. This update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewStateTransitionMessage" rel="nofollow">Review State Transition</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewTransitionStateActionImpl implements ReviewTransitionStateAction, ModelBase {
@@ -56,7 +56,7 @@ public class ReviewTransitionStateActionImpl implements ReviewTransitionStateAct
     }
 
     /**
-     *  <p>Value to set. If there is no State yet, the new State must be an initial State. If the existing State has <code>transitions</code> set, there must be a direct transition to the new State. If <code>transitions</code> is not set, no validation is performed. If the new State does not have the role <code>ReviewIncludedInStatistics</code>, the Review is not taken into account in the ratings statistics of the target.</p>
+     *  <p>Value to set. If there is no State yet, the new State must be an initial State. If the existing State has <code>transitions</code> set, there must be a direct transition to the new State. If <code>transitions</code> is not set, no validation is performed. If the new State does not have the <a href="https://docs.commercetools.com/apis/ctp:api:type:StateRoleEnum" rel="nofollow">role</a> <code>ReviewIncludedInStatistics</code>, the Review is not taken into account in the ratings statistics of the target.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {

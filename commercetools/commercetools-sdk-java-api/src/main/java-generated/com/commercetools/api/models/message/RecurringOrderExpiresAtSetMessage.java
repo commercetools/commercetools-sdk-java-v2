@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Set Expires At update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetExpiresAtAction" rel="nofollow">Set Expires At</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface RecurringOrderExpiresAtSetMessage extends Message {
     String RECURRING_ORDER_EXPIRES_AT_SET = "RecurringOrderExpiresAtSet";
 
     /**
-     *  <p>Expiration date and time of the Recurring Order after the Set Expires At update action.</p>
+     *  <p>Expiration date and time of the Recurring Order after the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetExpiresAtAction" rel="nofollow">Set Expires At</a> update action.</p>
      * @return newExpiresAt
      */
     @NotNull
@@ -55,7 +55,7 @@ public interface RecurringOrderExpiresAtSetMessage extends Message {
     public ZonedDateTime getNewExpiresAt();
 
     /**
-     *  <p>Expiration date and time of the Recurring Order before the Set Expires At update action.</p>
+     *  <p>Expiration date and time of the Recurring Order before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetExpiresAtAction" rel="nofollow">Set Expires At</a> update action.</p>
      * @return oldExpiresAt
      */
     @NotNull
@@ -63,14 +63,14 @@ public interface RecurringOrderExpiresAtSetMessage extends Message {
     public ZonedDateTime getOldExpiresAt();
 
     /**
-     *  <p>Expiration date and time of the Recurring Order after the Set Expires At update action.</p>
+     *  <p>Expiration date and time of the Recurring Order after the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetExpiresAtAction" rel="nofollow">Set Expires At</a> update action.</p>
      * @param newExpiresAt value to be set
      */
 
     public void setNewExpiresAt(final ZonedDateTime newExpiresAt);
 
     /**
-     *  <p>Expiration date and time of the Recurring Order before the Set Expires At update action.</p>
+     *  <p>Expiration date and time of the Recurring Order before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetExpiresAtAction" rel="nofollow">Set Expires At</a> update action.</p>
      * @param oldExpiresAt value to be set
      */
 

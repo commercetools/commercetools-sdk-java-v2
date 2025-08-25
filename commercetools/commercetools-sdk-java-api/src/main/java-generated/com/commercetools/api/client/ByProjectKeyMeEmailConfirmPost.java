@@ -16,8 +16,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>This is the last step in the email verification process of a Customer.</p>
- *  <p>After the email is verified, all email tokens issued previously through the email verification flow are invalidated. This invalidation of tokens is eventually consistent.</p>
+ *  <p>This is the last step in the <span>email verification process of a Customer</span>.</p>
+ *  <p>After the email is verified, all email tokens issued previously through the <span>email verification flow</span> are invalidated. This invalidation of tokens is <span>eventually consistent</span>.</p>
  *
  * <hr>
  * <div class=code-example>

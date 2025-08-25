@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Sets the default billing address from <code>addresses</code>. The action adds the <code>id</code> of the specified Address to the <code>billingAddressIds</code> if not contained already. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
- *  <p>This action generates the CustomerDefaultBillingAddressSet Message.</p>
+ *  <p>This action generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerDefaultBillingAddressSetMessage" rel="nofollow">CustomerDefaultBillingAddressSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,7 +36,7 @@ public interface CustomerSetDefaultBillingAddressAction extends CustomerUpdateAc
     String SET_DEFAULT_BILLING_ADDRESS = "setDefaultBillingAddress";
 
     /**
-     *  <p><code>id</code> of the Address to become the default billing address.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become the default billing address.</p>
      * @return addressId
      */
 
@@ -44,7 +44,7 @@ public interface CustomerSetDefaultBillingAddressAction extends CustomerUpdateAc
     public String getAddressId();
 
     /**
-     *  <p><code>key</code> of the Address to become the default billing address.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become the default billing address.</p>
      * @return addressKey
      */
 
@@ -52,14 +52,14 @@ public interface CustomerSetDefaultBillingAddressAction extends CustomerUpdateAc
     public String getAddressKey();
 
     /**
-     *  <p><code>id</code> of the Address to become the default billing address.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become the default billing address.</p>
      * @param addressId value to be set
      */
 
     public void setAddressId(final String addressId);
 
     /**
-     *  <p><code>key</code> of the Address to become the default billing address.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become the default billing address.</p>
      * @param addressKey value to be set
      */
 

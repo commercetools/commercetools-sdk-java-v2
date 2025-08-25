@@ -17,9 +17,9 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Updates Approval Rules inheritance behavior between Business Units.</p>
+ *  <p>Updates <span>Approval Rules</span> inheritance behavior between Business Units.</p>
  *  <p>Only Business Units of type <code>Division</code> can be changed to <code>ExplicitAndFromParent</code>.</p>
- *  <p>This update action generates a BusinessUnitApprovalRuleModeChanged Message.</p>
+ *  <p>This update action generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitApprovalRuleModeChangedMessage" rel="nofollow">BusinessUnitApprovalRuleModeChanged</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitChangeApprovalRuleModeActionImpl

@@ -16,7 +16,7 @@ import jakarta.validation.constraints.NotNull;
 
 /**
  *  <p>Returned when a language cannot be removed from a Project as it is being used by a Store.</p>
- *  <p>The error is returned as a failed response to the Change Languages update action.</p>
+ *  <p>The error is returned as a failed response to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectChangeLanguagesAction" rel="nofollow">Change Languages</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Unit Type update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitTypeSetMessageImpl implements BusinessUnitTypeSetMessage, ModelBase {
@@ -150,7 +150,7 @@ public class BusinessUnitTypeSetMessageImpl implements BusinessUnitTypeSetMessag
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -166,7 +166,7 @@ public class BusinessUnitTypeSetMessageImpl implements BusinessUnitTypeSetMessag
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -182,7 +182,7 @@ public class BusinessUnitTypeSetMessageImpl implements BusinessUnitTypeSetMessag
     }
 
     /**
-     *  <p>Parent unit of the Business Unit after the Set Unit Type update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> update action.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getParentUnit() {
@@ -190,7 +190,7 @@ public class BusinessUnitTypeSetMessageImpl implements BusinessUnitTypeSetMessag
     }
 
     /**
-     *  <p>Parent unit of the Business Unit before the Set Unit Type update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> update action.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getOldParentUnit() {
@@ -198,7 +198,7 @@ public class BusinessUnitTypeSetMessageImpl implements BusinessUnitTypeSetMessag
     }
 
     /**
-     *  <p>Type of the Business Unit after the Set Unit Type update action.</p>
+     *  <p>Type of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> update action.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitType getUnitType() {
@@ -206,7 +206,7 @@ public class BusinessUnitTypeSetMessageImpl implements BusinessUnitTypeSetMessag
     }
 
     /**
-     *  <p>Type of the Business Unit before the Set Unit Type update action.</p>
+     *  <p>Type of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> update action.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitType getOldUnitType() {

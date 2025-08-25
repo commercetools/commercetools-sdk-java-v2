@@ -17,28 +17,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CartState extends JsonEnum {
 
     /**
-    <p>The default state where a Cart can be updated and ordered. A Customer can have more than one active Cart.</p> */
+    <p>The default state where a Cart can be updated and ordered. A <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> can have more than one active Cart.</p> */
     CartState ACTIVE = CartStateEnum.ACTIVE;
     /**
-    <p>An anonymous Cart was merged into a Customer's Cart on sign-in, and no further operations are allowed on the Cart.</p> */
+    <p>An anonymous Cart was merged into a Customer's Cart on <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/login:POST" rel="nofollow">sign-in</a>, and no further operations are allowed on the Cart.</p> */
     CartState MERGED = CartStateEnum.MERGED;
     /**
-    <p>A Cart was ordered, and no further operations are allowed on the Cart.</p> */
+    <p>A Cart was <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders:POST" rel="nofollow">ordered</a>, and no further operations are allowed on the Cart.</p> */
     CartState ORDERED = CartStateEnum.ORDERED;
     /**
-    <p>A Cart is frozen. Update actions that can change the price of (Custom) Line Items are not allowed.</p>
+    <p>A Cart is <a href="https://docs.commercetools.com/apis/ctp:api:type:FrozenCarts" rel="nofollow">frozen</a>. Update actions that can change the price of (Custom) Line Items are not allowed.</p>
     <ul>
-     <li>Add LineItem</li>
-     <li>Change LineItem Quantity</li>
-     <li>Remove LineItem</li>
-     <li>Set LineItem DistributionChannel</li>
-     <li>Set LineItem SupplyChannel</li>
-     <li>Add CustomLineItem</li>
-     <li>Change CustomLineItem Quantity</li>
-     <li>Remove CustomLineItem</li>
-     <li>Change TaxMode</li>
-     <li>Set LineItem Price</li>
-     <li>Set LineItem TotalPrice</li>
+     <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddLineItemAction" rel="nofollow">Add LineItem</a></li>
+     <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartChangeLineItemQuantityAction" rel="nofollow">Change LineItem Quantity</a></li>
+     <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartRemoveLineItemAction" rel="nofollow">Remove LineItem</a></li>
+     <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetLineItemDistributionChannelAction" rel="nofollow">Set LineItem DistributionChannel</a></li>
+     <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetLineItemSupplyChannelAction" rel="nofollow">Set LineItem SupplyChannel</a></li>
+     <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddCustomLineItemAction" rel="nofollow">Add CustomLineItem</a></li>
+     <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartChangeCustomLineItemQuantityAction" rel="nofollow">Change CustomLineItem Quantity</a></li>
+     <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartRemoveCustomLineItemAction" rel="nofollow">Remove CustomLineItem</a></li>
+     <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartChangeTaxModeAction" rel="nofollow">Change TaxMode</a></li>
+     <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetLineItemPriceAction" rel="nofollow">Set LineItem Price</a></li>
+     <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetLineItemTotalPriceAction" rel="nofollow">Set LineItem TotalPrice</a></li>
     </ul> */
     CartState FROZEN = CartStateEnum.FROZEN;
 

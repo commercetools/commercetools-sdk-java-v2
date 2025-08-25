@@ -73,7 +73,7 @@ public class OrderSearchStringValueImpl implements OrderSearchStringValue, Model
     }
 
     /**
-     *  <p>Possible values for the <code>customType</code> property on simple expressions indicating the data type of the <code>field</code>.</p>
+     *  <p>Possible values for the <code>customType</code> property on <span>simple expressions</span> indicating the data type of the <code>field</code>.</p>
      */
 
     public com.commercetools.api.models.order.OrderSearchCustomType getCustomType() {

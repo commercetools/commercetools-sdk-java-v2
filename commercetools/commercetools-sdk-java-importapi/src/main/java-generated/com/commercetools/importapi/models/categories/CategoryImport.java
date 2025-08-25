@@ -22,7 +22,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Represents the data used to import a Category. Once imported, this data is persisted as a Category in the Project.</p>
+ *  <p>Represents the data used to import a Category. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> in the Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ import jakarta.validation.constraints.NotNull;
 public interface CategoryImport extends ImportResource {
 
     /**
-     *  <p>User-defined unique identifier. If a Category with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @return key
      */
     @NotNull
@@ -75,7 +75,7 @@ public interface CategoryImport extends ImportResource {
     public LocalizedString getDescription();
 
     /**
-     *  <p>Maps to <code>Category.parent</code>. If the referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Category is created.</p>
+     *  <p>Maps to <code>Category.parent</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Category is created.</p>
      * @return parent
      */
     @Valid
@@ -139,7 +139,7 @@ public interface CategoryImport extends ImportResource {
     public Custom getCustom();
 
     /**
-     *  <p>User-defined unique identifier. If a Category with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @param key value to be set
      */
 
@@ -167,7 +167,7 @@ public interface CategoryImport extends ImportResource {
     public void setDescription(final LocalizedString description);
 
     /**
-     *  <p>Maps to <code>Category.parent</code>. If the referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Category is created.</p>
+     *  <p>Maps to <code>Category.parent</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Category is created.</p>
      * @param parent value to be set
      */
 

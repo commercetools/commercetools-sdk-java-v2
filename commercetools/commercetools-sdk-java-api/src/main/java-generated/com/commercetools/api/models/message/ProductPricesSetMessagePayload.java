@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Set Prices update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetPricesAction" rel="nofollow">Set Prices</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -43,7 +43,7 @@ public interface ProductPricesSetMessagePayload extends MessagePayload {
     String PRODUCT_PRICES_SET = "ProductPricesSet";
 
     /**
-     *  <p>Unique identifier of the ProductVariant for which the Price was set.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which the Price was set.</p>
      * @return variantId
      */
     @NotNull
@@ -51,7 +51,7 @@ public interface ProductPricesSetMessagePayload extends MessagePayload {
     public Long getVariantId();
 
     /**
-     *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return prices
      */
     @NotNull
@@ -60,7 +60,7 @@ public interface ProductPricesSetMessagePayload extends MessagePayload {
     public List<Price> getPrices();
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @return staged
      */
     @NotNull
@@ -68,14 +68,14 @@ public interface ProductPricesSetMessagePayload extends MessagePayload {
     public Boolean getStaged();
 
     /**
-     *  <p>Unique identifier of the ProductVariant for which the Price was set.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which the Price was set.</p>
      * @param variantId value to be set
      */
 
     public void setVariantId(final Long variantId);
 
     /**
-     *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param prices values to be set
      */
 
@@ -83,14 +83,14 @@ public interface ProductPricesSetMessagePayload extends MessagePayload {
     public void setPrices(final Price... prices);
 
     /**
-     *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param prices values to be set
      */
 
     public void setPrices(final List<Price> prices);
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @param staged value to be set
      */
 

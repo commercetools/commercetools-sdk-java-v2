@@ -17,8 +17,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Updating the <code>validFrom</code> value generates the StandalonePriceValidFromSet Message.</p>
- *  <p>As the validity dates are part of the price scope and are not allowed to overlap, this update might return the DuplicateStandalonePriceScope and OverlappingStandalonePriceValidity errors, respectively. A Price without validity period does not conflict with a Price defined for a time period.</p>
+ *  <p>Updating the <code>validFrom</code> value generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceValidFromSetMessage" rel="nofollow">StandalonePriceValidFromSet</a> Message.</p>
+ *  <p>As the validity dates are part of the price scope and are not allowed to overlap, this update might return the <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateStandalonePriceScopeError" rel="nofollow">DuplicateStandalonePriceScope</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingStandalonePriceValidityError" rel="nofollow">OverlappingStandalonePriceValidity</a> errors, respectively. A Price without validity period does not conflict with a Price defined for a time period.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceSetValidFromActionImpl implements StandalonePriceSetValidFromAction, ModelBase {

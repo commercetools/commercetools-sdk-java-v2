@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The CloudEventsFormat can be used with any Destination, and the payload is delivered in the <code>JSON Event Format</code>. AzureEventGridDestination offers native support to filter and route CloudEvents.</p>
+ *  <p>The CloudEventsFormat can be used with any <span>Destination</span>, and the payload is delivered in the <code>JSON Event Format</code>. <a href="https://docs.commercetools.com/apis/ctp:api:type:AzureEventGridDestination" rel="nofollow">AzureEventGridDestination</a> offers native support to filter and route CloudEvents.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

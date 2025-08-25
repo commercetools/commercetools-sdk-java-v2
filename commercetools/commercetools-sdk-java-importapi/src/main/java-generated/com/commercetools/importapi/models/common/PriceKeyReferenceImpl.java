@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Used by the Import API to identify an Embedded Price.</p>
+ *  <p>Used by the <span>Import API</span> to identify an Embedded Price.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PriceKeyReferenceImpl implements PriceKeyReference, ModelBase {

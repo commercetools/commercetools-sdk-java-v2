@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated when a Business Unit <code>topLevelUnit</code> is modified due to a hierarchy change after a successful Set Unit Type or Change Parent Unit update action.</p>
+ *  <p>Generated when a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> <code>topLevelUnit</code> is modified due to a hierarchy change after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -48,7 +48,7 @@ public interface BusinessUnitTopLevelUnitSetMessage extends Message {
     String BUSINESS_UNIT_TOP_LEVEL_UNIT_SET = "BusinessUnitTopLevelUnitSet";
 
     /**
-     *  <p>Top-level unit of the Business Unit after the Set Unit Type or Change Parent Unit update action.</p>
+     *  <p>Top-level unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      * @return topLevelUnit
      */
     @NotNull
@@ -57,7 +57,7 @@ public interface BusinessUnitTopLevelUnitSetMessage extends Message {
     public BusinessUnitKeyReference getTopLevelUnit();
 
     /**
-     *  <p>Top-level unit of the Business Unit before the Set Unit Type or Change Parent Unit update action.</p>
+     *  <p>Top-level unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      * @return oldTopLevelUnit
      */
     @NotNull
@@ -66,14 +66,14 @@ public interface BusinessUnitTopLevelUnitSetMessage extends Message {
     public BusinessUnitKeyReference getOldTopLevelUnit();
 
     /**
-     *  <p>Top-level unit of the Business Unit after the Set Unit Type or Change Parent Unit update action.</p>
+     *  <p>Top-level unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      * @param topLevelUnit value to be set
      */
 
     public void setTopLevelUnit(final BusinessUnitKeyReference topLevelUnit);
 
     /**
-     *  <p>Top-level unit of the Business Unit before the Set Unit Type or Change Parent Unit update action.</p>
+     *  <p>Top-level unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      * @param oldTopLevelUnit value to be set
      */
 

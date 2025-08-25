@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Discounts the Product Price by allowing the client to explicitly set a discounted value. Used when setting discounts using an external service.</p>
+ *  <p>Discounts the Product Price by allowing the client to explicitly <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetDiscountedPriceAction" rel="nofollow">set a discounted value</a>. Used when setting discounts using an external service.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDiscountValueExternalImpl implements ProductDiscountValueExternal, ModelBase {

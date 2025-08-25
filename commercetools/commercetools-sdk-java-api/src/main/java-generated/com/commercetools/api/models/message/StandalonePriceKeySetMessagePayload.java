@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Set Key update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +35,7 @@ public interface StandalonePriceKeySetMessagePayload extends MessagePayload {
     String STANDALONE_PRICE_KEY_SET = "StandalonePriceKeySet";
 
     /**
-     *  <p><code>key</code> value of the StandalonePrice after the Set Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
      * @return key
      */
 
@@ -43,7 +43,7 @@ public interface StandalonePriceKeySetMessagePayload extends MessagePayload {
     public String getKey();
 
     /**
-     *  <p><code>key</code> value of the StandalonePrice before the Set Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
      * @return oldKey
      */
 
@@ -51,14 +51,14 @@ public interface StandalonePriceKeySetMessagePayload extends MessagePayload {
     public String getOldKey();
 
     /**
-     *  <p><code>key</code> value of the StandalonePrice after the Set Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p><code>key</code> value of the StandalonePrice before the Set Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
      * @param oldKey value to be set
      */
 

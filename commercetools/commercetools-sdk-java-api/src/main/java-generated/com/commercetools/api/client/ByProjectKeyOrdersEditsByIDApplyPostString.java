@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Applying an OrderEdit produces the OrderEditApplied Message.</p>
+ *  <p>Applying an OrderEdit produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEditAppliedMessage" rel="nofollow">OrderEditApplied</a> Message.</p>
  *
  * <hr>
  * <div class=code-example>

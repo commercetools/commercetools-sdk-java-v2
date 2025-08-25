@@ -32,7 +32,7 @@ import jakarta.validation.constraints.NotNull;
 public interface GraphQLErrorObject {
 
     /**
-     *  <p>One of the error codes that is listed on the Errors page.</p>
+     *  <p>One of the error codes that is listed on the <span>Errors</span> page.</p>
      * @return code
      */
     @NotNull

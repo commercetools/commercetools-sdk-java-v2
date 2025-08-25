@@ -19,8 +19,8 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Add Parcel on Orders.</li>
- *   <li>Add Parcel on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderAddParcelToDeliveryAction" rel="nofollow">Add Parcel</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderAddParcelToDeliveryAction" rel="nofollow">Add Parcel</a> on Staged Orders.</li>
  *  </ul>
  *
  * <hr>
@@ -71,7 +71,7 @@ public interface AddParcelToDeliveryChange extends Change {
     public Parcel getNextValue();
 
     /**
-     *  <p><code>id</code> of the Delivery to which the Parcel was added.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> to which the Parcel was added.</p>
      * @return deliveryId
      */
     @NotNull
@@ -93,7 +93,7 @@ public interface AddParcelToDeliveryChange extends Change {
     public void setNextValue(final Parcel nextValue);
 
     /**
-     *  <p><code>id</code> of the Delivery to which the Parcel was added.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> to which the Parcel was added.</p>
      * @param deliveryId value to be set
      */
 

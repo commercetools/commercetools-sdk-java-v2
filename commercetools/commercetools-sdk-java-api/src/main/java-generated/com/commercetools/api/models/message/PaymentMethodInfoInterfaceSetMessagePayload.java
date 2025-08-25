@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Set MethodInfo Interface update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoInterfaceAction" rel="nofollow">Set MethodInfo Interface</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +35,7 @@ public interface PaymentMethodInfoInterfaceSetMessagePayload extends MessagePayl
     String PAYMENT_METHOD_INFO_INTERFACE_SET = "PaymentMethodInfoInterfaceSet";
 
     /**
-     *  <p>Payment interface of the Payment Method after the Set MethodInfo Interface update action.</p>
+     *  <p>Payment interface of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoInterfaceAction" rel="nofollow">Set MethodInfo Interface</a> update action.</p>
      * @return interface
      */
 
@@ -43,7 +43,7 @@ public interface PaymentMethodInfoInterfaceSetMessagePayload extends MessagePayl
     public String getInterface();
 
     /**
-     *  <p>Payment interface of the Payment Method before the Set MethodInfo Interface update action.</p>
+     *  <p>Payment interface of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoInterfaceAction" rel="nofollow">Set MethodInfo Interface</a> update action.</p>
      * @return oldInterface
      */
 
@@ -51,14 +51,14 @@ public interface PaymentMethodInfoInterfaceSetMessagePayload extends MessagePayl
     public String getOldInterface();
 
     /**
-     *  <p>Payment interface of the Payment Method after the Set MethodInfo Interface update action.</p>
+     *  <p>Payment interface of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoInterfaceAction" rel="nofollow">Set MethodInfo Interface</a> update action.</p>
      * @param _interface value to be set
      */
 
     public void setInterface(final String _interface);
 
     /**
-     *  <p>Payment interface of the Payment Method before the Set MethodInfo Interface update action.</p>
+     *  <p>Payment interface of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoInterfaceAction" rel="nofollow">Set MethodInfo Interface</a> update action.</p>
      * @param oldInterface value to be set
      */
 

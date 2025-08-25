@@ -47,8 +47,8 @@ public class LocalizableTextAttributeImpl implements LocalizableTextAttribute, M
     }
 
     /**
-     *  <p>Required if used for ProductVariantImport. Must not be set if used for ProductVariantPatch.</p>
-     *  <p>Must match <code>name</code> of an AttributeDefinition of the Product Type.</p>
+     *  <p>Required if used for <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantImport" rel="nofollow">ProductVariantImport</a>. Must not be set if used for <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantPatch" rel="nofollow">ProductVariantPatch</a>.</p>
+     *  <p>Must match <code>name</code> of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> of the Product Type.</p>
      */
 
     public String getName() {
@@ -56,7 +56,7 @@ public class LocalizableTextAttributeImpl implements LocalizableTextAttribute, M
     }
 
     /**
-     *  <p>Must match <code>type</code> of an AttributeDefinition of the Product Type. The type is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     *  <p>Must match <code>type</code> of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> of the Product Type. The type is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
      */
 
     public String getType() {

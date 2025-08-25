@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Azure Service Bus can be used as a pull-queue with Queues, or to fan-out notifications with Topics and Subscriptions. To set up a Subscription with Azure Service Bus, first create a queue/topic in the Azure Portal with a Shared Access Policy including the <code>Send</code> permission.</p>
+ *  <p><span>Azure Service Bus</span> can be used as a pull-queue with <span>Queues</span>, or to fan-out notifications with <span>Topics and Subscriptions</span>. To set up a Subscription with Azure Service Bus, first create a queue/topic in the <span>Azure Portal</span> with a Shared Access Policy including the <code>Send</code> permission.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AzureServiceBusDestinationImpl implements AzureServiceBusDestination, ModelBase {

@@ -26,7 +26,7 @@ public class ProductDiscountValueAbsoluteDraftBuilder implements Builder<Product
 
     /**
      *  <p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
-     *  <p>If the array is empty or has multiple values of the same currency, the API returns an InvalidOperation error.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @param money value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class ProductDiscountValueAbsoluteDraftBuilder implements Builder<Product
 
     /**
      *  <p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
-     *  <p>If the array is empty or has multiple values of the same currency, the API returns an InvalidOperation error.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @param money value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class ProductDiscountValueAbsoluteDraftBuilder implements Builder<Product
 
     /**
      *  <p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
-     *  <p>If the array is empty or has multiple values of the same currency, the API returns an InvalidOperation error.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @param money value to be set
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class ProductDiscountValueAbsoluteDraftBuilder implements Builder<Product
 
     /**
      *  <p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
-     *  <p>If the array is empty or has multiple values of the same currency, the API returns an InvalidOperation error.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class ProductDiscountValueAbsoluteDraftBuilder implements Builder<Product
 
     /**
      *  <p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
-     *  <p>If the array is empty or has multiple values of the same currency, the API returns an InvalidOperation error.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -97,7 +97,7 @@ public class ProductDiscountValueAbsoluteDraftBuilder implements Builder<Product
 
     /**
      *  <p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
-     *  <p>If the array is empty or has multiple values of the same currency, the API returns an InvalidOperation error.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -109,7 +109,7 @@ public class ProductDiscountValueAbsoluteDraftBuilder implements Builder<Product
 
     /**
      *  <p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
-     *  <p>If the array is empty or has multiple values of the same currency, the API returns an InvalidOperation error.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -121,7 +121,7 @@ public class ProductDiscountValueAbsoluteDraftBuilder implements Builder<Product
 
     /**
      *  <p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
-     *  <p>If the array is empty or has multiple values of the same currency, the API returns an InvalidOperation error.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @return money
      */
 

@@ -19,7 +19,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when a Product Discount could not be found that could be applied to the Price of a Product Variant.</p>
- *  <p>The error is returned as a failed response to the Get Matching ProductDiscount request.</p>
+ *  <p>The error is returned as a failed response to the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/product-discounts/matching:POST" rel="nofollow">Get Matching ProductDiscount</a> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class NoMatchingProductDiscountFoundErrorImpl implements NoMatchingProductDiscountFoundError, ModelBase {

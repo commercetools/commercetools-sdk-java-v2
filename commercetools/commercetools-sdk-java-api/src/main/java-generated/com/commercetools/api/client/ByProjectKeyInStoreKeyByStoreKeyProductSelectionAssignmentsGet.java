@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Queries Product Selection assignments in a specific Store.</p>
+ *  <p>Queries Product Selection assignments in a specific <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
  *  <p>The response will include duplicate Products whenever more than one active Product Selection of the Store includes a Product. To make clear through which Product Selection a Product is available in the Store the response contains assignments including both the Product and the Product Selection. Only Products of Product Selections that are activated in the Store will be returned.</p>
  *
  * <hr>

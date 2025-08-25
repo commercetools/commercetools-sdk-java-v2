@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after removing a Custom Type from an Address of a Customer using the Set Custom Type in Address update action.</p>
+ *  <p>Generated after removing a Custom Type from an Address of a Customer using the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetAddressCustomTypeAction" rel="nofollow">Set Custom Type in Address</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,7 +42,7 @@ public interface CustomerAddressCustomTypeRemovedMessage extends Message {
     String CUSTOMER_ADDRESS_CUSTOM_TYPE_REMOVED = "CustomerAddressCustomTypeRemoved";
 
     /**
-     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a> that was removed. Absent if there was no previous Custom Type present.</p>
      * @return previousTypeId
      */
 
@@ -50,7 +50,7 @@ public interface CustomerAddressCustomTypeRemovedMessage extends Message {
     public String getPreviousTypeId();
 
     /**
-     *  <p><code>id</code> of the Address from which the Custom Type was removed.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> from which the Custom Type was removed.</p>
      * @return addressId
      */
 
@@ -58,14 +58,14 @@ public interface CustomerAddressCustomTypeRemovedMessage extends Message {
     public String getAddressId();
 
     /**
-     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a> that was removed. Absent if there was no previous Custom Type present.</p>
      * @param previousTypeId value to be set
      */
 
     public void setPreviousTypeId(final String previousTypeId);
 
     /**
-     *  <p><code>id</code> of the Address from which the Custom Type was removed.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> from which the Custom Type was removed.</p>
      * @param addressId value to be set
      */
 

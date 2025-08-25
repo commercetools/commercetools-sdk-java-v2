@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Instead of adding or removing Product Selections individually, you can also change all the Store's Product Selections in one go using this update action. The Store will only contain the Product Selections specified in the request.</p>
+ *  <p>Instead of adding or removing <span>Product Selections</span> individually, you can also change all the Store's Product Selections in one go using this update action. The Store will only contain the Product Selections specified in the request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreSetProductSelectionsActionImpl implements StoreSetProductSelectionsAction, ModelBase {
@@ -55,7 +55,7 @@ public class StoreSetProductSelectionsActionImpl implements StoreSetProductSelec
      *  <p>Value to set.</p>
      *  <ul>
      *   <li>If provided, Product Selections for which <code>active</code> is set to <code>true</code> are available in the Store.</li>
-     *   <li>If not provided or provided as empty array, the action removes all Product Selections from this Store, meaning all Products in the Project are available in this Store.</li>
+     *   <li>If not provided or provided as empty array, the action removes all Product Selections from this Store, meaning all Products in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> are available in this Store.</li>
      *  </ul>
      */
 

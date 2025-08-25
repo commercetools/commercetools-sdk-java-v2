@@ -35,7 +35,7 @@ public interface MyCustomerSetDefaultBillingAddressAction extends MyCustomerUpda
     String SET_DEFAULT_BILLING_ADDRESS = "setDefaultBillingAddress";
 
     /**
-     *  <p><code>id</code> of the Address to become the default billing address.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become the default billing address.</p>
      * @return addressId
      */
 
@@ -43,7 +43,7 @@ public interface MyCustomerSetDefaultBillingAddressAction extends MyCustomerUpda
     public String getAddressId();
 
     /**
-     *  <p><code>key</code> of the Address to become the default billing address.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become the default billing address.</p>
      * @return addressKey
      */
 
@@ -51,14 +51,14 @@ public interface MyCustomerSetDefaultBillingAddressAction extends MyCustomerUpda
     public String getAddressKey();
 
     /**
-     *  <p><code>id</code> of the Address to become the default billing address.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become the default billing address.</p>
      * @param addressId value to be set
      */
 
     public void setAddressId(final String addressId);
 
     /**
-     *  <p><code>key</code> of the Address to become the default billing address.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become the default billing address.</p>
      * @param addressKey value to be set
      */
 

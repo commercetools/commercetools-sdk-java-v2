@@ -36,7 +36,7 @@ import jakarta.validation.constraints.NotNull;
 public interface DiscountedLineItemPortionDraft extends io.vrap.rmf.base.client.Draft<DiscountedLineItemPortionDraft> {
 
     /**
-     *  <p>A CartDiscountReference or DirectDiscountReference for the discount applicable on the Line Item.</p>
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> for the discount applicable on the Line Item.</p>
      * @return discount
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface DiscountedLineItemPortionDraft extends io.vrap.rmf.base.client.
     public TypedMoneyDraft getDiscountedAmount();
 
     /**
-     *  <p>A CartDiscountReference or DirectDiscountReference for the discount applicable on the Line Item.</p>
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> for the discount applicable on the Line Item.</p>
      * @param discount value to be set
      */
 

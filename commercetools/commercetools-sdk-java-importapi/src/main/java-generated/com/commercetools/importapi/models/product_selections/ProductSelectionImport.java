@@ -20,7 +20,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Represents the data used to import a ProductSelection. Once imported, this data is persisted as a ProductSelection in the Project.</p>
+ *  <p>Represents the data used to import a ProductSelection. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">ProductSelection</a> in the Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ProductSelectionImport extends ImportResource {
 
     /**
-     *  <p>User-defined unique identifier. If an ProductSelection with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If an <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">ProductSelection</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @return key
      */
     @NotNull
@@ -79,7 +79,7 @@ public interface ProductSelectionImport extends ImportResource {
     public List<ProductSelectionAssignment> getAssignments();
 
     /**
-     *  <p>User-defined unique identifier. If an ProductSelection with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If an <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">ProductSelection</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @param key value to be set
      */
 

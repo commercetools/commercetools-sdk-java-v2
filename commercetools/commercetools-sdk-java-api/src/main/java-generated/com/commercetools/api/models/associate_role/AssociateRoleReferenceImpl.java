@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Reference to an AssociateRole.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to an <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssociateRoleReferenceImpl implements AssociateRoleReference, ModelBase {
@@ -56,7 +56,7 @@ public class AssociateRoleReferenceImpl implements AssociateRoleReference, Model
     }
 
     /**
-     *  <p>Unique identifier of the referenced AssociateRole.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a>.</p>
      */
 
     public String getId() {
@@ -64,7 +64,7 @@ public class AssociateRoleReferenceImpl implements AssociateRoleReference, Model
     }
 
     /**
-     *  <p>Contains the representation of the expanded AssociateRole. Only present in responses to requests with Reference Expansion for AssociateRole.</p>
+     *  <p>Contains the representation of the expanded AssociateRole. Only present in responses to requests with <span>Reference Expansion</span> for AssociateRole.</p>
      */
 
     public com.commercetools.api.models.associate_role.AssociateRole getObj() {

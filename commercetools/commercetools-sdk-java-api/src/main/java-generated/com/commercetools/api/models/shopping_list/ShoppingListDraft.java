@@ -57,7 +57,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     public LocalizedString getSlug();
 
     /**
-     *  <p>The Customer the ShoppingList should be associated to.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> the ShoppingList should be associated to.</p>
      * @return customer
      */
     @Valid
@@ -81,7 +81,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     public LocalizedString getDescription();
 
     /**
-     *  <p>Identifies ShoppingLists belonging to an anonymous session.</p>
+     *  <p>Identifies ShoppingLists belonging to an <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a>.</p>
      * @return anonymousId
      */
 
@@ -89,7 +89,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     public String getAnonymousId();
 
     /**
-     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the default value configured in the Project is used.</p>
+     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListsConfiguration" rel="nofollow">default value</a> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is used.</p>
      * @return deleteDaysAfterLastModification
      */
 
@@ -113,7 +113,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     public List<TextLineItemDraft> getTextLineItems();
 
     /**
-     *  <p>Assigns the new ShoppingList to the Store.</p>
+     *  <p>Assigns the new ShoppingList to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @return store
      */
     @Valid
@@ -121,7 +121,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     public StoreResourceIdentifier getStore();
 
     /**
-     *  <p>ResourceIdentifier of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the Customer must be an Associate of the Business Unit. Only available for B2B-enabled Projects.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit. Only available for <span>B2B</span>-enabled Projects.</p>
      * @return businessUnit
      */
     @Valid
@@ -151,7 +151,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     public void setSlug(final LocalizedString slug);
 
     /**
-     *  <p>The Customer the ShoppingList should be associated to.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> the ShoppingList should be associated to.</p>
      * @param customer value to be set
      */
 
@@ -172,14 +172,14 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     public void setDescription(final LocalizedString description);
 
     /**
-     *  <p>Identifies ShoppingLists belonging to an anonymous session.</p>
+     *  <p>Identifies ShoppingLists belonging to an <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a>.</p>
      * @param anonymousId value to be set
      */
 
     public void setAnonymousId(final String anonymousId);
 
     /**
-     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the default value configured in the Project is used.</p>
+     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListsConfiguration" rel="nofollow">default value</a> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is used.</p>
      * @param deleteDaysAfterLastModification value to be set
      */
 
@@ -216,14 +216,14 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     public void setTextLineItems(final List<TextLineItemDraft> textLineItems);
 
     /**
-     *  <p>Assigns the new ShoppingList to the Store.</p>
+     *  <p>Assigns the new ShoppingList to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param store value to be set
      */
 
     public void setStore(final StoreResourceIdentifier store);
 
     /**
-     *  <p>ResourceIdentifier of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the Customer must be an Associate of the Business Unit. Only available for B2B-enabled Projects.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param businessUnit value to be set
      */
 

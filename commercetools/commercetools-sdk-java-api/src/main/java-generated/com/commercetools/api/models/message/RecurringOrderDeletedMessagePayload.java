@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Delete RecurringOrder request.</p>
+ *  <p>Generated after a successful <span>Delete RecurringOrder</span> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface RecurringOrderDeletedMessagePayload extends MessagePayload {
     String RECURRING_ORDER_DELETED = "RecurringOrderDeleted";
 
     /**
-     *  <p>RecurringOrder that was deleted.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was deleted.</p>
      * @return recurringOrder
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface RecurringOrderDeletedMessagePayload extends MessagePayload {
     public RecurringOrder getRecurringOrder();
 
     /**
-     *  <p>RecurringOrder that was deleted.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was deleted.</p>
      * @param recurringOrder value to be set
      */
 

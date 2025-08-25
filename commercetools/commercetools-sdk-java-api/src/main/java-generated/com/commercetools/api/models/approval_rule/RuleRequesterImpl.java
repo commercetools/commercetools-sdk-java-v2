@@ -40,7 +40,7 @@ public class RuleRequesterImpl implements RuleRequester, ModelBase {
     }
 
     /**
-     *  <p>The Associate Role that an Associate must hold for the Approval Rule to apply to the Orders they create.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a> that an <a href="https://docs.commercetools.com/apis/ctp:api:type" rel="nofollow">Associate</a> must hold for the Approval Rule to apply to the Orders they create.</p>
      */
 
     public com.commercetools.api.models.associate_role.AssociateRoleKeyReference getAssociateRole() {

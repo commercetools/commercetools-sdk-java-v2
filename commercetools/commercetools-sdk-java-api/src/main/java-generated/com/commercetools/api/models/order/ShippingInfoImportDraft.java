@@ -108,7 +108,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public DiscountedLineItemPriceDraft getDiscountedPrice();
 
     /**
-     *  <p>Indicates if the ShippingMethod referenced is allowed for the Order or not.</p>
+     *  <p>Indicates if the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> referenced is allowed for the Order or not.</p>
      * @return shippingMethodState
      */
 
@@ -180,7 +180,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public void setDiscountedPrice(final DiscountedLineItemPriceDraft discountedPrice);
 
     /**
-     *  <p>Indicates if the ShippingMethod referenced is allowed for the Order or not.</p>
+     *  <p>Indicates if the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> referenced is allowed for the Order or not.</p>
      * @param shippingMethodState value to be set
      */
 

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Apply Staged Changes update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceApplyStagedChangesAction" rel="nofollow">Apply Staged Changes</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceStagedChangesAppliedMessagePayloadImpl
@@ -53,7 +53,7 @@ public class StandalonePriceStagedChangesAppliedMessagePayloadImpl
     }
 
     /**
-     *  <p>Applied changes of the StandalonePrice after the Apply Staged Changes update action.</p>
+     *  <p>Applied changes of the <span>StandalonePrice</span> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceApplyStagedChangesAction" rel="nofollow">Apply Staged Changes</a> update action.</p>
      */
 
     public com.commercetools.api.models.standalone_price.StagedStandalonePrice getStagedChanges() {

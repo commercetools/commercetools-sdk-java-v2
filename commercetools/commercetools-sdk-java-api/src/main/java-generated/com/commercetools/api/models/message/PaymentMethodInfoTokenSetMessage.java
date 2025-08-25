@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Generated after a successful Set MethodInfo Token update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoTokenAction" rel="nofollow">Set MethodInfo Token</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -45,7 +45,7 @@ public interface PaymentMethodInfoTokenSetMessage extends Message {
     String PAYMENT_METHOD_INFO_TOKEN_SET = "PaymentMethodInfoTokenSet";
 
     /**
-     *  <p>Token of the Payment Method after the Set MethodInfo Token update action.</p>
+     *  <p>Token of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoTokenAction" rel="nofollow">Set MethodInfo Token</a> update action.</p>
      * @return token
      */
     @Valid
@@ -53,7 +53,7 @@ public interface PaymentMethodInfoTokenSetMessage extends Message {
     public PaymentMethodToken getToken();
 
     /**
-     *  <p>Token of the Payment Method before the Set MethodInfo Token update action.</p>
+     *  <p>Token of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoTokenAction" rel="nofollow">Set MethodInfo Token</a> update action.</p>
      * @return oldToken
      */
     @Valid
@@ -61,14 +61,14 @@ public interface PaymentMethodInfoTokenSetMessage extends Message {
     public PaymentMethodToken getOldToken();
 
     /**
-     *  <p>Token of the Payment Method after the Set MethodInfo Token update action.</p>
+     *  <p>Token of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoTokenAction" rel="nofollow">Set MethodInfo Token</a> update action.</p>
      * @param token value to be set
      */
 
     public void setToken(final PaymentMethodToken token);
 
     /**
-     *  <p>Token of the Payment Method before the Set MethodInfo Token update action.</p>
+     *  <p>Token of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoTokenAction" rel="nofollow">Set MethodInfo Token</a> update action.</p>
      * @param oldToken value to be set
      */
 

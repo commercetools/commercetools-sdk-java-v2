@@ -20,8 +20,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Deletes a DiscountGroup in the Project. This request generates the DiscountGroupDeleted Message.</p>
- *  <p>If the DiscountGroup is referenced by a CartDiscount, a ReferenceExists error is returned.</p>
+ *  <p>Deletes a DiscountGroup in the Project. This request generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroupDeletedMessage" rel="nofollow">DiscountGroupDeleted</a> Message.</p>
+ *  <p>If the DiscountGroup is referenced by a CartDiscount, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferenceExistsError" rel="nofollow">ReferenceExists</a> error is returned.</p>
  *
  * <hr>
  * <div class=code-example>

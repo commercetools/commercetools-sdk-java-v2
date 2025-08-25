@@ -21,7 +21,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>To update a CartDiscount, you must have permissions for all Stores the CartDiscount is associated with, except when removing a Store.</p>
+ *  <p>To update a CartDiscount, you must have permissions for all Stores the CartDiscount is associated with, except when <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountRemoveStoreAction" rel="nofollow">removing a Store</a>.</p>
  *
  * <hr>
  * <div class=code-example>

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>IDs and references that created the resource. This is present on resources created after 1 February 2019 except for events not tracked.</p>
+ *  <p>IDs and references that created the resource. This is present on resources created after 1 February 2019 except for <span>events not tracked</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CreatedByImpl implements CreatedBy, ModelBase {
@@ -59,7 +59,7 @@ public class CreatedByImpl implements CreatedBy, ModelBase {
     }
 
     /**
-     *  <p><code>id</code> of the API Client which created the resource.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> which created the resource.</p>
      */
 
     public String getClientId() {
@@ -67,7 +67,7 @@ public class CreatedByImpl implements CreatedBy, ModelBase {
     }
 
     /**
-     *  <p>External user ID provided by the <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> scope.</p>
+     *  <p><span>External user ID</span> provided by the <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> <span>scope</span>.</p>
      */
 
     public String getExternalUserId() {
@@ -75,7 +75,7 @@ public class CreatedByImpl implements CreatedBy, ModelBase {
     }
 
     /**
-     *  <p>Indicates the Customer who created the resource using a token from the password flow.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who created the resource using a token from the <span>password flow</span>.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -83,7 +83,7 @@ public class CreatedByImpl implements CreatedBy, ModelBase {
     }
 
     /**
-     *  <p>Indicates the anonymous session during which the resource was created.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a> during which the resource was created.</p>
      */
 
     public String getAnonymousId() {
@@ -91,7 +91,7 @@ public class CreatedByImpl implements CreatedBy, ModelBase {
     }
 
     /**
-     *  <p>Indicates the Customer who created the resource in the context of a Business Unit. Only available for B2B-enabled Project when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who created the resource in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. Only available for <span>B2B</span>-enabled Project when an Associate acts on behalf of a company using the <span>associate endpoints</span>.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getAssociate() {

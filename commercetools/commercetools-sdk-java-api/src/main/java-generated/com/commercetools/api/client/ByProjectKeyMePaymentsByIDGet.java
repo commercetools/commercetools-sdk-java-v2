@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Retrieves a Payment with the provided <code>id</code> for the authenticated Customer or anonymous user.</p>
+ *  <p>Retrieves a <span>Payment</span> with the provided <code>id</code> for the authenticated Customer or anonymous user.</p>
  *
  * <hr>
  * <div class=code-example>

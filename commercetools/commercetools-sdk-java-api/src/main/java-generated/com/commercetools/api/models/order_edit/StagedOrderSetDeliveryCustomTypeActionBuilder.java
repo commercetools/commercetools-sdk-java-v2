@@ -36,7 +36,7 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryId value to be set
      * @return Builder
@@ -48,7 +48,7 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryKey value to be set
      * @return Builder
@@ -60,7 +60,7 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     *  <p>Defines the Type that extends the Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Delivery with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -72,7 +72,7 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     *  <p>Defines the Type that extends the Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Delivery with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -84,7 +84,7 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     *  <p>Defines the Type that extends the Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Delivery with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -96,7 +96,7 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Delivery.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Delivery.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Delivery.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Delivery.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Delivery.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Delivery.</p>
      * @param fields value to be set
      * @return Builder
      */
@@ -132,7 +132,7 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryId
      */
@@ -143,7 +143,7 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryKey
      */
@@ -154,7 +154,7 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     *  <p>Defines the Type that extends the Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Delivery with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
      * @return type
      */
 
@@ -164,7 +164,7 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Delivery.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Delivery.</p>
      * @return fields
      */
 

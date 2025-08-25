@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Changing the parent of a Business Unit generates a BusinessUnitParentChanged Message.</p>
+ *  <p>Changing the parent of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitParentChangedMessage" rel="nofollow">BusinessUnitParentChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface MyBusinessUnitChangeParentUnitAction extends MyBusinessUnitUpda
     String CHANGE_PARENT_UNIT = "changeParentUnit";
 
     /**
-     *  <p>New parent unit of the Business Unit. The new parent unit must have the same top-level unit as the old parent unit.</p>
+     *  <p>New parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. The new parent unit must have the same top-level unit as the old parent unit.</p>
      * @return parentUnit
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface MyBusinessUnitChangeParentUnitAction extends MyBusinessUnitUpda
     public BusinessUnitResourceIdentifier getParentUnit();
 
     /**
-     *  <p>New parent unit of the Business Unit. The new parent unit must have the same top-level unit as the old parent unit.</p>
+     *  <p>New parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. The new parent unit must have the same top-level unit as the old parent unit.</p>
      * @param parentUnit value to be set
      */
 

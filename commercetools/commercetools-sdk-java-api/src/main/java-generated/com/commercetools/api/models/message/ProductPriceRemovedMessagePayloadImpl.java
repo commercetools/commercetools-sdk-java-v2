@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Remove Price update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemovePriceAction" rel="nofollow">Remove Price</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPriceRemovedMessagePayloadImpl implements ProductPriceRemovedMessagePayload, ModelBase {
@@ -59,7 +59,7 @@ public class ProductPriceRemovedMessagePayloadImpl implements ProductPriceRemove
     }
 
     /**
-     *  <p>Unique identifier of the ProductVariant for which the Price was removed.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which the Price was removed.</p>
      */
 
     public Long getVariantId() {
@@ -67,7 +67,7 @@ public class ProductPriceRemovedMessagePayloadImpl implements ProductPriceRemove
     }
 
     /**
-     *  <p>The Embedded Price that was removed from the ProductVariant.</p>
+     *  <p>The Embedded Price that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      */
 
     public com.commercetools.api.models.common.Price getPrice() {
@@ -75,7 +75,7 @@ public class ProductPriceRemovedMessagePayloadImpl implements ProductPriceRemove
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      */
 
     public Boolean getStaged() {

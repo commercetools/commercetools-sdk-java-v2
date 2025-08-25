@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Change Price update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Price</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -43,7 +43,7 @@ public interface ProductPriceChangedMessagePayload extends MessagePayload {
     String PRODUCT_PRICE_CHANGED = "ProductPriceChanged";
 
     /**
-     *  <p>Unique identifier of the ProductVariant for which the Price was changed.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which the Price was changed.</p>
      * @return variantId
      */
     @NotNull
@@ -51,7 +51,7 @@ public interface ProductPriceChangedMessagePayload extends MessagePayload {
     public Long getVariantId();
 
     /**
-     *  <p>The current Embedded Price before the Change Embedded Price update action.</p>
+     *  <p>The current Embedded Price before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Embedded Price</a> update action.</p>
      * @return oldPrice
      */
     @NotNull
@@ -60,7 +60,7 @@ public interface ProductPriceChangedMessagePayload extends MessagePayload {
     public Price getOldPrice();
 
     /**
-     *  <p>The Embedded Price after the Change Embedded Price update action.</p>
+     *  <p>The Embedded Price after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Embedded Price</a> update action.</p>
      * @return newPrice
      */
     @NotNull
@@ -69,7 +69,7 @@ public interface ProductPriceChangedMessagePayload extends MessagePayload {
     public Price getNewPrice();
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @return staged
      */
     @NotNull
@@ -77,7 +77,7 @@ public interface ProductPriceChangedMessagePayload extends MessagePayload {
     public Boolean getStaged();
 
     /**
-     *  <p>The staged Embedded Price before the Change Embedded Price update action.</p>
+     *  <p>The staged Embedded Price before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Embedded Price</a> update action.</p>
      * @return oldStagedPrice
      */
     @Valid
@@ -85,35 +85,35 @@ public interface ProductPriceChangedMessagePayload extends MessagePayload {
     public Price getOldStagedPrice();
 
     /**
-     *  <p>Unique identifier of the ProductVariant for which the Price was changed.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which the Price was changed.</p>
      * @param variantId value to be set
      */
 
     public void setVariantId(final Long variantId);
 
     /**
-     *  <p>The current Embedded Price before the Change Embedded Price update action.</p>
+     *  <p>The current Embedded Price before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Embedded Price</a> update action.</p>
      * @param oldPrice value to be set
      */
 
     public void setOldPrice(final Price oldPrice);
 
     /**
-     *  <p>The Embedded Price after the Change Embedded Price update action.</p>
+     *  <p>The Embedded Price after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Embedded Price</a> update action.</p>
      * @param newPrice value to be set
      */
 
     public void setNewPrice(final Price newPrice);
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @param staged value to be set
      */
 
     public void setStaged(final Boolean staged);
 
     /**
-     *  <p>The staged Embedded Price before the Change Embedded Price update action.</p>
+     *  <p>The staged Embedded Price before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Embedded Price</a> update action.</p>
      * @param oldStagedPrice value to be set
      */
 

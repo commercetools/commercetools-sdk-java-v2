@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint. For more information, see Requesting an access token using an external OAuth 2.0 server.</p>
+ *  <p>Represents a RFC 7662 compliant <span>OAuth 2.0 Token Introspection</span> endpoint. For more information, see <span>Requesting an access token using an external OAuth 2.0 server</span>.</p>
  *  <p>You can only configure <strong>one</strong> external OAuth 2.0 endpoint per Project. To authenticate using multiple external services (such as social network logins), use a middle layer authentication service.</p>
  *
  * <hr>

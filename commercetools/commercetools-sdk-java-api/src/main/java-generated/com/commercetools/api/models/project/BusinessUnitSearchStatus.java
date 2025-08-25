@@ -11,7 +11,7 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Specifies the status of the Business Unit Search index. You can change the status using the Change Business Unit Search Status update action.</p>
+ *  <p>Specifies the status of the <span>Business Unit Search</span> index. You can change the status using the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectChangeBusinessUnitSearchStatusAction" rel="nofollow">Change Business Unit Search Status</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface BusinessUnitSearchStatus extends JsonEnum {

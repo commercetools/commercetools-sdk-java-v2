@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Set Associates update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetAssociatesAction" rel="nofollow">Set Associates</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface BusinessUnitAssociatesSetMessagePayload extends MessagePayload 
     String BUSINESS_UNIT_ASSOCIATES_SET = "BusinessUnitAssociatesSet";
 
     /**
-     *  <p>The list of Associates that was updated on the Business Unit.</p>
+     *  <p>The list of <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associates</a> that was updated on the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return associates
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface BusinessUnitAssociatesSetMessagePayload extends MessagePayload 
     public List<Associate> getAssociates();
 
     /**
-     *  <p>The list of Associates that was updated on the Business Unit.</p>
+     *  <p>The list of <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associates</a> that was updated on the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param associates values to be set
      */
 
@@ -58,7 +58,7 @@ public interface BusinessUnitAssociatesSetMessagePayload extends MessagePayload 
     public void setAssociates(final Associate... associates);
 
     /**
-     *  <p>The list of Associates that was updated on the Business Unit.</p>
+     *  <p>The list of <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associates</a> that was updated on the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param associates values to be set
      */
 

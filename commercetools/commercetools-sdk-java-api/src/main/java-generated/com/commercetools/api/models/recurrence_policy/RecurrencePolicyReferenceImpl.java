@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Reference to a RecurrencePolicy.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RecurrencePolicyReferenceImpl implements RecurrencePolicyReference, ModelBase {
@@ -56,7 +56,7 @@ public class RecurrencePolicyReferenceImpl implements RecurrencePolicyReference,
     }
 
     /**
-     *  <p>Unique identifier of the referenced RecurrencePolicy.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a>.</p>
      */
 
     public String getId() {
@@ -64,7 +64,7 @@ public class RecurrencePolicyReferenceImpl implements RecurrencePolicyReference,
     }
 
     /**
-     *  <p>Contains the representation of the expanded RecurrencePolicy. Only present in responses to requests with Reference Expansion for RecurrencePolicies.</p>
+     *  <p>Contains the representation of the expanded RecurrencePolicy. Only present in responses to requests with <span>Reference Expansion</span> for RecurrencePolicies.</p>
      */
 
     public com.commercetools.api.models.recurrence_policy.RecurrencePolicy getObj() {

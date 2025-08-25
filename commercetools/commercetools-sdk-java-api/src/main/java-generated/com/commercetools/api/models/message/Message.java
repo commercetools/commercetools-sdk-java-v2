@@ -21,7 +21,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Base representation of a Message containing common fields to all Message Types.</p>
+ *  <p>Base representation of a Message containing common fields to all <span>Message Types</span>.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern
@@ -103,7 +103,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     public Long getSequenceNumber();
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
     @NotNull
@@ -120,7 +120,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     public Long getResourceVersion();
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      * @return type
      */
     @NotNull
@@ -185,7 +185,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     public void setSequenceNumber(final Long sequenceNumber);
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      */
 

@@ -17,8 +17,8 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set Description on Tax Categories.</li>
- *   <li>Set Description on Zones.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategorySetDescriptionAction" rel="nofollow">Set Description</a> on Tax Categories.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ZoneSetDescriptionAction" rel="nofollow">Set Description</a> on Zones.</li>
  *  </ul>
  *
  * <hr>

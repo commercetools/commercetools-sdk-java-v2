@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Discounts the CartDiscountTarget relative to its price.</p>
+ *  <p>Discounts the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountTarget" rel="nofollow">CartDiscountTarget</a> relative to its price.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

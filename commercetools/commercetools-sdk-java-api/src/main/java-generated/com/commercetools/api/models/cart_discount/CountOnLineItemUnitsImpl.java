@@ -63,7 +63,7 @@ public class CountOnLineItemUnitsImpl implements CountOnLineItemUnits, ModelBase
     }
 
     /**
-     *  <p>Valid LineItem predicate that determines the units participating in the Discount.</p>
+     *  <p>Valid <span>LineItem predicate</span> that determines the units participating in the Discount.</p>
      */
 
     public String getPredicate() {

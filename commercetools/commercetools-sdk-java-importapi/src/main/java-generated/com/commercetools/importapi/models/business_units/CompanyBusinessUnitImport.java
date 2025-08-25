@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Represents a Company, the top-level of a business.</p>
+ *  <p>Represents a <a href="https://docs.commercetools.com/apis/ctp:api:type:Company" rel="nofollow">Company</a>, the top-level of a business.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

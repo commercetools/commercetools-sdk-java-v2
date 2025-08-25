@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Changes the owner of a Quote Request to a different Customer. Customer Group is not updated. This update action produces the Quote Request Customer Changed Message.</p>
+ *  <p>Changes the owner of a Quote Request to a different Customer. Customer Group is not updated. This update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestCustomerChangedMessage" rel="nofollow">Quote Request Customer Changed</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class QuoteRequestChangeCustomerActionImpl implements QuoteRequestChangeCustomerAction, ModelBase {

@@ -19,7 +19,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Represents the data used to import a Type. Once imported, this data is persisted as a Type in the Project.</p>
+ *  <p>Represents the data used to import a Type. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> in the Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ import jakarta.validation.constraints.NotNull;
 public interface TypeImport extends ImportResource {
 
     /**
-     *  <p>User-defined unique identifier for the Type. If a Type with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier for the Type. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @return key
      */
     @NotNull
@@ -79,7 +79,7 @@ public interface TypeImport extends ImportResource {
     public List<FieldDefinition> getFieldDefinitions();
 
     /**
-     *  <p>User-defined unique identifier for the Type. If a Type with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier for the Type. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @param key value to be set
      */
 

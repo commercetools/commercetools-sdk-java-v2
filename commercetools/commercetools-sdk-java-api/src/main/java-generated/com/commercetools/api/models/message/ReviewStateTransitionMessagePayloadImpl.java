@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Transition State update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewStateTransitionMessagePayloadImpl implements ReviewStateTransitionMessagePayload, ModelBase {
@@ -72,7 +72,7 @@ public class ReviewStateTransitionMessagePayloadImpl implements ReviewStateTrans
     }
 
     /**
-     *  <p>State of the Review before the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getOldState() {
@@ -80,7 +80,7 @@ public class ReviewStateTransitionMessagePayloadImpl implements ReviewStateTrans
     }
 
     /**
-     *  <p>State of the Review after the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getNewState() {
@@ -88,7 +88,7 @@ public class ReviewStateTransitionMessagePayloadImpl implements ReviewStateTrans
     }
 
     /**
-     *  <p>Whether the old Review was taken into account in the rating statistics of the target before the state transition.</p>
+     *  <p>Whether the old <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> was taken into account in the rating statistics of the target before the state transition.</p>
      */
 
     public Boolean getOldIncludedInStatistics() {
@@ -96,7 +96,7 @@ public class ReviewStateTransitionMessagePayloadImpl implements ReviewStateTrans
     }
 
     /**
-     *  <p>Whether the new Review was taken into account in the rating statistics of the target after the state transition.</p>
+     *  <p>Whether the new <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> was taken into account in the rating statistics of the target after the state transition.</p>
      */
 
     public Boolean getNewIncludedInStatistics() {
@@ -104,7 +104,7 @@ public class ReviewStateTransitionMessagePayloadImpl implements ReviewStateTrans
     }
 
     /**
-     *  <p>Reference to the resource that the Review belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource that the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> belongs to.</p>
      */
 
     public com.commercetools.api.models.common.Reference getTarget() {
@@ -112,7 +112,7 @@ public class ReviewStateTransitionMessagePayloadImpl implements ReviewStateTrans
     }
 
     /**
-     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     *  <p>Whether <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition validations were turned off during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      */
 
     public Boolean getForce() {

@@ -39,7 +39,7 @@ public interface ApprovalFlowSetCustomTypeAction extends ApprovalFlowUpdateActio
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
-     *  <p>Defines the Type that extends the ApprovalFlow with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ApprovalFlow.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the ApprovalFlow with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the ApprovalFlow.</p>
      * @return type
      */
     @Valid
@@ -47,7 +47,7 @@ public interface ApprovalFlowSetCustomTypeAction extends ApprovalFlowUpdateActio
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the ApprovalFlow.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the ApprovalFlow.</p>
      * @return fields
      */
     @Valid
@@ -55,14 +55,14 @@ public interface ApprovalFlowSetCustomTypeAction extends ApprovalFlowUpdateActio
     public FieldContainer getFields();
 
     /**
-     *  <p>Defines the Type that extends the ApprovalFlow with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ApprovalFlow.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the ApprovalFlow with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the ApprovalFlow.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields fields for the ApprovalFlow.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the ApprovalFlow.</p>
      * @param fields value to be set
      */
 

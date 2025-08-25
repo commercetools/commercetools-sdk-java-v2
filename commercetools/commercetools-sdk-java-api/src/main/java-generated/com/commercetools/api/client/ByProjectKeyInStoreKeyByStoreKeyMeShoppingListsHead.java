@@ -20,12 +20,12 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if one or more ShoppingLists exist for the provided query predicate for the authenticated Customer or anonymous user in a Store. Returns <code>200 OK</code> status if successful.</p>
- *  <p>A Not Found error is returned in the following scenarios:</p>
+ *  <p>Checks if one or more ShoppingLists exist for the provided query predicate for the authenticated Customer or anonymous user in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. Returns <code>200 OK</code> status if successful.</p>
+ *  <p>A <span>Not Found</span> error is returned in the following scenarios:</p>
  *  <ul>
  *   <li>If no ShoppingLists exist for the provided query predicate in a Store.</li>
  *   <li>If a ShoppingList matches the query predicate but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store.</li>
- *   <li>If a ShoppingList exists in a Store but does not contain either an <code>anonymousId</code> that matches the anonymous_id:{id} scope, or a <code>customer</code> with <code>id</code> value that matches the customer:{id} scope.</li>
+ *   <li>If a ShoppingList exists in a Store but does not contain either an <code>anonymousId</code> that matches the <span>anonymous_id:{id}</span> scope, or a <code>customer</code> with <code>id</code> value that matches the <span>customer:{id}</span> scope.</li>
  *  </ul>
  *
  * <hr>

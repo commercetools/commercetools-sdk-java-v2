@@ -22,7 +22,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>A MyShoppingListDraft is the object submitted as payload to the Create MyShoppingList request. The <code>customer</code> field of ShoppingList is automatically set with a password flow token. The <code>anonymousId</code> is automatically set with a token for an anonymous session. The <code>key</code> and <code>slug</code> fields can not be set.</p>
+ *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:MyShoppingListDraft" rel="nofollow">MyShoppingListDraft</a> is the object submitted as payload to the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/shopping-lists:POST" rel="nofollow">Create MyShoppingList request</a>. The <code>customer</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a> is automatically set with a <span>password flow token</span>. The <code>anonymousId</code> is automatically set with a <span>token for an anonymous session</span>. The <code>key</code> and <code>slug</code> fields can not be set.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
         io.vrap.rmf.base.client.Draft<MyShoppingListDraft> {
 
     /**
-     *  <p>Name of the ShoppingList.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @return name
      */
     @NotNull
@@ -57,7 +57,7 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
     public LocalizedString getDescription();
 
     /**
-     *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">Line Items</a> (containing Products) to add to the ShoppingList.</p>
      * @return lineItems
      */
     @Valid
@@ -65,7 +65,7 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
     public List<ShoppingListLineItemDraft> getLineItems();
 
     /**
-     *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">Line Items</a> (containing text values) to add to the ShoppingList.</p>
      * @return textLineItems
      */
     @Valid
@@ -81,7 +81,7 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the default value configured in the Project is used.</p>
+     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListsConfiguration" rel="nofollow">default value</a> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is used.</p>
      * @return deleteDaysAfterLastModification
      */
 
@@ -89,7 +89,7 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
     public Long getDeleteDaysAfterLastModification();
 
     /**
-     *  <p>Assigns the new ShoppingList to the Store. The Store assignment can not be modified.</p>
+     *  <p>Assigns the new ShoppingList to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. The Store assignment can not be modified.</p>
      * @return store
      */
     @Valid
@@ -97,7 +97,7 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
     public StoreResourceIdentifier getStore();
 
     /**
-     *  <p>Name of the ShoppingList.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param name value to be set
      */
 
@@ -111,7 +111,7 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
     public void setDescription(final LocalizedString description);
 
     /**
-     *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">Line Items</a> (containing Products) to add to the ShoppingList.</p>
      * @param lineItems values to be set
      */
 
@@ -119,14 +119,14 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
     public void setLineItems(final ShoppingListLineItemDraft... lineItems);
 
     /**
-     *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">Line Items</a> (containing Products) to add to the ShoppingList.</p>
      * @param lineItems values to be set
      */
 
     public void setLineItems(final List<ShoppingListLineItemDraft> lineItems);
 
     /**
-     *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">Line Items</a> (containing text values) to add to the ShoppingList.</p>
      * @param textLineItems values to be set
      */
 
@@ -134,7 +134,7 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
     public void setTextLineItems(final TextLineItemDraft... textLineItems);
 
     /**
-     *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">Line Items</a> (containing text values) to add to the ShoppingList.</p>
      * @param textLineItems values to be set
      */
 
@@ -148,14 +148,14 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
     public void setCustom(final CustomFieldsDraft custom);
 
     /**
-     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the default value configured in the Project is used.</p>
+     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListsConfiguration" rel="nofollow">default value</a> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is used.</p>
      * @param deleteDaysAfterLastModification value to be set
      */
 
     public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification);
 
     /**
-     *  <p>Assigns the new ShoppingList to the Store. The Store assignment can not be modified.</p>
+     *  <p>Assigns the new ShoppingList to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. The Store assignment can not be modified.</p>
      * @param store value to be set
      */
 

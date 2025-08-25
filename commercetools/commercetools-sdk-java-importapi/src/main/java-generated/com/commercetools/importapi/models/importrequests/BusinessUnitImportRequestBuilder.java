@@ -25,7 +25,7 @@ public class BusinessUnitImportRequestBuilder implements Builder<BusinessUnitImp
     private java.util.List<com.commercetools.importapi.models.business_units.BusinessUnitImport> resources;
 
     /**
-     *  <p>The Business Unit import resources of this request. Can contain CompanyBusinessUnitImport or DivisionBusinessUnitImport.</p>
+     *  <p>The Business Unit import resources of this request. Can contain <a href="https://docs.commercetools.com/apis/ctp:import:type:CompanyBusinessUnitImport" rel="nofollow">CompanyBusinessUnitImport</a> or <a href="https://docs.commercetools.com/apis/ctp:import:type:DivisionBusinessUnitImport" rel="nofollow">DivisionBusinessUnitImport</a>.</p>
      * @param resources value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class BusinessUnitImportRequestBuilder implements Builder<BusinessUnitImp
     }
 
     /**
-     *  <p>The Business Unit import resources of this request. Can contain CompanyBusinessUnitImport or DivisionBusinessUnitImport.</p>
+     *  <p>The Business Unit import resources of this request. Can contain <a href="https://docs.commercetools.com/apis/ctp:import:type:CompanyBusinessUnitImport" rel="nofollow">CompanyBusinessUnitImport</a> or <a href="https://docs.commercetools.com/apis/ctp:import:type:DivisionBusinessUnitImport" rel="nofollow">DivisionBusinessUnitImport</a>.</p>
      * @param resources value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class BusinessUnitImportRequestBuilder implements Builder<BusinessUnitImp
     }
 
     /**
-     *  <p>The Business Unit import resources of this request. Can contain CompanyBusinessUnitImport or DivisionBusinessUnitImport.</p>
+     *  <p>The Business Unit import resources of this request. Can contain <a href="https://docs.commercetools.com/apis/ctp:import:type:CompanyBusinessUnitImport" rel="nofollow">CompanyBusinessUnitImport</a> or <a href="https://docs.commercetools.com/apis/ctp:import:type:DivisionBusinessUnitImport" rel="nofollow">DivisionBusinessUnitImport</a>.</p>
      * @param resources value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class BusinessUnitImportRequestBuilder implements Builder<BusinessUnitImp
     }
 
     /**
-     *  <p>The Business Unit import resources of this request. Can contain CompanyBusinessUnitImport or DivisionBusinessUnitImport.</p>
+     *  <p>The Business Unit import resources of this request. Can contain <a href="https://docs.commercetools.com/apis/ctp:import:type:CompanyBusinessUnitImport" rel="nofollow">CompanyBusinessUnitImport</a> or <a href="https://docs.commercetools.com/apis/ctp:import:type:DivisionBusinessUnitImport" rel="nofollow">DivisionBusinessUnitImport</a>.</p>
      * @param builder function to build the resources value
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class BusinessUnitImportRequestBuilder implements Builder<BusinessUnitImp
     }
 
     /**
-     *  <p>The Business Unit import resources of this request. Can contain CompanyBusinessUnitImport or DivisionBusinessUnitImport.</p>
+     *  <p>The Business Unit import resources of this request. Can contain <a href="https://docs.commercetools.com/apis/ctp:import:type:CompanyBusinessUnitImport" rel="nofollow">CompanyBusinessUnitImport</a> or <a href="https://docs.commercetools.com/apis/ctp:import:type:DivisionBusinessUnitImport" rel="nofollow">DivisionBusinessUnitImport</a>.</p>
      * @param builder function to build the resources value
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class BusinessUnitImportRequestBuilder implements Builder<BusinessUnitImp
     }
 
     /**
-     *  <p>The Business Unit import resources of this request. Can contain CompanyBusinessUnitImport or DivisionBusinessUnitImport.</p>
+     *  <p>The Business Unit import resources of this request. Can contain <a href="https://docs.commercetools.com/apis/ctp:import:type:CompanyBusinessUnitImport" rel="nofollow">CompanyBusinessUnitImport</a> or <a href="https://docs.commercetools.com/apis/ctp:import:type:DivisionBusinessUnitImport" rel="nofollow">DivisionBusinessUnitImport</a>.</p>
      * @return resources
      */
 

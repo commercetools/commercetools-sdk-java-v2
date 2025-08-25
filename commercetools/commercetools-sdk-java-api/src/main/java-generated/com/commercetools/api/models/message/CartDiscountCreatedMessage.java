@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Create CartDiscount request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/cart-discounts:POST" rel="nofollow">Create CartDiscount</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface CartDiscountCreatedMessage extends Message {
     String CART_DISCOUNT_CREATED = "CartDiscountCreated";
 
     /**
-     *  <p>The Cart Discount that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discount</a> that was created.</p>
      * @return cartDiscount
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface CartDiscountCreatedMessage extends Message {
     public CartDiscount getCartDiscount();
 
     /**
-     *  <p>The Cart Discount that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discount</a> that was created.</p>
      * @param cartDiscount value to be set
      */
 

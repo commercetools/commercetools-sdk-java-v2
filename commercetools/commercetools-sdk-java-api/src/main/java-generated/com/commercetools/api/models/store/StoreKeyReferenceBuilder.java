@@ -24,7 +24,7 @@ public class StoreKeyReferenceBuilder implements Builder<StoreKeyReference> {
     private String key;
 
     /**
-     *  <p>Unique and immutable key of the referenced Store.</p>
+     *  <p>Unique and immutable key of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class StoreKeyReferenceBuilder implements Builder<StoreKeyReference> {
     }
 
     /**
-     *  <p>Unique and immutable key of the referenced Store.</p>
+     *  <p>Unique and immutable key of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @return key
      */
 

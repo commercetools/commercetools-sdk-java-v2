@@ -32,7 +32,7 @@ import jakarta.validation.constraints.NotNull;
 public interface Attribution {
 
     /**
-     *  <p><code>id</code> of the API Client that created or modified the resource.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> that created or modified the resource.</p>
      * @return clientId
      */
 
@@ -48,7 +48,7 @@ public interface Attribution {
     public AttributionSource getSource();
 
     /**
-     *  <p><code>id</code> of the API Client that created or modified the resource.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> that created or modified the resource.</p>
      * @param clientId value to be set
      */
 

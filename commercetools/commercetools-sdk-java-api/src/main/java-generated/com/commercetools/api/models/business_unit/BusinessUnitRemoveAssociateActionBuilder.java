@@ -25,7 +25,7 @@ public class BusinessUnitRemoveAssociateActionBuilder implements Builder<Busines
     private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
 
     /**
-     *  <p>Associate to remove.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> to remove.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class BusinessUnitRemoveAssociateActionBuilder implements Builder<Busines
     }
 
     /**
-     *  <p>Associate to remove.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> to remove.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class BusinessUnitRemoveAssociateActionBuilder implements Builder<Busines
     }
 
     /**
-     *  <p>Associate to remove.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> to remove.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class BusinessUnitRemoveAssociateActionBuilder implements Builder<Busines
     }
 
     /**
-     *  <p>Associate to remove.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> to remove.</p>
      * @return customer
      */
 

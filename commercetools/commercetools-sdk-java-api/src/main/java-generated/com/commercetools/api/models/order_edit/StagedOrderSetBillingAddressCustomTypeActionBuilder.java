@@ -31,7 +31,7 @@ public class StagedOrderSetBillingAddressCustomTypeActionBuilder
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>Defines the Type that extends the <code>billingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>billingAddress</code> with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -43,7 +43,7 @@ public class StagedOrderSetBillingAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Defines the Type that extends the <code>billingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>billingAddress</code> with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -55,7 +55,7 @@ public class StagedOrderSetBillingAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Defines the Type that extends the <code>billingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>billingAddress</code> with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class StagedOrderSetBillingAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <code>billingAddress</code>.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class StagedOrderSetBillingAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <code>billingAddress</code>.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -91,7 +91,7 @@ public class StagedOrderSetBillingAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <code>billingAddress</code>.</p>
      * @param fields value to be set
      * @return Builder
      */
@@ -103,7 +103,7 @@ public class StagedOrderSetBillingAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Defines the Type that extends the <code>billingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>billingAddress</code> with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>
      * @return type
      */
 
@@ -113,7 +113,7 @@ public class StagedOrderSetBillingAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <code>billingAddress</code>.</p>
      * @return fields
      */
 

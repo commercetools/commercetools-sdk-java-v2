@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Transition LineItem State update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderTransitionLineItemStateAction" rel="nofollow">Transition LineItem State</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -52,7 +52,7 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
     String LINE_ITEM_STATE_TRANSITION = "LineItemStateTransition";
 
     /**
-     *  <p>Unique identifier of the Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
      * @return lineItemId
      */
     @NotNull
@@ -68,7 +68,7 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
     public String getLineItemKey();
 
     /**
-     *  <p>Date and time (UTC) the transition of the Line Item State was performed.</p>
+     *  <p>Date and time (UTC) the transition of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> was performed.</p>
      * @return transitionDate
      */
     @NotNull
@@ -76,7 +76,7 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
     public ZonedDateTime getTransitionDate();
 
     /**
-     *  <p>Number of Line Items for which the State was transitioned.</p>
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Items</a> for which the <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> was transitioned.</p>
      * @return quantity
      */
     @NotNull
@@ -84,7 +84,7 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
     public Long getQuantity();
 
     /**
-     *  <p>State the Line Item was transitioned from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> was transitioned from.</p>
      * @return fromState
      */
     @NotNull
@@ -93,7 +93,7 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
     public StateReference getFromState();
 
     /**
-     *  <p>State the Line Item was transitioned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> was transitioned to.</p>
      * @return toState
      */
     @NotNull
@@ -102,7 +102,7 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
     public StateReference getToState();
 
     /**
-     *  <p>Unique identifier of the Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
      * @param lineItemId value to be set
      */
 
@@ -116,28 +116,28 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
     public void setLineItemKey(final String lineItemKey);
 
     /**
-     *  <p>Date and time (UTC) the transition of the Line Item State was performed.</p>
+     *  <p>Date and time (UTC) the transition of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> was performed.</p>
      * @param transitionDate value to be set
      */
 
     public void setTransitionDate(final ZonedDateTime transitionDate);
 
     /**
-     *  <p>Number of Line Items for which the State was transitioned.</p>
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Items</a> for which the <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> was transitioned.</p>
      * @param quantity value to be set
      */
 
     public void setQuantity(final Long quantity);
 
     /**
-     *  <p>State the Line Item was transitioned from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> was transitioned from.</p>
      * @param fromState value to be set
      */
 
     public void setFromState(final StateReference fromState);
 
     /**
-     *  <p>State the Line Item was transitioned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> was transitioned to.</p>
      * @param toState value to be set
      */
 

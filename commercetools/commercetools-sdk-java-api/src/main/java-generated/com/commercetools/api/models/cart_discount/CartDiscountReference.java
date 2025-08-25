@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Reference to a CartDiscount.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface CartDiscountReference extends Reference, com.commercetools.api.
     String CART_DISCOUNT = "cart-discount";
 
     /**
-     *  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>
+     *  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with <span>Reference Expansion</span> for CartDiscounts.</p>
      * @return obj
      */
     @Valid
@@ -49,7 +49,7 @@ public interface CartDiscountReference extends Reference, com.commercetools.api.
     public CartDiscount getObj();
 
     /**
-     *  <p>Unique identifier of the referenced CartDiscount.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a>.</p>
      * @return id
      */
     @NotNull
@@ -57,14 +57,14 @@ public interface CartDiscountReference extends Reference, com.commercetools.api.
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>
+     *  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with <span>Reference Expansion</span> for CartDiscounts.</p>
      * @param obj value to be set
      */
 
     public void setObj(final CartDiscount obj);
 
     /**
-     *  <p>Unique identifier of the referenced CartDiscount.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a>.</p>
      * @param id value to be set
      */
 

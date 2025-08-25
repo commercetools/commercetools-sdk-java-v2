@@ -187,7 +187,7 @@ public class PaymentMethodDefaultSetMessageBuilder implements Builder<PaymentMet
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -199,7 +199,7 @@ public class PaymentMethodDefaultSetMessageBuilder implements Builder<PaymentMet
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -261,7 +261,7 @@ public class PaymentMethodDefaultSetMessageBuilder implements Builder<PaymentMet
     }
 
     /**
-     *  <p>Default Payment Method after the Set Default update action.</p>
+     *  <p>Default Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetDefaultAction" rel="nofollow">Set Default</a> update action.</p>
      * @param _default value to be set
      * @return Builder
      */
@@ -272,7 +272,7 @@ public class PaymentMethodDefaultSetMessageBuilder implements Builder<PaymentMet
     }
 
     /**
-     *  <p>Default Payment Method before the Set Default update action.</p>
+     *  <p>Default Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetDefaultAction" rel="nofollow">Set Default</a> update action.</p>
      * @param oldDefault value to be set
      * @return Builder
      */
@@ -348,7 +348,7 @@ public class PaymentMethodDefaultSetMessageBuilder implements Builder<PaymentMet
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -376,7 +376,7 @@ public class PaymentMethodDefaultSetMessageBuilder implements Builder<PaymentMet
     }
 
     /**
-     *  <p>Default Payment Method after the Set Default update action.</p>
+     *  <p>Default Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetDefaultAction" rel="nofollow">Set Default</a> update action.</p>
      * @return default
      */
 
@@ -385,7 +385,7 @@ public class PaymentMethodDefaultSetMessageBuilder implements Builder<PaymentMet
     }
 
     /**
-     *  <p>Default Payment Method before the Set Default update action.</p>
+     *  <p>Default Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetDefaultAction" rel="nofollow">Set Default</a> update action.</p>
      * @return oldDefault
      */
 

@@ -210,7 +210,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>SKU of the ProductVariant to which this Price is associated.</p>
+     *  <p>SKU of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to which this Price is associated.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -255,7 +255,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>CustomerGroup for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which this Price is valid.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -269,7 +269,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>CustomerGroup for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which this Price is valid.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -282,7 +282,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>CustomerGroup for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which this Price is valid.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -294,7 +294,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Product distribution Channel for which this Price is valid.</p>
+     *  <p>Product distribution <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which this Price is valid.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -306,7 +306,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Product distribution Channel for which this Price is valid.</p>
+     *  <p>Product distribution <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which this Price is valid.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -318,7 +318,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Product distribution Channel for which this Price is valid.</p>
+     *  <p>Product distribution <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which this Price is valid.</p>
      * @param channel value to be set
      * @return Builder
      */
@@ -341,7 +341,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Date until the Price is valid. Standalone Prices that are no longer valid are not automatically deleted, but they can be deleted if necessary.</p>
+     *  <p>Date until the Price is valid. Standalone Prices that are no longer valid are not automatically deleted, but they can be <span>deleted</span> if necessary.</p>
      * @param validUntil value to be set
      * @return Builder
      */
@@ -446,7 +446,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the Line Item price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
+     *  <p>Set if a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> exists. If set, the API uses the <code>discounted</code> value for the <span>Line Item price selection</span>. When a <span>relative discount</span> is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the <span>half down rounding</span>.</p>
      * @param builder function to build the discounted value
      * @return Builder
      */
@@ -458,7 +458,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the Line Item price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
+     *  <p>Set if a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> exists. If set, the API uses the <code>discounted</code> value for the <span>Line Item price selection</span>. When a <span>relative discount</span> is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the <span>half down rounding</span>.</p>
      * @param builder function to build the discounted value
      * @return Builder
      */
@@ -470,7 +470,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the Line Item price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
+     *  <p>Set if a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> exists. If set, the API uses the <code>discounted</code> value for the <span>Line Item price selection</span>. When a <span>relative discount</span> is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the <span>half down rounding</span>.</p>
      * @param discounted value to be set
      * @return Builder
      */
@@ -554,7 +554,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>If set to <code>true</code>, the StandalonePrice is considered during Product price selection. If set to <code>false</code>, the StandalonePrice is not considered during Product price selection and any associated Line Items in a Cart cannot be ordered.</p>
+     *  <p>If set to <code>true</code>, the StandalonePrice is considered during <span>Product price selection</span>. If set to <code>false</code>, the StandalonePrice is not considered during <span>Product price selection</span> and any associated Line Items in a Cart cannot be ordered.</p>
      * @param active value to be set
      * @return Builder
      */
@@ -565,7 +565,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a> for which this Price is valid.</p>
      * @param builder function to build the recurrencePolicy value
      * @return Builder
      */
@@ -579,7 +579,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a> for which this Price is valid.</p>
      * @param builder function to build the recurrencePolicy value
      * @return Builder
      */
@@ -592,7 +592,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a> for which this Price is valid.</p>
      * @param recurrencePolicy value to be set
      * @return Builder
      */
@@ -670,7 +670,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>SKU of the ProductVariant to which this Price is associated.</p>
+     *  <p>SKU of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to which this Price is associated.</p>
      * @return sku
      */
 
@@ -698,7 +698,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>CustomerGroup for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which this Price is valid.</p>
      * @return customerGroup
      */
 
@@ -708,7 +708,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Product distribution Channel for which this Price is valid.</p>
+     *  <p>Product distribution <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which this Price is valid.</p>
      * @return channel
      */
 
@@ -728,7 +728,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Date until the Price is valid. Standalone Prices that are no longer valid are not automatically deleted, but they can be deleted if necessary.</p>
+     *  <p>Date until the Price is valid. Standalone Prices that are no longer valid are not automatically deleted, but they can be <span>deleted</span> if necessary.</p>
      * @return validUntil
      */
 
@@ -749,7 +749,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the Line Item price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
+     *  <p>Set if a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> exists. If set, the API uses the <code>discounted</code> value for the <span>Line Item price selection</span>. When a <span>relative discount</span> is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the <span>half down rounding</span>.</p>
      * @return discounted
      */
 
@@ -779,7 +779,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>If set to <code>true</code>, the StandalonePrice is considered during Product price selection. If set to <code>false</code>, the StandalonePrice is not considered during Product price selection and any associated Line Items in a Cart cannot be ordered.</p>
+     *  <p>If set to <code>true</code>, the StandalonePrice is considered during <span>Product price selection</span>. If set to <code>false</code>, the StandalonePrice is not considered during <span>Product price selection</span> and any associated Line Items in a Cart cannot be ordered.</p>
      * @return active
      */
 
@@ -788,7 +788,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a> for which this Price is valid.</p>
      * @return recurrencePolicy
      */
 

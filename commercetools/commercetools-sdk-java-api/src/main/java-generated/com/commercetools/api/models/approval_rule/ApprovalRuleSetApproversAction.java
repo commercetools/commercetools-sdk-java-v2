@@ -16,7 +16,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Setting the approvers for an Approval Rule generates an ApprovalRuleApproversSet Message.</p>
+ *  <p>Setting the approvers for an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">Approval Rule</a> generates an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleApproversSetMessage" rel="nofollow">ApprovalRuleApproversSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

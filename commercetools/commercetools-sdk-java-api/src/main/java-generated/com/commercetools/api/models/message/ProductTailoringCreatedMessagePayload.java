@@ -22,7 +22,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Create Product Tailoring or Create Product Tailoring in Store request.</p>
+ *  <p>Generated after a successful <span>Create Product Tailoring</span> or <span>Create Product Tailoring in Store</span> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -81,7 +81,7 @@ public interface ProductTailoringCreatedMessagePayload extends MessagePayload {
     public ProductReference getProduct();
 
     /**
-     *  <p>The description of the Product Tailoring at the time of creation.</p>
+     *  <p>The description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @return description
      */
     @Valid
@@ -89,7 +89,7 @@ public interface ProductTailoringCreatedMessagePayload extends MessagePayload {
     public LocalizedString getDescription();
 
     /**
-     *  <p>The name of the Product Tailoring at the time of creation.</p>
+     *  <p>The name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @return name
      */
     @Valid
@@ -97,7 +97,7 @@ public interface ProductTailoringCreatedMessagePayload extends MessagePayload {
     public LocalizedString getName();
 
     /**
-     *  <p>The slug of the Product Tailoring at the time of creation.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @return slug
      */
     @Valid
@@ -105,7 +105,7 @@ public interface ProductTailoringCreatedMessagePayload extends MessagePayload {
     public LocalizedString getSlug();
 
     /**
-     *  <p>The metaTitle of the Product Tailoring at the time of creation.</p>
+     *  <p>The metaTitle of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @return metaTitle
      */
     @Valid
@@ -113,7 +113,7 @@ public interface ProductTailoringCreatedMessagePayload extends MessagePayload {
     public LocalizedString getMetaTitle();
 
     /**
-     *  <p>The metaDescription of the Product Tailoring at the time of creation.</p>
+     *  <p>The metaDescription of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @return metaDescription
      */
     @Valid
@@ -121,7 +121,7 @@ public interface ProductTailoringCreatedMessagePayload extends MessagePayload {
     public LocalizedString getMetaDescription();
 
     /**
-     *  <p>The metaKeywords of the Product Tailoring at the time of creation.</p>
+     *  <p>The metaKeywords of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @return metaKeywords
      */
     @Valid
@@ -129,7 +129,7 @@ public interface ProductTailoringCreatedMessagePayload extends MessagePayload {
     public LocalizedString getMetaKeywords();
 
     /**
-     *  <p>The variants of the Product Tailoring at the time of creation.</p>
+     *  <p>The variants of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @return variants
      */
     @Valid
@@ -137,7 +137,7 @@ public interface ProductTailoringCreatedMessagePayload extends MessagePayload {
     public List<ProductVariantTailoring> getVariants();
 
     /**
-     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
      * @return attributes
      */
     @Valid
@@ -181,49 +181,49 @@ public interface ProductTailoringCreatedMessagePayload extends MessagePayload {
     public void setProduct(final ProductReference product);
 
     /**
-     *  <p>The description of the Product Tailoring at the time of creation.</p>
+     *  <p>The description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param description value to be set
      */
 
     public void setDescription(final LocalizedString description);
 
     /**
-     *  <p>The name of the Product Tailoring at the time of creation.</p>
+     *  <p>The name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param name value to be set
      */
 
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>The slug of the Product Tailoring at the time of creation.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param slug value to be set
      */
 
     public void setSlug(final LocalizedString slug);
 
     /**
-     *  <p>The metaTitle of the Product Tailoring at the time of creation.</p>
+     *  <p>The metaTitle of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param metaTitle value to be set
      */
 
     public void setMetaTitle(final LocalizedString metaTitle);
 
     /**
-     *  <p>The metaDescription of the Product Tailoring at the time of creation.</p>
+     *  <p>The metaDescription of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param metaDescription value to be set
      */
 
     public void setMetaDescription(final LocalizedString metaDescription);
 
     /**
-     *  <p>The metaKeywords of the Product Tailoring at the time of creation.</p>
+     *  <p>The metaKeywords of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param metaKeywords value to be set
      */
 
     public void setMetaKeywords(final LocalizedString metaKeywords);
 
     /**
-     *  <p>The variants of the Product Tailoring at the time of creation.</p>
+     *  <p>The variants of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param variants values to be set
      */
 
@@ -231,14 +231,14 @@ public interface ProductTailoringCreatedMessagePayload extends MessagePayload {
     public void setVariants(final ProductVariantTailoring... variants);
 
     /**
-     *  <p>The variants of the Product Tailoring at the time of creation.</p>
+     *  <p>The variants of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      * @param variants values to be set
      */
 
     public void setVariants(final List<ProductVariantTailoring> variants);
 
     /**
-     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
      * @param attributes values to be set
      */
 
@@ -246,7 +246,7 @@ public interface ProductTailoringCreatedMessagePayload extends MessagePayload {
     public void setAttributes(final ProductTailoringAttribute... attributes);
 
     /**
-     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
      * @param attributes values to be set
      */
 

@@ -39,7 +39,7 @@ public interface AssociateRoleSetCustomTypeAction extends AssociateRoleUpdateAct
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
-     *  <p>Defines the Type that extends the AssociateRole with Custom Fields. If absent, any existing Type and Custom Fields are removed from the AssociateRole.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the AssociateRole with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the AssociateRole.</p>
      * @return type
      */
     @Valid
@@ -47,7 +47,7 @@ public interface AssociateRoleSetCustomTypeAction extends AssociateRoleUpdateAct
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields for the AssociateRole.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> for the AssociateRole.</p>
      * @return fields
      */
     @Valid
@@ -55,14 +55,14 @@ public interface AssociateRoleSetCustomTypeAction extends AssociateRoleUpdateAct
     public FieldContainer getFields();
 
     /**
-     *  <p>Defines the Type that extends the AssociateRole with Custom Fields. If absent, any existing Type and Custom Fields are removed from the AssociateRole.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the AssociateRole with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the AssociateRole.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields for the AssociateRole.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> for the AssociateRole.</p>
      * @param fields value to be set
      */
 

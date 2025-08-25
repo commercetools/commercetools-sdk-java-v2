@@ -35,7 +35,7 @@ public interface CustomerRemoveBillingAddressIdAction extends CustomerUpdateActi
     String REMOVE_BILLING_ADDRESS_ID = "removeBillingAddressId";
 
     /**
-     *  <p><code>id</code> of the Address to remove from <code>billingAddressesIds</code>.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>billingAddressesIds</code>.</p>
      * @return addressId
      */
 
@@ -43,7 +43,7 @@ public interface CustomerRemoveBillingAddressIdAction extends CustomerUpdateActi
     public String getAddressId();
 
     /**
-     *  <p><code>key</code> of the Address to remove from <code>billingAddressesIds</code>.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>billingAddressesIds</code>.</p>
      * @return addressKey
      */
 
@@ -51,14 +51,14 @@ public interface CustomerRemoveBillingAddressIdAction extends CustomerUpdateActi
     public String getAddressKey();
 
     /**
-     *  <p><code>id</code> of the Address to remove from <code>billingAddressesIds</code>.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>billingAddressesIds</code>.</p>
      * @param addressId value to be set
      */
 
     public void setAddressId(final String addressId);
 
     /**
-     *  <p><code>key</code> of the Address to remove from <code>billingAddressesIds</code>.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>billingAddressesIds</code>.</p>
      * @param addressKey value to be set
      */
 

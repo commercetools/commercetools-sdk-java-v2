@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Result of a stats facet. The data type of <code>min</code> <code>max</code>, <code>mean</code>, and <code>sum</code> matches the data type of the <code>field</code> in the facet expression.</p>
+ *  <p>Result of a <span>stats facet</span>. The data type of <code>min</code> <code>max</code>, <code>mean</code>, and <code>sum</code> matches the data type of the <code>field</code> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchFacetStatsExpression" rel="nofollow">facet expression</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -58,7 +58,7 @@ public interface ProductSearchFacetResultStats extends ProductSearchFacetResult 
     public Object getMean();
 
     /**
-     *  <p>The sum of values of the field that match the facet expression.</p>
+     *  <p>The sum of values of the field that match the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchFacetStatsExpression" rel="nofollow">facet expression</a>.</p>
      *  <p>Only returned for number fields.</p>
      * @return sum
      */
@@ -97,7 +97,7 @@ public interface ProductSearchFacetResultStats extends ProductSearchFacetResult 
     public void setMean(final Object mean);
 
     /**
-     *  <p>The sum of values of the field that match the facet expression.</p>
+     *  <p>The sum of values of the field that match the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchFacetStatsExpression" rel="nofollow">facet expression</a>.</p>
      *  <p>Only returned for number fields.</p>
      * @param sum value to be set
      */

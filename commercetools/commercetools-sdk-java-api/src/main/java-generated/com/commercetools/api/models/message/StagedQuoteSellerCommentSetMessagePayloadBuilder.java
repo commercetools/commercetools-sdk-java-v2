@@ -25,7 +25,7 @@ public class StagedQuoteSellerCommentSetMessagePayloadBuilder
     private String sellerComment;
 
     /**
-     *  <p><code>sellerComment</code> on the StagedQuote after a successful Set Seller Comment update action.</p>
+     *  <p><code>sellerComment</code> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a> after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteSetSellerCommentAction" rel="nofollow">Set Seller Comment</a> update action.</p>
      * @param sellerComment value to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class StagedQuoteSellerCommentSetMessagePayloadBuilder
     }
 
     /**
-     *  <p><code>sellerComment</code> on the StagedQuote after a successful Set Seller Comment update action.</p>
+     *  <p><code>sellerComment</code> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a> after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteSetSellerCommentAction" rel="nofollow">Set Seller Comment</a> update action.</p>
      * @return sellerComment
      */
 

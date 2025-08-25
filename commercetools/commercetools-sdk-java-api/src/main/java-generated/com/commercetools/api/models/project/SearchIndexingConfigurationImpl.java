@@ -56,7 +56,7 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
     }
 
     /**
-     *  <p>Configuration for the Product Projection Search and Search Term Suggestions APIs.</p>
+     *  <p>Configuration for the <span>Product Projection Search</span> and <span>Search Term Suggestions</span> APIs.</p>
      */
 
     public com.commercetools.api.models.project.SearchIndexingConfigurationValues getProducts() {
@@ -64,7 +64,7 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
     }
 
     /**
-     *  <p>Configuration for the Product Search feature.</p>
+     *  <p>Configuration for the <span>Product Search</span> feature.</p>
      */
 
     public com.commercetools.api.models.project.SearchIndexingConfigurationValues getProductsSearch() {
@@ -72,7 +72,7 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
     }
 
     /**
-     *  <p>Configuration for the Order Search feature.</p>
+     *  <p>Configuration for the <span>Order Search</span> feature.</p>
      */
 
     public com.commercetools.api.models.project.SearchIndexingConfigurationValues getOrders() {
@@ -80,7 +80,7 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
     }
 
     /**
-     *  <p>Configuration for the Customer Search feature.</p>
+     *  <p>Configuration for the <span>Customer Search</span> feature.</p>
      */
 
     public com.commercetools.api.models.project.SearchIndexingConfigurationValues getCustomers() {
@@ -88,7 +88,7 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
     }
 
     /**
-     *  <p>Configuration for the Business Unit Search feature.</p>
+     *  <p>Configuration for the <span>Business Unit Search</span> feature.</p>
      */
 
     public com.commercetools.api.models.project.SearchIndexingConfigurationValues getBusinessUnits() {

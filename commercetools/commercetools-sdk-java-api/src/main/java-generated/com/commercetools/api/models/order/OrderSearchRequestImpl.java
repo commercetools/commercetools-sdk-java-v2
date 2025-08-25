@@ -66,7 +66,7 @@ public class OrderSearchRequestImpl implements OrderSearchRequest, ModelBase {
     }
 
     /**
-     *  <p>The maximum number of search results to be returned on one page.</p>
+     *  <p>The maximum number of search results to be returned on one <span>page</span>.</p>
      */
 
     public Integer getLimit() {
@@ -74,7 +74,7 @@ public class OrderSearchRequestImpl implements OrderSearchRequest, ModelBase {
     }
 
     /**
-     *  <p>The number of search results to be skipped in the response for pagination.</p>
+     *  <p>The number of search results to be skipped in the response for <span>pagination</span>.</p>
      */
 
     public Integer getOffset() {

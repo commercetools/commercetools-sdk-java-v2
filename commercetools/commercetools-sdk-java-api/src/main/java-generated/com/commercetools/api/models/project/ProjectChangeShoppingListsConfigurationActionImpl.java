@@ -53,7 +53,7 @@ public class ProjectChangeShoppingListsConfigurationActionImpl
     }
 
     /**
-     *  <p>Configuration for the Shopping Lists feature.</p>
+     *  <p>Configuration for the <span>Shopping Lists</span> feature.</p>
      */
 
     public com.commercetools.api.models.project.ShoppingListsConfiguration getShoppingListsConfiguration() {

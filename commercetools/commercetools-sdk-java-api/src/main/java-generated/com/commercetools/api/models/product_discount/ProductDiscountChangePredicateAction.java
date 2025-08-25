@@ -38,7 +38,7 @@ public interface ProductDiscountChangePredicateAction extends ProductDiscountUpd
     String CHANGE_PREDICATE = "changePredicate";
 
     /**
-     *  <p>New value to set. Must be a valid ProductDiscount predicate.</p>
+     *  <p>New value to set. Must be a valid <span>ProductDiscount predicate</span>.</p>
      * @return predicate
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface ProductDiscountChangePredicateAction extends ProductDiscountUpd
     public String getPredicate();
 
     /**
-     *  <p>New value to set. Must be a valid ProductDiscount predicate.</p>
+     *  <p>New value to set. Must be a valid <span>ProductDiscount predicate</span>.</p>
      * @param predicate value to be set
      */
 

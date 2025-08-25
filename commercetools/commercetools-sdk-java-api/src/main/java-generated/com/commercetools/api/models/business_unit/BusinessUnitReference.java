@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Reference to a BusinessUnit.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface BusinessUnitReference extends Reference, com.commercetools.api.
     String BUSINESS_UNIT = "business-unit";
 
     /**
-     *  <p>Contains the representation of the expanded BusinessUnit. Only present in responses to requests with Reference Expansion for BusinessUnit.</p>
+     *  <p>Contains the representation of the expanded BusinessUnit. Only present in responses to requests with <span>Reference Expansion</span> for BusinessUnit.</p>
      * @return obj
      */
     @Valid
@@ -49,7 +49,7 @@ public interface BusinessUnitReference extends Reference, com.commercetools.api.
     public BusinessUnit getObj();
 
     /**
-     *  <p>Unique identifier of the referenced BusinessUnit.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
      * @return id
      */
     @NotNull
@@ -57,14 +57,14 @@ public interface BusinessUnitReference extends Reference, com.commercetools.api.
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded BusinessUnit. Only present in responses to requests with Reference Expansion for BusinessUnit.</p>
+     *  <p>Contains the representation of the expanded BusinessUnit. Only present in responses to requests with <span>Reference Expansion</span> for BusinessUnit.</p>
      * @param obj value to be set
      */
 
     public void setObj(final BusinessUnit obj);
 
     /**
-     *  <p>Unique identifier of the referenced BusinessUnit.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
      * @param id value to be set
      */
 

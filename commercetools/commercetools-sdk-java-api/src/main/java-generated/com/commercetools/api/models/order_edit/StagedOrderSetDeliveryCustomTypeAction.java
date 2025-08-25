@@ -40,7 +40,7 @@ public interface StagedOrderSetDeliveryCustomTypeAction extends StagedOrderUpdat
     String SET_DELIVERY_CUSTOM_TYPE = "setDeliveryCustomType";
 
     /**
-     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryId
      */
@@ -49,7 +49,7 @@ public interface StagedOrderSetDeliveryCustomTypeAction extends StagedOrderUpdat
     public String getDeliveryId();
 
     /**
-     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryKey
      */
@@ -58,7 +58,7 @@ public interface StagedOrderSetDeliveryCustomTypeAction extends StagedOrderUpdat
     public String getDeliveryKey();
 
     /**
-     *  <p>Defines the Type that extends the Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Delivery with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
      * @return type
      */
     @Valid
@@ -66,7 +66,7 @@ public interface StagedOrderSetDeliveryCustomTypeAction extends StagedOrderUpdat
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the Delivery.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Delivery.</p>
      * @return fields
      */
     @Valid
@@ -74,7 +74,7 @@ public interface StagedOrderSetDeliveryCustomTypeAction extends StagedOrderUpdat
     public FieldContainer getFields();
 
     /**
-     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryId value to be set
      */
@@ -82,7 +82,7 @@ public interface StagedOrderSetDeliveryCustomTypeAction extends StagedOrderUpdat
     public void setDeliveryId(final String deliveryId);
 
     /**
-     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryKey value to be set
      */
@@ -90,14 +90,14 @@ public interface StagedOrderSetDeliveryCustomTypeAction extends StagedOrderUpdat
     public void setDeliveryKey(final String deliveryKey);
 
     /**
-     *  <p>Defines the Type that extends the Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Delivery with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields fields for the Delivery.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Delivery.</p>
      * @param fields value to be set
      */
 

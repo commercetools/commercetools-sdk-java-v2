@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Reference to a StagedQuote.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface StagedQuoteReference extends Reference, com.commercetools.api.m
     String STAGED_QUOTE = "staged-quote";
 
     /**
-     *  <p>Contains the representation of the expanded StagedQuote. Only present in responses to requests with Reference Expansion for StagedQuote.</p>
+     *  <p>Contains the representation of the expanded StagedQuote. Only present in responses to requests with <span>Reference Expansion</span> for StagedQuote.</p>
      * @return obj
      */
     @Valid
@@ -48,7 +48,7 @@ public interface StagedQuoteReference extends Reference, com.commercetools.api.m
     public StagedQuote getObj();
 
     /**
-     *  <p>Contains the representation of the expanded StagedQuote. Only present in responses to requests with Reference Expansion for StagedQuote.</p>
+     *  <p>Contains the representation of the expanded StagedQuote. Only present in responses to requests with <span>Reference Expansion</span> for StagedQuote.</p>
      * @param obj value to be set
      */
 

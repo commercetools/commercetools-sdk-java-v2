@@ -28,7 +28,7 @@ public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelActi
     private com.commercetools.api.models.common.LocalizedString label;
 
     /**
-     *  <p>Name of the Field Definition to update.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">Field Definition</a> to update.</p>
      * @param fieldName value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelActi
     }
 
     /**
-     *  <p>Name of the Field Definition to update.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">Field Definition</a> to update.</p>
      * @return fieldName
      */
 

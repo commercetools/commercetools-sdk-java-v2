@@ -45,7 +45,7 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *  <p>User-defined unique identifier of the RecurringOrder.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
     }
 
     /**
-     *  <p>ResourceIdentifier to the Cart from which the RecurringOrder is created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Cart from which the RecurringOrder is created.</p>
      * @param builder function to build the cart value
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
     }
 
     /**
-     *  <p>ResourceIdentifier to the Cart from which the RecurringOrder is created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Cart from which the RecurringOrder is created.</p>
      * @param builder function to build the cart value
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
     }
 
     /**
-     *  <p>ResourceIdentifier to the Cart from which the RecurringOrder is created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Cart from which the RecurringOrder is created.</p>
      * @param cart value to be set
      * @return Builder
      */
@@ -91,7 +91,7 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
     }
 
     /**
-     *  <p>Current version of the referenced Cart.</p>
+     *  <p>Current version of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      * @param cartVersion value to be set
      * @return Builder
      */
@@ -196,7 +196,7 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
     }
 
     /**
-     *  <p>User-defined unique identifier of the RecurringOrder.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a>.</p>
      * @return key
      */
 
@@ -206,7 +206,7 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
     }
 
     /**
-     *  <p>ResourceIdentifier to the Cart from which the RecurringOrder is created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Cart from which the RecurringOrder is created.</p>
      * @return cart
      */
 
@@ -215,7 +215,7 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
     }
 
     /**
-     *  <p>Current version of the referenced Cart.</p>
+     *  <p>Current version of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      * @return cartVersion
      */
 

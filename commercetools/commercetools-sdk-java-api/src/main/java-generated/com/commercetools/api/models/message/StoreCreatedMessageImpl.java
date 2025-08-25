@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Create Store request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/stores:POST" rel="nofollow">Create Store</a> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
@@ -162,7 +162,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -178,7 +178,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -194,7 +194,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
     }
 
     /**
-     *  <p>The <code>name</code> of the Store that was created.</p>
+     *  <p>The <code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -202,7 +202,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
     }
 
     /**
-     *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
+     *  <p>Languages of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created. Languages are represented as <span>IETF language tags</span>.</p>
      */
 
     public java.util.List<String> getLanguages() {
@@ -210,7 +210,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
     }
 
     /**
-     *  <p>Countries of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      */
 
     public java.util.List<com.commercetools.api.models.store_country.StoreCountry> getCountries() {
@@ -218,7 +218,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
     }
 
     /**
-     *  <p>Distribution Channels of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Distribution Channels</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getDistributionChannels() {
@@ -226,7 +226,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
     }
 
     /**
-     *  <p>Supply Channels of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Supply Channels</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getSupplyChannels() {
@@ -234,7 +234,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
     }
 
     /**
-     *  <p>ProductSelectionSettings of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      */
 
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getProductSelections() {
@@ -242,7 +242,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields on the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface KeyReference {
 
     /**
-     *  <p>User-defined unique identifier of the referenced resource. If the referenced resource does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced resource is created.</p>
+     *  <p>User-defined unique identifier of the referenced resource. If the referenced resource does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced resource is created.</p>
      * @return key
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface KeyReference {
     public ReferenceType getTypeId();
 
     /**
-     *  <p>User-defined unique identifier of the referenced resource. If the referenced resource does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced resource is created.</p>
+     *  <p>User-defined unique identifier of the referenced resource. If the referenced resource does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced resource is created.</p>
      * @param key value to be set
      */
 

@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Deletes an Order in the Project. Deleting an Order produces the OrderDeleted Message.</p>
+ *  <p>Deletes an Order in the Project. Deleting an Order produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderDeletedMessage" rel="nofollow">OrderDeleted</a> Message.</p>
  *
  * <hr>
  * <div class=code-example>

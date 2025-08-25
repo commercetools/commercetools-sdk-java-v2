@@ -27,7 +27,7 @@ public class PaymentMethodDefaultSetMessagePayloadBuilder implements Builder<Pay
     private Boolean oldDefault;
 
     /**
-     *  <p>Default Payment Method after the Set Default update action.</p>
+     *  <p>Default Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetDefaultAction" rel="nofollow">Set Default</a> update action.</p>
      * @param _default value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class PaymentMethodDefaultSetMessagePayloadBuilder implements Builder<Pay
     }
 
     /**
-     *  <p>Default Payment Method before the Set Default update action.</p>
+     *  <p>Default Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetDefaultAction" rel="nofollow">Set Default</a> update action.</p>
      * @param oldDefault value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class PaymentMethodDefaultSetMessagePayloadBuilder implements Builder<Pay
     }
 
     /**
-     *  <p>Default Payment Method after the Set Default update action.</p>
+     *  <p>Default Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetDefaultAction" rel="nofollow">Set Default</a> update action.</p>
      * @return default
      */
 
@@ -58,7 +58,7 @@ public class PaymentMethodDefaultSetMessagePayloadBuilder implements Builder<Pay
     }
 
     /**
-     *  <p>Default Payment Method before the Set Default update action.</p>
+     *  <p>Default Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetDefaultAction" rel="nofollow">Set Default</a> update action.</p>
      * @return oldDefault
      */
 

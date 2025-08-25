@@ -187,7 +187,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
-     *  <p>Order that needs to be approved.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that needs to be approved.</p>
      * @param builder function to build the order value
      * @return Builder
      */
@@ -199,7 +199,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
-     *  <p>Order that needs to be approved.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that needs to be approved.</p>
      * @param builder function to build the order value
      * @return Builder
      */
@@ -211,7 +211,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
-     *  <p>Order that needs to be approved.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that needs to be approved.</p>
      * @param order value to be set
      * @return Builder
      */
@@ -222,7 +222,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
-     *  <p>Business Unit the Approval Flow belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> the Approval Flow belongs to.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -236,7 +236,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
-     *  <p>Business Unit the Approval Flow belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> the Approval Flow belongs to.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -249,7 +249,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
-     *  <p>Business Unit the Approval Flow belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> the Approval Flow belongs to.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
@@ -261,7 +261,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
-     *  <p>Approval Rules that matched the Order.</p>
+     *  <p>Approval Rules that matched the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param rules value to be set
      * @return Builder
      */
@@ -272,7 +272,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
-     *  <p>Approval Rules that matched the Order.</p>
+     *  <p>Approval Rules that matched the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param rules value to be set
      * @return Builder
      */
@@ -284,7 +284,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
-     *  <p>Approval Rules that matched the Order.</p>
+     *  <p>Approval Rules that matched the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param rules value to be set
      * @return Builder
      */
@@ -298,7 +298,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
-     *  <p>Approval Rules that matched the Order.</p>
+     *  <p>Approval Rules that matched the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param builder function to build the rules value
      * @return Builder
      */
@@ -313,7 +313,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
-     *  <p>Approval Rules that matched the Order.</p>
+     *  <p>Approval Rules that matched the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param builder function to build the rules value
      * @return Builder
      */
@@ -326,7 +326,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
-     *  <p>Approval Rules that matched the Order.</p>
+     *  <p>Approval Rules that matched the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param builder function to build the rules value
      * @return Builder
      */
@@ -337,7 +337,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
-     *  <p>Approval Rules that matched the Order.</p>
+     *  <p>Approval Rules that matched the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param builder function to build the rules value
      * @return Builder
      */
@@ -359,7 +359,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
-     *  <p>Present when the status of the Approval Flow is <code>Rejected</code>.</p>
+     *  <p>Present when the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlowStatus" rel="nofollow">status</a> of the Approval Flow is <code>Rejected</code>.</p>
      * @param builder function to build the rejection value
      * @return Builder
      */
@@ -372,7 +372,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
-     *  <p>Present when the status of the Approval Flow is <code>Rejected</code>.</p>
+     *  <p>Present when the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlowStatus" rel="nofollow">status</a> of the Approval Flow is <code>Rejected</code>.</p>
      * @param builder function to build the rejection value
      * @return Builder
      */
@@ -384,7 +384,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
-     *  <p>Present when the status of the Approval Flow is <code>Rejected</code>.</p>
+     *  <p>Present when the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlowStatus" rel="nofollow">status</a> of the Approval Flow is <code>Rejected</code>.</p>
      * @param rejection value to be set
      * @return Builder
      */
@@ -855,7 +855,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
-     *  <p>Order that needs to be approved.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that needs to be approved.</p>
      * @return order
      */
 
@@ -864,7 +864,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
-     *  <p>Business Unit the Approval Flow belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> the Approval Flow belongs to.</p>
      * @return businessUnit
      */
 
@@ -873,7 +873,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
-     *  <p>Approval Rules that matched the Order.</p>
+     *  <p>Approval Rules that matched the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @return rules
      */
 
@@ -891,7 +891,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
-     *  <p>Present when the status of the Approval Flow is <code>Rejected</code>.</p>
+     *  <p>Present when the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlowStatus" rel="nofollow">status</a> of the Approval Flow is <code>Rejected</code>.</p>
      * @return rejection
      */
 

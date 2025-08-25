@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Create QuoteRequest request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/quote-requests:POST" rel="nofollow">Create QuoteRequest</a> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class QuoteRequestCreatedMessagePayloadImpl implements QuoteRequestCreatedMessagePayload, ModelBase {
@@ -52,7 +52,7 @@ public class QuoteRequestCreatedMessagePayloadImpl implements QuoteRequestCreate
     }
 
     /**
-     *  <p>Quote Request that was created.</p>
+     *  <p><span>Quote Request</span> that was created.</p>
      */
 
     public com.commercetools.api.models.quote_request.QuoteRequest getQuoteRequest() {

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Key update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroupSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountGroupKeySetMessagePayloadImpl implements DiscountGroupKeySetMessagePayload, ModelBase {
@@ -55,7 +55,7 @@ public class DiscountGroupKeySetMessagePayloadImpl implements DiscountGroupKeySe
     }
 
     /**
-     *  <p><code>key</code> value of the DiscountGroup after the Set Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroup" rel="nofollow">DiscountGroup</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroupSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
      */
 
     public String getKey() {
@@ -63,7 +63,7 @@ public class DiscountGroupKeySetMessagePayloadImpl implements DiscountGroupKeySe
     }
 
     /**
-     *  <p><code>key</code> value of the DiscountGroup before the Set Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroup" rel="nofollow">DiscountGroup</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroupSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
      */
 
     public String getOldKey() {

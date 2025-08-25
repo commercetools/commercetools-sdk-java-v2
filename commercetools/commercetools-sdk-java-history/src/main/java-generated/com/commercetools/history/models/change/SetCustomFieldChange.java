@@ -17,24 +17,24 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set CustomField on Cart Discounts.</li>
- *   <li>Set CustomField on Categories.</li>
- *   <li>Set CustomField on Channels.</li>
- *   <li>Set CustomField on Customers.</li>
- *   <li>Set CustomField on Customer Groups.</li>
- *   <li>Set CustomField on Discount Codes.</li>
- *   <li>Set CustomField on Inventories.</li>
- *   <li>Set CustomField on Orders.</li>
- *   <li>Set CustomField on Order Edits.</li>
- *   <li>Set CustomField on Payments.</li>
- *   <li>Set CustomField on Product Selections.</li>
- *   <li>Set CustomField on Quotes.</li>
- *   <li>Set CustomField on Quote Requests.</li>
- *   <li>Set CustomField on Reviews.</li>
- *   <li>Set CustomField on Shopping Lists.</li>
- *   <li>Set CustomField on Staged Orders.</li>
- *   <li>Set CustomField on Staged Quotes.</li>
- *   <li>Set CustomField on Stores.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Cart Discounts.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CategorySetCustomFieldAction" rel="nofollow">Set CustomField</a> on Categories.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Channels.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Customers.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroupSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Customer Groups.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Discount Codes.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntrySetCustomFieldAction" rel="nofollow">Set CustomField</a> on Inventories.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEditSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Order Edits.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Payments.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Product Selections.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Quotes.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Quote Requests.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Reviews.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Shopping Lists.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Staged Quotes.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Stores.</li>
  *  </ul>
  *
  * <hr>
@@ -92,7 +92,7 @@ public interface SetCustomFieldChange extends Change {
     public Object getNextValue();
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @return name
      */
     @NotNull
@@ -100,7 +100,7 @@ public interface SetCustomFieldChange extends Change {
     public String getName();
 
     /**
-     *  <p><code>id</code> of the referenced Type.</p>
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @return customTypeId
      */
     @NotNull
@@ -129,14 +129,14 @@ public interface SetCustomFieldChange extends Change {
     public void setNextValue(final Object nextValue);
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     *  <p><code>id</code> of the referenced Type.</p>
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param customTypeId value to be set
      */
 

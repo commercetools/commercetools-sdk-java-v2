@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface SearchKeyword {
 
     /**
-     *  <p>Text to return in the SuggestionResult.</p>
+     *  <p>Text to return in the <a href="https://docs.commercetools.com/apis/ctp:api:type:SuggestionResult" rel="nofollow">SuggestionResult</a>.</p>
      * @return text
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface SearchKeyword {
     public SuggestTokenizer getSuggestTokenizer();
 
     /**
-     *  <p>Text to return in the SuggestionResult.</p>
+     *  <p>Text to return in the <a href="https://docs.commercetools.com/apis/ctp:api:type:SuggestionResult" rel="nofollow">SuggestionResult</a>.</p>
      * @param text value to be set
      */
 

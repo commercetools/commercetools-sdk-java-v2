@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Determines the schedule for a Recurring Order to occur at a fixed interval—for example, every two weeks or every month.</p>
+ *  <p>Determines the schedule for a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> to occur at a fixed interval—for example, every two weeks or every month.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

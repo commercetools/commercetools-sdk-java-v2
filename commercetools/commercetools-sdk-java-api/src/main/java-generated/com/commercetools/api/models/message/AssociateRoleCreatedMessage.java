@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Create AssociateRole request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/associate-roles:POST" rel="nofollow">Create AssociateRole</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface AssociateRoleCreatedMessage extends Message {
     String ASSOCIATE_ROLE_CREATED = "AssociateRoleCreated";
 
     /**
-     *  <p>The AssociateRole that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a> that was created.</p>
      * @return associateRole
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface AssociateRoleCreatedMessage extends Message {
     public AssociateRole getAssociateRole();
 
     /**
-     *  <p>The AssociateRole that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a> that was created.</p>
      * @param associateRole value to be set
      */
 

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Customer Email update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerEmailAction" rel="nofollow">Set Customer Email</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderCustomerEmailSetMessagePayloadImpl implements OrderCustomerEmailSetMessagePayload, ModelBase {
@@ -55,7 +55,7 @@ public class OrderCustomerEmailSetMessagePayloadImpl implements OrderCustomerEma
     }
 
     /**
-     *  <p>Email address on the Order after the Set Customer Email update action.</p>
+     *  <p>Email address on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerEmailAction" rel="nofollow">Set Customer Email</a> update action.</p>
      */
 
     public String getEmail() {
@@ -63,7 +63,7 @@ public class OrderCustomerEmailSetMessagePayloadImpl implements OrderCustomerEma
     }
 
     /**
-     *  <p>Email address on the Order before the Set Customer Email update action.</p>
+     *  <p>Email address on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerEmailAction" rel="nofollow">Set Customer Email</a> update action.</p>
      */
 
     public String getOldEmail() {

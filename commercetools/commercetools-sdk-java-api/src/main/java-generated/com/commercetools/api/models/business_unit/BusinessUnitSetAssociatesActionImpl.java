@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Changes the Associates of a Business Unit, generates a BusinessUnitAssociatesSet Message.</p>
+ *  <p>Changes the Associates of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>, generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAssociatesSetMessage" rel="nofollow">BusinessUnitAssociatesSet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitSetAssociatesActionImpl implements BusinessUnitSetAssociatesAction, ModelBase {

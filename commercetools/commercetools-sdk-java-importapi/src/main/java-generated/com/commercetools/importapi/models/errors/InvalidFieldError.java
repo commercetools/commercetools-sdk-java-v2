@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>A given field is not supported. This error occurs, for example, if the field <code>variants</code>, which is not supported by Product Import, is sent to the Product Import endpoint.</p>
+ *  <p>A given field is not supported. This error occurs, for example, if the field <code>variants</code>, which is not supported by <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductImport" rel="nofollow">Product Import</a>, is sent to the Product Import endpoint.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

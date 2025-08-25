@@ -60,7 +60,7 @@ public class CartSetItemShippingAddressCustomTypeActionImpl
     }
 
     /**
-     *  <p><code>key</code> of the Address in <code>itemShippingAddress</code>.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> in <code>itemShippingAddress</code>.</p>
      */
 
     public String getAddressKey() {
@@ -68,7 +68,7 @@ public class CartSetItemShippingAddressCustomTypeActionImpl
     }
 
     /**
-     *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>itemShippingAddress</code> with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -76,7 +76,7 @@ public class CartSetItemShippingAddressCustomTypeActionImpl
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <code>itemShippingAddress</code>.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

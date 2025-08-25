@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Returned if the requested resource was not found or the Product Search index is inactive.</p>
+ *  <p>Returned if the requested resource was not found or the Product Search index is <span>inactive</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

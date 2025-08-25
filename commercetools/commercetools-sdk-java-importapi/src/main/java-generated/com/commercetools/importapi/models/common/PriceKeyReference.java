@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Used by the Import API to identify an Embedded Price.</p>
+ *  <p>Used by the <span>Import API</span> to identify an Embedded Price.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

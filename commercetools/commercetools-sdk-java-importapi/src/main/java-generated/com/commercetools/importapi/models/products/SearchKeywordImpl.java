@@ -51,7 +51,7 @@ public class SearchKeywordImpl implements SearchKeyword, ModelBase {
     }
 
     /**
-     *  <p>The tokenizer defines the tokens that are used for search term suggestions.</p>
+     *  <p>The tokenizer defines the tokens that are used for <span>search term suggestions</span>.</p>
      */
 
     public com.commercetools.importapi.models.products.SuggestTokenizer getSuggestTokenizer() {

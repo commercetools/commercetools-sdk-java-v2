@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Delete Customer request.</p>
+ *  <p>Generated after a successful <span>Delete Customer</span> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

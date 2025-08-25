@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Reference to a Cart.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface CartReference extends Reference, com.commercetools.api.models.I
     String CART = "cart";
 
     /**
-     *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.</p>
+     *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with <span>Reference Expansion</span> for Carts.</p>
      * @return obj
      */
     @Valid
@@ -49,7 +49,7 @@ public interface CartReference extends Reference, com.commercetools.api.models.I
     public Cart getObj();
 
     /**
-     *  <p>Unique identifier of the referenced Cart.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      * @return id
      */
     @NotNull
@@ -57,14 +57,14 @@ public interface CartReference extends Reference, com.commercetools.api.models.I
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.</p>
+     *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with <span>Reference Expansion</span> for Carts.</p>
      * @param obj value to be set
      */
 
     public void setObj(final Cart obj);
 
     /**
-     *  <p>Unique identifier of the referenced Cart.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      * @param id value to be set
      */
 

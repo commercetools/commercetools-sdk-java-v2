@@ -41,7 +41,7 @@ public interface ShippingMethodAddShippingRateAction extends ShippingMethodUpdat
     String ADD_SHIPPING_RATE = "addShippingRate";
 
     /**
-     *  <p>Zone to which the ShippingRate should be added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> to which the ShippingRate should be added.</p>
      * @return zone
      */
     @NotNull
@@ -59,7 +59,7 @@ public interface ShippingMethodAddShippingRateAction extends ShippingMethodUpdat
     public ShippingRateDraft getShippingRate();
 
     /**
-     *  <p>Zone to which the ShippingRate should be added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> to which the ShippingRate should be added.</p>
      * @param zone value to be set
      */
 

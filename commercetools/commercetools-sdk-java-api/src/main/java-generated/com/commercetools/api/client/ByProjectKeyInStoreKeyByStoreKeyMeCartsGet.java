@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Retrieves Carts for the authenticated Customer or anonymous user in a Store.</p>
+ *  <p>Retrieves Carts for the authenticated Customer or anonymous user in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
  *
  * <hr>
  * <div class=code-example>

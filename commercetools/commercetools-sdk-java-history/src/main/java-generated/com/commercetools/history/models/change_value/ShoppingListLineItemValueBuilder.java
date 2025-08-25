@@ -31,7 +31,7 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
     private Integer variantId;
 
     /**
-     *  <p><code>id</code> of the ShoppingListLineItem.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">ShoppingListLineItem</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     *  <p><code>id</code> of the ProductVariant the ShoppingListLineItem refers to.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> the ShoppingListLineItem refers to.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -88,7 +88,7 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     *  <p><code>id</code> of the ShoppingListLineItem.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">ShoppingListLineItem</a>.</p>
      * @return id
      */
 
@@ -106,7 +106,7 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     *  <p><code>id</code> of the ProductVariant the ShoppingListLineItem refers to.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> the ShoppingListLineItem refers to.</p>
      * @return variantId
      */
 

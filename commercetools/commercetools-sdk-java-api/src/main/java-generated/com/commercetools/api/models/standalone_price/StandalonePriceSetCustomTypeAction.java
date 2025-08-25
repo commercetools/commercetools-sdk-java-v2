@@ -39,7 +39,7 @@ public interface StandalonePriceSetCustomTypeAction extends StandalonePriceUpdat
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
-     *  <p>Defines the Type that extends the StandalonePrice with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StandalonePrice.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the StandalonePrice with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the StandalonePrice.</p>
      * @return type
      */
     @Valid
@@ -47,7 +47,7 @@ public interface StandalonePriceSetCustomTypeAction extends StandalonePriceUpdat
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the StandalonePrice.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the StandalonePrice.</p>
      * @return fields
      */
     @Valid
@@ -55,14 +55,14 @@ public interface StandalonePriceSetCustomTypeAction extends StandalonePriceUpdat
     public FieldContainer getFields();
 
     /**
-     *  <p>Defines the Type that extends the StandalonePrice with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StandalonePrice.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the StandalonePrice with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the StandalonePrice.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields fields for the StandalonePrice.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the StandalonePrice.</p>
      * @param fields value to be set
      */
 

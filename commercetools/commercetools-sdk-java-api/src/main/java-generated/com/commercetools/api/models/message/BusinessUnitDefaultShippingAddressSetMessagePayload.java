@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Generated after a successful Set Default Shipping Address update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetDefaultShippingAddressAction" rel="nofollow">Set Default Shipping Address</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

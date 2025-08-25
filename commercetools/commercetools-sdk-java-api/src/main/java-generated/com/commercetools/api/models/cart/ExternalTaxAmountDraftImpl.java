@@ -17,11 +17,11 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
+ *  <p>Cannot be used in <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemDraft" rel="nofollow">LineItemDraft</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItemDraft" rel="nofollow">CustomLineItemDraft</a>.</p>
  *  <p>Can only be set by these update actions:</p>
  *  <ul>
- *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
- *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetLineItemTaxAmountAction" rel="nofollow">Set LineItem TaxAmount</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetCustomLineItemTaxAmountAction" rel="nofollow">Set CustomLineItem TaxAmount</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingMethodTaxAmountAction" rel="nofollow">Set ShippingMethod TaxAmount</a> on Carts</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetLineItemTaxAmountAction" rel="nofollow">Set LineItem TaxAmount</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomLineItemTaxAmountAction" rel="nofollow">Set CustomLineItem TaxAmount</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingMethodTaxAmountAction" rel="nofollow">Set ShippingMethod TaxAmount</a> on Order Edits</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

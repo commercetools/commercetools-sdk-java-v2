@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Adding or updating a Custom Type on an Address of a Business Unit generates the BusinessUnitAddressCustomTypeSet Message, and removing one generates the BusinessUnitAddressCustomTypeRemoved Message.</p>
+ *  <p>Adding or updating a Custom Type on an Address of a Business Unit generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAddressCustomTypeSetMessage" rel="nofollow">BusinessUnitAddressCustomTypeSet</a> Message, and removing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAddressCustomTypeRemovedMessage" rel="nofollow">BusinessUnitAddressCustomTypeRemoved</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface BusinessUnitSetAddressCustomTypeAction extends BusinessUnitUpda
     String SET_ADDRESS_CUSTOM_TYPE = "setAddressCustomType";
 
     /**
-     *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>address</code> with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
      * @return type
      */
     @Valid
@@ -49,7 +49,7 @@ public interface BusinessUnitSetAddressCustomTypeAction extends BusinessUnitUpda
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields for the <code>address</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> for the <code>address</code>.</p>
      * @return fields
      */
     @Valid
@@ -65,14 +65,14 @@ public interface BusinessUnitSetAddressCustomTypeAction extends BusinessUnitUpda
     public String getAddressId();
 
     /**
-     *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>address</code> with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields for the <code>address</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> for the <code>address</code>.</p>
      * @param fields value to be set
      */
 

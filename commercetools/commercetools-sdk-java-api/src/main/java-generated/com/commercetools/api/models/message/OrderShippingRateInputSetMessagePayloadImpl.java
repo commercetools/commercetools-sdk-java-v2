@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set ShippingRateInput update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingRateInputAction" rel="nofollow">Set ShippingRateInput</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderShippingRateInputSetMessagePayloadImpl implements OrderShippingRateInputSetMessagePayload, ModelBase {
@@ -56,7 +56,7 @@ public class OrderShippingRateInputSetMessagePayloadImpl implements OrderShippin
     }
 
     /**
-     *  <p>ShippingRateInput after the Set ShippingRateInput update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRateInput" rel="nofollow">ShippingRateInput</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingRateInputAction" rel="nofollow">Set ShippingRateInput</a> update action.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput() {
@@ -64,7 +64,7 @@ public class OrderShippingRateInputSetMessagePayloadImpl implements OrderShippin
     }
 
     /**
-     *  <p>ShippingRateInput before the Set ShippingRateInput update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRateInput" rel="nofollow">ShippingRateInput</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingRateInputAction" rel="nofollow">Set ShippingRateInput</a> update action.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingRateInput getOldShippingRateInput() {

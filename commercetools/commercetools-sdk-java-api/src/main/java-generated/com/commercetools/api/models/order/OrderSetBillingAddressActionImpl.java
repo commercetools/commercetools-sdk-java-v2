@@ -17,8 +17,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>This action updates the <code>billingAddress</code> on the Order, but it does not change the billing address on the referenced Cart from which the Order is created.</p>
- *  <p>Produces the Order Billing Address Set Message.</p>
+ *  <p>This action updates the <code>billingAddress</code> on the Order, but it does not change the billing address on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> from which the Order is created.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderBillingAddressSetMessage" rel="nofollow">Order Billing Address Set</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetBillingAddressActionImpl implements OrderSetBillingAddressAction, ModelBase {

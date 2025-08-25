@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Reference to a ProductDiscount.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface ProductDiscountReference extends Reference, com.commercetools.a
     String PRODUCT_DISCOUNT = "product-discount";
 
     /**
-     *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
+     *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with <span>Reference Expansion</span> for ProductDiscounts.</p>
      * @return obj
      */
     @Valid
@@ -49,7 +49,7 @@ public interface ProductDiscountReference extends Reference, com.commercetools.a
     public ProductDiscount getObj();
 
     /**
-     *  <p>Unique identifier of the referenced ProductDiscount.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a>.</p>
      * @return id
      */
     @NotNull
@@ -57,14 +57,14 @@ public interface ProductDiscountReference extends Reference, com.commercetools.a
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
+     *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with <span>Reference Expansion</span> for ProductDiscounts.</p>
      * @param obj value to be set
      */
 
     public void setObj(final ProductDiscount obj);
 
     /**
-     *  <p>Unique identifier of the referenced ProductDiscount.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a>.</p>
      * @param id value to be set
      */
 

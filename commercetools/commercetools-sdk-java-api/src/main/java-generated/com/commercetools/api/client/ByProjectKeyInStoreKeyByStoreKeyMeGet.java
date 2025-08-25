@@ -20,11 +20,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Returns a Customer for a given Query Predicate in a Store. Returns a <code>200</code> status if successful.</p>
- *  <p>A ResourceNotFound error is returned in the following scenarios:</p>
+ *  <p>Returns a Customer for a given Query Predicate in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. Returns a <code>200</code> status if successful.</p>
+ *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error is returned in the following scenarios:</p>
  *  <ul>
  *   <li>If no Customer exists in the Store for the given Query Predicate.</li>
- *   <li>If a Customer exists in the Store for the given Query Predicate, but does not have an <code>id</code> value that matches the customer:{id} scope.</li>
+ *   <li>If a Customer exists in the Store for the given Query Predicate, but does not have an <code>id</code> value that matches the <span>customer:{id}</span> scope.</li>
  *   <li>If a Customer exists for the given Query Predicate but is associated with a different Store than what is specified in the <code>manage_my_profile:{projectKey}:{storeKey}</code> scope.</li>
  *  </ul>
  *

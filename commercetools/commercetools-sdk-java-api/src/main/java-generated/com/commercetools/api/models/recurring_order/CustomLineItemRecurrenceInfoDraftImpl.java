@@ -40,7 +40,7 @@ public class CustomLineItemRecurrenceInfoDraftImpl implements CustomLineItemRecu
     }
 
     /**
-     *  <p>ResourceIdentifier to a RecurrencePolicy.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a RecurrencePolicy.</p>
      */
 
     public com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifier getRecurrencePolicy() {

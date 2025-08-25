@@ -30,7 +30,7 @@ public class StagedQuoteSetCustomTypeActionBuilder implements Builder<StagedQuot
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>Defines the Type that extends the StagedQuote with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedQuote.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the StagedQuote with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the StagedQuote.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class StagedQuoteSetCustomTypeActionBuilder implements Builder<StagedQuot
     }
 
     /**
-     *  <p>Defines the Type that extends the StagedQuote with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedQuote.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the StagedQuote with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the StagedQuote.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class StagedQuoteSetCustomTypeActionBuilder implements Builder<StagedQuot
     }
 
     /**
-     *  <p>Defines the Type that extends the StagedQuote with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedQuote.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the StagedQuote with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the StagedQuote.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class StagedQuoteSetCustomTypeActionBuilder implements Builder<StagedQuot
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the StagedQuote.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the StagedQuote.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class StagedQuoteSetCustomTypeActionBuilder implements Builder<StagedQuot
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the StagedQuote.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the StagedQuote.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class StagedQuoteSetCustomTypeActionBuilder implements Builder<StagedQuot
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the StagedQuote.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the StagedQuote.</p>
      * @param fields value to be set
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class StagedQuoteSetCustomTypeActionBuilder implements Builder<StagedQuot
     }
 
     /**
-     *  <p>Defines the Type that extends the StagedQuote with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedQuote.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the StagedQuote with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the StagedQuote.</p>
      * @return type
      */
 
@@ -112,7 +112,7 @@ public class StagedQuoteSetCustomTypeActionBuilder implements Builder<StagedQuot
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the StagedQuote.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the StagedQuote.</p>
      * @return fields
      */
 

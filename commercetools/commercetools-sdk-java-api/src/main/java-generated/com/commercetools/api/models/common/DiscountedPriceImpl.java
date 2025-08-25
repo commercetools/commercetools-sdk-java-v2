@@ -51,7 +51,7 @@ public class DiscountedPriceImpl implements DiscountedPrice, ModelBase {
     }
 
     /**
-     *  <p>ProductDiscount related to the discounted price.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> related to the discounted price.</p>
      */
 
     public com.commercetools.api.models.product_discount.ProductDiscountReference getDiscount() {

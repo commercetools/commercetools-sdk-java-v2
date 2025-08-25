@@ -187,7 +187,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Reference to a Customer associated with the Payment.</p>
+     *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> associated with the Payment.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -199,7 +199,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Reference to a Customer associated with the Payment.</p>
+     *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> associated with the Payment.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -211,7 +211,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Reference to a Customer associated with the Payment.</p>
+     *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> associated with the Payment.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -222,7 +222,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Anonymous session associated with the Payment.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">Anonymous session</a> associated with the Payment.</p>
      * @param anonymousId value to be set
      * @return Builder
      */
@@ -233,7 +233,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on PaymentMethodInfo must be unique.</p>
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfo" rel="nofollow">PaymentMethodInfo</a> must be unique.</p>
      * @param interfaceId value to be set
      * @return Builder
      */
@@ -244,7 +244,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> gross total.</p>
      * @param builder function to build the amountPlanned value
      * @return Builder
      */
@@ -256,7 +256,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> gross total.</p>
      * @param builder function to build the amountPlanned value
      * @return Builder
      */
@@ -268,7 +268,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> gross total.</p>
      * @param amountPlanned value to be set
      * @return Builder
      */
@@ -351,7 +351,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionType</a> and a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">TransactionState</a>.</p>
      * @param transactions value to be set
      * @return Builder
      */
@@ -362,7 +362,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionType</a> and a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">TransactionState</a>.</p>
      * @param transactions value to be set
      * @return Builder
      */
@@ -374,7 +374,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionType</a> and a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">TransactionState</a>.</p>
      * @param transactions value to be set
      * @return Builder
      */
@@ -388,7 +388,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionType</a> and a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">TransactionState</a>.</p>
      * @param builder function to build the transactions value
      * @return Builder
      */
@@ -403,7 +403,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionType</a> and a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">TransactionState</a>.</p>
      * @param builder function to build the transactions value
      * @return Builder
      */
@@ -416,7 +416,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionType</a> and a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">TransactionState</a>.</p>
      * @param builder function to build the transactions value
      * @return Builder
      */
@@ -427,7 +427,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionType</a> and a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">TransactionState</a>.</p>
      * @param builder function to build the transactions value
      * @return Builder
      */
@@ -631,7 +631,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Reference to a Customer associated with the Payment.</p>
+     *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> associated with the Payment.</p>
      * @return customer
      */
 
@@ -641,7 +641,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Anonymous session associated with the Payment.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">Anonymous session</a> associated with the Payment.</p>
      * @return anonymousId
      */
 
@@ -651,7 +651,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on PaymentMethodInfo must be unique.</p>
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfo" rel="nofollow">PaymentMethodInfo</a> must be unique.</p>
      * @return interfaceId
      */
 
@@ -661,7 +661,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> gross total.</p>
      * @return amountPlanned
      */
 
@@ -688,7 +688,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionType</a> and a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">TransactionState</a>.</p>
      * @return transactions
      */
 

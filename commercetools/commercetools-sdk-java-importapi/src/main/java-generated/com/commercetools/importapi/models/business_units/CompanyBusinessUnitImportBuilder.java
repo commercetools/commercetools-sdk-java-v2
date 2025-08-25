@@ -63,7 +63,7 @@ public class CompanyBusinessUnitImportBuilder implements Builder<CompanyBusiness
     private com.commercetools.importapi.models.business_units.BusinessUnitStoreMode storeMode;
 
     /**
-     *  <p>User-defined unique identifier. If a BusinessUnit with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -521,7 +521,7 @@ public class CompanyBusinessUnitImportBuilder implements Builder<CompanyBusiness
     }
 
     /**
-     *  <p>User-defined unique identifier. If a BusinessUnit with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @return key
      */
 

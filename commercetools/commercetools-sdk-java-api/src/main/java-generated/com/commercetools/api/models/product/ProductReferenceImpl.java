@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Reference to a Product.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductReferenceImpl implements ProductReference, ModelBase {
@@ -56,7 +56,7 @@ public class ProductReferenceImpl implements ProductReference, ModelBase {
     }
 
     /**
-     *  <p>Unique identifier of the referenced Product.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      */
 
     public String getId() {
@@ -64,7 +64,7 @@ public class ProductReferenceImpl implements ProductReference, ModelBase {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Product. Only present in responses to requests with Reference Expansion for Products.</p>
+     *  <p>Contains the representation of the expanded Product. Only present in responses to requests with <span>Reference Expansion</span> for Products.</p>
      */
 
     public com.commercetools.api.models.product.Product getObj() {

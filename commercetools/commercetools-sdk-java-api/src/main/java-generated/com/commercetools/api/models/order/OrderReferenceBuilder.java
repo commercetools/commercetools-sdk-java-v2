@@ -30,7 +30,7 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
     private com.commercetools.api.models.order.Order obj;
 
     /**
-     *  <p>Unique identifier of the referenced Order.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Order. Only present in responses to requests with Reference Expansion for Orders.</p>
+     *  <p>Contains the representation of the expanded Order. Only present in responses to requests with <span>Reference Expansion</span> for Orders.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Order. Only present in responses to requests with Reference Expansion for Orders.</p>
+     *  <p>Contains the representation of the expanded Order. Only present in responses to requests with <span>Reference Expansion</span> for Orders.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Order. Only present in responses to requests with Reference Expansion for Orders.</p>
+     *  <p>Contains the representation of the expanded Order. Only present in responses to requests with <span>Reference Expansion</span> for Orders.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
     }
 
     /**
-     *  <p>Unique identifier of the referenced Order.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @return id
      */
 
@@ -85,7 +85,7 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Order. Only present in responses to requests with Reference Expansion for Orders.</p>
+     *  <p>Contains the representation of the expanded Order. Only present in responses to requests with <span>Reference Expansion</span> for Orders.</p>
      * @return obj
      */
 

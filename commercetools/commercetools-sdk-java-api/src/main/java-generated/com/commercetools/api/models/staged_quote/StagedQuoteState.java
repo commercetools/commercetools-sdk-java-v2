@@ -17,10 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface StagedQuoteState extends JsonEnum {
 
     /**
-    <p>Initial state after creating the StagedQuote indicating that the Seller is preparing the Quote.</p> */
+    <p>Initial state after creating the StagedQuote indicating that the <span>Seller</span> is preparing the Quote.</p> */
     StagedQuoteState IN_PROGRESS = StagedQuoteStateEnum.IN_PROGRESS;
     /**
-    <p>A state indicating that the StagedQuote has been sent to the Buyer.</p> */
+    <p>A state indicating that the StagedQuote has been sent to the <span>Buyer</span>.</p> */
     StagedQuoteState SENT = StagedQuoteStateEnum.SENT;
     /**
     <p>A state indicating that the StagedQuote flow was finished.</p> */

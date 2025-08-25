@@ -70,7 +70,7 @@ public class AssociateRoleDraftImpl implements AssociateRoleDraft, ModelBase {
     }
 
     /**
-     *  <p>Whether the AssociateRole can be assigned to an Associate by a buyer.</p>
+     *  <p>Whether the AssociateRole can be assigned to an Associate by a <span>buyer</span>.</p>
      */
 
     public Boolean getBuyerAssignable() {

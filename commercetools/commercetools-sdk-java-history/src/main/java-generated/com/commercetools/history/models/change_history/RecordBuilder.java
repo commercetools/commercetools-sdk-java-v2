@@ -61,7 +61,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Version of the resource after the change.</p>
-     *  <p>For more information on how the version is incremented, see Optimistic Concurrency Control.</p>
+     *  <p>For more information on how the version is incremented, see <span>Optimistic Concurrency Control</span>.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -187,7 +187,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>.</p>
-     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, <span>Optimistic Concurrency Control</span>).</p>
      * @param changes value to be set
      * @return Builder
      */
@@ -199,7 +199,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>.</p>
-     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, <span>Optimistic Concurrency Control</span>).</p>
      * @param changes value to be set
      * @return Builder
      */
@@ -211,7 +211,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>.</p>
-     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, <span>Optimistic Concurrency Control</span>).</p>
      * @param changes value to be set
      * @return Builder
      */
@@ -226,7 +226,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>.</p>
-     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, <span>Optimistic Concurrency Control</span>).</p>
      * @param builder function to build the changes value
      * @return Builder
      */
@@ -242,7 +242,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>.</p>
-     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, <span>Optimistic Concurrency Control</span>).</p>
      * @param builder function to build the changes value
      * @return Builder
      */
@@ -290,7 +290,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>References to the Stores associated with the Change.</p>
+     *  <p>References to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> associated with the <a href="https://docs.commercetools.com/apis/ctp:history:type:Change" rel="nofollow">Change</a>.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -301,7 +301,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>References to the Stores associated with the Change.</p>
+     *  <p>References to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> associated with the <a href="https://docs.commercetools.com/apis/ctp:history:type:Change" rel="nofollow">Change</a>.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -312,7 +312,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>References to the Stores associated with the Change.</p>
+     *  <p>References to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> associated with the <a href="https://docs.commercetools.com/apis/ctp:history:type:Change" rel="nofollow">Change</a>.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -326,7 +326,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>References to the Stores associated with the Change.</p>
+     *  <p>References to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> associated with the <a href="https://docs.commercetools.com/apis/ctp:history:type:Change" rel="nofollow">Change</a>.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -341,7 +341,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>References to the Stores associated with the Change.</p>
+     *  <p>References to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> associated with the <a href="https://docs.commercetools.com/apis/ctp:history:type:Change" rel="nofollow">Change</a>.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -354,7 +354,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>References to the Stores associated with the Change.</p>
+     *  <p>References to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> associated with the <a href="https://docs.commercetools.com/apis/ctp:history:type:Change" rel="nofollow">Change</a>.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -365,7 +365,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>References to the Stores associated with the Change.</p>
+     *  <p>References to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> associated with the <a href="https://docs.commercetools.com/apis/ctp:history:type:Change" rel="nofollow">Change</a>.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -376,7 +376,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Reference to the Business Unit associated with the Change. Only available for B2B-enabled Projects.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> associated with the <a href="https://docs.commercetools.com/apis/ctp:history:type:Change" rel="nofollow">Change</a>. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -388,7 +388,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Reference to the Business Unit associated with the Change. Only available for B2B-enabled Projects.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> associated with the <a href="https://docs.commercetools.com/apis/ctp:history:type:Change" rel="nofollow">Change</a>. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -400,7 +400,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Reference to the Business Unit associated with the Change. Only available for B2B-enabled Projects.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> associated with the <a href="https://docs.commercetools.com/apis/ctp:history:type:Change" rel="nofollow">Change</a>. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
@@ -425,7 +425,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Version of the resource after the change.</p>
-     *  <p>For more information on how the version is incremented, see Optimistic Concurrency Control.</p>
+     *  <p>For more information on how the version is incremented, see <span>Optimistic Concurrency Control</span>.</p>
      * @return version
      */
 
@@ -489,7 +489,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>.</p>
-     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, <span>Optimistic Concurrency Control</span>).</p>
      * @return changes
      */
 
@@ -507,7 +507,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>References to the Stores associated with the Change.</p>
+     *  <p>References to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> associated with the <a href="https://docs.commercetools.com/apis/ctp:history:type:Change" rel="nofollow">Change</a>.</p>
      * @return stores
      */
 
@@ -516,7 +516,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Reference to the Business Unit associated with the Change. Only available for B2B-enabled Projects.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> associated with the <a href="https://docs.commercetools.com/apis/ctp:history:type:Change" rel="nofollow">Change</a>. Only available for <span>B2B</span>-enabled Projects.</p>
      * @return businessUnit
      */
 

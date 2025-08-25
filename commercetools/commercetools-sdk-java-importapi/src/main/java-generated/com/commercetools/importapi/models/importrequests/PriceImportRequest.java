@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The request body to import Embedded Prices. Contains data for Embedded Prices to be created or updated in a Project.</p>
+ *  <p>The request body to <a href="https://docs.commercetools.com/apis/ctp:import:endpoint:/{projectKey}/prices/import-containers/{importContainerKey}:POST" rel="nofollow">import Embedded Prices</a>. Contains data for <span>Embedded Prices</span> to be created or updated in a Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

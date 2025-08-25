@@ -100,7 +100,7 @@ public interface AssociateRole extends BaseResource, com.commercetools.api.model
     public String getKey();
 
     /**
-     *  <p>Whether the AssociateRole can be assigned to an Associate by a buyer. If false, the AssociateRole can only be assigned using the general endpoint.</p>
+     *  <p>Whether the AssociateRole can be assigned to an Associate by a <span>buyer</span>. If false, the AssociateRole can only be assigned using the <span>general endpoint</span>.</p>
      * @return buyerAssignable
      */
     @NotNull
@@ -181,7 +181,7 @@ public interface AssociateRole extends BaseResource, com.commercetools.api.model
     public void setKey(final String key);
 
     /**
-     *  <p>Whether the AssociateRole can be assigned to an Associate by a buyer. If false, the AssociateRole can only be assigned using the general endpoint.</p>
+     *  <p>Whether the AssociateRole can be assigned to an Associate by a <span>buyer</span>. If false, the AssociateRole can only be assigned using the <span>general endpoint</span>.</p>
      * @param buyerAssignable value to be set
      */
 

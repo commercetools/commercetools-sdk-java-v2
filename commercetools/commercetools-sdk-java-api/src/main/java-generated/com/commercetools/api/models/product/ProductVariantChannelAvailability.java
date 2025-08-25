@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ProductVariantChannelAvailability {
 
     /**
-     *  <p>Indicates whether a Product Variant is in stock in a specified Channel.</p>
+     *  <p>Indicates whether a Product Variant is in stock in a specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @return isOnStock
      */
 
@@ -41,7 +41,7 @@ public interface ProductVariantChannelAvailability {
     public Boolean getIsOnStock();
 
     /**
-     *  <p>Number of days to restock a Product Variant once it is out of stock in a specified Channel.</p>
+     *  <p>Number of days to restock a Product Variant once it is out of stock in a specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @return restockableInDays
      */
 
@@ -49,7 +49,7 @@ public interface ProductVariantChannelAvailability {
     public Long getRestockableInDays();
 
     /**
-     *  <p>Number of items of this Product Variant that are in stock in a specified Channel.</p>
+     *  <p>Number of items of this Product Variant that are in stock in a specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @return availableQuantity
      */
 
@@ -57,7 +57,7 @@ public interface ProductVariantChannelAvailability {
     public Long getAvailableQuantity();
 
     /**
-     *  <p>Unique identifier of the InventoryEntry.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
      * @return id
      */
     @NotNull
@@ -65,7 +65,7 @@ public interface ProductVariantChannelAvailability {
     public String getId();
 
     /**
-     *  <p>Current version of the InventoryEntry.</p>
+     *  <p>Current version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
      * @return version
      */
     @NotNull
@@ -73,35 +73,35 @@ public interface ProductVariantChannelAvailability {
     public Long getVersion();
 
     /**
-     *  <p>Indicates whether a Product Variant is in stock in a specified Channel.</p>
+     *  <p>Indicates whether a Product Variant is in stock in a specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @param isOnStock value to be set
      */
 
     public void setIsOnStock(final Boolean isOnStock);
 
     /**
-     *  <p>Number of days to restock a Product Variant once it is out of stock in a specified Channel.</p>
+     *  <p>Number of days to restock a Product Variant once it is out of stock in a specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @param restockableInDays value to be set
      */
 
     public void setRestockableInDays(final Long restockableInDays);
 
     /**
-     *  <p>Number of items of this Product Variant that are in stock in a specified Channel.</p>
+     *  <p>Number of items of this Product Variant that are in stock in a specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @param availableQuantity value to be set
      */
 
     public void setAvailableQuantity(final Long availableQuantity);
 
     /**
-     *  <p>Unique identifier of the InventoryEntry.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     *  <p>Current version of the InventoryEntry.</p>
+     *  <p>Current version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
      * @param version value to be set
      */
 

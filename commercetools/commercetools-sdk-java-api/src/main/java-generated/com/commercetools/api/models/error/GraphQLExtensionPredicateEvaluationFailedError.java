@@ -16,7 +16,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Returned when the predicate defined in the ExtensionTrigger could not be evaluated due to a missing field.</p>
+ *  <p>Returned when the predicate defined in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ExtensionTrigger" rel="nofollow">ExtensionTrigger</a> could not be evaluated due to a missing field.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

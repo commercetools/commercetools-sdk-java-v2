@@ -30,7 +30,7 @@ public class MyCustomerRemoveShippingAddressIdActionBuilder
     private String addressKey;
 
     /**
-     *  <p><code>id</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>shippingAddressesIds</code>.</p>
      * @param addressId value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class MyCustomerRemoveShippingAddressIdActionBuilder
     }
 
     /**
-     *  <p><code>key</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>shippingAddressesIds</code>.</p>
      * @param addressKey value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class MyCustomerRemoveShippingAddressIdActionBuilder
     }
 
     /**
-     *  <p><code>id</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>shippingAddressesIds</code>.</p>
      * @return addressId
      */
 
@@ -62,7 +62,7 @@ public class MyCustomerRemoveShippingAddressIdActionBuilder
     }
 
     /**
-     *  <p><code>key</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>shippingAddressesIds</code>.</p>
      * @return addressKey
      */
 

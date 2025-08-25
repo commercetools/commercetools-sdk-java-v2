@@ -29,7 +29,7 @@ public class MyCustomerRemoveBillingAddressIdActionBuilder implements Builder<My
     private String addressKey;
 
     /**
-     *  <p><code>id</code> of the Address to remove from <code>billingAddressesIds</code>.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>billingAddressesIds</code>.</p>
      * @param addressId value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class MyCustomerRemoveBillingAddressIdActionBuilder implements Builder<My
     }
 
     /**
-     *  <p><code>key</code> of the Address to remove from <code>billingAddressesIds</code>.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>billingAddressesIds</code>.</p>
      * @param addressKey value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class MyCustomerRemoveBillingAddressIdActionBuilder implements Builder<My
     }
 
     /**
-     *  <p><code>id</code> of the Address to remove from <code>billingAddressesIds</code>.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>billingAddressesIds</code>.</p>
      * @return addressId
      */
 
@@ -61,7 +61,7 @@ public class MyCustomerRemoveBillingAddressIdActionBuilder implements Builder<My
     }
 
     /**
-     *  <p><code>key</code> of the Address to remove from <code>billingAddressesIds</code>.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>billingAddressesIds</code>.</p>
      * @return addressKey
      */
 

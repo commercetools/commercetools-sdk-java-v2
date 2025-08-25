@@ -11,7 +11,7 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Determines whether a Business Unit can inherit Approval Rules from a parent. Only Business Units of type <code>Division</code> can use <code>ExplicitAndFromParent</code>.</p>
+ *  <p>Determines whether a Business Unit can inherit <span>Approval Rules</span> from a parent. Only Business Units of type <code>Division</code> can use <code>ExplicitAndFromParent</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface BusinessUnitApprovalRuleMode extends JsonEnum {

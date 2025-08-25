@@ -41,7 +41,7 @@ public interface StagedOrderAddPaymentAction extends StagedOrderUpdateAction {
     String ADD_PAYMENT = "addPayment";
 
     /**
-     *  <p>Payment to add to the PaymentInfo. Must not be assigned to another Order or active Cart already.</p>
+     *  <p>Payment to add to the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentInfo" rel="nofollow">PaymentInfo</a>. Must not be assigned to another Order or active Cart already.</p>
      * @return payment
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface StagedOrderAddPaymentAction extends StagedOrderUpdateAction {
     public PaymentResourceIdentifier getPayment();
 
     /**
-     *  <p>Payment to add to the PaymentInfo. Must not be assigned to another Order or active Cart already.</p>
+     *  <p>Payment to add to the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentInfo" rel="nofollow">PaymentInfo</a>. Must not be assigned to another Order or active Cart already.</p>
      * @param payment value to be set
      */
 

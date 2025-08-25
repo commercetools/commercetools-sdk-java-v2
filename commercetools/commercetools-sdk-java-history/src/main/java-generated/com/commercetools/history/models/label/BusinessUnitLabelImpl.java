@@ -54,7 +54,7 @@ public class BusinessUnitLabelImpl implements BusinessUnitLabel, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Business Unit.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      */
 
     public String getKey() {

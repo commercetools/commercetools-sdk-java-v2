@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface PriceFunction {
 
     /**
-     *  <p>Currency code compliant to ISO 4217.</p>
+     *  <p>Currency code compliant to <span>ISO 4217</span>.</p>
      * @return currencyCode
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface PriceFunction {
     public String getFunction();
 
     /**
-     *  <p>Currency code compliant to ISO 4217.</p>
+     *  <p>Currency code compliant to <span>ISO 4217</span>.</p>
      * @param currencyCode value to be set
      */
 

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>PagedQueryResult with <code>results</code> containing an array of AttributeGroup.</p>
+ *  <p><span>PagedQueryResult</span> with <code>results</code> containing an array of <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeGroup" rel="nofollow">AttributeGroup</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeGroupPagedQueryResponseImpl implements AttributeGroupPagedQueryResponse, ModelBase {
@@ -78,7 +78,7 @@ public class AttributeGroupPagedQueryResponseImpl implements AttributeGroupPaged
     }
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     *  <p>Total number of results matching the query. This number is an estimation that is not <span>strongly consistent</span>. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a <span>Query Predicate</span>, <code>total</code> is subject to a <span>limit</span>.</p>
      */
 
     public Long getTotal() {
@@ -86,7 +86,7 @@ public class AttributeGroupPagedQueryResponseImpl implements AttributeGroupPaged
     }
 
     /**
-     *  <p>AttributeGroups matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeGroup" rel="nofollow">AttributeGroups</a> matching the query.</p>
      */
 
     public java.util.List<com.commercetools.api.models.attribute_group.AttributeGroup> getResults() {

@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Returned when a Discount predicate or API Extension predicate is not semantically correct.</p>
+ *  <p>Returned when a <span>Discount predicate</span> or <span>API Extension predicate</span> is not semantically correct.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

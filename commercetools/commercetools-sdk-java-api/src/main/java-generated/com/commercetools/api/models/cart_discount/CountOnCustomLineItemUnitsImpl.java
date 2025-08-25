@@ -63,7 +63,7 @@ public class CountOnCustomLineItemUnitsImpl implements CountOnCustomLineItemUnit
     }
 
     /**
-     *  <p>Valid CustomLineItem predicate that determines the units participating in the Discount.</p>
+     *  <p>Valid <span>CustomLineItem predicate</span> that determines the units participating in the Discount.</p>
      */
 
     public String getPredicate() {

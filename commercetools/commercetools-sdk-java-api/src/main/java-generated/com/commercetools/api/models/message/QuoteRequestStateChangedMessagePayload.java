@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Change Quote Request State update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestChangeQuoteRequestStateAction" rel="nofollow">Change Quote Request State</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface QuoteRequestStateChangedMessagePayload extends MessagePayload {
     String QUOTE_REQUEST_STATE_CHANGED = "QuoteRequestStateChanged";
 
     /**
-     *  <p>State of the Quote Request after the Change Quote Request State update action.</p>
+     *  <p>State of the Quote Request after the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestChangeQuoteRequestStateAction" rel="nofollow">Change Quote Request State</a> update action.</p>
      * @return quoteRequestState
      */
     @NotNull
@@ -48,7 +48,7 @@ public interface QuoteRequestStateChangedMessagePayload extends MessagePayload {
     public QuoteRequestState getQuoteRequestState();
 
     /**
-     *  <p>State of the Quote Request before the Change Quote Request State update action.</p>
+     *  <p>State of the Quote Request before the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestChangeQuoteRequestStateAction" rel="nofollow">Change Quote Request State</a> update action.</p>
      * @return oldQuoteRequestState
      */
     @NotNull
@@ -56,14 +56,14 @@ public interface QuoteRequestStateChangedMessagePayload extends MessagePayload {
     public QuoteRequestState getOldQuoteRequestState();
 
     /**
-     *  <p>State of the Quote Request after the Change Quote Request State update action.</p>
+     *  <p>State of the Quote Request after the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestChangeQuoteRequestStateAction" rel="nofollow">Change Quote Request State</a> update action.</p>
      * @param quoteRequestState value to be set
      */
 
     public void setQuoteRequestState(final QuoteRequestState quoteRequestState);
 
     /**
-     *  <p>State of the Quote Request before the Change Quote Request State update action.</p>
+     *  <p>State of the Quote Request before the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestChangeQuoteRequestStateAction" rel="nofollow">Change Quote Request State</a> update action.</p>
      * @param oldQuoteRequestState value to be set
      */
 

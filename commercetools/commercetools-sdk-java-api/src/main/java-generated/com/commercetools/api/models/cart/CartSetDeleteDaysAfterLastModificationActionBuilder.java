@@ -27,7 +27,7 @@ public class CartSetDeleteDaysAfterLastModificationActionBuilder
     private Integer deleteDaysAfterLastModification;
 
     /**
-     *  <p>Value to set. If not provided, the default value for this field configured in Project settings is assigned.</p>
+     *  <p>Value to set. If not provided, the default value for this field configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a> is assigned.</p>
      * @param deleteDaysAfterLastModification value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class CartSetDeleteDaysAfterLastModificationActionBuilder
     }
 
     /**
-     *  <p>Value to set. If not provided, the default value for this field configured in Project settings is assigned.</p>
+     *  <p>Value to set. If not provided, the default value for this field configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a> is assigned.</p>
      * @return deleteDaysAfterLastModification
      */
 

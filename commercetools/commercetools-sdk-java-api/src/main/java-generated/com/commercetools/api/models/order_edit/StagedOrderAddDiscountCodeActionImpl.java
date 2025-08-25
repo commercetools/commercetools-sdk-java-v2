@@ -17,9 +17,9 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Adds a DiscountCode to the Cart to activate the related Cart Discounts. Adding a Discount Code is only possible if no DirectDiscount has been applied to the Order.</p>
- *  <p>The maximum number of Discount Codes in a Cart is restricted by a limit.</p>
- *  <p>Specific Error Code: MatchingPriceNotFound</p>
+ *  <p>Adds a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> to the Cart to activate the related <span>Cart Discounts</span>. Adding a Discount Code is only possible if no <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">DirectDiscount</a> has been applied to the Order.</p>
+ *  <p>The maximum number of Discount Codes in a Cart is restricted by a <span>limit</span>.</p>
+ *  <p>Specific Error Code: <a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a></p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderAddDiscountCodeActionImpl implements StagedOrderAddDiscountCodeAction, ModelBase {
@@ -53,7 +53,7 @@ public class StagedOrderAddDiscountCodeActionImpl implements StagedOrderAddDisco
     }
 
     /**
-     *  <p><code>code</code> of a DiscountCode.</p>
+     *  <p><code>code</code> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
      */
 
     public String getCode() {

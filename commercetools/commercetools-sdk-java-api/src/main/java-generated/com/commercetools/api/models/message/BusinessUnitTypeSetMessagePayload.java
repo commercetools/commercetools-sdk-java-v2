@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Set Unit Type update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,7 +42,7 @@ public interface BusinessUnitTypeSetMessagePayload extends MessagePayload {
     String BUSINESS_UNIT_TYPE_SET = "BusinessUnitTypeSet";
 
     /**
-     *  <p>Parent unit of the Business Unit after the Set Unit Type update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> update action.</p>
      * @return parentUnit
      */
     @Valid
@@ -50,7 +50,7 @@ public interface BusinessUnitTypeSetMessagePayload extends MessagePayload {
     public BusinessUnitKeyReference getParentUnit();
 
     /**
-     *  <p>Parent unit of the Business Unit before the Set Unit Type update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> update action.</p>
      * @return oldParentUnit
      */
     @Valid
@@ -58,7 +58,7 @@ public interface BusinessUnitTypeSetMessagePayload extends MessagePayload {
     public BusinessUnitKeyReference getOldParentUnit();
 
     /**
-     *  <p>Type of the Business Unit after the Set Unit Type update action.</p>
+     *  <p>Type of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> update action.</p>
      * @return unitType
      */
     @NotNull
@@ -66,7 +66,7 @@ public interface BusinessUnitTypeSetMessagePayload extends MessagePayload {
     public BusinessUnitType getUnitType();
 
     /**
-     *  <p>Type of the Business Unit before the Set Unit Type update action.</p>
+     *  <p>Type of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> update action.</p>
      * @return oldUnitType
      */
     @NotNull
@@ -74,28 +74,28 @@ public interface BusinessUnitTypeSetMessagePayload extends MessagePayload {
     public BusinessUnitType getOldUnitType();
 
     /**
-     *  <p>Parent unit of the Business Unit after the Set Unit Type update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> update action.</p>
      * @param parentUnit value to be set
      */
 
     public void setParentUnit(final BusinessUnitKeyReference parentUnit);
 
     /**
-     *  <p>Parent unit of the Business Unit before the Set Unit Type update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> update action.</p>
      * @param oldParentUnit value to be set
      */
 
     public void setOldParentUnit(final BusinessUnitKeyReference oldParentUnit);
 
     /**
-     *  <p>Type of the Business Unit after the Set Unit Type update action.</p>
+     *  <p>Type of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> update action.</p>
      * @param unitType value to be set
      */
 
     public void setUnitType(final BusinessUnitType unitType);
 
     /**
-     *  <p>Type of the Business Unit before the Set Unit Type update action.</p>
+     *  <p>Type of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> update action.</p>
      * @param oldUnitType value to be set
      */
 

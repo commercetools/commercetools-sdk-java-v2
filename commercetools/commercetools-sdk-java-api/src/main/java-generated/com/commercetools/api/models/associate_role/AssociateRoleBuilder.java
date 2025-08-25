@@ -183,7 +183,7 @@ public class AssociateRoleBuilder implements Builder<AssociateRole> {
     }
 
     /**
-     *  <p>Whether the AssociateRole can be assigned to an Associate by a buyer. If false, the AssociateRole can only be assigned using the general endpoint.</p>
+     *  <p>Whether the AssociateRole can be assigned to an Associate by a <span>buyer</span>. If false, the AssociateRole can only be assigned using the <span>general endpoint</span>.</p>
      * @param buyerAssignable value to be set
      * @return Builder
      */
@@ -344,7 +344,7 @@ public class AssociateRoleBuilder implements Builder<AssociateRole> {
     }
 
     /**
-     *  <p>Whether the AssociateRole can be assigned to an Associate by a buyer. If false, the AssociateRole can only be assigned using the general endpoint.</p>
+     *  <p>Whether the AssociateRole can be assigned to an Associate by a <span>buyer</span>. If false, the AssociateRole can only be assigned using the <span>general endpoint</span>.</p>
      * @return buyerAssignable
      */
 

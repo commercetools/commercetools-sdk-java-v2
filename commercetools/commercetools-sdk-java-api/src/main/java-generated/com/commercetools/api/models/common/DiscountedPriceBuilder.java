@@ -51,7 +51,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-     *  <p>ProductDiscount related to the discounted price.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> related to the discounted price.</p>
      * @param builder function to build the discount value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-     *  <p>ProductDiscount related to the discounted price.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> related to the discounted price.</p>
      * @param builder function to build the discount value
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-     *  <p>ProductDiscount related to the discounted price.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> related to the discounted price.</p>
      * @param discount value to be set
      * @return Builder
      */
@@ -99,7 +99,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-     *  <p>ProductDiscount related to the discounted price.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> related to the discounted price.</p>
      * @return discount
      */
 

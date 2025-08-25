@@ -11,7 +11,7 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Every Import Operation is assigned one of the following states.</p>
+ *  <p>Every <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">Import Operation</a> is assigned one of the following states.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ProcessingState extends JsonEnum {
@@ -20,19 +20,19 @@ public interface ProcessingState extends JsonEnum {
     <p>The initial state assigned if the request payload (JSON structure and fields) meets Import API specifications. The resource import is in progress.</p> */
     ProcessingState PROCESSING = ProcessingStateEnum.PROCESSING;
     /**
-    <p>Either the request payload is missing the data as per Import API specifications, or even though the references were resolved, the data does not meet validation constraints. Generates the ImportValidationFailed Event.</p> */
+    <p>Either the request payload is missing the data as per Import API specifications, or even though the references were resolved, the data does not meet validation constraints. Generates the <span>ImportValidationFailed</span> Event.</p> */
     ProcessingState VALIDATION_FAILED = ProcessingStateEnum.VALIDATION_FAILED;
     /**
-    <p>The import request contains KeyReferences to resources that do not exist in your Composable Commerce Project. Generates the ImportUnresolved Event.</p> */
+    <p>The import request contains <a href="https://docs.commercetools.com/apis/ctp:api:type:KeyReference" rel="nofollow">KeyReferences</a> to resources that do not exist in your Composable Commerce Project. Generates the <span>ImportUnresolved</span> Event.</p> */
     ProcessingState UNRESOLVED = ProcessingStateEnum.UNRESOLVED;
     /**
-    <p>Products must have at least one Product Variant, also known as the Master Variant. If you import a Product without a Master Variant, the import request will have this status until another import request includes Master Variant data for the Product. Generates the ImportWaitForMasterVariant Event.</p> */
+    <p>Products must have at least one Product Variant, also known as the Master Variant. If you import a Product without a Master Variant, the import request will have this status until another import request includes Master Variant data for the Product. Generates the <span>ImportWaitForMasterVariant</span> Event.</p> */
     ProcessingState WAIT_FOR_MASTER_VARIANT = ProcessingStateEnum.WAIT_FOR_MASTER_VARIANT;
     /**
     <p>The resource was successfully imported.</p> */
     ProcessingState IMPORTED = ProcessingStateEnum.IMPORTED;
     /**
-    <p>The resource could not be imported. References were resolved, but the system could not import the data due to an internal server error and the retry limit was reached. Generates the ImportOperationRejected Event.</p> */
+    <p>The resource could not be imported. References were resolved, but the system could not import the data due to an internal server error and the retry limit was reached. Generates the <span>ImportOperationRejected</span> Event.</p> */
     ProcessingState REJECTED = ProcessingStateEnum.REJECTED;
     /**
     <p>The import request was canceled and the resource was not imported.</p> */

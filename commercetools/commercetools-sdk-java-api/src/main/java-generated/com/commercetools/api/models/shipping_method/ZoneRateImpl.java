@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Defines shipping rates in different currencies for a specific Zone.</p>
+ *  <p>Defines shipping rates in different currencies for a specific <a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ZoneRateImpl implements ZoneRate, ModelBase {
@@ -43,7 +43,7 @@ public class ZoneRateImpl implements ZoneRate, ModelBase {
     }
 
     /**
-     *  <p>Zone for which the shipping rates are valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> for which the shipping rates are valid.</p>
      */
 
     public com.commercetools.api.models.zone.ZoneReference getZone() {

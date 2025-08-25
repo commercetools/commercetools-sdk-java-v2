@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Generated after a successful Set Name update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetNameAction" rel="nofollow">Set Name</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -45,7 +45,7 @@ public interface PaymentMethodNameSetMessage extends Message {
     String PAYMENT_METHOD_NAME_SET = "PaymentMethodNameSet";
 
     /**
-     *  <p>Name of the Payment Method after the Set Name update action.</p>
+     *  <p>Name of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @return name
      */
     @Valid
@@ -53,7 +53,7 @@ public interface PaymentMethodNameSetMessage extends Message {
     public LocalizedString getName();
 
     /**
-     *  <p>Name of the Payment Method before the Set Name update action.</p>
+     *  <p>Name of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @return oldName
      */
     @Valid
@@ -61,14 +61,14 @@ public interface PaymentMethodNameSetMessage extends Message {
     public LocalizedString getOldName();
 
     /**
-     *  <p>Name of the Payment Method after the Set Name update action.</p>
+     *  <p>Name of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @param name value to be set
      */
 
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>Name of the Payment Method before the Set Name update action.</p>
+     *  <p>Name of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @param oldName value to be set
      */
 

@@ -39,7 +39,7 @@ public interface OrderSetReturnItemCustomTypeAction extends OrderUpdateAction {
     String SET_RETURN_ITEM_CUSTOM_TYPE = "setReturnItemCustomType";
 
     /**
-     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @return returnItemId
      */
 
@@ -47,7 +47,7 @@ public interface OrderSetReturnItemCustomTypeAction extends OrderUpdateAction {
     public String getReturnItemId();
 
     /**
-     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @return returnItemKey
      */
 
@@ -55,7 +55,7 @@ public interface OrderSetReturnItemCustomTypeAction extends OrderUpdateAction {
     public String getReturnItemKey();
 
     /**
-     *  <p>Defines the Type that extends the Return Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Return Item.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Return Item with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Return Item.</p>
      * @return type
      */
     @Valid
@@ -63,7 +63,7 @@ public interface OrderSetReturnItemCustomTypeAction extends OrderUpdateAction {
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the Return Item.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Return Item.</p>
      * @return fields
      */
     @Valid
@@ -71,28 +71,28 @@ public interface OrderSetReturnItemCustomTypeAction extends OrderUpdateAction {
     public FieldContainer getFields();
 
     /**
-     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @param returnItemId value to be set
      */
 
     public void setReturnItemId(final String returnItemId);
 
     /**
-     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @param returnItemKey value to be set
      */
 
     public void setReturnItemKey(final String returnItemKey);
 
     /**
-     *  <p>Defines the Type that extends the Return Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Return Item.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Return Item with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Return Item.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields fields for the Return Item.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Return Item.</p>
      * @param fields value to be set
      */
 

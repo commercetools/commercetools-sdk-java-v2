@@ -184,7 +184,7 @@ public class BusinessUnitAssociateAddedMessageBuilder implements Builder<Busines
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -196,7 +196,7 @@ public class BusinessUnitAssociateAddedMessageBuilder implements Builder<Busines
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -258,7 +258,7 @@ public class BusinessUnitAssociateAddedMessageBuilder implements Builder<Busines
     }
 
     /**
-     *  <p>The Associate that was added to the Business Unit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param builder function to build the associate value
      * @return Builder
      */
@@ -270,7 +270,7 @@ public class BusinessUnitAssociateAddedMessageBuilder implements Builder<Busines
     }
 
     /**
-     *  <p>The Associate that was added to the Business Unit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param builder function to build the associate value
      * @return Builder
      */
@@ -282,7 +282,7 @@ public class BusinessUnitAssociateAddedMessageBuilder implements Builder<Busines
     }
 
     /**
-     *  <p>The Associate that was added to the Business Unit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param associate value to be set
      * @return Builder
      */
@@ -359,7 +359,7 @@ public class BusinessUnitAssociateAddedMessageBuilder implements Builder<Busines
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -387,7 +387,7 @@ public class BusinessUnitAssociateAddedMessageBuilder implements Builder<Busines
     }
 
     /**
-     *  <p>The Associate that was added to the Business Unit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return associate
      */
 

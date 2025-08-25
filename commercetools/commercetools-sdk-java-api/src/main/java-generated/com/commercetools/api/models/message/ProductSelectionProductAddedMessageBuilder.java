@@ -187,7 +187,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -199,7 +199,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -261,7 +261,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>Product that was added to the Product Selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a>.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -273,7 +273,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>Product that was added to the Product Selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a>.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -285,7 +285,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>Product that was added to the Product Selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a>.</p>
      * @param product value to be set
      * @return Builder
      */
@@ -297,7 +297,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>Product Variant Selection after the Add Product update action.</p>
+     *  <p>Product Variant Selection after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionAddProductAction" rel="nofollow">Add Product</a> update action.</p>
      * @param variantSelection value to be set
      * @return Builder
      */
@@ -309,7 +309,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>Product Variant Selection after the Add Product update action.</p>
+     *  <p>Product Variant Selection after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionAddProductAction" rel="nofollow">Add Product</a> update action.</p>
      * @param builder function to build the variantSelection value
      * @return Builder
      */
@@ -388,7 +388,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -416,7 +416,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>Product that was added to the Product Selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a>.</p>
      * @return product
      */
 
@@ -425,7 +425,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>Product Variant Selection after the Add Product update action.</p>
+     *  <p>Product Variant Selection after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionAddProductAction" rel="nofollow">Add Product</a> update action.</p>
      * @return variantSelection
      */
 

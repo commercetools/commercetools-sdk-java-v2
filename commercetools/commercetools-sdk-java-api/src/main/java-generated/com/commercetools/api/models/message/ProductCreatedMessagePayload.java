@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Create Product request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/products:POST" rel="nofollow">Create Product</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface ProductCreatedMessagePayload extends MessagePayload {
     String PRODUCT_CREATED = "ProductCreated";
 
     /**
-     *  <p>The staged Product Projection of the Product at the time of creation.</p>
+     *  <p>The staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> at the time of creation.</p>
      * @return productProjection
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface ProductCreatedMessagePayload extends MessagePayload {
     public ProductProjection getProductProjection();
 
     /**
-     *  <p>The staged Product Projection of the Product at the time of creation.</p>
+     *  <p>The staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> at the time of creation.</p>
      * @param productProjection value to be set
      */
 

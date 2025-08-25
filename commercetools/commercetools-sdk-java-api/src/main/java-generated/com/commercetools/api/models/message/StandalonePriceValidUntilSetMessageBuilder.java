@@ -187,7 +187,7 @@ public class StandalonePriceValidUntilSetMessageBuilder implements Builder<Stand
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -199,7 +199,7 @@ public class StandalonePriceValidUntilSetMessageBuilder implements Builder<Stand
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -261,7 +261,7 @@ public class StandalonePriceValidUntilSetMessageBuilder implements Builder<Stand
     }
 
     /**
-     *  <p>Value of StandalonePrice <code>validUntil</code> after the Set Valid Until update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validUntil</code> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidUntilAction" rel="nofollow">Set Valid Until</a> update action.</p>
      * @param validUntil value to be set
      * @return Builder
      */
@@ -272,7 +272,7 @@ public class StandalonePriceValidUntilSetMessageBuilder implements Builder<Stand
     }
 
     /**
-     *  <p>Value of StandalonePrice <code>validUntil</code> before the Set Valid Until update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validUntil</code> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidUntilAction" rel="nofollow">Set Valid Until</a> update action.</p>
      * @param previousValidUntil value to be set
      * @return Builder
      */
@@ -349,7 +349,7 @@ public class StandalonePriceValidUntilSetMessageBuilder implements Builder<Stand
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -377,7 +377,7 @@ public class StandalonePriceValidUntilSetMessageBuilder implements Builder<Stand
     }
 
     /**
-     *  <p>Value of StandalonePrice <code>validUntil</code> after the Set Valid Until update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validUntil</code> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidUntilAction" rel="nofollow">Set Valid Until</a> update action.</p>
      * @return validUntil
      */
 
@@ -387,7 +387,7 @@ public class StandalonePriceValidUntilSetMessageBuilder implements Builder<Stand
     }
 
     /**
-     *  <p>Value of StandalonePrice <code>validUntil</code> before the Set Valid Until update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validUntil</code> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidUntilAction" rel="nofollow">Set Valid Until</a> update action.</p>
      * @return previousValidUntil
      */
 

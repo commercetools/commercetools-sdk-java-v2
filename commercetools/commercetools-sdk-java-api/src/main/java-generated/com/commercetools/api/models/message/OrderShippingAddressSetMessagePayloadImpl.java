@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Shipping Address update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetShippingAddressAction" rel="nofollow">Set Shipping Address</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderShippingAddressSetMessagePayloadImpl implements OrderShippingAddressSetMessagePayload, ModelBase {
@@ -56,7 +56,7 @@ public class OrderShippingAddressSetMessagePayloadImpl implements OrderShippingA
     }
 
     /**
-     *  <p>Shipping address on the Order after the Set Shipping Address update action.</p>
+     *  <p>Shipping address on the Order after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetShippingAddressAction" rel="nofollow">Set Shipping Address</a> update action.</p>
      */
 
     public com.commercetools.api.models.common.Address getAddress() {
@@ -64,7 +64,7 @@ public class OrderShippingAddressSetMessagePayloadImpl implements OrderShippingA
     }
 
     /**
-     *  <p>Shipping address on the Order before the Set Shipping Address update action.</p>
+     *  <p>Shipping address on the Order before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetShippingAddressAction" rel="nofollow">Set Shipping Address</a> update action.</p>
      */
 
     public com.commercetools.api.models.common.Address getOldAddress() {

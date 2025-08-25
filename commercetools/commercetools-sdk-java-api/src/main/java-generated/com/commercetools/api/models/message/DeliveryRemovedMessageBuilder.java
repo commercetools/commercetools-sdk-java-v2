@@ -187,7 +187,7 @@ public class DeliveryRemovedMessageBuilder implements Builder<DeliveryRemovedMes
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -198,7 +198,7 @@ public class DeliveryRemovedMessageBuilder implements Builder<DeliveryRemovedMes
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -260,7 +260,7 @@ public class DeliveryRemovedMessageBuilder implements Builder<DeliveryRemovedMes
     }
 
     /**
-     *  <p>The Delivery that was removed from the Order.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param builder function to build the delivery value
      * @return Builder
      */
@@ -272,7 +272,7 @@ public class DeliveryRemovedMessageBuilder implements Builder<DeliveryRemovedMes
     }
 
     /**
-     *  <p>The Delivery that was removed from the Order.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param builder function to build the delivery value
      * @return Builder
      */
@@ -284,7 +284,7 @@ public class DeliveryRemovedMessageBuilder implements Builder<DeliveryRemovedMes
     }
 
     /**
-     *  <p>The Delivery that was removed from the Order.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param delivery value to be set
      * @return Builder
      */
@@ -295,7 +295,7 @@ public class DeliveryRemovedMessageBuilder implements Builder<DeliveryRemovedMes
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingKey value to be set
      * @return Builder
      */
@@ -371,7 +371,7 @@ public class DeliveryRemovedMessageBuilder implements Builder<DeliveryRemovedMes
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -399,7 +399,7 @@ public class DeliveryRemovedMessageBuilder implements Builder<DeliveryRemovedMes
     }
 
     /**
-     *  <p>The Delivery that was removed from the Order.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @return delivery
      */
 
@@ -408,7 +408,7 @@ public class DeliveryRemovedMessageBuilder implements Builder<DeliveryRemovedMes
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingKey
      */
 

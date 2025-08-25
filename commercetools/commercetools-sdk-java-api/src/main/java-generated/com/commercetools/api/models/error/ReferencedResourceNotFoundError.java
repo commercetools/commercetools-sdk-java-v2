@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Returned when a resource referenced by a Reference or a ResourceIdentifier could not be found.</p>
+ *  <p>Returned when a resource referenced by a <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> or a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> could not be found.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

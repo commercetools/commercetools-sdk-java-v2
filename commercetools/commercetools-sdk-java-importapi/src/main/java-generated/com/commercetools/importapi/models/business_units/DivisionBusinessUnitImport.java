@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Represents a Division, a sub-unit of a Company or another Division.</p>
+ *  <p>Represents a <a href="https://docs.commercetools.com/apis/ctp:api:type:Division" rel="nofollow">Division</a>, a sub-unit of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Company" rel="nofollow">Company</a> or another Division.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

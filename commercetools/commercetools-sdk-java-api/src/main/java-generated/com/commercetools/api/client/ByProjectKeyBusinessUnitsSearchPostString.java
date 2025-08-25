@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>If the initial indexing is in progress or the feature is inactive, A SearchNotReady error is returned. If inactive, you can reactivate it.</p>
+ *  <p>If the initial indexing is in progress or the feature is inactive, A <a href="https://docs.commercetools.com/apis/ctp:api:type:SearchNotReadyError" rel="nofollow">SearchNotReady</a> error is returned. If inactive, you can <span>reactivate</span> it.</p>
  *
  * <hr>
  * <div class=code-example>

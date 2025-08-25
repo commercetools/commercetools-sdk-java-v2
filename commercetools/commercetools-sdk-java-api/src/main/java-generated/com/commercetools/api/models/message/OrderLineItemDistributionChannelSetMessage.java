@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Set LineItem DistributionChannel update action.</p>
+ *  <p>Generated after a successful <span>Set LineItem DistributionChannel</span> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface OrderLineItemDistributionChannelSetMessage extends OrderMessage
     String ORDER_LINE_ITEM_DISTRIBUTION_CHANNEL_SET = "OrderLineItemDistributionChannelSet";
 
     /**
-     *  <p>Unique identifier of the Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
      * @return lineItemId
      */
     @NotNull
@@ -63,7 +63,7 @@ public interface OrderLineItemDistributionChannelSetMessage extends OrderMessage
     public String getLineItemKey();
 
     /**
-     *  <p>Distribution Channel that was set.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Distribution Channel</a> that was set.</p>
      * @return distributionChannel
      */
     @Valid
@@ -71,7 +71,7 @@ public interface OrderLineItemDistributionChannelSetMessage extends OrderMessage
     public ChannelReference getDistributionChannel();
 
     /**
-     *  <p>Unique identifier of the Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
      * @param lineItemId value to be set
      */
 
@@ -85,7 +85,7 @@ public interface OrderLineItemDistributionChannelSetMessage extends OrderMessage
     public void setLineItemKey(final String lineItemKey);
 
     /**
-     *  <p>Distribution Channel that was set.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Distribution Channel</a> that was set.</p>
      * @param distributionChannel value to be set
      */
 

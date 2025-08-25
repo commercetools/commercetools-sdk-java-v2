@@ -97,7 +97,7 @@ public interface ApprovalRule extends BaseResource {
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     *  <p>User-defined unique identifier of the Approval Rule. Must be unique within a Business Unit.</p>
+     *  <p>User-defined unique identifier of the Approval Rule. Must be unique within a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return key
      */
 
@@ -121,7 +121,7 @@ public interface ApprovalRule extends BaseResource {
     public String getDescription();
 
     /**
-     *  <p>Indicates whether the Approval Rule should be matched against Orders or not.</p>
+     *  <p>Indicates whether the Approval Rule should be matched against <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> or not.</p>
      * @return status
      */
     @NotNull
@@ -129,7 +129,7 @@ public interface ApprovalRule extends BaseResource {
     public ApprovalRuleStatus getStatus();
 
     /**
-     *  <p>The Order Predicate describing the Orders the Approval Rule should match against.</p>
+     *  <p>The <span>Order Predicate</span> describing the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> the Approval Rule should match against.</p>
      * @return predicate
      */
     @NotNull
@@ -146,7 +146,7 @@ public interface ApprovalRule extends BaseResource {
     public ApproverHierarchy getApprovers();
 
     /**
-     *  <p>The Associate Roles customers must hold for their Order to require approval.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> customers must hold for their Order to require approval.</p>
      * @return requesters
      */
     @NotNull
@@ -155,7 +155,7 @@ public interface ApprovalRule extends BaseResource {
     public List<RuleRequester> getRequesters();
 
     /**
-     *  <p>The Business Unit the Approval Rule belongs to.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> the Approval Rule belongs to.</p>
      * @return businessUnit
      */
     @NotNull
@@ -214,7 +214,7 @@ public interface ApprovalRule extends BaseResource {
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
 
     /**
-     *  <p>User-defined unique identifier of the Approval Rule. Must be unique within a Business Unit.</p>
+     *  <p>User-defined unique identifier of the Approval Rule. Must be unique within a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param key value to be set
      */
 
@@ -235,14 +235,14 @@ public interface ApprovalRule extends BaseResource {
     public void setDescription(final String description);
 
     /**
-     *  <p>Indicates whether the Approval Rule should be matched against Orders or not.</p>
+     *  <p>Indicates whether the Approval Rule should be matched against <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> or not.</p>
      * @param status value to be set
      */
 
     public void setStatus(final ApprovalRuleStatus status);
 
     /**
-     *  <p>The Order Predicate describing the Orders the Approval Rule should match against.</p>
+     *  <p>The <span>Order Predicate</span> describing the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> the Approval Rule should match against.</p>
      * @param predicate value to be set
      */
 
@@ -256,7 +256,7 @@ public interface ApprovalRule extends BaseResource {
     public void setApprovers(final ApproverHierarchy approvers);
 
     /**
-     *  <p>The Associate Roles customers must hold for their Order to require approval.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> customers must hold for their Order to require approval.</p>
      * @param requesters values to be set
      */
 
@@ -264,14 +264,14 @@ public interface ApprovalRule extends BaseResource {
     public void setRequesters(final RuleRequester... requesters);
 
     /**
-     *  <p>The Associate Roles customers must hold for their Order to require approval.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> customers must hold for their Order to require approval.</p>
      * @param requesters values to be set
      */
 
     public void setRequesters(final List<RuleRequester> requesters);
 
     /**
-     *  <p>The Business Unit the Approval Rule belongs to.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> the Approval Rule belongs to.</p>
      * @param businessUnit value to be set
      */
 

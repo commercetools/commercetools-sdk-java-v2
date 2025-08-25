@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Add InterfaceInteraction update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentAddInterfaceInteractionAction" rel="nofollow">Add InterfaceInteraction</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentInteractionAddedMessagePayloadImpl implements PaymentInteractionAddedMessagePayload, ModelBase {
@@ -52,7 +52,7 @@ public class PaymentInteractionAddedMessagePayloadImpl implements PaymentInterac
     }
 
     /**
-     *  <p>The interface interaction that was added to the Payment.</p>
+     *  <p>The interface interaction that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getInteraction() {

@@ -35,7 +35,7 @@ import jakarta.validation.constraints.NotNull;
 public interface AssetChangeValue {
 
     /**
-     *  <p><code>id</code> of the Asset.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Asset" rel="nofollow">Asset</a>.</p>
      * @return id
      */
     @NotNull
@@ -52,7 +52,7 @@ public interface AssetChangeValue {
     public LocalizedString getName();
 
     /**
-     *  <p><code>id</code> of the Asset.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Asset" rel="nofollow">Asset</a>.</p>
      * @param id value to be set
      */
 

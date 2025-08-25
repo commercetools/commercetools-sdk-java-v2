@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Publishes the <code>staged</code> data of the ProductTailoring to <code>current</code>. Sets <code>hasStagedChanges</code> to <code>false</code>. Generates the ProductTailoringPublished Message.</p>
+ *  <p>Publishes the <code>staged</code> data of the ProductTailoring to <code>current</code>. Sets <code>hasStagedChanges</code> to <code>false</code>. Generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringPublishedMessage" rel="nofollow">ProductTailoringPublished</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTailoringPublishActionImpl implements ProductTailoringPublishAction, ModelBase {

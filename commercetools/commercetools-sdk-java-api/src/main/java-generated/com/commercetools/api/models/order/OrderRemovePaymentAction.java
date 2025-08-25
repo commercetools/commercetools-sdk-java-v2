@@ -40,7 +40,7 @@ public interface OrderRemovePaymentAction extends OrderUpdateAction {
     String REMOVE_PAYMENT = "removePayment";
 
     /**
-     *  <p>Payment to remove from the PaymentInfo.</p>
+     *  <p>Payment to remove from the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentInfo" rel="nofollow">PaymentInfo</a>.</p>
      * @return payment
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface OrderRemovePaymentAction extends OrderUpdateAction {
     public PaymentResourceIdentifier getPayment();
 
     /**
-     *  <p>Payment to remove from the PaymentInfo.</p>
+     *  <p>Payment to remove from the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentInfo" rel="nofollow">PaymentInfo</a>.</p>
      * @param payment value to be set
      */
 

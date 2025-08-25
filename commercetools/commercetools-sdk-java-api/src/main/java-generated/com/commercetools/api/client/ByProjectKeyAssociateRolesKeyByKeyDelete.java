@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Deleting an AssociateRole generates the AssociateRoleDeleted Message. An AssociateRole can only be deleted if it is not assigned to any Associates.</p>
+ *  <p>Deleting an AssociateRole generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRoleDeletedMessage" rel="nofollow">AssociateRoleDeleted</a> Message. An AssociateRole can only be deleted if it is not assigned to any <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associates</a>.</p>
  *
  * <hr>
  * <div class=code-example>

@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface BusinessUnitConfiguration {
 
     /**
-     *  <p>Status of Business Units created using the My Business Unit endpoint.</p>
+     *  <p>Status of Business Units created using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/business-units:POST" rel="nofollow">My Business Unit endpoint</a>.</p>
      * @return myBusinessUnitStatusOnCreation
      */
     @NotNull
@@ -42,7 +42,7 @@ public interface BusinessUnitConfiguration {
     public BusinessUnitConfigurationStatus getMyBusinessUnitStatusOnCreation();
 
     /**
-     *  <p>Default Associate Role assigned to the Associate creating a Business Unit using the My Business Unit endpoint.</p>
+     *  <p>Default <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a> assigned to the Associate creating a Business Unit using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/business-units:POST" rel="nofollow">My Business Unit endpoint</a>.</p>
      * @return myBusinessUnitAssociateRoleOnCreation
      */
     @Valid
@@ -50,14 +50,14 @@ public interface BusinessUnitConfiguration {
     public AssociateRoleKeyReference getMyBusinessUnitAssociateRoleOnCreation();
 
     /**
-     *  <p>Status of Business Units created using the My Business Unit endpoint.</p>
+     *  <p>Status of Business Units created using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/business-units:POST" rel="nofollow">My Business Unit endpoint</a>.</p>
      * @param myBusinessUnitStatusOnCreation value to be set
      */
 
     public void setMyBusinessUnitStatusOnCreation(final BusinessUnitConfigurationStatus myBusinessUnitStatusOnCreation);
 
     /**
-     *  <p>Default Associate Role assigned to the Associate creating a Business Unit using the My Business Unit endpoint.</p>
+     *  <p>Default <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a> assigned to the Associate creating a Business Unit using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/business-units:POST" rel="nofollow">My Business Unit endpoint</a>.</p>
      * @param myBusinessUnitAssociateRoleOnCreation value to be set
      */
 

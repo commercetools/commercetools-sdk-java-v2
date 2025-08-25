@@ -31,7 +31,7 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
     private Boolean staged;
 
     /**
-     *  <p>Unique identifier of the Product Variant to which the Image was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> to which the <a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> was added.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
     }
 
     /**
-     *  <p>Image that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      * @param builder function to build the image value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
     }
 
     /**
-     *  <p>Image that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      * @param builder function to build the image value
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
     }
 
     /**
-     *  <p>Image that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      * @param image value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -88,7 +88,7 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
     }
 
     /**
-     *  <p>Unique identifier of the Product Variant to which the Image was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> to which the <a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> was added.</p>
      * @return variantId
      */
 
@@ -97,7 +97,7 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
     }
 
     /**
-     *  <p>Image that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      * @return image
      */
 
@@ -106,7 +106,7 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @return staged
      */
 

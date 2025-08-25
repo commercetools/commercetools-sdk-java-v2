@@ -99,7 +99,7 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
     }
 
     /**
-     *  <p>CustomerGroup for which the given Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which the given Price is valid.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
@@ -107,7 +107,7 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
     }
 
     /**
-     *  <p><code>ProductDistribution</code> Channel for which the given Price is valid.</p>
+     *  <p><code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which the given Price is valid.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelReference getChannel() {
@@ -131,7 +131,7 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
     }
 
     /**
-     *  <p>DiscountedPrice you specify for the given Price.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedPrice" rel="nofollow">DiscountedPrice</a> you specify for the given Price.</p>
      */
 
     public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {
@@ -147,7 +147,7 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
     }
 
     /**
-     *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     *  <p>Price tier applied when the minimum quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> of a ProductVariant with the related Price is reached in a Cart.</p>
      *  <p>If <code>discounted</code> is specified, the tiered Price is ignored for a Product Variant.</p>
      */
 

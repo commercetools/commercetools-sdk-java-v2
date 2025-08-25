@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Unpublishes the <code>current</code> data of the ProductTailoring. Sets the <code>published</code> field to <code>false</code>. Generates the ProductTailoringUnpublished Message.</p>
+ *  <p>Unpublishes the <code>current</code> data of the ProductTailoring. Sets the <code>published</code> field to <code>false</code>. Generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringUnpublishedMessage" rel="nofollow">ProductTailoringUnpublished</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

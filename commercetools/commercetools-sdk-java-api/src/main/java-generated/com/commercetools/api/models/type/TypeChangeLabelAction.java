@@ -41,7 +41,7 @@ public interface TypeChangeLabelAction extends TypeUpdateAction {
     String CHANGE_LABEL = "changeLabel";
 
     /**
-     *  <p>Name of the Field Definition to update.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">Field Definition</a> to update.</p>
      * @return fieldName
      */
     @NotNull
@@ -58,7 +58,7 @@ public interface TypeChangeLabelAction extends TypeUpdateAction {
     public LocalizedString getLabel();
 
     /**
-     *  <p>Name of the Field Definition to update.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">Field Definition</a> to update.</p>
      * @param fieldName value to be set
      */
 

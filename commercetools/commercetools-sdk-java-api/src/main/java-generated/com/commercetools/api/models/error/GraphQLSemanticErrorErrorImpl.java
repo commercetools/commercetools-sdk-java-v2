@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Returned when a Discount predicate or API Extension predicate is not semantically correct.</p>
+ *  <p>Returned when a <span>Discount predicate</span> or <span>API Extension predicate</span> is not semantically correct.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLSemanticErrorErrorImpl implements GraphQLSemanticErrorError, ModelBase {

@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Reference to a Type.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypeReferenceImpl implements TypeReference, ModelBase {
@@ -56,7 +56,7 @@ public class TypeReferenceImpl implements TypeReference, ModelBase {
     }
 
     /**
-     *  <p>Unique identifier of the referenced Type.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      */
 
     public String getId() {
@@ -64,7 +64,7 @@ public class TypeReferenceImpl implements TypeReference, ModelBase {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Type. Only present in responses to requests with Reference Expansion for Types.</p>
+     *  <p>Contains the representation of the expanded Type. Only present in responses to requests with <a href="https://docs.commercetools.com/apis/ctp:api:type:Expansion" rel="nofollow">Reference Expansion</a> for Types.</p>
      */
 
     public com.commercetools.api.models.type.Type getObj() {

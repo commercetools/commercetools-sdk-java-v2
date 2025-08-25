@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Reference to a TaxCategory.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface TaxCategoryReference extends Reference, com.commercetools.api.m
     String TAX_CATEGORY = "tax-category";
 
     /**
-     *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>
+     *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with <span>Reference Expansion</span> for TaxCategories.</p>
      * @return obj
      */
     @Valid
@@ -49,7 +49,7 @@ public interface TaxCategoryReference extends Reference, com.commercetools.api.m
     public TaxCategory getObj();
 
     /**
-     *  <p>Unique identifier of the referenced TaxCategory.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a>.</p>
      * @return id
      */
     @NotNull
@@ -57,14 +57,14 @@ public interface TaxCategoryReference extends Reference, com.commercetools.api.m
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>
+     *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with <span>Reference Expansion</span> for TaxCategories.</p>
      * @param obj value to be set
      */
 
     public void setObj(final TaxCategory obj);
 
     /**
-     *  <p>Unique identifier of the referenced TaxCategory.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a>.</p>
      * @param id value to be set
      */
 

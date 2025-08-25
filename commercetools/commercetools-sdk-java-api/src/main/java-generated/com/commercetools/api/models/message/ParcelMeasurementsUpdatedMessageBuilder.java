@@ -193,7 +193,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -205,7 +205,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -267,7 +267,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     }
 
     /**
-     *  <p>Unique identifier of the Delivery.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param deliveryId value to be set
      * @return Builder
      */
@@ -278,7 +278,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     }
 
     /**
-     *  <p>Unique identifier of the Parcel.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param parcelId value to be set
      * @return Builder
      */
@@ -289,7 +289,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     }
 
     /**
-     *  <p>The Parcel Measurements that were set on the Parcel.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelMeasurements" rel="nofollow">Parcel Measurements</a> that were set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param builder function to build the measurements value
      * @return Builder
      */
@@ -301,7 +301,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     }
 
     /**
-     *  <p>The Parcel Measurements that were set on the Parcel.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelMeasurements" rel="nofollow">Parcel Measurements</a> that were set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param builder function to build the measurements value
      * @return Builder
      */
@@ -313,7 +313,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     }
 
     /**
-     *  <p>The Parcel Measurements that were set on the Parcel.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelMeasurements" rel="nofollow">Parcel Measurements</a> that were set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param measurements value to be set
      * @return Builder
      */
@@ -325,7 +325,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingKey value to be set
      * @return Builder
      */
@@ -401,7 +401,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -429,7 +429,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     }
 
     /**
-     *  <p>Unique identifier of the Delivery.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @return deliveryId
      */
 
@@ -438,7 +438,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     }
 
     /**
-     *  <p>Unique identifier of the Parcel.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @return parcelId
      */
 
@@ -447,7 +447,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     }
 
     /**
-     *  <p>The Parcel Measurements that were set on the Parcel.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelMeasurements" rel="nofollow">Parcel Measurements</a> that were set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @return measurements
      */
 
@@ -457,7 +457,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingKey
      */
 

@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Updates the <code>inputHint</code> of an AttributeDefinition.</p>
+ *  <p>Updates the <code>inputHint</code> of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

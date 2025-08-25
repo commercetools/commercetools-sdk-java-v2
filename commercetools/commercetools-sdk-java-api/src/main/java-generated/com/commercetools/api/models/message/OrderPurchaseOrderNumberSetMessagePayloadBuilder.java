@@ -30,7 +30,7 @@ public class OrderPurchaseOrderNumberSetMessagePayloadBuilder
     private String oldPurchaseOrderNumber;
 
     /**
-     *  <p>Purchase order number on the Order after the Set Purchase Order Number update action.</p>
+     *  <p>Purchase order number on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetPurchaseOrderNumberAction" rel="nofollow">Set Purchase Order Number</a> update action.</p>
      * @param purchaseOrderNumber value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class OrderPurchaseOrderNumberSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Purchase order number on the Order before the Set Purchase Order Number update action.</p>
+     *  <p>Purchase order number on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetPurchaseOrderNumberAction" rel="nofollow">Set Purchase Order Number</a> update action.</p>
      * @param oldPurchaseOrderNumber value to be set
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class OrderPurchaseOrderNumberSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Purchase order number on the Order after the Set Purchase Order Number update action.</p>
+     *  <p>Purchase order number on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetPurchaseOrderNumberAction" rel="nofollow">Set Purchase Order Number</a> update action.</p>
      * @return purchaseOrderNumber
      */
 
@@ -64,7 +64,7 @@ public class OrderPurchaseOrderNumberSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Purchase order number on the Order before the Set Purchase Order Number update action.</p>
+     *  <p>Purchase order number on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetPurchaseOrderNumberAction" rel="nofollow">Set Purchase Order Number</a> update action.</p>
      * @return oldPurchaseOrderNumber
      */
 

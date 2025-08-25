@@ -69,7 +69,7 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
     }
 
     /**
-     *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
+     *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a>.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
     }
 
     /**
-     *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
+     *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a>.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
     }
 
     /**
-     *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
+     *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a>.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
     }
 
     /**
-     *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
+     *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -124,7 +124,7 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
     }
 
     /**
-     *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
+     *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -138,7 +138,7 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
     }
 
     /**
-     *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
+     *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -150,7 +150,7 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
     }
 
     /**
-     *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
+     *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -190,7 +190,7 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
     }
 
     /**
-     *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
+     *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a>.</p>
      * @return attributes
      */
 

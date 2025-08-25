@@ -36,7 +36,7 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
     private Long oldQuantity;
 
     /**
-     *  <p>Unique identifier of the Custom Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -47,7 +47,7 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @param customLineItemKey value to be set
      * @return Builder
      */
@@ -59,7 +59,7 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Custom Line Item quantity after the Change Custom Line Item Quantity update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> quantity after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderChangeCustomLineItemQuantityAction" rel="nofollow">Change Custom Line Item Quantity</a> update action.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -70,7 +70,7 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Custom Line Item quantity before the Change Custom Line Item Quantity update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> quantity before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderChangeCustomLineItemQuantityAction" rel="nofollow">Change Custom Line Item Quantity</a> update action.</p>
      * @param oldQuantity value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Unique identifier of the Custom Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @return customLineItemId
      */
 
@@ -90,7 +90,7 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @return customLineItemKey
      */
 
@@ -100,7 +100,7 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Custom Line Item quantity after the Change Custom Line Item Quantity update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> quantity after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderChangeCustomLineItemQuantityAction" rel="nofollow">Change Custom Line Item Quantity</a> update action.</p>
      * @return quantity
      */
 
@@ -109,7 +109,7 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Custom Line Item quantity before the Change Custom Line Item Quantity update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> quantity before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderChangeCustomLineItemQuantityAction" rel="nofollow">Change Custom Line Item Quantity</a> update action.</p>
      * @return oldQuantity
      */
 

@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>If Product price selection query parameters are provided, the selected Prices are added to the response. Produces the ProductDeleted Message.</p>
+ *  <p>If <span>Product price selection query parameters</span> are provided, the selected Prices are added to the response. Produces the <span>ProductDeleted</span> Message.</p>
  *
  * <hr>
  * <div class=code-example>

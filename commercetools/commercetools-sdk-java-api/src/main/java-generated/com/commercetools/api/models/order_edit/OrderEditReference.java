@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Reference to an OrderEdit.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to an <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface OrderEditReference extends Reference, com.commercetools.api.mod
     String ORDER_EDIT = "order-edit";
 
     /**
-     *  <p>Contains the representation of the expanded Order Edit. Only present in responses to requests with Reference Expansion for Order Edits.</p>
+     *  <p>Contains the representation of the expanded Order Edit. Only present in responses to requests with <span>Reference Expansion</span> for Order Edits.</p>
      * @return obj
      */
     @Valid
@@ -49,7 +49,7 @@ public interface OrderEditReference extends Reference, com.commercetools.api.mod
     public OrderEdit getObj();
 
     /**
-     *  <p>Unique identifier of the referenced OrderEdit.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>.</p>
      * @return id
      */
     @NotNull
@@ -57,14 +57,14 @@ public interface OrderEditReference extends Reference, com.commercetools.api.mod
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded Order Edit. Only present in responses to requests with Reference Expansion for Order Edits.</p>
+     *  <p>Contains the representation of the expanded Order Edit. Only present in responses to requests with <span>Reference Expansion</span> for Order Edits.</p>
      * @param obj value to be set
      */
 
     public void setObj(final OrderEdit obj);
 
     /**
-     *  <p>Unique identifier of the referenced OrderEdit.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>.</p>
      * @param id value to be set
      */
 

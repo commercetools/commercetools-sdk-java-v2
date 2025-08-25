@@ -17,8 +17,8 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set Title on Customers.</li>
- *   <li>Set Title on Reviews.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetTitleAction" rel="nofollow">Set Title</a> on Customers.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewSetTitleAction" rel="nofollow">Set Title</a> on Reviews.</li>
  *  </ul>
  *
  * <hr>

@@ -28,7 +28,7 @@ public class BusinessUnitAssociateModeChangedMessagePayloadBuilder
     private com.commercetools.api.models.business_unit.BusinessUnitAssociateMode oldAssociateMode;
 
     /**
-     *  <p>BusinessUnitAssociateMode of the Business Unit after the Change Associate Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAssociateMode" rel="nofollow">BusinessUnitAssociateMode</a> of the Business Unit after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeAssociateModeAction" rel="nofollow">Change Associate Mode</a> update action.</p>
      * @param associateMode value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class BusinessUnitAssociateModeChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>BusinessUnitAssociateMode of the Business Unit before the Change Associate Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAssociateMode" rel="nofollow">BusinessUnitAssociateMode</a> of the Business Unit before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeAssociateModeAction" rel="nofollow">Change Associate Mode</a> update action.</p>
      * @param oldAssociateMode value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class BusinessUnitAssociateModeChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>BusinessUnitAssociateMode of the Business Unit after the Change Associate Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAssociateMode" rel="nofollow">BusinessUnitAssociateMode</a> of the Business Unit after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeAssociateModeAction" rel="nofollow">Change Associate Mode</a> update action.</p>
      * @return associateMode
      */
 
@@ -61,7 +61,7 @@ public class BusinessUnitAssociateModeChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>BusinessUnitAssociateMode of the Business Unit before the Change Associate Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAssociateMode" rel="nofollow">BusinessUnitAssociateMode</a> of the Business Unit before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeAssociateModeAction" rel="nofollow">Change Associate Mode</a> update action.</p>
      * @return oldAssociateMode
      */
 

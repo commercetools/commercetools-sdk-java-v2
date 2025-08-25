@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Discounts the Product Price by allowing the client to explicitly set a discounted value. Use this when setting discounts using an external service.</p>
+ *  <p>Discounts the Product Price by allowing the client to explicitly <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetDiscountedPriceAction" rel="nofollow">set a discounted value</a>. Use this when setting discounts using an external service.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

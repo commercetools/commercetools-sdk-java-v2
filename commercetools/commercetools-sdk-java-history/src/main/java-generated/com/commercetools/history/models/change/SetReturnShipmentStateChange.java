@@ -18,8 +18,8 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set ReturnShipmentState on Orders.</li>
- *   <li>Set ReturnShipmentState on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetReturnShipmentStateAction" rel="nofollow">Set ReturnShipmentState</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetReturnShipmentStateAction" rel="nofollow">Set ReturnShipmentState</a> on Staged Orders.</li>
  *  </ul>
  *
  * <hr>

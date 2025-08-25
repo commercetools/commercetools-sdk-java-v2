@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface CustomLineItemRecurrenceInfo {
 
     /**
-     *  <p>Reference to a RecurrencePolicy.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a RecurrencePolicy.</p>
      * @return recurrencePolicy
      */
     @NotNull
@@ -43,7 +43,7 @@ public interface CustomLineItemRecurrenceInfo {
     public RecurrencePolicyReference getRecurrencePolicy();
 
     /**
-     *  <p>Reference to a RecurrencePolicy.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a RecurrencePolicy.</p>
      * @param recurrencePolicy value to be set
      */
 

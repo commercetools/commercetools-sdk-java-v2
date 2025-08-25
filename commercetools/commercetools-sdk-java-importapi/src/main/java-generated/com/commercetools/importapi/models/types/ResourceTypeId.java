@@ -11,100 +11,100 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>IDs indicating the type of resource. Maps to <code>Type.resourceTypeIds</code>.</p>
+ *  <p>IDs indicating the <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceTypeId" rel="nofollow">type of resource</a>. Maps to <code>Type.resourceTypeIds</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ResourceTypeId extends JsonEnum {
 
     /**
-    <p>Address on BusinessUnit, Cart, Order, OrderEdit, Customer, and Channel</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> on <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a></p> */
     ResourceTypeId ADDRESS = ResourceTypeIdEnum.ADDRESS;
     /**
-    <p>Asset on Category and ProductVariant</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Asset" rel="nofollow">Asset</a> on <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a></p> */
     ResourceTypeId ASSET = ResourceTypeIdEnum.ASSET;
     /**
-    <p>BusinessUnit</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a></p> */
     ResourceTypeId BUSINESS_UNIT = ResourceTypeIdEnum.BUSINESS_UNIT;
     /**
-    <p>CartDiscount</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a></p> */
     ResourceTypeId CART_DISCOUNT = ResourceTypeIdEnum.CART_DISCOUNT;
     /**
-    <p>Category</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a></p> */
     ResourceTypeId CATEGORY = ResourceTypeIdEnum.CATEGORY;
     /**
-    <p>Channel</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a></p> */
     ResourceTypeId CHANNEL = ResourceTypeIdEnum.CHANNEL;
     /**
-    <p>Customer</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a></p> */
     ResourceTypeId CUSTOMER = ResourceTypeIdEnum.CUSTOMER;
     /**
-    <p>CustomerGroup</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a></p> */
     ResourceTypeId CUSTOMER_GROUP = ResourceTypeIdEnum.CUSTOMER_GROUP;
     /**
-    <p>CustomLineItem on Cart and Order</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a></p> */
     ResourceTypeId CUSTOM_LINE_ITEM = ResourceTypeIdEnum.CUSTOM_LINE_ITEM;
     /**
-    <p>DiscountCode</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a></p> */
     ResourceTypeId DISCOUNT_CODE = ResourceTypeIdEnum.DISCOUNT_CODE;
     /**
-    <p>InventoryEntry</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a></p> */
     ResourceTypeId INVENTORY_ENTRY = ResourceTypeIdEnum.INVENTORY_ENTRY;
     /**
-    <p>LineItem on Cart and Order, and on ShoppingListLineItem.</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>, and on <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">ShoppingListLineItem</a>.</p> */
     ResourceTypeId LINE_ITEM = ResourceTypeIdEnum.LINE_ITEM;
     /**
-    <p>Cart and Order. When a Cart is ordered, the CustomFields need to be copied to the Order. For this reason, the Types for Carts are also valid for Orders, and hence both have the same identifier: <code>order</code>.</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>. When a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> is ordered, the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">CustomFields</a> need to be copied to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>. For this reason, the Types for Carts are also valid for Orders, and hence both have the same identifier: <code>order</code>.</p> */
     ResourceTypeId ORDER = ResourceTypeIdEnum.ORDER;
     /**
-    <p>OrderEdit</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a></p> */
     ResourceTypeId ORDER_EDIT = ResourceTypeIdEnum.ORDER_EDIT;
     /**
-    <p>Delivery</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a></p> */
     ResourceTypeId ORDER_DELIVERY = ResourceTypeIdEnum.ORDER_DELIVERY;
     /**
-    <p>Parcel</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a></p> */
     ResourceTypeId ORDER_PARCEL = ResourceTypeIdEnum.ORDER_PARCEL;
     /**
-    <p>ReturnItem</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a></p> */
     ResourceTypeId ORDER_RETURN_ITEM = ResourceTypeIdEnum.ORDER_RETURN_ITEM;
     /**
-    <p>Payment</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a></p> */
     ResourceTypeId PAYMENT = ResourceTypeIdEnum.PAYMENT;
     /**
-    <p>InterfaceInteraction on Payment</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentAddInterfaceInteractionAction" rel="nofollow">InterfaceInteraction</a> on <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a></p> */
     ResourceTypeId PAYMENT_INTERFACE_INTERACTION = ResourceTypeIdEnum.PAYMENT_INTERFACE_INTERACTION;
     /**
-    <p>Embedded Price on ProductVariant</p> */
+    <p><span>Embedded Price</span> on <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a></p> */
     ResourceTypeId PRODUCT_PRICE = ResourceTypeIdEnum.PRODUCT_PRICE;
     /**
-    <p>ProductSelection</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">ProductSelection</a></p> */
     ResourceTypeId PRODUCT_SELECTION = ResourceTypeIdEnum.PRODUCT_SELECTION;
     /**
-    <p>Quote, QuoteRequest and StagedQuote. When a StagedQuote is created, the CustomFields will be copied from the QuoteRequest and when a Quote is created, the CustomFields will be copied from the StagedQuote. For this reason, the Types for Quotes are also valid for QuoteRequests and StagedQuotes, and hence all have the same identifier: <code>quote</code>.</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a>. When a <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a> is created, the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">CustomFields</a> will be copied from the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> and when a <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> is created, the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">CustomFields</a> will be copied from the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a>. For this reason, the Types for Quotes are also valid for QuoteRequests and StagedQuotes, and hence all have the same identifier: <code>quote</code>.</p> */
     ResourceTypeId QUOTE = ResourceTypeIdEnum.QUOTE;
     /**
-    <p>Review</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a></p> */
     ResourceTypeId REVIEW = ResourceTypeIdEnum.REVIEW;
     /**
-    <p>Shipping</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Shipping" rel="nofollow">Shipping</a></p> */
     ResourceTypeId SHIPPING = ResourceTypeIdEnum.SHIPPING;
     /**
-    <p>ShippingMethod</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a></p> */
     ResourceTypeId SHIPPING_METHOD = ResourceTypeIdEnum.SHIPPING_METHOD;
     /**
-    <p>ShoppingList</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a></p> */
     ResourceTypeId SHOPPING_LIST = ResourceTypeIdEnum.SHOPPING_LIST;
     /**
-    <p>TextLineItem on ShoppingList</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a> on <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a></p> */
     ResourceTypeId SHOPPING_LIST_TEXT_LINE_ITEM = ResourceTypeIdEnum.SHOPPING_LIST_TEXT_LINE_ITEM;
     /**
-    <p>StandalonePrice</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a></p> */
     ResourceTypeId STANDALONE_PRICE = ResourceTypeIdEnum.STANDALONE_PRICE;
     /**
-    <p>Store</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a></p> */
     ResourceTypeId STORE = ResourceTypeIdEnum.STORE;
     /**
-    <p>Transaction on Payment</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a> on <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a></p> */
     ResourceTypeId TRANSACTION = ResourceTypeIdEnum.TRANSACTION;
 
     /**

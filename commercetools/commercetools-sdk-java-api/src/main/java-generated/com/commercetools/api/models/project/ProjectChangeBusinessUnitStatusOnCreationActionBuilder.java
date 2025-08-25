@@ -25,7 +25,7 @@ public class ProjectChangeBusinessUnitStatusOnCreationActionBuilder
     private com.commercetools.api.models.project.BusinessUnitConfigurationStatus status;
 
     /**
-     *  <p>Status for Business Units created using the My Business Unit endpoint.</p>
+     *  <p>Status for Business Units created using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/business-units:POST" rel="nofollow">My Business Unit endpoint</a>.</p>
      * @param status value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class ProjectChangeBusinessUnitStatusOnCreationActionBuilder
     }
 
     /**
-     *  <p>Status for Business Units created using the My Business Unit endpoint.</p>
+     *  <p>Status for Business Units created using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/business-units:POST" rel="nofollow">My Business Unit endpoint</a>.</p>
      * @return status
      */
 

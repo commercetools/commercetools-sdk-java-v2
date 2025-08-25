@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+ *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldsImpl implements CustomFields, ModelBase {
@@ -43,7 +43,7 @@ public class CustomFieldsImpl implements CustomFields, ModelBase {
     }
 
     /**
-     *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that holds the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a> for the Custom Fields.</p>
      */
 
     public com.commercetools.api.models.type.TypeReference getType() {
@@ -51,7 +51,7 @@ public class CustomFieldsImpl implements CustomFields, ModelBase {
     }
 
     /**
-     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     *  <p>Object containing the Custom Fields for the <span>customized resource or data type</span>.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

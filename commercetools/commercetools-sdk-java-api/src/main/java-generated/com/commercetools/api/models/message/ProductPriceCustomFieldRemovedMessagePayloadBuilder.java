@@ -34,7 +34,7 @@ public class ProductPriceCustomFieldRemovedMessagePayloadBuilder
     private String name;
 
     /**
-     *  <p>Unique identifier of the Price from which the Custom Field was removed.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> from which the Custom Field was removed.</p>
      * @param priceId value to be set
      * @return Builder
      */
@@ -45,7 +45,7 @@ public class ProductPriceCustomFieldRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Unique identifier of the ProductVariant to which the Price belongs.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to which the Price belongs.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class ProductPriceCustomFieldRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class ProductPriceCustomFieldRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Unique identifier of the Price from which the Custom Field was removed.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> from which the Custom Field was removed.</p>
      * @return priceId
      */
 
@@ -87,7 +87,7 @@ public class ProductPriceCustomFieldRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Unique identifier of the ProductVariant to which the Price belongs.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to which the Price belongs.</p>
      * @return variantId
      */
 
@@ -96,7 +96,7 @@ public class ProductPriceCustomFieldRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @return staged
      */
 

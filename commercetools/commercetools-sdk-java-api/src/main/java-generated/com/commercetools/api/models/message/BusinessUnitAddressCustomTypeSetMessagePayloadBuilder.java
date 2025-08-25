@@ -70,7 +70,7 @@ public class BusinessUnitAddressCustomTypeSetMessagePayloadBuilder
     }
 
     /**
-     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the previous <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a>. Absent if there was no previous Custom Type present.</p>
      * @param oldTypeId value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class BusinessUnitAddressCustomTypeSetMessagePayloadBuilder
     }
 
     /**
-     *  <p><code>id</code> of the Address on which the Custom Field was set.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> on which the Custom Field was set.</p>
      * @param addressId value to be set
      * @return Builder
      */
@@ -101,7 +101,7 @@ public class BusinessUnitAddressCustomTypeSetMessagePayloadBuilder
     }
 
     /**
-     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the previous <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a>. Absent if there was no previous Custom Type present.</p>
      * @return oldTypeId
      */
 
@@ -111,7 +111,7 @@ public class BusinessUnitAddressCustomTypeSetMessagePayloadBuilder
     }
 
     /**
-     *  <p><code>id</code> of the Address on which the Custom Field was set.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> on which the Custom Field was set.</p>
      * @return addressId
      */
 

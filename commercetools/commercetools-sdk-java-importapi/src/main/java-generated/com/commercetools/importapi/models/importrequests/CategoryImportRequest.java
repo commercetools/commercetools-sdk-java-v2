@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The request body to import Categories. Contains data for Categories to be created or updated in a Project.</p>
+ *  <p>The request body to <a href="https://docs.commercetools.com/apis/ctp:import:endpoint:/{projectKey}/categories/import-containers/{importContainerKey}:POST" rel="nofollow">import Categories</a>. Contains data for <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> to be created or updated in a Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

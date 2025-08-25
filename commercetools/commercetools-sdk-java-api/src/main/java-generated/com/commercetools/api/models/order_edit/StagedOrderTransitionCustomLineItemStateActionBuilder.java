@@ -43,7 +43,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     private java.time.ZonedDateTime actualTransitionDate;
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -55,7 +55,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemKey value to be set
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     *  <p>Number of Custom Line Items that should transition State.</p>
+     *  <p>Number of Custom Line Items that should transition <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     *  <p>State the Custom Line Item should transition from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the Custom Line Item should transition from.</p>
      * @param builder function to build the fromState value
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     *  <p>State the Custom Line Item should transition from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the Custom Line Item should transition from.</p>
      * @param builder function to build the fromState value
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     *  <p>State the Custom Line Item should transition from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the Custom Line Item should transition from.</p>
      * @param fromState value to be set
      * @return Builder
      */
@@ -114,7 +114,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     *  <p>State the Custom Line Item should transition to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the Custom Line Item should transition to.</p>
      * @param builder function to build the toState value
      * @return Builder
      */
@@ -126,7 +126,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     *  <p>State the Custom Line Item should transition to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the Custom Line Item should transition to.</p>
      * @param builder function to build the toState value
      * @return Builder
      */
@@ -138,7 +138,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     *  <p>State the Custom Line Item should transition to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the Custom Line Item should transition to.</p>
      * @param toState value to be set
      * @return Builder
      */
@@ -150,7 +150,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     *  <p>Date and time (UTC) to perform the State transition.</p>
+     *  <p>Date and time (UTC) to perform the <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition.</p>
      * @param actualTransitionDate value to be set
      * @return Builder
      */
@@ -162,7 +162,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
 
@@ -172,7 +172,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemKey
      */
 
@@ -182,7 +182,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     *  <p>Number of Custom Line Items that should transition State.</p>
+     *  <p>Number of Custom Line Items that should transition <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      * @return quantity
      */
 
@@ -191,7 +191,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     *  <p>State the Custom Line Item should transition from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the Custom Line Item should transition from.</p>
      * @return fromState
      */
 
@@ -200,7 +200,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     *  <p>State the Custom Line Item should transition to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the Custom Line Item should transition to.</p>
      * @return toState
      */
 
@@ -209,7 +209,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     *  <p>Date and time (UTC) to perform the State transition.</p>
+     *  <p>Date and time (UTC) to perform the <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition.</p>
      * @return actualTransitionDate
      */
 

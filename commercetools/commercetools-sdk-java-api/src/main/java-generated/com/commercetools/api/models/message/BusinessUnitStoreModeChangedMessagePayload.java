@@ -19,7 +19,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Set Store Mode update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -45,7 +45,7 @@ public interface BusinessUnitStoreModeChangedMessagePayload extends MessagePaylo
     String BUSINESS_UNIT_STORE_MODE_CHANGED = "BusinessUnitStoreModeChanged";
 
     /**
-     *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @return stores
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface BusinessUnitStoreModeChangedMessagePayload extends MessagePaylo
     public List<StoreKeyReference> getStores();
 
     /**
-     *  <p>BusinessUnitStoreMode of the Business Unit after the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitStoreMode" rel="nofollow">BusinessUnitStoreMode</a> of the Business Unit after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @return storeMode
      */
     @NotNull
@@ -62,7 +62,7 @@ public interface BusinessUnitStoreModeChangedMessagePayload extends MessagePaylo
     public BusinessUnitStoreMode getStoreMode();
 
     /**
-     *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @return oldStores
      */
     @NotNull
@@ -71,7 +71,7 @@ public interface BusinessUnitStoreModeChangedMessagePayload extends MessagePaylo
     public List<StoreKeyReference> getOldStores();
 
     /**
-     *  <p>BusinessUnitStoreMode of the Business Unit before the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitStoreMode" rel="nofollow">BusinessUnitStoreMode</a> of the Business Unit before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @return oldStoreMode
      */
     @NotNull
@@ -79,7 +79,7 @@ public interface BusinessUnitStoreModeChangedMessagePayload extends MessagePaylo
     public BusinessUnitStoreMode getOldStoreMode();
 
     /**
-     *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @param stores values to be set
      */
 
@@ -87,21 +87,21 @@ public interface BusinessUnitStoreModeChangedMessagePayload extends MessagePaylo
     public void setStores(final StoreKeyReference... stores);
 
     /**
-     *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @param stores values to be set
      */
 
     public void setStores(final List<StoreKeyReference> stores);
 
     /**
-     *  <p>BusinessUnitStoreMode of the Business Unit after the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitStoreMode" rel="nofollow">BusinessUnitStoreMode</a> of the Business Unit after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @param storeMode value to be set
      */
 
     public void setStoreMode(final BusinessUnitStoreMode storeMode);
 
     /**
-     *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @param oldStores values to be set
      */
 
@@ -109,14 +109,14 @@ public interface BusinessUnitStoreModeChangedMessagePayload extends MessagePaylo
     public void setOldStores(final StoreKeyReference... oldStores);
 
     /**
-     *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @param oldStores values to be set
      */
 
     public void setOldStores(final List<StoreKeyReference> oldStores);
 
     /**
-     *  <p>BusinessUnitStoreMode of the Business Unit before the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitStoreMode" rel="nofollow">BusinessUnitStoreMode</a> of the Business Unit before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @param oldStoreMode value to be set
      */
 

@@ -58,7 +58,7 @@ public class CustomerPagedSearchResponseImpl implements CustomerPagedSearchRespo
     }
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      */
 
     public Integer getLimit() {
@@ -66,7 +66,7 @@ public class CustomerPagedSearchResponseImpl implements CustomerPagedSearchRespo
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      */
 
     public Integer getOffset() {

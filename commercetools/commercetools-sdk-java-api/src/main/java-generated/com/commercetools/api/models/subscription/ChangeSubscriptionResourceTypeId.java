@@ -11,133 +11,133 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Resource types supported by ChangeSubscriptions:</p>
+ *  <p>Resource types supported by <a href="https://docs.commercetools.com/apis/ctp:api:type:ChangeSubscription" rel="nofollow">ChangeSubscriptions</a>:</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ChangeSubscriptionResourceTypeId extends JsonEnum {
 
     /**
-    <p>Changes related to ApprovalFlows. Only available for B2B-enabled Projects.</p> */
+    <p>Changes related to <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">ApprovalFlows</a>. Only available for <span>B2B</span>-enabled Projects.</p> */
     ChangeSubscriptionResourceTypeId APPROVAL_FLOW = ChangeSubscriptionResourceTypeIdEnum.APPROVAL_FLOW;
     /**
-    <p>Changes related to ApprovalRules. Only available for B2B-enabled Projects.</p> */
+    <p>Changes related to <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRules</a>. Only available for <span>B2B</span>-enabled Projects.</p> */
     ChangeSubscriptionResourceTypeId APPROVAL_RULE = ChangeSubscriptionResourceTypeIdEnum.APPROVAL_RULE;
     /**
-    <p>Changes related to AssociateRoles. Only available for B2B-enabled Projects.</p> */
+    <p>Changes related to <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRoles</a>. Only available for <span>B2B</span>-enabled Projects.</p> */
     ChangeSubscriptionResourceTypeId ASSOCIATE_ROLE = ChangeSubscriptionResourceTypeIdEnum.ASSOCIATE_ROLE;
     /**
-    <p>Changes related to AttributeGroups.</p> */
+    <p>Changes related to <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeGroup" rel="nofollow">AttributeGroups</a>.</p> */
     ChangeSubscriptionResourceTypeId ATTRIBUTE_GROUP = ChangeSubscriptionResourceTypeIdEnum.ATTRIBUTE_GROUP;
     /**
-    <p>Changes to BusinessUnits. Only available for B2B-enabled Projects.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnits</a>. Only available for <span>B2B</span>-enabled Projects.</p> */
     ChangeSubscriptionResourceTypeId BUSINESS_UNIT = ChangeSubscriptionResourceTypeIdEnum.BUSINESS_UNIT;
     /**
-    <p>Changes to Carts. Only notification of creation is supported.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>. Only notification of creation is supported.</p> */
     ChangeSubscriptionResourceTypeId CART = ChangeSubscriptionResourceTypeIdEnum.CART;
     /**
-    <p>Changes to CartDiscounts.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a>.</p> */
     ChangeSubscriptionResourceTypeId CART_DISCOUNT = ChangeSubscriptionResourceTypeIdEnum.CART_DISCOUNT;
     /**
-    <p>Changes to Categories.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a>.</p> */
     ChangeSubscriptionResourceTypeId CATEGORY = ChangeSubscriptionResourceTypeIdEnum.CATEGORY;
     /**
-    <p>Changes to Channels.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channels</a>.</p> */
     ChangeSubscriptionResourceTypeId CHANNEL = ChangeSubscriptionResourceTypeIdEnum.CHANNEL;
     /**
-    <p>Changes to Customers.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customers</a>.</p> */
     ChangeSubscriptionResourceTypeId CUSTOMER = ChangeSubscriptionResourceTypeIdEnum.CUSTOMER;
     /**
-    <p>Changes to CustomerTokens.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerToken" rel="nofollow">CustomerTokens</a>.</p> */
     ChangeSubscriptionResourceTypeId CUSTOMER_EMAIL_TOKEN = ChangeSubscriptionResourceTypeIdEnum.CUSTOMER_EMAIL_TOKEN;
     /**
-    <p>Changes to CustomerGroups.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroups</a>.</p> */
     ChangeSubscriptionResourceTypeId CUSTOMER_GROUP = ChangeSubscriptionResourceTypeIdEnum.CUSTOMER_GROUP;
     /**
-    <p>Changes to CustomerTokens.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerToken" rel="nofollow">CustomerTokens</a>.</p> */
     ChangeSubscriptionResourceTypeId CUSTOMER_PASSWORD_TOKEN = ChangeSubscriptionResourceTypeIdEnum.CUSTOMER_PASSWORD_TOKEN;
     /**
-    <p>Changes to DiscountCodes.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCodes</a>.</p> */
     ChangeSubscriptionResourceTypeId DISCOUNT_CODE = ChangeSubscriptionResourceTypeIdEnum.DISCOUNT_CODE;
     /**
-    <p>Changes to DiscountGroups.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroup" rel="nofollow">DiscountGroups</a>.</p> */
     ChangeSubscriptionResourceTypeId DISCOUNT_GROUP = ChangeSubscriptionResourceTypeIdEnum.DISCOUNT_GROUP;
     /**
-    <p>Changes to Extensions.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:Extension" rel="nofollow">Extensions</a>.</p> */
     ChangeSubscriptionResourceTypeId EXTENSION = ChangeSubscriptionResourceTypeIdEnum.EXTENSION;
     /**
-    <p>Changes to InventoryEntries.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntries</a>.</p> */
     ChangeSubscriptionResourceTypeId INVENTORY_ENTRY = ChangeSubscriptionResourceTypeIdEnum.INVENTORY_ENTRY;
     /**
-    <p>Changes to CustomObjects.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomObject" rel="nofollow">CustomObjects</a>.</p> */
     ChangeSubscriptionResourceTypeId KEY_VALUE_DOCUMENT = ChangeSubscriptionResourceTypeIdEnum.KEY_VALUE_DOCUMENT;
     /**
-    <p>Changes to Orders. Modifying Orders via Order Edits does not trigger a notification. To achieve this, a MessageSubscription to the OrderEditApplied Message is necessary.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>. Modifying Orders via <span>Order Edits</span> does not trigger a notification. To achieve this, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MessageSubscription" rel="nofollow">MessageSubscription</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEditAppliedMessage" rel="nofollow">OrderEditApplied</a> Message is necessary.</p> */
     ChangeSubscriptionResourceTypeId ORDER = ChangeSubscriptionResourceTypeIdEnum.ORDER;
     /**
-    <p>Changes to OrderEdits.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdits</a>.</p> */
     ChangeSubscriptionResourceTypeId ORDER_EDIT = ChangeSubscriptionResourceTypeIdEnum.ORDER_EDIT;
     /**
-    <p>Changes to Payments.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payments</a>.</p> */
     ChangeSubscriptionResourceTypeId PAYMENT = ChangeSubscriptionResourceTypeIdEnum.PAYMENT;
     /**
-    <p>Changes to Products.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a>.</p> */
     ChangeSubscriptionResourceTypeId PRODUCT = ChangeSubscriptionResourceTypeIdEnum.PRODUCT;
     /**
-    <p>Changes to ProductDiscount.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a>.</p> */
     ChangeSubscriptionResourceTypeId PRODUCT_DISCOUNT = ChangeSubscriptionResourceTypeIdEnum.PRODUCT_DISCOUNT;
     /**
-    <p>Changes to ProductSelections.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">ProductSelections</a>.</p> */
     ChangeSubscriptionResourceTypeId PRODUCT_SELECTION = ChangeSubscriptionResourceTypeIdEnum.PRODUCT_SELECTION;
     /**
-    <p>Changes to ProductTailorings.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailorings</a>.</p> */
     ChangeSubscriptionResourceTypeId PRODUCT_TAILORING = ChangeSubscriptionResourceTypeIdEnum.PRODUCT_TAILORING;
     /**
-    <p>Changes to ProductTypes.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductTypes</a>.</p> */
     ChangeSubscriptionResourceTypeId PRODUCT_TYPE = ChangeSubscriptionResourceTypeIdEnum.PRODUCT_TYPE;
     /**
-    <p>Changes to Quotes.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>.</p> */
     ChangeSubscriptionResourceTypeId QUOTE = ChangeSubscriptionResourceTypeIdEnum.QUOTE;
     /**
-    <p>Changes to QuoteRequests.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequests</a>.</p> */
     ChangeSubscriptionResourceTypeId QUOTE_REQUEST = ChangeSubscriptionResourceTypeIdEnum.QUOTE_REQUEST;
     /**
-    <p>Changes to RecurrencePolicies.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicies</a>.</p> */
     ChangeSubscriptionResourceTypeId RECURRENCE_POLICY = ChangeSubscriptionResourceTypeIdEnum.RECURRENCE_POLICY;
     /**
-    <p>Changes to RecurringOrders.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrders</a>.</p> */
     ChangeSubscriptionResourceTypeId RECURRING_ORDER = ChangeSubscriptionResourceTypeIdEnum.RECURRING_ORDER;
     /**
-    <p>Changes to Reviews.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Reviews</a>.</p> */
     ChangeSubscriptionResourceTypeId REVIEW = ChangeSubscriptionResourceTypeIdEnum.REVIEW;
     /**
-    <p>Changes to ShippingMethods.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethods</a>.</p> */
     ChangeSubscriptionResourceTypeId SHIPPING_METHOD = ChangeSubscriptionResourceTypeIdEnum.SHIPPING_METHOD;
     /**
-    <p>Changes to ShoppingLists.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingLists</a>.</p> */
     ChangeSubscriptionResourceTypeId SHOPPING_LIST = ChangeSubscriptionResourceTypeIdEnum.SHOPPING_LIST;
     /**
-    <p>Changes to StagedQuotes.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuotes</a>.</p> */
     ChangeSubscriptionResourceTypeId STAGED_QUOTE = ChangeSubscriptionResourceTypeIdEnum.STAGED_QUOTE;
     /**
-    <p>Changes to StandalonePrices.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrices</a>.</p> */
     ChangeSubscriptionResourceTypeId STANDALONE_PRICE = ChangeSubscriptionResourceTypeIdEnum.STANDALONE_PRICE;
     /**
-    <p>Changes to States.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">States</a>.</p> */
     ChangeSubscriptionResourceTypeId STATE = ChangeSubscriptionResourceTypeIdEnum.STATE;
     /**
-    <p>Changes to Stores.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a>.</p> */
     ChangeSubscriptionResourceTypeId STORE = ChangeSubscriptionResourceTypeIdEnum.STORE;
     /**
-    <p>Changes to Subscriptions.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:Subscription" rel="nofollow">Subscriptions</a>.</p> */
     ChangeSubscriptionResourceTypeId SUBSCRIPTION = ChangeSubscriptionResourceTypeIdEnum.SUBSCRIPTION;
     /**
-    <p>Changes to TaxCategories.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategories</a>.</p> */
     ChangeSubscriptionResourceTypeId TAX_CATEGORY = ChangeSubscriptionResourceTypeIdEnum.TAX_CATEGORY;
     /**
-    <p>Changes to Types.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Types</a>.</p> */
     ChangeSubscriptionResourceTypeId TYPE = ChangeSubscriptionResourceTypeIdEnum.TYPE;
     /**
-    <p>Changes to Zones.</p> */
+    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zones</a>.</p> */
     ChangeSubscriptionResourceTypeId ZONE = ChangeSubscriptionResourceTypeIdEnum.ZONE;
 
     /**

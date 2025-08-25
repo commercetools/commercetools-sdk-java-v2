@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set PriceMode update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetPriceModeAction" rel="nofollow">Set PriceMode</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPriceModeSetMessagePayloadImpl implements ProductPriceModeSetMessagePayload, ModelBase {
@@ -52,7 +52,7 @@ public class ProductPriceModeSetMessagePayloadImpl implements ProductPriceModeSe
     }
 
     /**
-     *  <p>The PriceMode that was set.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPriceModeEnum" rel="nofollow">PriceMode</a> that was set.</p>
      */
 
     public com.commercetools.api.models.product.ProductPriceModeEnum getTo() {

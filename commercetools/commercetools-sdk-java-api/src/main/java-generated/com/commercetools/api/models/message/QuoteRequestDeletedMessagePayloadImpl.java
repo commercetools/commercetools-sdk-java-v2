@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Delete QuoteRequest request.</p>
+ *  <p>Generated after a successful <span>Delete QuoteRequest</span> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class QuoteRequestDeletedMessagePayloadImpl implements QuoteRequestDeletedMessagePayload, ModelBase {

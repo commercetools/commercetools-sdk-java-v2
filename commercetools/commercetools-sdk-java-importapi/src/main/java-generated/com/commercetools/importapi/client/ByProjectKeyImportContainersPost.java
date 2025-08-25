@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Creates an Import Container in the Project.</p>
- *  <p>Generates the ImportContainerCreated Event.</p>
+ *  <p>Generates the <span>ImportContainerCreated</span> Event.</p>
  *
  * <hr>
  * <div class=code-example>

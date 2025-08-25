@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Generated after a successful Set Customer Group update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAction" rel="nofollow">Set Customer Group</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface CustomerGroupSetMessagePayload extends MessagePayload {
     String CUSTOMER_GROUP_SET = "CustomerGroupSet";
 
     /**
-     *  <p>Customer Group that was set during the Set Customer Group update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">Customer Group</a> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAction" rel="nofollow">Set Customer Group</a> update action.</p>
      * @return customerGroup
      */
     @Valid
@@ -46,7 +46,7 @@ public interface CustomerGroupSetMessagePayload extends MessagePayload {
     public CustomerGroupReference getCustomerGroup();
 
     /**
-     *  <p>Customer Group that was set during the Set Customer Group update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">Customer Group</a> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAction" rel="nofollow">Set Customer Group</a> update action.</p>
      * @param customerGroup value to be set
      */
 

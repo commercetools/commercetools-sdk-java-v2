@@ -28,7 +28,7 @@ public class OrderLineItemAddedMessagePayloadBuilder implements Builder<OrderLin
     private Long addedQuantity;
 
     /**
-     *  <p>Line Item that was added to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class OrderLineItemAddedMessagePayloadBuilder implements Builder<OrderLin
     }
 
     /**
-     *  <p>Line Item that was added to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class OrderLineItemAddedMessagePayloadBuilder implements Builder<OrderLin
     }
 
     /**
-     *  <p>Line Item that was added to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param lineItem value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class OrderLineItemAddedMessagePayloadBuilder implements Builder<OrderLin
     }
 
     /**
-     *  <p>Quantity of Line Items that were added to the Order.</p>
+     *  <p>Quantity of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Items</a> that were added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param addedQuantity value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class OrderLineItemAddedMessagePayloadBuilder implements Builder<OrderLin
     }
 
     /**
-     *  <p>Line Item that was added to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @return lineItem
      */
 
@@ -83,7 +83,7 @@ public class OrderLineItemAddedMessagePayloadBuilder implements Builder<OrderLin
     }
 
     /**
-     *  <p>Quantity of Line Items that were added to the Order.</p>
+     *  <p>Quantity of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Items</a> that were added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @return addedQuantity
      */
 

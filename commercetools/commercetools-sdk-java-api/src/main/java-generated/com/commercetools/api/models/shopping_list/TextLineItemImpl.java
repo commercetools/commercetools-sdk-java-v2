@@ -62,7 +62,7 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     }
 
     /**
-     *  <p>Date and time (UTC) the TextLineItem was added to the ShoppingList.</p>
+     *  <p>Date and time (UTC) the TextLineItem was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      */
 
     public java.time.ZonedDateTime getAddedAt() {
@@ -94,7 +94,7 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     }
 
     /**
-     *  <p>User-defined identifier of the TextLineItem. It is unique per ShoppingList.</p>
+     *  <p>User-defined identifier of the TextLineItem. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      */
 
     public String getKey() {

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Associates update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetAssociatesAction" rel="nofollow">Set Associates</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitAssociatesSetMessagePayloadImpl implements BusinessUnitAssociatesSetMessagePayload, ModelBase {
@@ -52,7 +52,7 @@ public class BusinessUnitAssociatesSetMessagePayloadImpl implements BusinessUnit
     }
 
     /**
-     *  <p>The list of Associates that was updated on the Business Unit.</p>
+     *  <p>The list of <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associates</a> that was updated on the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.business_unit.Associate> getAssociates() {

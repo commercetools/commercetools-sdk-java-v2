@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>This method appends query parameters to the URL. The maximum allowed URL length is 8192 characters. Exceeding this limit will result in URL truncation, potentially leading to unexpected results. For funnel searches on Product Listing Pages, where users select multiple filters, we recommend the POST method which passes the query parameters within the request body, avoiding URL length restrictions.</p>
+ *  <p>This method appends query parameters to the URL. The maximum allowed URL length is 8192 characters. Exceeding this limit will result in URL truncation, potentially leading to unexpected results. For funnel searches on Product Listing Pages, where users select multiple filters, we recommend the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/product-projections/search:POST" rel="nofollow">POST</a> method which passes the query parameters within the request body, avoiding URL length restrictions.</p>
  *
  * <hr>
  * <div class=code-example>

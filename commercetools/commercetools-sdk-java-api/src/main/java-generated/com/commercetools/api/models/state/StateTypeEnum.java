@@ -17,31 +17,31 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface StateTypeEnum extends JsonEnum {
 
     /**
-    <p>Used by Orders.</p> */
+    <p>Used by <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>.</p> */
     StateTypeEnum ORDER_STATE = StateTypeEnumEnum.ORDER_STATE;
     /**
-    <p>Used by RecurringOrders.</p> */
+    <p>Used by <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrders</a>.</p> */
     StateTypeEnum RECURRING_ORDER_STATE = StateTypeEnumEnum.RECURRING_ORDER_STATE;
     /**
-    <p>Used by LineItems and CustomLineItems in Carts and Orders, with the <code>builtin</code> field always set to <code>true</code> by default. In addition, the <code>initial</code> field is set to <code>true</code> upon creation.</p> */
+    <p>Used by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a> in <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, with the <code>builtin</code> field always set to <code>true</code> by default. In addition, the <code>initial</code> field is set to <code>true</code> upon creation.</p> */
     StateTypeEnum LINE_ITEM_STATE = StateTypeEnumEnum.LINE_ITEM_STATE;
     /**
-    <p>Used by Products.</p> */
+    <p>Used by <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a>.</p> */
     StateTypeEnum PRODUCT_STATE = StateTypeEnumEnum.PRODUCT_STATE;
     /**
-    <p>Used by Reviews.</p> */
+    <p>Used by <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Reviews</a>.</p> */
     StateTypeEnum REVIEW_STATE = StateTypeEnumEnum.REVIEW_STATE;
     /**
-    <p>Used by PaymentStatus in Payments.</p> */
+    <p>Used by <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentStatus" rel="nofollow">PaymentStatus</a> in <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payments</a>.</p> */
     StateTypeEnum PAYMENT_STATE = StateTypeEnumEnum.PAYMENT_STATE;
     /**
-    <p>Used by QuoteRequest.</p> */
+    <p>Used by <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a>.</p> */
     StateTypeEnum QUOTE_REQUEST_STATE = StateTypeEnumEnum.QUOTE_REQUEST_STATE;
     /**
-    <p>Used by StagedQuote.</p> */
+    <p>Used by <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a>.</p> */
     StateTypeEnum STAGED_QUOTE_STATE = StateTypeEnumEnum.STAGED_QUOTE_STATE;
     /**
-    <p>Used by Quote.</p> */
+    <p>Used by <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a>.</p> */
     StateTypeEnum QUOTE_STATE = StateTypeEnumEnum.QUOTE_STATE;
 
     /**

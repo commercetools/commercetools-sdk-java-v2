@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Create StagedQuote request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/staged-quotes:POST" rel="nofollow">Create StagedQuote</a> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedQuoteCreatedMessagePayloadImpl implements StagedQuoteCreatedMessagePayload, ModelBase {
@@ -52,7 +52,7 @@ public class StagedQuoteCreatedMessagePayloadImpl implements StagedQuoteCreatedM
     }
 
     /**
-     *  <p>Staged Quote that was created.</p>
+     *  <p><span>Staged Quote</span> that was created.</p>
      */
 
     public com.commercetools.api.models.staged_quote.StagedQuote getStagedQuote() {

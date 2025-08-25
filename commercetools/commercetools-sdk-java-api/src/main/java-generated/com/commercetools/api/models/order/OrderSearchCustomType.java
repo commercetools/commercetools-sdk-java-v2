@@ -11,61 +11,61 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Possible values for the <code>customType</code> property on simple expressions indicating the data type of the <code>field</code>.</p>
+ *  <p>Possible values for the <code>customType</code> property on <span>simple expressions</span> indicating the data type of the <code>field</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface OrderSearchCustomType extends JsonEnum {
 
     /**
-    <p>For CustomFieldBooleanType Custom Fields.</p> */
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldBooleanType" rel="nofollow">CustomFieldBooleanType</a> Custom Fields.</p> */
     OrderSearchCustomType BOOLEAN_TYPE = OrderSearchCustomTypeEnum.BOOLEAN_TYPE;
     /**
-    <p>For CustomFieldStringType Custom Fields.</p> */
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldStringType" rel="nofollow">CustomFieldStringType</a> Custom Fields.</p> */
     OrderSearchCustomType STRING_TYPE = OrderSearchCustomTypeEnum.STRING_TYPE;
     /**
-    <p>For CustomFieldLocalizedStringType Custom Fields.</p> */
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedStringType" rel="nofollow">CustomFieldLocalizedStringType</a> Custom Fields.</p> */
     OrderSearchCustomType LOCALIZED_STRING_TYPE = OrderSearchCustomTypeEnum.LOCALIZED_STRING_TYPE;
     /**
-    <p>For CustomFieldEnumType Custom Fields.</p> */
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldEnumType" rel="nofollow">CustomFieldEnumType</a> Custom Fields.</p> */
     OrderSearchCustomType ENUM_TYPE = OrderSearchCustomTypeEnum.ENUM_TYPE;
     /**
-    <p>For CustomFieldLocalizedEnumType Custom Fields.</p> */
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumType" rel="nofollow">CustomFieldLocalizedEnumType</a> Custom Fields.</p> */
     OrderSearchCustomType LOCALIZED_ENUM_TYPE = OrderSearchCustomTypeEnum.LOCALIZED_ENUM_TYPE;
     /**
-    <p>For CustomFieldNumberType Custom Fields.</p> */
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldNumberType" rel="nofollow">CustomFieldNumberType</a> Custom Fields.</p> */
     OrderSearchCustomType NUMBER_TYPE = OrderSearchCustomTypeEnum.NUMBER_TYPE;
     /**
-    <p>For CustomFieldDateType Custom Fields.</p> */
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldDateType" rel="nofollow">CustomFieldDateType</a> Custom Fields.</p> */
     OrderSearchCustomType DATE_TYPE = OrderSearchCustomTypeEnum.DATE_TYPE;
     /**
-    <p>For CustomFieldTimeType Custom Fields.</p> */
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldTimeType" rel="nofollow">CustomFieldTimeType</a> Custom Fields.</p> */
     OrderSearchCustomType TIME_TYPE = OrderSearchCustomTypeEnum.TIME_TYPE;
     /**
-    <p>For CustomFieldDateTimeType Custom Fields.</p> */
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldDateTimeType" rel="nofollow">CustomFieldDateTimeType</a> Custom Fields.</p> */
     OrderSearchCustomType DATE_TIME_TYPE = OrderSearchCustomTypeEnum.DATE_TIME_TYPE;
     /**
-    <p>For CustomFieldSetType of <code>StringType</code> Custom Fields.</p> */
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldSetType" rel="nofollow">CustomFieldSetType</a> of <code>StringType</code> Custom Fields.</p> */
     OrderSearchCustomType SET_TYPE_STRING_TYPE = OrderSearchCustomTypeEnum.SET_TYPE_STRING_TYPE;
     /**
-    <p>For CustomFieldSetType of <code>LocalizedStringType</code> Custom Fields.</p> */
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldSetType" rel="nofollow">CustomFieldSetType</a> of <code>LocalizedStringType</code> Custom Fields.</p> */
     OrderSearchCustomType SET_TYPE_LOCALIZED_STRING_TYPE = OrderSearchCustomTypeEnum.SET_TYPE_LOCALIZED_STRING_TYPE;
     /**
-    <p>For CustomFieldSetType of <code>EnumType</code> Custom Fields.</p> */
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldSetType" rel="nofollow">CustomFieldSetType</a> of <code>EnumType</code> Custom Fields.</p> */
     OrderSearchCustomType SET_TYPE_ENUM_TYPE = OrderSearchCustomTypeEnum.SET_TYPE_ENUM_TYPE;
     /**
-    <p>For CustomFieldSetType of <code>LocalizedEnumType</code> Custom Fields.</p> */
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldSetType" rel="nofollow">CustomFieldSetType</a> of <code>LocalizedEnumType</code> Custom Fields.</p> */
     OrderSearchCustomType SET_TYPE_LOCALIZED_ENUM_TYPE = OrderSearchCustomTypeEnum.SET_TYPE_LOCALIZED_ENUM_TYPE;
     /**
-    <p>For CustomFieldSetType of <code>NumberType</code> Custom Fields.</p> */
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldSetType" rel="nofollow">CustomFieldSetType</a> of <code>NumberType</code> Custom Fields.</p> */
     OrderSearchCustomType SET_TYPE_NUMBER_TYPE = OrderSearchCustomTypeEnum.SET_TYPE_NUMBER_TYPE;
     /**
-    <p>For CustomFieldSetType of <code>DateType</code> Custom Fields.</p> */
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldSetType" rel="nofollow">CustomFieldSetType</a> of <code>DateType</code> Custom Fields.</p> */
     OrderSearchCustomType SET_TYPE_DATE_TYPE = OrderSearchCustomTypeEnum.SET_TYPE_DATE_TYPE;
     /**
-    <p>For CustomFieldSetType of <code>TimeType</code> Custom Fields.</p> */
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldSetType" rel="nofollow">CustomFieldSetType</a> of <code>TimeType</code> Custom Fields.</p> */
     OrderSearchCustomType SET_TYPE_TIME_TYPE = OrderSearchCustomTypeEnum.SET_TYPE_TIME_TYPE;
     /**
-    <p>For CustomFieldSetType of <code>DateTimeType</code> Custom Fields.</p> */
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldSetType" rel="nofollow">CustomFieldSetType</a> of <code>DateTimeType</code> Custom Fields.</p> */
     OrderSearchCustomType SET_TYPE_DATE_TIME_TYPE = OrderSearchCustomTypeEnum.SET_TYPE_DATE_TIME_TYPE;
 
     /**

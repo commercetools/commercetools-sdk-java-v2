@@ -66,7 +66,7 @@ public class ProductDiscountMatchQueryImpl implements ProductDiscountMatchQuery,
     }
 
     /**
-     *  <p>Controls which projected representation is applied for the query. Set to <code>true</code> for the <code>staged</code> Product Projection of the specified Product Variant, set to <code>false</code> for the <code>current</code> one.</p>
+     *  <p>Controls which <span>projected representation</span> is applied for the query. Set to <code>true</code> for the <code>staged</code> Product Projection of the specified Product Variant, set to <code>false</code> for the <code>current</code> one.</p>
      */
 
     public Boolean getStaged() {

@@ -45,7 +45,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     private Long quantity;
 
     /**
-     *  <p>Date and time (UTC) the TextLineItem was added to the ShoppingList.</p>
+     *  <p>Date and time (UTC) the TextLineItem was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param addedAt value to be set
      * @return Builder
      */
@@ -138,7 +138,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     *  <p>User-defined identifier of the TextLineItem. It is unique per ShoppingList.</p>
+     *  <p>User-defined identifier of the TextLineItem. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -195,7 +195,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     *  <p>Date and time (UTC) the TextLineItem was added to the ShoppingList.</p>
+     *  <p>Date and time (UTC) the TextLineItem was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @return addedAt
      */
 
@@ -233,7 +233,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     *  <p>User-defined identifier of the TextLineItem. It is unique per ShoppingList.</p>
+     *  <p>User-defined identifier of the TextLineItem. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @return key
      */
 

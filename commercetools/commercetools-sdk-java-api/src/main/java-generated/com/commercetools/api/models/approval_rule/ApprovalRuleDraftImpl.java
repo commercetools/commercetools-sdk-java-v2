@@ -86,7 +86,7 @@ public class ApprovalRuleDraftImpl implements ApprovalRuleDraft, ModelBase {
     }
 
     /**
-     *  <p>Indicates whether the Approval Rule should be matched against Orders or not.</p>
+     *  <p>Indicates whether the Approval Rule should be matched against <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> or not.</p>
      */
 
     public com.commercetools.api.models.approval_rule.ApprovalRuleStatus getStatus() {
@@ -94,7 +94,7 @@ public class ApprovalRuleDraftImpl implements ApprovalRuleDraft, ModelBase {
     }
 
     /**
-     *  <p>The predicate describing the Orders the Approval Rule should match against.</p>
+     *  <p>The <span>predicate</span> describing the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> the Approval Rule should match against.</p>
      */
 
     public String getPredicate() {
@@ -110,7 +110,7 @@ public class ApprovalRuleDraftImpl implements ApprovalRuleDraft, ModelBase {
     }
 
     /**
-     *  <p>The Associate Roles customers must hold for their Order to require approval.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> customers must hold for their Order to require approval.</p>
      */
 
     public java.util.List<com.commercetools.api.models.approval_rule.RuleRequesterDraft> getRequesters() {

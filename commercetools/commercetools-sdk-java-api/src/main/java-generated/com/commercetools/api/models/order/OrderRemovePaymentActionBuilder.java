@@ -25,7 +25,7 @@ public class OrderRemovePaymentActionBuilder implements Builder<OrderRemovePayme
     private com.commercetools.api.models.payment.PaymentResourceIdentifier payment;
 
     /**
-     *  <p>Payment to remove from the PaymentInfo.</p>
+     *  <p>Payment to remove from the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentInfo" rel="nofollow">PaymentInfo</a>.</p>
      * @param builder function to build the payment value
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class OrderRemovePaymentActionBuilder implements Builder<OrderRemovePayme
     }
 
     /**
-     *  <p>Payment to remove from the PaymentInfo.</p>
+     *  <p>Payment to remove from the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentInfo" rel="nofollow">PaymentInfo</a>.</p>
      * @param builder function to build the payment value
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class OrderRemovePaymentActionBuilder implements Builder<OrderRemovePayme
     }
 
     /**
-     *  <p>Payment to remove from the PaymentInfo.</p>
+     *  <p>Payment to remove from the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentInfo" rel="nofollow">PaymentInfo</a>.</p>
      * @param payment value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class OrderRemovePaymentActionBuilder implements Builder<OrderRemovePayme
     }
 
     /**
-     *  <p>Payment to remove from the PaymentInfo.</p>
+     *  <p>Payment to remove from the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentInfo" rel="nofollow">PaymentInfo</a>.</p>
      * @return payment
      */
 

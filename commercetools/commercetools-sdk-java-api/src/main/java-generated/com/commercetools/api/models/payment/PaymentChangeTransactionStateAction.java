@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Changing the TransactionState generates the PaymentTransactionStateChanged Message.</p>
+ *  <p>Changing the <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">TransactionState</a> generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentTransactionStateChangedMessage" rel="nofollow">PaymentTransactionStateChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface PaymentChangeTransactionStateAction extends PaymentUpdateAction
     String CHANGE_TRANSACTION_STATE = "changeTransactionState";
 
     /**
-     *  <p>Unique identifier of the Transaction.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>.</p>
      * @return transactionId
      */
     @NotNull
@@ -55,7 +55,7 @@ public interface PaymentChangeTransactionStateAction extends PaymentUpdateAction
     public TransactionState getState();
 
     /**
-     *  <p>Unique identifier of the Transaction.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>.</p>
      * @param transactionId value to be set
      */
 

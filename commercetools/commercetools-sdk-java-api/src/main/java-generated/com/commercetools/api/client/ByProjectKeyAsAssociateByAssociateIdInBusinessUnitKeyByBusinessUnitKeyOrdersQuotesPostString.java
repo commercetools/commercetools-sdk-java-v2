@@ -17,12 +17,12 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creates an Order from a Quote in a BusinessUnit.</p>
- *  <p>The Quote must reference the same Business Unit as the <code>businessUnitKey</code> path parameter, must have the <code>Pending</code> state, and must be valid (not past the <code>validTo</code> date). If these criteria are not met, an InvalidOperation error is returned.</p>
+ *  <p>Creates an Order from a <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> in a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
+ *  <p>The Quote must reference the same Business Unit as the <code>businessUnitKey</code> path parameter, must have the <code>Pending</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteState" rel="nofollow">state</a>, and must be valid (not past the <code>validTo</code> date). If these criteria are not met, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
  *  <p>Specific Error Codes:</p>
  *  <ul>
- *   <li>InvalidItemShippingDetails</li>
- *   <li>OutOfStock</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidItemShippingDetailsError" rel="nofollow">InvalidItemShippingDetails</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OutOfStockError" rel="nofollow">OutOfStock</a></li>
  *  </ul>
  *
  * <hr>

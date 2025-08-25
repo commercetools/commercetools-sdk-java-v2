@@ -30,7 +30,7 @@ public class CartReferenceBuilder implements Builder<CartReference> {
     private com.commercetools.api.models.cart.Cart obj;
 
     /**
-     *  <p>Unique identifier of the referenced Cart.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class CartReferenceBuilder implements Builder<CartReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.</p>
+     *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with <span>Reference Expansion</span> for Carts.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class CartReferenceBuilder implements Builder<CartReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.</p>
+     *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with <span>Reference Expansion</span> for Carts.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class CartReferenceBuilder implements Builder<CartReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.</p>
+     *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with <span>Reference Expansion</span> for Carts.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class CartReferenceBuilder implements Builder<CartReference> {
     }
 
     /**
-     *  <p>Unique identifier of the referenced Cart.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      * @return id
      */
 
@@ -85,7 +85,7 @@ public class CartReferenceBuilder implements Builder<CartReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.</p>
+     *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with <span>Reference Expansion</span> for Carts.</p>
      * @return obj
      */
 

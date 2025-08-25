@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Reference to a CustomerToken for email verification.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerToken" rel="nofollow">CustomerToken</a> for email verification.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerEmailTokenReferenceImpl implements CustomerEmailTokenReference, ModelBase {
@@ -52,7 +52,7 @@ public class CustomerEmailTokenReferenceImpl implements CustomerEmailTokenRefere
     }
 
     /**
-     *  <p>Unique identifier of the referenced CustomerToken.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerToken" rel="nofollow">CustomerToken</a>.</p>
      */
 
     public String getId() {

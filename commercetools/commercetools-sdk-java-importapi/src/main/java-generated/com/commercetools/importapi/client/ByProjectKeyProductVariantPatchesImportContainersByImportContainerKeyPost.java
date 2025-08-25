@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creates an Import Request for updating Product Variants. Returns an InvalidField error if the ProductVariantPatchRequest contains patches with and without the <code>product</code> field set.</p>
+ *  <p>Creates an Import Request for updating Product Variants. Returns an <a href="https://docs.commercetools.com/apis/ctp:import:type:InvalidFieldError" rel="nofollow">InvalidField</a> error if the <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantPatchRequest" rel="nofollow">ProductVariantPatchRequest</a> contains patches with and without the <code>product</code> field set.</p>
  *
  * <hr>
  * <div class=code-example>

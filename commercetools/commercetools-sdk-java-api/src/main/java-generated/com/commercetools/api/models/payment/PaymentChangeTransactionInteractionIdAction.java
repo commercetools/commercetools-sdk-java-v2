@@ -39,7 +39,7 @@ public interface PaymentChangeTransactionInteractionIdAction extends PaymentUpda
     String CHANGE_TRANSACTION_INTERACTION_ID = "changeTransactionInteractionId";
 
     /**
-     *  <p>Unique identifier of the Transaction.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>.</p>
      * @return transactionId
      */
     @NotNull
@@ -55,7 +55,7 @@ public interface PaymentChangeTransactionInteractionIdAction extends PaymentUpda
     public String getInteractionId();
 
     /**
-     *  <p>Unique identifier of the Transaction.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>.</p>
      * @param transactionId value to be set
      */
 

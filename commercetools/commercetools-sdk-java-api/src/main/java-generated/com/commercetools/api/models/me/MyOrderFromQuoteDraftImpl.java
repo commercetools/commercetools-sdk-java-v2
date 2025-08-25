@@ -46,7 +46,7 @@ public class MyOrderFromQuoteDraftImpl implements MyOrderFromQuoteDraft, ModelBa
     }
 
     /**
-     *  <p><code>id</code> of the Quote from which the Order is created.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> from which the Order is created.</p>
      */
 
     public String getId() {
@@ -54,7 +54,7 @@ public class MyOrderFromQuoteDraftImpl implements MyOrderFromQuoteDraft, ModelBa
     }
 
     /**
-     *  <p>Current <code>version</code> of the Quote from which the Order is created.</p>
+     *  <p>Current <code>version</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> from which the Order is created.</p>
      */
 
     public Long getVersion() {
@@ -62,7 +62,7 @@ public class MyOrderFromQuoteDraftImpl implements MyOrderFromQuoteDraft, ModelBa
     }
 
     /**
-     *  <p>Set to <code>true</code>, if the <code>quoteState</code> of the referenced Quote should be set to <code>Accepted</code>.</p>
+     *  <p>Set to <code>true</code>, if the <code>quoteState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> should be set to <code>Accepted</code>.</p>
      */
 
     public Boolean getQuoteStateToAccepted() {

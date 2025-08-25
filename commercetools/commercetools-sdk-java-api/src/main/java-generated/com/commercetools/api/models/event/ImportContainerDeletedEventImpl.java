@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated when an Import Container is deleted.</p>
+ *  <p>Generated when an <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">Import Container</a> is deleted.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportContainerDeletedEventImpl implements ImportContainerDeletedEvent, ModelBase {

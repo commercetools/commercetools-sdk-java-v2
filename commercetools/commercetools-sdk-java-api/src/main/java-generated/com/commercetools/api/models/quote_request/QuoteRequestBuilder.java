@@ -275,7 +275,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Buyer who owns the request.</p>
+     *  <p>The <span>Buyer</span> who owns the request.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -287,7 +287,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Buyer who owns the request.</p>
+     *  <p>The <span>Buyer</span> who owns the request.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -299,7 +299,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Buyer who owns the request.</p>
+     *  <p>The <span>Buyer</span> who owns the request.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -349,7 +349,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Store to which the Buyer belongs.</p>
+     *  <p>The Store to which the <span>Buyer</span> belongs.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -361,7 +361,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Store to which the Buyer belongs.</p>
+     *  <p>The Store to which the <span>Buyer</span> belongs.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -373,7 +373,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Store to which the Buyer belongs.</p>
+     *  <p>The Store to which the <span>Buyer</span> belongs.</p>
      * @param store value to be set
      * @return Builder
      */
@@ -617,7 +617,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Used to determine the eligible ShippingMethods and rates as well as the tax rate of the Line Items.</p>
+     *  <p>Used to determine the eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethods</a> and rates as well as the tax rate of the Line Items.</p>
      * @param builder function to build the shippingAddress value
      * @return Builder
      */
@@ -629,7 +629,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Used to determine the eligible ShippingMethods and rates as well as the tax rate of the Line Items.</p>
+     *  <p>Used to determine the eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethods</a> and rates as well as the tax rate of the Line Items.</p>
      * @param builder function to build the shippingAddress value
      * @return Builder
      */
@@ -641,7 +641,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Used to determine the eligible ShippingMethods and rates as well as the tax rate of the Line Items.</p>
+     *  <p>Used to determine the eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethods</a> and rates as well as the tax rate of the Line Items.</p>
      * @param shippingAddress value to be set
      * @return Builder
      */
@@ -689,7 +689,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Inventory mode of the Cart referenced in the QuoteRequestDraft.</p>
+     *  <p>Inventory mode of the Cart referenced in the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestDraft" rel="nofollow">QuoteRequestDraft</a>.</p>
      * @param inventoryMode value to be set
      * @return Builder
      */
@@ -701,7 +701,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Tax mode of the Cart referenced in the QuoteRequestDraft.</p>
+     *  <p>Tax mode of the Cart referenced in the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestDraft" rel="nofollow">QuoteRequestDraft</a>.</p>
      * @param taxMode value to be set
      * @return Builder
      */
@@ -712,7 +712,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>When calculating total prices on LineItems and CustomLineItems, the selected mode is used for rounding.</p>
+     *  <p>When calculating total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, the selected mode is used for rounding.</p>
      * @param priceRoundingMode value to be set
      * @return Builder
      */
@@ -758,7 +758,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Set automatically once the ShippingMethod is set.</p>
+     *  <p>Set automatically once the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> is set.</p>
      * @param builder function to build the shippingInfo value
      * @return Builder
      */
@@ -770,7 +770,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Set automatically once the ShippingMethod is set.</p>
+     *  <p>Set automatically once the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> is set.</p>
      * @param builder function to build the shippingInfo value
      * @return Builder
      */
@@ -782,7 +782,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Set automatically once the ShippingMethod is set.</p>
+     *  <p>Set automatically once the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> is set.</p>
      * @param shippingInfo value to be set
      * @return Builder
      */
@@ -829,7 +829,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Used to select a ShippingRatePriceTier.</p>
+     *  <p>Used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>.</p>
      * @param shippingRateInput value to be set
      * @return Builder
      */
@@ -841,7 +841,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Used to select a ShippingRatePriceTier.</p>
+     *  <p>Used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>.</p>
      * @param builder function to build the shippingRateInput value
      * @return Builder
      */
@@ -1066,7 +1066,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>State of the Quote Request. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Quote Request. This reference can point to a State in a custom workflow.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -1078,7 +1078,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>State of the Quote Request. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Quote Request. This reference can point to a State in a custom workflow.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -1090,7 +1090,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>State of the Quote Request. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Quote Request. This reference can point to a State in a custom workflow.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -1101,7 +1101,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer.</p>
+     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the <span>Buyer</span>.</p>
      * @param purchaseOrderNumber value to be set
      * @return Builder
      */
@@ -1112,7 +1112,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Cart from which a Quote is requested.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> from which a Quote is requested.</p>
      * @param builder function to build the cart value
      * @return Builder
      */
@@ -1124,7 +1124,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Cart from which a Quote is requested.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> from which a Quote is requested.</p>
      * @param builder function to build the cart value
      * @return Builder
      */
@@ -1136,7 +1136,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Cart from which a Quote is requested.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> from which a Quote is requested.</p>
      * @param cart value to be set
      * @return Builder
      */
@@ -1147,7 +1147,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The BusinessUnit for the Quote Request. Only available for B2B-enabled Projects.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> for the Quote Request. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -1161,7 +1161,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The BusinessUnit for the Quote Request. Only available for B2B-enabled Projects.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> for the Quote Request. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -1174,7 +1174,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The BusinessUnit for the Quote Request. Only available for B2B-enabled Projects.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> for the Quote Request. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
@@ -1271,7 +1271,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Buyer who owns the request.</p>
+     *  <p>The <span>Buyer</span> who owns the request.</p>
      * @return customer
      */
 
@@ -1290,7 +1290,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Store to which the Buyer belongs.</p>
+     *  <p>The Store to which the <span>Buyer</span> belongs.</p>
      * @return store
      */
 
@@ -1337,7 +1337,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Used to determine the eligible ShippingMethods and rates as well as the tax rate of the Line Items.</p>
+     *  <p>Used to determine the eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethods</a> and rates as well as the tax rate of the Line Items.</p>
      * @return shippingAddress
      */
 
@@ -1357,7 +1357,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Inventory mode of the Cart referenced in the QuoteRequestDraft.</p>
+     *  <p>Inventory mode of the Cart referenced in the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestDraft" rel="nofollow">QuoteRequestDraft</a>.</p>
      * @return inventoryMode
      */
 
@@ -1367,7 +1367,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Tax mode of the Cart referenced in the QuoteRequestDraft.</p>
+     *  <p>Tax mode of the Cart referenced in the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestDraft" rel="nofollow">QuoteRequestDraft</a>.</p>
      * @return taxMode
      */
 
@@ -1376,7 +1376,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>When calculating total prices on LineItems and CustomLineItems, the selected mode is used for rounding.</p>
+     *  <p>When calculating total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, the selected mode is used for rounding.</p>
      * @return priceRoundingMode
      */
 
@@ -1413,7 +1413,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Set automatically once the ShippingMethod is set.</p>
+     *  <p>Set automatically once the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> is set.</p>
      * @return shippingInfo
      */
 
@@ -1433,7 +1433,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Used to select a ShippingRatePriceTier.</p>
+     *  <p>Used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>.</p>
      * @return shippingRateInput
      */
 
@@ -1473,7 +1473,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>State of the Quote Request. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Quote Request. This reference can point to a State in a custom workflow.</p>
      * @return state
      */
 
@@ -1483,7 +1483,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer.</p>
+     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the <span>Buyer</span>.</p>
      * @return purchaseOrderNumber
      */
 
@@ -1493,7 +1493,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Cart from which a Quote is requested.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> from which a Quote is requested.</p>
      * @return cart
      */
 
@@ -1503,7 +1503,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The BusinessUnit for the Quote Request. Only available for B2B-enabled Projects.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> for the Quote Request. Only available for <span>B2B</span>-enabled Projects.</p>
      * @return businessUnit
      */
 

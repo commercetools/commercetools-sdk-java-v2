@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Changing the TransactionState generates the PaymentTransactionStateChanged Message.</p>
+ *  <p>Changing the <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">TransactionState</a> generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentTransactionStateChangedMessage" rel="nofollow">PaymentTransactionStateChanged</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentChangeTransactionStateActionImpl implements PaymentChangeTransactionStateAction, ModelBase {
@@ -55,7 +55,7 @@ public class PaymentChangeTransactionStateActionImpl implements PaymentChangeTra
     }
 
     /**
-     *  <p>Unique identifier of the Transaction.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>.</p>
      */
 
     public String getTransactionId() {

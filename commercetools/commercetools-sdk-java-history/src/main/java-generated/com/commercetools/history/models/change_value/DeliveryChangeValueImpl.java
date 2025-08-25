@@ -48,7 +48,7 @@ public class DeliveryChangeValueImpl implements DeliveryChangeValue, ModelBase {
     }
 
     /**
-     *  <p>Line Items or Custom Line Items shipped in the Delivery.</p>
+     *  <p>Line Items or Custom Line Items shipped in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.DeliveryItem> getItems() {
@@ -64,7 +64,7 @@ public class DeliveryChangeValueImpl implements DeliveryChangeValue, ModelBase {
     }
 
     /**
-     *  <p>Parcels included in the Delivery.</p>
+     *  <p>Parcels included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.Parcel> getParcels() {

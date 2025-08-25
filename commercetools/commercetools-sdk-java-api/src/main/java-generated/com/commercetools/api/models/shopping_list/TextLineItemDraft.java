@@ -37,7 +37,7 @@ public interface TextLineItemDraft extends com.commercetools.api.models.Customiz
         io.vrap.rmf.base.client.Draft<TextLineItemDraft> {
 
     /**
-     *  <p>User-defined unique identifier of the TextLineItem. Must be unique per ShoppingList.</p>
+     *  <p>User-defined unique identifier of the TextLineItem. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @return key
      */
 
@@ -45,7 +45,7 @@ public interface TextLineItemDraft extends com.commercetools.api.models.Customiz
     public String getKey();
 
     /**
-     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     *  <p>Date and time the TextLineItem is added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>. If not set, the current date and time (UTC) is used.</p>
      * @return addedAt
      */
 
@@ -86,14 +86,14 @@ public interface TextLineItemDraft extends com.commercetools.api.models.Customiz
     public Long getQuantity();
 
     /**
-     *  <p>User-defined unique identifier of the TextLineItem. Must be unique per ShoppingList.</p>
+     *  <p>User-defined unique identifier of the TextLineItem. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     *  <p>Date and time the TextLineItem is added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>. If not set, the current date and time (UTC) is used.</p>
      * @param addedAt value to be set
      */
 

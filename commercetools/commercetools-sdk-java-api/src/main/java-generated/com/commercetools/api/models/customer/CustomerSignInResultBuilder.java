@@ -30,7 +30,7 @@ public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult
     private com.commercetools.api.models.cart.Cart cart;
 
     /**
-     *  <p>Customer signed up or signed in after authentication.</p>
+     *  <p>Customer <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers:POST" rel="nofollow">signed up</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/login:POST" rel="nofollow">signed in</a> after authentication.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult
     }
 
     /**
-     *  <p>Customer signed up or signed in after authentication.</p>
+     *  <p>Customer <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers:POST" rel="nofollow">signed up</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/login:POST" rel="nofollow">signed in</a> after authentication.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult
     }
 
     /**
-     *  <p>Customer signed up or signed in after authentication.</p>
+     *  <p>Customer <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers:POST" rel="nofollow">signed up</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/login:POST" rel="nofollow">signed in</a> after authentication.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -100,7 +100,7 @@ public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult
     }
 
     /**
-     *  <p>Customer signed up or signed in after authentication.</p>
+     *  <p>Customer <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers:POST" rel="nofollow">signed up</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/login:POST" rel="nofollow">signed in</a> after authentication.</p>
      * @return customer
      */
 

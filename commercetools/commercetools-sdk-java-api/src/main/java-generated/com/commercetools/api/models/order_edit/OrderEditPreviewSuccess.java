@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The data is not persisted but is dynamically pulled by dry-running the update actions from <code>stagedActions</code> on the current version of the related Order, not from the Order version at the time the OrderEdit was created. Therefore, it cannot be queried.</p>
+ *  <p>The data is not persisted but is dynamically pulled by dry-running the update actions from <code>stagedActions</code> on the current version of the related <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>, not from the Order version at the time the OrderEdit was created. Therefore, it cannot be queried.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,7 +42,7 @@ public interface OrderEditPreviewSuccess extends OrderEditResult {
     String PREVIEW_SUCCESS = "PreviewSuccess";
 
     /**
-     *  <p>A preview of the edited Order as it will be after all <code>stagedActions</code> (incl. optional Order API Extensions) are applied.</p>
+     *  <p>A preview of the edited <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> as it will be after all <code>stagedActions</code> (incl. optional Order <span>API Extensions</span>) are applied.</p>
      * @return preview
      */
     @NotNull
@@ -60,7 +60,7 @@ public interface OrderEditPreviewSuccess extends OrderEditResult {
     public List<MessagePayload> getMessagePayloads();
 
     /**
-     *  <p>A preview of the edited Order as it will be after all <code>stagedActions</code> (incl. optional Order API Extensions) are applied.</p>
+     *  <p>A preview of the edited <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> as it will be after all <code>stagedActions</code> (incl. optional Order <span>API Extensions</span>) are applied.</p>
      * @param preview value to be set
      */
 

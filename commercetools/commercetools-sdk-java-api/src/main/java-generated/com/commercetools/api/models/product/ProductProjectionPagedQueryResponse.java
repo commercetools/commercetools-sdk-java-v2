@@ -38,7 +38,7 @@ public interface ProductProjectionPagedQueryResponse
         extends com.commercetools.api.models.ResourcePagedQueryResponse<ProductProjection> {
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @return limit
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface ProductProjectionPagedQueryResponse
     public Long getCount();
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     *  <p>Total number of results matching the query. This number is an estimation that is not <span>strongly consistent</span>. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a <span>Query Predicate</span>, <code>total</code> is subject to a <span>limit</span>.</p>
      * @return total
      */
 
@@ -62,7 +62,7 @@ public interface ProductProjectionPagedQueryResponse
     public Long getTotal();
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @return offset
      */
     @NotNull
@@ -70,7 +70,7 @@ public interface ProductProjectionPagedQueryResponse
     public Long getOffset();
 
     /**
-     *  <p>ProductProjections matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjections</a> matching the query.</p>
      * @return results
      */
     @NotNull
@@ -79,7 +79,7 @@ public interface ProductProjectionPagedQueryResponse
     public List<ProductProjection> getResults();
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @param limit value to be set
      */
 
@@ -93,21 +93,21 @@ public interface ProductProjectionPagedQueryResponse
     public void setCount(final Long count);
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     *  <p>Total number of results matching the query. This number is an estimation that is not <span>strongly consistent</span>. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a <span>Query Predicate</span>, <code>total</code> is subject to a <span>limit</span>.</p>
      * @param total value to be set
      */
 
     public void setTotal(final Long total);
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @param offset value to be set
      */
 
     public void setOffset(final Long offset);
 
     /**
-     *  <p>ProductProjections matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjections</a> matching the query.</p>
      * @param results values to be set
      */
 
@@ -115,7 +115,7 @@ public interface ProductProjectionPagedQueryResponse
     public void setResults(final ProductProjection... results);
 
     /**
-     *  <p>ProductProjections matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjections</a> matching the query.</p>
      * @param results values to be set
      */
 

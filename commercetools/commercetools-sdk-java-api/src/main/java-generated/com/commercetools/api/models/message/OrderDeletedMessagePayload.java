@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Delete Order request.</p>
+ *  <p>Generated after a successful <span>Delete Order</span> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface OrderDeletedMessagePayload extends OrderMessagePayload {
     String ORDER_DELETED = "OrderDeleted";
 
     /**
-     *  <p>Order that has been deleted.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that has been deleted.</p>
      * @return order
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface OrderDeletedMessagePayload extends OrderMessagePayload {
     public Order getOrder();
 
     /**
-     *  <p>Order that has been deleted.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that has been deleted.</p>
      * @param order value to be set
      */
 

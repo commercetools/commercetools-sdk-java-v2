@@ -79,7 +79,7 @@ public interface AssetDraft extends com.commercetools.api.models.CustomizableDra
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>User-defined identifier for the Asset. Must be unique per Category or ProductVariant.</p>
+     *  <p>User-defined identifier for the Asset. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return key
      */
 
@@ -138,7 +138,7 @@ public interface AssetDraft extends com.commercetools.api.models.CustomizableDra
     public void setCustom(final CustomFieldsDraft custom);
 
     /**
-     *  <p>User-defined identifier for the Asset. Must be unique per Category or ProductVariant.</p>
+     *  <p>User-defined identifier for the Asset. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param key value to be set
      */
 

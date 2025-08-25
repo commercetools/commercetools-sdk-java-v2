@@ -135,7 +135,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     *  <p>Indicates if the ShippingMethod referenced is allowed for the Order or not.</p>
+     *  <p>Indicates if the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> referenced is allowed for the Order or not.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingMethodState getShippingMethodState() {

@@ -62,7 +62,7 @@ public class ProductPagedSearchResponseImpl implements ProductPagedSearchRespons
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      */
 
     public Integer getOffset() {
@@ -70,7 +70,7 @@ public class ProductPagedSearchResponseImpl implements ProductPagedSearchRespons
     }
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      */
 
     public Integer getLimit() {
@@ -78,7 +78,7 @@ public class ProductPagedSearchResponseImpl implements ProductPagedSearchRespons
     }
 
     /**
-     *  <p>Results for facets when requested.</p>
+     *  <p>Results for <span>facets</span> when requested.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product_search.ProductSearchFacetResult> getFacets() {

@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Assigns multiple Customer Groups to a Customer. This action generates the CustomerGroupAssignmentsSetMessage Message.</p>
+ *  <p>Assigns multiple Customer Groups to a Customer. This action generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroupAssignmentsSetMessage" rel="nofollow">CustomerGroupAssignmentsSetMessage</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

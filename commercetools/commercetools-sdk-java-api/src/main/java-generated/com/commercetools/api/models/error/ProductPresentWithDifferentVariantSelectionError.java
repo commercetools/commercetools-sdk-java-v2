@@ -18,8 +18,8 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Returned when a Product is already assigned to a Product Selection, but the Product Selection has either a different Product Variant Selection or a different Product Variant Exclusion.</p>
- *  <p>The error is returned as a failed response either to the Add Product or to the Exclude Product update action.</p>
+ *  <p>Returned when a Product is already assigned to a <span>Product Selection</span>, but the Product Selection has either a different <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantSelection" rel="nofollow">Product Variant Selection</a> or a different <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantExclusion" rel="nofollow">Product Variant Exclusion</a>.</p>
+ *  <p>The error is returned as a failed response either to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionAddProductAction" rel="nofollow">Add Product</a> or to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionExcludeProductAction" rel="nofollow">Exclude Product</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -60,7 +60,7 @@ public interface ProductPresentWithDifferentVariantSelectionError extends ErrorO
     public String getMessage();
 
     /**
-     *  <p>Reference to the Product for which the error was returned.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the error was returned.</p>
      * @return product
      */
     @NotNull
@@ -69,7 +69,7 @@ public interface ProductPresentWithDifferentVariantSelectionError extends ErrorO
     public ProductReference getProduct();
 
     /**
-     *  <p>Existing Product Variant Selection or Exclusion for the Product in the Product Selection.</p>
+     *  <p>Existing Product Variant Selection or Exclusion for the <span>Product</span> in the <span>Product Selection</span>.</p>
      * @return existingVariantSelection
      */
     @NotNull
@@ -85,14 +85,14 @@ public interface ProductPresentWithDifferentVariantSelectionError extends ErrorO
     public void setMessage(final String message);
 
     /**
-     *  <p>Reference to the Product for which the error was returned.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the error was returned.</p>
      * @param product value to be set
      */
 
     public void setProduct(final ProductReference product);
 
     /**
-     *  <p>Existing Product Variant Selection or Exclusion for the Product in the Product Selection.</p>
+     *  <p>Existing Product Variant Selection or Exclusion for the <span>Product</span> in the <span>Product Selection</span>.</p>
      * @param existingVariantSelection value to be set
      */
 

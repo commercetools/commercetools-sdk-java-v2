@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Set Name update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetNameAction" rel="nofollow">Set Name</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -46,7 +46,7 @@ public interface ApprovalRuleNameSetMessage extends Message {
     String APPROVAL_RULE_NAME_SET = "ApprovalRuleNameSet";
 
     /**
-     *  <p>Name of the ApprovalRule after the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @return name
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface ApprovalRuleNameSetMessage extends Message {
     public String getName();
 
     /**
-     *  <p>Name of the ApprovalRule before the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @return oldName
      */
     @NotNull
@@ -62,14 +62,14 @@ public interface ApprovalRuleNameSetMessage extends Message {
     public String getOldName();
 
     /**
-     *  <p>Name of the ApprovalRule after the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     *  <p>Name of the ApprovalRule before the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @param oldName value to be set
      */
 

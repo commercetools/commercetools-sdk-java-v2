@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface GraphQLRequest {
 
     /**
-     *  <p>String representation of the <em>Source Text</em> of the <em>Document</em> that is specified in the Language section of the GraphQL specification.</p>
+     *  <p>String representation of the <em>Source Text</em> of the <em>Document</em> that is specified in the <span>Language section of the GraphQL specification</span>.</p>
      * @return query
      */
     @NotNull
@@ -57,7 +57,7 @@ public interface GraphQLRequest {
     public GraphQLVariablesMap getVariables();
 
     /**
-     *  <p>String representation of the <em>Source Text</em> of the <em>Document</em> that is specified in the Language section of the GraphQL specification.</p>
+     *  <p>String representation of the <em>Source Text</em> of the <em>Document</em> that is specified in the <span>Language section of the GraphQL specification</span>.</p>
      * @param query value to be set
      */
 

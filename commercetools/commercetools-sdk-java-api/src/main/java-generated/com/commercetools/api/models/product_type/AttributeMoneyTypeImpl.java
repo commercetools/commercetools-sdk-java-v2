@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Attribute type for Money type values.</p>
+ *  <p>Attribute type for <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">Money</a> type values.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeMoneyTypeImpl implements AttributeMoneyType, ModelBase {

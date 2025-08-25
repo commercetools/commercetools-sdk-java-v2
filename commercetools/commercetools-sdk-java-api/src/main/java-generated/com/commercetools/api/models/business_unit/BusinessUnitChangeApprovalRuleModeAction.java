@@ -15,9 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Updates Approval Rules inheritance behavior between Business Units.</p>
+ *  <p>Updates <span>Approval Rules</span> inheritance behavior between Business Units.</p>
  *  <p>Only Business Units of type <code>Division</code> can be changed to <code>ExplicitAndFromParent</code>.</p>
- *  <p>This update action generates a BusinessUnitApprovalRuleModeChanged Message.</p>
+ *  <p>This update action generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitApprovalRuleModeChangedMessage" rel="nofollow">BusinessUnitApprovalRuleModeChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

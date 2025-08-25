@@ -41,7 +41,7 @@ public class InvalidStateTransitionErrorBuilder implements Builder<InvalidStateT
     }
 
     /**
-     *  <p>Every Import Operation is assigned one of the following states.</p>
+     *  <p>Every <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">Import Operation</a> is assigned one of the following states.</p>
      * @param currentState value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class InvalidStateTransitionErrorBuilder implements Builder<InvalidStateT
     }
 
     /**
-     *  <p>Every Import Operation is assigned one of the following states.</p>
+     *  <p>Every <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">Import Operation</a> is assigned one of the following states.</p>
      * @param newState value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class InvalidStateTransitionErrorBuilder implements Builder<InvalidStateT
     }
 
     /**
-     *  <p>Every Import Operation is assigned one of the following states.</p>
+     *  <p>Every <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">Import Operation</a> is assigned one of the following states.</p>
      * @return currentState
      */
 
@@ -83,7 +83,7 @@ public class InvalidStateTransitionErrorBuilder implements Builder<InvalidStateT
     }
 
     /**
-     *  <p>Every Import Operation is assigned one of the following states.</p>
+     *  <p>Every <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">Import Operation</a> is assigned one of the following states.</p>
      * @return newState
      */
 

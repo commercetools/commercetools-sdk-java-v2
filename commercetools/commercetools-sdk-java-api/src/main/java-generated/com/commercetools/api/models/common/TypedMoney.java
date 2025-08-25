@@ -45,8 +45,8 @@ public interface TypedMoney extends Money {
     /**
      *  <p>Number of digits after the decimal separator.</p>
      *  <ul>
-     *   <li>For CentPrecisionMoney, it is equal to the default number of fraction digits for a currency.</li>
-     *   <li>For HighPrecisionMoney, it is greater than the default number of fraction digits for a currency.</li>
+     *   <li>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CentPrecisionMoney" rel="nofollow">CentPrecisionMoney</a>, it is equal to the default number of fraction digits for a currency.</li>
+     *   <li>For <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoney" rel="nofollow">HighPrecisionMoney</a>, it is greater than the default number of fraction digits for a currency.</li>
      *  </ul>
      * @return fractionDigits
      */
@@ -57,8 +57,8 @@ public interface TypedMoney extends Money {
     /**
      *  <p>Number of digits after the decimal separator.</p>
      *  <ul>
-     *   <li>For CentPrecisionMoney, it is equal to the default number of fraction digits for a currency.</li>
-     *   <li>For HighPrecisionMoney, it is greater than the default number of fraction digits for a currency.</li>
+     *   <li>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CentPrecisionMoney" rel="nofollow">CentPrecisionMoney</a>, it is equal to the default number of fraction digits for a currency.</li>
+     *   <li>For <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoney" rel="nofollow">HighPrecisionMoney</a>, it is greater than the default number of fraction digits for a currency.</li>
      *  </ul>
      * @param fractionDigits value to be set
      */

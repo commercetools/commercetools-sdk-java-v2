@@ -29,7 +29,7 @@ public class PaymentMethodKeySetMessagePayloadBuilder implements Builder<Payment
     private String oldKey;
 
     /**
-     *  <p><code>key</code> value of the PaymentMethod after the Set Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethod" rel="nofollow">PaymentMethod</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class PaymentMethodKeySetMessagePayloadBuilder implements Builder<Payment
     }
 
     /**
-     *  <p><code>key</code> value of the PaymentMethod before the Set Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethod" rel="nofollow">PaymentMethod</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
      * @param oldKey value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class PaymentMethodKeySetMessagePayloadBuilder implements Builder<Payment
     }
 
     /**
-     *  <p><code>key</code> value of the PaymentMethod after the Set Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethod" rel="nofollow">PaymentMethod</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
      * @return key
      */
 
@@ -61,7 +61,7 @@ public class PaymentMethodKeySetMessagePayloadBuilder implements Builder<Payment
     }
 
     /**
-     *  <p><code>key</code> value of the PaymentMethod before the Set Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethod" rel="nofollow">PaymentMethod</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
      * @return oldKey
      */
 

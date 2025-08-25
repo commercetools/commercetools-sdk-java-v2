@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Removes a Product image and deletes it from the Content Delivery Network (CDN) if it had been uploaded to our CDN. External images will not be deleted. The API deletes the removed image from the CDN in an eventual consistent way. Either <code>variantId</code> or <code>sku</code> is required.</p>
+ *  <p>Removes a Product image and deletes it from the Content Delivery Network (CDN) if it had been <span>uploaded to our CDN</span>. External images will not be deleted. The API deletes the removed image from the CDN in an <span>eventual consistent</span> way. Either <code>variantId</code> or <code>sku</code> is required.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

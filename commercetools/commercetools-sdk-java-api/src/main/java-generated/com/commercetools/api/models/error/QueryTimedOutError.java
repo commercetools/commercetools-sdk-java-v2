@@ -16,7 +16,7 @@ import jakarta.validation.constraints.NotNull;
 
 /**
  *  <p>Returned when the query times out.</p>
- *  <p>If a query constantly times out, please check if it follows the performance best practices.</p>
+ *  <p>If a query constantly times out, please check if it follows the <span>performance best practices</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

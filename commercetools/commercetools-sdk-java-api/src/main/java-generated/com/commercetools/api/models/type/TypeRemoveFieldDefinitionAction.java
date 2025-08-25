@@ -38,7 +38,7 @@ public interface TypeRemoveFieldDefinitionAction extends TypeUpdateAction {
     String REMOVE_FIELD_DEFINITION = "removeFieldDefinition";
 
     /**
-     *  <p><code>name</code> of the FieldDefinition to remove. The removal of a FieldDefinition deletes asynchronously all Custom Fields using the FieldDefinition as well.</p>
+     *  <p><code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a> to remove. The removal of a FieldDefinition deletes <span>asynchronously</span> all Custom Fields using the FieldDefinition as well.</p>
      * @return fieldName
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface TypeRemoveFieldDefinitionAction extends TypeUpdateAction {
     public String getFieldName();
 
     /**
-     *  <p><code>name</code> of the FieldDefinition to remove. The removal of a FieldDefinition deletes asynchronously all Custom Fields using the FieldDefinition as well.</p>
+     *  <p><code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a> to remove. The removal of a FieldDefinition deletes <span>asynchronously</span> all Custom Fields using the FieldDefinition as well.</p>
      * @param fieldName value to be set
      */
 

@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The request body to import ProductDrafts. Contains data for Products to be created or updated in a Project.</p>
+ *  <p>The request body to <a href="https://docs.commercetools.com/apis/ctp:import:endpoint:/{projectKey}/product-drafts/import-containers/{importContainerKey}:POST" rel="nofollow">import ProductDrafts</a>. Contains data for <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a> to be created or updated in a Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDraftImportRequestImpl implements ProductDraftImportRequest, ModelBase {

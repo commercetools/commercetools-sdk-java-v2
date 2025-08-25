@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Valid To update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteSetValidToAction" rel="nofollow">Set Valid To</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedQuoteValidToSetMessageImpl implements StagedQuoteValidToSetMessage, ModelBase {
@@ -138,7 +138,7 @@ public class StagedQuoteValidToSetMessageImpl implements StagedQuoteValidToSetMe
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -154,7 +154,7 @@ public class StagedQuoteValidToSetMessageImpl implements StagedQuoteValidToSetMe
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -170,7 +170,7 @@ public class StagedQuoteValidToSetMessageImpl implements StagedQuoteValidToSetMe
     }
 
     /**
-     *  <p>Expiration date for the Staged Quote after the Set Valid To update action.</p>
+     *  <p>Expiration date for the Staged Quote after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteSetValidToAction" rel="nofollow">Set Valid To</a> update action.</p>
      */
 
     public java.time.ZonedDateTime getValidTo() {

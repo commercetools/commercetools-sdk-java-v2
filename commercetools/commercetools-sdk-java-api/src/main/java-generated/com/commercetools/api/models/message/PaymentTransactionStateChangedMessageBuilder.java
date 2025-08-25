@@ -187,7 +187,7 @@ public class PaymentTransactionStateChangedMessageBuilder implements Builder<Pay
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -199,7 +199,7 @@ public class PaymentTransactionStateChangedMessageBuilder implements Builder<Pay
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -261,7 +261,7 @@ public class PaymentTransactionStateChangedMessageBuilder implements Builder<Pay
     }
 
     /**
-     *  <p>Unique identifier for the Transaction for which the Transaction State changed.</p>
+     *  <p>Unique identifier for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a> for which the <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">Transaction State</a> changed.</p>
      * @param transactionId value to be set
      * @return Builder
      */
@@ -272,7 +272,7 @@ public class PaymentTransactionStateChangedMessageBuilder implements Builder<Pay
     }
 
     /**
-     *  <p>Transaction State after the Change Transaction State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">Transaction State</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentChangeTransactionStateAction" rel="nofollow">Change Transaction State</a> update action.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -349,7 +349,7 @@ public class PaymentTransactionStateChangedMessageBuilder implements Builder<Pay
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -377,7 +377,7 @@ public class PaymentTransactionStateChangedMessageBuilder implements Builder<Pay
     }
 
     /**
-     *  <p>Unique identifier for the Transaction for which the Transaction State changed.</p>
+     *  <p>Unique identifier for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a> for which the <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">Transaction State</a> changed.</p>
      * @return transactionId
      */
 
@@ -386,7 +386,7 @@ public class PaymentTransactionStateChangedMessageBuilder implements Builder<Pay
     }
 
     /**
-     *  <p>Transaction State after the Change Transaction State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">Transaction State</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentChangeTransactionStateAction" rel="nofollow">Change Transaction State</a> update action.</p>
      * @return state
      */
 

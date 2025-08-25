@@ -63,7 +63,7 @@ public class RecurringOrderDraftImpl implements RecurringOrderDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the RecurringOrder.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a>.</p>
      */
 
     public String getKey() {
@@ -71,7 +71,7 @@ public class RecurringOrderDraftImpl implements RecurringOrderDraft, ModelBase {
     }
 
     /**
-     *  <p>ResourceIdentifier to the Cart from which the RecurringOrder is created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Cart from which the RecurringOrder is created.</p>
      */
 
     public com.commercetools.api.models.cart.CartResourceIdentifier getCart() {
@@ -79,7 +79,7 @@ public class RecurringOrderDraftImpl implements RecurringOrderDraft, ModelBase {
     }
 
     /**
-     *  <p>Current version of the referenced Cart.</p>
+     *  <p>Current version of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      */
 
     public Long getCartVersion() {

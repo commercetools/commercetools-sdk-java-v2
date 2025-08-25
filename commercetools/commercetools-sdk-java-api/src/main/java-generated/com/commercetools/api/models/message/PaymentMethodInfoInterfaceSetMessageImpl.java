@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set MethodInfo Interface update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoInterfaceAction" rel="nofollow">Set MethodInfo Interface</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentMethodInfoInterfaceSetMessageImpl implements PaymentMethodInfoInterfaceSetMessage, ModelBase {
@@ -143,7 +143,7 @@ public class PaymentMethodInfoInterfaceSetMessageImpl implements PaymentMethodIn
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -159,7 +159,7 @@ public class PaymentMethodInfoInterfaceSetMessageImpl implements PaymentMethodIn
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -175,7 +175,7 @@ public class PaymentMethodInfoInterfaceSetMessageImpl implements PaymentMethodIn
     }
 
     /**
-     *  <p>Payment interface of the Payment Method after the Set MethodInfo Interface update action.</p>
+     *  <p>Payment interface of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoInterfaceAction" rel="nofollow">Set MethodInfo Interface</a> update action.</p>
      */
 
     public String getInterface() {
@@ -183,7 +183,7 @@ public class PaymentMethodInfoInterfaceSetMessageImpl implements PaymentMethodIn
     }
 
     /**
-     *  <p>Payment interface of the Payment Method before the Set MethodInfo Interface update action.</p>
+     *  <p>Payment interface of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoInterfaceAction" rel="nofollow">Set MethodInfo Interface</a> update action.</p>
      */
 
     public String getOldInterface() {

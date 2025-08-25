@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the Add PlainEnumValue to AttributeDefinition update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeAddPlainEnumValueAction" rel="nofollow">Add PlainEnumValue to AttributeDefinition</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -67,7 +67,7 @@ public interface AddPlainEnumValueChange extends Change {
     public AttributePlainEnumValue getNextValue();
 
     /**
-     *  <p>Name of the updated AttributeDefinition.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @return attributeName
      */
     @NotNull
@@ -89,7 +89,7 @@ public interface AddPlainEnumValueChange extends Change {
     public void setNextValue(final AttributePlainEnumValue nextValue);
 
     /**
-     *  <p>Name of the updated AttributeDefinition.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @param attributeName value to be set
      */
 

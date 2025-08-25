@@ -38,7 +38,7 @@ public interface EnumAttribute extends Attribute {
     String ENUM = "enum";
 
     /**
-     *  <p>The key of the enum value. Must match the key of an AttributePlainEnumValue in the Product Type.</p>
+     *  <p>The key of the enum value. Must match the key of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributePlainEnumValue" rel="nofollow">AttributePlainEnumValue</a> in the Product Type.</p>
      * @return value
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface EnumAttribute extends Attribute {
     public String getValue();
 
     /**
-     *  <p>The key of the enum value. Must match the key of an AttributePlainEnumValue in the Product Type.</p>
+     *  <p>The key of the enum value. Must match the key of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributePlainEnumValue" rel="nofollow">AttributePlainEnumValue</a> in the Product Type.</p>
      * @param value value to be set
      */
 

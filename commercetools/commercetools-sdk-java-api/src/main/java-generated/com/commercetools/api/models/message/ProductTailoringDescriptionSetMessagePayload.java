@@ -19,7 +19,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Product Tailoring Set Description update action.</p>
+ *  <p>Generated after a successful Product Tailoring <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -69,7 +69,7 @@ public interface ProductTailoringDescriptionSetMessagePayload extends MessagePay
     public ProductReference getProduct();
 
     /**
-     *  <p>The description of the Product Tailoring after the Set Description update action.</p>
+     *  <p>The description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
      * @return description
      */
     @Valid
@@ -77,7 +77,7 @@ public interface ProductTailoringDescriptionSetMessagePayload extends MessagePay
     public LocalizedString getDescription();
 
     /**
-     *  <p>The description of the ProductTailoring before the Set Description update action.</p>
+     *  <p>The description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
      * @return oldDescription
      */
     @Valid
@@ -106,14 +106,14 @@ public interface ProductTailoringDescriptionSetMessagePayload extends MessagePay
     public void setProduct(final ProductReference product);
 
     /**
-     *  <p>The description of the Product Tailoring after the Set Description update action.</p>
+     *  <p>The description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
      * @param description value to be set
      */
 
     public void setDescription(final LocalizedString description);
 
     /**
-     *  <p>The description of the ProductTailoring before the Set Description update action.</p>
+     *  <p>The description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
      * @param oldDescription value to be set
      */
 

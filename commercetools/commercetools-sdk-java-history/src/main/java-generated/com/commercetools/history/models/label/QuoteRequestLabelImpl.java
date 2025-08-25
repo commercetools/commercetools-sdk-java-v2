@@ -63,7 +63,7 @@ public class QuoteRequestLabelImpl implements QuoteRequestLabel, ModelBase {
     }
 
     /**
-     *  <p>The Buyer who raised the Quote Request.</p>
+     *  <p>The <span>Buyer</span> who raised the Quote Request.</p>
      */
 
     public com.commercetools.history.models.common.Reference getCustomer() {

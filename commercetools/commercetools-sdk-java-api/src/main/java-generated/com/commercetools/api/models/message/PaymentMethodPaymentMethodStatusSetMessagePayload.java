@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Set PaymentMethodStatus update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetPaymentMethodStatusAction" rel="nofollow">Set PaymentMethodStatus</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,7 +36,7 @@ public interface PaymentMethodPaymentMethodStatusSetMessagePayload extends Messa
     String PAYMENT_METHOD_PAYMENT_METHOD_STATUS_SET = "PaymentMethodPaymentMethodStatusSet";
 
     /**
-     *  <p>Status of the Payment Method after the Set PaymentMethodStatus update action.</p>
+     *  <p>Status of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetPaymentMethodStatusAction" rel="nofollow">Set PaymentMethodStatus</a> update action.</p>
      * @return status
      */
 
@@ -44,7 +44,7 @@ public interface PaymentMethodPaymentMethodStatusSetMessagePayload extends Messa
     public PaymentMethodStatus getStatus();
 
     /**
-     *  <p>Status of the Payment Method before the Set PaymentMethodStatus update action.</p>
+     *  <p>Status of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetPaymentMethodStatusAction" rel="nofollow">Set PaymentMethodStatus</a> update action.</p>
      * @return oldStatus
      */
 
@@ -52,14 +52,14 @@ public interface PaymentMethodPaymentMethodStatusSetMessagePayload extends Messa
     public PaymentMethodStatus getOldStatus();
 
     /**
-     *  <p>Status of the Payment Method after the Set PaymentMethodStatus update action.</p>
+     *  <p>Status of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetPaymentMethodStatusAction" rel="nofollow">Set PaymentMethodStatus</a> update action.</p>
      * @param status value to be set
      */
 
     public void setStatus(final PaymentMethodStatus status);
 
     /**
-     *  <p>Status of the Payment Method before the Set PaymentMethodStatus update action.</p>
+     *  <p>Status of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetPaymentMethodStatusAction" rel="nofollow">Set PaymentMethodStatus</a> update action.</p>
      * @param oldStatus value to be set
      */
 

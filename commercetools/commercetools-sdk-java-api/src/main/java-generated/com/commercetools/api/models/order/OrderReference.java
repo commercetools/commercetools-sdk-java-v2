@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Reference to an Order.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface OrderReference extends Reference, com.commercetools.api.models.
     String ORDER = "order";
 
     /**
-     *  <p>Contains the representation of the expanded Order. Only present in responses to requests with Reference Expansion for Orders.</p>
+     *  <p>Contains the representation of the expanded Order. Only present in responses to requests with <span>Reference Expansion</span> for Orders.</p>
      * @return obj
      */
     @Valid
@@ -49,7 +49,7 @@ public interface OrderReference extends Reference, com.commercetools.api.models.
     public Order getObj();
 
     /**
-     *  <p>Unique identifier of the referenced Order.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @return id
      */
     @NotNull
@@ -57,14 +57,14 @@ public interface OrderReference extends Reference, com.commercetools.api.models.
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded Order. Only present in responses to requests with Reference Expansion for Orders.</p>
+     *  <p>Contains the representation of the expanded Order. Only present in responses to requests with <span>Reference Expansion</span> for Orders.</p>
      * @param obj value to be set
      */
 
     public void setObj(final Order obj);
 
     /**
-     *  <p>Unique identifier of the referenced Order.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param id value to be set
      */
 

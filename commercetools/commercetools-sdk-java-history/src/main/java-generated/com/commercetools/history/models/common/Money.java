@@ -35,7 +35,7 @@ import jakarta.validation.constraints.NotNull;
 public interface Money {
 
     /**
-     *  <p>Currency code compliant to ISO 4217.</p>
+     *  <p>Currency code compliant to <span>ISO 4217</span>.</p>
      * @return currencyCode
      */
     @NotNull
@@ -67,7 +67,7 @@ public interface Money {
     public MoneyType getType();
 
     /**
-     *  <p>Currency code compliant to ISO 4217.</p>
+     *  <p>Currency code compliant to <span>ISO 4217</span>.</p>
      * @param currencyCode value to be set
      */
 

@@ -19,8 +19,8 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Add ItemShippingAddress on Orders.</li>
- *   <li>Add ItemShippingAddress on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderAddItemShippingAddressAction" rel="nofollow">Add ItemShippingAddress</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderAddItemShippingAddressAction" rel="nofollow">Add ItemShippingAddress</a> on Staged Orders.</li>
  *  </ul>
  *
  * <hr>

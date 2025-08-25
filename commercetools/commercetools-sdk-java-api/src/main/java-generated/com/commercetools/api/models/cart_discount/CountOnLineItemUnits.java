@@ -38,7 +38,7 @@ public interface CountOnLineItemUnits extends PatternComponent {
     String COUNT_ON_LINE_ITEM_UNITS = "CountOnLineItemUnits";
 
     /**
-     *  <p>Valid LineItem predicate that determines the units participating in the Discount.</p>
+     *  <p>Valid <span>LineItem predicate</span> that determines the units participating in the Discount.</p>
      * @return predicate
      */
     @NotNull
@@ -73,7 +73,7 @@ public interface CountOnLineItemUnits extends PatternComponent {
     public Integer getExcludeCount();
 
     /**
-     *  <p>Valid LineItem predicate that determines the units participating in the Discount.</p>
+     *  <p>Valid <span>LineItem predicate</span> that determines the units participating in the Discount.</p>
      * @param predicate value to be set
      */
 

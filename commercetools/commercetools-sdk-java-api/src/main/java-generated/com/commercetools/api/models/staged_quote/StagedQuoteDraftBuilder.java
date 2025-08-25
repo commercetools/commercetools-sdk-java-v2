@@ -92,7 +92,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
     }
 
     /**
-     *  <p>If <code>true</code>, the <code>quoteRequestState</code> of the referenced QuoteRequest will be set to <code>Accepted</code>.</p>
+     *  <p>If <code>true</code>, the <code>quoteRequestState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> will be set to <code>Accepted</code>.</p>
      * @param quoteRequestStateToAccepted value to be set
      * @return Builder
      */
@@ -114,10 +114,10 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
     }
 
     /**
-     *  <p>Custom Fields to be added to the StagedQuote.</p>
+     *  <p><span>Custom Fields</span> to be added to the StagedQuote.</p>
      *  <ul>
-     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced QuoteRequest and added to the StagedQuote.</li>
-     *   <li>If empty, the Custom Fields on the referenced QuoteRequest are added to the StagedQuote automatically.</li>
+     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> and added to the StagedQuote.</li>
+     *   <li>If empty, the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> are added to the StagedQuote automatically.</li>
      *  </ul>
      * @param builder function to build the custom value
      * @return Builder
@@ -130,10 +130,10 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
     }
 
     /**
-     *  <p>Custom Fields to be added to the StagedQuote.</p>
+     *  <p><span>Custom Fields</span> to be added to the StagedQuote.</p>
      *  <ul>
-     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced QuoteRequest and added to the StagedQuote.</li>
-     *   <li>If empty, the Custom Fields on the referenced QuoteRequest are added to the StagedQuote automatically.</li>
+     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> and added to the StagedQuote.</li>
+     *   <li>If empty, the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> are added to the StagedQuote automatically.</li>
      *  </ul>
      * @param builder function to build the custom value
      * @return Builder
@@ -146,10 +146,10 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
     }
 
     /**
-     *  <p>Custom Fields to be added to the StagedQuote.</p>
+     *  <p><span>Custom Fields</span> to be added to the StagedQuote.</p>
      *  <ul>
-     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced QuoteRequest and added to the StagedQuote.</li>
-     *   <li>If empty, the Custom Fields on the referenced QuoteRequest are added to the StagedQuote automatically.</li>
+     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> and added to the StagedQuote.</li>
+     *   <li>If empty, the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> are added to the StagedQuote automatically.</li>
      *  </ul>
      * @param custom value to be set
      * @return Builder
@@ -161,7 +161,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
     }
 
     /**
-     *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -173,7 +173,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
     }
 
     /**
-     *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -185,7 +185,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
     }
 
     /**
-     *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -214,7 +214,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
     }
 
     /**
-     *  <p>If <code>true</code>, the <code>quoteRequestState</code> of the referenced QuoteRequest will be set to <code>Accepted</code>.</p>
+     *  <p>If <code>true</code>, the <code>quoteRequestState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> will be set to <code>Accepted</code>.</p>
      * @return quoteRequestStateToAccepted
      */
 
@@ -234,10 +234,10 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
     }
 
     /**
-     *  <p>Custom Fields to be added to the StagedQuote.</p>
+     *  <p><span>Custom Fields</span> to be added to the StagedQuote.</p>
      *  <ul>
-     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced QuoteRequest and added to the StagedQuote.</li>
-     *   <li>If empty, the Custom Fields on the referenced QuoteRequest are added to the StagedQuote automatically.</li>
+     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> and added to the StagedQuote.</li>
+     *   <li>If empty, the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> are added to the StagedQuote automatically.</li>
      *  </ul>
      * @return custom
      */
@@ -248,7 +248,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
     }
 
     /**
-     *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      * @return state
      */
 

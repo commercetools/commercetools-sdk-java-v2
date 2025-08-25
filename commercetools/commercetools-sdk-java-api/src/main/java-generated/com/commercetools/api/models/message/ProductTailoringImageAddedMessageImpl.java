@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Add External Image update action or after a successful Upload Product Tailoring image request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringAddExternalImageAction" rel="nofollow">Add External Image</a> update action or after a successful <span>Upload Product Tailoring image</span> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTailoringImageAddedMessageImpl implements ProductTailoringImageAddedMessage, ModelBase {
@@ -155,7 +155,7 @@ public class ProductTailoringImageAddedMessageImpl implements ProductTailoringIm
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -171,7 +171,7 @@ public class ProductTailoringImageAddedMessageImpl implements ProductTailoringIm
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -211,7 +211,7 @@ public class ProductTailoringImageAddedMessageImpl implements ProductTailoringIm
     }
 
     /**
-     *  <p><code>id</code> of the tailored ProductVariant.</p>
+     *  <p><code>id</code> of the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      */
 
     public Long getVariantId() {
@@ -219,7 +219,7 @@ public class ProductTailoringImageAddedMessageImpl implements ProductTailoringIm
     }
 
     /**
-     *  <p>Image that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      */
 
     public com.commercetools.api.models.common.Image getImage() {

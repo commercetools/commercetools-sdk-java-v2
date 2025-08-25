@@ -56,7 +56,7 @@ public class ShippingMethodRemoveShippingRateActionImpl implements ShippingMetho
     }
 
     /**
-     *  <p>Zone from which the ShippingRate should be removed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> from which the ShippingRate should be removed.</p>
      */
 
     public com.commercetools.api.models.zone.ZoneResourceIdentifier getZone() {

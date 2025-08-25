@@ -66,7 +66,7 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
     }
 
     /**
-     *  <p>The search query against searchable Product fields.</p>
+     *  <p>The search query against <span>searchable Product fields</span>.</p>
      */
 
     public com.commercetools.api.models.search.SearchQuery getQuery() {
@@ -74,7 +74,7 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
     }
 
     /**
-     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance score in descending order.</p>
+     *  <p>Controls how results to your query are <span>sorted</span>. If not provided, the results are sorted by relevance score in descending order.</p>
      */
 
     public java.util.List<com.commercetools.api.models.search.SearchSorting> getSort() {
@@ -82,7 +82,7 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
     }
 
     /**
-     *  <p>The maximum number of search results to be returned in one page.</p>
+     *  <p>The maximum number of search results to be returned in one <span>page</span>.</p>
      */
 
     public Integer getLimit() {
@@ -90,7 +90,7 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
     }
 
     /**
-     *  <p>The number of search results to be skipped in the response for pagination.</p>
+     *  <p>The number of search results to be skipped in the response for <span>pagination</span>.</p>
      */
 
     public Integer getOffset() {
@@ -98,7 +98,7 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
     }
 
     /**
-     *  <p>If <code>query</code> specifies an expression for a Product Variant field, set this to <code>true</code> to get additional information for each returned Product about which Product Variants match the search query. For details, see matching variants.</p>
+     *  <p>If <code>query</code> specifies an expression for a Product Variant field, set this to <code>true</code> to get additional information for each returned Product about which Product Variants match the search query. For details, see <span>matching variants</span>.</p>
      */
 
     public Boolean getMarkMatchingVariants() {
@@ -106,7 +106,7 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
     }
 
     /**
-     *  <p>Controls data integration with Product Projection parameters. If not set, the result does not include the Product Projection.</p>
+     *  <p>Controls data integration <span>with Product Projection parameters</span>. If not set, the result does not include the Product Projection.</p>
      */
 
     public com.commercetools.api.models.product_search.ProductSearchProjectionParams getProductProjectionParameters() {
@@ -114,7 +114,7 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
     }
 
     /**
-     *  <p>Set this field to request facets.</p>
+     *  <p>Set this field to request <span>facets</span>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product_search.ProductSearchFacetExpression> getFacets() {

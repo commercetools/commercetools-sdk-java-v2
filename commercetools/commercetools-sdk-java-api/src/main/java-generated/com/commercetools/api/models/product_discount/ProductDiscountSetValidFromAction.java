@@ -36,7 +36,7 @@ public interface ProductDiscountSetValidFromAction extends ProductDiscountUpdate
     String SET_VALID_FROM = "setValidFrom";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated discount values.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. Take <span>Eventual Consistency</span> into account for calculated discount values.</p>
      * @return validFrom
      */
 
@@ -44,7 +44,7 @@ public interface ProductDiscountSetValidFromAction extends ProductDiscountUpdate
     public ZonedDateTime getValidFrom();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated discount values.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. Take <span>Eventual Consistency</span> into account for calculated discount values.</p>
      * @param validFrom value to be set
      */
 

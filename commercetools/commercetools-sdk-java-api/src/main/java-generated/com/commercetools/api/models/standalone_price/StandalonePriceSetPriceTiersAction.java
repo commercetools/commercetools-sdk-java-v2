@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Sets all PriceTiers for a StandalonePrice in one action, produces the Standalone Price Tiers Set Message.</p>
+ *  <p>Sets all <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">PriceTiers</a> for a <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> in one action, produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceTiersSetMessage" rel="nofollow">Standalone Price Tiers Set</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface StandalonePriceSetPriceTiersAction extends StandalonePriceUpdat
     String SET_PRICE_TIERS = "setPriceTiers";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an InvalidField error is returned.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @return tiers
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface StandalonePriceSetPriceTiersAction extends StandalonePriceUpdat
     public List<PriceTierDraft> getTiers();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an InvalidField error is returned.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @param tiers values to be set
      */
 
@@ -58,7 +58,7 @@ public interface StandalonePriceSetPriceTiersAction extends StandalonePriceUpdat
     public void setTiers(final PriceTierDraft... tiers);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an InvalidField error is returned.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @param tiers values to be set
      */
 

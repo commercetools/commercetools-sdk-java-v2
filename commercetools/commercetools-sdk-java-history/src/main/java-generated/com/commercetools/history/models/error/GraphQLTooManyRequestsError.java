@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Returned when the Query Records request exceeds the rate limit.</p>
+ *  <p>Returned when the <span>Query Records</span> request exceeds the rate limit.</p>
  *  <p>Reduce the date range and resource types in your query to minimize the token usage, or retry the request after some time (indicated in the <code>Retry-After</code> header).</p>
  *
  * <hr>

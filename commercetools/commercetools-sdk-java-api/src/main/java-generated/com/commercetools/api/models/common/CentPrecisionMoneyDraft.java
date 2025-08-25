@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>This draft type is the alternative to Money.</p>
+ *  <p>This draft type is the alternative to <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">Money</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

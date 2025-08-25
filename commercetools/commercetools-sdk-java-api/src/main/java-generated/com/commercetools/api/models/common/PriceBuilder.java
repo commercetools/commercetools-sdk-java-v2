@@ -71,7 +71,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>User-defined identifier of the Price. It is unique per ProductVariant.</p>
+     *  <p>User-defined identifier of the Price. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -116,7 +116,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>CustomerGroup for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which this Price is valid.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -130,7 +130,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>CustomerGroup for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which this Price is valid.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -143,7 +143,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>CustomerGroup for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which this Price is valid.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -155,7 +155,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p><code>ProductDistribution</code> Channel for which this Price is valid.</p>
+     *  <p><code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which this Price is valid.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -167,7 +167,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p><code>ProductDistribution</code> Channel for which this Price is valid.</p>
+     *  <p><code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which this Price is valid.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -179,7 +179,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p><code>ProductDistribution</code> Channel for which this Price is valid.</p>
+     *  <p><code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which this Price is valid.</p>
      * @param channel value to be set
      * @return Builder
      */
@@ -201,7 +201,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Date and time until this Price is valid. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.</p>
+     *  <p>Date and time until this Price is valid. Prices that are no longer valid are not automatically removed, but they can be <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemovePriceAction" rel="nofollow">removed</a> if necessary.</p>
      * @param validUntil value to be set
      * @return Builder
      */
@@ -212,7 +212,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Is set if a ProductDiscount has been applied. If set, the API uses the DiscountedPrice value for the Line Item price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half-down rounding.</p>
+     *  <p>Is set if a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> has been applied. If set, the API uses the DiscountedPrice value for the <span>Line Item price selection</span>. When a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueRelative" rel="nofollow">relative discount</a> has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with <span>half-down rounding</span>.</p>
      * @param builder function to build the discounted value
      * @return Builder
      */
@@ -224,7 +224,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Is set if a ProductDiscount has been applied. If set, the API uses the DiscountedPrice value for the Line Item price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half-down rounding.</p>
+     *  <p>Is set if a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> has been applied. If set, the API uses the DiscountedPrice value for the <span>Line Item price selection</span>. When a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueRelative" rel="nofollow">relative discount</a> has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with <span>half-down rounding</span>.</p>
      * @param builder function to build the discounted value
      * @return Builder
      */
@@ -236,7 +236,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Is set if a ProductDiscount has been applied. If set, the API uses the DiscountedPrice value for the Line Item price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half-down rounding.</p>
+     *  <p>Is set if a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> has been applied. If set, the API uses the DiscountedPrice value for the <span>Line Item price selection</span>. When a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueRelative" rel="nofollow">relative discount</a> has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with <span>half-down rounding</span>.</p>
      * @param discounted value to be set
      * @return Builder
      */
@@ -247,7 +247,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     *  <p>Present if different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities have been specified.</p>
      *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers value to be set
      * @return Builder
@@ -259,7 +259,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     *  <p>Present if different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities have been specified.</p>
      *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers value to be set
      * @return Builder
@@ -271,7 +271,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     *  <p>Present if different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities have been specified.</p>
      *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers value to be set
      * @return Builder
@@ -286,7 +286,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     *  <p>Present if different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities have been specified.</p>
      *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
@@ -302,7 +302,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     *  <p>Present if different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities have been specified.</p>
      *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
@@ -316,7 +316,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     *  <p>Present if different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities have been specified.</p>
      *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
@@ -328,7 +328,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     *  <p>Present if different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities have been specified.</p>
      *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
@@ -375,7 +375,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Recurrence Policy for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">Recurrence Policy</a> for which this Price is valid.</p>
      * @param builder function to build the recurrencePolicy value
      * @return Builder
      */
@@ -389,7 +389,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Recurrence Policy for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">Recurrence Policy</a> for which this Price is valid.</p>
      * @param builder function to build the recurrencePolicy value
      * @return Builder
      */
@@ -402,7 +402,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Recurrence Policy for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">Recurrence Policy</a> for which this Price is valid.</p>
      * @param recurrencePolicy value to be set
      * @return Builder
      */
@@ -423,7 +423,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>User-defined identifier of the Price. It is unique per ProductVariant.</p>
+     *  <p>User-defined identifier of the Price. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return key
      */
 
@@ -452,7 +452,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>CustomerGroup for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which this Price is valid.</p>
      * @return customerGroup
      */
 
@@ -462,7 +462,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p><code>ProductDistribution</code> Channel for which this Price is valid.</p>
+     *  <p><code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which this Price is valid.</p>
      * @return channel
      */
 
@@ -482,7 +482,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Date and time until this Price is valid. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.</p>
+     *  <p>Date and time until this Price is valid. Prices that are no longer valid are not automatically removed, but they can be <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemovePriceAction" rel="nofollow">removed</a> if necessary.</p>
      * @return validUntil
      */
 
@@ -492,7 +492,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Is set if a ProductDiscount has been applied. If set, the API uses the DiscountedPrice value for the Line Item price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half-down rounding.</p>
+     *  <p>Is set if a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> has been applied. If set, the API uses the DiscountedPrice value for the <span>Line Item price selection</span>. When a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueRelative" rel="nofollow">relative discount</a> has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with <span>half-down rounding</span>.</p>
      * @return discounted
      */
 
@@ -502,7 +502,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     *  <p>Present if different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities have been specified.</p>
      *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @return tiers
      */
@@ -523,7 +523,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Recurrence Policy for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">Recurrence Policy</a> for which this Price is valid.</p>
      * @return recurrencePolicy
      */
 

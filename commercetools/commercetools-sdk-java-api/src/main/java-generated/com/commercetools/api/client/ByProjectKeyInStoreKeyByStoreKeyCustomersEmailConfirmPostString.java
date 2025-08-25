@@ -17,10 +17,10 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Use this method to verify a Store-specific Customer's email during their email verification process.</p>
- *  <p>Verifying the email of the Customer produces the CustomerEmailVerified Message.</p>
- *  <p>If the Customer exists in the Project but the <code>stores</code> field references a different Store, this method returns a ResourceNotFound error.</p>
- *  <p>After the email is verified, all email tokens issued previously through the email verification flow are invalidated. This invalidation of tokens is eventually consistent.</p>
+ *  <p>Use this method to verify a Store-specific Customer's email during their <span>email verification process</span>.</p>
+ *  <p>Verifying the email of the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerEmailVerifiedMessage" rel="nofollow">CustomerEmailVerified</a> Message.</p>
+ *  <p>If the Customer exists in the Project but the <code>stores</code> field references a different <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>, this method returns a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error.</p>
+ *  <p>After the email is verified, all email tokens issued previously through the <span>email verification flow</span> are invalidated. This invalidation of tokens is <span>eventually consistent</span>.</p>
  *
  * <hr>
  * <div class=code-example>

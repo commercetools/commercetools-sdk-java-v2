@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Returned when a Money operation overflows the 64-bit integer range. See Money usage for more information.</p>
+ *  <p>Returned when a <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">Money</a> operation overflows the 64-bit integer range. See <span>Money usage</span> for more information.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

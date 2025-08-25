@@ -188,7 +188,7 @@ public class StoreDistributionChannelsChangedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -200,7 +200,7 @@ public class StoreDistributionChannelsChangedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -262,7 +262,7 @@ public class StoreDistributionChannelsChangedMessageBuilder
     }
 
     /**
-     *  <p>Product distribution Channels that have been added to the Store.</p>
+     *  <p>Product distribution Channels that have been added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param addedDistributionChannels value to be set
      * @return Builder
      */
@@ -274,7 +274,7 @@ public class StoreDistributionChannelsChangedMessageBuilder
     }
 
     /**
-     *  <p>Product distribution Channels that have been added to the Store.</p>
+     *  <p>Product distribution Channels that have been added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param addedDistributionChannels value to be set
      * @return Builder
      */
@@ -286,7 +286,7 @@ public class StoreDistributionChannelsChangedMessageBuilder
     }
 
     /**
-     *  <p>Product distribution Channels that have been added to the Store.</p>
+     *  <p>Product distribution Channels that have been added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param addedDistributionChannels value to be set
      * @return Builder
      */
@@ -301,7 +301,7 @@ public class StoreDistributionChannelsChangedMessageBuilder
     }
 
     /**
-     *  <p>Product distribution Channels that have been added to the Store.</p>
+     *  <p>Product distribution Channels that have been added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the addedDistributionChannels value
      * @return Builder
      */
@@ -317,7 +317,7 @@ public class StoreDistributionChannelsChangedMessageBuilder
     }
 
     /**
-     *  <p>Product distribution Channels that have been added to the Store.</p>
+     *  <p>Product distribution Channels that have been added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the addedDistributionChannels value
      * @return Builder
      */
@@ -331,7 +331,7 @@ public class StoreDistributionChannelsChangedMessageBuilder
     }
 
     /**
-     *  <p>Product distribution Channels that have been added to the Store.</p>
+     *  <p>Product distribution Channels that have been added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the addedDistributionChannels value
      * @return Builder
      */
@@ -343,7 +343,7 @@ public class StoreDistributionChannelsChangedMessageBuilder
     }
 
     /**
-     *  <p>Product distribution Channels that have been added to the Store.</p>
+     *  <p>Product distribution Channels that have been added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the addedDistributionChannels value
      * @return Builder
      */
@@ -355,7 +355,7 @@ public class StoreDistributionChannelsChangedMessageBuilder
     }
 
     /**
-     *  <p>Product distribution Channels that have been removed from the Store.</p>
+     *  <p>Product distribution Channels that have been removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param removedDistributionChannels value to be set
      * @return Builder
      */
@@ -367,7 +367,7 @@ public class StoreDistributionChannelsChangedMessageBuilder
     }
 
     /**
-     *  <p>Product distribution Channels that have been removed from the Store.</p>
+     *  <p>Product distribution Channels that have been removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param removedDistributionChannels value to be set
      * @return Builder
      */
@@ -379,7 +379,7 @@ public class StoreDistributionChannelsChangedMessageBuilder
     }
 
     /**
-     *  <p>Product distribution Channels that have been removed from the Store.</p>
+     *  <p>Product distribution Channels that have been removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param removedDistributionChannels value to be set
      * @return Builder
      */
@@ -394,7 +394,7 @@ public class StoreDistributionChannelsChangedMessageBuilder
     }
 
     /**
-     *  <p>Product distribution Channels that have been removed from the Store.</p>
+     *  <p>Product distribution Channels that have been removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the removedDistributionChannels value
      * @return Builder
      */
@@ -410,7 +410,7 @@ public class StoreDistributionChannelsChangedMessageBuilder
     }
 
     /**
-     *  <p>Product distribution Channels that have been removed from the Store.</p>
+     *  <p>Product distribution Channels that have been removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the removedDistributionChannels value
      * @return Builder
      */
@@ -424,7 +424,7 @@ public class StoreDistributionChannelsChangedMessageBuilder
     }
 
     /**
-     *  <p>Product distribution Channels that have been removed from the Store.</p>
+     *  <p>Product distribution Channels that have been removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the removedDistributionChannels value
      * @return Builder
      */
@@ -436,7 +436,7 @@ public class StoreDistributionChannelsChangedMessageBuilder
     }
 
     /**
-     *  <p>Product distribution Channels that have been removed from the Store.</p>
+     *  <p>Product distribution Channels that have been removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the removedDistributionChannels value
      * @return Builder
      */
@@ -513,7 +513,7 @@ public class StoreDistributionChannelsChangedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -541,7 +541,7 @@ public class StoreDistributionChannelsChangedMessageBuilder
     }
 
     /**
-     *  <p>Product distribution Channels that have been added to the Store.</p>
+     *  <p>Product distribution Channels that have been added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @return addedDistributionChannels
      */
 
@@ -551,7 +551,7 @@ public class StoreDistributionChannelsChangedMessageBuilder
     }
 
     /**
-     *  <p>Product distribution Channels that have been removed from the Store.</p>
+     *  <p>Product distribution Channels that have been removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @return removedDistributionChannels
      */
 

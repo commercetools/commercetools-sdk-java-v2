@@ -30,7 +30,7 @@ public class AttributeGroupReferenceBuilder implements Builder<AttributeGroupRef
     private com.commercetools.api.models.attribute_group.AttributeGroup obj;
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced AttributeGroup.</p>
+     *  <p>Platform-generated unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeGroup" rel="nofollow">AttributeGroup</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class AttributeGroupReferenceBuilder implements Builder<AttributeGroupRef
     }
 
     /**
-     *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with Reference Expansion for AttributeGroup.</p>
+     *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with <span>Reference Expansion</span> for AttributeGroup.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class AttributeGroupReferenceBuilder implements Builder<AttributeGroupRef
     }
 
     /**
-     *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with Reference Expansion for AttributeGroup.</p>
+     *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with <span>Reference Expansion</span> for AttributeGroup.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class AttributeGroupReferenceBuilder implements Builder<AttributeGroupRef
     }
 
     /**
-     *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with Reference Expansion for AttributeGroup.</p>
+     *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with <span>Reference Expansion</span> for AttributeGroup.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class AttributeGroupReferenceBuilder implements Builder<AttributeGroupRef
     }
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced AttributeGroup.</p>
+     *  <p>Platform-generated unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeGroup" rel="nofollow">AttributeGroup</a>.</p>
      * @return id
      */
 
@@ -86,7 +86,7 @@ public class AttributeGroupReferenceBuilder implements Builder<AttributeGroupRef
     }
 
     /**
-     *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with Reference Expansion for AttributeGroup.</p>
+     *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with <span>Reference Expansion</span> for AttributeGroup.</p>
      * @return obj
      */
 

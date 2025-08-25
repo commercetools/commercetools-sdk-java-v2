@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Generated after a successful Change Parent Unit update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface BusinessUnitParentChangedMessagePayload extends MessagePayload 
     String BUSINESS_UNIT_PARENT_CHANGED = "BusinessUnitParentChanged";
 
     /**
-     *  <p>Parent unit of the Business Unit before the Change Parent Unit update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      * @return oldParentUnit
      */
     @Valid
@@ -46,7 +46,7 @@ public interface BusinessUnitParentChangedMessagePayload extends MessagePayload 
     public BusinessUnitKeyReference getOldParentUnit();
 
     /**
-     *  <p>Parent unit of the Business Unit after the Change Parent Unit update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      * @return newParentUnit
      */
     @Valid
@@ -54,14 +54,14 @@ public interface BusinessUnitParentChangedMessagePayload extends MessagePayload 
     public BusinessUnitKeyReference getNewParentUnit();
 
     /**
-     *  <p>Parent unit of the Business Unit before the Change Parent Unit update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      * @param oldParentUnit value to be set
      */
 
     public void setOldParentUnit(final BusinessUnitKeyReference oldParentUnit);
 
     /**
-     *  <p>Parent unit of the Business Unit after the Change Parent Unit update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      * @param newParentUnit value to be set
      */
 

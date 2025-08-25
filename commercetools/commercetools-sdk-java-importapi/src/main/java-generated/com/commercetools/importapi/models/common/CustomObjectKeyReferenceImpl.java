@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Used by the Import API to identify a CustomObject.</p>
+ *  <p>Used by the <span>Import API</span> to identify a CustomObject.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomObjectKeyReferenceImpl implements CustomObjectKeyReference, ModelBase {

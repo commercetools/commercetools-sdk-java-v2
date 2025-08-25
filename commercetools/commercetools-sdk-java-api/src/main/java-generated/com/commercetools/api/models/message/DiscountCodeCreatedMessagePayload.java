@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Create DiscountCode request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/discount-codes:POST" rel="nofollow">Create DiscountCode</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface DiscountCodeCreatedMessagePayload extends MessagePayload {
     String DISCOUNT_CODE_CREATED = "DiscountCodeCreated";
 
     /**
-     *  <p>The Discount Code that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">Discount Code</a> that was created.</p>
      * @return discountCode
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface DiscountCodeCreatedMessagePayload extends MessagePayload {
     public DiscountCode getDiscountCode();
 
     /**
-     *  <p>The Discount Code that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">Discount Code</a> that was created.</p>
      * @param discountCode value to be set
      */
 

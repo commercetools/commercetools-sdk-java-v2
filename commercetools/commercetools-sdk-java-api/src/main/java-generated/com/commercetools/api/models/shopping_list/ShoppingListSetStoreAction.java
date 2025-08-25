@@ -38,7 +38,7 @@ public interface ShoppingListSetStoreAction extends ShoppingListUpdateAction {
     String SET_STORE = "setStore";
 
     /**
-     *  <p>The Store the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
      * @return store
      */
     @Valid
@@ -46,7 +46,7 @@ public interface ShoppingListSetStoreAction extends ShoppingListUpdateAction {
     public StoreResourceIdentifier getStore();
 
     /**
-     *  <p>The Store the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
      * @param store value to be set
      */
 

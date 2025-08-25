@@ -53,7 +53,7 @@ public class ProjectChangeMessagesConfigurationActionImpl
     }
 
     /**
-     *  <p>Configuration for the Messages Query feature.</p>
+     *  <p>Configuration for the <span>Messages Query</span> feature.</p>
      */
 
     public com.commercetools.api.models.message.MessagesConfigurationDraft getMessagesConfiguration() {

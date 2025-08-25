@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Sets the default billing address from <code>addresses</code>. The action adds the <code>id</code> of the specified Address to the <code>billingAddressIds</code> if not contained already. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
- *  <p>This action generates the CustomerDefaultBillingAddressSet Message.</p>
+ *  <p>This action generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerDefaultBillingAddressSetMessage" rel="nofollow">CustomerDefaultBillingAddressSet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetDefaultBillingAddressActionImpl implements CustomerSetDefaultBillingAddressAction, ModelBase {
@@ -56,7 +56,7 @@ public class CustomerSetDefaultBillingAddressActionImpl implements CustomerSetDe
     }
 
     /**
-     *  <p><code>id</code> of the Address to become the default billing address.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become the default billing address.</p>
      */
 
     public String getAddressId() {
@@ -64,7 +64,7 @@ public class CustomerSetDefaultBillingAddressActionImpl implements CustomerSetDe
     }
 
     /**
-     *  <p><code>key</code> of the Address to become the default billing address.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become the default billing address.</p>
      */
 
     public String getAddressKey() {

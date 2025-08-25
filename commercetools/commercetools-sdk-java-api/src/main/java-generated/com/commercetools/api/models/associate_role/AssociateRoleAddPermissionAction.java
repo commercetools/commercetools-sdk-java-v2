@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Adding a Permission to an AssociateRole generates an AssociateRolePermissionAdded Message.</p>
+ *  <p>Adding a Permission to an <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a> generates an <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRolePermissionAddedMessage" rel="nofollow">AssociateRolePermissionAdded</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

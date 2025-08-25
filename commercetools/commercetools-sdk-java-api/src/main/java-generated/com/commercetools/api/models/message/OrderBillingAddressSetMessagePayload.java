@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Generated after a successful Set Billing Address update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetBillingAddressAction" rel="nofollow">Set Billing Address</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface OrderBillingAddressSetMessagePayload extends OrderMessagePayloa
     String ORDER_BILLING_ADDRESS_SET = "OrderBillingAddressSet";
 
     /**
-     *  <p>Billing address on the Order after the Set Billing Address update action.</p>
+     *  <p>Billing address on the Order after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetBillingAddressAction" rel="nofollow">Set Billing Address</a> update action.</p>
      * @return address
      */
     @Valid
@@ -46,7 +46,7 @@ public interface OrderBillingAddressSetMessagePayload extends OrderMessagePayloa
     public Address getAddress();
 
     /**
-     *  <p>Billing address on the Order before the Set Billing Address update action.</p>
+     *  <p>Billing address on the Order before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetBillingAddressAction" rel="nofollow">Set Billing Address</a> update action.</p>
      * @return oldAddress
      */
     @Valid
@@ -54,14 +54,14 @@ public interface OrderBillingAddressSetMessagePayload extends OrderMessagePayloa
     public Address getOldAddress();
 
     /**
-     *  <p>Billing address on the Order after the Set Billing Address update action.</p>
+     *  <p>Billing address on the Order after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetBillingAddressAction" rel="nofollow">Set Billing Address</a> update action.</p>
      * @param address value to be set
      */
 
     public void setAddress(final Address address);
 
     /**
-     *  <p>Billing address on the Order before the Set Billing Address update action.</p>
+     *  <p>Billing address on the Order before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetBillingAddressAction" rel="nofollow">Set Billing Address</a> update action.</p>
      * @param oldAddress value to be set
      */
 

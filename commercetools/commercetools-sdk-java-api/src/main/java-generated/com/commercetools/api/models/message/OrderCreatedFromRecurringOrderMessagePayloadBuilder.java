@@ -29,7 +29,7 @@ public class OrderCreatedFromRecurringOrderMessagePayloadBuilder
     private com.commercetools.api.models.recurring_order.RecurringOrderReference recurringOrderRef;
 
     /**
-     *  <p>Order that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that was created.</p>
      * @param builder function to build the order value
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class OrderCreatedFromRecurringOrderMessagePayloadBuilder
     }
 
     /**
-     *  <p>Order that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that was created.</p>
      * @param builder function to build the order value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class OrderCreatedFromRecurringOrderMessagePayloadBuilder
     }
 
     /**
-     *  <p>Order that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that was created.</p>
      * @param order value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class OrderCreatedFromRecurringOrderMessagePayloadBuilder
     }
 
     /**
-     *  <p>Reference to the origin Recurring Order.</p>
+     *  <p>Reference to the origin <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @param builder function to build the recurringOrderRef value
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class OrderCreatedFromRecurringOrderMessagePayloadBuilder
     }
 
     /**
-     *  <p>Reference to the origin Recurring Order.</p>
+     *  <p>Reference to the origin <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @param builder function to build the recurringOrderRef value
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class OrderCreatedFromRecurringOrderMessagePayloadBuilder
     }
 
     /**
-     *  <p>Reference to the origin Recurring Order.</p>
+     *  <p>Reference to the origin <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @param recurringOrderRef value to be set
      * @return Builder
      */
@@ -104,7 +104,7 @@ public class OrderCreatedFromRecurringOrderMessagePayloadBuilder
     }
 
     /**
-     *  <p>Order that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that was created.</p>
      * @return order
      */
 
@@ -113,7 +113,7 @@ public class OrderCreatedFromRecurringOrderMessagePayloadBuilder
     }
 
     /**
-     *  <p>Reference to the origin Recurring Order.</p>
+     *  <p>Reference to the origin <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @return recurringOrderRef
      */
 

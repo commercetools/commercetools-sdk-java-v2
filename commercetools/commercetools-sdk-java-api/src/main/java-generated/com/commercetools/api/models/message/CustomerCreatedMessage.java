@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Create Customer request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers:POST" rel="nofollow">Create Customer</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface CustomerCreatedMessage extends Message {
     String CUSTOMER_CREATED = "CustomerCreated";
 
     /**
-     *  <p>Customer that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that was created.</p>
      * @return customer
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface CustomerCreatedMessage extends Message {
     public Customer getCustomer();
 
     /**
-     *  <p>Customer that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that was created.</p>
      * @param customer value to be set
      */
 

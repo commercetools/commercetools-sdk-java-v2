@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Remove Shipping Address Identifier update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitRemoveShippingAddressIdAction" rel="nofollow">Remove Shipping Address Identifier</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitShippingAddressRemovedMessagePayloadImpl
@@ -53,7 +53,7 @@ public class BusinessUnitShippingAddressRemovedMessagePayloadImpl
     }
 
     /**
-     *  <p>The address that was removed from shipping addresses of the Business Unit.</p>
+     *  <p>The address that was removed from shipping addresses of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      */
 
     public com.commercetools.api.models.common.Address getAddress() {

@@ -48,7 +48,7 @@ public interface PaymentStatusDraft extends io.vrap.rmf.base.client.Draft<Paymen
     public String getInterfaceText();
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      * @return state
      */
     @Valid
@@ -70,7 +70,7 @@ public interface PaymentStatusDraft extends io.vrap.rmf.base.client.Draft<Paymen
     public void setInterfaceText(final String interfaceText);
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      * @param state value to be set
      */
 

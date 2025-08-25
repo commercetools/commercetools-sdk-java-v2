@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Either <code>id</code> or <code>sku</code> is required. Produces the ProductVariantTailoringDeleted Message.</p>
+ *  <p>Either <code>id</code> or <code>sku</code> is required. Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoringRemovedMessage" rel="nofollow">ProductVariantTailoringDeleted</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

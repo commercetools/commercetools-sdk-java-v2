@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>This action generates a BusinessUnitTypeSet Message.</p>
+ *  <p>This action generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitTypeSetMessage" rel="nofollow">BusinessUnitTypeSet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitSetUnitTypeActionImpl implements BusinessUnitSetUnitTypeAction, ModelBase {
@@ -56,7 +56,7 @@ public class BusinessUnitSetUnitTypeActionImpl implements BusinessUnitSetUnitTyp
     }
 
     /**
-     *  <p>New type of the Business Unit.</p>
+     *  <p>New type of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      *  <p>If <code>unitType="Company"</code>, the Business Unit <code>storeMode</code>, <code>associateMode</code>, and <code>approvalRuleMode</code> field values must be <code>Explicit</code>.</p>
      */
 
@@ -65,7 +65,7 @@ public class BusinessUnitSetUnitTypeActionImpl implements BusinessUnitSetUnitTyp
     }
 
     /**
-     *  <p>New parent unit for the Business Unit, if <code>unitType="Division"</code>.</p>
+     *  <p>New parent unit for the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>, if <code>unitType="Division"</code>.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getParentUnit() {

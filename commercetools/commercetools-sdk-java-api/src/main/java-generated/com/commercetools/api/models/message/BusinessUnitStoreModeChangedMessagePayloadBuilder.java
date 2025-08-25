@@ -35,7 +35,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
     private com.commercetools.api.models.business_unit.BusinessUnitStoreMode oldStoreMode;
 
     /**
-     *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -47,7 +47,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -59,7 +59,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -89,7 +89,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -113,7 +113,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -124,7 +124,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>BusinessUnitStoreMode of the Business Unit after the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitStoreMode" rel="nofollow">BusinessUnitStoreMode</a> of the Business Unit after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @param storeMode value to be set
      * @return Builder
      */
@@ -136,7 +136,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @param oldStores value to be set
      * @return Builder
      */
@@ -148,7 +148,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @param oldStores value to be set
      * @return Builder
      */
@@ -160,7 +160,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @param oldStores value to be set
      * @return Builder
      */
@@ -175,7 +175,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @param builder function to build the oldStores value
      * @return Builder
      */
@@ -190,7 +190,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @param builder function to build the oldStores value
      * @return Builder
      */
@@ -203,7 +203,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @param builder function to build the oldStores value
      * @return Builder
      */
@@ -214,7 +214,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @param builder function to build the oldStores value
      * @return Builder
      */
@@ -225,7 +225,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>BusinessUnitStoreMode of the Business Unit before the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitStoreMode" rel="nofollow">BusinessUnitStoreMode</a> of the Business Unit before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @param oldStoreMode value to be set
      * @return Builder
      */
@@ -237,7 +237,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @return stores
      */
 
@@ -246,7 +246,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>BusinessUnitStoreMode of the Business Unit after the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitStoreMode" rel="nofollow">BusinessUnitStoreMode</a> of the Business Unit after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @return storeMode
      */
 
@@ -255,7 +255,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @return oldStores
      */
 
@@ -264,7 +264,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>BusinessUnitStoreMode of the Business Unit before the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitStoreMode" rel="nofollow">BusinessUnitStoreMode</a> of the Business Unit before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      * @return oldStoreMode
      */
 

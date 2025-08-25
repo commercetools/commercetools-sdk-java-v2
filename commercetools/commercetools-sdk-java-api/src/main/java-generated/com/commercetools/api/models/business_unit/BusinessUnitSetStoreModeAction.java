@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Only Business Units of type <code>Division</code> can be have a store mode of <code>FromParent</code>. Changing the <code>storeMode</code> to <code>FromParent</code> empties the <code>stores</code> array on the BusinessUnit. This update action generates a BusinessUnitStoreModeChanged Message.</p>
+ *  <p>Only Business Units of type <code>Division</code> can be have a store mode of <code>FromParent</code>. Changing the <code>storeMode</code> to <code>FromParent</code> empties the <code>stores</code> array on the BusinessUnit. This update action generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitStoreModeChangedMessage" rel="nofollow">BusinessUnitStoreModeChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -49,7 +49,7 @@ public interface BusinessUnitSetStoreModeAction extends BusinessUnitUpdateAction
     public BusinessUnitStoreMode getStoreMode();
 
     /**
-     *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>Set the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
      * @return stores
      */
     @Valid
@@ -64,7 +64,7 @@ public interface BusinessUnitSetStoreModeAction extends BusinessUnitUpdateAction
     public void setStoreMode(final BusinessUnitStoreMode storeMode);
 
     /**
-     *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>Set the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
      * @param stores values to be set
      */
 
@@ -72,7 +72,7 @@ public interface BusinessUnitSetStoreModeAction extends BusinessUnitUpdateAction
     public void setStores(final StoreResourceIdentifier... stores);
 
     /**
-     *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>Set the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
      * @param stores values to be set
      */
 

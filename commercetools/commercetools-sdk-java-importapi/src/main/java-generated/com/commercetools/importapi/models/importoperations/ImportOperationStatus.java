@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The status of a new ImportOperation.</p>
+ *  <p>The status of a new <span>ImportOperation</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +35,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ImportOperationStatus {
 
     /**
-     *  <p><code>id</code> of the ImportOperation.</p>
+     *  <p><code>id</code> of the <span>ImportOperation</span>.</p>
      * @return operationId
      */
 
@@ -43,7 +43,7 @@ public interface ImportOperationStatus {
     public String getOperationId();
 
     /**
-     *  <p>Validation state of the ImportOperation.</p>
+     *  <p>Validation state of the <span>ImportOperation</span>.</p>
      * @return state
      */
     @NotNull
@@ -51,7 +51,7 @@ public interface ImportOperationStatus {
     public ImportOperationState getState();
 
     /**
-     *  <p>Errors for the ImportOperation.</p>
+     *  <p><span>Errors</span> for the <span>ImportOperation</span>.</p>
      * @return errors
      */
     @Valid
@@ -59,21 +59,21 @@ public interface ImportOperationStatus {
     public List<ErrorObject> getErrors();
 
     /**
-     *  <p><code>id</code> of the ImportOperation.</p>
+     *  <p><code>id</code> of the <span>ImportOperation</span>.</p>
      * @param operationId value to be set
      */
 
     public void setOperationId(final String operationId);
 
     /**
-     *  <p>Validation state of the ImportOperation.</p>
+     *  <p>Validation state of the <span>ImportOperation</span>.</p>
      * @param state value to be set
      */
 
     public void setState(final ImportOperationState state);
 
     /**
-     *  <p>Errors for the ImportOperation.</p>
+     *  <p><span>Errors</span> for the <span>ImportOperation</span>.</p>
      * @param errors values to be set
      */
 
@@ -81,7 +81,7 @@ public interface ImportOperationStatus {
     public void setErrors(final ErrorObject... errors);
 
     /**
-     *  <p>Errors for the ImportOperation.</p>
+     *  <p><span>Errors</span> for the <span>ImportOperation</span>.</p>
      * @param errors values to be set
      */
 

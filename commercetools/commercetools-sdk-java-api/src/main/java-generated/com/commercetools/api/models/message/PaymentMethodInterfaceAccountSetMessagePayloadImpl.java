@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set InterfaceAccount update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetInterfaceAccountAction" rel="nofollow">Set InterfaceAccount</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentMethodInterfaceAccountSetMessagePayloadImpl
@@ -56,7 +56,7 @@ public class PaymentMethodInterfaceAccountSetMessagePayloadImpl
     }
 
     /**
-     *  <p>Interface account of the Payment Method after the Set InterfaceAccount update action.</p>
+     *  <p>Interface account of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetInterfaceAccountAction" rel="nofollow">Set InterfaceAccount</a> update action.</p>
      */
 
     public String getInterfaceAccount() {
@@ -64,7 +64,7 @@ public class PaymentMethodInterfaceAccountSetMessagePayloadImpl
     }
 
     /**
-     *  <p>Interface account of the Payment Method before the Set InterfaceAccount update action.</p>
+     *  <p>Interface account of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetInterfaceAccountAction" rel="nofollow">Set InterfaceAccount</a> update action.</p>
      */
 
     public String getOldInterfaceAccount() {

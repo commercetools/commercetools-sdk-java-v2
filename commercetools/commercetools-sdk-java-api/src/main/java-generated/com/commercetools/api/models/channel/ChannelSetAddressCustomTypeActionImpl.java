@@ -56,7 +56,7 @@ public class ChannelSetAddressCustomTypeActionImpl implements ChannelSetAddressC
     }
 
     /**
-     *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>address</code> with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -64,7 +64,7 @@ public class ChannelSetAddressCustomTypeActionImpl implements ChannelSetAddressC
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <code>address</code>.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Change Associate Mode update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeAssociateModeAction" rel="nofollow">Change Associate Mode</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface BusinessUnitAssociateModeChangedMessagePayload extends MessageP
     String BUSINESS_UNIT_ASSOCIATE_MODE_CHANGED = "BusinessUnitAssociateModeChanged";
 
     /**
-     *  <p>BusinessUnitAssociateMode of the Business Unit after the Change Associate Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAssociateMode" rel="nofollow">BusinessUnitAssociateMode</a> of the Business Unit after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeAssociateModeAction" rel="nofollow">Change Associate Mode</a> update action.</p>
      * @return associateMode
      */
     @NotNull
@@ -48,7 +48,7 @@ public interface BusinessUnitAssociateModeChangedMessagePayload extends MessageP
     public BusinessUnitAssociateMode getAssociateMode();
 
     /**
-     *  <p>BusinessUnitAssociateMode of the Business Unit before the Change Associate Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAssociateMode" rel="nofollow">BusinessUnitAssociateMode</a> of the Business Unit before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeAssociateModeAction" rel="nofollow">Change Associate Mode</a> update action.</p>
      * @return oldAssociateMode
      */
     @NotNull
@@ -56,14 +56,14 @@ public interface BusinessUnitAssociateModeChangedMessagePayload extends MessageP
     public BusinessUnitAssociateMode getOldAssociateMode();
 
     /**
-     *  <p>BusinessUnitAssociateMode of the Business Unit after the Change Associate Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAssociateMode" rel="nofollow">BusinessUnitAssociateMode</a> of the Business Unit after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeAssociateModeAction" rel="nofollow">Change Associate Mode</a> update action.</p>
      * @param associateMode value to be set
      */
 
     public void setAssociateMode(final BusinessUnitAssociateMode associateMode);
 
     /**
-     *  <p>BusinessUnitAssociateMode of the Business Unit before the Change Associate Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAssociateMode" rel="nofollow">BusinessUnitAssociateMode</a> of the Business Unit before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeAssociateModeAction" rel="nofollow">Change Associate Mode</a> update action.</p>
      * @param oldAssociateMode value to be set
      */
 

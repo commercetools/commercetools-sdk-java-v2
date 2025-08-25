@@ -63,7 +63,7 @@ public class TypedMoneyImpl implements TypedMoney, ModelBase {
     }
 
     /**
-     *  <p>Currency code compliant to ISO 4217.</p>
+     *  <p>Currency code compliant to <span>ISO 4217</span>.</p>
      */
 
     public String getCurrencyCode() {
@@ -81,8 +81,8 @@ public class TypedMoneyImpl implements TypedMoney, ModelBase {
     /**
      *  <p>Number of digits after the decimal separator.</p>
      *  <ul>
-     *   <li>For CentPrecisionMoney, it is equal to the default number of fraction digits for a currency.</li>
-     *   <li>For HighPrecisionMoney, it is greater than the default number of fraction digits for a currency.</li>
+     *   <li>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CentPrecisionMoney" rel="nofollow">CentPrecisionMoney</a>, it is equal to the default number of fraction digits for a currency.</li>
+     *   <li>For <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoney" rel="nofollow">HighPrecisionMoney</a>, it is greater than the default number of fraction digits for a currency.</li>
      *  </ul>
      */
 

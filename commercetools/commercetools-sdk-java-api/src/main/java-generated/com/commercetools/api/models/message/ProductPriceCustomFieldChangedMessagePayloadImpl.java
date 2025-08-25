@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after changing an existing Custom Field on a Price using the Set Price CustomField update action.</p>
+ *  <p>Generated after changing an existing Custom Field on a Price using the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetProductPriceCustomFieldAction" rel="nofollow">Set Price CustomField</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPriceCustomFieldChangedMessagePayloadImpl
@@ -66,7 +66,7 @@ public class ProductPriceCustomFieldChangedMessagePayloadImpl
     }
 
     /**
-     *  <p>Unique identifier of the Price of which the Custom Field was changed.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> of which the Custom Field was changed.</p>
      */
 
     public String getPriceId() {
@@ -74,7 +74,7 @@ public class ProductPriceCustomFieldChangedMessagePayloadImpl
     }
 
     /**
-     *  <p>Unique identifier of the ProductVariant to which the Price belongs.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to which the Price belongs.</p>
      */
 
     public Long getVariantId() {
@@ -82,7 +82,7 @@ public class ProductPriceCustomFieldChangedMessagePayloadImpl
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      */
 
     public Boolean getStaged() {
@@ -98,7 +98,7 @@ public class ProductPriceCustomFieldChangedMessagePayloadImpl
     }
 
     /**
-     *  <p>CustomFieldValue based on the FieldType after the Set Price CustomField update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetProductPriceCustomFieldAction" rel="nofollow">Set Price CustomField</a> update action.</p>
      */
 
     public java.lang.Object getValue() {

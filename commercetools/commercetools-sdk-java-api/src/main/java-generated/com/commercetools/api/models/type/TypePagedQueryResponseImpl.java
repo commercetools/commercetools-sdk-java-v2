@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>PagedQueryResult with <code>results</code> containing an array of Types.</p>
+ *  <p><span>PagedQueryResult</span> with <code>results</code> containing an array of <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Types</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypePagedQueryResponseImpl implements TypePagedQueryResponse, ModelBase {
@@ -53,7 +53,7 @@ public class TypePagedQueryResponseImpl implements TypePagedQueryResponse, Model
     }
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      */
 
     public Long getLimit() {
@@ -61,7 +61,7 @@ public class TypePagedQueryResponseImpl implements TypePagedQueryResponse, Model
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      */
 
     public Long getOffset() {
@@ -77,7 +77,7 @@ public class TypePagedQueryResponseImpl implements TypePagedQueryResponse, Model
     }
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     *  <p>Total number of results matching the query. This number is an estimation that is not <span>strongly consistent</span>. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>, <code>total</code> is subject to a <span>limit</span>.</p>
      */
 
     public Long getTotal() {
@@ -85,7 +85,7 @@ public class TypePagedQueryResponseImpl implements TypePagedQueryResponse, Model
     }
 
     /**
-     *  <p>Types matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Types</a> matching the query.</p>
      */
 
     public java.util.List<com.commercetools.api.models.type.Type> getResults() {

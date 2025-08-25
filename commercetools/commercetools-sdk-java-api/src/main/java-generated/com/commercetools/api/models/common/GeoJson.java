@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>GeoJSON Geometry represents a Geometry Object as defined in the GeoJSON standard.</p>
+ *  <p>GeoJSON Geometry represents a <span>Geometry Object</span> as defined in the GeoJSON standard.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern

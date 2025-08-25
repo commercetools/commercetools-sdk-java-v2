@@ -18,8 +18,8 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Represents a CartDiscount that can only be associated with a single Cart or Order.</p>
- *  <p>For an introduction to Direct Discounts and to understand how they work in Composable Commerce, see the Direct Discounts overview.</p>
+ *  <p>Represents a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a> that can only be associated with a single Cart or Order.</p>
+ *  <p>For an introduction to Direct Discounts and to understand how they work in Composable Commerce, see the <span>Direct Discounts overview</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

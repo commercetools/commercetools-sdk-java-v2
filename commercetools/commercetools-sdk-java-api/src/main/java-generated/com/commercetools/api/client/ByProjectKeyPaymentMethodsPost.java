@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creates a PaymentMethod in the Project. This request generates the PaymentMethodCreated Message.</p>
+ *  <p>Creates a PaymentMethod in the Project. This request generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodCreatedMessage" rel="nofollow">PaymentMethodCreated</a> Message.</p>
  *
  * <hr>
  * <div class=code-example>

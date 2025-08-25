@@ -41,7 +41,7 @@ public interface SearchKeyword {
     public String getText();
 
     /**
-     *  <p>The tokenizer defines the tokens that are used for search term suggestions.</p>
+     *  <p>The tokenizer defines the tokens that are used for <span>search term suggestions</span>.</p>
      * @return suggestTokenizer
      */
     @Valid
@@ -56,7 +56,7 @@ public interface SearchKeyword {
     public void setText(final String text);
 
     /**
-     *  <p>The tokenizer defines the tokens that are used for search term suggestions.</p>
+     *  <p>The tokenizer defines the tokens that are used for <span>search term suggestions</span>.</p>
      * @param suggestTokenizer value to be set
      */
 

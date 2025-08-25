@@ -157,7 +157,7 @@ public class ProjectImpl implements Project, ModelBase {
     }
 
     /**
-     *  <p>Holds the configuration for the Messages Query feature.</p>
+     *  <p>Holds the configuration for the <span>Messages Query</span> feature.</p>
      */
 
     public com.commercetools.api.models.message.MessagesConfiguration getMessages() {
@@ -165,7 +165,7 @@ public class ProjectImpl implements Project, ModelBase {
     }
 
     /**
-     *  <p>Holds the configuration for the Carts feature.</p>
+     *  <p>Holds the configuration for the <span>Carts</span> feature.</p>
      */
 
     public com.commercetools.api.models.project.CartsConfiguration getCarts() {
@@ -173,7 +173,7 @@ public class ProjectImpl implements Project, ModelBase {
     }
 
     /**
-     *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
+     *  <p>Holds the configuration for the <span>Shopping Lists</span> feature. This field may not be present on Projects created before January 2020.</p>
      */
 
     public com.commercetools.api.models.project.ShoppingListsConfiguration getShoppingLists() {
@@ -181,7 +181,7 @@ public class ProjectImpl implements Project, ModelBase {
     }
 
     /**
-     *  <p>Holds the configuration for the tiered shipping rates feature.</p>
+     *  <p>Holds the configuration for the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">tiered shipping rates</a> feature.</p>
      */
 
     public com.commercetools.api.models.project.ShippingRateInputType getShippingRateInputType() {
@@ -189,7 +189,7 @@ public class ProjectImpl implements Project, ModelBase {
     }
 
     /**
-     *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
+     *  <p>Represents a RFC 7662 compliant <span>OAuth 2.0 Token Introspection</span> endpoint.</p>
      */
 
     public com.commercetools.api.models.project.ExternalOAuth getExternalOAuth() {
@@ -205,7 +205,7 @@ public class ProjectImpl implements Project, ModelBase {
     }
 
     /**
-     *  <p>Holds configuration specific to Business Units.</p>
+     *  <p>Holds configuration specific to <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Units</a>.</p>
      */
 
     public com.commercetools.api.models.project.BusinessUnitConfiguration getBusinessUnits() {

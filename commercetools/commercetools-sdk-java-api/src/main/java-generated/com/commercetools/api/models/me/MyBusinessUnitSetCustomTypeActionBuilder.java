@@ -30,7 +30,7 @@ public class MyBusinessUnitSetCustomTypeActionBuilder implements Builder<MyBusin
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>Defines the Type that extends the BusinessUnit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the BusinessUnit.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the BusinessUnit with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the BusinessUnit.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class MyBusinessUnitSetCustomTypeActionBuilder implements Builder<MyBusin
     }
 
     /**
-     *  <p>Defines the Type that extends the BusinessUnit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the BusinessUnit.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the BusinessUnit with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the BusinessUnit.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class MyBusinessUnitSetCustomTypeActionBuilder implements Builder<MyBusin
     }
 
     /**
-     *  <p>Defines the Type that extends the BusinessUnit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the BusinessUnit.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the BusinessUnit with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the BusinessUnit.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class MyBusinessUnitSetCustomTypeActionBuilder implements Builder<MyBusin
     }
 
     /**
-     *  <p>Sets the Custom Fields for the BusinessUnit.</p>
+     *  <p>Sets the <span>Custom Fields</span> for the BusinessUnit.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class MyBusinessUnitSetCustomTypeActionBuilder implements Builder<MyBusin
     }
 
     /**
-     *  <p>Sets the Custom Fields for the BusinessUnit.</p>
+     *  <p>Sets the <span>Custom Fields</span> for the BusinessUnit.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class MyBusinessUnitSetCustomTypeActionBuilder implements Builder<MyBusin
     }
 
     /**
-     *  <p>Sets the Custom Fields for the BusinessUnit.</p>
+     *  <p>Sets the <span>Custom Fields</span> for the BusinessUnit.</p>
      * @param fields value to be set
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class MyBusinessUnitSetCustomTypeActionBuilder implements Builder<MyBusin
     }
 
     /**
-     *  <p>Defines the Type that extends the BusinessUnit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the BusinessUnit.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the BusinessUnit with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the BusinessUnit.</p>
      * @return type
      */
 
@@ -112,7 +112,7 @@ public class MyBusinessUnitSetCustomTypeActionBuilder implements Builder<MyBusin
     }
 
     /**
-     *  <p>Sets the Custom Fields for the BusinessUnit.</p>
+     *  <p>Sets the <span>Custom Fields</span> for the BusinessUnit.</p>
      * @return fields
      */
 

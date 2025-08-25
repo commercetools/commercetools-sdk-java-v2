@@ -36,7 +36,7 @@ public class BusinessUnitTypeSetMessagePayloadBuilder implements Builder<Busines
     private com.commercetools.api.models.business_unit.BusinessUnitType oldUnitType;
 
     /**
-     *  <p>Parent unit of the Business Unit after the Set Unit Type update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> update action.</p>
      * @param builder function to build the parentUnit value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class BusinessUnitTypeSetMessagePayloadBuilder implements Builder<Busines
     }
 
     /**
-     *  <p>Parent unit of the Business Unit after the Set Unit Type update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> update action.</p>
      * @param builder function to build the parentUnit value
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class BusinessUnitTypeSetMessagePayloadBuilder implements Builder<Busines
     }
 
     /**
-     *  <p>Parent unit of the Business Unit after the Set Unit Type update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> update action.</p>
      * @param parentUnit value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class BusinessUnitTypeSetMessagePayloadBuilder implements Builder<Busines
     }
 
     /**
-     *  <p>Parent unit of the Business Unit before the Set Unit Type update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> update action.</p>
      * @param builder function to build the oldParentUnit value
      * @return Builder
      */
@@ -88,7 +88,7 @@ public class BusinessUnitTypeSetMessagePayloadBuilder implements Builder<Busines
     }
 
     /**
-     *  <p>Parent unit of the Business Unit before the Set Unit Type update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> update action.</p>
      * @param builder function to build the oldParentUnit value
      * @return Builder
      */
@@ -101,7 +101,7 @@ public class BusinessUnitTypeSetMessagePayloadBuilder implements Builder<Busines
     }
 
     /**
-     *  <p>Parent unit of the Business Unit before the Set Unit Type update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> update action.</p>
      * @param oldParentUnit value to be set
      * @return Builder
      */
@@ -113,7 +113,7 @@ public class BusinessUnitTypeSetMessagePayloadBuilder implements Builder<Busines
     }
 
     /**
-     *  <p>Type of the Business Unit after the Set Unit Type update action.</p>
+     *  <p>Type of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> update action.</p>
      * @param unitType value to be set
      * @return Builder
      */
@@ -125,7 +125,7 @@ public class BusinessUnitTypeSetMessagePayloadBuilder implements Builder<Busines
     }
 
     /**
-     *  <p>Type of the Business Unit before the Set Unit Type update action.</p>
+     *  <p>Type of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> update action.</p>
      * @param oldUnitType value to be set
      * @return Builder
      */
@@ -137,7 +137,7 @@ public class BusinessUnitTypeSetMessagePayloadBuilder implements Builder<Busines
     }
 
     /**
-     *  <p>Parent unit of the Business Unit after the Set Unit Type update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> update action.</p>
      * @return parentUnit
      */
 
@@ -147,7 +147,7 @@ public class BusinessUnitTypeSetMessagePayloadBuilder implements Builder<Busines
     }
 
     /**
-     *  <p>Parent unit of the Business Unit before the Set Unit Type update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> update action.</p>
      * @return oldParentUnit
      */
 
@@ -157,7 +157,7 @@ public class BusinessUnitTypeSetMessagePayloadBuilder implements Builder<Busines
     }
 
     /**
-     *  <p>Type of the Business Unit after the Set Unit Type update action.</p>
+     *  <p>Type of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> update action.</p>
      * @return unitType
      */
 
@@ -166,7 +166,7 @@ public class BusinessUnitTypeSetMessagePayloadBuilder implements Builder<Busines
     }
 
     /**
-     *  <p>Type of the Business Unit before the Set Unit Type update action.</p>
+     *  <p>Type of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> update action.</p>
      * @return oldUnitType
      */
 

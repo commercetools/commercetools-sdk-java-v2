@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">PriceTierDraft</span><span class="extends-implements">
 extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="interface in io.vrap.rmf.base.client">Draft</a>&lt;<a href="PriceTierDraft.html" title="interface in com.commercetools.api.models.common">PriceTierDraft</a>&gt;</span></div>
-<div class="block"><p>Specifies a Price tier that applies when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+<div class="block"><p>Specifies a Price tier that applies when the minimum quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> of a ProductVariant with the related Price is reached in a Cart.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -130,7 +130,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getValue()" class="member-name-link">getValue</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</div>
+<div class="block">Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>quantity</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="PriceTierDraft.html" title="interface in com.commercetools.api.models.common">PriceTierDraft</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -150,7 +150,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setValue(com.commercetools.api.models.common.Money)" class="member-name-link">setValue</a><wbr>(<a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</div>
+<div class="block">Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>quantity</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="PriceTierDraft.html" title="interface in com.commercetools.api.models.common">PriceTierDraft</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -182,7 +182,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getMinimumQuantity</span>()</div>
 <div class="block"><p>Minimum quantity this Price tier is valid for.</p>
-  <p>The minimum quantity is always greater than or equal to 2. The base Price is interpreted as valid for a minimum quantity equal to 1. A Price or StandalonePrice cannot contain more than one tier with the same <code>minimumQuantity</code>. In the case one of the constraint is not met an InvalidField is returned.</p></div>
+  <p>The minimum quantity is always greater than or equal to 2. The base Price is interpreted as valid for a minimum quantity equal to 1. A <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> cannot contain more than one tier with the same <code>minimumQuantity</code>. In the case one of the constraint is not met an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> is returned.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>minimumQuantity</dd>
@@ -195,8 +195,8 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name">getValue</span>()</div>
-<div class="block"><p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
-  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+<div class="block"><p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>quantity</code>.</p>
+  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
   <p>The <code>currencyCode</code> of a Price tier must be the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -209,7 +209,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <h3>setMinimumQuantity</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setMinimumQuantity</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;minimumQuantity)</span></div>
 <div class="block"><p>Minimum quantity this Price tier is valid for.</p>
-  <p>The minimum quantity is always greater than or equal to 2. The base Price is interpreted as valid for a minimum quantity equal to 1. A Price or StandalonePrice cannot contain more than one tier with the same <code>minimumQuantity</code>. In the case one of the constraint is not met an InvalidField is returned.</p></div>
+  <p>The minimum quantity is always greater than or equal to 2. The base Price is interpreted as valid for a minimum quantity equal to 1. A <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> cannot contain more than one tier with the same <code>minimumQuantity</code>. In the case one of the constraint is not met an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> is returned.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>minimumQuantity</code> - value to be set</dd>
@@ -220,8 +220,8 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setValue(com.commercetools.api.models.common.Money)">
 <h3>setValue</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setValue</span><wbr><span class="parameters">(<a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;value)</span></div>
-<div class="block"><p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
-  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+<div class="block"><p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>quantity</code>.</p>
+  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
   <p>The <code>currencyCode</code> of a Price tier must be the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>

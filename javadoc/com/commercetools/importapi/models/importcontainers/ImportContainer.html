@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ImportContainer</span></div>
-<div class="block"><p>Contains the resources to be imported. Unless <code>resourceType</code> is specified, the ImportContainer can import all of the supported ImportResourceTypes.</p>
+<div class="block"><p>Contains the resources to be imported. Unless <code>resourceType</code> is specified, the ImportContainer can import all of the supported <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">ImportResourceTypes</a>.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -142,7 +142,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../common/ImportResourceType.html" title="interface in com.commercetools.importapi.models.common">ImportResourceType</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getResourceType()" class="member-name-link">getResourceType</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The resource type the ImportContainer supports.</div>
+<div class="block">The <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">resource type</a> the ImportContainer supports.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="RetentionPolicy.html" title="interface in com.commercetools.importapi.models.importcontainers">RetentionPolicy</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRetentionPolicy()" class="member-name-link">getRetentionPolicy</a>()</code></div>
@@ -187,7 +187,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setResourceType(com.commercetools.importapi.models.common.ImportResourceType)" class="member-name-link">setResourceType</a><wbr>(<a href="../common/ImportResourceType.html" title="interface in com.commercetools.importapi.models.common">ImportResourceType</a>&nbsp;resourceType)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The resource type the ImportContainer supports.</div>
+<div class="block">The <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">resource type</a> the ImportContainer supports.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setRetentionPolicy(com.commercetools.importapi.models.importcontainers.RetentionPolicy)" class="member-name-link">setRetentionPolicy</a><wbr>(<a href="RetentionPolicy.html" title="interface in com.commercetools.importapi.models.importcontainers">RetentionPolicy</a>&nbsp;retentionPolicy)</code></div>
@@ -239,7 +239,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getResourceType()">
 <h3>getResourceType</h3>
 <div class="member-signature"><span class="return-type"><a href="../common/ImportResourceType.html" title="interface in com.commercetools.importapi.models.common">ImportResourceType</a></span>&nbsp;<span class="element-name">getResourceType</span>()</div>
-<div class="block"><p>The resource type the ImportContainer supports. If not present, the ImportContainer can import all of the supported ImportResourceTypes.</p></div>
+<div class="block"><p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">resource type</a> the ImportContainer supports. If not present, the ImportContainer can import all of the supported <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">ImportResourceTypes</a>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>resourceType</dd>
@@ -298,7 +298,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getExpiresAt()">
 <h3>getExpiresAt</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getExpiresAt</span>()</div>
-<div class="block"><p>Date and time (UTC) the ImportContainer is automatically deleted. Only present if a <code>retentionPolicy</code> is set. ImportContainers without <code>expiresAt</code> are permanent until manually deleted.</p></div>
+<div class="block"><p>Date and time (UTC) the ImportContainer is automatically deleted. Only present if a <code>retentionPolicy</code> is set. ImportContainers without <code>expiresAt</code> are permanent until <span>manually deleted</span>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>expiresAt</dd>
@@ -320,7 +320,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setResourceType(com.commercetools.importapi.models.common.ImportResourceType)">
 <h3>setResourceType</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setResourceType</span><wbr><span class="parameters">(<a href="../common/ImportResourceType.html" title="interface in com.commercetools.importapi.models.common">ImportResourceType</a>&nbsp;resourceType)</span></div>
-<div class="block"><p>The resource type the ImportContainer supports. If not present, the ImportContainer can import all of the supported ImportResourceTypes.</p></div>
+<div class="block"><p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">resource type</a> the ImportContainer supports. If not present, the ImportContainer can import all of the supported <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">ImportResourceTypes</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>resourceType</code> - value to be set</dd>
@@ -375,7 +375,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setExpiresAt(java.time.ZonedDateTime)">
 <h3>setExpiresAt</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setExpiresAt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;expiresAt)</span></div>
-<div class="block"><p>Date and time (UTC) the ImportContainer is automatically deleted. Only present if a <code>retentionPolicy</code> is set. ImportContainers without <code>expiresAt</code> are permanent until manually deleted.</p></div>
+<div class="block"><p>Date and time (UTC) the ImportContainer is automatically deleted. Only present if a <code>retentionPolicy</code> is set. ImportContainers without <code>expiresAt</code> are permanent until <span>manually deleted</span>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>expiresAt</code> - value to be set</dd>

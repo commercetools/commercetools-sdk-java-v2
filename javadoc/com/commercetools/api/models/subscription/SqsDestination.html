@@ -78,9 +78,9 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">SqsDestination</span><span class="extends-implements">
 extends <a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a></span></div>
-<div class="block"><p>AWS SQS is a pull-queue on AWS. The queue must be a Standard queue type with a <code>MaximumMessageSize</code> of <code>256 KB</code>.</p>
+<div class="block"><p><span>AWS SQS</span> is a pull-queue on AWS. The queue must be a <span>Standard</span> queue type with a <code>MaximumMessageSize</code> of <code>256 KB</code>.</p>
   <p>We recommend setting <code>authenticationMode</code> to <code>IAM</code>, to avoid unnecessary key management. For IAM authentication and before creating the Subscription, give permissions to the following user account: <code>arn:aws:iam::362576667341:user/subscriptions</code>. Otherwise, a test message will not be sent.</p>
-  <p>If you prefer to use <code>Credentials</code> for authentication, we recommend creating an IAM user with an <code>accessKey</code> and <code>accessSecret</code> pair specifically for each Subscription.</p>
+  <p>If you prefer to use <code>Credentials</code> for authentication, we recommend <span>creating an IAM user</span> with an <code>accessKey</code> and <code>accessSecret</code> pair specifically for each Subscription.</p>
   <p>The IAM user should only have the <code>sqs:SendMessage</code> permission on this queue.</p>
 
  <hr>
@@ -165,7 +165,7 @@ extends <a href="Destination.html" title="interface in com.commercetools.api.mod
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRegion()" class="member-name-link">getRegion</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">AWS Region the message queue is located in.</div>
+<div class="block"><span>AWS Region</span> the message queue is located in.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="SqsDestination.html" title="interface in com.commercetools.api.models.subscription">SqsDestination</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -200,7 +200,7 @@ extends <a href="Destination.html" title="interface in com.commercetools.api.mod
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setRegion(java.lang.String)" class="member-name-link">setRegion</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;region)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">AWS Region the message queue is located in.</div>
+<div class="block"><span>AWS Region</span> the message queue is located in.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SqsDestination.html" title="interface in com.commercetools.api.models.subscription">SqsDestination</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -291,7 +291,7 @@ extends <a href="Destination.html" title="interface in com.commercetools.api.mod
 <h3>getRegion</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getRegion</span>()</div>
-<div class="block"><p>AWS Region the message queue is located in.</p></div>
+<div class="block"><p><span>AWS Region</span> the message queue is located in.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>region</dd>
@@ -346,7 +346,7 @@ extends <a href="Destination.html" title="interface in com.commercetools.api.mod
 <section class="detail" id="setRegion(java.lang.String)">
 <h3>setRegion</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setRegion</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;region)</span></div>
-<div class="block"><p>AWS Region the message queue is located in.</p></div>
+<div class="block"><p><span>AWS Region</span> the message queue is located in.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>region</code> - value to be set</dd>

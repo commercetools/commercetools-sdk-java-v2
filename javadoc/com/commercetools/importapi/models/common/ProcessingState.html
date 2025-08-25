@@ -82,7 +82,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ProcessingState</span><span class="extends-implements">
 extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="interface in io.vrap.rmf.base.client">JsonEnum</a></span></div>
-<div class="block"><p>Every Import Operation is assigned one of the following states.</p></div>
+<div class="block"><p>Every <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">Import Operation</a> is assigned one of the following states.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -135,7 +135,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <div class="col-first even-row-color"><code>static final <a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></code></div>
 <div class="col-second even-row-color"><code><a href="#UNRESOLVED" class="member-name-link">UNRESOLVED</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">The import request contains KeyReferences to resources that do not exist in your Composable Commerce Project.</div>
+<div class="block">The import request contains <a href="https://docs.commercetools.com/apis/ctp:api:type:KeyReference" rel="nofollow">KeyReferences</a> to resources that do not exist in your Composable Commerce Project.</div>
 </div>
 <div class="col-first odd-row-color"><code>static final <a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#VALIDATION_FAILED" class="member-name-link">VALIDATION_FAILED</a></code></div>
@@ -217,21 +217,21 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <section class="detail" id="VALIDATION_FAILED">
 <h3>VALIDATION_FAILED</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></span>&nbsp;<span class="element-name">VALIDATION_FAILED</span></div>
-<div class="block"><p>Either the request payload is missing the data as per Import API specifications, or even though the references were resolved, the data does not meet validation constraints. Generates the ImportValidationFailed Event.</p></div>
+<div class="block"><p>Either the request payload is missing the data as per Import API specifications, or even though the references were resolved, the data does not meet validation constraints. Generates the <span>ImportValidationFailed</span> Event.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="UNRESOLVED">
 <h3>UNRESOLVED</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></span>&nbsp;<span class="element-name">UNRESOLVED</span></div>
-<div class="block"><p>The import request contains KeyReferences to resources that do not exist in your Composable Commerce Project. Generates the ImportUnresolved Event.</p></div>
+<div class="block"><p>The import request contains <a href="https://docs.commercetools.com/apis/ctp:api:type:KeyReference" rel="nofollow">KeyReferences</a> to resources that do not exist in your Composable Commerce Project. Generates the <span>ImportUnresolved</span> Event.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="WAIT_FOR_MASTER_VARIANT">
 <h3>WAIT_FOR_MASTER_VARIANT</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></span>&nbsp;<span class="element-name">WAIT_FOR_MASTER_VARIANT</span></div>
-<div class="block"><p>Products must have at least one Product Variant, also known as the Master Variant. If you import a Product without a Master Variant, the import request will have this status until another import request includes Master Variant data for the Product. Generates the ImportWaitForMasterVariant Event.</p></div>
+<div class="block"><p>Products must have at least one Product Variant, also known as the Master Variant. If you import a Product without a Master Variant, the import request will have this status until another import request includes Master Variant data for the Product. Generates the <span>ImportWaitForMasterVariant</span> Event.</p></div>
 </section>
 </li>
 <li>
@@ -245,7 +245,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <section class="detail" id="REJECTED">
 <h3>REJECTED</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></span>&nbsp;<span class="element-name">REJECTED</span></div>
-<div class="block"><p>The resource could not be imported. References were resolved, but the system could not import the data due to an internal server error and the retry limit was reached. Generates the ImportOperationRejected Event.</p></div>
+<div class="block"><p>The resource could not be imported. References were resolved, but the system could not import the data due to an internal server error and the retry limit was reached. Generates the <span>ImportOperationRejected</span> Event.</p></div>
 </section>
 </li>
 <li>

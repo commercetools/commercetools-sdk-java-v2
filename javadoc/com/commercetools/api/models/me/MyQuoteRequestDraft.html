@@ -191,7 +191,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <h3>getCartId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCartId</span>()</div>
-<div class="block"><p><code>id</code> of the Cart from which the Quote Request is created. Carts with Discount Codes and Carts with <code>Multiple</code> ShippingMode are not supported. The Cart must have a <code>shippingAddress</code> defined, otherwise an InvalidOperation error is returned when creating a Quote Request.</p></div>
+<div class="block"><p><code>id</code> of the Cart from which the Quote Request is created. Carts with <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">Discount Codes</a> and Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a> are not supported. The Cart must have a <code>shippingAddress</code> defined, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned when <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/quote-requests:POST" rel="nofollow">creating a Quote Request</a>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>cartId</dd>
@@ -225,7 +225,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setCartId(java.lang.String)">
 <h3>setCartId</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCartId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;cartId)</span></div>
-<div class="block"><p><code>id</code> of the Cart from which the Quote Request is created. Carts with Discount Codes and Carts with <code>Multiple</code> ShippingMode are not supported. The Cart must have a <code>shippingAddress</code> defined, otherwise an InvalidOperation error is returned when creating a Quote Request.</p></div>
+<div class="block"><p><code>id</code> of the Cart from which the Quote Request is created. Carts with <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">Discount Codes</a> and Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a> are not supported. The Cart must have a <code>shippingAddress</code> defined, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned when <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/quote-requests:POST" rel="nofollow">creating a Quote Request</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>cartId</code> - value to be set</dd>

@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">CartDiscountValueFixedDraft</span><span class="extends-implements">
 extends <a href="CartDiscountValueDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueDraft</a>, <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="interface in io.vrap.rmf.base.client">Draft</a>&lt;<a href="CartDiscountValueFixedDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueFixedDraft</a>&gt;</span></div>
-<div class="block"><p>Sets the DiscountedLineItemPrice of the CartDiscountLineItemsTarget or CartDiscountCustomLineItemsTarget to the value specified in the <code>money</code> field, if it is lower than the current Line Item price for the same currency. If the Line Item price is already discounted to a price equal to or lower than the respective price in the <code>money</code> field, this Discount is not applied.</p>
+<div class="block"><p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedLineItemPrice" rel="nofollow">DiscountedLineItemPrice</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountLineItemsTarget" rel="nofollow">CartDiscountLineItemsTarget</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemsTarget</a> to the value specified in the <code>money</code> field, if it is lower than the current Line Item price for the same currency. If the Line Item price is already discounted to a price equal to or lower than the respective price in the <code>money</code> field, this Discount is not applied.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -141,12 +141,12 @@ extends <a href="CartDiscountValueDraft.html" title="interface in com.commerceto
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="DiscountApplicationMode.html" title="interface in com.commercetools.api.models.cart_discount">DiscountApplicationMode</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getApplicationMode()" class="member-name-link">getApplicationMode</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Determines how the discount applies on CartDiscountLineItemTarget or CartDiscountCustomLineItemTarget.</div>
+<div class="block">Determines how the discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountLineItemsTarget" rel="nofollow">CartDiscountLineItemTarget</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemTarget</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMoney()" class="member-name-link">getMoney</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Money values provided either in cent precision or high precision for different currencies.</div>
+<div class="block">Money values provided either in <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">cent precision</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">high precision</a> for different currencies.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CartDiscountValueFixedDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueFixedDraft</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -161,17 +161,17 @@ extends <a href="CartDiscountValueDraft.html" title="interface in com.commerceto
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setApplicationMode(com.commercetools.api.models.cart_discount.DiscountApplicationMode)" class="member-name-link">setApplicationMode</a><wbr>(<a href="DiscountApplicationMode.html" title="interface in com.commercetools.api.models.cart_discount">DiscountApplicationMode</a>&nbsp;applicationMode)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Determines how the discount applies on CartDiscountLineItemTarget or CartDiscountCustomLineItemTarget.</div>
+<div class="block">Determines how the discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountLineItemsTarget" rel="nofollow">CartDiscountLineItemTarget</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemTarget</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setMoney(com.commercetools.api.models.common.Money...)" class="member-name-link">setMoney</a><wbr>(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>...&nbsp;money)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Money values provided either in cent precision or high precision for different currencies.</div>
+<div class="block">Money values provided either in <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">cent precision</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">high precision</a> for different currencies.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setMoney(java.util.List)" class="member-name-link">setMoney</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&gt;&nbsp;money)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Money values provided either in cent precision or high precision for different currencies.</div>
+<div class="block">Money values provided either in <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">cent precision</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">high precision</a> for different currencies.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartDiscountValueFixedDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueFixedDraft</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -229,8 +229,8 @@ extends <a href="CartDiscountValueDraft.html" title="interface in com.commerceto
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&gt;</span>&nbsp;<span class="element-name">getMoney</span>()</div>
-<div class="block"><p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
-  <p>If the array is empty or has multiple values of the same currency, the API returns an InvalidOperation error.</p></div>
+<div class="block"><p>Money values provided either in <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">cent precision</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">high precision</a> for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+  <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>money</dd>
@@ -241,8 +241,8 @@ extends <a href="CartDiscountValueDraft.html" title="interface in com.commerceto
 <section class="detail" id="getApplicationMode()">
 <h3>getApplicationMode</h3>
 <div class="member-signature"><span class="return-type"><a href="DiscountApplicationMode.html" title="interface in com.commercetools.api.models.cart_discount">DiscountApplicationMode</a></span>&nbsp;<span class="element-name">getApplicationMode</span>()</div>
-<div class="block"><p>Determines how the discount applies on CartDiscountLineItemTarget or CartDiscountCustomLineItemTarget.</p>
-  <p>For CartDiscountPatternTarget, you can also set the mode to <code>ProportionateDistribution</code> or <code>EvenDistribution</code>.</p></div>
+<div class="block"><p>Determines how the discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountLineItemsTarget" rel="nofollow">CartDiscountLineItemTarget</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemTarget</a>.</p>
+  <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a>, you can also set the mode to <code>ProportionateDistribution</code> or <code>EvenDistribution</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>applicationMode</dd>
@@ -253,8 +253,8 @@ extends <a href="CartDiscountValueDraft.html" title="interface in com.commerceto
 <section class="detail" id="setMoney(com.commercetools.api.models.common.Money...)">
 <h3>setMoney</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setMoney</span><wbr><span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>...&nbsp;money)</span></div>
-<div class="block"><p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
-  <p>If the array is empty or has multiple values of the same currency, the API returns an InvalidOperation error.</p></div>
+<div class="block"><p>Money values provided either in <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">cent precision</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">high precision</a> for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+  <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>money</code> - values to be set</dd>
@@ -265,8 +265,8 @@ extends <a href="CartDiscountValueDraft.html" title="interface in com.commerceto
 <section class="detail" id="setMoney(java.util.List)">
 <h3>setMoney</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setMoney</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&gt;&nbsp;money)</span></div>
-<div class="block"><p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
-  <p>If the array is empty or has multiple values of the same currency, the API returns an InvalidOperation error.</p></div>
+<div class="block"><p>Money values provided either in <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">cent precision</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">high precision</a> for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+  <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>money</code> - values to be set</dd>
@@ -277,8 +277,8 @@ extends <a href="CartDiscountValueDraft.html" title="interface in com.commerceto
 <section class="detail" id="setApplicationMode(com.commercetools.api.models.cart_discount.DiscountApplicationMode)">
 <h3>setApplicationMode</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setApplicationMode</span><wbr><span class="parameters">(<a href="DiscountApplicationMode.html" title="interface in com.commercetools.api.models.cart_discount">DiscountApplicationMode</a>&nbsp;applicationMode)</span></div>
-<div class="block"><p>Determines how the discount applies on CartDiscountLineItemTarget or CartDiscountCustomLineItemTarget.</p>
-  <p>For CartDiscountPatternTarget, you can also set the mode to <code>ProportionateDistribution</code> or <code>EvenDistribution</code>.</p></div>
+<div class="block"><p>Determines how the discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountLineItemsTarget" rel="nofollow">CartDiscountLineItemTarget</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemTarget</a>.</p>
+  <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a>, you can also set the mode to <code>ProportionateDistribution</code> or <code>EvenDistribution</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>applicationMode</code> - value to be set</dd>

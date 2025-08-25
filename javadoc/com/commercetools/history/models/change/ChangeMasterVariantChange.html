@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ChangeMasterVariantChange</span><span class="extends-implements">
 extends <a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></span></div>
-<div class="block"><p>Change triggered by the Change Master Variant update action.</p>
+<div class="block"><p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangeMasterVariantAction" rel="nofollow">Change Master Variant</a> update action.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -145,14 +145,14 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCatalogData()" class="member-name-link">getCatalogData</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
-   <code>staged</code>, if the staged ProductCatalogData was updated.
-   <code>current</code>, if the current ProductCatalogData was updated.
+   <code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.
+   <code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.
   </div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getChange()" class="member-name-link">getChange</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Type of change on a resource that is similar to the update action it relates to, where possible.</div>
+<div class="block"><span>Type of change</span> on a resource that is similar to the update action it relates to, where possible.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/Variant.html" title="interface in com.commercetools.history.models.common">Variant</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNextValue()" class="member-name-link">getNextValue</a>()</code></div>
@@ -183,8 +183,8 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCatalogData(java.lang.String)" class="member-name-link">setCatalogData</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;catalogData)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
-   <code>staged</code>, if the staged ProductCatalogData was updated.
-   <code>current</code>, if the current ProductCatalogData was updated.
+   <code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.
+   <code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.
   </div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
@@ -273,8 +273,8 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getChange</span>()</div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="Change.html#getChange()">Change</a></code></span></div>
-<div class="block"><p>Type of change on a resource that is similar to the update action it relates to, where possible. It is not a unique identifier for the data structure, for example, the <code>setDescription</code> change can occur with a localized and non-localized representation.</p>
-  <p>Records can be filtered by this value using the <code>changes</code> query parameter.</p></div>
+<div class="block"><p><span>Type of change</span> on a resource that is similar to the update action it relates to, where possible. It is not a unique identifier for the data structure, for example, the <code>setDescription</code> change can occur with a localized and non-localized representation.</p>
+  <p><a href="https://docs.commercetools.com/apis/ctp:history:type:Record" rel="nofollow">Records</a> can be filtered by this value using the <code>changes</code> query parameter.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Change.html#getChange()">getChange</a></code>&nbsp;in interface&nbsp;<code><a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></code></dd>
@@ -315,8 +315,8 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCatalogData</span>()</div>
 <div class="block"><ul>
-   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
-   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
   </ul></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -364,8 +364,8 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <h3>setCatalogData</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCatalogData</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;catalogData)</span></div>
 <div class="block"><ul>
-   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
-   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
   </ul></div>
 <dl class="notes">
 <dt>Parameters:</dt>

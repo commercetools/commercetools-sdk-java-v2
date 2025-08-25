@@ -361,7 +361,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="key(java.lang.String)">
 <h3>key</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceImportBuilder.html" title="class in com.commercetools.importapi.models.standalone_prices">StandalonePriceImportBuilder</a></span>&nbsp;<span class="element-name">key</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
-<div class="block"><p>User-defined unique identifier for the StandalonePrice. If a StandalonePrice) with this <code>key</code> exists, it is updated with the imported data.</p></div>
+<div class="block"><p>User-defined unique identifier for the StandalonePrice. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>) with this <code>key</code> exists, it is updated with the imported data.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>key</code> - value to be set</dd>
@@ -414,7 +414,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>country</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceImportBuilder.html" title="class in com.commercetools.importapi.models.standalone_prices">StandalonePriceImportBuilder</a></span>&nbsp;<span class="element-name">country</span><wbr><span class="parameters">(@Nullable
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;country)</span></div>
-<div class="block"><p>Maps to <code>StandalonePrice.country</code>. This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.country</code>. This value cannot be updated. Attempting to update this value will result in an <span>InvalidFieldsUpdate</span> error.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>country</code> - value to be set</dd>
@@ -427,8 +427,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="customerGroup(java.util.function.Function)">
 <h3>customerGroup</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceImportBuilder.html" title="class in com.commercetools.importapi.models.standalone_prices">StandalonePriceImportBuilder</a></span>&nbsp;<span class="element-name">customerGroup</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomerGroupKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CustomerGroupKeyReferenceBuilder</a>,<wbr><a href="../common/CustomerGroupKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CustomerGroupKeyReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Maps to <code>StandalonePrice.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
-  <p>This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.customerGroup</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
+  <p>This value cannot be updated. Attempting to update this value will result in an <span>InvalidFieldsUpdate</span> error.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the customerGroup value</dd>
@@ -441,8 +441,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withCustomerGroup(java.util.function.Function)">
 <h3>withCustomerGroup</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceImportBuilder.html" title="class in com.commercetools.importapi.models.standalone_prices">StandalonePriceImportBuilder</a></span>&nbsp;<span class="element-name">withCustomerGroup</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomerGroupKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CustomerGroupKeyReferenceBuilder</a>,<wbr><a href="../common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Maps to <code>StandalonePrice.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
-  <p>This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.customerGroup</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
+  <p>This value cannot be updated. Attempting to update this value will result in an <span>InvalidFieldsUpdate</span> error.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the customerGroup value</dd>
@@ -456,8 +456,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>customerGroup</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceImportBuilder.html" title="class in com.commercetools.importapi.models.standalone_prices">StandalonePriceImportBuilder</a></span>&nbsp;<span class="element-name">customerGroup</span><wbr><span class="parameters">(@Nullable
  <a href="../common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a>&nbsp;customerGroup)</span></div>
-<div class="block"><p>Maps to <code>StandalonePrice.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
-  <p>This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.customerGroup</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
+  <p>This value cannot be updated. Attempting to update this value will result in an <span>InvalidFieldsUpdate</span> error.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>customerGroup</code> - value to be set</dd>
@@ -470,8 +470,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="channel(java.util.function.Function)">
 <h3>channel</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceImportBuilder.html" title="class in com.commercetools.importapi.models.standalone_prices">StandalonePriceImportBuilder</a></span>&nbsp;<span class="element-name">channel</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ChannelKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ChannelKeyReferenceBuilder</a>,<wbr><a href="../common/ChannelKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ChannelKeyReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Maps to <code>StandalonePrice.channel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
-  <p>This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.channel</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
+  <p>This value cannot be updated. Attempting to update this value will result in an <span>InvalidFieldsUpdate</span> error.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the channel value</dd>
@@ -484,8 +484,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withChannel(java.util.function.Function)">
 <h3>withChannel</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceImportBuilder.html" title="class in com.commercetools.importapi.models.standalone_prices">StandalonePriceImportBuilder</a></span>&nbsp;<span class="element-name">withChannel</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ChannelKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ChannelKeyReferenceBuilder</a>,<wbr><a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Maps to <code>StandalonePrice.channel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
-  <p>This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.channel</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
+  <p>This value cannot be updated. Attempting to update this value will result in an <span>InvalidFieldsUpdate</span> error.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the channel value</dd>
@@ -499,8 +499,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>channel</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceImportBuilder.html" title="class in com.commercetools.importapi.models.standalone_prices">StandalonePriceImportBuilder</a></span>&nbsp;<span class="element-name">channel</span><wbr><span class="parameters">(@Nullable
  <a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a>&nbsp;channel)</span></div>
-<div class="block"><p>Maps to <code>StandalonePrice.channel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
-  <p>This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.channel</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
+  <p>This value cannot be updated. Attempting to update this value will result in an <span>InvalidFieldsUpdate</span> error.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>channel</code> - value to be set</dd>
@@ -715,7 +715,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
-<div class="block"><p>User-defined unique identifier for the StandalonePrice. If a StandalonePrice) with this <code>key</code> exists, it is updated with the imported data.</p></div>
+<div class="block"><p>User-defined unique identifier for the StandalonePrice. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>) with this <code>key</code> exists, it is updated with the imported data.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>key</dd>
@@ -749,7 +749,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getCountry</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCountry</span>()</div>
-<div class="block"><p>Maps to <code>StandalonePrice.country</code>. This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.country</code>. This value cannot be updated. Attempting to update this value will result in an <span>InvalidFieldsUpdate</span> error.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>country</dd>
@@ -761,8 +761,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getCustomerGroup</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a></span>&nbsp;<span class="element-name">getCustomerGroup</span>()</div>
-<div class="block"><p>Maps to <code>StandalonePrice.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
-  <p>This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.customerGroup</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
+  <p>This value cannot be updated. Attempting to update this value will result in an <span>InvalidFieldsUpdate</span> error.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>customerGroup</dd>
@@ -774,8 +774,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getChannel</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></span>&nbsp;<span class="element-name">getChannel</span>()</div>
-<div class="block"><p>Maps to <code>StandalonePrice.channel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
-  <p>This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.channel</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
+  <p>This value cannot be updated. Attempting to update this value will result in an <span>InvalidFieldsUpdate</span> error.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>channel</dd>

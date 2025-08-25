@@ -377,7 +377,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="key(java.lang.String)">
 <h3>key</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeImportBuilder.html" title="class in com.commercetools.importapi.models.discount_codes">DiscountCodeImportBuilder</a></span>&nbsp;<span class="element-name">key</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
-<div class="block"><p>User-defined unique identifier. If a DiscountCode with this <code>key</code> exists, it is updated with the imported data.</p></div>
+<div class="block"><p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> with this <code>key</code> exists, it is updated with the imported data.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>key</code> - value to be set</dd>
@@ -470,7 +470,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="code(java.lang.String)">
 <h3>code</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeImportBuilder.html" title="class in com.commercetools.importapi.models.discount_codes">DiscountCodeImportBuilder</a></span>&nbsp;<span class="element-name">code</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;code)</span></div>
-<div class="block"><p>Maps to <code>DiscountCode.code</code>. This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.code</code>. This value cannot be updated. Attempting to update this value will result in an <span>InvalidFieldsUpdate</span> error.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>code</code> - value to be set</dd>
@@ -483,7 +483,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="cartDiscounts(com.commercetools.importapi.models.common.CartDiscountKeyReference...)">
 <h3>cartDiscounts</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeImportBuilder.html" title="class in com.commercetools.importapi.models.discount_codes">DiscountCodeImportBuilder</a></span>&nbsp;<span class="element-name">cartDiscounts</span><wbr><span class="parameters">(<a href="../common/CartDiscountKeyReference.html" title="interface in com.commercetools.importapi.models.common">CartDiscountKeyReference</a>...&nbsp;cartDiscounts)</span></div>
-<div class="block"><p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced CartDiscounts do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>cartDiscounts</code> - value to be set</dd>
@@ -496,7 +496,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="cartDiscounts(java.util.List)">
 <h3>cartDiscounts</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeImportBuilder.html" title="class in com.commercetools.importapi.models.discount_codes">DiscountCodeImportBuilder</a></span>&nbsp;<span class="element-name">cartDiscounts</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CartDiscountKeyReference.html" title="interface in com.commercetools.importapi.models.common">CartDiscountKeyReference</a>&gt;&nbsp;cartDiscounts)</span></div>
-<div class="block"><p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced CartDiscounts do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>cartDiscounts</code> - value to be set</dd>
@@ -509,7 +509,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="plusCartDiscounts(com.commercetools.importapi.models.common.CartDiscountKeyReference...)">
 <h3>plusCartDiscounts</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeImportBuilder.html" title="class in com.commercetools.importapi.models.discount_codes">DiscountCodeImportBuilder</a></span>&nbsp;<span class="element-name">plusCartDiscounts</span><wbr><span class="parameters">(<a href="../common/CartDiscountKeyReference.html" title="interface in com.commercetools.importapi.models.common">CartDiscountKeyReference</a>...&nbsp;cartDiscounts)</span></div>
-<div class="block"><p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced CartDiscounts do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>cartDiscounts</code> - value to be set</dd>
@@ -522,7 +522,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="plusCartDiscounts(java.util.function.Function)">
 <h3>plusCartDiscounts</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeImportBuilder.html" title="class in com.commercetools.importapi.models.discount_codes">DiscountCodeImportBuilder</a></span>&nbsp;<span class="element-name">plusCartDiscounts</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CartDiscountKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CartDiscountKeyReferenceBuilder</a>,<wbr><a href="../common/CartDiscountKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CartDiscountKeyReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced CartDiscounts do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the cartDiscounts value</dd>
@@ -535,7 +535,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withCartDiscounts(java.util.function.Function)">
 <h3>withCartDiscounts</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeImportBuilder.html" title="class in com.commercetools.importapi.models.discount_codes">DiscountCodeImportBuilder</a></span>&nbsp;<span class="element-name">withCartDiscounts</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CartDiscountKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CartDiscountKeyReferenceBuilder</a>,<wbr><a href="../common/CartDiscountKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CartDiscountKeyReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced CartDiscounts do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the cartDiscounts value</dd>
@@ -548,7 +548,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="addCartDiscounts(java.util.function.Function)">
 <h3>addCartDiscounts</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeImportBuilder.html" title="class in com.commercetools.importapi.models.discount_codes">DiscountCodeImportBuilder</a></span>&nbsp;<span class="element-name">addCartDiscounts</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CartDiscountKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CartDiscountKeyReferenceBuilder</a>,<wbr><a href="../common/CartDiscountKeyReference.html" title="interface in com.commercetools.importapi.models.common">CartDiscountKeyReference</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced CartDiscounts do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the cartDiscounts value</dd>
@@ -561,7 +561,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="setCartDiscounts(java.util.function.Function)">
 <h3>setCartDiscounts</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeImportBuilder.html" title="class in com.commercetools.importapi.models.discount_codes">DiscountCodeImportBuilder</a></span>&nbsp;<span class="element-name">setCartDiscounts</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CartDiscountKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CartDiscountKeyReferenceBuilder</a>,<wbr><a href="../common/CartDiscountKeyReference.html" title="interface in com.commercetools.importapi.models.common">CartDiscountKeyReference</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced CartDiscounts do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the cartDiscounts value</dd>
@@ -739,7 +739,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
-<div class="block"><p>User-defined unique identifier. If a DiscountCode with this <code>key</code> exists, it is updated with the imported data.</p></div>
+<div class="block"><p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> with this <code>key</code> exists, it is updated with the imported data.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>key</dd>
@@ -774,7 +774,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getCode()">
 <h3>getCode</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCode</span>()</div>
-<div class="block"><p>Maps to <code>DiscountCode.code</code>. This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.code</code>. This value cannot be updated. Attempting to update this value will result in an <span>InvalidFieldsUpdate</span> error.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>code</dd>
@@ -785,7 +785,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getCartDiscounts()">
 <h3>getCartDiscounts</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CartDiscountKeyReference.html" title="interface in com.commercetools.importapi.models.common">CartDiscountKeyReference</a>&gt;</span>&nbsp;<span class="element-name">getCartDiscounts</span>()</div>
-<div class="block"><p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced CartDiscounts do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>cartDiscounts</dd>

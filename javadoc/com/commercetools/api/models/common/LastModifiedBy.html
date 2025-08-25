@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">LastModifiedBy</span><span class="extends-implements">
 extends <a href="ClientLogging.html" title="interface in com.commercetools.api.models.common">ClientLogging</a></span></div>
-<div class="block"><p>IDs and references that last modified the resource. This is present on resources created or updated after 1 February 2019 except for events not tracked.</p>
+<div class="block"><p>IDs and references that last modified the resource. This is present on resources created or updated after 1 February 2019 except for <span>events not tracked</span>.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -123,12 +123,12 @@ extends <a href="ClientLogging.html" title="interface in com.commercetools.api.m
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAnonymousId()" class="member-name-link">getAnonymousId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Indicates the anonymous session during which the resource was modified.</div>
+<div class="block">Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a> during which the resource was modified.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAssociate()" class="member-name-link">getAssociate</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Indicates the Customer who modified the resource in the context of a Business Unit.</div>
+<div class="block">Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who modified the resource in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="Attribution.html" title="interface in com.commercetools.api.models.common">Attribution</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAttributedTo()" class="member-name-link">getAttributedTo</a>()</code></div>
@@ -138,17 +138,17 @@ extends <a href="ClientLogging.html" title="interface in com.commercetools.api.m
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getClientId()" class="member-name-link">getClientId</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>id</code> of the API Client which modified the resource.</div>
+<div class="block"><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> which modified the resource.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCustomer()" class="member-name-link">getCustomer</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Indicates the Customer who modified the resource using a token from the password flow.</div>
+<div class="block">Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who modified the resource using a token from the <span>password flow</span>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getExternalUserId()" class="member-name-link">getExternalUserId</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">External user ID provided by the <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> scope.</div>
+<div class="block"><span>External user ID</span> provided by the <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> <span>scope</span>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -163,12 +163,12 @@ extends <a href="ClientLogging.html" title="interface in com.commercetools.api.m
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAnonymousId(java.lang.String)" class="member-name-link">setAnonymousId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;anonymousId)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Indicates the anonymous session during which the resource was modified.</div>
+<div class="block">Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a> during which the resource was modified.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAssociate(com.commercetools.api.models.customer.CustomerReference)" class="member-name-link">setAssociate</a><wbr>(<a href="../customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a>&nbsp;associate)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Indicates the Customer who modified the resource in the context of a Business Unit.</div>
+<div class="block">Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who modified the resource in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAttributedTo(com.commercetools.api.models.common.Attribution)" class="member-name-link">setAttributedTo</a><wbr>(<a href="Attribution.html" title="interface in com.commercetools.api.models.common">Attribution</a>&nbsp;attributedTo)</code></div>
@@ -178,17 +178,17 @@ extends <a href="ClientLogging.html" title="interface in com.commercetools.api.m
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setClientId(java.lang.String)" class="member-name-link">setClientId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;clientId)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>id</code> of the API Client which modified the resource.</div>
+<div class="block"><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> which modified the resource.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCustomer(com.commercetools.api.models.customer.CustomerReference)" class="member-name-link">setCustomer</a><wbr>(<a href="../customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a>&nbsp;customer)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Indicates the Customer who modified the resource using a token from the password flow.</div>
+<div class="block">Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who modified the resource using a token from the <span>password flow</span>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setExternalUserId(java.lang.String)" class="member-name-link">setExternalUserId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;externalUserId)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">External user ID provided by the <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> scope.</div>
+<div class="block"><span>External user ID</span> provided by the <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> <span>scope</span>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -221,7 +221,7 @@ extends <a href="ClientLogging.html" title="interface in com.commercetools.api.m
 <section class="detail" id="getClientId()">
 <h3>getClientId</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getClientId</span>()</div>
-<div class="block"><p><code>id</code> of the API Client which modified the resource.</p></div>
+<div class="block"><p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> which modified the resource.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ClientLogging.html#getClientId()">getClientId</a></code>&nbsp;in interface&nbsp;<code><a href="ClientLogging.html" title="interface in com.commercetools.api.models.common">ClientLogging</a></code></dd>
@@ -234,7 +234,7 @@ extends <a href="ClientLogging.html" title="interface in com.commercetools.api.m
 <section class="detail" id="getExternalUserId()">
 <h3>getExternalUserId</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getExternalUserId</span>()</div>
-<div class="block"><p>External user ID provided by the <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> scope.</p></div>
+<div class="block"><p><span>External user ID</span> provided by the <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> <span>scope</span>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ClientLogging.html#getExternalUserId()">getExternalUserId</a></code>&nbsp;in interface&nbsp;<code><a href="ClientLogging.html" title="interface in com.commercetools.api.models.common">ClientLogging</a></code></dd>
@@ -248,7 +248,7 @@ extends <a href="ClientLogging.html" title="interface in com.commercetools.api.m
 <h3>getCustomer</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a></span>&nbsp;<span class="element-name">getCustomer</span>()</div>
-<div class="block"><p>Indicates the Customer who modified the resource using a token from the password flow.</p></div>
+<div class="block"><p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who modified the resource using a token from the <span>password flow</span>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ClientLogging.html#getCustomer()">getCustomer</a></code>&nbsp;in interface&nbsp;<code><a href="ClientLogging.html" title="interface in com.commercetools.api.models.common">ClientLogging</a></code></dd>
@@ -261,7 +261,7 @@ extends <a href="ClientLogging.html" title="interface in com.commercetools.api.m
 <section class="detail" id="getAnonymousId()">
 <h3>getAnonymousId</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getAnonymousId</span>()</div>
-<div class="block"><p>Indicates the anonymous session during which the resource was modified.</p></div>
+<div class="block"><p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a> during which the resource was modified.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ClientLogging.html#getAnonymousId()">getAnonymousId</a></code>&nbsp;in interface&nbsp;<code><a href="ClientLogging.html" title="interface in com.commercetools.api.models.common">ClientLogging</a></code></dd>
@@ -287,7 +287,7 @@ extends <a href="ClientLogging.html" title="interface in com.commercetools.api.m
 <h3>getAssociate</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a></span>&nbsp;<span class="element-name">getAssociate</span>()</div>
-<div class="block"><p>Indicates the Customer who modified the resource in the context of a Business Unit. Only available for B2B-enabled Projects when an Associate acts on behalf of a company using the associate endpoints.</p></div>
+<div class="block"><p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who modified the resource in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. Only available for <span>B2B</span>-enabled Projects when an Associate acts on behalf of a company using the <span>associate endpoints</span>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ClientLogging.html#getAssociate()">getAssociate</a></code>&nbsp;in interface&nbsp;<code><a href="ClientLogging.html" title="interface in com.commercetools.api.models.common">ClientLogging</a></code></dd>
@@ -300,7 +300,7 @@ extends <a href="ClientLogging.html" title="interface in com.commercetools.api.m
 <section class="detail" id="setClientId(java.lang.String)">
 <h3>setClientId</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setClientId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;clientId)</span></div>
-<div class="block"><p><code>id</code> of the API Client which modified the resource.</p></div>
+<div class="block"><p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> which modified the resource.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ClientLogging.html#setClientId(java.lang.String)">setClientId</a></code>&nbsp;in interface&nbsp;<code><a href="ClientLogging.html" title="interface in com.commercetools.api.models.common">ClientLogging</a></code></dd>
@@ -313,7 +313,7 @@ extends <a href="ClientLogging.html" title="interface in com.commercetools.api.m
 <section class="detail" id="setExternalUserId(java.lang.String)">
 <h3>setExternalUserId</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setExternalUserId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;externalUserId)</span></div>
-<div class="block"><p>External user ID provided by the <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> scope.</p></div>
+<div class="block"><p><span>External user ID</span> provided by the <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> <span>scope</span>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ClientLogging.html#setExternalUserId(java.lang.String)">setExternalUserId</a></code>&nbsp;in interface&nbsp;<code><a href="ClientLogging.html" title="interface in com.commercetools.api.models.common">ClientLogging</a></code></dd>
@@ -326,7 +326,7 @@ extends <a href="ClientLogging.html" title="interface in com.commercetools.api.m
 <section class="detail" id="setCustomer(com.commercetools.api.models.customer.CustomerReference)">
 <h3>setCustomer</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCustomer</span><wbr><span class="parameters">(<a href="../customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a>&nbsp;customer)</span></div>
-<div class="block"><p>Indicates the Customer who modified the resource using a token from the password flow.</p></div>
+<div class="block"><p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who modified the resource using a token from the <span>password flow</span>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ClientLogging.html#setCustomer(com.commercetools.api.models.customer.CustomerReference)">setCustomer</a></code>&nbsp;in interface&nbsp;<code><a href="ClientLogging.html" title="interface in com.commercetools.api.models.common">ClientLogging</a></code></dd>
@@ -339,7 +339,7 @@ extends <a href="ClientLogging.html" title="interface in com.commercetools.api.m
 <section class="detail" id="setAnonymousId(java.lang.String)">
 <h3>setAnonymousId</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setAnonymousId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;anonymousId)</span></div>
-<div class="block"><p>Indicates the anonymous session during which the resource was modified.</p></div>
+<div class="block"><p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a> during which the resource was modified.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ClientLogging.html#setAnonymousId(java.lang.String)">setAnonymousId</a></code>&nbsp;in interface&nbsp;<code><a href="ClientLogging.html" title="interface in com.commercetools.api.models.common">ClientLogging</a></code></dd>
@@ -363,7 +363,7 @@ extends <a href="ClientLogging.html" title="interface in com.commercetools.api.m
 <section class="detail" id="setAssociate(com.commercetools.api.models.customer.CustomerReference)">
 <h3>setAssociate</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setAssociate</span><wbr><span class="parameters">(<a href="../customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a>&nbsp;associate)</span></div>
-<div class="block"><p>Indicates the Customer who modified the resource in the context of a Business Unit. Only available for B2B-enabled Projects when an Associate acts on behalf of a company using the associate endpoints.</p></div>
+<div class="block"><p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who modified the resource in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. Only available for <span>B2B</span>-enabled Projects when an Associate acts on behalf of a company using the <span>associate endpoints</span>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ClientLogging.html#setAssociate(com.commercetools.api.models.customer.CustomerReference)">setAssociate</a></code>&nbsp;in interface&nbsp;<code><a href="ClientLogging.html" title="interface in com.commercetools.api.models.common">ClientLogging</a></code></dd>

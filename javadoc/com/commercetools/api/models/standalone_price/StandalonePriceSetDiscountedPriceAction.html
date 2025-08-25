@@ -78,8 +78,8 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">StandalonePriceSetDiscountedPriceAction</span><span class="extends-implements">
 extends <a href="StandalonePriceUpdateAction.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceUpdateAction</a></span></div>
-<div class="block"><p>Discounts a Standalone Price of a Product Variant on a published Product. If the Product Variant does not exist or if it exists only in the staged representation of a Product, an InvalidOperationError error is returned.</p>
-  <p>Produces the StandalonePriceExternalDiscountSet Message.</p>
+<div class="block"><p>Discounts a Standalone Price of a Product Variant on a published <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product Variant does not exist or if it exists only in the staged representation of a Product, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperationError</a> error is returned.</p>
+  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceExternalDiscountSetMessage" rel="nofollow">StandalonePriceExternalDiscountSet</a> Message.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -217,7 +217,7 @@ extends <a href="StandalonePriceUpdateAction.html" title="interface in com.comme
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/DiscountedPriceDraft.html" title="interface in com.commercetools.api.models.common">DiscountedPriceDraft</a></span>&nbsp;<span class="element-name">getDiscounted</span>()</div>
 <div class="block"><p>Value to set. If empty, any existing value will be removed.</p>
-  <p>The referenced ProductDiscount must be of type external, active, and its predicate must match the referenced Price.</p></div>
+  <p>The referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> must be of type external, active, and its predicate must match the referenced Price.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>discounted</dd>
@@ -229,7 +229,7 @@ extends <a href="StandalonePriceUpdateAction.html" title="interface in com.comme
 <h3>setDiscounted</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setDiscounted</span><wbr><span class="parameters">(<a href="../common/DiscountedPriceDraft.html" title="interface in com.commercetools.api.models.common">DiscountedPriceDraft</a>&nbsp;discounted)</span></div>
 <div class="block"><p>Value to set. If empty, any existing value will be removed.</p>
-  <p>The referenced ProductDiscount must be of type external, active, and its predicate must match the referenced Price.</p></div>
+  <p>The referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> must be of type external, active, and its predicate must match the referenced Price.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>discounted</code> - value to be set</dd>

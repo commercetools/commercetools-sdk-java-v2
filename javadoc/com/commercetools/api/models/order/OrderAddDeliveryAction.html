@@ -78,8 +78,8 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">OrderAddDeliveryAction</span><span class="extends-implements">
 extends <a href="OrderUpdateAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateAction</a>, <a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="OrderAddDeliveryAction.html" title="interface in com.commercetools.api.models.order">OrderAddDeliveryAction</a>&gt;</span></div>
-<div class="block"><p>A Delivery can only be added to an Order if its <code>shippingInfo</code> (for <code>shippingMode</code> = <code>Single</code>), or its <code>shipping</code> (for <code>shippingMode</code> = <code>Multiple</code>) exists.</p>
-  <p>Produces the Delivery Added Message.</p>
+<div class="block"><p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> can only be added to an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> if its <code>shippingInfo</code> (for <code>shippingMode</code> = <code>Single</code>), or its <code>shipping</code> (for <code>shippingMode</code> = <code>Multiple</code>) exists.</p>
+  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryAddedMessage" rel="nofollow">Delivery Added</a> Message.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -151,7 +151,7 @@ extends <a href="OrderUpdateAction.html" title="interface in com.commercetools.a
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDeliveryKey()" class="member-name-link">getDeliveryKey</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>key</code> of an existing Delivery.</div>
+<div class="block"><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getItems()" class="member-name-link">getItems</a>()</code></div>
@@ -166,7 +166,7 @@ extends <a href="OrderUpdateAction.html" title="interface in com.commercetools.a
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getShippingKey()" class="member-name-link">getShippingKey</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>key</code> of the ShippingMethod, required for <code>Multiple</code> ShippingMode.</div>
+<div class="block"><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a>, required for <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="OrderAddDeliveryAction.html" title="interface in com.commercetools.api.models.order">OrderAddDeliveryAction</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -191,7 +191,7 @@ extends <a href="OrderUpdateAction.html" title="interface in com.commercetools.a
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setDeliveryKey(java.lang.String)" class="member-name-link">setDeliveryKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;deliveryKey)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>key</code> of an existing Delivery.</div>
+<div class="block"><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setItems(com.commercetools.api.models.order.DeliveryItem...)" class="member-name-link">setItems</a><wbr>(<a href="DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>...&nbsp;items)</code></div>
@@ -216,7 +216,7 @@ extends <a href="OrderUpdateAction.html" title="interface in com.commercetools.a
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setShippingKey(java.lang.String)" class="member-name-link">setShippingKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;shippingKey)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>key</code> of the ShippingMethod, required for <code>Multiple</code> ShippingMode.</div>
+<div class="block"><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a>, required for <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OrderAddDeliveryAction.html" title="interface in com.commercetools.api.models.order">OrderAddDeliveryAction</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -278,7 +278,7 @@ extends <a href="OrderUpdateAction.html" title="interface in com.commercetools.a
 <section class="detail" id="getDeliveryKey()">
 <h3>getDeliveryKey</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getDeliveryKey</span>()</div>
-<div class="block"><p><code>key</code> of an existing Delivery.</p></div>
+<div class="block"><p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>deliveryKey</dd>
@@ -289,7 +289,7 @@ extends <a href="OrderUpdateAction.html" title="interface in com.commercetools.a
 <section class="detail" id="getShippingKey()">
 <h3>getShippingKey</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getShippingKey</span>()</div>
-<div class="block"><p><code>key</code> of the ShippingMethod, required for <code>Multiple</code> ShippingMode.</p></div>
+<div class="block"><p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a>, required for <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>shippingKey</dd>
@@ -326,7 +326,7 @@ extends <a href="OrderUpdateAction.html" title="interface in com.commercetools.a
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ParcelDraft.html" title="interface in com.commercetools.api.models.order">ParcelDraft</a>&gt;</span>&nbsp;<span class="element-name">getParcels</span>()</div>
 <div class="block"><p>Parcels of the Delivery.</p>
-  <p>If provided, this update action produces the Parcel Added To Delivery Message.</p></div>
+  <p>If provided, this update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelAddedToDeliveryMessage" rel="nofollow">Parcel Added To Delivery</a> Message.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>parcels</dd>
@@ -351,7 +351,7 @@ extends <a href="OrderUpdateAction.html" title="interface in com.commercetools.a
 <section class="detail" id="setDeliveryKey(java.lang.String)">
 <h3>setDeliveryKey</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setDeliveryKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;deliveryKey)</span></div>
-<div class="block"><p><code>key</code> of an existing Delivery.</p></div>
+<div class="block"><p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>deliveryKey</code> - value to be set</dd>
@@ -362,7 +362,7 @@ extends <a href="OrderUpdateAction.html" title="interface in com.commercetools.a
 <section class="detail" id="setShippingKey(java.lang.String)">
 <h3>setShippingKey</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setShippingKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;shippingKey)</span></div>
-<div class="block"><p><code>key</code> of the ShippingMethod, required for <code>Multiple</code> ShippingMode.</p></div>
+<div class="block"><p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a>, required for <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>shippingKey</code> - value to be set</dd>
@@ -407,7 +407,7 @@ extends <a href="OrderUpdateAction.html" title="interface in com.commercetools.a
 <h3>setParcels</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setParcels</span><wbr><span class="parameters">(<a href="ParcelDraft.html" title="interface in com.commercetools.api.models.order">ParcelDraft</a>...&nbsp;parcels)</span></div>
 <div class="block"><p>Parcels of the Delivery.</p>
-  <p>If provided, this update action produces the Parcel Added To Delivery Message.</p></div>
+  <p>If provided, this update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelAddedToDeliveryMessage" rel="nofollow">Parcel Added To Delivery</a> Message.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>parcels</code> - values to be set</dd>
@@ -419,7 +419,7 @@ extends <a href="OrderUpdateAction.html" title="interface in com.commercetools.a
 <h3>setParcels</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setParcels</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ParcelDraft.html" title="interface in com.commercetools.api.models.order">ParcelDraft</a>&gt;&nbsp;parcels)</span></div>
 <div class="block"><p>Parcels of the Delivery.</p>
-  <p>If provided, this update action produces the Parcel Added To Delivery Message.</p></div>
+  <p>If provided, this update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelAddedToDeliveryMessage" rel="nofollow">Parcel Added To Delivery</a> Message.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>parcels</code> - values to be set</dd>

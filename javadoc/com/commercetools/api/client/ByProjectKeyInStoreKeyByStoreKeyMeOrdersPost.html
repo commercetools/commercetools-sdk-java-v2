@@ -88,22 +88,22 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost</span>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/TypeBodyApiMethod.html" title="class in io.vrap.rmf.base.client">TypeBodyApiMethod</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost</a>,<wbr><a href="../models/order/Order.html" title="interface in com.commercetools.api.models.order">Order</a>,<wbr><a href="../models/me/MyOrderFromCartDraft.html" title="interface in com.commercetools.api.models.me">MyOrderFromCartDraft</a>&gt;
 implements <a href="ConflictingTrait.html" title="interface in com.commercetools.api.client">ConflictingTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost</a>&gt;, <a href="ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost</a>&gt;, <a href="Deprecatable201Trait.html" title="interface in com.commercetools.api.client">Deprecatable201Trait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost</a>&gt;, <a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost</a>&gt;</span></div>
-<div class="block"><p>Creates an Order from a Cart in a Store for the Customer or anonymous user. The <code>customerId</code> or <code>anonymousId</code> field on the Order is automatically set based on the customer:{id} or anonymous_id:{id} scope.</p>
+<div class="block"><p>Creates an Order from a Cart in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> for the Customer or anonymous user. The <code>customerId</code> or <code>anonymousId</code> field on the Order is automatically set based on the <span>customer:{id}</span> or <span>anonymous_id:{id}</span> scope.</p>
   <p>The Cart must have a shipping address and an active Shipping Method set.</p>
-  <p>When creating B2B Orders, the Customer must have the <code>CreateMyOrdersFromMyCarts</code> Permission.</p>
-  <p>If the Cart's <code>customerId</code> does not match the customer:{id} scope, or the <code>anonymousId</code> does not match the anonymous_id:{id} scope, a ResourceNotFound error is returned.</p>
-  <p>Creating an Order produces the OrderCreated Message.</p>
+  <p>When creating <span>B2B Orders</span>, the Customer must have the <code>CreateMyOrdersFromMyCarts</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Permission" rel="nofollow">Permission</a>.</p>
+  <p>If the Cart's <code>customerId</code> does not match the <span>customer:{id}</span> scope, or the <code>anonymousId</code> does not match the <span>anonymous_id:{id}</span> scope, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error is returned.</p>
+  <p>Creating an Order produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderCreatedMessage" rel="nofollow">OrderCreated</a> Message.</p>
   <p>Specific Error Codes:</p>
   <ul>
-   <li>AssociateMissingPermission</li>
-   <li>CountryNotConfiguredInStore</li>
-   <li>DiscountCodeNonApplicable</li>
-   <li>InvalidItemShippingDetails</li>
-   <li>MatchingPriceNotFound</li>
-   <li>MissingTaxRateForCountry</li>
-   <li>OutOfStock</li>
-   <li>PriceChanged</li>
-   <li>ShippingMethodDoesNotMatchCart</li>
+   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateMissingPermissionError" rel="nofollow">AssociateMissingPermission</a></li>
+   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CountryNotConfiguredInStoreError" rel="nofollow">CountryNotConfiguredInStore</a></li>
+   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeNonApplicableError" rel="nofollow">DiscountCodeNonApplicable</a></li>
+   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidItemShippingDetailsError" rel="nofollow">InvalidItemShippingDetails</a></li>
+   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a></li>
+   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a></li>
+   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OutOfStockError" rel="nofollow">OutOfStock</a></li>
+   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:PriceChangedError" rel="nofollow">PriceChanged</a></li>
+   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethodDoesNotMatchCartError" rel="nofollow">ShippingMethodDoesNotMatchCart</a></li>
   </ul>
 
  <hr>

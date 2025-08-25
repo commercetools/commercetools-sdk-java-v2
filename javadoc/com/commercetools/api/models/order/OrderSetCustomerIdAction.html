@@ -78,8 +78,8 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">OrderSetCustomerIdAction</span><span class="extends-implements">
 extends <a href="OrderUpdateAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateAction</a></span></div>
-<div class="block"><p>Setting the Order's <code>customerId</code> does not recalculate prices or discounts on the Order. If the Customer belongs to a Customer Group, <code>customerGroup</code> on the Order is updated automatically.</p>
-  <p>Produces the OrderCustomerSet Message.</p>
+<div class="block"><p>Setting the Order's <code>customerId</code> does not recalculate prices or discounts on the Order. If the Customer belongs to a Customer Group, <code>customerGroup</code> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> is updated automatically.</p>
+  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderCustomerSetMessage" rel="nofollow">OrderCustomerSet</a> Message.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -141,7 +141,7 @@ extends <a href="OrderUpdateAction.html" title="interface in com.commercetools.a
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCustomerId()" class="member-name-link">getCustomerId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>id</code> of an existing Customer.</div>
+<div class="block"><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="OrderSetCustomerIdAction.html" title="interface in com.commercetools.api.models.order">OrderSetCustomerIdAction</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -156,7 +156,7 @@ extends <a href="OrderUpdateAction.html" title="interface in com.commercetools.a
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCustomerId(java.lang.String)" class="member-name-link">setCustomerId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customerId)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>id</code> of an existing Customer.</div>
+<div class="block"><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OrderSetCustomerIdAction.html" title="interface in com.commercetools.api.models.order">OrderSetCustomerIdAction</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -215,7 +215,7 @@ extends <a href="OrderUpdateAction.html" title="interface in com.commercetools.a
 <section class="detail" id="getCustomerId()">
 <h3>getCustomerId</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCustomerId</span>()</div>
-<div class="block"><p><code>id</code> of an existing Customer. If empty, any existing value is removed.</p></div>
+<div class="block"><p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>. If empty, any existing value is removed.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>customerId</dd>
@@ -226,7 +226,7 @@ extends <a href="OrderUpdateAction.html" title="interface in com.commercetools.a
 <section class="detail" id="setCustomerId(java.lang.String)">
 <h3>setCustomerId</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCustomerId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customerId)</span></div>
-<div class="block"><p><code>id</code> of an existing Customer. If empty, any existing value is removed.</p></div>
+<div class="block"><p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>. If empty, any existing value is removed.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>customerId</code> - value to be set</dd>

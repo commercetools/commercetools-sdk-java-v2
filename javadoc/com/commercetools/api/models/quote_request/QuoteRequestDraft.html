@@ -155,7 +155,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getState()" class="member-name-link">getState</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">State of the Quote Request.</div>
+<div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Quote Request.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="QuoteRequestDraft.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestDraft</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -200,7 +200,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setState(com.commercetools.api.models.state.StateReference)" class="member-name-link">setState</a><wbr>(<a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&nbsp;state)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">State of the Quote Request.</div>
+<div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Quote Request.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="QuoteRequestDraft.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestDraft</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -232,7 +232,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="../cart/CartResourceIdentifier.html" title="interface in com.commercetools.api.models.cart">CartResourceIdentifier</a></span>&nbsp;<span class="element-name">getCart</span>()</div>
-<div class="block"><p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, and Carts with <code>Multiple</code> ShippingMode are not supported. The Cart must have a <code>shippingAddress</code> defined, otherwise an InvalidOperation error is returned when creating a Quote Request.</p></div>
+<div class="block"><p>Cart for which a Quote is requested. Anonymous Carts, Carts with <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">Discount Codes</a>, and Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a> are not supported. The Cart must have a <code>shippingAddress</code> defined, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned when <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/quote-requests:POST" rel="nofollow">creating a Quote Request</a>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>cart</dd>
@@ -292,7 +292,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <h3>getState</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></span>&nbsp;<span class="element-name">getState</span>()</div>
-<div class="block"><p>State of the Quote Request. This reference can point to a State in a custom workflow.</p></div>
+<div class="block"><p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Quote Request. This reference can point to a State in a custom workflow.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>state</dd>
@@ -303,7 +303,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="getPurchaseOrderNumber()">
 <h3>getPurchaseOrderNumber</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getPurchaseOrderNumber</span>()</div>
-<div class="block"><p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer.</p></div>
+<div class="block"><p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the <span>Buyer</span>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>purchaseOrderNumber</dd>
@@ -314,7 +314,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="setCart(com.commercetools.api.models.cart.CartResourceIdentifier)">
 <h3>setCart</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCart</span><wbr><span class="parameters">(<a href="../cart/CartResourceIdentifier.html" title="interface in com.commercetools.api.models.cart">CartResourceIdentifier</a>&nbsp;cart)</span></div>
-<div class="block"><p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, and Carts with <code>Multiple</code> ShippingMode are not supported. The Cart must have a <code>shippingAddress</code> defined, otherwise an InvalidOperation error is returned when creating a Quote Request.</p></div>
+<div class="block"><p>Cart for which a Quote is requested. Anonymous Carts, Carts with <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">Discount Codes</a>, and Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a> are not supported. The Cart must have a <code>shippingAddress</code> defined, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned when <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/quote-requests:POST" rel="nofollow">creating a Quote Request</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>cart</code> - value to be set</dd>
@@ -369,7 +369,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="setState(com.commercetools.api.models.state.StateReference)">
 <h3>setState</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setState</span><wbr><span class="parameters">(<a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&nbsp;state)</span></div>
-<div class="block"><p>State of the Quote Request. This reference can point to a State in a custom workflow.</p></div>
+<div class="block"><p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Quote Request. This reference can point to a State in a custom workflow.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>state</code> - value to be set</dd>
@@ -380,7 +380,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="setPurchaseOrderNumber(java.lang.String)">
 <h3>setPurchaseOrderNumber</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setPurchaseOrderNumber</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;purchaseOrderNumber)</span></div>
-<div class="block"><p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer.</p></div>
+<div class="block"><p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the <span>Buyer</span>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>purchaseOrderNumber</code> - value to be set</dd>

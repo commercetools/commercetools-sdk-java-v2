@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">Price</span><span class="extends-implements">
 extends <a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a>&lt;<a href="Price.html" title="interface in com.commercetools.api.models.common">Price</a>&gt;, <a href="../WithKey.html" title="interface in com.commercetools.api.models">WithKey</a></span></div>
-<div class="block"><p>The representation for prices embedded in LineItems and in ProductVariants when the ProductPriceMode is <code>Embedded</code>. For the <code>Standalone</code> ProductPriceMode refer to StandalonePrice.</p>
+<div class="block"><p>The representation for prices embedded in <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and in <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> when the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPriceModeEnum" rel="nofollow">ProductPriceMode</a> is <code>Embedded</code>. For the <code>Standalone</code> ProductPriceMode refer to <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -125,7 +125,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getChannel()" class="member-name-link">getChannel</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>ProductDistribution</code> Channel for which this Price is valid.</div>
+<div class="block"><code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which this Price is valid.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCountry()" class="member-name-link">getCountry</a>()</code></div>
@@ -140,12 +140,12 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCustomerGroup()" class="member-name-link">getCustomerGroup</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">CustomerGroup for which this Price is valid.</div>
+<div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which this Price is valid.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="DiscountedPrice.html" title="interface in com.commercetools.api.models.common">DiscountedPrice</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDiscounted()" class="member-name-link">getDiscounted</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Is set if a ProductDiscount has been applied.</div>
+<div class="block">Is set if a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> has been applied.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
@@ -160,12 +160,12 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../recurrence_policy/RecurrencePolicyReference.html" title="interface in com.commercetools.api.models.recurrence_policy">RecurrencePolicyReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRecurrencePolicy()" class="member-name-link">getRecurrencePolicy</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Recurrence Policy for which this Price is valid.</div>
+<div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">Recurrence Policy</a> for which this Price is valid.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="PriceTier.html" title="interface in com.commercetools.api.models.common">PriceTier</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTiers()" class="member-name-link">getTiers</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Present if different Prices for certain LineItem quantities have been specified.</div>
+<div class="block">Present if different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities have been specified.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getValidFrom()" class="member-name-link">getValidFrom</a>()</code></div>
@@ -195,7 +195,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setChannel(com.commercetools.api.models.channel.ChannelReference)" class="member-name-link">setChannel</a><wbr>(<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;channel)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>ProductDistribution</code> Channel for which this Price is valid.</div>
+<div class="block"><code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which this Price is valid.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCountry(java.lang.String)" class="member-name-link">setCountry</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;country)</code></div>
@@ -210,12 +210,12 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupReference)" class="member-name-link">setCustomerGroup</a><wbr>(<a href="../customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a>&nbsp;customerGroup)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">CustomerGroup for which this Price is valid.</div>
+<div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which this Price is valid.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setDiscounted(com.commercetools.api.models.common.DiscountedPrice)" class="member-name-link">setDiscounted</a><wbr>(<a href="DiscountedPrice.html" title="interface in com.commercetools.api.models.common">DiscountedPrice</a>&nbsp;discounted)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Is set if a ProductDiscount has been applied.</div>
+<div class="block">Is set if a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> has been applied.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setId(java.lang.String)" class="member-name-link">setId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
@@ -230,17 +230,17 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setRecurrencePolicy(com.commercetools.api.models.recurrence_policy.RecurrencePolicyReference)" class="member-name-link">setRecurrencePolicy</a><wbr>(<a href="../recurrence_policy/RecurrencePolicyReference.html" title="interface in com.commercetools.api.models.recurrence_policy">RecurrencePolicyReference</a>&nbsp;recurrencePolicy)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Recurrence Policy for which this Price is valid.</div>
+<div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">Recurrence Policy</a> for which this Price is valid.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTiers(com.commercetools.api.models.common.PriceTier...)" class="member-name-link">setTiers</a><wbr>(<a href="PriceTier.html" title="interface in com.commercetools.api.models.common">PriceTier</a>...&nbsp;tiers)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Present if different Prices for certain LineItem quantities have been specified.</div>
+<div class="block">Present if different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities have been specified.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTiers(java.util.List)" class="member-name-link">setTiers</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="PriceTier.html" title="interface in com.commercetools.api.models.common">PriceTier</a>&gt;&nbsp;tiers)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Present if different Prices for certain LineItem quantities have been specified.</div>
+<div class="block">Present if different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities have been specified.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setValidFrom(java.time.ZonedDateTime)" class="member-name-link">setValidFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validFrom)</code></div>
@@ -300,7 +300,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
-<div class="block"><p>User-defined identifier of the Price. It is unique per ProductVariant.</p></div>
+<div class="block"><p>User-defined identifier of the Price. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../WithKey.html#getKey()">getKey</a></code>&nbsp;in interface&nbsp;<code><a href="../WithKey.html" title="interface in com.commercetools.api.models">WithKey</a></code></dd>
@@ -338,7 +338,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <h3>getCustomerGroup</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a></span>&nbsp;<span class="element-name">getCustomerGroup</span>()</div>
-<div class="block"><p>CustomerGroup for which this Price is valid.</p></div>
+<div class="block"><p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which this Price is valid.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>customerGroup</dd>
@@ -350,7 +350,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <h3>getChannel</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a></span>&nbsp;<span class="element-name">getChannel</span>()</div>
-<div class="block"><p><code>ProductDistribution</code> Channel for which this Price is valid.</p></div>
+<div class="block"><p><code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which this Price is valid.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>channel</dd>
@@ -372,7 +372,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <section class="detail" id="getValidUntil()">
 <h3>getValidUntil</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getValidUntil</span>()</div>
-<div class="block"><p>Date and time until this Price is valid. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.</p></div>
+<div class="block"><p>Date and time until this Price is valid. Prices that are no longer valid are not automatically removed, but they can be <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemovePriceAction" rel="nofollow">removed</a> if necessary.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>validUntil</dd>
@@ -384,7 +384,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <h3>getDiscounted</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="DiscountedPrice.html" title="interface in com.commercetools.api.models.common">DiscountedPrice</a></span>&nbsp;<span class="element-name">getDiscounted</span>()</div>
-<div class="block"><p>Is set if a ProductDiscount has been applied. If set, the API uses the DiscountedPrice value for the Line Item price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half-down rounding.</p></div>
+<div class="block"><p>Is set if a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> has been applied. If set, the API uses the DiscountedPrice value for the <span>Line Item price selection</span>. When a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueRelative" rel="nofollow">relative discount</a> has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with <span>half-down rounding</span>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>discounted</dd>
@@ -396,7 +396,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <h3>getTiers</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="PriceTier.html" title="interface in com.commercetools.api.models.common">PriceTier</a>&gt;</span>&nbsp;<span class="element-name">getTiers</span>()</div>
-<div class="block"><p>Present if different Prices for certain LineItem quantities have been specified.</p>
+<div class="block"><p>Present if different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities have been specified.</p>
   <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -423,7 +423,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <h3>getRecurrencePolicy</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../recurrence_policy/RecurrencePolicyReference.html" title="interface in com.commercetools.api.models.recurrence_policy">RecurrencePolicyReference</a></span>&nbsp;<span class="element-name">getRecurrencePolicy</span>()</div>
-<div class="block"><p>Recurrence Policy for which this Price is valid.</p></div>
+<div class="block"><p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">Recurrence Policy</a> for which this Price is valid.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>recurrencePolicy</dd>
@@ -445,7 +445,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
-<div class="block"><p>User-defined identifier of the Price. It is unique per ProductVariant.</p></div>
+<div class="block"><p>User-defined identifier of the Price. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>key</code> - value to be set</dd>
@@ -478,7 +478,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <section class="detail" id="setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupReference)">
 <h3>setCustomerGroup</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCustomerGroup</span><wbr><span class="parameters">(<a href="../customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a>&nbsp;customerGroup)</span></div>
-<div class="block"><p>CustomerGroup for which this Price is valid.</p></div>
+<div class="block"><p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which this Price is valid.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>customerGroup</code> - value to be set</dd>
@@ -489,7 +489,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <section class="detail" id="setChannel(com.commercetools.api.models.channel.ChannelReference)">
 <h3>setChannel</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setChannel</span><wbr><span class="parameters">(<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;channel)</span></div>
-<div class="block"><p><code>ProductDistribution</code> Channel for which this Price is valid.</p></div>
+<div class="block"><p><code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which this Price is valid.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>channel</code> - value to be set</dd>
@@ -511,7 +511,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <section class="detail" id="setValidUntil(java.time.ZonedDateTime)">
 <h3>setValidUntil</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setValidUntil</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validUntil)</span></div>
-<div class="block"><p>Date and time until this Price is valid. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.</p></div>
+<div class="block"><p>Date and time until this Price is valid. Prices that are no longer valid are not automatically removed, but they can be <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemovePriceAction" rel="nofollow">removed</a> if necessary.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>validUntil</code> - value to be set</dd>
@@ -522,7 +522,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <section class="detail" id="setDiscounted(com.commercetools.api.models.common.DiscountedPrice)">
 <h3>setDiscounted</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setDiscounted</span><wbr><span class="parameters">(<a href="DiscountedPrice.html" title="interface in com.commercetools.api.models.common">DiscountedPrice</a>&nbsp;discounted)</span></div>
-<div class="block"><p>Is set if a ProductDiscount has been applied. If set, the API uses the DiscountedPrice value for the Line Item price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half-down rounding.</p></div>
+<div class="block"><p>Is set if a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> has been applied. If set, the API uses the DiscountedPrice value for the <span>Line Item price selection</span>. When a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueRelative" rel="nofollow">relative discount</a> has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with <span>half-down rounding</span>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>discounted</code> - value to be set</dd>
@@ -533,7 +533,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <section class="detail" id="setTiers(com.commercetools.api.models.common.PriceTier...)">
 <h3>setTiers</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTiers</span><wbr><span class="parameters">(<a href="PriceTier.html" title="interface in com.commercetools.api.models.common">PriceTier</a>...&nbsp;tiers)</span></div>
-<div class="block"><p>Present if different Prices for certain LineItem quantities have been specified.</p>
+<div class="block"><p>Present if different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities have been specified.</p>
   <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -545,7 +545,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <section class="detail" id="setTiers(java.util.List)">
 <h3>setTiers</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTiers</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="PriceTier.html" title="interface in com.commercetools.api.models.common">PriceTier</a>&gt;&nbsp;tiers)</span></div>
-<div class="block"><p>Present if different Prices for certain LineItem quantities have been specified.</p>
+<div class="block"><p>Present if different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities have been specified.</p>
   <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -570,7 +570,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <section class="detail" id="setRecurrencePolicy(com.commercetools.api.models.recurrence_policy.RecurrencePolicyReference)">
 <h3>setRecurrencePolicy</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setRecurrencePolicy</span><wbr><span class="parameters">(<a href="../recurrence_policy/RecurrencePolicyReference.html" title="interface in com.commercetools.api.models.recurrence_policy">RecurrencePolicyReference</a>&nbsp;recurrencePolicy)</span></div>
-<div class="block"><p>Recurrence Policy for which this Price is valid.</p></div>
+<div class="block"><p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">Recurrence Policy</a> for which this Price is valid.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>recurrencePolicy</code> - value to be set</dd>

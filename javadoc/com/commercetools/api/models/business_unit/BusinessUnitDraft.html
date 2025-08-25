@@ -82,7 +82,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">BusinessUnitDraft</span><span class="extends-implements">
 extends <a href="../WithKey.html" title="interface in com.commercetools.api.models">WithKey</a></span></div>
-<div class="block"><p>Generic draft type to model those fields all Business Units have in common. The additional fields required for creating a Company or Division are represented on CompanyDraft and DivisionDraft.</p>
+<div class="block"><p>Generic draft type to model those fields all Business Units have in common. The additional fields required for creating a <a href="https://docs.commercetools.com/apis/ctp:api:type:Company" rel="nofollow">Company</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Division" rel="nofollow">Division</a> are represented on <a href="https://docs.commercetools.com/apis/ctp:api:type:CompanyDraft" rel="nofollow">CompanyDraft</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:DivisionDraft" rel="nofollow">DivisionDraft</a>.</p>
 
  <hr>
  Example to create a subtype instance using the builder pattern
@@ -144,7 +144,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AssociateDraft.html" title="interface in com.commercetools.api.models.business_unit">AssociateDraft</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAssociates()" class="member-name-link">getAssociates</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">List of members that are part of the Business Unit in specific roles.</div>
+<div class="block">List of members that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getBillingAddresses()" class="member-name-link">getBillingAddresses</a>()</code></div>
@@ -189,7 +189,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="BusinessUnitStatus.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitStatus</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStatus()" class="member-name-link">getStatus</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Indicates whether the Business Unit can be edited and used in Orders.</div>
+<div class="block">Indicates whether the Business Unit can be edited and used in <span>Orders</span>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="BusinessUnitStoreMode.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitStoreMode</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStoreMode()" class="member-name-link">getStoreMode</a>()</code></div>
@@ -199,7 +199,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStores()" class="member-name-link">getStores</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Sets the Stores the Business Unit is associated with.</div>
+<div class="block">Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="BusinessUnitType.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitType</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUnitType()" class="member-name-link">getUnitType</a>()</code></div>
@@ -229,12 +229,12 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAssociates(com.commercetools.api.models.business_unit.AssociateDraft...)" class="member-name-link">setAssociates</a><wbr>(<a href="AssociateDraft.html" title="interface in com.commercetools.api.models.business_unit">AssociateDraft</a>...&nbsp;associates)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">List of members that are part of the Business Unit in specific roles.</div>
+<div class="block">List of members that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAssociates(java.util.List)" class="member-name-link">setAssociates</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AssociateDraft.html" title="interface in com.commercetools.api.models.business_unit">AssociateDraft</a>&gt;&nbsp;associates)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">List of members that are part of the Business Unit in specific roles.</div>
+<div class="block">List of members that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setBillingAddresses(java.lang.Integer...)" class="member-name-link">setBillingAddresses</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>...&nbsp;billingAddresses)</code></div>
@@ -289,7 +289,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setStatus(com.commercetools.api.models.business_unit.BusinessUnitStatus)" class="member-name-link">setStatus</a><wbr>(<a href="BusinessUnitStatus.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitStatus</a>&nbsp;status)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Indicates whether the Business Unit can be edited and used in Orders.</div>
+<div class="block">Indicates whether the Business Unit can be edited and used in <span>Orders</span>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setStoreMode(com.commercetools.api.models.business_unit.BusinessUnitStoreMode)" class="member-name-link">setStoreMode</a><wbr>(<a href="BusinessUnitStoreMode.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitStoreMode</a>&nbsp;storeMode)</code></div>
@@ -299,12 +299,12 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setStores(com.commercetools.api.models.store.StoreResourceIdentifier...)" class="member-name-link">setStores</a><wbr>(<a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a>...&nbsp;stores)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Sets the Stores the Business Unit is associated with.</div>
+<div class="block">Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setStores(java.util.List)" class="member-name-link">setStores</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a>&gt;&nbsp;stores)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Sets the Stores the Business Unit is associated with.</div>
+<div class="block">Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="BusinessUnitDraft.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitDraft</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -348,7 +348,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="getStatus()">
 <h3>getStatus</h3>
 <div class="member-signature"><span class="return-type"><a href="BusinessUnitStatus.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitStatus</a></span>&nbsp;<span class="element-name">getStatus</span>()</div>
-<div class="block"><p>Indicates whether the Business Unit can be edited and used in Orders.</p></div>
+<div class="block"><p>Indicates whether the Business Unit can be edited and used in <span>Orders</span>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>status</dd>
@@ -360,9 +360,9 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <h3>getStores</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a>&gt;</span>&nbsp;<span class="element-name">getStores</span>()</div>
-<div class="block"><p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for Companies and not set for Divisions.</p>
-  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Recurring Orders, Quotes, Quote Requests, or Shopping Lists must belong to one of the Business Unit's Stores.</p>
-  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Recurring Orders, Quotes, Quote Requests, or Shopping Lists must not belong to any Store.</p></div>
+<div class="block"><p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Companies</a> and not set for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Divisions</a>.</p>
+  <p>If the Business Unit has Stores defined, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must belong to one of the Business Unit's Stores.</p>
+  <p>If the Business Unit has no Stores, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must not belong to any Store.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>stores</dd>
@@ -373,7 +373,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="getStoreMode()">
 <h3>getStoreMode</h3>
 <div class="member-signature"><span class="return-type"><a href="BusinessUnitStoreMode.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitStoreMode</a></span>&nbsp;<span class="element-name">getStoreMode</span>()</div>
-<div class="block"><p>Defines whether the Stores of the Business Unit are set directly on the Business Unit or are inherited from a parent. <code>storeMode</code> is always <code>Explicit</code> for Companies and defaults to <code>FromParent</code> for Divisions.</p></div>
+<div class="block"><p>Defines whether the Stores of the Business Unit are set directly on the Business Unit or are inherited from a parent. <code>storeMode</code> is always <code>Explicit</code> for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Companies</a> and defaults to <code>FromParent</code> for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Divisions</a>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>storeMode</dd>
@@ -419,7 +419,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="getAssociateMode()">
 <h3>getAssociateMode</h3>
 <div class="member-signature"><span class="return-type"><a href="BusinessUnitAssociateMode.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitAssociateMode</a></span>&nbsp;<span class="element-name">getAssociateMode</span>()</div>
-<div class="block"><p>Determines whether the Business Unit can inherit Associates from a parent. Always <code>Explicit</code> for Companies and defaults to <code>ExplicitAndFromParent</code> for Divisions.</p></div>
+<div class="block"><p>Determines whether the Business Unit can inherit Associates from a parent. Always <code>Explicit</code> for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Companies</a> and defaults to <code>ExplicitAndFromParent</code> for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Divisions</a>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>associateMode</dd>
@@ -431,7 +431,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <h3>getAssociates</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AssociateDraft.html" title="interface in com.commercetools.api.models.business_unit">AssociateDraft</a>&gt;</span>&nbsp;<span class="element-name">getAssociates</span>()</div>
-<div class="block"><p>List of members that are part of the Business Unit in specific roles.</p></div>
+<div class="block"><p>List of members that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>associates</dd>
@@ -442,7 +442,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="getApprovalRuleMode()">
 <h3>getApprovalRuleMode</h3>
 <div class="member-signature"><span class="return-type"><a href="BusinessUnitApprovalRuleMode.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitApprovalRuleMode</a></span>&nbsp;<span class="element-name">getApprovalRuleMode</span>()</div>
-<div class="block"><p>Determines whether the Business Unit can inherit Approval Rules from a parent. For Companies, the value of this field is always <code>Explicit</code>. For Divisions, the default value is <code>ExplicitAndFromParent</code>.</p></div>
+<div class="block"><p>Determines whether the Business Unit can inherit Approval Rules from a parent. For <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Companies</a>, the value of this field is always <code>Explicit</code>. For <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Divisions</a>, the default value is <code>ExplicitAndFromParent</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>approvalRuleMode</dd>
@@ -465,7 +465,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="getShippingAddresses()">
 <h3>getShippingAddresses</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</span>&nbsp;<span class="element-name">getShippingAddresses</span>()</div>
-<div class="block"><p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p></div>
+<div class="block"><p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>shippingAddresses</dd>
@@ -487,7 +487,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="getBillingAddresses()">
 <h3>getBillingAddresses</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</span>&nbsp;<span class="element-name">getBillingAddresses</span>()</div>
-<div class="block"><p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p></div>
+<div class="block"><p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>billingAddresses</dd>
@@ -532,7 +532,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="setStatus(com.commercetools.api.models.business_unit.BusinessUnitStatus)">
 <h3>setStatus</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setStatus</span><wbr><span class="parameters">(<a href="BusinessUnitStatus.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitStatus</a>&nbsp;status)</span></div>
-<div class="block"><p>Indicates whether the Business Unit can be edited and used in Orders.</p></div>
+<div class="block"><p>Indicates whether the Business Unit can be edited and used in <span>Orders</span>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>status</code> - value to be set</dd>
@@ -543,9 +543,9 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="setStores(com.commercetools.api.models.store.StoreResourceIdentifier...)">
 <h3>setStores</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setStores</span><wbr><span class="parameters">(<a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a>...&nbsp;stores)</span></div>
-<div class="block"><p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for Companies and not set for Divisions.</p>
-  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Recurring Orders, Quotes, Quote Requests, or Shopping Lists must belong to one of the Business Unit's Stores.</p>
-  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Recurring Orders, Quotes, Quote Requests, or Shopping Lists must not belong to any Store.</p></div>
+<div class="block"><p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Companies</a> and not set for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Divisions</a>.</p>
+  <p>If the Business Unit has Stores defined, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must belong to one of the Business Unit's Stores.</p>
+  <p>If the Business Unit has no Stores, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must not belong to any Store.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>stores</code> - values to be set</dd>
@@ -556,9 +556,9 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="setStores(java.util.List)">
 <h3>setStores</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setStores</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a>&gt;&nbsp;stores)</span></div>
-<div class="block"><p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for Companies and not set for Divisions.</p>
-  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Recurring Orders, Quotes, Quote Requests, or Shopping Lists must belong to one of the Business Unit's Stores.</p>
-  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Recurring Orders, Quotes, Quote Requests, or Shopping Lists must not belong to any Store.</p></div>
+<div class="block"><p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Companies</a> and not set for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Divisions</a>.</p>
+  <p>If the Business Unit has Stores defined, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must belong to one of the Business Unit's Stores.</p>
+  <p>If the Business Unit has no Stores, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must not belong to any Store.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>stores</code> - values to be set</dd>
@@ -569,7 +569,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="setStoreMode(com.commercetools.api.models.business_unit.BusinessUnitStoreMode)">
 <h3>setStoreMode</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setStoreMode</span><wbr><span class="parameters">(<a href="BusinessUnitStoreMode.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitStoreMode</a>&nbsp;storeMode)</span></div>
-<div class="block"><p>Defines whether the Stores of the Business Unit are set directly on the Business Unit or are inherited from a parent. <code>storeMode</code> is always <code>Explicit</code> for Companies and defaults to <code>FromParent</code> for Divisions.</p></div>
+<div class="block"><p>Defines whether the Stores of the Business Unit are set directly on the Business Unit or are inherited from a parent. <code>storeMode</code> is always <code>Explicit</code> for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Companies</a> and defaults to <code>FromParent</code> for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Divisions</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>storeMode</code> - value to be set</dd>
@@ -602,7 +602,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="setAssociateMode(com.commercetools.api.models.business_unit.BusinessUnitAssociateMode)">
 <h3>setAssociateMode</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setAssociateMode</span><wbr><span class="parameters">(<a href="BusinessUnitAssociateMode.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitAssociateMode</a>&nbsp;associateMode)</span></div>
-<div class="block"><p>Determines whether the Business Unit can inherit Associates from a parent. Always <code>Explicit</code> for Companies and defaults to <code>ExplicitAndFromParent</code> for Divisions.</p></div>
+<div class="block"><p>Determines whether the Business Unit can inherit Associates from a parent. Always <code>Explicit</code> for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Companies</a> and defaults to <code>ExplicitAndFromParent</code> for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Divisions</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>associateMode</code> - value to be set</dd>
@@ -613,7 +613,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="setAssociates(com.commercetools.api.models.business_unit.AssociateDraft...)">
 <h3>setAssociates</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setAssociates</span><wbr><span class="parameters">(<a href="AssociateDraft.html" title="interface in com.commercetools.api.models.business_unit">AssociateDraft</a>...&nbsp;associates)</span></div>
-<div class="block"><p>List of members that are part of the Business Unit in specific roles.</p></div>
+<div class="block"><p>List of members that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>associates</code> - values to be set</dd>
@@ -624,7 +624,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="setAssociates(java.util.List)">
 <h3>setAssociates</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setAssociates</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AssociateDraft.html" title="interface in com.commercetools.api.models.business_unit">AssociateDraft</a>&gt;&nbsp;associates)</span></div>
-<div class="block"><p>List of members that are part of the Business Unit in specific roles.</p></div>
+<div class="block"><p>List of members that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>associates</code> - values to be set</dd>
@@ -635,7 +635,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="setApprovalRuleMode(com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode)">
 <h3>setApprovalRuleMode</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setApprovalRuleMode</span><wbr><span class="parameters">(<a href="BusinessUnitApprovalRuleMode.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitApprovalRuleMode</a>&nbsp;approvalRuleMode)</span></div>
-<div class="block"><p>Determines whether the Business Unit can inherit Approval Rules from a parent. For Companies, the value of this field is always <code>Explicit</code>. For Divisions, the default value is <code>ExplicitAndFromParent</code>.</p></div>
+<div class="block"><p>Determines whether the Business Unit can inherit Approval Rules from a parent. For <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Companies</a>, the value of this field is always <code>Explicit</code>. For <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Divisions</a>, the default value is <code>ExplicitAndFromParent</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>approvalRuleMode</code> - value to be set</dd>
@@ -668,7 +668,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="setShippingAddresses(java.lang.Integer...)">
 <h3>setShippingAddresses</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setShippingAddresses</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>...&nbsp;shippingAddresses)</span></div>
-<div class="block"><p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p></div>
+<div class="block"><p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>shippingAddresses</code> - values to be set</dd>
@@ -679,7 +679,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="setShippingAddresses(java.util.List)">
 <h3>setShippingAddresses</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setShippingAddresses</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;shippingAddresses)</span></div>
-<div class="block"><p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p></div>
+<div class="block"><p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>shippingAddresses</code> - values to be set</dd>
@@ -701,7 +701,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="setBillingAddresses(java.lang.Integer...)">
 <h3>setBillingAddresses</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setBillingAddresses</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>...&nbsp;billingAddresses)</span></div>
-<div class="block"><p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p></div>
+<div class="block"><p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>billingAddresses</code> - values to be set</dd>
@@ -712,7 +712,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="setBillingAddresses(java.util.List)">
 <h3>setBillingAddresses</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setBillingAddresses</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;billingAddresses)</span></div>
-<div class="block"><p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p></div>
+<div class="block"><p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>billingAddresses</code> - values to be set</dd>

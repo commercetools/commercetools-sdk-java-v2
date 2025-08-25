@@ -130,7 +130,7 @@ extends <a href="../ResourceUpdate.html" title="interface in com.commercetools.a
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDryRun()" class="member-name-link">getDryRun</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">If set to <code>true</code>, the Order Edit is applied on the Order without persisting it.</div>
+<div class="block">If set to <code>true</code>, the Order Edit is applied on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> without persisting it.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVersion()" class="member-name-link">getVersion</a>()</code></div>
@@ -160,7 +160,7 @@ extends <a href="../ResourceUpdate.html" title="interface in com.commercetools.a
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setDryRun(java.lang.Boolean)" class="member-name-link">setDryRun</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;dryRun)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">If set to <code>true</code>, the Order Edit is applied on the Order without persisting it.</div>
+<div class="block">If set to <code>true</code>, the Order Edit is applied on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> without persisting it.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setVersion(java.lang.Long)" class="member-name-link">setVersion</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</code></div>
@@ -199,7 +199,7 @@ extends <a href="../ResourceUpdate.html" title="interface in com.commercetools.a
 <h3>getVersion</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getVersion</span>()</div>
-<div class="block"><p>Expected version of the Order Edit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p></div>
+<div class="block"><p>Expected version of the Order Edit on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourceUpdate.html#getVersion()">getVersion</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="OrderEditUpdate.html" title="interface in com.commercetools.api.models.order_edit">OrderEditUpdate</a>,<wbr><a href="OrderEditUpdateAction.html" title="interface in com.commercetools.api.models.order_edit">OrderEditUpdateAction</a>,<wbr><a href="OrderEditUpdateBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditUpdateBuilder</a>&gt;</code></dd>
@@ -227,7 +227,7 @@ extends <a href="../ResourceUpdate.html" title="interface in com.commercetools.a
 <section class="detail" id="getDryRun()">
 <h3>getDryRun</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getDryRun</span>()</div>
-<div class="block"><p>If set to <code>true</code>, the Order Edit is applied on the Order without persisting it.</p></div>
+<div class="block"><p>If set to <code>true</code>, the Order Edit is applied on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> without persisting it.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>dryRun</dd>
@@ -238,7 +238,7 @@ extends <a href="../ResourceUpdate.html" title="interface in com.commercetools.a
 <section class="detail" id="setVersion(java.lang.Long)">
 <h3>setVersion</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setVersion</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
-<div class="block"><p>Expected version of the Order Edit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p></div>
+<div class="block"><p>Expected version of the Order Edit on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourceUpdate.html#setVersion(java.lang.Long)">setVersion</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="OrderEditUpdate.html" title="interface in com.commercetools.api.models.order_edit">OrderEditUpdate</a>,<wbr><a href="OrderEditUpdateAction.html" title="interface in com.commercetools.api.models.order_edit">OrderEditUpdateAction</a>,<wbr><a href="OrderEditUpdateBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditUpdateBuilder</a>&gt;</code></dd>
@@ -275,7 +275,7 @@ extends <a href="../ResourceUpdate.html" title="interface in com.commercetools.a
 <section class="detail" id="setDryRun(java.lang.Boolean)">
 <h3>setDryRun</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setDryRun</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;dryRun)</span></div>
-<div class="block"><p>If set to <code>true</code>, the Order Edit is applied on the Order without persisting it.</p></div>
+<div class="block"><p>If set to <code>true</code>, the Order Edit is applied on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> without persisting it.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>dryRun</code> - value to be set</dd>

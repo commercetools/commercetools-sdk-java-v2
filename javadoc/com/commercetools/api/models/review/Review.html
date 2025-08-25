@@ -522,7 +522,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <h3>getTarget</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></span>&nbsp;<span class="element-name">getTarget</span>()</div>
-<div class="block"><p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p></div>
+<div class="block"><p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelReference" rel="nofollow">ChannelReference</a>. A referenced resource can be embedded through <span>Reference Expansion</span>. The expanded reference is the value of an additional <code>obj</code> field then.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>target</dd>
@@ -534,7 +534,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <h3>getIncludedInStatistics</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getIncludedInStatistics</span>()</div>
-<div class="block"><p>Indicates if this Review is taken into account in the ratings statistics of the target. A Review is per default used in the statistics, unless the Review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p></div>
+<div class="block"><p>Indicates if this Review is taken into account in the ratings statistics of the target. A Review is per default used in the statistics, unless the Review is in a state that does not have the <a href="https://docs.commercetools.com/apis/ctp:api:type:StateRoleEnum" rel="nofollow">role</a> <code>ReviewIncludedInStatistics</code>. If the role of a <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> is modified after the calculation of this field, the calculation is not updated.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>includedInStatistics</dd>
@@ -557,7 +557,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <h3>getState</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></span>&nbsp;<span class="element-name">getState</span>()</div>
-<div class="block"><p>State of the Review. Used for approval processes, see Review approval process for details.</p></div>
+<div class="block"><p>State of the Review. Used for approval processes, see <span>Review approval process</span> for details.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>state</dd>
@@ -734,7 +734,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <section class="detail" id="setTarget(com.commercetools.api.models.common.Reference)">
 <h3>setTarget</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTarget</span><wbr><span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;target)</span></div>
-<div class="block"><p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p></div>
+<div class="block"><p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelReference" rel="nofollow">ChannelReference</a>. A referenced resource can be embedded through <span>Reference Expansion</span>. The expanded reference is the value of an additional <code>obj</code> field then.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>target</code> - value to be set</dd>
@@ -745,7 +745,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <section class="detail" id="setIncludedInStatistics(java.lang.Boolean)">
 <h3>setIncludedInStatistics</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setIncludedInStatistics</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;includedInStatistics)</span></div>
-<div class="block"><p>Indicates if this Review is taken into account in the ratings statistics of the target. A Review is per default used in the statistics, unless the Review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p></div>
+<div class="block"><p>Indicates if this Review is taken into account in the ratings statistics of the target. A Review is per default used in the statistics, unless the Review is in a state that does not have the <a href="https://docs.commercetools.com/apis/ctp:api:type:StateRoleEnum" rel="nofollow">role</a> <code>ReviewIncludedInStatistics</code>. If the role of a <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> is modified after the calculation of this field, the calculation is not updated.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>includedInStatistics</code> - value to be set</dd>
@@ -767,7 +767,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <section class="detail" id="setState(com.commercetools.api.models.state.StateReference)">
 <h3>setState</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setState</span><wbr><span class="parameters">(<a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&nbsp;state)</span></div>
-<div class="block"><p>State of the Review. Used for approval processes, see Review approval process for details.</p></div>
+<div class="block"><p>State of the Review. Used for approval processes, see <span>Review approval process</span> for details.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>state</code> - value to be set</dd>

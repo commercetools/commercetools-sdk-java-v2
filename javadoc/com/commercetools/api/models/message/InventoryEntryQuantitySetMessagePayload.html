@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">InventoryEntryQuantitySetMessagePayload</span><span class="extends-implements">
 extends <a href="MessagePayload.html" title="interface in com.commercetools.api.models.message">MessagePayload</a></span></div>
-<div class="block"><p>Generated after a successful Add Quantity, Remove Quantity or Change Quantity update action. Inventory changes as a result of Order creation do not trigger this message.</p>
+<div class="block"><p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntryAddQuantityAction" rel="nofollow">Add Quantity</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntryRemoveQuantityAction" rel="nofollow">Remove Quantity</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntryChangeQuantityAction" rel="nofollow">Change Quantity</a> update action. Inventory changes as a result of <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders:POST" rel="nofollow">Order creation</a> do not trigger this message.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -144,27 +144,27 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNewAvailableQuantity()" class="member-name-link">getNewAvailableQuantity</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Available quantity for the InventoryEntry after the quantity was updated.</div>
+<div class="block">Available quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> after the quantity was updated.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNewQuantityOnStock()" class="member-name-link">getNewQuantityOnStock</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Quantity on stock for the InventoryEntry after the quantity was updated.</div>
+<div class="block">Quantity on stock for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> after the quantity was updated.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOldAvailableQuantity()" class="member-name-link">getOldAvailableQuantity</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Available quantity for the InventoryEntry before the quantity was updated.</div>
+<div class="block">Available quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> before the quantity was updated.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOldQuantityOnStock()" class="member-name-link">getOldQuantityOnStock</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Quantity on stock for the InventoryEntry before the quantity was updated.</div>
+<div class="block">Quantity on stock for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> before the quantity was updated.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSupplyChannel()" class="member-name-link">getSupplyChannel</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Reference to the Channel where the InventoryEntry quantity was set.</div>
+<div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> where the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> quantity was set.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="InventoryEntryQuantitySetMessagePayload.html" title="interface in com.commercetools.api.models.message">InventoryEntryQuantitySetMessagePayload</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -179,27 +179,27 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setNewAvailableQuantity(java.lang.Long)" class="member-name-link">setNewAvailableQuantity</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;newAvailableQuantity)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Available quantity for the InventoryEntry after the quantity was updated.</div>
+<div class="block">Available quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> after the quantity was updated.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setNewQuantityOnStock(java.lang.Long)" class="member-name-link">setNewQuantityOnStock</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;newQuantityOnStock)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Quantity on stock for the InventoryEntry after the quantity was updated.</div>
+<div class="block">Quantity on stock for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> after the quantity was updated.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setOldAvailableQuantity(java.lang.Long)" class="member-name-link">setOldAvailableQuantity</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;oldAvailableQuantity)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Available quantity for the InventoryEntry before the quantity was updated.</div>
+<div class="block">Available quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> before the quantity was updated.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setOldQuantityOnStock(java.lang.Long)" class="member-name-link">setOldQuantityOnStock</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;oldQuantityOnStock)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Quantity on stock for the InventoryEntry before the quantity was updated.</div>
+<div class="block">Quantity on stock for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> before the quantity was updated.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setSupplyChannel(com.commercetools.api.models.channel.ChannelReference)" class="member-name-link">setSupplyChannel</a><wbr>(<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;supplyChannel)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Reference to the Channel where the InventoryEntry quantity was set.</div>
+<div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> where the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> quantity was set.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="InventoryEntryQuantitySetMessagePayload.html" title="interface in com.commercetools.api.models.message">InventoryEntryQuantitySetMessagePayload</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -259,7 +259,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <h3>getOldQuantityOnStock</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getOldQuantityOnStock</span>()</div>
-<div class="block"><p>Quantity on stock for the InventoryEntry before the quantity was updated.</p></div>
+<div class="block"><p>Quantity on stock for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> before the quantity was updated.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>oldQuantityOnStock</dd>
@@ -271,7 +271,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <h3>getNewQuantityOnStock</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getNewQuantityOnStock</span>()</div>
-<div class="block"><p>Quantity on stock for the InventoryEntry after the quantity was updated.</p></div>
+<div class="block"><p>Quantity on stock for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> after the quantity was updated.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>newQuantityOnStock</dd>
@@ -283,7 +283,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <h3>getOldAvailableQuantity</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getOldAvailableQuantity</span>()</div>
-<div class="block"><p>Available quantity for the InventoryEntry before the quantity was updated.</p></div>
+<div class="block"><p>Available quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> before the quantity was updated.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>oldAvailableQuantity</dd>
@@ -295,7 +295,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <h3>getNewAvailableQuantity</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getNewAvailableQuantity</span>()</div>
-<div class="block"><p>Available quantity for the InventoryEntry after the quantity was updated.</p></div>
+<div class="block"><p>Available quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> after the quantity was updated.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>newAvailableQuantity</dd>
@@ -307,7 +307,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <h3>getSupplyChannel</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a></span>&nbsp;<span class="element-name">getSupplyChannel</span>()</div>
-<div class="block"><p>Reference to the Channel where the InventoryEntry quantity was set.</p></div>
+<div class="block"><p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> where the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> quantity was set.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>supplyChannel</dd>
@@ -318,7 +318,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <section class="detail" id="setOldQuantityOnStock(java.lang.Long)">
 <h3>setOldQuantityOnStock</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setOldQuantityOnStock</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;oldQuantityOnStock)</span></div>
-<div class="block"><p>Quantity on stock for the InventoryEntry before the quantity was updated.</p></div>
+<div class="block"><p>Quantity on stock for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> before the quantity was updated.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>oldQuantityOnStock</code> - value to be set</dd>
@@ -329,7 +329,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <section class="detail" id="setNewQuantityOnStock(java.lang.Long)">
 <h3>setNewQuantityOnStock</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setNewQuantityOnStock</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;newQuantityOnStock)</span></div>
-<div class="block"><p>Quantity on stock for the InventoryEntry after the quantity was updated.</p></div>
+<div class="block"><p>Quantity on stock for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> after the quantity was updated.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>newQuantityOnStock</code> - value to be set</dd>
@@ -340,7 +340,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <section class="detail" id="setOldAvailableQuantity(java.lang.Long)">
 <h3>setOldAvailableQuantity</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setOldAvailableQuantity</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;oldAvailableQuantity)</span></div>
-<div class="block"><p>Available quantity for the InventoryEntry before the quantity was updated.</p></div>
+<div class="block"><p>Available quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> before the quantity was updated.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>oldAvailableQuantity</code> - value to be set</dd>
@@ -351,7 +351,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <section class="detail" id="setNewAvailableQuantity(java.lang.Long)">
 <h3>setNewAvailableQuantity</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setNewAvailableQuantity</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;newAvailableQuantity)</span></div>
-<div class="block"><p>Available quantity for the InventoryEntry after the quantity was updated.</p></div>
+<div class="block"><p>Available quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> after the quantity was updated.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>newAvailableQuantity</code> - value to be set</dd>
@@ -362,7 +362,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <section class="detail" id="setSupplyChannel(com.commercetools.api.models.channel.ChannelReference)">
 <h3>setSupplyChannel</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setSupplyChannel</span><wbr><span class="parameters">(<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;supplyChannel)</span></div>
-<div class="block"><p>Reference to the Channel where the InventoryEntry quantity was set.</p></div>
+<div class="block"><p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> where the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> quantity was set.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>supplyChannel</code> - value to be set</dd>

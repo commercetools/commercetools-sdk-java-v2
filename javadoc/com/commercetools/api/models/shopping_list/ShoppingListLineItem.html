@@ -78,8 +78,8 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ShoppingListLineItem</span><span class="extends-implements">
 extends <a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a>&lt;<a href="ShoppingListLineItem.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListLineItem</a>&gt;</span></div>
-<div class="block"><p>ShoppingListLineItems are Line Items that contain references to ProductVariants in a Product.</p>
-  <p>In addition to standard Reference Expansion, a ShoppingListLineItem offers expansion on <code>productSlug</code> and <code>variant</code>, defined with the query parameter <code>expand</code>.</p>
+<div class="block"><p>ShoppingListLineItems are Line Items that contain references to <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
+  <p>In addition to standard <span>Reference Expansion</span>, a ShoppingListLineItem offers expansion on <code>productSlug</code> and <code>variant</code>, defined with the query parameter <code>expand</code>.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -161,22 +161,22 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getProductId()" class="member-name-link">getProductId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Unique identifier of a Product.</div>
+<div class="block">Unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getProductSlug()" class="member-name-link">getProductSlug</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Slug of the current ProductData.</div>
+<div class="block">Slug of the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductData" rel="nofollow">ProductData</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../product_type/ProductTypeReference.html" title="interface in com.commercetools.api.models.product_type">ProductTypeReference</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getProductType()" class="member-name-link">getProductType</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The Product Type defining the Attributes of the Product.</div>
+<div class="block">The Product Type defining the Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPublished()" class="member-name-link">getPublished</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Whether the related Product is published or not.</div>
+<div class="block">Whether the related <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> is published or not.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getQuantity()" class="member-name-link">getQuantity</a>()</code></div>
@@ -186,12 +186,12 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../product/ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVariant()" class="member-name-link">getVariant</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Data of the ProductVariant.</div>
+<div class="block">Data of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVariantId()" class="member-name-link">getVariantId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>id</code> of the ProductVariant the ShoppingListLineItem refers to.</div>
+<div class="block"><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> the ShoppingListLineItem refers to.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ShoppingListLineItem.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListLineItem</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -236,22 +236,22 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setProductId(java.lang.String)" class="member-name-link">setProductId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;productId)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Unique identifier of a Product.</div>
+<div class="block">Unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setProductSlug(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">setProductSlug</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;productSlug)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Slug of the current ProductData.</div>
+<div class="block">Slug of the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductData" rel="nofollow">ProductData</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setProductType(com.commercetools.api.models.product_type.ProductTypeReference)" class="member-name-link">setProductType</a><wbr>(<a href="../product_type/ProductTypeReference.html" title="interface in com.commercetools.api.models.product_type">ProductTypeReference</a>&nbsp;productType)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The Product Type defining the Attributes of the Product.</div>
+<div class="block">The Product Type defining the Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setPublished(java.lang.Boolean)" class="member-name-link">setPublished</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;published)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Whether the related Product is published or not.</div>
+<div class="block">Whether the related <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> is published or not.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setQuantity(java.lang.Long)" class="member-name-link">setQuantity</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantity)</code></div>
@@ -261,12 +261,12 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setVariant(com.commercetools.api.models.product.ProductVariant)" class="member-name-link">setVariant</a><wbr>(<a href="../product/ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&nbsp;variant)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Data of the ProductVariant.</div>
+<div class="block">Data of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setVariantId(java.lang.Long)" class="member-name-link">setVariantId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;variantId)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>id</code> of the ProductVariant the ShoppingListLineItem refers to.</div>
+<div class="block"><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> the ShoppingListLineItem refers to.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ShoppingListLineItem.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListLineItem</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -326,7 +326,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <h3>getDeactivatedAt</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getDeactivatedAt</span>()</div>
 <div class="block"><p>If the Product or Product Variant is deleted, <code>deactivatedAt</code> is the date and time (UTC) of deletion.</p>
-  <p>This data is updated in an eventual consistent manner when the Product Variant cannot be ordered anymore.</p></div>
+  <p>This data is updated in an <span>eventual consistent manner</span> when the Product Variant cannot be ordered anymore.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>deactivatedAt</dd>
@@ -349,7 +349,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
-<div class="block"><p>User-defined identifier of the ShoppingListLineItem. It is unique per ShoppingList.</p></div>
+<div class="block"><p>User-defined identifier of the ShoppingListLineItem. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>key</dd>
@@ -363,7 +363,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name">getName</span>()</div>
 <div class="block"><p>Name of the Product.</p>
-  <p>This data is updated in an eventual consistent manner when the Product's name changes.</p></div>
+  <p>This data is updated in an <span>eventual consistent manner</span> when the Product's name changes.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>name</dd>
@@ -375,7 +375,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <h3>getProductId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getProductId</span>()</div>
-<div class="block"><p>Unique identifier of a Product.</p></div>
+<div class="block"><p>Unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>productId</dd>
@@ -388,7 +388,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="../product_type/ProductTypeReference.html" title="interface in com.commercetools.api.models.product_type">ProductTypeReference</a></span>&nbsp;<span class="element-name">getProductType</span>()</div>
-<div class="block"><p>The Product Type defining the Attributes of the Product.</p></div>
+<div class="block"><p>The Product Type defining the Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>productType</dd>
@@ -400,8 +400,8 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <h3>getPublished</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getPublished</span>()</div>
-<div class="block"><p>Whether the related Product is published or not.</p>
-  <p>This data is updated in an eventual consistent manner when the Product's published status changes.</p></div>
+<div class="block"><p>Whether the related <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> is published or not.</p>
+  <p>This data is updated in an <span>eventual consistent manner</span> when the Product's published status changes.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>published</dd>
@@ -424,7 +424,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <section class="detail" id="getVariantId()">
 <h3>getVariantId</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getVariantId</span>()</div>
-<div class="block"><p><code>id</code> of the ProductVariant the ShoppingListLineItem refers to. If not set, the ShoppingListLineItem refers to the Master Variant.</p></div>
+<div class="block"><p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> the ShoppingListLineItem refers to. If not set, the ShoppingListLineItem refers to the Master Variant.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>variantId</dd>
@@ -436,7 +436,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <h3>getVariant</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../product/ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a></span>&nbsp;<span class="element-name">getVariant</span>()</div>
-<div class="block"><p>Data of the ProductVariant. This data includes all the Product Attributes and Variant Attributes to ensure the full Attribute context of the Product Variant.</p>
+<div class="block"><p>Data of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. This data includes all the Product Attributes and Variant Attributes to ensure the full Attribute context of the Product Variant.</p>
   <p>Returned when expanded using <code>expand=lineItems[*].variant</code>. You cannot expand only a single element of the array.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -449,7 +449,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <h3>getProductSlug</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name">getProductSlug</span>()</div>
-<div class="block"><p>Slug of the current ProductData.</p>
+<div class="block"><p>Slug of the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductData" rel="nofollow">ProductData</a>.</p>
   <p>Returned when expanded using <code>expand=lineItems[*].productSlug</code>. You cannot expand only a single element of the array.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -486,7 +486,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <h3>setDeactivatedAt</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setDeactivatedAt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;deactivatedAt)</span></div>
 <div class="block"><p>If the Product or Product Variant is deleted, <code>deactivatedAt</code> is the date and time (UTC) of deletion.</p>
-  <p>This data is updated in an eventual consistent manner when the Product Variant cannot be ordered anymore.</p></div>
+  <p>This data is updated in an <span>eventual consistent manner</span> when the Product Variant cannot be ordered anymore.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>deactivatedAt</code> - value to be set</dd>
@@ -508,7 +508,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
-<div class="block"><p>User-defined identifier of the ShoppingListLineItem. It is unique per ShoppingList.</p></div>
+<div class="block"><p>User-defined identifier of the ShoppingListLineItem. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>key</code> - value to be set</dd>
@@ -520,7 +520,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <h3>setName</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setName</span><wbr><span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</span></div>
 <div class="block"><p>Name of the Product.</p>
-  <p>This data is updated in an eventual consistent manner when the Product's name changes.</p></div>
+  <p>This data is updated in an <span>eventual consistent manner</span> when the Product's name changes.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>name</code> - value to be set</dd>
@@ -531,7 +531,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <section class="detail" id="setProductId(java.lang.String)">
 <h3>setProductId</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setProductId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;productId)</span></div>
-<div class="block"><p>Unique identifier of a Product.</p></div>
+<div class="block"><p>Unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>productId</code> - value to be set</dd>
@@ -542,7 +542,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <section class="detail" id="setProductType(com.commercetools.api.models.product_type.ProductTypeReference)">
 <h3>setProductType</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setProductType</span><wbr><span class="parameters">(<a href="../product_type/ProductTypeReference.html" title="interface in com.commercetools.api.models.product_type">ProductTypeReference</a>&nbsp;productType)</span></div>
-<div class="block"><p>The Product Type defining the Attributes of the Product.</p></div>
+<div class="block"><p>The Product Type defining the Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>productType</code> - value to be set</dd>
@@ -553,8 +553,8 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <section class="detail" id="setPublished(java.lang.Boolean)">
 <h3>setPublished</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setPublished</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;published)</span></div>
-<div class="block"><p>Whether the related Product is published or not.</p>
-  <p>This data is updated in an eventual consistent manner when the Product's published status changes.</p></div>
+<div class="block"><p>Whether the related <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> is published or not.</p>
+  <p>This data is updated in an <span>eventual consistent manner</span> when the Product's published status changes.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>published</code> - value to be set</dd>
@@ -576,7 +576,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <section class="detail" id="setVariantId(java.lang.Long)">
 <h3>setVariantId</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setVariantId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;variantId)</span></div>
-<div class="block"><p><code>id</code> of the ProductVariant the ShoppingListLineItem refers to. If not set, the ShoppingListLineItem refers to the Master Variant.</p></div>
+<div class="block"><p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> the ShoppingListLineItem refers to. If not set, the ShoppingListLineItem refers to the Master Variant.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>variantId</code> - value to be set</dd>
@@ -587,7 +587,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <section class="detail" id="setVariant(com.commercetools.api.models.product.ProductVariant)">
 <h3>setVariant</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setVariant</span><wbr><span class="parameters">(<a href="../product/ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&nbsp;variant)</span></div>
-<div class="block"><p>Data of the ProductVariant. This data includes all the Product Attributes and Variant Attributes to ensure the full Attribute context of the Product Variant.</p>
+<div class="block"><p>Data of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. This data includes all the Product Attributes and Variant Attributes to ensure the full Attribute context of the Product Variant.</p>
   <p>Returned when expanded using <code>expand=lineItems[*].variant</code>. You cannot expand only a single element of the array.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -599,7 +599,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <section class="detail" id="setProductSlug(com.commercetools.api.models.common.LocalizedString)">
 <h3>setProductSlug</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setProductSlug</span><wbr><span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;productSlug)</span></div>
-<div class="block"><p>Slug of the current ProductData.</p>
+<div class="block"><p>Slug of the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductData" rel="nofollow">ProductData</a>.</p>
   <p>Returned when expanded using <code>expand=lineItems[*].productSlug</code>. You cannot expand only a single element of the array.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>

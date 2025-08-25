@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ProductSetDiscountedPriceAction</span><span class="extends-implements">
 extends <a href="ProductUpdateAction.html" title="interface in com.commercetools.api.models.product">ProductUpdateAction</a></span></div>
-<div class="block"><p>Produces the ProductPriceExternalDiscountSet Message.</p>
+<div class="block"><p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPriceExternalDiscountSetMessage" rel="nofollow">ProductPriceExternalDiscountSet</a> Message.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -146,7 +146,7 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPriceId()" class="member-name-link">getPriceId</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The <code>id</code> of the Price to set the Discount.</div>
+<div class="block">The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> to set the Discount.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStaged()" class="member-name-link">getStaged</a>()</code></div>
@@ -171,7 +171,7 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setPriceId(java.lang.String)" class="member-name-link">setPriceId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;priceId)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The <code>id</code> of the Price to set the Discount.</div>
+<div class="block">The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> to set the Discount.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setStaged(java.lang.Boolean)" class="member-name-link">setStaged</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</code></div>
@@ -236,7 +236,7 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <h3>getPriceId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getPriceId</span>()</div>
-<div class="block"><p>The <code>id</code> of the Price to set the Discount.</p></div>
+<div class="block"><p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> to set the Discount.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>priceId</dd>
@@ -259,7 +259,7 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <h3>getDiscounted</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/DiscountedPriceDraft.html" title="interface in com.commercetools.api.models.common">DiscountedPriceDraft</a></span>&nbsp;<span class="element-name">getDiscounted</span>()</div>
-<div class="block"><p>Value to set. If empty, any existing value will be removed. The referenced ProductDiscount must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p></div>
+<div class="block"><p>Value to set. If empty, any existing value will be removed. The referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>discounted</dd>
@@ -270,7 +270,7 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="setPriceId(java.lang.String)">
 <h3>setPriceId</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setPriceId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;priceId)</span></div>
-<div class="block"><p>The <code>id</code> of the Price to set the Discount.</p></div>
+<div class="block"><p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> to set the Discount.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>priceId</code> - value to be set</dd>
@@ -292,7 +292,7 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="setDiscounted(com.commercetools.api.models.common.DiscountedPriceDraft)">
 <h3>setDiscounted</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setDiscounted</span><wbr><span class="parameters">(<a href="../common/DiscountedPriceDraft.html" title="interface in com.commercetools.api.models.common">DiscountedPriceDraft</a>&nbsp;discounted)</span></div>
-<div class="block"><p>Value to set. If empty, any existing value will be removed. The referenced ProductDiscount must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p></div>
+<div class="block"><p>Value to set. If empty, any existing value will be removed. The referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>discounted</code> - value to be set</dd>

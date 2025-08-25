@@ -79,7 +79,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">StagedOrderSetCustomerGroupAction</span><span class="extends-implements">
 extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a></span></div>
 <div class="block"><p>This update action can only be used if a Customer is not assigned to a Cart. If a Customer is already assigned, the Cart uses the Customer Group of the assigned Customer.</p>
-  <p>To reflect the new Customer Group, this update action can result in updates to the Cart. When this occurs, the following errors can be returned: MatchingPriceNotFound and MissingTaxRateForCountry.</p>
+  <p>To reflect the new Customer Group, this update action can result in <span>updates to the Cart</span>. When this occurs, the following errors can be returned: <a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a>.</p>
 
  <hr>
  Example to create an instance using the builder pattern

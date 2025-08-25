@@ -86,12 +86,12 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ByProjectKeyMeActiveCartGet</span>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/TypeApiMethod.html" title="class in io.vrap.rmf.base.client">TypeApiMethod</a>&lt;<a href="ByProjectKeyMeActiveCartGet.html" title="class in com.commercetools.api.client">ByProjectKeyMeActiveCartGet</a>,<wbr><a href="../models/cart/Cart.html" title="interface in com.commercetools.api.models.cart">Cart</a>&gt;
 implements <a href="ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="ByProjectKeyMeActiveCartGet.html" title="class in com.commercetools.api.client">ByProjectKeyMeActiveCartGet</a>&gt;, <a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyMeActiveCartGet.html" title="class in com.commercetools.api.client">ByProjectKeyMeActiveCartGet</a>&gt;, <a href="Deprecatable200Trait.html" title="interface in com.commercetools.api.client">Deprecatable200Trait</a>&lt;<a href="ByProjectKeyMeActiveCartGet.html" title="class in com.commercetools.api.client">ByProjectKeyMeActiveCartGet</a>&gt;</span></div>
-<div class="block"><p>Retrieves the Customer's most recently modified active Cart. Returns a <code>200</code> status if successful.</p>
-  <p>Carts with <code>Merchant</code> or <code>Quote</code> CartOrigin are ignored.</p>
-  <p>A ResourceNotFound error is returned in the following scenarios:</p>
+<div class="block"><p>Retrieves the Customer's most recently modified <a href="https://docs.commercetools.com/apis/ctp:api:type:CartState" rel="nofollow">active Cart</a>. Returns a <code>200</code> status if successful.</p>
+  <p>Carts with <code>Merchant</code> or <code>Quote</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:CartOrigin" rel="nofollow">CartOrigin</a> are ignored.</p>
+  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error is returned in the following scenarios:</p>
   <ul>
    <li>If no active Cart exists.</li>
-   <li>If an active Cart exists but does not have a <code>customerId</code> that matches the customer:{id} scope, or <code>anonymousId</code> that matches the anonymous_id:{id} scope.</li>
+   <li>If an active Cart exists but does not have a <code>customerId</code> that matches the <span>customer:{id}</span> scope, or <code>anonymousId</code> that matches the <span>anonymous_id:{id}</span> scope.</li>
   </ul>
 
  <hr>

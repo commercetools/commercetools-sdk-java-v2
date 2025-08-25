@@ -83,7 +83,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">DiscountCodeState</span><span class="extends-implements">
 extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="interface in io.vrap.rmf.base.client">JsonEnum</a></span></div>
 <div class="block"><p>Indicates the state of a Discount Code in a Cart.</p>
-  <p>If an Order is created from a Cart with a state other than <code>MatchesCart</code> or <code>ApplicationStoppedByGroupBestDeal</code>, a DiscountCodeNonApplicable error is returned.</p>
+  <p>If an Order is created from a Cart with a state other than <code>MatchesCart</code> or <code>ApplicationStoppedByGroupBestDeal</code>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeNonApplicableError" rel="nofollow">DiscountCodeNonApplicable</a> error is returned.</p>
   <p>For Orders created from a Cart with a <code>ApplicationStoppedByGroupBestDeal</code> state, the discount code is not applied.</p></div>
 </section>
 <section class="summary">
@@ -122,7 +122,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <div class="col-first odd-row-color"><code>static final <a href="DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT" class="member-name-link">APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">The Discount Code is active, but further Cart Discounts are not applied as a Cart Discount with <code>StopAfterThisDiscount</code> StackingMode is applied.</div>
+<div class="block">The Discount Code is active, but further Cart Discounts are not applied as a Cart Discount with <code>StopAfterThisDiscount</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:StackingMode" rel="nofollow">StackingMode</a> is applied.</div>
 </div>
 <div class="col-first even-row-color"><code>static final <a href="DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></code></div>
 <div class="col-second even-row-color"><code><a href="#DOES_NOT_MATCH_CART" class="member-name-link">DOES_NOT_MATCH_CART</a></code></div>
@@ -137,7 +137,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <div class="col-first even-row-color"><code>static final <a href="DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></code></div>
 <div class="col-second even-row-color"><code><a href="#MAX_APPLICATION_REACHED" class="member-name-link">MAX_APPLICATION_REACHED</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">The <code>maxApplications</code> or <code>maxApplicationsPerCustomer</code> for a DiscountCode has been reached.</div>
+<div class="block">The <code>maxApplications</code> or <code>maxApplicationsPerCustomer</code> for a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> has been reached.</div>
 </div>
 <div class="col-first odd-row-color"><code>static final <a href="DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#NOT_ACTIVE" class="member-name-link">NOT_ACTIVE</a></code></div>
@@ -219,35 +219,35 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <section class="detail" id="NOT_VALID">
 <h3>NOT_VALID</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></span>&nbsp;<span class="element-name">NOT_VALID</span></div>
-<div class="block"><p>The Discount Code is not valid or does not contain any valid Cart Discounts. Validity is determined by the CartDiscount <code>validFrom</code> and <code>validUntil</code> dates.</p></div>
+<div class="block"><p>The Discount Code is not valid or does not contain any valid Cart Discounts. Validity is determined by the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a> <code>validFrom</code> and <code>validUntil</code> dates.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="DOES_NOT_MATCH_CART">
 <h3>DOES_NOT_MATCH_CART</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></span>&nbsp;<span class="element-name">DOES_NOT_MATCH_CART</span></div>
-<div class="block"><p>The Discount Code is active and contains at least one active and valid Cart Discount. The DiscountCode <code>cartPredicate</code> does not match the Cart or the contained active discount's cart predicates do not match the Cart.</p></div>
+<div class="block"><p>The Discount Code is active and contains at least one active and valid Cart Discount. The <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> <code>cartPredicate</code> does not match the Cart or the contained active discount's cart predicates do not match the Cart.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="MATCHES_CART">
 <h3>MATCHES_CART</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></span>&nbsp;<span class="element-name">MATCHES_CART</span></div>
-<div class="block"><p>The Discount Code is active and contains at least one active and valid Cart Discount. The DiscountCode <code>cartPredicate</code> matches the Cart and at least one of the contained active discount's cart predicates matches the Cart.</p></div>
+<div class="block"><p>The Discount Code is active and contains at least one active and valid Cart Discount. The <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> <code>cartPredicate</code> matches the Cart and at least one of the contained active discount's cart predicates matches the Cart.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="MAX_APPLICATION_REACHED">
 <h3>MAX_APPLICATION_REACHED</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></span>&nbsp;<span class="element-name">MAX_APPLICATION_REACHED</span></div>
-<div class="block"><p>The <code>maxApplications</code> or <code>maxApplicationsPerCustomer</code> for a DiscountCode has been reached.</p></div>
+<div class="block"><p>The <code>maxApplications</code> or <code>maxApplicationsPerCustomer</code> for a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> has been reached.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT">
 <h3>APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></span>&nbsp;<span class="element-name">APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT</span></div>
-<div class="block"><p>The Discount Code is active, but further Cart Discounts are not applied as a Cart Discount with <code>StopAfterThisDiscount</code> StackingMode is applied.</p></div>
+<div class="block"><p>The Discount Code is active, but further Cart Discounts are not applied as a Cart Discount with <code>StopAfterThisDiscount</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:StackingMode" rel="nofollow">StackingMode</a> is applied.</p></div>
 </section>
 </li>
 <li>

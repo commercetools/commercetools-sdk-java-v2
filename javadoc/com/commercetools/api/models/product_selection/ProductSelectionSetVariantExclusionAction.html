@@ -78,8 +78,8 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ProductSelectionSetVariantExclusionAction</span><span class="extends-implements">
 extends <a href="ProductSelectionUpdateAction.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionUpdateAction</a></span></div>
-<div class="block"><p>Updates the Product Variant Exclusion of an existing Product Selection Assignment. A ProductVariantExclusion can only be set if the Product has already been excluded from the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
-  <p>If the specified Product is not assigned to the Product Selection, a ProductAssignmentMissing error is returned.</p>
+<div class="block"><p>Updates the Product Variant Exclusion of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionAssignment" rel="nofollow">Product Selection Assignment</a>. A <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantExclusion" rel="nofollow">ProductVariantExclusion</a> can only be set if the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> has already been excluded from the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a> with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</p>
+  <p>If the specified Product is not assigned to the Product Selection, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductAssignmentMissingError" rel="nofollow">ProductAssignmentMissing</a> error is returned.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -147,7 +147,7 @@ extends <a href="ProductSelectionUpdateAction.html" title="interface in com.comm
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="ProductVariantExclusion.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantExclusion</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVariantExclusion()" class="member-name-link">getVariantExclusion</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</div>
+<div class="block">Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProductSelectionSetVariantExclusionAction.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionSetVariantExclusionAction</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -167,7 +167,7 @@ extends <a href="ProductSelectionUpdateAction.html" title="interface in com.comm
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setVariantExclusion(com.commercetools.api.models.product_selection.ProductVariantExclusion)" class="member-name-link">setVariantExclusion</a><wbr>(<a href="ProductVariantExclusion.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantExclusion</a>&nbsp;variantExclusion)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</div>
+<div class="block">Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductSelectionSetVariantExclusionAction.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionSetVariantExclusionAction</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -240,7 +240,7 @@ extends <a href="ProductSelectionUpdateAction.html" title="interface in com.comm
 <h3>getVariantExclusion</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="ProductVariantExclusion.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantExclusion</a></span>&nbsp;<span class="element-name">getVariantExclusion</span>()</div>
-<div class="block"><p>Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. Leave it empty to unset an existing Variant Exclusion.</p></div>
+<div class="block"><p>Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. Leave it empty to unset an existing Variant Exclusion.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>variantExclusion</dd>
@@ -262,7 +262,7 @@ extends <a href="ProductSelectionUpdateAction.html" title="interface in com.comm
 <section class="detail" id="setVariantExclusion(com.commercetools.api.models.product_selection.ProductVariantExclusion)">
 <h3>setVariantExclusion</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setVariantExclusion</span><wbr><span class="parameters">(<a href="ProductVariantExclusion.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantExclusion</a>&nbsp;variantExclusion)</span></div>
-<div class="block"><p>Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. Leave it empty to unset an existing Variant Exclusion.</p></div>
+<div class="block"><p>Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. Leave it empty to unset an existing Variant Exclusion.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>variantExclusion</code> - value to be set</dd>

@@ -88,9 +88,9 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost</span>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/TypeBodyApiMethod.html" title="class in io.vrap.rmf.base.client">TypeBodyApiMethod</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost</a>,<wbr><a href="../models/customer/CustomerToken.html" title="interface in com.commercetools.api.models.customer">CustomerToken</a>,<wbr><a href="../models/customer/CustomerCreateEmailToken.html" title="interface in com.commercetools.api.models.customer">CustomerCreateEmailToken</a>&gt;
 implements <a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost</a>&gt;</span></div>
-<div class="block"><p>Use this method to create an email token for a Store-specific Customer during their email verification process.</p>
-  <p>If the Customer exists in the Project but the <code>stores</code> field references a different Store, this method returns a ResourceNotFound error.</p>
-  <p>Creating an email token for the Customer produces the CustomerEmailTokenCreated Message. The Message will include the token's value, if the token's validity is 60 minutes or less.</p>
+<div class="block"><p>Use this method to create an email token for a Store-specific Customer during their <span>email verification process</span>.</p>
+  <p>If the Customer exists in the Project but the <code>stores</code> field references a different Store, this method returns a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error.</p>
+  <p>Creating an email token for the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerEmailTokenCreatedMessage" rel="nofollow">CustomerEmailTokenCreated</a> Message. The Message will include the token's value, if the token's validity is 60 minutes or less.</p>
 
  <hr>
  <div class=code-example>

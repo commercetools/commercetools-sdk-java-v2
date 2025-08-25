@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">CartScoreTier</span><span class="extends-implements">
 extends <a href="ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a></span></div>
-<div class="block"><p>The ShippingRate maps to an abstract Cart categorization expressed by integers (such as shipping scores or weight ranges). Either <code>price</code> or <code>priceFunction</code> is required.</p>
+<div class="block"><p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> maps to an abstract Cart categorization expressed by integers (such as shipping scores or weight ranges). Either <code>price</code> or <code>priceFunction</code> is required.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -141,7 +141,7 @@ extends <a href="ShippingRatePriceTier.html" title="interface in com.commercetoo
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getIsMatching()" class="member-name-link">getIsMatching</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</div>
+<div class="block">Appears in response to <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-cart:GET" rel="nofollow">Get ShippingMethods for a Cart</a> if the shipping rate matches the search query.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPrice()" class="member-name-link">getPrice</a>()</code></div>
@@ -171,7 +171,7 @@ extends <a href="ShippingRatePriceTier.html" title="interface in com.commercetoo
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setIsMatching(java.lang.Boolean)" class="member-name-link">setIsMatching</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isMatching)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</div>
+<div class="block">Appears in response to <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-cart:GET" rel="nofollow">Get ShippingMethods for a Cart</a> if the shipping rate matches the search query.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setPrice(com.commercetools.api.models.common.Money)" class="member-name-link">setPrice</a><wbr>(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;price)</code></div>
@@ -243,7 +243,7 @@ extends <a href="ShippingRatePriceTier.html" title="interface in com.commercetoo
 <h3>getScore</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getScore</span>()</div>
-<div class="block"><p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See Tiered shipping rates for details and examples.</p></div>
+<div class="block"><p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See <span>Tiered shipping rates</span> for details and examples.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>score</dd>
@@ -278,7 +278,7 @@ extends <a href="ShippingRatePriceTier.html" title="interface in com.commercetoo
 <section class="detail" id="getIsMatching()">
 <h3>getIsMatching</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getIsMatching</span>()</div>
-<div class="block"><p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p></div>
+<div class="block"><p>Appears in response to <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-cart:GET" rel="nofollow">Get ShippingMethods for a Cart</a> if the shipping rate matches the search query.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>isMatching</dd>
@@ -289,7 +289,7 @@ extends <a href="ShippingRatePriceTier.html" title="interface in com.commercetoo
 <section class="detail" id="setScore(java.lang.Integer)">
 <h3>setScore</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setScore</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;score)</span></div>
-<div class="block"><p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See Tiered shipping rates for details and examples.</p></div>
+<div class="block"><p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See <span>Tiered shipping rates</span> for details and examples.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>score</code> - value to be set</dd>
@@ -322,7 +322,7 @@ extends <a href="ShippingRatePriceTier.html" title="interface in com.commercetoo
 <section class="detail" id="setIsMatching(java.lang.Boolean)">
 <h3>setIsMatching</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setIsMatching</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isMatching)</span></div>
-<div class="block"><p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p></div>
+<div class="block"><p>Appears in response to <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-cart:GET" rel="nofollow">Get ShippingMethods for a Cart</a> if the shipping rate matches the search query.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>isMatching</code> - value to be set</dd>

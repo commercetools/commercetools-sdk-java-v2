@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ApprovalFlowRejectAction</span><span class="extends-implements">
 extends <a href="ApprovalFlowUpdateAction.html" title="interface in com.commercetools.api.models.approval_flow">ApprovalFlowUpdateAction</a></span></div>
-<div class="block"><p>This update action allows an Associate to reject an Approval Flow, setting its status to <code>Rejected</code>. The process takes into account all Associate Roles held by the Associate, aligning with the matched Approval Rules and their respective approver hierarchies. Even a single rejection in the process will result in the rejection of the entire Approval Flow.</p>
+<div class="block"><p>This update action allows an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> to reject an Approval Flow, setting its status to <code>Rejected</code>. The process takes into account all <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> held by the Associate, aligning with the matched <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">Approval Rules</a> and their respective approver hierarchies. Even a single rejection in the process will result in the rejection of the entire Approval Flow.</p>
   <p>An Associate is eligible to reject only if their roles are within tiers of the Approval Rule hierarchy that are yet to be rejected. An Associate may alter a prior approval into a rejection.</p>
 
  <hr>
@@ -141,7 +141,7 @@ extends <a href="ApprovalFlowUpdateAction.html" title="interface in com.commerce
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReason()" class="member-name-link">getReason</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The reason for the rejection of the Approval Flow.</div>
+<div class="block">The reason for the rejection of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ApprovalFlowRejectAction.html" title="interface in com.commercetools.api.models.approval_flow">ApprovalFlowRejectAction</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -156,7 +156,7 @@ extends <a href="ApprovalFlowUpdateAction.html" title="interface in com.commerce
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setReason(java.lang.String)" class="member-name-link">setReason</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;reason)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The reason for the rejection of the Approval Flow.</div>
+<div class="block">The reason for the rejection of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ApprovalFlowRejectAction.html" title="interface in com.commercetools.api.models.approval_flow">ApprovalFlowRejectAction</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -212,7 +212,7 @@ extends <a href="ApprovalFlowUpdateAction.html" title="interface in com.commerce
 <section class="detail" id="getReason()">
 <h3>getReason</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getReason</span>()</div>
-<div class="block"><p>The reason for the rejection of the Approval Flow.</p></div>
+<div class="block"><p>The reason for the rejection of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>reason</dd>
@@ -223,7 +223,7 @@ extends <a href="ApprovalFlowUpdateAction.html" title="interface in com.commerce
 <section class="detail" id="setReason(java.lang.String)">
 <h3>setReason</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setReason</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;reason)</span></div>
-<div class="block"><p>The reason for the rejection of the Approval Flow.</p></div>
+<div class="block"><p>The reason for the rejection of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>reason</code> - value to be set</dd>

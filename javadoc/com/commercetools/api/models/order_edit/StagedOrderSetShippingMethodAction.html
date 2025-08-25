@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">StagedOrderSetShippingMethodAction</span><span class="extends-implements">
 extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a></span></div>
-<div class="block"><p>To set the Cart's Shipping Method, the Cart must have the <code>Single</code> ShippingMode and a <code>shippingAddress</code>.</p>
+<div class="block"><p>To set the Cart's Shipping Method, the Cart must have the <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a> and a <code>shippingAddress</code>.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -140,7 +140,7 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../cart/ExternalTaxRateDraft.html" title="interface in com.commercetools.api.models.cart">ExternalTaxRateDraft</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getExternalTaxRate()" class="member-name-link">getExternalTaxRate</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</div>
+<div class="block">An external Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../shipping_method/ShippingMethodResourceIdentifier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifier</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getShippingMethod()" class="member-name-link">getShippingMethod</a>()</code></div>
@@ -160,7 +160,7 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setExternalTaxRate(com.commercetools.api.models.cart.ExternalTaxRateDraft)" class="member-name-link">setExternalTaxRate</a><wbr>(<a href="../cart/ExternalTaxRateDraft.html" title="interface in com.commercetools.api.models.cart">ExternalTaxRateDraft</a>&nbsp;externalTaxRate)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</div>
+<div class="block">An external Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setShippingMethod(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier)" class="member-name-link">setShippingMethod</a><wbr>(<a href="../shipping_method/ShippingMethodResourceIdentifier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifier</a>&nbsp;shippingMethod)</code></div>
@@ -225,7 +225,7 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <h3>getShippingMethod</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../shipping_method/ShippingMethodResourceIdentifier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifier</a></span>&nbsp;<span class="element-name">getShippingMethod</span>()</div>
-<div class="block"><p>Value to set. If empty, any existing value will be removed. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p></div>
+<div class="block"><p>Value to set. If empty, any existing value will be removed. If the referenced Shipping Method has a predicate that does not match the Cart, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>shippingMethod</dd>
@@ -237,7 +237,7 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <h3>getExternalTaxRate</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../cart/ExternalTaxRateDraft.html" title="interface in com.commercetools.api.models.cart">ExternalTaxRateDraft</a></span>&nbsp;<span class="element-name">getExternalTaxRate</span>()</div>
-<div class="block"><p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p></div>
+<div class="block"><p>An external Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>externalTaxRate</dd>
@@ -248,7 +248,7 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <section class="detail" id="setShippingMethod(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier)">
 <h3>setShippingMethod</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setShippingMethod</span><wbr><span class="parameters">(<a href="../shipping_method/ShippingMethodResourceIdentifier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifier</a>&nbsp;shippingMethod)</span></div>
-<div class="block"><p>Value to set. If empty, any existing value will be removed. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p></div>
+<div class="block"><p>Value to set. If empty, any existing value will be removed. If the referenced Shipping Method has a predicate that does not match the Cart, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>shippingMethod</code> - value to be set</dd>
@@ -259,7 +259,7 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <section class="detail" id="setExternalTaxRate(com.commercetools.api.models.cart.ExternalTaxRateDraft)">
 <h3>setExternalTaxRate</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setExternalTaxRate</span><wbr><span class="parameters">(<a href="../cart/ExternalTaxRateDraft.html" title="interface in com.commercetools.api.models.cart">ExternalTaxRateDraft</a>&nbsp;externalTaxRate)</span></div>
-<div class="block"><p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p></div>
+<div class="block"><p>An external Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>externalTaxRate</code> - value to be set</dd>

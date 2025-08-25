@@ -148,7 +148,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPredicate()" class="member-name-link">getPredicate</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Valid ProductDiscount predicate.</div>
+<div class="block">Valid <span>ProductDiscount predicate</span>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSortOrder()" class="member-name-link">getSortOrder</a>()</code></div>
@@ -203,7 +203,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setPredicate(java.lang.String)" class="member-name-link">setPredicate</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;predicate)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Valid ProductDiscount predicate.</div>
+<div class="block">Valid <span>ProductDiscount predicate</span>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setSortOrder(java.lang.String)" class="member-name-link">setSortOrder</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sortOrder)</code></div>
@@ -305,7 +305,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <h3>getPredicate</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getPredicate</span>()</div>
-<div class="block"><p>Valid ProductDiscount predicate.</p></div>
+<div class="block"><p>Valid <span>ProductDiscount predicate</span>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>predicate</dd>
@@ -317,7 +317,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <h3>getSortOrder</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getSortOrder</span>()</div>
-<div class="block"><p>Decimal value between 0 and 1 (passed as String literal) that defines the order of ProductDiscounts to apply in case more than one is applicable and active. A ProductDiscount with a higher <code>sortOrder</code> is prioritized. The value must be <strong>unique</strong> among all ProductDiscounts in the Project.</p></div>
+<div class="block"><p>Decimal value between 0 and 1 (passed as String literal) that defines the order of ProductDiscounts to apply in case more than one is applicable and active. A ProductDiscount with a higher <code>sortOrder</code> is prioritized. The value must be <strong>unique</strong> among all ProductDiscounts in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>sortOrder</dd>
@@ -340,7 +340,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="getValidFrom()">
 <h3>getValidFrom</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getValidFrom</span>()</div>
-<div class="block"><p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p></div>
+<div class="block"><p>Date and time (UTC) from which the Discount is effective. Take <span>Eventual Consistency</span> into account for calculated discount values.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>validFrom</dd>
@@ -351,7 +351,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="getValidUntil()">
 <h3>getValidUntil</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getValidUntil</span>()</div>
-<div class="block"><p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p></div>
+<div class="block"><p>Date and time (UTC) until which the Discount is effective. Take <span>Eventual Consistency</span> into account for calculated undiscounted values.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>validUntil</dd>
@@ -406,7 +406,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="setPredicate(java.lang.String)">
 <h3>setPredicate</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setPredicate</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;predicate)</span></div>
-<div class="block"><p>Valid ProductDiscount predicate.</p></div>
+<div class="block"><p>Valid <span>ProductDiscount predicate</span>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>predicate</code> - value to be set</dd>
@@ -417,7 +417,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="setSortOrder(java.lang.String)">
 <h3>setSortOrder</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setSortOrder</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sortOrder)</span></div>
-<div class="block"><p>Decimal value between 0 and 1 (passed as String literal) that defines the order of ProductDiscounts to apply in case more than one is applicable and active. A ProductDiscount with a higher <code>sortOrder</code> is prioritized. The value must be <strong>unique</strong> among all ProductDiscounts in the Project.</p></div>
+<div class="block"><p>Decimal value between 0 and 1 (passed as String literal) that defines the order of ProductDiscounts to apply in case more than one is applicable and active. A ProductDiscount with a higher <code>sortOrder</code> is prioritized. The value must be <strong>unique</strong> among all ProductDiscounts in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>sortOrder</code> - value to be set</dd>
@@ -439,7 +439,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="setValidFrom(java.time.ZonedDateTime)">
 <h3>setValidFrom</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setValidFrom</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validFrom)</span></div>
-<div class="block"><p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p></div>
+<div class="block"><p>Date and time (UTC) from which the Discount is effective. Take <span>Eventual Consistency</span> into account for calculated discount values.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>validFrom</code> - value to be set</dd>
@@ -450,7 +450,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="setValidUntil(java.time.ZonedDateTime)">
 <h3>setValidUntil</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setValidUntil</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validUntil)</span></div>
-<div class="block"><p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p></div>
+<div class="block"><p>Date and time (UTC) until which the Discount is effective. Take <span>Eventual Consistency</span> into account for calculated undiscounted values.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>validUntil</code> - value to be set</dd>

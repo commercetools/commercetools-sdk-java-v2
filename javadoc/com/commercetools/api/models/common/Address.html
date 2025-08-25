@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">Address</span><span class="extends-implements">
 extends <a href="BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>, <a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a>&lt;<a href="Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;</span></div>
-<div class="block"><p>Address type returned by read methods. Optionally, the <code>custom</code> field can be present in addition to the fields of a BaseAddress.</p>
+<div class="block"><p>Address type returned by read methods. Optionally, the <code>custom</code> field can be present in addition to the fields of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BaseAddress" rel="nofollow">BaseAddress</a>.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -204,7 +204,7 @@ extends <a href="BaseAddress.html" title="interface in com.commercetools.api.mod
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getId</span>()</div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="BaseAddress.html#getId()">BaseAddress</a></code></span></div>
 <div class="block"><p>Unique identifier of the Address.</p>
-  <p>It is not recommended to set it manually since the API overwrites this ID when creating an Address for a Customer. Use <code>key</code> instead and omit this field from the request to let the API generate the ID for the Address.</p></div>
+  <p>It is not recommended to set it manually since the API overwrites this ID when creating an Address for a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>. Use <code>key</code> instead and omit this field from the request to let the API generate the ID for the Address.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="BaseAddress.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>

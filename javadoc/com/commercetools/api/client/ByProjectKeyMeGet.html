@@ -87,10 +87,10 @@ loadScripts(document, 'script');</script>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/TypeApiMethod.html" title="class in io.vrap.rmf.base.client">TypeApiMethod</a>&lt;<a href="ByProjectKeyMeGet.html" title="class in com.commercetools.api.client">ByProjectKeyMeGet</a>,<wbr><a href="../models/customer/Customer.html" title="interface in com.commercetools.api.models.customer">Customer</a>&gt;
 implements <a href="SortableTrait.html" title="interface in com.commercetools.api.client">SortableTrait</a>&lt;<a href="ByProjectKeyMeGet.html" title="class in com.commercetools.api.client">ByProjectKeyMeGet</a>&gt;, <a href="PagingTrait.html" title="interface in com.commercetools.api.client">PagingTrait</a>&lt;<a href="ByProjectKeyMeGet.html" title="class in com.commercetools.api.client">ByProjectKeyMeGet</a>&gt;, <a href="ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="ByProjectKeyMeGet.html" title="class in com.commercetools.api.client">ByProjectKeyMeGet</a>&gt;, <a href="QueryTrait.html" title="interface in com.commercetools.api.client">QueryTrait</a>&lt;<a href="ByProjectKeyMeGet.html" title="class in com.commercetools.api.client">ByProjectKeyMeGet</a>&gt;, <a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyMeGet.html" title="class in com.commercetools.api.client">ByProjectKeyMeGet</a>&gt;, <a href="Deprecatable200Trait.html" title="interface in com.commercetools.api.client">Deprecatable200Trait</a>&lt;<a href="ByProjectKeyMeGet.html" title="class in com.commercetools.api.client">ByProjectKeyMeGet</a>&gt;</span></div>
 <div class="block"><p>Returns a Customer for a given Query Predicate. Returns a <code>200</code> status if successful.</p>
-  <p>A ResourceNotFound error is returned in the following scenarios:</p>
+  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error is returned in the following scenarios:</p>
   <ul>
    <li>If no Customer exists for the given Query Predicate.</li>
-   <li>If a Customer exists for the given Query Predicate, but does not have an <code>id</code> value that matches the customer:{id} scope.</li>
+   <li>If a Customer exists for the given Query Predicate, but does not have an <code>id</code> value that matches the <span>customer:{id}</span> scope.</li>
   </ul>
 
  <hr>

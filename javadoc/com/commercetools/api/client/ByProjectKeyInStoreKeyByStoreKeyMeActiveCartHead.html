@@ -87,11 +87,11 @@ loadScripts(document, 'script');</script>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/TypeApiMethod.html" title="class in io.vrap.rmf.base.client">TypeApiMethod</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyMeActiveCartHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeActiveCartHead</a>,<wbr><a href="https://fasterxml.github.io/jackson-databind/javadoc/2.14/com/fasterxml/jackson/databind/JsonNode.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">JsonNode</a>&gt;
 implements <a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyMeActiveCartHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeActiveCartHead</a>&gt;, <a href="Deprecatable200Trait.html" title="interface in com.commercetools.api.client">Deprecatable200Trait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyMeActiveCartHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeActiveCartHead</a>&gt;</span></div>
 <div class="block"><p>Checks if an active Cart exists in a Store. Returns <code>200 OK</code> status if successful.</p>
-  <p>A ResourceNotFound error is returned in the following scenarios:</p>
+  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error is returned in the following scenarios:</p>
   <ul>
    <li>If no active Cart exists in a Store.</li>
    <li>If an active Cart exists but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store.</li>
-   <li>If an active Cart exists but does not contain a <code>customerId</code> that matches the customer:{id} scope, or <code>anonymousId</code> that matches the anonymous_id:{id} scope.</li>
+   <li>If an active Cart exists but does not contain a <code>customerId</code> that matches the <span>customer:{id}</span> scope, or <code>anonymousId</code> that matches the <span>anonymous_id:{id}</span> scope.</li>
   </ul>
 
  <hr>

@@ -78,8 +78,8 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">CartDiscountSetStoresAction</span><span class="extends-implements">
 extends <a href="CartDiscountUpdateAction.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountUpdateAction</a></span></div>
-<div class="block"><p>If a referenced Store does not exist, a ReferencedResourceNotFound error is returned.</p>
-  <p>This action generates a CartDiscountStoresSet Message.</p>
+<div class="block"><p>If a referenced Store does not exist, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferencedResourceNotFoundError" rel="nofollow">ReferencedResourceNotFound</a> error is returned.</p>
+  <p>This action generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountStoresSetMessage" rel="nofollow">CartDiscountStoresSet</a> Message.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -142,7 +142,7 @@ extends <a href="CartDiscountUpdateAction.html" title="interface in com.commerce
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStores()" class="member-name-link">getStores</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Stores to set.</div>
+<div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CartDiscountSetStoresAction.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountSetStoresAction</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -157,12 +157,12 @@ extends <a href="CartDiscountUpdateAction.html" title="interface in com.commerce
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setStores(com.commercetools.api.models.store.StoreResourceIdentifier...)" class="member-name-link">setStores</a><wbr>(<a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a>...&nbsp;stores)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Stores to set.</div>
+<div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setStores(java.util.List)" class="member-name-link">setStores</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a>&gt;&nbsp;stores)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Stores to set.</div>
+<div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartDiscountSetStoresAction.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountSetStoresAction</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -223,11 +223,11 @@ extends <a href="CartDiscountUpdateAction.html" title="interface in com.commerce
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a>&gt;</span>&nbsp;<span class="element-name">getStores</span>()</div>
-<div class="block"><p>Stores to set. Overrides the current list of Stores. If empty, any existing values will be removed.</p>
+<div class="block"><p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores. If empty, any existing values will be removed.</p>
   <p>A failed update can return the following errors:</p>
   <ul>
-   <li>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</li>
-   <li>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</li>
+   <li>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</li>
+   <li>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</li>
   </ul></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -239,11 +239,11 @@ extends <a href="CartDiscountUpdateAction.html" title="interface in com.commerce
 <section class="detail" id="setStores(com.commercetools.api.models.store.StoreResourceIdentifier...)">
 <h3>setStores</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setStores</span><wbr><span class="parameters">(<a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a>...&nbsp;stores)</span></div>
-<div class="block"><p>Stores to set. Overrides the current list of Stores. If empty, any existing values will be removed.</p>
+<div class="block"><p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores. If empty, any existing values will be removed.</p>
   <p>A failed update can return the following errors:</p>
   <ul>
-   <li>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</li>
-   <li>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</li>
+   <li>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</li>
+   <li>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</li>
   </ul></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -255,11 +255,11 @@ extends <a href="CartDiscountUpdateAction.html" title="interface in com.commerce
 <section class="detail" id="setStores(java.util.List)">
 <h3>setStores</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setStores</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a>&gt;&nbsp;stores)</span></div>
-<div class="block"><p>Stores to set. Overrides the current list of Stores. If empty, any existing values will be removed.</p>
+<div class="block"><p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores. If empty, any existing values will be removed.</p>
   <p>A failed update can return the following errors:</p>
   <ul>
-   <li>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</li>
-   <li>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</li>
+   <li>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</li>
+   <li>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</li>
   </ul></div>
 <dl class="notes">
 <dt>Parameters:</dt>

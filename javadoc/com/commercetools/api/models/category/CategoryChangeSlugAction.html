@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">CategoryChangeSlugAction</span><span class="extends-implements">
 extends <a href="CategoryUpdateAction.html" title="interface in com.commercetools.api.models.category">CategoryUpdateAction</a></span></div>
-<div class="block"><p>Changing the slug produces the CategorySlugChanged Message.</p>
+<div class="block"><p>Changing the slug produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CategorySlugChangedMessage" rel="nofollow">CategorySlugChanged</a> Message.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -217,7 +217,7 @@ extends <a href="CategoryUpdateAction.html" title="interface in com.commercetool
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name">getSlug</span>()</div>
-<div class="block"><p>New value to set. Must not be empty. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p></div>
+<div class="block"><p>New value to set. Must not be empty. A Category can have the same slug for different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>, but it must be unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>slug</dd>
@@ -228,7 +228,7 @@ extends <a href="CategoryUpdateAction.html" title="interface in com.commercetool
 <section class="detail" id="setSlug(com.commercetools.api.models.common.LocalizedString)">
 <h3>setSlug</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setSlug</span><wbr><span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;slug)</span></div>
-<div class="block"><p>New value to set. Must not be empty. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p></div>
+<div class="block"><p>New value to set. Must not be empty. A Category can have the same slug for different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>, but it must be unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>slug</code> - value to be set</dd>

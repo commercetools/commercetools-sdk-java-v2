@@ -125,7 +125,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <div class="col-first even-row-color"><code>static final <a href="InventoryMode.html" title="interface in com.commercetools.api.models.cart">InventoryMode</a></code></div>
 <div class="col-second even-row-color"><code><a href="#TRACK_ONLY" class="member-name-link">TRACK_ONLY</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">Orders are tracked on the Inventory, and ordering a LineItem deducts the available quantity on the respective InventoryEntry.</div>
+<div class="block">Orders are tracked on the Inventory, and ordering a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> deducts the available quantity on the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</div>
 </div>
 </div>
 </section>
@@ -201,16 +201,16 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <section class="detail" id="TRACK_ONLY">
 <h3>TRACK_ONLY</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="InventoryMode.html" title="interface in com.commercetools.api.models.cart">InventoryMode</a></span>&nbsp;<span class="element-name">TRACK_ONLY</span></div>
-<div class="block"><p>Orders are tracked on the Inventory, and ordering a LineItem deducts the available quantity on the respective InventoryEntry.</p>
-    <p>An Order can be created even if the Line Item quantity is zero or negative, but if no matching Inventory Entry exists for the Line Item, an OutOfStock error is returned.</p></div>
+<div class="block"><p>Orders are tracked on the Inventory, and ordering a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> deducts the available quantity on the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
+    <p>An <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders:POST" rel="nofollow">Order can be created</a> even if the Line Item quantity is zero or negative, but if no matching Inventory Entry exists for the Line Item, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OutOfStockError" rel="nofollow">OutOfStock</a> error is returned.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="RESERVE_ON_ORDER">
 <h3>RESERVE_ON_ORDER</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="InventoryMode.html" title="interface in com.commercetools.api.models.cart">InventoryMode</a></span>&nbsp;<span class="element-name">RESERVE_ON_ORDER</span></div>
-<div class="block"><p>Line Items in a Cart are only reserved for the duration of the ordering transaction. If a Line Item is not available when creating an Order, an OutOfStock error is returned. This is because the InventoryEntry <code>availableQuantity</code> is insufficient (but is still updated) for the ordered Line Item quantity.</p>
-    <p>However, an Order can be created if the InventoryEntry <code>restockableInDays</code> is set (including <code>0</code>).</p></div>
+<div class="block"><p>Line Items in a Cart are only reserved for the duration of the ordering transaction. If a Line Item is not available when <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders:POST" rel="nofollow">creating an Order</a>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OutOfStockError" rel="nofollow">OutOfStock</a> error is returned. This is because the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> <code>availableQuantity</code> is insufficient (but is still updated) for the ordered Line Item quantity.</p>
+    <p>However, an Order can be created if the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> <code>restockableInDays</code> is set (including <code>0</code>).</p></div>
 </section>
 </li>
 </ul>

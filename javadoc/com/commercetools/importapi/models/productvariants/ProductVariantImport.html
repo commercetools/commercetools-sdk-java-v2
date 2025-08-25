@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ProductVariantImport</span><span class="extends-implements">
 extends <a href="../common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></span></div>
-<div class="block"><p>Represents the data used to import a ProductVariant. Once imported, this data is persisted as a ProductVariant in the Project.</p>
+<div class="block"><p>Represents the data used to import a ProductVariant. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in the Project.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -142,7 +142,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getIsMasterVariant()" class="member-name-link">getIsMasterVariant</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
-   When creating a new ProductVariant, set to <code>false</code>; otherwise, the import operation will fail with a NewMasterVariantAdditionNotAllowed error.
+   When creating a new ProductVariant, set to <code>false</code>; otherwise, the import operation will fail with a <a href="https://docs.commercetools.com/apis/ctp:import:type:NewMasterVariantAdditionNotAllowedError" rel="nofollow">NewMasterVariantAdditionNotAllowed</a> error.
    Set to <code>true</code> if the ProductVariant exists and you want to set this ProductVariant as the Master Variant.
   </div>
 </div>
@@ -154,7 +154,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getProduct()" class="member-name-link">getProduct</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The Product containing this ProductVariant.</div>
+<div class="block">The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product</a> containing this ProductVariant.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSku()" class="member-name-link">getSku</a>()</code></div>
@@ -165,7 +165,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStaged()" class="member-name-link">getStaged</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
-   Set to <code>false</code> to update both the current and staged projections of the Product with the new Product Variant data.
+   Set to <code>false</code> to update both the <span>current and staged projections</span> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> with the new Product Variant data.
    Leave empty or set to <code>true</code> to only update the staged projection.
   </div>
 </div>
@@ -213,7 +213,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setIsMasterVariant(java.lang.Boolean)" class="member-name-link">setIsMasterVariant</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isMasterVariant)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
-   When creating a new ProductVariant, set to <code>false</code>; otherwise, the import operation will fail with a NewMasterVariantAdditionNotAllowed error.
+   When creating a new ProductVariant, set to <code>false</code>; otherwise, the import operation will fail with a <a href="https://docs.commercetools.com/apis/ctp:import:type:NewMasterVariantAdditionNotAllowedError" rel="nofollow">NewMasterVariantAdditionNotAllowed</a> error.
    Set to <code>true</code> if the ProductVariant exists and you want to set this ProductVariant as the Master Variant.
   </div>
 </div>
@@ -225,7 +225,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setProduct(com.commercetools.importapi.models.common.ProductKeyReference)" class="member-name-link">setProduct</a><wbr>(<a href="../common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a>&nbsp;product)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The Product containing this ProductVariant.</div>
+<div class="block">The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product</a> containing this ProductVariant.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setSku(java.lang.String)" class="member-name-link">setSku</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</code></div>
@@ -236,7 +236,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setStaged(java.lang.Boolean)" class="member-name-link">setStaged</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
-   Set to <code>false</code> to update both the current and staged projections of the Product with the new Product Variant data.
+   Set to <code>false</code> to update both the <span>current and staged projections</span> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> with the new Product Variant data.
    Leave empty or set to <code>true</code> to only update the staged projection.
   </div>
 </div>
@@ -272,7 +272,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getKey</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
-<div class="block"><p>User-defined unique identifier. If a ProductVariant with this <code>key</code> exists on the specified <code>product</code>, it is updated with the imported data.</p></div>
+<div class="block"><p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> with this <code>key</code> exists on the specified <code>product</code>, it is updated with the imported data.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/ImportResource.html#getKey()">getKey</a></code>&nbsp;in interface&nbsp;<code><a href="../common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></code></dd>
@@ -298,7 +298,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getIsMasterVariant</span>()</div>
 <div class="block"><ul>
-   <li>When creating a new ProductVariant, set to <code>false</code>; otherwise, the import operation will fail with a NewMasterVariantAdditionNotAllowed error.</li>
+   <li>When creating a new ProductVariant, set to <code>false</code>; otherwise, the import operation will fail with a <a href="https://docs.commercetools.com/apis/ctp:import:type:NewMasterVariantAdditionNotAllowedError" rel="nofollow">NewMasterVariantAdditionNotAllowed</a> error.</li>
    <li>Set to <code>true</code> if the ProductVariant exists and you want to set this ProductVariant as the Master Variant.</li>
   </ul></div>
 <dl class="notes">
@@ -312,7 +312,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getAttributes</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>&gt;</span>&nbsp;<span class="element-name">getAttributes</span>()</div>
-<div class="block"><p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p></div>
+<div class="block"><p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be <code>unresolved</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>attributes</dd>
@@ -348,7 +348,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getStaged</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getStaged</span>()</div>
 <div class="block"><ul>
-   <li>Set to <code>false</code> to update both the current and staged projections of the Product with the new Product Variant data.</li>
+   <li>Set to <code>false</code> to update both the <span>current and staged projections</span> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> with the new Product Variant data.</li>
    <li>Leave empty or set to <code>true</code> to only update the staged projection.</li>
   </ul></div>
 <dl class="notes">
@@ -363,7 +363,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="../common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a></span>&nbsp;<span class="element-name">getProduct</span>()</div>
-<div class="block"><p>The Product containing this ProductVariant. If the referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Product is created.</p></div>
+<div class="block"><p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product</a> containing this ProductVariant. If the referenced Product does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Product is created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>product</dd>
@@ -374,7 +374,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
-<div class="block"><p>User-defined unique identifier. If a ProductVariant with this <code>key</code> exists on the specified <code>product</code>, it is updated with the imported data.</p></div>
+<div class="block"><p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> with this <code>key</code> exists on the specified <code>product</code>, it is updated with the imported data.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/ImportResource.html#setKey(java.lang.String)">setKey</a></code>&nbsp;in interface&nbsp;<code><a href="../common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></code></dd>
@@ -399,7 +399,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>setIsMasterVariant</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setIsMasterVariant</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isMasterVariant)</span></div>
 <div class="block"><ul>
-   <li>When creating a new ProductVariant, set to <code>false</code>; otherwise, the import operation will fail with a NewMasterVariantAdditionNotAllowed error.</li>
+   <li>When creating a new ProductVariant, set to <code>false</code>; otherwise, the import operation will fail with a <a href="https://docs.commercetools.com/apis/ctp:import:type:NewMasterVariantAdditionNotAllowedError" rel="nofollow">NewMasterVariantAdditionNotAllowed</a> error.</li>
    <li>Set to <code>true</code> if the ProductVariant exists and you want to set this ProductVariant as the Master Variant.</li>
   </ul></div>
 <dl class="notes">
@@ -412,7 +412,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setAttributes(com.commercetools.importapi.models.productvariants.Attribute...)">
 <h3>setAttributes</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setAttributes</span><wbr><span class="parameters">(<a href="Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>...&nbsp;attributes)</span></div>
-<div class="block"><p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p></div>
+<div class="block"><p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be <code>unresolved</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>attributes</code> - values to be set</dd>
@@ -423,7 +423,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setAttributes(java.util.List)">
 <h3>setAttributes</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setAttributes</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>&gt;&nbsp;attributes)</span></div>
-<div class="block"><p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p></div>
+<div class="block"><p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be <code>unresolved</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>attributes</code> - values to be set</dd>
@@ -479,7 +479,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>setStaged</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setStaged</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</span></div>
 <div class="block"><ul>
-   <li>Set to <code>false</code> to update both the current and staged projections of the Product with the new Product Variant data.</li>
+   <li>Set to <code>false</code> to update both the <span>current and staged projections</span> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> with the new Product Variant data.</li>
    <li>Leave empty or set to <code>true</code> to only update the staged projection.</li>
   </ul></div>
 <dl class="notes">
@@ -492,7 +492,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setProduct(com.commercetools.importapi.models.common.ProductKeyReference)">
 <h3>setProduct</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setProduct</span><wbr><span class="parameters">(<a href="../common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a>&nbsp;product)</span></div>
-<div class="block"><p>The Product containing this ProductVariant. If the referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Product is created.</p></div>
+<div class="block"><p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product</a> containing this ProductVariant. If the referenced Product does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Product is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>product</code> - value to be set</dd>

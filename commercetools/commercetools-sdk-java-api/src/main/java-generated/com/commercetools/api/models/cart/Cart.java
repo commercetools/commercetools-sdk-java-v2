@@ -376,7 +376,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public String getCountry();
 
     /**
-     *  <p>Languages of the Cart. Can only contain languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
+     *  <p>Language of the Cart. Must be one of the languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return locale
      */
 
@@ -769,7 +769,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setCountry(final String country);
 
     /**
-     *  <p>Languages of the Cart. Can only contain languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
+     *  <p>Language of the Cart. Must be one of the languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param locale value to be set
      */
 

@@ -42,4 +42,10 @@ public class DiscountGroupDraftQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, DiscountGroupDraftQueryBuilderDsl::of));
     }
 
+    public BooleanComparisonPredicateBuilder<DiscountGroupDraftQueryBuilderDsl> isActive() {
+        return new BooleanComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("isActive")),
+            p -> new CombinationQueryPredicate<>(p, DiscountGroupDraftQueryBuilderDsl::of));
+    }
+
 }

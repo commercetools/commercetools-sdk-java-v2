@@ -982,6 +982,14 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for discountGroupIsActiveSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DiscountGroupIsActiveSetMessagePayloadBuilder discountGroupIsActiveSetBuilder() {
+        return com.commercetools.api.models.message.DiscountGroupIsActiveSetMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for discountGroupKeySet subtype
      * @return builder
      */

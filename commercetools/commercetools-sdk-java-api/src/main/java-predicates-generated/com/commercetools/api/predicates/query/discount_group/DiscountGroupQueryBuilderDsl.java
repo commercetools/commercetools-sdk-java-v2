@@ -65,6 +65,12 @@ public class DiscountGroupQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, DiscountGroupQueryBuilderDsl::of));
     }
 
+    public BooleanComparisonPredicateBuilder<DiscountGroupQueryBuilderDsl> isActive() {
+        return new BooleanComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("isActive")),
+            p -> new CombinationQueryPredicate<>(p, DiscountGroupQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<DiscountGroupQueryBuilderDsl> lastModifiedBy(
             Function<com.commercetools.api.predicates.query.common.LastModifiedByQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.LastModifiedByQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

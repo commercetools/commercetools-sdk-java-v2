@@ -1158,6 +1158,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for discountGroupIsActiveSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DiscountGroupIsActiveSetMessageBuilder discountGroupIsActiveSetBuilder() {
+        return com.commercetools.api.models.message.DiscountGroupIsActiveSetMessageBuilder.of();
+    }
+
+    /**
      * builder for discountGroupKeySet subtype
      * @return builder
      */

@@ -203,6 +203,10 @@ public class GraphQLErrorObjectBuilder {
         return com.commercetools.api.models.error.GraphQLMaxCartDiscountsReachedErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.GraphQLMaxDiscountGroupsReachedErrorBuilder maxDiscountGroupsReachedBuilder() {
+        return com.commercetools.api.models.error.GraphQLMaxDiscountGroupsReachedErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.GraphQLMaxResourceLimitExceededErrorBuilder maxResourceLimitExceededBuilder() {
         return com.commercetools.api.models.error.GraphQLMaxResourceLimitExceededErrorBuilder.of();
     }

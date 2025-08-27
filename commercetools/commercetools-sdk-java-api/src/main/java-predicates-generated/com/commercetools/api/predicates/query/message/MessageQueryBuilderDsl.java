@@ -871,6 +871,14 @@ public class MessageQueryBuilderDsl {
             MessageQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asDiscountGroupIsActiveSet(
+            Function<com.commercetools.api.predicates.query.message.DiscountGroupIsActiveSetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.DiscountGroupIsActiveSetMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.message.DiscountGroupIsActiveSetMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MessageQueryBuilderDsl> asDiscountGroupKeySet(
             Function<com.commercetools.api.predicates.query.message.DiscountGroupKeySetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.DiscountGroupKeySetMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

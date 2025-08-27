@@ -15,6 +15,10 @@ public class DiscountGroupUpdateActionBuilder {
         return com.commercetools.api.models.discount_group.DiscountGroupSetDescriptionActionBuilder.of();
     }
 
+    public com.commercetools.api.models.discount_group.DiscountGroupSetIsActiveActionBuilder setIsActiveBuilder() {
+        return com.commercetools.api.models.discount_group.DiscountGroupSetIsActiveActionBuilder.of();
+    }
+
     public com.commercetools.api.models.discount_group.DiscountGroupSetKeyActionBuilder setKeyBuilder() {
         return com.commercetools.api.models.discount_group.DiscountGroupSetKeyActionBuilder.of();
     }

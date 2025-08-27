@@ -480,6 +480,14 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for maxDiscountGroupsReached subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.MaxDiscountGroupsReachedErrorBuilder maxDiscountGroupsReachedBuilder() {
+        return com.commercetools.api.models.error.MaxDiscountGroupsReachedErrorBuilder.of();
+    }
+
+    /**
      * builder for maxResourceLimitExceeded subtype
      * @return builder
      */

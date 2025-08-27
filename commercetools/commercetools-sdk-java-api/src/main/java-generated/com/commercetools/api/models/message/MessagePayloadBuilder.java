@@ -471,6 +471,10 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.DiscountGroupDeletedMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.DiscountGroupIsActiveSetMessagePayloadBuilder discountGroupIsActiveSetBuilder() {
+        return com.commercetools.api.models.message.DiscountGroupIsActiveSetMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.DiscountGroupKeySetMessagePayloadBuilder discountGroupKeySetBuilder() {
         return com.commercetools.api.models.message.DiscountGroupKeySetMessagePayloadBuilder.of();
     }

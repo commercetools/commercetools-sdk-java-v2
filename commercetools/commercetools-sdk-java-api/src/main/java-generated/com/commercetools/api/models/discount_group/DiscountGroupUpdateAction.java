@@ -68,6 +68,14 @@ public interface DiscountGroupUpdateAction {
     }
 
     /**
+     * builder for setIsActive subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.discount_group.DiscountGroupSetIsActiveActionBuilder setIsActiveBuilder() {
+        return com.commercetools.api.models.discount_group.DiscountGroupSetIsActiveActionBuilder.of();
+    }
+
+    /**
      * builder for setKey subtype
      * @return builder
      */

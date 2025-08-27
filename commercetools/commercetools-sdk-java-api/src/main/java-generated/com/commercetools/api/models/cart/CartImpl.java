@@ -528,7 +528,7 @@ public class CartImpl implements Cart, ModelBase {
     }
 
     /**
-     *  <p>Languages of the Cart. Can only contain languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
+     *  <p>Language of the Cart. Must be one of the languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      */
 
     public String getLocale() {

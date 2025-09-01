@@ -253,7 +253,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="cart(java.util.function.Function)">
 <h3>cart</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerSignInResultBuilder.html" title="class in com.commercetools.api.models.customer">CustomerSignInResultBuilder</a></span>&nbsp;<span class="element-name">cart</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/CartBuilder.html" title="class in com.commercetools.api.models.cart">CartBuilder</a>,<wbr><a href="../cart/CartBuilder.html" title="class in com.commercetools.api.models.cart">CartBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Cart associated with the Customer. If empty, the Customer does not have a Cart assigned.</p></div>
+<div class="block"><p>Cart associated with the Customer.</p>
+  <p>The Cart is recalculated to remove invalid Line Items and apply the latest prices, taxes, and discounts. During these updates, the following errors can be returned: <a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a>.</p>
+  <p>For more information, see <span>Cart updates</span>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the cart value</dd>
@@ -266,7 +268,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withCart(java.util.function.Function)">
 <h3>withCart</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerSignInResultBuilder.html" title="class in com.commercetools.api.models.customer">CustomerSignInResultBuilder</a></span>&nbsp;<span class="element-name">withCart</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/CartBuilder.html" title="class in com.commercetools.api.models.cart">CartBuilder</a>,<wbr><a href="../cart/Cart.html" title="interface in com.commercetools.api.models.cart">Cart</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Cart associated with the Customer. If empty, the Customer does not have a Cart assigned.</p></div>
+<div class="block"><p>Cart associated with the Customer.</p>
+  <p>The Cart is recalculated to remove invalid Line Items and apply the latest prices, taxes, and discounts. During these updates, the following errors can be returned: <a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a>.</p>
+  <p>For more information, see <span>Cart updates</span>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the cart value</dd>
@@ -280,7 +284,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>cart</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerSignInResultBuilder.html" title="class in com.commercetools.api.models.customer">CustomerSignInResultBuilder</a></span>&nbsp;<span class="element-name">cart</span><wbr><span class="parameters">(@Nullable
  <a href="../cart/Cart.html" title="interface in com.commercetools.api.models.cart">Cart</a>&nbsp;cart)</span></div>
-<div class="block"><p>Cart associated with the Customer. If empty, the Customer does not have a Cart assigned.</p></div>
+<div class="block"><p>Cart associated with the Customer.</p>
+  <p>The Cart is recalculated to remove invalid Line Items and apply the latest prices, taxes, and discounts. During these updates, the following errors can be returned: <a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a>.</p>
+  <p>For more information, see <span>Cart updates</span>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>cart</code> - value to be set</dd>
@@ -305,7 +311,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getCart</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../cart/Cart.html" title="interface in com.commercetools.api.models.cart">Cart</a></span>&nbsp;<span class="element-name">getCart</span>()</div>
-<div class="block"><p>Cart associated with the Customer. If empty, the Customer does not have a Cart assigned.</p></div>
+<div class="block"><p>Cart associated with the Customer.</p>
+  <p>The Cart is recalculated to remove invalid Line Items and apply the latest prices, taxes, and discounts. During these updates, the following errors can be returned: <a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a>.</p>
+  <p>For more information, see <span>Cart updates</span>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>cart</dd>

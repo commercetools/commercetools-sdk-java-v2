@@ -188,7 +188,9 @@ loadScripts(document, 'script');</script>
 <h3>getCart</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../cart/Cart.html" title="interface in com.commercetools.api.models.cart">Cart</a></span>&nbsp;<span class="element-name">getCart</span>()</div>
-<div class="block"><p>Cart associated with the Customer. If empty, the Customer does not have a Cart assigned.</p></div>
+<div class="block"><p>Cart associated with the Customer.</p>
+  <p>The Cart is recalculated to remove invalid Line Items and apply the latest prices, taxes, and discounts. During these updates, the following errors can be returned: <a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a>.</p>
+  <p>For more information, see <span>Cart updates</span>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>cart</dd>
@@ -210,7 +212,9 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setCart(com.commercetools.api.models.cart.Cart)">
 <h3>setCart</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCart</span><wbr><span class="parameters">(<a href="../cart/Cart.html" title="interface in com.commercetools.api.models.cart">Cart</a>&nbsp;cart)</span></div>
-<div class="block"><p>Cart associated with the Customer. If empty, the Customer does not have a Cart assigned.</p></div>
+<div class="block"><p>Cart associated with the Customer.</p>
+  <p>The Cart is recalculated to remove invalid Line Items and apply the latest prices, taxes, and discounts. During these updates, the following errors can be returned: <a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a>.</p>
+  <p>For more information, see <span>Cart updates</span>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>cart</code> - value to be set</dd>

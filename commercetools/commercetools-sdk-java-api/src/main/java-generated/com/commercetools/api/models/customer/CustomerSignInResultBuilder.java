@@ -65,7 +65,9 @@ public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult
     }
 
     /**
-     *  <p>Cart associated with the Customer. If empty, the Customer does not have a Cart assigned.</p>
+     *  <p>Cart associated with the Customer.</p>
+     *  <p>The Cart is recalculated to remove invalid Line Items and apply the latest prices, taxes, and discounts. During these updates, the following errors can be returned: <a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a>.</p>
+     *  <p>For more information, see <span>Cart updates</span>.</p>
      * @param builder function to build the cart value
      * @return Builder
      */
@@ -77,7 +79,9 @@ public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult
     }
 
     /**
-     *  <p>Cart associated with the Customer. If empty, the Customer does not have a Cart assigned.</p>
+     *  <p>Cart associated with the Customer.</p>
+     *  <p>The Cart is recalculated to remove invalid Line Items and apply the latest prices, taxes, and discounts. During these updates, the following errors can be returned: <a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a>.</p>
+     *  <p>For more information, see <span>Cart updates</span>.</p>
      * @param builder function to build the cart value
      * @return Builder
      */
@@ -89,7 +93,9 @@ public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult
     }
 
     /**
-     *  <p>Cart associated with the Customer. If empty, the Customer does not have a Cart assigned.</p>
+     *  <p>Cart associated with the Customer.</p>
+     *  <p>The Cart is recalculated to remove invalid Line Items and apply the latest prices, taxes, and discounts. During these updates, the following errors can be returned: <a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a>.</p>
+     *  <p>For more information, see <span>Cart updates</span>.</p>
      * @param cart value to be set
      * @return Builder
      */
@@ -109,7 +115,9 @@ public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult
     }
 
     /**
-     *  <p>Cart associated with the Customer. If empty, the Customer does not have a Cart assigned.</p>
+     *  <p>Cart associated with the Customer.</p>
+     *  <p>The Cart is recalculated to remove invalid Line Items and apply the latest prices, taxes, and discounts. During these updates, the following errors can be returned: <a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a>.</p>
+     *  <p>For more information, see <span>Cart updates</span>.</p>
      * @return cart
      */
 

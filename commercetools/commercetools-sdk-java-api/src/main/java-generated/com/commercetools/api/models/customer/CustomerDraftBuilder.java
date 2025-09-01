@@ -221,7 +221,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Identifies a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> that will be assigned to the new Customer.</p>
+     *  <p>Assigns the Customer to the specified Cart.</p>
      * @param builder function to build the anonymousCart value
      * @return Builder
      */
@@ -234,7 +234,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Identifies a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> that will be assigned to the new Customer.</p>
+     *  <p>Assigns the Customer to the specified Cart.</p>
      * @param builder function to build the anonymousCart value
      * @return Builder
      */
@@ -246,7 +246,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Identifies a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> that will be assigned to the new Customer.</p>
+     *  <p>Assigns the Customer to the specified Cart.</p>
      * @param anonymousCart value to be set
      * @return Builder
      */
@@ -258,7 +258,8 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Identifies Carts and Orders belonging to an anonymous session that will be assigned to the new Customer.</p>
+     *  <p>Assigns the Customer to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingLists</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payments</a> with the same <code>anonymousId</code>.</p>
+     *  <p>If <code>anonymousCart</code> is provided, this value must match the <code>anonymousId</code> of the anonymous <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param anonymousId value to be set
      * @return Builder
      */
@@ -928,7 +929,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Identifies a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> that will be assigned to the new Customer.</p>
+     *  <p>Assigns the Customer to the specified Cart.</p>
      * @return anonymousCart
      */
 
@@ -938,7 +939,8 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Identifies Carts and Orders belonging to an anonymous session that will be assigned to the new Customer.</p>
+     *  <p>Assigns the Customer to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingLists</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payments</a> with the same <code>anonymousId</code>.</p>
+     *  <p>If <code>anonymousCart</code> is provided, this value must match the <code>anonymousId</code> of the anonymous <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return anonymousId
      */
 

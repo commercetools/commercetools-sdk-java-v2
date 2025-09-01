@@ -23,7 +23,6 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *   <li>If the Customer does not have a Cart yet, the most recently modified anonymous cart becomes the Customer's Cart.</li>
  *   <li>If the Customer already has a Cart, the most recently modified anonymous cart is handled in accordance with <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousCartSignInMode" rel="nofollow">AnonymousCartSignInMode</a>.</li>
  *  </ul>
- *  <p>A Cart returned in the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSignInResult" rel="nofollow">CustomerSignInResult</a> has any invalid Line Items removed and is <span>updated</span> with the latest prices, taxes, and discounts. During these updates, the following errors can be returned: <a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a>.</p>
  *  <p>If an account with the given credentials is not found, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidCredentialsError" rel="nofollow">InvalidCredentials</a> error is returned.</p>
  *
  * <hr>

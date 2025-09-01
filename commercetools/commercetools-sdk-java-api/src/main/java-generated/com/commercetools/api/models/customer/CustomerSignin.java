@@ -59,7 +59,7 @@ public interface CustomerSignin {
     public String getAnonymousCartId();
 
     /**
-     *  <p>Identifies a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> that will be assigned to the Customer.</p>
+     *  <p>Assigns the Customer to the specified Cart.</p>
      * @return anonymousCart
      */
     @Valid
@@ -78,7 +78,8 @@ public interface CustomerSignin {
     public AnonymousCartSignInMode getAnonymousCartSignInMode();
 
     /**
-     *  <p>If both <code>anonymousCart</code> and <code>anonymousId</code> are provided, the <code>anonymousId</code> on the CustomerSignin must match that of the anonymous <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>. Otherwise a <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">400 Bad Request</a> <code>Invalid Operation</code> error is returned with the message: "Cart with the ID cart-id does not have the expected anonymousId.".</p>
+     *  <p>Assigns the Customer to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingLists</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payments</a> with the same <code>anonymousId</code>.</p>
+     *  <p>If <code>anonymousCart</code> is provided, this value must match the <code>anonymousId</code> of the anonymous <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return anonymousId
      */
 
@@ -118,7 +119,7 @@ public interface CustomerSignin {
     public void setAnonymousCartId(final String anonymousCartId);
 
     /**
-     *  <p>Identifies a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> that will be assigned to the Customer.</p>
+     *  <p>Assigns the Customer to the specified Cart.</p>
      * @param anonymousCart value to be set
      */
 
@@ -135,7 +136,8 @@ public interface CustomerSignin {
     public void setAnonymousCartSignInMode(final AnonymousCartSignInMode anonymousCartSignInMode);
 
     /**
-     *  <p>If both <code>anonymousCart</code> and <code>anonymousId</code> are provided, the <code>anonymousId</code> on the CustomerSignin must match that of the anonymous <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>. Otherwise a <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">400 Bad Request</a> <code>Invalid Operation</code> error is returned with the message: "Cart with the ID cart-id does not have the expected anonymousId.".</p>
+     *  <p>Assigns the Customer to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingLists</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payments</a> with the same <code>anonymousId</code>.</p>
+     *  <p>If <code>anonymousCart</code> is provided, this value must match the <code>anonymousId</code> of the anonymous <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param anonymousId value to be set
      */
 

@@ -19,7 +19,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 /**
  *  <p>If used with an optional <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">access token for an anonymous session</a>, all Orders and Carts that belong to the <code>anonymousId</code> are assigned to the newly created Customer.</p>
  *  <p>If omitted in the request body, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> <code>stores</code> field is set to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> specified in the path parameter.</p>
- *  <p>A Cart returned in the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSignInResult" rel="nofollow">CustomerSignInResult</a> has any invalid Line Items removed and is <span>updated</span> with the latest prices, taxes, and discounts. During these updates, the following errors can be returned: <a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a>.</p>
+ *  <p>If the Customer has multiple active Carts, the anonymous Cart is <span>merged</span> into the most recently modified active Cart.</p>
  *  <p>Creating a Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerCreatedMessage" rel="nofollow">CustomerCreated</a> Message.</p>
  *
  * <hr>

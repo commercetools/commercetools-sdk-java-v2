@@ -1,10 +1,44 @@
 
+# 19.4.0 (2025-09-01)
+
+**Api changes**
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `isActive` to type `DiscountGroup`
+- added property `isActive` to type `DiscountGroupDraft`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `DiscountGroupSetIsActiveAction`
+- added type `MaxDiscountGroupsReachedError`
+- added type `GraphQLMaxDiscountGroupsReachedError`
+- added type `DiscountGroupIsActiveSetMessage`
+- added type `DiscountGroupIsActiveSetMessagePayload`
+</details>
+
+
+
+## What's Changed
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/974
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/976
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/977
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/978
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/979
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.3.0...19.4.0
+
 # 19.3.0 (2025-08-22)
 
 ## What's Changed
 * Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/972
 * Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/968
-* updating dependency by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/973
+* updating dependency by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/973 Thanks to @drazenhrgar for the report
 
 **Api changes**
 

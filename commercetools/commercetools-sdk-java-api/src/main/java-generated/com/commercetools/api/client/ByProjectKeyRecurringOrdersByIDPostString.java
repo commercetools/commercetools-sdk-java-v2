@@ -22,6 +22,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Updates a Recurring Order using one or more <span>update actions</span>.</p>
+ *  <p>A Recurring Order can only be updated when it is not processing an Order. Otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
  *
  * <hr>
  * <div class=code-example>

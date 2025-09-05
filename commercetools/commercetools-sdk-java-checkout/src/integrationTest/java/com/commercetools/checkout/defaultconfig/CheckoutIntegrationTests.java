@@ -56,7 +56,7 @@ public class CheckoutIntegrationTests {
                             .cart(c -> c.id(cart.getId()))
                             .plusTransactionItems(t -> t
                                     .amount(a -> a.centAmount(100).currencyCode("EUR"))
-                                    .paymentIntegration(p -> p.key("sample-invoice-payment")))
+                                    .paymentIntegration(p -> p.key("ci-payment-integration")))
                             .build()
 
             ).executeBlocking().getBody();

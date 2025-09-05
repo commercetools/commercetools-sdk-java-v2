@@ -50,7 +50,7 @@ public class CheckoutIntegrationTests {
                         .application(a -> a.key("demo-commercetools-checkout"))
                         .cart(c -> c.id(cart.getId()))
                         .plusTransactionItems(t -> t.amount(a -> a.centAmount(100).currencyCode("EUR"))
-                                .paymentIntegration(p -> p.key("sample-invoice-payment")))
+                                .paymentIntegration(p -> p.key("ci-payment-integration")))
                         .build()
 
                 )

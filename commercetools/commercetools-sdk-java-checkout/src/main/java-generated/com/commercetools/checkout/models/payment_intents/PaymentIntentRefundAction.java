@@ -32,20 +32,12 @@ import jakarta.validation.constraints.NotNull;
 @io.vrap.rmf.base.client.utils.json.SubType("refundPayment")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentIntentRefundActionImpl.class)
-public interface PaymentIntentRefundAction {
+public interface PaymentIntentRefundAction extends PaymentIntentAction {
 
     /**
      * discriminator value for PaymentIntentRefundAction
      */
     String REFUND_PAYMENT = "refundPayment";
-
-    /**
-     *
-     * @return action
-     */
-    @NotNull
-    @JsonProperty("action")
-    public String getAction();
 
     /**
      *  <p>Amount to be refunded. It must be less than or equal to the <span>captured</span> amount.</p>

@@ -22,7 +22,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentIntentReverseActionImpl implements PaymentIntentReverseAction, ModelBase {
 
-    private String action;
+    private com.commercetools.checkout.models.payment_intents.PaymentIntentOperation action;
 
     private String merchantReference;
 
@@ -32,21 +32,21 @@ public class PaymentIntentReverseActionImpl implements PaymentIntentReverseActio
     @JsonCreator
     PaymentIntentReverseActionImpl(@JsonProperty("merchantReference") final String merchantReference) {
         this.merchantReference = merchantReference;
-        this.action = REVERSE_PAYMENT;
+        this.action = PaymentIntentOperation.findEnum("reversePayment");
     }
 
     /**
      * create empty instance
      */
     public PaymentIntentReverseActionImpl() {
-        this.action = REVERSE_PAYMENT;
+        this.action = PaymentIntentOperation.findEnum("reversePayment");
     }
 
     /**
-     *
+     *  <p>Action to execute for the given <span>Payment</span>.</p>
      */
 
-    public String getAction() {
+    public com.commercetools.checkout.models.payment_intents.PaymentIntentOperation getAction() {
         return this.action;
     }
 

@@ -24,21 +24,13 @@ public class PaymentIntentActionImpl implements PaymentIntentAction, ModelBase {
 
     private com.commercetools.checkout.models.payment_intents.PaymentIntentOperation action;
 
-    private com.commercetools.checkout.models.common.Amount amount;
-
-    private String merchantReference;
-
     /**
      * create instance with all properties
      */
     @JsonCreator
     PaymentIntentActionImpl(
-            @JsonProperty("action") final com.commercetools.checkout.models.payment_intents.PaymentIntentOperation action,
-            @JsonProperty("amount") final com.commercetools.checkout.models.common.Amount amount,
-            @JsonProperty("merchantReference") final String merchantReference) {
+            @JsonProperty("action") final com.commercetools.checkout.models.payment_intents.PaymentIntentOperation action) {
         this.action = action;
-        this.amount = amount;
-        this.merchantReference = merchantReference;
     }
 
     /**
@@ -55,34 +47,6 @@ public class PaymentIntentActionImpl implements PaymentIntentAction, ModelBase {
         return this.action;
     }
 
-    /**
-     *  <p>Amount to be captured or refunded.</p>
-     */
-
-    public com.commercetools.checkout.models.common.Amount getAmount() {
-        return this.amount;
-    }
-
-    /**
-     *  <p>A merchant-defined identifier associated with the Payment to track and reconcile the Payment Intent Action on the merchant's side. For example, an invoice number.</p>
-     */
-
-    public String getMerchantReference() {
-        return this.merchantReference;
-    }
-
-    public void setAction(final com.commercetools.checkout.models.payment_intents.PaymentIntentOperation action) {
-        this.action = action;
-    }
-
-    public void setAmount(final com.commercetools.checkout.models.common.Amount amount) {
-        this.amount = amount;
-    }
-
-    public void setMerchantReference(final String merchantReference) {
-        this.merchantReference = merchantReference;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -93,26 +57,17 @@ public class PaymentIntentActionImpl implements PaymentIntentAction, ModelBase {
 
         PaymentIntentActionImpl that = (PaymentIntentActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action)
-                .append(amount, that.amount)
-                .append(merchantReference, that.merchantReference)
-                .append(action, that.action)
-                .append(amount, that.amount)
-                .append(merchantReference, that.merchantReference)
-                .isEquals();
+        return new EqualsBuilder().append(action, that.action).append(action, that.action).isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(amount).append(merchantReference).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).toHashCode();
     }
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
-                .append("amount", amount)
-                .append("merchantReference", merchantReference)
-                .build();
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
     @Override

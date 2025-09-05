@@ -97,10 +97,6 @@ public interface TransactionItemDraft extends io.vrap.rmf.base.client.Draft<Tran
         if (template == null) {
             return null;
         }
-
-        if (!(template instanceof TransactionItemDraftImpl)) {
-            return template.copyDeep();
-        }
         TransactionItemDraftImpl instance = new TransactionItemDraftImpl();
         instance.setPaymentIntegration(
             com.commercetools.checkout.models.payment_integration.PaymentIntegrationResourceIdentifier

@@ -12,8 +12,6 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-import jakarta.validation.constraints.NotNull;
-
 /**
  *  <p>Requests to <span>reverse</span> a <span>Payment</span>. Checkout reverses the Payment, and then requests the PSP or gift card management system to proceed with the relevant process to reverse the Payment.</p>
  *
@@ -29,20 +27,12 @@ import jakarta.validation.constraints.NotNull;
 @io.vrap.rmf.base.client.utils.json.SubType("reversePayment")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentIntentReverseActionImpl.class)
-public interface PaymentIntentReverseAction {
+public interface PaymentIntentReverseAction extends PaymentIntentAction {
 
     /**
      * discriminator value for PaymentIntentReverseAction
      */
     String REVERSE_PAYMENT = "reversePayment";
-
-    /**
-     *
-     * @return action
-     */
-    @NotNull
-    @JsonProperty("action")
-    public String getAction();
 
     /**
      *  <p>A merchant-defined identifier associated with the <span>Payment</span> to track and reconcile the <a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntentAction" rel="nofollow">Payment Intent Action</a> on the merchant's side. For example, an invoice number.</p>

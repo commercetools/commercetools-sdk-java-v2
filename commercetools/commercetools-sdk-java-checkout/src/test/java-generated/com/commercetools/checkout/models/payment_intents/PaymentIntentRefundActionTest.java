@@ -20,6 +20,7 @@ public class PaymentIntentRefundActionTest {
                 new Object[] { "amount",
                         PaymentIntentRefundAction.builder()
                                 .amount(new com.commercetools.checkout.models.common.AmountImpl()) },
+                new Object[] { "transactionId", PaymentIntentRefundAction.builder().transactionId("transactionId") },
                 new Object[] { "merchantReference",
                         PaymentIntentRefundAction.builder().merchantReference("merchantReference") } };
     }
@@ -29,6 +30,13 @@ public class PaymentIntentRefundActionTest {
         PaymentIntentRefundAction value = PaymentIntentRefundAction.of();
         value.setAmount(new com.commercetools.checkout.models.common.AmountImpl());
         Assertions.assertThat(value.getAmount()).isEqualTo(new com.commercetools.checkout.models.common.AmountImpl());
+    }
+
+    @Test
+    public void transactionId() {
+        PaymentIntentRefundAction value = PaymentIntentRefundAction.of();
+        value.setTransactionId("transactionId");
+        Assertions.assertThat(value.getTransactionId()).isEqualTo("transactionId");
     }
 
     @Test

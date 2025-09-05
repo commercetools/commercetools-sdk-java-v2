@@ -7,6 +7,7 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import com.commercetools.checkout.models.common.Amount;
 import com.commercetools.checkout.models.payment.PaymentReference;
 import com.commercetools.checkout.models.payment_integration.PaymentIntegrationReference;
 import com.fasterxml.jackson.annotation.*;
@@ -32,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TransactionItemImpl.class)
-public interface TransactionItem extends TransactionItemDraft {
+public interface TransactionItem {
 
     /**
      *  <p>Reference to the <span>Payment</span> associated with the Transaction Item.</p>
@@ -52,6 +53,14 @@ public interface TransactionItem extends TransactionItemDraft {
     public PaymentIntegrationReference getPaymentIntegration();
 
     /**
+     *  <p>Money value of the Transaction Item.</p>
+     * @return amount
+     */
+    @Valid
+    @JsonProperty("amount")
+    public Amount getAmount();
+
+    /**
      *  <p>Reference to the <span>Payment</span> associated with the Transaction Item.</p>
      * @param payment value to be set
      */
@@ -64,6 +73,13 @@ public interface TransactionItem extends TransactionItemDraft {
      */
 
     public void setPaymentIntegration(final PaymentIntegrationReference paymentIntegration);
+
+    /**
+     *  <p>Money value of the Transaction Item.</p>
+     * @param amount value to be set
+     */
+
+    public void setAmount(final Amount amount);
 
     /**
      * factory method
@@ -80,9 +96,9 @@ public interface TransactionItem extends TransactionItemDraft {
      */
     public static TransactionItem of(final TransactionItem template) {
         TransactionItemImpl instance = new TransactionItemImpl();
+        instance.setPayment(template.getPayment());
         instance.setPaymentIntegration(template.getPaymentIntegration());
         instance.setAmount(template.getAmount());
-        instance.setPayment(template.getPayment());
         return instance;
     }
 
@@ -99,10 +115,10 @@ public interface TransactionItem extends TransactionItemDraft {
             return null;
         }
         TransactionItemImpl instance = new TransactionItemImpl();
+        instance.setPayment(com.commercetools.checkout.models.payment.PaymentReference.deepCopy(template.getPayment()));
         instance.setPaymentIntegration(com.commercetools.checkout.models.payment_integration.PaymentIntegrationReference
                 .deepCopy(template.getPaymentIntegration()));
         instance.setAmount(com.commercetools.checkout.models.common.Amount.deepCopy(template.getAmount()));
-        instance.setPayment(com.commercetools.checkout.models.payment.PaymentReference.deepCopy(template.getPayment()));
         return instance;
     }
 

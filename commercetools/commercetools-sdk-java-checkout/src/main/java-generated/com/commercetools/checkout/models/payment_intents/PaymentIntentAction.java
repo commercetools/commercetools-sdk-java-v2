@@ -7,30 +7,28 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.checkout.models.common.Amount;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
  *  <p>Depending on the action specified, Checkout requests the <span>payment service provider</span> (PSP) or gift card management system to capture, refund, or cancel the authorization for the given Payment.</p>
  *
  * <hr>
- * Example to create an instance using the builder pattern
+ * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     PaymentIntentAction paymentIntentAction = PaymentIntentAction.builder()
- *             .action(PaymentIntentOperation.CAPTURE_PAYMENT)
+ *     PaymentIntentAction paymentIntentAction = PaymentIntentAction.cancelPaymentBuilder()
  *             .build()
  * </code></pre>
  * </div>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = PaymentIntentActionImpl.class, visible = true)
 @JsonDeserialize(as = PaymentIntentActionImpl.class)
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface PaymentIntentAction {
 
     /**
@@ -40,64 +38,6 @@ public interface PaymentIntentAction {
     @NotNull
     @JsonProperty("action")
     public PaymentIntentOperation getAction();
-
-    /**
-     *  <p>Amount to be captured or refunded.</p>
-     * @return amount
-     */
-    @Valid
-    @JsonProperty("amount")
-    public Amount getAmount();
-
-    /**
-     *  <p>A merchant-defined identifier associated with the Payment to track and reconcile the Payment Intent Action on the merchant's side. For example, an invoice number.</p>
-     * @return merchantReference
-     */
-
-    @JsonProperty("merchantReference")
-    public String getMerchantReference();
-
-    /**
-     *  <p>Action to execute for the given <span>Payment</span>.</p>
-     * @param action value to be set
-     */
-
-    public void setAction(final PaymentIntentOperation action);
-
-    /**
-     *  <p>Amount to be captured or refunded.</p>
-     * @param amount value to be set
-     */
-
-    public void setAmount(final Amount amount);
-
-    /**
-     *  <p>A merchant-defined identifier associated with the Payment to track and reconcile the Payment Intent Action on the merchant's side. For example, an invoice number.</p>
-     * @param merchantReference value to be set
-     */
-
-    public void setMerchantReference(final String merchantReference);
-
-    /**
-     * factory method
-     * @return instance of PaymentIntentAction
-     */
-    public static PaymentIntentAction of() {
-        return new PaymentIntentActionImpl();
-    }
-
-    /**
-     * factory method to create a shallow copy PaymentIntentAction
-     * @param template instance to be copied
-     * @return copy instance
-     */
-    public static PaymentIntentAction of(final PaymentIntentAction template) {
-        PaymentIntentActionImpl instance = new PaymentIntentActionImpl();
-        instance.setAction(template.getAction());
-        instance.setAmount(template.getAmount());
-        instance.setMerchantReference(template.getMerchantReference());
-        return instance;
-    }
 
     public PaymentIntentAction copyDeep();
 
@@ -111,28 +51,44 @@ public interface PaymentIntentAction {
         if (template == null) {
             return null;
         }
+
+        if (!(template instanceof PaymentIntentActionImpl)) {
+            return template.copyDeep();
+        }
         PaymentIntentActionImpl instance = new PaymentIntentActionImpl();
-        instance.setAction(template.getAction());
-        instance.setAmount(com.commercetools.checkout.models.common.Amount.deepCopy(template.getAmount()));
-        instance.setMerchantReference(template.getMerchantReference());
         return instance;
     }
 
     /**
-     * builder factory method for PaymentIntentAction
+     * builder for cancelPayment subtype
      * @return builder
      */
-    public static PaymentIntentActionBuilder builder() {
-        return PaymentIntentActionBuilder.of();
+    public static com.commercetools.checkout.models.payment_intents.PaymentIntentCancelActionBuilder cancelPaymentBuilder() {
+        return com.commercetools.checkout.models.payment_intents.PaymentIntentCancelActionBuilder.of();
     }
 
     /**
-     * create builder for PaymentIntentAction instance
-     * @param template instance with prefilled values for the builder
+     * builder for capturePayment subtype
      * @return builder
      */
-    public static PaymentIntentActionBuilder builder(final PaymentIntentAction template) {
-        return PaymentIntentActionBuilder.of(template);
+    public static com.commercetools.checkout.models.payment_intents.PaymentIntentCaptureActionBuilder capturePaymentBuilder() {
+        return com.commercetools.checkout.models.payment_intents.PaymentIntentCaptureActionBuilder.of();
+    }
+
+    /**
+     * builder for refundPayment subtype
+     * @return builder
+     */
+    public static com.commercetools.checkout.models.payment_intents.PaymentIntentRefundActionBuilder refundPaymentBuilder() {
+        return com.commercetools.checkout.models.payment_intents.PaymentIntentRefundActionBuilder.of();
+    }
+
+    /**
+     * builder for reversePayment subtype
+     * @return builder
+     */
+    public static com.commercetools.checkout.models.payment_intents.PaymentIntentReverseActionBuilder reversePaymentBuilder() {
+        return com.commercetools.checkout.models.payment_intents.PaymentIntentReverseActionBuilder.of();
     }
 
     /**

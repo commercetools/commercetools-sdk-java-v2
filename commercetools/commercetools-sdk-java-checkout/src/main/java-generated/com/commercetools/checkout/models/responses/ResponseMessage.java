@@ -12,7 +12,6 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
@@ -26,7 +25,6 @@ import jakarta.validation.constraints.NotNull;
  *             .severity("{severity}")
  *             .message("{message}")
  *             .correlationId("{correlationId}")
- *             .payload(payloadBuilder -> payloadBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -35,28 +33,12 @@ import jakarta.validation.constraints.NotNull;
 public interface ResponseMessage extends Message {
 
     /**
-     *  <p>Additional data about the event.</p>
-     * @return payload
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("payload")
-    public Object getPayload();
-
-    /**
      *  <p>Unique identifier of the event.</p>
      * @return correlationId
      */
     @NotNull
     @JsonProperty("correlationId")
     public String getCorrelationId();
-
-    /**
-     *  <p>Additional data about the event.</p>
-     * @param payload value to be set
-     */
-
-    public void setPayload(final Object payload);
 
     /**
      *  <p>Unique identifier of the event.</p>
@@ -85,7 +67,6 @@ public interface ResponseMessage extends Message {
         instance.setSeverity(template.getSeverity());
         instance.setMessage(template.getMessage());
         instance.setCorrelationId(template.getCorrelationId());
-        instance.setPayload(template.getPayload());
         return instance;
     }
 

@@ -22,7 +22,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentIntentRefundActionImpl implements PaymentIntentRefundAction, ModelBase {
 
-    private String action;
+    private com.commercetools.checkout.models.payment_intents.PaymentIntentOperation action;
 
     private com.commercetools.checkout.models.common.Amount amount;
 
@@ -40,21 +40,21 @@ public class PaymentIntentRefundActionImpl implements PaymentIntentRefundAction,
         this.amount = amount;
         this.transactionId = transactionId;
         this.merchantReference = merchantReference;
-        this.action = REFUND_PAYMENT;
+        this.action = PaymentIntentOperation.findEnum("refundPayment");
     }
 
     /**
      * create empty instance
      */
     public PaymentIntentRefundActionImpl() {
-        this.action = REFUND_PAYMENT;
+        this.action = PaymentIntentOperation.findEnum("refundPayment");
     }
 
     /**
-     *
+     *  <p>Action to execute for the given <span>Payment</span>.</p>
      */
 
-    public String getAction() {
+    public com.commercetools.checkout.models.payment_intents.PaymentIntentOperation getAction() {
         return this.action;
     }
 

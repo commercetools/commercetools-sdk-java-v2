@@ -24,13 +24,49 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TransactionItemBuilder implements Builder<TransactionItem> {
 
+    @Nullable
+    private com.commercetools.checkout.models.payment.PaymentReference payment;
+
     private com.commercetools.checkout.models.payment_integration.PaymentIntegrationReference paymentIntegration;
 
     @Nullable
     private com.commercetools.checkout.models.common.Amount amount;
 
-    @Nullable
-    private com.commercetools.checkout.models.payment.PaymentReference payment;
+    /**
+     *  <p>Reference to the <span>Payment</span> associated with the Transaction Item.</p>
+     * @param builder function to build the payment value
+     * @return Builder
+     */
+
+    public TransactionItemBuilder payment(
+            Function<com.commercetools.checkout.models.payment.PaymentReferenceBuilder, com.commercetools.checkout.models.payment.PaymentReferenceBuilder> builder) {
+        this.payment = builder.apply(com.commercetools.checkout.models.payment.PaymentReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the <span>Payment</span> associated with the Transaction Item.</p>
+     * @param builder function to build the payment value
+     * @return Builder
+     */
+
+    public TransactionItemBuilder withPayment(
+            Function<com.commercetools.checkout.models.payment.PaymentReferenceBuilder, com.commercetools.checkout.models.payment.PaymentReference> builder) {
+        this.payment = builder.apply(com.commercetools.checkout.models.payment.PaymentReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the <span>Payment</span> associated with the Transaction Item.</p>
+     * @param payment value to be set
+     * @return Builder
+     */
+
+    public TransactionItemBuilder payment(
+            @Nullable final com.commercetools.checkout.models.payment.PaymentReference payment) {
+        this.payment = payment;
+        return this;
+    }
 
     /**
      *  <p>Reference to the <span>Payment Integration</span> to use to execute the payment.</p>
@@ -108,38 +144,12 @@ public class TransactionItemBuilder implements Builder<TransactionItem> {
 
     /**
      *  <p>Reference to the <span>Payment</span> associated with the Transaction Item.</p>
-     * @param builder function to build the payment value
-     * @return Builder
+     * @return payment
      */
 
-    public TransactionItemBuilder payment(
-            Function<com.commercetools.checkout.models.payment.PaymentReferenceBuilder, com.commercetools.checkout.models.payment.PaymentReferenceBuilder> builder) {
-        this.payment = builder.apply(com.commercetools.checkout.models.payment.PaymentReferenceBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Reference to the <span>Payment</span> associated with the Transaction Item.</p>
-     * @param builder function to build the payment value
-     * @return Builder
-     */
-
-    public TransactionItemBuilder withPayment(
-            Function<com.commercetools.checkout.models.payment.PaymentReferenceBuilder, com.commercetools.checkout.models.payment.PaymentReference> builder) {
-        this.payment = builder.apply(com.commercetools.checkout.models.payment.PaymentReferenceBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>Reference to the <span>Payment</span> associated with the Transaction Item.</p>
-     * @param payment value to be set
-     * @return Builder
-     */
-
-    public TransactionItemBuilder payment(
-            @Nullable final com.commercetools.checkout.models.payment.PaymentReference payment) {
-        this.payment = payment;
-        return this;
+    @Nullable
+    public com.commercetools.checkout.models.payment.PaymentReference getPayment() {
+        return this.payment;
     }
 
     /**
@@ -162,22 +172,12 @@ public class TransactionItemBuilder implements Builder<TransactionItem> {
     }
 
     /**
-     *  <p>Reference to the <span>Payment</span> associated with the Transaction Item.</p>
-     * @return payment
-     */
-
-    @Nullable
-    public com.commercetools.checkout.models.payment.PaymentReference getPayment() {
-        return this.payment;
-    }
-
-    /**
      * builds TransactionItem with checking for non-null required values
      * @return TransactionItem
      */
     public TransactionItem build() {
         Objects.requireNonNull(paymentIntegration, TransactionItem.class + ": paymentIntegration is missing");
-        return new TransactionItemImpl(paymentIntegration, amount, payment);
+        return new TransactionItemImpl(payment, paymentIntegration, amount);
     }
 
     /**
@@ -185,7 +185,7 @@ public class TransactionItemBuilder implements Builder<TransactionItem> {
      * @return TransactionItem
      */
     public TransactionItem buildUnchecked() {
-        return new TransactionItemImpl(paymentIntegration, amount, payment);
+        return new TransactionItemImpl(payment, paymentIntegration, amount);
     }
 
     /**
@@ -203,9 +203,9 @@ public class TransactionItemBuilder implements Builder<TransactionItem> {
      */
     public static TransactionItemBuilder of(final TransactionItem template) {
         TransactionItemBuilder builder = new TransactionItemBuilder();
+        builder.payment = template.getPayment();
         builder.paymentIntegration = template.getPaymentIntegration();
         builder.amount = template.getAmount();
-        builder.payment = template.getPayment();
         return builder;
     }
 

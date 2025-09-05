@@ -22,7 +22,9 @@ public class TransactionItemTest {
                                 .payment(new com.commercetools.checkout.models.payment.PaymentReferenceImpl()) },
                 new Object[] { "paymentIntegration", TransactionItem.builder()
                         .paymentIntegration(
-                            new com.commercetools.checkout.models.payment_integration.PaymentIntegrationReferenceImpl()) } };
+                            new com.commercetools.checkout.models.payment_integration.PaymentIntegrationReferenceImpl()) },
+                new Object[] { "amount",
+                        TransactionItem.builder().amount(new com.commercetools.checkout.models.common.AmountImpl()) } };
     }
 
     @Test
@@ -40,5 +42,12 @@ public class TransactionItemTest {
             new com.commercetools.checkout.models.payment_integration.PaymentIntegrationReferenceImpl());
         Assertions.assertThat(value.getPaymentIntegration())
                 .isEqualTo(new com.commercetools.checkout.models.payment_integration.PaymentIntegrationReferenceImpl());
+    }
+
+    @Test
+    public void amount() {
+        TransactionItem value = TransactionItem.of();
+        value.setAmount(new com.commercetools.checkout.models.common.AmountImpl());
+        Assertions.assertThat(value.getAmount()).isEqualTo(new com.commercetools.checkout.models.common.AmountImpl());
     }
 }

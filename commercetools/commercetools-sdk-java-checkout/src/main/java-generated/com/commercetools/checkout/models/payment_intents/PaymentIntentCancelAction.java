@@ -12,8 +12,6 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-import jakarta.validation.constraints.NotNull;
-
 /**
  *  <p>Requests to <span>cancel the authorization</span> for a Payment. Checkout will cancel the <span>Payment</span> and will request the PSP or gift card management system to proceed with the financial process to cancel the authorization.</p>
  *  <p>You cannot request to cancel the authorization for a Payment that has already been <span>captured</span>.</p>
@@ -30,20 +28,12 @@ import jakarta.validation.constraints.NotNull;
 @io.vrap.rmf.base.client.utils.json.SubType("cancelPayment")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentIntentCancelActionImpl.class)
-public interface PaymentIntentCancelAction {
+public interface PaymentIntentCancelAction extends PaymentIntentAction {
 
     /**
      * discriminator value for PaymentIntentCancelAction
      */
     String CANCEL_PAYMENT = "cancelPayment";
-
-    /**
-     *
-     * @return action
-     */
-    @NotNull
-    @JsonProperty("action")
-    public String getAction();
 
     /**
      *  <p>A merchant-defined identifier associated with the <span>Payment</span> to track and reconcile the <a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntentAction" rel="nofollow">Payment Intent Action</a> on the merchant's side. For example, an invoice number.</p>

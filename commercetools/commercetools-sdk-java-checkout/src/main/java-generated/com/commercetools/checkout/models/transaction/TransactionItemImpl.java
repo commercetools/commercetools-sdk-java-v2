@@ -22,29 +22,37 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TransactionItemImpl implements TransactionItem, ModelBase {
 
+    private com.commercetools.checkout.models.payment.PaymentReference payment;
+
     private com.commercetools.checkout.models.payment_integration.PaymentIntegrationReference paymentIntegration;
 
     private com.commercetools.checkout.models.common.Amount amount;
-
-    private com.commercetools.checkout.models.payment.PaymentReference payment;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     TransactionItemImpl(
+            @JsonProperty("payment") final com.commercetools.checkout.models.payment.PaymentReference payment,
             @JsonProperty("paymentIntegration") final com.commercetools.checkout.models.payment_integration.PaymentIntegrationReference paymentIntegration,
-            @JsonProperty("amount") final com.commercetools.checkout.models.common.Amount amount,
-            @JsonProperty("payment") final com.commercetools.checkout.models.payment.PaymentReference payment) {
+            @JsonProperty("amount") final com.commercetools.checkout.models.common.Amount amount) {
+        this.payment = payment;
         this.paymentIntegration = paymentIntegration;
         this.amount = amount;
-        this.payment = payment;
     }
 
     /**
      * create empty instance
      */
     public TransactionItemImpl() {
+    }
+
+    /**
+     *  <p>Reference to the <span>Payment</span> associated with the Transaction Item.</p>
+     */
+
+    public com.commercetools.checkout.models.payment.PaymentReference getPayment() {
+        return this.payment;
     }
 
     /**
@@ -63,12 +71,8 @@ public class TransactionItemImpl implements TransactionItem, ModelBase {
         return this.amount;
     }
 
-    /**
-     *  <p>Reference to the <span>Payment</span> associated with the Transaction Item.</p>
-     */
-
-    public com.commercetools.checkout.models.payment.PaymentReference getPayment() {
-        return this.payment;
+    public void setPayment(final com.commercetools.checkout.models.payment.PaymentReference payment) {
+        this.payment = payment;
     }
 
     public void setPaymentIntegration(
@@ -78,10 +82,6 @@ public class TransactionItemImpl implements TransactionItem, ModelBase {
 
     public void setAmount(final com.commercetools.checkout.models.common.Amount amount) {
         this.amount = amount;
-    }
-
-    public void setPayment(final com.commercetools.checkout.models.payment.PaymentReference payment) {
-        this.payment = payment;
     }
 
     @Override
@@ -94,26 +94,25 @@ public class TransactionItemImpl implements TransactionItem, ModelBase {
 
         TransactionItemImpl that = (TransactionItemImpl) o;
 
-        return new EqualsBuilder().append(paymentIntegration, that.paymentIntegration)
+        return new EqualsBuilder().append(payment, that.payment)
+                .append(paymentIntegration, that.paymentIntegration)
                 .append(amount, that.amount)
                 .append(payment, that.payment)
                 .append(paymentIntegration, that.paymentIntegration)
                 .append(amount, that.amount)
-                .append(payment, that.payment)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(paymentIntegration).append(amount).append(payment).toHashCode();
+        return new HashCodeBuilder(17, 37).append(payment).append(paymentIntegration).append(amount).toHashCode();
     }
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE)
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("payment", payment)
                 .append("paymentIntegration", paymentIntegration)
                 .append("amount", amount)
-                .append("payment", payment)
                 .build();
     }
 

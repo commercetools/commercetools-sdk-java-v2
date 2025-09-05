@@ -30,20 +30,16 @@ public class ResponseMessageImpl implements ResponseMessage, ModelBase {
 
     private String correlationId;
 
-    private java.lang.Object payload;
-
     /**
      * create instance with all properties
      */
     @JsonCreator
     ResponseMessageImpl(@JsonProperty("code") final String code, @JsonProperty("severity") final String severity,
-            @JsonProperty("message") final String message, @JsonProperty("correlationId") final String correlationId,
-            @JsonProperty("payload") final java.lang.Object payload) {
+            @JsonProperty("message") final String message, @JsonProperty("correlationId") final String correlationId) {
         this.code = code;
         this.severity = severity;
         this.message = message;
         this.correlationId = correlationId;
-        this.payload = payload;
     }
 
     /**
@@ -84,14 +80,6 @@ public class ResponseMessageImpl implements ResponseMessage, ModelBase {
         return this.correlationId;
     }
 
-    /**
-     *  <p>Additional data about the event.</p>
-     */
-
-    public java.lang.Object getPayload() {
-        return this.payload;
-    }
-
     public void setSeverity(final String severity) {
         this.severity = severity;
     }
@@ -102,10 +90,6 @@ public class ResponseMessageImpl implements ResponseMessage, ModelBase {
 
     public void setCorrelationId(final String correlationId) {
         this.correlationId = correlationId;
-    }
-
-    public void setPayload(final java.lang.Object payload) {
-        this.payload = payload;
     }
 
     @Override
@@ -122,12 +106,10 @@ public class ResponseMessageImpl implements ResponseMessage, ModelBase {
                 .append(severity, that.severity)
                 .append(message, that.message)
                 .append(correlationId, that.correlationId)
-                .append(payload, that.payload)
                 .append(code, that.code)
                 .append(severity, that.severity)
                 .append(message, that.message)
                 .append(correlationId, that.correlationId)
-                .append(payload, that.payload)
                 .isEquals();
     }
 
@@ -137,7 +119,6 @@ public class ResponseMessageImpl implements ResponseMessage, ModelBase {
                 .append(severity)
                 .append(message)
                 .append(correlationId)
-                .append(payload)
                 .toHashCode();
     }
 
@@ -147,7 +128,6 @@ public class ResponseMessageImpl implements ResponseMessage, ModelBase {
                 .append("severity", severity)
                 .append("message", message)
                 .append("correlationId", correlationId)
-                .append("payload", payload)
                 .build();
     }
 

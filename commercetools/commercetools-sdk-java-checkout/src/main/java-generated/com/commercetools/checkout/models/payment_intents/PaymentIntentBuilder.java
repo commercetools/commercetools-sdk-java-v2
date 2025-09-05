@@ -70,7 +70,7 @@ public class PaymentIntentBuilder implements Builder<PaymentIntent> {
      */
 
     public PaymentIntentBuilder plusActions(
-            Function<com.commercetools.checkout.models.payment_intents.PaymentIntentActionBuilder, com.commercetools.checkout.models.payment_intents.PaymentIntentActionBuilder> builder) {
+            Function<com.commercetools.checkout.models.payment_intents.PaymentIntentActionBuilder, Builder<? extends com.commercetools.checkout.models.payment_intents.PaymentIntentAction>> builder) {
         if (this.actions == null) {
             this.actions = new ArrayList<>();
         }
@@ -86,35 +86,11 @@ public class PaymentIntentBuilder implements Builder<PaymentIntent> {
      */
 
     public PaymentIntentBuilder withActions(
-            Function<com.commercetools.checkout.models.payment_intents.PaymentIntentActionBuilder, com.commercetools.checkout.models.payment_intents.PaymentIntentActionBuilder> builder) {
+            Function<com.commercetools.checkout.models.payment_intents.PaymentIntentActionBuilder, Builder<? extends com.commercetools.checkout.models.payment_intents.PaymentIntentAction>> builder) {
         this.actions = new ArrayList<>();
         this.actions.add(
             builder.apply(com.commercetools.checkout.models.payment_intents.PaymentIntentActionBuilder.of()).build());
         return this;
-    }
-
-    /**
-     *  <p>Action to execute for the given Payment.</p>
-     * @param builder function to build the actions value
-     * @return Builder
-     */
-
-    public PaymentIntentBuilder addActions(
-            Function<com.commercetools.checkout.models.payment_intents.PaymentIntentActionBuilder, com.commercetools.checkout.models.payment_intents.PaymentIntentAction> builder) {
-        return plusActions(
-            builder.apply(com.commercetools.checkout.models.payment_intents.PaymentIntentActionBuilder.of()));
-    }
-
-    /**
-     *  <p>Action to execute for the given Payment.</p>
-     * @param builder function to build the actions value
-     * @return Builder
-     */
-
-    public PaymentIntentBuilder setActions(
-            Function<com.commercetools.checkout.models.payment_intents.PaymentIntentActionBuilder, com.commercetools.checkout.models.payment_intents.PaymentIntentAction> builder) {
-        return actions(
-            builder.apply(com.commercetools.checkout.models.payment_intents.PaymentIntentActionBuilder.of()));
     }
 
     /**

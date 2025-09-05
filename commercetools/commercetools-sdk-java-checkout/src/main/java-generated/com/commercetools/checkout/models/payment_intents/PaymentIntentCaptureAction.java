@@ -32,20 +32,12 @@ import jakarta.validation.constraints.NotNull;
 @io.vrap.rmf.base.client.utils.json.SubType("capturePayment")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentIntentCaptureActionImpl.class)
-public interface PaymentIntentCaptureAction {
+public interface PaymentIntentCaptureAction extends PaymentIntentAction {
 
     /**
      * discriminator value for PaymentIntentCaptureAction
      */
     String CAPTURE_PAYMENT = "capturePayment";
-
-    /**
-     *
-     * @return action
-     */
-    @NotNull
-    @JsonProperty("action")
-    public String getAction();
 
     /**
      *  <p>Amount to be captured. It must be less than or equal to the <span>authorized</span> amount.</p>

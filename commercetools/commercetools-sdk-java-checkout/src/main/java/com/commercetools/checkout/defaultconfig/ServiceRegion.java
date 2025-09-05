@@ -9,10 +9,10 @@ public enum ServiceRegion implements ServiceRegionConfig {
         "https://auth.europe-west1.gcp.commercetools.com")),
     GCP_US_CENTRAL1(new RegionHosts("https://checkout.us-central1.gcp.commercetools.com/",
         "https://auth.us-central1.gcp.commercetools.com")),
-//    AWS_US_EAST_2(new RegionHosts("https://checkout.us-east-2.aws.commercetools.com/",
-//        "https://auth.us-east-2.aws.commercetools.com")),
-//    AWS_EU_CENTRAL_1(new RegionHosts("https://checkout.eu-central-1.aws.commercetools.com/",
-//        "https://auth.eu-central-1.aws.commercetools.com")),
+    //    AWS_US_EAST_2(new RegionHosts("https://checkout.us-east-2.aws.commercetools.com/",
+    //        "https://auth.us-east-2.aws.commercetools.com")),
+    //    AWS_EU_CENTRAL_1(new RegionHosts("https://checkout.eu-central-1.aws.commercetools.com/",
+    //        "https://auth.eu-central-1.aws.commercetools.com")),
     GCP_AUSTRALIA_SOUTHEAST1(new RegionHosts("https://checkout.australia-southeast1.gcp.commercetools.com/",
         "https://auth.australia-southeast1.gcp.commercetools.com")),;
 

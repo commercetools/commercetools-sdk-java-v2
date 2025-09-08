@@ -26,8 +26,6 @@ import jakarta.validation.constraints.NotNull;
  * <pre><code class='java'>
  *     ProductSelectionVariantExclusionChangedMessagePayload productSelectionVariantExclusionChangedMessagePayload = ProductSelectionVariantExclusionChangedMessagePayload.builder()
  *             .product(productBuilder -> productBuilder)
- *             .oldVariantExclusion(oldVariantExclusionBuilder -> oldVariantExclusionBuilder)
- *             .newVariantExclusion(newVariantExclusionBuilder -> newVariantExclusionBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -55,7 +53,6 @@ public interface ProductSelectionVariantExclusionChangedMessagePayload extends M
      *  <p>Product Variant Exclusion before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantExclusionAction" rel="nofollow">Set Variant Exclusion</a> update action.</p>
      * @return oldVariantExclusion
      */
-    @NotNull
     @Valid
     @JsonProperty("oldVariantExclusion")
     public ProductVariantExclusion getOldVariantExclusion();
@@ -64,7 +61,6 @@ public interface ProductSelectionVariantExclusionChangedMessagePayload extends M
      *  <p>Product Variant Exclusion after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantExclusionAction" rel="nofollow">Set Variant Exclusion</a> update action.</p>
      * @return newVariantExclusion
      */
-    @NotNull
     @Valid
     @JsonProperty("newVariantExclusion")
     public ProductVariantExclusion getNewVariantExclusion();

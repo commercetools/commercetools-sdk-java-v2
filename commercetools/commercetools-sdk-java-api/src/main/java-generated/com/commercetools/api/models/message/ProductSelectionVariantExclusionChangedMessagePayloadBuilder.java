@@ -4,6 +4,8 @@ package com.commercetools.api.models.message;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,8 +17,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ProductSelectionVariantExclusionChangedMessagePayload productSelectionVariantExclusionChangedMessagePayload = ProductSelectionVariantExclusionChangedMessagePayload.builder()
  *             .product(productBuilder -> productBuilder)
- *             .oldVariantExclusion(oldVariantExclusionBuilder -> oldVariantExclusionBuilder)
- *             .newVariantExclusion(newVariantExclusionBuilder -> newVariantExclusionBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -27,8 +27,10 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
 
     private com.commercetools.api.models.product.ProductReference product;
 
+    @Nullable
     private com.commercetools.api.models.product_selection.ProductVariantExclusion oldVariantExclusion;
 
+    @Nullable
     private com.commercetools.api.models.product_selection.ProductVariantExclusion newVariantExclusion;
 
     /**
@@ -101,7 +103,7 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
      */
 
     public ProductSelectionVariantExclusionChangedMessagePayloadBuilder oldVariantExclusion(
-            final com.commercetools.api.models.product_selection.ProductVariantExclusion oldVariantExclusion) {
+            @Nullable final com.commercetools.api.models.product_selection.ProductVariantExclusion oldVariantExclusion) {
         this.oldVariantExclusion = oldVariantExclusion;
         return this;
     }
@@ -140,7 +142,7 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
      */
 
     public ProductSelectionVariantExclusionChangedMessagePayloadBuilder newVariantExclusion(
-            final com.commercetools.api.models.product_selection.ProductVariantExclusion newVariantExclusion) {
+            @Nullable final com.commercetools.api.models.product_selection.ProductVariantExclusion newVariantExclusion) {
         this.newVariantExclusion = newVariantExclusion;
         return this;
     }
@@ -159,6 +161,7 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
      * @return oldVariantExclusion
      */
 
+    @Nullable
     public com.commercetools.api.models.product_selection.ProductVariantExclusion getOldVariantExclusion() {
         return this.oldVariantExclusion;
     }
@@ -168,6 +171,7 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
      * @return newVariantExclusion
      */
 
+    @Nullable
     public com.commercetools.api.models.product_selection.ProductVariantExclusion getNewVariantExclusion() {
         return this.newVariantExclusion;
     }
@@ -179,10 +183,6 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
     public ProductSelectionVariantExclusionChangedMessagePayload build() {
         Objects.requireNonNull(product,
             ProductSelectionVariantExclusionChangedMessagePayload.class + ": product is missing");
-        Objects.requireNonNull(oldVariantExclusion,
-            ProductSelectionVariantExclusionChangedMessagePayload.class + ": oldVariantExclusion is missing");
-        Objects.requireNonNull(newVariantExclusion,
-            ProductSelectionVariantExclusionChangedMessagePayload.class + ": newVariantExclusion is missing");
         return new ProductSelectionVariantExclusionChangedMessagePayloadImpl(product, oldVariantExclusion,
             newVariantExclusion);
     }

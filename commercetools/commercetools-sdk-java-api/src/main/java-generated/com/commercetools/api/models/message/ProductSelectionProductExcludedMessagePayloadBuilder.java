@@ -4,6 +4,8 @@ package com.commercetools.api.models.message;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,7 +17,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ProductSelectionProductExcludedMessagePayload productSelectionProductExcludedMessagePayload = ProductSelectionProductExcludedMessagePayload.builder()
  *             .product(productBuilder -> productBuilder)
- *             .variantExclusion(variantExclusionBuilder -> variantExclusionBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -26,6 +27,7 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
 
     private com.commercetools.api.models.product.ProductReference product;
 
+    @Nullable
     private com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion;
 
     /**
@@ -98,7 +100,7 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
      */
 
     public ProductSelectionProductExcludedMessagePayloadBuilder variantExclusion(
-            final com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion) {
+            @Nullable final com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion) {
         this.variantExclusion = variantExclusion;
         return this;
     }
@@ -117,6 +119,7 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
      * @return variantExclusion
      */
 
+    @Nullable
     public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {
         return this.variantExclusion;
     }
@@ -127,8 +130,6 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
      */
     public ProductSelectionProductExcludedMessagePayload build() {
         Objects.requireNonNull(product, ProductSelectionProductExcludedMessagePayload.class + ": product is missing");
-        Objects.requireNonNull(variantExclusion,
-            ProductSelectionProductExcludedMessagePayload.class + ": variantExclusion is missing");
         return new ProductSelectionProductExcludedMessagePayloadImpl(product, variantExclusion);
     }
 

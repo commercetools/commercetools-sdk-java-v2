@@ -26,7 +26,6 @@ import jakarta.validation.constraints.NotNull;
  * <pre><code class='java'>
  *     ProductSelectionProductExcludedMessagePayload productSelectionProductExcludedMessagePayload = ProductSelectionProductExcludedMessagePayload.builder()
  *             .product(productBuilder -> productBuilder)
- *             .variantExclusion(variantExclusionBuilder -> variantExclusionBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -54,7 +53,6 @@ public interface ProductSelectionProductExcludedMessagePayload extends MessagePa
      *  <p>Product Variant Exclusion after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionExcludeProductAction" rel="nofollow">Exclude Product</a> update action.</p>
      * @return variantExclusion
      */
-    @NotNull
     @Valid
     @JsonProperty("variantExclusion")
     public ProductVariantExclusion getVariantExclusion();

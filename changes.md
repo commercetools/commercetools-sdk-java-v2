@@ -1,20 +1,19 @@
 **Api changes**
 
 <details>
-<summary>Added Property(s)</summary>
+<summary>Required Property(s)</summary>
 
-- added property `isActive` to type `DiscountGroup`
-- added property `isActive` to type `DiscountGroupDraft`
-</details>
-
-
-<details>
-<summary>Added Type(s)</summary>
-
-- added type `DiscountGroupSetIsActiveAction`
-- added type `MaxDiscountGroupsReachedError`
-- added type `GraphQLMaxDiscountGroupsReachedError`
-- added type `DiscountGroupIsActiveSetMessage`
-- added type `DiscountGroupIsActiveSetMessagePayload`
+- changed property `variantSelection` of type `ProductSelectionProductAddedMessage` to be optional
+- changed property `variantExclusion` of type `ProductSelectionProductExcludedMessage` to be optional
+- changed property `oldVariantExclusion` of type `ProductSelectionVariantExclusionChangedMessage` to be optional
+- changed property `newVariantExclusion` of type `ProductSelectionVariantExclusionChangedMessage` to be optional
+- changed property `oldVariantSelection` of type `ProductSelectionVariantSelectionChangedMessage` to be optional
+- changed property `newVariantSelection` of type `ProductSelectionVariantSelectionChangedMessage` to be optional
+- changed property `variantSelection` of type `ProductSelectionProductAddedMessagePayload` to be optional
+- changed property `variantExclusion` of type `ProductSelectionProductExcludedMessagePayload` to be optional
+- changed property `oldVariantExclusion` of type `ProductSelectionVariantExclusionChangedMessagePayload` to be optional
+- changed property `newVariantExclusion` of type `ProductSelectionVariantExclusionChangedMessagePayload` to be optional
+- changed property `oldVariantSelection` of type `ProductSelectionVariantSelectionChangedMessagePayload` to be optional
+- changed property `newVariantSelection` of type `ProductSelectionVariantSelectionChangedMessagePayload` to be optional
 </details>
 

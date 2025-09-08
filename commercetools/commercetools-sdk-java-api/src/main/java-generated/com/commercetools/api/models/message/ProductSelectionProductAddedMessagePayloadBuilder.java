@@ -4,6 +4,8 @@ package com.commercetools.api.models.message;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,7 +17,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ProductSelectionProductAddedMessagePayload productSelectionProductAddedMessagePayload = ProductSelectionProductAddedMessagePayload.builder()
  *             .product(productBuilder -> productBuilder)
- *             .variantSelection(variantSelectionBuilder -> variantSelectionBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -26,6 +27,7 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
 
     private com.commercetools.api.models.product.ProductReference product;
 
+    @Nullable
     private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
 
     /**
@@ -71,7 +73,7 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
      */
 
     public ProductSelectionProductAddedMessagePayloadBuilder variantSelection(
-            final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
+            @Nullable final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
         this.variantSelection = variantSelection;
         return this;
     }
@@ -104,6 +106,7 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
      * @return variantSelection
      */
 
+    @Nullable
     public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
         return this.variantSelection;
     }
@@ -114,8 +117,6 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
      */
     public ProductSelectionProductAddedMessagePayload build() {
         Objects.requireNonNull(product, ProductSelectionProductAddedMessagePayload.class + ": product is missing");
-        Objects.requireNonNull(variantSelection,
-            ProductSelectionProductAddedMessagePayload.class + ": variantSelection is missing");
         return new ProductSelectionProductAddedMessagePayloadImpl(product, variantSelection);
     }
 

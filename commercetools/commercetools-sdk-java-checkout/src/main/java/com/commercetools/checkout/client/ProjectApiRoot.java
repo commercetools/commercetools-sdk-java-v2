@@ -28,6 +28,16 @@ public class ProjectApiRoot implements Closeable, ProjectScopedApiRoot {
         return ApiRoot.fromClient(apiHttpClient).withProjectKey(projectKey);
     }
 
+    @Override
+    public ByProjectKeyPaymentIntentsRequestBuilder paymentIntents() {
+        return with().paymentIntents();
+    }
+
+    @Override
+    public ByProjectKeyTransactionsRequestBuilder transactions() {
+        return with().transactions();
+    }
+
     public ByProjectKeyRequestBuilder withProjectKey(final String projectKey) {
         return ApiRoot.fromClient(apiHttpClient).withProjectKey(projectKey);
     }

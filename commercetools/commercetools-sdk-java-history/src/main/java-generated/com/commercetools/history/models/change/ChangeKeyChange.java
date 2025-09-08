@@ -17,9 +17,9 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Change Key on Channels.</li>
- *   <li>Change State key on States.</li>
- *   <li>Change Key on Types.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelChangeKeyAction" rel="nofollow">Change Key</a> on Channels.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StateChangeKeyAction" rel="nofollow">Change State key</a> on States.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:TypeChangeKeyAction" rel="nofollow">Change Key</a> on Types.</li>
  *  </ul>
  *
  * <hr>

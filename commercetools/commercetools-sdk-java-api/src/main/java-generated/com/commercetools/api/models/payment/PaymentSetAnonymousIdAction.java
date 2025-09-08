@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>If the Payment is already associated with a Customer, an InvalidOperation error is returned.</p>
+ *  <p>If the Payment is already associated with a Customer, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

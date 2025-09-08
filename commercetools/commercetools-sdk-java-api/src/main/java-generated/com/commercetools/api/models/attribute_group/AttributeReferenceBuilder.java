@@ -24,7 +24,7 @@ public class AttributeReferenceBuilder implements Builder<AttributeReference> {
     private String key;
 
     /**
-     *  <p>The Attribute's <code>name</code> as given in its AttributeDefinition.</p>
+     *  <p>The Attribute's <code>name</code> as given in its <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class AttributeReferenceBuilder implements Builder<AttributeReference> {
     }
 
     /**
-     *  <p>The Attribute's <code>name</code> as given in its AttributeDefinition.</p>
+     *  <p>The Attribute's <code>name</code> as given in its <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @return key
      */
 

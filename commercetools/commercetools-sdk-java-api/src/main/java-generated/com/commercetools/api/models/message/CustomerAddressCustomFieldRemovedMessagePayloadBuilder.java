@@ -41,7 +41,7 @@ public class CustomerAddressCustomFieldRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p><code>id</code> of the Address from which the Custom Field was removed.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> from which the Custom Field was removed.</p>
      * @param addressId value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class CustomerAddressCustomFieldRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p><code>id</code> of the Address from which the Custom Field was removed.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> from which the Custom Field was removed.</p>
      * @return addressId
      */
 

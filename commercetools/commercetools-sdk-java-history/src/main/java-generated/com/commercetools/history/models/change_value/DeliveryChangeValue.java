@@ -39,7 +39,7 @@ import jakarta.validation.constraints.NotNull;
 public interface DeliveryChangeValue {
 
     /**
-     *  <p>Line Items or Custom Line Items shipped in the Delivery.</p>
+     *  <p>Line Items or Custom Line Items shipped in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @return items
      */
     @NotNull
@@ -57,7 +57,7 @@ public interface DeliveryChangeValue {
     public Address getAddress();
 
     /**
-     *  <p>Parcels included in the Delivery.</p>
+     *  <p>Parcels included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @return parcels
      */
     @NotNull
@@ -66,7 +66,7 @@ public interface DeliveryChangeValue {
     public List<Parcel> getParcels();
 
     /**
-     *  <p>Line Items or Custom Line Items shipped in the Delivery.</p>
+     *  <p>Line Items or Custom Line Items shipped in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param items values to be set
      */
 
@@ -74,7 +74,7 @@ public interface DeliveryChangeValue {
     public void setItems(final DeliveryItem... items);
 
     /**
-     *  <p>Line Items or Custom Line Items shipped in the Delivery.</p>
+     *  <p>Line Items or Custom Line Items shipped in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param items values to be set
      */
 
@@ -88,7 +88,7 @@ public interface DeliveryChangeValue {
     public void setAddress(final Address address);
 
     /**
-     *  <p>Parcels included in the Delivery.</p>
+     *  <p>Parcels included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param parcels values to be set
      */
 
@@ -96,7 +96,7 @@ public interface DeliveryChangeValue {
     public void setParcels(final Parcel... parcels);
 
     /**
-     *  <p>Parcels included in the Delivery.</p>
+     *  <p>Parcels included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param parcels values to be set
      */
 

@@ -110,7 +110,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     public String getKey();
 
     /**
-     *  <p>Indicates whether the Business Unit can be edited and used in Orders.</p>
+     *  <p>Indicates whether the Business Unit can be edited and used in <span>Orders</span>.</p>
      * @return status
      */
     @NotNull
@@ -118,9 +118,9 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     public BusinessUnitStatus getStatus();
 
     /**
-     *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
-     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Recurring Orders, Quotes, Quote Requests, or Shopping Lists must belong to one of the Business Unit's Stores.</p>
-     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Recurring Orders, Quotes, Quote Requests, or Shopping Lists must not belong to any Store.</p>
+     *  <p>References to <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must not belong to any Store.</p>
      * @return stores
      */
     @Valid
@@ -128,7 +128,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     public List<StoreKeyReference> getStores();
 
     /**
-     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is <span>eventually consistent</span> and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
      * @return inheritedStores
      */
     @Valid
@@ -225,7 +225,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     public BusinessUnitAssociateMode getAssociateMode();
 
     /**
-     *  <p>Associates that are part of the Business Unit in specific roles.</p>
+     *  <p>Associates that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</p>
      * @return associates
      */
     @NotNull
@@ -234,7 +234,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     public List<Associate> getAssociates();
 
     /**
-     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is <span>eventually consistent</span> and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
      * @return inheritedAssociates
      */
     @Valid
@@ -259,7 +259,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     public BusinessUnitKeyReference getTopLevelUnit();
 
     /**
-     *  <p>Determines whether the Business Unit can inherit Approval Rules from a parent. Always <code>Explicit</code> for Companies and defaults to <code>ExplicitAndFromParent</code> for Divisions.</p>
+     *  <p>Determines whether the Business Unit can inherit Approval Rules from a parent. Always <code>Explicit</code> for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Companies</a> and defaults to <code>ExplicitAndFromParent</code> for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Divisions</a>.</p>
      * @return approvalRuleMode
      */
     @NotNull
@@ -316,16 +316,16 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     public void setKey(final String key);
 
     /**
-     *  <p>Indicates whether the Business Unit can be edited and used in Orders.</p>
+     *  <p>Indicates whether the Business Unit can be edited and used in <span>Orders</span>.</p>
      * @param status value to be set
      */
 
     public void setStatus(final BusinessUnitStatus status);
 
     /**
-     *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
-     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Recurring Orders, Quotes, Quote Requests, or Shopping Lists must belong to one of the Business Unit's Stores.</p>
-     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Recurring Orders, Quotes, Quote Requests, or Shopping Lists must not belong to any Store.</p>
+     *  <p>References to <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must not belong to any Store.</p>
      * @param stores values to be set
      */
 
@@ -333,16 +333,16 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     public void setStores(final StoreKeyReference... stores);
 
     /**
-     *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
-     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Recurring Orders, Quotes, Quote Requests, or Shopping Lists must belong to one of the Business Unit's Stores.</p>
-     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Recurring Orders, Quotes, Quote Requests, or Shopping Lists must not belong to any Store.</p>
+     *  <p>References to <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must not belong to any Store.</p>
      * @param stores values to be set
      */
 
     public void setStores(final List<StoreKeyReference> stores);
 
     /**
-     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is <span>eventually consistent</span> and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
      * @param inheritedStores values to be set
      */
 
@@ -350,7 +350,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     public void setInheritedStores(final StoreKeyReference... inheritedStores);
 
     /**
-     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is <span>eventually consistent</span> and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
      * @param inheritedStores values to be set
      */
 
@@ -451,7 +451,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     public void setAssociateMode(final BusinessUnitAssociateMode associateMode);
 
     /**
-     *  <p>Associates that are part of the Business Unit in specific roles.</p>
+     *  <p>Associates that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</p>
      * @param associates values to be set
      */
 
@@ -459,14 +459,14 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     public void setAssociates(final Associate... associates);
 
     /**
-     *  <p>Associates that are part of the Business Unit in specific roles.</p>
+     *  <p>Associates that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</p>
      * @param associates values to be set
      */
 
     public void setAssociates(final List<Associate> associates);
 
     /**
-     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is <span>eventually consistent</span> and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
      * @param inheritedAssociates values to be set
      */
 
@@ -474,7 +474,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     public void setInheritedAssociates(final InheritedAssociate... inheritedAssociates);
 
     /**
-     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is <span>eventually consistent</span> and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
      * @param inheritedAssociates values to be set
      */
 
@@ -495,7 +495,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     public void setTopLevelUnit(final BusinessUnitKeyReference topLevelUnit);
 
     /**
-     *  <p>Determines whether the Business Unit can inherit Approval Rules from a parent. Always <code>Explicit</code> for Companies and defaults to <code>ExplicitAndFromParent</code> for Divisions.</p>
+     *  <p>Determines whether the Business Unit can inherit Approval Rules from a parent. Always <code>Explicit</code> for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Companies</a> and defaults to <code>ExplicitAndFromParent</code> for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Divisions</a>.</p>
      * @param approvalRuleMode value to be set
      */
 

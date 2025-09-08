@@ -182,7 +182,7 @@ public class ProductBuilder implements Builder<Product> {
 
     /**
      *  <p>User-defined unique identifier of the Product.</p>
-     *  <p>This is different from the <code>key</code> of a ProductVariant.</p>
+     *  <p>This is different from the <code>key</code> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -265,7 +265,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *  <p>The TaxCategory of the Product.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of the Product.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -278,7 +278,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *  <p>The TaxCategory of the Product.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of the Product.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -290,7 +290,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *  <p>The TaxCategory of the Product.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of the Product.</p>
      * @param taxCategory value to be set
      * @return Builder
      */
@@ -302,7 +302,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *  <p>State of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Product.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -314,7 +314,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *  <p>State of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Product.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -326,7 +326,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *  <p>State of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Product.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -510,7 +510,7 @@ public class ProductBuilder implements Builder<Product> {
 
     /**
      *  <p>User-defined unique identifier of the Product.</p>
-     *  <p>This is different from the <code>key</code> of a ProductVariant.</p>
+     *  <p>This is different from the <code>key</code> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return key
      */
 
@@ -538,7 +538,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *  <p>The TaxCategory of the Product.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of the Product.</p>
      * @return taxCategory
      */
 
@@ -548,7 +548,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *  <p>State of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Product.</p>
      * @return state
      */
 

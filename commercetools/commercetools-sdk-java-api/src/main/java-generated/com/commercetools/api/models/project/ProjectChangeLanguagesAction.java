@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Removing a language used by a Store returns a LanguageUsedInStores error.</p>
+ *  <p>Removing a language used by a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> returns a <a href="https://docs.commercetools.com/apis/ctp:api:type:LanguageUsedInStoresError" rel="nofollow">LanguageUsedInStores</a> error.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -51,7 +51,7 @@ public class ChangeTargetLineItemsChangeValueImpl implements ChangeTargetLineIte
     }
 
     /**
-     *  <p>Valid LineItem target predicate.</p>
+     *  <p>Valid <span>LineItem target predicate</span>.</p>
      */
 
     public String getPredicate() {

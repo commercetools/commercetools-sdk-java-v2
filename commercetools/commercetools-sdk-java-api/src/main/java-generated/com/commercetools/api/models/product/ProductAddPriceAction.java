@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Adds the given Price to the <code>prices</code> array of the ProductVariant. Either <code>variantId</code> or <code>sku</code> is required.</p>
+ *  <p>Adds the given Price to the <code>prices</code> array of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. Either <code>variantId</code> or <code>sku</code> is required.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

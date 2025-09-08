@@ -39,7 +39,7 @@ public class CheckoutMessagePaymentsPayloadBaseDataBuilder implements Builder<Ch
     private com.commercetools.api.models.order.OrderReference order;
 
     /**
-     *  <p><code>key</code> of the Project where the payment was made.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> where the payment was made.</p>
      * @param projectKey value to be set
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class CheckoutMessagePaymentsPayloadBaseDataBuilder implements Builder<Ch
     }
 
     /**
-     *  <p>The Payment on which the change or action was performed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> on which the change or action was performed.</p>
      * @param builder function to build the payment value
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class CheckoutMessagePaymentsPayloadBaseDataBuilder implements Builder<Ch
     }
 
     /**
-     *  <p>The Payment on which the change or action was performed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> on which the change or action was performed.</p>
      * @param builder function to build the payment value
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class CheckoutMessagePaymentsPayloadBaseDataBuilder implements Builder<Ch
     }
 
     /**
-     *  <p>The Payment on which the change or action was performed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> on which the change or action was performed.</p>
      * @param payment value to be set
      * @return Builder
      */
@@ -86,7 +86,7 @@ public class CheckoutMessagePaymentsPayloadBaseDataBuilder implements Builder<Ch
     }
 
     /**
-     *  <p><code>id</code> of the Transaction.</p>
+     *  <p><code>id</code> of the <span>Transaction</span>.</p>
      * @param transactionId value to be set
      * @return Builder
      */
@@ -97,7 +97,7 @@ public class CheckoutMessagePaymentsPayloadBaseDataBuilder implements Builder<Ch
     }
 
     /**
-     *  <p>The Cart on which the change or action was performed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> on which the change or action was performed.</p>
      * @param builder function to build the cart value
      * @return Builder
      */
@@ -109,7 +109,7 @@ public class CheckoutMessagePaymentsPayloadBaseDataBuilder implements Builder<Ch
     }
 
     /**
-     *  <p>The Cart on which the change or action was performed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> on which the change or action was performed.</p>
      * @param builder function to build the cart value
      * @return Builder
      */
@@ -121,7 +121,7 @@ public class CheckoutMessagePaymentsPayloadBaseDataBuilder implements Builder<Ch
     }
 
     /**
-     *  <p>The Cart on which the change or action was performed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> on which the change or action was performed.</p>
      * @param cart value to be set
      * @return Builder
      */
@@ -133,7 +133,7 @@ public class CheckoutMessagePaymentsPayloadBaseDataBuilder implements Builder<Ch
     }
 
     /**
-     *  <p>The Order on which the change or action was performed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> on which the change or action was performed.</p>
      * @param builder function to build the order value
      * @return Builder
      */
@@ -145,7 +145,7 @@ public class CheckoutMessagePaymentsPayloadBaseDataBuilder implements Builder<Ch
     }
 
     /**
-     *  <p>The Order on which the change or action was performed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> on which the change or action was performed.</p>
      * @param builder function to build the order value
      * @return Builder
      */
@@ -157,7 +157,7 @@ public class CheckoutMessagePaymentsPayloadBaseDataBuilder implements Builder<Ch
     }
 
     /**
-     *  <p>The Order on which the change or action was performed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> on which the change or action was performed.</p>
      * @param order value to be set
      * @return Builder
      */
@@ -169,7 +169,7 @@ public class CheckoutMessagePaymentsPayloadBaseDataBuilder implements Builder<Ch
     }
 
     /**
-     *  <p><code>key</code> of the Project where the payment was made.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> where the payment was made.</p>
      * @return projectKey
      */
 
@@ -178,7 +178,7 @@ public class CheckoutMessagePaymentsPayloadBaseDataBuilder implements Builder<Ch
     }
 
     /**
-     *  <p>The Payment on which the change or action was performed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> on which the change or action was performed.</p>
      * @return payment
      */
 
@@ -187,7 +187,7 @@ public class CheckoutMessagePaymentsPayloadBaseDataBuilder implements Builder<Ch
     }
 
     /**
-     *  <p><code>id</code> of the Transaction.</p>
+     *  <p><code>id</code> of the <span>Transaction</span>.</p>
      * @return transactionId
      */
 
@@ -196,7 +196,7 @@ public class CheckoutMessagePaymentsPayloadBaseDataBuilder implements Builder<Ch
     }
 
     /**
-     *  <p>The Cart on which the change or action was performed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> on which the change or action was performed.</p>
      * @return cart
      */
 
@@ -206,7 +206,7 @@ public class CheckoutMessagePaymentsPayloadBaseDataBuilder implements Builder<Ch
     }
 
     /**
-     *  <p>The Order on which the change or action was performed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> on which the change or action was performed.</p>
      * @return order
      */
 

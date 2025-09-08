@@ -36,7 +36,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     private com.commercetools.importapi.models.common.ProductKeyReference product;
 
     /**
-     *  <p>Reference to the ProductVariant to update.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to update.</p>
      * @param builder function to build the productVariant value
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     }
 
     /**
-     *  <p>Reference to the ProductVariant to update.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to update.</p>
      * @param builder function to build the productVariant value
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     }
 
     /**
-     *  <p>Reference to the ProductVariant to update.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to update.</p>
      * @param productVariant value to be set
      * @return Builder
      */
@@ -77,10 +77,10 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     /**
      *  <p>Maps to <code>ProductVariant.attributes</code>.</p>
      *  <ul>
-     *   <li>The referenced Attribute must be defined in an existing ProductType, or the <code>state</code> of the ImportOperation will be <code>validationFailed</code>.</li>
+     *   <li>The referenced Attribute must be defined in an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>, or the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be <code>validationFailed</code>.</li>
      *   <li>Setting the value of a non-required Attribute to <code>null</code> will remove the Attribute.</li>
-     *   <li>Attempting to set a <code>null</code> value to a required Attribute will make the import operation fail with an InvalidOperation error.</li>
-     *   <li>Importing LocalizableTextAttributes or LocalizableTextSetAttributes follows an override pattern, meaning that omitted localized fields will be deleted, new fields will be created, and existing fields will be updated. You can delete localized fields by setting their value to <code>null</code>.</li>
+     *   <li>Attempting to set a <code>null</code> value to a required Attribute will make the import operation fail with an <a href="https://docs.commercetools.com/apis/ctp:import:type:InvalidOperation" rel="nofollow">InvalidOperation</a> error.</li>
+     *   <li>Importing <a href="https://docs.commercetools.com/apis/ctp:import:type:LocalizableTextAttribute" rel="nofollow">LocalizableTextAttributes</a> or <a href="https://docs.commercetools.com/apis/ctp:import:type:LocalizableTextSetAttribute" rel="nofollow">LocalizableTextSetAttributes</a> follows an override pattern, meaning that omitted localized fields will be deleted, new fields will be created, and existing fields will be updated. You can delete localized fields by setting their value to <code>null</code>.</li>
      *  </ul>
      * @param builder function to build the attributes value
      * @return Builder
@@ -96,10 +96,10 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     /**
      *  <p>Maps to <code>ProductVariant.attributes</code>.</p>
      *  <ul>
-     *   <li>The referenced Attribute must be defined in an existing ProductType, or the <code>state</code> of the ImportOperation will be <code>validationFailed</code>.</li>
+     *   <li>The referenced Attribute must be defined in an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>, or the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be <code>validationFailed</code>.</li>
      *   <li>Setting the value of a non-required Attribute to <code>null</code> will remove the Attribute.</li>
-     *   <li>Attempting to set a <code>null</code> value to a required Attribute will make the import operation fail with an InvalidOperation error.</li>
-     *   <li>Importing LocalizableTextAttributes or LocalizableTextSetAttributes follows an override pattern, meaning that omitted localized fields will be deleted, new fields will be created, and existing fields will be updated. You can delete localized fields by setting their value to <code>null</code>.</li>
+     *   <li>Attempting to set a <code>null</code> value to a required Attribute will make the import operation fail with an <a href="https://docs.commercetools.com/apis/ctp:import:type:InvalidOperation" rel="nofollow">InvalidOperation</a> error.</li>
+     *   <li>Importing <a href="https://docs.commercetools.com/apis/ctp:import:type:LocalizableTextAttribute" rel="nofollow">LocalizableTextAttributes</a> or <a href="https://docs.commercetools.com/apis/ctp:import:type:LocalizableTextSetAttribute" rel="nofollow">LocalizableTextSetAttributes</a> follows an override pattern, meaning that omitted localized fields will be deleted, new fields will be created, and existing fields will be updated. You can delete localized fields by setting their value to <code>null</code>.</li>
      *  </ul>
      * @param builder function to build the attributes value
      * @return Builder
@@ -114,10 +114,10 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     /**
      *  <p>Maps to <code>ProductVariant.attributes</code>.</p>
      *  <ul>
-     *   <li>The referenced Attribute must be defined in an existing ProductType, or the <code>state</code> of the ImportOperation will be <code>validationFailed</code>.</li>
+     *   <li>The referenced Attribute must be defined in an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>, or the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be <code>validationFailed</code>.</li>
      *   <li>Setting the value of a non-required Attribute to <code>null</code> will remove the Attribute.</li>
-     *   <li>Attempting to set a <code>null</code> value to a required Attribute will make the import operation fail with an InvalidOperation error.</li>
-     *   <li>Importing LocalizableTextAttributes or LocalizableTextSetAttributes follows an override pattern, meaning that omitted localized fields will be deleted, new fields will be created, and existing fields will be updated. You can delete localized fields by setting their value to <code>null</code>.</li>
+     *   <li>Attempting to set a <code>null</code> value to a required Attribute will make the import operation fail with an <a href="https://docs.commercetools.com/apis/ctp:import:type:InvalidOperation" rel="nofollow">InvalidOperation</a> error.</li>
+     *   <li>Importing <a href="https://docs.commercetools.com/apis/ctp:import:type:LocalizableTextAttribute" rel="nofollow">LocalizableTextAttributes</a> or <a href="https://docs.commercetools.com/apis/ctp:import:type:LocalizableTextSetAttribute" rel="nofollow">LocalizableTextSetAttributes</a> follows an override pattern, meaning that omitted localized fields will be deleted, new fields will be created, and existing fields will be updated. You can delete localized fields by setting their value to <code>null</code>.</li>
      *  </ul>
      * @param attributes value to be set
      * @return Builder
@@ -130,7 +130,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     }
 
     /**
-     *  <p>If <code>false</code>, the attribute changes are applied to both current and staged projected representations of the Product.</p>
+     *  <p>If <code>false</code>, the attribute changes are applied to both <span>current and staged projected representations</span> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -141,9 +141,9 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     }
 
     /**
-     *  <p>Reference to the Product that contains the ProductVariant.</p>
-     *  <p>We recommend to set this value to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the ProductVariantPatchRequest.</p>
-     *  <p>If the referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Product is created.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that contains the ProductVariant.</p>
+     *  <p>We recommend to set this value to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantPatchRequest" rel="nofollow">ProductVariantPatchRequest</a>.</p>
+     *  <p>If the referenced Product does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Product is created.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -155,9 +155,9 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     }
 
     /**
-     *  <p>Reference to the Product that contains the ProductVariant.</p>
-     *  <p>We recommend to set this value to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the ProductVariantPatchRequest.</p>
-     *  <p>If the referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Product is created.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that contains the ProductVariant.</p>
+     *  <p>We recommend to set this value to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantPatchRequest" rel="nofollow">ProductVariantPatchRequest</a>.</p>
+     *  <p>If the referenced Product does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Product is created.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -169,9 +169,9 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     }
 
     /**
-     *  <p>Reference to the Product that contains the ProductVariant.</p>
-     *  <p>We recommend to set this value to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the ProductVariantPatchRequest.</p>
-     *  <p>If the referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Product is created.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that contains the ProductVariant.</p>
+     *  <p>We recommend to set this value to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantPatchRequest" rel="nofollow">ProductVariantPatchRequest</a>.</p>
+     *  <p>If the referenced Product does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Product is created.</p>
      * @param product value to be set
      * @return Builder
      */
@@ -183,7 +183,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     }
 
     /**
-     *  <p>Reference to the ProductVariant to update.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to update.</p>
      * @return productVariant
      */
 
@@ -194,10 +194,10 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     /**
      *  <p>Maps to <code>ProductVariant.attributes</code>.</p>
      *  <ul>
-     *   <li>The referenced Attribute must be defined in an existing ProductType, or the <code>state</code> of the ImportOperation will be <code>validationFailed</code>.</li>
+     *   <li>The referenced Attribute must be defined in an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>, or the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be <code>validationFailed</code>.</li>
      *   <li>Setting the value of a non-required Attribute to <code>null</code> will remove the Attribute.</li>
-     *   <li>Attempting to set a <code>null</code> value to a required Attribute will make the import operation fail with an InvalidOperation error.</li>
-     *   <li>Importing LocalizableTextAttributes or LocalizableTextSetAttributes follows an override pattern, meaning that omitted localized fields will be deleted, new fields will be created, and existing fields will be updated. You can delete localized fields by setting their value to <code>null</code>.</li>
+     *   <li>Attempting to set a <code>null</code> value to a required Attribute will make the import operation fail with an <a href="https://docs.commercetools.com/apis/ctp:import:type:InvalidOperation" rel="nofollow">InvalidOperation</a> error.</li>
+     *   <li>Importing <a href="https://docs.commercetools.com/apis/ctp:import:type:LocalizableTextAttribute" rel="nofollow">LocalizableTextAttributes</a> or <a href="https://docs.commercetools.com/apis/ctp:import:type:LocalizableTextSetAttribute" rel="nofollow">LocalizableTextSetAttributes</a> follows an override pattern, meaning that omitted localized fields will be deleted, new fields will be created, and existing fields will be updated. You can delete localized fields by setting their value to <code>null</code>.</li>
      *  </ul>
      * @return attributes
      */
@@ -208,7 +208,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     }
 
     /**
-     *  <p>If <code>false</code>, the attribute changes are applied to both current and staged projected representations of the Product.</p>
+     *  <p>If <code>false</code>, the attribute changes are applied to both <span>current and staged projected representations</span> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return staged
      */
 
@@ -218,9 +218,9 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     }
 
     /**
-     *  <p>Reference to the Product that contains the ProductVariant.</p>
-     *  <p>We recommend to set this value to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the ProductVariantPatchRequest.</p>
-     *  <p>If the referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Product is created.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that contains the ProductVariant.</p>
+     *  <p>We recommend to set this value to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantPatchRequest" rel="nofollow">ProductVariantPatchRequest</a>.</p>
+     *  <p>If the referenced Product does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Product is created.</p>
      * @return product
      */
 

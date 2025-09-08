@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Sets the recurrence information on the CustomLineItem. If the Cart is already associated with a Recurring Order, this action will fail.</p>
+ *  <p>Sets the recurrence information on the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>. If the Cart is already associated with a Recurring Order, this action will fail.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface MyCartSetCustomLineItemRecurrenceInfoAction extends MyCartUpdat
     String SET_CUSTOM_LINE_ITEM_RECURRENCE_INFO = "setCustomLineItemRecurrenceInfo";
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
 
@@ -46,7 +46,7 @@ public interface MyCartSetCustomLineItemRecurrenceInfoAction extends MyCartUpdat
     public String getCustomLineItemId();
 
     /**
-     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemKey
      */
 
@@ -62,14 +62,14 @@ public interface MyCartSetCustomLineItemRecurrenceInfoAction extends MyCartUpdat
     public CustomLineItemRecurrenceInfoDraft getRecurrenceInfo();
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      */
 
     public void setCustomLineItemId(final String customLineItemId);
 
     /**
-     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemKey value to be set
      */
 

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Sets the requesters for an Approval Rule generates an ApprovalRuleRequestersSet Message.</p>
+ *  <p>Sets the requesters for an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">Approval Rule</a> generates an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleRequestersSetMessage" rel="nofollow">ApprovalRuleRequestersSet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ApprovalRuleSetRequestersActionImpl implements ApprovalRuleSetRequestersAction, ModelBase {

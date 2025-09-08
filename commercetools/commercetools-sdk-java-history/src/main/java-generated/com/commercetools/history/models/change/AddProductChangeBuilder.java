@@ -77,7 +77,7 @@ public class AddProductChangeBuilder implements Builder<AddProductChange> {
     }
 
     /**
-     *  <p>The Product Variants included in the Product Selection.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variants</a> included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a>.</p>
      * @param builder function to build the variantSelection value
      * @return Builder
      */
@@ -91,7 +91,7 @@ public class AddProductChangeBuilder implements Builder<AddProductChange> {
     }
 
     /**
-     *  <p>The Product Variants included in the Product Selection.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variants</a> included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a>.</p>
      * @param builder function to build the variantSelection value
      * @return Builder
      */
@@ -104,7 +104,7 @@ public class AddProductChangeBuilder implements Builder<AddProductChange> {
     }
 
     /**
-     *  <p>The Product Variants included in the Product Selection.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variants</a> included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a>.</p>
      * @param variantSelection value to be set
      * @return Builder
      */
@@ -134,7 +134,7 @@ public class AddProductChangeBuilder implements Builder<AddProductChange> {
     }
 
     /**
-     *  <p>The Product Variants included in the Product Selection.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variants</a> included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a>.</p>
      * @return variantSelection
      */
 

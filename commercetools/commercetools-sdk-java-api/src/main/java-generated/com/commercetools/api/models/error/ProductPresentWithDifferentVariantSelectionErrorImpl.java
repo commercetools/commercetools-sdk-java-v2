@@ -18,8 +18,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Returned when a Product is already assigned to a Product Selection, but the Product Selection has either a different Product Variant Selection or a different Product Variant Exclusion.</p>
- *  <p>The error is returned as a failed response either to the Add Product or to the Exclude Product update action.</p>
+ *  <p>Returned when a Product is already assigned to a <span>Product Selection</span>, but the Product Selection has either a different <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantSelection" rel="nofollow">Product Variant Selection</a> or a different <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantExclusion" rel="nofollow">Product Variant Exclusion</a>.</p>
+ *  <p>The error is returned as a failed response either to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionAddProductAction" rel="nofollow">Add Product</a> or to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionExcludeProductAction" rel="nofollow">Exclude Product</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPresentWithDifferentVariantSelectionErrorImpl
@@ -82,7 +82,7 @@ public class ProductPresentWithDifferentVariantSelectionErrorImpl
     }
 
     /**
-     *  <p>Reference to the Product for which the error was returned.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the error was returned.</p>
      */
 
     public com.commercetools.api.models.product.ProductReference getProduct() {
@@ -90,7 +90,7 @@ public class ProductPresentWithDifferentVariantSelectionErrorImpl
     }
 
     /**
-     *  <p>Existing Product Variant Selection or Exclusion for the Product in the Product Selection.</p>
+     *  <p>Existing Product Variant Selection or Exclusion for the <span>Product</span> in the <span>Product Selection</span>.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductVariantSelection getExistingVariantSelection() {

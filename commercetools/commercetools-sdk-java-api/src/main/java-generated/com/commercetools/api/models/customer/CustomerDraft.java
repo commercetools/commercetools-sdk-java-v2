@@ -42,7 +42,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>User-defined unique identifier for the Customer. The <code>key</code> field is preferred over <code>customerNumber</code> as it is mutable and provides more flexibility.</p>
-     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Customers with the Import API.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Customers with the <span>Import API</span>.</p>
      * @return key
      */
 
@@ -67,7 +67,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public String getExternalId();
 
     /**
-     *  <p>Email address of the Customer that must be unique for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
+     *  <p>Email address of the Customer that must be <span>unique</span> for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
      * @return email
      */
     @NotNull
@@ -115,7 +115,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public String getTitle();
 
     /**
-     *  <p>Deprecated since an anonymous Cart can be identified by its <code>id</code> or external <code>key</code>.</p>
+     *  <p>Deprecated since an anonymous <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> can be identified by its <code>id</code> or external <code>key</code>.</p>
      * @return anonymousCartId
      */
     @Deprecated
@@ -123,7 +123,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public String getAnonymousCartId();
 
     /**
-     *  <p>Identifies a Cart that will be assigned to the new Customer.</p>
+     *  <p>Assigns the Customer to the specified Cart.</p>
      * @return anonymousCart
      */
     @Valid
@@ -131,7 +131,8 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public CartResourceIdentifier getAnonymousCart();
 
     /**
-     *  <p>Identifies Carts and Orders belonging to an anonymous session that will be assigned to the new Customer.</p>
+     *  <p>Assigns the Customer to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingLists</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payments</a> with the same <code>anonymousId</code>.</p>
+     *  <p>If <code>anonymousCart</code> is provided, this value must match the <code>anonymousId</code> of the anonymous <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return anonymousId
      */
 
@@ -147,7 +148,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public LocalDate getDateOfBirth();
 
     /**
-     *  <p>Company name of the Customer. When representing a company as a Customer, Business Units provide extended functionality.</p>
+     *  <p>Company name of the Customer. When representing a company as a Customer, <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Units</a> provide extended functionality.</p>
      * @return companyName
      */
 
@@ -203,7 +204,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public List<Integer> getBillingAddresses();
 
     /**
-     *  <p>Set to <code>true</code> if the email address of the Customer has been verified already. The intended use is to leave this field unset upon sign-up of the Customer and initiate the email verification afterwards.</p>
+     *  <p>Set to <code>true</code> if the email address of the Customer has been verified already. The intended use is to leave this field unset upon sign-up of the Customer and initiate the <span>email verification</span> afterwards.</p>
      * @return isEmailVerified
      */
 
@@ -211,7 +212,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public Boolean getIsEmailVerified();
 
     /**
-     *  <p>Sets the CustomerGroup for the Customer.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for the Customer.</p>
      *  <p>For new projects, use <code>customerGroupAssignments</code> instead. It supports assigning Customers to multiple Customer Groups and provides greater flexibility in complex pricing scenarios.</p>
      * @return customerGroup
      */
@@ -221,7 +222,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Customer Groups to assign the Customer to.</p>
-     *  <p>Used for Line Item price selection.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
      * @return customerGroupAssignments
      */
     @Valid
@@ -237,7 +238,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>Preferred language of the Customer. Must be one of the languages supported by the Project.</p>
+     *  <p>Preferred language of the Customer. Must be one of the languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return locale
      */
 
@@ -253,10 +254,10 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public String getSalutation();
 
     /**
-     *  <p>Sets the Stores for the Customer.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> for the Customer.</p>
      *  <ul>
-     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @return stores
      */
@@ -277,7 +278,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>User-defined unique identifier for the Customer. The <code>key</code> field is preferred over <code>customerNumber</code> as it is mutable and provides more flexibility.</p>
-     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Customers with the Import API.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Customers with the <span>Import API</span>.</p>
      * @param key value to be set
      */
 
@@ -299,7 +300,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public void setExternalId(final String externalId);
 
     /**
-     *  <p>Email address of the Customer that must be unique for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
+     *  <p>Email address of the Customer that must be <span>unique</span> for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
      * @param email value to be set
      */
 
@@ -341,21 +342,22 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public void setTitle(final String title);
 
     /**
-     *  <p>Deprecated since an anonymous Cart can be identified by its <code>id</code> or external <code>key</code>.</p>
+     *  <p>Deprecated since an anonymous <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> can be identified by its <code>id</code> or external <code>key</code>.</p>
      * @param anonymousCartId value to be set
      */
     @Deprecated
     public void setAnonymousCartId(final String anonymousCartId);
 
     /**
-     *  <p>Identifies a Cart that will be assigned to the new Customer.</p>
+     *  <p>Assigns the Customer to the specified Cart.</p>
      * @param anonymousCart value to be set
      */
 
     public void setAnonymousCart(final CartResourceIdentifier anonymousCart);
 
     /**
-     *  <p>Identifies Carts and Orders belonging to an anonymous session that will be assigned to the new Customer.</p>
+     *  <p>Assigns the Customer to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingLists</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payments</a> with the same <code>anonymousId</code>.</p>
+     *  <p>If <code>anonymousCart</code> is provided, this value must match the <code>anonymousId</code> of the anonymous <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param anonymousId value to be set
      */
 
@@ -369,7 +371,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public void setDateOfBirth(final LocalDate dateOfBirth);
 
     /**
-     *  <p>Company name of the Customer. When representing a company as a Customer, Business Units provide extended functionality.</p>
+     *  <p>Company name of the Customer. When representing a company as a Customer, <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Units</a> provide extended functionality.</p>
      * @param companyName value to be set
      */
 
@@ -442,14 +444,14 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public void setBillingAddresses(final List<Integer> billingAddresses);
 
     /**
-     *  <p>Set to <code>true</code> if the email address of the Customer has been verified already. The intended use is to leave this field unset upon sign-up of the Customer and initiate the email verification afterwards.</p>
+     *  <p>Set to <code>true</code> if the email address of the Customer has been verified already. The intended use is to leave this field unset upon sign-up of the Customer and initiate the <span>email verification</span> afterwards.</p>
      * @param isEmailVerified value to be set
      */
 
     public void setIsEmailVerified(final Boolean isEmailVerified);
 
     /**
-     *  <p>Sets the CustomerGroup for the Customer.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for the Customer.</p>
      *  <p>For new projects, use <code>customerGroupAssignments</code> instead. It supports assigning Customers to multiple Customer Groups and provides greater flexibility in complex pricing scenarios.</p>
      * @param customerGroup value to be set
      */
@@ -458,7 +460,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Customer Groups to assign the Customer to.</p>
-     *  <p>Used for Line Item price selection.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
      * @param customerGroupAssignments values to be set
      */
 
@@ -467,7 +469,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Customer Groups to assign the Customer to.</p>
-     *  <p>Used for Line Item price selection.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
      * @param customerGroupAssignments values to be set
      */
 
@@ -481,7 +483,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public void setCustom(final CustomFieldsDraft custom);
 
     /**
-     *  <p>Preferred language of the Customer. Must be one of the languages supported by the Project.</p>
+     *  <p>Preferred language of the Customer. Must be one of the languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param locale value to be set
      */
 
@@ -495,10 +497,10 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public void setSalutation(final String salutation);
 
     /**
-     *  <p>Sets the Stores for the Customer.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> for the Customer.</p>
      *  <ul>
-     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @param stores values to be set
      */
@@ -507,10 +509,10 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public void setStores(final StoreResourceIdentifier... stores);
 
     /**
-     *  <p>Sets the Stores for the Customer.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> for the Customer.</p>
      *  <ul>
-     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @param stores values to be set
      */

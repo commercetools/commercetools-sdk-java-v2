@@ -177,7 +177,7 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
     }
 
     /**
-     *  <p>Valid ProductDiscount predicate.</p>
+     *  <p>Valid <span>ProductDiscount predicate</span>.</p>
      */
 
     public String getPredicate() {
@@ -209,7 +209,7 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
     }
 
     /**
-     *  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>
+     *  <p>Date and time (UTC) from which the Discount is effective. Take <span>Eventual Consistency</span> into account for calculated discount values.</p>
      */
 
     public java.time.ZonedDateTime getValidFrom() {
@@ -217,7 +217,7 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
     }
 
     /**
-     *  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     *  <p>Date and time (UTC) until which the Discount is effective. Take <span>Eventual Consistency</span> into account for calculated undiscounted values.</p>
      */
 
     public java.time.ZonedDateTime getValidUntil() {

@@ -33,7 +33,7 @@ public class ImageBuilder implements Builder<Image> {
     private String label;
 
     /**
-     *  <p>URL of the image in its original size that must be unique within a single ProductVariant.</p>
+     *  <p>URL of the image in its original size that must be unique within a single <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param url value to be set
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class ImageBuilder implements Builder<Image> {
     }
 
     /**
-     *  <p>URL of the image in its original size that must be unique within a single ProductVariant.</p>
+     *  <p>URL of the image in its original size that must be unique within a single <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return url
      */
 

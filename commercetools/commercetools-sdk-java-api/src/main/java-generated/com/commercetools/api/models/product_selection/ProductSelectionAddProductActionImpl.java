@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Adds a Product to the Product Selection.</p>
- *  <p>If the specified Product is already assigned to the Product Selection, but the existing Product Selection has a different Product Variant Selection, a ProductPresentWithDifferentVariantSelection error is returned.</p>
+ *  <p>If the specified Product is already assigned to the Product Selection, but the existing Product Selection has a different Product Variant Selection, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPresentWithDifferentVariantSelectionError" rel="nofollow">ProductPresentWithDifferentVariantSelection</a> error is returned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionAddProductActionImpl implements ProductSelectionAddProductAction, ModelBase {

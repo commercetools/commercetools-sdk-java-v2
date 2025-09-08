@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after adding a Custom Field to a Delivery using the Set CustomField update action.</p>
+ *  <p>Generated after adding a Custom Field to a Delivery using the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetDeliveryCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface DeliveryCustomFieldAddedMessagePayload extends OrderMessagePayl
     public String getName();
 
     /**
-     *  <p>The added CustomFieldValue based on the FieldType.</p>
+     *  <p>The added <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a>.</p>
      * @return value
      */
     @NotNull
@@ -55,7 +55,7 @@ public interface DeliveryCustomFieldAddedMessagePayload extends OrderMessagePayl
     public Object getValue();
 
     /**
-     *  <p>Unique identifier of the Delivery.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @return deliveryId
      */
     @NotNull
@@ -70,14 +70,14 @@ public interface DeliveryCustomFieldAddedMessagePayload extends OrderMessagePayl
     public void setName(final String name);
 
     /**
-     *  <p>The added CustomFieldValue based on the FieldType.</p>
+     *  <p>The added <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a>.</p>
      * @param value value to be set
      */
 
     public void setValue(final Object value);
 
     /**
-     *  <p>Unique identifier of the Delivery.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param deliveryId value to be set
      */
 

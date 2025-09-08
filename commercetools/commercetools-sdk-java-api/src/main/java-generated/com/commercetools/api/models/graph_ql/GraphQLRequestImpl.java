@@ -47,7 +47,7 @@ public class GraphQLRequestImpl implements GraphQLRequest, ModelBase {
     }
 
     /**
-     *  <p>String representation of the <em>Source Text</em> of the <em>Document</em> that is specified in the Language section of the GraphQL specification.</p>
+     *  <p>String representation of the <em>Source Text</em> of the <em>Document</em> that is specified in the <span>Language section of the GraphQL specification</span>.</p>
      */
 
     public String getQuery() {

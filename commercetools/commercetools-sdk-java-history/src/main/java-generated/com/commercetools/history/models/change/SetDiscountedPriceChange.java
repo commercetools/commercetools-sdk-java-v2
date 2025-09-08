@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the Set Discounted Embedded Price update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetDiscountedPriceAction" rel="nofollow">Set Discounted Embedded Price</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -80,8 +80,8 @@ public interface SetDiscountedPriceChange extends Change {
 
     /**
      *  <ul>
-     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
-     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *  </ul>
      * @return catalogData
      */
@@ -90,7 +90,7 @@ public interface SetDiscountedPriceChange extends Change {
     public String getCatalogData();
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the updated ProductVariant.</p>
+     *  <p><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return variant
      */
     @NotNull
@@ -98,7 +98,7 @@ public interface SetDiscountedPriceChange extends Change {
     public String getVariant();
 
     /**
-     *  <p><code>id</code> of the Embedded Price.</p>
+     *  <p><code>id</code> of the Embedded <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</p>
      * @return priceId
      */
     @NotNull
@@ -128,8 +128,8 @@ public interface SetDiscountedPriceChange extends Change {
 
     /**
      *  <ul>
-     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
-     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *  </ul>
      * @param catalogData value to be set
      */
@@ -137,14 +137,14 @@ public interface SetDiscountedPriceChange extends Change {
     public void setCatalogData(final String catalogData);
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the updated ProductVariant.</p>
+     *  <p><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param variant value to be set
      */
 
     public void setVariant(final String variant);
 
     /**
-     *  <p><code>id</code> of the Embedded Price.</p>
+     *  <p><code>id</code> of the Embedded <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</p>
      * @param priceId value to be set
      */
 

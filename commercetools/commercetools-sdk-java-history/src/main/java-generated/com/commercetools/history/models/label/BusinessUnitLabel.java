@@ -47,7 +47,7 @@ public interface BusinessUnitLabel extends Label {
     public String getType();
 
     /**
-     *  <p>User-defined unique identifier of the Business Unit.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return key
      */
     @NotNull
@@ -63,7 +63,7 @@ public interface BusinessUnitLabel extends Label {
     public String getName();
 
     /**
-     *  <p>User-defined unique identifier of the Business Unit.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param key value to be set
      */
 

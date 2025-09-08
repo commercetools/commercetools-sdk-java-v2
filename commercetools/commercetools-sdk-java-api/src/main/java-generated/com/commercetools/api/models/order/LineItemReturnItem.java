@@ -52,7 +52,7 @@ public interface LineItemReturnItem extends ReturnItem {
     public String getKey();
 
     /**
-     *  <p><code>id</code> of the returned LineItem.</p>
+     *  <p><code>id</code> of the returned <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
      * @return lineItemId
      */
     @NotNull
@@ -75,7 +75,7 @@ public interface LineItemReturnItem extends ReturnItem {
     public void setKey(final String key);
 
     /**
-     *  <p><code>id</code> of the returned LineItem.</p>
+     *  <p><code>id</code> of the returned <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
      * @param lineItemId value to be set
      */
 

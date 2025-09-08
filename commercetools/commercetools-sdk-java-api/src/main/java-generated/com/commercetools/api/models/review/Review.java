@@ -143,7 +143,7 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
     public String getText();
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelReference" rel="nofollow">ChannelReference</a>. A referenced resource can be embedded through <span>Reference Expansion</span>. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      * @return target
      */
     @Valid
@@ -151,7 +151,7 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
     public Reference getTarget();
 
     /**
-     *  <p>Indicates if this Review is taken into account in the ratings statistics of the target. A Review is per default used in the statistics, unless the Review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>
+     *  <p>Indicates if this Review is taken into account in the ratings statistics of the target. A Review is per default used in the statistics, unless the Review is in a state that does not have the <a href="https://docs.commercetools.com/apis/ctp:api:type:StateRoleEnum" rel="nofollow">role</a> <code>ReviewIncludedInStatistics</code>. If the role of a <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> is modified after the calculation of this field, the calculation is not updated.</p>
      * @return includedInStatistics
      */
     @NotNull
@@ -167,7 +167,7 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
     public Integer getRating();
 
     /**
-     *  <p>State of the Review. Used for approval processes, see Review approval process for details.</p>
+     *  <p>State of the Review. Used for approval processes, see <span>Review approval process</span> for details.</p>
      * @return state
      */
     @Valid
@@ -275,14 +275,14 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
     public void setText(final String text);
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelReference" rel="nofollow">ChannelReference</a>. A referenced resource can be embedded through <span>Reference Expansion</span>. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      * @param target value to be set
      */
 
     public void setTarget(final Reference target);
 
     /**
-     *  <p>Indicates if this Review is taken into account in the ratings statistics of the target. A Review is per default used in the statistics, unless the Review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>
+     *  <p>Indicates if this Review is taken into account in the ratings statistics of the target. A Review is per default used in the statistics, unless the Review is in a state that does not have the <a href="https://docs.commercetools.com/apis/ctp:api:type:StateRoleEnum" rel="nofollow">role</a> <code>ReviewIncludedInStatistics</code>. If the role of a <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> is modified after the calculation of this field, the calculation is not updated.</p>
      * @param includedInStatistics value to be set
      */
 
@@ -296,7 +296,7 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
     public void setRating(final Integer rating);
 
     /**
-     *  <p>State of the Review. Used for approval processes, see Review approval process for details.</p>
+     *  <p>State of the Review. Used for approval processes, see <span>Review approval process</span> for details.</p>
      * @param state value to be set
      */
 

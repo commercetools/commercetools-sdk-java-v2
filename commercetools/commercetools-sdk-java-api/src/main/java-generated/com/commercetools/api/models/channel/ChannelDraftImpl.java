@@ -111,7 +111,7 @@ public class ChannelDraftImpl implements ChannelDraft, ModelBase {
     }
 
     /**
-     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>
+     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the <a href="https://docs.commercetools.com/apis/ctp:api:type:GeoJsonPoint" rel="nofollow">Point</a> type is supported.</p>
      */
 
     public com.commercetools.api.models.common.GeoJson getGeoLocation() {

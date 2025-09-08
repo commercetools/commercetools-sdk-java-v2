@@ -17,8 +17,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Removes enum values from an AttributeDefinition of AttributeEnumType, AttributeLocalizedEnumType, AttributeSetType of AttributeEnumType, or AttributeSetType of AttributeLocalizedEnumType.</p>
- *  <p>If the Attribute is <strong>not</strong> required, the Attributes of all Products using those enum keys will also be removed in an eventually consistent way. If the Attribute is required, the operation returns an EnumValueIsUsed error.</p>
+ *  <p>Removes enum values from an AttributeDefinition of <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeEnumType" rel="nofollow">AttributeEnumType</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumType" rel="nofollow">AttributeLocalizedEnumType</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeSetType" rel="nofollow">AttributeSetType</a> of AttributeEnumType, or AttributeSetType of AttributeLocalizedEnumType.</p>
+ *  <p>If the Attribute is <strong>not</strong> required, the Attributes of all Products using those enum keys will also be removed in an <span>eventually consistent</span> way. If the Attribute is required, the operation returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:EnumValueIsUsedError" rel="nofollow">EnumValueIsUsed</a> error.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeRemoveEnumValuesActionImpl implements ProductTypeRemoveEnumValuesAction, ModelBase {
@@ -64,7 +64,7 @@ public class ProductTypeRemoveEnumValuesActionImpl implements ProductTypeRemoveE
     }
 
     /**
-     *  <p>Keys of AttributeEnumType or AttributeLocalizedEnumType to remove.</p>
+     *  <p>Keys of <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeEnumType" rel="nofollow">AttributeEnumType</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumType" rel="nofollow">AttributeLocalizedEnumType</a> to remove.</p>
      */
 
     public java.util.List<String> getKeys() {

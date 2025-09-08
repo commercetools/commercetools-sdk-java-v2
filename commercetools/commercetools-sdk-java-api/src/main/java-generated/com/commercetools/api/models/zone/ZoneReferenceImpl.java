@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Reference to a Zone.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ZoneReferenceImpl implements ZoneReference, ModelBase {
@@ -56,7 +56,7 @@ public class ZoneReferenceImpl implements ZoneReference, ModelBase {
     }
 
     /**
-     *  <p>Unique identifier of the referenced Zone.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a>.</p>
      */
 
     public String getId() {
@@ -64,7 +64,7 @@ public class ZoneReferenceImpl implements ZoneReference, ModelBase {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Zone. Only present in responses to requests with Reference Expansion for Zones.</p>
+     *  <p>Contains the representation of the expanded Zone. Only present in responses to requests with <span>Reference Expansion</span> for Zones.</p>
      */
 
     public com.commercetools.api.models.zone.Zone getObj() {

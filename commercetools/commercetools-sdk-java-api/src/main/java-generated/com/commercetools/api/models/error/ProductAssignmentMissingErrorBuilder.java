@@ -67,7 +67,7 @@ public class ProductAssignmentMissingErrorBuilder implements Builder<ProductAssi
     }
 
     /**
-     *  <p>Reference to the Product for which the error was returned.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the error was returned.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class ProductAssignmentMissingErrorBuilder implements Builder<ProductAssi
     }
 
     /**
-     *  <p>Reference to the Product for which the error was returned.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the error was returned.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -91,7 +91,7 @@ public class ProductAssignmentMissingErrorBuilder implements Builder<ProductAssi
     }
 
     /**
-     *  <p>Reference to the Product for which the error was returned.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the error was returned.</p>
      * @param product value to be set
      * @return Builder
      */
@@ -121,7 +121,7 @@ public class ProductAssignmentMissingErrorBuilder implements Builder<ProductAssi
     }
 
     /**
-     *  <p>Reference to the Product for which the error was returned.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the error was returned.</p>
      * @return product
      */
 

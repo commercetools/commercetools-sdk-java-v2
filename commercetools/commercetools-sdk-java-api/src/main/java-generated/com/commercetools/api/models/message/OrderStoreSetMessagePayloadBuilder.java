@@ -27,7 +27,7 @@ public class OrderStoreSetMessagePayloadBuilder implements Builder<OrderStoreSet
     private com.commercetools.api.models.store.StoreKeyReference store;
 
     /**
-     *  <p>Store that was set.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was set.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class OrderStoreSetMessagePayloadBuilder implements Builder<OrderStoreSet
     }
 
     /**
-     *  <p>Store that was set.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was set.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class OrderStoreSetMessagePayloadBuilder implements Builder<OrderStoreSet
     }
 
     /**
-     *  <p>Store that was set.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was set.</p>
      * @param store value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class OrderStoreSetMessagePayloadBuilder implements Builder<OrderStoreSet
     }
 
     /**
-     *  <p>Store that was set.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was set.</p>
      * @return store
      */
 

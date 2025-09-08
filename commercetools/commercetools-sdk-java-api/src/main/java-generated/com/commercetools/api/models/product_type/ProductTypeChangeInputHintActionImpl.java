@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Updates the <code>inputHint</code> of an AttributeDefinition.</p>
+ *  <p>Updates the <code>inputHint</code> of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangeInputHintActionImpl implements ProductTypeChangeInputHintAction, ModelBase {

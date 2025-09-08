@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Generated after a successful Set Discounted Price update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetDiscountedPriceAction" rel="nofollow">Set Discounted Price</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -45,7 +45,7 @@ public interface StandalonePriceExternalDiscountSetMessage extends Message {
     String STANDALONE_PRICE_EXTERNAL_DISCOUNT_SET = "StandalonePriceExternalDiscountSet";
 
     /**
-     *  <p>The <code>discounted</code> value of the StandalonePrice after the Set Discounted Price update action.</p>
+     *  <p>The <code>discounted</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetDiscountedPriceAction" rel="nofollow">Set Discounted Price</a> update action.</p>
      * @return discounted
      */
     @Valid
@@ -53,7 +53,7 @@ public interface StandalonePriceExternalDiscountSetMessage extends Message {
     public DiscountedPrice getDiscounted();
 
     /**
-     *  <p>The <code>discounted</code> value of the StandalonePrice after the Set Discounted Price update action.</p>
+     *  <p>The <code>discounted</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetDiscountedPriceAction" rel="nofollow">Set Discounted Price</a> update action.</p>
      * @param discounted value to be set
      */
 

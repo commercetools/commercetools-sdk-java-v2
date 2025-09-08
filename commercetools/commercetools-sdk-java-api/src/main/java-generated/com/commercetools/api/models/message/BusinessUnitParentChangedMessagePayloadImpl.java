@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Change Parent Unit update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitParentChangedMessagePayloadImpl implements BusinessUnitParentChangedMessagePayload, ModelBase {
@@ -56,7 +56,7 @@ public class BusinessUnitParentChangedMessagePayloadImpl implements BusinessUnit
     }
 
     /**
-     *  <p>Parent unit of the Business Unit before the Change Parent Unit update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getOldParentUnit() {
@@ -64,7 +64,7 @@ public class BusinessUnitParentChangedMessagePayloadImpl implements BusinessUnit
     }
 
     /**
-     *  <p>Parent unit of the Business Unit after the Change Parent Unit update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getNewParentUnit() {

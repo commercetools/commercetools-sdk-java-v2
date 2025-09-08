@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if one or more Carts exist for a Customer in a Store. Returns a <code>200</code> status if the Cart exists, or a <code>404</code> status otherwise.</p>
+ *  <p>Checks if one or more Carts exist for a Customer in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. Returns a <code>200</code> status if the Cart exists, or a <code>404</code> status otherwise.</p>
  *
  * <hr>
  * <div class=code-example>

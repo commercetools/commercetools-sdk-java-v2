@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Adding an address to the Customer produces the CustomerAddressAdded Message.</p>
+ *  <p>Adding an address to the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddressAddedMessage" rel="nofollow">CustomerAddressAdded</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerAddAddressActionImpl implements MyCustomerAddAddressAction, ModelBase {

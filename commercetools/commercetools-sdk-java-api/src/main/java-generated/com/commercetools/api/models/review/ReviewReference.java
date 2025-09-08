@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Reference to a Review.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface ReviewReference extends Reference, com.commercetools.api.models
     String REVIEW = "review";
 
     /**
-     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
+     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with <span>Reference Expansion</span> for Reviews.</p>
      * @return obj
      */
     @Valid
@@ -49,7 +49,7 @@ public interface ReviewReference extends Reference, com.commercetools.api.models
     public Review getObj();
 
     /**
-     *  <p>Unique identifier of the referenced Review.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a>.</p>
      * @return id
      */
     @NotNull
@@ -57,14 +57,14 @@ public interface ReviewReference extends Reference, com.commercetools.api.models
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
+     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with <span>Reference Expansion</span> for Reviews.</p>
      * @param obj value to be set
      */
 
     public void setObj(final Review obj);
 
     /**
-     *  <p>Unique identifier of the referenced Review.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a>.</p>
      * @param id value to be set
      */
 

@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Discount is applied to the total price of the Cart. The same percentage of discount applies on the Cart or Order <code>taxedPrice</code> and <code>taxedShippingPrice</code>.</p>
+ *  <p>Discount is applied to the total price of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>. The same percentage of discount applies on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> <code>taxedPrice</code> and <code>taxedShippingPrice</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountTotalPriceTargetImpl implements CartDiscountTotalPriceTarget, ModelBase {

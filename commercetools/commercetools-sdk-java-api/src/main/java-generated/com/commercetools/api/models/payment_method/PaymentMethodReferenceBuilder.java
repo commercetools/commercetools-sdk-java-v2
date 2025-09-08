@@ -30,7 +30,7 @@ public class PaymentMethodReferenceBuilder implements Builder<PaymentMethodRefer
     private com.commercetools.api.models.payment_method.PaymentMethod obj;
 
     /**
-     *  <p>Unique identifier of the referenced PaymentMethod.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethod" rel="nofollow">PaymentMethod</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class PaymentMethodReferenceBuilder implements Builder<PaymentMethodRefer
     }
 
     /**
-     *  <p>Contains the representation of the expanded PaymentMethod. Only present in responses to requests with Reference Expansion for PaymentMethods.</p>
+     *  <p>Contains the representation of the expanded PaymentMethod. Only present in responses to requests with <span>Reference Expansion</span> for PaymentMethods.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class PaymentMethodReferenceBuilder implements Builder<PaymentMethodRefer
     }
 
     /**
-     *  <p>Contains the representation of the expanded PaymentMethod. Only present in responses to requests with Reference Expansion for PaymentMethods.</p>
+     *  <p>Contains the representation of the expanded PaymentMethod. Only present in responses to requests with <span>Reference Expansion</span> for PaymentMethods.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class PaymentMethodReferenceBuilder implements Builder<PaymentMethodRefer
     }
 
     /**
-     *  <p>Contains the representation of the expanded PaymentMethod. Only present in responses to requests with Reference Expansion for PaymentMethods.</p>
+     *  <p>Contains the representation of the expanded PaymentMethod. Only present in responses to requests with <span>Reference Expansion</span> for PaymentMethods.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class PaymentMethodReferenceBuilder implements Builder<PaymentMethodRefer
     }
 
     /**
-     *  <p>Unique identifier of the referenced PaymentMethod.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethod" rel="nofollow">PaymentMethod</a>.</p>
      * @return id
      */
 
@@ -86,7 +86,7 @@ public class PaymentMethodReferenceBuilder implements Builder<PaymentMethodRefer
     }
 
     /**
-     *  <p>Contains the representation of the expanded PaymentMethod. Only present in responses to requests with Reference Expansion for PaymentMethods.</p>
+     *  <p>Contains the representation of the expanded PaymentMethod. Only present in responses to requests with <span>Reference Expansion</span> for PaymentMethods.</p>
      * @return obj
      */
 

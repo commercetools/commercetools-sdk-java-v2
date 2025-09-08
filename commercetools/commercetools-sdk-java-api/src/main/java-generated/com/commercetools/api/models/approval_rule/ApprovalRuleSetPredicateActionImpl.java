@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Setting the Order Predicate for an Approval Rule generates an ApprovalRulePredicateSet Message.</p>
+ *  <p>Setting the <span>Order Predicate</span> for an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">Approval Rule</a> generates an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRulePredicateSetMessage" rel="nofollow">ApprovalRulePredicateSet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ApprovalRuleSetPredicateActionImpl implements ApprovalRuleSetPredicateAction, ModelBase {
@@ -51,7 +51,7 @@ public class ApprovalRuleSetPredicateActionImpl implements ApprovalRuleSetPredic
     }
 
     /**
-     *  <p>A valid Order Predicate to set for the Approval Rule.</p>
+     *  <p>A valid <span>Order Predicate</span> to set for the Approval Rule.</p>
      */
 
     public String getPredicate() {

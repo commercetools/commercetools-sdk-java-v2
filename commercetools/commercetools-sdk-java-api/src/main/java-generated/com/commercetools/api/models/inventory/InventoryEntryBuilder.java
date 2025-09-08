@@ -198,7 +198,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> <code>sku</code> of the InventoryEntry.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -209,7 +209,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     *  <p>Channel that supplies this InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> that supplies this InventoryEntry.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -221,7 +221,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     *  <p>Channel that supplies this InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> that supplies this InventoryEntry.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -233,7 +233,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     *  <p>Channel that supplies this InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> that supplies this InventoryEntry.</p>
      * @param supplyChannel value to be set
      * @return Builder
      */
@@ -267,7 +267,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     *  <p>Minimum quantity that can be added to a Cart. See Quantity limits.</p>
+     *  <p>Minimum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
      * @param minCartQuantity value to be set
      * @return Builder
      */
@@ -278,7 +278,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     *  <p>Maximum quantity that can be added to a Cart. See Quantity limits.</p>
+     *  <p>Maximum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
      * @param maxCartQuantity value to be set
      * @return Builder
      */
@@ -412,7 +412,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> <code>sku</code> of the InventoryEntry.</p>
      * @return sku
      */
 
@@ -421,7 +421,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     *  <p>Channel that supplies this InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> that supplies this InventoryEntry.</p>
      * @return supplyChannel
      */
 
@@ -449,7 +449,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     *  <p>Minimum quantity that can be added to a Cart. See Quantity limits.</p>
+     *  <p>Minimum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
      * @return minCartQuantity
      */
 
@@ -459,7 +459,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     *  <p>Maximum quantity that can be added to a Cart. See Quantity limits.</p>
+     *  <p>Maximum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
      * @return maxCartQuantity
      */
 

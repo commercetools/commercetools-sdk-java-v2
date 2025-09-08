@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>This draft type is the alternative to Money.</p>
+ *  <p>This draft type is the alternative to <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">Money</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CentPrecisionMoneyDraftImpl implements CentPrecisionMoneyDraft, ModelBase {
@@ -59,7 +59,7 @@ public class CentPrecisionMoneyDraftImpl implements CentPrecisionMoneyDraft, Mod
     }
 
     /**
-     *  <p>Currency code compliant to ISO 4217.</p>
+     *  <p>Currency code compliant to <span>ISO 4217</span>.</p>
      */
 
     public String getCurrencyCode() {

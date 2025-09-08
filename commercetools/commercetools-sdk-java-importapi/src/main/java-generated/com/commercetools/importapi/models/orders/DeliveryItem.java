@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface DeliveryItem {
 
     /**
-     *  <p><code>id</code> of the LineItem or CustomLineItem delivered.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> delivered.</p>
      * @return id
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface DeliveryItem {
     public Long getQuantity();
 
     /**
-     *  <p><code>id</code> of the LineItem or CustomLineItem delivered.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> delivered.</p>
      * @param id value to be set
      */
 

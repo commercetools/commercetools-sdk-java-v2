@@ -44,7 +44,7 @@ public interface DiscountedPrice {
     public TypedMoney getValue();
 
     /**
-     *  <p>ProductDiscount related to the discounted price.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> related to the discounted price.</p>
      * @return discount
      */
     @NotNull
@@ -60,7 +60,7 @@ public interface DiscountedPrice {
     public void setValue(final TypedMoney value);
 
     /**
-     *  <p>ProductDiscount related to the discounted price.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> related to the discounted price.</p>
      * @param discount value to be set
      */
 

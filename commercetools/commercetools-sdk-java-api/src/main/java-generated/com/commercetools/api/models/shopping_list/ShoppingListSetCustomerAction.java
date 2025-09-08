@@ -38,7 +38,7 @@ public interface ShoppingListSetCustomerAction extends ShoppingListUpdateAction 
     String SET_CUSTOMER = "setCustomer";
 
     /**
-     *  <p>The Customer the ShoppingList should be associated to. If empty, any existing value will be removed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> the ShoppingList should be associated to. If empty, any existing value will be removed.</p>
      * @return customer
      */
     @Valid
@@ -46,7 +46,7 @@ public interface ShoppingListSetCustomerAction extends ShoppingListUpdateAction 
     public CustomerResourceIdentifier getCustomer();
 
     /**
-     *  <p>The Customer the ShoppingList should be associated to. If empty, any existing value will be removed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> the ShoppingList should be associated to. If empty, any existing value will be removed.</p>
      * @param customer value to be set
      */
 

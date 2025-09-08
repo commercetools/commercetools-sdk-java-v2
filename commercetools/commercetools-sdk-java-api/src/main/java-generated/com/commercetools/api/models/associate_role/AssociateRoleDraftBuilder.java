@@ -61,7 +61,7 @@ public class AssociateRoleDraftBuilder implements Builder<AssociateRoleDraft> {
     }
 
     /**
-     *  <p>Whether the AssociateRole can be assigned to an Associate by a buyer.</p>
+     *  <p>Whether the AssociateRole can be assigned to an Associate by a <span>buyer</span>.</p>
      * @param buyerAssignable value to be set
      * @return Builder
      */
@@ -166,7 +166,7 @@ public class AssociateRoleDraftBuilder implements Builder<AssociateRoleDraft> {
     }
 
     /**
-     *  <p>Whether the AssociateRole can be assigned to an Associate by a buyer.</p>
+     *  <p>Whether the AssociateRole can be assigned to an Associate by a <span>buyer</span>.</p>
      * @return buyerAssignable
      */
 

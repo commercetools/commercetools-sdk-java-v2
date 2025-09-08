@@ -45,7 +45,7 @@ public class SetAddressCustomTypeChangeBuilder implements Builder<SetAddressCust
     }
 
     /**
-     *  <p>Address which was extended.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> which was extended.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class SetAddressCustomTypeChangeBuilder implements Builder<SetAddressCust
     }
 
     /**
-     *  <p>Address which was extended.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> which was extended.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class SetAddressCustomTypeChangeBuilder implements Builder<SetAddressCust
     }
 
     /**
-     *  <p>Address which was extended.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> which was extended.</p>
      * @param address value to be set
      * @return Builder
      */
@@ -161,7 +161,7 @@ public class SetAddressCustomTypeChangeBuilder implements Builder<SetAddressCust
     }
 
     /**
-     *  <p>Address which was extended.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> which was extended.</p>
      * @return address
      */
 

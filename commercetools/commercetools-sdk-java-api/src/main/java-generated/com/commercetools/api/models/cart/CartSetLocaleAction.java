@@ -35,7 +35,7 @@ public interface CartSetLocaleAction extends CartUpdateAction {
     String SET_LOCALE = "setLocale";
 
     /**
-     *  <p>Value to set. Must be one of the Project's <code>languages</code>. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Must be one of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>'s <code>languages</code>. If empty, any existing value will be removed.</p>
      * @return locale
      */
 
@@ -43,7 +43,7 @@ public interface CartSetLocaleAction extends CartUpdateAction {
     public String getLocale();
 
     /**
-     *  <p>Value to set. Must be one of the Project's <code>languages</code>. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Must be one of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>'s <code>languages</code>. If empty, any existing value will be removed.</p>
      * @param locale value to be set
      */
 

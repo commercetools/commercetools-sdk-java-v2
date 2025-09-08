@@ -24,7 +24,7 @@ public class CustomerPasswordUpdatedMessagePayloadBuilder implements Builder<Cus
     private Boolean reset;
 
     /**
-     *  <p>Whether the Customer's password was updated during the Reset password or Change password flow.</p>
+     *  <p>Whether the Customer's password was updated during the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers/password/reset:POST" rel="nofollow">Reset password</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers/password:POST" rel="nofollow">Change password</a> flow.</p>
      * @param reset value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class CustomerPasswordUpdatedMessagePayloadBuilder implements Builder<Cus
     }
 
     /**
-     *  <p>Whether the Customer's password was updated during the Reset password or Change password flow.</p>
+     *  <p>Whether the Customer's password was updated during the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers/password/reset:POST" rel="nofollow">Reset password</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers/password:POST" rel="nofollow">Change password</a> flow.</p>
      * @return reset
      */
 

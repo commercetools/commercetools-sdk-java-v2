@@ -11,6 +11,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportRequestBuilder {
 
+    public com.commercetools.importapi.models.importrequests.BusinessUnitImportRequestBuilder businessUnitBuilder() {
+        return com.commercetools.importapi.models.importrequests.BusinessUnitImportRequestBuilder.of();
+    }
+
     public com.commercetools.importapi.models.importrequests.CategoryImportRequestBuilder categoryBuilder() {
         return com.commercetools.importapi.models.importrequests.CategoryImportRequestBuilder.of();
     }

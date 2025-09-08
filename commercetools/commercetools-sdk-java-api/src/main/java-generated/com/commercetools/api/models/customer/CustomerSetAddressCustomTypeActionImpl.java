@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Adding or updating a Custom Type on an Address of a Customer generates the CustomerAddressCustomTypeSet Message, and removing one generates the CustomerAddressCustomTypeRemoved Message.</p>
+ *  <p>Adding or updating a Custom Type on an Address of a Customer generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddressCustomTypeSetMessage" rel="nofollow">CustomerAddressCustomTypeSet</a> Message, and removing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddressCustomTypeRemovedMessage" rel="nofollow">CustomerAddressCustomTypeRemoved</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetAddressCustomTypeActionImpl implements CustomerSetAddressCustomTypeAction, ModelBase {
@@ -59,7 +59,7 @@ public class CustomerSetAddressCustomTypeActionImpl implements CustomerSetAddres
     }
 
     /**
-     *  <p>User-defined unique identifier of the Address to be updated.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to be updated.</p>
      */
 
     public String getAddressId() {
@@ -67,7 +67,7 @@ public class CustomerSetAddressCustomTypeActionImpl implements CustomerSetAddres
     }
 
     /**
-     *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>address</code> with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -75,7 +75,7 @@ public class CustomerSetAddressCustomTypeActionImpl implements CustomerSetAddres
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <code>address</code>.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

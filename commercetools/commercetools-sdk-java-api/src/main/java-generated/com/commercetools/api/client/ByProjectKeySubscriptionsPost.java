@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>A test notification is sent to ensure the correct configuration of the Destination. If the notification cannot be delivered, the Subscription will not be created. The payload of the test notification is of type ResourceCreated for the <code>resourceTypeId</code> <code>subscription</code>.</p>
+ *  <p>A test notification is sent to ensure the correct configuration of the Destination. If the notification cannot be delivered, the Subscription will not be created. The payload of the test notification is of type <span>ResourceCreated</span> for the <code>resourceTypeId</code> <code>subscription</code>.</p>
  *
  * <hr>
  * <div class=code-example>

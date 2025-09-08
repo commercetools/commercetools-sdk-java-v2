@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Removing the address from a Business Unit generates the BusinessUnitAddressRemoved Message.</p>
+ *  <p>Removing the address from a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAddressRemovedMessage" rel="nofollow">BusinessUnitAddressRemoved</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitRemoveAddressActionImpl implements BusinessUnitRemoveAddressAction, ModelBase {

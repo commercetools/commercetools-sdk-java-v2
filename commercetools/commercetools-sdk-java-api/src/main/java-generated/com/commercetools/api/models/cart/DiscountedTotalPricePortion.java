@@ -36,7 +36,7 @@ import jakarta.validation.constraints.NotNull;
 public interface DiscountedTotalPricePortion {
 
     /**
-     *  <p>A CartDiscountReference or DirectDiscountReference to the discount applied on the Cart <code>totalPrice</code>.</p>
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> to the discount applied on the Cart <code>totalPrice</code>.</p>
      * @return discount
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface DiscountedTotalPricePortion {
     public TypedMoney getDiscountedAmount();
 
     /**
-     *  <p>A CartDiscountReference or DirectDiscountReference to the discount applied on the Cart <code>totalPrice</code>.</p>
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> to the discount applied on the Cart <code>totalPrice</code>.</p>
      * @param discount value to be set
      */
 

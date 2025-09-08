@@ -65,7 +65,7 @@ public class HighPrecisionMoneyDraftImpl implements HighPrecisionMoneyDraft, Mod
     }
 
     /**
-     *  <p>Currency code compliant to ISO 4217.</p>
+     *  <p>Currency code compliant to <span>ISO 4217</span>.</p>
      */
 
     public String getCurrencyCode() {

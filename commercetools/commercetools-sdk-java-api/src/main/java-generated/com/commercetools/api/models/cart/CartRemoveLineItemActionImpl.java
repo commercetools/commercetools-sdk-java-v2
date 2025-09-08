@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The LineItem price is updated as described in Line Item price selection.</p>
+ *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> price is updated as described in <span>Line Item price selection</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartRemoveLineItemActionImpl implements CartRemoveLineItemAction, ModelBase {
@@ -70,7 +70,7 @@ public class CartRemoveLineItemActionImpl implements CartRemoveLineItemAction, M
     }
 
     /**
-     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemId() {
@@ -78,7 +78,7 @@ public class CartRemoveLineItemActionImpl implements CartRemoveLineItemAction, M
     }
 
     /**
-     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemKey() {
@@ -94,7 +94,8 @@ public class CartRemoveLineItemActionImpl implements CartRemoveLineItemAction, M
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemPriceMode" rel="nofollow">LineItemPriceMode</a>.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      */
 
     public com.commercetools.api.models.common.Money getExternalPrice() {
@@ -102,7 +103,7 @@ public class CartRemoveLineItemActionImpl implements CartRemoveLineItemAction, M
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>price</code> and <code>totalPrice</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalTotal</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemPriceMode" rel="nofollow">LineItemPriceMode</a>.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {

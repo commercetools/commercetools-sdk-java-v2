@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Produces the ParcelItemsUpdated Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelItemsUpdatedMessage" rel="nofollow">ParcelItemsUpdated</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetParcelItemsActionImpl implements OrderSetParcelItemsAction, ModelBase {
@@ -59,7 +59,7 @@ public class OrderSetParcelItemsActionImpl implements OrderSetParcelItemsAction,
     }
 
     /**
-     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      */
 
@@ -68,7 +68,7 @@ public class OrderSetParcelItemsActionImpl implements OrderSetParcelItemsAction,
     }
 
     /**
-     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      */
 

@@ -56,7 +56,7 @@ public class QuoteSetCustomTypeActionImpl implements QuoteSetCustomTypeAction, M
     }
 
     /**
-     *  <p>Defines the Type that extends the Quote with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Quote.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Quote with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Quote.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -64,7 +64,7 @@ public class QuoteSetCustomTypeActionImpl implements QuoteSetCustomTypeAction, M
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Quote.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Quote.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

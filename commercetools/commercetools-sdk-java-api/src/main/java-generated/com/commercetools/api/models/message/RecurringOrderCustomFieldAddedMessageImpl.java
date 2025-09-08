@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after adding a Custom Field using the Set CustomField.</p>
+ *  <p>Generated after adding a Custom Field using the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetCustomFieldAction" rel="nofollow">Set CustomField</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RecurringOrderCustomFieldAddedMessageImpl implements RecurringOrderCustomFieldAddedMessage, ModelBase {
@@ -142,7 +142,7 @@ public class RecurringOrderCustomFieldAddedMessageImpl implements RecurringOrder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -158,7 +158,7 @@ public class RecurringOrderCustomFieldAddedMessageImpl implements RecurringOrder
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -182,7 +182,7 @@ public class RecurringOrderCustomFieldAddedMessageImpl implements RecurringOrder
     }
 
     /**
-     *  <p>The added CustomFieldValue based on the FieldType.</p>
+     *  <p>The added <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a>.</p>
      */
 
     public java.lang.Object getValue() {

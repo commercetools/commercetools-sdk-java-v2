@@ -28,8 +28,7 @@ public class DiscountedPriceDraftBuilder implements Builder<DiscountedPriceDraft
     private com.commercetools.api.models.product_discount.ProductDiscountReference discount;
 
     /**
-     *  <p>Sets the money value for the discounted price.</p>
-     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+     *  <p>Sets the money value for the discounted price. To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -41,8 +40,7 @@ public class DiscountedPriceDraftBuilder implements Builder<DiscountedPriceDraft
     }
 
     /**
-     *  <p>Sets the money value for the discounted price.</p>
-     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+     *  <p>Sets the money value for the discounted price. To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -54,8 +52,7 @@ public class DiscountedPriceDraftBuilder implements Builder<DiscountedPriceDraft
     }
 
     /**
-     *  <p>Sets the money value for the discounted price.</p>
-     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+     *  <p>Sets the money value for the discounted price. To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -66,7 +63,7 @@ public class DiscountedPriceDraftBuilder implements Builder<DiscountedPriceDraft
     }
 
     /**
-     *  <p>Relates the referenced ProductDiscount to the discounted price.</p>
+     *  <p>Relates the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> to the discounted price.</p>
      * @param builder function to build the discount value
      * @return Builder
      */
@@ -80,7 +77,7 @@ public class DiscountedPriceDraftBuilder implements Builder<DiscountedPriceDraft
     }
 
     /**
-     *  <p>Relates the referenced ProductDiscount to the discounted price.</p>
+     *  <p>Relates the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> to the discounted price.</p>
      * @param builder function to build the discount value
      * @return Builder
      */
@@ -93,7 +90,7 @@ public class DiscountedPriceDraftBuilder implements Builder<DiscountedPriceDraft
     }
 
     /**
-     *  <p>Relates the referenced ProductDiscount to the discounted price.</p>
+     *  <p>Relates the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> to the discounted price.</p>
      * @param discount value to be set
      * @return Builder
      */
@@ -105,8 +102,7 @@ public class DiscountedPriceDraftBuilder implements Builder<DiscountedPriceDraft
     }
 
     /**
-     *  <p>Sets the money value for the discounted price.</p>
-     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+     *  <p>Sets the money value for the discounted price. To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @return value
      */
 
@@ -115,7 +111,7 @@ public class DiscountedPriceDraftBuilder implements Builder<DiscountedPriceDraft
     }
 
     /**
-     *  <p>Relates the referenced ProductDiscount to the discounted price.</p>
+     *  <p>Relates the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> to the discounted price.</p>
      * @return discount
      */
 

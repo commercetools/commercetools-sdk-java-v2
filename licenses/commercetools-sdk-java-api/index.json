@@ -152,7 +152,7 @@
         },
         {
             "moduleName": "org.apache.commons:commons-lang3",
-            "moduleVersion": "3.17.0",
+            "moduleVersion": "3.18.0",
             "moduleUrls": [
                 "https://commons.apache.org/proper/commons-lang/"
             ],

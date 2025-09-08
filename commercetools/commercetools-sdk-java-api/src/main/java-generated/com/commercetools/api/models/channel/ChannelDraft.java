@@ -86,7 +86,7 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>
+     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the <a href="https://docs.commercetools.com/apis/ctp:api:type:GeoJsonPoint" rel="nofollow">Point</a> type is supported.</p>
      * @return geoLocation
      */
     @Valid
@@ -144,7 +144,7 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
     public void setCustom(final CustomFieldsDraft custom);
 
     /**
-     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>
+     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the <a href="https://docs.commercetools.com/apis/ctp:api:type:GeoJsonPoint" rel="nofollow">Point</a> type is supported.</p>
      * @param geoLocation value to be set
      */
 

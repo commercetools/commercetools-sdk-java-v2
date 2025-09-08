@@ -21,7 +21,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful recalculation of a Discount on a Line Item.</p>
+ *  <p>Generated after a successful recalculation of a Discount on a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -54,7 +54,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     String ORDER_LINE_ITEM_DISCOUNT_SET = "OrderLineItemDiscountSet";
 
     /**
-     *  <p>Unique identifier for the Line Item.</p>
+     *  <p>Unique identifier for the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
      * @return lineItemId
      */
     @NotNull
@@ -70,7 +70,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     public String getLineItemKey();
 
     /**
-     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     *  <p>Array of <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedLineItemPriceForQuantity" rel="nofollow">DiscountedLineItemPriceForQuantity</a> after the Discount recalculation.</p>
      * @return discountedPricePerQuantity
      */
     @NotNull
@@ -79,7 +79,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     public List<DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity();
 
     /**
-     *  <p>Total Price of the Line Item after the Discount recalculation.</p>
+     *  <p>Total Price of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> after the Discount recalculation.</p>
      * @return totalPrice
      */
     @NotNull
@@ -88,7 +88,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     public CentPrecisionMoney getTotalPrice();
 
     /**
-     *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedItemPrice" rel="nofollow">TaxedItemPrice</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> after the Discount recalculation.</p>
      * @return taxedPrice
      */
     @Valid
@@ -96,7 +96,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     public TaxedItemPrice getTaxedPrice();
 
     /**
-     *  <p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">Shipping Method</a>. Only applicable for Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      * @return taxedPricePortions
      */
     @NotNull
@@ -105,7 +105,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     public List<MethodTaxedPrice> getTaxedPricePortions();
 
     /**
-     *  <p>Unique identifier for the Line Item.</p>
+     *  <p>Unique identifier for the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
      * @param lineItemId value to be set
      */
 
@@ -119,7 +119,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     public void setLineItemKey(final String lineItemKey);
 
     /**
-     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     *  <p>Array of <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedLineItemPriceForQuantity" rel="nofollow">DiscountedLineItemPriceForQuantity</a> after the Discount recalculation.</p>
      * @param discountedPricePerQuantity values to be set
      */
 
@@ -127,7 +127,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     public void setDiscountedPricePerQuantity(final DiscountedLineItemPriceForQuantity... discountedPricePerQuantity);
 
     /**
-     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     *  <p>Array of <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedLineItemPriceForQuantity" rel="nofollow">DiscountedLineItemPriceForQuantity</a> after the Discount recalculation.</p>
      * @param discountedPricePerQuantity values to be set
      */
 
@@ -135,21 +135,21 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
             final List<DiscountedLineItemPriceForQuantity> discountedPricePerQuantity);
 
     /**
-     *  <p>Total Price of the Line Item after the Discount recalculation.</p>
+     *  <p>Total Price of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> after the Discount recalculation.</p>
      * @param totalPrice value to be set
      */
 
     public void setTotalPrice(final CentPrecisionMoney totalPrice);
 
     /**
-     *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedItemPrice" rel="nofollow">TaxedItemPrice</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> after the Discount recalculation.</p>
      * @param taxedPrice value to be set
      */
 
     public void setTaxedPrice(final TaxedItemPrice taxedPrice);
 
     /**
-     *  <p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">Shipping Method</a>. Only applicable for Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      * @param taxedPricePortions values to be set
      */
 
@@ -157,7 +157,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     public void setTaxedPricePortions(final MethodTaxedPrice... taxedPricePortions);
 
     /**
-     *  <p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">Shipping Method</a>. Only applicable for Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      * @param taxedPricePortions values to be set
      */
 

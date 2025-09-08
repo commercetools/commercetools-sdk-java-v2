@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Used by the Import API to identify a Store.</p>
+ *  <p>Used by the <span>Import API</span> to identify a Store.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreKeyReferenceImpl implements StoreKeyReference, ModelBase {

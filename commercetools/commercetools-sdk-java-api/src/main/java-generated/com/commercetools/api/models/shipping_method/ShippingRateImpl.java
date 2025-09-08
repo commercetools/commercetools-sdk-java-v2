@@ -59,7 +59,7 @@ public class ShippingRateImpl implements ShippingRate, ModelBase {
     }
 
     /**
-     *  <p>Free shipping is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
+     *  <p><span>Free shipping</span> is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      */
 
     public com.commercetools.api.models.common.CentPrecisionMoney getFreeAbove() {
@@ -67,7 +67,7 @@ public class ShippingRateImpl implements ShippingRate, ModelBase {
     }
 
     /**
-     *  <p><code>true</code> if the ShippingRate matches given Cart or Location. Only appears in response to requests for Get ShippingMethods for a Cart or Get ShippingMethods for a Location.</p>
+     *  <p><code>true</code> if the ShippingRate matches given <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Location" rel="nofollow">Location</a>. Only appears in response to requests for <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-cart:GET" rel="nofollow">Get ShippingMethods for a Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-location:GET" rel="nofollow">Get ShippingMethods for a Location</a>.</p>
      */
 
     public Boolean getIsMatching() {

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Information about the user or API Client who performed the change. This is a variant of LastModifiedBy.</p>
+ *  <p>Information about the user or API Client who performed the change. This is a variant of <a href="https://docs.commercetools.com/apis/ctp:api:type:LastModifiedBy" rel="nofollow">LastModifiedBy</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ModifiedByImpl implements ModifiedBy, ModelBase {
@@ -69,7 +69,7 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
     }
 
     /**
-     *  <p>ID of the Merchant Center user who made the change.</p>
+     *  <p><span>ID</span> of the Merchant Center user who made the change.</p>
      *  <p>Present only if <code>isPlatformClient</code> is <code>true</code>.</p>
      */
 
@@ -81,8 +81,8 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
      *  <p>Indicates who performed the change.</p>
      *  <ul>
      *   <li>If the change was made by a user, the value is <code>"user"</code>.</li>
-     *   <li>If the change was made by an API Client with or without an external user ID, the value is <code>"external-user"</code>.</li>
-     *   <li>If the change was made by an Associate, the value is <code>"associate"</code>.</li>
+     *   <li>If the change was made by an API Client with or without an <span>external user ID</span>, the value is <code>"external-user"</code>.</li>
+     *   <li>If the change was made by an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a>, the value is <code>"associate"</code>.</li>
      *  </ul>
      */
 
@@ -91,7 +91,7 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
     }
 
     /**
-     *  <p>ID of the API Client that made the change.</p>
+     *  <p><span>ID</span> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> that made the change.</p>
      *  <p>Present only if the change was made using an API Client.</p>
      */
 
@@ -100,7 +100,7 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
     }
 
     /**
-     *  <p>Present only if the change was made using a token from an anonymous session.</p>
+     *  <p>Present only if the change was made using a token from an <span>anonymous session</span>.</p>
      */
 
     public String getAnonymousId() {
@@ -108,8 +108,8 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
     }
 
     /**
-     *  <p>The Customer who made the change.</p>
-     *  <p>Present only if the change was made using a token from the password flow.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who made the change.</p>
+     *  <p>Present only if the change was made using a token from the <span>password flow</span>.</p>
      */
 
     public com.commercetools.history.models.common.Reference getCustomer() {
@@ -117,7 +117,7 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
     }
 
     /**
-     *  <p>The Associate who made the change in the context of a Business Unit. Only available for B2B-enabled Projects when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> who made the change in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. Only available for <span>B2B</span>-enabled Projects when an Associate acts on behalf of a company using the <span>associate endpoints</span>.</p>
      */
 
     public com.commercetools.history.models.common.Reference getAssociate() {

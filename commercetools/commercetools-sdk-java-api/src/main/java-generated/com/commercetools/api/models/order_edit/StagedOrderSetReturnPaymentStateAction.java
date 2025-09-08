@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>To set a ReturnPaymentState, the Order <code>returnInfo</code> must have at least one ReturnItem.</p>
+ *  <p>To set a <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnPaymentState" rel="nofollow">ReturnPaymentState</a>, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> <code>returnInfo</code> must have at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface StagedOrderSetReturnPaymentStateAction extends StagedOrderUpdat
     String SET_RETURN_PAYMENT_STATE = "setReturnPaymentState";
 
     /**
-     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @return returnItemId
      */
 
@@ -48,7 +48,7 @@ public interface StagedOrderSetReturnPaymentStateAction extends StagedOrderUpdat
     public String getReturnItemId();
 
     /**
-     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @return returnItemKey
      */
 
@@ -56,7 +56,7 @@ public interface StagedOrderSetReturnPaymentStateAction extends StagedOrderUpdat
     public String getReturnItemKey();
 
     /**
-     *  <p>New Payment status of the ReturnItem.</p>
+     *  <p>New Payment status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
      * @return paymentState
      */
     @NotNull
@@ -64,21 +64,21 @@ public interface StagedOrderSetReturnPaymentStateAction extends StagedOrderUpdat
     public ReturnPaymentState getPaymentState();
 
     /**
-     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @param returnItemId value to be set
      */
 
     public void setReturnItemId(final String returnItemId);
 
     /**
-     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @param returnItemKey value to be set
      */
 
     public void setReturnItemKey(final String returnItemKey);
 
     /**
-     *  <p>New Payment status of the ReturnItem.</p>
+     *  <p>New Payment status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
      * @param paymentState value to be set
      */
 

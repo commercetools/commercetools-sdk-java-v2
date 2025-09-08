@@ -123,8 +123,8 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     /**
      *  <p>Payment status of the Return Item:</p>
      *  <ul>
-     *   <li><code>NonRefundable</code>, for items in the <code>Advised</code> ReturnShipmentState</li>
-     *   <li><code>Initial</code>, for items in the <code>Returned</code> ReturnShipmentState</li>
+     *   <li><code>NonRefundable</code>, for items in the <code>Advised</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnShipmentState" rel="nofollow">ReturnShipmentState</a></li>
+     *   <li><code>Initial</code>, for items in the <code>Returned</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnShipmentState" rel="nofollow">ReturnShipmentState</a></li>
      *  </ul>
      */
 

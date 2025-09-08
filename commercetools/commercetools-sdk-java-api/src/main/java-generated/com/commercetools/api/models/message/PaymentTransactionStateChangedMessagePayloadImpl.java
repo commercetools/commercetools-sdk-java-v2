@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Change TransactionState update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentChangeTransactionStateAction" rel="nofollow">Change TransactionState</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentTransactionStateChangedMessagePayloadImpl
@@ -56,7 +56,7 @@ public class PaymentTransactionStateChangedMessagePayloadImpl
     }
 
     /**
-     *  <p>Unique identifier for the Transaction for which the Transaction State changed.</p>
+     *  <p>Unique identifier for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a> for which the <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">Transaction State</a> changed.</p>
      */
 
     public String getTransactionId() {
@@ -64,7 +64,7 @@ public class PaymentTransactionStateChangedMessagePayloadImpl
     }
 
     /**
-     *  <p>Transaction State after the Change Transaction State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">Transaction State</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentChangeTransactionStateAction" rel="nofollow">Change Transaction State</a> update action.</p>
      */
 
     public com.commercetools.api.models.payment.TransactionState getState() {

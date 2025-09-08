@@ -52,7 +52,7 @@ public class StagedOrderRemovePaymentActionImpl implements StagedOrderRemovePaym
     }
 
     /**
-     *  <p>Payment to remove from the PaymentInfo.</p>
+     *  <p>Payment to remove from the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentInfo" rel="nofollow">PaymentInfo</a>.</p>
      */
 
     public com.commercetools.api.models.payment.PaymentResourceIdentifier getPayment() {

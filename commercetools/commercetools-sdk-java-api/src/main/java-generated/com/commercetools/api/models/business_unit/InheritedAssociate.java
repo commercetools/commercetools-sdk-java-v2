@@ -45,7 +45,7 @@ public interface InheritedAssociate {
     public List<InheritedAssociateRoleAssignment> getAssociateRoleAssignments();
 
     /**
-     *  <p>The Customer that acts as an Associate in the Business Unit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</p>
      * @return customer
      */
     @NotNull
@@ -69,7 +69,7 @@ public interface InheritedAssociate {
     public void setAssociateRoleAssignments(final List<InheritedAssociateRoleAssignment> associateRoleAssignments);
 
     /**
-     *  <p>The Customer that acts as an Associate in the Business Unit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</p>
      * @param customer value to be set
      */
 

@@ -39,7 +39,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     private com.commercetools.api.models.project.SearchIndexingConfigurationValues businessUnits;
 
     /**
-     *  <p>Configuration for the Product Projection Search and Search Term Suggestions APIs.</p>
+     *  <p>Configuration for the <span>Product Projection Search</span> and <span>Search Term Suggestions</span> APIs.</p>
      * @param builder function to build the products value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-     *  <p>Configuration for the Product Projection Search and Search Term Suggestions APIs.</p>
+     *  <p>Configuration for the <span>Product Projection Search</span> and <span>Search Term Suggestions</span> APIs.</p>
      * @param builder function to build the products value
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-     *  <p>Configuration for the Product Projection Search and Search Term Suggestions APIs.</p>
+     *  <p>Configuration for the <span>Product Projection Search</span> and <span>Search Term Suggestions</span> APIs.</p>
      * @param products value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-     *  <p>Configuration for the Product Search feature.</p>
+     *  <p>Configuration for the <span>Product Search</span> feature.</p>
      * @param builder function to build the productsSearch value
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-     *  <p>Configuration for the Product Search feature.</p>
+     *  <p>Configuration for the <span>Product Search</span> feature.</p>
      * @param builder function to build the productsSearch value
      * @return Builder
      */
@@ -105,7 +105,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-     *  <p>Configuration for the Product Search feature.</p>
+     *  <p>Configuration for the <span>Product Search</span> feature.</p>
      * @param productsSearch value to be set
      * @return Builder
      */
@@ -117,7 +117,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-     *  <p>Configuration for the Order Search feature.</p>
+     *  <p>Configuration for the <span>Order Search</span> feature.</p>
      * @param builder function to build the orders value
      * @return Builder
      */
@@ -130,7 +130,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-     *  <p>Configuration for the Order Search feature.</p>
+     *  <p>Configuration for the <span>Order Search</span> feature.</p>
      * @param builder function to build the orders value
      * @return Builder
      */
@@ -142,7 +142,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-     *  <p>Configuration for the Order Search feature.</p>
+     *  <p>Configuration for the <span>Order Search</span> feature.</p>
      * @param orders value to be set
      * @return Builder
      */
@@ -154,7 +154,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-     *  <p>Configuration for the Customer Search feature.</p>
+     *  <p>Configuration for the <span>Customer Search</span> feature.</p>
      * @param builder function to build the customers value
      * @return Builder
      */
@@ -168,7 +168,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-     *  <p>Configuration for the Customer Search feature.</p>
+     *  <p>Configuration for the <span>Customer Search</span> feature.</p>
      * @param builder function to build the customers value
      * @return Builder
      */
@@ -181,7 +181,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-     *  <p>Configuration for the Customer Search feature.</p>
+     *  <p>Configuration for the <span>Customer Search</span> feature.</p>
      * @param customers value to be set
      * @return Builder
      */
@@ -193,7 +193,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-     *  <p>Configuration for the Business Unit Search feature.</p>
+     *  <p>Configuration for the <span>Business Unit Search</span> feature.</p>
      * @param builder function to build the businessUnits value
      * @return Builder
      */
@@ -207,7 +207,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-     *  <p>Configuration for the Business Unit Search feature.</p>
+     *  <p>Configuration for the <span>Business Unit Search</span> feature.</p>
      * @param builder function to build the businessUnits value
      * @return Builder
      */
@@ -220,7 +220,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-     *  <p>Configuration for the Business Unit Search feature.</p>
+     *  <p>Configuration for the <span>Business Unit Search</span> feature.</p>
      * @param businessUnits value to be set
      * @return Builder
      */
@@ -232,7 +232,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-     *  <p>Configuration for the Product Projection Search and Search Term Suggestions APIs.</p>
+     *  <p>Configuration for the <span>Product Projection Search</span> and <span>Search Term Suggestions</span> APIs.</p>
      * @return products
      */
 
@@ -242,7 +242,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-     *  <p>Configuration for the Product Search feature.</p>
+     *  <p>Configuration for the <span>Product Search</span> feature.</p>
      * @return productsSearch
      */
 
@@ -252,7 +252,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-     *  <p>Configuration for the Order Search feature.</p>
+     *  <p>Configuration for the <span>Order Search</span> feature.</p>
      * @return orders
      */
 
@@ -262,7 +262,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-     *  <p>Configuration for the Customer Search feature.</p>
+     *  <p>Configuration for the <span>Customer Search</span> feature.</p>
      * @return customers
      */
 
@@ -272,7 +272,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-     *  <p>Configuration for the Business Unit Search feature.</p>
+     *  <p>Configuration for the <span>Business Unit Search</span> feature.</p>
      * @return businessUnits
      */
 

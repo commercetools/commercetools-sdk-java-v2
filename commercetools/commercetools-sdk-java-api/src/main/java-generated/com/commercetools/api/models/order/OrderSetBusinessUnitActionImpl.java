@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Updates the Business Unit on the Order. Setting the Order's <code>businessUnit</code> does not recalculate prices or discounts on the Order.</p>
- *  <p>Produces the OrderBusinessUnitSet Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderBusinessUnitSetMessage" rel="nofollow">OrderBusinessUnitSet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetBusinessUnitActionImpl implements OrderSetBusinessUnitAction, ModelBase {
@@ -54,7 +54,7 @@ public class OrderSetBusinessUnitActionImpl implements OrderSetBusinessUnitActio
 
     /**
      *  <p>New Business Unit to assign to the Order. If empty, any existing value is removed.</p>
-     *  <p>If the referenced Business Unit does not exist, a ReferencedResourceNotFound error is returned.</p>
+     *  <p>If the referenced Business Unit does not exist, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferencedResourceNotFoundError" rel="nofollow">ReferencedResourceNotFound</a> error is returned.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit() {

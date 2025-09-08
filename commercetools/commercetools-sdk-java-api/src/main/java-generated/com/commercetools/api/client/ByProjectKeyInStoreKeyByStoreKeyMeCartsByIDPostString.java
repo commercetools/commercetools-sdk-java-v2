@@ -22,11 +22,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Updates the Cart for a given <code>id</code> in a Store. Returns a <code>200</code> status if successful.</p>
- *  <p>A ResourceNotFound error is returned in the following scenarios:</p>
+ *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error is returned in the following scenarios:</p>
  *  <ul>
  *   <li>If no Cart exists in the Store for the given <code>id</code>.</li>
  *   <li>If the Cart exists but does not belong to a Store, or the Cart's <code>store</code> field references a different Store.</li>
- *   <li>If the Cart exists but does not have either a <code>customerId</code> that matches the customer:{id} scope, or an <code>anonymousId</code> that matches the anonymous_id:{id} scope.</li>
+ *   <li>If the Cart exists but does not have either a <code>customerId</code> that matches the <span>customer:{id}</span> scope, or an <code>anonymousId</code> that matches the <span>anonymous_id:{id}</span> scope.</li>
  *  </ul>
  *
  * <hr>

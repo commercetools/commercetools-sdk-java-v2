@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the Change AttributeDefinition AttributeConstraint update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeChangeAttributeConstraintAction" rel="nofollow">Change AttributeDefinition AttributeConstraint</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -74,7 +74,7 @@ public interface ChangeAttributeConstraintChange extends Change {
     public AttributeConstraintEnum getNextValue();
 
     /**
-     *  <p>Name of the updated AttributeDefinition.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @return attributeName
      */
     @NotNull
@@ -103,7 +103,7 @@ public interface ChangeAttributeConstraintChange extends Change {
     public void setNextValue(final AttributeConstraintEnum nextValue);
 
     /**
-     *  <p>Name of the updated AttributeDefinition.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @param attributeName value to be set
      */
 

@@ -17,82 +17,82 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ChangeHistoryResourceType extends JsonEnum {
 
     /**
-    <p>for AssociateRole - Only available for B2B-enabled Projects.</p> */
+    <p>for <span>AssociateRole</span> - Only available for <span>B2B</span>-enabled Projects.</p> */
     ChangeHistoryResourceType ASSOCIATE_ROLE = ChangeHistoryResourceTypeEnum.ASSOCIATE_ROLE;
     /**
-    <p>for BusinessUnit - Only available for B2B-enabled Projects.</p> */
+    <p>for <span>BusinessUnit</span> - Only available for <span>B2B</span>-enabled Projects.</p> */
     ChangeHistoryResourceType BUSINESS_UNIT = ChangeHistoryResourceTypeEnum.BUSINESS_UNIT;
     /**
-    <p>for CartDiscount</p> */
+    <p>for <span>CartDiscount</span></p> */
     ChangeHistoryResourceType CART_DISCOUNT = ChangeHistoryResourceTypeEnum.CART_DISCOUNT;
     /**
-    <p>for Category</p> */
+    <p>for <span>Category</span></p> */
     ChangeHistoryResourceType CATEGORY = ChangeHistoryResourceTypeEnum.CATEGORY;
     /**
-    <p>for Channel</p> */
+    <p>for <span>Channel</span></p> */
     ChangeHistoryResourceType CHANNEL = ChangeHistoryResourceTypeEnum.CHANNEL;
     /**
-    <p>for Customer</p> */
+    <p>for <span>Customer</span></p> */
     ChangeHistoryResourceType CUSTOMER = ChangeHistoryResourceTypeEnum.CUSTOMER;
     /**
-    <p>for CustomerGroup</p> */
+    <p>for <span>CustomerGroup</span></p> */
     ChangeHistoryResourceType CUSTOMER_GROUP = ChangeHistoryResourceTypeEnum.CUSTOMER_GROUP;
     /**
-    <p>for DiscountCode</p> */
+    <p>for <span>DiscountCode</span></p> */
     ChangeHistoryResourceType DISCOUNT_CODE = ChangeHistoryResourceTypeEnum.DISCOUNT_CODE;
     /**
-    <p>for InventoryEntry</p> */
+    <p>for <span>InventoryEntry</span></p> */
     ChangeHistoryResourceType INVENTORY_ENTRY = ChangeHistoryResourceTypeEnum.INVENTORY_ENTRY;
     /**
-    <p>for CustomObject</p> */
+    <p>for <span>CustomObject</span></p> */
     ChangeHistoryResourceType KEY_VALUE_DOCUMENT = ChangeHistoryResourceTypeEnum.KEY_VALUE_DOCUMENT;
     /**
-    <p>for Order</p> */
+    <p>for <span>Order</span></p> */
     ChangeHistoryResourceType ORDER = ChangeHistoryResourceTypeEnum.ORDER;
     /**
-    <p>for Payment</p> */
+    <p>for <span>Payment</span></p> */
     ChangeHistoryResourceType PAYMENT = ChangeHistoryResourceTypeEnum.PAYMENT;
     /**
-    <p>for Product</p> */
+    <p>for <span>Product</span></p> */
     ChangeHistoryResourceType PRODUCT = ChangeHistoryResourceTypeEnum.PRODUCT;
     /**
-    <p>for ProductDiscount</p> */
+    <p>for <span>ProductDiscount</span></p> */
     ChangeHistoryResourceType PRODUCT_DISCOUNT = ChangeHistoryResourceTypeEnum.PRODUCT_DISCOUNT;
     /**
-    <p>for ProductSelection</p> */
+    <p>for <span>ProductSelection</span></p> */
     ChangeHistoryResourceType PRODUCT_SELECTION = ChangeHistoryResourceTypeEnum.PRODUCT_SELECTION;
     /**
-    <p>for ProductType</p> */
+    <p>for <span>ProductType</span></p> */
     ChangeHistoryResourceType PRODUCT_TYPE = ChangeHistoryResourceTypeEnum.PRODUCT_TYPE;
     /**
-    <p>for QuoteRequest</p> */
+    <p>for <span>QuoteRequest</span></p> */
     ChangeHistoryResourceType QUOTE_REQUEST = ChangeHistoryResourceTypeEnum.QUOTE_REQUEST;
     /**
-    <p>for Quote</p> */
+    <p>for <span>Quote</span></p> */
     ChangeHistoryResourceType QUOTE = ChangeHistoryResourceTypeEnum.QUOTE;
     /**
-    <p>for Review</p> */
+    <p>for <span>Review</span></p> */
     ChangeHistoryResourceType REVIEW = ChangeHistoryResourceTypeEnum.REVIEW;
     /**
-    <p>for ShoppingList</p> */
+    <p>for <span>ShoppingList</span></p> */
     ChangeHistoryResourceType SHOPPING_LIST = ChangeHistoryResourceTypeEnum.SHOPPING_LIST;
     /**
-    <p>for StagedQuote</p> */
+    <p>for <span>StagedQuote</span></p> */
     ChangeHistoryResourceType STAGED_QUOTE = ChangeHistoryResourceTypeEnum.STAGED_QUOTE;
     /**
-    <p>for State</p> */
+    <p>for <span>State</span></p> */
     ChangeHistoryResourceType STATE = ChangeHistoryResourceTypeEnum.STATE;
     /**
-    <p>for Store</p> */
+    <p>for <span>Store</span></p> */
     ChangeHistoryResourceType STORE = ChangeHistoryResourceTypeEnum.STORE;
     /**
-    <p>for TaxCategory</p> */
+    <p>for <span>TaxCategory</span></p> */
     ChangeHistoryResourceType TAX_CATEGORY = ChangeHistoryResourceTypeEnum.TAX_CATEGORY;
     /**
-    <p>for Type</p> */
+    <p>for <span>Type</span></p> */
     ChangeHistoryResourceType TYPE = ChangeHistoryResourceTypeEnum.TYPE;
     /**
-    <p>for Zone</p> */
+    <p>for <span>Zone</span></p> */
     ChangeHistoryResourceType ZONE = ChangeHistoryResourceTypeEnum.ZONE;
 
     /**

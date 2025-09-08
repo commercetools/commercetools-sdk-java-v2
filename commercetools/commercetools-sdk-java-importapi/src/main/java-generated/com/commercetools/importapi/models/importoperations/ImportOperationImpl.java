@@ -86,7 +86,7 @@ public class ImportOperationImpl implements ImportOperation, ModelBase {
     }
 
     /**
-     *  <p><code>key</code> of the ImportContainer.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainer</a>.</p>
      */
 
     public String getImportContainerKey() {
@@ -126,7 +126,7 @@ public class ImportOperationImpl implements ImportOperation, ModelBase {
     }
 
     /**
-     *  <p>Contains errors if the import was unsuccessful. See Errors.</p>
+     *  <p>Contains errors if the import was unsuccessful. See <span>Errors</span>.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.errors.ErrorObject> getErrors() {

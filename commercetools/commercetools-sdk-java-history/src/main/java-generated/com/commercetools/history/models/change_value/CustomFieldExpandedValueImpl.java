@@ -55,7 +55,7 @@ public class CustomFieldExpandedValueImpl implements CustomFieldExpandedValue, M
     }
 
     /**
-     *  <p>CustomFieldValue based on the FieldType.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a>.</p>
      */
 
     public java.lang.Object getValue() {

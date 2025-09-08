@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>A localized enum value must be unique within the enum, else a DuplicateEnumValues error is returned.</p>
+ *  <p>A localized enum value must be unique within the enum, else a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateEnumValuesError" rel="nofollow">DuplicateEnumValues</a> error is returned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeLocalizedEnumValueImpl implements AttributeLocalizedEnumValue, ModelBase {

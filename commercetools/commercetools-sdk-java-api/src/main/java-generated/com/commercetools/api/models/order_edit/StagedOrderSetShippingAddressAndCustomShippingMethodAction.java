@@ -73,7 +73,7 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
     public ShippingRateDraft getShippingRate();
 
     /**
-     *  <p>Used to select a Tax Rate when the Order has the <code>Platform</code> TaxMode.</p>
+     *  <p>Used to select a Tax Rate when the Order has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return taxCategory
      */
     @Valid
@@ -81,7 +81,7 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
     public TaxCategoryResourceIdentifier getTaxCategory();
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return externalTaxRate
      */
     @Valid
@@ -118,14 +118,14 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
     public void setShippingRate(final ShippingRateDraft shippingRate);
 
     /**
-     *  <p>Used to select a Tax Rate when the Order has the <code>Platform</code> TaxMode.</p>
+     *  <p>Used to select a Tax Rate when the Order has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param taxCategory value to be set
      */
 
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param externalTaxRate value to be set
      */
 

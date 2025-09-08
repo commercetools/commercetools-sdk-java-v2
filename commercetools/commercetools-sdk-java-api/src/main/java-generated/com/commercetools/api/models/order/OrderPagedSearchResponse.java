@@ -43,7 +43,7 @@ public interface OrderPagedSearchResponse {
     public Long getTotal();
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @return offset
      */
 
@@ -51,7 +51,7 @@ public interface OrderPagedSearchResponse {
     public Long getOffset();
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @return limit
      */
 
@@ -75,14 +75,14 @@ public interface OrderPagedSearchResponse {
     public void setTotal(final Long total);
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @param offset value to be set
      */
 
     public void setOffset(final Long offset);
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @param limit value to be set
      */
 

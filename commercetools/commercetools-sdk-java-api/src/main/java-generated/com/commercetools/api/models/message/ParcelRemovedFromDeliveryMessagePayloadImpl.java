@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Remove Parcel from Delivery update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderRemoveParcelFromDeliveryAction" rel="nofollow">Remove Parcel from Delivery</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelRemovedFromDeliveryMessagePayloadImpl implements ParcelRemovedFromDeliveryMessagePayload, ModelBase {
@@ -59,7 +59,7 @@ public class ParcelRemovedFromDeliveryMessagePayloadImpl implements ParcelRemove
     }
 
     /**
-     *  <p>Unique identifier of the Delivery.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      */
 
     public String getDeliveryId() {
@@ -67,7 +67,7 @@ public class ParcelRemovedFromDeliveryMessagePayloadImpl implements ParcelRemove
     }
 
     /**
-     *  <p>Parcel that was removed from the Delivery.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      */
 
     public com.commercetools.api.models.order.Parcel getParcel() {
@@ -75,7 +75,7 @@ public class ParcelRemovedFromDeliveryMessagePayloadImpl implements ParcelRemove
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      */
 
     public String getShippingKey() {

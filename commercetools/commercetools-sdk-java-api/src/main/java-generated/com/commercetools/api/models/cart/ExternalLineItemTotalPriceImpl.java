@@ -44,6 +44,7 @@ public class ExternalLineItemTotalPriceImpl implements ExternalLineItemTotalPric
 
     /**
      *  <p>Price of the Line Item.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      */
 
     public com.commercetools.api.models.common.Money getPrice() {

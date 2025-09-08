@@ -51,7 +51,7 @@ public class ShippingMethodChangeIsDefaultActionImpl implements ShippingMethodCh
     }
 
     /**
-     *  <p>Value to set. Only one ShippingMethod can be default in a Project.</p>
+     *  <p>Value to set. Only one ShippingMethod can be default in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      */
 
     public Boolean getIsDefault() {

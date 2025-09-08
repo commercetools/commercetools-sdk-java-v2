@@ -153,7 +153,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> <code>sku</code> of the InventoryEntry.</p>
      */
 
     public String getSku() {
@@ -161,7 +161,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     *  <p>Channel that supplies this InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> that supplies this InventoryEntry.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
@@ -185,7 +185,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     *  <p>Minimum quantity that can be added to a Cart. See Quantity limits.</p>
+     *  <p>Minimum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
      */
 
     public Integer getMinCartQuantity() {
@@ -193,7 +193,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     *  <p>Maximum quantity that can be added to a Cart. See Quantity limits.</p>
+     *  <p>Maximum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
      */
 
     public Integer getMaxCartQuantity() {

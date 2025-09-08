@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Use this method to retrieve the details of a global Customer by using the password token during their password reset process.</p>
+ *  <p>Use this method to retrieve the details of a global Customer by using the password token during their <span>password reset process</span>.</p>
  *
  * <hr>
  * <div class=code-example>

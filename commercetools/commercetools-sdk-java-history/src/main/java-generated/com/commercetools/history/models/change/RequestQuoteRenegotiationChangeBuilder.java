@@ -68,7 +68,7 @@ public class RequestQuoteRenegotiationChangeBuilder implements Builder<RequestQu
     }
 
     /**
-     *  <p>Message from the Buyer regarding the Quote renegotiation request.</p>
+     *  <p>Message from the <span>Buyer</span> regarding the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> renegotiation request.</p>
      * @param buyerComment value to be set
      * @return Builder
      */
@@ -106,7 +106,7 @@ public class RequestQuoteRenegotiationChangeBuilder implements Builder<RequestQu
     }
 
     /**
-     *  <p>Message from the Buyer regarding the Quote renegotiation request.</p>
+     *  <p>Message from the <span>Buyer</span> regarding the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> renegotiation request.</p>
      * @return buyerComment
      */
 

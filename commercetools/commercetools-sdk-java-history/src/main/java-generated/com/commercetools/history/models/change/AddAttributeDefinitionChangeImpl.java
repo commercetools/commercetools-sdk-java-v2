@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered by the Add Attribute Definition update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeAddAttributeDefinitionAction" rel="nofollow">Add Attribute Definition</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddAttributeDefinitionChangeImpl implements AddAttributeDefinitionChange, ModelBase {

@@ -45,7 +45,7 @@ public interface AssignedProductSelection {
 
     /**
      *  <p>Defines which Variants of the Product will be included in the Product Selection.</p>
-     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> ProductSelectionMode.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</p>
      * @return variantSelection
      */
     @Valid
@@ -54,7 +54,7 @@ public interface AssignedProductSelection {
 
     /**
      *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
-     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</p>
      * @return variantExclusion
      */
     @Valid
@@ -78,7 +78,7 @@ public interface AssignedProductSelection {
 
     /**
      *  <p>Defines which Variants of the Product will be included in the Product Selection.</p>
-     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> ProductSelectionMode.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</p>
      * @param variantSelection value to be set
      */
 
@@ -86,7 +86,7 @@ public interface AssignedProductSelection {
 
     /**
      *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
-     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</p>
      * @param variantExclusion value to be set
      */
 

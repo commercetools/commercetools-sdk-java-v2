@@ -21,8 +21,8 @@ import org.apache.commons.lang3.builder.ToStringStyle;
  *  <p>Returned when the current password of the Customer does not match.</p>
  *  <p>The error is returned as a failed response to:</p>
  *  <ul>
- *   <li>Change Customer Password and Change Customer Password in a Store requests on Customers.</li>
- *   <li>Change Customer Password and Change Customer Password in a Store requests on My Customer Profile.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers/password:POST" rel="nofollow">Change Customer Password</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/customers/password:POST" rel="nofollow">Change Customer Password in a Store</a> requests on Customers.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/password:POST" rel="nofollow">Change Customer Password</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/me/password:POST" rel="nofollow">Change Customer Password in a Store</a> requests on My Customer Profile.</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

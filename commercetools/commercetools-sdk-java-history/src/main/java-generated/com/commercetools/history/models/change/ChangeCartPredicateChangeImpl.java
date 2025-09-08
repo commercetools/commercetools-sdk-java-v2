@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered by the Change Cart Predicate update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountChangeCartPredicateAction" rel="nofollow">Change Cart Predicate</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeCartPredicateChangeImpl implements ChangeCartPredicateChange, ModelBase {

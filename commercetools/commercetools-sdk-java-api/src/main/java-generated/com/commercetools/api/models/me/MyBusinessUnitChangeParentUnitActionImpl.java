@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Changing the parent of a Business Unit generates a BusinessUnitParentChanged Message.</p>
+ *  <p>Changing the parent of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitParentChangedMessage" rel="nofollow">BusinessUnitParentChanged</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyBusinessUnitChangeParentUnitActionImpl implements MyBusinessUnitChangeParentUnitAction, ModelBase {
@@ -52,7 +52,7 @@ public class MyBusinessUnitChangeParentUnitActionImpl implements MyBusinessUnitC
     }
 
     /**
-     *  <p>New parent unit of the Business Unit. The new parent unit must have the same top-level unit as the old parent unit.</p>
+     *  <p>New parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. The new parent unit must have the same top-level unit as the old parent unit.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getParentUnit() {

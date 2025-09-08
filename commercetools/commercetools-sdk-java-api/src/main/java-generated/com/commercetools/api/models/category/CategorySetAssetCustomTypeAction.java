@@ -55,7 +55,7 @@ public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
     public String getAssetKey();
 
     /**
-     *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Asset with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
      * @return type
      */
     @Valid
@@ -63,7 +63,7 @@ public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the Asset.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Asset.</p>
      * @return fields
      */
     @Valid
@@ -85,14 +85,14 @@ public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
     public void setAssetKey(final String assetKey);
 
     /**
-     *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Asset with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields fields for the Asset.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Asset.</p>
      * @param fields value to be set
      */
 

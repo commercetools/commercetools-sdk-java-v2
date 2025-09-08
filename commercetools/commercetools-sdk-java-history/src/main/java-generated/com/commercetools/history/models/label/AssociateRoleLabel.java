@@ -47,7 +47,7 @@ public interface AssociateRoleLabel extends Label {
     public String getType();
 
     /**
-     *  <p>User-defined unique identifier of the Associate Role.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a>.</p>
      * @return key
      */
     @NotNull
@@ -63,7 +63,7 @@ public interface AssociateRoleLabel extends Label {
     public String getName();
 
     /**
-     *  <p>User-defined unique identifier of the Associate Role.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a>.</p>
      * @param key value to be set
      */
 

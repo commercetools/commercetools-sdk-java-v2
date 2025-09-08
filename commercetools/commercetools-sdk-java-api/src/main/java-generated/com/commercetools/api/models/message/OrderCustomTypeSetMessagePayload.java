@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Set Custom Type.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomTypeAction" rel="nofollow">Set Custom Type</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -49,7 +49,7 @@ public interface OrderCustomTypeSetMessagePayload extends OrderMessagePayload {
     public CustomFields getCustomFields();
 
     /**
-     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the previous <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a>. Absent if there was no previous Custom Type present.</p>
      * @return previousTypeId
      */
 
@@ -64,7 +64,7 @@ public interface OrderCustomTypeSetMessagePayload extends OrderMessagePayload {
     public void setCustomFields(final CustomFields customFields);
 
     /**
-     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the previous <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a>. Absent if there was no previous Custom Type present.</p>
      * @param previousTypeId value to be set
      */
 

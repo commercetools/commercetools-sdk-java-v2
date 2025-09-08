@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Returned when a resource referenced by a Reference or a ResourceIdentifier could not be found.</p>
+ *  <p>Returned when a resource referenced by a <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> or a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> could not be found.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReferencedResourceNotFoundErrorImpl implements ReferencedResourceNotFoundError, ModelBase {

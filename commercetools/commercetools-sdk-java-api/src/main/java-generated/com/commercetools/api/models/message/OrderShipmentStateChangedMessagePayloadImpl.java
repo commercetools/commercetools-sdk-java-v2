@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Change ShipmentState update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeShipmentStateAction" rel="nofollow">Change ShipmentState</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderShipmentStateChangedMessagePayloadImpl implements OrderShipmentStateChangedMessagePayload, ModelBase {
@@ -56,7 +56,7 @@ public class OrderShipmentStateChangedMessagePayloadImpl implements OrderShipmen
     }
 
     /**
-     *  <p>ShipmentState after the Change Shipment State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShipmentState" rel="nofollow">ShipmentState</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeShipmentStateAction" rel="nofollow">Change Shipment State</a> update action.</p>
      */
 
     public com.commercetools.api.models.order.ShipmentState getShipmentState() {
@@ -64,7 +64,7 @@ public class OrderShipmentStateChangedMessagePayloadImpl implements OrderShipmen
     }
 
     /**
-     *  <p>ShipmentState before the Change Shipment State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShipmentState" rel="nofollow">ShipmentState</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeShipmentStateAction" rel="nofollow">Change Shipment State</a> update action.</p>
      */
 
     public com.commercetools.api.models.order.ShipmentState getOldShipmentState() {

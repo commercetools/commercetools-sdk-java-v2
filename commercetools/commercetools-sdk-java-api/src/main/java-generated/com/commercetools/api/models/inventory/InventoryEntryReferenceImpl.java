@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Reference to an InventoryEntry.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to an <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntryReferenceImpl implements InventoryEntryReference, ModelBase {
@@ -56,7 +56,7 @@ public class InventoryEntryReferenceImpl implements InventoryEntryReference, Mod
     }
 
     /**
-     *  <p>Unique identifier of the referenced InventoryEntry.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
      */
 
     public String getId() {
@@ -64,7 +64,7 @@ public class InventoryEntryReferenceImpl implements InventoryEntryReference, Mod
     }
 
     /**
-     *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with Reference Expansion for InventoryEntries.</p>
+     *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with <span>Reference Expansion</span> for InventoryEntries.</p>
      */
 
     public com.commercetools.api.models.inventory.InventoryEntry getObj() {

@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Set Predicate update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetPredicateAction" rel="nofollow">Set Predicate</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -46,7 +46,7 @@ public interface ApprovalRulePredicateSetMessage extends Message {
     String APPROVAL_RULE_PREDICATE_SET = "ApprovalRulePredicateSet";
 
     /**
-     *  <p>Name of the ApprovalRule after the Set Predicate update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetPredicateAction" rel="nofollow">Set Predicate</a> update action.</p>
      * @return predicate
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface ApprovalRulePredicateSetMessage extends Message {
     public String getPredicate();
 
     /**
-     *  <p>Name of the ApprovalRule before the Set Predicate update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetPredicateAction" rel="nofollow">Set Predicate</a> update action.</p>
      * @return oldPredicate
      */
     @NotNull
@@ -62,14 +62,14 @@ public interface ApprovalRulePredicateSetMessage extends Message {
     public String getOldPredicate();
 
     /**
-     *  <p>Name of the ApprovalRule after the Set Predicate update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetPredicateAction" rel="nofollow">Set Predicate</a> update action.</p>
      * @param predicate value to be set
      */
 
     public void setPredicate(final String predicate);
 
     /**
-     *  <p>Name of the ApprovalRule before the Set Predicate update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetPredicateAction" rel="nofollow">Set Predicate</a> update action.</p>
      * @param oldPredicate value to be set
      */
 

@@ -20,13 +20,13 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creates a Cart for the Customer or anonymous user. The <code>customerId</code> or <code>anonymousId</code> field on the Cart is automatically set based on the customer:{id} or anonymous_id:{id} scope.</p>
+ *  <p>Creates a Cart for the Customer or anonymous user. The <code>customerId</code> or <code>anonymousId</code> field on the Cart is automatically set based on the <span>customer:{id}</span> or <span>anonymous_id:{id}</span> scope.</p>
  *  <p>Specific Error Codes:</p>
  *  <ul>
- *   <li>DiscountCodeNonApplicable</li>
- *   <li>InvalidItemShippingDetails</li>
- *   <li>MatchingPriceNotFound</li>
- *   <li>MissingTaxRateForCountry</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeNonApplicableError" rel="nofollow">DiscountCodeNonApplicable</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidItemShippingDetailsError" rel="nofollow">InvalidItemShippingDetails</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a></li>
  *  </ul>
  *
  * <hr>

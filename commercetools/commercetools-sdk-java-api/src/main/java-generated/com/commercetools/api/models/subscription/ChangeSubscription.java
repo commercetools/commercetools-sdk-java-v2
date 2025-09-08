@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Notification about changes to a resource. The payload format differs for resource creation, update, and deletion.</p>
+ *  <p>Notification about changes to a resource. The payload format differs for resource <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceCreatedDeliveryPayload" rel="nofollow">creation</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceUpdatedDeliveryPayload" rel="nofollow">update</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceDeletedDeliveryPayload" rel="nofollow">deletion</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +32,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ChangeSubscription {
 
     /**
-     *  <p>Unique identifier for the type of resource, for example, <code>cart</code>.</p>
+     *  <p>Unique identifier for the type of resource, for example, <code>order</code>.</p>
      * @return resourceTypeId
      */
     @NotNull
@@ -40,7 +40,7 @@ public interface ChangeSubscription {
     public ChangeSubscriptionResourceTypeId getResourceTypeId();
 
     /**
-     *  <p>Unique identifier for the type of resource, for example, <code>cart</code>.</p>
+     *  <p>Unique identifier for the type of resource, for example, <code>order</code>.</p>
      * @param resourceTypeId value to be set
      */
 

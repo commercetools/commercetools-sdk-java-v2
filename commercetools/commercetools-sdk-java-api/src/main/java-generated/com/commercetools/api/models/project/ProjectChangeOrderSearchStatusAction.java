@@ -38,7 +38,7 @@ public interface ProjectChangeOrderSearchStatusAction extends ProjectUpdateActio
     String CHANGE_ORDER_SEARCH_STATUS = "changeOrderSearchStatus";
 
     /**
-     *  <p>Activates or deactivates the Order Search feature. Activation will trigger building a search index for the Orders in the Project.</p>
+     *  <p>Activates or deactivates the <span>Order Search</span> feature. Activation will trigger building a search index for the Orders in the Project.</p>
      * @return status
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface ProjectChangeOrderSearchStatusAction extends ProjectUpdateActio
     public OrderSearchStatus getStatus();
 
     /**
-     *  <p>Activates or deactivates the Order Search feature. Activation will trigger building a search index for the Orders in the Project.</p>
+     *  <p>Activates or deactivates the <span>Order Search</span> feature. Activation will trigger building a search index for the Orders in the Project.</p>
      * @param status value to be set
      */
 

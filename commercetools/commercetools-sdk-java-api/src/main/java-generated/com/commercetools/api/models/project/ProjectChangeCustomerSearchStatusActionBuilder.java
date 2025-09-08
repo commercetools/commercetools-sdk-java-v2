@@ -25,7 +25,7 @@ public class ProjectChangeCustomerSearchStatusActionBuilder
     private com.commercetools.api.models.project.CustomerSearchStatus status;
 
     /**
-     *  <p>Activates or deactivates the Customer Search feature. Activation will trigger building a search index for the Customers in the Project.</p>
+     *  <p>Activates or deactivates the <span>Customer Search</span> feature. Activation will trigger building a search index for the Customers in the Project.</p>
      * @param status value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class ProjectChangeCustomerSearchStatusActionBuilder
     }
 
     /**
-     *  <p>Activates or deactivates the Customer Search feature. Activation will trigger building a search index for the Customers in the Project.</p>
+     *  <p>Activates or deactivates the <span>Customer Search</span> feature. Activation will trigger building a search index for the Customers in the Project.</p>
      * @return status
      */
 

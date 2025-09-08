@@ -38,7 +38,7 @@ public interface LocalizableEnumAttribute extends Attribute {
     String LENUM = "lenum";
 
     /**
-     *  <p>The key of the localized enum value. Must match the key of an AttributeLocalizedEnumValue in the Product Type.</p>
+     *  <p>The key of the localized enum value. Must match the key of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumValue" rel="nofollow">AttributeLocalizedEnumValue</a> in the Product Type.</p>
      * @return value
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface LocalizableEnumAttribute extends Attribute {
     public String getValue();
 
     /**
-     *  <p>The key of the localized enum value. Must match the key of an AttributeLocalizedEnumValue in the Product Type.</p>
+     *  <p>The key of the localized enum value. Must match the key of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumValue" rel="nofollow">AttributeLocalizedEnumValue</a> in the Product Type.</p>
      * @param value value to be set
      */
 

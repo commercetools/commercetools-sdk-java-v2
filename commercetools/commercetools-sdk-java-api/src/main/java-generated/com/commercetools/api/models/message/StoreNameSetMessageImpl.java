@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Name update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetNameAction" rel="nofollow">Set Name</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreNameSetMessageImpl implements StoreNameSetMessage, ModelBase {
@@ -142,7 +142,7 @@ public class StoreNameSetMessageImpl implements StoreNameSetMessage, ModelBase {
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -158,7 +158,7 @@ public class StoreNameSetMessageImpl implements StoreNameSetMessage, ModelBase {
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -174,7 +174,7 @@ public class StoreNameSetMessageImpl implements StoreNameSetMessage, ModelBase {
     }
 
     /**
-     *  <p>Name of the Store set during the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -182,7 +182,7 @@ public class StoreNameSetMessageImpl implements StoreNameSetMessage, ModelBase {
     }
 
     /**
-     *  <p>Names set for the Store in different locales.</p>
+     *  <p>Names set for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> in different locales.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.LocalizedString> getNameAllLocales() {

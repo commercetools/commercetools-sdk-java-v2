@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Represents errors related to authentication and authorization in a format conforming to the OAuth 2.0 specification.</p>
+ *  <p>Represents errors related to authentication and authorization in a format conforming to the <span>OAuth 2.0 specification</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,7 +37,7 @@ import jakarta.validation.constraints.NotNull;
 public interface AuthErrorResponse extends ErrorResponse {
 
     /**
-     *  <p>Error code as per the OAuth 2.0 specification. For example: <code>"access_denied"</code>.</p>
+     *  <p>Error code as per the <span>OAuth 2.0 specification</span>. For example: <code>"access_denied"</code>.</p>
      * @return error
      */
     @NotNull
@@ -62,7 +62,7 @@ public interface AuthErrorResponse extends ErrorResponse {
     public List<ErrorObject> getErrors();
 
     /**
-     *  <p>Error code as per the OAuth 2.0 specification. For example: <code>"access_denied"</code>.</p>
+     *  <p>Error code as per the <span>OAuth 2.0 specification</span>. For example: <code>"access_denied"</code>.</p>
      * @param error value to be set
      */
 

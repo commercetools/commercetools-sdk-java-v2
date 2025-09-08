@@ -43,7 +43,7 @@ public class CustomImpl implements Custom, ModelBase {
     }
 
     /**
-     *  <p>The Type that provides the field definitions for this object. If the referenced Type does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Type is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that provides the field definitions for this object. If the referenced Type does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Type is created.</p>
      */
 
     public com.commercetools.importapi.models.common.TypeKeyReference getType() {

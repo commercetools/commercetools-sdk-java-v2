@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the Request Quote Renegotiation update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestQuoteRenegotiationAction" rel="nofollow">Request Quote Renegotiation</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -74,7 +74,7 @@ public interface RequestQuoteRenegotiationChange extends Change {
     public QuoteState getNextValue();
 
     /**
-     *  <p>Message from the Buyer regarding the Quote renegotiation request.</p>
+     *  <p>Message from the <span>Buyer</span> regarding the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> renegotiation request.</p>
      * @return buyerComment
      */
     @NotNull
@@ -103,7 +103,7 @@ public interface RequestQuoteRenegotiationChange extends Change {
     public void setNextValue(final QuoteState nextValue);
 
     /**
-     *  <p>Message from the Buyer regarding the Quote renegotiation request.</p>
+     *  <p>Message from the <span>Buyer</span> regarding the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> renegotiation request.</p>
      * @param buyerComment value to be set
      */
 

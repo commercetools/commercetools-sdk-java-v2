@@ -15,8 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Returned when during an order update of AttributeEnumType or AttributeLocalizedEnumType the new enum values do not match the existing ones.</p>
- *  <p>The error is returned as a failed response to the Change the order of EnumValues and Change the order of LocalizedEnumValues update actions.</p>
+ *  <p>Returned when during an order update of <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeEnumType" rel="nofollow">AttributeEnumType</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumType" rel="nofollow">AttributeLocalizedEnumType</a> the new enum values do not match the existing ones.</p>
+ *  <p>The error is returned as a failed response to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeChangePlainEnumValueOrderAction" rel="nofollow">Change the order of EnumValues</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeChangeLocalizedEnumValueOrderAction" rel="nofollow">Change the order of LocalizedEnumValues</a> update actions.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

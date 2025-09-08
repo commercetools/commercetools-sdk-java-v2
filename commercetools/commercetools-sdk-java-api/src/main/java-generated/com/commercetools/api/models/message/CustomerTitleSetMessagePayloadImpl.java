@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Title update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetTitleAction" rel="nofollow">Set Title</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerTitleSetMessagePayloadImpl implements CustomerTitleSetMessagePayload, ModelBase {
@@ -51,7 +51,7 @@ public class CustomerTitleSetMessagePayloadImpl implements CustomerTitleSetMessa
     }
 
     /**
-     *  <p>The <code>title</code> that was set during the Set Title update action.</p>
+     *  <p>The <code>title</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetTitleAction" rel="nofollow">Set Title</a> update action.</p>
      */
 
     public String getTitle() {

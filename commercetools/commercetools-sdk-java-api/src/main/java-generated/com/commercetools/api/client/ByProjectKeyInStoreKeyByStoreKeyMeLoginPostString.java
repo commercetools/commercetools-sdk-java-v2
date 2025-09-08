@@ -17,14 +17,13 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Retrieves the authenticated Customer (that matches the given email/password pair) if they are part of a specific Store.</p>
- *  <p>If used with an optional access token for an anonymous session, all Orders and Carts that belong to the <code>anonymousId</code> are assigned to the newly logged-in Customer.</p>
+ *  <p>Retrieves the authenticated Customer (that matches the given email/password pair) if they are part of a specific <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+ *  <p>If used with an optional <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">access token for an anonymous session</a>, all Orders and Carts that belong to the <code>anonymousId</code> are assigned to the newly logged-in Customer.</p>
  *  <ul>
  *   <li>If the Customer does not have a Cart, the most recently modified anonymous cart becomes the Customer's Cart.</li>
- *   <li>If the Customer already has a Cart, the most recently modified anonymous cart is handled according to AnonymousCartSignInMode.</li>
+ *   <li>If the Customer already has a Cart, the most recently modified anonymous cart is handled according to <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousCartSignInMode" rel="nofollow">AnonymousCartSignInMode</a>.</li>
  *  </ul>
- *  <p>A Cart returned in the CustomerSignInResult has any invalid Line Items removed and is updated with the latest prices, taxes, and discounts. During these updates, the following errors can be returned: MatchingPriceNotFound and MissingTaxRateForCountry.</p>
- *  <p>If an account with the given credentials is not found, an InvalidCredentials error is returned.</p>
+ *  <p>If an account with the given credentials is not found, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidCredentialsError" rel="nofollow">InvalidCredentials</a> error is returned.</p>
  *
  * <hr>
  * <div class=code-example>

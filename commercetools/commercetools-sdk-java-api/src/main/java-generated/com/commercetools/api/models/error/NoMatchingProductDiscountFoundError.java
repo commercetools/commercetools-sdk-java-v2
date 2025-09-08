@@ -16,7 +16,7 @@ import jakarta.validation.constraints.NotNull;
 
 /**
  *  <p>Returned when a Product Discount could not be found that could be applied to the Price of a Product Variant.</p>
- *  <p>The error is returned as a failed response to the Get Matching ProductDiscount request.</p>
+ *  <p>The error is returned as a failed response to the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/product-discounts/matching:POST" rel="nofollow">Get Matching ProductDiscount</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

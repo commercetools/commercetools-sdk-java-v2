@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Adding or updating a Custom Type on a Business Unit generates the BusinessUnitCustomTypeSet Message, removing one generates the BusinessUnitCustomTypeRemoved Message.</p>
+ *  <p>Adding or updating a Custom Type on a Business Unit generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitCustomTypeSetMessage" rel="nofollow">BusinessUnitCustomTypeSet</a> Message, removing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitCustomTypeRemovedMessage" rel="nofollow">BusinessUnitCustomTypeRemoved</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyBusinessUnitSetCustomTypeActionImpl implements MyBusinessUnitSetCustomTypeAction, ModelBase {
@@ -56,7 +56,7 @@ public class MyBusinessUnitSetCustomTypeActionImpl implements MyBusinessUnitSetC
     }
 
     /**
-     *  <p>Defines the Type that extends the BusinessUnit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the BusinessUnit.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the BusinessUnit with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the BusinessUnit.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -64,7 +64,7 @@ public class MyBusinessUnitSetCustomTypeActionImpl implements MyBusinessUnitSetC
     }
 
     /**
-     *  <p>Sets the Custom Fields for the BusinessUnit.</p>
+     *  <p>Sets the <span>Custom Fields</span> for the BusinessUnit.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

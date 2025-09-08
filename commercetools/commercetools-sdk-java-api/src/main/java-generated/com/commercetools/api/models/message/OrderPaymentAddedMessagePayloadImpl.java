@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Add Payment update action or when a Payment is added via Order Edits.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderAddPaymentAction" rel="nofollow">Add Payment</a> update action or when a <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> is added via <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderAddPaymentAction" rel="nofollow">Order Edits</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderPaymentAddedMessagePayloadImpl implements OrderPaymentAddedMessagePayload, ModelBase {
@@ -52,7 +52,7 @@ public class OrderPaymentAddedMessagePayloadImpl implements OrderPaymentAddedMes
     }
 
     /**
-     *  <p>Payment that was added to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      */
 
     public com.commercetools.api.models.payment.PaymentReference getPayment() {

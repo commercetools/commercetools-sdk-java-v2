@@ -38,7 +38,7 @@ public interface LocalizedEnumField extends CustomField {
     String LOCALIZED_ENUM = "LocalizedEnum";
 
     /**
-     *  <p>The key of the localized enum value. Must match the key of a CustomFieldLocalizedEnumValue in the CustomFieldLocalizedEnumType.</p>
+     *  <p>The key of the localized enum value. Must match the key of a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumValue" rel="nofollow">CustomFieldLocalizedEnumValue</a> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumType" rel="nofollow">CustomFieldLocalizedEnumType</a>.</p>
      * @return value
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface LocalizedEnumField extends CustomField {
     public String getValue();
 
     /**
-     *  <p>The key of the localized enum value. Must match the key of a CustomFieldLocalizedEnumValue in the CustomFieldLocalizedEnumType.</p>
+     *  <p>The key of the localized enum value. Must match the key of a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumValue" rel="nofollow">CustomFieldLocalizedEnumValue</a> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumType" rel="nofollow">CustomFieldLocalizedEnumType</a>.</p>
      * @param value value to be set
      */
 

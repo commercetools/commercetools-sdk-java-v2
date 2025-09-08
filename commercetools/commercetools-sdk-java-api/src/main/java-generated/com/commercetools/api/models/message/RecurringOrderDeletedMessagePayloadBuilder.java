@@ -25,7 +25,7 @@ public class RecurringOrderDeletedMessagePayloadBuilder implements Builder<Recur
     private com.commercetools.api.models.recurring_order.RecurringOrder recurringOrder;
 
     /**
-     *  <p>RecurringOrder that was deleted.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was deleted.</p>
      * @param builder function to build the recurringOrder value
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class RecurringOrderDeletedMessagePayloadBuilder implements Builder<Recur
     }
 
     /**
-     *  <p>RecurringOrder that was deleted.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was deleted.</p>
      * @param builder function to build the recurringOrder value
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class RecurringOrderDeletedMessagePayloadBuilder implements Builder<Recur
     }
 
     /**
-     *  <p>RecurringOrder that was deleted.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was deleted.</p>
      * @param recurringOrder value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class RecurringOrderDeletedMessagePayloadBuilder implements Builder<Recur
     }
 
     /**
-     *  <p>RecurringOrder that was deleted.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was deleted.</p>
      * @return recurringOrder
      */
 

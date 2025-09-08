@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Add Supply Channel, Remove Supply Channel, or Set Supply Channels update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreAddSupplyChannelAction" rel="nofollow">Add Supply Channel</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreRemoveSupplyChannelAction" rel="nofollow">Remove Supply Channel</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetSupplyChannelsAction" rel="nofollow">Set Supply Channels</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreSupplyChannelsChangedMessagePayloadImpl
@@ -57,7 +57,7 @@ public class StoreSupplyChannelsChangedMessagePayloadImpl
     }
 
     /**
-     *  <p>Inventory supply Channels that have been added to the Store.</p>
+     *  <p>Inventory supply Channels that have been added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getAddedSupplyChannels() {
@@ -65,7 +65,7 @@ public class StoreSupplyChannelsChangedMessagePayloadImpl
     }
 
     /**
-     *  <p>Inventory supply Channels that have been removed from the Store.</p>
+     *  <p>Inventory supply Channels that have been removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getRemovedSupplyChannels() {

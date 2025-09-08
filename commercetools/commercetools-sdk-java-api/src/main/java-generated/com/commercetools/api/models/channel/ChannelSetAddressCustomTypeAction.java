@@ -39,7 +39,7 @@ public interface ChannelSetAddressCustomTypeAction extends ChannelUpdateAction {
     String SET_ADDRESS_CUSTOM_TYPE = "setAddressCustomType";
 
     /**
-     *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>address</code> with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
      * @return type
      */
     @Valid
@@ -47,7 +47,7 @@ public interface ChannelSetAddressCustomTypeAction extends ChannelUpdateAction {
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <code>address</code>.</p>
      * @return fields
      */
     @Valid
@@ -55,14 +55,14 @@ public interface ChannelSetAddressCustomTypeAction extends ChannelUpdateAction {
     public FieldContainer getFields();
 
     /**
-     *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>address</code> with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <code>address</code>.</p>
      * @param fields value to be set
      */
 

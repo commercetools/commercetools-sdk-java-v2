@@ -50,7 +50,7 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
     public String getType();
 
     /**
-     *  <p>Reference to a Product.</p>
+     *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return product
      */
     @NotNull
@@ -59,7 +59,7 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
     public Reference getProduct();
 
     /**
-     *  <p><code>id</code> of the ProductVariant.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return variantId
      */
     @NotNull
@@ -67,7 +67,7 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
     public Integer getVariantId();
 
     /**
-     *  <p>Channel with ChannelRoleEnum <code>InventorySupply</code>.</p>
+     *  <p>Channel with <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>InventorySupply</code>.</p>
      * @return supplyChannel
      */
     @Valid
@@ -75,7 +75,7 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
     public Reference getSupplyChannel();
 
     /**
-     *  <p>Channel with ChannelRoleEnum <code>ProductDistribution</code>.</p>
+     *  <p>Channel with <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>ProductDistribution</code>.</p>
      * @return distributionChannel
      */
     @NotNull
@@ -84,28 +84,28 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
     public Reference getDistributionChannel();
 
     /**
-     *  <p>Reference to a Product.</p>
+     *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param product value to be set
      */
 
     public void setProduct(final Reference product);
 
     /**
-     *  <p><code>id</code> of the ProductVariant.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param variantId value to be set
      */
 
     public void setVariantId(final Integer variantId);
 
     /**
-     *  <p>Channel with ChannelRoleEnum <code>InventorySupply</code>.</p>
+     *  <p>Channel with <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>InventorySupply</code>.</p>
      * @param supplyChannel value to be set
      */
 
     public void setSupplyChannel(final Reference supplyChannel);
 
     /**
-     *  <p>Channel with ChannelRoleEnum <code>ProductDistribution</code>.</p>
+     *  <p>Channel with <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>ProductDistribution</code>.</p>
      * @param distributionChannel value to be set
      */
 

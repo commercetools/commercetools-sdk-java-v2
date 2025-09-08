@@ -36,6 +36,7 @@ public interface ExternalLineItemTotalPrice {
 
     /**
      *  <p>Price of the Line Item.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @return price
      */
     @NotNull
@@ -54,6 +55,7 @@ public interface ExternalLineItemTotalPrice {
 
     /**
      *  <p>Price of the Line Item.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param price value to be set
      */
 

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The <code>Unique</code> AttributeConstraintEnum was violated.</p>
+ *  <p>The <code>Unique</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeConstraintEnum" rel="nofollow">AttributeConstraintEnum</a> was violated.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DuplicateAttributeValueErrorImpl implements DuplicateAttributeValueError, ModelBase {

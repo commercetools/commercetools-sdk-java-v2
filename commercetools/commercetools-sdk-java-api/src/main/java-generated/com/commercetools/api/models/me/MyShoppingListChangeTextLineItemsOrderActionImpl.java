@@ -53,7 +53,7 @@ public class MyShoppingListChangeTextLineItemsOrderActionImpl
     }
 
     /**
-     *  <p>All existing TextLineItem <code>id</code>s in the desired new order.</p>
+     *  <p>All existing <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a> <code>id</code>s in the desired new order.</p>
      */
 
     public java.util.List<String> getTextLineItemOrder() {

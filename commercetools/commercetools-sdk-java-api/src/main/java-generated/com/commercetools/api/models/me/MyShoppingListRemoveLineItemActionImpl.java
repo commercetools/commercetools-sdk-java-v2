@@ -58,7 +58,7 @@ public class MyShoppingListRemoveLineItemActionImpl implements MyShoppingListRem
     }
 
     /**
-     *  <p>The <code>id</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">ShoppingListLineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemId() {
@@ -66,7 +66,7 @@ public class MyShoppingListRemoveLineItemActionImpl implements MyShoppingListRem
     }
 
     /**
-     *  <p>The <code>key</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p>The <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">ShoppingListLineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemKey() {

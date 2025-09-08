@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Add Transaction update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentAddTransactionAction" rel="nofollow">Add Transaction</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentTransactionAddedMessagePayloadImpl implements PaymentTransactionAddedMessagePayload, ModelBase {
@@ -52,7 +52,7 @@ public class PaymentTransactionAddedMessagePayloadImpl implements PaymentTransac
     }
 
     /**
-     *  <p>Transaction that was added to the Payment.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p>
      */
 
     public com.commercetools.api.models.payment.Transaction getTransaction() {

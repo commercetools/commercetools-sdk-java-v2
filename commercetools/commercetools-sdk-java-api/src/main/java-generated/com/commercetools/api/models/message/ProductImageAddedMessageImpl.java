@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Add External Image update action or after the successful upload of an image.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductAddExternalImageAction" rel="nofollow">Add External Image</a> update action or after the successful <span>upload of an image</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductImageAddedMessageImpl implements ProductImageAddedMessage, ModelBase {
@@ -146,7 +146,7 @@ public class ProductImageAddedMessageImpl implements ProductImageAddedMessage, M
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -162,7 +162,7 @@ public class ProductImageAddedMessageImpl implements ProductImageAddedMessage, M
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -178,7 +178,7 @@ public class ProductImageAddedMessageImpl implements ProductImageAddedMessage, M
     }
 
     /**
-     *  <p>Unique identifier of the Product Variant to which the Image was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> to which the <a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> was added.</p>
      */
 
     public Long getVariantId() {
@@ -186,7 +186,7 @@ public class ProductImageAddedMessageImpl implements ProductImageAddedMessage, M
     }
 
     /**
-     *  <p>Image that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      */
 
     public com.commercetools.api.models.common.Image getImage() {
@@ -194,7 +194,7 @@ public class ProductImageAddedMessageImpl implements ProductImageAddedMessage, M
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      */
 
     public Boolean getStaged() {

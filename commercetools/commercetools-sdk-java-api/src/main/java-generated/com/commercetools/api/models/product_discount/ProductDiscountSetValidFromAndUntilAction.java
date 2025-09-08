@@ -36,7 +36,7 @@ public interface ProductDiscountSetValidFromAndUntilAction extends ProductDiscou
     String SET_VALID_FROM_AND_UNTIL = "setValidFromAndUntil";
 
     /**
-     *  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     *  <p>Value to set. Take <span>Eventual Consistency</span> into account for calculated undiscounted values.</p>
      * @return validFrom
      */
 
@@ -44,7 +44,7 @@ public interface ProductDiscountSetValidFromAndUntilAction extends ProductDiscou
     public ZonedDateTime getValidFrom();
 
     /**
-     *  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     *  <p>Value to set. Take <span>Eventual Consistency</span> into account for calculated undiscounted values.</p>
      * @return validUntil
      */
 
@@ -52,14 +52,14 @@ public interface ProductDiscountSetValidFromAndUntilAction extends ProductDiscou
     public ZonedDateTime getValidUntil();
 
     /**
-     *  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     *  <p>Value to set. Take <span>Eventual Consistency</span> into account for calculated undiscounted values.</p>
      * @param validFrom value to be set
      */
 
     public void setValidFrom(final ZonedDateTime validFrom);
 
     /**
-     *  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     *  <p>Value to set. Take <span>Eventual Consistency</span> into account for calculated undiscounted values.</p>
      * @param validUntil value to be set
      */
 

@@ -18,8 +18,8 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Change PaymentState on Orders.</li>
- *   <li>Change PaymentState on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangePaymentStateAction" rel="nofollow">Change PaymentState</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderChangePaymentStateAction" rel="nofollow">Change PaymentState</a> on Staged Orders.</li>
  *  </ul>
  *
  * <hr>

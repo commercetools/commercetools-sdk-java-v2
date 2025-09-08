@@ -77,7 +77,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     *  <p>Specifies to which ProductVariant the API associates this Price. It is not validated to exist in product variants.</p>
+     *  <p>Specifies to which <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> the API associates this Price. It is not validated to exist in product variants.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -89,7 +89,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets the money value of this Price.</p>
-     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets the money value of this Price.</p>
-     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -115,7 +115,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets the money value of this Price.</p>
-     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -137,7 +137,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which this Price is valid.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -151,7 +151,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which this Price is valid.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -164,7 +164,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which this Price is valid.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -176,7 +176,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     *  <p>Sets the product distribution Channel for which this Price is valid.</p>
+     *  <p>Sets the product distribution <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which this Price is valid.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -189,7 +189,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     *  <p>Sets the product distribution Channel for which this Price is valid.</p>
+     *  <p>Sets the product distribution <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which this Price is valid.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -201,7 +201,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     *  <p>Sets the product distribution Channel for which this Price is valid.</p>
+     *  <p>Sets the product distribution <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which this Price is valid.</p>
      * @param channel value to be set
      * @return Builder
      */
@@ -224,7 +224,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     *  <p>Sets the date until the Price is valid. Must be at least 1 ms later than <code>validFrom</code>. Standalone Prices that are no longer valid are not automatically deleted, but they can be deleted if necessary.</p>
+     *  <p>Sets the date until the Price is valid. Must be at least 1 ms later than <code>validFrom</code>. Standalone Prices that are no longer valid are not automatically deleted, but they can be <span>deleted</span> if necessary.</p>
      * @param validUntil value to be set
      * @return Builder
      */
@@ -403,7 +403,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a> for which this Price is valid.</p>
      * @param builder function to build the recurrencePolicy value
      * @return Builder
      */
@@ -417,7 +417,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a> for which this Price is valid.</p>
      * @param builder function to build the recurrencePolicy value
      * @return Builder
      */
@@ -430,7 +430,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a> for which this Price is valid.</p>
      * @param recurrencePolicy value to be set
      * @return Builder
      */
@@ -478,7 +478,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during Product price selection.</p>
+     *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during <span>Product price selection</span>.</p>
      * @param active value to be set
      * @return Builder
      */
@@ -499,7 +499,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     *  <p>Specifies to which ProductVariant the API associates this Price. It is not validated to exist in product variants.</p>
+     *  <p>Specifies to which <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> the API associates this Price. It is not validated to exist in product variants.</p>
      * @return sku
      */
 
@@ -509,7 +509,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets the money value of this Price.</p>
-     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @return value
      */
 
@@ -528,7 +528,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which this Price is valid.</p>
      * @return customerGroup
      */
 
@@ -538,7 +538,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     *  <p>Sets the product distribution Channel for which this Price is valid.</p>
+     *  <p>Sets the product distribution <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which this Price is valid.</p>
      * @return channel
      */
 
@@ -558,7 +558,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     *  <p>Sets the date until the Price is valid. Must be at least 1 ms later than <code>validFrom</code>. Standalone Prices that are no longer valid are not automatically deleted, but they can be deleted if necessary.</p>
+     *  <p>Sets the date until the Price is valid. Must be at least 1 ms later than <code>validFrom</code>. Standalone Prices that are no longer valid are not automatically deleted, but they can be <span>deleted</span> if necessary.</p>
      * @return validUntil
      */
 
@@ -599,7 +599,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a> for which this Price is valid.</p>
      * @return recurrencePolicy
      */
 
@@ -619,7 +619,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during Product price selection.</p>
+     *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during <span>Product price selection</span>.</p>
      * @return active
      */
 

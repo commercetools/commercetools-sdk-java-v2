@@ -16,7 +16,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Specifies a Price tier that applies when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+ *  <p>Specifies a Price tier that applies when the minimum quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> of a ProductVariant with the related Price is reached in a Cart.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +35,7 @@ public interface PriceTierDraft extends io.vrap.rmf.base.client.Draft<PriceTierD
 
     /**
      *  <p>Minimum quantity this Price tier is valid for.</p>
-     *  <p>The minimum quantity is always greater than or equal to 2. The base Price is interpreted as valid for a minimum quantity equal to 1. A Price or StandalonePrice cannot contain more than one tier with the same <code>minimumQuantity</code>. In the case one of the constraint is not met an InvalidField is returned.</p>
+     *  <p>The minimum quantity is always greater than or equal to 2. The base Price is interpreted as valid for a minimum quantity equal to 1. A <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> cannot contain more than one tier with the same <code>minimumQuantity</code>. In the case one of the constraint is not met an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> is returned.</p>
      * @return minimumQuantity
      */
     @NotNull
@@ -43,7 +43,8 @@ public interface PriceTierDraft extends io.vrap.rmf.base.client.Draft<PriceTierD
     public Long getMinimumQuantity();
 
     /**
-     *  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>. To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+     *  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>quantity</code>.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      *  <p>The <code>currencyCode</code> of a Price tier must be the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p>
      * @return value
      */
@@ -54,14 +55,15 @@ public interface PriceTierDraft extends io.vrap.rmf.base.client.Draft<PriceTierD
 
     /**
      *  <p>Minimum quantity this Price tier is valid for.</p>
-     *  <p>The minimum quantity is always greater than or equal to 2. The base Price is interpreted as valid for a minimum quantity equal to 1. A Price or StandalonePrice cannot contain more than one tier with the same <code>minimumQuantity</code>. In the case one of the constraint is not met an InvalidField is returned.</p>
+     *  <p>The minimum quantity is always greater than or equal to 2. The base Price is interpreted as valid for a minimum quantity equal to 1. A <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> cannot contain more than one tier with the same <code>minimumQuantity</code>. In the case one of the constraint is not met an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> is returned.</p>
      * @param minimumQuantity value to be set
      */
 
     public void setMinimumQuantity(final Long minimumQuantity);
 
     /**
-     *  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>. To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+     *  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>quantity</code>.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      *  <p>The <code>currencyCode</code> of a Price tier must be the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p>
      * @param value value to be set
      */

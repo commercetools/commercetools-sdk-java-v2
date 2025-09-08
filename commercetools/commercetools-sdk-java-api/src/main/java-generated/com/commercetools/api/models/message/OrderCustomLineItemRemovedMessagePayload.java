@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Remove CustomLineItem update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveCustomLineItemAction" rel="nofollow">Remove CustomLineItem</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface OrderCustomLineItemRemovedMessagePayload extends OrderMessagePa
     String ORDER_CUSTOM_LINE_ITEM_REMOVED = "OrderCustomLineItemRemoved";
 
     /**
-     *  <p>Unique identifier of the Custom Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @return customLineItemId
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface OrderCustomLineItemRemovedMessagePayload extends OrderMessagePa
     public String getCustomLineItemId();
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @return customLineItemKey
      */
 
@@ -57,7 +57,7 @@ public interface OrderCustomLineItemRemovedMessagePayload extends OrderMessagePa
     public String getCustomLineItemKey();
 
     /**
-     *  <p>Custom Line Item that was removed from the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @return customLineItem
      */
     @NotNull
@@ -66,21 +66,21 @@ public interface OrderCustomLineItemRemovedMessagePayload extends OrderMessagePa
     public CustomLineItem getCustomLineItem();
 
     /**
-     *  <p>Unique identifier of the Custom Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @param customLineItemId value to be set
      */
 
     public void setCustomLineItemId(final String customLineItemId);
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @param customLineItemKey value to be set
      */
 
     public void setCustomLineItemKey(final String customLineItemKey);
 
     /**
-     *  <p>Custom Line Item that was removed from the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param customLineItem value to be set
      */
 

@@ -188,7 +188,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     /**
      *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
      *  <ul>
-     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of <a href="https://docs.commercetools.com/apis/ctp:api:type:StateTypeEnum" rel="nofollow">StateType</a> <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the <a href="https://docs.commercetools.com/apis/ctp:api:type:StateResourceIdentifier" rel="nofollow">StateResourceIdentifier</a> to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
      *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
      *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
@@ -205,7 +205,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     /**
      *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
      *  <ul>
-     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of <a href="https://docs.commercetools.com/apis/ctp:api:type:StateTypeEnum" rel="nofollow">StateType</a> <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the <a href="https://docs.commercetools.com/apis/ctp:api:type:StateResourceIdentifier" rel="nofollow">StateResourceIdentifier</a> to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
      *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
      *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
@@ -222,7 +222,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     /**
      *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
      *  <ul>
-     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of <a href="https://docs.commercetools.com/apis/ctp:api:type:StateTypeEnum" rel="nofollow">StateType</a> <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the <a href="https://docs.commercetools.com/apis/ctp:api:type:StateResourceIdentifier" rel="nofollow">StateResourceIdentifier</a> to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
      *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
      *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
@@ -242,7 +242,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     /**
      *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
      *  <ul>
-     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of <a href="https://docs.commercetools.com/apis/ctp:api:type:StateTypeEnum" rel="nofollow">StateType</a> <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the <a href="https://docs.commercetools.com/apis/ctp:api:type:StateResourceIdentifier" rel="nofollow">StateResourceIdentifier</a> to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
      *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
      *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
@@ -263,7 +263,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     /**
      *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
      *  <ul>
-     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of <a href="https://docs.commercetools.com/apis/ctp:api:type:StateTypeEnum" rel="nofollow">StateType</a> <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the <a href="https://docs.commercetools.com/apis/ctp:api:type:StateResourceIdentifier" rel="nofollow">StateResourceIdentifier</a> to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
      *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
      *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
@@ -282,7 +282,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     /**
      *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
      *  <ul>
-     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of <a href="https://docs.commercetools.com/apis/ctp:api:type:StateTypeEnum" rel="nofollow">StateType</a> <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the <a href="https://docs.commercetools.com/apis/ctp:api:type:StateResourceIdentifier" rel="nofollow">StateResourceIdentifier</a> to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
      *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
      *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
@@ -298,7 +298,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     /**
      *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
      *  <ul>
-     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of <a href="https://docs.commercetools.com/apis/ctp:api:type:StateTypeEnum" rel="nofollow">StateType</a> <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the <a href="https://docs.commercetools.com/apis/ctp:api:type:StateResourceIdentifier" rel="nofollow">StateResourceIdentifier</a> to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
      *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
      *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
@@ -372,7 +372,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     /**
      *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
      *  <ul>
-     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of <a href="https://docs.commercetools.com/apis/ctp:api:type:StateTypeEnum" rel="nofollow">StateType</a> <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the <a href="https://docs.commercetools.com/apis/ctp:api:type:StateResourceIdentifier" rel="nofollow">StateResourceIdentifier</a> to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
      *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
      *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>

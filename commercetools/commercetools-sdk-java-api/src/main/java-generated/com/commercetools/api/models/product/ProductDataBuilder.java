@@ -95,7 +95,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Categories assigned to the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the Product.</p>
      * @param categories value to be set
      * @return Builder
      */
@@ -106,7 +106,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Categories assigned to the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the Product.</p>
      * @param categories value to be set
      * @return Builder
      */
@@ -118,7 +118,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Categories assigned to the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the Product.</p>
      * @param categories value to be set
      * @return Builder
      */
@@ -133,7 +133,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Categories assigned to the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the Product.</p>
      * @param builder function to build the categories value
      * @return Builder
      */
@@ -148,7 +148,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Categories assigned to the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the Product.</p>
      * @param builder function to build the categories value
      * @return Builder
      */
@@ -161,7 +161,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Categories assigned to the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the Product.</p>
      * @param builder function to build the categories value
      * @return Builder
      */
@@ -172,7 +172,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Categories assigned to the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the Product.</p>
      * @param builder function to build the categories value
      * @return Builder
      */
@@ -256,7 +256,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different Locales. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -268,7 +268,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different Locales. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -280,7 +280,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different Locales. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
      * @param slug value to be set
      * @return Builder
      */
@@ -520,7 +520,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
+     *  <p>Used by <span>Search Term Suggestions</span>, but is also considered for a <span>full text search</span> in the Product Projection Search API.</p>
      * @param builder function to build the searchKeywords value
      * @return Builder
      */
@@ -532,7 +532,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
+     *  <p>Used by <span>Search Term Suggestions</span>, but is also considered for a <span>full text search</span> in the Product Projection Search API.</p>
      * @param builder function to build the searchKeywords value
      * @return Builder
      */
@@ -544,7 +544,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
+     *  <p>Used by <span>Search Term Suggestions</span>, but is also considered for a <span>full text search</span> in the Product Projection Search API.</p>
      * @param searchKeywords value to be set
      * @return Builder
      */
@@ -555,7 +555,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Product Attributes according to the respective AttributeDefinition. <strong>Not supported</strong> by Product Projection Search.</p>
+     *  <p>Product Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>. <strong>Not supported</strong> by <span>Product Projection Search</span>.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -566,7 +566,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Product Attributes according to the respective AttributeDefinition. <strong>Not supported</strong> by Product Projection Search.</p>
+     *  <p>Product Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>. <strong>Not supported</strong> by <span>Product Projection Search</span>.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -578,7 +578,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Product Attributes according to the respective AttributeDefinition. <strong>Not supported</strong> by Product Projection Search.</p>
+     *  <p>Product Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>. <strong>Not supported</strong> by <span>Product Projection Search</span>.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -592,7 +592,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Product Attributes according to the respective AttributeDefinition. <strong>Not supported</strong> by Product Projection Search.</p>
+     *  <p>Product Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>. <strong>Not supported</strong> by <span>Product Projection Search</span>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -607,7 +607,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Product Attributes according to the respective AttributeDefinition. <strong>Not supported</strong> by Product Projection Search.</p>
+     *  <p>Product Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>. <strong>Not supported</strong> by <span>Product Projection Search</span>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -620,7 +620,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Product Attributes according to the respective AttributeDefinition. <strong>Not supported</strong> by Product Projection Search.</p>
+     *  <p>Product Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>. <strong>Not supported</strong> by <span>Product Projection Search</span>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -631,7 +631,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Product Attributes according to the respective AttributeDefinition. <strong>Not supported</strong> by Product Projection Search.</p>
+     *  <p>Product Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>. <strong>Not supported</strong> by <span>Product Projection Search</span>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -651,7 +651,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Categories assigned to the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the Product.</p>
      * @return categories
      */
 
@@ -680,7 +680,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different Locales. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
      * @return slug
      */
 
@@ -737,7 +737,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
+     *  <p>Used by <span>Search Term Suggestions</span>, but is also considered for a <span>full text search</span> in the Product Projection Search API.</p>
      * @return searchKeywords
      */
 
@@ -746,7 +746,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Product Attributes according to the respective AttributeDefinition. <strong>Not supported</strong> by Product Projection Search.</p>
+     *  <p>Product Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>. <strong>Not supported</strong> by <span>Product Projection Search</span>.</p>
      * @return attributes
      */
 

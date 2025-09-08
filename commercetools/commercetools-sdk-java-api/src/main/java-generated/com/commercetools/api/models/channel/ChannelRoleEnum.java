@@ -20,7 +20,7 @@ public interface ChannelRoleEnum extends JsonEnum {
     <p>Channel can be used to track inventory entries (for example, Channels with this role can be treated as warehouses).</p> */
     ChannelRoleEnum INVENTORY_SUPPLY = ChannelRoleEnumEnum.INVENTORY_SUPPLY;
     /**
-    <p>Channel can be used to expose Products to a specific distribution Channel. The Channel can be used by a Cart to select a Product Price.</p> */
+    <p>Channel can be used to expose Products to a specific distribution Channel. The Channel can be used by a Cart to <span>select</span> a Product Price.</p> */
     ChannelRoleEnum PRODUCT_DISTRIBUTION = ChannelRoleEnumEnum.PRODUCT_DISTRIBUTION;
     /**
     <p>Channel can be used to track order export activities.</p> */

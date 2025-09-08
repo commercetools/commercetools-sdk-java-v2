@@ -94,7 +94,7 @@ public class SetLineItemProductKeyChangeImpl implements SetLineItemProductKeyCha
     }
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getLineItem() {
@@ -102,7 +102,7 @@ public class SetLineItemProductKeyChangeImpl implements SetLineItemProductKeyCha
     }
 
     /**
-     *  <p><code>id</code> of the updated LineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
      */
 
     public String getLineItemId() {
@@ -110,7 +110,7 @@ public class SetLineItemProductKeyChangeImpl implements SetLineItemProductKeyCha
     }
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the updated ProductVariant.</p>
+     *  <p><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      */
 
     public String getVariant() {

@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The ShippingRate maps to an abstract Cart categorization expressed by strings (for example, <code>Light</code>, <code>Medium</code>, or <code>Heavy</code>). Only keys defined in the <code>values</code> array can be used to create a tier or to set a value of the <code>shippingRateInput</code> on the Cart. Keys must be unique.</p>
+ *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> maps to an abstract Cart categorization expressed by strings (for example, <code>Light</code>, <code>Medium</code>, or <code>Heavy</code>). Only keys defined in the <code>values</code> array can be used to create a tier or to set a value of the <code>shippingRateInput</code> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>. Keys must be unique.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartClassificationTypeImpl implements CartClassificationType, ModelBase {
@@ -53,7 +53,7 @@ public class CartClassificationTypeImpl implements CartClassificationType, Model
     }
 
     /**
-     *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
+     *  <p>The classification items that can be used for specifying any <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> getValues() {

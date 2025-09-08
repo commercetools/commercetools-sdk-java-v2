@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Business Unit update action on Orders or Set Business Unit update action on Order Edits.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Orders or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Order Edits.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderBusinessUnitSetMessagePayloadImpl implements OrderBusinessUnitSetMessagePayload, ModelBase {
@@ -56,7 +56,7 @@ public class OrderBusinessUnitSetMessagePayloadImpl implements OrderBusinessUnit
     }
 
     /**
-     *  <p>BusinessUnit on the Order after the Set Business Unit update action on Orders or Set Business Unit update action on Order Edits.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Orders or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Order Edits.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
@@ -64,7 +64,7 @@ public class OrderBusinessUnitSetMessagePayloadImpl implements OrderBusinessUnit
     }
 
     /**
-     *  <p>BusinessUnit on the Order before the Set Business Unit update action on Orders or Set Business Unit update action on Order Edits.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Orders or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Order Edits.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getOldbusinessUnit() {

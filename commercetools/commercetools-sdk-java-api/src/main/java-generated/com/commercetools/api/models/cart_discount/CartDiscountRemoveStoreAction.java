@@ -17,8 +17,8 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>If a referenced Store does not exist, a ReferencedResourceNotFound error is returned.</p>
- *  <p>This action generates a CartDiscountStoreRemoved Message.</p>
+ *  <p>If a referenced Store does not exist, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferencedResourceNotFoundError" rel="nofollow">ReferencedResourceNotFound</a> error is returned.</p>
+ *  <p>This action generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountStoreRemovedMessage" rel="nofollow">CartDiscountStoreRemoved</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface CartDiscountRemoveStoreAction extends CartDiscountUpdateAction 
     String REMOVE_STORE = "removeStore";
 
     /**
-     *  <p>Store to remove.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to remove.</p>
      * @return store
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface CartDiscountRemoveStoreAction extends CartDiscountUpdateAction 
     public StoreResourceIdentifier getStore();
 
     /**
-     *  <p>Store to remove.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to remove.</p>
      * @param store value to be set
      */
 

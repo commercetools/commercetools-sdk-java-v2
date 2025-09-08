@@ -17,6 +17,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ReferenceType extends JsonEnum {
 
     /**
+    <p>References an associate role.</p> */
+    ReferenceType ASSOCIATE_ROLE = ReferenceTypeEnum.ASSOCIATE_ROLE;
+    /**
+    <p>References a business unit.</p> */
+    ReferenceType BUSINESS_UNIT = ReferenceTypeEnum.BUSINESS_UNIT;
+    /**
     <p>References a cart.</p> */
     ReferenceType CART = ReferenceTypeEnum.CART;
     /**
@@ -81,6 +87,16 @@ public interface ReferenceType extends JsonEnum {
      * possible values of ReferenceType
      */
     enum ReferenceTypeEnum implements ReferenceType {
+        /**
+         * associate-role
+         */
+        ASSOCIATE_ROLE("associate-role"),
+
+        /**
+         * business-unit
+         */
+        BUSINESS_UNIT("business-unit"),
+
         /**
          * cart
          */

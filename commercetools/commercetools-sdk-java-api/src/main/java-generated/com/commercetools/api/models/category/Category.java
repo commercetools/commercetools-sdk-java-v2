@@ -108,7 +108,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     public LocalizedString getName();
 
     /**
-     *  <p>User-defined identifier used as a deep-link URL to the related Category per Locale. A Category can have the same slug for different Locales, but they are unique across the Project. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
+     *  <p>User-defined identifier used as a deep-link URL to the related Category per <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>. A Category can have the same slug for different Locales, but they are unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For <span>good performance</span>, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
      * @return slug
      */
     @NotNull
@@ -255,7 +255,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>User-defined identifier used as a deep-link URL to the related Category per Locale. A Category can have the same slug for different Locales, but they are unique across the Project. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
+     *  <p>User-defined identifier used as a deep-link URL to the related Category per <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>. A Category can have the same slug for different Locales, but they are unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For <span>good performance</span>, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
      * @param slug value to be set
      */
 

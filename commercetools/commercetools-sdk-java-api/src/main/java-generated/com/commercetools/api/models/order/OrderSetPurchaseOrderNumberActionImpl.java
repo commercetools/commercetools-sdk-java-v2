@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Produces the PurchaseOrderNumberSet Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderPurchaseOrderNumberSetMessage" rel="nofollow">PurchaseOrderNumberSet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetPurchaseOrderNumberActionImpl implements OrderSetPurchaseOrderNumberAction, ModelBase {

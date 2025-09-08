@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p><code>ContainerAndKey</code> is specific to Custom Objects. Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>
+ *  <p><code>ContainerAndKey</code> is specific to <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomObject" rel="nofollow">Custom Objects</a>. Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface ContainerAndKey {
     public String getKey();
 
     /**
-     *  <p>Namespace to group Custom Objects.</p>
+     *  <p>Namespace to group <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomObject" rel="nofollow">Custom Objects</a>.</p>
      * @return container
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface ContainerAndKey {
     public void setKey(final String key);
 
     /**
-     *  <p>Namespace to group Custom Objects.</p>
+     *  <p>Namespace to group <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomObject" rel="nofollow">Custom Objects</a>.</p>
      * @param container value to be set
      */
 

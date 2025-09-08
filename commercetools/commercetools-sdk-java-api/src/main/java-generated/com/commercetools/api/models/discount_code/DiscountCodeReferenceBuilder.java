@@ -30,7 +30,7 @@ public class DiscountCodeReferenceBuilder implements Builder<DiscountCodeReferen
     private com.commercetools.api.models.discount_code.DiscountCode obj;
 
     /**
-     *  <p>Unique identifier of the referenced DiscountCode.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class DiscountCodeReferenceBuilder implements Builder<DiscountCodeReferen
     }
 
     /**
-     *  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p>
+     *  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with <span>Reference Expansion</span> for DiscountCodes.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class DiscountCodeReferenceBuilder implements Builder<DiscountCodeReferen
     }
 
     /**
-     *  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p>
+     *  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with <span>Reference Expansion</span> for DiscountCodes.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class DiscountCodeReferenceBuilder implements Builder<DiscountCodeReferen
     }
 
     /**
-     *  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p>
+     *  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with <span>Reference Expansion</span> for DiscountCodes.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class DiscountCodeReferenceBuilder implements Builder<DiscountCodeReferen
     }
 
     /**
-     *  <p>Unique identifier of the referenced DiscountCode.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
      * @return id
      */
 
@@ -86,7 +86,7 @@ public class DiscountCodeReferenceBuilder implements Builder<DiscountCodeReferen
     }
 
     /**
-     *  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p>
+     *  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with <span>Reference Expansion</span> for DiscountCodes.</p>
      * @return obj
      */
 

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Remove Product update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionRemoveProductAction" rel="nofollow">Remove Product</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionProductRemovedMessagePayloadImpl
@@ -53,7 +53,7 @@ public class ProductSelectionProductRemovedMessagePayloadImpl
     }
 
     /**
-     *  <p>Product that was removed from the Product Selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that was removed from the Product Selection.</p>
      */
 
     public com.commercetools.api.models.product.ProductReference getProduct() {

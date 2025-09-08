@@ -58,6 +58,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
 
     /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -70,6 +71,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
 
     /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -82,6 +84,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
 
     /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param money value to be set
      * @return Builder
      */
@@ -160,8 +163,8 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
-     *  <p>If TaxMode is <code>Platform</code>, this field must not be empty.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
+     *  <p>If <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> is <code>Platform</code>, this field must not be empty.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -175,8 +178,8 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
-     *  <p>If TaxMode is <code>Platform</code>, this field must not be empty.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
+     *  <p>If <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> is <code>Platform</code>, this field must not be empty.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -189,8 +192,8 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
-     *  <p>If TaxMode is <code>Platform</code>, this field must not be empty.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
+     *  <p>If <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> is <code>Platform</code>, this field must not be empty.</p>
      * @param taxCategory value to be set
      * @return Builder
      */
@@ -202,7 +205,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has <code>External</code> TaxMode.</p>
+     *  <p>An external Tax Rate can be set if the Cart has <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -215,7 +218,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has <code>External</code> TaxMode.</p>
+     *  <p>An external Tax Rate can be set if the Cart has <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -227,7 +230,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has <code>External</code> TaxMode.</p>
+     *  <p>An external Tax Rate can be set if the Cart has <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param externalTaxRate value to be set
      * @return Builder
      */
@@ -313,7 +316,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
 
     /**
      *  <ul>
-     *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget, MultiBuyCustomLineItemsTarget, or CartDiscountPatternTarget are applied to the Custom Line Item.</li>
+     *   <li>If <code>Standard</code>, Cart Discounts with a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemsTarget</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:MultiBuyCustomLineItemsTarget" rel="nofollow">MultiBuyCustomLineItemsTarget</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> are applied to the Custom Line Item.</li>
      *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
      *  </ul>
      * @param priceMode value to be set
@@ -367,6 +370,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
 
     /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @return money
      */
 
@@ -413,8 +417,8 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
-     *  <p>If TaxMode is <code>Platform</code>, this field must not be empty.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
+     *  <p>If <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> is <code>Platform</code>, this field must not be empty.</p>
      * @return taxCategory
      */
 
@@ -424,7 +428,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has <code>External</code> TaxMode.</p>
+     *  <p>An external Tax Rate can be set if the Cart has <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return externalTaxRate
      */
 
@@ -455,7 +459,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
 
     /**
      *  <ul>
-     *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget, MultiBuyCustomLineItemsTarget, or CartDiscountPatternTarget are applied to the Custom Line Item.</li>
+     *   <li>If <code>Standard</code>, Cart Discounts with a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemsTarget</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:MultiBuyCustomLineItemsTarget" rel="nofollow">MultiBuyCustomLineItemsTarget</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> are applied to the Custom Line Item.</li>
      *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
      *  </ul>
      * @return priceMode

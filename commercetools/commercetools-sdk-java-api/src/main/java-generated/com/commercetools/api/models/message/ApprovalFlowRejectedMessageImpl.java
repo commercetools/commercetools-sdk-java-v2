@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after an Approval Flow is rejected.</p>
+ *  <p>Generated after an <span>Approval Flow is rejected</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ApprovalFlowRejectedMessageImpl implements ApprovalFlowRejectedMessage, ModelBase {
@@ -146,7 +146,7 @@ public class ApprovalFlowRejectedMessageImpl implements ApprovalFlowRejectedMess
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -162,7 +162,7 @@ public class ApprovalFlowRejectedMessageImpl implements ApprovalFlowRejectedMess
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -178,7 +178,7 @@ public class ApprovalFlowRejectedMessageImpl implements ApprovalFlowRejectedMess
     }
 
     /**
-     *  <p>Reference to the Customer who rejected the Approval Flow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who rejected the <span>Approval Flow</span>.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getAssociate() {
@@ -186,7 +186,7 @@ public class ApprovalFlowRejectedMessageImpl implements ApprovalFlowRejectedMess
     }
 
     /**
-     *  <p>Description of the reason why the Approval Flow was rejected.</p>
+     *  <p>Description of the reason why the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> was rejected.</p>
      */
 
     public String getRejectionReason() {
@@ -194,7 +194,7 @@ public class ApprovalFlowRejectedMessageImpl implements ApprovalFlowRejectedMess
     }
 
     /**
-     *  <p>Reference to the Order that received the rejection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that received the rejection.</p>
      */
 
     public com.commercetools.api.models.order.OrderReference getOrder() {

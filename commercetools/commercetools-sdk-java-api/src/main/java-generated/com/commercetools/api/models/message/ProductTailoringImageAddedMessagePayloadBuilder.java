@@ -123,7 +123,7 @@ public class ProductTailoringImageAddedMessagePayloadBuilder
     }
 
     /**
-     *  <p><code>id</code> of the tailored ProductVariant.</p>
+     *  <p><code>id</code> of the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -134,7 +134,7 @@ public class ProductTailoringImageAddedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Image that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      * @param builder function to build the image value
      * @return Builder
      */
@@ -146,7 +146,7 @@ public class ProductTailoringImageAddedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Image that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      * @param builder function to build the image value
      * @return Builder
      */
@@ -158,7 +158,7 @@ public class ProductTailoringImageAddedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Image that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      * @param image value to be set
      * @return Builder
      */
@@ -198,7 +198,7 @@ public class ProductTailoringImageAddedMessagePayloadBuilder
     }
 
     /**
-     *  <p><code>id</code> of the tailored ProductVariant.</p>
+     *  <p><code>id</code> of the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return variantId
      */
 
@@ -207,7 +207,7 @@ public class ProductTailoringImageAddedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Image that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      * @return image
      */
 

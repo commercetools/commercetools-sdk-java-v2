@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated when a Custom Field has been removed from the Order using the Set CustomField action.</p>
+ *  <p>Generated when a Custom Field has been removed from the Order using the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomFieldAction" rel="nofollow">Set CustomField</a> action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderCustomFieldRemovedMessagePayloadImpl implements OrderCustomFieldRemovedMessagePayload, ModelBase {

@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Azure Service Bus can be used as a pull-queue with Queues, or to fan-out notifications with Topics and Subscriptions. To set up a Subscription with Azure Service Bus, first create a queue/topic in the Azure Portal with a Shared Access Policy including the <code>Send</code> permission.</p>
+ *  <p><span>Azure Service Bus</span> can be used as a pull-queue with <span>Queues</span>, or to fan-out notifications with <span>Topics and Subscriptions</span>. To set up a Subscription with Azure Service Bus, first create a queue/topic in the <span>Azure Portal</span> with a Shared Access Policy including the <code>Send</code> permission.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

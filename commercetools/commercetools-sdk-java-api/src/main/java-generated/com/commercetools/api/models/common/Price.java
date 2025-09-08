@@ -22,7 +22,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The representation for prices embedded in LineItems and in ProductVariants when the ProductPriceMode is <code>Embedded</code>. For the <code>Standalone</code> ProductPriceMode refer to StandalonePrice.</p>
+ *  <p>The representation for prices embedded in <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and in <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> when the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPriceModeEnum" rel="nofollow">ProductPriceMode</a> is <code>Embedded</code>. For the <code>Standalone</code> ProductPriceMode refer to <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -48,7 +48,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
     public String getId();
 
     /**
-     *  <p>User-defined identifier of the Price. It is unique per ProductVariant.</p>
+     *  <p>User-defined identifier of the Price. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return key
      */
 
@@ -73,7 +73,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
     public String getCountry();
 
     /**
-     *  <p>CustomerGroup for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which this Price is valid.</p>
      * @return customerGroup
      */
     @Valid
@@ -81,7 +81,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
     public CustomerGroupReference getCustomerGroup();
 
     /**
-     *  <p><code>ProductDistribution</code> Channel for which this Price is valid.</p>
+     *  <p><code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which this Price is valid.</p>
      * @return channel
      */
     @Valid
@@ -97,7 +97,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
     public ZonedDateTime getValidFrom();
 
     /**
-     *  <p>Date and time until this Price is valid. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.</p>
+     *  <p>Date and time until this Price is valid. Prices that are no longer valid are not automatically removed, but they can be <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemovePriceAction" rel="nofollow">removed</a> if necessary.</p>
      * @return validUntil
      */
 
@@ -105,7 +105,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
     public ZonedDateTime getValidUntil();
 
     /**
-     *  <p>Is set if a ProductDiscount has been applied. If set, the API uses the DiscountedPrice value for the Line Item price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half-down rounding.</p>
+     *  <p>Is set if a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> has been applied. If set, the API uses the DiscountedPrice value for the <span>Line Item price selection</span>. When a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueRelative" rel="nofollow">relative discount</a> has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with <span>half-down rounding</span>.</p>
      * @return discounted
      */
     @Valid
@@ -113,7 +113,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
     public DiscountedPrice getDiscounted();
 
     /**
-     *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     *  <p>Present if different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities have been specified.</p>
      *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @return tiers
      */
@@ -130,7 +130,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
     public CustomFields getCustom();
 
     /**
-     *  <p>Recurrence Policy for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">Recurrence Policy</a> for which this Price is valid.</p>
      * @return recurrencePolicy
      */
     @Valid
@@ -145,7 +145,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
     public void setId(final String id);
 
     /**
-     *  <p>User-defined identifier of the Price. It is unique per ProductVariant.</p>
+     *  <p>User-defined identifier of the Price. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param key value to be set
      */
 
@@ -166,14 +166,14 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
     public void setCountry(final String country);
 
     /**
-     *  <p>CustomerGroup for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which this Price is valid.</p>
      * @param customerGroup value to be set
      */
 
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
 
     /**
-     *  <p><code>ProductDistribution</code> Channel for which this Price is valid.</p>
+     *  <p><code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which this Price is valid.</p>
      * @param channel value to be set
      */
 
@@ -187,21 +187,21 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
     public void setValidFrom(final ZonedDateTime validFrom);
 
     /**
-     *  <p>Date and time until this Price is valid. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.</p>
+     *  <p>Date and time until this Price is valid. Prices that are no longer valid are not automatically removed, but they can be <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemovePriceAction" rel="nofollow">removed</a> if necessary.</p>
      * @param validUntil value to be set
      */
 
     public void setValidUntil(final ZonedDateTime validUntil);
 
     /**
-     *  <p>Is set if a ProductDiscount has been applied. If set, the API uses the DiscountedPrice value for the Line Item price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half-down rounding.</p>
+     *  <p>Is set if a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> has been applied. If set, the API uses the DiscountedPrice value for the <span>Line Item price selection</span>. When a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueRelative" rel="nofollow">relative discount</a> has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with <span>half-down rounding</span>.</p>
      * @param discounted value to be set
      */
 
     public void setDiscounted(final DiscountedPrice discounted);
 
     /**
-     *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     *  <p>Present if different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities have been specified.</p>
      *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers values to be set
      */
@@ -210,7 +210,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
     public void setTiers(final PriceTier... tiers);
 
     /**
-     *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     *  <p>Present if different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities have been specified.</p>
      *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers values to be set
      */
@@ -225,7 +225,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
     public void setCustom(final CustomFields custom);
 
     /**
-     *  <p>Recurrence Policy for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">Recurrence Policy</a> for which this Price is valid.</p>
      * @param recurrencePolicy value to be set
      */
 

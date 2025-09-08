@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Set Custom Type with empty parameters.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomTypeAction" rel="nofollow">Set Custom Type</a> with empty parameters.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,7 +42,7 @@ public interface OrderCustomTypeRemovedMessage extends OrderMessage {
     String ORDER_CUSTOM_TYPE_REMOVED = "OrderCustomTypeRemoved";
 
     /**
-     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a> that was removed. Absent if there was no previous Custom Type present.</p>
      * @return previousTypeId
      */
 
@@ -50,7 +50,7 @@ public interface OrderCustomTypeRemovedMessage extends OrderMessage {
     public String getPreviousTypeId();
 
     /**
-     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a> that was removed. Absent if there was no previous Custom Type present.</p>
      * @param previousTypeId value to be set
      */
 

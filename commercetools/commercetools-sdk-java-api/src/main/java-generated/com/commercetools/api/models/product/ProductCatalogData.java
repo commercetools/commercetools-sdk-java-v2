@@ -16,7 +16,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Contains the <code>current</code> and <code>staged</code> ProductData.</p>
+ *  <p>Contains the <code>current</code> and <code>staged</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductData" rel="nofollow">ProductData</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

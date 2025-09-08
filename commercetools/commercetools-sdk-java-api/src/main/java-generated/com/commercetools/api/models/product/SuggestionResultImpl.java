@@ -41,7 +41,7 @@ public class SuggestionResultImpl implements SuggestionResult, ModelBase {
     }
 
     /**
-     *  <p>The result may contain multiple Suggestions identified by their Locale. See Suggestions for two languages.</p>
+     *  <p>The result may contain multiple Suggestions identified by their <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>. See <span>Suggestions for two languages</span>.</p>
      */
 
     public Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values() {

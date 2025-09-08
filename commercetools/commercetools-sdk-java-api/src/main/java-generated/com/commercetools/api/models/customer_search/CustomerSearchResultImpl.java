@@ -42,7 +42,7 @@ public class CustomerSearchResultImpl implements CustomerSearchResult, ModelBase
     }
 
     /**
-     *  <p><code>id</code> of the Customer matching the search query.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> matching the search query.</p>
      */
 
     public String getId() {

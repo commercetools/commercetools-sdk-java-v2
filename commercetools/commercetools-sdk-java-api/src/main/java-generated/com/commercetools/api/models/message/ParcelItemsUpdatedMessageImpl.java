@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Parcel Items update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetParcelItemsAction" rel="nofollow">Set Parcel Items</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelItemsUpdatedMessageImpl implements ParcelItemsUpdatedMessage, ModelBase {
@@ -153,7 +153,7 @@ public class ParcelItemsUpdatedMessageImpl implements ParcelItemsUpdatedMessage,
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -169,7 +169,7 @@ public class ParcelItemsUpdatedMessageImpl implements ParcelItemsUpdatedMessage,
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -185,7 +185,7 @@ public class ParcelItemsUpdatedMessageImpl implements ParcelItemsUpdatedMessage,
     }
 
     /**
-     *  <p>Unique identifier of the Parcel.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      */
 
     public String getParcelId() {
@@ -193,7 +193,7 @@ public class ParcelItemsUpdatedMessageImpl implements ParcelItemsUpdatedMessage,
     }
 
     /**
-     *  <p>Unique identifier of the Delivery.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      */
 
     public String getDeliveryId() {
@@ -201,7 +201,7 @@ public class ParcelItemsUpdatedMessageImpl implements ParcelItemsUpdatedMessage,
     }
 
     /**
-     *  <p>Delivery Items after the Set Parcel Items update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryItem" rel="nofollow">Delivery Items</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetParcelItemsAction" rel="nofollow">Set Parcel Items</a> update action.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
@@ -209,7 +209,7 @@ public class ParcelItemsUpdatedMessageImpl implements ParcelItemsUpdatedMessage,
     }
 
     /**
-     *  <p>Delivery Items before the Set Parcel Items update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryItem" rel="nofollow">Delivery Items</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetParcelItemsAction" rel="nofollow">Set Parcel Items</a> update action.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getOldItems() {
@@ -217,7 +217,7 @@ public class ParcelItemsUpdatedMessageImpl implements ParcelItemsUpdatedMessage,
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      */
 
     public String getShippingKey() {

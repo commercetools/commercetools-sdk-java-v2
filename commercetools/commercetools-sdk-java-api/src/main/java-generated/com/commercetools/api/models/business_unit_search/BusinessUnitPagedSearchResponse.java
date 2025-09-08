@@ -45,7 +45,7 @@ public interface BusinessUnitPagedSearchResponse {
     public Long getTotal();
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @return limit
      */
     @NotNull
@@ -53,7 +53,7 @@ public interface BusinessUnitPagedSearchResponse {
     public Integer getLimit();
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @return offset
      */
     @NotNull
@@ -77,14 +77,14 @@ public interface BusinessUnitPagedSearchResponse {
     public void setTotal(final Long total);
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @param limit value to be set
      */
 
     public void setLimit(final Integer limit);
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @param offset value to be set
      */
 

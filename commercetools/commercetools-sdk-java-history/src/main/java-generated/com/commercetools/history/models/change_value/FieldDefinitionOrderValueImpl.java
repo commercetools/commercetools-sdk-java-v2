@@ -43,7 +43,7 @@ public class FieldDefinitionOrderValueImpl implements FieldDefinitionOrderValue,
     }
 
     /**
-     *  <p>Name of the FieldDefinition.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>.</p>
      */
 
     public String getName() {

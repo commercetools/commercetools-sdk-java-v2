@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Describes the order in which Associates can approve the matched Order.</p>
+ *  <p>Describes the order in which <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associates</a> can approve the matched <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -19,7 +19,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Remove ProductVariant Tailoring update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringRemoveVariantAction" rel="nofollow">Remove ProductVariant Tailoring</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -71,7 +71,7 @@ public interface ProductVariantTailoringRemovedMessagePayload extends MessagePay
     public ProductReference getProduct();
 
     /**
-     *  <p><code>id</code> of the ProductVariant removed from the Tailoring.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> removed from the Tailoring.</p>
      * @return variantId
      */
     @NotNull
@@ -79,7 +79,7 @@ public interface ProductVariantTailoringRemovedMessagePayload extends MessagePay
     public Long getVariantId();
 
     /**
-     *  <p>The ProductVariantTailoring that was removed from the ProductTailoring.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">ProductVariantTailoring</a> that was removed from the ProductTailoring.</p>
      * @return variant
      */
     @NotNull
@@ -109,14 +109,14 @@ public interface ProductVariantTailoringRemovedMessagePayload extends MessagePay
     public void setProduct(final ProductReference product);
 
     /**
-     *  <p><code>id</code> of the ProductVariant removed from the Tailoring.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> removed from the Tailoring.</p>
      * @param variantId value to be set
      */
 
     public void setVariantId(final Long variantId);
 
     /**
-     *  <p>The ProductVariantTailoring that was removed from the ProductTailoring.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">ProductVariantTailoring</a> that was removed from the ProductTailoring.</p>
      * @param variant value to be set
      */
 

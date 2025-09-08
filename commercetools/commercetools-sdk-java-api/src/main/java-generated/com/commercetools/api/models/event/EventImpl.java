@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Base representation of an Event containing common fields to all Event Types.</p>
+ *  <p>Base representation of an Event containing common fields to all <span>Event Types</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class EventImpl implements Event, ModelBase {

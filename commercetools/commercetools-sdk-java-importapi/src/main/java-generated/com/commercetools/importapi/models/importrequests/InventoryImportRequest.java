@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The request body to import Inventories. Contains data for InventoryEntries to be created or updated in a commercetools Project.</p>
+ *  <p>The request body to <a href="https://docs.commercetools.com/apis/ctp:import:endpoint:/{projectKey}/inventories/import-containers/{importContainerKey}:POST" rel="nofollow">import Inventories</a>. Contains data for <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntries</a> to be created or updated in a commercetools Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

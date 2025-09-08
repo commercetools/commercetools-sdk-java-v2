@@ -51,7 +51,7 @@ public interface OrderSearchRequest {
     public List<OrderSearchSorting> getSort();
 
     /**
-     *  <p>The maximum number of search results to be returned on one page.</p>
+     *  <p>The maximum number of search results to be returned on one <span>page</span>.</p>
      * @return limit
      */
 
@@ -59,7 +59,7 @@ public interface OrderSearchRequest {
     public Integer getLimit();
 
     /**
-     *  <p>The number of search results to be skipped in the response for pagination.</p>
+     *  <p>The number of search results to be skipped in the response for <span>pagination</span>.</p>
      * @return offset
      */
 
@@ -89,14 +89,14 @@ public interface OrderSearchRequest {
     public void setSort(final List<OrderSearchSorting> sort);
 
     /**
-     *  <p>The maximum number of search results to be returned on one page.</p>
+     *  <p>The maximum number of search results to be returned on one <span>page</span>.</p>
      * @param limit value to be set
      */
 
     public void setLimit(final Integer limit);
 
     /**
-     *  <p>The number of search results to be skipped in the response for pagination.</p>
+     *  <p>The number of search results to be skipped in the response for <span>pagination</span>.</p>
      * @param offset value to be set
      */
 

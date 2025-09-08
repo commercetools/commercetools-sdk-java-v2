@@ -118,6 +118,11 @@ public class ProjectApiRoot implements Closeable, ProjectScopedApiRoot {
     }
 
     @Override
+    public ByProjectKeyBusinessUnitsRequestBuilder businessUnits() {
+        return with().businessUnits();
+    }
+
+    @Override
     public void close() {
         if (apiHttpClient == null) {
             return;

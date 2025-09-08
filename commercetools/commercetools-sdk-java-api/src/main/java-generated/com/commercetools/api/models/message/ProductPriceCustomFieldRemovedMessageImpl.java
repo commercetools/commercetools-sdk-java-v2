@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after removing a Custom Field from a Price using the Set Price CustomField update action.</p>
+ *  <p>Generated after removing a Custom Field from a Price using the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetProductPriceCustomFieldAction" rel="nofollow">Set Price CustomField</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPriceCustomFieldRemovedMessageImpl implements ProductPriceCustomFieldRemovedMessage, ModelBase {
@@ -149,7 +149,7 @@ public class ProductPriceCustomFieldRemovedMessageImpl implements ProductPriceCu
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -165,7 +165,7 @@ public class ProductPriceCustomFieldRemovedMessageImpl implements ProductPriceCu
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -181,7 +181,7 @@ public class ProductPriceCustomFieldRemovedMessageImpl implements ProductPriceCu
     }
 
     /**
-     *  <p>Unique identifier of the Price from which the Custom Field was removed.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> from which the Custom Field was removed.</p>
      */
 
     public String getPriceId() {
@@ -189,7 +189,7 @@ public class ProductPriceCustomFieldRemovedMessageImpl implements ProductPriceCu
     }
 
     /**
-     *  <p>Unique identifier of the ProductVariant to which the Price belongs.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to which the Price belongs.</p>
      */
 
     public Long getVariantId() {
@@ -197,7 +197,7 @@ public class ProductPriceCustomFieldRemovedMessageImpl implements ProductPriceCu
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      */
 
     public Boolean getStaged() {

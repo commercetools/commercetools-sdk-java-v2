@@ -27,7 +27,7 @@ public class ShoppingListSetStoreActionBuilder implements Builder<ShoppingListSe
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
     /**
-     *  <p>The Store the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class ShoppingListSetStoreActionBuilder implements Builder<ShoppingListSe
     }
 
     /**
-     *  <p>The Store the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class ShoppingListSetStoreActionBuilder implements Builder<ShoppingListSe
     }
 
     /**
-     *  <p>The Store the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
      * @param store value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class ShoppingListSetStoreActionBuilder implements Builder<ShoppingListSe
     }
 
     /**
-     *  <p>The Store the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
      * @return store
      */
 

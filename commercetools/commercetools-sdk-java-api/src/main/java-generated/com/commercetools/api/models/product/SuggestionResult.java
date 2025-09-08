@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface SuggestionResult {
 
     /**
-     *  <p>The result may contain multiple Suggestions identified by their Locale. See Suggestions for two languages.</p>
+     *  <p>The result may contain multiple Suggestions identified by their <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>. See <span>Suggestions for two languages</span>.</p>
      * @return map of the pattern property values
      */
     @NotNull
@@ -42,7 +42,7 @@ public interface SuggestionResult {
     public Map<String, List<Suggestion>> values();
 
     /**
-     *  <p>The result may contain multiple Suggestions identified by their Locale. See Suggestions for two languages.</p>
+     *  <p>The result may contain multiple Suggestions identified by their <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>. See <span>Suggestions for two languages</span>.</p>
      * @param key property name
      * @param value property value
      */

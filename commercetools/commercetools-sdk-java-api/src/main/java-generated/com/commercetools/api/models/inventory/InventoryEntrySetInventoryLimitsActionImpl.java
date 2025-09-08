@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Sets the inventory limits for a specific InventoryEntry. This action allows you to define minimum and maximum quantities that can be added to a Cart. For more information, see Quantity limits.</p>
+ *  <p>Sets the inventory limits for a specific InventoryEntry. This action allows you to define minimum and maximum quantities that can be added to a Cart. For more information, see <span>Quantity limits</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntrySetInventoryLimitsActionImpl implements InventoryEntrySetInventoryLimitsAction, ModelBase {

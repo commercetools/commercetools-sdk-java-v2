@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Variant Selection update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantSelectionAction" rel="nofollow">Set Variant Selection</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionVariantSelectionChangedMessagePayloadImpl
@@ -61,7 +61,7 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadImpl
     }
 
     /**
-     *  <p>Product for which the Product Variant Selection changed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the Product Variant Selection changed.</p>
      */
 
     public com.commercetools.api.models.product.ProductReference getProduct() {
@@ -69,7 +69,7 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadImpl
     }
 
     /**
-     *  <p>Product Variant Selection before the Set Variant Selection update action.</p>
+     *  <p>Product Variant Selection before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantSelectionAction" rel="nofollow">Set Variant Selection</a> update action.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductVariantSelection getOldVariantSelection() {
@@ -77,7 +77,7 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadImpl
     }
 
     /**
-     *  <p>Product Variant Selection after the Set Variant Selection update action.</p>
+     *  <p>Product Variant Selection after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantSelectionAction" rel="nofollow">Set Variant Selection</a> update action.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductVariantSelection getNewVariantSelection() {

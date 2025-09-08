@@ -225,7 +225,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     *  <p>Name of the updated FieldDefinition.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>.</p>
      * @param fieldName value to be set
      * @return Builder
      */
@@ -263,7 +263,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     *  <p>Name of the updated FieldDefinition.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>.</p>
      * @return fieldName
      */
 

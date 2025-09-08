@@ -266,7 +266,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Email address of the Customer that is unique for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
+     *  <p>Email address of the Customer that is <span>unique</span> for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
      * @param email value to be set
      * @return Builder
      */
@@ -545,7 +545,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Indicates whether the email address of the Customer is verified.</p>
+     *  <p>Indicates whether the email address of the Customer is <span>verified</span>.</p>
      * @param isEmailVerified value to be set
      * @return Builder
      */
@@ -556,7 +556,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>CustomerGroup to which the Customer belongs.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> to which the Customer belongs.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -570,7 +570,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>CustomerGroup to which the Customer belongs.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> to which the Customer belongs.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -583,7 +583,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>CustomerGroup to which the Customer belongs.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> to which the Customer belongs.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -596,7 +596,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Customer Groups that the Customer belongs to.</p>
-     *  <p>Used for Line Item price selection.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
      * @param customerGroupAssignments value to be set
      * @return Builder
      */
@@ -609,7 +609,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Customer Groups that the Customer belongs to.</p>
-     *  <p>Used for Line Item price selection.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
      * @param customerGroupAssignments value to be set
      * @return Builder
      */
@@ -622,7 +622,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Customer Groups that the Customer belongs to.</p>
-     *  <p>Used for Line Item price selection.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
      * @param customerGroupAssignments value to be set
      * @return Builder
      */
@@ -638,7 +638,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Customer Groups that the Customer belongs to.</p>
-     *  <p>Used for Line Item price selection.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
      * @param builder function to build the customerGroupAssignments value
      * @return Builder
      */
@@ -655,7 +655,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Customer Groups that the Customer belongs to.</p>
-     *  <p>Used for Line Item price selection.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
      * @param builder function to build the customerGroupAssignments value
      * @return Builder
      */
@@ -670,7 +670,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Customer Groups that the Customer belongs to.</p>
-     *  <p>Used for Line Item price selection.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
      * @param builder function to build the customerGroupAssignments value
      * @return Builder
      */
@@ -683,7 +683,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Customer Groups that the Customer belongs to.</p>
-     *  <p>Used for Line Item price selection.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
      * @param builder function to build the customerGroupAssignments value
      * @return Builder
      */
@@ -752,10 +752,10 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @param stores value to be set
      * @return Builder
@@ -767,10 +767,10 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @param stores value to be set
      * @return Builder
@@ -782,10 +782,10 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @param stores value to be set
      * @return Builder
@@ -800,10 +800,10 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @param builder function to build the stores value
      * @return Builder
@@ -819,10 +819,10 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @param builder function to build the stores value
      * @return Builder
@@ -836,10 +836,10 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @param builder function to build the stores value
      * @return Builder
@@ -851,10 +851,10 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @param builder function to build the stores value
      * @return Builder
@@ -965,7 +965,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Email address of the Customer that is unique for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
+     *  <p>Email address of the Customer that is <span>unique</span> for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
      * @return email
      */
 
@@ -1103,7 +1103,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Indicates whether the email address of the Customer is verified.</p>
+     *  <p>Indicates whether the email address of the Customer is <span>verified</span>.</p>
      * @return isEmailVerified
      */
 
@@ -1112,7 +1112,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>CustomerGroup to which the Customer belongs.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> to which the Customer belongs.</p>
      * @return customerGroup
      */
 
@@ -1123,7 +1123,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Customer Groups that the Customer belongs to.</p>
-     *  <p>Used for Line Item price selection.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
      * @return customerGroupAssignments
      */
 
@@ -1163,10 +1163,10 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @return stores
      */

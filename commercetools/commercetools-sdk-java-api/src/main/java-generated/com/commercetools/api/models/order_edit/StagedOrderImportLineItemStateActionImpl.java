@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The import of States does not follow any predefined rules and should be only used if no transitions are defined. The <code>quantity</code> in the ItemStates must match the sum of all Line Item states' quantities.</p>
+ *  <p>The import of States does not follow any predefined rules and should be only used if no transitions are defined. The <code>quantity</code> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ItemState" rel="nofollow">ItemStates</a> must match the sum of all Line Item states' quantities.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderImportLineItemStateActionImpl implements StagedOrderImportLineItemStateAction, ModelBase {
@@ -59,7 +59,7 @@ public class StagedOrderImportLineItemStateActionImpl implements StagedOrderImpo
     }
 
     /**
-     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemId() {
@@ -67,7 +67,7 @@ public class StagedOrderImportLineItemStateActionImpl implements StagedOrderImpo
     }
 
     /**
-     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemKey() {

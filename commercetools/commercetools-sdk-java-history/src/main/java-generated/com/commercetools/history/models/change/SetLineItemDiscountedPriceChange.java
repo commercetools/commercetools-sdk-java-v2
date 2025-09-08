@@ -79,7 +79,7 @@ public interface SetLineItemDiscountedPriceChange extends Change {
     public DiscountedLineItemPrice getNextValue();
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @return lineItem
      */
     @NotNull
@@ -88,7 +88,7 @@ public interface SetLineItemDiscountedPriceChange extends Change {
     public LocalizedString getLineItem();
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the updated ProductVariant.</p>
+     *  <p><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return variant
      */
     @NotNull
@@ -117,14 +117,14 @@ public interface SetLineItemDiscountedPriceChange extends Change {
     public void setNextValue(final DiscountedLineItemPrice nextValue);
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @param lineItem value to be set
      */
 
     public void setLineItem(final LocalizedString lineItem);
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the updated ProductVariant.</p>
+     *  <p><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param variant value to be set
      */
 

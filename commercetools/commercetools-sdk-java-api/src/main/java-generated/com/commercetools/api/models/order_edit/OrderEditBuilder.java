@@ -115,7 +115,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
     }
 
     /**
-     *  <p>Reference to the Order updated with this edit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Order updated with this edit.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -127,7 +127,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
     }
 
     /**
-     *  <p>Reference to the Order updated with this edit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Order updated with this edit.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -139,7 +139,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
     }
 
     /**
-     *  <p>Reference to the Order updated with this edit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Order updated with this edit.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -405,7 +405,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
     }
 
     /**
-     *  <p>Reference to the Order updated with this edit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Order updated with this edit.</p>
      * @return resource
      */
 

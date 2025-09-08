@@ -70,7 +70,7 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
     }
 
     /**
-     *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> <code>sku</code> of the InventoryEntry.</p>
      */
 
     public String getSku() {
@@ -79,7 +79,7 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
 
     /**
      *  <p>User-defined unique identifier for the InventoryEntry.</p>
-     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing InventoryEntries with the Import API and the Merchant Center.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing InventoryEntries with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
      */
 
     public String getKey() {
@@ -87,7 +87,7 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
     }
 
     /**
-     *  <p>Channel that supplies this InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> that supplies this InventoryEntry.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
@@ -103,7 +103,7 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
     }
 
     /**
-     *  <p>Minimum quantity that can be added to a Cart. See Quantity limits.</p>
+     *  <p>Minimum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
      */
 
     public Integer getMinCartQuantity() {
@@ -111,7 +111,7 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
     }
 
     /**
-     *  <p>Maximum quantity that can be added to a Cart. See Quantity limits.</p>
+     *  <p>Maximum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
      */
 
     public Integer getMaxCartQuantity() {

@@ -57,7 +57,7 @@ public class StagedOrderSetShippingAddressCustomTypeActionImpl
     }
 
     /**
-     *  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>shippingAddress</code> with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -65,7 +65,7 @@ public class StagedOrderSetShippingAddressCustomTypeActionImpl
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <code>shippingAddress</code>.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The <code>stagedActions</code> field cannot be updated if the Order Edit <code>result</code> is OrderEdit Applied.</p>
+ *  <p>The <code>stagedActions</code> field cannot be updated if the Order Edit <code>result</code> is <span>OrderEdit Applied</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

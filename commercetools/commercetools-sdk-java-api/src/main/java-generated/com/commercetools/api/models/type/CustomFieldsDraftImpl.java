@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+ *  <p>The representation used when creating or updating a <span>customizable data type</span> with Custom Fields.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldsDraftImpl implements CustomFieldsDraft, ModelBase {
@@ -43,7 +43,7 @@ public class CustomFieldsDraftImpl implements CustomFieldsDraft, ModelBase {
     }
 
     /**
-     *  <p><code>id</code> or <code>key</code> of the Type.</p>
+     *  <p><code>id</code> or <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -51,7 +51,7 @@ public class CustomFieldsDraftImpl implements CustomFieldsDraft, ModelBase {
     }
 
     /**
-     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     *  <p>Object containing the Custom Fields for the <span>customized resource or data type</span>.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

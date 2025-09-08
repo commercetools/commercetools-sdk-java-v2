@@ -17,10 +17,10 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set Locale on Customers.</li>
- *   <li>Set Locale on Orders.</li>
- *   <li>Set Locale on Staged Orders.</li>
- *   <li>Set Locale on Reviews.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetLocaleAction" rel="nofollow">Set Locale</a> on Customers.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetLocaleAction" rel="nofollow">Set Locale</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetLocaleAction" rel="nofollow">Set Locale</a> on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewSetLocaleAction" rel="nofollow">Set Locale</a> on Reviews.</li>
  *  </ul>
  *
  * <hr>

@@ -34,7 +34,7 @@ public class CartSetItemShippingAddressCustomTypeActionBuilder
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p><code>key</code> of the Address in <code>itemShippingAddress</code>.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> in <code>itemShippingAddress</code>.</p>
      * @param addressKey value to be set
      * @return Builder
      */
@@ -45,7 +45,7 @@ public class CartSetItemShippingAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>itemShippingAddress</code> with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class CartSetItemShippingAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>itemShippingAddress</code> with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class CartSetItemShippingAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>itemShippingAddress</code> with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class CartSetItemShippingAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <code>itemShippingAddress</code>.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class CartSetItemShippingAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <code>itemShippingAddress</code>.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -105,7 +105,7 @@ public class CartSetItemShippingAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <code>itemShippingAddress</code>.</p>
      * @param fields value to be set
      * @return Builder
      */
@@ -117,7 +117,7 @@ public class CartSetItemShippingAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p><code>key</code> of the Address in <code>itemShippingAddress</code>.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> in <code>itemShippingAddress</code>.</p>
      * @return addressKey
      */
 
@@ -126,7 +126,7 @@ public class CartSetItemShippingAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>itemShippingAddress</code> with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
      * @return type
      */
 
@@ -136,7 +136,7 @@ public class CartSetItemShippingAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <code>itemShippingAddress</code>.</p>
      * @return fields
      */
 

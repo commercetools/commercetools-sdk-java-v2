@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Returned when attempting to create a ProductVariant and set it as the Master Variant in the same ProductVariantImport.</p>
+ *  <p>Returned when attempting to create a ProductVariant and set it as the Master Variant in the same <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantImport" rel="nofollow">ProductVariantImport</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

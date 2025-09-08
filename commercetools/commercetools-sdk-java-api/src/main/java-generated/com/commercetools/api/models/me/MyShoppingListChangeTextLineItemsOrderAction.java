@@ -38,7 +38,7 @@ public interface MyShoppingListChangeTextLineItemsOrderAction extends MyShopping
     String CHANGE_TEXT_LINE_ITEMS_ORDER = "changeTextLineItemsOrder";
 
     /**
-     *  <p>All existing TextLineItem <code>id</code>s in the desired new order.</p>
+     *  <p>All existing <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a> <code>id</code>s in the desired new order.</p>
      * @return textLineItemOrder
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface MyShoppingListChangeTextLineItemsOrderAction extends MyShopping
     public List<String> getTextLineItemOrder();
 
     /**
-     *  <p>All existing TextLineItem <code>id</code>s in the desired new order.</p>
+     *  <p>All existing <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a> <code>id</code>s in the desired new order.</p>
      * @param textLineItemOrder values to be set
      */
 
@@ -54,7 +54,7 @@ public interface MyShoppingListChangeTextLineItemsOrderAction extends MyShopping
     public void setTextLineItemOrder(final String... textLineItemOrder);
 
     /**
-     *  <p>All existing TextLineItem <code>id</code>s in the desired new order.</p>
+     *  <p>All existing <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a> <code>id</code>s in the desired new order.</p>
      * @param textLineItemOrder values to be set
      */
 

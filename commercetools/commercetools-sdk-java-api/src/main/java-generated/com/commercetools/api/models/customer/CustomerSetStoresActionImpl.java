@@ -17,7 +17,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Sets the Stores the Customer account is associated with. If no Stores are specified, the Customer becomes a global Customer.</p>
+ *  <p>Sets the Stores the Customer account is associated with. If no Stores are specified, the Customer becomes a <span>global Customer</span>.</p>
+ *  <p>This action generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerStoresSetMessage" rel="nofollow">CustomerStoresSet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetStoresActionImpl implements CustomerSetStoresAction, ModelBase {

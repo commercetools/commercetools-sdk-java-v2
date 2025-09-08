@@ -14,6 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Sets the default shipping address from <code>addresses</code>. The action adds the <code>id</code> of the specified address to the <code>shippingAddressIds</code> if not contained already. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+ *  <p>This action generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerDefaultShippingAddressSetMessage" rel="nofollow">CustomerDefaultShippingAddressSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +36,7 @@ public interface CustomerSetDefaultShippingAddressAction extends CustomerUpdateA
     String SET_DEFAULT_SHIPPING_ADDRESS = "setDefaultShippingAddress";
 
     /**
-     *  <p><code>id</code> of the Address to become the default shipping address.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become the default shipping address.</p>
      * @return addressId
      */
 
@@ -43,7 +44,7 @@ public interface CustomerSetDefaultShippingAddressAction extends CustomerUpdateA
     public String getAddressId();
 
     /**
-     *  <p><code>key</code> of the Address to become the default shipping address.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become the default shipping address.</p>
      * @return addressKey
      */
 
@@ -51,14 +52,14 @@ public interface CustomerSetDefaultShippingAddressAction extends CustomerUpdateA
     public String getAddressKey();
 
     /**
-     *  <p><code>id</code> of the Address to become the default shipping address.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become the default shipping address.</p>
      * @param addressId value to be set
      */
 
     public void setAddressId(final String addressId);
 
     /**
-     *  <p><code>key</code> of the Address to become the default shipping address.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become the default shipping address.</p>
      * @param addressKey value to be set
      */
 

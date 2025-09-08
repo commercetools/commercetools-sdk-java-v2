@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Seller Comment update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteSetSellerCommentAction" rel="nofollow">Set Seller Comment</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedQuoteSellerCommentSetMessagePayloadImpl
@@ -52,7 +52,7 @@ public class StagedQuoteSellerCommentSetMessagePayloadImpl
     }
 
     /**
-     *  <p><code>sellerComment</code> on the StagedQuote after a successful Set Seller Comment update action.</p>
+     *  <p><code>sellerComment</code> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a> after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteSetSellerCommentAction" rel="nofollow">Set Seller Comment</a> update action.</p>
      */
 
     public String getSellerComment() {

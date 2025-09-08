@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>IDs and references that created the resource. This is present on resources created after 1 February 2019 except for events not tracked.</p>
+ *  <p>IDs and references that created the resource. This is present on resources created after 1 February 2019 except for <span>events not tracked</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +32,7 @@ import jakarta.validation.Valid;
 public interface CreatedBy extends ClientLogging {
 
     /**
-     *  <p><code>id</code> of the API Client which created the resource.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> which created the resource.</p>
      * @return clientId
      */
 
@@ -40,7 +40,7 @@ public interface CreatedBy extends ClientLogging {
     public String getClientId();
 
     /**
-     *  <p>External user ID provided by the <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> scope.</p>
+     *  <p><span>External user ID</span> provided by the <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> <span>scope</span>.</p>
      * @return externalUserId
      */
 
@@ -48,7 +48,7 @@ public interface CreatedBy extends ClientLogging {
     public String getExternalUserId();
 
     /**
-     *  <p>Indicates the Customer who created the resource using a token from the password flow.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who created the resource using a token from the <span>password flow</span>.</p>
      * @return customer
      */
     @Valid
@@ -56,7 +56,7 @@ public interface CreatedBy extends ClientLogging {
     public CustomerReference getCustomer();
 
     /**
-     *  <p>Indicates the anonymous session during which the resource was created.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a> during which the resource was created.</p>
      * @return anonymousId
      */
 
@@ -72,7 +72,7 @@ public interface CreatedBy extends ClientLogging {
     public Attribution getAttributedTo();
 
     /**
-     *  <p>Indicates the Customer who created the resource in the context of a Business Unit. Only available for B2B-enabled Project when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who created the resource in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. Only available for <span>B2B</span>-enabled Project when an Associate acts on behalf of a company using the <span>associate endpoints</span>.</p>
      * @return associate
      */
     @Valid
@@ -80,28 +80,28 @@ public interface CreatedBy extends ClientLogging {
     public CustomerReference getAssociate();
 
     /**
-     *  <p><code>id</code> of the API Client which created the resource.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> which created the resource.</p>
      * @param clientId value to be set
      */
 
     public void setClientId(final String clientId);
 
     /**
-     *  <p>External user ID provided by the <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> scope.</p>
+     *  <p><span>External user ID</span> provided by the <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> <span>scope</span>.</p>
      * @param externalUserId value to be set
      */
 
     public void setExternalUserId(final String externalUserId);
 
     /**
-     *  <p>Indicates the Customer who created the resource using a token from the password flow.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who created the resource using a token from the <span>password flow</span>.</p>
      * @param customer value to be set
      */
 
     public void setCustomer(final CustomerReference customer);
 
     /**
-     *  <p>Indicates the anonymous session during which the resource was created.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a> during which the resource was created.</p>
      * @param anonymousId value to be set
      */
 
@@ -115,7 +115,7 @@ public interface CreatedBy extends ClientLogging {
     public void setAttributedTo(final Attribution attributedTo);
 
     /**
-     *  <p>Indicates the Customer who created the resource in the context of a Business Unit. Only available for B2B-enabled Project when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who created the resource in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. Only available for <span>B2B</span>-enabled Project when an Associate acts on behalf of a company using the <span>associate endpoints</span>.</p>
      * @param associate value to be set
      */
 

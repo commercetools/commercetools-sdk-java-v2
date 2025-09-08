@@ -32,7 +32,7 @@ public class CustomerCreatePasswordResetTokenBuilder implements Builder<Customer
     private Boolean invalidateOlderTokens;
 
     /**
-     *  <p>Email address of the Customer treated as case-insensitive.</p>
+     *  <p>Email address of the Customer treated as <span>case-insensitive</span>.</p>
      * @param email value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class CustomerCreatePasswordResetTokenBuilder implements Builder<Customer
     }
 
     /**
-     *  <p>Email address of the Customer treated as case-insensitive.</p>
+     *  <p>Email address of the Customer treated as <span>case-insensitive</span>.</p>
      * @return email
      */
 

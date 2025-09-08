@@ -43,7 +43,7 @@ public class ParcelTrackingDataImpl implements ParcelTrackingData, ModelBase {
     }
 
     /**
-     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      */
 
     public String getParcelId() {

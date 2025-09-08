@@ -39,7 +39,7 @@ public interface ReviewSetTargetAction extends ReviewUpdateAction {
     String SET_TARGET = "setTarget";
 
     /**
-     *  <p>Value to set, specified as ProductResourceIdentifier or ChannelResourceIdentifier, respectively. If empty, any existing value will be removed.</p>
+     *  <p>Value to set, specified as <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductResourceIdentifier" rel="nofollow">ProductResourceIdentifier</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelResourceIdentifier" rel="nofollow">ChannelResourceIdentifier</a>, respectively. If empty, any existing value will be removed.</p>
      * @return target
      */
     @NotNull
@@ -47,21 +47,21 @@ public interface ReviewSetTargetAction extends ReviewUpdateAction {
     public Object getTarget();
 
     /**
-     *  <p>Value to set, specified as ProductResourceIdentifier or ChannelResourceIdentifier, respectively. If empty, any existing value will be removed.</p>
+     *  <p>Value to set, specified as <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductResourceIdentifier" rel="nofollow">ProductResourceIdentifier</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelResourceIdentifier" rel="nofollow">ChannelResourceIdentifier</a>, respectively. If empty, any existing value will be removed.</p>
      * @param target value to be set
      */
 
     public void setTarget(final ProductResourceIdentifier target);
 
     /**
-     *  <p>Value to set, specified as ProductResourceIdentifier or ChannelResourceIdentifier, respectively. If empty, any existing value will be removed.</p>
+     *  <p>Value to set, specified as <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductResourceIdentifier" rel="nofollow">ProductResourceIdentifier</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelResourceIdentifier" rel="nofollow">ChannelResourceIdentifier</a>, respectively. If empty, any existing value will be removed.</p>
      * @param target value to be set
      */
 
     public void setTarget(final ChannelResourceIdentifier target);
 
     /**
-     *  <p>Value to set, specified as ProductResourceIdentifier or ChannelResourceIdentifier, respectively. If empty, any existing value will be removed.</p>
+     *  <p>Value to set, specified as <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductResourceIdentifier" rel="nofollow">ProductResourceIdentifier</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelResourceIdentifier" rel="nofollow">ChannelResourceIdentifier</a>, respectively. If empty, any existing value will be removed.</p>
      * @param target value to be set
      */
 

@@ -59,7 +59,7 @@ public class PaymentSetTransactionCustomTypeActionImpl implements PaymentSetTran
     }
 
     /**
-     *  <p>Unique identifier of the Transaction. If the specified <code>transactionId</code> does not exist, the request will fail with an InvalidOperation error.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>. If the specified <code>transactionId</code> does not exist, the request will fail with an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      */
 
     public String getTransactionId() {
@@ -67,7 +67,7 @@ public class PaymentSetTransactionCustomTypeActionImpl implements PaymentSetTran
     }
 
     /**
-     *  <p>Defines the Type that extends the Transaction with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Transaction.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Transaction with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Transaction.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -75,7 +75,7 @@ public class PaymentSetTransactionCustomTypeActionImpl implements PaymentSetTran
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Transaction.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Transaction.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

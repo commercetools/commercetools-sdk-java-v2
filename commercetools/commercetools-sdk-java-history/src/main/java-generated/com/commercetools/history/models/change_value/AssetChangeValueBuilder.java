@@ -28,7 +28,7 @@ public class AssetChangeValueBuilder implements Builder<AssetChangeValue> {
     private com.commercetools.history.models.common.LocalizedString name;
 
     /**
-     *  <p><code>id</code> of the Asset.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Asset" rel="nofollow">Asset</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class AssetChangeValueBuilder implements Builder<AssetChangeValue> {
     }
 
     /**
-     *  <p><code>id</code> of the Asset.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Asset" rel="nofollow">Asset</a>.</p>
      * @return id
      */
 

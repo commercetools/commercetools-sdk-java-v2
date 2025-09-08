@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Add Address update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAddAddressAction" rel="nofollow">Add Address</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitAddressAddedMessagePayloadImpl implements BusinessUnitAddressAddedMessagePayload, ModelBase {
@@ -52,7 +52,7 @@ public class BusinessUnitAddressAddedMessagePayloadImpl implements BusinessUnitA
     }
 
     /**
-     *  <p>The address that was added to the Business Unit.</p>
+     *  <p>The address that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      */
 
     public com.commercetools.api.models.common.Address getAddress() {

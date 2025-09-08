@@ -21,8 +21,8 @@ import org.apache.commons.lang3.builder.ToStringStyle;
  *  <p>Returned when the provided password token of the Customer has expired.</p>
  *  <p>The error is returned as a failed response to:</p>
  *  <ul>
- *   <li>Get Customer by password token and Get Customer in Store by password token requests</li>
- *   <li>Reset password of Customer and Reset password of Customer in Store requests</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers/password-token={passwordToken}:GET" rel="nofollow">Get Customer by password token</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/customers/password-token={passwordToken}:GET" rel="nofollow">Get Customer in Store by password token</a> requests</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers/password/reset:POST" rel="nofollow">Reset password of Customer</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/customers/password/reset:POST" rel="nofollow">Reset password of Customer in Store</a> requests</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

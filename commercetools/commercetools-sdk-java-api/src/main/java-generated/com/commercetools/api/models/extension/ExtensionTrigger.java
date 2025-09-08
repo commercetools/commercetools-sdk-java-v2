@@ -49,7 +49,7 @@ public interface ExtensionTrigger {
     public List<ExtensionAction> getActions();
 
     /**
-     *  <p>Valid predicate that controls the conditions under which the API Extension is called. The Extension is not triggered when the specified condition is not fulfilled.</p>
+     *  <p>Valid <span>predicate</span> that controls the conditions under which the API Extension is called. The Extension is not triggered when the specified condition is not fulfilled.</p>
      * @return condition
      */
 
@@ -79,7 +79,7 @@ public interface ExtensionTrigger {
     public void setActions(final List<ExtensionAction> actions);
 
     /**
-     *  <p>Valid predicate that controls the conditions under which the API Extension is called. The Extension is not triggered when the specified condition is not fulfilled.</p>
+     *  <p>Valid <span>predicate</span> that controls the conditions under which the API Extension is called. The Extension is not triggered when the specified condition is not fulfilled.</p>
      * @param condition value to be set
      */
 

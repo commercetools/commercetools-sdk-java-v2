@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Schedule of a RecurringOrder that occurs at a fixed interval—for example, every two weeks or every month.</p>
+ *  <p>Schedule of a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that occurs at a fixed interval—for example, every two weeks or every month.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandardScheduleImpl implements StandardSchedule, ModelBase {

@@ -28,7 +28,7 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
     private Long total;
 
     /**
-     *  <p>The current ProcessingStates of ImportOperations in an ImportContainer.</p>
+     *  <p>The current <a href="https://docs.commercetools.com/apis/ctp:import:type:ProcessingState" rel="nofollow">ProcessingStates</a> of ImportOperations in an ImportContainer.</p>
      * @param builder function to build the states value
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
     }
 
     /**
-     *  <p>The current ProcessingStates of ImportOperations in an ImportContainer.</p>
+     *  <p>The current <a href="https://docs.commercetools.com/apis/ctp:import:type:ProcessingState" rel="nofollow">ProcessingStates</a> of ImportOperations in an ImportContainer.</p>
      * @param builder function to build the states value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
     }
 
     /**
-     *  <p>The current ProcessingStates of ImportOperations in an ImportContainer.</p>
+     *  <p>The current <a href="https://docs.commercetools.com/apis/ctp:import:type:ProcessingState" rel="nofollow">ProcessingStates</a> of ImportOperations in an ImportContainer.</p>
      * @param states value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
     }
 
     /**
-     *  <p>The current ProcessingStates of ImportOperations in an ImportContainer.</p>
+     *  <p>The current <a href="https://docs.commercetools.com/apis/ctp:import:type:ProcessingState" rel="nofollow">ProcessingStates</a> of ImportOperations in an ImportContainer.</p>
      * @return states
      */
 

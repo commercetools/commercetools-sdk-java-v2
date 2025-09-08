@@ -52,7 +52,7 @@ public class ProjectChangeCustomerSearchStatusActionImpl implements ProjectChang
     }
 
     /**
-     *  <p>Activates or deactivates the Customer Search feature. Activation will trigger building a search index for the Customers in the Project.</p>
+     *  <p>Activates or deactivates the <span>Customer Search</span> feature. Activation will trigger building a search index for the Customers in the Project.</p>
      */
 
     public com.commercetools.api.models.project.CustomerSearchStatus getStatus() {

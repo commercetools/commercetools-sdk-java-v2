@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Assigns multiple Customer Groups to a Customer. This action generates the CustomerGroupAssignmentsSetMessage Message.</p>
+ *  <p>Assigns multiple Customer Groups to a Customer. This action generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroupAssignmentsSetMessage" rel="nofollow">CustomerGroupAssignmentsSetMessage</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetCustomerGroupAssignmentsActionImpl

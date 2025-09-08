@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Change OrderState update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeOrderStateAction" rel="nofollow">Change OrderState</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface OrderStateChangedMessagePayload extends OrderMessagePayload {
     String ORDER_STATE_CHANGED = "OrderStateChanged";
 
     /**
-     *  <p>OrderState after the Change Order State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderState" rel="nofollow">OrderState</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeOrderStateAction" rel="nofollow">Change Order State</a> update action.</p>
      * @return orderState
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface OrderStateChangedMessagePayload extends OrderMessagePayload {
     public OrderState getOrderState();
 
     /**
-     *  <p>OrderState before the Change Order State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderState" rel="nofollow">OrderState</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeOrderStateAction" rel="nofollow">Change Order State</a> update action.</p>
      * @return oldOrderState
      */
 
@@ -55,14 +55,14 @@ public interface OrderStateChangedMessagePayload extends OrderMessagePayload {
     public OrderState getOldOrderState();
 
     /**
-     *  <p>OrderState after the Change Order State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderState" rel="nofollow">OrderState</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeOrderStateAction" rel="nofollow">Change Order State</a> update action.</p>
      * @param orderState value to be set
      */
 
     public void setOrderState(final OrderState orderState);
 
     /**
-     *  <p>OrderState before the Change Order State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderState" rel="nofollow">OrderState</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeOrderStateAction" rel="nofollow">Change Order State</a> update action.</p>
      * @param oldOrderState value to be set
      */
 

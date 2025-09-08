@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set MethodInfo Token update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoTokenAction" rel="nofollow">Set MethodInfo Token</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentMethodInfoTokenSetMessageImpl implements PaymentMethodInfoTokenSetMessage, ModelBase {
@@ -143,7 +143,7 @@ public class PaymentMethodInfoTokenSetMessageImpl implements PaymentMethodInfoTo
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -159,7 +159,7 @@ public class PaymentMethodInfoTokenSetMessageImpl implements PaymentMethodInfoTo
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -175,7 +175,7 @@ public class PaymentMethodInfoTokenSetMessageImpl implements PaymentMethodInfoTo
     }
 
     /**
-     *  <p>Token of the Payment Method after the Set MethodInfo Token update action.</p>
+     *  <p>Token of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoTokenAction" rel="nofollow">Set MethodInfo Token</a> update action.</p>
      */
 
     public com.commercetools.api.models.payment_method.PaymentMethodToken getToken() {
@@ -183,7 +183,7 @@ public class PaymentMethodInfoTokenSetMessageImpl implements PaymentMethodInfoTo
     }
 
     /**
-     *  <p>Token of the Payment Method before the Set MethodInfo Token update action.</p>
+     *  <p>Token of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoTokenAction" rel="nofollow">Set MethodInfo Token</a> update action.</p>
      */
 
     public com.commercetools.api.models.payment_method.PaymentMethodToken getOldToken() {

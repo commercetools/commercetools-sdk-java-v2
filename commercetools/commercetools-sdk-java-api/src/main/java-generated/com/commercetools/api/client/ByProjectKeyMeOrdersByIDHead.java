@@ -17,10 +17,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Checks if an Order exists with the provided <code>id</code> for the authenticated Customer or anonymous user. Returns a <code>200</code> status if successful.</p>
- *  <p>A Not Found error is returned in the following scenarios:</p>
+ *  <p>A <span>Not Found</span> error is returned in the following scenarios:</p>
  *  <ul>
  *   <li>If no Order exists for the provided <code>id</code>.</li>
- *   <li>If the Order exists but does not have either a <code>customerId</code> that matches the customer:{id} scope, or an <code>anonymousId</code> that matches the anonymous_id:{id} scope.</li>
+ *   <li>If the Order exists but does not have either a <code>customerId</code> that matches the <span>customer:{id}</span> scope, or an <code>anonymousId</code> that matches the <span>anonymous_id:{id}</span> scope.</li>
  *  </ul>
  *
  * <hr>

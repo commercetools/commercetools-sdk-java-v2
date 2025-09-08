@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Valid Until update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidUntilAction" rel="nofollow">Set Valid Until</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceValidUntilSetMessagePayloadImpl
@@ -56,7 +56,7 @@ public class StandalonePriceValidUntilSetMessagePayloadImpl
     }
 
     /**
-     *  <p>Value of StandalonePrice <code>validUntil</code> after the Set Valid Until update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validUntil</code> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidUntilAction" rel="nofollow">Set Valid Until</a> update action.</p>
      */
 
     public java.time.ZonedDateTime getValidUntil() {
@@ -64,7 +64,7 @@ public class StandalonePriceValidUntilSetMessagePayloadImpl
     }
 
     /**
-     *  <p>Value of StandalonePrice <code>validUntil</code> before the Set Valid Until update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validUntil</code> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidUntilAction" rel="nofollow">Set Valid Until</a> update action.</p>
      */
 
     public java.time.ZonedDateTime getPreviousValidUntil() {

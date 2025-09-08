@@ -19,8 +19,8 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Change OrderState on Orders.</li>
- *   <li>Change OrderState on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeOrderStateAction" rel="nofollow">Change OrderState</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderChangeOrderStateAction" rel="nofollow">Change OrderState</a> on Staged Orders.</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

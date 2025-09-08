@@ -25,7 +25,7 @@ public class CartDiscountStoreAddedMessagePayloadBuilder implements Builder<Cart
     private com.commercetools.api.models.store.StoreKeyReference store;
 
     /**
-     *  <p>The Store that was added to the Cart Discount.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discount</a>.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class CartDiscountStoreAddedMessagePayloadBuilder implements Builder<Cart
     }
 
     /**
-     *  <p>The Store that was added to the Cart Discount.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discount</a>.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class CartDiscountStoreAddedMessagePayloadBuilder implements Builder<Cart
     }
 
     /**
-     *  <p>The Store that was added to the Cart Discount.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discount</a>.</p>
      * @param store value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class CartDiscountStoreAddedMessagePayloadBuilder implements Builder<Cart
     }
 
     /**
-     *  <p>The Store that was added to the Cart Discount.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discount</a>.</p>
      * @return store
      */
 

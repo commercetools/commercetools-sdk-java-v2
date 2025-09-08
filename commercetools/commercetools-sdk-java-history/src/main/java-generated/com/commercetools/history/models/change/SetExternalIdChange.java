@@ -17,8 +17,8 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set External ID on Categories.</li>
- *   <li>Set External ID on Customers.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CategorySetExternalIdAction" rel="nofollow">Set External ID</a> on Categories.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetExternalIdAction" rel="nofollow">Set External ID</a> on Customers.</li>
  *  </ul>
  *
  * <hr>

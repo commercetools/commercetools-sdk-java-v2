@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Reference to a RecurringOrder.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RecurringOrderReferenceImpl implements RecurringOrderReference, ModelBase {
@@ -56,7 +56,7 @@ public class RecurringOrderReferenceImpl implements RecurringOrderReference, Mod
     }
 
     /**
-     *  <p>Unique identifier of the referenced RecurringOrder.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a>.</p>
      */
 
     public String getId() {
@@ -64,7 +64,7 @@ public class RecurringOrderReferenceImpl implements RecurringOrderReference, Mod
     }
 
     /**
-     *  <p>Contains the representation of the expanded RecurringOrder. Only present in responses to requests with Reference Expansion for RecurringOrders.</p>
+     *  <p>Contains the representation of the expanded RecurringOrder. Only present in responses to requests with <span>Reference Expansion</span> for RecurringOrders.</p>
      */
 
     public com.commercetools.api.models.recurring_order.RecurringOrder getObj() {

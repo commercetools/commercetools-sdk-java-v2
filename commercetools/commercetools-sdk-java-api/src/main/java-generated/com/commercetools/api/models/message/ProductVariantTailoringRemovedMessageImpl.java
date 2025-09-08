@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Remove ProductVariant Tailoring update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringRemoveVariantAction" rel="nofollow">Remove ProductVariant Tailoring</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantTailoringRemovedMessageImpl implements ProductVariantTailoringRemovedMessage, ModelBase {
@@ -155,7 +155,7 @@ public class ProductVariantTailoringRemovedMessageImpl implements ProductVariant
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -171,7 +171,7 @@ public class ProductVariantTailoringRemovedMessageImpl implements ProductVariant
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -211,7 +211,7 @@ public class ProductVariantTailoringRemovedMessageImpl implements ProductVariant
     }
 
     /**
-     *  <p><code>id</code> of the ProductVariant removed from the Tailoring.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> removed from the Tailoring.</p>
      */
 
     public Long getVariantId() {
@@ -219,7 +219,7 @@ public class ProductVariantTailoringRemovedMessageImpl implements ProductVariant
     }
 
     /**
-     *  <p>The ProductVariantTailoring that was removed from the ProductTailoring.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">ProductVariantTailoring</a> that was removed from the ProductTailoring.</p>
      */
 
     public com.commercetools.api.models.product_tailoring.ProductVariantTailoring getVariant() {

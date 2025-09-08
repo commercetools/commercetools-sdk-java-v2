@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Changing the <code>buyerAssignable</code> value of an AssociateRole generates an AssociateRoleBuyerAssignableChanged Message.</p>
+ *  <p>Changing the <code>buyerAssignable</code> value of an AssociateRole generates an <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRoleBuyerAssignableChangedMessage" rel="nofollow">AssociateRoleBuyerAssignableChanged</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssociateRoleChangeBuyerAssignableActionImpl

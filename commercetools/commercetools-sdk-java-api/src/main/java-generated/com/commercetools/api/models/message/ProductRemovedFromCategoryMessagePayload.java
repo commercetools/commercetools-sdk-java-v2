@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Remove from Category update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemoveFromCategoryAction" rel="nofollow">Remove from Category</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface ProductRemovedFromCategoryMessagePayload extends MessagePayload
     String PRODUCT_REMOVED_FROM_CATEGORY = "ProductRemovedFromCategory";
 
     /**
-     *  <p>Category the Product was removed from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> was removed from.</p>
      * @return category
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface ProductRemovedFromCategoryMessagePayload extends MessagePayload
     public CategoryReference getCategory();
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @return staged
      */
     @NotNull
@@ -58,14 +58,14 @@ public interface ProductRemovedFromCategoryMessagePayload extends MessagePayload
     public Boolean getStaged();
 
     /**
-     *  <p>Category the Product was removed from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> was removed from.</p>
      * @param category value to be set
      */
 
     public void setCategory(final CategoryReference category);
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @param staged value to be set
      */
 

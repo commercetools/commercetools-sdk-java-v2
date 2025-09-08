@@ -76,7 +76,7 @@ public interface FacetRange {
     public String getToStr();
 
     /**
-     *  <p>Number of ProductVariants for which the values in a field fall into the specified range.</p>
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> for which the values in a field fall into the specified range.</p>
      * @return count
      */
     @NotNull
@@ -84,8 +84,8 @@ public interface FacetRange {
     public Long getCount();
 
     /**
-     *  <p>Number of Products for which the values in a field fall into the specified range.</p>
-     *  <p>Present only if the <code>counting products</code> extension is enabled.</p>
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a> for which the values in a field fall into the specified range.</p>
+     *  <p>Present only if the <code>counting products</code> <span>extension</span> is enabled.</p>
      * @return productCount
      */
 
@@ -157,15 +157,15 @@ public interface FacetRange {
     public void setToStr(final String toStr);
 
     /**
-     *  <p>Number of ProductVariants for which the values in a field fall into the specified range.</p>
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> for which the values in a field fall into the specified range.</p>
      * @param count value to be set
      */
 
     public void setCount(final Long count);
 
     /**
-     *  <p>Number of Products for which the values in a field fall into the specified range.</p>
-     *  <p>Present only if the <code>counting products</code> extension is enabled.</p>
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a> for which the values in a field fall into the specified range.</p>
+     *  <p>Present only if the <code>counting products</code> <span>extension</span> is enabled.</p>
      * @param productCount value to be set
      */
 

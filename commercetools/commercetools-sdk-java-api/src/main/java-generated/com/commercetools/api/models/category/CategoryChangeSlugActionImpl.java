@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Changing the slug produces the CategorySlugChanged Message.</p>
+ *  <p>Changing the slug produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CategorySlugChangedMessage" rel="nofollow">CategorySlugChanged</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryChangeSlugActionImpl implements CategoryChangeSlugAction, ModelBase {
@@ -51,7 +51,7 @@ public class CategoryChangeSlugActionImpl implements CategoryChangeSlugAction, M
     }
 
     /**
-     *  <p>New value to set. Must not be empty. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     *  <p>New value to set. Must not be empty. A Category can have the same slug for different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>, but it must be unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getSlug() {

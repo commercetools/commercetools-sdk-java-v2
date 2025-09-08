@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Updating the Associate on a Business Unit generates the BusinessUnitAssociateChanged Message.</p>
+ *  <p>Updating the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> on a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAssociateChangedMessage" rel="nofollow">BusinessUnitAssociateChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

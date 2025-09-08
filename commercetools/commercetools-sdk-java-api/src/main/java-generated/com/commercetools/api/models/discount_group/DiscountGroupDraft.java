@@ -68,6 +68,14 @@ public interface DiscountGroupDraft extends io.vrap.rmf.base.client.Draft<Discou
     public String getSortOrder();
 
     /**
+     *  <p>A DiscountGroup must be active for its CartDiscounts to be considered during discount application.</p>
+     * @return isActive
+     */
+
+    @JsonProperty("isActive")
+    public Boolean getIsActive();
+
+    /**
      *  <p>Name of the DiscountGroup.</p>
      * @param name value to be set
      */
@@ -97,6 +105,13 @@ public interface DiscountGroupDraft extends io.vrap.rmf.base.client.Draft<Discou
     public void setSortOrder(final String sortOrder);
 
     /**
+     *  <p>A DiscountGroup must be active for its CartDiscounts to be considered during discount application.</p>
+     * @param isActive value to be set
+     */
+
+    public void setIsActive(final Boolean isActive);
+
+    /**
      * factory method
      * @return instance of DiscountGroupDraft
      */
@@ -115,6 +130,7 @@ public interface DiscountGroupDraft extends io.vrap.rmf.base.client.Draft<Discou
         instance.setKey(template.getKey());
         instance.setDescription(template.getDescription());
         instance.setSortOrder(template.getSortOrder());
+        instance.setIsActive(template.getIsActive());
         return instance;
     }
 
@@ -136,6 +152,7 @@ public interface DiscountGroupDraft extends io.vrap.rmf.base.client.Draft<Discou
         instance.setDescription(
             com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setSortOrder(template.getSortOrder());
+        instance.setIsActive(template.getIsActive());
         return instance;
     }
 

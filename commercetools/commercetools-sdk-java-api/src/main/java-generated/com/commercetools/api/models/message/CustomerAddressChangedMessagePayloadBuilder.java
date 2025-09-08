@@ -25,7 +25,7 @@ public class CustomerAddressChangedMessagePayloadBuilder implements Builder<Cust
     private com.commercetools.api.models.common.Address address;
 
     /**
-     *  <p>Address that was set during the Change Address update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeAddressAction" rel="nofollow">Change Address</a> update action.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class CustomerAddressChangedMessagePayloadBuilder implements Builder<Cust
     }
 
     /**
-     *  <p>Address that was set during the Change Address update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeAddressAction" rel="nofollow">Change Address</a> update action.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class CustomerAddressChangedMessagePayloadBuilder implements Builder<Cust
     }
 
     /**
-     *  <p>Address that was set during the Change Address update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeAddressAction" rel="nofollow">Change Address</a> update action.</p>
      * @param address value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class CustomerAddressChangedMessagePayloadBuilder implements Builder<Cust
     }
 
     /**
-     *  <p>Address that was set during the Change Address update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeAddressAction" rel="nofollow">Change Address</a> update action.</p>
      * @return address
      */
 

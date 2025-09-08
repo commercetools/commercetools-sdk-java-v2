@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Field type for Reference values.</p>
+ *  <p>Field type for <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> values.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -63,7 +63,7 @@ public class DiscountCodeImportBuilder implements Builder<DiscountCodeImport> {
     private com.commercetools.importapi.models.customfields.Custom custom;
 
     /**
-     *  <p>User-defined unique identifier. If a DiscountCode with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -146,7 +146,7 @@ public class DiscountCodeImportBuilder implements Builder<DiscountCodeImport> {
     }
 
     /**
-     *  <p>Maps to <code>DiscountCode.code</code>. This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p>
+     *  <p>Maps to <code>DiscountCode.code</code>. This value cannot be updated. Attempting to update this value will result in an <span>InvalidFieldsUpdate</span> error.</p>
      * @param code value to be set
      * @return Builder
      */
@@ -157,7 +157,7 @@ public class DiscountCodeImportBuilder implements Builder<DiscountCodeImport> {
     }
 
     /**
-     *  <p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced CartDiscounts do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p>
+     *  <p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p>
      * @param cartDiscounts value to be set
      * @return Builder
      */
@@ -169,7 +169,7 @@ public class DiscountCodeImportBuilder implements Builder<DiscountCodeImport> {
     }
 
     /**
-     *  <p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced CartDiscounts do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p>
+     *  <p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p>
      * @param cartDiscounts value to be set
      * @return Builder
      */
@@ -181,7 +181,7 @@ public class DiscountCodeImportBuilder implements Builder<DiscountCodeImport> {
     }
 
     /**
-     *  <p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced CartDiscounts do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p>
+     *  <p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p>
      * @param cartDiscounts value to be set
      * @return Builder
      */
@@ -196,7 +196,7 @@ public class DiscountCodeImportBuilder implements Builder<DiscountCodeImport> {
     }
 
     /**
-     *  <p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced CartDiscounts do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p>
+     *  <p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p>
      * @param builder function to build the cartDiscounts value
      * @return Builder
      */
@@ -212,7 +212,7 @@ public class DiscountCodeImportBuilder implements Builder<DiscountCodeImport> {
     }
 
     /**
-     *  <p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced CartDiscounts do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p>
+     *  <p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p>
      * @param builder function to build the cartDiscounts value
      * @return Builder
      */
@@ -226,7 +226,7 @@ public class DiscountCodeImportBuilder implements Builder<DiscountCodeImport> {
     }
 
     /**
-     *  <p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced CartDiscounts do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p>
+     *  <p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p>
      * @param builder function to build the cartDiscounts value
      * @return Builder
      */
@@ -238,7 +238,7 @@ public class DiscountCodeImportBuilder implements Builder<DiscountCodeImport> {
     }
 
     /**
-     *  <p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced CartDiscounts do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p>
+     *  <p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p>
      * @param builder function to build the cartDiscounts value
      * @return Builder
      */
@@ -388,7 +388,7 @@ public class DiscountCodeImportBuilder implements Builder<DiscountCodeImport> {
     }
 
     /**
-     *  <p>User-defined unique identifier. If a DiscountCode with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @return key
      */
 
@@ -417,7 +417,7 @@ public class DiscountCodeImportBuilder implements Builder<DiscountCodeImport> {
     }
 
     /**
-     *  <p>Maps to <code>DiscountCode.code</code>. This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p>
+     *  <p>Maps to <code>DiscountCode.code</code>. This value cannot be updated. Attempting to update this value will result in an <span>InvalidFieldsUpdate</span> error.</p>
      * @return code
      */
 
@@ -426,7 +426,7 @@ public class DiscountCodeImportBuilder implements Builder<DiscountCodeImport> {
     }
 
     /**
-     *  <p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced CartDiscounts do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p>
+     *  <p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p>
      * @return cartDiscounts
      */
 

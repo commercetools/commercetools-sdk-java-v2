@@ -32,7 +32,7 @@ import jakarta.validation.constraints.NotNull;
 public interface GraphQLErrorObject {
 
     /**
-     *  <p>One of the error codes that is listed on the Errors page.</p>
+     *  <p>One of the error codes that is listed on the <span>Errors</span> page.</p>
      * @return code
      */
     @NotNull
@@ -459,6 +459,14 @@ public interface GraphQLErrorObject {
      */
     public static com.commercetools.api.models.error.GraphQLMaxCartDiscountsReachedErrorBuilder maxCartDiscountsReachedBuilder() {
         return com.commercetools.api.models.error.GraphQLMaxCartDiscountsReachedErrorBuilder.of();
+    }
+
+    /**
+     * builder for maxDiscountGroupsReached subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLMaxDiscountGroupsReachedErrorBuilder maxDiscountGroupsReachedBuilder() {
+        return com.commercetools.api.models.error.GraphQLMaxDiscountGroupsReachedErrorBuilder.of();
     }
 
     /**

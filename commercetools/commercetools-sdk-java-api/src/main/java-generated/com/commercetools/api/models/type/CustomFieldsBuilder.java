@@ -28,7 +28,7 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that holds the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a> for the Custom Fields.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
     }
 
     /**
-     *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that holds the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a> for the Custom Fields.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
     }
 
     /**
-     *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that holds the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a> for the Custom Fields.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
     }
 
     /**
-     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     *  <p>Object containing the Custom Fields for the <span>customized resource or data type</span>.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
     }
 
     /**
-     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     *  <p>Object containing the Custom Fields for the <span>customized resource or data type</span>.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -87,7 +87,7 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
     }
 
     /**
-     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     *  <p>Object containing the Custom Fields for the <span>customized resource or data type</span>.</p>
      * @param fields value to be set
      * @return Builder
      */
@@ -98,7 +98,7 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
     }
 
     /**
-     *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that holds the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a> for the Custom Fields.</p>
      * @return type
      */
 
@@ -107,7 +107,7 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
     }
 
     /**
-     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     *  <p>Object containing the Custom Fields for the <span>customized resource or data type</span>.</p>
      * @return fields
      */
 

@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Setting the first name of the Customer produces the CustomerFirstNameSet Message.</p>
+ *  <p>Setting the first name of the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerFirstNameSetMessage" rel="nofollow">CustomerFirstNameSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -40,7 +40,7 @@ public class PaymentInfoImpl implements PaymentInfo, ModelBase {
     }
 
     /**
-     *  <p>References to the Payments associated with the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">References</a> to the Payments associated with the Order.</p>
      */
 
     public java.util.List<com.commercetools.api.models.payment.PaymentReference> getPayments() {

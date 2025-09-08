@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Reference to a State.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface StateReference extends Reference, com.commercetools.api.models.
     String STATE = "state";
 
     /**
-     *  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>
+     *  <p>Contains the representation of the expanded State. Only present in responses to requests with <span>Reference Expansion</span> for States.</p>
      * @return obj
      */
     @Valid
@@ -49,7 +49,7 @@ public interface StateReference extends Reference, com.commercetools.api.models.
     public State getObj();
 
     /**
-     *  <p>Unique identifier of the referenced State.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      * @return id
      */
     @NotNull
@@ -57,14 +57,14 @@ public interface StateReference extends Reference, com.commercetools.api.models.
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>
+     *  <p>Contains the representation of the expanded State. Only present in responses to requests with <span>Reference Expansion</span> for States.</p>
      * @param obj value to be set
      */
 
     public void setObj(final State obj);
 
     /**
-     *  <p>Unique identifier of the referenced State.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      * @param id value to be set
      */
 

@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Generated after a successful Set Business Unit update action on Orders or Set Business Unit update action on Order Edits.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Orders or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Order Edits.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface OrderBusinessUnitSetMessagePayload extends OrderMessagePayload 
     String ORDER_BUSINESS_UNIT_SET = "OrderBusinessUnitSet";
 
     /**
-     *  <p>BusinessUnit on the Order after the Set Business Unit update action on Orders or Set Business Unit update action on Order Edits.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Orders or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Order Edits.</p>
      * @return businessUnit
      */
     @Valid
@@ -46,7 +46,7 @@ public interface OrderBusinessUnitSetMessagePayload extends OrderMessagePayload 
     public BusinessUnitKeyReference getBusinessUnit();
 
     /**
-     *  <p>BusinessUnit on the Order before the Set Business Unit update action on Orders or Set Business Unit update action on Order Edits.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Orders or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Order Edits.</p>
      * @return oldbusinessUnit
      */
     @Valid
@@ -54,14 +54,14 @@ public interface OrderBusinessUnitSetMessagePayload extends OrderMessagePayload 
     public BusinessUnitKeyReference getOldbusinessUnit();
 
     /**
-     *  <p>BusinessUnit on the Order after the Set Business Unit update action on Orders or Set Business Unit update action on Order Edits.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Orders or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Order Edits.</p>
      * @param businessUnit value to be set
      */
 
     public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);
 
     /**
-     *  <p>BusinessUnit on the Order before the Set Business Unit update action on Orders or Set Business Unit update action on Order Edits.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Orders or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetBusinessUnitAction" rel="nofollow">Set Business Unit</a> update action on Order Edits.</p>
      * @param oldbusinessUnit value to be set
      */
 

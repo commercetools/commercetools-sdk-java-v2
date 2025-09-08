@@ -21,10 +21,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Retrieves a ShoppingList with the provided <code>key</code> for the authenticated Customer or anonymous user. Returns a <code>200</code> status if successful.</p>
- *  <p>A ResourceNotFound error is returned in the following scenarios:</p>
+ *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error is returned in the following scenarios:</p>
  *  <ul>
  *   <li>If no ShoppingList exists with the provided <code>key</code>.</li>
- *   <li>If a ShoppingList exists but does not contain either an <code>anonymousId</code> that matches the anonymous_id:{id} scope, or a <code>customer</code> with <code>id</code> value that matches the customer:{id} scope.</li>
+ *   <li>If a ShoppingList exists but does not contain either an <code>anonymousId</code> that matches the <span>anonymous_id:{id}</span> scope, or a <code>customer</code> with <code>id</code> value that matches the <span>customer:{id}</span> scope.</li>
  *  </ul>
  *
  * <hr>

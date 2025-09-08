@@ -26,7 +26,7 @@ public class BusinessUnitAssociatesSetMessagePayloadBuilder
     private java.util.List<com.commercetools.api.models.business_unit.Associate> associates;
 
     /**
-     *  <p>The list of Associates that was updated on the Business Unit.</p>
+     *  <p>The list of <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associates</a> that was updated on the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param associates value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class BusinessUnitAssociatesSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>The list of Associates that was updated on the Business Unit.</p>
+     *  <p>The list of <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associates</a> that was updated on the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param associates value to be set
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class BusinessUnitAssociatesSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>The list of Associates that was updated on the Business Unit.</p>
+     *  <p>The list of <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associates</a> that was updated on the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param associates value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class BusinessUnitAssociatesSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>The list of Associates that was updated on the Business Unit.</p>
+     *  <p>The list of <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associates</a> that was updated on the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param builder function to build the associates value
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class BusinessUnitAssociatesSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>The list of Associates that was updated on the Business Unit.</p>
+     *  <p>The list of <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associates</a> that was updated on the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param builder function to build the associates value
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class BusinessUnitAssociatesSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>The list of Associates that was updated on the Business Unit.</p>
+     *  <p>The list of <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associates</a> that was updated on the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param builder function to build the associates value
      * @return Builder
      */
@@ -104,7 +104,7 @@ public class BusinessUnitAssociatesSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>The list of Associates that was updated on the Business Unit.</p>
+     *  <p>The list of <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associates</a> that was updated on the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param builder function to build the associates value
      * @return Builder
      */
@@ -115,7 +115,7 @@ public class BusinessUnitAssociatesSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>The list of Associates that was updated on the Business Unit.</p>
+     *  <p>The list of <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associates</a> that was updated on the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return associates
      */
 

@@ -30,7 +30,7 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
     private java.util.List<com.commercetools.api.models.store_country.StoreCountry> removedCountries;
 
     /**
-     *  <p>Countries added to the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param addedCountries value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
     }
 
     /**
-     *  <p>Countries added to the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param addedCountries value to be set
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
     }
 
     /**
-     *  <p>Countries added to the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param addedCountries value to be set
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
     }
 
     /**
-     *  <p>Countries added to the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the addedCountries value
      * @return Builder
      */
@@ -85,7 +85,7 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
     }
 
     /**
-     *  <p>Countries added to the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the addedCountries value
      * @return Builder
      */
@@ -99,7 +99,7 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
     }
 
     /**
-     *  <p>Countries added to the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the addedCountries value
      * @return Builder
      */
@@ -110,7 +110,7 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
     }
 
     /**
-     *  <p>Countries added to the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the addedCountries value
      * @return Builder
      */
@@ -121,7 +121,7 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
     }
 
     /**
-     *  <p>Countries removed from the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param removedCountries value to be set
      * @return Builder
      */
@@ -133,7 +133,7 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
     }
 
     /**
-     *  <p>Countries removed from the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param removedCountries value to be set
      * @return Builder
      */
@@ -145,7 +145,7 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
     }
 
     /**
-     *  <p>Countries removed from the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param removedCountries value to be set
      * @return Builder
      */
@@ -160,7 +160,7 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
     }
 
     /**
-     *  <p>Countries removed from the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the removedCountries value
      * @return Builder
      */
@@ -176,7 +176,7 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
     }
 
     /**
-     *  <p>Countries removed from the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the removedCountries value
      * @return Builder
      */
@@ -190,7 +190,7 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
     }
 
     /**
-     *  <p>Countries removed from the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the removedCountries value
      * @return Builder
      */
@@ -201,7 +201,7 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
     }
 
     /**
-     *  <p>Countries removed from the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the removedCountries value
      * @return Builder
      */
@@ -212,7 +212,7 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
     }
 
     /**
-     *  <p>Countries added to the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @return addedCountries
      */
 
@@ -222,7 +222,7 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
     }
 
     /**
-     *  <p>Countries removed from the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @return removedCountries
      */
 

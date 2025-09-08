@@ -20,9 +20,10 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>When using this endpoint, if omitted, the Customer <code>stores</code> field is set to the Store specified in the path parameter.</p>
- *  <p>If the <code>anonymousCart</code> field is set on the CustomerDraft, then the newly created Customer will be assigned to that Cart. Similarly, if the <code>anonymousId</code> field is set, the Customer will be set on all Carts, Orders, ShoppingLists and Payments with the same <code>anonymousId</code>. If a Cart with a <code>store</code> field specified, the <code>store</code> field must reference the same Store specified in the <code>{storeKey}</code> path parameter.</p>
- *  <p>Creating a Customer produces the CustomerCreated Message. Simultaneously creating two Customers with the same email address can return a LockedField error.</p>
+ *  <p>When using this endpoint, if omitted, the Customer <code>stores</code> field is set to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> specified in the path parameter.</p>
+ *  <p>If a Cart with a <code>store</code> field specified, the <code>store</code> field must reference the same <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> specified in the <code>{storeKey}</code> path parameter.</p>
+ *  <p>If the Customer has multiple active Carts, the anonymous Cart is <span>merged</span> into the most recently modified active Cart.</p>
+ *  <p>Creating a Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerCreatedMessage" rel="nofollow">CustomerCreated</a> Message. Simultaneously creating two Customers with the same email address can return a <a href="https://docs.commercetools.com/apis/ctp:api:type:LockedFieldError" rel="nofollow">LockedField</a> error.</p>
  *
  * <hr>
  * <div class=code-example>

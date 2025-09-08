@@ -25,7 +25,7 @@ public class OrderDiscountCodeRemovedMessagePayloadBuilder implements Builder<Or
     private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
 
     /**
-     *  <p>DiscountCode that was removed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> that was removed.</p>
      * @param builder function to build the discountCode value
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class OrderDiscountCodeRemovedMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *  <p>DiscountCode that was removed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> that was removed.</p>
      * @param builder function to build the discountCode value
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class OrderDiscountCodeRemovedMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *  <p>DiscountCode that was removed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> that was removed.</p>
      * @param discountCode value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class OrderDiscountCodeRemovedMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *  <p>DiscountCode that was removed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> that was removed.</p>
      * @return discountCode
      */
 

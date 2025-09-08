@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Unpublishes the <code>current</code> data of the ProductTailoring. Sets the <code>published</code> field to <code>false</code>. Generates the ProductTailoringUnpublished Message.</p>
+ *  <p>Unpublishes the <code>current</code> data of the ProductTailoring. Sets the <code>published</code> field to <code>false</code>. Generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringUnpublishedMessage" rel="nofollow">ProductTailoringUnpublished</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTailoringUnpublishActionImpl implements ProductTailoringUnpublishAction, ModelBase {

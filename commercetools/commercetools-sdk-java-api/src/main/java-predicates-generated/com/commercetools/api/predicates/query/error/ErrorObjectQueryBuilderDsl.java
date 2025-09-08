@@ -367,6 +367,13 @@ public class ErrorObjectQueryBuilderDsl {
             ErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asMaxDiscountGroupsReached(
+            Function<com.commercetools.api.predicates.query.error.MaxDiscountGroupsReachedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.MaxDiscountGroupsReachedErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.error.MaxDiscountGroupsReachedErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asMaxResourceLimitExceeded(
             Function<com.commercetools.api.predicates.query.error.MaxResourceLimitExceededErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.MaxResourceLimitExceededErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

@@ -63,7 +63,7 @@ public class ShoppingListSetLineItemCustomTypeActionImpl implements ShoppingList
     }
 
     /**
-     *  <p>The <code>id</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">ShoppingListLineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemId() {
@@ -71,7 +71,7 @@ public class ShoppingListSetLineItemCustomTypeActionImpl implements ShoppingList
     }
 
     /**
-     *  <p>The <code>key</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p>The <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">ShoppingListLineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemKey() {
@@ -79,7 +79,7 @@ public class ShoppingListSetLineItemCustomTypeActionImpl implements ShoppingList
     }
 
     /**
-     *  <p>Defines the Type that extends the ShoppingListLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShoppingListLineItem.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the ShoppingListLineItem with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the ShoppingListLineItem.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -87,7 +87,7 @@ public class ShoppingListSetLineItemCustomTypeActionImpl implements ShoppingList
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the ShoppingListLineItem.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the ShoppingListLineItem.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

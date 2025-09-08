@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Can be used if the Cart has the <code>External</code> TaxMode.</p>
+ *  <p>Can be used if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,7 +37,7 @@ public interface CartSetLineItemTaxRateAction extends CartUpdateAction {
     String SET_LINE_ITEM_TAX_RATE = "setLineItemTaxRate";
 
     /**
-     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
@@ -45,7 +45,7 @@ public interface CartSetLineItemTaxRateAction extends CartUpdateAction {
     public String getLineItemId();
 
     /**
-     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemKey
      */
 
@@ -61,7 +61,7 @@ public interface CartSetLineItemTaxRateAction extends CartUpdateAction {
     public ExternalTaxRateDraft getExternalTaxRate();
 
     /**
-     *  <p><code>key</code> of the ShippingMethod used for this Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> used for this Line Item. This is required for Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingKey
      */
 
@@ -69,14 +69,14 @@ public interface CartSetLineItemTaxRateAction extends CartUpdateAction {
     public String getShippingKey();
 
     /**
-     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
 
     /**
-     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemKey value to be set
      */
 
@@ -90,7 +90,7 @@ public interface CartSetLineItemTaxRateAction extends CartUpdateAction {
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
 
     /**
-     *  <p><code>key</code> of the ShippingMethod used for this Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> used for this Line Item. This is required for Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingKey value to be set
      */
 

@@ -24,7 +24,7 @@ public class ChangeSubscriptionBuilder implements Builder<ChangeSubscription> {
     private com.commercetools.api.models.subscription.ChangeSubscriptionResourceTypeId resourceTypeId;
 
     /**
-     *  <p>Unique identifier for the type of resource, for example, <code>cart</code>.</p>
+     *  <p>Unique identifier for the type of resource, for example, <code>order</code>.</p>
      * @param resourceTypeId value to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class ChangeSubscriptionBuilder implements Builder<ChangeSubscription> {
     }
 
     /**
-     *  <p>Unique identifier for the type of resource, for example, <code>cart</code>.</p>
+     *  <p>Unique identifier for the type of resource, for example, <code>order</code>.</p>
      * @return resourceTypeId
      */
 

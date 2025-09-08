@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Contains the Product Variant to be used in the LineItemImportDraft.</p>
+ *  <p>Contains the Product Variant to be used in the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemImportDraft" rel="nofollow">LineItemImportDraft</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantImportDraftImpl implements ProductVariantImportDraft, ModelBase {
@@ -54,7 +54,7 @@ public class ProductVariantImportDraftImpl implements ProductVariantImportDraft,
     }
 
     /**
-     *  <p>The <code>id</code> of the ProductVariant. Required if you do not set a value for <code>sku</code>. If set, you must specify a <code>productId</code> in the LineItemImportDraft also.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. Required if you do not set a value for <code>sku</code>. If set, you must specify a <code>productId</code> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemImportDraft" rel="nofollow">LineItemImportDraft</a> also.</p>
      */
 
     public Long getId() {
@@ -62,7 +62,7 @@ public class ProductVariantImportDraftImpl implements ProductVariantImportDraft,
     }
 
     /**
-     *  <p>The <code>sku</code> of the ProductVariant. Required if you do not set a value for <code>id</code>.</p>
+     *  <p>The <code>sku</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. Required if you do not set a value for <code>id</code>.</p>
      */
 
     public String getSku() {
@@ -70,7 +70,7 @@ public class ProductVariantImportDraftImpl implements ProductVariantImportDraft,
     }
 
     /**
-     *  <p>The Prices of the Product Variant if you want to override the <code>prices</code> property in the referenced ProductVariant. If not set, the <code>prices</code> from the referenced ProductVariant are used in the resulting Order. If set, each Price must have its unique price scope (same <code>value.currencyCode</code>, <code>country</code>, <code>customerGroup</code>, <code>channel</code>, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Prices</a> of the Product Variant if you want to override the <code>prices</code> property in the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. If not set, the <code>prices</code> from the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> are used in the resulting Order. If set, each Price must have its unique price scope (same <code>value.currencyCode</code>, <code>country</code>, <code>customerGroup</code>, <code>channel</code>, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {
@@ -78,7 +78,7 @@ public class ProductVariantImportDraftImpl implements ProductVariantImportDraft,
     }
 
     /**
-     *  <p>The Attributes of the Product Variant if you want to override the <code>attributes</code> property in the referenced ProductVariant. If not set, the <code>attributes</code> from the referenced ProductVariant are copied to the resulting Order.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Attribute" rel="nofollow">Attributes</a> of the Product Variant if you want to override the <code>attributes</code> property in the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. If not set, the <code>attributes</code> from the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> are copied to the resulting Order.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
@@ -86,7 +86,7 @@ public class ProductVariantImportDraftImpl implements ProductVariantImportDraft,
     }
 
     /**
-     *  <p>The Images of the Product Variant if you want to override the <code>images</code> property in the referenced ProductVariant. If not set, the <code>images</code> from the referenced ProductVariant are copied to the resulting Order.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> of the Product Variant if you want to override the <code>images</code> property in the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. If not set, the <code>images</code> from the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> are copied to the resulting Order.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Image> getImages() {

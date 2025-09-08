@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set InterfaceId update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetInterfaceIdAction" rel="nofollow">Set InterfaceId</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentInterfaceIdSetMessagePayloadImpl implements PaymentInterfaceIdSetMessagePayload, ModelBase {
@@ -55,7 +55,7 @@ public class PaymentInterfaceIdSetMessagePayloadImpl implements PaymentInterface
     }
 
     /**
-     *  <p>Interface ID of the Payment after the Set InterfaceId update action.</p>
+     *  <p>Interface ID of the Payment after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetInterfaceIdAction" rel="nofollow">Set InterfaceId</a> update action.</p>
      */
 
     public String getInterfaceId() {
@@ -63,7 +63,7 @@ public class PaymentInterfaceIdSetMessagePayloadImpl implements PaymentInterface
     }
 
     /**
-     *  <p>Interface ID of the Payment before the Set InterfaceId update action.</p>
+     *  <p>Interface ID of the Payment before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetInterfaceIdAction" rel="nofollow">Set InterfaceId</a> update action.</p>
      */
 
     public String getOldInterfaceId() {

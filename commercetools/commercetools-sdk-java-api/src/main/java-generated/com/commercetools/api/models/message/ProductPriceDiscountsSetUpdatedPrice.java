@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Details about an Embedded Price that was updated due to a Discount. Specific to Product Price Discounts Set Message.</p>
+ *  <p>Details about an <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Price</a> that was updated due to a Discount. Specific to <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPriceDiscountsSetMessage" rel="nofollow">Product Price Discounts Set</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,7 +36,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ProductPriceDiscountsSetUpdatedPrice {
 
     /**
-     *  <p>Unique identifier of the ProductVariant for which the Discount was set.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which the Discount was set.</p>
      * @return variantId
      */
     @NotNull
@@ -44,7 +44,7 @@ public interface ProductPriceDiscountsSetUpdatedPrice {
     public Integer getVariantId();
 
     /**
-     *  <p>Key of the ProductVariant for which Discount was set.</p>
+     *  <p>Key of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which Discount was set.</p>
      * @return variantKey
      */
 
@@ -52,7 +52,7 @@ public interface ProductPriceDiscountsSetUpdatedPrice {
     public String getVariantKey();
 
     /**
-     *  <p>SKU of the ProductVariant for which Discount was set.</p>
+     *  <p>SKU of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which Discount was set.</p>
      * @return sku
      */
 
@@ -60,7 +60,7 @@ public interface ProductPriceDiscountsSetUpdatedPrice {
     public String getSku();
 
     /**
-     *  <p>Unique identifier of the Price.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</p>
      * @return priceId
      */
     @NotNull
@@ -68,7 +68,7 @@ public interface ProductPriceDiscountsSetUpdatedPrice {
     public String getPriceId();
 
     /**
-     *  <p>Discounted Price for the ProductVariant for which Discount was set.</p>
+     *  <p>Discounted Price for the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which Discount was set.</p>
      * @return discounted
      */
     @Valid
@@ -76,7 +76,7 @@ public interface ProductPriceDiscountsSetUpdatedPrice {
     public DiscountedPrice getDiscounted();
 
     /**
-     *  <p>Whether the update was only applied to the staged ProductProjection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjection</a>.</p>
      * @return staged
      */
     @NotNull
@@ -84,42 +84,42 @@ public interface ProductPriceDiscountsSetUpdatedPrice {
     public Boolean getStaged();
 
     /**
-     *  <p>Unique identifier of the ProductVariant for which the Discount was set.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which the Discount was set.</p>
      * @param variantId value to be set
      */
 
     public void setVariantId(final Integer variantId);
 
     /**
-     *  <p>Key of the ProductVariant for which Discount was set.</p>
+     *  <p>Key of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which Discount was set.</p>
      * @param variantKey value to be set
      */
 
     public void setVariantKey(final String variantKey);
 
     /**
-     *  <p>SKU of the ProductVariant for which Discount was set.</p>
+     *  <p>SKU of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which Discount was set.</p>
      * @param sku value to be set
      */
 
     public void setSku(final String sku);
 
     /**
-     *  <p>Unique identifier of the Price.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</p>
      * @param priceId value to be set
      */
 
     public void setPriceId(final String priceId);
 
     /**
-     *  <p>Discounted Price for the ProductVariant for which Discount was set.</p>
+     *  <p>Discounted Price for the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which Discount was set.</p>
      * @param discounted value to be set
      */
 
     public void setDiscounted(final DiscountedPrice discounted);
 
     /**
-     *  <p>Whether the update was only applied to the staged ProductProjection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjection</a>.</p>
      * @param staged value to be set
      */
 

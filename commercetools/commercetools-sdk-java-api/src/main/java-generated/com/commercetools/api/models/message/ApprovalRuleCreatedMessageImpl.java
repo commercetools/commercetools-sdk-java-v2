@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after an Approval Rule is created.</p>
+ *  <p>Generated after an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">Approval Rule</a> is created.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ApprovalRuleCreatedMessageImpl implements ApprovalRuleCreatedMessage, ModelBase {
@@ -138,7 +138,7 @@ public class ApprovalRuleCreatedMessageImpl implements ApprovalRuleCreatedMessag
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -154,7 +154,7 @@ public class ApprovalRuleCreatedMessageImpl implements ApprovalRuleCreatedMessag
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -170,7 +170,7 @@ public class ApprovalRuleCreatedMessageImpl implements ApprovalRuleCreatedMessag
     }
 
     /**
-     *  <p>The Approval Rule that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">Approval Rule</a> that was created.</p>
      */
 
     public com.commercetools.api.models.approval_rule.ApprovalRule getApprovalRule() {

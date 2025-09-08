@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Adding a PriceTier to a StandalonePrice produces the Standalone Price Tier Added Message.</p>
+ *  <p>Adding a <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">PriceTier</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceTierAddedMessage" rel="nofollow">Standalone Price Tier Added</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface StandalonePriceAddPriceTierAction extends StandalonePriceUpdate
     String ADD_PRICE_TIER = "addPriceTier";
 
     /**
-     *  <p>The PriceTier to be added to the <code>tiers</code> field of the StandalonePrice. The action returns an InvalidField error in the following cases:</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">PriceTier</a> to be added to the <code>tiers</code> field of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>. The action returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error in the following cases:</p>
      *  <ul>
      *   <li>Trying to add a PriceTier with <code>minimumQuantity</code> &lt; <code>2</code>.</li>
      *   <li>Trying to add a PriceTier with <code>minimumQuantity</code> that already exists for the StandalonePrice.</li>
@@ -53,7 +53,7 @@ public interface StandalonePriceAddPriceTierAction extends StandalonePriceUpdate
     public PriceTierDraft getTier();
 
     /**
-     *  <p>The PriceTier to be added to the <code>tiers</code> field of the StandalonePrice. The action returns an InvalidField error in the following cases:</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">PriceTier</a> to be added to the <code>tiers</code> field of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>. The action returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error in the following cases:</p>
      *  <ul>
      *   <li>Trying to add a PriceTier with <code>minimumQuantity</code> &lt; <code>2</code>.</li>
      *   <li>Trying to add a PriceTier with <code>minimumQuantity</code> that already exists for the StandalonePrice.</li>

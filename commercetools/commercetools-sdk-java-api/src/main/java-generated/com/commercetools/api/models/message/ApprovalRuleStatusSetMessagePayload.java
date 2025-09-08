@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Set Status update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetStatusAction" rel="nofollow">Set Status</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface ApprovalRuleStatusSetMessagePayload extends MessagePayload {
     String APPROVAL_RULE_STATUS_SET = "ApprovalRuleStatusSet";
 
     /**
-     *  <p>Status of the ApprovalRule after the Set Status update action.</p>
+     *  <p>Status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetStatusAction" rel="nofollow">Set Status</a> update action.</p>
      * @return status
      */
     @NotNull
@@ -48,7 +48,7 @@ public interface ApprovalRuleStatusSetMessagePayload extends MessagePayload {
     public ApprovalRuleStatus getStatus();
 
     /**
-     *  <p>Status of the ApprovalRule before the Set Status update action.</p>
+     *  <p>Status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetStatusAction" rel="nofollow">Set Status</a> update action.</p>
      * @return oldStatus
      */
     @NotNull
@@ -56,14 +56,14 @@ public interface ApprovalRuleStatusSetMessagePayload extends MessagePayload {
     public ApprovalRuleStatus getOldStatus();
 
     /**
-     *  <p>Status of the ApprovalRule after the Set Status update action.</p>
+     *  <p>Status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetStatusAction" rel="nofollow">Set Status</a> update action.</p>
      * @param status value to be set
      */
 
     public void setStatus(final ApprovalRuleStatus status);
 
     /**
-     *  <p>Status of the ApprovalRule before the Set Status update action.</p>
+     *  <p>Status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetStatusAction" rel="nofollow">Set Status</a> update action.</p>
      * @param oldStatus value to be set
      */
 

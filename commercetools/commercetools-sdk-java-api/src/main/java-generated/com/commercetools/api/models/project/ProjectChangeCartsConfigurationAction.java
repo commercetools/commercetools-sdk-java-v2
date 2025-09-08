@@ -39,7 +39,7 @@ public interface ProjectChangeCartsConfigurationAction extends ProjectUpdateActi
     String CHANGE_CARTS_CONFIGURATION = "changeCartsConfiguration";
 
     /**
-     *  <p>Configuration for the Carts feature.</p>
+     *  <p>Configuration for the <span>Carts</span> feature.</p>
      * @return cartsConfiguration
      */
     @NotNull
@@ -48,7 +48,7 @@ public interface ProjectChangeCartsConfigurationAction extends ProjectUpdateActi
     public CartsConfiguration getCartsConfiguration();
 
     /**
-     *  <p>Configuration for the Carts feature.</p>
+     *  <p>Configuration for the <span>Carts</span> feature.</p>
      * @param cartsConfiguration value to be set
      */
 

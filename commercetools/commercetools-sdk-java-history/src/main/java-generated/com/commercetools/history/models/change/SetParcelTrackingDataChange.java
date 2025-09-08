@@ -20,8 +20,8 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set Parcel Tracking Data on Orders.</li>
- *   <li>Set Parcel Tracking Data on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetParcelTrackingDataAction" rel="nofollow">Set Parcel Tracking Data</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetParcelTrackingDataAction" rel="nofollow">Set Parcel Tracking Data</a> on Staged Orders.</li>
  *  </ul>
  *
  * <hr>

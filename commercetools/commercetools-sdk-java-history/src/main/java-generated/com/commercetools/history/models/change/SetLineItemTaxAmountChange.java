@@ -19,7 +19,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the Set LineItem TaxAmount update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetLineItemTaxAmountAction" rel="nofollow">Set LineItem TaxAmount</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -81,7 +81,7 @@ public interface SetLineItemTaxAmountChange extends Change {
     public TaxRate getNextValue();
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @return lineItem
      */
     @NotNull
@@ -90,7 +90,7 @@ public interface SetLineItemTaxAmountChange extends Change {
     public LocalizedString getLineItem();
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     *  <p><code>sku</code> or <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return variant
      */
     @NotNull
@@ -127,14 +127,14 @@ public interface SetLineItemTaxAmountChange extends Change {
     public void setNextValue(final TaxRate nextValue);
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @param lineItem value to be set
      */
 
     public void setLineItem(final LocalizedString lineItem);
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     *  <p><code>sku</code> or <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param variant value to be set
      */
 

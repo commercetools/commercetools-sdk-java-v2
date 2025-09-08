@@ -111,7 +111,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     *  <p>CustomerGroup for which the given Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which the given Price is valid.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -125,7 +125,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     *  <p>CustomerGroup for which the given Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which the given Price is valid.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -138,7 +138,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     *  <p>CustomerGroup for which the given Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which the given Price is valid.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -150,7 +150,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     *  <p><code>ProductDistribution</code> Channel for which the given Price is valid.</p>
+     *  <p><code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which the given Price is valid.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -162,7 +162,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     *  <p><code>ProductDistribution</code> Channel for which the given Price is valid.</p>
+     *  <p><code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which the given Price is valid.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -174,7 +174,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     *  <p><code>ProductDistribution</code> Channel for which the given Price is valid.</p>
+     *  <p><code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which the given Price is valid.</p>
      * @param channel value to be set
      * @return Builder
      */
@@ -207,7 +207,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     *  <p>DiscountedPrice you specify for the given Price.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedPrice" rel="nofollow">DiscountedPrice</a> you specify for the given Price.</p>
      * @param builder function to build the discounted value
      * @return Builder
      */
@@ -219,7 +219,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     *  <p>DiscountedPrice you specify for the given Price.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedPrice" rel="nofollow">DiscountedPrice</a> you specify for the given Price.</p>
      * @param builder function to build the discounted value
      * @return Builder
      */
@@ -231,7 +231,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     *  <p>DiscountedPrice you specify for the given Price.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedPrice" rel="nofollow">DiscountedPrice</a> you specify for the given Price.</p>
      * @param discounted value to be set
      * @return Builder
      */
@@ -278,7 +278,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     *  <p>Price tier applied when the minimum quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> of a ProductVariant with the related Price is reached in a Cart.</p>
      *  <p>If <code>discounted</code> is specified, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers value to be set
      * @return Builder
@@ -290,7 +290,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     *  <p>Price tier applied when the minimum quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> of a ProductVariant with the related Price is reached in a Cart.</p>
      *  <p>If <code>discounted</code> is specified, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers value to be set
      * @return Builder
@@ -303,7 +303,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     *  <p>Price tier applied when the minimum quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> of a ProductVariant with the related Price is reached in a Cart.</p>
      *  <p>If <code>discounted</code> is specified, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers value to be set
      * @return Builder
@@ -318,7 +318,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     *  <p>Price tier applied when the minimum quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> of a ProductVariant with the related Price is reached in a Cart.</p>
      *  <p>If <code>discounted</code> is specified, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
@@ -334,7 +334,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     *  <p>Price tier applied when the minimum quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> of a ProductVariant with the related Price is reached in a Cart.</p>
      *  <p>If <code>discounted</code> is specified, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
@@ -348,7 +348,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     *  <p>Price tier applied when the minimum quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> of a ProductVariant with the related Price is reached in a Cart.</p>
      *  <p>If <code>discounted</code> is specified, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
@@ -360,7 +360,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     *  <p>Price tier applied when the minimum quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> of a ProductVariant with the related Price is reached in a Cart.</p>
      *  <p>If <code>discounted</code> is specified, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
@@ -401,7 +401,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     *  <p>CustomerGroup for which the given Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which the given Price is valid.</p>
      * @return customerGroup
      */
 
@@ -411,7 +411,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     *  <p><code>ProductDistribution</code> Channel for which the given Price is valid.</p>
+     *  <p><code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which the given Price is valid.</p>
      * @return channel
      */
 
@@ -441,7 +441,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     *  <p>DiscountedPrice you specify for the given Price.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedPrice" rel="nofollow">DiscountedPrice</a> you specify for the given Price.</p>
      * @return discounted
      */
 
@@ -461,7 +461,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     *  <p>Price tier applied when the minimum quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> of a ProductVariant with the related Price is reached in a Cart.</p>
      *  <p>If <code>discounted</code> is specified, the tiered Price is ignored for a Product Variant.</p>
      * @return tiers
      */

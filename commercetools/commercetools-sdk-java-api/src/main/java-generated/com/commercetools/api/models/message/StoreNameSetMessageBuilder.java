@@ -187,7 +187,7 @@ public class StoreNameSetMessageBuilder implements Builder<StoreNameSetMessage> 
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -198,7 +198,7 @@ public class StoreNameSetMessageBuilder implements Builder<StoreNameSetMessage> 
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -260,7 +260,7 @@ public class StoreNameSetMessageBuilder implements Builder<StoreNameSetMessage> 
     }
 
     /**
-     *  <p>Name of the Store set during the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -272,7 +272,7 @@ public class StoreNameSetMessageBuilder implements Builder<StoreNameSetMessage> 
     }
 
     /**
-     *  <p>Name of the Store set during the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -284,7 +284,7 @@ public class StoreNameSetMessageBuilder implements Builder<StoreNameSetMessage> 
     }
 
     /**
-     *  <p>Name of the Store set during the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -295,7 +295,7 @@ public class StoreNameSetMessageBuilder implements Builder<StoreNameSetMessage> 
     }
 
     /**
-     *  <p>Names set for the Store in different locales.</p>
+     *  <p>Names set for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> in different locales.</p>
      * @param nameAllLocales value to be set
      * @return Builder
      */
@@ -307,7 +307,7 @@ public class StoreNameSetMessageBuilder implements Builder<StoreNameSetMessage> 
     }
 
     /**
-     *  <p>Names set for the Store in different locales.</p>
+     *  <p>Names set for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> in different locales.</p>
      * @param nameAllLocales value to be set
      * @return Builder
      */
@@ -319,7 +319,7 @@ public class StoreNameSetMessageBuilder implements Builder<StoreNameSetMessage> 
     }
 
     /**
-     *  <p>Names set for the Store in different locales.</p>
+     *  <p>Names set for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> in different locales.</p>
      * @param nameAllLocales value to be set
      * @return Builder
      */
@@ -334,7 +334,7 @@ public class StoreNameSetMessageBuilder implements Builder<StoreNameSetMessage> 
     }
 
     /**
-     *  <p>Names set for the Store in different locales.</p>
+     *  <p>Names set for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> in different locales.</p>
      * @param builder function to build the nameAllLocales value
      * @return Builder
      */
@@ -349,7 +349,7 @@ public class StoreNameSetMessageBuilder implements Builder<StoreNameSetMessage> 
     }
 
     /**
-     *  <p>Names set for the Store in different locales.</p>
+     *  <p>Names set for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> in different locales.</p>
      * @param builder function to build the nameAllLocales value
      * @return Builder
      */
@@ -362,7 +362,7 @@ public class StoreNameSetMessageBuilder implements Builder<StoreNameSetMessage> 
     }
 
     /**
-     *  <p>Names set for the Store in different locales.</p>
+     *  <p>Names set for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> in different locales.</p>
      * @param builder function to build the nameAllLocales value
      * @return Builder
      */
@@ -373,7 +373,7 @@ public class StoreNameSetMessageBuilder implements Builder<StoreNameSetMessage> 
     }
 
     /**
-     *  <p>Names set for the Store in different locales.</p>
+     *  <p>Names set for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> in different locales.</p>
      * @param builder function to build the nameAllLocales value
      * @return Builder
      */
@@ -449,7 +449,7 @@ public class StoreNameSetMessageBuilder implements Builder<StoreNameSetMessage> 
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -477,7 +477,7 @@ public class StoreNameSetMessageBuilder implements Builder<StoreNameSetMessage> 
     }
 
     /**
-     *  <p>Name of the Store set during the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @return name
      */
 
@@ -487,7 +487,7 @@ public class StoreNameSetMessageBuilder implements Builder<StoreNameSetMessage> 
     }
 
     /**
-     *  <p>Names set for the Store in different locales.</p>
+     *  <p>Names set for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> in different locales.</p>
      * @return nameAllLocales
      */
 

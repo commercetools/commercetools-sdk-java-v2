@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>These objects represent information about which API Client created or modified a resource. For more information, see Client Logging.</p>
+ *  <p>These objects represent information about which <span>API Client</span> created or modified a resource. For more information, see <span>Client Logging</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ClientLoggingImpl implements ClientLogging, ModelBase {
@@ -55,7 +55,7 @@ public class ClientLoggingImpl implements ClientLogging, ModelBase {
     }
 
     /**
-     *  <p><code>id</code> of the API Client which created the resource.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> which created the resource.</p>
      */
 
     public String getClientId() {
@@ -63,7 +63,7 @@ public class ClientLoggingImpl implements ClientLogging, ModelBase {
     }
 
     /**
-     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     *  <p><span>External user ID</span> provided by <code>X-External-User-ID</code> HTTP Header.</p>
      */
 
     public String getExternalUserId() {
@@ -71,7 +71,7 @@ public class ClientLoggingImpl implements ClientLogging, ModelBase {
     }
 
     /**
-     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who modified the resource using a token from the <span>password flow</span>.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -79,7 +79,7 @@ public class ClientLoggingImpl implements ClientLogging, ModelBase {
     }
 
     /**
-     *  <p>Indicates that the resource was modified during an anonymous session with the logged ID.</p>
+     *  <p>Indicates that the resource was modified during an <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a> with the logged ID.</p>
      */
 
     public String getAnonymousId() {
@@ -87,7 +87,7 @@ public class ClientLoggingImpl implements ClientLogging, ModelBase {
     }
 
     /**
-     *  <p>Indicates the Customer who created or modified the resource in the context of a Business Unit. Only available for B2B-enabled Projects when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who created or modified the resource in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. Only available for <span>B2B</span>-enabled Projects when an Associate acts on behalf of a company using the <span>associate endpoints</span>.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getAssociate() {

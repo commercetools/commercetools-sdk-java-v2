@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Removes all staged changes from the StandalonePrice. Removing staged changes successfully produces the StandalonePriceStagedChangesRemoved Message.</p>
+ *  <p>Removes all staged changes from the StandalonePrice. Removing staged changes successfully produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceStagedChangesRemovedMessage" rel="nofollow">StandalonePriceStagedChangesRemoved</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

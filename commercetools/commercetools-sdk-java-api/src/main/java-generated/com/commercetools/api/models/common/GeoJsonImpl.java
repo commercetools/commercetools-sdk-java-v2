@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>GeoJSON Geometry represents a Geometry Object as defined in the GeoJSON standard.</p>
+ *  <p>GeoJSON Geometry represents a <span>Geometry Object</span> as defined in the GeoJSON standard.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GeoJsonImpl implements GeoJson, ModelBase {

@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if an active ShippingMethod that can ship to the provided Location exists for the provided OrderEdit. Returns a <code>200 OK</code> status if the ShippingMethod exists or a Not Found error otherwise.</p>
+ *  <p>Checks if an active ShippingMethod that can ship to the provided <a href="https://docs.commercetools.com/apis/ctp:api:type:Location" rel="nofollow">Location</a> exists for the provided <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>. Returns a <code>200 OK</code> status if the ShippingMethod exists or a <span>Not Found</span> error otherwise.</p>
  *
  * <hr>
  * <div class=code-example>

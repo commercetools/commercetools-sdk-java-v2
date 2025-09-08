@@ -91,7 +91,7 @@ public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
     }
 
     /**
-     *  <p>Set this field if this Price is only valid for the referenced CustomerGroup. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>. If the referenced CustomerGroup does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      */
 
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
@@ -99,7 +99,7 @@ public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
     }
 
     /**
-     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>. If the referenced Channel does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      */
 
     public com.commercetools.importapi.models.common.ChannelKeyReference getChannel() {

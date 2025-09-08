@@ -17,8 +17,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>This action updates the <code>customerEmail</code> on the Order, but it does not change the Customer email on the Cart the Order has been created from.</p>
- *  <p>Produces the Order Customer Email Set Message.</p>
+ *  <p>This action updates the <code>customerEmail</code> on the Order, but it does not change the Customer email on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> the Order has been created from.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderCustomerEmailSetMessage" rel="nofollow">Order Customer Email Set</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetCustomerEmailActionImpl implements StagedOrderSetCustomerEmailAction, ModelBase {

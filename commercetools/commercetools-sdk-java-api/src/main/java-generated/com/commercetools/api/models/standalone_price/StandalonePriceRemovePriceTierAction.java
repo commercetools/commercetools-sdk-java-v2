@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Removing a PriceTier from a StandalonePrice produces the Standalone Price Tier Removed Message.</p>
+ *  <p>Removing a <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">PriceTier</a> from a <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceTierRemovedMessage" rel="nofollow">Standalone Price Tier Removed</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface StandalonePriceRemovePriceTierAction extends StandalonePriceUpd
     String REMOVE_PRICE_TIER = "removePriceTier";
 
     /**
-     *  <p>The <code>minimumQuantity</code> of the PriceTier to be removed from the <code>tiers</code> field of the StandalonePrice.</p>
+     *  <p>The <code>minimumQuantity</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">PriceTier</a> to be removed from the <code>tiers</code> field of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @return tierMinimumQuantity
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface StandalonePriceRemovePriceTierAction extends StandalonePriceUpd
     public Long getTierMinimumQuantity();
 
     /**
-     *  <p>The <code>minimumQuantity</code> of the PriceTier to be removed from the <code>tiers</code> field of the StandalonePrice.</p>
+     *  <p>The <code>minimumQuantity</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">PriceTier</a> to be removed from the <code>tiers</code> field of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param tierMinimumQuantity value to be set
      */
 

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Removing an address from the Customer produces the CustomerAddressRemoved Message.</p>
+ *  <p>Removing an address from the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddressRemovedMessage" rel="nofollow">CustomerAddressRemoved</a> Message.</p>
  *  <p>Either <code>addressId</code> or <code>addressKey</code> is required.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -56,7 +56,7 @@ public class CustomerRemoveAddressActionImpl implements CustomerRemoveAddressAct
     }
 
     /**
-     *  <p><code>id</code> of the Address to remove.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove.</p>
      */
 
     public String getAddressId() {
@@ -64,7 +64,7 @@ public class CustomerRemoveAddressActionImpl implements CustomerRemoveAddressAct
     }
 
     /**
-     *  <p><code>key</code> of the Address to remove.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove.</p>
      */
 
     public String getAddressKey() {

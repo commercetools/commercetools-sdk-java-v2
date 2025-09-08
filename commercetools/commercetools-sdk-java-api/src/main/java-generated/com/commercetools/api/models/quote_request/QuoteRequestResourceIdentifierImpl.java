@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>ResourceIdentifier to a QuoteRequest.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class QuoteRequestResourceIdentifierImpl implements QuoteRequestResourceIdentifier, ModelBase {
@@ -47,7 +47,7 @@ public class QuoteRequestResourceIdentifierImpl implements QuoteRequestResourceI
     }
 
     /**
-     *  <p>Type of referenced resource. If given, it must match the expected ReferenceTypeId of the referenced resource.</p>
+     *  <p>Type of referenced resource. If given, it must match the expected <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferenceTypeId" rel="nofollow">ReferenceTypeId</a> of the referenced resource.</p>
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {

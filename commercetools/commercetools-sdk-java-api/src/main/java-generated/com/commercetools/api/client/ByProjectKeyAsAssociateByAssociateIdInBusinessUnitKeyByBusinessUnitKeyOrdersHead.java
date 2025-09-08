@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if one or more Orders exist with provided query predicate in a BusinessUnit. Returns a <code>200</code> status if any Orders match the query predicate, or a <code>404</code> status otherwise.</p>
+ *  <p>Checks if one or more Orders exist with provided query predicate in a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>. Returns a <code>200</code> status if any Orders match the query predicate, or a <code>404</code> status otherwise.</p>
  *
  * <hr>
  * <div class=code-example>

@@ -19,7 +19,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when a preview to find an appropriate Shipping Method for an OrderEdit could not be generated.</p>
- *  <p>The error is returned as a failed response to the Get Shipping Methods for an OrderEdit request.</p>
+ *  <p>The error is returned as a failed response to the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-orderedit:GET" rel="nofollow">Get Shipping Methods for an OrderEdit</a> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLEditPreviewFailedErrorImpl implements GraphQLEditPreviewFailedError, ModelBase {

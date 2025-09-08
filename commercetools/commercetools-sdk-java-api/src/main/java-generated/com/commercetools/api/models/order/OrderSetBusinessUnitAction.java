@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 
 /**
  *  <p>Updates the Business Unit on the Order. Setting the Order's <code>businessUnit</code> does not recalculate prices or discounts on the Order.</p>
- *  <p>Produces the OrderBusinessUnitSet Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderBusinessUnitSetMessage" rel="nofollow">OrderBusinessUnitSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface OrderSetBusinessUnitAction extends OrderUpdateAction {
 
     /**
      *  <p>New Business Unit to assign to the Order. If empty, any existing value is removed.</p>
-     *  <p>If the referenced Business Unit does not exist, a ReferencedResourceNotFound error is returned.</p>
+     *  <p>If the referenced Business Unit does not exist, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferencedResourceNotFoundError" rel="nofollow">ReferencedResourceNotFound</a> error is returned.</p>
      * @return businessUnit
      */
     @Valid
@@ -49,7 +49,7 @@ public interface OrderSetBusinessUnitAction extends OrderUpdateAction {
 
     /**
      *  <p>New Business Unit to assign to the Order. If empty, any existing value is removed.</p>
-     *  <p>If the referenced Business Unit does not exist, a ReferencedResourceNotFound error is returned.</p>
+     *  <p>If the referenced Business Unit does not exist, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferencedResourceNotFoundError" rel="nofollow">ReferencedResourceNotFound</a> error is returned.</p>
      * @param businessUnit value to be set
      */
 

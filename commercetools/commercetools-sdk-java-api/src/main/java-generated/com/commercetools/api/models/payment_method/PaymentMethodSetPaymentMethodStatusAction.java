@@ -15,8 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>This action generates the PaymentMethodPaymentMethodStatusSet Message.</p>
- *  <p>A default Payment Method cannot be set as inactive, and the action will return an InvalidOperation error.</p>
+ *  <p>This action generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodPaymentMethodStatusSetMessage" rel="nofollow">PaymentMethodPaymentMethodStatusSet</a> Message.</p>
+ *  <p>A default Payment Method cannot be set as inactive, and the action will return an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

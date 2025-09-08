@@ -81,7 +81,7 @@ public interface ProductSelection
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+     *  <p>Present on resources updated after 1/02/2019 except for <span>events not tracked</span>.</p>
      * @return lastModifiedBy
      */
     @Valid
@@ -89,7 +89,7 @@ public interface ProductSelection
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+     *  <p>Present on resources created after 1/02/2019 except for <span>events not tracked</span>.</p>
      * @return createdBy
      */
     @Valid
@@ -122,7 +122,7 @@ public interface ProductSelection
     public Integer getProductCount();
 
     /**
-     *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
+     *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">including or excluding</a> them explicitly.</p>
      * @return mode
      */
     @NotNull
@@ -166,14 +166,14 @@ public interface ProductSelection
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
     /**
-     *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+     *  <p>Present on resources updated after 1/02/2019 except for <span>events not tracked</span>.</p>
      * @param lastModifiedBy value to be set
      */
 
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
 
     /**
-     *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+     *  <p>Present on resources created after 1/02/2019 except for <span>events not tracked</span>.</p>
      * @param createdBy value to be set
      */
 
@@ -201,7 +201,7 @@ public interface ProductSelection
     public void setProductCount(final Integer productCount);
 
     /**
-     *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
+     *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">including or excluding</a> them explicitly.</p>
      * @param mode value to be set
      */
 

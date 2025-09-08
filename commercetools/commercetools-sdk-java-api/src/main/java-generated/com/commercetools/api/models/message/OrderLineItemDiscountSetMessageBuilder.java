@@ -199,7 +199,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -211,7 +211,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -273,7 +273,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Unique identifier for the Line Item.</p>
+     *  <p>Unique identifier for the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
@@ -295,7 +295,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     *  <p>Array of <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedLineItemPriceForQuantity" rel="nofollow">DiscountedLineItemPriceForQuantity</a> after the Discount recalculation.</p>
      * @param discountedPricePerQuantity value to be set
      * @return Builder
      */
@@ -307,7 +307,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     *  <p>Array of <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedLineItemPriceForQuantity" rel="nofollow">DiscountedLineItemPriceForQuantity</a> after the Discount recalculation.</p>
      * @param discountedPricePerQuantity value to be set
      * @return Builder
      */
@@ -319,7 +319,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     *  <p>Array of <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedLineItemPriceForQuantity" rel="nofollow">DiscountedLineItemPriceForQuantity</a> after the Discount recalculation.</p>
      * @param discountedPricePerQuantity value to be set
      * @return Builder
      */
@@ -334,7 +334,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     *  <p>Array of <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedLineItemPriceForQuantity" rel="nofollow">DiscountedLineItemPriceForQuantity</a> after the Discount recalculation.</p>
      * @param builder function to build the discountedPricePerQuantity value
      * @return Builder
      */
@@ -350,7 +350,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     *  <p>Array of <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedLineItemPriceForQuantity" rel="nofollow">DiscountedLineItemPriceForQuantity</a> after the Discount recalculation.</p>
      * @param builder function to build the discountedPricePerQuantity value
      * @return Builder
      */
@@ -364,7 +364,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     *  <p>Array of <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedLineItemPriceForQuantity" rel="nofollow">DiscountedLineItemPriceForQuantity</a> after the Discount recalculation.</p>
      * @param builder function to build the discountedPricePerQuantity value
      * @return Builder
      */
@@ -376,7 +376,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     *  <p>Array of <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedLineItemPriceForQuantity" rel="nofollow">DiscountedLineItemPriceForQuantity</a> after the Discount recalculation.</p>
      * @param builder function to build the discountedPricePerQuantity value
      * @return Builder
      */
@@ -388,7 +388,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Total Price of the Line Item after the Discount recalculation.</p>
+     *  <p>Total Price of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> after the Discount recalculation.</p>
      * @param builder function to build the totalPrice value
      * @return Builder
      */
@@ -400,7 +400,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Total Price of the Line Item after the Discount recalculation.</p>
+     *  <p>Total Price of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> after the Discount recalculation.</p>
      * @param builder function to build the totalPrice value
      * @return Builder
      */
@@ -412,7 +412,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Total Price of the Line Item after the Discount recalculation.</p>
+     *  <p>Total Price of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> after the Discount recalculation.</p>
      * @param totalPrice value to be set
      * @return Builder
      */
@@ -424,7 +424,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedItemPrice" rel="nofollow">TaxedItemPrice</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> after the Discount recalculation.</p>
      * @param builder function to build the taxedPrice value
      * @return Builder
      */
@@ -436,7 +436,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedItemPrice" rel="nofollow">TaxedItemPrice</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> after the Discount recalculation.</p>
      * @param builder function to build the taxedPrice value
      * @return Builder
      */
@@ -448,7 +448,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedItemPrice" rel="nofollow">TaxedItemPrice</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> after the Discount recalculation.</p>
      * @param taxedPrice value to be set
      * @return Builder
      */
@@ -460,7 +460,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">Shipping Method</a>. Only applicable for Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      * @param taxedPricePortions value to be set
      * @return Builder
      */
@@ -472,7 +472,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">Shipping Method</a>. Only applicable for Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      * @param taxedPricePortions value to be set
      * @return Builder
      */
@@ -484,7 +484,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">Shipping Method</a>. Only applicable for Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      * @param taxedPricePortions value to be set
      * @return Builder
      */
@@ -499,7 +499,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">Shipping Method</a>. Only applicable for Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      * @param builder function to build the taxedPricePortions value
      * @return Builder
      */
@@ -515,7 +515,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">Shipping Method</a>. Only applicable for Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      * @param builder function to build the taxedPricePortions value
      * @return Builder
      */
@@ -529,7 +529,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">Shipping Method</a>. Only applicable for Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      * @param builder function to build the taxedPricePortions value
      * @return Builder
      */
@@ -540,7 +540,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">Shipping Method</a>. Only applicable for Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      * @param builder function to build the taxedPricePortions value
      * @return Builder
      */
@@ -616,7 +616,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -644,7 +644,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Unique identifier for the Line Item.</p>
+     *  <p>Unique identifier for the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
      * @return lineItemId
      */
 
@@ -663,7 +663,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     *  <p>Array of <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedLineItemPriceForQuantity" rel="nofollow">DiscountedLineItemPriceForQuantity</a> after the Discount recalculation.</p>
      * @return discountedPricePerQuantity
      */
 
@@ -672,7 +672,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Total Price of the Line Item after the Discount recalculation.</p>
+     *  <p>Total Price of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> after the Discount recalculation.</p>
      * @return totalPrice
      */
 
@@ -681,7 +681,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedItemPrice" rel="nofollow">TaxedItemPrice</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> after the Discount recalculation.</p>
      * @return taxedPrice
      */
 
@@ -691,7 +691,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">Shipping Method</a>. Only applicable for Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      * @return taxedPricePortions
      */
 

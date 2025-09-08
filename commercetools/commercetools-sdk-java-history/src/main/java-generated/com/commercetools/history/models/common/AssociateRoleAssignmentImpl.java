@@ -52,7 +52,7 @@ public class AssociateRoleAssignmentImpl implements AssociateRoleAssignment, Mod
     }
 
     /**
-     *  <p>Determines whether an AssociateRoleAssignment can be inherited by child Business Units.</p>
+     *  <p>Determines whether an <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRoleAssignment" rel="nofollow">AssociateRoleAssignment</a> can be inherited by child Business Units.</p>
      */
 
     public com.commercetools.history.models.common.AssociateRoleInheritanceMode getInheritance() {

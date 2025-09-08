@@ -50,7 +50,7 @@ public interface AttributeDefinition {
     public AttributeType getType();
 
     /**
-     *  <p>User-defined name of the Attribute that is unique within the Project.</p>
+     *  <p>User-defined name of the Attribute that is unique within the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return name
      */
     @NotNull
@@ -67,7 +67,7 @@ public interface AttributeDefinition {
     public LocalizedString getLabel();
 
     /**
-     *  <p>If <code>true</code>, the Attribute must have a value on a ProductVariant.</p>
+     *  <p>If <code>true</code>, the Attribute must have a value on a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return isRequired
      */
     @NotNull
@@ -99,7 +99,7 @@ public interface AttributeDefinition {
     public LocalizedString getInputTip();
 
     /**
-     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for AttributeTextType and AttributeLocalizableTextType).</p>
+     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeTextType" rel="nofollow">AttributeTextType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizableTextType" rel="nofollow">AttributeLocalizableTextType</a>).</p>
      * @return inputHint
      */
     @NotNull
@@ -107,8 +107,8 @@ public interface AttributeDefinition {
     public TextInputHint getInputHint();
 
     /**
-     *  <p>If <code>true</code>, the Attribute's values are available in the Product Search or the Product Projection Search API for use in full-text search queries, filters, and facets. However, if an Attribute's <code>level</code> is set as <code>Product</code>, then Product Projection Search does <strong>not support</strong> the Attribute.</p>
-     *  <p>The exact features that are available with this flag depend on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
+     *  <p>If <code>true</code>, the Attribute's values are available in the <span>Product Search</span> or the <span>Product Projection Search</span> API for use in full-text search queries, filters, and facets. However, if an Attribute's <code>level</code> is set as <code>Product</code>, then Product Projection Search does <strong>not support</strong> the Attribute.</p>
+     *  <p>The exact features that are available with this flag depend on the specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeType" rel="nofollow">AttributeType</a>. The maximum size of a searchable field is <strong>restricted</strong> by the <span>Field content size limit</span>. This constraint is enforced at both <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/products:POST" rel="nofollow">Product creation</a> and <span>Product update</span>. If the length of the input exceeds the maximum size, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @return isSearchable
      */
     @NotNull
@@ -123,7 +123,7 @@ public interface AttributeDefinition {
     public void setType(final AttributeType type);
 
     /**
-     *  <p>User-defined name of the Attribute that is unique within the Project.</p>
+     *  <p>User-defined name of the Attribute that is unique within the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param name value to be set
      */
 
@@ -137,7 +137,7 @@ public interface AttributeDefinition {
     public void setLabel(final LocalizedString label);
 
     /**
-     *  <p>If <code>true</code>, the Attribute must have a value on a ProductVariant.</p>
+     *  <p>If <code>true</code>, the Attribute must have a value on a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param isRequired value to be set
      */
 
@@ -165,15 +165,15 @@ public interface AttributeDefinition {
     public void setInputTip(final LocalizedString inputTip);
 
     /**
-     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for AttributeTextType and AttributeLocalizableTextType).</p>
+     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeTextType" rel="nofollow">AttributeTextType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizableTextType" rel="nofollow">AttributeLocalizableTextType</a>).</p>
      * @param inputHint value to be set
      */
 
     public void setInputHint(final TextInputHint inputHint);
 
     /**
-     *  <p>If <code>true</code>, the Attribute's values are available in the Product Search or the Product Projection Search API for use in full-text search queries, filters, and facets. However, if an Attribute's <code>level</code> is set as <code>Product</code>, then Product Projection Search does <strong>not support</strong> the Attribute.</p>
-     *  <p>The exact features that are available with this flag depend on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
+     *  <p>If <code>true</code>, the Attribute's values are available in the <span>Product Search</span> or the <span>Product Projection Search</span> API for use in full-text search queries, filters, and facets. However, if an Attribute's <code>level</code> is set as <code>Product</code>, then Product Projection Search does <strong>not support</strong> the Attribute.</p>
+     *  <p>The exact features that are available with this flag depend on the specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeType" rel="nofollow">AttributeType</a>. The maximum size of a searchable field is <strong>restricted</strong> by the <span>Field content size limit</span>. This constraint is enforced at both <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/products:POST" rel="nofollow">Product creation</a> and <span>Product update</span>. If the length of the input exceeds the maximum size, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @param isSearchable value to be set
      */
 

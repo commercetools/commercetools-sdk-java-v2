@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The <code>stagedActions</code> field cannot be updated if the Order Edit <code>result</code> is OrderEdit Applied.</p>
+ *  <p>The <code>stagedActions</code> field cannot be updated if the Order Edit <code>result</code> is <span>OrderEdit Applied</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditSetStagedActionsActionImpl implements OrderEditSetStagedActionsAction, ModelBase {

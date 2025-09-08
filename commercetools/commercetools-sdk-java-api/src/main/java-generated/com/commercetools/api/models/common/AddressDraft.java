@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Address type to be used on write methods. Optionally, use the <code>custom</code> field in addition to the fields of a BaseAddress.</p>
+ *  <p>Address type to be used on write methods. Optionally, use the <code>custom</code> field in addition to the fields of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BaseAddress" rel="nofollow">BaseAddress</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

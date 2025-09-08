@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>It is used to calculate the taxPortions field in a Cart or Order.</p>
+ *  <p>It is used to calculate the <span>taxPortions</span> field in a Cart or Order.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SubRateImpl implements SubRate, ModelBase {

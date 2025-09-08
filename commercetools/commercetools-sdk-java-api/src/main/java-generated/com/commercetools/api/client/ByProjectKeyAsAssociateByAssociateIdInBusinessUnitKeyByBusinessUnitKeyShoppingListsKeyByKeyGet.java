@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Retrieves a ShoppingList with the provided <code>key</code> in a BusinessUnit. If the ShoppingList exists in the Project but does not reference the requested BusinessUnit, this method returns an InvalidOperation error.</p>
+ *  <p>Retrieves a ShoppingList with the provided <code>key</code> in a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>. If the ShoppingList exists in the Project but does not reference the requested <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>, this method returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
  *
  * <hr>
  * <div class=code-example>

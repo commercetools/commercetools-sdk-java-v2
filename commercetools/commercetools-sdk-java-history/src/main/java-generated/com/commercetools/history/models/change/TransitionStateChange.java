@@ -19,15 +19,15 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Transition State on Orders.</li>
- *   <li>Transition State on Staged Orders.</li>
- *   <li>Transition State on Payments.</li>
- *   <li>Transition State on Products.</li>
- *   <li>Transition State on Quotes.</li>
- *   <li>Transition State on Staged Quotes.</li>
- *   <li>Transition State on Quote Requests.</li>
- *   <li>Transition State on Reviews.</li>
- *   <li>Transition State on States.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderTransitionStateAction" rel="nofollow">Transition State</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderTransitionStateAction" rel="nofollow">Transition State</a> on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentTransitionStateAction" rel="nofollow">Transition State</a> on Payments.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTransitionStateAction" rel="nofollow">Transition State</a> on Products.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteTransitionStateAction" rel="nofollow">Transition State</a> on Quotes.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteTransitionStateAction" rel="nofollow">Transition State</a> on Staged Quotes.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestTransitionStateAction" rel="nofollow">Transition State</a> on Quote Requests.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> on Reviews.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StateSetTransitionsAction" rel="nofollow">Transition State</a> on States.</li>
  *  </ul>
  *
  * <hr>

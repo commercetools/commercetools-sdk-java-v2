@@ -17,8 +17,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Updates the label of a single enum <code>value</code> in an AttributeLocalizedEnumType AttributeDefinition, or AttributeSetType of AttributeLocalizedEnumType AttributeDefinition.</p>
- *  <p>All Products will be updated to the new label in an eventually consistent way.</p>
+ *  <p>Updates the label of a single enum <code>value</code> in an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumType" rel="nofollow">AttributeLocalizedEnumType</a> AttributeDefinition, or <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeSetType" rel="nofollow">AttributeSetType</a> of AttributeLocalizedEnumType AttributeDefinition.</p>
+ *  <p>All Products will be updated to the new label in an <span>eventually consistent</span> way.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangeLocalizedEnumValueLabelActionImpl

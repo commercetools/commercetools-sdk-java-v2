@@ -203,6 +203,10 @@ public class ErrorObjectBuilder {
         return com.commercetools.api.models.error.MaxCartDiscountsReachedErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.MaxDiscountGroupsReachedErrorBuilder maxDiscountGroupsReachedBuilder() {
+        return com.commercetools.api.models.error.MaxDiscountGroupsReachedErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.MaxResourceLimitExceededErrorBuilder maxResourceLimitExceededBuilder() {
         return com.commercetools.api.models.error.MaxResourceLimitExceededErrorBuilder.of();
     }

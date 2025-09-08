@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Reference to a CustomerGroup.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface CustomerGroupReference extends Reference, com.commercetools.api
     String CUSTOMER_GROUP = "customer-group";
 
     /**
-     *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
+     *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with <span>Reference Expansion</span> for CustomerGroups.</p>
      * @return obj
      */
     @Valid
@@ -49,7 +49,7 @@ public interface CustomerGroupReference extends Reference, com.commercetools.api
     public CustomerGroup getObj();
 
     /**
-     *  <p>Unique identifier of the referenced CustomerGroup.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>.</p>
      * @return id
      */
     @NotNull
@@ -57,14 +57,14 @@ public interface CustomerGroupReference extends Reference, com.commercetools.api
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
+     *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with <span>Reference Expansion</span> for CustomerGroups.</p>
      * @param obj value to be set
      */
 
     public void setObj(final CustomerGroup obj);
 
     /**
-     *  <p>Unique identifier of the referenced CustomerGroup.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>.</p>
      * @param id value to be set
      */
 

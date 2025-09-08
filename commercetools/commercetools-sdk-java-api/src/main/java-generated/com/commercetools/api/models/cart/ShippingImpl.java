@@ -55,7 +55,7 @@ public class ShippingImpl implements Shipping, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      */
 
     public String getShippingKey() {
@@ -63,7 +63,7 @@ public class ShippingImpl implements Shipping, ModelBase {
     }
 
     /**
-     *  <p>Automatically set when the Shipping Method is added.</p>
+     *  <p>Automatically set when the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingInfo getShippingInfo() {
@@ -79,10 +79,10 @@ public class ShippingImpl implements Shipping, ModelBase {
     }
 
     /**
-     *  <p>Used as an input to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <p>Used as an input to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>:</p>
      *  <ul>
-     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
-     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
+     *   <li>If <code>CartClassification</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ClassificationShippingRateInput" rel="nofollow">ClassificationShippingRateInput</a>.</li>
+     *   <li>If <code>CartScore</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ScoreShippingRateInput" rel="nofollow">ScoreShippingRateInput</a>.</li>
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
      */
@@ -92,7 +92,7 @@ public class ShippingImpl implements Shipping, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields of Shipping with <code>Multiple</code> ShippingMode.</p>
+     *  <p>Custom Fields of Shipping with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getShippingCustomFields() {

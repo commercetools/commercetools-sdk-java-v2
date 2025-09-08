@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Remove DiscountCode update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveDiscountCodeAction" rel="nofollow">Remove DiscountCode</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface OrderDiscountCodeRemovedMessage extends OrderMessage {
     String ORDER_DISCOUNT_CODE_REMOVED = "OrderDiscountCodeRemoved";
 
     /**
-     *  <p>DiscountCode that was removed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> that was removed.</p>
      * @return discountCode
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface OrderDiscountCodeRemovedMessage extends OrderMessage {
     public DiscountCodeReference getDiscountCode();
 
     /**
-     *  <p>DiscountCode that was removed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> that was removed.</p>
      * @param discountCode value to be set
      */
 

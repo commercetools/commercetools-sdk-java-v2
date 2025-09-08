@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Add Price Tier update action</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceAddPriceTierAction" rel="nofollow">Add Price Tier</a> update action</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceTierAddedMessagePayloadImpl implements StandalonePriceTierAddedMessagePayload, ModelBase {
@@ -52,7 +52,7 @@ public class StandalonePriceTierAddedMessagePayloadImpl implements StandalonePri
     }
 
     /**
-     *  <p>The Price Tier that has been added to the array field <code>tiers</code> for the StandalonePrice.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">Price Tier</a> that has been added to the array field <code>tiers</code> for the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      */
 
     public com.commercetools.api.models.common.PriceTier getTier() {

@@ -71,7 +71,7 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
     }
 
     /**
-     *  <p><code>id</code> of the referenced Type.</p>
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param customTypeId value to be set
      * @return Builder
      */
@@ -157,7 +157,7 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @return name
      */
 
@@ -166,7 +166,7 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
     }
 
     /**
-     *  <p><code>id</code> of the referenced Type.</p>
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @return customTypeId
      */
 

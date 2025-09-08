@@ -40,7 +40,7 @@ public interface CartSetBusinessUnitAction extends CartUpdateAction {
     String SET_BUSINESS_UNIT = "setBusinessUnit";
 
     /**
-     *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart.</p>
+     *  <p>New Business Unit to assign to the Cart, which must have access to the <span>Store</span> that is set on the Cart.</p>
      * @return businessUnit
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface CartSetBusinessUnitAction extends CartUpdateAction {
     public BusinessUnitResourceIdentifier getBusinessUnit();
 
     /**
-     *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart.</p>
+     *  <p>New Business Unit to assign to the Cart, which must have access to the <span>Store</span> that is set on the Cart.</p>
      * @param businessUnit value to be set
      */
 

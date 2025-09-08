@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Add Product update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionAddProductAction" rel="nofollow">Add Product</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,7 +26,6 @@ import jakarta.validation.constraints.NotNull;
  * <pre><code class='java'>
  *     ProductSelectionProductAddedMessagePayload productSelectionProductAddedMessagePayload = ProductSelectionProductAddedMessagePayload.builder()
  *             .product(productBuilder -> productBuilder)
- *             .variantSelection(variantSelectionBuilder -> variantSelectionBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -42,7 +41,7 @@ public interface ProductSelectionProductAddedMessagePayload extends MessagePaylo
     String PRODUCT_SELECTION_PRODUCT_ADDED = "ProductSelectionProductAdded";
 
     /**
-     *  <p>Product that was added to the Product Selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a>.</p>
      * @return product
      */
     @NotNull
@@ -51,23 +50,22 @@ public interface ProductSelectionProductAddedMessagePayload extends MessagePaylo
     public ProductReference getProduct();
 
     /**
-     *  <p>Product Variant Selection after the Add Product update action.</p>
+     *  <p>Product Variant Selection after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionAddProductAction" rel="nofollow">Add Product</a> update action.</p>
      * @return variantSelection
      */
-    @NotNull
     @Valid
     @JsonProperty("variantSelection")
     public ProductVariantSelection getVariantSelection();
 
     /**
-     *  <p>Product that was added to the Product Selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a>.</p>
      * @param product value to be set
      */
 
     public void setProduct(final ProductReference product);
 
     /**
-     *  <p>Product Variant Selection after the Add Product update action.</p>
+     *  <p>Product Variant Selection after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionAddProductAction" rel="nofollow">Add Product</a> update action.</p>
      * @param variantSelection value to be set
      */
 

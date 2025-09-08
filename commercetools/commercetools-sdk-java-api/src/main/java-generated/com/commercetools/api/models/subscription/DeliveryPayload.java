@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>All payloads for the PlatformFormat share these common fields.</p>
+ *  <p>All payloads for the <a href="https://docs.commercetools.com/apis/ctp:api:type:PlatformFormat" rel="nofollow">PlatformFormat</a> share these common fields.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +35,7 @@ import jakarta.validation.constraints.NotNull;
 public interface DeliveryPayload extends SubscriptionNotification {
 
     /**
-     *  <p><code>key</code> of the Project. Useful for processing notifications if the Destination receives them from multiple Projects.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Useful for processing notifications if the Destination receives them from multiple Projects.</p>
      * @return projectKey
      */
     @NotNull
@@ -60,7 +60,7 @@ public interface DeliveryPayload extends SubscriptionNotification {
     public UserProvidedIdentifiers getResourceUserProvidedIdentifiers();
 
     /**
-     *  <p><code>key</code> of the Project. Useful for processing notifications if the Destination receives them from multiple Projects.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Useful for processing notifications if the Destination receives them from multiple Projects.</p>
      * @param projectKey value to be set
      */
 

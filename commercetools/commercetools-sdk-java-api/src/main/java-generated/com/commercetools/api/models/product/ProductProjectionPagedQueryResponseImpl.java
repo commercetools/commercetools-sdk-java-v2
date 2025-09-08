@@ -54,7 +54,7 @@ public class ProductProjectionPagedQueryResponseImpl implements ProductProjectio
     }
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      */
 
     public Long getLimit() {
@@ -70,7 +70,7 @@ public class ProductProjectionPagedQueryResponseImpl implements ProductProjectio
     }
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     *  <p>Total number of results matching the query. This number is an estimation that is not <span>strongly consistent</span>. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a <span>Query Predicate</span>, <code>total</code> is subject to a <span>limit</span>.</p>
      */
 
     public Long getTotal() {
@@ -78,7 +78,7 @@ public class ProductProjectionPagedQueryResponseImpl implements ProductProjectio
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      */
 
     public Long getOffset() {
@@ -86,7 +86,7 @@ public class ProductProjectionPagedQueryResponseImpl implements ProductProjectio
     }
 
     /**
-     *  <p>ProductProjections matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjections</a> matching the query.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.ProductProjection> getResults() {

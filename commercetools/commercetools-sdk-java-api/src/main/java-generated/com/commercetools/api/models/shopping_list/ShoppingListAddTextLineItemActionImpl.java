@@ -80,7 +80,7 @@ public class ShoppingListAddTextLineItemActionImpl implements ShoppingListAddTex
     }
 
     /**
-     *  <p>User-defined identifier of the TextLineItem. Must be unique per ShoppingList.</p>
+     *  <p>User-defined identifier of the TextLineItem. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      */
 
     public String getKey() {
@@ -104,7 +104,7 @@ public class ShoppingListAddTextLineItemActionImpl implements ShoppingListAddTex
     }
 
     /**
-     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     *  <p>Date and time the TextLineItem is added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>. If not set, the current date and time (UTC) is used.</p>
      */
 
     public java.time.ZonedDateTime getAddedAt() {

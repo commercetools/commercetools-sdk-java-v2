@@ -50,7 +50,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -73,7 +73,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -87,7 +87,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -115,7 +115,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -126,7 +126,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -304,7 +304,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @return items
      */
 

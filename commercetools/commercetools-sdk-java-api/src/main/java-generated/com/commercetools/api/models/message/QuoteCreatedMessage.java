@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Create Quote request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/quotes:POST" rel="nofollow">Create Quote</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface QuoteCreatedMessage extends Message {
     String QUOTE_CREATED = "QuoteCreated";
 
     /**
-     *  <p>Quote that was created.</p>
+     *  <p><span>Quote</span> that was created.</p>
      * @return quote
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface QuoteCreatedMessage extends Message {
     public Quote getQuote();
 
     /**
-     *  <p>Quote that was created.</p>
+     *  <p><span>Quote</span> that was created.</p>
      * @param quote value to be set
      */
 

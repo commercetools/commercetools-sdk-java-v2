@@ -21,8 +21,8 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set Parcel Items on Orders.</li>
- *   <li>Set Parcel Items on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetParcelItemsAction" rel="nofollow">Set Parcel Items</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetParcelItemsAction" rel="nofollow">Set Parcel Items</a> on Staged Orders.</li>
  *  </ul>
  *
  * <hr>

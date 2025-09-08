@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface MethodTaxRate {
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingMethodKey
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface MethodTaxRate {
     public TaxRate getTaxRate();
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingMethodKey value to be set
      */
 

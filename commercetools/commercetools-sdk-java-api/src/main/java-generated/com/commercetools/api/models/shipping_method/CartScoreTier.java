@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The ShippingRate maps to an abstract Cart categorization expressed by integers (such as shipping scores or weight ranges). Either <code>price</code> or <code>priceFunction</code> is required.</p>
+ *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> maps to an abstract Cart categorization expressed by integers (such as shipping scores or weight ranges). Either <code>price</code> or <code>priceFunction</code> is required.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface CartScoreTier extends ShippingRatePriceTier {
     String CART_SCORE = "CartScore";
 
     /**
-     *  <p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See Tiered shipping rates for details and examples.</p>
+     *  <p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See <span>Tiered shipping rates</span> for details and examples.</p>
      * @return score
      */
     @NotNull
@@ -64,7 +64,7 @@ public interface CartScoreTier extends ShippingRatePriceTier {
     public PriceFunction getPriceFunction();
 
     /**
-     *  <p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p>
+     *  <p>Appears in response to <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-cart:GET" rel="nofollow">Get ShippingMethods for a Cart</a> if the shipping rate matches the search query.</p>
      * @return isMatching
      */
 
@@ -72,7 +72,7 @@ public interface CartScoreTier extends ShippingRatePriceTier {
     public Boolean getIsMatching();
 
     /**
-     *  <p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See Tiered shipping rates for details and examples.</p>
+     *  <p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See <span>Tiered shipping rates</span> for details and examples.</p>
      * @param score value to be set
      */
 
@@ -93,7 +93,7 @@ public interface CartScoreTier extends ShippingRatePriceTier {
     public void setPriceFunction(final PriceFunction priceFunction);
 
     /**
-     *  <p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p>
+     *  <p>Appears in response to <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-cart:GET" rel="nofollow">Get ShippingMethods for a Cart</a> if the shipping rate matches the search query.</p>
      * @param isMatching value to be set
      */
 

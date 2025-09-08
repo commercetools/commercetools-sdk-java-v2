@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Adding a Store to a Business Unit generates a BusinessUnitStoreAdded Message. Only applicable when <code>storeMode</code> is <code>Explicit</code>.</p>
+ *  <p>Adding a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitStoreAddedMessage" rel="nofollow">BusinessUnitStoreAdded</a> Message. Only applicable when <code>storeMode</code> is <code>Explicit</code>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface BusinessUnitAddStoreAction extends BusinessUnitUpdateAction {
     String ADD_STORE = "addStore";
 
     /**
-     *  <p>Store to add.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to add.</p>
      * @return store
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface BusinessUnitAddStoreAction extends BusinessUnitUpdateAction {
     public StoreResourceIdentifier getStore();
 
     /**
-     *  <p>Store to add.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to add.</p>
      * @param store value to be set
      */
 

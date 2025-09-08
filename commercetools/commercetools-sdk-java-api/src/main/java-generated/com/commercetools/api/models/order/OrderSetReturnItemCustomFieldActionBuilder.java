@@ -35,7 +35,7 @@ public class OrderSetReturnItemCustomFieldActionBuilder implements Builder<Order
     private java.lang.Object value;
 
     /**
-     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @param returnItemId value to be set
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class OrderSetReturnItemCustomFieldActionBuilder implements Builder<Order
     }
 
     /**
-     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @param returnItemKey value to be set
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class OrderSetReturnItemCustomFieldActionBuilder implements Builder<Order
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class OrderSetReturnItemCustomFieldActionBuilder implements Builder<Order
     }
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class OrderSetReturnItemCustomFieldActionBuilder implements Builder<Order
     }
 
     /**
-     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @return returnItemId
      */
 
@@ -89,7 +89,7 @@ public class OrderSetReturnItemCustomFieldActionBuilder implements Builder<Order
     }
 
     /**
-     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @return returnItemKey
      */
 
@@ -99,7 +99,7 @@ public class OrderSetReturnItemCustomFieldActionBuilder implements Builder<Order
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @return name
      */
 
@@ -108,7 +108,7 @@ public class OrderSetReturnItemCustomFieldActionBuilder implements Builder<Order
     }
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
 

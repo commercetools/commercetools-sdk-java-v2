@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Removing an Associate from a Business Unit generates a BusinessUnitAssociateRemoved Message.</p>
+ *  <p>Removing an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> from a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAssociateRemovedMessage" rel="nofollow">BusinessUnitAssociateRemoved</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyBusinessUnitRemoveAssociateActionImpl implements MyBusinessUnitRemoveAssociateAction, ModelBase {
@@ -52,7 +52,7 @@ public class MyBusinessUnitRemoveAssociateActionImpl implements MyBusinessUnitRe
     }
 
     /**
-     *  <p>Associate to remove.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> to remove.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {

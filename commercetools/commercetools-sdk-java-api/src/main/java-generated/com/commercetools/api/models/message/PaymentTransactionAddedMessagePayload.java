@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Add Transaction update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentAddTransactionAction" rel="nofollow">Add Transaction</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface PaymentTransactionAddedMessagePayload extends MessagePayload {
     String PAYMENT_TRANSACTION_ADDED = "PaymentTransactionAdded";
 
     /**
-     *  <p>Transaction that was added to the Payment.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p>
      * @return transaction
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface PaymentTransactionAddedMessagePayload extends MessagePayload {
     public Transaction getTransaction();
 
     /**
-     *  <p>Transaction that was added to the Payment.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p>
      * @param transaction value to be set
      */
 

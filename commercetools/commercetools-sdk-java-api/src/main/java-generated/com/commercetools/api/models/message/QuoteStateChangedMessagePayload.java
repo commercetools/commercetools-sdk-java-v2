@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Change Quote State update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteChangeQuoteStateAction" rel="nofollow">Change Quote State</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface QuoteStateChangedMessagePayload extends MessagePayload {
     String QUOTE_STATE_CHANGED = "QuoteStateChanged";
 
     /**
-     *  <p>State of the Quote after the Change Quote State update action.</p>
+     *  <p>State of the Quote after the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteChangeQuoteStateAction" rel="nofollow">Change Quote State</a> update action.</p>
      * @return quoteState
      */
     @NotNull
@@ -48,7 +48,7 @@ public interface QuoteStateChangedMessagePayload extends MessagePayload {
     public QuoteState getQuoteState();
 
     /**
-     *  <p>State of the Quote before the Change Quote State update action.</p>
+     *  <p>State of the Quote before the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteChangeQuoteStateAction" rel="nofollow">Change Quote State</a> update action.</p>
      * @return oldQuoteState
      */
     @NotNull
@@ -56,14 +56,14 @@ public interface QuoteStateChangedMessagePayload extends MessagePayload {
     public QuoteState getOldQuoteState();
 
     /**
-     *  <p>State of the Quote after the Change Quote State update action.</p>
+     *  <p>State of the Quote after the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteChangeQuoteStateAction" rel="nofollow">Change Quote State</a> update action.</p>
      * @param quoteState value to be set
      */
 
     public void setQuoteState(final QuoteState quoteState);
 
     /**
-     *  <p>State of the Quote before the Change Quote State update action.</p>
+     *  <p>State of the Quote before the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteChangeQuoteStateAction" rel="nofollow">Change Quote State</a> update action.</p>
      * @param oldQuoteState value to be set
      */
 

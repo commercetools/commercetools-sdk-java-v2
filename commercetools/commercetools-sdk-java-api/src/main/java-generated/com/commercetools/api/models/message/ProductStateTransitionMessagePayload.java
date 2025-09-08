@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Transition State update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface ProductStateTransitionMessagePayload extends MessagePayload {
     String PRODUCT_STATE_TRANSITION = "ProductStateTransition";
 
     /**
-     *  <p>Product State after the Transition State update action.</p>
+     *  <p>Product <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @return state
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface ProductStateTransitionMessagePayload extends MessagePayload {
     public StateReference getState();
 
     /**
-     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     *  <p>Whether <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition validations were turned off during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @return force
      */
     @NotNull
@@ -58,14 +58,14 @@ public interface ProductStateTransitionMessagePayload extends MessagePayload {
     public Boolean getForce();
 
     /**
-     *  <p>Product State after the Transition State update action.</p>
+     *  <p>Product <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param state value to be set
      */
 
     public void setState(final StateReference state);
 
     /**
-     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     *  <p>Whether <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition validations were turned off during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param force value to be set
      */
 

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered by the Update CustomObject request when a new property is added.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/custom-objects:POST" rel="nofollow">Update CustomObject</a> request when a new property is added.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddPropertyChangeImpl implements AddPropertyChange, ModelBase {

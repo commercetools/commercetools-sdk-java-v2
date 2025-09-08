@@ -26,7 +26,7 @@ public class ProductSelectionProductRemovedMessagePayloadBuilder
     private com.commercetools.api.models.product.ProductReference product;
 
     /**
-     *  <p>Product that was removed from the Product Selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that was removed from the Product Selection.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class ProductSelectionProductRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Product that was removed from the Product Selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that was removed from the Product Selection.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class ProductSelectionProductRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Product that was removed from the Product Selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that was removed from the Product Selection.</p>
      * @param product value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class ProductSelectionProductRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Product that was removed from the Product Selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that was removed from the Product Selection.</p>
      * @return product
      */
 

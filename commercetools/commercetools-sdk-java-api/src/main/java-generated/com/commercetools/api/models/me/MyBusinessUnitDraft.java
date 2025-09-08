@@ -88,7 +88,7 @@ public interface MyBusinessUnitDraft extends com.commercetools.api.models.Custom
     public List<BaseAddress> getAddresses();
 
     /**
-     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p>
      * @return shippingAddresses
      */
 
@@ -104,7 +104,7 @@ public interface MyBusinessUnitDraft extends com.commercetools.api.models.Custom
     public Integer getDefaultShippingAddress();
 
     /**
-     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p>
      * @return billingAddresses
      */
 
@@ -163,7 +163,7 @@ public interface MyBusinessUnitDraft extends com.commercetools.api.models.Custom
     public void setAddresses(final List<BaseAddress> addresses);
 
     /**
-     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p>
      * @param shippingAddresses values to be set
      */
 
@@ -171,7 +171,7 @@ public interface MyBusinessUnitDraft extends com.commercetools.api.models.Custom
     public void setShippingAddresses(final Integer... shippingAddresses);
 
     /**
-     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p>
      * @param shippingAddresses values to be set
      */
 
@@ -185,7 +185,7 @@ public interface MyBusinessUnitDraft extends com.commercetools.api.models.Custom
     public void setDefaultShippingAddress(final Integer defaultShippingAddress);
 
     /**
-     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p>
      * @param billingAddresses values to be set
      */
 
@@ -193,7 +193,7 @@ public interface MyBusinessUnitDraft extends com.commercetools.api.models.Custom
     public void setBillingAddresses(final Integer... billingAddresses);
 
     /**
-     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p>
      * @param billingAddresses values to be set
      */
 

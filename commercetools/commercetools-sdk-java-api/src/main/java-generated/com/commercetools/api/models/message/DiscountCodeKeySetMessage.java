@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Set Key update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,7 +42,7 @@ public interface DiscountCodeKeySetMessage extends Message {
     String DISCOUNT_CODE_KEY_SET = "DiscountCodeKeySet";
 
     /**
-     *  <p><code>key</code> value of the Discount Code after the Set Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">Discount Code</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
      * @return key
      */
 
@@ -50,7 +50,7 @@ public interface DiscountCodeKeySetMessage extends Message {
     public String getKey();
 
     /**
-     *  <p><code>key</code> value of the Discount Code before the Set Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">Discount Code</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
      * @return oldKey
      */
 
@@ -58,14 +58,14 @@ public interface DiscountCodeKeySetMessage extends Message {
     public String getOldKey();
 
     /**
-     *  <p><code>key</code> value of the Discount Code after the Set Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">Discount Code</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p><code>key</code> value of the Discount Code before the Set Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">Discount Code</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
      * @param oldKey value to be set
      */
 

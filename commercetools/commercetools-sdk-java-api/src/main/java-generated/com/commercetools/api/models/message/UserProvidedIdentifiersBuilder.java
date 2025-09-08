@@ -67,7 +67,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     *  <p>User-provided unique identifier of an Order.</p>
+     *  <p>User-provided unique identifier of an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param orderNumber value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     *  <p>User-provided unique identifier of a Customer.</p>
+     *  <p>User-provided unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>.</p>
      * @param customerNumber value to be set
      * @return Builder
      */
@@ -89,7 +89,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     *  <p>Unique SKU of a Product Variant.</p>
+     *  <p>Unique SKU of a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a>.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -100,7 +100,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     *  <p>Unique identifier usually used in deep-link URLs for a Product. The value corresponds to the slug in the <code>current</code> Product Projection.</p>
+     *  <p>Unique identifier usually used in deep-link URLs for a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. The value corresponds to the slug in the <code>current</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -112,7 +112,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     *  <p>Unique identifier usually used in deep-link URLs for a Product. The value corresponds to the slug in the <code>current</code> Product Projection.</p>
+     *  <p>Unique identifier usually used in deep-link URLs for a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. The value corresponds to the slug in the <code>current</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -124,7 +124,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     *  <p>Unique identifier usually used in deep-link URLs for a Product. The value corresponds to the slug in the <code>current</code> Product Projection.</p>
+     *  <p>Unique identifier usually used in deep-link URLs for a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. The value corresponds to the slug in the <code>current</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @param slug value to be set
      * @return Builder
      */
@@ -136,7 +136,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     *  <p>Unique identifier of a Custom Object.</p>
+     *  <p>Unique identifier of a <span>Custom Object</span>.</p>
      * @param builder function to build the containerAndKey value
      * @return Builder
      */
@@ -148,7 +148,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     *  <p>Unique identifier of a Custom Object.</p>
+     *  <p>Unique identifier of a <span>Custom Object</span>.</p>
      * @param builder function to build the containerAndKey value
      * @return Builder
      */
@@ -160,7 +160,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     *  <p>Unique identifier of a Custom Object.</p>
+     *  <p>Unique identifier of a <span>Custom Object</span>.</p>
      * @param containerAndKey value to be set
      * @return Builder
      */
@@ -192,7 +192,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     *  <p>User-provided unique identifier of an Order.</p>
+     *  <p>User-provided unique identifier of an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @return orderNumber
      */
 
@@ -202,7 +202,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     *  <p>User-provided unique identifier of a Customer.</p>
+     *  <p>User-provided unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>.</p>
      * @return customerNumber
      */
 
@@ -212,7 +212,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     *  <p>Unique SKU of a Product Variant.</p>
+     *  <p>Unique SKU of a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a>.</p>
      * @return sku
      */
 
@@ -222,7 +222,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     *  <p>Unique identifier usually used in deep-link URLs for a Product. The value corresponds to the slug in the <code>current</code> Product Projection.</p>
+     *  <p>Unique identifier usually used in deep-link URLs for a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. The value corresponds to the slug in the <code>current</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @return slug
      */
 
@@ -232,7 +232,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     *  <p>Unique identifier of a Custom Object.</p>
+     *  <p>Unique identifier of a <span>Custom Object</span>.</p>
      * @return containerAndKey
      */
 

@@ -63,7 +63,7 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
     public String getCountry();
 
     /**
-     *  <p>CustomerGroup for which the given Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which the given Price is valid.</p>
      * @return customerGroup
      */
     @Valid
@@ -71,7 +71,7 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
     public CustomerGroupReference getCustomerGroup();
 
     /**
-     *  <p><code>ProductDistribution</code> Channel for which the given Price is valid.</p>
+     *  <p><code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which the given Price is valid.</p>
      * @return channel
      */
     @Valid
@@ -95,7 +95,7 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
     public ZonedDateTime getValidUntil();
 
     /**
-     *  <p>DiscountedPrice you specify for the given Price.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedPrice" rel="nofollow">DiscountedPrice</a> you specify for the given Price.</p>
      * @return discounted
      */
     @Valid
@@ -111,7 +111,7 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
     public CustomFields getCustom();
 
     /**
-     *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     *  <p>Price tier applied when the minimum quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> of a ProductVariant with the related Price is reached in a Cart.</p>
      *  <p>If <code>discounted</code> is specified, the tiered Price is ignored for a Product Variant.</p>
      * @return tiers
      */
@@ -141,14 +141,14 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
     public void setCountry(final String country);
 
     /**
-     *  <p>CustomerGroup for which the given Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which the given Price is valid.</p>
      * @param customerGroup value to be set
      */
 
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
 
     /**
-     *  <p><code>ProductDistribution</code> Channel for which the given Price is valid.</p>
+     *  <p><code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which the given Price is valid.</p>
      * @param channel value to be set
      */
 
@@ -169,7 +169,7 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
     public void setValidUntil(final ZonedDateTime validUntil);
 
     /**
-     *  <p>DiscountedPrice you specify for the given Price.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedPrice" rel="nofollow">DiscountedPrice</a> you specify for the given Price.</p>
      * @param discounted value to be set
      */
 
@@ -183,7 +183,7 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
     public void setCustom(final CustomFields custom);
 
     /**
-     *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     *  <p>Price tier applied when the minimum quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> of a ProductVariant with the related Price is reached in a Cart.</p>
      *  <p>If <code>discounted</code> is specified, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers values to be set
      */
@@ -192,7 +192,7 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
     public void setTiers(final PriceTierDraft... tiers);
 
     /**
-     *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     *  <p>Price tier applied when the minimum quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> of a ProductVariant with the related Price is reached in a Cart.</p>
      *  <p>If <code>discounted</code> is specified, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers values to be set
      */

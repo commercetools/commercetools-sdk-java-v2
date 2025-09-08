@@ -17,8 +17,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>This action generates the PaymentMethodPaymentMethodStatusSet Message.</p>
- *  <p>A default Payment Method cannot be set as inactive, and the action will return an InvalidOperation error.</p>
+ *  <p>This action generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodPaymentMethodStatusSetMessage" rel="nofollow">PaymentMethodPaymentMethodStatusSet</a> Message.</p>
+ *  <p>A default Payment Method cannot be set as inactive, and the action will return an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentMethodSetPaymentMethodStatusActionImpl

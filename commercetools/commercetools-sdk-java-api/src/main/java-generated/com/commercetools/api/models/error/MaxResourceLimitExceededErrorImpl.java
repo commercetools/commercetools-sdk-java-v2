@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Returned when a resource type cannot be created as it has reached its limits.</p>
+ *  <p>Returned when a resource type cannot be created as it has reached its <span>limits</span>.</p>
  *  <p>The limits must be adjusted for this resource before sending the request again.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

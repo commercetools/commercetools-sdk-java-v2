@@ -103,7 +103,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     *  <p>Maps to <code>shippingInfo.taxCategory</code>. If the referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
+     *  <p>Maps to <code>shippingInfo.taxCategory</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
      */
 
     public com.commercetools.importapi.models.common.TaxCategoryKeyReference getTaxCategory() {
@@ -111,7 +111,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     *  <p>Maps to <code>shippingInfo.shippingMethod</code>. If the referenced ShippingMethod does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ShippingMethod is created.</p>
+     *  <p>Maps to <code>shippingInfo.shippingMethod</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ShippingMethod is created.</p>
      */
 
     public com.commercetools.importapi.models.common.ShippingMethodKeyReference getShippingMethod() {

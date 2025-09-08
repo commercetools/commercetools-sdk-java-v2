@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Field type for Time values.</p>
+ *  <p>Field type for <a href="https://docs.commercetools.com/apis/ctp:api:type:Time" rel="nofollow">Time</a> values.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

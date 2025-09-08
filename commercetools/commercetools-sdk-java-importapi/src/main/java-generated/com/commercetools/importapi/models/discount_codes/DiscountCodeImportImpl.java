@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Represents the data used to import a DiscountCode. Once imported, this data is persisted as a DiscountCode in the Project.</p>
+ *  <p>Represents the data used to import a DiscountCode. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> in the Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeImportImpl implements DiscountCodeImport, ModelBase {
@@ -86,7 +86,7 @@ public class DiscountCodeImportImpl implements DiscountCodeImport, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier. If a DiscountCode with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      */
 
     public String getKey() {
@@ -110,7 +110,7 @@ public class DiscountCodeImportImpl implements DiscountCodeImport, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>DiscountCode.code</code>. This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p>
+     *  <p>Maps to <code>DiscountCode.code</code>. This value cannot be updated. Attempting to update this value will result in an <span>InvalidFieldsUpdate</span> error.</p>
      */
 
     public String getCode() {
@@ -118,7 +118,7 @@ public class DiscountCodeImportImpl implements DiscountCodeImport, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced CartDiscounts do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p>
+     *  <p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.common.CartDiscountKeyReference> getCartDiscounts() {

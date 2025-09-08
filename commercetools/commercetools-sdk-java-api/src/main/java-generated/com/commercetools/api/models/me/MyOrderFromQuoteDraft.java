@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface MyOrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<MyOrderFromQuoteDraft> {
 
     /**
-     *  <p><code>id</code> of the Quote from which the Order is created.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> from which the Order is created.</p>
      * @return id
      */
     @NotNull
@@ -41,7 +41,7 @@ public interface MyOrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<MyO
     public String getId();
 
     /**
-     *  <p>Current <code>version</code> of the Quote from which the Order is created.</p>
+     *  <p>Current <code>version</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> from which the Order is created.</p>
      * @return version
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface MyOrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<MyO
     public Long getVersion();
 
     /**
-     *  <p>Set to <code>true</code>, if the <code>quoteState</code> of the referenced Quote should be set to <code>Accepted</code>.</p>
+     *  <p>Set to <code>true</code>, if the <code>quoteState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> should be set to <code>Accepted</code>.</p>
      * @return quoteStateToAccepted
      */
 
@@ -57,21 +57,21 @@ public interface MyOrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<MyO
     public Boolean getQuoteStateToAccepted();
 
     /**
-     *  <p><code>id</code> of the Quote from which the Order is created.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> from which the Order is created.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     *  <p>Current <code>version</code> of the Quote from which the Order is created.</p>
+     *  <p>Current <code>version</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> from which the Order is created.</p>
      * @param version value to be set
      */
 
     public void setVersion(final Long version);
 
     /**
-     *  <p>Set to <code>true</code>, if the <code>quoteState</code> of the referenced Quote should be set to <code>Accepted</code>.</p>
+     *  <p>Set to <code>true</code>, if the <code>quoteState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> should be set to <code>Accepted</code>.</p>
      * @param quoteStateToAccepted value to be set
      */
 

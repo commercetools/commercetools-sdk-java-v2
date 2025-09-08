@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Changing the address on a Business Unit generates the BusinessUnitAddressChanged Message.</p>
+ *  <p>Changing the address on a Business Unit generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAddressChangedMessage" rel="nofollow">BusinessUnitAddressChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

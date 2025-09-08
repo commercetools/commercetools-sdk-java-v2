@@ -102,7 +102,7 @@ public interface ApprovalFlow extends BaseResource {
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     *  <p>Order that needs to be approved.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that needs to be approved.</p>
      * @return order
      */
     @NotNull
@@ -111,7 +111,7 @@ public interface ApprovalFlow extends BaseResource {
     public OrderReference getOrder();
 
     /**
-     *  <p>Business Unit the Approval Flow belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> the Approval Flow belongs to.</p>
      * @return businessUnit
      */
     @NotNull
@@ -120,7 +120,7 @@ public interface ApprovalFlow extends BaseResource {
     public BusinessUnitKeyReference getBusinessUnit();
 
     /**
-     *  <p>Approval Rules that matched the Order.</p>
+     *  <p>Approval Rules that matched the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @return rules
      */
     @NotNull
@@ -137,7 +137,7 @@ public interface ApprovalFlow extends BaseResource {
     public ApprovalFlowStatus getStatus();
 
     /**
-     *  <p>Present when the status of the Approval Flow is <code>Rejected</code>.</p>
+     *  <p>Present when the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlowStatus" rel="nofollow">status</a> of the Approval Flow is <code>Rejected</code>.</p>
      * @return rejection
      */
     @Valid
@@ -231,21 +231,21 @@ public interface ApprovalFlow extends BaseResource {
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
 
     /**
-     *  <p>Order that needs to be approved.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that needs to be approved.</p>
      * @param order value to be set
      */
 
     public void setOrder(final OrderReference order);
 
     /**
-     *  <p>Business Unit the Approval Flow belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> the Approval Flow belongs to.</p>
      * @param businessUnit value to be set
      */
 
     public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);
 
     /**
-     *  <p>Approval Rules that matched the Order.</p>
+     *  <p>Approval Rules that matched the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param rules values to be set
      */
 
@@ -253,7 +253,7 @@ public interface ApprovalFlow extends BaseResource {
     public void setRules(final ApprovalRule... rules);
 
     /**
-     *  <p>Approval Rules that matched the Order.</p>
+     *  <p>Approval Rules that matched the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param rules values to be set
      */
 
@@ -267,7 +267,7 @@ public interface ApprovalFlow extends BaseResource {
     public void setStatus(final ApprovalFlowStatus status);
 
     /**
-     *  <p>Present when the status of the Approval Flow is <code>Rejected</code>.</p>
+     *  <p>Present when the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlowStatus" rel="nofollow">status</a> of the Approval Flow is <code>Rejected</code>.</p>
      * @param rejection value to be set
      */
 

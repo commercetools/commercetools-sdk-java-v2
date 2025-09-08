@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after removing a Custom Type from a Customer Group using the Set Custom Type update action with empty parameters.</p>
+ *  <p>Generated after removing a Custom Type from a Customer Group using the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroupSetCustomTypeAction" rel="nofollow">Set Custom Type</a> update action with empty parameters.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +35,7 @@ public interface CustomerGroupCustomTypeRemovedMessagePayload extends MessagePay
     String CUSTOMER_GROUP_CUSTOM_TYPE_REMOVED = "CustomerGroupCustomTypeRemoved";
 
     /**
-     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a> that was removed. Absent if there was no previous Custom Type present.</p>
      * @return oldTypeId
      */
 
@@ -43,7 +43,7 @@ public interface CustomerGroupCustomTypeRemovedMessagePayload extends MessagePay
     public String getOldTypeId();
 
     /**
-     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a> that was removed. Absent if there was no previous Custom Type present.</p>
      * @param oldTypeId value to be set
      */
 

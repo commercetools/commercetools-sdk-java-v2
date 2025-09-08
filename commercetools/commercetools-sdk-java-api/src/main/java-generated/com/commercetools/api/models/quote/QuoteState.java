@@ -17,23 +17,23 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface QuoteState extends JsonEnum {
 
     /**
-    <p>A state indicating that the Seller submitted the Quote to the Buyer, but the Buyer has not replied yet.</p>
+    <p>A state indicating that the <span>Seller</span> submitted the Quote to the <span>Buyer</span>, but the <span>Buyer</span> has not replied yet.</p>
     <p>This is the default state.</p> */
     QuoteState PENDING = QuoteStateEnum.PENDING;
     /**
-    <p>A state indicating that the Buyer has declined the Quote.</p> */
+    <p>A state indicating that the <span>Buyer</span> has declined the Quote.</p> */
     QuoteState DECLINED = QuoteStateEnum.DECLINED;
     /**
-    <p>A state indicating that the Buyer has declined and requested to renegotiate the Quote.</p> */
+    <p>A state indicating that the <span>Buyer</span> has declined and requested to <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestQuoteRenegotiationAction" rel="nofollow">renegotiate</a> the Quote.</p> */
     QuoteState DECLINED_FOR_RENEGOTIATION = QuoteStateEnum.DECLINED_FOR_RENEGOTIATION;
     /**
-    <p>A state indicating that the Seller has created a new Quote after a renegotiation has been requested.</p> */
+    <p>A state indicating that the <span>Seller</span> has created a new Quote after a renegotiation has been requested.</p> */
     QuoteState RENEGOTIATION_ADDRESSED = QuoteStateEnum.RENEGOTIATION_ADDRESSED;
     /**
-    <p>A state indicating that the Buyer has accepted the Quote.</p> */
+    <p>A state indicating that the <span>Buyer</span> has accepted the Quote.</p> */
     QuoteState ACCEPTED = QuoteStateEnum.ACCEPTED;
     /**
-    <p>A state indicating that the Seller has withdrawn the Quote before the Buyer has accepted it.</p> */
+    <p>A state indicating that the <span>Seller</span> has withdrawn the Quote before the <span>Buyer</span> has accepted it.</p> */
     QuoteState WITHDRAWN = QuoteStateEnum.WITHDRAWN;
 
     /**

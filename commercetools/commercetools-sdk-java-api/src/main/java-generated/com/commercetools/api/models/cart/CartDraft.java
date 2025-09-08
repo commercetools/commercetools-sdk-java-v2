@@ -57,7 +57,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public String getKey();
 
     /**
-     *  <p><code>id</code> of the Customer that the Cart belongs to.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that the Cart belongs to.</p>
      * @return customerId
      */
 
@@ -73,7 +73,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public String getCustomerEmail();
 
     /**
-     *  <p>ResourceIdentifier to the Customer Group of the Customer that the Cart belongs to. Used for Line Item price selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Customer Group of the Customer that the Cart belongs to. Used for <span>Line Item price selection</span>.</p>
      *  <p>You can set either a <code>customerId</code> or a <code>customerGroup</code>. If the Customer referenced in <code>customerId</code> belongs to a Customer Group then <code>customerGroup</code> is set automatically.</p>
      * @return customerGroup
      */
@@ -82,7 +82,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public CustomerGroupResourceIdentifier getCustomerGroup();
 
     /**
-     *  <p>Anonymous session associated with the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">Anonymous session</a> associated with the Cart.</p>
      * @return anonymousId
      */
 
@@ -90,7 +90,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public String getAnonymousId();
 
     /**
-     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to. When the <code>customerId</code> of the Cart is also set, the Customer must be an Associate of the Business Unit. Only available for B2B-enabled Projects.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Business Unit the Cart should belong to. When the <code>customerId</code> of the Cart is also set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit. Only available for <span>B2B</span>-enabled Projects.</p>
      * @return businessUnit
      */
     @Valid
@@ -98,7 +98,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public BusinessUnitResourceIdentifier getBusinessUnit();
 
     /**
-     *  <p>ResourceIdentifier to the Store the Cart should belong to. Once set, it cannot be updated.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Store the Cart should belong to. Once set, it cannot be updated.</p>
      * @return store
      */
     @Valid
@@ -106,7 +106,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public StoreResourceIdentifier getStore();
 
     /**
-     *  <p>Line Items to add to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> to add to the Cart.</p>
      * @return lineItems
      */
     @Valid
@@ -114,7 +114,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public List<LineItemDraft> getLineItems();
 
     /**
-     *  <p>Custom Line Items to add to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> to add to the Cart.</p>
      * @return customLineItems
      */
     @Valid
@@ -130,7 +130,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public TaxMode getTaxMode();
 
     /**
-     *  <p>External Tax Rate for the <code>shippingMethod</code> if the Cart has <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the <code>shippingMethod</code> if the Cart has <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return externalTaxRateForShippingMethod
      */
     @Valid
@@ -138,7 +138,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public ExternalTaxRateDraft getExternalTaxRateForShippingMethod();
 
     /**
-     *  <p>Determines how the total prices on LineItems and CustomLineItems are rounded when calculated. If not set, the default value configured in the Project is used.</p>
+     *  <p>Determines how the total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a> are rounded when calculated. If not set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">default value</a> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is used.</p>
      * @return priceRoundingMode
      */
 
@@ -146,7 +146,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public RoundingMode getPriceRoundingMode();
 
     /**
-     *  <p>Determines how monetary values are rounded when calculating taxes for <code>taxedPrice</code>. If not set, the default value configured in the Project is used.</p>
+     *  <p>Determines how monetary values are rounded when calculating taxes for <code>taxedPrice</code>. If not set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">default value</a> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is used.</p>
      * @return taxRoundingMode
      */
 
@@ -178,7 +178,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public BaseAddress getBillingAddress();
 
     /**
-     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items. Must be one of the <code>itemShippingAddresses</code> when that field is also provided.</p>
+     *  <p>Shipping address for a Cart with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Determines eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> rates and Tax Rates of Line Items. Must be one of the <code>itemShippingAddresses</code> when that field is also provided.</p>
      * @return shippingAddress
      */
     @Valid
@@ -186,7 +186,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public BaseAddress getShippingAddress();
 
     /**
-     *  <p>Shipping Method for a Cart with <code>Single</code> ShippingMode. If the referenced ShippingMethod has a <code>predicate</code> that does not match the Cart, an InvalidOperation error is returned when creating a Cart.</p>
+     *  <p>Shipping Method for a Cart with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> has a <code>predicate</code> that does not match the Cart, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned when <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/carts:POST" rel="nofollow">creating a Cart</a>.</p>
      * @return shippingMethod
      */
     @Valid
@@ -194,10 +194,10 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public ShippingMethodResourceIdentifier getShippingMethod();
 
     /**
-     *  <p>Used as an input to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <p>Used as an input to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>:</p>
      *  <ul>
-     *   <li>If <code>CartClassification</code>, it must be ClassificationShippingRateInputDraft.</li>
-     *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
+     *   <li>If <code>CartClassification</code>, it must be <a href="https://docs.commercetools.com/apis/ctp:api:type:ClassificationShippingRateInputDraft" rel="nofollow">ClassificationShippingRateInputDraft</a>.</li>
+     *   <li>If <code>CartScore</code>, it must be <a href="https://docs.commercetools.com/apis/ctp:api:type:ScoreShippingRateInputDraft" rel="nofollow">ScoreShippingRateInputDraft</a>.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
      * @return shippingRateInput
@@ -218,7 +218,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public ShippingMode getShippingMode();
 
     /**
-     *  <p>Custom Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>Custom Shipping Methods for a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return customShipping
      */
     @Valid
@@ -226,7 +226,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public List<CustomShippingDraft> getCustomShipping();
 
     /**
-     *  <p>Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>Shipping Methods for a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shipping
      */
     @Valid
@@ -234,8 +234,8 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public List<ShippingDraft> getShipping();
 
     /**
-     *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
-     *  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> to reference these addresses under their <code>shippingDetails</code>.</p>
+     *  <p>For Carts with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>: eligible Shipping Methods or applicable Tax Rates are determined by the address <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @return itemShippingAddresses
      */
     @Valid
@@ -243,7 +243,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public List<BaseAddress> getItemShippingAddresses();
 
     /**
-     *  <p><code>code</code> of the existing DiscountCodes to add to the Cart.</p>
+     *  <p><code>code</code> of the existing <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCodes</a> to add to the Cart.</p>
      * @return discountCodes
      */
 
@@ -251,7 +251,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public List<String> getDiscountCodes();
 
     /**
-     *  <p>Used for Line Item price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
+     *  <p>Used for <span>Line Item price selection</span>. If used for <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/carts:POST" rel="nofollow">Create Cart in Store</a>, the provided country must be one of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store's</a> <code>countries</code>.</p>
      * @return country
      */
 
@@ -259,7 +259,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public String getCountry();
 
     /**
-     *  <p>Languages of the Cart. Can only contain languages supported by the Project.</p>
+     *  <p>Language of the Cart. Must be one of the languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return locale
      */
 
@@ -275,8 +275,8 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public CartOrigin getOrigin();
 
     /**
-     *  <p>Number of days after the last modification before a Cart is deleted. If not provided, the default value for this field configured in Project settings is assigned.</p>
-     *  <p>Create a ChangeSubscription for Carts to receive a ResourceDeletedDeliveryPayload upon deletion of the Cart.</p>
+     *  <p>Number of days after the last modification before a Cart is deleted. If not provided, the default value for this field configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a> is assigned.</p>
+     *  <p>Create a <a href="https://docs.commercetools.com/apis/ctp:api:type:ChangeSubscription" rel="nofollow">ChangeSubscription</a> for Carts to receive a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceDeletedDeliveryPayload" rel="nofollow">ResourceDeletedDeliveryPayload</a> upon deletion of the Cart.</p>
      * @return deleteDaysAfterLastModification
      */
 
@@ -306,7 +306,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public void setKey(final String key);
 
     /**
-     *  <p><code>id</code> of the Customer that the Cart belongs to.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that the Cart belongs to.</p>
      * @param customerId value to be set
      */
 
@@ -320,7 +320,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public void setCustomerEmail(final String customerEmail);
 
     /**
-     *  <p>ResourceIdentifier to the Customer Group of the Customer that the Cart belongs to. Used for Line Item price selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Customer Group of the Customer that the Cart belongs to. Used for <span>Line Item price selection</span>.</p>
      *  <p>You can set either a <code>customerId</code> or a <code>customerGroup</code>. If the Customer referenced in <code>customerId</code> belongs to a Customer Group then <code>customerGroup</code> is set automatically.</p>
      * @param customerGroup value to be set
      */
@@ -328,28 +328,28 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public void setCustomerGroup(final CustomerGroupResourceIdentifier customerGroup);
 
     /**
-     *  <p>Anonymous session associated with the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">Anonymous session</a> associated with the Cart.</p>
      * @param anonymousId value to be set
      */
 
     public void setAnonymousId(final String anonymousId);
 
     /**
-     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to. When the <code>customerId</code> of the Cart is also set, the Customer must be an Associate of the Business Unit. Only available for B2B-enabled Projects.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Business Unit the Cart should belong to. When the <code>customerId</code> of the Cart is also set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param businessUnit value to be set
      */
 
     public void setBusinessUnit(final BusinessUnitResourceIdentifier businessUnit);
 
     /**
-     *  <p>ResourceIdentifier to the Store the Cart should belong to. Once set, it cannot be updated.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Store the Cart should belong to. Once set, it cannot be updated.</p>
      * @param store value to be set
      */
 
     public void setStore(final StoreResourceIdentifier store);
 
     /**
-     *  <p>Line Items to add to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> to add to the Cart.</p>
      * @param lineItems values to be set
      */
 
@@ -357,14 +357,14 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public void setLineItems(final LineItemDraft... lineItems);
 
     /**
-     *  <p>Line Items to add to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> to add to the Cart.</p>
      * @param lineItems values to be set
      */
 
     public void setLineItems(final List<LineItemDraft> lineItems);
 
     /**
-     *  <p>Custom Line Items to add to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> to add to the Cart.</p>
      * @param customLineItems values to be set
      */
 
@@ -372,7 +372,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public void setCustomLineItems(final CustomLineItemDraft... customLineItems);
 
     /**
-     *  <p>Custom Line Items to add to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> to add to the Cart.</p>
      * @param customLineItems values to be set
      */
 
@@ -386,21 +386,21 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public void setTaxMode(final TaxMode taxMode);
 
     /**
-     *  <p>External Tax Rate for the <code>shippingMethod</code> if the Cart has <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the <code>shippingMethod</code> if the Cart has <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param externalTaxRateForShippingMethod value to be set
      */
 
     public void setExternalTaxRateForShippingMethod(final ExternalTaxRateDraft externalTaxRateForShippingMethod);
 
     /**
-     *  <p>Determines how the total prices on LineItems and CustomLineItems are rounded when calculated. If not set, the default value configured in the Project is used.</p>
+     *  <p>Determines how the total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a> are rounded when calculated. If not set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">default value</a> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is used.</p>
      * @param priceRoundingMode value to be set
      */
 
     public void setPriceRoundingMode(final RoundingMode priceRoundingMode);
 
     /**
-     *  <p>Determines how monetary values are rounded when calculating taxes for <code>taxedPrice</code>. If not set, the default value configured in the Project is used.</p>
+     *  <p>Determines how monetary values are rounded when calculating taxes for <code>taxedPrice</code>. If not set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">default value</a> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is used.</p>
      * @param taxRoundingMode value to be set
      */
 
@@ -428,24 +428,24 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public void setBillingAddress(final BaseAddress billingAddress);
 
     /**
-     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items. Must be one of the <code>itemShippingAddresses</code> when that field is also provided.</p>
+     *  <p>Shipping address for a Cart with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Determines eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> rates and Tax Rates of Line Items. Must be one of the <code>itemShippingAddresses</code> when that field is also provided.</p>
      * @param shippingAddress value to be set
      */
 
     public void setShippingAddress(final BaseAddress shippingAddress);
 
     /**
-     *  <p>Shipping Method for a Cart with <code>Single</code> ShippingMode. If the referenced ShippingMethod has a <code>predicate</code> that does not match the Cart, an InvalidOperation error is returned when creating a Cart.</p>
+     *  <p>Shipping Method for a Cart with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> has a <code>predicate</code> that does not match the Cart, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned when <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/carts:POST" rel="nofollow">creating a Cart</a>.</p>
      * @param shippingMethod value to be set
      */
 
     public void setShippingMethod(final ShippingMethodResourceIdentifier shippingMethod);
 
     /**
-     *  <p>Used as an input to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <p>Used as an input to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>:</p>
      *  <ul>
-     *   <li>If <code>CartClassification</code>, it must be ClassificationShippingRateInputDraft.</li>
-     *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
+     *   <li>If <code>CartClassification</code>, it must be <a href="https://docs.commercetools.com/apis/ctp:api:type:ClassificationShippingRateInputDraft" rel="nofollow">ClassificationShippingRateInputDraft</a>.</li>
+     *   <li>If <code>CartScore</code>, it must be <a href="https://docs.commercetools.com/apis/ctp:api:type:ScoreShippingRateInputDraft" rel="nofollow">ScoreShippingRateInputDraft</a>.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
      * @param shippingRateInput value to be set
@@ -464,7 +464,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public void setShippingMode(final ShippingMode shippingMode);
 
     /**
-     *  <p>Custom Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>Custom Shipping Methods for a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param customShipping values to be set
      */
 
@@ -472,14 +472,14 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public void setCustomShipping(final CustomShippingDraft... customShipping);
 
     /**
-     *  <p>Custom Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>Custom Shipping Methods for a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param customShipping values to be set
      */
 
     public void setCustomShipping(final List<CustomShippingDraft> customShipping);
 
     /**
-     *  <p>Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>Shipping Methods for a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shipping values to be set
      */
 
@@ -487,15 +487,15 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public void setShipping(final ShippingDraft... shipping);
 
     /**
-     *  <p>Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>Shipping Methods for a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shipping values to be set
      */
 
     public void setShipping(final List<ShippingDraft> shipping);
 
     /**
-     *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
-     *  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> to reference these addresses under their <code>shippingDetails</code>.</p>
+     *  <p>For Carts with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>: eligible Shipping Methods or applicable Tax Rates are determined by the address <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @param itemShippingAddresses values to be set
      */
 
@@ -503,15 +503,15 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public void setItemShippingAddresses(final BaseAddress... itemShippingAddresses);
 
     /**
-     *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
-     *  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> to reference these addresses under their <code>shippingDetails</code>.</p>
+     *  <p>For Carts with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>: eligible Shipping Methods or applicable Tax Rates are determined by the address <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @param itemShippingAddresses values to be set
      */
 
     public void setItemShippingAddresses(final List<BaseAddress> itemShippingAddresses);
 
     /**
-     *  <p><code>code</code> of the existing DiscountCodes to add to the Cart.</p>
+     *  <p><code>code</code> of the existing <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCodes</a> to add to the Cart.</p>
      * @param discountCodes values to be set
      */
 
@@ -519,21 +519,21 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public void setDiscountCodes(final String... discountCodes);
 
     /**
-     *  <p><code>code</code> of the existing DiscountCodes to add to the Cart.</p>
+     *  <p><code>code</code> of the existing <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCodes</a> to add to the Cart.</p>
      * @param discountCodes values to be set
      */
 
     public void setDiscountCodes(final List<String> discountCodes);
 
     /**
-     *  <p>Used for Line Item price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
+     *  <p>Used for <span>Line Item price selection</span>. If used for <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/carts:POST" rel="nofollow">Create Cart in Store</a>, the provided country must be one of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store's</a> <code>countries</code>.</p>
      * @param country value to be set
      */
 
     public void setCountry(final String country);
 
     /**
-     *  <p>Languages of the Cart. Can only contain languages supported by the Project.</p>
+     *  <p>Language of the Cart. Must be one of the languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param locale value to be set
      */
 
@@ -547,8 +547,8 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public void setOrigin(final CartOrigin origin);
 
     /**
-     *  <p>Number of days after the last modification before a Cart is deleted. If not provided, the default value for this field configured in Project settings is assigned.</p>
-     *  <p>Create a ChangeSubscription for Carts to receive a ResourceDeletedDeliveryPayload upon deletion of the Cart.</p>
+     *  <p>Number of days after the last modification before a Cart is deleted. If not provided, the default value for this field configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a> is assigned.</p>
+     *  <p>Create a <a href="https://docs.commercetools.com/apis/ctp:api:type:ChangeSubscription" rel="nofollow">ChangeSubscription</a> for Carts to receive a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceDeletedDeliveryPayload" rel="nofollow">ResourceDeletedDeliveryPayload</a> upon deletion of the Cart.</p>
      * @param deleteDaysAfterLastModification value to be set
      */
 

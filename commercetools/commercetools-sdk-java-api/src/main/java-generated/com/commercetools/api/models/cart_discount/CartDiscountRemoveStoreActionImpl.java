@@ -17,8 +17,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>If a referenced Store does not exist, a ReferencedResourceNotFound error is returned.</p>
- *  <p>This action generates a CartDiscountStoreRemoved Message.</p>
+ *  <p>If a referenced Store does not exist, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferencedResourceNotFoundError" rel="nofollow">ReferencedResourceNotFound</a> error is returned.</p>
+ *  <p>This action generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountStoreRemovedMessage" rel="nofollow">CartDiscountStoreRemoved</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountRemoveStoreActionImpl implements CartDiscountRemoveStoreAction, ModelBase {
@@ -53,7 +53,7 @@ public class CartDiscountRemoveStoreActionImpl implements CartDiscountRemoveStor
     }
 
     /**
-     *  <p>Store to remove.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to remove.</p>
      */
 
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {

@@ -21,7 +21,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creates a DiscountGroup in the Project. This request generates the DiscountGroupCreated Message.</p>
+ *  <p>Creates a DiscountGroup in the Project. This request generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroupCreatedMessage" rel="nofollow">DiscountGroupCreated</a> Message.</p>
+ *  <p>If the <span>limit</span> for active Discount Groups has been reached, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxDiscountGroupsReachedError" rel="nofollow">MaxDiscountGroupsReached</a> error is returned.</p>
  *
  * <hr>
  * <div class=code-example>

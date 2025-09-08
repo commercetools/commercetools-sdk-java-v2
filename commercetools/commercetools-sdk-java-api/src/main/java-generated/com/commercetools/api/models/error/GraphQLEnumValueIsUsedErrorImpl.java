@@ -19,7 +19,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when an enum value cannot be removed from an Attribute as it is being used by a Product.</p>
- *  <p>The error is returned as a failed response to the Remove EnumValues from AttributeDefinition update action.</p>
+ *  <p>The error is returned as a failed response to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeRemoveEnumValuesAction" rel="nofollow">Remove EnumValues from AttributeDefinition</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLEnumValueIsUsedErrorImpl implements GraphQLEnumValueIsUsedError, ModelBase {

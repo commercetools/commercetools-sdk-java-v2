@@ -74,7 +74,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     *  <p><code>id</code> of the referenced Type.</p>
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param customTypeId value to be set
      * @return Builder
      */
@@ -85,7 +85,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -96,7 +96,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @param lineItem value to be set
      * @return Builder
      */
@@ -132,7 +132,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     *  <p><code>sku</code> or <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param variant value to be set
      * @return Builder
      */
@@ -170,7 +170,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     *  <p><code>id</code> of the referenced Type.</p>
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @return customTypeId
      */
 
@@ -179,7 +179,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @return name
      */
 
@@ -188,7 +188,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @return lineItem
      */
 
@@ -197,7 +197,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     *  <p><code>sku</code> or <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return variant
      */
 

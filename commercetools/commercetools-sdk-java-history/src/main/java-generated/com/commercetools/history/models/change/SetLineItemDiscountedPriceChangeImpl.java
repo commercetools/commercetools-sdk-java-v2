@@ -91,7 +91,7 @@ public class SetLineItemDiscountedPriceChangeImpl implements SetLineItemDiscount
     }
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getLineItem() {
@@ -99,7 +99,7 @@ public class SetLineItemDiscountedPriceChangeImpl implements SetLineItemDiscount
     }
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the updated ProductVariant.</p>
+     *  <p><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      */
 
     public String getVariant() {

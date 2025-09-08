@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Different from Address in that <code>key</code> is required and <code>id</code> is not supported.</p>
+ *  <p>Different from <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> in that <code>key</code> is required and <code>id</code> is not supported.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerAddressImpl implements CustomerAddress, ModelBase {

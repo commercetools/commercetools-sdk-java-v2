@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Updating the name of an AssociateRole generates an AssociateRoleNameSet Message.</p>
+ *  <p>Updating the name of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a> generates an <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRoleNameSetMessage" rel="nofollow">AssociateRoleNameSet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssociateRoleSetNameActionImpl implements AssociateRoleSetNameAction, ModelBase {

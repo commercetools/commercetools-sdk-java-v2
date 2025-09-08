@@ -38,7 +38,7 @@ public interface PaymentDraft extends PaymentDraftMixin, com.commercetools.api.m
         com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<PaymentDraft> {
 
     /**
-     *  <p>Reference to a Customer associated with the Payment.</p>
+     *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> associated with the Payment.</p>
      * @return customer
      */
     @Valid
@@ -46,7 +46,7 @@ public interface PaymentDraft extends PaymentDraftMixin, com.commercetools.api.m
     public CustomerResourceIdentifier getCustomer();
 
     /**
-     *  <p>Anonymous session associated with the Payment.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">Anonymous session</a> associated with the Payment.</p>
      * @return anonymousId
      */
 
@@ -54,7 +54,7 @@ public interface PaymentDraft extends PaymentDraftMixin, com.commercetools.api.m
     public String getAnonymousId();
 
     /**
-     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on PaymentMethodInfo must be unique. Once set, it cannot be changed.</p>
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfo" rel="nofollow">PaymentMethodInfo</a> must be unique. Once set, it cannot be changed.</p>
      * @return interfaceId
      */
 
@@ -62,7 +62,7 @@ public interface PaymentDraft extends PaymentDraftMixin, com.commercetools.api.m
     public String getInterfaceId();
 
     /**
-     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> gross total.</p>
      * @return amountPlanned
      */
     @NotNull
@@ -87,7 +87,7 @@ public interface PaymentDraft extends PaymentDraftMixin, com.commercetools.api.m
     public PaymentStatusDraft getPaymentStatus();
 
     /**
-     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionType</a> and a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">TransactionState</a>.</p>
      * @return transactions
      */
     @Valid
@@ -119,28 +119,28 @@ public interface PaymentDraft extends PaymentDraftMixin, com.commercetools.api.m
     public String getKey();
 
     /**
-     *  <p>Reference to a Customer associated with the Payment.</p>
+     *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> associated with the Payment.</p>
      * @param customer value to be set
      */
 
     public void setCustomer(final CustomerResourceIdentifier customer);
 
     /**
-     *  <p>Anonymous session associated with the Payment.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">Anonymous session</a> associated with the Payment.</p>
      * @param anonymousId value to be set
      */
 
     public void setAnonymousId(final String anonymousId);
 
     /**
-     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on PaymentMethodInfo must be unique. Once set, it cannot be changed.</p>
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfo" rel="nofollow">PaymentMethodInfo</a> must be unique. Once set, it cannot be changed.</p>
      * @param interfaceId value to be set
      */
 
     public void setInterfaceId(final String interfaceId);
 
     /**
-     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> gross total.</p>
      * @param amountPlanned value to be set
      */
 
@@ -161,7 +161,7 @@ public interface PaymentDraft extends PaymentDraftMixin, com.commercetools.api.m
     public void setPaymentStatus(final PaymentStatusDraft paymentStatus);
 
     /**
-     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionType</a> and a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">TransactionState</a>.</p>
      * @param transactions values to be set
      */
 
@@ -169,7 +169,7 @@ public interface PaymentDraft extends PaymentDraftMixin, com.commercetools.api.m
     public void setTransactions(final TransactionDraft... transactions);
 
     /**
-     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionType</a> and a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">TransactionState</a>.</p>
      * @param transactions values to be set
      */
 

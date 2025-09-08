@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if a ShippingMethod exists with the provided <code>key</code>. Returns a <code>200 OK</code> status if the ShippingMethod exists or a Not Found error otherwise.</p>
+ *  <p>Checks if a ShippingMethod exists with the provided <code>key</code>. Returns a <code>200 OK</code> status if the ShippingMethod exists or a <span>Not Found</span> error otherwise.</p>
  *
  * <hr>
  * <div class=code-example>

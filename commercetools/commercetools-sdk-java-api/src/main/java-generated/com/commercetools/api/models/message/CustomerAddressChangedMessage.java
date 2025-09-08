@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Change Address update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeAddressAction" rel="nofollow">Change Address</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface CustomerAddressChangedMessage extends Message {
     String CUSTOMER_ADDRESS_CHANGED = "CustomerAddressChanged";
 
     /**
-     *  <p>Address that was set during the Change Address update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeAddressAction" rel="nofollow">Change Address</a> update action.</p>
      * @return address
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface CustomerAddressChangedMessage extends Message {
     public Address getAddress();
 
     /**
-     *  <p>Address that was set during the Change Address update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeAddressAction" rel="nofollow">Change Address</a> update action.</p>
      * @param address value to be set
      */
 

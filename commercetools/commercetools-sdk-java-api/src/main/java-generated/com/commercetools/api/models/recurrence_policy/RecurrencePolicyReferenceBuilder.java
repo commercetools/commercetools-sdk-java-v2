@@ -30,7 +30,7 @@ public class RecurrencePolicyReferenceBuilder implements Builder<RecurrencePolic
     private com.commercetools.api.models.recurrence_policy.RecurrencePolicy obj;
 
     /**
-     *  <p>Unique identifier of the referenced RecurrencePolicy.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class RecurrencePolicyReferenceBuilder implements Builder<RecurrencePolic
     }
 
     /**
-     *  <p>Contains the representation of the expanded RecurrencePolicy. Only present in responses to requests with Reference Expansion for RecurrencePolicies.</p>
+     *  <p>Contains the representation of the expanded RecurrencePolicy. Only present in responses to requests with <span>Reference Expansion</span> for RecurrencePolicies.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class RecurrencePolicyReferenceBuilder implements Builder<RecurrencePolic
     }
 
     /**
-     *  <p>Contains the representation of the expanded RecurrencePolicy. Only present in responses to requests with Reference Expansion for RecurrencePolicies.</p>
+     *  <p>Contains the representation of the expanded RecurrencePolicy. Only present in responses to requests with <span>Reference Expansion</span> for RecurrencePolicies.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class RecurrencePolicyReferenceBuilder implements Builder<RecurrencePolic
     }
 
     /**
-     *  <p>Contains the representation of the expanded RecurrencePolicy. Only present in responses to requests with Reference Expansion for RecurrencePolicies.</p>
+     *  <p>Contains the representation of the expanded RecurrencePolicy. Only present in responses to requests with <span>Reference Expansion</span> for RecurrencePolicies.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class RecurrencePolicyReferenceBuilder implements Builder<RecurrencePolic
     }
 
     /**
-     *  <p>Unique identifier of the referenced RecurrencePolicy.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a>.</p>
      * @return id
      */
 
@@ -86,7 +86,7 @@ public class RecurrencePolicyReferenceBuilder implements Builder<RecurrencePolic
     }
 
     /**
-     *  <p>Contains the representation of the expanded RecurrencePolicy. Only present in responses to requests with Reference Expansion for RecurrencePolicies.</p>
+     *  <p>Contains the representation of the expanded RecurrencePolicy. Only present in responses to requests with <span>Reference Expansion</span> for RecurrencePolicies.</p>
      * @return obj
      */
 

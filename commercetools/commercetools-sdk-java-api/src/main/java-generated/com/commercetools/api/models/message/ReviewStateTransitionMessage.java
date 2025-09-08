@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Transition State update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -51,7 +51,7 @@ public interface ReviewStateTransitionMessage extends Message {
     String REVIEW_STATE_TRANSITION = "ReviewStateTransition";
 
     /**
-     *  <p>State of the Review before the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @return oldState
      */
     @Valid
@@ -59,7 +59,7 @@ public interface ReviewStateTransitionMessage extends Message {
     public StateReference getOldState();
 
     /**
-     *  <p>State of the Review after the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @return newState
      */
     @NotNull
@@ -68,7 +68,7 @@ public interface ReviewStateTransitionMessage extends Message {
     public StateReference getNewState();
 
     /**
-     *  <p>Whether the old Review was taken into account in the rating statistics of the target before the state transition.</p>
+     *  <p>Whether the old <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> was taken into account in the rating statistics of the target before the state transition.</p>
      * @return oldIncludedInStatistics
      */
     @NotNull
@@ -76,7 +76,7 @@ public interface ReviewStateTransitionMessage extends Message {
     public Boolean getOldIncludedInStatistics();
 
     /**
-     *  <p>Whether the new Review was taken into account in the rating statistics of the target after the state transition.</p>
+     *  <p>Whether the new <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> was taken into account in the rating statistics of the target after the state transition.</p>
      * @return newIncludedInStatistics
      */
     @NotNull
@@ -84,7 +84,7 @@ public interface ReviewStateTransitionMessage extends Message {
     public Boolean getNewIncludedInStatistics();
 
     /**
-     *  <p>Reference to the resource that the Review belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource that the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> belongs to.</p>
      * @return target
      */
     @Valid
@@ -92,7 +92,7 @@ public interface ReviewStateTransitionMessage extends Message {
     public Reference getTarget();
 
     /**
-     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     *  <p>Whether <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition validations were turned off during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @return force
      */
     @NotNull
@@ -100,42 +100,42 @@ public interface ReviewStateTransitionMessage extends Message {
     public Boolean getForce();
 
     /**
-     *  <p>State of the Review before the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param oldState value to be set
      */
 
     public void setOldState(final StateReference oldState);
 
     /**
-     *  <p>State of the Review after the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param newState value to be set
      */
 
     public void setNewState(final StateReference newState);
 
     /**
-     *  <p>Whether the old Review was taken into account in the rating statistics of the target before the state transition.</p>
+     *  <p>Whether the old <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> was taken into account in the rating statistics of the target before the state transition.</p>
      * @param oldIncludedInStatistics value to be set
      */
 
     public void setOldIncludedInStatistics(final Boolean oldIncludedInStatistics);
 
     /**
-     *  <p>Whether the new Review was taken into account in the rating statistics of the target after the state transition.</p>
+     *  <p>Whether the new <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> was taken into account in the rating statistics of the target after the state transition.</p>
      * @param newIncludedInStatistics value to be set
      */
 
     public void setNewIncludedInStatistics(final Boolean newIncludedInStatistics);
 
     /**
-     *  <p>Reference to the resource that the Review belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource that the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> belongs to.</p>
      * @param target value to be set
      */
 
     public void setTarget(final Reference target);
 
     /**
-     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     *  <p>Whether <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition validations were turned off during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param force value to be set
      */
 

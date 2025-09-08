@@ -19,8 +19,8 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set Asset Sources on Categories.</li>
- *   <li>Set Asset Sources on Products.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CategorySetAssetSourcesAction" rel="nofollow">Set Asset Sources</a> on Categories.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetAssetSourcesAction" rel="nofollow">Set Asset Sources</a> on Products.</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

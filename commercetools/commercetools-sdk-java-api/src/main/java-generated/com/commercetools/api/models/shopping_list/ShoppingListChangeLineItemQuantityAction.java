@@ -38,7 +38,7 @@ public interface ShoppingListChangeLineItemQuantityAction extends ShoppingListUp
     String CHANGE_LINE_ITEM_QUANTITY = "changeLineItemQuantity";
 
     /**
-     *  <p>The <code>id</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">ShoppingListLineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
@@ -46,7 +46,7 @@ public interface ShoppingListChangeLineItemQuantityAction extends ShoppingListUp
     public String getLineItemId();
 
     /**
-     *  <p>The <code>key</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p>The <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">ShoppingListLineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemKey
      */
 
@@ -62,14 +62,14 @@ public interface ShoppingListChangeLineItemQuantityAction extends ShoppingListUp
     public Long getQuantity();
 
     /**
-     *  <p>The <code>id</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">ShoppingListLineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
 
     /**
-     *  <p>The <code>key</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p>The <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">ShoppingListLineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemKey value to be set
      */
 

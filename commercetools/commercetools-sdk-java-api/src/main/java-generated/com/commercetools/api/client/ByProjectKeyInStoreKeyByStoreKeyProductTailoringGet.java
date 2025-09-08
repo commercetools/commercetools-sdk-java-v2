@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Queries Product Tailoring in a specific Store.</p>
+ *  <p>Queries Product Tailoring in a specific <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
  *
  * <hr>
  * <div class=code-example>

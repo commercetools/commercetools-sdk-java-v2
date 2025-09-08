@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>PagedQueryResult for Import Operations.</p>
+ *  <p><span>PagedQueryResult</span> for Import Operations.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportOperationPagedResponseImpl implements ImportOperationPagedResponse, ModelBase {
@@ -54,7 +54,7 @@ public class ImportOperationPagedResponseImpl implements ImportOperationPagedRes
     }
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      */
 
     public Integer getLimit() {
@@ -62,7 +62,7 @@ public class ImportOperationPagedResponseImpl implements ImportOperationPagedRes
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      */
 
     public Long getOffset() {

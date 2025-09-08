@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Unpublish Product update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductUnpublishAction" rel="nofollow">Unpublish Product</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

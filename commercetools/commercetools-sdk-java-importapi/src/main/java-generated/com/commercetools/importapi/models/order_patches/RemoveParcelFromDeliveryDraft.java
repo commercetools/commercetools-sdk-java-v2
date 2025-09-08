@@ -32,7 +32,7 @@ import jakarta.validation.constraints.NotNull;
 public interface RemoveParcelFromDeliveryDraft extends io.vrap.rmf.base.client.Draft<RemoveParcelFromDeliveryDraft> {
 
     /**
-     *  <p><code>id</code> of the Parcel to be removed from the Delivery.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a> to be removed from the Delivery.</p>
      * @return parcelId
      */
     @NotNull
@@ -40,7 +40,7 @@ public interface RemoveParcelFromDeliveryDraft extends io.vrap.rmf.base.client.D
     public String getParcelId();
 
     /**
-     *  <p><code>id</code> of the Parcel to be removed from the Delivery.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a> to be removed from the Delivery.</p>
      * @param parcelId value to be set
      */
 

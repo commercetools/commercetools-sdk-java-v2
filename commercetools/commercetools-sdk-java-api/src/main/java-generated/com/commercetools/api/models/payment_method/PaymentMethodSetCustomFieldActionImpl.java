@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Adding a Custom Field to a PaymentMethod generates the PaymentMethodCustomFieldAdded Message, removing one generates the PaymentMethodCustomFieldRemoved Message, and updating an existing one generates the PaymentMethodCustomFieldChanged Message.</p>
+ *  <p>Adding a Custom Field to a PaymentMethod generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodCustomFieldAddedMessage" rel="nofollow">PaymentMethodCustomFieldAdded</a> Message, removing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodCustomFieldRemovedMessage" rel="nofollow">PaymentMethodCustomFieldRemoved</a> Message, and updating an existing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodCustomFieldChangedMessage" rel="nofollow">PaymentMethodCustomFieldChanged</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentMethodSetCustomFieldActionImpl implements PaymentMethodSetCustomFieldAction, ModelBase {
@@ -55,7 +55,7 @@ public class PaymentMethodSetCustomFieldActionImpl implements PaymentMethodSetCu
     }
 
     /**
-     *  <p>Name of the Custom Field to add, update, or remove.</p>
+     *  <p>Name of the <span>Custom Field</span> to add, update, or remove.</p>
      */
 
     public String getName() {
@@ -63,7 +63,7 @@ public class PaymentMethodSetCustomFieldActionImpl implements PaymentMethodSetCu
     }
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      */
 
     public java.lang.Object getValue() {

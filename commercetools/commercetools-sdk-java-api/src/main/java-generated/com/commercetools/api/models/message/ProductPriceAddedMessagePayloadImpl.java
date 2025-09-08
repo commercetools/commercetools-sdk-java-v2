@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Add Price update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductAddPriceAction" rel="nofollow">Add Price</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPriceAddedMessagePayloadImpl implements ProductPriceAddedMessagePayload, ModelBase {
@@ -59,7 +59,7 @@ public class ProductPriceAddedMessagePayloadImpl implements ProductPriceAddedMes
     }
 
     /**
-     *  <p>Unique identifier of the ProductVariant for which the Price was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which the Price was added.</p>
      */
 
     public Long getVariantId() {
@@ -67,7 +67,7 @@ public class ProductPriceAddedMessagePayloadImpl implements ProductPriceAddedMes
     }
 
     /**
-     *  <p>The Embedded Price that was added to the ProductVariant.</p>
+     *  <p>The Embedded Price that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      */
 
     public com.commercetools.api.models.common.Price getPrice() {
@@ -75,7 +75,7 @@ public class ProductPriceAddedMessagePayloadImpl implements ProductPriceAddedMes
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      */
 
     public Boolean getStaged() {

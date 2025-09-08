@@ -17,8 +17,8 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Updates the Product Variant Selection of an existing Product Selection Assignment. A ProductVariantSelection can only be set if the Product has already been included in the Product Selection with <code>Individual</code> ProductSelectionMode.</p>
- *  <p>If the specified Product is not assigned to the Product Selection, a ProductAssignmentMissing error is returned.</p>
+ *  <p>Updates the Product Variant Selection of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionAssignment" rel="nofollow">Product Selection Assignment</a>. A <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantSelection" rel="nofollow">ProductVariantSelection</a> can only be set if the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> has already been included in the Product Selection with <code>Individual</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</p>
+ *  <p>If the specified Product is not assigned to the Product Selection, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductAssignmentMissingError" rel="nofollow">ProductAssignmentMissing</a> error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

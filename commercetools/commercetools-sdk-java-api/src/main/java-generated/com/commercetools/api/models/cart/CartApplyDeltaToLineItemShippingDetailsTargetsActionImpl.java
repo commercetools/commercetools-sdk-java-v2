@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>To override the shipping details, see Set LineItem ShippingDetails.</p>
+ *  <p>To override the shipping details, see <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetLineItemShippingDetailsAction" rel="nofollow">Set LineItem ShippingDetails</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl
@@ -60,7 +60,7 @@ public class CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl
     }
 
     /**
-     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemId() {
@@ -68,7 +68,7 @@ public class CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl
     }
 
     /**
-     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemKey() {

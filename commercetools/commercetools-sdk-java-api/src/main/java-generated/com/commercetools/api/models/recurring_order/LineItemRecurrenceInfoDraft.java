@@ -35,7 +35,7 @@ import jakarta.validation.constraints.NotNull;
 public interface LineItemRecurrenceInfoDraft extends io.vrap.rmf.base.client.Draft<LineItemRecurrenceInfoDraft> {
 
     /**
-     *  <p>ResourceIdentifier to a RecurrencePolicy.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a RecurrencePolicy.</p>
      * @return recurrencePolicy
      */
     @NotNull
@@ -52,7 +52,7 @@ public interface LineItemRecurrenceInfoDraft extends io.vrap.rmf.base.client.Dra
     public PriceSelectionMode getPriceSelectionMode();
 
     /**
-     *  <p>ResourceIdentifier to a RecurrencePolicy.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a RecurrencePolicy.</p>
      * @param recurrencePolicy value to be set
      */
 

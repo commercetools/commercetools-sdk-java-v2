@@ -26,7 +26,7 @@ public class CustomerCompanyNameSetMessagePayloadBuilder implements Builder<Cust
     private String companyName;
 
     /**
-     *  <p>The <code>companyName</code> that was set during the Set Company Name update action.</p>
+     *  <p>The <code>companyName</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCompanyNameAction" rel="nofollow">Set Company Name</a> update action.</p>
      * @param companyName value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class CustomerCompanyNameSetMessagePayloadBuilder implements Builder<Cust
     }
 
     /**
-     *  <p>The <code>companyName</code> that was set during the Set Company Name update action.</p>
+     *  <p>The <code>companyName</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCompanyNameAction" rel="nofollow">Set Company Name</a> update action.</p>
      * @return companyName
      */
 

@@ -24,7 +24,7 @@ public class StagedQuoteValidToSetMessagePayloadBuilder implements Builder<Stage
     private java.time.ZonedDateTime validTo;
 
     /**
-     *  <p>Expiration date for the Staged Quote after the Set Valid To update action.</p>
+     *  <p>Expiration date for the Staged Quote after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteSetValidToAction" rel="nofollow">Set Valid To</a> update action.</p>
      * @param validTo value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class StagedQuoteValidToSetMessagePayloadBuilder implements Builder<Stage
     }
 
     /**
-     *  <p>Expiration date for the Staged Quote after the Set Valid To update action.</p>
+     *  <p>Expiration date for the Staged Quote after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteSetValidToAction" rel="nofollow">Set Valid To</a> update action.</p>
      * @return validTo
      */
 

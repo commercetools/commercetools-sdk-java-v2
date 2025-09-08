@@ -16,7 +16,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Returned when a Product Variant value conflicts with an existing one during an Update Product request.</p>
+ *  <p>Returned when a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> value conflicts with an existing one during an <span>Update Product</span> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

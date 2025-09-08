@@ -19,8 +19,8 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set Asset CustomField on Categories.</li>
- *   <li>Set Asset CustomField on Products.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CategorySetAssetCustomFieldAction" rel="nofollow">Set Asset CustomField</a> on Categories.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetAssetCustomFieldAction" rel="nofollow">Set Asset CustomField</a> on Products.</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -98,7 +98,7 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      */
 
     public String getName() {
@@ -106,7 +106,7 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
     }
 
     /**
-     *  <p><code>id</code> of the referenced Type.</p>
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      */
 
     public String getCustomTypeId() {

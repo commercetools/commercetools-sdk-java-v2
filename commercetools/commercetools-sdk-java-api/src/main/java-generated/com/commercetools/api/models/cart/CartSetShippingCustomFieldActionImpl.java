@@ -58,7 +58,7 @@ public class CartSetShippingCustomFieldActionImpl implements CartSetShippingCust
     }
 
     /**
-     *  <p>The <code>shippingKey</code> of the Shipping to customize. Used to specify which Shipping Method to customize on a Cart with <code>Multiple</code> ShippingMode. Leave this empty to customize the one and only ShippingMethod on a <code>Single</code> ShippingMode Cart.</p>
+     *  <p>The <code>shippingKey</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Shipping" rel="nofollow">Shipping</a> to customize. Used to specify which Shipping Method to customize on a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Leave this empty to customize the one and only ShippingMethod on a <code>Single</code> ShippingMode Cart.</p>
      */
 
     public String getShippingKey() {
@@ -66,7 +66,7 @@ public class CartSetShippingCustomFieldActionImpl implements CartSetShippingCust
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      */
 
     public String getName() {
@@ -74,7 +74,7 @@ public class CartSetShippingCustomFieldActionImpl implements CartSetShippingCust
     }
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      */
 
     public java.lang.Object getValue() {

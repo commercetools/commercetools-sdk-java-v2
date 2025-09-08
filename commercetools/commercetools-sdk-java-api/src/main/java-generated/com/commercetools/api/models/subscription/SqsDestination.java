@@ -15,9 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>AWS SQS is a pull-queue on AWS. The queue must be a Standard queue type with a <code>MaximumMessageSize</code> of <code>256 KB</code>.</p>
+ *  <p><span>AWS SQS</span> is a pull-queue on AWS. The queue must be a <span>Standard</span> queue type with a <code>MaximumMessageSize</code> of <code>256 KB</code>.</p>
  *  <p>We recommend setting <code>authenticationMode</code> to <code>IAM</code>, to avoid unnecessary key management. For IAM authentication and before creating the Subscription, give permissions to the following user account: <code>arn:aws:iam::362576667341:user/subscriptions</code>. Otherwise, a test message will not be sent.</p>
- *  <p>If you prefer to use <code>Credentials</code> for authentication, we recommend creating an IAM user with an <code>accessKey</code> and <code>accessSecret</code> pair specifically for each Subscription.</p>
+ *  <p>If you prefer to use <code>Credentials</code> for authentication, we recommend <span>creating an IAM user</span> with an <code>accessKey</code> and <code>accessSecret</code> pair specifically for each Subscription.</p>
  *  <p>The IAM user should only have the <code>sqs:SendMessage</code> permission on this queue.</p>
  *
  * <hr>
@@ -66,7 +66,7 @@ public interface SqsDestination extends Destination {
     public String getQueueUrl();
 
     /**
-     *  <p>AWS Region the message queue is located in.</p>
+     *  <p><span>AWS Region</span> the message queue is located in.</p>
      * @return region
      */
     @NotNull
@@ -103,7 +103,7 @@ public interface SqsDestination extends Destination {
     public void setQueueUrl(final String queueUrl);
 
     /**
-     *  <p>AWS Region the message queue is located in.</p>
+     *  <p><span>AWS Region</span> the message queue is located in.</p>
      * @param region value to be set
      */
 

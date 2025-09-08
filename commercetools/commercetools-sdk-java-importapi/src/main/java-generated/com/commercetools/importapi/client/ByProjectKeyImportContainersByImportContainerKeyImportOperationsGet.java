@@ -21,7 +21,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Retrieves all ImportOperations within an ImportContainer.</p>
+ *  <p>Retrieves all ImportOperations within an <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainer</a>.</p>
  *
  * <hr>
  * <div class=code-example>

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Changes the <code>email</code> of the Customer and sets the <code>isEmailVerified</code> property to <code>false</code>. This update action generates a CustomerEmailChanged Message.</p>
+ *  <p>Changes the <code>email</code> of the Customer and sets the <code>isEmailVerified</code> property to <code>false</code>. This update action generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerEmailChangedMessage" rel="nofollow">CustomerEmailChanged</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerChangeEmailActionImpl implements CustomerChangeEmailAction, ModelBase {

@@ -20,8 +20,8 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set LineItem Custom Type on Orders.</li>
- *   <li>Set LineItem Custom Type on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetLineItemCustomTypeAction" rel="nofollow">Set LineItem Custom Type</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetLineItemCustomTypeAction" rel="nofollow">Set LineItem Custom Type</a> on Staged Orders.</li>
  *  </ul>
  *
  * <hr>
@@ -83,7 +83,7 @@ public interface SetOrderLineItemCustomTypeChange extends Change {
     public CustomFields getNextValue();
 
     /**
-     *  <p>Name of the Product the updated Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
      * @return lineItem
      */
     @NotNull
@@ -92,7 +92,7 @@ public interface SetOrderLineItemCustomTypeChange extends Change {
     public LocalizedString getLineItem();
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     *  <p><code>sku</code> or <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return variant
      */
     @NotNull
@@ -121,14 +121,14 @@ public interface SetOrderLineItemCustomTypeChange extends Change {
     public void setNextValue(final CustomFields nextValue);
 
     /**
-     *  <p>Name of the Product the updated Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
      * @param lineItem value to be set
      */
 
     public void setLineItem(final LocalizedString lineItem);
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     *  <p><code>sku</code> or <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param variant value to be set
      */
 

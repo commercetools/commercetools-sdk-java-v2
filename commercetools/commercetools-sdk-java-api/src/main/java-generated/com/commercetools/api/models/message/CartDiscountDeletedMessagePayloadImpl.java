@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Delete CartDiscount request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/cart-discounts/{id}:DELETE" rel="nofollow">Delete CartDiscount</a> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountDeletedMessagePayloadImpl implements CartDiscountDeletedMessagePayload, ModelBase {

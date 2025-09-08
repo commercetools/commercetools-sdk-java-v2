@@ -103,7 +103,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
 
     /**
      *  <p>User-defined unique identifier of the ProductVariant.</p>
-     *  <p>This is different from Product <code>key</code>.</p>
+     *  <p>This is different from <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> <code>key</code>.</p>
      */
 
     public String getKey() {
@@ -119,7 +119,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
@@ -127,7 +127,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *  <p>Only available when price selection is used. Cannot be used in a Query Predicate.</p>
+     *  <p>Only available when <span>price selection</span> is used. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
      */
 
     public com.commercetools.api.models.common.Price getPrice() {
@@ -151,7 +151,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *  <p>Set if the Product Variant is tracked by Inventory. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is eventually consistent).</p>
+     *  <p>Set if the Product Variant is tracked by <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">Inventory</a>. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is <span>eventually consistent</span>).</p>
      */
 
     public com.commercetools.api.models.product.ProductVariantAvailability getAvailability() {
@@ -159,7 +159,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a Product Projection Search request.</p>
+     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearch" rel="nofollow">Product Projection Search</a> request.</p>
      */
 
     public Boolean getIsMatchingVariant() {
@@ -167,7 +167,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *  <p>Only available in response to a Product Projection Search request with Product price selection. Can be used to sort, filter, and facet.</p>
+     *  <p>Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearch" rel="nofollow">Product Projection Search</a> request with <span>Product price selection</span>. Can be used to sort, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">filter</a>, and facet.</p>
      */
 
     public com.commercetools.api.models.common.ScopedPrice getScopedPrice() {
@@ -175,7 +175,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *  <p>Only available in response to a Product Projection Search request with Product price selection.</p>
+     *  <p>Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">Product Projection Search</a> request with <span>Product price selection</span>.</p>
      */
 
     public Boolean getScopedPriceDiscounted() {
@@ -183,7 +183,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *  <p>Only available when Product price selection is used. Cannot be used in a Query Predicate.</p>
+     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Price> getRecurrencePrices() {

@@ -39,7 +39,7 @@ public class QuoteRequestLabelBuilder implements Builder<QuoteRequestLabel> {
     }
 
     /**
-     *  <p>The Buyer who raised the Quote Request.</p>
+     *  <p>The <span>Buyer</span> who raised the Quote Request.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class QuoteRequestLabelBuilder implements Builder<QuoteRequestLabel> {
     }
 
     /**
-     *  <p>The Buyer who raised the Quote Request.</p>
+     *  <p>The <span>Buyer</span> who raised the Quote Request.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class QuoteRequestLabelBuilder implements Builder<QuoteRequestLabel> {
     }
 
     /**
-     *  <p>The Buyer who raised the Quote Request.</p>
+     *  <p>The <span>Buyer</span> who raised the Quote Request.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class QuoteRequestLabelBuilder implements Builder<QuoteRequestLabel> {
     }
 
     /**
-     *  <p>The Buyer who raised the Quote Request.</p>
+     *  <p>The <span>Buyer</span> who raised the Quote Request.</p>
      * @return customer
      */
 

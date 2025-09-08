@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Set PriceMode update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetPriceModeAction" rel="nofollow">Set PriceMode</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -46,7 +46,7 @@ public interface ProductPriceModeSetMessage extends Message {
     String PRODUCT_PRICE_MODE_SET = "ProductPriceModeSet";
 
     /**
-     *  <p>The PriceMode that was set.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPriceModeEnum" rel="nofollow">PriceMode</a> that was set.</p>
      * @return to
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface ProductPriceModeSetMessage extends Message {
     public ProductPriceModeEnum getTo();
 
     /**
-     *  <p>The PriceMode that was set.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPriceModeEnum" rel="nofollow">PriceMode</a> that was set.</p>
      * @param to value to be set
      */
 

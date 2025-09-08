@@ -16,10 +16,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Authenticates a global Customer not associated with a Store. For more information, see Global versus Store-specific Customers. If the Customer is registered in a Store, use the Authenticate (sign in) Customer in Store method.</p>
- *  <p>Triggers Cart merge during sign-in.</p>
- *  <p>A Cart returned in the CustomerSignInResult has any invalid Line Items removed and is updated with the latest prices, taxes, and discounts. During these updates, the following errors can be returned: MatchingPriceNotFound and MissingTaxRateForCountry.</p>
- *  <p>If an account with the given credentials is not found, an InvalidCredentials error is returned.</p>
+ *  <p>Authenticates a global Customer.</p>
+ *  <p>If the Customer has multiple active Carts, the anonymous Cart is <span>merged</span> into the most recently modified active Cart.</p>
+ *  <p>If an account with the given credentials is not found, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidCredentialsError" rel="nofollow">InvalidCredentials</a> error is returned.</p>
  *
  * <hr>
  * <div class=code-example>

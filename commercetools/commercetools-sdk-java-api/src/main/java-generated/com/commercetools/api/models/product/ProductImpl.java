@@ -139,7 +139,7 @@ public class ProductImpl implements Product, ModelBase {
 
     /**
      *  <p>User-defined unique identifier of the Product.</p>
-     *  <p>This is different from the <code>key</code> of a ProductVariant.</p>
+     *  <p>This is different from the <code>key</code> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      */
 
     public String getKey() {
@@ -163,7 +163,7 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-     *  <p>The TaxCategory of the Product.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of the Product.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory() {
@@ -171,7 +171,7 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-     *  <p>State of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Product.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {

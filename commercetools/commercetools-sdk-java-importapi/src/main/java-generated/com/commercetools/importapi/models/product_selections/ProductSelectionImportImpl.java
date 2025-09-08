@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Represents the data used to import a ProductSelection. Once imported, this data is persisted as a ProductSelection in the Project.</p>
+ *  <p>Represents the data used to import a ProductSelection. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">ProductSelection</a> in the Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionImportImpl implements ProductSelectionImport, ModelBase {
@@ -55,7 +55,7 @@ public class ProductSelectionImportImpl implements ProductSelectionImport, Model
     }
 
     /**
-     *  <p>User-defined unique identifier. If an ProductSelection with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If an <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">ProductSelection</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      */
 
     public String getKey() {

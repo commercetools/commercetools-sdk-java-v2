@@ -43,7 +43,7 @@ public class ItemShippingTargetImpl implements ItemShippingTarget, ModelBase {
     }
 
     /**
-     *  <p>Key of the address in the Cart <code>itemShippingAddresses</code>. Duplicate address keys are not allowed.</p>
+     *  <p>Key of the address in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> <code>itemShippingAddresses</code>. Duplicate address keys are not allowed.</p>
      */
 
     public String getAddressKey() {

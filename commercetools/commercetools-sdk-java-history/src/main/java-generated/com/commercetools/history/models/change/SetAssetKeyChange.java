@@ -19,8 +19,8 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set Asset Key on Categories.</li>
- *   <li>Set Asset Key on Products.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CategorySetAssetKeyAction" rel="nofollow">Set Asset Key</a> on Categories.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetAssetKeyAction" rel="nofollow">Set Asset Key</a> on Products.</li>
  *  </ul>
  *
  * <hr>

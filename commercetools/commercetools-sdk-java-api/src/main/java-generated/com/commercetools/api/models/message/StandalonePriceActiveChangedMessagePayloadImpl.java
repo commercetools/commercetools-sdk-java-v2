@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Change Active update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceChangeActiveAction" rel="nofollow">Change Active</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceActiveChangedMessagePayloadImpl
@@ -56,7 +56,7 @@ public class StandalonePriceActiveChangedMessagePayloadImpl
     }
 
     /**
-     *  <p>Value of the <code>active</code> field of the StandalonePrice after the Change Active update action.</p>
+     *  <p>Value of the <code>active</code> field of the StandalonePrice after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceChangeActiveAction" rel="nofollow">Change Active</a> update action.</p>
      */
 
     public Boolean getActive() {
@@ -64,7 +64,7 @@ public class StandalonePriceActiveChangedMessagePayloadImpl
     }
 
     /**
-     *  <p>Value of the <code>active</code> field of the StandalonePrice before the Change Active update action.</p>
+     *  <p>Value of the <code>active</code> field of the StandalonePrice before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceChangeActiveAction" rel="nofollow">Change Active</a> update action.</p>
      */
 
     public Boolean getOldActive() {

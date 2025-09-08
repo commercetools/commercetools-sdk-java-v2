@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Setting the country can lead to changes in the LineItem prices.</p>
+ *  <p>Setting the country can lead to changes in the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> prices.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,7 +37,7 @@ public interface StagedOrderSetCountryAction extends StagedOrderUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
-     *  <p>If the Cart is bound to a <code>store</code>, the provided value must be included in the Store's <code>countries</code>. Otherwise a CountryNotConfiguredInStore error is returned.</p>
+     *  <p>If the Cart is bound to a <code>store</code>, the provided value must be included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>'s <code>countries</code>. Otherwise a <a href="https://docs.commercetools.com/apis/ctp:api:type:CountryNotConfiguredInStoreError" rel="nofollow">CountryNotConfiguredInStore</a> error is returned.</p>
      * @return country
      */
 
@@ -46,7 +46,7 @@ public interface StagedOrderSetCountryAction extends StagedOrderUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
-     *  <p>If the Cart is bound to a <code>store</code>, the provided value must be included in the Store's <code>countries</code>. Otherwise a CountryNotConfiguredInStore error is returned.</p>
+     *  <p>If the Cart is bound to a <code>store</code>, the provided value must be included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>'s <code>countries</code>. Otherwise a <a href="https://docs.commercetools.com/apis/ctp:api:type:CountryNotConfiguredInStoreError" rel="nofollow">CountryNotConfiguredInStore</a> error is returned.</p>
      * @param country value to be set
      */
 

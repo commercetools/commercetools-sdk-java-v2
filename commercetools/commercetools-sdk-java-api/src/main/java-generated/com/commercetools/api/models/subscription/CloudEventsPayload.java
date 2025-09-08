@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The CloudEventsFormat represents event data in a way that conforms to a common specification. The payload can be found inside the <code>data</code> field.</p>
+ *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:CloudEventsFormat" rel="nofollow">CloudEventsFormat</a> represents event data in a way that conforms to a common specification. The payload can be found inside the <code>data</code> field.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -46,7 +46,7 @@ public interface CloudEventsPayload {
     String CLOUD_EVENTS = "CloudEvents";
 
     /**
-     *  <p>The version of the CloudEvents specification which the event uses.</p>
+     *  <p>The version of the <span>CloudEvents</span> specification which the event uses.</p>
      * @return specversion
      */
     @NotNull
@@ -62,7 +62,7 @@ public interface CloudEventsPayload {
     public String getId();
 
     /**
-     *  <p>The <code>type</code> is namespaced with <code>com.commercetools</code>, followed by the ReferenceTypeId, the type of Subscription (either <code>message</code> or <code>change</code>), and the message or change type. For example, <code>com.commercetools.product.message.ProductPublished</code> or <code>com.commercetools.order.change.ResourceCreated</code>.</p>
+     *  <p>The <code>type</code> is namespaced with <code>com.commercetools</code>, followed by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferenceTypeId" rel="nofollow">ReferenceTypeId</a>, the type of Subscription (either <code>message</code> or <code>change</code>), and the message or change type. For example, <code>com.commercetools.product.message.ProductPublished</code> or <code>com.commercetools.order.change.ResourceCreated</code>.</p>
      * @return type
      */
     @NotNull
@@ -70,7 +70,7 @@ public interface CloudEventsPayload {
     public String getType();
 
     /**
-     *  <p>The default REST URI of the ReferenceTypeId that triggered this event, including the project key.</p>
+     *  <p>The default REST URI of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferenceTypeId" rel="nofollow">ReferenceTypeId</a> that triggered this event, including the project key.</p>
      * @return source
      */
     @NotNull
@@ -94,7 +94,7 @@ public interface CloudEventsPayload {
     public ZonedDateTime getTime();
 
     /**
-     *  <p>Corresponds to the <code>sequenceNumber</code> of a MessageSubscription. Can be used to process messages in the correct order.</p>
+     *  <p>Corresponds to the <code>sequenceNumber</code> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:MessageSubscription" rel="nofollow">MessageSubscription</a>. Can be used to process messages in the correct order.</p>
      * @return sequence
      */
 
@@ -110,7 +110,7 @@ public interface CloudEventsPayload {
     public String getSequencetype();
 
     /**
-     *  <p>The URI from which the message can be retrieved if messages are enabled. Only set for MessageSubscriptions.</p>
+     *  <p>The URI from which the message can be retrieved if messages are <span>enabled</span>. Only set for <a href="https://docs.commercetools.com/apis/ctp:api:type:MessageSubscription" rel="nofollow">MessageSubscriptions</a>.</p>
      * @return dataref
      */
 
@@ -118,7 +118,7 @@ public interface CloudEventsPayload {
     public String getDataref();
 
     /**
-     *  <p>MessageDeliveryPayload, ResourceCreatedDeliveryPayload, ResourceUpdatedDeliveryPayload, or ResourceDeletedDeliveryPayload, EventDeliveryPayload.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:MessageDeliveryPayload" rel="nofollow">MessageDeliveryPayload</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceCreatedDeliveryPayload" rel="nofollow">ResourceCreatedDeliveryPayload</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceUpdatedDeliveryPayload" rel="nofollow">ResourceUpdatedDeliveryPayload</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceDeletedDeliveryPayload" rel="nofollow">ResourceDeletedDeliveryPayload</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:EventDeliveryPayload" rel="nofollow">EventDeliveryPayload</a>.</p>
      * @return data
      */
     @NotNull
@@ -127,7 +127,7 @@ public interface CloudEventsPayload {
     public DeliveryPayload getData();
 
     /**
-     *  <p>The version of the CloudEvents specification which the event uses.</p>
+     *  <p>The version of the <span>CloudEvents</span> specification which the event uses.</p>
      * @param specversion value to be set
      */
 
@@ -141,14 +141,14 @@ public interface CloudEventsPayload {
     public void setId(final String id);
 
     /**
-     *  <p>The <code>type</code> is namespaced with <code>com.commercetools</code>, followed by the ReferenceTypeId, the type of Subscription (either <code>message</code> or <code>change</code>), and the message or change type. For example, <code>com.commercetools.product.message.ProductPublished</code> or <code>com.commercetools.order.change.ResourceCreated</code>.</p>
+     *  <p>The <code>type</code> is namespaced with <code>com.commercetools</code>, followed by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferenceTypeId" rel="nofollow">ReferenceTypeId</a>, the type of Subscription (either <code>message</code> or <code>change</code>), and the message or change type. For example, <code>com.commercetools.product.message.ProductPublished</code> or <code>com.commercetools.order.change.ResourceCreated</code>.</p>
      * @param type value to be set
      */
 
     public void setType(final String type);
 
     /**
-     *  <p>The default REST URI of the ReferenceTypeId that triggered this event, including the project key.</p>
+     *  <p>The default REST URI of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferenceTypeId" rel="nofollow">ReferenceTypeId</a> that triggered this event, including the project key.</p>
      * @param source value to be set
      */
 
@@ -169,7 +169,7 @@ public interface CloudEventsPayload {
     public void setTime(final ZonedDateTime time);
 
     /**
-     *  <p>Corresponds to the <code>sequenceNumber</code> of a MessageSubscription. Can be used to process messages in the correct order.</p>
+     *  <p>Corresponds to the <code>sequenceNumber</code> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:MessageSubscription" rel="nofollow">MessageSubscription</a>. Can be used to process messages in the correct order.</p>
      * @param sequence value to be set
      */
 
@@ -183,14 +183,14 @@ public interface CloudEventsPayload {
     public void setSequencetype(final String sequencetype);
 
     /**
-     *  <p>The URI from which the message can be retrieved if messages are enabled. Only set for MessageSubscriptions.</p>
+     *  <p>The URI from which the message can be retrieved if messages are <span>enabled</span>. Only set for <a href="https://docs.commercetools.com/apis/ctp:api:type:MessageSubscription" rel="nofollow">MessageSubscriptions</a>.</p>
      * @param dataref value to be set
      */
 
     public void setDataref(final String dataref);
 
     /**
-     *  <p>MessageDeliveryPayload, ResourceCreatedDeliveryPayload, ResourceUpdatedDeliveryPayload, or ResourceDeletedDeliveryPayload, EventDeliveryPayload.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:MessageDeliveryPayload" rel="nofollow">MessageDeliveryPayload</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceCreatedDeliveryPayload" rel="nofollow">ResourceCreatedDeliveryPayload</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceUpdatedDeliveryPayload" rel="nofollow">ResourceUpdatedDeliveryPayload</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceDeletedDeliveryPayload" rel="nofollow">ResourceDeletedDeliveryPayload</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:EventDeliveryPayload" rel="nofollow">EventDeliveryPayload</a>.</p>
      * @param data value to be set
      */
 

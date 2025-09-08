@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Delete RecurringOrder request.</p>
+ *  <p>Generated after a successful <span>Delete RecurringOrder</span> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RecurringOrderDeletedMessagePayloadImpl implements RecurringOrderDeletedMessagePayload, ModelBase {
@@ -52,7 +52,7 @@ public class RecurringOrderDeletedMessagePayloadImpl implements RecurringOrderDe
     }
 
     /**
-     *  <p>RecurringOrder that was deleted.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was deleted.</p>
      */
 
     public com.commercetools.api.models.recurring_order.RecurringOrder getRecurringOrder() {

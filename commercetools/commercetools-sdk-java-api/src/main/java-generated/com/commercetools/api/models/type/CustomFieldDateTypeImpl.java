@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Field type for Date values.</p>
+ *  <p>Field type for <a href="https://docs.commercetools.com/apis/ctp:api:type:Date" rel="nofollow">Date</a> values.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldDateTypeImpl implements CustomFieldDateType, ModelBase {

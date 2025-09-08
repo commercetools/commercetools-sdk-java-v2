@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Field type for LocalizedString values.</p>
+ *  <p>Field type for <a href="https://docs.commercetools.com/apis/ctp:api:type:LocalizedString" rel="nofollow">LocalizedString</a> values.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

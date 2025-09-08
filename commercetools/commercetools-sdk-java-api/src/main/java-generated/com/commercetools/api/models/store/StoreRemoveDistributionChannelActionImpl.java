@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>This update action produces the StoreDistributionChannelsChanged Message.</p>
+ *  <p>This update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreDistributionChannelsChangedMessage" rel="nofollow">StoreDistributionChannelsChanged</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreRemoveDistributionChannelActionImpl implements StoreRemoveDistributionChannelAction, ModelBase {
@@ -52,7 +52,7 @@ public class StoreRemoveDistributionChannelActionImpl implements StoreRemoveDist
     }
 
     /**
-     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {

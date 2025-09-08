@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+ *  <p>A localized string is a JSON object where the keys are of <span>IETF language tag</span>, and the values the corresponding strings used for that language.</p>
  *  <pre><code>{
  *    "de": "Hundefutter",
  *    "en": "dog food"

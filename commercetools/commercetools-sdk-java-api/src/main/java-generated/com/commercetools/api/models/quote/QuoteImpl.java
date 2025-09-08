@@ -254,7 +254,7 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
-     *  <p>The Buyer who owns the Quote.</p>
+     *  <p>The <span>Buyer</span> who owns the Quote.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -278,7 +278,7 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
-     *  <p>Message from the Seller included in the offer.</p>
+     *  <p>Message from the <span>Seller</span> included in the offer.</p>
      */
 
     public String getSellerComment() {
@@ -286,7 +286,7 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
-     *  <p>Message from the Buyer included in the renegotiation request.</p>
+     *  <p>Message from the <span>Buyer</span> included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestQuoteRenegotiationAction" rel="nofollow">renegotiation request</a>.</p>
      */
 
     public String getBuyerComment() {
@@ -294,7 +294,7 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
-     *  <p>The Store to which the Buyer belongs.</p>
+     *  <p>The Store to which the <span>Buyer</span> belongs.</p>
      */
 
     public com.commercetools.api.models.store.StoreKeyReference getStore() {
@@ -334,7 +334,7 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
-     *  <p>Used to determine the eligible ShippingMethods and rates as well as the tax rate of the Line Items.</p>
+     *  <p>Used to determine the eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethods</a> and rates as well as the tax rate of the Line Items.</p>
      */
 
     public com.commercetools.api.models.common.Address getShippingAddress() {
@@ -350,7 +350,7 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
-     *  <p>Inventory mode of the Cart referenced in the QuoteRequestDraft.</p>
+     *  <p>Inventory mode of the Cart referenced in the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestDraft" rel="nofollow">QuoteRequestDraft</a>.</p>
      */
 
     public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
@@ -358,7 +358,7 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
-     *  <p>Tax mode of the Cart referenced in the QuoteRequestDraft.</p>
+     *  <p>Tax mode of the Cart referenced in the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestDraft" rel="nofollow">QuoteRequestDraft</a>.</p>
      */
 
     public com.commercetools.api.models.cart.TaxMode getTaxMode() {
@@ -366,7 +366,7 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
-     *  <p>When calculating total prices on LineItems and CustomLineItems, the selected mode is used for rounding.</p>
+     *  <p>When calculating total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, the selected mode is used for rounding.</p>
      */
 
     public com.commercetools.api.models.cart.RoundingMode getPriceRoundingMode() {
@@ -398,7 +398,7 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
-     *  <p>Set automatically once the ShippingMethod is set.</p>
+     *  <p>Set automatically once the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> is set.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingInfo getShippingInfo() {
@@ -414,7 +414,7 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
-     *  <p>Used to select a ShippingRatePriceTier.</p>
+     *  <p>Used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput() {
@@ -454,7 +454,7 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
-     *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Quote. This reference can point to a State in a custom workflow.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -462,7 +462,7 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
-     *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
+     *  <p>The Purchase Order Number is typically set by the <span>Buyer</span> on a <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> to track the purchase order during the <span>quote and order flow</span>.</p>
      */
 
     public String getPurchaseOrderNumber() {
@@ -470,7 +470,7 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
-     *  <p>The BusinessUnit for the Quote. Only available for B2B-enabled Projects.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> for the Quote. Only available for <span>B2B</span>-enabled Projects.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {

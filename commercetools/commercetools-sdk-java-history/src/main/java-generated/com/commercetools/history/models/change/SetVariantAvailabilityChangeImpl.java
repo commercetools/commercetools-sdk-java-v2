@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered automatically when an InventoryEntry associated with a Product changes.</p>
+ *  <p>Change triggered automatically when an <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> associated with a Product changes.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetVariantAvailabilityChangeImpl implements SetVariantAvailabilityChange, ModelBase {
@@ -91,8 +91,8 @@ public class SetVariantAvailabilityChangeImpl implements SetVariantAvailabilityC
 
     /**
      *  <ul>
-     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
-     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *  </ul>
      */
 
@@ -101,7 +101,7 @@ public class SetVariantAvailabilityChangeImpl implements SetVariantAvailabilityC
     }
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     *  <p><code>sku</code> or <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      */
 
     public String getVariant() {

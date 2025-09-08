@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Setting the description for an Approval Rule generates an ApprovalRuleDescriptionSet Message.</p>
+ *  <p>Setting the description for an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">Approval Rule</a> generates an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleDescriptionSetMessage" rel="nofollow">ApprovalRuleDescriptionSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

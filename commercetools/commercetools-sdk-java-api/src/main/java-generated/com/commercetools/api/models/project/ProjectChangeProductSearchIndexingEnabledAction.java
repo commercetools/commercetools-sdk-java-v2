@@ -39,8 +39,8 @@ public interface ProjectChangeProductSearchIndexingEnabledAction extends Project
 
     /**
      *  <ul>
-     *   <li>If <code>false</code>, the indexing of Product information will stop and the Product Projection Search as well as the Search Term Suggestions API will no longer be available for this Project. The Project's SearchIndexingConfiguration <code>status</code> for <code>products</code> will be changed to <code>"Deactivated"</code>.</li>
-     *   <li>If <code>true</code>, the indexing of Product information will start and the Product Projection Search as well as the Search Term Suggestions API will become available soon after for this Project. Proportional to the amount of information being indexed, the Project's SearchIndexingConfiguration <code>status</code> for <code>products</code> will be shown as <code>"Indexing"</code> during this time. As soon as the indexing has finished, the configuration status will be changed to <code>"Activated"</code> making the aforementioned APIs fully available for this Project.</li>
+     *   <li>If <code>false</code>, the indexing of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> information will stop and the <span>Product Projection Search</span> as well as the <span>Search Term Suggestions</span> API will no longer be available for this Project. The Project's <a href="https://docs.commercetools.com/apis/ctp:api:type:SearchIndexingConfiguration" rel="nofollow">SearchIndexingConfiguration</a> <code>status</code> for <code>products</code> will be changed to <code>"Deactivated"</code>.</li>
+     *   <li>If <code>true</code>, the indexing of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> information will start and the <span>Product Projection Search</span> as well as the <span>Search Term Suggestions</span> API will become available soon after for this Project. Proportional to the amount of information being indexed, the Project's <a href="https://docs.commercetools.com/apis/ctp:api:type:SearchIndexingConfiguration" rel="nofollow">SearchIndexingConfiguration</a> <code>status</code> for <code>products</code> will be shown as <code>"Indexing"</code> during this time. As soon as the indexing has finished, the configuration status will be changed to <code>"Activated"</code> making the aforementioned APIs fully available for this Project.</li>
      *  </ul>
      * @return enabled
      */
@@ -49,7 +49,7 @@ public interface ProjectChangeProductSearchIndexingEnabledAction extends Project
     public Boolean getEnabled();
 
     /**
-     *  <p>Controls whether the action should apply to Product Projection Search or to Product Search.</p>
+     *  <p>Controls whether the action should apply to <span>Product Projection Search</span> or to <span>Product Search</span>.</p>
      * @return mode
      */
 
@@ -58,8 +58,8 @@ public interface ProjectChangeProductSearchIndexingEnabledAction extends Project
 
     /**
      *  <ul>
-     *   <li>If <code>false</code>, the indexing of Product information will stop and the Product Projection Search as well as the Search Term Suggestions API will no longer be available for this Project. The Project's SearchIndexingConfiguration <code>status</code> for <code>products</code> will be changed to <code>"Deactivated"</code>.</li>
-     *   <li>If <code>true</code>, the indexing of Product information will start and the Product Projection Search as well as the Search Term Suggestions API will become available soon after for this Project. Proportional to the amount of information being indexed, the Project's SearchIndexingConfiguration <code>status</code> for <code>products</code> will be shown as <code>"Indexing"</code> during this time. As soon as the indexing has finished, the configuration status will be changed to <code>"Activated"</code> making the aforementioned APIs fully available for this Project.</li>
+     *   <li>If <code>false</code>, the indexing of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> information will stop and the <span>Product Projection Search</span> as well as the <span>Search Term Suggestions</span> API will no longer be available for this Project. The Project's <a href="https://docs.commercetools.com/apis/ctp:api:type:SearchIndexingConfiguration" rel="nofollow">SearchIndexingConfiguration</a> <code>status</code> for <code>products</code> will be changed to <code>"Deactivated"</code>.</li>
+     *   <li>If <code>true</code>, the indexing of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> information will start and the <span>Product Projection Search</span> as well as the <span>Search Term Suggestions</span> API will become available soon after for this Project. Proportional to the amount of information being indexed, the Project's <a href="https://docs.commercetools.com/apis/ctp:api:type:SearchIndexingConfiguration" rel="nofollow">SearchIndexingConfiguration</a> <code>status</code> for <code>products</code> will be shown as <code>"Indexing"</code> during this time. As soon as the indexing has finished, the configuration status will be changed to <code>"Activated"</code> making the aforementioned APIs fully available for this Project.</li>
      *  </ul>
      * @param enabled value to be set
      */
@@ -67,7 +67,7 @@ public interface ProjectChangeProductSearchIndexingEnabledAction extends Project
     public void setEnabled(final Boolean enabled);
 
     /**
-     *  <p>Controls whether the action should apply to Product Projection Search or to Product Search.</p>
+     *  <p>Controls whether the action should apply to <span>Product Projection Search</span> or to <span>Product Search</span>.</p>
      * @param mode value to be set
      */
 

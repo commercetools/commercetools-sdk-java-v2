@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Generated after a successful Set ShippingMethod and Set Custom ShippingMethod update actions.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingMethodAction" rel="nofollow">Set ShippingMethod</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomShippingMethodAction" rel="nofollow">Set Custom ShippingMethod</a> update actions.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface OrderShippingInfoSetMessagePayload extends OrderMessagePayload 
     String ORDER_SHIPPING_INFO_SET = "OrderShippingInfoSet";
 
     /**
-     *  <p>ShippingInfo after the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingMethodAction" rel="nofollow">Set Shipping Method</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomShippingMethodAction" rel="nofollow">Set Custom Shipping Method</a> update action.</p>
      * @return shippingInfo
      */
     @Valid
@@ -46,7 +46,7 @@ public interface OrderShippingInfoSetMessagePayload extends OrderMessagePayload 
     public ShippingInfo getShippingInfo();
 
     /**
-     *  <p>ShippingInfo before the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingMethodAction" rel="nofollow">Set Shipping Method</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomShippingMethodAction" rel="nofollow">Set Custom Shipping Method</a> update action.</p>
      * @return oldShippingInfo
      */
     @Valid
@@ -54,14 +54,14 @@ public interface OrderShippingInfoSetMessagePayload extends OrderMessagePayload 
     public ShippingInfo getOldShippingInfo();
 
     /**
-     *  <p>ShippingInfo after the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingMethodAction" rel="nofollow">Set Shipping Method</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomShippingMethodAction" rel="nofollow">Set Custom Shipping Method</a> update action.</p>
      * @param shippingInfo value to be set
      */
 
     public void setShippingInfo(final ShippingInfo shippingInfo);
 
     /**
-     *  <p>ShippingInfo before the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingMethodAction" rel="nofollow">Set Shipping Method</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomShippingMethodAction" rel="nofollow">Set Custom Shipping Method</a> update action.</p>
      * @param oldShippingInfo value to be set
      */
 

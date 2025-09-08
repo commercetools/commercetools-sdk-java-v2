@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after removing a Custom Type from a Customer Group using the Set Custom Type update action with empty parameters.</p>
+ *  <p>Generated after removing a Custom Type from a Customer Group using the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroupSetCustomTypeAction" rel="nofollow">Set Custom Type</a> update action with empty parameters.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerGroupCustomTypeRemovedMessagePayloadImpl
@@ -52,7 +52,7 @@ public class CustomerGroupCustomTypeRemovedMessagePayloadImpl
     }
 
     /**
-     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a> that was removed. Absent if there was no previous Custom Type present.</p>
      */
 
     public String getOldTypeId() {

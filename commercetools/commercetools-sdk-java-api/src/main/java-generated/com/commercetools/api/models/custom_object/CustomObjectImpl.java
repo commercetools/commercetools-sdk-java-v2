@@ -133,9 +133,9 @@ public class CustomObjectImpl implements CustomObject, ModelBase {
     }
 
     /**
-     *  <p>Can be any JSON standard type, such as number, string, boolean, array, object, or a common API data type.</p>
+     *  <p>Can be any JSON standard type, such as number, string, boolean, array, object, or a <span>common API data type</span>.</p>
      *  <ul>
-     *   <li>For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</li>
+     *   <li>For values of type <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</li>
      *  </ul>
      */
 

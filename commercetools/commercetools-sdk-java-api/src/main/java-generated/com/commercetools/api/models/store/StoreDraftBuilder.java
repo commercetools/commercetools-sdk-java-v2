@@ -94,7 +94,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>Languages defined in Project. Only languages defined in the Project can be used.</p>
+     *  <p>Languages defined in <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Only languages defined in the Project can be used.</p>
      * @param languages value to be set
      * @return Builder
      */
@@ -105,7 +105,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>Languages defined in Project. Only languages defined in the Project can be used.</p>
+     *  <p>Languages defined in <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Only languages defined in the Project can be used.</p>
      * @param languages value to be set
      * @return Builder
      */
@@ -116,7 +116,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>Languages defined in Project. Only languages defined in the Project can be used.</p>
+     *  <p>Languages defined in <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Only languages defined in the Project can be used.</p>
      * @param languages value to be set
      * @return Builder
      */
@@ -219,7 +219,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param distributionChannels value to be set
      * @return Builder
      */
@@ -231,7 +231,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param distributionChannels value to be set
      * @return Builder
      */
@@ -243,7 +243,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param distributionChannels value to be set
      * @return Builder
      */
@@ -258,7 +258,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param builder function to build the distributionChannels value
      * @return Builder
      */
@@ -274,7 +274,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param builder function to build the distributionChannels value
      * @return Builder
      */
@@ -288,7 +288,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param builder function to build the distributionChannels value
      * @return Builder
      */
@@ -300,7 +300,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param builder function to build the distributionChannels value
      * @return Builder
      */
@@ -312,7 +312,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param supplyChannels value to be set
      * @return Builder
      */
@@ -324,7 +324,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param supplyChannels value to be set
      * @return Builder
      */
@@ -336,7 +336,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param supplyChannels value to be set
      * @return Builder
      */
@@ -351,7 +351,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param builder function to build the supplyChannels value
      * @return Builder
      */
@@ -367,7 +367,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param builder function to build the supplyChannels value
      * @return Builder
      */
@@ -381,7 +381,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param builder function to build the supplyChannels value
      * @return Builder
      */
@@ -393,7 +393,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param builder function to build the supplyChannels value
      * @return Builder
      */
@@ -407,8 +407,8 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     /**
      *  <p>Controls availability of Products for this Store via active/inactive Product Selections:</p>
      *  <ul>
-     *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
-     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> ProductSelectionMode are provided, all the Products are available in this Store.</li>
+     *   <li>Leave empty if all Products in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> should be available in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a> are provided, all the Products are available in this Store.</li>
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is available in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availability in this Store.</li>
      *  </ul>
@@ -425,8 +425,8 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     /**
      *  <p>Controls availability of Products for this Store via active/inactive Product Selections:</p>
      *  <ul>
-     *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
-     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> ProductSelectionMode are provided, all the Products are available in this Store.</li>
+     *   <li>Leave empty if all Products in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> should be available in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a> are provided, all the Products are available in this Store.</li>
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is available in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availability in this Store.</li>
      *  </ul>
@@ -443,8 +443,8 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     /**
      *  <p>Controls availability of Products for this Store via active/inactive Product Selections:</p>
      *  <ul>
-     *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
-     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> ProductSelectionMode are provided, all the Products are available in this Store.</li>
+     *   <li>Leave empty if all Products in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> should be available in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a> are provided, all the Products are available in this Store.</li>
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is available in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availability in this Store.</li>
      *  </ul>
@@ -464,8 +464,8 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     /**
      *  <p>Controls availability of Products for this Store via active/inactive Product Selections:</p>
      *  <ul>
-     *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
-     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> ProductSelectionMode are provided, all the Products are available in this Store.</li>
+     *   <li>Leave empty if all Products in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> should be available in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a> are provided, all the Products are available in this Store.</li>
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is available in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availability in this Store.</li>
      *  </ul>
@@ -486,8 +486,8 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     /**
      *  <p>Controls availability of Products for this Store via active/inactive Product Selections:</p>
      *  <ul>
-     *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
-     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> ProductSelectionMode are provided, all the Products are available in this Store.</li>
+     *   <li>Leave empty if all Products in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> should be available in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a> are provided, all the Products are available in this Store.</li>
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is available in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availability in this Store.</li>
      *  </ul>
@@ -506,8 +506,8 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     /**
      *  <p>Controls availability of Products for this Store via active/inactive Product Selections:</p>
      *  <ul>
-     *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
-     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> ProductSelectionMode are provided, all the Products are available in this Store.</li>
+     *   <li>Leave empty if all Products in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> should be available in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a> are provided, all the Products are available in this Store.</li>
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is available in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availability in this Store.</li>
      *  </ul>
@@ -524,8 +524,8 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     /**
      *  <p>Controls availability of Products for this Store via active/inactive Product Selections:</p>
      *  <ul>
-     *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
-     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> ProductSelectionMode are provided, all the Products are available in this Store.</li>
+     *   <li>Leave empty if all Products in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> should be available in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a> are provided, all the Products are available in this Store.</li>
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is available in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availability in this Store.</li>
      *  </ul>
@@ -594,7 +594,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>Languages defined in Project. Only languages defined in the Project can be used.</p>
+     *  <p>Languages defined in <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Only languages defined in the Project can be used.</p>
      * @return languages
      */
 
@@ -614,7 +614,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @return distributionChannels
      */
 
@@ -624,7 +624,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @return supplyChannels
      */
 
@@ -636,8 +636,8 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     /**
      *  <p>Controls availability of Products for this Store via active/inactive Product Selections:</p>
      *  <ul>
-     *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
-     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> ProductSelectionMode are provided, all the Products are available in this Store.</li>
+     *   <li>Leave empty if all Products in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> should be available in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a> are provided, all the Products are available in this Store.</li>
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is available in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availability in this Store.</li>
      *  </ul>

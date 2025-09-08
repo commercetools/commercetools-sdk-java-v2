@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>This action generates a BusinessUnitParentChanged Message.</p>
+ *  <p>This action generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitParentChangedMessage" rel="nofollow">BusinessUnitParentChanged</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitChangeParentUnitActionImpl implements BusinessUnitChangeParentUnitAction, ModelBase {
@@ -52,8 +52,8 @@ public class BusinessUnitChangeParentUnitActionImpl implements BusinessUnitChang
     }
 
     /**
-     *  <p>New parent unit of the Business Unit. It must be associated with the same Stores, as the old parent unit.</p>
-     *  <p>The Business Unit <code>inheritedAssociates</code> and <code>inheritedStores</code> field values will be eventually consistent.</p>
+     *  <p>New parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. It must be associated with the same Stores, as the old parent unit.</p>
+     *  <p>The Business Unit <code>inheritedAssociates</code> and <code>inheritedStores</code> field values will be <span>eventually consistent</span>.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getParentUnit() {

@@ -39,7 +39,7 @@ public interface ProjectChangeShoppingListsConfigurationAction extends ProjectUp
     String CHANGE_SHOPPING_LISTS_CONFIGURATION = "changeShoppingListsConfiguration";
 
     /**
-     *  <p>Configuration for the Shopping Lists feature.</p>
+     *  <p>Configuration for the <span>Shopping Lists</span> feature.</p>
      * @return shoppingListsConfiguration
      */
     @NotNull
@@ -48,7 +48,7 @@ public interface ProjectChangeShoppingListsConfigurationAction extends ProjectUp
     public ShoppingListsConfiguration getShoppingListsConfiguration();
 
     /**
-     *  <p>Configuration for the Shopping Lists feature.</p>
+     *  <p>Configuration for the <span>Shopping Lists</span> feature.</p>
      * @param shoppingListsConfiguration value to be set
      */
 

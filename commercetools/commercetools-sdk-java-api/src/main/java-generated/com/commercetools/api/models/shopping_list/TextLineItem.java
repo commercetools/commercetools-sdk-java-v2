@@ -39,7 +39,7 @@ import jakarta.validation.constraints.NotNull;
 public interface TextLineItem extends com.commercetools.api.models.Customizable<TextLineItem> {
 
     /**
-     *  <p>Date and time (UTC) the TextLineItem was added to the ShoppingList.</p>
+     *  <p>Date and time (UTC) the TextLineItem was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @return addedAt
      */
     @NotNull
@@ -71,7 +71,7 @@ public interface TextLineItem extends com.commercetools.api.models.Customizable<
     public String getId();
 
     /**
-     *  <p>User-defined identifier of the TextLineItem. It is unique per ShoppingList.</p>
+     *  <p>User-defined identifier of the TextLineItem. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @return key
      */
 
@@ -96,7 +96,7 @@ public interface TextLineItem extends com.commercetools.api.models.Customizable<
     public Long getQuantity();
 
     /**
-     *  <p>Date and time (UTC) the TextLineItem was added to the ShoppingList.</p>
+     *  <p>Date and time (UTC) the TextLineItem was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param addedAt value to be set
      */
 
@@ -124,7 +124,7 @@ public interface TextLineItem extends com.commercetools.api.models.Customizable<
     public void setId(final String id);
 
     /**
-     *  <p>User-defined identifier of the TextLineItem. It is unique per ShoppingList.</p>
+     *  <p>User-defined identifier of the TextLineItem. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param key value to be set
      */
 

@@ -39,7 +39,7 @@ import jakarta.validation.constraints.NotNull;
 public interface RecurringOrderDraft extends io.vrap.rmf.base.client.Draft<RecurringOrderDraft> {
 
     /**
-     *  <p>User-defined unique identifier of the RecurringOrder.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a>.</p>
      * @return key
      */
 
@@ -47,7 +47,7 @@ public interface RecurringOrderDraft extends io.vrap.rmf.base.client.Draft<Recur
     public String getKey();
 
     /**
-     *  <p>ResourceIdentifier to the Cart from which the RecurringOrder is created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Cart from which the RecurringOrder is created.</p>
      * @return cart
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface RecurringOrderDraft extends io.vrap.rmf.base.client.Draft<Recur
     public CartResourceIdentifier getCart();
 
     /**
-     *  <p>Current version of the referenced Cart.</p>
+     *  <p>Current version of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      * @return cartVersion
      */
     @NotNull
@@ -96,21 +96,21 @@ public interface RecurringOrderDraft extends io.vrap.rmf.base.client.Draft<Recur
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>User-defined unique identifier of the RecurringOrder.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a>.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>ResourceIdentifier to the Cart from which the RecurringOrder is created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Cart from which the RecurringOrder is created.</p>
      * @param cart value to be set
      */
 
     public void setCart(final CartResourceIdentifier cart);
 
     /**
-     *  <p>Current version of the referenced Cart.</p>
+     *  <p>Current version of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      * @param cartVersion value to be set
      */
 

@@ -187,7 +187,7 @@ public class OrderShippingRateInputSetMessageBuilder implements Builder<OrderShi
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -199,7 +199,7 @@ public class OrderShippingRateInputSetMessageBuilder implements Builder<OrderShi
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -261,7 +261,7 @@ public class OrderShippingRateInputSetMessageBuilder implements Builder<OrderShi
     }
 
     /**
-     *  <p>ShippingRateInput after the Set ShippingRateInput update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRateInput" rel="nofollow">ShippingRateInput</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingRateInputAction" rel="nofollow">Set ShippingRateInput</a> update action.</p>
      * @param shippingRateInput value to be set
      * @return Builder
      */
@@ -273,7 +273,7 @@ public class OrderShippingRateInputSetMessageBuilder implements Builder<OrderShi
     }
 
     /**
-     *  <p>ShippingRateInput after the Set ShippingRateInput update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRateInput" rel="nofollow">ShippingRateInput</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingRateInputAction" rel="nofollow">Set ShippingRateInput</a> update action.</p>
      * @param builder function to build the shippingRateInput value
      * @return Builder
      */
@@ -285,7 +285,7 @@ public class OrderShippingRateInputSetMessageBuilder implements Builder<OrderShi
     }
 
     /**
-     *  <p>ShippingRateInput before the Set ShippingRateInput update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRateInput" rel="nofollow">ShippingRateInput</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingRateInputAction" rel="nofollow">Set ShippingRateInput</a> update action.</p>
      * @param oldShippingRateInput value to be set
      * @return Builder
      */
@@ -297,7 +297,7 @@ public class OrderShippingRateInputSetMessageBuilder implements Builder<OrderShi
     }
 
     /**
-     *  <p>ShippingRateInput before the Set ShippingRateInput update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRateInput" rel="nofollow">ShippingRateInput</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingRateInputAction" rel="nofollow">Set ShippingRateInput</a> update action.</p>
      * @param builder function to build the oldShippingRateInput value
      * @return Builder
      */
@@ -375,7 +375,7 @@ public class OrderShippingRateInputSetMessageBuilder implements Builder<OrderShi
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -403,7 +403,7 @@ public class OrderShippingRateInputSetMessageBuilder implements Builder<OrderShi
     }
 
     /**
-     *  <p>ShippingRateInput after the Set ShippingRateInput update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRateInput" rel="nofollow">ShippingRateInput</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingRateInputAction" rel="nofollow">Set ShippingRateInput</a> update action.</p>
      * @return shippingRateInput
      */
 
@@ -413,7 +413,7 @@ public class OrderShippingRateInputSetMessageBuilder implements Builder<OrderShi
     }
 
     /**
-     *  <p>ShippingRateInput before the Set ShippingRateInput update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRateInput" rel="nofollow">ShippingRateInput</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingRateInputAction" rel="nofollow">Set ShippingRateInput</a> update action.</p>
      * @return oldShippingRateInput
      */
 

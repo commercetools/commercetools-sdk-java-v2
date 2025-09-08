@@ -24,7 +24,7 @@ public class ShippingMethodChangeIsDefaultActionBuilder implements Builder<Shipp
     private Boolean isDefault;
 
     /**
-     *  <p>Value to set. Only one ShippingMethod can be default in a Project.</p>
+     *  <p>Value to set. Only one ShippingMethod can be default in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param isDefault value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class ShippingMethodChangeIsDefaultActionBuilder implements Builder<Shipp
     }
 
     /**
-     *  <p>Value to set. Only one ShippingMethod can be default in a Project.</p>
+     *  <p>Value to set. Only one ShippingMethod can be default in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return isDefault
      */
 

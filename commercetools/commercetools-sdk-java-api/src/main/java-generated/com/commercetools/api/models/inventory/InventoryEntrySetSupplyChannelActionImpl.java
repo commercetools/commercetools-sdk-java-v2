@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>If an entry with the same <code>sku</code> and <code>supplyChannel</code> already exists, an DuplicateField error is returned.</p>
+ *  <p>If an entry with the same <code>sku</code> and <code>supplyChannel</code> already exists, an <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntrySetSupplyChannelActionImpl implements InventoryEntrySetSupplyChannelAction, ModelBase {

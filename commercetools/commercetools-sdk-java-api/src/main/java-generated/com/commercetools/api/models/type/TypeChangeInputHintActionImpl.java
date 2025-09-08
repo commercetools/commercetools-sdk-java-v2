@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Changes the <code>inputHint</code> of CustomFieldStringType FieldDefinition, a CustomFieldLocalizedStringType FieldDefinition, and CustomFieldSetType FieldDefinition of these string-based FieldTypes.</p>
+ *  <p>Changes the <code>inputHint</code> of <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldStringType" rel="nofollow">CustomFieldStringType</a> <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedStringType" rel="nofollow">CustomFieldLocalizedStringType</a> <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldSetType" rel="nofollow">CustomFieldSetType</a> <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a> of these string-based FieldTypes.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypeChangeInputHintActionImpl implements TypeChangeInputHintAction, ModelBase {
@@ -55,7 +55,7 @@ public class TypeChangeInputHintActionImpl implements TypeChangeInputHintAction,
     }
 
     /**
-     *  <p><code>name</code> of the Field Definition to update.</p>
+     *  <p><code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">Field Definition</a> to update.</p>
      */
 
     public String getFieldName() {

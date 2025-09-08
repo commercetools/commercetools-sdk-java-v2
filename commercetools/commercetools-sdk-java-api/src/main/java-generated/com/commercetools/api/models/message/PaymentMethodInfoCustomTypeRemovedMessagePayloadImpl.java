@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after removing Custom Fields from a PaymentMethodInfo using the Set MethodInfo Custom Type update action on Payments and the Set MethodInfo Custom Type update action on My Payments.</p>
+ *  <p>Generated after removing Custom Fields from a PaymentMethodInfo using the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoCustomTypeAction" rel="nofollow">Set MethodInfo Custom Type</a> update action on Payments and the <a href="https://docs.commercetools.com/apis/ctp:api:type:MyPaymentSetMethodInfoCustomTypeAction" rel="nofollow">Set MethodInfo Custom Type</a> update action on My Payments.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentMethodInfoCustomTypeRemovedMessagePayloadImpl
@@ -52,7 +52,7 @@ public class PaymentMethodInfoCustomTypeRemovedMessagePayloadImpl
     }
 
     /**
-     *  <p><code>id</code> of the Type that was removed. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that was removed. Absent if there was no previous Custom Type present.</p>
      */
 
     public String getOldTypeId() {

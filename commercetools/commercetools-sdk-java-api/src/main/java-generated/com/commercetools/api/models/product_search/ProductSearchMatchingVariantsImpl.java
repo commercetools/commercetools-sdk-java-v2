@@ -43,7 +43,7 @@ public class ProductSearchMatchingVariantsImpl implements ProductSearchMatchingV
     }
 
     /**
-     *  <p><code>true</code> if all Variants of the returned Product match the search query, or if search query does not specify any expression for a Product Variant field.</p>
+     *  <p><code>true</code> if all Variants of the returned Product match the search query, or if search query does not specify any expression for a <span>Product Variant field</span>.</p>
      *  <p><code>false</code> if only a subset of the Product Variants match the search query.</p>
      *  <p>Is always <code>false</code> for query expressions on Product Variant fields.</p>
      */

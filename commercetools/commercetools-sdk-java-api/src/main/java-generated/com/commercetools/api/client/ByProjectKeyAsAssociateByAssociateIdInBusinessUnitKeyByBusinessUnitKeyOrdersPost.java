@@ -20,18 +20,18 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creates an Order from a Cart in a BusinessUnit.</p>
+ *  <p>Creates an Order from a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> in a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
  *  <p>The Cart must have a shipping address and an active Shipping Method set.</p>
- *  <p>If the Cart does not reference the same BusinessUnit as the <code>businessUnitKey</code> path parameter, an InvalidOperation is returned.</p>
+ *  <p>If the Cart does not reference the same BusinessUnit as the <code>businessUnitKey</code> path parameter, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> is returned.</p>
  *  <p>Specific Error Codes:</p>
  *  <ul>
- *   <li>DiscountCodeNonApplicable</li>
- *   <li>InvalidItemShippingDetails</li>
- *   <li>OutOfStock</li>
- *   <li>PriceChanged</li>
- *   <li>ShippingMethodDoesNotMatchCart</li>
- *   <li>MatchingPriceNotFound</li>
- *   <li>MissingTaxRateForCountry</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeNonApplicableError" rel="nofollow">DiscountCodeNonApplicable</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidItemShippingDetailsError" rel="nofollow">InvalidItemShippingDetails</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OutOfStockError" rel="nofollow">OutOfStock</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:PriceChangedError" rel="nofollow">PriceChanged</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethodDoesNotMatchCartError" rel="nofollow">ShippingMethodDoesNotMatchCart</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a></li>
  *  </ul>
  *
  * <hr>

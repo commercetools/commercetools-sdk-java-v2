@@ -20,7 +20,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Set Images update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -79,7 +79,7 @@ public interface ProductTailoringImagesSetMessagePayload extends MessagePayload 
     public Long getVariantId();
 
     /**
-     *  <p>Images on the tailored Product Variant before the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      * @return oldImages
      */
     @Valid
@@ -87,7 +87,7 @@ public interface ProductTailoringImagesSetMessagePayload extends MessagePayload 
     public List<Image> getOldImages();
 
     /**
-     *  <p>Images on the tailored Product Variant after the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      * @return images
      */
     @Valid
@@ -123,7 +123,7 @@ public interface ProductTailoringImagesSetMessagePayload extends MessagePayload 
     public void setVariantId(final Long variantId);
 
     /**
-     *  <p>Images on the tailored Product Variant before the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      * @param oldImages values to be set
      */
 
@@ -131,14 +131,14 @@ public interface ProductTailoringImagesSetMessagePayload extends MessagePayload 
     public void setOldImages(final Image... oldImages);
 
     /**
-     *  <p>Images on the tailored Product Variant before the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      * @param oldImages values to be set
      */
 
     public void setOldImages(final List<Image> oldImages);
 
     /**
-     *  <p>Images on the tailored Product Variant after the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      * @param images values to be set
      */
 
@@ -146,7 +146,7 @@ public interface ProductTailoringImagesSetMessagePayload extends MessagePayload 
     public void setImages(final Image... images);
 
     /**
-     *  <p>Images on the tailored Product Variant after the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      * @param images values to be set
      */
 

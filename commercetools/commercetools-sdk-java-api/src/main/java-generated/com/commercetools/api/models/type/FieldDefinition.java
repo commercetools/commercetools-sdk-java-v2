@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Defines a Custom Field and its meta-information. This FieldDefinition is similar to an AttributeDefinition of Product Types.</p>
+ *  <p>Defines a <span>Custom Field</span> and its meta-information. This FieldDefinition is similar to an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> of <span>Product Types</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -46,7 +46,7 @@ public interface FieldDefinition {
     public FieldType getType();
 
     /**
-     *  <p>Name of the Custom Field to define. Must be unique for a given ResourceTypeId. In case there is a FieldDefinition with the same <code>name</code> in another Type, both FieldDefinitions must have the same <code>type</code>.</p>
+     *  <p>Name of the Custom Field to define. Must be unique for a given <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>. In case there is a FieldDefinition with the same <code>name</code> in another <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>, both FieldDefinitions must have the same <code>type</code>.</p>
      * @return name
      */
     @NotNull
@@ -71,7 +71,7 @@ public interface FieldDefinition {
     public Boolean getRequired();
 
     /**
-     *  <p>Defines the visual representation of the field in user interfaces like the Merchant Center. It is only relevant for string-based FieldTypes like CustomFieldStringType and CustomFieldLocalizedStringType.</p>
+     *  <p>Defines the visual representation of the field in user interfaces like the Merchant Center. It is only relevant for string-based <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldTypes</a> like <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldStringType" rel="nofollow">CustomFieldStringType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedStringType" rel="nofollow">CustomFieldLocalizedStringType</a>.</p>
      * @return inputHint
      */
 
@@ -86,7 +86,7 @@ public interface FieldDefinition {
     public void setType(final FieldType type);
 
     /**
-     *  <p>Name of the Custom Field to define. Must be unique for a given ResourceTypeId. In case there is a FieldDefinition with the same <code>name</code> in another Type, both FieldDefinitions must have the same <code>type</code>.</p>
+     *  <p>Name of the Custom Field to define. Must be unique for a given <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>. In case there is a FieldDefinition with the same <code>name</code> in another <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>, both FieldDefinitions must have the same <code>type</code>.</p>
      * @param name value to be set
      */
 
@@ -107,7 +107,7 @@ public interface FieldDefinition {
     public void setRequired(final Boolean required);
 
     /**
-     *  <p>Defines the visual representation of the field in user interfaces like the Merchant Center. It is only relevant for string-based FieldTypes like CustomFieldStringType and CustomFieldLocalizedStringType.</p>
+     *  <p>Defines the visual representation of the field in user interfaces like the Merchant Center. It is only relevant for string-based <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldTypes</a> like <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldStringType" rel="nofollow">CustomFieldStringType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedStringType" rel="nofollow">CustomFieldLocalizedStringType</a>.</p>
      * @param inputHint value to be set
      */
 

@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The request body to import Standalone Prices. Contains data for Standalone Prices to be created or updated in a Project.</p>
+ *  <p>The request body to <a href="https://docs.commercetools.com/apis/ctp:import:endpoint:/{projectKey}/standalone-prices/import-containers/{importContainerKey}:POST" rel="nofollow">import Standalone Prices</a>. Contains data for <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Prices</a> to be created or updated in a Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceImportRequestImpl implements StandalonePriceImportRequest, ModelBase {
@@ -45,7 +45,7 @@ public class StandalonePriceImportRequestImpl implements StandalonePriceImportRe
     }
 
     /**
-     *  <p>The resource types that can be imported.</p>
+     *  <p>The resource type that can be imported.</p>
      */
 
     public com.commercetools.importapi.models.common.ImportResourceType getType() {

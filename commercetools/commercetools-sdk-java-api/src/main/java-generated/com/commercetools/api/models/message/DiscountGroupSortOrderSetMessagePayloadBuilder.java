@@ -30,7 +30,7 @@ public class DiscountGroupSortOrderSetMessagePayloadBuilder
     private String oldSortOrder;
 
     /**
-     *  <p><code>sortOrder</code> value of the DiscountGroup after the Set SortOrder update action.</p>
+     *  <p><code>sortOrder</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroup" rel="nofollow">DiscountGroup</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroupSetSortOrderAction" rel="nofollow">Set SortOrder</a> update action.</p>
      * @param sortOrder value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class DiscountGroupSortOrderSetMessagePayloadBuilder
     }
 
     /**
-     *  <p><code>sortOrder</code> value of the DiscountGroup before the Set SortOrder update action.</p>
+     *  <p><code>sortOrder</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroup" rel="nofollow">DiscountGroup</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroupSetSortOrderAction" rel="nofollow">Set SortOrder</a> update action.</p>
      * @param oldSortOrder value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class DiscountGroupSortOrderSetMessagePayloadBuilder
     }
 
     /**
-     *  <p><code>sortOrder</code> value of the DiscountGroup after the Set SortOrder update action.</p>
+     *  <p><code>sortOrder</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroup" rel="nofollow">DiscountGroup</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroupSetSortOrderAction" rel="nofollow">Set SortOrder</a> update action.</p>
      * @return sortOrder
      */
 
@@ -62,7 +62,7 @@ public class DiscountGroupSortOrderSetMessagePayloadBuilder
     }
 
     /**
-     *  <p><code>sortOrder</code> value of the DiscountGroup before the Set SortOrder update action.</p>
+     *  <p><code>sortOrder</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroup" rel="nofollow">DiscountGroup</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroupSetSortOrderAction" rel="nofollow">Set SortOrder</a> update action.</p>
      * @return oldSortOrder
      */
 

@@ -40,7 +40,7 @@ public interface ProjectChangeMessagesConfigurationAction extends ProjectUpdateA
     String CHANGE_MESSAGES_CONFIGURATION = "changeMessagesConfiguration";
 
     /**
-     *  <p>Configuration for the Messages Query feature.</p>
+     *  <p>Configuration for the <span>Messages Query</span> feature.</p>
      * @return messagesConfiguration
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface ProjectChangeMessagesConfigurationAction extends ProjectUpdateA
     public MessagesConfigurationDraft getMessagesConfiguration();
 
     /**
-     *  <p>Configuration for the Messages Query feature.</p>
+     *  <p>Configuration for the <span>Messages Query</span> feature.</p>
      * @param messagesConfiguration value to be set
      */
 

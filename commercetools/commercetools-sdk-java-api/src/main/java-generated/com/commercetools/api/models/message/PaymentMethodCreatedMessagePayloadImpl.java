@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Create PaymentMethod request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/payment-methods:POST" rel="nofollow">Create PaymentMethod</a> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentMethodCreatedMessagePayloadImpl implements PaymentMethodCreatedMessagePayload, ModelBase {
@@ -52,7 +52,7 @@ public class PaymentMethodCreatedMessagePayloadImpl implements PaymentMethodCrea
     }
 
     /**
-     *  <p>PaymentMethod that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethod" rel="nofollow">PaymentMethod</a> that was created.</p>
      */
 
     public com.commercetools.api.models.payment_method.PaymentMethod getPaymentMethod() {

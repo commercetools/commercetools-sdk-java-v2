@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>PagedQueryResult for Import Operations.</p>
+ *  <p><span>PagedQueryResult</span> for Import Operations.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ImportOperationPagedResponse {
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @return limit
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface ImportOperationPagedResponse {
     public Integer getLimit();
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @return offset
      */
     @NotNull
@@ -79,14 +79,14 @@ public interface ImportOperationPagedResponse {
     public List<ImportOperation> getResults();
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @param limit value to be set
      */
 
     public void setLimit(final Integer limit);
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @param offset value to be set
      */
 

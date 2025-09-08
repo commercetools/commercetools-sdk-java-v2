@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated when an Import Container is deleted.</p>
+ *  <p>Generated when an <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">Import Container</a> is deleted.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -24,7 +24,8 @@ public class DiscountGroupDraftTest {
                 new Object[] { "description",
                         DiscountGroupDraft.builder()
                                 .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { "sortOrder", DiscountGroupDraft.builder().sortOrder("sortOrder") } };
+                new Object[] { "sortOrder", DiscountGroupDraft.builder().sortOrder("sortOrder") },
+                new Object[] { "isActive", DiscountGroupDraft.builder().isActive(true) } };
     }
 
     @Test
@@ -54,5 +55,12 @@ public class DiscountGroupDraftTest {
         DiscountGroupDraft value = DiscountGroupDraft.of();
         value.setSortOrder("sortOrder");
         Assertions.assertThat(value.getSortOrder()).isEqualTo("sortOrder");
+    }
+
+    @Test
+    public void isActive() {
+        DiscountGroupDraft value = DiscountGroupDraft.of();
+        value.setIsActive(true);
+        Assertions.assertThat(value.getIsActive()).isEqualTo(true);
     }
 }

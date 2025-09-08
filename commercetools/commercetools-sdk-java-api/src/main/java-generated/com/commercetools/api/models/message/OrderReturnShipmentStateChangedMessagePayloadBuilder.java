@@ -28,7 +28,7 @@ public class OrderReturnShipmentStateChangedMessagePayloadBuilder
     private com.commercetools.api.models.order.ReturnShipmentState returnShipmentState;
 
     /**
-     *  <p>Unique identifier of the ReturnItem.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
      * @param returnItemId value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class OrderReturnShipmentStateChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>State of the ReturnItem after the Set Return Shipment State update action.</p>
+     *  <p>State of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetReturnShipmentStateAction" rel="nofollow">Set Return Shipment State</a> update action.</p>
      * @param returnShipmentState value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class OrderReturnShipmentStateChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Unique identifier of the ReturnItem.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
      * @return returnItemId
      */
 
@@ -60,7 +60,7 @@ public class OrderReturnShipmentStateChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>State of the ReturnItem after the Set Return Shipment State update action.</p>
+     *  <p>State of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetReturnShipmentStateAction" rel="nofollow">Set Return Shipment State</a> update action.</p>
      * @return returnShipmentState
      */
 

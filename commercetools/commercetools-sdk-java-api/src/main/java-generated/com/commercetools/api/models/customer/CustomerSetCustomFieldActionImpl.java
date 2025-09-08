@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Adding a Custom Field to a Customer generates the CustomerCustomFieldAdded Message, removing one generates the CustomerCustomFieldRemoved Message, and updating an existing one generates the CustomerCustomFieldChanged Message.</p>
+ *  <p>Adding a Custom Field to a Customer generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerCustomFieldAddedMessage" rel="nofollow">CustomerCustomFieldAdded</a> Message, removing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerCustomFieldRemovedMessage" rel="nofollow">CustomerCustomFieldRemoved</a> Message, and updating an existing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerCustomFieldChangedMessage" rel="nofollow">CustomerCustomFieldChanged</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetCustomFieldActionImpl implements CustomerSetCustomFieldAction, ModelBase {
@@ -55,7 +55,7 @@ public class CustomerSetCustomFieldActionImpl implements CustomerSetCustomFieldA
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      */
 
     public String getName() {
@@ -63,7 +63,7 @@ public class CustomerSetCustomFieldActionImpl implements CustomerSetCustomFieldA
     }
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. If <code>value</code> is provided, it is set for the field defined by <code>name</code>. Trying to remove a field that does not exist will fail with an InvalidOperation error.</p>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. If <code>value</code> is provided, it is set for the field defined by <code>name</code>. Trying to remove a field that does not exist will fail with an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      */
 
     public java.lang.Object getValue() {

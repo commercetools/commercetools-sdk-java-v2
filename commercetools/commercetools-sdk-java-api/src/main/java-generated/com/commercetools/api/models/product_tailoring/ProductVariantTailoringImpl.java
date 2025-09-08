@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The tailoring of a ProductVariant.</p>
+ *  <p>The tailoring of a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantTailoringImpl implements ProductVariantTailoring, ModelBase {
@@ -51,7 +51,7 @@ public class ProductVariantTailoringImpl implements ProductVariantTailoring, Mod
     }
 
     /**
-     *  <p>The <code>id</code> of the tailored ProductVariant.</p>
+     *  <p>The <code>id</code> of the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      */
 
     public Long getId() {
@@ -59,7 +59,7 @@ public class ProductVariantTailoringImpl implements ProductVariantTailoring, Mod
     }
 
     /**
-     *  <p>Images of the tailored Product Variant. If present, these images will override the images of the corresponding ProductVariant in total.</p>
+     *  <p>Images of the tailored Product Variant. If present, these images will override the images of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in total.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Image> getImages() {
@@ -67,7 +67,7 @@ public class ProductVariantTailoringImpl implements ProductVariantTailoring, Mod
     }
 
     /**
-     *  <p>Media assets of the tailored Product Variant. If present, these assets will override the assets of the corresponding ProductVariant in total.</p>
+     *  <p>Media assets of the tailored Product Variant. If present, these assets will override the assets of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in total.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Asset> getAssets() {
@@ -75,7 +75,7 @@ public class ProductVariantTailoringImpl implements ProductVariantTailoring, Mod
     }
 
     /**
-     *  <p>Attributes of the tailored Product Variant. If present, these Attributes are selectively merged into the <code>attributes</code> of the corresponding ProductVariant:</p>
+     *  <p>Attributes of the tailored Product Variant. If present, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>:</p>
      *  <ul>
      *   <li>If the ProductVariant contains an Attribute with the same <code>name</code>, its <code>value</code> is overwritten,</li>
      *   <li>otherwise the Attribute and its value are added to the ProductVariant.</li>

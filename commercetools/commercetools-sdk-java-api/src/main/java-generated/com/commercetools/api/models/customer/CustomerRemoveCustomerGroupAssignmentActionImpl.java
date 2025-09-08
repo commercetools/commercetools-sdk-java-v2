@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Unassigns a Customer Group from a Customer. This action generates the CustomerGroupAssignmentRemoved Message.</p>
+ *  <p>Unassigns a Customer Group from a Customer. This action generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroupAssignmentRemovedMessage" rel="nofollow">CustomerGroupAssignmentRemoved</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerRemoveCustomerGroupAssignmentActionImpl

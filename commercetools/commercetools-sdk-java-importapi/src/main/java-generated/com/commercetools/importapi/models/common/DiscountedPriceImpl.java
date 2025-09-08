@@ -51,7 +51,7 @@ public class DiscountedPriceImpl implements DiscountedPrice, ModelBase {
     }
 
     /**
-     *  <p>Reference to a ProductDiscount. If the referenced ProductDiscount does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductDiscount is created.</p>
+     *  <p>Reference to a ProductDiscount. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductDiscount is created.</p>
      */
 
     public com.commercetools.importapi.models.common.ProductDiscountKeyReference getDiscount() {

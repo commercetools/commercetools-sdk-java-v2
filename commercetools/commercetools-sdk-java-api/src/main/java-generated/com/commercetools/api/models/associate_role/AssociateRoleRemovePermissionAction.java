@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Removing a Permission from an AssociateRole generates an AssociateRolePermissionRemoved Message.</p>
+ *  <p>Removing a Permission from an <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a> generates an <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRolePermissionRemovedMessage" rel="nofollow">AssociateRolePermissionRemoved</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

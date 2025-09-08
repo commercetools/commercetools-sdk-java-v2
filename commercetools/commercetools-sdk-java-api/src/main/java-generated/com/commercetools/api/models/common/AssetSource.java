@@ -16,7 +16,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Representation of an Asset in a specific format, for example a video in a certain encoding, or an image in a certain resolution.</p>
+ *  <p>Representation of an <span>Asset</span> in a specific format, for example a video in a certain encoding, or an image in a certain resolution.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface AssetSource extends com.commercetools.api.models.WithKey {
     public String getUri();
 
     /**
-     *  <p>User-defined identifier of the AssetSource. Must be unique per Asset.</p>
+     *  <p>User-defined identifier of the AssetSource. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:Asset" rel="nofollow">Asset</a>.</p>
      * @return key
      */
 
@@ -72,7 +72,7 @@ public interface AssetSource extends com.commercetools.api.models.WithKey {
     public void setUri(final String uri);
 
     /**
-     *  <p>User-defined identifier of the AssetSource. Must be unique per Asset.</p>
+     *  <p>User-defined identifier of the AssetSource. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:Asset" rel="nofollow">Asset</a>.</p>
      * @param key value to be set
      */
 

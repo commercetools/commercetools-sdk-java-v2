@@ -39,7 +39,7 @@ public interface MyShoppingListSetCustomTypeAction extends MyShoppingListUpdateA
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
-     *  <p>Defines the Type that extends the MyShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyShoppingList.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the MyShoppingList with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the MyShoppingList.</p>
      * @return type
      */
     @Valid
@@ -47,7 +47,7 @@ public interface MyShoppingListSetCustomTypeAction extends MyShoppingListUpdateA
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the MyShoppingList.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the MyShoppingList.</p>
      * @return fields
      */
     @Valid
@@ -55,14 +55,14 @@ public interface MyShoppingListSetCustomTypeAction extends MyShoppingListUpdateA
     public FieldContainer getFields();
 
     /**
-     *  <p>Defines the Type that extends the MyShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyShoppingList.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the MyShoppingList with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the MyShoppingList.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields fields for the MyShoppingList.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the MyShoppingList.</p>
      * @param fields value to be set
      */
 

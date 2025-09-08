@@ -17,22 +17,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TermFacetResultType extends JsonEnum {
 
     /**
-    <p>For AttributeTextType Attributes.</p> */
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeTextType" rel="nofollow">AttributeTextType</a> Attributes.</p> */
     TermFacetResultType TEXT = TermFacetResultTypeEnum.TEXT;
     /**
-    <p>For AttributeDateType Attributes.</p> */
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDateType" rel="nofollow">AttributeDateType</a> Attributes.</p> */
     TermFacetResultType DATE = TermFacetResultTypeEnum.DATE;
     /**
-    <p>For AttributeTimeType Attributes.</p> */
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeTimeType" rel="nofollow">AttributeTimeType</a> Attributes.</p> */
     TermFacetResultType TIME = TermFacetResultTypeEnum.TIME;
     /**
-    <p>For AttributeDateTimeType Attributes.</p> */
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDateTimeType" rel="nofollow">AttributeDateTimeType</a> Attributes.</p> */
     TermFacetResultType DATETIME = TermFacetResultTypeEnum.DATETIME;
     /**
-    <p>For AttributeBooleanType Attributes.</p> */
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeBooleanType" rel="nofollow">AttributeBooleanType</a> Attributes.</p> */
     TermFacetResultType BOOLEAN = TermFacetResultTypeEnum.BOOLEAN;
     /**
-    <p>For AttributeNumberType Attributes.</p> */
+    <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeNumberType" rel="nofollow">AttributeNumberType</a> Attributes.</p> */
     TermFacetResultType NUMBER = TermFacetResultTypeEnum.NUMBER;
 
     /**

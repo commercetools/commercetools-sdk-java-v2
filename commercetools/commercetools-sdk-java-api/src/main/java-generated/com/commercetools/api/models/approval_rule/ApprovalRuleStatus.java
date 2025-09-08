@@ -11,13 +11,13 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Indicates whether the Approval Rule should be matched against Orders or not.</p>
+ *  <p>Indicates whether the Approval Rule should be matched against <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> or not.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ApprovalRuleStatus extends JsonEnum {
 
     /**
-    <p>The Approval Rule is in effect and will be used in evaluating approval requests for Orders.</p> */
+    <p>The Approval Rule is in effect and will be used in evaluating approval requests for <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>.</p> */
     ApprovalRuleStatus ACTIVE = ApprovalRuleStatusEnum.ACTIVE;
     /**
     <p>The Approval Rule is not in effect and will not be used in evaluating approval requests for Orders.</p> */

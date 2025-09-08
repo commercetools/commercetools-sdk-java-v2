@@ -63,7 +63,7 @@ public class OrderSetDeliveryAddressCustomTypeActionImpl implements OrderSetDeli
     }
 
     /**
-     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      */
 
@@ -72,7 +72,7 @@ public class OrderSetDeliveryAddressCustomTypeActionImpl implements OrderSetDeli
     }
 
     /**
-     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      */
 
@@ -81,7 +81,7 @@ public class OrderSetDeliveryAddressCustomTypeActionImpl implements OrderSetDeli
     }
 
     /**
-     *  <p>Defines the Type that extends the Delivery <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery <code>address</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> <code>address</code> with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> <code>address</code>.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -89,7 +89,7 @@ public class OrderSetDeliveryAddressCustomTypeActionImpl implements OrderSetDeli
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Delivery <code>address</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> <code>address</code>.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Remove Billing Address Identifier update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitRemoveBillingAddressIdAction" rel="nofollow">Remove Billing Address Identifier</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface BusinessUnitBillingAddressRemovedMessage extends Message {
     String BUSINESS_UNIT_BILLING_ADDRESS_REMOVED = "BusinessUnitBillingAddressRemoved";
 
     /**
-     *  <p>The address that was removed from the billing addresses of the Business Unit.</p>
+     *  <p>The address that was removed from the billing addresses of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return address
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface BusinessUnitBillingAddressRemovedMessage extends Message {
     public Address getAddress();
 
     /**
-     *  <p>The address that was removed from the billing addresses of the Business Unit.</p>
+     *  <p>The address that was removed from the billing addresses of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param address value to be set
      */
 

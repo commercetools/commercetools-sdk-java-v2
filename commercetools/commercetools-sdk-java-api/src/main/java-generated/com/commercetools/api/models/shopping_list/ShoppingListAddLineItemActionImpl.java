@@ -17,9 +17,9 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The ProductVariant to be included in the ShoppingListLineItem must be specified using the <code>productID</code> and <code>variantID</code>, or by the <code>sku</code>. If the ShoppingList already contains a ShoppingListLineItem for the same Product Variant with the same Custom Fields, then only the quantity of the existing ShoppingListLineItem is increased. A ShoppingListLineItem with an empty <code>variantId</code> is not considered the same as a ShoppingListLineItem with a <code>variantId</code> currently referring to the Master Variant.</p>
+ *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to be included in the ShoppingListLineItem must be specified using the <code>productID</code> and <code>variantID</code>, or by the <code>sku</code>. If the ShoppingList already contains a ShoppingListLineItem for the same Product Variant with the same Custom Fields, then only the quantity of the existing ShoppingListLineItem is increased. A ShoppingListLineItem with an empty <code>variantId</code> is not considered the same as a ShoppingListLineItem with a <code>variantId</code> currently referring to the Master Variant.</p>
  *  <p>Product Attributes are merged with Variant Attributes to ensure the full Attribute context of the Product Variant.</p>
- *  <p>Produces the Shopping List Line Item Added Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItemAddedMessage" rel="nofollow">Shopping List Line Item Added</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListAddLineItemActionImpl implements ShoppingListAddLineItemAction, ModelBase {
@@ -75,7 +75,7 @@ public class ShoppingListAddLineItemActionImpl implements ShoppingListAddLineIte
     }
 
     /**
-     *  <p>User-defined identifier of the ShoppingListLineItem. Must be unique per ShoppingList.</p>
+     *  <p>User-defined identifier of the ShoppingListLineItem. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      */
 
     public String getKey() {
@@ -83,7 +83,7 @@ public class ShoppingListAddLineItemActionImpl implements ShoppingListAddLineIte
     }
 
     /**
-     *  <p><code>sku</code> of the ProductVariant.</p>
+     *  <p><code>sku</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      */
 
     public String getSku() {
@@ -91,7 +91,7 @@ public class ShoppingListAddLineItemActionImpl implements ShoppingListAddLineIte
     }
 
     /**
-     *  <p>Unique identifier of a Product.</p>
+     *  <p>Unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      */
 
     public String getProductId() {
@@ -99,7 +99,7 @@ public class ShoppingListAddLineItemActionImpl implements ShoppingListAddLineIte
     }
 
     /**
-     *  <p><code>id</code> of the ProductVariant. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
      */
 
     public Long getVariantId() {
@@ -115,7 +115,7 @@ public class ShoppingListAddLineItemActionImpl implements ShoppingListAddLineIte
     }
 
     /**
-     *  <p>Date and time the ShoppingListLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     *  <p>Date and time the ShoppingListLineItem is added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>. If not set, the current date and time (UTC) is used.</p>
      */
 
     public java.time.ZonedDateTime getAddedAt() {

@@ -28,7 +28,7 @@ public class ProductStateTransitionMessagePayloadBuilder implements Builder<Prod
     private Boolean force;
 
     /**
-     *  <p>Product State after the Transition State update action.</p>
+     *  <p>Product <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class ProductStateTransitionMessagePayloadBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Product State after the Transition State update action.</p>
+     *  <p>Product <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ProductStateTransitionMessagePayloadBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Product State after the Transition State update action.</p>
+     *  <p>Product <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class ProductStateTransitionMessagePayloadBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     *  <p>Whether <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition validations were turned off during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param force value to be set
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class ProductStateTransitionMessagePayloadBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Product State after the Transition State update action.</p>
+     *  <p>Product <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @return state
      */
 
@@ -84,7 +84,7 @@ public class ProductStateTransitionMessagePayloadBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     *  <p>Whether <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition validations were turned off during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @return force
      */
 

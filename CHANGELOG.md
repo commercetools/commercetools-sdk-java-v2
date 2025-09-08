@@ -1,4 +1,205 @@
 
+# 19.4.0 (2025-09-01)
+
+**Api changes**
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `isActive` to type `DiscountGroup`
+- added property `isActive` to type `DiscountGroupDraft`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `DiscountGroupSetIsActiveAction`
+- added type `MaxDiscountGroupsReachedError`
+- added type `GraphQLMaxDiscountGroupsReachedError`
+- added type `DiscountGroupIsActiveSetMessage`
+- added type `DiscountGroupIsActiveSetMessagePayload`
+</details>
+
+
+
+## What's Changed
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/974
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/976
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/977
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/978
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/979
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.3.0...19.4.0
+
+# 19.3.0 (2025-08-22)
+
+## What's Changed
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/972
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/968
+* updating dependency by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/973 Thanks to @drazenhrgar for the report
+
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `CustomerDefaultBillingAddressSetMessage`
+- added type `CustomerDefaultShippingAddressSetMessage`
+- added type `CustomerStoresSetMessage`
+- added type `CustomerDefaultBillingAddressSetMessagePayload`
+- added type `CustomerDefaultShippingAddressSetMessagePayload`
+- added type `CustomerStoresSetMessagePayload`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKey().recurrencePolicies().withKey().delete()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().withId().delete()`
+</details>
+
+**Import changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `AssociateRoleKeyReference`
+- added type `BusinessUnitKeyReference`
+- added type `BusinessUnitImportRequest`
+- added type `AssociateRoleInheritanceMode`
+- added type `BusinessUnitStatus`
+- added type `BusinessUnitAssociateMode`
+- added type `BusinessUnitApprovalRuleMode`
+- added type `BusinessUnitStoreMode`
+- added type `BusinessUnitType`
+- added type `AssociateRoleAssignmentDraft`
+- added type `AssociateDraft`
+- added type `BusinessUnitImport`
+- added type `CompanyBusinessUnitImport`
+- added type `DivisionBusinessUnitImport`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKeyValue().businessUnits().importContainers().withImportContainerKeyValue().post()`
+</details>
+
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/business-units`
+- added resource `/{projectKey}/business-units/import-containers`
+- added resource `/{projectKey}/business-units/import-containers/{importContainerKey}`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `business-unit` to type `ImportResourceType`
+- added enum `associate-role` to type `ReferenceType`
+- added enum `business-unit` to type `ReferenceType`
+</details>
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.2.0...19.3.0
+
+
+# 19.1.0 (2025-08-05)
+
+## What's Changed
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/940
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/941
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/942
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/943
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/944
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/945
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/946
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/947
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/949
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/950
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/951
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/952
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/953
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/954
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/955
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/957
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/961
+* Fix split packages by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/958
+
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `InventoryEntrySetInventoryLimitsAction`
+- added type `RecurringOrderDeletedMessage`
+- added type `RecurringOrderExpiresAtSetMessage`
+- added type `RecurringOrderDeletedMessagePayload`
+- added type `RecurringOrderExpiresAtSetMessagePayload`
+- added type `ProductSearchFacetResultStats`
+- added type `ProductSearchFacetStatsExpression`
+- added type `ProductSearchFacetStatsValue`
+- added type `RecurringOrderSetExpiresAtAction`
+</details>
+
+
+<details>
+<summary>Removed Type(s)</summary>
+
+- :warning: removed type `RecurringOrderMessagePayload`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKey().recurringOrders().withId().delete()`
+- added method `apiRoot.withProjectKey().recurringOrders().withKey().delete()`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `minCartQuantity` to type `InventoryEntry`
+- added property `maxCartQuantity` to type `InventoryEntry`
+- added property `minCartQuantity` to type `InventoryEntryDraft`
+- added property `maxCartQuantity` to type `InventoryEntryDraft`
+- added property `expiresAt` to type `RecurringOrderDraft`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `discount-group` to type `ChangeSubscriptionResourceTypeId`
+</details>
+
+**History changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `TooManyRequestsError`
+- added type `GraphQLTooManyRequestsError`
+- added type `GraphQLErrorObject`
+</details>
+
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `extensions` of type `GraphQLError` from type `object` to `GraphQLErrorObject`
+</details>
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.0.0...19.1.0
+
 # 19.0.0 (2025-07-10)
 
 ## Breaking Changes

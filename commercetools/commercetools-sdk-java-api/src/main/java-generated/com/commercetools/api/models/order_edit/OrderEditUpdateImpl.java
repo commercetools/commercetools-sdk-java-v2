@@ -47,7 +47,7 @@ public class OrderEditUpdateImpl implements OrderEditUpdate, ModelBase {
     }
 
     /**
-     *  <p>Expected version of the Order Edit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the Order Edit on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      */
 
     public Long getVersion() {
@@ -63,7 +63,7 @@ public class OrderEditUpdateImpl implements OrderEditUpdate, ModelBase {
     }
 
     /**
-     *  <p>If set to <code>true</code>, the Order Edit is applied on the Order without persisting it.</p>
+     *  <p>If set to <code>true</code>, the Order Edit is applied on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> without persisting it.</p>
      */
 
     public Boolean getDryRun() {

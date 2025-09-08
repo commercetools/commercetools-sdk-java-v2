@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Either <code>variantId</code> or <code>sku</code> is required. The Asset to update must be specified using either <code>assetId</code> or <code>assetKey</code>.</p>
+ *  <p>Either <code>variantId</code> or <code>sku</code> is required. The <a href="https://docs.commercetools.com/apis/ctp:api:type:Asset" rel="nofollow">Asset</a> to update must be specified using either <code>assetId</code> or <code>assetKey</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetAssetCustomTypeActionImpl implements ProductSetAssetCustomTypeAction, ModelBase {
@@ -113,7 +113,7 @@ public class ProductSetAssetCustomTypeActionImpl implements ProductSetAssetCusto
     }
 
     /**
-     *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Asset with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -121,7 +121,7 @@ public class ProductSetAssetCustomTypeActionImpl implements ProductSetAssetCusto
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Asset.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Asset.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

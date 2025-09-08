@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Discount is applied to the shipping costs of the Cart.</p>
+ *  <p>Discount is applied to the shipping costs of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountShippingCostTargetImpl implements CartDiscountShippingCostTarget, ModelBase {

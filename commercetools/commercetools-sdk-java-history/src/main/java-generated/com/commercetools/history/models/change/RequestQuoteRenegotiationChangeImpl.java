@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered by the Request Quote Renegotiation update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestQuoteRenegotiationAction" rel="nofollow">Request Quote Renegotiation</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RequestQuoteRenegotiationChangeImpl implements RequestQuoteRenegotiationChange, ModelBase {
@@ -87,7 +87,7 @@ public class RequestQuoteRenegotiationChangeImpl implements RequestQuoteRenegoti
     }
 
     /**
-     *  <p>Message from the Buyer regarding the Quote renegotiation request.</p>
+     *  <p>Message from the <span>Buyer</span> regarding the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> renegotiation request.</p>
      */
 
     public String getBuyerComment() {

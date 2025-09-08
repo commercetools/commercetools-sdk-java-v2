@@ -15,15 +15,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Returned when a Cart or an Order in a Store references a country that is not included in the countries configured for the Store.</p>
+ *  <p>Returned when a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> references a country that is not included in the countries configured for the Store.</p>
  *  <p>The error is returned as a failed response to:</p>
  *  <ul>
- *   <li>Create Cart in Store request and Set Country update action on Carts.</li>
- *   <li>Create Cart in Store request and Set Country update action on My Carts.</li>
- *   <li>Create Order in Store from Cart and Create Order from Quote requests on Orders.</li>
- *   <li>Create Order in Store from Cart and Create Order from Quote requests on My Orders.</li>
- *   <li>Create Order by Import request on Order Import.</li>
- *   <li>Set Country update action on Order Edits.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/carts:POST" rel="nofollow">Create Cart in Store</a> request and <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetCountryAction" rel="nofollow">Set Country</a> update action on Carts.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/me/carts:POST" rel="nofollow">Create Cart in Store</a> request and <a href="https://docs.commercetools.com/apis/ctp:api:type:MyCartSetCountryAction" rel="nofollow">Set Country</a> update action on My Carts.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/orders:POST" rel="nofollow">Create Order in Store from Cart</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/quotes:POST" rel="nofollow">Create Order from Quote</a> requests on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/me/orders:POST" rel="nofollow">Create Order in Store from Cart</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/orders/quotes:POST" rel="nofollow">Create Order from Quote</a> requests on My Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/import:POST" rel="nofollow">Create Order by Import</a> request on Order Import.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCountryAction" rel="nofollow">Set Country</a> update action on Order Edits.</li>
  *  </ul>
  *
  * <hr>

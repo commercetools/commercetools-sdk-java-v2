@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after an Approval Flow is created.</p>
+ *  <p>Generated after an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> is created.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface ApprovalFlowCreatedMessage extends Message {
     String APPROVAL_FLOW_CREATED = "ApprovalFlowCreated";
 
     /**
-     *  <p>The Approval Flow that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> that was created.</p>
      * @return approvalFlow
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface ApprovalFlowCreatedMessage extends Message {
     public ApprovalFlow getApprovalFlow();
 
     /**
-     *  <p>The Approval Flow that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> that was created.</p>
      * @param approvalFlow value to be set
      */
 

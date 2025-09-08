@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Returned when two Customers are simultaneously created or updated with the same email address.</p>
+ *  <p>Returned when two <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customers</a> are simultaneously created or updated with the same email address.</p>
  *  <p>To confirm if the operation was successful, repeat the request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

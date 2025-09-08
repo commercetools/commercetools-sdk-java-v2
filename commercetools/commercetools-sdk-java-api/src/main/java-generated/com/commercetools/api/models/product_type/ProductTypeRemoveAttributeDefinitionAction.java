@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Removes an AttributeDefinition and also deletes all corresponding Attributes on all Products with this ProductType. The removal of the Attributes is eventually consistent.</p>
+ *  <p>Removes an AttributeDefinition and also deletes all corresponding Attributes on all <span>Products</span> with this ProductType. The removal of the Attributes is <span>eventually consistent</span>.</p>
  *  <p>The <code>CombinationUnique</code> constraint is not checked when an Attribute is removed, and uniqueness violations may occur when you remove an Attribute with a <code>CombinationUnique</code> constraint.</p>
  *
  * <hr>

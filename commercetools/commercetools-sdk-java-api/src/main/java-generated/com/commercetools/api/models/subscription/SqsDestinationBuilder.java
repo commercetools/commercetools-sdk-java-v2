@@ -71,7 +71,7 @@ public class SqsDestinationBuilder implements Builder<SqsDestination> {
     }
 
     /**
-     *  <p>AWS Region the message queue is located in.</p>
+     *  <p><span>AWS Region</span> the message queue is located in.</p>
      * @param region value to be set
      * @return Builder
      */
@@ -123,7 +123,7 @@ public class SqsDestinationBuilder implements Builder<SqsDestination> {
     }
 
     /**
-     *  <p>AWS Region the message queue is located in.</p>
+     *  <p><span>AWS Region</span> the message queue is located in.</p>
      * @return region
      */
 

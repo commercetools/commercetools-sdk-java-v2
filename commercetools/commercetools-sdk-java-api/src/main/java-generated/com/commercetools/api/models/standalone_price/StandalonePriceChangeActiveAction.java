@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Updating the value of a StandalonePrice produces the StandalonePriceActiveChanged Message.</p>
+ *  <p>Updating the value of a <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceActiveChangedMessage" rel="nofollow">StandalonePriceActiveChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface StandalonePriceChangeActiveAction extends StandalonePriceUpdate
     String CHANGE_ACTIVE = "changeActive";
 
     /**
-     *  <p>New value to set for the <code>active</code> field of the StandalonePrice.</p>
+     *  <p>New value to set for the <code>active</code> field of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @return active
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface StandalonePriceChangeActiveAction extends StandalonePriceUpdate
     public Boolean getActive();
 
     /**
-     *  <p>New value to set for the <code>active</code> field of the StandalonePrice.</p>
+     *  <p>New value to set for the <code>active</code> field of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param active value to be set
      */
 

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Change Quote State update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteChangeQuoteStateAction" rel="nofollow">Change Quote State</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class QuoteStateChangedMessagePayloadImpl implements QuoteStateChangedMessagePayload, ModelBase {
@@ -56,7 +56,7 @@ public class QuoteStateChangedMessagePayloadImpl implements QuoteStateChangedMes
     }
 
     /**
-     *  <p>State of the Quote after the Change Quote State update action.</p>
+     *  <p>State of the Quote after the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteChangeQuoteStateAction" rel="nofollow">Change Quote State</a> update action.</p>
      */
 
     public com.commercetools.api.models.quote.QuoteState getQuoteState() {
@@ -64,7 +64,7 @@ public class QuoteStateChangedMessagePayloadImpl implements QuoteStateChangedMes
     }
 
     /**
-     *  <p>State of the Quote before the Change Quote State update action.</p>
+     *  <p>State of the Quote before the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteChangeQuoteStateAction" rel="nofollow">Change Quote State</a> update action.</p>
      */
 
     public com.commercetools.api.models.quote.QuoteState getOldQuoteState() {

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Setting the last name of the Customer produces the CustomerLastNameSet Message.</p>
+ *  <p>Setting the last name of the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerLastNameSetMessage" rel="nofollow">CustomerLastNameSet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetLastNameActionImpl implements CustomerSetLastNameAction, ModelBase {

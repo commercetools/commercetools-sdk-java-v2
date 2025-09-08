@@ -41,7 +41,7 @@ public interface ApiClientDraft extends io.vrap.rmf.base.client.Draft<ApiClientD
     public String getName();
 
     /**
-     *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
+     *  <p>Whitespace-separated list of <span>OAuth scopes</span> that can be used when <span>obtaining an access token</span>.</p>
      * @return scope
      */
     @NotNull
@@ -80,7 +80,7 @@ public interface ApiClientDraft extends io.vrap.rmf.base.client.Draft<ApiClientD
     public void setName(final String name);
 
     /**
-     *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
+     *  <p>Whitespace-separated list of <span>OAuth scopes</span> that can be used when <span>obtaining an access token</span>.</p>
      * @param scope value to be set
      */
 

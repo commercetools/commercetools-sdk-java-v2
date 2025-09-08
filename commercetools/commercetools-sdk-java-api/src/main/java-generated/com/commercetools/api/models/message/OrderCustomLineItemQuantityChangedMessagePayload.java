@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Change CustomLineItem Quantity update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderChangeCustomLineItemQuantityAction" rel="nofollow">Change CustomLineItem Quantity</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface OrderCustomLineItemQuantityChangedMessagePayload extends OrderM
     String ORDER_CUSTOM_LINE_ITEM_QUANTITY_CHANGED = "OrderCustomLineItemQuantityChanged";
 
     /**
-     *  <p>Unique identifier of the Custom Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @return customLineItemId
      */
     @NotNull
@@ -48,7 +48,7 @@ public interface OrderCustomLineItemQuantityChangedMessagePayload extends OrderM
     public String getCustomLineItemId();
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @return customLineItemKey
      */
 
@@ -56,7 +56,7 @@ public interface OrderCustomLineItemQuantityChangedMessagePayload extends OrderM
     public String getCustomLineItemKey();
 
     /**
-     *  <p>Custom Line Item quantity after the Change Custom Line Item Quantity update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> quantity after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderChangeCustomLineItemQuantityAction" rel="nofollow">Change Custom Line Item Quantity</a> update action.</p>
      * @return quantity
      */
     @NotNull
@@ -64,7 +64,7 @@ public interface OrderCustomLineItemQuantityChangedMessagePayload extends OrderM
     public Long getQuantity();
 
     /**
-     *  <p>Custom Line Item quantity before the Change Custom Line Item Quantity update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> quantity before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderChangeCustomLineItemQuantityAction" rel="nofollow">Change Custom Line Item Quantity</a> update action.</p>
      * @return oldQuantity
      */
     @NotNull
@@ -72,28 +72,28 @@ public interface OrderCustomLineItemQuantityChangedMessagePayload extends OrderM
     public Long getOldQuantity();
 
     /**
-     *  <p>Unique identifier of the Custom Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @param customLineItemId value to be set
      */
 
     public void setCustomLineItemId(final String customLineItemId);
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @param customLineItemKey value to be set
      */
 
     public void setCustomLineItemKey(final String customLineItemKey);
 
     /**
-     *  <p>Custom Line Item quantity after the Change Custom Line Item Quantity update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> quantity after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderChangeCustomLineItemQuantityAction" rel="nofollow">Change Custom Line Item Quantity</a> update action.</p>
      * @param quantity value to be set
      */
 
     public void setQuantity(final Long quantity);
 
     /**
-     *  <p>Custom Line Item quantity before the Change Custom Line Item Quantity update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> quantity before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderChangeCustomLineItemQuantityAction" rel="nofollow">Change Custom Line Item Quantity</a> update action.</p>
      * @param oldQuantity value to be set
      */
 

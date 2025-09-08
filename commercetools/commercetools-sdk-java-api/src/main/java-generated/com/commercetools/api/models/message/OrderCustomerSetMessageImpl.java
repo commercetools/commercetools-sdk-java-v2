@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Customer ID update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerIdAction" rel="nofollow">Set Customer ID</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderCustomerSetMessageImpl implements OrderCustomerSetMessage, ModelBase {
@@ -150,7 +150,7 @@ public class OrderCustomerSetMessageImpl implements OrderCustomerSetMessage, Mod
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -166,7 +166,7 @@ public class OrderCustomerSetMessageImpl implements OrderCustomerSetMessage, Mod
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -182,7 +182,7 @@ public class OrderCustomerSetMessageImpl implements OrderCustomerSetMessage, Mod
     }
 
     /**
-     *  <p>Customer on the Order after the Set Customer ID update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerIdAction" rel="nofollow">Set Customer ID</a> update action.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -190,7 +190,7 @@ public class OrderCustomerSetMessageImpl implements OrderCustomerSetMessage, Mod
     }
 
     /**
-     *  <p>CustomerGroup on the Order after the Set Customer ID update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerIdAction" rel="nofollow">Set Customer ID</a> update action.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
@@ -198,7 +198,7 @@ public class OrderCustomerSetMessageImpl implements OrderCustomerSetMessage, Mod
     }
 
     /**
-     *  <p>Customer on the Order before the Set Customer ID update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerIdAction" rel="nofollow">Set Customer ID</a> update action.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getOldCustomer() {
@@ -206,7 +206,7 @@ public class OrderCustomerSetMessageImpl implements OrderCustomerSetMessage, Mod
     }
 
     /**
-     *  <p>CustomerGroup on the Order before the Set Customer ID update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomerIdAction" rel="nofollow">Set Customer ID</a> update action.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getOldCustomerGroup() {

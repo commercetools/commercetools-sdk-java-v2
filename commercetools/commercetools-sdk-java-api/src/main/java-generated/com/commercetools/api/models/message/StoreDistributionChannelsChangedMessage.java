@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Generated after a successful Add Distribution Channel, Remove Distribution Channel, or Set Distribution Channels update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreAddDistributionChannelAction" rel="nofollow">Add Distribution Channel</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreRemoveDistributionChannelAction" rel="nofollow">Remove Distribution Channel</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetDistributionChannelsAction" rel="nofollow">Set Distribution Channels</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -46,7 +46,7 @@ public interface StoreDistributionChannelsChangedMessage extends Message {
     String STORE_DISTRIBUTION_CHANNELS_CHANGED = "StoreDistributionChannelsChanged";
 
     /**
-     *  <p>Product distribution Channels that have been added to the Store.</p>
+     *  <p>Product distribution Channels that have been added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @return addedDistributionChannels
      */
     @Valid
@@ -54,7 +54,7 @@ public interface StoreDistributionChannelsChangedMessage extends Message {
     public List<ChannelReference> getAddedDistributionChannels();
 
     /**
-     *  <p>Product distribution Channels that have been removed from the Store.</p>
+     *  <p>Product distribution Channels that have been removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @return removedDistributionChannels
      */
     @Valid
@@ -62,7 +62,7 @@ public interface StoreDistributionChannelsChangedMessage extends Message {
     public List<ChannelReference> getRemovedDistributionChannels();
 
     /**
-     *  <p>Product distribution Channels that have been added to the Store.</p>
+     *  <p>Product distribution Channels that have been added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param addedDistributionChannels values to be set
      */
 
@@ -70,14 +70,14 @@ public interface StoreDistributionChannelsChangedMessage extends Message {
     public void setAddedDistributionChannels(final ChannelReference... addedDistributionChannels);
 
     /**
-     *  <p>Product distribution Channels that have been added to the Store.</p>
+     *  <p>Product distribution Channels that have been added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param addedDistributionChannels values to be set
      */
 
     public void setAddedDistributionChannels(final List<ChannelReference> addedDistributionChannels);
 
     /**
-     *  <p>Product distribution Channels that have been removed from the Store.</p>
+     *  <p>Product distribution Channels that have been removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param removedDistributionChannels values to be set
      */
 
@@ -85,7 +85,7 @@ public interface StoreDistributionChannelsChangedMessage extends Message {
     public void setRemovedDistributionChannels(final ChannelReference... removedDistributionChannels);
 
     /**
-     *  <p>Product distribution Channels that have been removed from the Store.</p>
+     *  <p>Product distribution Channels that have been removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param removedDistributionChannels values to be set
      */
 

@@ -76,7 +76,7 @@ public class SearchDateRangeValueImpl implements SearchDateRangeValue, ModelBase
     }
 
     /**
-     *  <p>Possible values for the <code>fieldType</code> property on simple expressions indicating the data type of the <code>field</code>.</p>
+     *  <p>Possible values for the <code>fieldType</code> property on <span>simple expressions</span> indicating the data type of the <code>field</code>.</p>
      */
 
     public com.commercetools.api.models.search.SearchFieldType getFieldType() {

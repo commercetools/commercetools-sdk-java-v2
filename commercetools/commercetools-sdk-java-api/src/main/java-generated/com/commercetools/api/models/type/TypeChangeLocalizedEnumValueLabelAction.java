@@ -16,7 +16,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Changes the <code>label</code> of a LocalizedEnumValue of a LocalizedEnumType FieldDefinition.</p>
+ *  <p>Changes the <code>label</code> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumValue" rel="nofollow">LocalizedEnumValue</a> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumType" rel="nofollow">LocalizedEnumType</a> FieldDefinition.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface TypeChangeLocalizedEnumValueLabelAction extends TypeUpdateActio
     String CHANGE_LOCALIZED_ENUM_VALUE_LABEL = "changeLocalizedEnumValueLabel";
 
     /**
-     *  <p><code>name</code> of the FieldDefinition to update.</p>
+     *  <p><code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a> to update.</p>
      * @return fieldName
      */
     @NotNull
@@ -57,7 +57,7 @@ public interface TypeChangeLocalizedEnumValueLabelAction extends TypeUpdateActio
     public CustomFieldLocalizedEnumValue getValue();
 
     /**
-     *  <p><code>name</code> of the FieldDefinition to update.</p>
+     *  <p><code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a> to update.</p>
      * @param fieldName value to be set
      */
 

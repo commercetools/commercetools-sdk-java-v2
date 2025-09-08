@@ -35,7 +35,7 @@ import jakarta.validation.constraints.NotNull;
 public interface CustomerSignin {
 
     /**
-     *  <p>Email address of the Customer treated as case-insensitive.</p>
+     *  <p>Email address of the Customer treated as <span>case-insensitive</span>.</p>
      * @return email
      */
     @NotNull
@@ -59,7 +59,7 @@ public interface CustomerSignin {
     public String getAnonymousCartId();
 
     /**
-     *  <p>Identifies a Cart that will be assigned to the Customer.</p>
+     *  <p>Assigns the Customer to the specified Cart.</p>
      * @return anonymousCart
      */
     @Valid
@@ -68,8 +68,8 @@ public interface CustomerSignin {
 
     /**
      *  <ul>
-     *   <li>Set to <code>MergeWithExistingCustomerCart</code> if LineItems of the anonymous Cart should be merged with the active Customer Cart that has been modified most recently.</li>
-     *   <li>Set to <code>UseAsNewActiveCustomerCart</code> if the anonymous Cart should be used as the new active Customer Cart and no LineItems are to be merged.</li>
+     *   <li>Set to <code>MergeWithExistingCustomerCart</code> if <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> of the anonymous Cart should be merged with the active Customer Cart that has been modified most recently.</li>
+     *   <li>Set to <code>UseAsNewActiveCustomerCart</code> if the anonymous Cart should be used as the new active Customer Cart and no <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> are to be merged.</li>
      *  </ul>
      * @return anonymousCartSignInMode
      */
@@ -78,7 +78,8 @@ public interface CustomerSignin {
     public AnonymousCartSignInMode getAnonymousCartSignInMode();
 
     /**
-     *  <p>If both <code>anonymousCart</code> and <code>anonymousId</code> are provided, the <code>anonymousId</code> on the CustomerSignin must match that of the anonymous Cart. Otherwise a 400 Bad Request <code>Invalid Operation</code> error is returned with the message: "Cart with the ID cart-id does not have the expected anonymousId.".</p>
+     *  <p>Assigns the Customer to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingLists</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payments</a> with the same <code>anonymousId</code>.</p>
+     *  <p>If <code>anonymousCart</code> is provided, this value must match the <code>anonymousId</code> of the anonymous <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return anonymousId
      */
 
@@ -87,7 +88,7 @@ public interface CustomerSignin {
 
     /**
      *  <ul>
-     *   <li>If <code>true</code>, the LineItem Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart will be updated.</li>
+     *   <li>If <code>true</code>, the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart will be updated.</li>
      *   <li>If <code>false</code>, only the prices, discounts, and tax rates will be updated.</li>
      *  </ul>
      * @return updateProductData
@@ -97,7 +98,7 @@ public interface CustomerSignin {
     public Boolean getUpdateProductData();
 
     /**
-     *  <p>Email address of the Customer treated as case-insensitive.</p>
+     *  <p>Email address of the Customer treated as <span>case-insensitive</span>.</p>
      * @param email value to be set
      */
 
@@ -118,7 +119,7 @@ public interface CustomerSignin {
     public void setAnonymousCartId(final String anonymousCartId);
 
     /**
-     *  <p>Identifies a Cart that will be assigned to the Customer.</p>
+     *  <p>Assigns the Customer to the specified Cart.</p>
      * @param anonymousCart value to be set
      */
 
@@ -126,8 +127,8 @@ public interface CustomerSignin {
 
     /**
      *  <ul>
-     *   <li>Set to <code>MergeWithExistingCustomerCart</code> if LineItems of the anonymous Cart should be merged with the active Customer Cart that has been modified most recently.</li>
-     *   <li>Set to <code>UseAsNewActiveCustomerCart</code> if the anonymous Cart should be used as the new active Customer Cart and no LineItems are to be merged.</li>
+     *   <li>Set to <code>MergeWithExistingCustomerCart</code> if <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> of the anonymous Cart should be merged with the active Customer Cart that has been modified most recently.</li>
+     *   <li>Set to <code>UseAsNewActiveCustomerCart</code> if the anonymous Cart should be used as the new active Customer Cart and no <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> are to be merged.</li>
      *  </ul>
      * @param anonymousCartSignInMode value to be set
      */
@@ -135,7 +136,8 @@ public interface CustomerSignin {
     public void setAnonymousCartSignInMode(final AnonymousCartSignInMode anonymousCartSignInMode);
 
     /**
-     *  <p>If both <code>anonymousCart</code> and <code>anonymousId</code> are provided, the <code>anonymousId</code> on the CustomerSignin must match that of the anonymous Cart. Otherwise a 400 Bad Request <code>Invalid Operation</code> error is returned with the message: "Cart with the ID cart-id does not have the expected anonymousId.".</p>
+     *  <p>Assigns the Customer to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingLists</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payments</a> with the same <code>anonymousId</code>.</p>
+     *  <p>If <code>anonymousCart</code> is provided, this value must match the <code>anonymousId</code> of the anonymous <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param anonymousId value to be set
      */
 
@@ -143,7 +145,7 @@ public interface CustomerSignin {
 
     /**
      *  <ul>
-     *   <li>If <code>true</code>, the LineItem Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart will be updated.</li>
+     *   <li>If <code>true</code>, the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart will be updated.</li>
      *   <li>If <code>false</code>, only the prices, discounts, and tax rates will be updated.</li>
      *  </ul>
      * @param updateProductData value to be set

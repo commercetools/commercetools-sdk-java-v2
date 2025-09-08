@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Removes the association to a Store from the Customer. If no more Stores are assigned, the Customer becomes a global Customer.</p>
+ *  <p>Removes the association to a Store from the Customer. If no more Stores are assigned, the Customer becomes a <span>global Customer</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -40,7 +40,7 @@ public interface ProjectSetBusinessUnitAssociateRoleOnCreationAction extends Pro
     String SET_MY_BUSINESS_UNIT_ASSOCIATE_ROLE_ON_CREATION = "setMyBusinessUnitAssociateRoleOnCreation";
 
     /**
-     *  <p>Default Associate Role assigned to the Associate creating a Business Unit using the My Business Unit endpoint.</p>
+     *  <p>Default <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a> assigned to the Associate creating a Business Unit using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/business-units:POST" rel="nofollow">My Business Unit endpoint</a>.</p>
      * @return associateRole
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface ProjectSetBusinessUnitAssociateRoleOnCreationAction extends Pro
     public AssociateRoleResourceIdentifier getAssociateRole();
 
     /**
-     *  <p>Default Associate Role assigned to the Associate creating a Business Unit using the My Business Unit endpoint.</p>
+     *  <p>Default <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a> assigned to the Associate creating a Business Unit using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/business-units:POST" rel="nofollow">My Business Unit endpoint</a>.</p>
      * @param associateRole value to be set
      */
 

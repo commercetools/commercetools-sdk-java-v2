@@ -4,6 +4,8 @@ package com.commercetools.api.models.message;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,7 +17,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ProductSelectionProductAddedMessagePayload productSelectionProductAddedMessagePayload = ProductSelectionProductAddedMessagePayload.builder()
  *             .product(productBuilder -> productBuilder)
- *             .variantSelection(variantSelectionBuilder -> variantSelectionBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -26,10 +27,11 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
 
     private com.commercetools.api.models.product.ProductReference product;
 
+    @Nullable
     private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
 
     /**
-     *  <p>Product that was added to the Product Selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a>.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -41,7 +43,7 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Product that was added to the Product Selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a>.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -53,7 +55,7 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Product that was added to the Product Selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a>.</p>
      * @param product value to be set
      * @return Builder
      */
@@ -65,19 +67,19 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Product Variant Selection after the Add Product update action.</p>
+     *  <p>Product Variant Selection after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionAddProductAction" rel="nofollow">Add Product</a> update action.</p>
      * @param variantSelection value to be set
      * @return Builder
      */
 
     public ProductSelectionProductAddedMessagePayloadBuilder variantSelection(
-            final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
+            @Nullable final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
         this.variantSelection = variantSelection;
         return this;
     }
 
     /**
-     *  <p>Product Variant Selection after the Add Product update action.</p>
+     *  <p>Product Variant Selection after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionAddProductAction" rel="nofollow">Add Product</a> update action.</p>
      * @param builder function to build the variantSelection value
      * @return Builder
      */
@@ -91,7 +93,7 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Product that was added to the Product Selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a>.</p>
      * @return product
      */
 
@@ -100,10 +102,11 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Product Variant Selection after the Add Product update action.</p>
+     *  <p>Product Variant Selection after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionAddProductAction" rel="nofollow">Add Product</a> update action.</p>
      * @return variantSelection
      */
 
+    @Nullable
     public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
         return this.variantSelection;
     }
@@ -114,8 +117,6 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
      */
     public ProductSelectionProductAddedMessagePayload build() {
         Objects.requireNonNull(product, ProductSelectionProductAddedMessagePayload.class + ": product is missing");
-        Objects.requireNonNull(variantSelection,
-            ProductSelectionProductAddedMessagePayload.class + ": variantSelection is missing");
         return new ProductSelectionProductAddedMessagePayloadImpl(product, variantSelection);
     }
 

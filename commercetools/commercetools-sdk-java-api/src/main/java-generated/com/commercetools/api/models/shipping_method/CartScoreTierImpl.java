@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The ShippingRate maps to an abstract Cart categorization expressed by integers (such as shipping scores or weight ranges). Either <code>price</code> or <code>priceFunction</code> is required.</p>
+ *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> maps to an abstract Cart categorization expressed by integers (such as shipping scores or weight ranges). Either <code>price</code> or <code>priceFunction</code> is required.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartScoreTierImpl implements CartScoreTier, ModelBase {
@@ -63,7 +63,7 @@ public class CartScoreTierImpl implements CartScoreTier, ModelBase {
     }
 
     /**
-     *  <p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See Tiered shipping rates for details and examples.</p>
+     *  <p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See <span>Tiered shipping rates</span> for details and examples.</p>
      */
 
     public Integer getScore() {
@@ -87,7 +87,7 @@ public class CartScoreTierImpl implements CartScoreTier, ModelBase {
     }
 
     /**
-     *  <p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p>
+     *  <p>Appears in response to <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-cart:GET" rel="nofollow">Get ShippingMethods for a Cart</a> if the shipping rate matches the search query.</p>
      */
 
     public Boolean getIsMatching() {

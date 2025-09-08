@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface BusinessUnitSearchResult {
 
     /**
-     *  <p><code>id</code> of the BusinessUnit matching the search query.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> matching the search query.</p>
      * @return id
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface BusinessUnitSearchResult {
     public Double getRelevance();
 
     /**
-     *  <p><code>id</code> of the BusinessUnit matching the search query.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> matching the search query.</p>
      * @param id value to be set
      */
 

@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Adding a Payment interaction generates the PaymentInteractionAdded Message.</p>
+ *  <p>Adding a Payment interaction generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentInteractionAddedMessage" rel="nofollow">PaymentInteractionAdded</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface PaymentAddInterfaceInteractionAction extends PaymentUpdateActio
     String ADD_INTERFACE_INTERACTION = "addInterfaceInteraction";
 
     /**
-     *  <p>ResourceIdentifier of a Type.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @return type
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface PaymentAddInterfaceInteractionAction extends PaymentUpdateActio
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Custom Fields as per FieldDefinitions of the Type.</p>
+     *  <p><span>Custom Fields</span> as per <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @return fields
      */
     @Valid
@@ -58,14 +58,14 @@ public interface PaymentAddInterfaceInteractionAction extends PaymentUpdateActio
     public FieldContainer getFields();
 
     /**
-     *  <p>ResourceIdentifier of a Type.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Custom Fields as per FieldDefinitions of the Type.</p>
+     *  <p><span>Custom Fields</span> as per <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param fields value to be set
      */
 

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set StatusInterfaceCode update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetStatusInterfaceCodeAction" rel="nofollow">Set StatusInterfaceCode</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentStatusInterfaceCodeSetMessageImpl implements PaymentStatusInterfaceCodeSetMessage, ModelBase {
@@ -139,7 +139,7 @@ public class PaymentStatusInterfaceCodeSetMessageImpl implements PaymentStatusIn
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -155,7 +155,7 @@ public class PaymentStatusInterfaceCodeSetMessageImpl implements PaymentStatusIn
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -171,7 +171,7 @@ public class PaymentStatusInterfaceCodeSetMessageImpl implements PaymentStatusIn
     }
 
     /**
-     *  <p>The <code>interfaceCode</code> that was set during the Set StatusInterfaceCode update action.</p>
+     *  <p>The <code>interfaceCode</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetStatusInterfaceCodeAction" rel="nofollow">Set StatusInterfaceCode</a> update action.</p>
      */
 
     public String getInterfaceCode() {

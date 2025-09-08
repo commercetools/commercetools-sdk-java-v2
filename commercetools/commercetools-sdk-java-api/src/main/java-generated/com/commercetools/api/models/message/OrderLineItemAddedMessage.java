@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Add LineItem update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderAddLineItemAction" rel="nofollow">Add LineItem</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -48,7 +48,7 @@ public interface OrderLineItemAddedMessage extends OrderMessage {
     String ORDER_LINE_ITEM_ADDED = "OrderLineItemAdded";
 
     /**
-     *  <p>Line Item that was added to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @return lineItem
      */
     @NotNull
@@ -57,7 +57,7 @@ public interface OrderLineItemAddedMessage extends OrderMessage {
     public LineItem getLineItem();
 
     /**
-     *  <p>Quantity of Line Items that were added to the Order.</p>
+     *  <p>Quantity of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Items</a> that were added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @return addedQuantity
      */
     @NotNull
@@ -65,14 +65,14 @@ public interface OrderLineItemAddedMessage extends OrderMessage {
     public Long getAddedQuantity();
 
     /**
-     *  <p>Line Item that was added to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param lineItem value to be set
      */
 
     public void setLineItem(final LineItem lineItem);
 
     /**
-     *  <p>Quantity of Line Items that were added to the Order.</p>
+     *  <p>Quantity of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Items</a> that were added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param addedQuantity value to be set
      */
 

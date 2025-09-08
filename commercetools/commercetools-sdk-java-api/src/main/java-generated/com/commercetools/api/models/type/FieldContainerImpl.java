@@ -40,7 +40,7 @@ public class FieldContainerImpl implements FieldContainer, ModelBase {
     }
 
     /**
-     *  <p>JSON object with keys matching the names of Custom Fields (that is, <code>name</code>s in the FieldDefinitions) and values given by CustomFieldValue.</p>
+     *  <p>JSON object with keys matching the names of Custom Fields (that is, <code>name</code>s in the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a>) and values given by <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a>.</p>
      */
 
     public Map<String, java.lang.Object> values() {

@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Delete Product request.</p>
+ *  <p>Generated after a successful <span>Delete Product</span> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface ProductDeletedMessage extends Message {
     String PRODUCT_DELETED = "ProductDeleted";
 
     /**
-     *  <p>List of image URLs that were removed during the Delete Product request.</p>
+     *  <p>List of image URLs that were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Delete Product</a> request.</p>
      * @return removedImageUrls
      */
     @NotNull
@@ -55,7 +55,7 @@ public interface ProductDeletedMessage extends Message {
     public List<String> getRemovedImageUrls();
 
     /**
-     *  <p>Current Product Projection of the deleted Product.</p>
+     *  <p>Current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the deleted <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return currentProjection
      */
     @Valid
@@ -63,7 +63,7 @@ public interface ProductDeletedMessage extends Message {
     public ProductProjection getCurrentProjection();
 
     /**
-     *  <p>List of image URLs that were removed during the Delete Product request.</p>
+     *  <p>List of image URLs that were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Delete Product</a> request.</p>
      * @param removedImageUrls values to be set
      */
 
@@ -71,14 +71,14 @@ public interface ProductDeletedMessage extends Message {
     public void setRemovedImageUrls(final String... removedImageUrls);
 
     /**
-     *  <p>List of image URLs that were removed during the Delete Product request.</p>
+     *  <p>List of image URLs that were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Delete Product</a> request.</p>
      * @param removedImageUrls values to be set
      */
 
     public void setRemovedImageUrls(final List<String> removedImageUrls);
 
     /**
-     *  <p>Current Product Projection of the deleted Product.</p>
+     *  <p>Current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the deleted <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param currentProjection value to be set
      */
 

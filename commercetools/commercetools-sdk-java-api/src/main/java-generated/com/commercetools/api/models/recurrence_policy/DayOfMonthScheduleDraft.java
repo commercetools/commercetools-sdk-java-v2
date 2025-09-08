@@ -15,10 +15,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Determines the schedule for a Recurring Order to occur on a specific day of each month.</p>
+ *  <p>Determines the schedule for a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> to occur on a specific day of each month.</p>
  *  <ul>
  *   <li>Orders will be created even if the specified day is a weekend or holiday.</li>
- *   <li>To place orders on different dates within the same month (for example, the 1st and 15th), create separate Recurring Orders—each with its own schedule.</li>
+ *   <li>To place orders on different dates within the same month (for example, the 1st and 15th), create separate <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>—each with its own schedule.</li>
  *  </ul>
  *
  * <hr>
@@ -43,7 +43,7 @@ public interface DayOfMonthScheduleDraft
     String DAY_OF_MONTH = "dayOfMonth";
 
     /**
-     *  <p>The day of the month when the Recurring Order should be created. If the value is greater than the number of days in a given month, the order will be created on the last day of the month.</p>
+     *  <p>The day of the month when the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> should be created. If the value is greater than the number of days in a given month, the order will be created on the last day of the month.</p>
      * @return day
      */
     @NotNull
@@ -51,7 +51,7 @@ public interface DayOfMonthScheduleDraft
     public Integer getDay();
 
     /**
-     *  <p>The day of the month when the Recurring Order should be created. If the value is greater than the number of days in a given month, the order will be created on the last day of the month.</p>
+     *  <p>The day of the month when the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> should be created. If the value is greater than the number of days in a given month, the order will be created on the last day of the month.</p>
      * @param day value to be set
      */
 

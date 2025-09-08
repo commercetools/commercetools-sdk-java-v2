@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Either <code>variantId</code> or <code>sku</code> is required. The Asset to update must be specified using either <code>assetId</code> or <code>assetKey</code>.</p>
+ *  <p>Either <code>variantId</code> or <code>sku</code> is required. The <a href="https://docs.commercetools.com/apis/ctp:api:type:Asset" rel="nofollow">Asset</a> to update must be specified using either <code>assetId</code> or <code>assetKey</code>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -78,7 +78,7 @@ public interface ProductSetAssetCustomFieldAction extends ProductUpdateAction {
     public String getAssetKey();
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @return name
      */
     @NotNull
@@ -86,7 +86,7 @@ public interface ProductSetAssetCustomFieldAction extends ProductUpdateAction {
     public String getName();
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
 
@@ -129,14 +129,14 @@ public interface ProductSetAssetCustomFieldAction extends ProductUpdateAction {
     public void setAssetKey(final String assetKey);
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      */
 

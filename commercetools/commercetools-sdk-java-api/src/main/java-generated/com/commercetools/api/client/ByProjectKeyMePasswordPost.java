@@ -16,8 +16,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Changing the password of the Customer produces the CustomerPasswordUpdated Message with <code>reset=false</code>.</p>
- *  <p>If the current password does not match, an InvalidCurrentPassword error is returned.</p>
+ *  <p>Changing the password of the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerPasswordUpdatedMessage" rel="nofollow">CustomerPasswordUpdated</a> Message with <code>reset=false</code>.</p>
+ *  <p>If the current password does not match, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidCurrentPasswordError" rel="nofollow">InvalidCurrentPassword</a> error is returned.</p>
  *
  * <hr>
  * <div class=code-example>

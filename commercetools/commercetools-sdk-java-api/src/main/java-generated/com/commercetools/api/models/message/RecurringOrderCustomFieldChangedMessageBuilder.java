@@ -190,7 +190,7 @@ public class RecurringOrderCustomFieldChangedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -202,7 +202,7 @@ public class RecurringOrderCustomFieldChangedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -275,7 +275,7 @@ public class RecurringOrderCustomFieldChangedMessageBuilder
     }
 
     /**
-     *  <p>CustomFieldValue based on the FieldType after the Set CustomField update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -286,7 +286,7 @@ public class RecurringOrderCustomFieldChangedMessageBuilder
     }
 
     /**
-     *  <p>CustomFieldValue based on the FieldType before the Set CustomField update action. When there has not been a Custom Field with the <code>name</code> on the Order before, an Order Custom Field Added Message is generated instead.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetCustomFieldAction" rel="nofollow">Set CustomField</a> update action. When there has not been a Custom Field with the <code>name</code> on the Order before, an <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderCustomFieldAddedMessage" rel="nofollow">Order Custom Field Added</a> Message is generated instead.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -363,7 +363,7 @@ public class RecurringOrderCustomFieldChangedMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -400,7 +400,7 @@ public class RecurringOrderCustomFieldChangedMessageBuilder
     }
 
     /**
-     *  <p>CustomFieldValue based on the FieldType after the Set CustomField update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
      * @return value
      */
 
@@ -409,7 +409,7 @@ public class RecurringOrderCustomFieldChangedMessageBuilder
     }
 
     /**
-     *  <p>CustomFieldValue based on the FieldType before the Set CustomField update action. When there has not been a Custom Field with the <code>name</code> on the Order before, an Order Custom Field Added Message is generated instead.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetCustomFieldAction" rel="nofollow">Set CustomField</a> update action. When there has not been a Custom Field with the <code>name</code> on the Order before, an <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderCustomFieldAddedMessage" rel="nofollow">Order Custom Field Added</a> Message is generated instead.</p>
      * @return previousValue
      */
 

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Updating the value of a StandalonePrice produces the StandalonePriceActiveChanged Message.</p>
+ *  <p>Updating the value of a <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceActiveChangedMessage" rel="nofollow">StandalonePriceActiveChanged</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceChangeActiveActionImpl implements StandalonePriceChangeActiveAction, ModelBase {
@@ -51,7 +51,7 @@ public class StandalonePriceChangeActiveActionImpl implements StandalonePriceCha
     }
 
     /**
-     *  <p>New value to set for the <code>active</code> field of the StandalonePrice.</p>
+     *  <p>New value to set for the <code>active</code> field of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      */
 
     public Boolean getActive() {

@@ -68,7 +68,7 @@ public class TaxedPriceDraftImpl implements TaxedPriceDraft, ModelBase {
 
     /**
      *  <p>Taxable portions added to the <code>totalGross</code>.</p>
-     *  <p>Calculated from the TaxRates.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> getTaxPortions() {

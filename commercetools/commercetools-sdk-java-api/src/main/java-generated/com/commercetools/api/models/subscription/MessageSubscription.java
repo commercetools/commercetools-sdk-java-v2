@@ -15,8 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Messages will be delivered even if the Messages Query HTTP API is not enabled.</p>
- *  <p>For MessageSubscriptions, the format of the payload is MessageDeliveryPayload.</p>
+ *  <p>Messages will be delivered even if the Messages Query HTTP API <span>is not enabled</span>.</p>
+ *  <p>For MessageSubscriptions, the format of the payload is <a href="https://docs.commercetools.com/apis/ctp:api:type:MessageDeliveryPayload" rel="nofollow">MessageDeliveryPayload</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

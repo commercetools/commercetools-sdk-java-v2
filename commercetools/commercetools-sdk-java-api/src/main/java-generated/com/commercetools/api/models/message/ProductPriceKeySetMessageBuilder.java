@@ -196,7 +196,7 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -207,7 +207,7 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -280,7 +280,7 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
     }
 
     /**
-     *  <p>Unique identifier of the Price.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</p>
      * @param priceId value to be set
      * @return Builder
      */
@@ -291,7 +291,7 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
     }
 
     /**
-     *  <p><code>key</code> value of the Price before the Set Price Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetPriceKeyAction" rel="nofollow">Set Price Key</a> update action.</p>
      * @param oldKey value to be set
      * @return Builder
      */
@@ -302,7 +302,7 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
     }
 
     /**
-     *  <p><code>key</code> value of the Price after the Set Price Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetPriceKeyAction" rel="nofollow">Set Price Key</a> update action.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -313,7 +313,7 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -389,7 +389,7 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -426,7 +426,7 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
     }
 
     /**
-     *  <p>Unique identifier of the Price.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</p>
      * @return priceId
      */
 
@@ -436,7 +436,7 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
     }
 
     /**
-     *  <p><code>key</code> value of the Price before the Set Price Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetPriceKeyAction" rel="nofollow">Set Price Key</a> update action.</p>
      * @return oldKey
      */
 
@@ -446,7 +446,7 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
     }
 
     /**
-     *  <p><code>key</code> value of the Price after the Set Price Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetPriceKeyAction" rel="nofollow">Set Price Key</a> update action.</p>
      * @return key
      */
 
@@ -456,7 +456,7 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @return staged
      */
 

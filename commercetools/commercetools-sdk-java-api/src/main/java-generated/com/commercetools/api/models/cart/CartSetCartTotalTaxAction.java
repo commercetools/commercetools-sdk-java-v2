@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Can be used if the Cart has the <code>ExternalAmount</code> TaxMode. This update action adds the <code>taxedPrice</code> field to the Cart. It sets the <code>totalGross</code> amount, and Composable Commerce calculates the <code>totalNet</code> and <code>totalTax</code> values based on the provided <code>externalTotalGross</code>. You must use this update action after any price-affecting change occurs within the Cart.</p>
+ *  <p>Can be used if the Cart has the <code>ExternalAmount</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>. This update action adds the <code>taxedPrice</code> field to the Cart. It sets the <code>totalGross</code> amount, and Composable Commerce calculates the <code>totalNet</code> and <code>totalTax</code> values based on the provided <code>externalTotalGross</code>. You must use this update action after any price-affecting change occurs within the Cart.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

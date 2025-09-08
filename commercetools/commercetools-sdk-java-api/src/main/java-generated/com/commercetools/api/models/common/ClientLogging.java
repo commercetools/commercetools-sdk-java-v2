@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>These objects represent information about which API Client created or modified a resource. For more information, see Client Logging.</p>
+ *  <p>These objects represent information about which <span>API Client</span> created or modified a resource. For more information, see <span>Client Logging</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +32,7 @@ import jakarta.validation.Valid;
 public interface ClientLogging {
 
     /**
-     *  <p><code>id</code> of the API Client which created the resource.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> which created the resource.</p>
      * @return clientId
      */
 
@@ -40,7 +40,7 @@ public interface ClientLogging {
     public String getClientId();
 
     /**
-     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     *  <p><span>External user ID</span> provided by <code>X-External-User-ID</code> HTTP Header.</p>
      * @return externalUserId
      */
 
@@ -48,7 +48,7 @@ public interface ClientLogging {
     public String getExternalUserId();
 
     /**
-     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who modified the resource using a token from the <span>password flow</span>.</p>
      * @return customer
      */
     @Valid
@@ -56,7 +56,7 @@ public interface ClientLogging {
     public CustomerReference getCustomer();
 
     /**
-     *  <p>Indicates that the resource was modified during an anonymous session with the logged ID.</p>
+     *  <p>Indicates that the resource was modified during an <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a> with the logged ID.</p>
      * @return anonymousId
      */
 
@@ -64,7 +64,7 @@ public interface ClientLogging {
     public String getAnonymousId();
 
     /**
-     *  <p>Indicates the Customer who created or modified the resource in the context of a Business Unit. Only available for B2B-enabled Projects when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who created or modified the resource in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. Only available for <span>B2B</span>-enabled Projects when an Associate acts on behalf of a company using the <span>associate endpoints</span>.</p>
      * @return associate
      */
     @Valid
@@ -72,35 +72,35 @@ public interface ClientLogging {
     public CustomerReference getAssociate();
 
     /**
-     *  <p><code>id</code> of the API Client which created the resource.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> which created the resource.</p>
      * @param clientId value to be set
      */
 
     public void setClientId(final String clientId);
 
     /**
-     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     *  <p><span>External user ID</span> provided by <code>X-External-User-ID</code> HTTP Header.</p>
      * @param externalUserId value to be set
      */
 
     public void setExternalUserId(final String externalUserId);
 
     /**
-     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who modified the resource using a token from the <span>password flow</span>.</p>
      * @param customer value to be set
      */
 
     public void setCustomer(final CustomerReference customer);
 
     /**
-     *  <p>Indicates that the resource was modified during an anonymous session with the logged ID.</p>
+     *  <p>Indicates that the resource was modified during an <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a> with the logged ID.</p>
      * @param anonymousId value to be set
      */
 
     public void setAnonymousId(final String anonymousId);
 
     /**
-     *  <p>Indicates the Customer who created or modified the resource in the context of a Business Unit. Only available for B2B-enabled Projects when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who created or modified the resource in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. Only available for <span>B2B</span>-enabled Projects when an Associate acts on behalf of a company using the <span>associate endpoints</span>.</p>
      * @param associate value to be set
      */
 

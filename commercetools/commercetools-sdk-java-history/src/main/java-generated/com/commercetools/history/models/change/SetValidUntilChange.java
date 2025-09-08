@@ -17,9 +17,9 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set Valid Until on Cart Discounts.</li>
- *   <li>Set Valid Until on Discount Codes.</li>
- *   <li>Set Valid Until on Product Discounts.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountSetValidUntilAction" rel="nofollow">Set Valid Until</a> on Cart Discounts.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeSetValidUntilAction" rel="nofollow">Set Valid Until</a> on Discount Codes.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountSetValidUntilAction" rel="nofollow">Set Valid Until</a> on Product Discounts.</li>
  *  </ul>
  *
  * <hr>

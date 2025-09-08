@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The request body to import ProductVariants. Contains data for ProductVariants to be created or updated in a Project.</p>
+ *  <p>The request body to <a href="https://docs.commercetools.com/apis/ctp:import:endpoint:/{projectKey}/product-variants/import-containers/{importContainerKey}:POST" rel="nofollow">import ProductVariants</a>. Contains data for <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> to be created or updated in a Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

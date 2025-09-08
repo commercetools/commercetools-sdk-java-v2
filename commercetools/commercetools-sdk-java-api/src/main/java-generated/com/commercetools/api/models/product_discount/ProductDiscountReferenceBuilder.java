@@ -30,7 +30,7 @@ public class ProductDiscountReferenceBuilder implements Builder<ProductDiscountR
     private com.commercetools.api.models.product_discount.ProductDiscount obj;
 
     /**
-     *  <p>Unique identifier of the referenced ProductDiscount.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ProductDiscountReferenceBuilder implements Builder<ProductDiscountR
     }
 
     /**
-     *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
+     *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with <span>Reference Expansion</span> for ProductDiscounts.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ProductDiscountReferenceBuilder implements Builder<ProductDiscountR
     }
 
     /**
-     *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
+     *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with <span>Reference Expansion</span> for ProductDiscounts.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class ProductDiscountReferenceBuilder implements Builder<ProductDiscountR
     }
 
     /**
-     *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
+     *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with <span>Reference Expansion</span> for ProductDiscounts.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class ProductDiscountReferenceBuilder implements Builder<ProductDiscountR
     }
 
     /**
-     *  <p>Unique identifier of the referenced ProductDiscount.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a>.</p>
      * @return id
      */
 
@@ -86,7 +86,7 @@ public class ProductDiscountReferenceBuilder implements Builder<ProductDiscountR
     }
 
     /**
-     *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
+     *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with <span>Reference Expansion</span> for ProductDiscounts.</p>
      * @return obj
      */
 

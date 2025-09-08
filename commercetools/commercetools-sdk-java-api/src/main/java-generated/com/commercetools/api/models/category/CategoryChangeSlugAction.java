@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Changing the slug produces the CategorySlugChanged Message.</p>
+ *  <p>Changing the slug produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CategorySlugChangedMessage" rel="nofollow">CategorySlugChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface CategoryChangeSlugAction extends CategoryUpdateAction {
     String CHANGE_SLUG = "changeSlug";
 
     /**
-     *  <p>New value to set. Must not be empty. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     *  <p>New value to set. Must not be empty. A Category can have the same slug for different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>, but it must be unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @return slug
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface CategoryChangeSlugAction extends CategoryUpdateAction {
     public LocalizedString getSlug();
 
     /**
-     *  <p>New value to set. Must not be empty. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     *  <p>New value to set. Must not be empty. A Category can have the same slug for different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>, but it must be unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @param slug value to be set
      */
 

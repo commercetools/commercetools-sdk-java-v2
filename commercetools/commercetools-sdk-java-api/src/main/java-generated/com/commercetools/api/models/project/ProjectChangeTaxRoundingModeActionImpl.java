@@ -52,7 +52,7 @@ public class ProjectChangeTaxRoundingModeActionImpl implements ProjectChangeTaxR
     }
 
     /**
-     *  <p>Project-level default rounding mode for tax calculation. See CartsConfiguration.</p>
+     *  <p>Project-level default rounding mode for tax calculation. See <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">CartsConfiguration</a>.</p>
      */
 
     public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {

@@ -18,7 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Produces the Return Info Set Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnInfoSetMessage" rel="nofollow">Return Info Set</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Change Name update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeNameAction" rel="nofollow">Change Name</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitNameChangedMessagePayloadImpl implements BusinessUnitNameChangedMessagePayload, ModelBase {
@@ -51,7 +51,7 @@ public class BusinessUnitNameChangedMessagePayloadImpl implements BusinessUnitNa
     }
 
     /**
-     *  <p>Updated name of the Business Unit.</p>
+     *  <p>Updated name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      */
 
     public String getName() {

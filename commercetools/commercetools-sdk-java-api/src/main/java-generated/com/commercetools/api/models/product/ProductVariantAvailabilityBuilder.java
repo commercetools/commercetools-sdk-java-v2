@@ -42,7 +42,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     private Long version;
 
     /**
-     *  <p>For each InventoryEntry with a supply Channel, an entry is added to <code>channels</code>.</p>
+     *  <p>For each <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> with a supply Channel, an entry is added to <code>channels</code>.</p>
      * @param builder function to build the channels value
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     }
 
     /**
-     *  <p>For each InventoryEntry with a supply Channel, an entry is added to <code>channels</code>.</p>
+     *  <p>For each <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> with a supply Channel, an entry is added to <code>channels</code>.</p>
      * @param builder function to build the channels value
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     }
 
     /**
-     *  <p>For each InventoryEntry with a supply Channel, an entry is added to <code>channels</code>.</p>
+     *  <p>For each <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> with a supply Channel, an entry is added to <code>channels</code>.</p>
      * @param channels value to be set
      * @return Builder
      */
@@ -114,7 +114,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     }
 
     /**
-     *  <p>Unique identifier of the InventoryEntry.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -125,7 +125,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     }
 
     /**
-     *  <p>Current version of the InventoryEntry.</p>
+     *  <p>Current version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -136,7 +136,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     }
 
     /**
-     *  <p>For each InventoryEntry with a supply Channel, an entry is added to <code>channels</code>.</p>
+     *  <p>For each <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> with a supply Channel, an entry is added to <code>channels</code>.</p>
      * @return channels
      */
 
@@ -176,7 +176,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     }
 
     /**
-     *  <p>Unique identifier of the InventoryEntry.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
      * @return id
      */
 
@@ -186,7 +186,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     }
 
     /**
-     *  <p>Current version of the InventoryEntry.</p>
+     *  <p>Current version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
      * @return version
      */
 

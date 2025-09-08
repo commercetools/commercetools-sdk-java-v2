@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The <code>customerId</code> is determined by a password flow token and automatically set on the resulting Cart. The <code>anonymousId</code> is determined by a token for an anonymous session and automatically set on the resulting Cart.</p>
+ *  <p>The <code>customerId</code> is determined by a <span>password flow token</span> and automatically set on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>. The <code>anonymousId</code> is determined by a <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">token for an anonymous session</a> and automatically set on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartDraftImpl implements MyCartDraft, ModelBase {
@@ -118,7 +118,7 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
     }
 
     /**
-     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to. The Customer must be an Associate of the Business Unit. Only available for B2B-enabled Projects.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Business Unit the Cart should belong to. The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit. Only available for <span>B2B</span>-enabled Projects.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit() {
@@ -126,7 +126,7 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
     }
 
     /**
-     *  <p>ResourceIdentifier to the Store the Cart should belong to. Once set, it cannot be updated.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Store the Cart should belong to. Once set, it cannot be updated.</p>
      */
 
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
@@ -134,7 +134,7 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
     }
 
     /**
-     *  <p>Line Items to add to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> to add to the Cart.</p>
      */
 
     public java.util.List<com.commercetools.api.models.me.MyLineItemDraft> getLineItems() {
@@ -166,7 +166,7 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
     }
 
     /**
-     *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address associated with the Cart. Determines eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> rates and Tax Rates of Line Items.</p>
      */
 
     public com.commercetools.api.models.common.BaseAddress getShippingAddress() {
@@ -174,7 +174,7 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
     }
 
     /**
-     *  <p>Shipping Method for the Cart. If the referenced ShippingMethod has a <code>predicate</code> that does not match the Cart, an InvalidOperation error is returned when creating a Cart.</p>
+     *  <p>Shipping Method for the Cart. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> has a <code>predicate</code> that does not match the Cart, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned when <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/carts:POST" rel="nofollow">creating a Cart</a>.</p>
      */
 
     public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {
@@ -182,8 +182,8 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
     }
 
     /**
-     *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
-     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the Cart <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> to reference these addresses under their <code>shippingDetails</code>.</p>
+     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.BaseAddress> getItemShippingAddresses() {
@@ -202,7 +202,7 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
     }
 
     /**
-     *  <p><code>code</code> of the existing DiscountCodes to add to the Cart.</p>
+     *  <p><code>code</code> of the existing <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCodes</a> to add to the Cart.</p>
      */
 
     public java.util.List<String> getDiscountCodes() {
@@ -210,7 +210,7 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
     }
 
     /**
-     *  <p>Used for Line Item price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
+     *  <p>Used for <span>Line Item price selection</span>. If used for <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/me/carts:POST" rel="nofollow">Create Cart in Store</a>, the provided country must be one of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store's</a> <code>countries</code>.</p>
      */
 
     public String getCountry() {
@@ -218,7 +218,7 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
     }
 
     /**
-     *  <p>Languages of the Cart. Can only contain languages supported by the Project.</p>
+     *  <p>Language of the Cart. Must be one of the languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      */
 
     public String getLocale() {
@@ -226,8 +226,8 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
     }
 
     /**
-     *  <p>Number of days after the last modification before a Cart is deleted. If not provided, the default value for this field configured in Project settings is assigned.</p>
-     *  <p>Create a ChangeSubscription for Carts to receive a ResourceDeletedDeliveryPayload upon deletion of the Cart.</p>
+     *  <p>Number of days after the last modification before a Cart is deleted. If not provided, the default value for this field configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a> is assigned.</p>
+     *  <p>Create a <a href="https://docs.commercetools.com/apis/ctp:api:type:ChangeSubscription" rel="nofollow">ChangeSubscription</a> for Carts to receive a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceDeletedDeliveryPayload" rel="nofollow">ResourceDeletedDeliveryPayload</a> upon deletion of the Cart.</p>
      */
 
     public Long getDeleteDaysAfterLastModification() {

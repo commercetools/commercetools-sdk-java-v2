@@ -50,7 +50,7 @@ public class MyCustomerSigninImpl implements MyCustomerSignin, ModelBase {
     }
 
     /**
-     *  <p>Email address of the Customer treated as case-insensitive.</p>
+     *  <p>Email address of the Customer treated as <span>case-insensitive</span>.</p>
      */
 
     public String getEmail() {
@@ -67,8 +67,8 @@ public class MyCustomerSigninImpl implements MyCustomerSignin, ModelBase {
 
     /**
      *  <ul>
-     *   <li>If <code>MergeWithExistingCustomerCart</code>, LineItems of the anonymous Cart are merged with the recently modified active Customer Cart.</li>
-     *   <li>If <code>UseAsNewActiveCustomerCart</code>, the anonymous Cart is used as the new active Customer Cart, and no LineItems are merged.</li>
+     *   <li>If <code>MergeWithExistingCustomerCart</code>, <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> of the anonymous Cart are merged with the recently modified active Customer Cart.</li>
+     *   <li>If <code>UseAsNewActiveCustomerCart</code>, the anonymous Cart is used as the new active Customer Cart, and no <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> are merged.</li>
      *  </ul>
      */
 
@@ -78,7 +78,7 @@ public class MyCustomerSigninImpl implements MyCustomerSignin, ModelBase {
 
     /**
      *  <ul>
-     *   <li>If <code>true</code>, the LineItem Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart is updated.</li>
+     *   <li>If <code>true</code>, the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart is updated.</li>
      *   <li>If <code>false</code>, only the prices, discounts, and tax rates are updated.</li>
      *  </ul>
      */

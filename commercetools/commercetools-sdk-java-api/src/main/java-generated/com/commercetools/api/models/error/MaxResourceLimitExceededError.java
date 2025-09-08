@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Returned when a resource type cannot be created as it has reached its limits.</p>
+ *  <p>Returned when a resource type cannot be created as it has reached its <span>limits</span>.</p>
  *  <p>The limits must be adjusted for this resource before sending the request again.</p>
  *
  * <hr>

@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Different from Address in that <code>key</code> is required and <code>id</code> is not supported.</p>
+ *  <p>Different from <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> in that <code>key</code> is required and <code>id</code> is not supported.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

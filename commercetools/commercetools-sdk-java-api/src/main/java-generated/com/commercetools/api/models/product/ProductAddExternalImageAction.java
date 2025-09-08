@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Either <code>variantId</code> or <code>sku</code> is required. Produces the ProductImageAdded Message.</p>
+ *  <p>Either <code>variantId</code> or <code>sku</code> is required. Produces the <span>ProductImageAdded</span> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

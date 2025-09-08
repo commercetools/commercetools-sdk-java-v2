@@ -294,7 +294,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
     }
 
     /**
-     *  <p>Valid ProductDiscount predicate.</p>
+     *  <p>Valid <span>ProductDiscount predicate</span>.</p>
      * @param predicate value to be set
      * @return Builder
      */
@@ -392,7 +392,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
     }
 
     /**
-     *  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>
+     *  <p>Date and time (UTC) from which the Discount is effective. Take <span>Eventual Consistency</span> into account for calculated discount values.</p>
      * @param validFrom value to be set
      * @return Builder
      */
@@ -403,7 +403,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
     }
 
     /**
-     *  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     *  <p>Date and time (UTC) until which the Discount is effective. Take <span>Eventual Consistency</span> into account for calculated undiscounted values.</p>
      * @param validUntil value to be set
      * @return Builder
      */
@@ -508,7 +508,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
     }
 
     /**
-     *  <p>Valid ProductDiscount predicate.</p>
+     *  <p>Valid <span>ProductDiscount predicate</span>.</p>
      * @return predicate
      */
 
@@ -544,7 +544,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
     }
 
     /**
-     *  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>
+     *  <p>Date and time (UTC) from which the Discount is effective. Take <span>Eventual Consistency</span> into account for calculated discount values.</p>
      * @return validFrom
      */
 
@@ -554,7 +554,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
     }
 
     /**
-     *  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     *  <p>Date and time (UTC) until which the Discount is effective. Take <span>Eventual Consistency</span> into account for calculated undiscounted values.</p>
      * @return validUntil
      */
 

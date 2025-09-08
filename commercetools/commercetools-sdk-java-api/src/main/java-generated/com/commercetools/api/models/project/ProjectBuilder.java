@@ -232,7 +232,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Messages Query feature.</p>
+     *  <p>Holds the configuration for the <span>Messages Query</span> feature.</p>
      * @param builder function to build the messages value
      * @return Builder
      */
@@ -244,7 +244,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Messages Query feature.</p>
+     *  <p>Holds the configuration for the <span>Messages Query</span> feature.</p>
      * @param builder function to build the messages value
      * @return Builder
      */
@@ -256,7 +256,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Messages Query feature.</p>
+     *  <p>Holds the configuration for the <span>Messages Query</span> feature.</p>
      * @param messages value to be set
      * @return Builder
      */
@@ -267,7 +267,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Carts feature.</p>
+     *  <p>Holds the configuration for the <span>Carts</span> feature.</p>
      * @param builder function to build the carts value
      * @return Builder
      */
@@ -279,7 +279,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Carts feature.</p>
+     *  <p>Holds the configuration for the <span>Carts</span> feature.</p>
      * @param builder function to build the carts value
      * @return Builder
      */
@@ -291,7 +291,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Carts feature.</p>
+     *  <p>Holds the configuration for the <span>Carts</span> feature.</p>
      * @param carts value to be set
      * @return Builder
      */
@@ -302,7 +302,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
+     *  <p>Holds the configuration for the <span>Shopping Lists</span> feature. This field may not be present on Projects created before January 2020.</p>
      * @param builder function to build the shoppingLists value
      * @return Builder
      */
@@ -315,7 +315,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
+     *  <p>Holds the configuration for the <span>Shopping Lists</span> feature. This field may not be present on Projects created before January 2020.</p>
      * @param builder function to build the shoppingLists value
      * @return Builder
      */
@@ -327,7 +327,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
+     *  <p>Holds the configuration for the <span>Shopping Lists</span> feature. This field may not be present on Projects created before January 2020.</p>
      * @param shoppingLists value to be set
      * @return Builder
      */
@@ -339,7 +339,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the tiered shipping rates feature.</p>
+     *  <p>Holds the configuration for the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">tiered shipping rates</a> feature.</p>
      * @param shippingRateInputType value to be set
      * @return Builder
      */
@@ -351,7 +351,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the tiered shipping rates feature.</p>
+     *  <p>Holds the configuration for the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">tiered shipping rates</a> feature.</p>
      * @param builder function to build the shippingRateInputType value
      * @return Builder
      */
@@ -365,7 +365,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
+     *  <p>Represents a RFC 7662 compliant <span>OAuth 2.0 Token Introspection</span> endpoint.</p>
      * @param builder function to build the externalOAuth value
      * @return Builder
      */
@@ -377,7 +377,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
+     *  <p>Represents a RFC 7662 compliant <span>OAuth 2.0 Token Introspection</span> endpoint.</p>
      * @param builder function to build the externalOAuth value
      * @return Builder
      */
@@ -389,7 +389,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
+     *  <p>Represents a RFC 7662 compliant <span>OAuth 2.0 Token Introspection</span> endpoint.</p>
      * @param externalOAuth value to be set
      * @return Builder
      */
@@ -440,7 +440,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds configuration specific to Business Units.</p>
+     *  <p>Holds configuration specific to <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Units</a>.</p>
      * @param builder function to build the businessUnits value
      * @return Builder
      */
@@ -453,7 +453,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds configuration specific to Business Units.</p>
+     *  <p>Holds configuration specific to <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Units</a>.</p>
      * @param builder function to build the businessUnits value
      * @return Builder
      */
@@ -465,7 +465,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds configuration specific to Business Units.</p>
+     *  <p>Holds configuration specific to <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Units</a>.</p>
      * @param businessUnits value to be set
      * @return Builder
      */
@@ -550,7 +550,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Messages Query feature.</p>
+     *  <p>Holds the configuration for the <span>Messages Query</span> feature.</p>
      * @return messages
      */
 
@@ -559,7 +559,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Carts feature.</p>
+     *  <p>Holds the configuration for the <span>Carts</span> feature.</p>
      * @return carts
      */
 
@@ -568,7 +568,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
+     *  <p>Holds the configuration for the <span>Shopping Lists</span> feature. This field may not be present on Projects created before January 2020.</p>
      * @return shoppingLists
      */
 
@@ -578,7 +578,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the tiered shipping rates feature.</p>
+     *  <p>Holds the configuration for the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">tiered shipping rates</a> feature.</p>
      * @return shippingRateInputType
      */
 
@@ -588,7 +588,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
+     *  <p>Represents a RFC 7662 compliant <span>OAuth 2.0 Token Introspection</span> endpoint.</p>
      * @return externalOAuth
      */
 
@@ -608,7 +608,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds configuration specific to Business Units.</p>
+     *  <p>Holds configuration specific to <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Units</a>.</p>
      * @return businessUnits
      */
 

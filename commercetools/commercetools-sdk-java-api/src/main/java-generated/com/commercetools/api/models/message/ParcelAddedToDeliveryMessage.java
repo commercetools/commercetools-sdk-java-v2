@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Add Parcel to Delivery update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderAddParcelToDeliveryAction" rel="nofollow">Add Parcel to Delivery</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -49,7 +49,7 @@ public interface ParcelAddedToDeliveryMessage extends OrderMessage {
     String PARCEL_ADDED_TO_DELIVERY = "ParcelAddedToDelivery";
 
     /**
-     *  <p>Unique identifier of the Delivery.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @return delivery
      */
     @NotNull
@@ -58,7 +58,7 @@ public interface ParcelAddedToDeliveryMessage extends OrderMessage {
     public Delivery getDelivery();
 
     /**
-     *  <p>Parcel that was added to the Delivery.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @return parcel
      */
     @NotNull
@@ -67,7 +67,7 @@ public interface ParcelAddedToDeliveryMessage extends OrderMessage {
     public Parcel getParcel();
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingKey
      */
 
@@ -75,21 +75,21 @@ public interface ParcelAddedToDeliveryMessage extends OrderMessage {
     public String getShippingKey();
 
     /**
-     *  <p>Unique identifier of the Delivery.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param delivery value to be set
      */
 
     public void setDelivery(final Delivery delivery);
 
     /**
-     *  <p>Parcel that was added to the Delivery.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param parcel value to be set
      */
 
     public void setParcel(final Parcel parcel);
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingKey value to be set
      */
 

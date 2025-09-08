@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Method update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetMethodAction" rel="nofollow">Set Method</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentMethodMethodSetMessagePayloadImpl implements PaymentMethodMethodSetMessagePayload, ModelBase {
@@ -55,7 +55,7 @@ public class PaymentMethodMethodSetMessagePayloadImpl implements PaymentMethodMe
     }
 
     /**
-     *  <p>Payment Method after the Set Method update action.</p>
+     *  <p>Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetMethodAction" rel="nofollow">Set Method</a> update action.</p>
      */
 
     public String getMethod() {
@@ -63,7 +63,7 @@ public class PaymentMethodMethodSetMessagePayloadImpl implements PaymentMethodMe
     }
 
     /**
-     *  <p>Payment Method before the Set Method update action.</p>
+     *  <p>Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetMethodAction" rel="nofollow">Set Method</a> update action.</p>
      */
 
     public String getOldMethod() {

@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Sets the Stores of the Business Unit. Can only be set if the Business Unit <code>storeMode</code> is <code>Explicit</code>. Carts and Orders created after the Set Stores update must use the new Stores of the Business Unit and, if set, their Product Selections, and Channels. Orders created before the Set Stores update action remain unchanged. Setting the Stores on a Business Unit generates a BusinessUnitStoresSet Message.</p>
+ *  <p>Sets the Stores of the Business Unit. Can only be set if the Business Unit <code>storeMode</code> is <code>Explicit</code>. <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> created after the Set Stores update must use the new Stores of the Business Unit and, if set, their <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selections</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channels</a>. Orders created before the Set Stores update action remain unchanged. Setting the Stores on a Business Unit generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitStoresSetMessage" rel="nofollow">BusinessUnitStoresSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface BusinessUnitSetStoresAction extends BusinessUnitUpdateAction {
     String SET_STORES = "setStores";
 
     /**
-     *  <p>Stores to set. Overrides the current list of Stores.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores.</p>
      * @return stores
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface BusinessUnitSetStoresAction extends BusinessUnitUpdateAction {
     public List<StoreResourceIdentifier> getStores();
 
     /**
-     *  <p>Stores to set. Overrides the current list of Stores.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores.</p>
      * @param stores values to be set
      */
 
@@ -58,7 +58,7 @@ public interface BusinessUnitSetStoresAction extends BusinessUnitUpdateAction {
     public void setStores(final StoreResourceIdentifier... stores);
 
     /**
-     *  <p>Stores to set. Overrides the current list of Stores.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores.</p>
      * @param stores values to be set
      */
 

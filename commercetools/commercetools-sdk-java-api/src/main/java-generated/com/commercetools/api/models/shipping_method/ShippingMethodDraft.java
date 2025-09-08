@@ -49,7 +49,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public String getKey();
 
     /**
-     *  <p>Unique name for the ShippingMethod within a Project.</p>
+     *  <p>Unique name for the ShippingMethod within a <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return name
      */
     @NotNull
@@ -81,7 +81,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public LocalizedString getLocalizedDescription();
 
     /**
-     *  <p>TaxCategory for all ZoneRates of the ShippingMethod.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> for all ZoneRates of the ShippingMethod.</p>
      * @return taxCategory
      */
     @NotNull
@@ -90,7 +90,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public TaxCategoryResourceIdentifier getTaxCategory();
 
     /**
-     *  <p>Defines ShippingRates (prices) for specific zones.</p>
+     *  <p>Defines <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> (prices) for specific zones.</p>
      * @return zoneRates
      */
     @NotNull
@@ -107,7 +107,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public Boolean getActive();
 
     /**
-     *  <p>If set to <code>true</code>, the ShippingMethod will be the Project's default ShippingMethod. When retrieving matching Shipping Methods, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p>
+     *  <p>If set to <code>true</code>, the ShippingMethod will be the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>'s default ShippingMethod. When retrieving <span>matching Shipping Methods</span>, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p>
      * @return isDefault
      */
     @NotNull
@@ -115,7 +115,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public Boolean getIsDefault();
 
     /**
-     *  <p>Valid Cart predicate to select a ShippingMethod for a Cart.</p>
+     *  <p>Valid <span>Cart predicate</span> to select a ShippingMethod for a Cart.</p>
      * @return predicate
      */
 
@@ -138,7 +138,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public void setKey(final String key);
 
     /**
-     *  <p>Unique name for the ShippingMethod within a Project.</p>
+     *  <p>Unique name for the ShippingMethod within a <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param name value to be set
      */
 
@@ -166,14 +166,14 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public void setLocalizedDescription(final LocalizedString localizedDescription);
 
     /**
-     *  <p>TaxCategory for all ZoneRates of the ShippingMethod.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> for all ZoneRates of the ShippingMethod.</p>
      * @param taxCategory value to be set
      */
 
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
 
     /**
-     *  <p>Defines ShippingRates (prices) for specific zones.</p>
+     *  <p>Defines <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> (prices) for specific zones.</p>
      * @param zoneRates values to be set
      */
 
@@ -181,7 +181,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public void setZoneRates(final ZoneRateDraft... zoneRates);
 
     /**
-     *  <p>Defines ShippingRates (prices) for specific zones.</p>
+     *  <p>Defines <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> (prices) for specific zones.</p>
      * @param zoneRates values to be set
      */
 
@@ -195,14 +195,14 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public void setActive(final Boolean active);
 
     /**
-     *  <p>If set to <code>true</code>, the ShippingMethod will be the Project's default ShippingMethod. When retrieving matching Shipping Methods, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p>
+     *  <p>If set to <code>true</code>, the ShippingMethod will be the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>'s default ShippingMethod. When retrieving <span>matching Shipping Methods</span>, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p>
      * @param isDefault value to be set
      */
 
     public void setIsDefault(final Boolean isDefault);
 
     /**
-     *  <p>Valid Cart predicate to select a ShippingMethod for a Cart.</p>
+     *  <p>Valid <span>Cart predicate</span> to select a ShippingMethod for a Cart.</p>
      * @param predicate value to be set
      */
 

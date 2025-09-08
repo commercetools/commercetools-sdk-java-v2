@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after adding a Custom Type to an Address of a Customer using the Set Custom Type in Address update action.</p>
+ *  <p>Generated after adding a Custom Type to an Address of a Customer using the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetAddressCustomTypeAction" rel="nofollow">Set Custom Type in Address</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerAddressCustomTypeSetMessageImpl implements CustomerAddressCustomTypeSetMessage, ModelBase {
@@ -147,7 +147,7 @@ public class CustomerAddressCustomTypeSetMessageImpl implements CustomerAddressC
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -163,7 +163,7 @@ public class CustomerAddressCustomTypeSetMessageImpl implements CustomerAddressC
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -187,7 +187,7 @@ public class CustomerAddressCustomTypeSetMessageImpl implements CustomerAddressC
     }
 
     /**
-     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the previous <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a>. Absent if there was no previous Custom Type present.</p>
      */
 
     public String getPreviousTypeId() {
@@ -195,7 +195,7 @@ public class CustomerAddressCustomTypeSetMessageImpl implements CustomerAddressC
     }
 
     /**
-     *  <p><code>id</code> of the Address on which the Custom Field was set.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> on which the Custom Field was set.</p>
      */
 
     public String getAddressId() {

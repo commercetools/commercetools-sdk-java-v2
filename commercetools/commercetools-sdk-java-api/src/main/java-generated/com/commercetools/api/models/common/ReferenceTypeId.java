@@ -17,136 +17,136 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ReferenceTypeId extends JsonEnum {
 
     /**
-    <p>References an ApprovalFlow. Only available for B2B-enabled Projects.</p> */
+    <p>References an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">ApprovalFlow</a>. Only available for <span>B2B</span>-enabled Projects.</p> */
     ReferenceTypeId APPROVAL_FLOW = ReferenceTypeIdEnum.APPROVAL_FLOW;
     /**
-    <p>References an ApprovalRule. Only available for B2B-enabled Projects.</p> */
+    <p>References an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a>. Only available for <span>B2B</span>-enabled Projects.</p> */
     ReferenceTypeId APPROVAL_RULE = ReferenceTypeIdEnum.APPROVAL_RULE;
     /**
-    <p>References an AssociateRole. Only available for B2B-enabled Projects.</p> */
+    <p>References an <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a>. Only available for <span>B2B</span>-enabled Projects.</p> */
     ReferenceTypeId ASSOCIATE_ROLE = ReferenceTypeIdEnum.ASSOCIATE_ROLE;
     /**
-    <p>References an AttributeGroup.</p> */
+    <p>References an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeGroup" rel="nofollow">AttributeGroup</a>.</p> */
     ReferenceTypeId ATTRIBUTE_GROUP = ReferenceTypeIdEnum.ATTRIBUTE_GROUP;
     /**
-    <p>References a BusinessUnit. Only available for B2B-enabled Projects.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>. Only available for <span>B2B</span>-enabled Projects.</p> */
     ReferenceTypeId BUSINESS_UNIT = ReferenceTypeIdEnum.BUSINESS_UNIT;
     /**
-    <p>References a Cart.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p> */
     ReferenceTypeId CART = ReferenceTypeIdEnum.CART;
     /**
-    <p>References a CartDiscount.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a>.</p> */
     ReferenceTypeId CART_DISCOUNT = ReferenceTypeIdEnum.CART_DISCOUNT;
     /**
-    <p>References a Category.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a>.</p> */
     ReferenceTypeId CATEGORY = ReferenceTypeIdEnum.CATEGORY;
     /**
-    <p>References a Channel.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p> */
     ReferenceTypeId CHANNEL = ReferenceTypeIdEnum.CHANNEL;
     /**
-    <p>References a Customer.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>.</p> */
     ReferenceTypeId CUSTOMER = ReferenceTypeIdEnum.CUSTOMER;
     /**
-    <p>References a CustomerToken for email verification.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerToken" rel="nofollow">CustomerToken</a> for <span>email verification</span>.</p> */
     ReferenceTypeId CUSTOMER_EMAIL_TOKEN = ReferenceTypeIdEnum.CUSTOMER_EMAIL_TOKEN;
     /**
-    <p>References a CustomerGroup.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>.</p> */
     ReferenceTypeId CUSTOMER_GROUP = ReferenceTypeIdEnum.CUSTOMER_GROUP;
     /**
-    <p>References a CustomerToken for password reset.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerToken" rel="nofollow">CustomerToken</a> for <span>password reset</span>.</p> */
     ReferenceTypeId CUSTOMER_PASSWORD_TOKEN = ReferenceTypeIdEnum.CUSTOMER_PASSWORD_TOKEN;
     /**
-    <p>References a DirectDiscount.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">DirectDiscount</a>.</p> */
     ReferenceTypeId DIRECT_DISCOUNT = ReferenceTypeIdEnum.DIRECT_DISCOUNT;
     /**
-    <p>References a DiscountCode.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p> */
     ReferenceTypeId DISCOUNT_CODE = ReferenceTypeIdEnum.DISCOUNT_CODE;
     /**
-    <p>References a DiscountGroup.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroup" rel="nofollow">DiscountGroup</a>.</p> */
     ReferenceTypeId DISCOUNT_GROUP = ReferenceTypeIdEnum.DISCOUNT_GROUP;
     /**
-    <p>References an Extension.</p> */
+    <p>References an <a href="https://docs.commercetools.com/apis/ctp:api:type:Extension" rel="nofollow">Extension</a>.</p> */
     ReferenceTypeId EXTENSION = ReferenceTypeIdEnum.EXTENSION;
     /**
-    <p>References an InventoryEntry.</p> */
+    <p>References an <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p> */
     ReferenceTypeId INVENTORY_ENTRY = ReferenceTypeIdEnum.INVENTORY_ENTRY;
     /**
-    <p>References a CustomObject.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomObject" rel="nofollow">CustomObject</a>.</p> */
     ReferenceTypeId KEY_VALUE_DOCUMENT = ReferenceTypeIdEnum.KEY_VALUE_DOCUMENT;
     /**
-    <p>References an Order.</p> */
+    <p>References an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p> */
     ReferenceTypeId ORDER = ReferenceTypeIdEnum.ORDER;
     /**
-    <p>References an Order Edit.</p> */
+    <p>References an <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">Order Edit</a>.</p> */
     ReferenceTypeId ORDER_EDIT = ReferenceTypeIdEnum.ORDER_EDIT;
     /**
-    <p>References a PaymentMethod.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethod" rel="nofollow">PaymentMethod</a>.</p> */
     ReferenceTypeId PAYMENT_METHOD = ReferenceTypeIdEnum.PAYMENT_METHOD;
     /**
-    <p>References a Payment.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p> */
     ReferenceTypeId PAYMENT = ReferenceTypeIdEnum.PAYMENT;
     /**
-    <p>References a Product.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p> */
     ReferenceTypeId PRODUCT = ReferenceTypeIdEnum.PRODUCT;
     /**
-    <p>References a ProductDiscount.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a>.</p> */
     ReferenceTypeId PRODUCT_DISCOUNT = ReferenceTypeIdEnum.PRODUCT_DISCOUNT;
     /**
-    <p>References an Embedded Price.</p> */
+    <p>References an <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Price</a>.</p> */
     ReferenceTypeId PRODUCT_PRICE = ReferenceTypeIdEnum.PRODUCT_PRICE;
     /**
-    <p>References a ProductSelection.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">ProductSelection</a>.</p> */
     ReferenceTypeId PRODUCT_SELECTION = ReferenceTypeIdEnum.PRODUCT_SELECTION;
     /**
-    <p>References a ProductTailoring.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a>.</p> */
     ReferenceTypeId PRODUCT_TAILORING = ReferenceTypeIdEnum.PRODUCT_TAILORING;
     /**
-    <p>References a ProductType.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>.</p> */
     ReferenceTypeId PRODUCT_TYPE = ReferenceTypeIdEnum.PRODUCT_TYPE;
     /**
-    <p>References a Quote.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a>.</p> */
     ReferenceTypeId QUOTE = ReferenceTypeIdEnum.QUOTE;
     /**
-    <p>References a QuoteRequest.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a>.</p> */
     ReferenceTypeId QUOTE_REQUEST = ReferenceTypeIdEnum.QUOTE_REQUEST;
     /**
-    <p>References a RecurrencePolicy.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a>.</p> */
     ReferenceTypeId RECURRENCE_POLICY = ReferenceTypeIdEnum.RECURRENCE_POLICY;
     /**
-    <p>References a RecurringOrder.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a>.</p> */
     ReferenceTypeId RECURRING_ORDER = ReferenceTypeIdEnum.RECURRING_ORDER;
     /**
-    <p>References a Review.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a>.</p> */
     ReferenceTypeId REVIEW = ReferenceTypeIdEnum.REVIEW;
     /**
-    <p>References a ShippingMethod.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a>.</p> */
     ReferenceTypeId SHIPPING_METHOD = ReferenceTypeIdEnum.SHIPPING_METHOD;
     /**
-    <p>References a ShoppingList.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p> */
     ReferenceTypeId SHOPPING_LIST = ReferenceTypeIdEnum.SHOPPING_LIST;
     /**
-    <p>References a StagedQuote.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a>.</p> */
     ReferenceTypeId STAGED_QUOTE = ReferenceTypeIdEnum.STAGED_QUOTE;
     /**
-    <p>References a StandalonePrice.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p> */
     ReferenceTypeId STANDALONE_PRICE = ReferenceTypeIdEnum.STANDALONE_PRICE;
     /**
-    <p>References a State.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p> */
     ReferenceTypeId STATE = ReferenceTypeIdEnum.STATE;
     /**
-    <p>References a Store.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p> */
     ReferenceTypeId STORE = ReferenceTypeIdEnum.STORE;
     /**
-    <p>References a Subscription.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Subscription" rel="nofollow">Subscription</a>.</p> */
     ReferenceTypeId SUBSCRIPTION = ReferenceTypeIdEnum.SUBSCRIPTION;
     /**
-    <p>References a TaxCategory.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a>.</p> */
     ReferenceTypeId TAX_CATEGORY = ReferenceTypeIdEnum.TAX_CATEGORY;
     /**
-    <p>References a Type.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p> */
     ReferenceTypeId TYPE = ReferenceTypeIdEnum.TYPE;
     /**
-    <p>References a Zone.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a>.</p> */
     ReferenceTypeId ZONE = ReferenceTypeIdEnum.ZONE;
 
     /**

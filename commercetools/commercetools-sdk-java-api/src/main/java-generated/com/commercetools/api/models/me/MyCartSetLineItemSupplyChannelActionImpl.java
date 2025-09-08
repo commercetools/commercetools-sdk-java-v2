@@ -17,8 +17,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Performing this action does not reserve stock. Stock is only reserved at Order creation if the InventoryMode of the Cart is <code>TrackOnly</code> or <code>ReserveOnOrder</code>.</p>
- *  <p>This action is subject to InventoryEntry min/max restrictions when applicable. For more information, see Quantity limits.</p>
+ *  <p>Performing this action does not reserve stock. Stock is only reserved at Order creation if the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">InventoryMode</a> of the Cart is <code>TrackOnly</code> or <code>ReserveOnOrder</code>.</p>
+ *  <p>This action is subject to <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> min/max restrictions when applicable. For more information, see <span>Quantity limits</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartSetLineItemSupplyChannelActionImpl implements MyCartSetLineItemSupplyChannelAction, ModelBase {
@@ -60,7 +60,7 @@ public class MyCartSetLineItemSupplyChannelActionImpl implements MyCartSetLineIt
     }
 
     /**
-     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemId() {
@@ -68,7 +68,7 @@ public class MyCartSetLineItemSupplyChannelActionImpl implements MyCartSetLineIt
     }
 
     /**
-     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemKey() {
@@ -77,8 +77,8 @@ public class MyCartSetLineItemSupplyChannelActionImpl implements MyCartSetLineIt
 
     /**
      *  <ul>
-     *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
-     *   <li>If not present, the current Reference to a supply channel will be removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</li>
+     *   <li>If present, a <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Channel is set for the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> specified by <code>lineItemId</code>.</li>
+     *   <li>If not present, the current <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a supply channel will be removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> specified by <code>lineItemId</code>. The Channel must have the <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</li>
      *  </ul>
      */
 

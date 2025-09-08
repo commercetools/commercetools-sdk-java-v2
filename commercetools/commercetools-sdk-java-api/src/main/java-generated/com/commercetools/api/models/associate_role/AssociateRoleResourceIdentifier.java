@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>ResourceIdentifier of an AssociateRole. Either <code>id</code> or <code>key</code> is required. If both are set, an InvalidJsonInput error is returned.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TypeResourceIdentifier" rel="nofollow">ResourceIdentifier</a> of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a>. Either <code>id</code> or <code>key</code> is required. If both are set, an <span>InvalidJsonInput</span> error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,7 +37,7 @@ public interface AssociateRoleResourceIdentifier
     String ASSOCIATE_ROLE = "associate-role";
 
     /**
-     *  <p>Unique identifier of the referenced AssociateRole. Required if <code>key</code> is absent.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a>. Required if <code>key</code> is absent.</p>
      * @return id
      */
 
@@ -45,7 +45,7 @@ public interface AssociateRoleResourceIdentifier
     public String getId();
 
     /**
-     *  <p>Unique key of the referenced AssociateRole. Required if <code>id</code> is absent.</p>
+     *  <p>Unique key of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a>. Required if <code>id</code> is absent.</p>
      * @return key
      */
 
@@ -53,14 +53,14 @@ public interface AssociateRoleResourceIdentifier
     public String getKey();
 
     /**
-     *  <p>Unique identifier of the referenced AssociateRole. Required if <code>key</code> is absent.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a>. Required if <code>key</code> is absent.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     *  <p>Unique key of the referenced AssociateRole. Required if <code>id</code> is absent.</p>
+     *  <p>Unique key of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a>. Required if <code>id</code> is absent.</p>
      * @param key value to be set
      */
 

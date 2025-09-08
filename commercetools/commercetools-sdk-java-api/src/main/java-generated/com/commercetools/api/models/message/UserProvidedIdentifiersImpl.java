@@ -77,7 +77,7 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, Mod
     }
 
     /**
-     *  <p>User-provided unique identifier of an Order.</p>
+     *  <p>User-provided unique identifier of an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      */
 
     public String getOrderNumber() {
@@ -85,7 +85,7 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, Mod
     }
 
     /**
-     *  <p>User-provided unique identifier of a Customer.</p>
+     *  <p>User-provided unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>.</p>
      */
 
     public String getCustomerNumber() {
@@ -93,7 +93,7 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, Mod
     }
 
     /**
-     *  <p>Unique SKU of a Product Variant.</p>
+     *  <p>Unique SKU of a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a>.</p>
      */
 
     public String getSku() {
@@ -101,7 +101,7 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, Mod
     }
 
     /**
-     *  <p>Unique identifier usually used in deep-link URLs for a Product. The value corresponds to the slug in the <code>current</code> Product Projection.</p>
+     *  <p>Unique identifier usually used in deep-link URLs for a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. The value corresponds to the slug in the <code>current</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getSlug() {
@@ -109,7 +109,7 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, Mod
     }
 
     /**
-     *  <p>Unique identifier of a Custom Object.</p>
+     *  <p>Unique identifier of a <span>Custom Object</span>.</p>
      */
 
     public com.commercetools.api.models.message.ContainerAndKey getContainerAndKey() {

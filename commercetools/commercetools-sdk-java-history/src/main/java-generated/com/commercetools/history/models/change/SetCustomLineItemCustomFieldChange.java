@@ -19,8 +19,8 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set CustomLineItem Custom Type on Orders.</li>
- *   <li>Set CustomLineItem Custom Type on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomLineItemCustomFieldAction" rel="nofollow">Set CustomLineItem Custom Type</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomLineItemCustomFieldAction" rel="nofollow">Set CustomLineItem Custom Type</a> on Staged Orders.</li>
  *  </ul>
  *
  * <hr>
@@ -79,7 +79,7 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
     public Object getNextValue();
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @return name
      */
     @NotNull
@@ -87,7 +87,7 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
     public String getName();
 
     /**
-     *  <p>Name of the updated CustomLineItem.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @return customLineItem
      */
     @NotNull
@@ -96,7 +96,7 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
     public LocalizedString getCustomLineItem();
 
     /**
-     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @return customLineItemId
      */
     @NotNull
@@ -125,21 +125,21 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
     public void setNextValue(final Object nextValue);
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     *  <p>Name of the updated CustomLineItem.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @param customLineItem value to be set
      */
 
     public void setCustomLineItem(final LocalizedString customLineItem);
 
     /**
-     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @param customLineItemId value to be set
      */
 

@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Produces the ParcelRemovedFromDelivery Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelRemovedFromDeliveryMessage" rel="nofollow">ParcelRemovedFromDelivery</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,7 +36,7 @@ public interface StagedOrderRemoveParcelFromDeliveryAction extends StagedOrderUp
     String REMOVE_PARCEL_FROM_DELIVERY = "removeParcelFromDelivery";
 
     /**
-     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @return parcelId
      */
@@ -45,7 +45,7 @@ public interface StagedOrderRemoveParcelFromDeliveryAction extends StagedOrderUp
     public String getParcelId();
 
     /**
-     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @return parcelKey
      */
@@ -54,7 +54,7 @@ public interface StagedOrderRemoveParcelFromDeliveryAction extends StagedOrderUp
     public String getParcelKey();
 
     /**
-     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @param parcelId value to be set
      */
@@ -62,7 +62,7 @@ public interface StagedOrderRemoveParcelFromDeliveryAction extends StagedOrderUp
     public void setParcelId(final String parcelId);
 
     /**
-     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @param parcelKey value to be set
      */

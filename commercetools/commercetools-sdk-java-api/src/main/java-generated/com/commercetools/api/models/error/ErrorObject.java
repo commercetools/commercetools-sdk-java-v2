@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Represents a single error. Multiple errors may be included in an ErrorResponse.</p>
+ *  <p>Represents a single error. Multiple errors may be included in an <a href="https://docs.commercetools.com/apis/ctp:api:type:ErrorResponse" rel="nofollow">ErrorResponse</a>.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern
@@ -477,6 +477,14 @@ public interface ErrorObject {
      */
     public static com.commercetools.api.models.error.MaxCartDiscountsReachedErrorBuilder maxCartDiscountsReachedBuilder() {
         return com.commercetools.api.models.error.MaxCartDiscountsReachedErrorBuilder.of();
+    }
+
+    /**
+     * builder for maxDiscountGroupsReached subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.MaxDiscountGroupsReachedErrorBuilder maxDiscountGroupsReachedBuilder() {
+        return com.commercetools.api.models.error.MaxDiscountGroupsReachedErrorBuilder.of();
     }
 
     /**

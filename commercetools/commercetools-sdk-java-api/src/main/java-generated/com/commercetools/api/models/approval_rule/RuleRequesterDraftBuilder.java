@@ -25,7 +25,7 @@ public class RuleRequesterDraftBuilder implements Builder<RuleRequesterDraft> {
     private com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifier associateRole;
 
     /**
-     *  <p>The Associate Role that an Associate must hold for the Approval Rule to apply to the Orders they create.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a> that an <a href="https://docs.commercetools.com/apis/ctp:api:type" rel="nofollow">Associate</a> must hold for the Approval Rule to apply to the Orders they create.</p>
      * @param builder function to build the associateRole value
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class RuleRequesterDraftBuilder implements Builder<RuleRequesterDraft> {
     }
 
     /**
-     *  <p>The Associate Role that an Associate must hold for the Approval Rule to apply to the Orders they create.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a> that an <a href="https://docs.commercetools.com/apis/ctp:api:type" rel="nofollow">Associate</a> must hold for the Approval Rule to apply to the Orders they create.</p>
      * @param builder function to build the associateRole value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class RuleRequesterDraftBuilder implements Builder<RuleRequesterDraft> {
     }
 
     /**
-     *  <p>The Associate Role that an Associate must hold for the Approval Rule to apply to the Orders they create.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a> that an <a href="https://docs.commercetools.com/apis/ctp:api:type" rel="nofollow">Associate</a> must hold for the Approval Rule to apply to the Orders they create.</p>
      * @param associateRole value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class RuleRequesterDraftBuilder implements Builder<RuleRequesterDraft> {
     }
 
     /**
-     *  <p>The Associate Role that an Associate must hold for the Approval Rule to apply to the Orders they create.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a> that an <a href="https://docs.commercetools.com/apis/ctp:api:type" rel="nofollow">Associate</a> must hold for the Approval Rule to apply to the Orders they create.</p>
      * @return associateRole
      */
 

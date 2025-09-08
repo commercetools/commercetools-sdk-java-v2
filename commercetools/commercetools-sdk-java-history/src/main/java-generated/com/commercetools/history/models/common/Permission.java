@@ -11,7 +11,7 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Permissions grant granular access to Business Units, Carts, Orders, Quotes, and Quote Requests.</p>
+ *  <p>Permissions grant granular access to <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Units</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface Permission extends JsonEnum {

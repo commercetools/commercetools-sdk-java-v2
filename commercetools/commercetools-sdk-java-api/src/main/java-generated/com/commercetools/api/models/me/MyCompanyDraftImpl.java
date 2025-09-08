@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Draft type to represent the top level of a business. Contains the fields and values of the generic MyBusinessUnitDraft that are used specifically for creating a Company.</p>
+ *  <p>Draft type to represent the top level of a business. Contains the fields and values of the generic <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitDraft" rel="nofollow">MyBusinessUnitDraft</a> that are used specifically for creating a <a href="https://docs.commercetools.com/apis/ctp:api:type:Company" rel="nofollow">Company</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCompanyDraftImpl implements MyCompanyDraft, ModelBase {
@@ -123,7 +123,7 @@ public class MyCompanyDraftImpl implements MyCompanyDraft, ModelBase {
     }
 
     /**
-     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p>
      */
 
     public java.util.List<Integer> getShippingAddresses() {
@@ -139,7 +139,7 @@ public class MyCompanyDraftImpl implements MyCompanyDraft, ModelBase {
     }
 
     /**
-     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p>
      */
 
     public java.util.List<Integer> getBillingAddresses() {

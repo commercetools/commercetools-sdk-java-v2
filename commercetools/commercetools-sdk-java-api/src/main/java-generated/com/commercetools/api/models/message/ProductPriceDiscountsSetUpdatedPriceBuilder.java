@@ -42,7 +42,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     private Boolean staged;
 
     /**
-     *  <p>Unique identifier of the ProductVariant for which the Discount was set.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which the Discount was set.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Key of the ProductVariant for which Discount was set.</p>
+     *  <p>Key of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which Discount was set.</p>
      * @param variantKey value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>SKU of the ProductVariant for which Discount was set.</p>
+     *  <p>SKU of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which Discount was set.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Unique identifier of the Price.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</p>
      * @param priceId value to be set
      * @return Builder
      */
@@ -86,7 +86,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Discounted Price for the ProductVariant for which Discount was set.</p>
+     *  <p>Discounted Price for the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which Discount was set.</p>
      * @param builder function to build the discounted value
      * @return Builder
      */
@@ -98,7 +98,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Discounted Price for the ProductVariant for which Discount was set.</p>
+     *  <p>Discounted Price for the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which Discount was set.</p>
      * @param builder function to build the discounted value
      * @return Builder
      */
@@ -110,7 +110,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Discounted Price for the ProductVariant for which Discount was set.</p>
+     *  <p>Discounted Price for the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which Discount was set.</p>
      * @param discounted value to be set
      * @return Builder
      */
@@ -122,7 +122,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged ProductProjection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjection</a>.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -133,7 +133,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Unique identifier of the ProductVariant for which the Discount was set.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which the Discount was set.</p>
      * @return variantId
      */
 
@@ -142,7 +142,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Key of the ProductVariant for which Discount was set.</p>
+     *  <p>Key of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which Discount was set.</p>
      * @return variantKey
      */
 
@@ -152,7 +152,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>SKU of the ProductVariant for which Discount was set.</p>
+     *  <p>SKU of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which Discount was set.</p>
      * @return sku
      */
 
@@ -162,7 +162,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Unique identifier of the Price.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</p>
      * @return priceId
      */
 
@@ -171,7 +171,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Discounted Price for the ProductVariant for which Discount was set.</p>
+     *  <p>Discounted Price for the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which Discount was set.</p>
      * @return discounted
      */
 
@@ -181,7 +181,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged ProductProjection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjection</a>.</p>
      * @return staged
      */
 

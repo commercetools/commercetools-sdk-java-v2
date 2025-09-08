@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Set Date of Birth update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetDateOfBirthAction" rel="nofollow">Set Date of Birth</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -43,7 +43,7 @@ public interface CustomerDateOfBirthSetMessage extends Message {
     String CUSTOMER_DATE_OF_BIRTH_SET = "CustomerDateOfBirthSet";
 
     /**
-     *  <p>The <code>dateOfBirth</code> that was set during the Set Date of Birth update action.</p>
+     *  <p>The <code>dateOfBirth</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetDateOfBirthAction" rel="nofollow">Set Date of Birth</a> update action.</p>
      * @return dateOfBirth
      */
 
@@ -51,7 +51,7 @@ public interface CustomerDateOfBirthSetMessage extends Message {
     public LocalDate getDateOfBirth();
 
     /**
-     *  <p>The <code>dateOfBirth</code> that was set during the Set Date of Birth update action.</p>
+     *  <p>The <code>dateOfBirth</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetDateOfBirthAction" rel="nofollow">Set Date of Birth</a> update action.</p>
      * @param dateOfBirth value to be set
      */
 

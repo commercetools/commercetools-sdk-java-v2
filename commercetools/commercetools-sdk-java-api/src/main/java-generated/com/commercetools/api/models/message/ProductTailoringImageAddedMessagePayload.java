@@ -19,7 +19,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Add External Image update action or after a successful Upload Product Tailoring image request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringAddExternalImageAction" rel="nofollow">Add External Image</a> update action or after a successful <span>Upload Product Tailoring image</span> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -71,7 +71,7 @@ public interface ProductTailoringImageAddedMessagePayload extends MessagePayload
     public ProductReference getProduct();
 
     /**
-     *  <p><code>id</code> of the tailored ProductVariant.</p>
+     *  <p><code>id</code> of the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return variantId
      */
     @NotNull
@@ -79,7 +79,7 @@ public interface ProductTailoringImageAddedMessagePayload extends MessagePayload
     public Long getVariantId();
 
     /**
-     *  <p>Image that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      * @return image
      */
     @NotNull
@@ -109,14 +109,14 @@ public interface ProductTailoringImageAddedMessagePayload extends MessagePayload
     public void setProduct(final ProductReference product);
 
     /**
-     *  <p><code>id</code> of the tailored ProductVariant.</p>
+     *  <p><code>id</code> of the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param variantId value to be set
      */
 
     public void setVariantId(final Long variantId);
 
     /**
-     *  <p>Image that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      * @param image value to be set
      */
 

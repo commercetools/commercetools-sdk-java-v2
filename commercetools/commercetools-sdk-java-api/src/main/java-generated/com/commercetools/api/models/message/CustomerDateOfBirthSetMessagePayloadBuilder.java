@@ -26,7 +26,7 @@ public class CustomerDateOfBirthSetMessagePayloadBuilder implements Builder<Cust
     private java.time.LocalDate dateOfBirth;
 
     /**
-     *  <p>The <code>dateOfBirth</code> that was set during the Set Date of Birth update action.</p>
+     *  <p>The <code>dateOfBirth</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetDateOfBirthAction" rel="nofollow">Set Date of Birth</a> update action.</p>
      * @param dateOfBirth value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class CustomerDateOfBirthSetMessagePayloadBuilder implements Builder<Cust
     }
 
     /**
-     *  <p>The <code>dateOfBirth</code> that was set during the Set Date of Birth update action.</p>
+     *  <p>The <code>dateOfBirth</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetDateOfBirthAction" rel="nofollow">Set Date of Birth</a> update action.</p>
      * @return dateOfBirth
      */
 

@@ -30,7 +30,7 @@ public class PaymentMethodInfoMethodSetMessagePayloadBuilder
     private String oldMethod;
 
     /**
-     *  <p>Payment Method after the Set MethodInfo Method update action.</p>
+     *  <p>Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoMethodAction" rel="nofollow">Set MethodInfo Method</a> update action.</p>
      * @param method value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class PaymentMethodInfoMethodSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Payment Method before the Set MethodInfo Method update action.</p>
+     *  <p>Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoMethodAction" rel="nofollow">Set MethodInfo Method</a> update action.</p>
      * @param oldMethod value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class PaymentMethodInfoMethodSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Payment Method after the Set MethodInfo Method update action.</p>
+     *  <p>Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoMethodAction" rel="nofollow">Set MethodInfo Method</a> update action.</p>
      * @return method
      */
 
@@ -62,7 +62,7 @@ public class PaymentMethodInfoMethodSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Payment Method before the Set MethodInfo Method update action.</p>
+     *  <p>Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoMethodAction" rel="nofollow">Set MethodInfo Method</a> update action.</p>
      * @return oldMethod
      */
 

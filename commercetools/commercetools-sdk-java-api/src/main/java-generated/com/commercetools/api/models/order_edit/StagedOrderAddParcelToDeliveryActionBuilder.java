@@ -45,7 +45,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryId value to be set
      * @return Builder
@@ -57,7 +57,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryKey value to be set
      * @return Builder
@@ -69,7 +69,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param parcelKey value to be set
      * @return Builder
      */
@@ -277,7 +277,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryId
      */
@@ -288,7 +288,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryKey
      */
@@ -299,7 +299,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @return parcelKey
      */
 

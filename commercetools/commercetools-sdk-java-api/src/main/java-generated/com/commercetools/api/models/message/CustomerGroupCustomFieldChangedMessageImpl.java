@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after changing an existing Custom Field on a Customer Group using the Set CustomField update action.</p>
+ *  <p>Generated after changing an existing Custom Field on a Customer Group using the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroupSetCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerGroupCustomFieldChangedMessageImpl implements CustomerGroupCustomFieldChangedMessage, ModelBase {
@@ -146,7 +146,7 @@ public class CustomerGroupCustomFieldChangedMessageImpl implements CustomerGroup
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -162,7 +162,7 @@ public class CustomerGroupCustomFieldChangedMessageImpl implements CustomerGroup
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -186,7 +186,7 @@ public class CustomerGroupCustomFieldChangedMessageImpl implements CustomerGroup
     }
 
     /**
-     *  <p>CustomFieldValue based on the FieldType after the Set CustomField update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroupSetCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
      */
 
     public java.lang.Object getValue() {
@@ -194,7 +194,7 @@ public class CustomerGroupCustomFieldChangedMessageImpl implements CustomerGroup
     }
 
     /**
-     *  <p>CustomFieldValue based on the FieldType before the Set CustomField update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroupSetCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
      */
 
     public java.lang.Object getOldValue() {

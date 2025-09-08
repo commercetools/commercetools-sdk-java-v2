@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>The My Business Unit endpoint does not support assigning existing Customers to a Business Unit. Associates with the <code>UpdateAssociates</code> Permission can use this endpoint to create a new Customer and associate it with the Business Unit. If the required Permission is missing, an AssociateMissingPermission error is returned.</p>
+ *  <p>The My Business Unit endpoint does not support assigning existing Customers to a Business Unit. Associates with the <code>UpdateAssociates</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Permission" rel="nofollow">Permission</a> can use this endpoint to create a new Customer and associate it with the Business Unit. If the required <span>Permission</span> is missing, an <span>AssociateMissingPermission</span> error is returned.</p>
  *
  * <hr>
  * <div class=code-example>

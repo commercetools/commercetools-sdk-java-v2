@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>This action sets or removes the custom type for an existing CustomerGroup. If present, this action overwrites any existing custom type and fields.</p>
+ *  <p>This action sets or removes the custom type for an existing CustomerGroup. If present, this action overwrites any existing <span>custom</span> type and fields.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerGroupSetCustomTypeActionImpl implements CustomerGroupSetCustomTypeAction, ModelBase {
@@ -56,7 +56,7 @@ public class CustomerGroupSetCustomTypeActionImpl implements CustomerGroupSetCus
     }
 
     /**
-     *  <p>Defines the Type that extends the CustomerGroup with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomerGroup.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the CustomerGroup with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the CustomerGroup.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -64,7 +64,7 @@ public class CustomerGroupSetCustomTypeActionImpl implements CustomerGroupSetCus
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the CustomerGroup.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the CustomerGroup.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

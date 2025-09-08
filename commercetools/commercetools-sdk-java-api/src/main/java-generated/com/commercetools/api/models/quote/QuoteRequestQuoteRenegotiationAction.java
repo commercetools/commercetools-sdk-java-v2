@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Represents the Buyer requesting renegotiation for a Quote. Valid for Quotes in a <code>Pending</code> state.</p>
+ *  <p>Represents the Buyer requesting renegotiation for a Quote. Valid for Quotes in a <code>Pending</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteState" rel="nofollow">state</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +35,7 @@ public interface QuoteRequestQuoteRenegotiationAction extends QuoteUpdateAction 
     String REQUEST_QUOTE_RENEGOTIATION = "requestQuoteRenegotiation";
 
     /**
-     *  <p>Message from the Buyer regarding the Quote renegotiation request.</p>
+     *  <p>Message from the <span>Buyer</span> regarding the Quote renegotiation request.</p>
      * @return buyerComment
      */
 
@@ -43,7 +43,7 @@ public interface QuoteRequestQuoteRenegotiationAction extends QuoteUpdateAction 
     public String getBuyerComment();
 
     /**
-     *  <p>Message from the Buyer regarding the Quote renegotiation request.</p>
+     *  <p>Message from the <span>Buyer</span> regarding the Quote renegotiation request.</p>
      * @param buyerComment value to be set
      */
 

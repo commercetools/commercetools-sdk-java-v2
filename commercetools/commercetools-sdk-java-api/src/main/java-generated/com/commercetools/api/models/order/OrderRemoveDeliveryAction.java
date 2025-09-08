@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Produces the DeliveryRemoved Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryRemovedMessage" rel="nofollow">DeliveryRemoved</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +35,7 @@ public interface OrderRemoveDeliveryAction extends OrderUpdateAction {
     String REMOVE_DELIVERY = "removeDelivery";
 
     /**
-     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryId
      */
@@ -44,7 +44,7 @@ public interface OrderRemoveDeliveryAction extends OrderUpdateAction {
     public String getDeliveryId();
 
     /**
-     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryKey
      */
@@ -53,7 +53,7 @@ public interface OrderRemoveDeliveryAction extends OrderUpdateAction {
     public String getDeliveryKey();
 
     /**
-     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryId value to be set
      */
@@ -61,7 +61,7 @@ public interface OrderRemoveDeliveryAction extends OrderUpdateAction {
     public void setDeliveryId(final String deliveryId);
 
     /**
-     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryKey value to be set
      */

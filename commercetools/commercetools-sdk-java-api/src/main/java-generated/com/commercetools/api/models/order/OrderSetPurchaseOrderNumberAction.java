@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Produces the PurchaseOrderNumberSet Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderPurchaseOrderNumberSetMessage" rel="nofollow">PurchaseOrderNumberSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

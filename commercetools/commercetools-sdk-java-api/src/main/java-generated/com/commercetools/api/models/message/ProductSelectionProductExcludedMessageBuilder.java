@@ -24,7 +24,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
  *             .product(productBuilder -> productBuilder)
- *             .variantExclusion(variantExclusionBuilder -> variantExclusionBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -57,6 +56,7 @@ public class ProductSelectionProductExcludedMessageBuilder implements Builder<Pr
 
     private com.commercetools.api.models.product.ProductReference product;
 
+    @Nullable
     private com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion;
 
     /**
@@ -330,7 +330,7 @@ public class ProductSelectionProductExcludedMessageBuilder implements Builder<Pr
      */
 
     public ProductSelectionProductExcludedMessageBuilder variantExclusion(
-            final com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion) {
+            @Nullable final com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion) {
         this.variantExclusion = variantExclusion;
         return this;
     }
@@ -442,6 +442,7 @@ public class ProductSelectionProductExcludedMessageBuilder implements Builder<Pr
      * @return variantExclusion
      */
 
+    @Nullable
     public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {
         return this.variantExclusion;
     }
@@ -462,8 +463,6 @@ public class ProductSelectionProductExcludedMessageBuilder implements Builder<Pr
         Objects.requireNonNull(resourceVersion,
             ProductSelectionProductExcludedMessage.class + ": resourceVersion is missing");
         Objects.requireNonNull(product, ProductSelectionProductExcludedMessage.class + ": product is missing");
-        Objects.requireNonNull(variantExclusion,
-            ProductSelectionProductExcludedMessage.class + ": variantExclusion is missing");
         return new ProductSelectionProductExcludedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, product,
             variantExclusion);

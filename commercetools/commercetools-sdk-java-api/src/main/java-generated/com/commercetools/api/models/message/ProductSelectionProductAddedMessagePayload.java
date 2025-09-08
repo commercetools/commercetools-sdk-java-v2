@@ -26,7 +26,6 @@ import jakarta.validation.constraints.NotNull;
  * <pre><code class='java'>
  *     ProductSelectionProductAddedMessagePayload productSelectionProductAddedMessagePayload = ProductSelectionProductAddedMessagePayload.builder()
  *             .product(productBuilder -> productBuilder)
- *             .variantSelection(variantSelectionBuilder -> variantSelectionBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -54,7 +53,6 @@ public interface ProductSelectionProductAddedMessagePayload extends MessagePaylo
      *  <p>Product Variant Selection after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionAddProductAction" rel="nofollow">Add Product</a> update action.</p>
      * @return variantSelection
      */
-    @NotNull
     @Valid
     @JsonProperty("variantSelection")
     public ProductVariantSelection getVariantSelection();

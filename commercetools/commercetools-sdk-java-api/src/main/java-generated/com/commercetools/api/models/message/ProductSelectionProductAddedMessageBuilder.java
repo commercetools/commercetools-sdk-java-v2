@@ -24,7 +24,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
  *             .product(productBuilder -> productBuilder)
- *             .variantSelection(variantSelectionBuilder -> variantSelectionBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -57,6 +56,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
 
     private com.commercetools.api.models.product.ProductReference product;
 
+    @Nullable
     private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
 
     /**
@@ -303,7 +303,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
      */
 
     public ProductSelectionProductAddedMessageBuilder variantSelection(
-            final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
+            @Nullable final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
         this.variantSelection = variantSelection;
         return this;
     }
@@ -429,6 +429,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
      * @return variantSelection
      */
 
+    @Nullable
     public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
         return this.variantSelection;
     }
@@ -449,8 +450,6 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
         Objects.requireNonNull(resourceVersion,
             ProductSelectionProductAddedMessage.class + ": resourceVersion is missing");
         Objects.requireNonNull(product, ProductSelectionProductAddedMessage.class + ": product is missing");
-        Objects.requireNonNull(variantSelection,
-            ProductSelectionProductAddedMessage.class + ": variantSelection is missing");
         return new ProductSelectionProductAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, product,
             variantSelection);

@@ -4,6 +4,8 @@ package com.commercetools.api.models.message;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,8 +17,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ProductSelectionVariantSelectionChangedMessagePayload productSelectionVariantSelectionChangedMessagePayload = ProductSelectionVariantSelectionChangedMessagePayload.builder()
  *             .product(productBuilder -> productBuilder)
- *             .oldVariantSelection(oldVariantSelectionBuilder -> oldVariantSelectionBuilder)
- *             .newVariantSelection(newVariantSelectionBuilder -> newVariantSelectionBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -27,8 +27,10 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadBuilder
 
     private com.commercetools.api.models.product.ProductReference product;
 
+    @Nullable
     private com.commercetools.api.models.product_selection.ProductVariantSelection oldVariantSelection;
 
+    @Nullable
     private com.commercetools.api.models.product_selection.ProductVariantSelection newVariantSelection;
 
     /**
@@ -74,7 +76,7 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadBuilder
      */
 
     public ProductSelectionVariantSelectionChangedMessagePayloadBuilder oldVariantSelection(
-            final com.commercetools.api.models.product_selection.ProductVariantSelection oldVariantSelection) {
+            @Nullable final com.commercetools.api.models.product_selection.ProductVariantSelection oldVariantSelection) {
         this.oldVariantSelection = oldVariantSelection;
         return this;
     }
@@ -100,7 +102,7 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadBuilder
      */
 
     public ProductSelectionVariantSelectionChangedMessagePayloadBuilder newVariantSelection(
-            final com.commercetools.api.models.product_selection.ProductVariantSelection newVariantSelection) {
+            @Nullable final com.commercetools.api.models.product_selection.ProductVariantSelection newVariantSelection) {
         this.newVariantSelection = newVariantSelection;
         return this;
     }
@@ -133,6 +135,7 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadBuilder
      * @return oldVariantSelection
      */
 
+    @Nullable
     public com.commercetools.api.models.product_selection.ProductVariantSelection getOldVariantSelection() {
         return this.oldVariantSelection;
     }
@@ -142,6 +145,7 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadBuilder
      * @return newVariantSelection
      */
 
+    @Nullable
     public com.commercetools.api.models.product_selection.ProductVariantSelection getNewVariantSelection() {
         return this.newVariantSelection;
     }
@@ -153,10 +157,6 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadBuilder
     public ProductSelectionVariantSelectionChangedMessagePayload build() {
         Objects.requireNonNull(product,
             ProductSelectionVariantSelectionChangedMessagePayload.class + ": product is missing");
-        Objects.requireNonNull(oldVariantSelection,
-            ProductSelectionVariantSelectionChangedMessagePayload.class + ": oldVariantSelection is missing");
-        Objects.requireNonNull(newVariantSelection,
-            ProductSelectionVariantSelectionChangedMessagePayload.class + ": newVariantSelection is missing");
         return new ProductSelectionVariantSelectionChangedMessagePayloadImpl(product, oldVariantSelection,
             newVariantSelection);
     }

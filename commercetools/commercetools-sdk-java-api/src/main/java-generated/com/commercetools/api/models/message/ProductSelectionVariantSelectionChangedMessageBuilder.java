@@ -24,8 +24,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
  *             .product(productBuilder -> productBuilder)
- *             .oldVariantSelection(oldVariantSelectionBuilder -> oldVariantSelectionBuilder)
- *             .newVariantSelection(newVariantSelectionBuilder -> newVariantSelectionBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -59,8 +57,10 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
 
     private com.commercetools.api.models.product.ProductReference product;
 
+    @Nullable
     private com.commercetools.api.models.product_selection.ProductVariantSelection oldVariantSelection;
 
+    @Nullable
     private com.commercetools.api.models.product_selection.ProductVariantSelection newVariantSelection;
 
     /**
@@ -308,7 +308,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
      */
 
     public ProductSelectionVariantSelectionChangedMessageBuilder oldVariantSelection(
-            final com.commercetools.api.models.product_selection.ProductVariantSelection oldVariantSelection) {
+            @Nullable final com.commercetools.api.models.product_selection.ProductVariantSelection oldVariantSelection) {
         this.oldVariantSelection = oldVariantSelection;
         return this;
     }
@@ -334,7 +334,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
      */
 
     public ProductSelectionVariantSelectionChangedMessageBuilder newVariantSelection(
-            final com.commercetools.api.models.product_selection.ProductVariantSelection newVariantSelection) {
+            @Nullable final com.commercetools.api.models.product_selection.ProductVariantSelection newVariantSelection) {
         this.newVariantSelection = newVariantSelection;
         return this;
     }
@@ -460,6 +460,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
      * @return oldVariantSelection
      */
 
+    @Nullable
     public com.commercetools.api.models.product_selection.ProductVariantSelection getOldVariantSelection() {
         return this.oldVariantSelection;
     }
@@ -469,6 +470,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
      * @return newVariantSelection
      */
 
+    @Nullable
     public com.commercetools.api.models.product_selection.ProductVariantSelection getNewVariantSelection() {
         return this.newVariantSelection;
     }
@@ -491,10 +493,6 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
         Objects.requireNonNull(resourceVersion,
             ProductSelectionVariantSelectionChangedMessage.class + ": resourceVersion is missing");
         Objects.requireNonNull(product, ProductSelectionVariantSelectionChangedMessage.class + ": product is missing");
-        Objects.requireNonNull(oldVariantSelection,
-            ProductSelectionVariantSelectionChangedMessage.class + ": oldVariantSelection is missing");
-        Objects.requireNonNull(newVariantSelection,
-            ProductSelectionVariantSelectionChangedMessage.class + ": newVariantSelection is missing");
         return new ProductSelectionVariantSelectionChangedMessageImpl(id, version, createdAt, lastModifiedAt,
             lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers,
             product, oldVariantSelection, newVariantSelection);

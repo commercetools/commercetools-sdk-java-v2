@@ -33,8 +33,6 @@ import jakarta.validation.constraints.NotNull;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
  *             .product(productBuilder -> productBuilder)
- *             .oldVariantSelection(oldVariantSelectionBuilder -> oldVariantSelectionBuilder)
- *             .newVariantSelection(newVariantSelectionBuilder -> newVariantSelectionBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -62,7 +60,6 @@ public interface ProductSelectionVariantSelectionChangedMessage extends Message 
      *  <p>Product Variant Selection before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantSelectionAction" rel="nofollow">Set Variant Selection</a> update action.</p>
      * @return oldVariantSelection
      */
-    @NotNull
     @Valid
     @JsonProperty("oldVariantSelection")
     public ProductVariantSelection getOldVariantSelection();
@@ -71,7 +68,6 @@ public interface ProductSelectionVariantSelectionChangedMessage extends Message 
      *  <p>Product Variant Selection after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantSelectionAction" rel="nofollow">Set Variant Selection</a> update action.</p>
      * @return newVariantSelection
      */
-    @NotNull
     @Valid
     @JsonProperty("newVariantSelection")
     public ProductVariantSelection getNewVariantSelection();

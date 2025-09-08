@@ -24,8 +24,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
  *             .product(productBuilder -> productBuilder)
- *             .oldVariantExclusion(oldVariantExclusionBuilder -> oldVariantExclusionBuilder)
- *             .newVariantExclusion(newVariantExclusionBuilder -> newVariantExclusionBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -59,8 +57,10 @@ public class ProductSelectionVariantExclusionChangedMessageBuilder
 
     private com.commercetools.api.models.product.ProductReference product;
 
+    @Nullable
     private com.commercetools.api.models.product_selection.ProductVariantExclusion oldVariantExclusion;
 
+    @Nullable
     private com.commercetools.api.models.product_selection.ProductVariantExclusion newVariantExclusion;
 
     /**
@@ -335,7 +335,7 @@ public class ProductSelectionVariantExclusionChangedMessageBuilder
      */
 
     public ProductSelectionVariantExclusionChangedMessageBuilder oldVariantExclusion(
-            final com.commercetools.api.models.product_selection.ProductVariantExclusion oldVariantExclusion) {
+            @Nullable final com.commercetools.api.models.product_selection.ProductVariantExclusion oldVariantExclusion) {
         this.oldVariantExclusion = oldVariantExclusion;
         return this;
     }
@@ -374,7 +374,7 @@ public class ProductSelectionVariantExclusionChangedMessageBuilder
      */
 
     public ProductSelectionVariantExclusionChangedMessageBuilder newVariantExclusion(
-            final com.commercetools.api.models.product_selection.ProductVariantExclusion newVariantExclusion) {
+            @Nullable final com.commercetools.api.models.product_selection.ProductVariantExclusion newVariantExclusion) {
         this.newVariantExclusion = newVariantExclusion;
         return this;
     }
@@ -486,6 +486,7 @@ public class ProductSelectionVariantExclusionChangedMessageBuilder
      * @return oldVariantExclusion
      */
 
+    @Nullable
     public com.commercetools.api.models.product_selection.ProductVariantExclusion getOldVariantExclusion() {
         return this.oldVariantExclusion;
     }
@@ -495,6 +496,7 @@ public class ProductSelectionVariantExclusionChangedMessageBuilder
      * @return newVariantExclusion
      */
 
+    @Nullable
     public com.commercetools.api.models.product_selection.ProductVariantExclusion getNewVariantExclusion() {
         return this.newVariantExclusion;
     }
@@ -517,10 +519,6 @@ public class ProductSelectionVariantExclusionChangedMessageBuilder
         Objects.requireNonNull(resourceVersion,
             ProductSelectionVariantExclusionChangedMessage.class + ": resourceVersion is missing");
         Objects.requireNonNull(product, ProductSelectionVariantExclusionChangedMessage.class + ": product is missing");
-        Objects.requireNonNull(oldVariantExclusion,
-            ProductSelectionVariantExclusionChangedMessage.class + ": oldVariantExclusion is missing");
-        Objects.requireNonNull(newVariantExclusion,
-            ProductSelectionVariantExclusionChangedMessage.class + ": newVariantExclusion is missing");
         return new ProductSelectionVariantExclusionChangedMessageImpl(id, version, createdAt, lastModifiedAt,
             lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers,
             product, oldVariantExclusion, newVariantExclusion);

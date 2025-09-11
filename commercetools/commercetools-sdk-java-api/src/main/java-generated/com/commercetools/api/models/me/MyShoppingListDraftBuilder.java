@@ -45,7 +45,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
     /**
-     *  <p>Name of the ShoppingList.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     *  <p>Name of the ShoppingList.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     *  <p>Name of the ShoppingList.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -116,7 +116,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">Line Items</a> (containing Products) to add to the ShoppingList.</p>
      * @param lineItems value to be set
      * @return Builder
      */
@@ -128,7 +128,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">Line Items</a> (containing Products) to add to the ShoppingList.</p>
      * @param lineItems value to be set
      * @return Builder
      */
@@ -140,7 +140,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">Line Items</a> (containing Products) to add to the ShoppingList.</p>
      * @param lineItems value to be set
      * @return Builder
      */
@@ -155,7 +155,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">Line Items</a> (containing Products) to add to the ShoppingList.</p>
      * @param builder function to build the lineItems value
      * @return Builder
      */
@@ -171,7 +171,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">Line Items</a> (containing Products) to add to the ShoppingList.</p>
      * @param builder function to build the lineItems value
      * @return Builder
      */
@@ -185,7 +185,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">Line Items</a> (containing Products) to add to the ShoppingList.</p>
      * @param builder function to build the lineItems value
      * @return Builder
      */
@@ -197,7 +197,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">Line Items</a> (containing Products) to add to the ShoppingList.</p>
      * @param builder function to build the lineItems value
      * @return Builder
      */
@@ -209,7 +209,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">Line Items</a> (containing text values) to add to the ShoppingList.</p>
      * @param textLineItems value to be set
      * @return Builder
      */
@@ -221,7 +221,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">Line Items</a> (containing text values) to add to the ShoppingList.</p>
      * @param textLineItems value to be set
      * @return Builder
      */
@@ -233,7 +233,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">Line Items</a> (containing text values) to add to the ShoppingList.</p>
      * @param textLineItems value to be set
      * @return Builder
      */
@@ -248,7 +248,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">Line Items</a> (containing text values) to add to the ShoppingList.</p>
      * @param builder function to build the textLineItems value
      * @return Builder
      */
@@ -264,7 +264,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">Line Items</a> (containing text values) to add to the ShoppingList.</p>
      * @param builder function to build the textLineItems value
      * @return Builder
      */
@@ -278,7 +278,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">Line Items</a> (containing text values) to add to the ShoppingList.</p>
      * @param builder function to build the textLineItems value
      * @return Builder
      */
@@ -290,7 +290,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">Line Items</a> (containing text values) to add to the ShoppingList.</p>
      * @param builder function to build the textLineItems value
      * @return Builder
      */
@@ -337,7 +337,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the default value configured in the Project is used.</p>
+     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListsConfiguration" rel="nofollow">default value</a> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is used.</p>
      * @param deleteDaysAfterLastModification value to be set
      * @return Builder
      */
@@ -349,7 +349,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     *  <p>Assigns the new ShoppingList to the Store. The Store assignment can not be modified.</p>
+     *  <p>Assigns the new ShoppingList to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. The Store assignment can not be modified.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -361,7 +361,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     *  <p>Assigns the new ShoppingList to the Store. The Store assignment can not be modified.</p>
+     *  <p>Assigns the new ShoppingList to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. The Store assignment can not be modified.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -373,7 +373,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     *  <p>Assigns the new ShoppingList to the Store. The Store assignment can not be modified.</p>
+     *  <p>Assigns the new ShoppingList to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. The Store assignment can not be modified.</p>
      * @param store value to be set
      * @return Builder
      */
@@ -385,7 +385,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     *  <p>Name of the ShoppingList.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @return name
      */
 
@@ -404,7 +404,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">Line Items</a> (containing Products) to add to the ShoppingList.</p>
      * @return lineItems
      */
 
@@ -414,7 +414,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">Line Items</a> (containing text values) to add to the ShoppingList.</p>
      * @return textLineItems
      */
 
@@ -434,7 +434,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the default value configured in the Project is used.</p>
+     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListsConfiguration" rel="nofollow">default value</a> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is used.</p>
      * @return deleteDaysAfterLastModification
      */
 
@@ -444,7 +444,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     *  <p>Assigns the new ShoppingList to the Store. The Store assignment can not be modified.</p>
+     *  <p>Assigns the new ShoppingList to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. The Store assignment can not be modified.</p>
      * @return store
      */
 

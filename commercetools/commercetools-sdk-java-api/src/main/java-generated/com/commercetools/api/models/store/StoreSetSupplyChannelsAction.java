@@ -17,8 +17,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Setting a supply channel produces the StoreSupplyChannelsChanged Message.</p>
- *  <p>Setting a Channel without the <code>InventorySupply</code> ChannelRoleEnum returns a MissingRoleOnChannel error.</p>
+ *  <p>Setting a supply channel produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSupplyChannelsChangedMessage" rel="nofollow">StoreSupplyChannelsChanged</a> Message.</p>
+ *  <p>Setting a <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> without the <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> returns a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

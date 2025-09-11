@@ -94,6 +94,10 @@ public interface ErrorObject {
         if (template == null) {
             return null;
         }
+
+        if (!(template instanceof ErrorObjectImpl)) {
+            return template.copyDeep();
+        }
         ErrorObjectImpl instance = new ErrorObjectImpl();
         instance.setCode(template.getCode());
         instance.setMessage(template.getMessage());

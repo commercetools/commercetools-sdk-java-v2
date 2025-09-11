@@ -17,8 +17,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>This action updates the <code>shippingAddress</code> on the Order, but it does not change the shipping address on the referenced Cart from which the Order is created. Also, it does not recalculate the Cart as taxes may not fit to the shipping address anymore.</p>
- *  <p>Produces the Order Shipping Address Set Message.</p>
+ *  <p>This action updates the <code>shippingAddress</code> on the Order, but it does not change the shipping address on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> from which the Order is created. Also, it does not recalculate the Cart as taxes may not fit to the shipping address anymore.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderShippingAddressSetMessage" rel="nofollow">Order Shipping Address Set</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetShippingAddressActionImpl implements OrderSetShippingAddressAction, ModelBase {

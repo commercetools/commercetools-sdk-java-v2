@@ -38,7 +38,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ProductSearchFacetRangesValue {
 
     /**
-     *  <p>Name of the ranges facet to appear in the ProductSearchFacetResultBucket.</p>
+     *  <p>Name of the ranges facet to appear in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchFacetResultBucket" rel="nofollow">ProductSearchFacetResultBucket</a>.</p>
      * @return name
      */
     @NotNull
@@ -70,7 +70,7 @@ public interface ProductSearchFacetRangesValue {
     public ProductSearchFacetCountLevelEnum getLevel();
 
     /**
-     *  <p>The searchable Product field to facet on.</p>
+     *  <p>The <span>searchable Product field</span> to facet on.</p>
      * @return field
      */
     @NotNull
@@ -87,7 +87,7 @@ public interface ProductSearchFacetRangesValue {
     public List<ProductSearchFacetRangesFacetRange> getRanges();
 
     /**
-     *  <p>String value specifying linguistic and regional preferences using the IETF language tag format, as described in BCP 47. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
+     *  <p>String value specifying linguistic and regional preferences using the <span>IETF language tag format</span>, as described in <span>BCP 47</span>. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
      * @return language
      */
 
@@ -103,7 +103,7 @@ public interface ProductSearchFacetRangesValue {
     public SearchFieldType getFieldType();
 
     /**
-     *  <p>Name of the ranges facet to appear in the ProductSearchFacetResultBucket.</p>
+     *  <p>Name of the ranges facet to appear in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchFacetResultBucket" rel="nofollow">ProductSearchFacetResultBucket</a>.</p>
      * @param name value to be set
      */
 
@@ -131,7 +131,7 @@ public interface ProductSearchFacetRangesValue {
     public void setLevel(final ProductSearchFacetCountLevelEnum level);
 
     /**
-     *  <p>The searchable Product field to facet on.</p>
+     *  <p>The <span>searchable Product field</span> to facet on.</p>
      * @param field value to be set
      */
 
@@ -153,7 +153,7 @@ public interface ProductSearchFacetRangesValue {
     public void setRanges(final List<ProductSearchFacetRangesFacetRange> ranges);
 
     /**
-     *  <p>String value specifying linguistic and regional preferences using the IETF language tag format, as described in BCP 47. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
+     *  <p>String value specifying linguistic and regional preferences using the <span>IETF language tag format</span>, as described in <span>BCP 47</span>. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
      * @param language value to be set
      */
 

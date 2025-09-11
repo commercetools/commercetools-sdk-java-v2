@@ -187,7 +187,7 @@ public class ApprovalRuleApproversSetMessageBuilder implements Builder<ApprovalR
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -199,7 +199,7 @@ public class ApprovalRuleApproversSetMessageBuilder implements Builder<ApprovalR
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -261,7 +261,7 @@ public class ApprovalRuleApproversSetMessageBuilder implements Builder<ApprovalR
     }
 
     /**
-     *  <p>Approver hierarchy of the ApprovalRule after the Set Approvers update action.</p>
+     *  <p>Approver hierarchy of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetApproversAction" rel="nofollow">Set Approvers</a> update action.</p>
      * @param builder function to build the approvers value
      * @return Builder
      */
@@ -274,7 +274,7 @@ public class ApprovalRuleApproversSetMessageBuilder implements Builder<ApprovalR
     }
 
     /**
-     *  <p>Approver hierarchy of the ApprovalRule after the Set Approvers update action.</p>
+     *  <p>Approver hierarchy of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetApproversAction" rel="nofollow">Set Approvers</a> update action.</p>
      * @param builder function to build the approvers value
      * @return Builder
      */
@@ -286,7 +286,7 @@ public class ApprovalRuleApproversSetMessageBuilder implements Builder<ApprovalR
     }
 
     /**
-     *  <p>Approver hierarchy of the ApprovalRule after the Set Approvers update action.</p>
+     *  <p>Approver hierarchy of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetApproversAction" rel="nofollow">Set Approvers</a> update action.</p>
      * @param approvers value to be set
      * @return Builder
      */
@@ -298,7 +298,7 @@ public class ApprovalRuleApproversSetMessageBuilder implements Builder<ApprovalR
     }
 
     /**
-     *  <p>Approver hierarchy of the ApprovalRule before the Set Approvers update action.</p>
+     *  <p>Approver hierarchy of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetApproversAction" rel="nofollow">Set Approvers</a> update action.</p>
      * @param builder function to build the oldApprovers value
      * @return Builder
      */
@@ -311,7 +311,7 @@ public class ApprovalRuleApproversSetMessageBuilder implements Builder<ApprovalR
     }
 
     /**
-     *  <p>Approver hierarchy of the ApprovalRule before the Set Approvers update action.</p>
+     *  <p>Approver hierarchy of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetApproversAction" rel="nofollow">Set Approvers</a> update action.</p>
      * @param builder function to build the oldApprovers value
      * @return Builder
      */
@@ -323,7 +323,7 @@ public class ApprovalRuleApproversSetMessageBuilder implements Builder<ApprovalR
     }
 
     /**
-     *  <p>Approver hierarchy of the ApprovalRule before the Set Approvers update action.</p>
+     *  <p>Approver hierarchy of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetApproversAction" rel="nofollow">Set Approvers</a> update action.</p>
      * @param oldApprovers value to be set
      * @return Builder
      */
@@ -400,7 +400,7 @@ public class ApprovalRuleApproversSetMessageBuilder implements Builder<ApprovalR
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -428,7 +428,7 @@ public class ApprovalRuleApproversSetMessageBuilder implements Builder<ApprovalR
     }
 
     /**
-     *  <p>Approver hierarchy of the ApprovalRule after the Set Approvers update action.</p>
+     *  <p>Approver hierarchy of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetApproversAction" rel="nofollow">Set Approvers</a> update action.</p>
      * @return approvers
      */
 
@@ -437,7 +437,7 @@ public class ApprovalRuleApproversSetMessageBuilder implements Builder<ApprovalR
     }
 
     /**
-     *  <p>Approver hierarchy of the ApprovalRule before the Set Approvers update action.</p>
+     *  <p>Approver hierarchy of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetApproversAction" rel="nofollow">Set Approvers</a> update action.</p>
      * @return oldApprovers
      */
 

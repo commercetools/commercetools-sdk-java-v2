@@ -19,8 +19,8 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set Asset CustomField on Categories.</li>
- *   <li>Set Asset CustomField on Products.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CategorySetAssetCustomFieldAction" rel="nofollow">Set Asset CustomField</a> on Categories.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetAssetCustomFieldAction" rel="nofollow">Set Asset CustomField</a> on Products.</li>
  *  </ul>
  *
  * <hr>
@@ -79,7 +79,7 @@ public interface SetAssetCustomFieldChange extends Change {
     public Object getNextValue();
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @return name
      */
     @NotNull
@@ -87,7 +87,7 @@ public interface SetAssetCustomFieldChange extends Change {
     public String getName();
 
     /**
-     *  <p><code>id</code> of the referenced Type.</p>
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @return customTypeId
      */
     @NotNull
@@ -125,14 +125,14 @@ public interface SetAssetCustomFieldChange extends Change {
     public void setNextValue(final Object nextValue);
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     *  <p><code>id</code> of the referenced Type.</p>
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param customTypeId value to be set
      */
 

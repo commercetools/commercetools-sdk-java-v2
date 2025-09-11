@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Product Tailoring Set Slug update action.</p>
+ *  <p>Generated after a successful Product Tailoring <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetSlugAction" rel="nofollow">Set Slug</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTailoringSlugSetMessagePayloadImpl implements ProductTailoringSlugSetMessagePayload, ModelBase {
@@ -92,7 +92,7 @@ public class ProductTailoringSlugSetMessagePayloadImpl implements ProductTailori
     }
 
     /**
-     *  <p>The slug of the Product Tailoring after the Set Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetSlugAction" rel="nofollow">Set Slug</a> update action.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getSlug() {
@@ -100,7 +100,7 @@ public class ProductTailoringSlugSetMessagePayloadImpl implements ProductTailori
     }
 
     /**
-     *  <p>The slug of the ProductTailoring before the Set Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetSlugAction" rel="nofollow">Set Slug</a> update action.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getOldSlug() {

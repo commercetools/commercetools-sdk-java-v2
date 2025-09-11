@@ -75,7 +75,7 @@ public class TermFacetResultImpl implements TermFacetResult, ModelBase {
     }
 
     /**
-     *  <p>Number of ProductVariants that have no value for the specified term facet expression.</p>
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> that have no value for the specified <span>term facet expression</span>.</p>
      */
 
     public Long getMissing() {
@@ -83,7 +83,7 @@ public class TermFacetResultImpl implements TermFacetResult, ModelBase {
     }
 
     /**
-     *  <p>Number of terms matching the term facet expression.</p>
+     *  <p>Number of terms matching the <span>term facet expression</span>.</p>
      *  <ul>
      *   <li>If the expression refers to Product fields like <code>categories.id</code> and <code>reviewRatingStatistics.count</code>, the value represents the number of Products.</li>
      *   <li>If the expression is defined for fields specific to Product Variants, for example, <code>variants.attributes.{name}</code>, the value represents the number of Product Variants matching the expression.</li>
@@ -95,7 +95,7 @@ public class TermFacetResultImpl implements TermFacetResult, ModelBase {
     }
 
     /**
-     *  <p>Number of terms not represented in this object (such as the number of terms beyond the limit).</p>
+     *  <p>Number of terms not represented in this object (such as the number of terms beyond the <span>limit</span>).</p>
      */
 
     public Long getOther() {
@@ -103,9 +103,9 @@ public class TermFacetResultImpl implements TermFacetResult, ModelBase {
     }
 
     /**
-     *  <p>Values for the field specified in term facet expression for which at least one ProductVariant could be found.</p>
+     *  <p>Values for the field specified in <span>term facet expression</span> for which at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> could be found.</p>
      *  <p>By default, facet terms are returned in a descending order of their <code>count</code>.</p>
-     *  <p>If the term facet expression specifies to count Products through the <code>counting products</code> extension, then facet terms are returned in a descending order of their <code>productCount</code>.</p>
+     *  <p>If the term facet expression specifies to count <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a> through the <code>counting products</code> <span>extension</span>, then facet terms are returned in a descending order of their <code>productCount</code>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.FacetTerm> getTerms() {

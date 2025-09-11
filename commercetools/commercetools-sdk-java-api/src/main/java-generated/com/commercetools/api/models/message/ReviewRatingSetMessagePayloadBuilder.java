@@ -36,7 +36,7 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
     private com.commercetools.api.models.common.Reference target;
 
     /**
-     *  <p>The <code>rating</code> of the Review before the Set Rating update action.</p>
+     *  <p>The <code>rating</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewSetRatingAction" rel="nofollow">Set Rating</a> update action.</p>
      * @param oldRating value to be set
      * @return Builder
      */
@@ -47,7 +47,7 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
     }
 
     /**
-     *  <p>The <code>rating</code> of the Review after the Set Rating update action.</p>
+     *  <p>The <code>rating</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewSetRatingAction" rel="nofollow">Set Rating</a> update action.</p>
      * @param newRating value to be set
      * @return Builder
      */
@@ -58,7 +58,7 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
     }
 
     /**
-     *  <p>Whether the Review was taken into account in the ratings statistics of the target.</p>
+     *  <p>Whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> was taken into account in the ratings statistics of the target.</p>
      * @param includedInStatistics value to be set
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
     }
 
     /**
-     *  <p>Reference to the resource that the Review belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource that the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> belongs to.</p>
      * @param target value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
     }
 
     /**
-     *  <p>Reference to the resource that the Review belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource that the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> belongs to.</p>
      * @param builder function to build the target value
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
     }
 
     /**
-     *  <p>The <code>rating</code> of the Review before the Set Rating update action.</p>
+     *  <p>The <code>rating</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewSetRatingAction" rel="nofollow">Set Rating</a> update action.</p>
      * @return oldRating
      */
 
@@ -103,7 +103,7 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
     }
 
     /**
-     *  <p>The <code>rating</code> of the Review after the Set Rating update action.</p>
+     *  <p>The <code>rating</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewSetRatingAction" rel="nofollow">Set Rating</a> update action.</p>
      * @return newRating
      */
 
@@ -113,7 +113,7 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
     }
 
     /**
-     *  <p>Whether the Review was taken into account in the ratings statistics of the target.</p>
+     *  <p>Whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> was taken into account in the ratings statistics of the target.</p>
      * @return includedInStatistics
      */
 
@@ -122,7 +122,7 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
     }
 
     /**
-     *  <p>Reference to the resource that the Review belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource that the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> belongs to.</p>
      * @return target
      */
 

@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Add Address update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAddAddressAction" rel="nofollow">Add Address</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface BusinessUnitAddressAddedMessage extends Message {
     String BUSINESS_UNIT_ADDRESS_ADDED = "BusinessUnitAddressAdded";
 
     /**
-     *  <p>The address that was added to the Business Unit.</p>
+     *  <p>The address that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return address
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface BusinessUnitAddressAddedMessage extends Message {
     public Address getAddress();
 
     /**
-     *  <p>The address that was added to the Business Unit.</p>
+     *  <p>The address that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param address value to be set
      */
 

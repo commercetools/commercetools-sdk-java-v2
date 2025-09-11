@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Produces the ProductAddedToCategory Message.</p>
+ *  <p>Produces the <span>ProductAddedToCategory</span> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

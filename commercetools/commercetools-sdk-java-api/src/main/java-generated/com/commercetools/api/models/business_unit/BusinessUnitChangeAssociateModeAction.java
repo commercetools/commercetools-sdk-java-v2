@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Only Business Units of type <code>Division</code> can be changed to <code>ExplicitAndFromParent</code>. This update action generates a BusinessUnitAssociateModeChanged Message.</p>
+ *  <p>Only Business Units of type <code>Division</code> can be changed to <code>ExplicitAndFromParent</code>. This update action generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAssociateModeChangedMessage" rel="nofollow">BusinessUnitAssociateModeChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

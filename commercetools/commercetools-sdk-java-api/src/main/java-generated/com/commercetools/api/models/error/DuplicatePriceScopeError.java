@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Returned when a Price scope conflicts with an existing one during an Update Product request.</p>
+ *  <p>Returned when a Price scope conflicts with an existing one during an <span>Update Product</span> request.</p>
  *  <p>Every Price of a Product Variant must have a distinct combination of currency, Customer Group, country, and Channel that constitute the scope of a Price.</p>
  *
  * <hr>

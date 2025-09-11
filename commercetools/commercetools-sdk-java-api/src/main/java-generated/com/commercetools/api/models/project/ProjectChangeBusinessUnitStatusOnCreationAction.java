@@ -38,7 +38,7 @@ public interface ProjectChangeBusinessUnitStatusOnCreationAction extends Project
     String CHANGE_MY_BUSINESS_UNIT_STATUS_ON_CREATION = "changeMyBusinessUnitStatusOnCreation";
 
     /**
-     *  <p>Status for Business Units created using the My Business Unit endpoint.</p>
+     *  <p>Status for Business Units created using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/business-units:POST" rel="nofollow">My Business Unit endpoint</a>.</p>
      * @return status
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface ProjectChangeBusinessUnitStatusOnCreationAction extends Project
     public BusinessUnitConfigurationStatus getStatus();
 
     /**
-     *  <p>Status for Business Units created using the My Business Unit endpoint.</p>
+     *  <p>Status for Business Units created using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/business-units:POST" rel="nofollow">My Business Unit endpoint</a>.</p>
      * @param status value to be set
      */
 

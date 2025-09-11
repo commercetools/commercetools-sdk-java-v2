@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Description update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ApprovalRuleDescriptionSetMessagePayloadImpl
@@ -56,7 +56,7 @@ public class ApprovalRuleDescriptionSetMessagePayloadImpl
     }
 
     /**
-     *  <p>Description of the ApprovalRule after the Set Description update action.</p>
+     *  <p>Description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
      */
 
     public String getDescription() {
@@ -64,7 +64,7 @@ public class ApprovalRuleDescriptionSetMessagePayloadImpl
     }
 
     /**
-     *  <p>Description of the ApprovalRule before the Set Description update action.</p>
+     *  <p>Description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
      */
 
     public String getOldDescription() {

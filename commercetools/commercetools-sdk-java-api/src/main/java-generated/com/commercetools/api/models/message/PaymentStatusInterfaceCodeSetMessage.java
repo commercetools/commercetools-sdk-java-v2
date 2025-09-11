@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Set StatusInterfaceCode update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetStatusInterfaceCodeAction" rel="nofollow">Set StatusInterfaceCode</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -43,7 +43,7 @@ public interface PaymentStatusInterfaceCodeSetMessage extends Message {
     String PAYMENT_STATUS_INTERFACE_CODE_SET = "PaymentStatusInterfaceCodeSet";
 
     /**
-     *  <p>The <code>interfaceCode</code> that was set during the Set StatusInterfaceCode update action.</p>
+     *  <p>The <code>interfaceCode</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetStatusInterfaceCodeAction" rel="nofollow">Set StatusInterfaceCode</a> update action.</p>
      * @return interfaceCode
      */
 
@@ -51,7 +51,7 @@ public interface PaymentStatusInterfaceCodeSetMessage extends Message {
     public String getInterfaceCode();
 
     /**
-     *  <p>The <code>interfaceCode</code> that was set during the Set StatusInterfaceCode update action.</p>
+     *  <p>The <code>interfaceCode</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetStatusInterfaceCodeAction" rel="nofollow">Set StatusInterfaceCode</a> update action.</p>
      * @param interfaceCode value to be set
      */
 

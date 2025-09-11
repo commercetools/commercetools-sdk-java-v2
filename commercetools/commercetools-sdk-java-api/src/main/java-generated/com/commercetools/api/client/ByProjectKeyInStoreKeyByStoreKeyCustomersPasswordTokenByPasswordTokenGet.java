@@ -20,8 +20,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Use this method to retrieve a Store-specific Customer's details by using the password reset token during their password reset process.</p>
- *  <p>If the Customer exists in the Project but the <code>stores</code> field references a different Store, this method returns a ResourceNotFound error.</p>
+ *  <p>Use this method to retrieve a Store-specific Customer's details by using the password reset token during their <span>password reset process</span>.</p>
+ *  <p>If the Customer exists in the Project but the <code>stores</code> field references a different Store, this method returns a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error.</p>
  *
  * <hr>
  * <div class=code-example>

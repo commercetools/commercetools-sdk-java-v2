@@ -119,7 +119,7 @@ public class SetVariantSelectionChangeBuilder implements Builder<SetVariantSelec
     }
 
     /**
-     *  <p>Reference to the updated Product.</p>
+     *  <p>Reference to the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -131,7 +131,7 @@ public class SetVariantSelectionChangeBuilder implements Builder<SetVariantSelec
     }
 
     /**
-     *  <p>Reference to the updated Product.</p>
+     *  <p>Reference to the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -143,7 +143,7 @@ public class SetVariantSelectionChangeBuilder implements Builder<SetVariantSelec
     }
 
     /**
-     *  <p>Reference to the updated Product.</p>
+     *  <p>Reference to the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param product value to be set
      * @return Builder
      */
@@ -181,7 +181,7 @@ public class SetVariantSelectionChangeBuilder implements Builder<SetVariantSelec
     }
 
     /**
-     *  <p>Reference to the updated Product.</p>
+     *  <p>Reference to the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return product
      */
 

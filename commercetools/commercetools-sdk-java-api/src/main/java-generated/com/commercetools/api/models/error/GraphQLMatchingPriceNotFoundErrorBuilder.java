@@ -70,7 +70,7 @@ public class GraphQLMatchingPriceNotFoundErrorBuilder implements Builder<GraphQL
     }
 
     /**
-     *  <p>Unique identifier of a Product.</p>
+     *  <p>Unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param productId value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class GraphQLMatchingPriceNotFoundErrorBuilder implements Builder<GraphQL
     }
 
     /**
-     *  <p>Unique identifier of a ProductVariant in the Product.</p>
+     *  <p>Unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in the Product.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -198,7 +198,7 @@ public class GraphQLMatchingPriceNotFoundErrorBuilder implements Builder<GraphQL
     }
 
     /**
-     *  <p>Unique identifier of a Product.</p>
+     *  <p>Unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return productId
      */
 
@@ -207,7 +207,7 @@ public class GraphQLMatchingPriceNotFoundErrorBuilder implements Builder<GraphQL
     }
 
     /**
-     *  <p>Unique identifier of a ProductVariant in the Product.</p>
+     *  <p>Unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in the Product.</p>
      * @return variantId
      */
 

@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface TransactionChangeValue {
 
     /**
-     *  <p><code>id</code> of the Transaction.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>.</p>
      * @return id
      */
     @NotNull
@@ -58,7 +58,7 @@ public interface TransactionChangeValue {
     public String getTimestamp();
 
     /**
-     *  <p><code>id</code> of the Transaction.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>.</p>
      * @param id value to be set
      */
 

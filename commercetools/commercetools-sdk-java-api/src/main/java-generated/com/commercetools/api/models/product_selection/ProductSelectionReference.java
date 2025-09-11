@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Reference to a ProductSelection.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">ProductSelection</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,7 +42,7 @@ public interface ProductSelectionReference
     String PRODUCT_SELECTION = "product-selection";
 
     /**
-     *  <p>Unique identifier of the referenced ProductSelection.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">ProductSelection</a>.</p>
      * @return id
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface ProductSelectionReference
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>
+     *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with <span>Reference Expansion</span> for ProductSelections.</p>
      * @return obj
      */
     @Valid
@@ -58,14 +58,14 @@ public interface ProductSelectionReference
     public ProductSelection getObj();
 
     /**
-     *  <p>Unique identifier of the referenced ProductSelection.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">ProductSelection</a>.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>
+     *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with <span>Reference Expansion</span> for ProductSelections.</p>
      * @param obj value to be set
      */
 

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Setting the date of birth of the Customer produces the CustomerDateOfBirthSet Message.</p>
+ *  <p>Setting the date of birth of the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerDateOfBirthSetMessage" rel="nofollow">CustomerDateOfBirthSet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerSetDateOfBirthActionImpl implements MyCustomerSetDateOfBirthAction, ModelBase {

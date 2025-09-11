@@ -192,7 +192,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -204,7 +204,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -266,7 +266,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     }
 
     /**
-     *  <p>Unique identifier of the Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
@@ -288,7 +288,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     }
 
     /**
-     *  <p>Distribution Channel that was set.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Distribution Channel</a> that was set.</p>
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
@@ -301,7 +301,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     }
 
     /**
-     *  <p>Distribution Channel that was set.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Distribution Channel</a> that was set.</p>
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
@@ -313,7 +313,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     }
 
     /**
-     *  <p>Distribution Channel that was set.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Distribution Channel</a> that was set.</p>
      * @param distributionChannel value to be set
      * @return Builder
      */
@@ -390,7 +390,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -418,7 +418,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     }
 
     /**
-     *  <p>Unique identifier of the Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
      * @return lineItemId
      */
 
@@ -437,7 +437,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     }
 
     /**
-     *  <p>Distribution Channel that was set.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Distribution Channel</a> that was set.</p>
      * @return distributionChannel
      */
 

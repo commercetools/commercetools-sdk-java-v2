@@ -187,7 +187,7 @@ public class ProductStateTransitionMessageBuilder implements Builder<ProductStat
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -198,7 +198,7 @@ public class ProductStateTransitionMessageBuilder implements Builder<ProductStat
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -260,7 +260,7 @@ public class ProductStateTransitionMessageBuilder implements Builder<ProductStat
     }
 
     /**
-     *  <p>Product State after the Transition State update action.</p>
+     *  <p>Product <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -272,7 +272,7 @@ public class ProductStateTransitionMessageBuilder implements Builder<ProductStat
     }
 
     /**
-     *  <p>Product State after the Transition State update action.</p>
+     *  <p>Product <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -284,7 +284,7 @@ public class ProductStateTransitionMessageBuilder implements Builder<ProductStat
     }
 
     /**
-     *  <p>Product State after the Transition State update action.</p>
+     *  <p>Product <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -295,7 +295,7 @@ public class ProductStateTransitionMessageBuilder implements Builder<ProductStat
     }
 
     /**
-     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     *  <p>Whether <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition validations were turned off during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param force value to be set
      * @return Builder
      */
@@ -371,7 +371,7 @@ public class ProductStateTransitionMessageBuilder implements Builder<ProductStat
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -399,7 +399,7 @@ public class ProductStateTransitionMessageBuilder implements Builder<ProductStat
     }
 
     /**
-     *  <p>Product State after the Transition State update action.</p>
+     *  <p>Product <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @return state
      */
 
@@ -408,7 +408,7 @@ public class ProductStateTransitionMessageBuilder implements Builder<ProductStat
     }
 
     /**
-     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     *  <p>Whether <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition validations were turned off during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @return force
      */
 

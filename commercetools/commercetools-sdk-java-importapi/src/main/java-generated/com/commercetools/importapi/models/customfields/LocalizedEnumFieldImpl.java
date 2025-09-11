@@ -51,7 +51,7 @@ public class LocalizedEnumFieldImpl implements LocalizedEnumField, ModelBase {
     }
 
     /**
-     *  <p>The key of the localized enum value. Must match the key of a CustomFieldLocalizedEnumValue in the CustomFieldLocalizedEnumType.</p>
+     *  <p>The key of the localized enum value. Must match the key of a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumValue" rel="nofollow">CustomFieldLocalizedEnumValue</a> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumType" rel="nofollow">CustomFieldLocalizedEnumType</a>.</p>
      */
 
     public String getValue() {

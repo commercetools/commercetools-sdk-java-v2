@@ -46,7 +46,7 @@ public interface OrderEditDraft extends com.commercetools.api.models.Customizabl
     public String getKey();
 
     /**
-     *  <p>Reference to the Order updated with this edit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Order updated with this edit.</p>
      * @return resource
      */
     @NotNull
@@ -55,7 +55,7 @@ public interface OrderEditDraft extends com.commercetools.api.models.Customizabl
     public OrderReference getResource();
 
     /**
-     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the edit has been applied.</p>
+     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/edits/{id}/apply:POST" rel="nofollow">edit has been applied</a>.</p>
      * @return stagedActions
      */
     @Valid
@@ -79,8 +79,8 @@ public interface OrderEditDraft extends com.commercetools.api.models.Customizabl
     public String getComment();
 
     /**
-     *  <p>Set to <code>true</code> if you want to preview the edited Order first without persisting it (dry run). A dry run allows checking for potential errors when trying to apply the <code>stagedActions</code>.</p>
-     *  <p>Order API Extensions, if any, are also called in dry runs.</p>
+     *  <p>Set to <code>true</code> if you want to <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEditPreviewSuccess" rel="nofollow">preview</a> the edited Order first without persisting it (dry run). A dry run allows checking for potential <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEditPreviewFailure" rel="nofollow">errors</a> when trying to apply the <code>stagedActions</code>.</p>
+     *  <p>Order <span>API Extensions</span>, if any, are also called in dry runs.</p>
      * @return dryRun
      */
 
@@ -95,14 +95,14 @@ public interface OrderEditDraft extends com.commercetools.api.models.Customizabl
     public void setKey(final String key);
 
     /**
-     *  <p>Reference to the Order updated with this edit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Order updated with this edit.</p>
      * @param resource value to be set
      */
 
     public void setResource(final OrderReference resource);
 
     /**
-     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the edit has been applied.</p>
+     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/edits/{id}/apply:POST" rel="nofollow">edit has been applied</a>.</p>
      * @param stagedActions values to be set
      */
 
@@ -110,7 +110,7 @@ public interface OrderEditDraft extends com.commercetools.api.models.Customizabl
     public void setStagedActions(final StagedOrderUpdateAction... stagedActions);
 
     /**
-     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the edit has been applied.</p>
+     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/edits/{id}/apply:POST" rel="nofollow">edit has been applied</a>.</p>
      * @param stagedActions values to be set
      */
 
@@ -131,8 +131,8 @@ public interface OrderEditDraft extends com.commercetools.api.models.Customizabl
     public void setComment(final String comment);
 
     /**
-     *  <p>Set to <code>true</code> if you want to preview the edited Order first without persisting it (dry run). A dry run allows checking for potential errors when trying to apply the <code>stagedActions</code>.</p>
-     *  <p>Order API Extensions, if any, are also called in dry runs.</p>
+     *  <p>Set to <code>true</code> if you want to <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEditPreviewSuccess" rel="nofollow">preview</a> the edited Order first without persisting it (dry run). A dry run allows checking for potential <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEditPreviewFailure" rel="nofollow">errors</a> when trying to apply the <code>stagedActions</code>.</p>
+     *  <p>Order <span>API Extensions</span>, if any, are also called in dry runs.</p>
      * @param dryRun value to be set
      */
 

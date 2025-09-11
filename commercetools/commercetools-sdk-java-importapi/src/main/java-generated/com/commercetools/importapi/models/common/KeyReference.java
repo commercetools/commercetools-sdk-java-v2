@@ -21,7 +21,7 @@ import jakarta.validation.constraints.NotNull;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     KeyReference keyReference = KeyReference.cartDiscountBuilder()
+ *     KeyReference keyReference = KeyReference.associateRoleBuilder()
  *             key("{key}")
  *             .build()
  * </code></pre>
@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface KeyReference {
 
     /**
-     *  <p>User-defined unique identifier of the referenced resource. If the referenced resource does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced resource is created.</p>
+     *  <p>User-defined unique identifier of the referenced resource. If the referenced resource does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced resource is created.</p>
      * @return key
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface KeyReference {
     public ReferenceType getTypeId();
 
     /**
-     *  <p>User-defined unique identifier of the referenced resource. If the referenced resource does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced resource is created.</p>
+     *  <p>User-defined unique identifier of the referenced resource. If the referenced resource does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced resource is created.</p>
      * @param key value to be set
      */
 
@@ -74,6 +74,22 @@ public interface KeyReference {
         KeyReferenceImpl instance = new KeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
+    }
+
+    /**
+     * builder for associateRole subtype
+     * @return builder
+     */
+    public static com.commercetools.importapi.models.common.AssociateRoleKeyReferenceBuilder associateRoleBuilder() {
+        return com.commercetools.importapi.models.common.AssociateRoleKeyReferenceBuilder.of();
+    }
+
+    /**
+     * builder for businessUnit subtype
+     * @return builder
+     */
+    public static com.commercetools.importapi.models.common.BusinessUnitKeyReferenceBuilder businessUnitBuilder() {
+        return com.commercetools.importapi.models.common.BusinessUnitKeyReferenceBuilder.of();
     }
 
     /**

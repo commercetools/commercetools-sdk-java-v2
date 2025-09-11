@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Starts At update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetStartsAtAction" rel="nofollow">Set Starts At</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RecurringOrderStartsAtSetMessagePayloadImpl implements RecurringOrderStartsAtSetMessagePayload, ModelBase {
@@ -55,7 +55,7 @@ public class RecurringOrderStartsAtSetMessagePayloadImpl implements RecurringOrd
     }
 
     /**
-     *  <p>Start date and time of the Recurring Order after the Set Starts At update action.</p>
+     *  <p>Start date and time of the Recurring Order after the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetStartsAtAction" rel="nofollow">Set Starts At</a> update action.</p>
      */
 
     public java.time.ZonedDateTime getStartsAt() {
@@ -63,7 +63,7 @@ public class RecurringOrderStartsAtSetMessagePayloadImpl implements RecurringOrd
     }
 
     /**
-     *  <p>Start date and time of the Recurring Order before the Set Starts At update action.</p>
+     *  <p>Start date and time of the Recurring Order before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetStartsAtAction" rel="nofollow">Set Starts At</a> update action.</p>
      */
 
     public java.time.ZonedDateTime getOldStartsAt() {

@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The representation sent to the server to create an ImportContainer.</p>
+ *  <p>The representation sent to the server to create an <span>ImportContainer</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

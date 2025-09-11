@@ -41,7 +41,7 @@ public interface ImportContainerUpdateDraft extends io.vrap.rmf.base.client.Draf
     public Long getVersion();
 
     /**
-     *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">resource type</a> to be imported. If not given, the ImportContainer is able to import all of the supported <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">ImportResourceTypes</a>.</p>
      * @return resourceType
      */
 
@@ -56,7 +56,7 @@ public interface ImportContainerUpdateDraft extends io.vrap.rmf.base.client.Draf
     public void setVersion(final Long version);
 
     /**
-     *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">resource type</a> to be imported. If not given, the ImportContainer is able to import all of the supported <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">ImportResourceTypes</a>.</p>
      * @param resourceType value to be set
      */
 

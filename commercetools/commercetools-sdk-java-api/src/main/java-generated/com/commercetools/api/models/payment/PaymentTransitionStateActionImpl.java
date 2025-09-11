@@ -17,8 +17,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>If the Payment has no current State, <code>initial</code> must be <code>true</code> for the new State. If the existing State has transitions set, the new State must be a valid transition. If the existing State has no transitions set, no validations are performed when transitioning to the new State.</p>
- *  <p>Transitioning the State of a Payment produces the PaymentStatusStateTransition Message.</p>
+ *  <p>If the Payment has no current <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>, <code>initial</code> must be <code>true</code> for the new State. If the existing State has transitions set, the new State must be a valid transition. If the existing State has no transitions set, no validations are performed when transitioning to the new State.</p>
+ *  <p>Transitioning the State of a Payment produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentStatusStateTransitionMessage" rel="nofollow">PaymentStatusStateTransition</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentTransitionStateActionImpl implements PaymentTransitionStateAction, ModelBase {
@@ -57,7 +57,7 @@ public class PaymentTransitionStateActionImpl implements PaymentTransitionStateA
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Create Category request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/categories:POST" rel="nofollow">Create Category</a> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryCreatedMessagePayloadImpl implements CategoryCreatedMessagePayload, ModelBase {
@@ -52,7 +52,7 @@ public class CategoryCreatedMessagePayloadImpl implements CategoryCreatedMessage
     }
 
     /**
-     *  <p>Category that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> that was created.</p>
      */
 
     public com.commercetools.api.models.category.Category getCategory() {

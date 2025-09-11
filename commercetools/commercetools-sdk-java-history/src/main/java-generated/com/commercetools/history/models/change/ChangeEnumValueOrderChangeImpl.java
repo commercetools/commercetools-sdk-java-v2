@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered by the Change the order of EnumValues update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:TypeChangeEnumValueOrderAction" rel="nofollow">Change the order of EnumValues</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeEnumValueOrderChangeImpl implements ChangeEnumValueOrderChange, ModelBase {
@@ -87,7 +87,7 @@ public class ChangeEnumValueOrderChangeImpl implements ChangeEnumValueOrderChang
     }
 
     /**
-     *  <p>Name of the updated FieldDefinition.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>.</p>
      */
 
     public String getFieldName() {

@@ -19,8 +19,8 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Update SyncInfo on Orders.</li>
- *   <li>Update SyncInfo on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderUpdateSyncInfoAction" rel="nofollow">Update SyncInfo</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderUpdateSyncInfoAction" rel="nofollow">Update SyncInfo</a> on Staged Orders.</li>
  *  </ul>
  *
  * <hr>
@@ -71,7 +71,7 @@ public interface UpdateSyncInfoChange extends Change {
     public SyncInfo getNextValue();
 
     /**
-     *  <p><code>id</code> of the updated Channel.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @return channelId
      */
     @NotNull
@@ -93,7 +93,7 @@ public interface UpdateSyncInfoChange extends Change {
     public void setNextValue(final SyncInfo nextValue);
 
     /**
-     *  <p><code>id</code> of the updated Channel.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @param channelId value to be set
      */
 

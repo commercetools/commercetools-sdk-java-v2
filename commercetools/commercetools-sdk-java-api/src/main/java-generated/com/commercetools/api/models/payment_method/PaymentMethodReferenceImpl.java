@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Reference to a PaymentMethod.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethod" rel="nofollow">PaymentMethod</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentMethodReferenceImpl implements PaymentMethodReference, ModelBase {
@@ -56,7 +56,7 @@ public class PaymentMethodReferenceImpl implements PaymentMethodReference, Model
     }
 
     /**
-     *  <p>Unique identifier of the referenced PaymentMethod.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethod" rel="nofollow">PaymentMethod</a>.</p>
      */
 
     public String getId() {
@@ -64,7 +64,7 @@ public class PaymentMethodReferenceImpl implements PaymentMethodReference, Model
     }
 
     /**
-     *  <p>Contains the representation of the expanded PaymentMethod. Only present in responses to requests with Reference Expansion for PaymentMethods.</p>
+     *  <p>Contains the representation of the expanded PaymentMethod. Only present in responses to requests with <span>Reference Expansion</span> for PaymentMethods.</p>
      */
 
     public com.commercetools.api.models.payment_method.PaymentMethod getObj() {

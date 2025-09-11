@@ -29,7 +29,7 @@ public class DiscountGroupKeySetMessagePayloadBuilder implements Builder<Discoun
     private String oldKey;
 
     /**
-     *  <p><code>key</code> value of the DiscountGroup after the Set Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroup" rel="nofollow">DiscountGroup</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroupSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class DiscountGroupKeySetMessagePayloadBuilder implements Builder<Discoun
     }
 
     /**
-     *  <p><code>key</code> value of the DiscountGroup before the Set Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroup" rel="nofollow">DiscountGroup</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroupSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
      * @param oldKey value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class DiscountGroupKeySetMessagePayloadBuilder implements Builder<Discoun
     }
 
     /**
-     *  <p><code>key</code> value of the DiscountGroup after the Set Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroup" rel="nofollow">DiscountGroup</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroupSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
      * @return key
      */
 
@@ -61,7 +61,7 @@ public class DiscountGroupKeySetMessagePayloadBuilder implements Builder<Discoun
     }
 
     /**
-     *  <p><code>key</code> value of the DiscountGroup before the Set Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroup" rel="nofollow">DiscountGroup</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroupSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
      * @return oldKey
      */
 

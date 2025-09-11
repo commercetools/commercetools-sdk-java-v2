@@ -51,7 +51,7 @@ public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTa
     public String getType();
 
     /**
-     *  <p>Valid CustomLineItem target predicate.</p>
+     *  <p>Valid <span>CustomLineItem target predicate</span>.</p>
      * @return predicate
      */
     @NotNull
@@ -91,7 +91,7 @@ public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTa
     public SelectionMode getSelectionMode();
 
     /**
-     *  <p>Valid CustomLineItem target predicate.</p>
+     *  <p>Valid <span>CustomLineItem target predicate</span>.</p>
      * @param predicate value to be set
      */
 

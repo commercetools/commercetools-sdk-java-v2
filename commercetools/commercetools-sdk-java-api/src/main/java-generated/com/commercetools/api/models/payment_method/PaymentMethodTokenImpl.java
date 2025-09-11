@@ -49,7 +49,7 @@ public class PaymentMethodTokenImpl implements PaymentMethodToken, ModelBase {
      *  <ul>
      *   <li>in the payload of Payment and PaymentMethod messages</li>
      *   <li>when querying MyPayments</li>
-     *   <li>in referenced Payments and PaymentMethods embedded through Reference Expansion</li>
+     *   <li>in referenced Payments and PaymentMethods embedded through <span>Reference Expansion</span></li>
      *  </ul>
      */
 

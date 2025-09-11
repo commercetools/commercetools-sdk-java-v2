@@ -63,7 +63,7 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
     public Long getStagedQuoteVersion();
 
     /**
-     *  <p>If <code>true</code>, the <code>stagedQuoteState</code> of the referenced StagedQuote will be set to <code>Sent</code>.</p>
+     *  <p>If <code>true</code>, the <code>stagedQuoteState</code> of the referenced <span>StagedQuote</span> will be set to <code>Sent</code>.</p>
      * @return stagedQuoteStateToSent
      */
 
@@ -71,7 +71,7 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
     public Boolean getStagedQuoteStateToSent();
 
     /**
-     *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Quote. This reference can point to a State in a custom workflow.</p>
      * @return state
      */
     @Valid
@@ -79,10 +79,10 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
     public StateReference getState();
 
     /**
-     *  <p>Custom Fields to be added to the Quote.</p>
+     *  <p><span>Custom Fields</span> to be added to the Quote.</p>
      *  <ul>
-     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced StagedQuote and added to the Quote.</li>
-     *   <li>If empty, the Custom Fields on the referenced StagedQuote are added to the Quote automatically.</li>
+     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced <span>StagedQuote</span> and added to the Quote.</li>
+     *   <li>If empty, the Custom Fields on the referenced <span>StagedQuote</span> are added to the Quote automatically.</li>
      *  </ul>
      * @return custom
      */
@@ -112,24 +112,24 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
     public void setStagedQuoteVersion(final Long stagedQuoteVersion);
 
     /**
-     *  <p>If <code>true</code>, the <code>stagedQuoteState</code> of the referenced StagedQuote will be set to <code>Sent</code>.</p>
+     *  <p>If <code>true</code>, the <code>stagedQuoteState</code> of the referenced <span>StagedQuote</span> will be set to <code>Sent</code>.</p>
      * @param stagedQuoteStateToSent value to be set
      */
 
     public void setStagedQuoteStateToSent(final Boolean stagedQuoteStateToSent);
 
     /**
-     *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Quote. This reference can point to a State in a custom workflow.</p>
      * @param state value to be set
      */
 
     public void setState(final StateReference state);
 
     /**
-     *  <p>Custom Fields to be added to the Quote.</p>
+     *  <p><span>Custom Fields</span> to be added to the Quote.</p>
      *  <ul>
-     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced StagedQuote and added to the Quote.</li>
-     *   <li>If empty, the Custom Fields on the referenced StagedQuote are added to the Quote automatically.</li>
+     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced <span>StagedQuote</span> and added to the Quote.</li>
+     *   <li>If empty, the Custom Fields on the referenced <span>StagedQuote</span> are added to the Quote automatically.</li>
      *  </ul>
      * @param custom value to be set
      */

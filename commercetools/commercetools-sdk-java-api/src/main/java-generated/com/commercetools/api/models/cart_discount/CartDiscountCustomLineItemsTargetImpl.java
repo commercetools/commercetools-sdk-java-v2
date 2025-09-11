@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Discount is applied to CustomLineItems matching the <code>predicate</code>.</p>
+ *  <p>Discount is applied to <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a> matching the <code>predicate</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountCustomLineItemsTargetImpl implements CartDiscountCustomLineItemsTarget, ModelBase {
@@ -51,7 +51,7 @@ public class CartDiscountCustomLineItemsTargetImpl implements CartDiscountCustom
     }
 
     /**
-     *  <p>Valid CustomLineItem target predicate.</p>
+     *  <p>Valid <span>CustomLineItem target predicate</span>.</p>
      */
 
     public String getPredicate() {

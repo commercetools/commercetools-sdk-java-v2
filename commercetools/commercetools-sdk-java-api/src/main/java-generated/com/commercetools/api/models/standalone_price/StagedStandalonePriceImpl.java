@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Staged changes on a Standalone Price. To update the <code>value</code> property of a Staged Standalone Price, use the Change Value update action. To apply all staged changes to the Standalone Price, use the Apply Staged Changes update action.</p>
+ *  <p>Staged changes on a Standalone Price. To update the <code>value</code> property of a Staged Standalone Price, use the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceChangeValueAction" rel="nofollow">Change Value</a> update action. To apply all staged changes to the Standalone Price, use the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceApplyStagedChangesAction" rel="nofollow">Apply Staged Changes</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedStandalonePriceImpl implements StagedStandalonePrice, ModelBase {

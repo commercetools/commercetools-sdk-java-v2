@@ -30,7 +30,7 @@ public class PaymentMethodPaymentMethodStatusSetMessagePayloadBuilder
     private com.commercetools.api.models.payment_method.PaymentMethodStatus oldStatus;
 
     /**
-     *  <p>Status of the Payment Method after the Set PaymentMethodStatus update action.</p>
+     *  <p>Status of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetPaymentMethodStatusAction" rel="nofollow">Set PaymentMethodStatus</a> update action.</p>
      * @param status value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class PaymentMethodPaymentMethodStatusSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Status of the Payment Method before the Set PaymentMethodStatus update action.</p>
+     *  <p>Status of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetPaymentMethodStatusAction" rel="nofollow">Set PaymentMethodStatus</a> update action.</p>
      * @param oldStatus value to be set
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class PaymentMethodPaymentMethodStatusSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Status of the Payment Method after the Set PaymentMethodStatus update action.</p>
+     *  <p>Status of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetPaymentMethodStatusAction" rel="nofollow">Set PaymentMethodStatus</a> update action.</p>
      * @return status
      */
 
@@ -64,7 +64,7 @@ public class PaymentMethodPaymentMethodStatusSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Status of the Payment Method before the Set PaymentMethodStatus update action.</p>
+     *  <p>Status of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetPaymentMethodStatusAction" rel="nofollow">Set PaymentMethodStatus</a> update action.</p>
      * @return oldStatus
      */
 

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The current status of ImportOperations in an ImportContainer.</p>
+ *  <p>The current status of <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperations</a> in an <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainer</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportSummaryImpl implements ImportSummary, ModelBase {
@@ -44,7 +44,7 @@ public class ImportSummaryImpl implements ImportSummary, ModelBase {
     }
 
     /**
-     *  <p>The current ProcessingStates of ImportOperations in an ImportContainer.</p>
+     *  <p>The current <a href="https://docs.commercetools.com/apis/ctp:import:type:ProcessingState" rel="nofollow">ProcessingStates</a> of ImportOperations in an ImportContainer.</p>
      */
 
     public com.commercetools.importapi.models.importsummaries.OperationStates getStates() {

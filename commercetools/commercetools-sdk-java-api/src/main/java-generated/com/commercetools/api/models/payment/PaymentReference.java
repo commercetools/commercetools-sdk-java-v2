@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Reference to a Payment.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface PaymentReference extends Reference, com.commercetools.api.model
     String PAYMENT = "payment";
 
     /**
-     *  <p>Contains the representation of the expanded Payment. Only present in responses to requests with Reference Expansion for Payments.</p>
+     *  <p>Contains the representation of the expanded Payment. Only present in responses to requests with <span>Reference Expansion</span> for Payments.</p>
      * @return obj
      */
     @Valid
@@ -49,7 +49,7 @@ public interface PaymentReference extends Reference, com.commercetools.api.model
     public Payment getObj();
 
     /**
-     *  <p>Unique identifier of the referenced Payment.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p>
      * @return id
      */
     @NotNull
@@ -57,14 +57,14 @@ public interface PaymentReference extends Reference, com.commercetools.api.model
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded Payment. Only present in responses to requests with Reference Expansion for Payments.</p>
+     *  <p>Contains the representation of the expanded Payment. Only present in responses to requests with <span>Reference Expansion</span> for Payments.</p>
      * @param obj value to be set
      */
 
     public void setObj(final Payment obj);
 
     /**
-     *  <p>Unique identifier of the referenced Payment.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p>
      * @param id value to be set
      */
 

@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Change BuyerAssignable update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRoleChangeBuyerAssignableAction" rel="nofollow">Change BuyerAssignable</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

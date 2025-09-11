@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Set Starts At update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetStartsAtAction" rel="nofollow">Set Starts At</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface RecurringOrderStartsAtSetMessagePayload extends MessagePayload 
     String RECURRING_ORDER_STARTS_AT_SET = "RecurringOrderStartsAtSet";
 
     /**
-     *  <p>Start date and time of the Recurring Order after the Set Starts At update action.</p>
+     *  <p>Start date and time of the Recurring Order after the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetStartsAtAction" rel="nofollow">Set Starts At</a> update action.</p>
      * @return startsAt
      */
     @NotNull
@@ -48,7 +48,7 @@ public interface RecurringOrderStartsAtSetMessagePayload extends MessagePayload 
     public ZonedDateTime getStartsAt();
 
     /**
-     *  <p>Start date and time of the Recurring Order before the Set Starts At update action.</p>
+     *  <p>Start date and time of the Recurring Order before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetStartsAtAction" rel="nofollow">Set Starts At</a> update action.</p>
      * @return oldStartsAt
      */
     @NotNull
@@ -56,14 +56,14 @@ public interface RecurringOrderStartsAtSetMessagePayload extends MessagePayload 
     public ZonedDateTime getOldStartsAt();
 
     /**
-     *  <p>Start date and time of the Recurring Order after the Set Starts At update action.</p>
+     *  <p>Start date and time of the Recurring Order after the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetStartsAtAction" rel="nofollow">Set Starts At</a> update action.</p>
      * @param startsAt value to be set
      */
 
     public void setStartsAt(final ZonedDateTime startsAt);
 
     /**
-     *  <p>Start date and time of the Recurring Order before the Set Starts At update action.</p>
+     *  <p>Start date and time of the Recurring Order before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetStartsAtAction" rel="nofollow">Set Starts At</a> update action.</p>
      * @param oldStartsAt value to be set
      */
 

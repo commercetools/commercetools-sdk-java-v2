@@ -17,13 +17,13 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface LineItemPriceMode extends JsonEnum {
 
     /**
-    <p>The price is selected from the Product Variant. This is the default mode.</p> */
+    <p>The price is <span>selected</span> from the Product Variant. This is the default mode.</p> */
     LineItemPriceMode PLATFORM = LineItemPriceModeEnum.PLATFORM;
     /**
     <p>The Line Item price is set externally. Cart Discounts can apply to Line Items with this price mode. All update actions that change the quantity of a Line Item with this price mode require the <code>externalPrice</code> field to be given.</p> */
     LineItemPriceMode EXTERNAL_PRICE = LineItemPriceModeEnum.EXTERNAL_PRICE;
     /**
-    <p>The Line Item price with the total is set externally. Cart Discounts are deactivated for Line Items with this price mode, despite a matching CartDiscountLineItemsTarget or MultiBuyLineItemsTarget. Although a Line Item with this price mode has both <code>price</code> and <code>totalPrice</code> set externally, only <code>totalPrice</code> is used to calculate the total price of a Cart. All update actions that change the quantity of a Line Item with this price mode can set the new price with the <code>externalTotalPrice</code> field. If the <code>externalTotalPrice</code> field is not given in the update actions, the external price is unset and the price mode is set to <code>Platform</code>.</p> */
+    <p>The Line Item price with the total is set externally. Cart Discounts are deactivated for Line Items with this price mode, despite a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountLineItemsTarget" rel="nofollow">CartDiscountLineItemsTarget</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:MultiBuyLineItemsTarget" rel="nofollow">MultiBuyLineItemsTarget</a>. Although a Line Item with this price mode has both <code>price</code> and <code>totalPrice</code> set externally, only <code>totalPrice</code> is used to calculate the total price of a Cart. All update actions that change the quantity of a Line Item with this price mode can set the new price with the <code>externalTotalPrice</code> field. If the <code>externalTotalPrice</code> field is not given in the update actions, the external price is unset and the price mode is set to <code>Platform</code>.</p> */
     LineItemPriceMode EXTERNAL_TOTAL = LineItemPriceModeEnum.EXTERNAL_TOTAL;
 
     /**

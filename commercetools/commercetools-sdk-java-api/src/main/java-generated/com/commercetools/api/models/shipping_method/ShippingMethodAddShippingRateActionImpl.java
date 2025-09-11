@@ -56,7 +56,7 @@ public class ShippingMethodAddShippingRateActionImpl implements ShippingMethodAd
     }
 
     /**
-     *  <p>Zone to which the ShippingRate should be added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> to which the ShippingRate should be added.</p>
      */
 
     public com.commercetools.api.models.zone.ZoneResourceIdentifier getZone() {

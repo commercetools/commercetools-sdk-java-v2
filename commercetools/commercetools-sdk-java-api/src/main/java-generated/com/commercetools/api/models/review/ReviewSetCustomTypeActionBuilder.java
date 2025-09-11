@@ -30,7 +30,7 @@ public class ReviewSetCustomTypeActionBuilder implements Builder<ReviewSetCustom
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>Defines the Type that extends the Review with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Review.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Review with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Review.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class ReviewSetCustomTypeActionBuilder implements Builder<ReviewSetCustom
     }
 
     /**
-     *  <p>Defines the Type that extends the Review with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Review.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Review with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Review.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class ReviewSetCustomTypeActionBuilder implements Builder<ReviewSetCustom
     }
 
     /**
-     *  <p>Defines the Type that extends the Review with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Review.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Review with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Review.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class ReviewSetCustomTypeActionBuilder implements Builder<ReviewSetCustom
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Review.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Review.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class ReviewSetCustomTypeActionBuilder implements Builder<ReviewSetCustom
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Review.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Review.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class ReviewSetCustomTypeActionBuilder implements Builder<ReviewSetCustom
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Review.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Review.</p>
      * @param fields value to be set
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class ReviewSetCustomTypeActionBuilder implements Builder<ReviewSetCustom
     }
 
     /**
-     *  <p>Defines the Type that extends the Review with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Review.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Review with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Review.</p>
      * @return type
      */
 
@@ -112,7 +112,7 @@ public class ReviewSetCustomTypeActionBuilder implements Builder<ReviewSetCustom
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Review.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Review.</p>
      * @return fields
      */
 

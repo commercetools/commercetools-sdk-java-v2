@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     UnresolvedReferences unresolvedReferences = UnresolvedReferences.builder()
  *             .key("{key}")
- *             .typeId(ReferenceType.CART)
+ *             .typeId(ReferenceType.ASSOCIATE_ROLE)
  *             .build()
  * </code></pre>
  * </div>

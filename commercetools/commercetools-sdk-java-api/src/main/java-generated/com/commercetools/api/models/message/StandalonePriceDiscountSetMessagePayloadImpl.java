@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a Product Discount is successfully applied to a StandalonePrice.</p>
+ *  <p>Generated after a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">Product Discount</a> is successfully applied to a StandalonePrice.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceDiscountSetMessagePayloadImpl
@@ -53,7 +53,7 @@ public class StandalonePriceDiscountSetMessagePayloadImpl
     }
 
     /**
-     *  <p>The new <code>discounted</code> value of the updated StandalonePrice.</p>
+     *  <p>The new <code>discounted</code> value of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      */
 
     public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {

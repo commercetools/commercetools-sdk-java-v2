@@ -15,8 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Returned when the <code>name</code> of the AttributeDefinition conflicts with an existing Attribute.</p>
- *  <p>The error is returned as a failed response to the Create ProductType request or Change AttributeDefinition Name update action.</p>
+ *  <p>Returned when the <code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> conflicts with an existing Attribute.</p>
+ *  <p>The error is returned as a failed response to the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/product-types:POST" rel="nofollow">Create ProductType</a> request or <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeChangeAttributeNameAction" rel="nofollow">Change AttributeDefinition Name</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

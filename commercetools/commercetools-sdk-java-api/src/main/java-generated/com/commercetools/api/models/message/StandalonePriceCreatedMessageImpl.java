@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Create StandalonePrice request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/standalone-prices:POST" rel="nofollow">Create StandalonePrice</a> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceCreatedMessageImpl implements StandalonePriceCreatedMessage, ModelBase {
@@ -138,7 +138,7 @@ public class StandalonePriceCreatedMessageImpl implements StandalonePriceCreated
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -154,7 +154,7 @@ public class StandalonePriceCreatedMessageImpl implements StandalonePriceCreated
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -170,7 +170,7 @@ public class StandalonePriceCreatedMessageImpl implements StandalonePriceCreated
     }
 
     /**
-     *  <p>Standalone Price that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Price</a> that was created.</p>
      */
 
     public com.commercetools.api.models.standalone_price.StandalonePrice getStandalonePrice() {

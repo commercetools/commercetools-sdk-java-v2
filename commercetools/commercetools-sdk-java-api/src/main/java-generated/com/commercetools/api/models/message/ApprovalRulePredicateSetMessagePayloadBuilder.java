@@ -27,7 +27,7 @@ public class ApprovalRulePredicateSetMessagePayloadBuilder implements Builder<Ap
     private String oldPredicate;
 
     /**
-     *  <p>Name of the ApprovalRule after the Set Predicate update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetPredicateAction" rel="nofollow">Set Predicate</a> update action.</p>
      * @param predicate value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class ApprovalRulePredicateSetMessagePayloadBuilder implements Builder<Ap
     }
 
     /**
-     *  <p>Name of the ApprovalRule before the Set Predicate update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetPredicateAction" rel="nofollow">Set Predicate</a> update action.</p>
      * @param oldPredicate value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class ApprovalRulePredicateSetMessagePayloadBuilder implements Builder<Ap
     }
 
     /**
-     *  <p>Name of the ApprovalRule after the Set Predicate update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetPredicateAction" rel="nofollow">Set Predicate</a> update action.</p>
      * @return predicate
      */
 
@@ -58,7 +58,7 @@ public class ApprovalRulePredicateSetMessagePayloadBuilder implements Builder<Ap
     }
 
     /**
-     *  <p>Name of the ApprovalRule before the Set Predicate update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetPredicateAction" rel="nofollow">Set Predicate</a> update action.</p>
      * @return oldPredicate
      */
 

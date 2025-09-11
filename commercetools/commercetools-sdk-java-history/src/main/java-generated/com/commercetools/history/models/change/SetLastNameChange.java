@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by Set Last Name update action.</p>
+ *  <p>Change triggered by <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetLastNameAction" rel="nofollow">Set Last Name</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

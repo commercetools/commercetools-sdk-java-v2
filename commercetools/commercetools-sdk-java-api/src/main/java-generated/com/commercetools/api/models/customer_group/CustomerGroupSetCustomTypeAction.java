@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>This action sets or removes the custom type for an existing CustomerGroup. If present, this action overwrites any existing custom type and fields.</p>
+ *  <p>This action sets or removes the custom type for an existing CustomerGroup. If present, this action overwrites any existing <span>custom</span> type and fields.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface CustomerGroupSetCustomTypeAction extends CustomerGroupUpdateAct
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
-     *  <p>Defines the Type that extends the CustomerGroup with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomerGroup.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the CustomerGroup with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the CustomerGroup.</p>
      * @return type
      */
     @Valid
@@ -47,7 +47,7 @@ public interface CustomerGroupSetCustomTypeAction extends CustomerGroupUpdateAct
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the CustomerGroup.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the CustomerGroup.</p>
      * @return fields
      */
     @Valid
@@ -55,14 +55,14 @@ public interface CustomerGroupSetCustomTypeAction extends CustomerGroupUpdateAct
     public FieldContainer getFields();
 
     /**
-     *  <p>Defines the Type that extends the CustomerGroup with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomerGroup.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the CustomerGroup with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the CustomerGroup.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields fields for the CustomerGroup.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the CustomerGroup.</p>
      * @param fields value to be set
      */
 

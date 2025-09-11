@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Setting the name for an Approval Rule generates an ApprovalRuleNameSet Message.</p>
+ *  <p>Setting the name for an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">Approval Rule</a> generates an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleNameSetMessage" rel="nofollow">ApprovalRuleNameSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

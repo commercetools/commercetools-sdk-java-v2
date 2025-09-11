@@ -42,7 +42,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *  <p>Name of the TextLineItem.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a>.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     }
 
     /**
-     *  <p>Name of the TextLineItem.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a>.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     }
 
     /**
-     *  <p>Name of the TextLineItem.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a>.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     }
 
     /**
-     *  <p>User-defined identifier of the TextLineItem. Must be unique per ShoppingList.</p>
+     *  <p>User-defined identifier of the TextLineItem. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -136,7 +136,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     }
 
     /**
-     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     *  <p>Date and time the TextLineItem is added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>. If not set, the current date and time (UTC) is used.</p>
      * @param addedAt value to be set
      * @return Builder
      */
@@ -183,7 +183,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     }
 
     /**
-     *  <p>Name of the TextLineItem.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a>.</p>
      * @return name
      */
 
@@ -192,7 +192,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     }
 
     /**
-     *  <p>User-defined identifier of the TextLineItem. Must be unique per ShoppingList.</p>
+     *  <p>User-defined identifier of the TextLineItem. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @return key
      */
 
@@ -222,7 +222,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     }
 
     /**
-     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     *  <p>Date and time the TextLineItem is added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>. If not set, the current date and time (UTC) is used.</p>
      * @return addedAt
      */
 

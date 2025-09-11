@@ -22,7 +22,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>The <code>view_audit_log:{projectKey}</code> scope is required, and depending on the resource type queried, their respective scopes must be granted.</p>
+ *  <p>The <code>view_audit_log:{projectKey}</code> scope is required, and depending on the <a href="https://docs.commercetools.com/apis/ctp:history:type:ChangeHistoryResourceType" rel="nofollow">resource type</a> queried, their respective scopes must be granted.</p>
+ *  <p>If the request exceeds the rate limit, a <a href="https://docs.commercetools.com/apis/ctp:history:type:TooManyRequestsError" rel="nofollow">TooManyRequests</a> error is returned.</p>
  *
  * <hr>
  * <div class=code-example>

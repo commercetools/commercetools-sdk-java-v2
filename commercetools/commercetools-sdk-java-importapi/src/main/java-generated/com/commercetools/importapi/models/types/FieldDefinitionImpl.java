@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Defines a Custom Field and its meta-information. Maps to <code>Type.FieldDefinition</code>.</p>
+ *  <p>Defines a <span>Custom Field</span> and its meta-information. Maps to <code>Type.FieldDefinition</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class FieldDefinitionImpl implements FieldDefinition, ModelBase {
@@ -63,7 +63,7 @@ public class FieldDefinitionImpl implements FieldDefinition, ModelBase {
     }
 
     /**
-     *  <p>Name of the Custom Field to define. Must be unique for a given ResourceTypeId. In case there is a FieldDefinition with the same <code>name</code> in another Type, both FieldDefinitions must have the same <code>type</code>. This value cannot be changed after the Type is imported.</p>
+     *  <p>Name of the Custom Field to define. Must be unique for a given <a href="https://docs.commercetools.com/apis/ctp:import:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>. In case there is a FieldDefinition with the same <code>name</code> in another Type, both FieldDefinitions must have the same <code>type</code>. This value cannot be changed after the Type is imported.</p>
      */
 
     public String getName() {
@@ -87,7 +87,7 @@ public class FieldDefinitionImpl implements FieldDefinition, ModelBase {
     }
 
     /**
-     *  <p>Provides a visual representation type for this field. It is only relevant for string-based field types like CustomFieldStringType and CustomFieldLocalizedStringType.</p>
+     *  <p>Provides a visual representation type for this field. It is only relevant for string-based field types like <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldStringType" rel="nofollow">CustomFieldStringType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedStringType" rel="nofollow">CustomFieldLocalizedStringType</a>.</p>
      */
 
     public com.commercetools.importapi.models.types.TypeTextInputHint getInputHint() {

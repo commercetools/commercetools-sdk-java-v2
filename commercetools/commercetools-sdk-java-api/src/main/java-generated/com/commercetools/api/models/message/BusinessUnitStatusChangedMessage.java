@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Change Status update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeStatusAction" rel="nofollow">Change Status</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -46,7 +46,7 @@ public interface BusinessUnitStatusChangedMessage extends Message {
     String BUSINESS_UNIT_STATUS_CHANGED = "BusinessUnitStatusChanged";
 
     /**
-     *  <p>Updated status of the Business Unit.</p>
+     *  <p>Updated status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return active
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface BusinessUnitStatusChangedMessage extends Message {
     public BusinessUnitStatus getActive();
 
     /**
-     *  <p>Updated status of the Business Unit.</p>
+     *  <p>Updated status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param active value to be set
      */
 

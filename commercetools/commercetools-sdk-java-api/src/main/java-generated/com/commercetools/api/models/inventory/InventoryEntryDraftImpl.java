@@ -30,6 +30,10 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
 
     private Long quantityOnStock;
 
+    private Integer minCartQuantity;
+
+    private Integer maxCartQuantity;
+
     private Long restockableInDays;
 
     private java.time.ZonedDateTime expectedDelivery;
@@ -43,6 +47,8 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
     InventoryEntryDraftImpl(@JsonProperty("sku") final String sku, @JsonProperty("key") final String key,
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel,
             @JsonProperty("quantityOnStock") final Long quantityOnStock,
+            @JsonProperty("minCartQuantity") final Integer minCartQuantity,
+            @JsonProperty("maxCartQuantity") final Integer maxCartQuantity,
             @JsonProperty("restockableInDays") final Long restockableInDays,
             @JsonProperty("expectedDelivery") final java.time.ZonedDateTime expectedDelivery,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -50,6 +56,8 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
         this.key = key;
         this.supplyChannel = supplyChannel;
         this.quantityOnStock = quantityOnStock;
+        this.minCartQuantity = minCartQuantity;
+        this.maxCartQuantity = maxCartQuantity;
         this.restockableInDays = restockableInDays;
         this.expectedDelivery = expectedDelivery;
         this.custom = custom;
@@ -62,7 +70,7 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
     }
 
     /**
-     *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> <code>sku</code> of the InventoryEntry.</p>
      */
 
     public String getSku() {
@@ -71,7 +79,7 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
 
     /**
      *  <p>User-defined unique identifier for the InventoryEntry.</p>
-     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing InventoryEntries with the Import API and the Merchant Center.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing InventoryEntries with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
      */
 
     public String getKey() {
@@ -79,7 +87,7 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
     }
 
     /**
-     *  <p>Channel that supplies this InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> that supplies this InventoryEntry.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
@@ -92,6 +100,22 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
 
     public Long getQuantityOnStock() {
         return this.quantityOnStock;
+    }
+
+    /**
+     *  <p>Minimum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
+     */
+
+    public Integer getMinCartQuantity() {
+        return this.minCartQuantity;
+    }
+
+    /**
+     *  <p>Maximum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
+     */
+
+    public Integer getMaxCartQuantity() {
+        return this.maxCartQuantity;
     }
 
     /**
@@ -134,6 +158,14 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
         this.quantityOnStock = quantityOnStock;
     }
 
+    public void setMinCartQuantity(final Integer minCartQuantity) {
+        this.minCartQuantity = minCartQuantity;
+    }
+
+    public void setMaxCartQuantity(final Integer maxCartQuantity) {
+        this.maxCartQuantity = maxCartQuantity;
+    }
+
     public void setRestockableInDays(final Long restockableInDays) {
         this.restockableInDays = restockableInDays;
     }
@@ -160,6 +192,8 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
                 .append(key, that.key)
                 .append(supplyChannel, that.supplyChannel)
                 .append(quantityOnStock, that.quantityOnStock)
+                .append(minCartQuantity, that.minCartQuantity)
+                .append(maxCartQuantity, that.maxCartQuantity)
                 .append(restockableInDays, that.restockableInDays)
                 .append(expectedDelivery, that.expectedDelivery)
                 .append(custom, that.custom)
@@ -167,6 +201,8 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
                 .append(key, that.key)
                 .append(supplyChannel, that.supplyChannel)
                 .append(quantityOnStock, that.quantityOnStock)
+                .append(minCartQuantity, that.minCartQuantity)
+                .append(maxCartQuantity, that.maxCartQuantity)
                 .append(restockableInDays, that.restockableInDays)
                 .append(expectedDelivery, that.expectedDelivery)
                 .append(custom, that.custom)
@@ -179,6 +215,8 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
                 .append(key)
                 .append(supplyChannel)
                 .append(quantityOnStock)
+                .append(minCartQuantity)
+                .append(maxCartQuantity)
                 .append(restockableInDays)
                 .append(expectedDelivery)
                 .append(custom)
@@ -191,6 +229,8 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
                 .append("key", key)
                 .append("supplyChannel", supplyChannel)
                 .append("quantityOnStock", quantityOnStock)
+                .append("minCartQuantity", minCartQuantity)
+                .append("maxCartQuantity", maxCartQuantity)
                 .append("restockableInDays", restockableInDays)
                 .append("expectedDelivery", expectedDelivery)
                 .append("custom", custom)

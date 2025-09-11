@@ -35,6 +35,14 @@ public class RecurringOrderUpdateActionQueryBuilderDsl {
             RecurringOrderUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<RecurringOrderUpdateActionQueryBuilderDsl> asSetExpiresAt(
+            Function<com.commercetools.api.predicates.query.recurring_order.RecurringOrderSetExpiresAtActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.recurring_order.RecurringOrderSetExpiresAtActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.recurring_order.RecurringOrderSetExpiresAtActionQueryBuilderDsl
+                    .of()),
+            RecurringOrderUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<RecurringOrderUpdateActionQueryBuilderDsl> asSetKey(
             Function<com.commercetools.api.predicates.query.recurring_order.RecurringOrderSetKeyActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.recurring_order.RecurringOrderSetKeyActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

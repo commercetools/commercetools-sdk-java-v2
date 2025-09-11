@@ -148,7 +148,7 @@ public class RecurringOrderBuilder implements Builder<RecurringOrder> {
     }
 
     /**
-     *  <p>Reference to the Cart for a RecurringOrder. The referenced Cart will have the <code>RecurringOrder</code> CartOrigin.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Cart for a RecurringOrder. The referenced Cart will have the <code>RecurringOrder</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:CartOrigin" rel="nofollow">CartOrigin</a>.</p>
      * @param builder function to build the cart value
      * @return Builder
      */
@@ -160,7 +160,7 @@ public class RecurringOrderBuilder implements Builder<RecurringOrder> {
     }
 
     /**
-     *  <p>Reference to the Cart for a RecurringOrder. The referenced Cart will have the <code>RecurringOrder</code> CartOrigin.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Cart for a RecurringOrder. The referenced Cart will have the <code>RecurringOrder</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:CartOrigin" rel="nofollow">CartOrigin</a>.</p>
      * @param builder function to build the cart value
      * @return Builder
      */
@@ -172,7 +172,7 @@ public class RecurringOrderBuilder implements Builder<RecurringOrder> {
     }
 
     /**
-     *  <p>Reference to the Cart for a RecurringOrder. The referenced Cart will have the <code>RecurringOrder</code> CartOrigin.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Cart for a RecurringOrder. The referenced Cart will have the <code>RecurringOrder</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:CartOrigin" rel="nofollow">CartOrigin</a>.</p>
      * @param cart value to be set
      * @return Builder
      */
@@ -183,7 +183,7 @@ public class RecurringOrderBuilder implements Builder<RecurringOrder> {
     }
 
     /**
-     *  <p>Reference to the original Order that generated this RecurringOrder.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the original <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that generated this RecurringOrder.</p>
      * @param builder function to build the originOrder value
      * @return Builder
      */
@@ -195,7 +195,7 @@ public class RecurringOrderBuilder implements Builder<RecurringOrder> {
     }
 
     /**
-     *  <p>Reference to the original Order that generated this RecurringOrder.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the original <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that generated this RecurringOrder.</p>
      * @param builder function to build the originOrder value
      * @return Builder
      */
@@ -207,7 +207,7 @@ public class RecurringOrderBuilder implements Builder<RecurringOrder> {
     }
 
     /**
-     *  <p>Reference to the original Order that generated this RecurringOrder.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the original <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that generated this RecurringOrder.</p>
      * @param originOrder value to be set
      * @return Builder
      */
@@ -299,7 +299,7 @@ public class RecurringOrderBuilder implements Builder<RecurringOrder> {
     }
 
     /**
-     *  <p>Reference to a Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Store.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -311,7 +311,7 @@ public class RecurringOrderBuilder implements Builder<RecurringOrder> {
     }
 
     /**
-     *  <p>Reference to a Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Store.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -323,7 +323,7 @@ public class RecurringOrderBuilder implements Builder<RecurringOrder> {
     }
 
     /**
-     *  <p>Reference to a Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Store.</p>
      * @param store value to be set
      * @return Builder
      */
@@ -334,7 +334,7 @@ public class RecurringOrderBuilder implements Builder<RecurringOrder> {
     }
 
     /**
-     *  <p>Reference to the Business Unit that the RecurringOrder belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Business Unit that the RecurringOrder belongs to.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -348,7 +348,7 @@ public class RecurringOrderBuilder implements Builder<RecurringOrder> {
     }
 
     /**
-     *  <p>Reference to the Business Unit that the RecurringOrder belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Business Unit that the RecurringOrder belongs to.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -361,7 +361,7 @@ public class RecurringOrderBuilder implements Builder<RecurringOrder> {
     }
 
     /**
-     *  <p>Reference to the Business Unit that the RecurringOrder belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Business Unit that the RecurringOrder belongs to.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
@@ -373,7 +373,7 @@ public class RecurringOrderBuilder implements Builder<RecurringOrder> {
     }
 
     /**
-     *  <p>State of the RecurringOrder in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the RecurringOrder in a custom workflow.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -385,7 +385,7 @@ public class RecurringOrderBuilder implements Builder<RecurringOrder> {
     }
 
     /**
-     *  <p>State of the RecurringOrder in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the RecurringOrder in a custom workflow.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -397,7 +397,7 @@ public class RecurringOrderBuilder implements Builder<RecurringOrder> {
     }
 
     /**
-     *  <p>State of the RecurringOrder in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the RecurringOrder in a custom workflow.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -446,7 +446,7 @@ public class RecurringOrderBuilder implements Builder<RecurringOrder> {
     }
 
     /**
-     *  <p>The Customer that the RecurringOrder belongs to.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that the RecurringOrder belongs to.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -458,7 +458,7 @@ public class RecurringOrderBuilder implements Builder<RecurringOrder> {
     }
 
     /**
-     *  <p>The Customer that the RecurringOrder belongs to.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that the RecurringOrder belongs to.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -470,7 +470,7 @@ public class RecurringOrderBuilder implements Builder<RecurringOrder> {
     }
 
     /**
-     *  <p>The Customer that the RecurringOrder belongs to.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that the RecurringOrder belongs to.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -645,7 +645,7 @@ public class RecurringOrderBuilder implements Builder<RecurringOrder> {
     }
 
     /**
-     *  <p>Reference to the Cart for a RecurringOrder. The referenced Cart will have the <code>RecurringOrder</code> CartOrigin.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Cart for a RecurringOrder. The referenced Cart will have the <code>RecurringOrder</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:CartOrigin" rel="nofollow">CartOrigin</a>.</p>
      * @return cart
      */
 
@@ -654,7 +654,7 @@ public class RecurringOrderBuilder implements Builder<RecurringOrder> {
     }
 
     /**
-     *  <p>Reference to the original Order that generated this RecurringOrder.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the original <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that generated this RecurringOrder.</p>
      * @return originOrder
      */
 
@@ -722,7 +722,7 @@ public class RecurringOrderBuilder implements Builder<RecurringOrder> {
     }
 
     /**
-     *  <p>Reference to a Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Store.</p>
      * @return store
      */
 
@@ -732,7 +732,7 @@ public class RecurringOrderBuilder implements Builder<RecurringOrder> {
     }
 
     /**
-     *  <p>Reference to the Business Unit that the RecurringOrder belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Business Unit that the RecurringOrder belongs to.</p>
      * @return businessUnit
      */
 
@@ -742,7 +742,7 @@ public class RecurringOrderBuilder implements Builder<RecurringOrder> {
     }
 
     /**
-     *  <p>State of the RecurringOrder in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the RecurringOrder in a custom workflow.</p>
      * @return state
      */
 
@@ -770,7 +770,7 @@ public class RecurringOrderBuilder implements Builder<RecurringOrder> {
     }
 
     /**
-     *  <p>The Customer that the RecurringOrder belongs to.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that the RecurringOrder belongs to.</p>
      * @return customer
      */
 

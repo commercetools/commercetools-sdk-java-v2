@@ -27,7 +27,7 @@ public class PaymentMethodInfoCustomTypeRemovedMessagePayloadBuilder
     private String oldTypeId;
 
     /**
-     *  <p><code>id</code> of the Type that was removed. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that was removed. Absent if there was no previous Custom Type present.</p>
      * @param oldTypeId value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class PaymentMethodInfoCustomTypeRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p><code>id</code> of the Type that was removed. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that was removed. Absent if there was no previous Custom Type present.</p>
      * @return oldTypeId
      */
 

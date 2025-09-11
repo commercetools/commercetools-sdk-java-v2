@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after an Approval Flow is completed and reaches a final status.</p>
+ *  <p>Generated after an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> is completed and reaches a final status.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ApprovalFlowCompletedMessageImpl implements ApprovalFlowCompletedMessage, ModelBase {
@@ -142,7 +142,7 @@ public class ApprovalFlowCompletedMessageImpl implements ApprovalFlowCompletedMe
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -158,7 +158,7 @@ public class ApprovalFlowCompletedMessageImpl implements ApprovalFlowCompletedMe
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -174,7 +174,7 @@ public class ApprovalFlowCompletedMessageImpl implements ApprovalFlowCompletedMe
     }
 
     /**
-     *  <p>Final status of the Approval Flow.</p>
+     *  <p>Final status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      */
 
     public com.commercetools.api.models.approval_flow.ApprovalFlowStatus getStatus() {
@@ -182,7 +182,7 @@ public class ApprovalFlowCompletedMessageImpl implements ApprovalFlowCompletedMe
     }
 
     /**
-     *  <p>Reference to the Order related to the completed Approval Flow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> related to the completed <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      */
 
     public com.commercetools.api.models.order.OrderReference getOrder() {

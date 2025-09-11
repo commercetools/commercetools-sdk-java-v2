@@ -52,7 +52,7 @@ public class ProjectChangeOrderSearchStatusActionImpl implements ProjectChangeOr
     }
 
     /**
-     *  <p>Activates or deactivates the Order Search feature. Activation will trigger building a search index for the Orders in the Project.</p>
+     *  <p>Activates or deactivates the <span>Order Search</span> feature. Activation will trigger building a search index for the Orders in the Project.</p>
      */
 
     public com.commercetools.api.models.project.OrderSearchStatus getStatus() {

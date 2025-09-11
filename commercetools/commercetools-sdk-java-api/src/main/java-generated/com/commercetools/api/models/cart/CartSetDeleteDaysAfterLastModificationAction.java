@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Number of days after the last modification before a Cart is deleted.</p>
- *  <p>If a ChangeSubscription exists for Carts, a ResourceDeletedDeliveryPayload is sent.</p>
+ *  <p>If a <a href="https://docs.commercetools.com/apis/ctp:api:type:ChangeSubscription" rel="nofollow">ChangeSubscription</a> exists for Carts, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceDeletedDeliveryPayload" rel="nofollow">ResourceDeletedDeliveryPayload</a> is sent.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,7 +36,7 @@ public interface CartSetDeleteDaysAfterLastModificationAction extends CartUpdate
     String SET_DELETE_DAYS_AFTER_LAST_MODIFICATION = "setDeleteDaysAfterLastModification";
 
     /**
-     *  <p>Value to set. If not provided, the default value for this field configured in Project settings is assigned.</p>
+     *  <p>Value to set. If not provided, the default value for this field configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a> is assigned.</p>
      * @return deleteDaysAfterLastModification
      */
 
@@ -44,7 +44,7 @@ public interface CartSetDeleteDaysAfterLastModificationAction extends CartUpdate
     public Integer getDeleteDaysAfterLastModification();
 
     /**
-     *  <p>Value to set. If not provided, the default value for this field configured in Project settings is assigned.</p>
+     *  <p>Value to set. If not provided, the default value for this field configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a> is assigned.</p>
      * @param deleteDaysAfterLastModification value to be set
      */
 

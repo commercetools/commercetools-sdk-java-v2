@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Set Method update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetMethodAction" rel="nofollow">Set Method</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,7 +42,7 @@ public interface PaymentMethodMethodSetMessage extends Message {
     String PAYMENT_METHOD_METHOD_SET = "PaymentMethodMethodSet";
 
     /**
-     *  <p>Payment Method after the Set Method update action.</p>
+     *  <p>Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetMethodAction" rel="nofollow">Set Method</a> update action.</p>
      * @return method
      */
 
@@ -50,7 +50,7 @@ public interface PaymentMethodMethodSetMessage extends Message {
     public String getMethod();
 
     /**
-     *  <p>Payment Method before the Set Method update action.</p>
+     *  <p>Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetMethodAction" rel="nofollow">Set Method</a> update action.</p>
      * @return oldMethod
      */
 
@@ -58,14 +58,14 @@ public interface PaymentMethodMethodSetMessage extends Message {
     public String getOldMethod();
 
     /**
-     *  <p>Payment Method after the Set Method update action.</p>
+     *  <p>Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetMethodAction" rel="nofollow">Set Method</a> update action.</p>
      * @param method value to be set
      */
 
     public void setMethod(final String method);
 
     /**
-     *  <p>Payment Method before the Set Method update action.</p>
+     *  <p>Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetMethodAction" rel="nofollow">Set Method</a> update action.</p>
      * @param oldMethod value to be set
      */
 

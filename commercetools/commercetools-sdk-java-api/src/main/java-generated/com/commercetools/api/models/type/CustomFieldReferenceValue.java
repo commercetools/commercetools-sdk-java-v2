@@ -11,64 +11,64 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Defines which resource type a CustomFieldReferenceType can reference.</p>
+ *  <p>Defines which resource type a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldReferenceType" rel="nofollow">CustomFieldReferenceType</a> can reference.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface CustomFieldReferenceValue extends JsonEnum {
 
     /**
-    <p>ApprovalFlow - Only available for B2B-enabled Projects.</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">ApprovalFlow</a> - Only available for <span>B2B</span>-enabled Projects.</p> */
     CustomFieldReferenceValue APPROVAL_FLOW = CustomFieldReferenceValueEnum.APPROVAL_FLOW;
     /**
-    <p>ApprovalRule - Only available for B2B-enabled Projects.</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> - Only available for <span>B2B</span>-enabled Projects.</p> */
     CustomFieldReferenceValue APPROVAL_RULE = CustomFieldReferenceValueEnum.APPROVAL_RULE;
     /**
-    <p>AssociateRole - Only available for B2B-enabled Projects.</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a> - Only available for <span>B2B</span>-enabled Projects.</p> */
     CustomFieldReferenceValue ASSOCIATE_ROLE = CustomFieldReferenceValueEnum.ASSOCIATE_ROLE;
     /**
-    <p>BusinessUnit - Only available for B2B-enabled Projects.</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> - Only available for <span>B2B</span>-enabled Projects.</p> */
     CustomFieldReferenceValue BUSINESS_UNIT = CustomFieldReferenceValueEnum.BUSINESS_UNIT;
     /**
-    <p>Cart</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a></p> */
     CustomFieldReferenceValue CART = CustomFieldReferenceValueEnum.CART;
     /**
-    <p>CartDiscount</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a></p> */
     CustomFieldReferenceValue CART_DISCOUNT = CustomFieldReferenceValueEnum.CART_DISCOUNT;
     /**
-    <p>Category</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a></p> */
     CustomFieldReferenceValue CATEGORY = CustomFieldReferenceValueEnum.CATEGORY;
     /**
-    <p>Channel</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a></p> */
     CustomFieldReferenceValue CHANNEL = CustomFieldReferenceValueEnum.CHANNEL;
     /**
-    <p>Customer</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a></p> */
     CustomFieldReferenceValue CUSTOMER = CustomFieldReferenceValueEnum.CUSTOMER;
     /**
-    <p>CustomerGroup</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a></p> */
     CustomFieldReferenceValue CUSTOMER_GROUP = CustomFieldReferenceValueEnum.CUSTOMER_GROUP;
     /**
-    <p>CustomObject</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomObject" rel="nofollow">CustomObject</a></p> */
     CustomFieldReferenceValue KEY_VALUE_DOCUMENT = CustomFieldReferenceValueEnum.KEY_VALUE_DOCUMENT;
     /**
-    <p>Order</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a></p> */
     CustomFieldReferenceValue ORDER = CustomFieldReferenceValueEnum.ORDER;
     /**
-    <p>Product</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a></p> */
     CustomFieldReferenceValue PRODUCT = CustomFieldReferenceValueEnum.PRODUCT;
     /**
-    <p>ProductType</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a></p> */
     CustomFieldReferenceValue PRODUCT_TYPE = CustomFieldReferenceValueEnum.PRODUCT_TYPE;
     /**
-    <p>Review</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a></p> */
     CustomFieldReferenceValue REVIEW = CustomFieldReferenceValueEnum.REVIEW;
     /**
-    <p>State</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a></p> */
     CustomFieldReferenceValue STATE = CustomFieldReferenceValueEnum.STATE;
     /**
-    <p>ShippingMethod</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a></p> */
     CustomFieldReferenceValue SHIPPING_METHOD = CustomFieldReferenceValueEnum.SHIPPING_METHOD;
     /**
-    <p>Zone</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a></p> */
     CustomFieldReferenceValue ZONE = CustomFieldReferenceValueEnum.ZONE;
 
     /**

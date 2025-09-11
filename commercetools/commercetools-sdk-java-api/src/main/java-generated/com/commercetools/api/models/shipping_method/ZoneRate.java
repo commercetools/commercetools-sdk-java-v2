@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Defines shipping rates in different currencies for a specific Zone.</p>
+ *  <p>Defines shipping rates in different currencies for a specific <a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,7 +36,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ZoneRate {
 
     /**
-     *  <p>Zone for which the shipping rates are valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> for which the shipping rates are valid.</p>
      * @return zone
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface ZoneRate {
     public List<ShippingRate> getShippingRates();
 
     /**
-     *  <p>Zone for which the shipping rates are valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> for which the shipping rates are valid.</p>
      * @param zone value to be set
      */
 

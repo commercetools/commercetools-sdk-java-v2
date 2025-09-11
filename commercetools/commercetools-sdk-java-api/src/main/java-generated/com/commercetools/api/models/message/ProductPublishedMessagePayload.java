@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Publish update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishAction" rel="nofollow">Publish</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -43,7 +43,7 @@ public interface ProductPublishedMessagePayload extends MessagePayload {
     String PRODUCT_PUBLISHED = "ProductPublished";
 
     /**
-     *  <p>List of image URLs which were removed during the Publish update action.</p>
+     *  <p>List of image URLs which were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishAction" rel="nofollow">Publish</a> update action.</p>
      * @return removedImageUrls
      */
     @NotNull
@@ -51,7 +51,7 @@ public interface ProductPublishedMessagePayload extends MessagePayload {
     public List<String> getRemovedImageUrls();
 
     /**
-     *  <p>Current Product Projection of the Product at the time of creation.</p>
+     *  <p>Current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> at the time of creation.</p>
      * @return productProjection
      */
     @NotNull
@@ -60,7 +60,7 @@ public interface ProductPublishedMessagePayload extends MessagePayload {
     public ProductProjection getProductProjection();
 
     /**
-     *  <p>Publishing Scope that was used during the Publish update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishScope" rel="nofollow">Publishing Scope</a> that was used during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishAction" rel="nofollow">Publish</a> update action.</p>
      * @return scope
      */
     @NotNull
@@ -68,7 +68,7 @@ public interface ProductPublishedMessagePayload extends MessagePayload {
     public ProductPublishScope getScope();
 
     /**
-     *  <p>List of image URLs which were removed during the Publish update action.</p>
+     *  <p>List of image URLs which were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishAction" rel="nofollow">Publish</a> update action.</p>
      * @param removedImageUrls values to be set
      */
 
@@ -76,21 +76,21 @@ public interface ProductPublishedMessagePayload extends MessagePayload {
     public void setRemovedImageUrls(final String... removedImageUrls);
 
     /**
-     *  <p>List of image URLs which were removed during the Publish update action.</p>
+     *  <p>List of image URLs which were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishAction" rel="nofollow">Publish</a> update action.</p>
      * @param removedImageUrls values to be set
      */
 
     public void setRemovedImageUrls(final List<String> removedImageUrls);
 
     /**
-     *  <p>Current Product Projection of the Product at the time of creation.</p>
+     *  <p>Current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> at the time of creation.</p>
      * @param productProjection value to be set
      */
 
     public void setProductProjection(final ProductProjection productProjection);
 
     /**
-     *  <p>Publishing Scope that was used during the Publish update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishScope" rel="nofollow">Publishing Scope</a> that was used during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishAction" rel="nofollow">Publish</a> update action.</p>
      * @param scope value to be set
      */
 

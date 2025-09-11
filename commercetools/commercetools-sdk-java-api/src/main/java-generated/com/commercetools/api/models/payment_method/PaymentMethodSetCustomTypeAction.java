@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Adding or updating a Custom Type on a PaymentMethod generates the PaymentMethodCustomTypeSet Message, removing one generates the PaymentMethodCustomTypeRemoved Message.</p>
+ *  <p>Adding or updating a Custom Type on a PaymentMethod generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodCustomTypeSetMessage" rel="nofollow">PaymentMethodCustomTypeSet</a> Message, removing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodCustomTypeRemovedMessage" rel="nofollow">PaymentMethodCustomTypeRemoved</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface PaymentMethodSetCustomTypeAction extends PaymentMethodUpdateAct
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
-     *  <p>Defines the Type that extends the PaymentMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the PaymentMethod.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the PaymentMethod with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the PaymentMethod.</p>
      * @return type
      */
     @Valid
@@ -47,7 +47,7 @@ public interface PaymentMethodSetCustomTypeAction extends PaymentMethodUpdateAct
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the PaymentMethod.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the PaymentMethod.</p>
      * @return fields
      */
     @Valid
@@ -55,14 +55,14 @@ public interface PaymentMethodSetCustomTypeAction extends PaymentMethodUpdateAct
     public FieldContainer getFields();
 
     /**
-     *  <p>Defines the Type that extends the PaymentMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the PaymentMethod.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the PaymentMethod with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the PaymentMethod.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields fields for the PaymentMethod.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the PaymentMethod.</p>
      * @param fields value to be set
      */
 

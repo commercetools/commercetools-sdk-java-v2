@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the Set AttributeDefinition InputTip update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeSetInputTipAction" rel="nofollow">Set AttributeDefinition InputTip</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -77,7 +77,7 @@ public interface SetInputTipChange extends Change {
     public LocalizedString getNextValue();
 
     /**
-     *  <p>Name of the updated AttributeDefinition.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @return attributeName
      */
     @NotNull
@@ -106,7 +106,7 @@ public interface SetInputTipChange extends Change {
     public void setNextValue(final LocalizedString nextValue);
 
     /**
-     *  <p>Name of the updated AttributeDefinition.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @param attributeName value to be set
      */
 

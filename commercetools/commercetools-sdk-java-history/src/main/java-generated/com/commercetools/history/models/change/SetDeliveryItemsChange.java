@@ -20,8 +20,8 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set Delivery Items on Orders.</li>
- *   <li>Set Delivery Items on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetDeliveryItemsAction" rel="nofollow">Set Delivery Items</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetDeliveryItemsAction" rel="nofollow">Set Delivery Items</a> on Staged Orders.</li>
  *  </ul>
  *
  * <hr>
@@ -82,7 +82,7 @@ public interface SetDeliveryItemsChange extends Change {
     public List<DeliveryItem> getNextValue();
 
     /**
-     *  <p><code>id</code> of the updated Delivery.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @return deliveryId
      */
     @NotNull
@@ -127,7 +127,7 @@ public interface SetDeliveryItemsChange extends Change {
     public void setNextValue(final List<DeliveryItem> nextValue);
 
     /**
-     *  <p><code>id</code> of the updated Delivery.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param deliveryId value to be set
      */
 

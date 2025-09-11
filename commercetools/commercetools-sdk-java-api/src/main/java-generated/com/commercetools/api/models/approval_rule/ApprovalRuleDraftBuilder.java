@@ -78,7 +78,7 @@ public class ApprovalRuleDraftBuilder implements Builder<ApprovalRuleDraft> {
     }
 
     /**
-     *  <p>Indicates whether the Approval Rule should be matched against Orders or not.</p>
+     *  <p>Indicates whether the Approval Rule should be matched against <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> or not.</p>
      * @param status value to be set
      * @return Builder
      */
@@ -89,7 +89,7 @@ public class ApprovalRuleDraftBuilder implements Builder<ApprovalRuleDraft> {
     }
 
     /**
-     *  <p>The predicate describing the Orders the Approval Rule should match against.</p>
+     *  <p>The <span>predicate</span> describing the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> the Approval Rule should match against.</p>
      * @param predicate value to be set
      * @return Builder
      */
@@ -137,7 +137,7 @@ public class ApprovalRuleDraftBuilder implements Builder<ApprovalRuleDraft> {
     }
 
     /**
-     *  <p>The Associate Roles customers must hold for their Order to require approval.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> customers must hold for their Order to require approval.</p>
      * @param requesters value to be set
      * @return Builder
      */
@@ -149,7 +149,7 @@ public class ApprovalRuleDraftBuilder implements Builder<ApprovalRuleDraft> {
     }
 
     /**
-     *  <p>The Associate Roles customers must hold for their Order to require approval.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> customers must hold for their Order to require approval.</p>
      * @param requesters value to be set
      * @return Builder
      */
@@ -161,7 +161,7 @@ public class ApprovalRuleDraftBuilder implements Builder<ApprovalRuleDraft> {
     }
 
     /**
-     *  <p>The Associate Roles customers must hold for their Order to require approval.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> customers must hold for their Order to require approval.</p>
      * @param requesters value to be set
      * @return Builder
      */
@@ -176,7 +176,7 @@ public class ApprovalRuleDraftBuilder implements Builder<ApprovalRuleDraft> {
     }
 
     /**
-     *  <p>The Associate Roles customers must hold for their Order to require approval.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> customers must hold for their Order to require approval.</p>
      * @param builder function to build the requesters value
      * @return Builder
      */
@@ -192,7 +192,7 @@ public class ApprovalRuleDraftBuilder implements Builder<ApprovalRuleDraft> {
     }
 
     /**
-     *  <p>The Associate Roles customers must hold for their Order to require approval.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> customers must hold for their Order to require approval.</p>
      * @param builder function to build the requesters value
      * @return Builder
      */
@@ -206,7 +206,7 @@ public class ApprovalRuleDraftBuilder implements Builder<ApprovalRuleDraft> {
     }
 
     /**
-     *  <p>The Associate Roles customers must hold for their Order to require approval.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> customers must hold for their Order to require approval.</p>
      * @param builder function to build the requesters value
      * @return Builder
      */
@@ -217,7 +217,7 @@ public class ApprovalRuleDraftBuilder implements Builder<ApprovalRuleDraft> {
     }
 
     /**
-     *  <p>The Associate Roles customers must hold for their Order to require approval.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> customers must hold for their Order to require approval.</p>
      * @param builder function to build the requesters value
      * @return Builder
      */
@@ -257,7 +257,7 @@ public class ApprovalRuleDraftBuilder implements Builder<ApprovalRuleDraft> {
     }
 
     /**
-     *  <p>Indicates whether the Approval Rule should be matched against Orders or not.</p>
+     *  <p>Indicates whether the Approval Rule should be matched against <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> or not.</p>
      * @return status
      */
 
@@ -266,7 +266,7 @@ public class ApprovalRuleDraftBuilder implements Builder<ApprovalRuleDraft> {
     }
 
     /**
-     *  <p>The predicate describing the Orders the Approval Rule should match against.</p>
+     *  <p>The <span>predicate</span> describing the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> the Approval Rule should match against.</p>
      * @return predicate
      */
 
@@ -284,7 +284,7 @@ public class ApprovalRuleDraftBuilder implements Builder<ApprovalRuleDraft> {
     }
 
     /**
-     *  <p>The Associate Roles customers must hold for their Order to require approval.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> customers must hold for their Order to require approval.</p>
      * @return requesters
      */
 

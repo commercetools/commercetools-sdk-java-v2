@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Each query endpoint returns a paged query response containing the actual resources matching the query predicate plus information about pagination. This documents the fields all query responses have in common, for specific response types, see the respective API reference pages.</p>
+ *  <p>Each query endpoint returns a paged query response containing the actual resources matching the query predicate plus information about <span>pagination</span>. This documents the fields all query responses have in common, for specific response types, see the respective API reference pages.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PagedQueryResponseImpl implements PagedQueryResponse, ModelBase {
@@ -57,7 +57,7 @@ public class PagedQueryResponseImpl implements PagedQueryResponse, ModelBase {
     }
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      */
 
     public Long getLimit() {
@@ -65,7 +65,7 @@ public class PagedQueryResponseImpl implements PagedQueryResponse, ModelBase {
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      */
 
     public Long getOffset() {
@@ -81,7 +81,7 @@ public class PagedQueryResponseImpl implements PagedQueryResponse, ModelBase {
     }
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     *  <p>Total number of results matching the query. This number is an estimation that is not <span>strongly consistent</span>. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a <span>Query Predicate</span>, <code>total</code> is subject to a <span>limit</span>.</p>
      */
 
     public Long getTotal() {

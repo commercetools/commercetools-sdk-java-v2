@@ -190,7 +190,7 @@ public class ProductPublishedMessageBuilder implements Builder<ProductPublishedM
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -201,7 +201,7 @@ public class ProductPublishedMessageBuilder implements Builder<ProductPublishedM
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -263,7 +263,7 @@ public class ProductPublishedMessageBuilder implements Builder<ProductPublishedM
     }
 
     /**
-     *  <p>List of image URLs which were removed during the Publish update action.</p>
+     *  <p>List of image URLs which were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishAction" rel="nofollow">Publish</a> update action.</p>
      * @param removedImageUrls value to be set
      * @return Builder
      */
@@ -274,7 +274,7 @@ public class ProductPublishedMessageBuilder implements Builder<ProductPublishedM
     }
 
     /**
-     *  <p>List of image URLs which were removed during the Publish update action.</p>
+     *  <p>List of image URLs which were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishAction" rel="nofollow">Publish</a> update action.</p>
      * @param removedImageUrls value to be set
      * @return Builder
      */
@@ -285,7 +285,7 @@ public class ProductPublishedMessageBuilder implements Builder<ProductPublishedM
     }
 
     /**
-     *  <p>List of image URLs which were removed during the Publish update action.</p>
+     *  <p>List of image URLs which were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishAction" rel="nofollow">Publish</a> update action.</p>
      * @param removedImageUrls value to be set
      * @return Builder
      */
@@ -299,7 +299,7 @@ public class ProductPublishedMessageBuilder implements Builder<ProductPublishedM
     }
 
     /**
-     *  <p>Current Product Projection of the Product at the time of creation.</p>
+     *  <p>Current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> at the time of creation.</p>
      * @param builder function to build the productProjection value
      * @return Builder
      */
@@ -312,7 +312,7 @@ public class ProductPublishedMessageBuilder implements Builder<ProductPublishedM
     }
 
     /**
-     *  <p>Current Product Projection of the Product at the time of creation.</p>
+     *  <p>Current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> at the time of creation.</p>
      * @param builder function to build the productProjection value
      * @return Builder
      */
@@ -324,7 +324,7 @@ public class ProductPublishedMessageBuilder implements Builder<ProductPublishedM
     }
 
     /**
-     *  <p>Current Product Projection of the Product at the time of creation.</p>
+     *  <p>Current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> at the time of creation.</p>
      * @param productProjection value to be set
      * @return Builder
      */
@@ -336,7 +336,7 @@ public class ProductPublishedMessageBuilder implements Builder<ProductPublishedM
     }
 
     /**
-     *  <p>Publishing Scope that was used during the Publish update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishScope" rel="nofollow">Publishing Scope</a> that was used during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishAction" rel="nofollow">Publish</a> update action.</p>
      * @param scope value to be set
      * @return Builder
      */
@@ -412,7 +412,7 @@ public class ProductPublishedMessageBuilder implements Builder<ProductPublishedM
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -440,7 +440,7 @@ public class ProductPublishedMessageBuilder implements Builder<ProductPublishedM
     }
 
     /**
-     *  <p>List of image URLs which were removed during the Publish update action.</p>
+     *  <p>List of image URLs which were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishAction" rel="nofollow">Publish</a> update action.</p>
      * @return removedImageUrls
      */
 
@@ -449,7 +449,7 @@ public class ProductPublishedMessageBuilder implements Builder<ProductPublishedM
     }
 
     /**
-     *  <p>Current Product Projection of the Product at the time of creation.</p>
+     *  <p>Current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> at the time of creation.</p>
      * @return productProjection
      */
 
@@ -458,7 +458,7 @@ public class ProductPublishedMessageBuilder implements Builder<ProductPublishedM
     }
 
     /**
-     *  <p>Publishing Scope that was used during the Publish update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishScope" rel="nofollow">Publishing Scope</a> that was used during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishAction" rel="nofollow">Publish</a> update action.</p>
      * @return scope
      */
 

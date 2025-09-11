@@ -25,7 +25,7 @@ public class OrderPaymentAddedMessagePayloadBuilder implements Builder<OrderPaym
     private com.commercetools.api.models.payment.PaymentReference payment;
 
     /**
-     *  <p>Payment that was added to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param builder function to build the payment value
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class OrderPaymentAddedMessagePayloadBuilder implements Builder<OrderPaym
     }
 
     /**
-     *  <p>Payment that was added to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param builder function to build the payment value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class OrderPaymentAddedMessagePayloadBuilder implements Builder<OrderPaym
     }
 
     /**
-     *  <p>Payment that was added to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param payment value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class OrderPaymentAddedMessagePayloadBuilder implements Builder<OrderPaym
     }
 
     /**
-     *  <p>Payment that was added to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @return payment
      */
 

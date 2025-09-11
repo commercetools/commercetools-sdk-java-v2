@@ -41,7 +41,7 @@ public interface MyShoppingListSetLineItemCustomTypeAction extends MyShoppingLis
     String SET_LINE_ITEM_CUSTOM_TYPE = "setLineItemCustomType";
 
     /**
-     *  <p>Unique identifier of an existing ShoppingListLineItem in the ShoppingList.</p>
+     *  <p>Unique identifier of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">ShoppingListLineItem</a> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @return lineItemId
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface MyShoppingListSetLineItemCustomTypeAction extends MyShoppingLis
     public String getLineItemId();
 
     /**
-     *  <p>Defines the Type that extends the ShoppingListLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShoppingListLineItem.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the ShoppingListLineItem with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the ShoppingListLineItem.</p>
      * @return type
      */
     @Valid
@@ -57,7 +57,7 @@ public interface MyShoppingListSetLineItemCustomTypeAction extends MyShoppingLis
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the ShoppingListLineItem.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the ShoppingListLineItem.</p>
      * @return fields
      */
     @Valid
@@ -65,21 +65,21 @@ public interface MyShoppingListSetLineItemCustomTypeAction extends MyShoppingLis
     public FieldContainer getFields();
 
     /**
-     *  <p>Unique identifier of an existing ShoppingListLineItem in the ShoppingList.</p>
+     *  <p>Unique identifier of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">ShoppingListLineItem</a> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
 
     /**
-     *  <p>Defines the Type that extends the ShoppingListLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShoppingListLineItem.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the ShoppingListLineItem with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the ShoppingListLineItem.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields fields for the ShoppingListLineItem.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the ShoppingListLineItem.</p>
      * @param fields value to be set
      */
 

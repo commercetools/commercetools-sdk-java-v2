@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Remove Store update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountRemoveStoreAction" rel="nofollow">Remove Store</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface CartDiscountStoreRemovedMessage extends Message {
     String CART_DISCOUNT_STORE_REMOVED = "CartDiscountStoreRemoved";
 
     /**
-     *  <p>The Store that was removed from the Cart Discount.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discount</a>.</p>
      * @return store
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface CartDiscountStoreRemovedMessage extends Message {
     public StoreKeyReference getStore();
 
     /**
-     *  <p>The Store that was removed from the Cart Discount.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discount</a>.</p>
      * @param store value to be set
      */
 

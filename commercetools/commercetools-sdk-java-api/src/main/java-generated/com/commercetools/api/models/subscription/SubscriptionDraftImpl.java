@@ -100,7 +100,7 @@ public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
     }
 
     /**
-     *  <p>Format in which the payload is delivered. When not provided, the PlatformFormat is selected by default.</p>
+     *  <p>Format in which the payload is delivered. When not provided, the <a href="https://docs.commercetools.com/apis/ctp:api:type:PlatformFormat" rel="nofollow">PlatformFormat</a> is selected by default.</p>
      */
 
     public com.commercetools.api.models.subscription.DeliveryFormat getFormat() {

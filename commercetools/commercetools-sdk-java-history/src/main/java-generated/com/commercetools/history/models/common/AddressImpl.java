@@ -229,7 +229,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Two-digit country code as per <span>ISO 3166-1 alpha-2</span>.</p>
      */
 
     public String getCountry() {

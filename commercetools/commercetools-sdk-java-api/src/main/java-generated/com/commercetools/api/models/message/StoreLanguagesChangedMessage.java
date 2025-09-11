@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Set Languages update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetLanguagesAction" rel="nofollow">Set Languages</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,7 +42,7 @@ public interface StoreLanguagesChangedMessage extends Message {
     String STORE_LANGUAGES_CHANGED = "StoreLanguagesChanged";
 
     /**
-     *  <p>Locales added to the Store after the Set Languages update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a> added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetLanguagesAction" rel="nofollow">Set Languages</a> update action.</p>
      * @return addedLanguages
      */
 
@@ -50,7 +50,7 @@ public interface StoreLanguagesChangedMessage extends Message {
     public List<String> getAddedLanguages();
 
     /**
-     *  <p>Locales removed from the Store during the Set Languages update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a> removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> during the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetLanguagesAction" rel="nofollow">Set Languages</a> update action.</p>
      * @return removedLanguages
      */
 
@@ -58,7 +58,7 @@ public interface StoreLanguagesChangedMessage extends Message {
     public List<String> getRemovedLanguages();
 
     /**
-     *  <p>Locales added to the Store after the Set Languages update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a> added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetLanguagesAction" rel="nofollow">Set Languages</a> update action.</p>
      * @param addedLanguages values to be set
      */
 
@@ -66,14 +66,14 @@ public interface StoreLanguagesChangedMessage extends Message {
     public void setAddedLanguages(final String... addedLanguages);
 
     /**
-     *  <p>Locales added to the Store after the Set Languages update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a> added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetLanguagesAction" rel="nofollow">Set Languages</a> update action.</p>
      * @param addedLanguages values to be set
      */
 
     public void setAddedLanguages(final List<String> addedLanguages);
 
     /**
-     *  <p>Locales removed from the Store during the Set Languages update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a> removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> during the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetLanguagesAction" rel="nofollow">Set Languages</a> update action.</p>
      * @param removedLanguages values to be set
      */
 
@@ -81,7 +81,7 @@ public interface StoreLanguagesChangedMessage extends Message {
     public void setRemovedLanguages(final String... removedLanguages);
 
     /**
-     *  <p>Locales removed from the Store during the Set Languages update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a> removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> during the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetLanguagesAction" rel="nofollow">Set Languages</a> update action.</p>
      * @param removedLanguages values to be set
      */
 

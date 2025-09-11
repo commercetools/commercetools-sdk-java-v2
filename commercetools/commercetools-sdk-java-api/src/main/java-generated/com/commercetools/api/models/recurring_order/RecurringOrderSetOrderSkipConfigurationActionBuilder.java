@@ -31,7 +31,7 @@ public class RecurringOrderSetOrderSkipConfigurationActionBuilder
     private java.time.ZonedDateTime updatedExpiresAt;
 
     /**
-     *  <p>Configuration for skipping the next orders of the Recurring Order.</p>
+     *  <p>Configuration for skipping the next orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @param skipConfiguration value to be set
      * @return Builder
      */
@@ -43,7 +43,7 @@ public class RecurringOrderSetOrderSkipConfigurationActionBuilder
     }
 
     /**
-     *  <p>Configuration for skipping the next orders of the Recurring Order.</p>
+     *  <p>Configuration for skipping the next orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @param builder function to build the skipConfiguration value
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class RecurringOrderSetOrderSkipConfigurationActionBuilder
     }
 
     /**
-     *  <p>Date and time (UTC) the Recurring Order will resume and start to generate new orders.</p>
+     *  <p>Date and time (UTC) the Recurring Order will expire and stop generating new orders.</p>
      * @param updatedExpiresAt value to be set
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class RecurringOrderSetOrderSkipConfigurationActionBuilder
     }
 
     /**
-     *  <p>Configuration for skipping the next orders of the Recurring Order.</p>
+     *  <p>Configuration for skipping the next orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @return skipConfiguration
      */
 
@@ -79,7 +79,7 @@ public class RecurringOrderSetOrderSkipConfigurationActionBuilder
     }
 
     /**
-     *  <p>Date and time (UTC) the Recurring Order will resume and start to generate new orders.</p>
+     *  <p>Date and time (UTC) the Recurring Order will expire and stop generating new orders.</p>
      * @return updatedExpiresAt
      */
 

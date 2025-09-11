@@ -11,16 +11,16 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Resource types supported by EventSubscriptions.</p>
+ *  <p>Resource types supported by <a href="https://docs.commercetools.com/apis/ctp:api:type:EventSubscription" rel="nofollow">EventSubscriptions</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface EventSubscriptionResourceTypeId extends JsonEnum {
 
     /**
-    <p>Events related to Checkout.</p> */
+    <p>Events related to <span>Checkout</span>.</p> */
     EventSubscriptionResourceTypeId CHECKOUT = EventSubscriptionResourceTypeIdEnum.CHECKOUT;
     /**
-    <p>Events related to the Import API.</p> */
+    <p>Events related to the <span>Import API</span>.</p> */
     EventSubscriptionResourceTypeId IMPORT_API = EventSubscriptionResourceTypeIdEnum.IMPORT_API;
 
     /**

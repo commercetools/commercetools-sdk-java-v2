@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Add ShoppingListLineItem update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListAddLineItemAction" rel="nofollow">Add ShoppingListLineItem</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListLineItemAddedMessagePayloadImpl implements ShoppingListLineItemAddedMessagePayload, ModelBase {
@@ -52,7 +52,7 @@ public class ShoppingListLineItemAddedMessagePayloadImpl implements ShoppingList
     }
 
     /**
-     *  <p>Line Item that was added to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">Line Item</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      */
 
     public com.commercetools.api.models.shopping_list.ShoppingListLineItem getLineItem() {

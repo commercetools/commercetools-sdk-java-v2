@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Removes a Shipping Method from a Cart that has the <code>Multiple</code> ShippingMode.</p>
+ *  <p>Removes a Shipping Method from a Cart that has the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -55,7 +55,7 @@ public class CustomerAddBillingAddressIdActionImpl implements CustomerAddBilling
     }
 
     /**
-     *  <p><code>id</code> of the Address to become a billing address.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become a billing address.</p>
      */
 
     public String getAddressId() {
@@ -63,7 +63,7 @@ public class CustomerAddBillingAddressIdActionImpl implements CustomerAddBilling
     }
 
     /**
-     *  <p><code>key</code> of the Address to become a billing address.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become a billing address.</p>
      */
 
     public String getAddressKey() {

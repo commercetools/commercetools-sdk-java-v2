@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the Set Max Applications Per Customer update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeSetMaxApplicationsPerCustomerAction" rel="nofollow">Set Max Applications Per Customer</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Returned when update actions could not be applied to the resource (for example, because a referenced resource does not exist). This would result in a 400 Bad Request response if the same update action was sent from a regular client.</p>
+ *  <p>Returned when update actions could not be applied to the resource (for example, because a referenced resource does not exist). This would result in a <span>400 Bad Request</span> response if the same update action was sent from a regular client.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpdateActionsFailedError, ModelBase {

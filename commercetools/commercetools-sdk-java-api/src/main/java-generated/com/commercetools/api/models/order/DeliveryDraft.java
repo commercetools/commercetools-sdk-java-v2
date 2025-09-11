@@ -43,7 +43,7 @@ public interface DeliveryDraft extends com.commercetools.api.models.Customizable
     public String getKey();
 
     /**
-     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @return items
      */
     @Valid
@@ -82,7 +82,7 @@ public interface DeliveryDraft extends com.commercetools.api.models.Customizable
     public void setKey(final String key);
 
     /**
-     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param items values to be set
      */
 
@@ -90,7 +90,7 @@ public interface DeliveryDraft extends com.commercetools.api.models.Customizable
     public void setItems(final DeliveryItem... items);
 
     /**
-     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param items values to be set
      */
 

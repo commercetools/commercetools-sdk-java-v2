@@ -22,7 +22,7 @@ import jakarta.validation.constraints.NotNull;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     ImportRequest importRequest = ImportRequest.categoryBuilder()
+ *     ImportRequest importRequest = ImportRequest.businessUnitBuilder()
  *             plusResources(resourcesBuilder -> resourcesBuilder)
  *             .build()
  * </code></pre>
@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ImportRequest {
 
     /**
-     *  <p>The resource types that can be imported.</p>
+     *  <p>The resource type that can be imported.</p>
      * @return type
      */
     @NotNull
@@ -59,6 +59,14 @@ public interface ImportRequest {
         }
         ImportRequestImpl instance = new ImportRequestImpl();
         return instance;
+    }
+
+    /**
+     * builder for businessUnit subtype
+     * @return builder
+     */
+    public static com.commercetools.importapi.models.importrequests.BusinessUnitImportRequestBuilder businessUnitBuilder() {
+        return com.commercetools.importapi.models.importrequests.BusinessUnitImportRequestBuilder.of();
     }
 
     /**

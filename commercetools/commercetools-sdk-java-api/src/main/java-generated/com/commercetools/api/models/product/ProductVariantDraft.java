@@ -19,7 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Creates a Product Variant when included in the <code>masterVariant</code> and <code>variants</code> fields of the ProductDraft.</p>
+ *  <p>Creates a Product Variant when included in the <code>masterVariant</code> and <code>variants</code> fields of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDraft" rel="nofollow">ProductDraft</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -60,7 +60,7 @@ public interface ProductVariantDraft
     public List<PriceDraft> getPrices();
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @return attributes
      */
     @Valid
@@ -113,7 +113,7 @@ public interface ProductVariantDraft
     public void setPrices(final List<PriceDraft> prices);
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @param attributes values to be set
      */
 
@@ -121,7 +121,7 @@ public interface ProductVariantDraft
     public void setAttributes(final Attribute... attributes);
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @param attributes values to be set
      */
 

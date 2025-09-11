@@ -87,7 +87,34 @@ public class ByProjectKeyRecurringOrdersByIDTest {
                         .recurringOrders()
                         .withId("test_ID")
                         .post(com.commercetools.api.models.recurring_order.RecurringOrderUpdate.of())
-                        .createHttpRequest(), "post", "test_projectKey/recurring-orders/test_ID", } };
+                        .createHttpRequest(), "post", "test_projectKey/recurring-orders/test_ID", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .recurringOrders()
+                                .withId("test_ID")
+                                .delete()
+                                .withDataErasure(true)
+                                .createHttpRequest(),
+                        "delete", "test_projectKey/recurring-orders/test_ID?dataErasure=true", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .recurringOrders()
+                        .withId("test_ID")
+                        .delete()
+                        .withVersion(2)
+                        .createHttpRequest(), "delete", "test_projectKey/recurring-orders/test_ID?version=2", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .recurringOrders()
+                                .withId("test_ID")
+                                .delete()
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "delete", "test_projectKey/recurring-orders/test_ID?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .recurringOrders()
+                        .withId("test_ID")
+                        .delete()
+                        .createHttpRequest(), "delete", "test_projectKey/recurring-orders/test_ID", } };
     }
 
     public static Object[][] executeMethodParameters() {
@@ -107,6 +134,23 @@ public class ByProjectKeyRecurringOrdersByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .recurringOrders()
                         .withId("test_ID")
-                        .post(com.commercetools.api.models.recurring_order.RecurringOrderUpdate.of()), } };
+                        .post(com.commercetools.api.models.recurring_order.RecurringOrderUpdate.of()), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .recurringOrders()
+                        .withId("test_ID")
+                        .delete()
+                        .withDataErasure(true), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .recurringOrders()
+                        .withId("test_ID")
+                        .delete()
+                        .withVersion(2), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .recurringOrders()
+                        .withId("test_ID")
+                        .delete()
+                        .withExpand("expand"), },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").recurringOrders().withId("test_ID").delete(), } };
     }
 }

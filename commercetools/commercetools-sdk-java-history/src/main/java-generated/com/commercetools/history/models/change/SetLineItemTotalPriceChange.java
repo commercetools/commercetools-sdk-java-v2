@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the Set LineItemTotalPrice update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetLineItemTotalPriceAction" rel="nofollow">Set LineItemTotalPrice</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -78,7 +78,7 @@ public interface SetLineItemTotalPriceChange extends Change {
     public Money getNextValue();
 
     /**
-     *  <p>Name of the Product the updated Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
      * @return lineItem
      */
     @NotNull
@@ -108,7 +108,7 @@ public interface SetLineItemTotalPriceChange extends Change {
     public void setNextValue(final Money nextValue);
 
     /**
-     *  <p>Name of the Product the updated Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
      * @param lineItem value to be set
      */
 

@@ -20,8 +20,8 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Change Asset Name on Categories.</li>
- *   <li>Change Asset Name on Products.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CategoryChangeAssetNameAction" rel="nofollow">Change Asset Name</a> on Categories.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangeAssetNameAction" rel="nofollow">Change Asset Name</a> on Products.</li>
  *  </ul>
  *
  * <hr>

@@ -56,7 +56,7 @@ public class AssociateRoleSetCustomTypeActionImpl implements AssociateRoleSetCus
     }
 
     /**
-     *  <p>Defines the Type that extends the AssociateRole with Custom Fields. If absent, any existing Type and Custom Fields are removed from the AssociateRole.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the AssociateRole with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the AssociateRole.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -64,7 +64,7 @@ public class AssociateRoleSetCustomTypeActionImpl implements AssociateRoleSetCus
     }
 
     /**
-     *  <p>Sets the Custom Fields for the AssociateRole.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> for the AssociateRole.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

@@ -51,7 +51,7 @@ public class ImportContainerUpdateDraftImpl implements ImportContainerUpdateDraf
     }
 
     /**
-     *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">resource type</a> to be imported. If not given, the ImportContainer is able to import all of the supported <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">ImportResourceTypes</a>.</p>
      */
 
     public com.commercetools.importapi.models.common.ImportResourceType getResourceType() {

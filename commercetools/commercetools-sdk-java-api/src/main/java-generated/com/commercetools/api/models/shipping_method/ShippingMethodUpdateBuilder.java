@@ -39,7 +39,7 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
     }
 
     /**
-     *  <p>Update actions to be performed on the ShippingMethod.</p>
+     *  <p>Update actions to be performed on the <span>ShippingMethod</span>.</p>
      * @param actions value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
     }
 
     /**
-     *  <p>Update actions to be performed on the ShippingMethod.</p>
+     *  <p>Update actions to be performed on the <span>ShippingMethod</span>.</p>
      * @param actions value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
     }
 
     /**
-     *  <p>Update actions to be performed on the ShippingMethod.</p>
+     *  <p>Update actions to be performed on the <span>ShippingMethod</span>.</p>
      * @param actions value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
     }
 
     /**
-     *  <p>Update actions to be performed on the ShippingMethod.</p>
+     *  <p>Update actions to be performed on the <span>ShippingMethod</span>.</p>
      * @param builder function to build the actions value
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
     }
 
     /**
-     *  <p>Update actions to be performed on the ShippingMethod.</p>
+     *  <p>Update actions to be performed on the <span>ShippingMethod</span>.</p>
      * @param builder function to build the actions value
      * @return Builder
      */
@@ -117,7 +117,7 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
     }
 
     /**
-     *  <p>Update actions to be performed on the ShippingMethod.</p>
+     *  <p>Update actions to be performed on the <span>ShippingMethod</span>.</p>
      * @return actions
      */
 

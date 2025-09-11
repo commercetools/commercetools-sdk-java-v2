@@ -55,7 +55,7 @@ public class FilteredFacetResultImpl implements FilteredFacetResult, ModelBase {
     }
 
     /**
-     *  <p>Number of ProductVariants matching the value specified in filtered facet expression.</p>
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> matching the value specified in <span>filtered facet expression</span>.</p>
      */
 
     public Long getCount() {
@@ -63,8 +63,8 @@ public class FilteredFacetResultImpl implements FilteredFacetResult, ModelBase {
     }
 
     /**
-     *  <p>Number of Products matching the value specified in filtered facet expression.</p>
-     *  <p>Present only if the <code>counting products</code> extension is enabled.</p>
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a> matching the value specified in <span>filtered facet expression</span>.</p>
+     *  <p>Present only if the <code>counting products</code> <span>extension</span> is enabled.</p>
      */
 
     public Long getProductCount() {

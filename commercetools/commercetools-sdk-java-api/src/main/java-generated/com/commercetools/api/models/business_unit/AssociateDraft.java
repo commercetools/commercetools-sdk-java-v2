@@ -45,7 +45,7 @@ public interface AssociateDraft extends io.vrap.rmf.base.client.Draft<AssociateD
     public List<AssociateRoleAssignmentDraft> getAssociateRoleAssignments();
 
     /**
-     *  <p>The Customer to be part of the Business Unit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> to be part of the Business Unit.</p>
      * @return customer
      */
     @NotNull
@@ -69,7 +69,7 @@ public interface AssociateDraft extends io.vrap.rmf.base.client.Draft<AssociateD
     public void setAssociateRoleAssignments(final List<AssociateRoleAssignmentDraft> associateRoleAssignments);
 
     /**
-     *  <p>The Customer to be part of the Business Unit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> to be part of the Business Unit.</p>
      * @param customer value to be set
      */
 

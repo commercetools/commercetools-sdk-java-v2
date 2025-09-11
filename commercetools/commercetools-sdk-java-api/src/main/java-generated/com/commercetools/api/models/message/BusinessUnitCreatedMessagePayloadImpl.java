@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Create BusinessUnit request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/business-units:POST" rel="nofollow">Create BusinessUnit</a> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitCreatedMessagePayloadImpl implements BusinessUnitCreatedMessagePayload, ModelBase {
@@ -52,7 +52,7 @@ public class BusinessUnitCreatedMessagePayloadImpl implements BusinessUnitCreate
     }
 
     /**
-     *  <p>The Business Unit that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> that was created.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnit getBusinessUnit() {

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Result of a stats facet. The data type of <code>min</code> <code>max</code>, <code>mean</code>, and <code>sum</code> matches the data type of the <code>field</code> in the facet expression.</p>
+ *  <p>Result of a <span>stats facet</span>. The data type of <code>min</code> <code>max</code>, <code>mean</code>, and <code>sum</code> matches the data type of the <code>field</code> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchFacetStatsExpression" rel="nofollow">facet expression</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSearchFacetResultStatsImpl implements ProductSearchFacetResultStats, ModelBase {
@@ -90,7 +90,7 @@ public class ProductSearchFacetResultStatsImpl implements ProductSearchFacetResu
     }
 
     /**
-     *  <p>The sum of values of the field that match the facet expression.</p>
+     *  <p>The sum of values of the field that match the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchFacetStatsExpression" rel="nofollow">facet expression</a>.</p>
      *  <p>Only returned for number fields.</p>
      */
 

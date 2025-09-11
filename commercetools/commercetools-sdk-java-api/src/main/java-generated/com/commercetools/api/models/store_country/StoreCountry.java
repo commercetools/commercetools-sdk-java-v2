@@ -32,7 +32,7 @@ import jakarta.validation.constraints.NotNull;
 public interface StoreCountry {
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Two-digit country code as per <span>ISO 3166-1 alpha-2</span>.</p>
      * @return code
      */
     @NotNull
@@ -40,7 +40,7 @@ public interface StoreCountry {
     public String getCode();
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Two-digit country code as per <span>ISO 3166-1 alpha-2</span>.</p>
      * @param code value to be set
      */
 

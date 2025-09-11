@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Date of Birth update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetDateOfBirthAction" rel="nofollow">Set Date of Birth</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerDateOfBirthSetMessagePayloadImpl implements CustomerDateOfBirthSetMessagePayload, ModelBase {
@@ -51,7 +51,7 @@ public class CustomerDateOfBirthSetMessagePayloadImpl implements CustomerDateOfB
     }
 
     /**
-     *  <p>The <code>dateOfBirth</code> that was set during the Set Date of Birth update action.</p>
+     *  <p>The <code>dateOfBirth</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetDateOfBirthAction" rel="nofollow">Set Date of Birth</a> update action.</p>
      */
 
     public java.time.LocalDate getDateOfBirth() {

@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Use this method to retrieve a global Customer's details by using the email token during their email verification process.</p>
+ *  <p>Use this method to retrieve a global Customer's details by using the email token during their <span>email verification process</span>.</p>
  *
  * <hr>
  * <div class=code-example>

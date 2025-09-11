@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Description update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ApprovalRuleDescriptionSetMessageImpl implements ApprovalRuleDescriptionSetMessage, ModelBase {
@@ -143,7 +143,7 @@ public class ApprovalRuleDescriptionSetMessageImpl implements ApprovalRuleDescri
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -159,7 +159,7 @@ public class ApprovalRuleDescriptionSetMessageImpl implements ApprovalRuleDescri
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -175,7 +175,7 @@ public class ApprovalRuleDescriptionSetMessageImpl implements ApprovalRuleDescri
     }
 
     /**
-     *  <p>Description of the ApprovalRule after the Set Description update action.</p>
+     *  <p>Description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
      */
 
     public String getDescription() {
@@ -183,7 +183,7 @@ public class ApprovalRuleDescriptionSetMessageImpl implements ApprovalRuleDescri
     }
 
     /**
-     *  <p>Description of the ApprovalRule before the Set Description update action.</p>
+     *  <p>Description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetDescriptionAction" rel="nofollow">Set Description</a> update action.</p>
      */
 
     public String getOldDescription() {

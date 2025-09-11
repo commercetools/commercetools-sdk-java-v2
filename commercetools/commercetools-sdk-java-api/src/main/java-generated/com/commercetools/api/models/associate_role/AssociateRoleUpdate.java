@@ -35,7 +35,7 @@ import jakarta.validation.constraints.NotNull;
 public interface AssociateRoleUpdate {
 
     /**
-     *  <p>Expected version of the AssociateRole on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the AssociateRole on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @return version
      */
     @NotNull
@@ -52,7 +52,7 @@ public interface AssociateRoleUpdate {
     public List<AssociateRoleUpdateAction> getActions();
 
     /**
-     *  <p>Expected version of the AssociateRole on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the AssociateRole on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @param version value to be set
      */
 

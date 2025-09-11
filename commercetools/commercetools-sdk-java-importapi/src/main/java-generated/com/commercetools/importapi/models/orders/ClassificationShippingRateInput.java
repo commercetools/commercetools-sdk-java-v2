@@ -49,7 +49,7 @@ public interface ClassificationShippingRateInput extends ShippingRateInput {
     public String getKey();
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <p>A localized string is a JSON object where the keys are of <span>IETF language tag</span>, and the values the corresponding strings used for that language.</p>
      *  <pre><code>{
      *    "de": "Hundefutter",
      *    "en": "dog food"
@@ -70,7 +70,7 @@ public interface ClassificationShippingRateInput extends ShippingRateInput {
     public void setKey(final String key);
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <p>A localized string is a JSON object where the keys are of <span>IETF language tag</span>, and the values the corresponding strings used for that language.</p>
      *  <pre><code>{
      *    "de": "Hundefutter",
      *    "en": "dog food"

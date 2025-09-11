@@ -19,7 +19,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Add ProductVariant Tailoring update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringAddVariantAction" rel="nofollow">Add ProductVariant Tailoring</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -78,7 +78,7 @@ public interface ProductVariantTailoringAddedMessage extends Message {
     public ProductReference getProduct();
 
     /**
-     *  <p><code>id</code> of the ProductVariant added to the Tailoring.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> added to the Tailoring.</p>
      * @return variantId
      */
     @NotNull
@@ -86,7 +86,7 @@ public interface ProductVariantTailoringAddedMessage extends Message {
     public Long getVariantId();
 
     /**
-     *  <p>The ProductVariantTailoring that was added to the ProductTailoring.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">ProductVariantTailoring</a> that was added to the ProductTailoring.</p>
      * @return variant
      */
     @NotNull
@@ -116,14 +116,14 @@ public interface ProductVariantTailoringAddedMessage extends Message {
     public void setProduct(final ProductReference product);
 
     /**
-     *  <p><code>id</code> of the ProductVariant added to the Tailoring.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> added to the Tailoring.</p>
      * @param variantId value to be set
      */
 
     public void setVariantId(final Long variantId);
 
     /**
-     *  <p>The ProductVariantTailoring that was added to the ProductTailoring.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">ProductVariantTailoring</a> that was added to the ProductTailoring.</p>
      * @param variant value to be set
      */
 

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Key update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeKeySetMessagePayloadImpl implements DiscountCodeKeySetMessagePayload, ModelBase {
@@ -55,7 +55,7 @@ public class DiscountCodeKeySetMessagePayloadImpl implements DiscountCodeKeySetM
     }
 
     /**
-     *  <p><code>key</code> value of the Discount Code after the Set Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">Discount Code</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
      */
 
     public String getKey() {
@@ -63,7 +63,7 @@ public class DiscountCodeKeySetMessagePayloadImpl implements DiscountCodeKeySetM
     }
 
     /**
-     *  <p><code>key</code> value of the Discount Code before the Set Key update action.</p>
+     *  <p><code>key</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">Discount Code</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeSetKeyAction" rel="nofollow">Set Key</a> update action.</p>
      */
 
     public String getOldKey() {

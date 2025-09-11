@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Set Purchase Order Number update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetPurchaseOrderNumberAction" rel="nofollow">Set Purchase Order Number</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +35,7 @@ public interface OrderPurchaseOrderNumberSetMessagePayload extends OrderMessageP
     String ORDER_PURCHASE_ORDER_NUMBER_SET = "OrderPurchaseOrderNumberSet";
 
     /**
-     *  <p>Purchase order number on the Order after the Set Purchase Order Number update action.</p>
+     *  <p>Purchase order number on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetPurchaseOrderNumberAction" rel="nofollow">Set Purchase Order Number</a> update action.</p>
      * @return purchaseOrderNumber
      */
 
@@ -43,7 +43,7 @@ public interface OrderPurchaseOrderNumberSetMessagePayload extends OrderMessageP
     public String getPurchaseOrderNumber();
 
     /**
-     *  <p>Purchase order number on the Order before the Set Purchase Order Number update action.</p>
+     *  <p>Purchase order number on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetPurchaseOrderNumberAction" rel="nofollow">Set Purchase Order Number</a> update action.</p>
      * @return oldPurchaseOrderNumber
      */
 
@@ -51,14 +51,14 @@ public interface OrderPurchaseOrderNumberSetMessagePayload extends OrderMessageP
     public String getOldPurchaseOrderNumber();
 
     /**
-     *  <p>Purchase order number on the Order after the Set Purchase Order Number update action.</p>
+     *  <p>Purchase order number on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetPurchaseOrderNumberAction" rel="nofollow">Set Purchase Order Number</a> update action.</p>
      * @param purchaseOrderNumber value to be set
      */
 
     public void setPurchaseOrderNumber(final String purchaseOrderNumber);
 
     /**
-     *  <p>Purchase order number on the Order before the Set Purchase Order Number update action.</p>
+     *  <p>Purchase order number on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetPurchaseOrderNumberAction" rel="nofollow">Set Purchase Order Number</a> update action.</p>
      * @param oldPurchaseOrderNumber value to be set
      */
 

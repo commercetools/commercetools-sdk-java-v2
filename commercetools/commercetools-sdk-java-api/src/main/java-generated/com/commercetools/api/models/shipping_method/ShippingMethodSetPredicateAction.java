@@ -35,7 +35,7 @@ public interface ShippingMethodSetPredicateAction extends ShippingMethodUpdateAc
     String SET_PREDICATE = "setPredicate";
 
     /**
-     *  <p>A valid Cart predicate. If <code>predicate</code> is absent or <code>null</code>, it is removed if it exists.</p>
+     *  <p>A valid <span>Cart predicate</span>. If <code>predicate</code> is absent or <code>null</code>, it is removed if it exists.</p>
      * @return predicate
      */
 
@@ -43,7 +43,7 @@ public interface ShippingMethodSetPredicateAction extends ShippingMethodUpdateAc
     public String getPredicate();
 
     /**
-     *  <p>A valid Cart predicate. If <code>predicate</code> is absent or <code>null</code>, it is removed if it exists.</p>
+     *  <p>A valid <span>Cart predicate</span>. If <code>predicate</code> is absent or <code>null</code>, it is removed if it exists.</p>
      * @param predicate value to be set
      */
 

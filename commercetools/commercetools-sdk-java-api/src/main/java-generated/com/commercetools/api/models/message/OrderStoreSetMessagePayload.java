@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Generated after a successful Set Store update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetStoreAction" rel="nofollow">Set Store</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface OrderStoreSetMessagePayload extends OrderMessagePayload {
     String ORDER_STORE_SET = "OrderStoreSet";
 
     /**
-     *  <p>Store that was set.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was set.</p>
      * @return store
      */
     @Valid
@@ -46,7 +46,7 @@ public interface OrderStoreSetMessagePayload extends OrderMessagePayload {
     public StoreKeyReference getStore();
 
     /**
-     *  <p>Store that was set.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was set.</p>
      * @param store value to be set
      */
 

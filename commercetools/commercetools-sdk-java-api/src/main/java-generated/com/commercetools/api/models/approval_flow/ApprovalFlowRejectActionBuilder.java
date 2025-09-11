@@ -26,7 +26,7 @@ public class ApprovalFlowRejectActionBuilder implements Builder<ApprovalFlowReje
     private String reason;
 
     /**
-     *  <p>The reason for the rejection of the Approval Flow.</p>
+     *  <p>The reason for the rejection of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @param reason value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class ApprovalFlowRejectActionBuilder implements Builder<ApprovalFlowReje
     }
 
     /**
-     *  <p>The reason for the rejection of the Approval Flow.</p>
+     *  <p>The reason for the rejection of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @return reason
      */
 

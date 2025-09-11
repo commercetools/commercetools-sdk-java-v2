@@ -27,7 +27,7 @@ public class ReturnInfoSetMessagePayloadBuilder implements Builder<ReturnInfoSet
     private java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo;
 
     /**
-     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnInfo" rel="nofollow">ReturnInfo</a> that was set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">Order Edit</a>.</p>
      * @param returnInfo value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class ReturnInfoSetMessagePayloadBuilder implements Builder<ReturnInfoSet
     }
 
     /**
-     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnInfo" rel="nofollow">ReturnInfo</a> that was set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">Order Edit</a>.</p>
      * @param returnInfo value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class ReturnInfoSetMessagePayloadBuilder implements Builder<ReturnInfoSet
     }
 
     /**
-     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnInfo" rel="nofollow">ReturnInfo</a> that was set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">Order Edit</a>.</p>
      * @param returnInfo value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class ReturnInfoSetMessagePayloadBuilder implements Builder<ReturnInfoSet
     }
 
     /**
-     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnInfo" rel="nofollow">ReturnInfo</a> that was set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">Order Edit</a>.</p>
      * @param builder function to build the returnInfo value
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class ReturnInfoSetMessagePayloadBuilder implements Builder<ReturnInfoSet
     }
 
     /**
-     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnInfo" rel="nofollow">ReturnInfo</a> that was set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">Order Edit</a>.</p>
      * @param builder function to build the returnInfo value
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class ReturnInfoSetMessagePayloadBuilder implements Builder<ReturnInfoSet
     }
 
     /**
-     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnInfo" rel="nofollow">ReturnInfo</a> that was set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">Order Edit</a>.</p>
      * @param builder function to build the returnInfo value
      * @return Builder
      */
@@ -105,7 +105,7 @@ public class ReturnInfoSetMessagePayloadBuilder implements Builder<ReturnInfoSet
     }
 
     /**
-     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnInfo" rel="nofollow">ReturnInfo</a> that was set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">Order Edit</a>.</p>
      * @param builder function to build the returnInfo value
      * @return Builder
      */
@@ -116,7 +116,7 @@ public class ReturnInfoSetMessagePayloadBuilder implements Builder<ReturnInfoSet
     }
 
     /**
-     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnInfo" rel="nofollow">ReturnInfo</a> that was set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">Order Edit</a>.</p>
      * @return returnInfo
      */
 

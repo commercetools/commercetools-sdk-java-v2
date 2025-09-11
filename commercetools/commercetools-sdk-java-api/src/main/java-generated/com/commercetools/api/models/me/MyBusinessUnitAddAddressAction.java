@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Adding an address to a Business Unit generates a BusinessUnitAddressAdded Message.</p>
+ *  <p>Adding an address to a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAddressAddedMessage" rel="nofollow">BusinessUnitAddressAdded</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

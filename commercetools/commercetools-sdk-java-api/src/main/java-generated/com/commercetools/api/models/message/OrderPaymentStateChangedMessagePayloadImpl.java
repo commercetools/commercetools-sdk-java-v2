@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Change PaymentState update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangePaymentStateAction" rel="nofollow">Change PaymentState</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderPaymentStateChangedMessagePayloadImpl implements OrderPaymentStateChangedMessagePayload, ModelBase {
@@ -56,7 +56,7 @@ public class OrderPaymentStateChangedMessagePayloadImpl implements OrderPaymentS
     }
 
     /**
-     *  <p>PaymentState after the Change Payment State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentState" rel="nofollow">PaymentState</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangePaymentStateAction" rel="nofollow">Change Payment State</a> update action.</p>
      */
 
     public com.commercetools.api.models.order.PaymentState getPaymentState() {
@@ -64,7 +64,7 @@ public class OrderPaymentStateChangedMessagePayloadImpl implements OrderPaymentS
     }
 
     /**
-     *  <p>PaymentState before the Change Payment State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentState" rel="nofollow">PaymentState</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangePaymentStateAction" rel="nofollow">Change Payment State</a> update action.</p>
      */
 
     public com.commercetools.api.models.order.PaymentState getOldPaymentState() {

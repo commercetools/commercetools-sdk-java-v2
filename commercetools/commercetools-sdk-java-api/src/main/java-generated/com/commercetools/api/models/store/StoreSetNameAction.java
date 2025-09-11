@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>This update action produces the StoreNameSet Message.</p>
+ *  <p>This update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreNameSetMessage" rel="nofollow">StoreNameSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

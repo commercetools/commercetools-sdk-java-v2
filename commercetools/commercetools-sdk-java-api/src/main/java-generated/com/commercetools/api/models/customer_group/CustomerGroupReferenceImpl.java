@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Reference to a CustomerGroup.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerGroupReferenceImpl implements CustomerGroupReference, ModelBase {
@@ -56,7 +56,7 @@ public class CustomerGroupReferenceImpl implements CustomerGroupReference, Model
     }
 
     /**
-     *  <p>Unique identifier of the referenced CustomerGroup.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>.</p>
      */
 
     public String getId() {
@@ -64,7 +64,7 @@ public class CustomerGroupReferenceImpl implements CustomerGroupReference, Model
     }
 
     /**
-     *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
+     *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with <span>Reference Expansion</span> for CustomerGroups.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroup getObj() {

@@ -26,7 +26,7 @@ public class BusinessUnitAssociateChangedMessagePayloadBuilder
     private com.commercetools.api.models.business_unit.Associate associate;
 
     /**
-     *  <p>The Associate that was updated.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> that was updated.</p>
      * @param builder function to build the associate value
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class BusinessUnitAssociateChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The Associate that was updated.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> that was updated.</p>
      * @param builder function to build the associate value
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class BusinessUnitAssociateChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The Associate that was updated.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> that was updated.</p>
      * @param associate value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class BusinessUnitAssociateChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The Associate that was updated.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> that was updated.</p>
      * @return associate
      */
 

@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Setting the Order Predicate for an Approval Rule generates an ApprovalRulePredicateSet Message.</p>
+ *  <p>Setting the <span>Order Predicate</span> for an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">Approval Rule</a> generates an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRulePredicateSetMessage" rel="nofollow">ApprovalRulePredicateSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface ApprovalRuleSetPredicateAction extends ApprovalRuleUpdateAction
     String SET_PREDICATE = "setPredicate";
 
     /**
-     *  <p>A valid Order Predicate to set for the Approval Rule.</p>
+     *  <p>A valid <span>Order Predicate</span> to set for the Approval Rule.</p>
      * @return predicate
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface ApprovalRuleSetPredicateAction extends ApprovalRuleUpdateAction
     public String getPredicate();
 
     /**
-     *  <p>A valid Order Predicate to set for the Approval Rule.</p>
+     *  <p>A valid <span>Order Predicate</span> to set for the Approval Rule.</p>
      * @param predicate value to be set
      */
 

@@ -17,8 +17,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Use this method to create an email token for a global Customer during their email verification process.</p>
- *  <p>Creating an email token for the Customer produces the CustomerEmailTokenCreated Message. The Message will include the token's value, if the token's validity is 60 minutes or less.</p>
+ *  <p>Use this method to create an email token for a global Customer during their <span>email verification process</span>.</p>
+ *  <p>Creating an email token for the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerEmailTokenCreatedMessage" rel="nofollow">CustomerEmailTokenCreated</a> Message. The Message will include the token's value, if the token's validity is 60 minutes or less.</p>
  *
  * <hr>
  * <div class=code-example>

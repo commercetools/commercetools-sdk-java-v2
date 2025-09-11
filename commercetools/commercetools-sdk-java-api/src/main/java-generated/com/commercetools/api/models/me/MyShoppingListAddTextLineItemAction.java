@@ -43,7 +43,7 @@ public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdat
     String ADD_TEXT_LINE_ITEM = "addTextLineItem";
 
     /**
-     *  <p>Name of the TextLineItem.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a>.</p>
      * @return name
      */
     @NotNull
@@ -52,7 +52,7 @@ public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdat
     public LocalizedString getName();
 
     /**
-     *  <p>User-defined identifier of the TextLineItem. Must be unique per ShoppingList.</p>
+     *  <p>User-defined identifier of the TextLineItem. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @return key
      */
 
@@ -76,7 +76,7 @@ public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdat
     public Long getQuantity();
 
     /**
-     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     *  <p>Date and time the TextLineItem is added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>. If not set, the current date and time (UTC) is used.</p>
      * @return addedAt
      */
 
@@ -92,14 +92,14 @@ public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdat
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>Name of the TextLineItem.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TextLineItem" rel="nofollow">TextLineItem</a>.</p>
      * @param name value to be set
      */
 
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>User-defined identifier of the TextLineItem. Must be unique per ShoppingList.</p>
+     *  <p>User-defined identifier of the TextLineItem. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param key value to be set
      */
 
@@ -120,7 +120,7 @@ public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdat
     public void setQuantity(final Long quantity);
 
     /**
-     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     *  <p>Date and time the TextLineItem is added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>. If not set, the current date and time (UTC) is used.</p>
      * @param addedAt value to be set
      */
 

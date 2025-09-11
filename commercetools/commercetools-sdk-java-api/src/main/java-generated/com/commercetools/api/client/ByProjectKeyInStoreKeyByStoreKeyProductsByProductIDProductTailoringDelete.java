@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generates the ProductTailoringDeleted Message.</p>
+ *  <p>Generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringDeletedMessage" rel="nofollow">ProductTailoringDeleted</a> Message.</p>
  *
  * <hr>
  * <div class=code-example>

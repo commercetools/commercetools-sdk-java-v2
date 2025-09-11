@@ -53,7 +53,7 @@ public class ProjectSetBusinessUnitAssociateRoleOnCreationActionImpl
     }
 
     /**
-     *  <p>Default Associate Role assigned to the Associate creating a Business Unit using the My Business Unit endpoint.</p>
+     *  <p>Default <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a> assigned to the Associate creating a Business Unit using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/business-units:POST" rel="nofollow">My Business Unit endpoint</a>.</p>
      */
 
     public com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifier getAssociateRole() {

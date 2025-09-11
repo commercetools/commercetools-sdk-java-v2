@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Reference to a ProductTailoring.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface ProductTailoringReference extends Reference {
     String PRODUCT_TAILORING = "product-tailoring";
 
     /**
-     *  <p>Unique identifier of the referenced ProductTailoring.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a>.</p>
      * @return id
      */
     @NotNull
@@ -48,7 +48,7 @@ public interface ProductTailoringReference extends Reference {
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded ProductTailoring. Only present in responses to requests with Reference Expansion for ProductTailoring.</p>
+     *  <p>Contains the representation of the expanded ProductTailoring. Only present in responses to requests with <span>Reference Expansion</span> for ProductTailoring.</p>
      * @return obj
      */
     @Valid
@@ -56,14 +56,14 @@ public interface ProductTailoringReference extends Reference {
     public ProductTailoring getObj();
 
     /**
-     *  <p>Unique identifier of the referenced ProductTailoring.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a>.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     *  <p>Contains the representation of the expanded ProductTailoring. Only present in responses to requests with Reference Expansion for ProductTailoring.</p>
+     *  <p>Contains the representation of the expanded ProductTailoring. Only present in responses to requests with <span>Reference Expansion</span> for ProductTailoring.</p>
      * @param obj value to be set
      */
 

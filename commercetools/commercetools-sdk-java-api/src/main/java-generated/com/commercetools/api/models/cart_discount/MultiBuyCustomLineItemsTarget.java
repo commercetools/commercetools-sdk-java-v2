@@ -41,7 +41,7 @@ public interface MultiBuyCustomLineItemsTarget extends CartDiscountTarget {
     String MULTI_BUY_CUSTOM_LINE_ITEMS = "multiBuyCustomLineItems";
 
     /**
-     *  <p>Valid CustomLineItems target predicate. The Discount will be applied to Custom Line Items that are matched by the predicate.</p>
+     *  <p>Valid <span>CustomLineItems target predicate</span>. The Discount will be applied to Custom Line Items that are matched by the predicate.</p>
      * @return predicate
      */
     @NotNull
@@ -81,7 +81,7 @@ public interface MultiBuyCustomLineItemsTarget extends CartDiscountTarget {
     public SelectionMode getSelectionMode();
 
     /**
-     *  <p>Valid CustomLineItems target predicate. The Discount will be applied to Custom Line Items that are matched by the predicate.</p>
+     *  <p>Valid <span>CustomLineItems target predicate</span>. The Discount will be applied to Custom Line Items that are matched by the predicate.</p>
      * @param predicate value to be set
      */
 

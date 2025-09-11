@@ -39,7 +39,7 @@ public class ItemStateBuilder implements Builder<ItemState> {
     }
 
     /**
-     *  <p>State of the Line Items or Custom Line Items in a custom workflow. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p>
+     *  <p>State of the Line Items or Custom Line Items in a custom workflow. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced State is created.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class ItemStateBuilder implements Builder<ItemState> {
     }
 
     /**
-     *  <p>State of the Line Items or Custom Line Items in a custom workflow. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p>
+     *  <p>State of the Line Items or Custom Line Items in a custom workflow. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced State is created.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class ItemStateBuilder implements Builder<ItemState> {
     }
 
     /**
-     *  <p>State of the Line Items or Custom Line Items in a custom workflow. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p>
+     *  <p>State of the Line Items or Custom Line Items in a custom workflow. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced State is created.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class ItemStateBuilder implements Builder<ItemState> {
     }
 
     /**
-     *  <p>State of the Line Items or Custom Line Items in a custom workflow. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p>
+     *  <p>State of the Line Items or Custom Line Items in a custom workflow. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced State is created.</p>
      * @return state
      */
 

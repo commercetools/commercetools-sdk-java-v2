@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>To set the start date and time, the Recurring Order must not have been started yet. Setting the start date and time generates the RecurringOrderStartsAtSet Message.</p>
+ *  <p>To set the start date and time, the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> must not have been started yet. Setting the start date and time generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderStartsAtSetMessage" rel="nofollow">RecurringOrderStartsAtSet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RecurringOrderSetStartsAtActionImpl implements RecurringOrderSetStartsAtAction, ModelBase {
@@ -51,7 +51,7 @@ public class RecurringOrderSetStartsAtActionImpl implements RecurringOrderSetSta
     }
 
     /**
-     *  <p>Date and time (UTC) the Recurring Order should be started. The date and time must be in the future.</p>
+     *  <p>Date and time (UTC) the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> should be started. The date and time must be in the future.</p>
      */
 
     public java.time.ZonedDateTime getStartsAt() {

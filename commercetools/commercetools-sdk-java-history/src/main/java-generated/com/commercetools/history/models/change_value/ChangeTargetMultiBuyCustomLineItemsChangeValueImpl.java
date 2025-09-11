@@ -68,7 +68,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueImpl
     }
 
     /**
-     *  <p>Valid CustomLineItem target predicate.</p>
+     *  <p>Valid <span>CustomLineItem target predicate</span>.</p>
      */
 
     public String getPredicate() {

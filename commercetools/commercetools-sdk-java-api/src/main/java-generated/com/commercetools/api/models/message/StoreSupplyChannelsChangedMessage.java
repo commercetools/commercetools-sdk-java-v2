@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Generated after a successful Add Supply Channel, Remove Supply Channel, or Set Supply Channels update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreAddSupplyChannelAction" rel="nofollow">Add Supply Channel</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreRemoveSupplyChannelAction" rel="nofollow">Remove Supply Channel</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetSupplyChannelsAction" rel="nofollow">Set Supply Channels</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -46,7 +46,7 @@ public interface StoreSupplyChannelsChangedMessage extends Message {
     String STORE_SUPPLY_CHANNELS_CHANGED = "StoreSupplyChannelsChanged";
 
     /**
-     *  <p>Inventory supply Channels that have been added to the Store.</p>
+     *  <p>Inventory supply Channels that have been added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @return addedSupplyChannels
      */
     @Valid
@@ -54,7 +54,7 @@ public interface StoreSupplyChannelsChangedMessage extends Message {
     public List<ChannelReference> getAddedSupplyChannels();
 
     /**
-     *  <p>Inventory supply Channels that have been removed from the Store.</p>
+     *  <p>Inventory supply Channels that have been removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @return removedSupplyChannels
      */
     @Valid
@@ -62,7 +62,7 @@ public interface StoreSupplyChannelsChangedMessage extends Message {
     public List<ChannelReference> getRemovedSupplyChannels();
 
     /**
-     *  <p>Inventory supply Channels that have been added to the Store.</p>
+     *  <p>Inventory supply Channels that have been added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param addedSupplyChannels values to be set
      */
 
@@ -70,14 +70,14 @@ public interface StoreSupplyChannelsChangedMessage extends Message {
     public void setAddedSupplyChannels(final ChannelReference... addedSupplyChannels);
 
     /**
-     *  <p>Inventory supply Channels that have been added to the Store.</p>
+     *  <p>Inventory supply Channels that have been added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param addedSupplyChannels values to be set
      */
 
     public void setAddedSupplyChannels(final List<ChannelReference> addedSupplyChannels);
 
     /**
-     *  <p>Inventory supply Channels that have been removed from the Store.</p>
+     *  <p>Inventory supply Channels that have been removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param removedSupplyChannels values to be set
      */
 
@@ -85,7 +85,7 @@ public interface StoreSupplyChannelsChangedMessage extends Message {
     public void setRemovedSupplyChannels(final ChannelReference... removedSupplyChannels);
 
     /**
-     *  <p>Inventory supply Channels that have been removed from the Store.</p>
+     *  <p>Inventory supply Channels that have been removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param removedSupplyChannels values to be set
      */
 

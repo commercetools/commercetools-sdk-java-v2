@@ -19,8 +19,8 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Change the label of a LocalizedEnumValue on Product Types.</li>
- *   <li>Change LocalizedEnumValue Label on Types.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeChangeLocalizedEnumValueLabelAction" rel="nofollow">Change the label of a LocalizedEnumValue</a> on Product Types.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:TypeChangeLocalizedEnumValueLabelAction" rel="nofollow">Change LocalizedEnumValue Label</a> on Types.</li>
  *  </ul>
  *
  * <hr>
@@ -83,7 +83,7 @@ public interface ChangeLocalizedEnumValueLabelChange extends Change {
     public LocalizedString getNextValue();
 
     /**
-     *  <p>Name of the updated FieldDefinition; only present on changes to Types.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>; only present on changes to Types.</p>
      * @return fieldName
      */
     @NotNull
@@ -91,7 +91,7 @@ public interface ChangeLocalizedEnumValueLabelChange extends Change {
     public String getFieldName();
 
     /**
-     *  <p>Name of the updated AttributeDefinition; only present on changes to Product Types.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>; only present on changes to Product Types.</p>
      * @return attributeName
      */
     @NotNull
@@ -128,14 +128,14 @@ public interface ChangeLocalizedEnumValueLabelChange extends Change {
     public void setNextValue(final LocalizedString nextValue);
 
     /**
-     *  <p>Name of the updated FieldDefinition; only present on changes to Types.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>; only present on changes to Types.</p>
      * @param fieldName value to be set
      */
 
     public void setFieldName(final String fieldName);
 
     /**
-     *  <p>Name of the updated AttributeDefinition; only present on changes to Product Types.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>; only present on changes to Product Types.</p>
      * @param attributeName value to be set
      */
 

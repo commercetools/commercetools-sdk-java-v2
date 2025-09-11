@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Schedule of a Recurring Order that occurs on a specific day of each month. This type is returned in the RecurrencePolicy for an active Recurring Order.</p>
+ *  <p>Schedule of a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> that occurs on a specific day of each month. This type is returned in the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a> for an active <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,15 +38,7 @@ public interface DayOfMonthSchedule extends RecurrencePolicySchedule {
     String DAY_OF_MONTH = "dayOfMonth";
 
     /**
-     *
-     * @return type
-     */
-    @NotNull
-    @JsonProperty("type")
-    public String getType();
-
-    /**
-     *  <p>The day of the month when the Recurring Order is created. If the value is greater than the number of days in a given month, the order is created on the last day of the month.</p>
+     *  <p>The day of the month when the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> is created. If the value is greater than the number of days in a given month, the order is created on the last day of the month.</p>
      * @return day
      */
     @NotNull
@@ -54,7 +46,7 @@ public interface DayOfMonthSchedule extends RecurrencePolicySchedule {
     public Integer getDay();
 
     /**
-     *  <p>The day of the month when the Recurring Order is created. If the value is greater than the number of days in a given month, the order is created on the last day of the month.</p>
+     *  <p>The day of the month when the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> is created. If the value is greater than the number of days in a given month, the order is created on the last day of the month.</p>
      * @param day value to be set
      */
 

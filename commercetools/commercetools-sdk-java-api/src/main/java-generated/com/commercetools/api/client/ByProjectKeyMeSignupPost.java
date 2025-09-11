@@ -16,8 +16,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>If used with an optional access token for an anonymous session, all Orders and Carts that belong to the <code>anonymousId</code> are assigned to the newly created Customer.</p>
- *  <p>Creating a Customer produces the CustomerCreated Message.</p>
+ *  <p>If used with an optional <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">access token for an anonymous session</a>, all Orders and Carts that belong to the <code>anonymousId</code> are assigned to the newly created Customer.</p>
+ *  <p>Creating a Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerCreatedMessage" rel="nofollow">CustomerCreated</a> Message.</p>
  *
  * <hr>
  * <div class=code-example>

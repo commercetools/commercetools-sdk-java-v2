@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Reference to a Quote.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface QuoteReference extends Reference, com.commercetools.api.models.
     String QUOTE = "quote";
 
     /**
-     *  <p>Contains the representation of the expanded Quote. Only present in responses to requests with Reference Expansion for Quote.</p>
+     *  <p>Contains the representation of the expanded Quote. Only present in responses to requests with <span>Reference Expansion</span> for Quote.</p>
      * @return obj
      */
     @Valid
@@ -48,7 +48,7 @@ public interface QuoteReference extends Reference, com.commercetools.api.models.
     public Quote getObj();
 
     /**
-     *  <p>Contains the representation of the expanded Quote. Only present in responses to requests with Reference Expansion for Quote.</p>
+     *  <p>Contains the representation of the expanded Quote. Only present in responses to requests with <span>Reference Expansion</span> for Quote.</p>
      * @param obj value to be set
      */
 

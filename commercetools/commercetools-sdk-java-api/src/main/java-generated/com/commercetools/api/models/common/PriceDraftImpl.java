@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The draft representation for prices to be embedded into ProductVariantDrafts when the ProductPriceMode is <code>Embedded</code>. For the <code>Standalone</code> ProductPriceMode use StandalonePriceDraft.</p>
+ *  <p>The draft representation for prices to be embedded into <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantDraft" rel="nofollow">ProductVariantDrafts</a> when the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPriceModeEnum" rel="nofollow">ProductPriceMode</a> is <code>Embedded</code>. For the <code>Standalone</code> ProductPriceMode use <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceDraft" rel="nofollow">StandalonePriceDraft</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PriceDraftImpl implements PriceDraft, ModelBase {
@@ -79,7 +79,7 @@ public class PriceDraftImpl implements PriceDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined identifier for the Price. It must be unique per ProductVariant.</p>
+     *  <p>User-defined identifier for the Price. It must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      */
 
     public String getKey() {
@@ -88,7 +88,7 @@ public class PriceDraftImpl implements PriceDraft, ModelBase {
 
     /**
      *  <p>Money value of this Price.</p>
-     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      */
 
     public com.commercetools.api.models.common.Money getValue() {
@@ -104,7 +104,7 @@ public class PriceDraftImpl implements PriceDraft, ModelBase {
     }
 
     /**
-     *  <p>Set this field if this Price is only valid for the referenced CustomerGroup.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
@@ -112,7 +112,7 @@ public class PriceDraftImpl implements PriceDraft, ModelBase {
     }
 
     /**
-     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
@@ -128,7 +128,7 @@ public class PriceDraftImpl implements PriceDraft, ModelBase {
     }
 
     /**
-     *  <p>Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than <code>validFrom</code>. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.</p>
+     *  <p>Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than <code>validFrom</code>. Prices that are no longer valid are not automatically removed, but they can be <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemovePriceAction" rel="nofollow">removed</a> if necessary.</p>
      */
 
     public java.time.ZonedDateTime getValidUntil() {
@@ -137,11 +137,11 @@ public class PriceDraftImpl implements PriceDraft, ModelBase {
 
     /**
      *  <p>Set this field to add a DiscountedPrice from an <strong>external service</strong>.</p>
-     *  <p>Otherwise, Composable Commerce sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
+     *  <p>Otherwise, Composable Commerce sets this field automatically if at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> applies. The DiscountedPrice must reference a ProductDiscount with:</p>
      *  <ul>
      *   <li>The <code>isActive</code> flag set to <code>true</code>.</li>
-     *   <li>A ProductDiscountValue of type <code>external</code>.</li>
-     *   <li>A <code>predicate</code> that matches the ProductVariant the Price is referenced from.</li>
+     *   <li>A <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueExternal" rel="nofollow">ProductDiscountValue</a> of type <code>external</code>.</li>
+     *   <li>A <code>predicate</code> that matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> the Price is referenced from.</li>
      *  </ul>
      */
 
@@ -150,7 +150,7 @@ public class PriceDraftImpl implements PriceDraft, ModelBase {
     }
 
     /**
-     *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     *  <p>Set this field to specify different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities.</p>
      *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      */
 
@@ -167,7 +167,7 @@ public class PriceDraftImpl implements PriceDraft, ModelBase {
     }
 
     /**
-     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a> for which this Price is valid.</p>
      */
 
     public com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifier getRecurrencePolicy() {

@@ -22,7 +22,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Represents the data used to import a Customer. Once imported, this data is persisted as a Customer in the Project.</p>
+ *  <p>Represents the data used to import a Customer. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> in the Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ import jakarta.validation.constraints.NotNull;
 public interface CustomerImport extends ImportResource {
 
     /**
-     *  <p>User-defined unique identifier. If a Customer with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @return key
      */
     @NotNull
@@ -64,7 +64,7 @@ public interface CustomerImport extends ImportResource {
     public String getEmail();
 
     /**
-     *  <p>Maps to <code>Customer.password</code>. Required when <code>authenticationMode</code> is set to <code>Password</code>.</p>
+     *  <p>Maps to <code>Customer.password</code>. Required when <code>authenticationMode</code> is set to <code>Password</code>. This field is only used when creating new Customers, and is ignored when updating Customers. However, due to the Import API's <span>upsert behavior</span>, a non-empty value must still be provided when updating Customers.</p>
      * @return password
      */
 
@@ -72,7 +72,7 @@ public interface CustomerImport extends ImportResource {
     public String getPassword();
 
     /**
-     *  <p>Maps to <code>Customer.stores</code>. If the referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Stores are created.</p>
+     *  <p>Maps to <code>Customer.stores</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Stores are created.</p>
      * @return stores
      */
     @Valid
@@ -160,7 +160,7 @@ public interface CustomerImport extends ImportResource {
     public Boolean getIsEmailVerified();
 
     /**
-     *  <p>Maps to <code>Customer.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
+     *  <p>Maps to <code>Customer.customerGroup</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @return customerGroup
      */
     @Valid
@@ -235,7 +235,7 @@ public interface CustomerImport extends ImportResource {
     public AuthenticationMode getAuthenticationMode();
 
     /**
-     *  <p>User-defined unique identifier. If a Customer with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @param key value to be set
      */
 
@@ -256,14 +256,14 @@ public interface CustomerImport extends ImportResource {
     public void setEmail(final String email);
 
     /**
-     *  <p>Maps to <code>Customer.password</code>. Required when <code>authenticationMode</code> is set to <code>Password</code>.</p>
+     *  <p>Maps to <code>Customer.password</code>. Required when <code>authenticationMode</code> is set to <code>Password</code>. This field is only used when creating new Customers, and is ignored when updating Customers. However, due to the Import API's <span>upsert behavior</span>, a non-empty value must still be provided when updating Customers.</p>
      * @param password value to be set
      */
 
     public void setPassword(final String password);
 
     /**
-     *  <p>Maps to <code>Customer.stores</code>. If the referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Stores are created.</p>
+     *  <p>Maps to <code>Customer.stores</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Stores are created.</p>
      * @param stores values to be set
      */
 
@@ -271,7 +271,7 @@ public interface CustomerImport extends ImportResource {
     public void setStores(final StoreKeyReference... stores);
 
     /**
-     *  <p>Maps to <code>Customer.stores</code>. If the referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Stores are created.</p>
+     *  <p>Maps to <code>Customer.stores</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Stores are created.</p>
      * @param stores values to be set
      */
 
@@ -348,7 +348,7 @@ public interface CustomerImport extends ImportResource {
     public void setIsEmailVerified(final Boolean isEmailVerified);
 
     /**
-     *  <p>Maps to <code>Customer.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
+     *  <p>Maps to <code>Customer.customerGroup</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @param customerGroup value to be set
      */
 

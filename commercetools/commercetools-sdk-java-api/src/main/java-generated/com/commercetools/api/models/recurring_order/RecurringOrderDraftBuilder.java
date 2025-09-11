@@ -36,13 +36,16 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
     private java.time.ZonedDateTime startsAt;
 
     @Nullable
+    private java.time.ZonedDateTime expiresAt;
+
+    @Nullable
     private com.commercetools.api.models.state.StateResourceIdentifier state;
 
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *  <p>User-defined unique identifier of the RecurringOrder.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -53,7 +56,7 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
     }
 
     /**
-     *  <p>ResourceIdentifier to the Cart from which the RecurringOrder is created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Cart from which the RecurringOrder is created.</p>
      * @param builder function to build the cart value
      * @return Builder
      */
@@ -65,7 +68,7 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
     }
 
     /**
-     *  <p>ResourceIdentifier to the Cart from which the RecurringOrder is created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Cart from which the RecurringOrder is created.</p>
      * @param builder function to build the cart value
      * @return Builder
      */
@@ -77,7 +80,7 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
     }
 
     /**
-     *  <p>ResourceIdentifier to the Cart from which the RecurringOrder is created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Cart from which the RecurringOrder is created.</p>
      * @param cart value to be set
      * @return Builder
      */
@@ -88,7 +91,7 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
     }
 
     /**
-     *  <p>Current version of the referenced Cart.</p>
+     *  <p>Current version of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      * @param cartVersion value to be set
      * @return Builder
      */
@@ -106,6 +109,17 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
 
     public RecurringOrderDraftBuilder startsAt(final java.time.ZonedDateTime startsAt) {
         this.startsAt = startsAt;
+        return this;
+    }
+
+    /**
+     *  <p>Date and time (UTC) when the RecurringOrder will expire.</p>
+     * @param expiresAt value to be set
+     * @return Builder
+     */
+
+    public RecurringOrderDraftBuilder expiresAt(@Nullable final java.time.ZonedDateTime expiresAt) {
+        this.expiresAt = expiresAt;
         return this;
     }
 
@@ -182,7 +196,7 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
     }
 
     /**
-     *  <p>User-defined unique identifier of the RecurringOrder.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a>.</p>
      * @return key
      */
 
@@ -192,7 +206,7 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
     }
 
     /**
-     *  <p>ResourceIdentifier to the Cart from which the RecurringOrder is created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Cart from which the RecurringOrder is created.</p>
      * @return cart
      */
 
@@ -201,7 +215,7 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
     }
 
     /**
-     *  <p>Current version of the referenced Cart.</p>
+     *  <p>Current version of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      * @return cartVersion
      */
 
@@ -216,6 +230,16 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
 
     public java.time.ZonedDateTime getStartsAt() {
         return this.startsAt;
+    }
+
+    /**
+     *  <p>Date and time (UTC) when the RecurringOrder will expire.</p>
+     * @return expiresAt
+     */
+
+    @Nullable
+    public java.time.ZonedDateTime getExpiresAt() {
+        return this.expiresAt;
     }
 
     /**
@@ -246,7 +270,7 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
         Objects.requireNonNull(cart, RecurringOrderDraft.class + ": cart is missing");
         Objects.requireNonNull(cartVersion, RecurringOrderDraft.class + ": cartVersion is missing");
         Objects.requireNonNull(startsAt, RecurringOrderDraft.class + ": startsAt is missing");
-        return new RecurringOrderDraftImpl(key, cart, cartVersion, startsAt, state, custom);
+        return new RecurringOrderDraftImpl(key, cart, cartVersion, startsAt, expiresAt, state, custom);
     }
 
     /**
@@ -254,7 +278,7 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
      * @return RecurringOrderDraft
      */
     public RecurringOrderDraft buildUnchecked() {
-        return new RecurringOrderDraftImpl(key, cart, cartVersion, startsAt, state, custom);
+        return new RecurringOrderDraftImpl(key, cart, cartVersion, startsAt, expiresAt, state, custom);
     }
 
     /**
@@ -276,6 +300,7 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
         builder.cart = template.getCart();
         builder.cartVersion = template.getCartVersion();
         builder.startsAt = template.getStartsAt();
+        builder.expiresAt = template.getExpiresAt();
         builder.state = template.getState();
         builder.custom = template.getCustom();
         return builder;

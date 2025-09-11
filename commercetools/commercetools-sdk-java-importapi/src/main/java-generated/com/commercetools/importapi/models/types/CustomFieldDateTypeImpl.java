@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Field type for Date values.</p>
+ *  <p>Field type for <a href="https://docs.commercetools.com/apis/ctp:api:type:Date" rel="nofollow">Date</a> values.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldDateTypeImpl implements CustomFieldDateType, ModelBase {
@@ -32,7 +32,7 @@ public class CustomFieldDateTypeImpl implements CustomFieldDateType, ModelBase {
     }
 
     /**
-     *  <p>Name of the field type. Must be unique for a given ResourceTypeId. In case there is a FieldDefinition with the same <code>name</code> in another Type, both FieldDefinitions must have the same <code>type</code>. This value cannot be changed after the Type is imported.</p>
+     *  <p>Name of the field type. Must be unique for a given <a href="https://docs.commercetools.com/apis/ctp:import:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>. In case there is a FieldDefinition with the same <code>name</code> in another Type, both FieldDefinitions must have the same <code>type</code>. This value cannot be changed after the Type is imported.</p>
      */
 
     public String getName() {

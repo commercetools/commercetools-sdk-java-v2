@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Transition CustomLineItem State update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderTransitionCustomLineItemStateAction" rel="nofollow">Transition CustomLineItem State</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomLineItemStateTransitionMessagePayloadImpl
@@ -72,7 +72,7 @@ public class CustomLineItemStateTransitionMessagePayloadImpl
     }
 
     /**
-     *  <p>Unique identifier of the Custom Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      */
 
     public String getCustomLineItemId() {
@@ -80,7 +80,7 @@ public class CustomLineItemStateTransitionMessagePayloadImpl
     }
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      */
 
     public String getCustomLineItemKey() {
@@ -88,7 +88,7 @@ public class CustomLineItemStateTransitionMessagePayloadImpl
     }
 
     /**
-     *  <p>Date and time (UTC) the transition of the Custom Line Item State was performed.</p>
+     *  <p>Date and time (UTC) the transition of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> was performed.</p>
      */
 
     public java.time.ZonedDateTime getTransitionDate() {
@@ -96,7 +96,7 @@ public class CustomLineItemStateTransitionMessagePayloadImpl
     }
 
     /**
-     *  <p>Number of Custom Line Items for which the State was transitioned.</p>
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Items</a> for which the <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> was transitioned.</p>
      */
 
     public Long getQuantity() {
@@ -104,7 +104,7 @@ public class CustomLineItemStateTransitionMessagePayloadImpl
     }
 
     /**
-     *  <p>State the Custom Line Item was transitioned from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> was transitioned from.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getFromState() {
@@ -112,7 +112,7 @@ public class CustomLineItemStateTransitionMessagePayloadImpl
     }
 
     /**
-     *  <p>State the Custom Line Item was transitioned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> was transitioned to.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getToState() {

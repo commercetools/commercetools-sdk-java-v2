@@ -18,11 +18,11 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Returned when a Cart Discount cannot be created or assigned to a Store as the limit for active Cart Discounts in a Store has been reached for one or more Stores in the request.</p>
+ *  <p>Returned when a Cart Discount cannot be created or assigned to a Store as the <span>limit</span> for active Cart Discounts in a Store has been reached for one or more Stores in the request.</p>
  *  <p>The error is returned as a failed response to:</p>
  *  <ul>
- *   <li>Create CartDiscount and Create CartDiscount in Store requests</li>
- *   <li>Add Store and Set Store update actions</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/cart-discounts:POST" rel="nofollow">Create CartDiscount</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/cart-discounts:POST" rel="nofollow">Create CartDiscount in Store</a> requests</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountAddStoreAction" rel="nofollow">Add Store</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountSetStoresAction" rel="nofollow">Set Store</a> update actions</li>
  *  </ul>
  *
  * <hr>

@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Delete Product Tailoring or Delete ProductTailoring assigned to Product in Store request.</p>
+ *  <p>Generated after a successful <span>Delete Product Tailoring</span> or <span>Delete ProductTailoring assigned to Product in Store</span> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Change Customer update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestChangeCustomerAction" rel="nofollow">Change Customer</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -48,7 +48,7 @@ public interface QuoteRequestCustomerChangedMessage extends Message {
     String QUOTE_REQUEST_CUSTOMER_CHANGED = "QuoteRequestCustomerChanged";
 
     /**
-     *  <p>The Buyer who now owns the Quote Request.</p>
+     *  <p>The <span>Buyer</span> who now owns the Quote Request.</p>
      * @return customer
      */
     @NotNull
@@ -57,7 +57,7 @@ public interface QuoteRequestCustomerChangedMessage extends Message {
     public CustomerReference getCustomer();
 
     /**
-     *  <p>The previous Buyer.</p>
+     *  <p>The previous <span>Buyer</span>.</p>
      * @return previousCustomer
      */
     @NotNull
@@ -66,14 +66,14 @@ public interface QuoteRequestCustomerChangedMessage extends Message {
     public CustomerReference getPreviousCustomer();
 
     /**
-     *  <p>The Buyer who now owns the Quote Request.</p>
+     *  <p>The <span>Buyer</span> who now owns the Quote Request.</p>
      * @param customer value to be set
      */
 
     public void setCustomer(final CustomerReference customer);
 
     /**
-     *  <p>The previous Buyer.</p>
+     *  <p>The previous <span>Buyer</span>.</p>
      * @param previousCustomer value to be set
      */
 

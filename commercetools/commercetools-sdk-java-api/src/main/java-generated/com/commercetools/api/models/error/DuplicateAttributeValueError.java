@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Returned when the <code>Unique</code> AttributeConstraint criteria are not met during an Update Product request.</p>
+ *  <p>Returned when the <code>Unique</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeConstraintEnum" rel="nofollow">AttributeConstraint</a> criteria are not met during an <span>Update Product</span> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

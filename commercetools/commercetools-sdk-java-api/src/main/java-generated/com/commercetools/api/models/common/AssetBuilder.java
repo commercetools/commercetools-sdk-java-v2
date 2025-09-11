@@ -45,7 +45,7 @@ public class AssetBuilder implements Builder<Asset> {
     private String key;
 
     /**
-     *  <p>Unique identifier of the Asset. Not required when importing Assets using the Import API.</p>
+     *  <p>Unique identifier of the Asset. Not required when importing Assets using the <span>Import API</span>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -283,7 +283,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *  <p>User-defined identifier of the Asset. It is unique per Category or ProductVariant.</p>
+     *  <p>User-defined identifier of the Asset. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -294,7 +294,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *  <p>Unique identifier of the Asset. Not required when importing Assets using the Import API.</p>
+     *  <p>Unique identifier of the Asset. Not required when importing Assets using the <span>Import API</span>.</p>
      * @return id
      */
 
@@ -351,7 +351,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *  <p>User-defined identifier of the Asset. It is unique per Category or ProductVariant.</p>
+     *  <p>User-defined identifier of the Asset. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return key
      */
 

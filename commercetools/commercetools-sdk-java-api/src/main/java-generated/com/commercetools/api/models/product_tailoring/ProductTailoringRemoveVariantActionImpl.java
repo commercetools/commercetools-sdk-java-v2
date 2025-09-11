@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Either <code>id</code> or <code>sku</code> is required. Produces the ProductVariantTailoringDeleted Message.</p>
+ *  <p>Either <code>id</code> or <code>sku</code> is required. Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoringRemovedMessage" rel="nofollow">ProductVariantTailoringDeleted</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTailoringRemoveVariantActionImpl implements ProductTailoringRemoveVariantAction, ModelBase {

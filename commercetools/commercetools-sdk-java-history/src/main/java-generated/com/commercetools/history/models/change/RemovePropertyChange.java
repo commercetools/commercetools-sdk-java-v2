@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the Update CustomObject request when an existing property is removed.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/custom-objects:POST" rel="nofollow">Update CustomObject</a> request when an existing property is removed.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

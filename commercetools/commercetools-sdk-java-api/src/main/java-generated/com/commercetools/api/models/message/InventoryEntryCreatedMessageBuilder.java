@@ -184,7 +184,7 @@ public class InventoryEntryCreatedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -195,7 +195,7 @@ public class InventoryEntryCreatedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -257,7 +257,7 @@ public class InventoryEntryCreatedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     *  <p>InventoryEntry that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> that was created.</p>
      * @param builder function to build the inventoryEntry value
      * @return Builder
      */
@@ -269,7 +269,7 @@ public class InventoryEntryCreatedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     *  <p>InventoryEntry that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> that was created.</p>
      * @param builder function to build the inventoryEntry value
      * @return Builder
      */
@@ -281,7 +281,7 @@ public class InventoryEntryCreatedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     *  <p>InventoryEntry that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> that was created.</p>
      * @param inventoryEntry value to be set
      * @return Builder
      */
@@ -358,7 +358,7 @@ public class InventoryEntryCreatedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -386,7 +386,7 @@ public class InventoryEntryCreatedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     *  <p>InventoryEntry that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> that was created.</p>
      * @return inventoryEntry
      */
 

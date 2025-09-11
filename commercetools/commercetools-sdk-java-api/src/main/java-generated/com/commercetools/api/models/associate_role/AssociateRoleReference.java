@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Reference to an AssociateRole.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to an <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface AssociateRoleReference extends Reference {
     String ASSOCIATE_ROLE = "associate-role";
 
     /**
-     *  <p>Contains the representation of the expanded AssociateRole. Only present in responses to requests with Reference Expansion for AssociateRole.</p>
+     *  <p>Contains the representation of the expanded AssociateRole. Only present in responses to requests with <span>Reference Expansion</span> for AssociateRole.</p>
      * @return obj
      */
     @Valid
@@ -48,7 +48,7 @@ public interface AssociateRoleReference extends Reference {
     public AssociateRole getObj();
 
     /**
-     *  <p>Unique identifier of the referenced AssociateRole.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a>.</p>
      * @return id
      */
     @NotNull
@@ -56,14 +56,14 @@ public interface AssociateRoleReference extends Reference {
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded AssociateRole. Only present in responses to requests with Reference Expansion for AssociateRole.</p>
+     *  <p>Contains the representation of the expanded AssociateRole. Only present in responses to requests with <span>Reference Expansion</span> for AssociateRole.</p>
      * @param obj value to be set
      */
 
     public void setObj(final AssociateRole obj);
 
     /**
-     *  <p>Unique identifier of the referenced AssociateRole.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a>.</p>
      * @param id value to be set
      */
 

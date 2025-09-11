@@ -189,7 +189,7 @@ public class DiscountCodeImpl implements DiscountCode, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the DiscountCode added to the Cart to apply the related CartDiscounts.</p>
+     *  <p>User-defined unique identifier of the DiscountCode <span>added to the Cart</span> to apply the related <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a>.</p>
      */
 
     public String getCode() {

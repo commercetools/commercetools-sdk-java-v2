@@ -51,7 +51,7 @@ public interface ProductData extends ProductDataLike {
     public LocalizedString getName();
 
     /**
-     *  <p>Categories assigned to the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the Product.</p>
      * @return categories
      */
     @NotNull
@@ -76,7 +76,7 @@ public interface ProductData extends ProductDataLike {
     public LocalizedString getDescription();
 
     /**
-     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different Locales. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
      * @return slug
      */
     @NotNull
@@ -127,7 +127,7 @@ public interface ProductData extends ProductDataLike {
     public List<ProductVariant> getVariants();
 
     /**
-     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
+     *  <p>Used by <span>Search Term Suggestions</span>, but is also considered for a <span>full text search</span> in the Product Projection Search API.</p>
      * @return searchKeywords
      */
     @NotNull
@@ -136,7 +136,7 @@ public interface ProductData extends ProductDataLike {
     public SearchKeywords getSearchKeywords();
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Product Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>. <strong>Not supported</strong> by <span>Product Projection Search</span>.</p>
      * @return attributes
      */
     @NotNull
@@ -152,7 +152,7 @@ public interface ProductData extends ProductDataLike {
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>Categories assigned to the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the Product.</p>
      * @param categories values to be set
      */
 
@@ -160,7 +160,7 @@ public interface ProductData extends ProductDataLike {
     public void setCategories(final CategoryReference... categories);
 
     /**
-     *  <p>Categories assigned to the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the Product.</p>
      * @param categories values to be set
      */
 
@@ -181,7 +181,7 @@ public interface ProductData extends ProductDataLike {
     public void setDescription(final LocalizedString description);
 
     /**
-     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different Locales. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
      * @param slug value to be set
      */
 
@@ -231,14 +231,14 @@ public interface ProductData extends ProductDataLike {
     public void setVariants(final List<ProductVariant> variants);
 
     /**
-     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
+     *  <p>Used by <span>Search Term Suggestions</span>, but is also considered for a <span>full text search</span> in the Product Projection Search API.</p>
      * @param searchKeywords value to be set
      */
 
     public void setSearchKeywords(final SearchKeywords searchKeywords);
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Product Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>. <strong>Not supported</strong> by <span>Product Projection Search</span>.</p>
      * @param attributes values to be set
      */
 
@@ -246,7 +246,7 @@ public interface ProductData extends ProductDataLike {
     public void setAttributes(final Attribute... attributes);
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Product Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>. <strong>Not supported</strong> by <span>Product Projection Search</span>.</p>
      * @param attributes values to be set
      */
 

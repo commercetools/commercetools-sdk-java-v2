@@ -55,7 +55,7 @@ public class PaymentChangeTransactionTimestampActionImpl implements PaymentChang
     }
 
     /**
-     *  <p>Unique identifier of the Transaction.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>.</p>
      */
 
     public String getTransactionId() {

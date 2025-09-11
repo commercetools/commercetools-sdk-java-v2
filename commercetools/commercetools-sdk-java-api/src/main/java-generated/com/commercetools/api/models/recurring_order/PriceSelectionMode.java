@@ -11,13 +11,13 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Indicates how the price of a Line Item or Custom Line Item is selected during Order creation.</p>
+ *  <p>Indicates how the price of a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> is selected during Order creation.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface PriceSelectionMode extends JsonEnum {
 
     /**
-    <p>The price set when the Recurring Order was created is used for each subsequent order.</p> */
+    <p>The price set when the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> was created is used for each subsequent order.</p> */
     PriceSelectionMode FIXED = PriceSelectionModeEnum.FIXED;
     /**
     <p>The price is updated each time a new Order is created.</p> */

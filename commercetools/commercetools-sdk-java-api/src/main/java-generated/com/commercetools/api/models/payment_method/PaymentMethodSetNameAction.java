@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>This update action generates the PaymentMethodNameSet Message.</p>
+ *  <p>This update action generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodNameSetMessage" rel="nofollow">PaymentMethodNameSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -16,7 +16,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>A test notification is sent to ensure the correct configuration of the Destination. If the notification cannot be delivered, the update will fail. The payload of the test notification is of type ResourceCreated for the <code>resourceTypeId</code> <code>subscription</code>. The <code>status</code> will change to Healthy, if it isn't already.</p>
+ *  <p>A test notification is sent to ensure the correct configuration of the Destination. If the notification cannot be delivered, the update will fail. The payload of the test notification is of type <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceCreatedDeliveryPayload" rel="nofollow">ResourceCreated</a> for the <code>resourceTypeId</code> <code>subscription</code>. The <code>status</code> will change to <a href="https://docs.commercetools.com/apis/ctp:api:type:SubscriptionHealthStatus" rel="nofollow">Healthy</a>, if it isn't already.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

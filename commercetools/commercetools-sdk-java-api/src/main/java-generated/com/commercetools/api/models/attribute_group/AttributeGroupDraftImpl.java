@@ -67,7 +67,7 @@ public class AttributeGroupDraftImpl implements AttributeGroupDraft, ModelBase {
     }
 
     /**
-     *  <p>Attributes with unique values.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">Attributes</a> with unique values.</p>
      */
 
     public java.util.List<com.commercetools.api.models.attribute_group.AttributeReference> getAttributes() {

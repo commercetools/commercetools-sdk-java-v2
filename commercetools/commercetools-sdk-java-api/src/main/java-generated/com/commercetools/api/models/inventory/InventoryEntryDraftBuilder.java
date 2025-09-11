@@ -36,6 +36,12 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     private Long quantityOnStock;
 
     @Nullable
+    private Integer minCartQuantity;
+
+    @Nullable
+    private Integer maxCartQuantity;
+
+    @Nullable
     private Long restockableInDays;
 
     @Nullable
@@ -45,7 +51,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> <code>sku</code> of the InventoryEntry.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -57,7 +63,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
 
     /**
      *  <p>User-defined unique identifier for the InventoryEntry.</p>
-     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing InventoryEntries with the Import API and the Merchant Center.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing InventoryEntries with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -68,7 +74,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *  <p>Channel that supplies this InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> that supplies this InventoryEntry.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -81,7 +87,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *  <p>Channel that supplies this InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> that supplies this InventoryEntry.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -93,7 +99,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *  <p>Channel that supplies this InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> that supplies this InventoryEntry.</p>
      * @param supplyChannel value to be set
      * @return Builder
      */
@@ -112,6 +118,28 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
 
     public InventoryEntryDraftBuilder quantityOnStock(final Long quantityOnStock) {
         this.quantityOnStock = quantityOnStock;
+        return this;
+    }
+
+    /**
+     *  <p>Minimum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
+     * @param minCartQuantity value to be set
+     * @return Builder
+     */
+
+    public InventoryEntryDraftBuilder minCartQuantity(@Nullable final Integer minCartQuantity) {
+        this.minCartQuantity = minCartQuantity;
+        return this;
+    }
+
+    /**
+     *  <p>Maximum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
+     * @param maxCartQuantity value to be set
+     * @return Builder
+     */
+
+    public InventoryEntryDraftBuilder maxCartQuantity(@Nullable final Integer maxCartQuantity) {
+        this.maxCartQuantity = maxCartQuantity;
         return this;
     }
 
@@ -174,7 +202,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> <code>sku</code> of the InventoryEntry.</p>
      * @return sku
      */
 
@@ -184,7 +212,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
 
     /**
      *  <p>User-defined unique identifier for the InventoryEntry.</p>
-     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing InventoryEntries with the Import API and the Merchant Center.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing InventoryEntries with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
      * @return key
      */
 
@@ -194,7 +222,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *  <p>Channel that supplies this InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> that supplies this InventoryEntry.</p>
      * @return supplyChannel
      */
 
@@ -210,6 +238,26 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
 
     public Long getQuantityOnStock() {
         return this.quantityOnStock;
+    }
+
+    /**
+     *  <p>Minimum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
+     * @return minCartQuantity
+     */
+
+    @Nullable
+    public Integer getMinCartQuantity() {
+        return this.minCartQuantity;
+    }
+
+    /**
+     *  <p>Maximum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
+     * @return maxCartQuantity
+     */
+
+    @Nullable
+    public Integer getMaxCartQuantity() {
+        return this.maxCartQuantity;
     }
 
     /**
@@ -249,8 +297,8 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     public InventoryEntryDraft build() {
         Objects.requireNonNull(sku, InventoryEntryDraft.class + ": sku is missing");
         Objects.requireNonNull(quantityOnStock, InventoryEntryDraft.class + ": quantityOnStock is missing");
-        return new InventoryEntryDraftImpl(sku, key, supplyChannel, quantityOnStock, restockableInDays,
-            expectedDelivery, custom);
+        return new InventoryEntryDraftImpl(sku, key, supplyChannel, quantityOnStock, minCartQuantity, maxCartQuantity,
+            restockableInDays, expectedDelivery, custom);
     }
 
     /**
@@ -258,8 +306,8 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
      * @return InventoryEntryDraft
      */
     public InventoryEntryDraft buildUnchecked() {
-        return new InventoryEntryDraftImpl(sku, key, supplyChannel, quantityOnStock, restockableInDays,
-            expectedDelivery, custom);
+        return new InventoryEntryDraftImpl(sku, key, supplyChannel, quantityOnStock, minCartQuantity, maxCartQuantity,
+            restockableInDays, expectedDelivery, custom);
     }
 
     /**
@@ -281,6 +329,8 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
         builder.key = template.getKey();
         builder.supplyChannel = template.getSupplyChannel();
         builder.quantityOnStock = template.getQuantityOnStock();
+        builder.minCartQuantity = template.getMinCartQuantity();
+        builder.maxCartQuantity = template.getMaxCartQuantity();
         builder.restockableInDays = template.getRestockableInDays();
         builder.expectedDelivery = template.getExpectedDelivery();
         builder.custom = template.getCustom();

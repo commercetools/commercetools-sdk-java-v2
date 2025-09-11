@@ -42,7 +42,7 @@ public interface StagedOrderSetItemShippingAddressCustomTypeAction extends Stage
     String SET_ITEM_SHIPPING_ADDRESS_CUSTOM_TYPE = "setItemShippingAddressCustomType";
 
     /**
-     *  <p><code>key</code> of the Address in <code>itemShippingAddresses</code>.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> in <code>itemShippingAddresses</code>.</p>
      * @return addressKey
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface StagedOrderSetItemShippingAddressCustomTypeAction extends Stage
     public String getAddressKey();
 
     /**
-     *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>itemShippingAddress</code> with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
      * @return type
      */
     @Valid
@@ -58,7 +58,7 @@ public interface StagedOrderSetItemShippingAddressCustomTypeAction extends Stage
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <code>itemShippingAddress</code>.</p>
      * @return fields
      */
     @Valid
@@ -66,21 +66,21 @@ public interface StagedOrderSetItemShippingAddressCustomTypeAction extends Stage
     public FieldContainer getFields();
 
     /**
-     *  <p><code>key</code> of the Address in <code>itemShippingAddresses</code>.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> in <code>itemShippingAddresses</code>.</p>
      * @param addressKey value to be set
      */
 
     public void setAddressKey(final String addressKey);
 
     /**
-     *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>itemShippingAddress</code> with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <code>itemShippingAddress</code>.</p>
      * @param fields value to be set
      */
 

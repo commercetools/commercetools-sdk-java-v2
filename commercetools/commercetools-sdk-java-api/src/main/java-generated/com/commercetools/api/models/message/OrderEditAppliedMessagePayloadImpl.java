@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after successfully applying an OrderEdit.</p>
+ *  <p>Generated after successfully <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/edits/{id}/apply:POST" rel="nofollow">applying an OrderEdit</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditAppliedMessagePayloadImpl implements OrderEditAppliedMessagePayload, ModelBase {
@@ -56,7 +56,7 @@ public class OrderEditAppliedMessagePayloadImpl implements OrderEditAppliedMessa
     }
 
     /**
-     *  <p>OrderEdit that was applied.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a> that was applied.</p>
      */
 
     public com.commercetools.api.models.order_edit.OrderEdit getEdit() {
@@ -64,7 +64,7 @@ public class OrderEditAppliedMessagePayloadImpl implements OrderEditAppliedMessa
     }
 
     /**
-     *  <p>Information about a successfully applied OrderEdit.</p>
+     *  <p>Information about a successfully applied <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>.</p>
      */
 
     public com.commercetools.api.models.order_edit.OrderEditApplied getResult() {

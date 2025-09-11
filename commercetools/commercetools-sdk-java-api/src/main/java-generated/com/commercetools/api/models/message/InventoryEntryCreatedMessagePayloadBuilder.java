@@ -25,7 +25,7 @@ public class InventoryEntryCreatedMessagePayloadBuilder implements Builder<Inven
     private com.commercetools.api.models.inventory.InventoryEntry inventoryEntry;
 
     /**
-     *  <p>InventoryEntry that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> that was created.</p>
      * @param builder function to build the inventoryEntry value
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class InventoryEntryCreatedMessagePayloadBuilder implements Builder<Inven
     }
 
     /**
-     *  <p>InventoryEntry that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> that was created.</p>
      * @param builder function to build the inventoryEntry value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class InventoryEntryCreatedMessagePayloadBuilder implements Builder<Inven
     }
 
     /**
-     *  <p>InventoryEntry that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> that was created.</p>
      * @param inventoryEntry value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class InventoryEntryCreatedMessagePayloadBuilder implements Builder<Inven
     }
 
     /**
-     *  <p>InventoryEntry that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> that was created.</p>
      * @return inventoryEntry
      */
 

@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Transition State update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -48,7 +48,7 @@ public interface RecurringOrderStateTransitionMessage extends Message {
     String RECURRING_ORDER_STATE_TRANSITION = "RecurringOrderStateTransition";
 
     /**
-     *  <p>RecurringOrderState after the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderState" rel="nofollow">RecurringOrderState</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @return state
      */
     @NotNull
@@ -57,7 +57,7 @@ public interface RecurringOrderStateTransitionMessage extends Message {
     public StateReference getState();
 
     /**
-     *  <p>RecurringOrderState before the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderState" rel="nofollow">RecurringOrderState</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @return oldState
      */
     @Valid
@@ -65,7 +65,7 @@ public interface RecurringOrderStateTransitionMessage extends Message {
     public StateReference getOldState();
 
     /**
-     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     *  <p>Whether <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition validations were turned off during the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @return force
      */
     @NotNull
@@ -73,21 +73,21 @@ public interface RecurringOrderStateTransitionMessage extends Message {
     public Boolean getForce();
 
     /**
-     *  <p>RecurringOrderState after the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderState" rel="nofollow">RecurringOrderState</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param state value to be set
      */
 
     public void setState(final StateReference state);
 
     /**
-     *  <p>RecurringOrderState before the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderState" rel="nofollow">RecurringOrderState</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param oldState value to be set
      */
 
     public void setOldState(final StateReference oldState);
 
     /**
-     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     *  <p>Whether <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition validations were turned off during the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param force value to be set
      */
 

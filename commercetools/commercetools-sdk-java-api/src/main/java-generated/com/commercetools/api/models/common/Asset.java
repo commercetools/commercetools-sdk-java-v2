@@ -37,7 +37,7 @@ import jakarta.validation.constraints.NotNull;
 public interface Asset extends com.commercetools.api.models.Customizable<Asset>, com.commercetools.api.models.WithKey {
 
     /**
-     *  <p>Unique identifier of the Asset. Not required when importing Assets using the Import API.</p>
+     *  <p>Unique identifier of the Asset. Not required when importing Assets using the <span>Import API</span>.</p>
      * @return id
      */
     @NotNull
@@ -87,7 +87,7 @@ public interface Asset extends com.commercetools.api.models.Customizable<Asset>,
     public CustomFields getCustom();
 
     /**
-     *  <p>User-defined identifier of the Asset. It is unique per Category or ProductVariant.</p>
+     *  <p>User-defined identifier of the Asset. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return key
      */
 
@@ -95,7 +95,7 @@ public interface Asset extends com.commercetools.api.models.Customizable<Asset>,
     public String getKey();
 
     /**
-     *  <p>Unique identifier of the Asset. Not required when importing Assets using the Import API.</p>
+     *  <p>Unique identifier of the Asset. Not required when importing Assets using the <span>Import API</span>.</p>
      * @param id value to be set
      */
 
@@ -153,7 +153,7 @@ public interface Asset extends com.commercetools.api.models.Customizable<Asset>,
     public void setCustom(final CustomFields custom);
 
     /**
-     *  <p>User-defined identifier of the Asset. It is unique per Category or ProductVariant.</p>
+     *  <p>User-defined identifier of the Asset. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param key value to be set
      */
 

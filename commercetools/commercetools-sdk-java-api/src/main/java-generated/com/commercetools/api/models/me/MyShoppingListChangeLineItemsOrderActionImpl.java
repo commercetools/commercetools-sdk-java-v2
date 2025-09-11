@@ -53,7 +53,7 @@ public class MyShoppingListChangeLineItemsOrderActionImpl
     }
 
     /**
-     *  <p>All existing ShoppingListLineItem <code>id</code>s of the ShoppingList in the desired new order.</p>
+     *  <p>All existing <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">ShoppingListLineItem</a> <code>id</code>s of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a> in the desired new order.</p>
      */
 
     public java.util.List<String> getLineItemOrder() {

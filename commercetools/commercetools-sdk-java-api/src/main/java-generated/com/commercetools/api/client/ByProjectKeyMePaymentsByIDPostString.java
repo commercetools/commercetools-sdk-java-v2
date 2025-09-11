@@ -21,7 +21,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Updates a Payment for the authenticated Customer or anonymous user using one or more update actions. You can only update a Payment if it has no Transactions.</p>
+ *  <p>Updates a <span>Payment</span> for the authenticated Customer or anonymous user using one or more <span>update actions</span>. You can only update a Payment if it has no <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transactions</a>.</p>
  *
  * <hr>
  * <div class=code-example>

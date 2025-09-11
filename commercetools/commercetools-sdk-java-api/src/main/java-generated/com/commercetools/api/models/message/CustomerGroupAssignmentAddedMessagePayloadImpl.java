@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Add CustomerGroupAssignment update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddCustomerGroupAssignmentAction" rel="nofollow">Add CustomerGroupAssignment</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerGroupAssignmentAddedMessagePayloadImpl
@@ -53,7 +53,7 @@ public class CustomerGroupAssignmentAddedMessagePayloadImpl
     }
 
     /**
-     *  <p>Customer Group assigned to the Customer during the Add CustomerGroupAssignment update action.</p>
+     *  <p>Customer Group assigned to the Customer during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddCustomerGroupAssignmentAction" rel="nofollow">Add CustomerGroupAssignment</a> update action.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerGroupAssignment getCustomerGroupAssignment() {

@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Returned if the requested resource was not found or the Product Search index is inactive.</p>
+ *  <p>Returned if the requested resource was not found or the Product Search index is <span>inactive</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLObjectNotFoundErrorImpl implements GraphQLObjectNotFoundError, ModelBase {

@@ -133,7 +133,7 @@ public class AssociateRoleImpl implements AssociateRole, ModelBase {
     }
 
     /**
-     *  <p>Whether the AssociateRole can be assigned to an Associate by a buyer. If false, the AssociateRole can only be assigned using the general endpoint.</p>
+     *  <p>Whether the AssociateRole can be assigned to an Associate by a <span>buyer</span>. If false, the AssociateRole can only be assigned using the <span>general endpoint</span>.</p>
      */
 
     public Boolean getBuyerAssignable() {

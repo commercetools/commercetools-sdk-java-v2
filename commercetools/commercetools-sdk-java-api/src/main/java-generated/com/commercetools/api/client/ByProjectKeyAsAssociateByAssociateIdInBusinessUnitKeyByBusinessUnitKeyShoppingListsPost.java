@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creates a ShoppingList in the BusinessUnit referenced by <code>businessUnitKey</code>. As such, the <code>businessUnit</code> field on ShoppingListDraft is ignored for this request.</p>
+ *  <p>Creates a ShoppingList in the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> referenced by <code>businessUnitKey</code>. As such, the <code>businessUnit</code> field on <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListDraft" rel="nofollow">ShoppingListDraft</a> is ignored for this request.</p>
  *
  * <hr>
  * <div class=code-example>

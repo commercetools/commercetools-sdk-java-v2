@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface Custom {
 
     /**
-     *  <p>The Type that provides the field definitions for this object. If the referenced Type does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Type is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that provides the field definitions for this object. If the referenced Type does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Type is created.</p>
      * @return type
      */
     @NotNull
@@ -51,7 +51,7 @@ public interface Custom {
     public FieldContainer getFields();
 
     /**
-     *  <p>The Type that provides the field definitions for this object. If the referenced Type does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Type is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that provides the field definitions for this object. If the referenced Type does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Type is created.</p>
      * @param type value to be set
      */
 

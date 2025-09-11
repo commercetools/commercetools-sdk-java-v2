@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creating a Cart Discount produces the CartDiscountCreated Message.</p>
+ *  <p>Creating a Cart Discount produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCreatedMessage" rel="nofollow">CartDiscountCreated</a> Message.</p>
  *
  * <hr>
  * <div class=code-example>

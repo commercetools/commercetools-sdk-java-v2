@@ -17,9 +17,9 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Setting the shipping address also sets the TaxRate of Line Items and calculates the TaxedPrice.</p>
- *  <p>If a matching price cannot be found for the given shipping address during Line Item price selection, a MissingTaxRateForCountry error is returned.</p>
- *  <p>If you want to allow shipping to states inside a country that are not explicitly covered by a TaxRate, set the <code>countryTaxRateFallbackEnabled</code> field to <code>true</code> in the CartsConfiguration by using the Change CountryTaxRateFallbackEnabled update action.</p>
+ *  <p>Setting the shipping address also sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> of Line Items and calculates the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedPrice" rel="nofollow">TaxedPrice</a>.</p>
+ *  <p>If a matching price cannot be found for the given shipping address during <span>Line Item price selection</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a> error is returned.</p>
+ *  <p>If you want to allow shipping to states inside a country that are not explicitly covered by a TaxRate, set the <code>countryTaxRateFallbackEnabled</code> field to <code>true</code> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">CartsConfiguration</a> by using the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectChangeCountryTaxRateFallbackEnabledAction" rel="nofollow">Change CountryTaxRateFallbackEnabled</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartSetShippingAddressActionImpl implements MyCartSetShippingAddressAction, ModelBase {

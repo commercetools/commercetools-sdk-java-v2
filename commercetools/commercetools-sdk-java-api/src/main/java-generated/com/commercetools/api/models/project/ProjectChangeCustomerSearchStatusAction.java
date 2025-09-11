@@ -38,7 +38,7 @@ public interface ProjectChangeCustomerSearchStatusAction extends ProjectUpdateAc
     String CHANGE_CUSTOMER_SEARCH_STATUS = "changeCustomerSearchStatus";
 
     /**
-     *  <p>Activates or deactivates the Customer Search feature. Activation will trigger building a search index for the Customers in the Project.</p>
+     *  <p>Activates or deactivates the <span>Customer Search</span> feature. Activation will trigger building a search index for the Customers in the Project.</p>
      * @return status
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface ProjectChangeCustomerSearchStatusAction extends ProjectUpdateAc
     public CustomerSearchStatus getStatus();
 
     /**
-     *  <p>Activates or deactivates the Customer Search feature. Activation will trigger building a search index for the Customers in the Project.</p>
+     *  <p>Activates or deactivates the <span>Customer Search</span> feature. Activation will trigger building a search index for the Customers in the Project.</p>
      * @param status value to be set
      */
 

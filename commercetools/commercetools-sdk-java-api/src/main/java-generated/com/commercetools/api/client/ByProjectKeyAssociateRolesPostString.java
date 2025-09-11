@@ -21,7 +21,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creating a Associate Role generates the AssociateRoleCreated Message.</p>
+ *  <p>Creating a Associate Role generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRoleCreatedMessage" rel="nofollow">AssociateRoleCreated</a> Message.</p>
  *
  * <hr>
  * <div class=code-example>

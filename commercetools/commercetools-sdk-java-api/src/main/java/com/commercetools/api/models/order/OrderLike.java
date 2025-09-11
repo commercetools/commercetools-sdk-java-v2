@@ -9,9 +9,24 @@ import java.util.Optional;
 
 import javax.money.MonetaryAmount;
 
-import com.commercetools.api.models.cart.*;
+import com.commercetools.api.models.cart.CartOrigin;
+import com.commercetools.api.models.cart.CustomLineItem;
+import com.commercetools.api.models.cart.DiscountCodeInfo;
+import com.commercetools.api.models.cart.InventoryMode;
+import com.commercetools.api.models.cart.LineItem;
+import com.commercetools.api.models.cart.RoundingMode;
+import com.commercetools.api.models.cart.ShippingInfo;
+import com.commercetools.api.models.cart.ShippingRateInput;
+import com.commercetools.api.models.cart.TaxCalculationMode;
+import com.commercetools.api.models.cart.TaxMode;
+import com.commercetools.api.models.cart.TaxedPrice;
 import com.commercetools.api.models.cart_discount.CartDiscountReference;
-import com.commercetools.api.models.common.*;
+import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.common.CreatedBy;
+import com.commercetools.api.models.common.LastModifiedBy;
+import com.commercetools.api.models.common.MonetaryAmountConvertable;
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFields;

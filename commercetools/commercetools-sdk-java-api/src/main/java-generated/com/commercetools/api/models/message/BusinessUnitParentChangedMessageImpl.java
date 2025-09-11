@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Change Parent Unit update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitParentChangedMessageImpl implements BusinessUnitParentChangedMessage, ModelBase {
@@ -143,7 +143,7 @@ public class BusinessUnitParentChangedMessageImpl implements BusinessUnitParentC
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -159,7 +159,7 @@ public class BusinessUnitParentChangedMessageImpl implements BusinessUnitParentC
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -175,7 +175,7 @@ public class BusinessUnitParentChangedMessageImpl implements BusinessUnitParentC
     }
 
     /**
-     *  <p>Parent unit of the Business Unit before the Change Parent Unit update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getOldParentUnit() {
@@ -183,7 +183,7 @@ public class BusinessUnitParentChangedMessageImpl implements BusinessUnitParentC
     }
 
     /**
-     *  <p>Parent unit of the Business Unit after the Change Parent Unit update action.</p>
+     *  <p>Parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getNewParentUnit() {

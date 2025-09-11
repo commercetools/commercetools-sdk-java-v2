@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ParcelChangeValue {
 
     /**
-     *  <p><code>id</code> of the Parcel.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @return id
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface ParcelChangeValue {
     public String getCreatedAt();
 
     /**
-     *  <p><code>id</code> of the Parcel.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param id value to be set
      */
 

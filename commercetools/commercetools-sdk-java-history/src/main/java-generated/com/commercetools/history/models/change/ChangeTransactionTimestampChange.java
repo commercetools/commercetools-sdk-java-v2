@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the Change TransactionTimestamp update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentChangeTransactionTimestampAction" rel="nofollow">Change TransactionTimestamp</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Change Associate update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeAssociateAction" rel="nofollow">Change Associate</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitAssociateChangedMessagePayloadImpl
@@ -53,7 +53,7 @@ public class BusinessUnitAssociateChangedMessagePayloadImpl
     }
 
     /**
-     *  <p>The Associate that was updated.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> that was updated.</p>
      */
 
     public com.commercetools.api.models.business_unit.Associate getAssociate() {

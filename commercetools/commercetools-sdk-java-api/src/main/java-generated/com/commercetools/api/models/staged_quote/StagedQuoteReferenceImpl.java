@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Reference to a StagedQuote.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedQuoteReferenceImpl implements StagedQuoteReference, ModelBase {
@@ -64,7 +64,7 @@ public class StagedQuoteReferenceImpl implements StagedQuoteReference, ModelBase
     }
 
     /**
-     *  <p>Contains the representation of the expanded StagedQuote. Only present in responses to requests with Reference Expansion for StagedQuote.</p>
+     *  <p>Contains the representation of the expanded StagedQuote. Only present in responses to requests with <span>Reference Expansion</span> for StagedQuote.</p>
      */
 
     public com.commercetools.api.models.staged_quote.StagedQuote getObj() {

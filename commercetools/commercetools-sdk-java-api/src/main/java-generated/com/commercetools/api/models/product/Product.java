@@ -99,7 +99,7 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
 
     /**
      *  <p>User-defined unique identifier of the Product.</p>
-     *  <p>This is different from the <code>key</code> of a ProductVariant.</p>
+     *  <p>This is different from the <code>key</code> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return key
      */
 
@@ -125,7 +125,7 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
     public ProductCatalogData getMasterData();
 
     /**
-     *  <p>The TaxCategory of the Product.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of the Product.</p>
      * @return taxCategory
      */
     @Valid
@@ -133,7 +133,7 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
     public TaxCategoryReference getTaxCategory();
 
     /**
-     *  <p>State of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Product.</p>
      * @return state
      */
     @Valid
@@ -208,7 +208,7 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
 
     /**
      *  <p>User-defined unique identifier of the Product.</p>
-     *  <p>This is different from the <code>key</code> of a ProductVariant.</p>
+     *  <p>This is different from the <code>key</code> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param key value to be set
      */
 
@@ -229,14 +229,14 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
     public void setMasterData(final ProductCatalogData masterData);
 
     /**
-     *  <p>The TaxCategory of the Product.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of the Product.</p>
      * @param taxCategory value to be set
      */
 
     public void setTaxCategory(final TaxCategoryReference taxCategory);
 
     /**
-     *  <p>State of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Product.</p>
      * @param state value to be set
      */
 

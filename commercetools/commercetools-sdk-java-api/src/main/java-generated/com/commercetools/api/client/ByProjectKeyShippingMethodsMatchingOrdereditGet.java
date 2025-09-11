@@ -20,7 +20,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Retrieves the active ShippingMethods that can ship to the given Location for an OrderEdit. If a matching ShippingMethod has <code>isDefault</code> set to <code>true</code>, it is returned as the first item in the array. If the OrderEdit preview cannot be generated, an EditPreviewFailed error is returned.</p>
+ *  <p>Retrieves the active ShippingMethods that can ship to the provided <a href="https://docs.commercetools.com/apis/ctp:api:type:Location" rel="nofollow">Location</a> for an <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>.</p>
+ *  <p>If a matching ShippingMethod has <code>isDefault</code> set to <code>true</code>, it is returned as the first item in the array.</p>
+ *  <p>If the OrderEdit preview cannot be generated, an <a href="https://docs.commercetools.com/apis/ctp:api:type:EditPreviewFailedError" rel="nofollow">EditPreviewFailed</a> error is returned.</p>
  *
  * <hr>
  * <div class=code-example>

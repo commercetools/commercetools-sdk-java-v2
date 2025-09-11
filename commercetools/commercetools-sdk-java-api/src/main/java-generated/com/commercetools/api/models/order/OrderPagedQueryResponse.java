@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>PagedQueryResult with <code>results</code> containing an array of Order.</p>
+ *  <p><span>PagedQueryResult</span> with <code>results</code> containing an array of <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,7 +37,7 @@ import jakarta.validation.constraints.NotNull;
 public interface OrderPagedQueryResponse extends com.commercetools.api.models.ResourcePagedQueryResponse<Order> {
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @return limit
      */
     @NotNull
@@ -45,7 +45,7 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
     public Long getLimit();
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @return offset
      */
     @NotNull
@@ -61,7 +61,7 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
     public Long getCount();
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     *  <p>Total number of results matching the query. This number is an estimation that is not <span>strongly consistent</span>. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>, <code>total</code> is subject to a <span>limit</span>.</p>
      * @return total
      */
 
@@ -69,7 +69,7 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
     public Long getTotal();
 
     /**
-     *  <p>Orders matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> matching the query.</p>
      * @return results
      */
     @NotNull
@@ -78,14 +78,14 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
     public List<Order> getResults();
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @param limit value to be set
      */
 
     public void setLimit(final Long limit);
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @param offset value to be set
      */
 
@@ -99,14 +99,14 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
     public void setCount(final Long count);
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     *  <p>Total number of results matching the query. This number is an estimation that is not <span>strongly consistent</span>. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>, <code>total</code> is subject to a <span>limit</span>.</p>
      * @param total value to be set
      */
 
     public void setTotal(final Long total);
 
     /**
-     *  <p>Orders matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> matching the query.</p>
      * @param results values to be set
      */
 
@@ -114,7 +114,7 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
     public void setResults(final Order... results);
 
     /**
-     *  <p>Orders matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> matching the query.</p>
      * @param results values to be set
      */
 

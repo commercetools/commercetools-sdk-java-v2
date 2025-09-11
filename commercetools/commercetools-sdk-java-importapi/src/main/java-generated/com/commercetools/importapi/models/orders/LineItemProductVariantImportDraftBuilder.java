@@ -39,7 +39,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     private java.util.List<com.commercetools.importapi.models.common.Image> images;
 
     /**
-     *  <p>Maps to <code>ProductVariant.product</code>. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
+     *  <p>Maps to <code>ProductVariant.product</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
      * @param builder function to build the productVariant value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.product</code>. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
+     *  <p>Maps to <code>ProductVariant.product</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
      * @param builder function to build the productVariant value
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.product</code>. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
+     *  <p>Maps to <code>ProductVariant.product</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
      * @param productVariant value to be set
      * @return Builder
      */
@@ -336,7 +336,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.product</code>. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
+     *  <p>Maps to <code>ProductVariant.product</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
      * @return productVariant
      */
 

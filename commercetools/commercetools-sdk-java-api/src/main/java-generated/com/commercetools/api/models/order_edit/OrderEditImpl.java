@@ -122,7 +122,7 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
     }
 
     /**
-     *  <p>Reference to the Order updated with this edit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Order updated with this edit.</p>
      */
 
     public com.commercetools.api.models.order.OrderReference getResource() {

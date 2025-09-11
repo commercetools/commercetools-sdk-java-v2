@@ -28,7 +28,7 @@ public class CustomerGroupAssignmentsSetMessagePayloadBuilder
     private java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments;
 
     /**
-     *  <p>Customer Groups assigned to the Customer during the Set CustomerGroupAssignments update action.</p>
+     *  <p>Customer Groups assigned to the Customer during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</p>
      * @param customerGroupAssignments value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class CustomerGroupAssignmentsSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Customer Groups assigned to the Customer during the Set CustomerGroupAssignments update action.</p>
+     *  <p>Customer Groups assigned to the Customer during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</p>
      * @param customerGroupAssignments value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class CustomerGroupAssignmentsSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Customer Groups assigned to the Customer during the Set CustomerGroupAssignments update action.</p>
+     *  <p>Customer Groups assigned to the Customer during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</p>
      * @param customerGroupAssignments value to be set
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class CustomerGroupAssignmentsSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Customer Groups assigned to the Customer during the Set CustomerGroupAssignments update action.</p>
+     *  <p>Customer Groups assigned to the Customer during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</p>
      * @param builder function to build the customerGroupAssignments value
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class CustomerGroupAssignmentsSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Customer Groups assigned to the Customer during the Set CustomerGroupAssignments update action.</p>
+     *  <p>Customer Groups assigned to the Customer during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</p>
      * @param builder function to build the customerGroupAssignments value
      * @return Builder
      */
@@ -97,7 +97,7 @@ public class CustomerGroupAssignmentsSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Customer Groups assigned to the Customer during the Set CustomerGroupAssignments update action.</p>
+     *  <p>Customer Groups assigned to the Customer during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</p>
      * @param builder function to build the customerGroupAssignments value
      * @return Builder
      */
@@ -109,7 +109,7 @@ public class CustomerGroupAssignmentsSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Customer Groups assigned to the Customer during the Set CustomerGroupAssignments update action.</p>
+     *  <p>Customer Groups assigned to the Customer during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</p>
      * @param builder function to build the customerGroupAssignments value
      * @return Builder
      */
@@ -121,7 +121,7 @@ public class CustomerGroupAssignmentsSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Customer Groups assigned to the Customer during the Set CustomerGroupAssignments update action.</p>
+     *  <p>Customer Groups assigned to the Customer during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</p>
      * @return customerGroupAssignments
      */
 

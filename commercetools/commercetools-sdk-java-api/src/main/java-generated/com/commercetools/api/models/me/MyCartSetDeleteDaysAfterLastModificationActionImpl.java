@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Number of days after the last modification before a Cart is deleted.</p>
- *  <p>If a ChangeSubscription exists for Carts, a ResourceDeletedDeliveryPayload is sent.</p>
+ *  <p>If a <a href="https://docs.commercetools.com/apis/ctp:api:type:ChangeSubscription" rel="nofollow">ChangeSubscription</a> exists for Carts, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceDeletedDeliveryPayload" rel="nofollow">ResourceDeletedDeliveryPayload</a> is sent.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartSetDeleteDaysAfterLastModificationActionImpl
@@ -54,7 +54,7 @@ public class MyCartSetDeleteDaysAfterLastModificationActionImpl
     }
 
     /**
-     *  <p>Value to set. If not provided, the default value for this field configured in Project settings is assigned.</p>
+     *  <p>Value to set. If not provided, the default value for this field configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a> is assigned.</p>
      */
 
     public Integer getDeleteDaysAfterLastModification() {

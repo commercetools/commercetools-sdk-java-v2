@@ -17,8 +17,8 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set AnonymousId on Payments.</li>
- *   <li>Set AnonymousId on Shopping Lists.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetAnonymousIdAction" rel="nofollow">Set AnonymousId</a> on Payments.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListSetAnonymousIdAction" rel="nofollow">Set AnonymousId</a> on Shopping Lists.</li>
  *  </ul>
  *
  * <hr>

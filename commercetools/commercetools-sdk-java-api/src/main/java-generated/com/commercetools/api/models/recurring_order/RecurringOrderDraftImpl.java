@@ -30,6 +30,8 @@ public class RecurringOrderDraftImpl implements RecurringOrderDraft, ModelBase {
 
     private java.time.ZonedDateTime startsAt;
 
+    private java.time.ZonedDateTime expiresAt;
+
     private com.commercetools.api.models.state.StateResourceIdentifier state;
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
@@ -42,12 +44,14 @@ public class RecurringOrderDraftImpl implements RecurringOrderDraft, ModelBase {
             @JsonProperty("cart") final com.commercetools.api.models.cart.CartResourceIdentifier cart,
             @JsonProperty("cartVersion") final Long cartVersion,
             @JsonProperty("startsAt") final java.time.ZonedDateTime startsAt,
+            @JsonProperty("expiresAt") final java.time.ZonedDateTime expiresAt,
             @JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.key = key;
         this.cart = cart;
         this.cartVersion = cartVersion;
         this.startsAt = startsAt;
+        this.expiresAt = expiresAt;
         this.state = state;
         this.custom = custom;
     }
@@ -59,7 +63,7 @@ public class RecurringOrderDraftImpl implements RecurringOrderDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the RecurringOrder.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a>.</p>
      */
 
     public String getKey() {
@@ -67,7 +71,7 @@ public class RecurringOrderDraftImpl implements RecurringOrderDraft, ModelBase {
     }
 
     /**
-     *  <p>ResourceIdentifier to the Cart from which the RecurringOrder is created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Cart from which the RecurringOrder is created.</p>
      */
 
     public com.commercetools.api.models.cart.CartResourceIdentifier getCart() {
@@ -75,7 +79,7 @@ public class RecurringOrderDraftImpl implements RecurringOrderDraft, ModelBase {
     }
 
     /**
-     *  <p>Current version of the referenced Cart.</p>
+     *  <p>Current version of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      */
 
     public Long getCartVersion() {
@@ -88,6 +92,14 @@ public class RecurringOrderDraftImpl implements RecurringOrderDraft, ModelBase {
 
     public java.time.ZonedDateTime getStartsAt() {
         return this.startsAt;
+    }
+
+    /**
+     *  <p>Date and time (UTC) when the RecurringOrder will expire.</p>
+     */
+
+    public java.time.ZonedDateTime getExpiresAt() {
+        return this.expiresAt;
     }
 
     /**
@@ -122,6 +134,10 @@ public class RecurringOrderDraftImpl implements RecurringOrderDraft, ModelBase {
         this.startsAt = startsAt;
     }
 
+    public void setExpiresAt(final java.time.ZonedDateTime expiresAt) {
+        this.expiresAt = expiresAt;
+    }
+
     public void setState(final com.commercetools.api.models.state.StateResourceIdentifier state) {
         this.state = state;
     }
@@ -144,12 +160,14 @@ public class RecurringOrderDraftImpl implements RecurringOrderDraft, ModelBase {
                 .append(cart, that.cart)
                 .append(cartVersion, that.cartVersion)
                 .append(startsAt, that.startsAt)
+                .append(expiresAt, that.expiresAt)
                 .append(state, that.state)
                 .append(custom, that.custom)
                 .append(key, that.key)
                 .append(cart, that.cart)
                 .append(cartVersion, that.cartVersion)
                 .append(startsAt, that.startsAt)
+                .append(expiresAt, that.expiresAt)
                 .append(state, that.state)
                 .append(custom, that.custom)
                 .isEquals();
@@ -161,6 +179,7 @@ public class RecurringOrderDraftImpl implements RecurringOrderDraft, ModelBase {
                 .append(cart)
                 .append(cartVersion)
                 .append(startsAt)
+                .append(expiresAt)
                 .append(state)
                 .append(custom)
                 .toHashCode();
@@ -172,6 +191,7 @@ public class RecurringOrderDraftImpl implements RecurringOrderDraft, ModelBase {
                 .append("cart", cart)
                 .append("cartVersion", cartVersion)
                 .append("startsAt", startsAt)
+                .append("expiresAt", expiresAt)
                 .append("state", state)
                 .append("custom", custom)
                 .build();

@@ -25,6 +25,8 @@ public class RecurringOrderDraftTest {
                 new Object[] { "cartVersion", RecurringOrderDraft.builder().cartVersion(7L) },
                 new Object[] { "startsAt",
                         RecurringOrderDraft.builder().startsAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "expiresAt",
+                        RecurringOrderDraft.builder().expiresAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
                 new Object[] { "state",
                         RecurringOrderDraft.builder()
                                 .state(new com.commercetools.api.models.state.StateResourceIdentifierImpl()) },
@@ -59,6 +61,13 @@ public class RecurringOrderDraftTest {
         RecurringOrderDraft value = RecurringOrderDraft.of();
         value.setStartsAt(ZonedDateTime.parse("2023-06-01T12:00Z"));
         Assertions.assertThat(value.getStartsAt()).isEqualTo(ZonedDateTime.parse("2023-06-01T12:00Z"));
+    }
+
+    @Test
+    public void expiresAt() {
+        RecurringOrderDraft value = RecurringOrderDraft.of();
+        value.setExpiresAt(ZonedDateTime.parse("2023-06-01T12:00Z"));
+        Assertions.assertThat(value.getExpiresAt()).isEqualTo(ZonedDateTime.parse("2023-06-01T12:00Z"));
     }
 
     @Test

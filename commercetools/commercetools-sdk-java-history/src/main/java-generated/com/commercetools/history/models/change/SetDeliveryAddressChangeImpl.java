@@ -19,8 +19,8 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set DeliveryAddress on Orders.</li>
- *   <li>Set DeliveryAddress on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetDeliveryAddressAction" rel="nofollow">Set DeliveryAddress</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetDeliveryAddressAction" rel="nofollow">Set DeliveryAddress</a> on Staged Orders.</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -91,7 +91,7 @@ public class SetDeliveryAddressChangeImpl implements SetDeliveryAddressChange, M
     }
 
     /**
-     *  <p><code>id</code> of the updated Delivery.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      */
 
     public String getDeliveryId() {

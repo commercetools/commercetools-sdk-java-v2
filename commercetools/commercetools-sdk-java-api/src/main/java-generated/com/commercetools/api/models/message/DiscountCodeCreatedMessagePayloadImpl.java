@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Create DiscountCode request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/discount-codes:POST" rel="nofollow">Create DiscountCode</a> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeCreatedMessagePayloadImpl implements DiscountCodeCreatedMessagePayload, ModelBase {
@@ -52,7 +52,7 @@ public class DiscountCodeCreatedMessagePayloadImpl implements DiscountCodeCreate
     }
 
     /**
-     *  <p>The Discount Code that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">Discount Code</a> that was created.</p>
      */
 
     public com.commercetools.api.models.discount_code.DiscountCode getDiscountCode() {

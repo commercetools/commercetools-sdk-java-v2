@@ -44,7 +44,7 @@ public class LineItemRecurrenceInfoImpl implements LineItemRecurrenceInfo, Model
     }
 
     /**
-     *  <p>Reference to a RecurrencePolicy.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a RecurrencePolicy.</p>
      */
 
     public com.commercetools.api.models.recurrence_policy.RecurrencePolicyReference getRecurrencePolicy() {

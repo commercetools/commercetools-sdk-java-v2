@@ -53,7 +53,7 @@ public class CartDiscountChangeRequiresDiscountCodeActionImpl
     }
 
     /**
-     *  <p>New value to set. If set to <code>true</code>, the Discount can only be used in connection with a DiscountCode.</p>
+     *  <p>New value to set. If set to <code>true</code>, the Discount can only be used in connection with a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
      */
 
     public Boolean getRequiresDiscountCode() {

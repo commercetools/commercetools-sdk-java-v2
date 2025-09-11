@@ -25,7 +25,7 @@ public class ProductCreatedMessagePayloadBuilder implements Builder<ProductCreat
     private com.commercetools.api.models.product.ProductProjection productProjection;
 
     /**
-     *  <p>The staged Product Projection of the Product at the time of creation.</p>
+     *  <p>The staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> at the time of creation.</p>
      * @param builder function to build the productProjection value
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class ProductCreatedMessagePayloadBuilder implements Builder<ProductCreat
     }
 
     /**
-     *  <p>The staged Product Projection of the Product at the time of creation.</p>
+     *  <p>The staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> at the time of creation.</p>
      * @param builder function to build the productProjection value
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class ProductCreatedMessagePayloadBuilder implements Builder<ProductCreat
     }
 
     /**
-     *  <p>The staged Product Projection of the Product at the time of creation.</p>
+     *  <p>The staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> at the time of creation.</p>
      * @param productProjection value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class ProductCreatedMessagePayloadBuilder implements Builder<ProductCreat
     }
 
     /**
-     *  <p>The staged Product Projection of the Product at the time of creation.</p>
+     *  <p>The staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> at the time of creation.</p>
      * @return productProjection
      */
 

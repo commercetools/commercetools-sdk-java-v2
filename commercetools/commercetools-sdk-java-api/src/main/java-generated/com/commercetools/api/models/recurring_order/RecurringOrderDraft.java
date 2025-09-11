@@ -39,7 +39,7 @@ import jakarta.validation.constraints.NotNull;
 public interface RecurringOrderDraft extends io.vrap.rmf.base.client.Draft<RecurringOrderDraft> {
 
     /**
-     *  <p>User-defined unique identifier of the RecurringOrder.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a>.</p>
      * @return key
      */
 
@@ -47,7 +47,7 @@ public interface RecurringOrderDraft extends io.vrap.rmf.base.client.Draft<Recur
     public String getKey();
 
     /**
-     *  <p>ResourceIdentifier to the Cart from which the RecurringOrder is created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Cart from which the RecurringOrder is created.</p>
      * @return cart
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface RecurringOrderDraft extends io.vrap.rmf.base.client.Draft<Recur
     public CartResourceIdentifier getCart();
 
     /**
-     *  <p>Current version of the referenced Cart.</p>
+     *  <p>Current version of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      * @return cartVersion
      */
     @NotNull
@@ -70,6 +70,14 @@ public interface RecurringOrderDraft extends io.vrap.rmf.base.client.Draft<Recur
     @NotNull
     @JsonProperty("startsAt")
     public ZonedDateTime getStartsAt();
+
+    /**
+     *  <p>Date and time (UTC) when the RecurringOrder will expire.</p>
+     * @return expiresAt
+     */
+
+    @JsonProperty("expiresAt")
+    public ZonedDateTime getExpiresAt();
 
     /**
      *  <p>State for the RecurringOrder in a custom workflow.</p>
@@ -88,21 +96,21 @@ public interface RecurringOrderDraft extends io.vrap.rmf.base.client.Draft<Recur
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>User-defined unique identifier of the RecurringOrder.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a>.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>ResourceIdentifier to the Cart from which the RecurringOrder is created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Cart from which the RecurringOrder is created.</p>
      * @param cart value to be set
      */
 
     public void setCart(final CartResourceIdentifier cart);
 
     /**
-     *  <p>Current version of the referenced Cart.</p>
+     *  <p>Current version of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      * @param cartVersion value to be set
      */
 
@@ -114,6 +122,13 @@ public interface RecurringOrderDraft extends io.vrap.rmf.base.client.Draft<Recur
      */
 
     public void setStartsAt(final ZonedDateTime startsAt);
+
+    /**
+     *  <p>Date and time (UTC) when the RecurringOrder will expire.</p>
+     * @param expiresAt value to be set
+     */
+
+    public void setExpiresAt(final ZonedDateTime expiresAt);
 
     /**
      *  <p>State for the RecurringOrder in a custom workflow.</p>
@@ -148,6 +163,7 @@ public interface RecurringOrderDraft extends io.vrap.rmf.base.client.Draft<Recur
         instance.setCart(template.getCart());
         instance.setCartVersion(template.getCartVersion());
         instance.setStartsAt(template.getStartsAt());
+        instance.setExpiresAt(template.getExpiresAt());
         instance.setState(template.getState());
         instance.setCustom(template.getCustom());
         return instance;
@@ -170,6 +186,7 @@ public interface RecurringOrderDraft extends io.vrap.rmf.base.client.Draft<Recur
         instance.setCart(com.commercetools.api.models.cart.CartResourceIdentifier.deepCopy(template.getCart()));
         instance.setCartVersion(template.getCartVersion());
         instance.setStartsAt(template.getStartsAt());
+        instance.setExpiresAt(template.getExpiresAt());
         instance.setState(com.commercetools.api.models.state.StateResourceIdentifier.deepCopy(template.getState()));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;

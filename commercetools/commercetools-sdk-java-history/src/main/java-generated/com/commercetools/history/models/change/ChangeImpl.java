@@ -51,8 +51,8 @@ public class ChangeImpl implements Change, ModelBase {
     }
 
     /**
-     *  <p>Type of change on a resource that is similar to the update action it relates to, where possible. It is not a unique identifier for the data structure, for example, the <code>setDescription</code> change can occur with a localized and non-localized representation.</p>
-     *  <p>Records can be filtered by this value using the <code>changes</code> query parameter.</p>
+     *  <p><span>Type of change</span> on a resource that is similar to the update action it relates to, where possible. It is not a unique identifier for the data structure, for example, the <code>setDescription</code> change can occur with a localized and non-localized representation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:history:type:Record" rel="nofollow">Records</a> can be filtered by this value using the <code>changes</code> query parameter.</p>
      */
 
     public String getChange() {

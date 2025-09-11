@@ -134,7 +134,7 @@ public interface ProductDiscount
     public ProductDiscountValue getValue();
 
     /**
-     *  <p>Valid ProductDiscount predicate.</p>
+     *  <p>Valid <span>ProductDiscount predicate</span>.</p>
      * @return predicate
      */
     @NotNull
@@ -167,7 +167,7 @@ public interface ProductDiscount
     public List<Reference> getReferences();
 
     /**
-     *  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>
+     *  <p>Date and time (UTC) from which the Discount is effective. Take <span>Eventual Consistency</span> into account for calculated discount values.</p>
      * @return validFrom
      */
 
@@ -175,7 +175,7 @@ public interface ProductDiscount
     public ZonedDateTime getValidFrom();
 
     /**
-     *  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     *  <p>Date and time (UTC) until which the Discount is effective. Take <span>Eventual Consistency</span> into account for calculated undiscounted values.</p>
      * @return validUntil
      */
 
@@ -253,7 +253,7 @@ public interface ProductDiscount
     public void setValue(final ProductDiscountValue value);
 
     /**
-     *  <p>Valid ProductDiscount predicate.</p>
+     *  <p>Valid <span>ProductDiscount predicate</span>.</p>
      * @param predicate value to be set
      */
 
@@ -289,14 +289,14 @@ public interface ProductDiscount
     public void setReferences(final List<Reference> references);
 
     /**
-     *  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>
+     *  <p>Date and time (UTC) from which the Discount is effective. Take <span>Eventual Consistency</span> into account for calculated discount values.</p>
      * @param validFrom value to be set
      */
 
     public void setValidFrom(final ZonedDateTime validFrom);
 
     /**
-     *  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     *  <p>Date and time (UTC) until which the Discount is effective. Take <span>Eventual Consistency</span> into account for calculated undiscounted values.</p>
      * @param validUntil value to be set
      */
 

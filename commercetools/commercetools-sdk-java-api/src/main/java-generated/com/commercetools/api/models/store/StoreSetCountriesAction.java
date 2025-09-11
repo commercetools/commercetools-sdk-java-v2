@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>This update action produces the StoreCountriesChanged Message.</p>
+ *  <p>This update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountriesChangedMessage" rel="nofollow">StoreCountriesChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

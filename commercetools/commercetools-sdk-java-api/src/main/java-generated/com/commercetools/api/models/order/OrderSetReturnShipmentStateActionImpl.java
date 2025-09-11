@@ -17,8 +17,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>To set a <code>ReturnShipmentState</code>, the Order <code>returnInfo</code> must have at least one ReturnItem.</p>
- *  <p>Produces the Order Return Shipment State Changed Message.</p>
+ *  <p>To set a <code>ReturnShipmentState</code>, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> <code>returnInfo</code> must have at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderReturnShipmentStateChangedMessage" rel="nofollow">Order Return Shipment State Changed</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetReturnShipmentStateActionImpl implements OrderSetReturnShipmentStateAction, ModelBase {
@@ -60,7 +60,7 @@ public class OrderSetReturnShipmentStateActionImpl implements OrderSetReturnShip
     }
 
     /**
-     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      */
 
     public String getReturnItemId() {
@@ -68,7 +68,7 @@ public class OrderSetReturnShipmentStateActionImpl implements OrderSetReturnShip
     }
 
     /**
-     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      */
 
     public String getReturnItemKey() {
@@ -76,7 +76,7 @@ public class OrderSetReturnShipmentStateActionImpl implements OrderSetReturnShip
     }
 
     /**
-     *  <p>New shipment state of the ReturnItem.</p>
+     *  <p>New shipment state of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
      */
 
     public com.commercetools.api.models.order.ReturnShipmentState getShipmentState() {

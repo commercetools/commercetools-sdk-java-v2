@@ -21,7 +21,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creates a Payment for the authenticated Customer or anonymous user. Creating a Payment produces the PaymentCreated Message.</p>
+ *  <p>Creates a <span>Payment</span> for the authenticated Customer or anonymous user. Creating a Payment produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentCreatedMessage" rel="nofollow">PaymentCreated</a> Message.</p>
  *
  * <hr>
  * <div class=code-example>

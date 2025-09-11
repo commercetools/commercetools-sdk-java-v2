@@ -63,7 +63,7 @@ public class StagedOrderSetParcelCustomTypeActionImpl implements StagedOrderSetP
     }
 
     /**
-     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      */
 
@@ -72,7 +72,7 @@ public class StagedOrderSetParcelCustomTypeActionImpl implements StagedOrderSetP
     }
 
     /**
-     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      */
 
@@ -81,7 +81,7 @@ public class StagedOrderSetParcelCustomTypeActionImpl implements StagedOrderSetP
     }
 
     /**
-     *  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Parcel with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -89,7 +89,7 @@ public class StagedOrderSetParcelCustomTypeActionImpl implements StagedOrderSetP
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Parcel.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Parcel.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

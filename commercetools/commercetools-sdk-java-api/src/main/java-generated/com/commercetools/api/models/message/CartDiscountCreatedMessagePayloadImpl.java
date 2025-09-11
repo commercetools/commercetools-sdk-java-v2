@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Create CartDiscount request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/cart-discounts:POST" rel="nofollow">Create CartDiscount</a> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountCreatedMessagePayloadImpl implements CartDiscountCreatedMessagePayload, ModelBase {
@@ -52,7 +52,7 @@ public class CartDiscountCreatedMessagePayloadImpl implements CartDiscountCreate
     }
 
     /**
-     *  <p>The Cart Discount that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discount</a> that was created.</p>
      */
 
     public com.commercetools.api.models.cart_discount.CartDiscount getCartDiscount() {

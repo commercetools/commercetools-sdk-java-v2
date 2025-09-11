@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Returned when attempting to create a ProductVariant and set it as the Master Variant in the same ProductVariantImport.</p>
+ *  <p>Returned when attempting to create a ProductVariant and set it as the Master Variant in the same <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantImport" rel="nofollow">ProductVariantImport</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class NewMasterVariantAdditionNotAllowedErrorImpl implements NewMasterVariantAdditionNotAllowedError, ModelBase {

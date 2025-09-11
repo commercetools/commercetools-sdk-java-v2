@@ -36,7 +36,7 @@ public interface QuoteUpdate
         extends com.commercetools.api.models.ResourceUpdate<QuoteUpdate, QuoteUpdateAction, QuoteUpdateBuilder> {
 
     /**
-     *  <p>Expected version of the Quote to which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> to which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @return version
      */
     @NotNull
@@ -44,7 +44,7 @@ public interface QuoteUpdate
     public Long getVersion();
 
     /**
-     *  <p>Update actions to be performed on the Quote.</p>
+     *  <p>Update actions to be performed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a>.</p>
      * @return actions
      */
     @NotNull
@@ -53,14 +53,14 @@ public interface QuoteUpdate
     public List<QuoteUpdateAction> getActions();
 
     /**
-     *  <p>Expected version of the Quote to which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> to which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @param version value to be set
      */
 
     public void setVersion(final Long version);
 
     /**
-     *  <p>Update actions to be performed on the Quote.</p>
+     *  <p>Update actions to be performed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a>.</p>
      * @param actions values to be set
      */
 
@@ -68,7 +68,7 @@ public interface QuoteUpdate
     public void setActions(final QuoteUpdateAction... actions);
 
     /**
-     *  <p>Update actions to be performed on the Quote.</p>
+     *  <p>Update actions to be performed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a>.</p>
      * @param actions values to be set
      */
 

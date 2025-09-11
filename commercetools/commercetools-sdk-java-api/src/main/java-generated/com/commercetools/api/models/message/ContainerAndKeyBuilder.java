@@ -38,7 +38,7 @@ public class ContainerAndKeyBuilder implements Builder<ContainerAndKey> {
     }
 
     /**
-     *  <p>Namespace to group Custom Objects.</p>
+     *  <p>Namespace to group <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomObject" rel="nofollow">Custom Objects</a>.</p>
      * @param container value to be set
      * @return Builder
      */
@@ -58,7 +58,7 @@ public class ContainerAndKeyBuilder implements Builder<ContainerAndKey> {
     }
 
     /**
-     *  <p>Namespace to group Custom Objects.</p>
+     *  <p>Namespace to group <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomObject" rel="nofollow">Custom Objects</a>.</p>
      * @return container
      */
 

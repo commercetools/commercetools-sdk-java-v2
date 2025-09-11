@@ -166,7 +166,7 @@ public class RecurringOrderImpl implements RecurringOrder, ModelBase {
     }
 
     /**
-     *  <p>Reference to the Cart for a RecurringOrder. The referenced Cart will have the <code>RecurringOrder</code> CartOrigin.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Cart for a RecurringOrder. The referenced Cart will have the <code>RecurringOrder</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:CartOrigin" rel="nofollow">CartOrigin</a>.</p>
      */
 
     public com.commercetools.api.models.cart.CartReference getCart() {
@@ -174,7 +174,7 @@ public class RecurringOrderImpl implements RecurringOrder, ModelBase {
     }
 
     /**
-     *  <p>Reference to the original Order that generated this RecurringOrder.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the original <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that generated this RecurringOrder.</p>
      */
 
     public com.commercetools.api.models.order.OrderReference getOriginOrder() {
@@ -230,7 +230,7 @@ public class RecurringOrderImpl implements RecurringOrder, ModelBase {
     }
 
     /**
-     *  <p>Reference to a Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Store.</p>
      */
 
     public com.commercetools.api.models.store.StoreKeyReference getStore() {
@@ -238,7 +238,7 @@ public class RecurringOrderImpl implements RecurringOrder, ModelBase {
     }
 
     /**
-     *  <p>Reference to the Business Unit that the RecurringOrder belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Business Unit that the RecurringOrder belongs to.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
@@ -246,7 +246,7 @@ public class RecurringOrderImpl implements RecurringOrder, ModelBase {
     }
 
     /**
-     *  <p>State of the RecurringOrder in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the RecurringOrder in a custom workflow.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -270,7 +270,7 @@ public class RecurringOrderImpl implements RecurringOrder, ModelBase {
     }
 
     /**
-     *  <p>The Customer that the RecurringOrder belongs to.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that the RecurringOrder belongs to.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {

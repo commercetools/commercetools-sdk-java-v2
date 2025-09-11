@@ -52,7 +52,7 @@ public interface PaymentMethodDraft extends io.vrap.rmf.base.client.Draft<Paymen
 
     /**
      *  <p>Reference to a Customer the PaymentMethod should belong to.</p>
-     *  <p>If <code>businessUnit</code> is set, the Customer must be an Associate of the Business Unit.</p>
+     *  <p>If <code>businessUnit</code> is set, the Customer must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit.</p>
      * @return customer
      */
     @Valid
@@ -61,7 +61,7 @@ public interface PaymentMethodDraft extends io.vrap.rmf.base.client.Draft<Paymen
 
     /**
      *  <p>Reference to a BusinessUnit the PaymentMethod should belong to.</p>
-     *  <p>Only available for B2B-enabled Projects.</p>
+     *  <p>Only available for <span>B2B</span>-enabled Projects.</p>
      * @return businessUnit
      */
     @Valid
@@ -141,7 +141,7 @@ public interface PaymentMethodDraft extends io.vrap.rmf.base.client.Draft<Paymen
 
     /**
      *  <p>Reference to a Customer the PaymentMethod should belong to.</p>
-     *  <p>If <code>businessUnit</code> is set, the Customer must be an Associate of the Business Unit.</p>
+     *  <p>If <code>businessUnit</code> is set, the Customer must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit.</p>
      * @param customer value to be set
      */
 
@@ -149,7 +149,7 @@ public interface PaymentMethodDraft extends io.vrap.rmf.base.client.Draft<Paymen
 
     /**
      *  <p>Reference to a BusinessUnit the PaymentMethod should belong to.</p>
-     *  <p>Only available for B2B-enabled Projects.</p>
+     *  <p>Only available for <span>B2B</span>-enabled Projects.</p>
      * @param businessUnit value to be set
      */
 

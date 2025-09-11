@@ -196,7 +196,7 @@ public class ProductTailoringImageAddedMessageBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -208,7 +208,7 @@ public class ProductTailoringImageAddedMessageBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -353,7 +353,7 @@ public class ProductTailoringImageAddedMessageBuilder implements Builder<Product
     }
 
     /**
-     *  <p><code>id</code> of the tailored ProductVariant.</p>
+     *  <p><code>id</code> of the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -364,7 +364,7 @@ public class ProductTailoringImageAddedMessageBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Image that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      * @param builder function to build the image value
      * @return Builder
      */
@@ -376,7 +376,7 @@ public class ProductTailoringImageAddedMessageBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Image that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      * @param builder function to build the image value
      * @return Builder
      */
@@ -388,7 +388,7 @@ public class ProductTailoringImageAddedMessageBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Image that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      * @param image value to be set
      * @return Builder
      */
@@ -464,7 +464,7 @@ public class ProductTailoringImageAddedMessageBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -520,7 +520,7 @@ public class ProductTailoringImageAddedMessageBuilder implements Builder<Product
     }
 
     /**
-     *  <p><code>id</code> of the tailored ProductVariant.</p>
+     *  <p><code>id</code> of the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return variantId
      */
 
@@ -529,7 +529,7 @@ public class ProductTailoringImageAddedMessageBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Image that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      * @return image
      */
 

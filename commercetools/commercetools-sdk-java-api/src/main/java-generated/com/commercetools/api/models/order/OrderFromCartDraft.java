@@ -36,7 +36,7 @@ import jakarta.validation.constraints.NotNull;
 public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderFromCartDraft> {
 
     /**
-     *  <p><code>id</code> of the Cart used to create the Order.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> used to create the Order.</p>
      * @return id
      */
     @Deprecated
@@ -44,7 +44,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     public String getId();
 
     /**
-     *  <p>ResourceIdentifier to the Cart from which the Order is created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Cart from which the Order is created.</p>
      *  <p>This field is required, but is marked as optional for backwards compatibility reasons.</p>
      * @return cart
      */
@@ -53,7 +53,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     public CartResourceIdentifier getCart();
 
     /**
-     *  <p><code>version</code> of the Cart from which the Order is created.</p>
+     *  <p><code>version</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> from which the Order is created.</p>
      * @return version
      */
     @NotNull
@@ -70,7 +70,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
 
     /**
      *  <p>User-defined identifier for a purchase Order.</p>
-     *  <p>It is typically set by the Buyer and can be used with Quotes to track the purchase Order during the quote and order flow.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> and can be used with <span>Quotes</span> to track the purchase Order during the <span>quote and order flow</span>.</p>
      * @return purchaseOrderNumber
      */
 
@@ -110,10 +110,10 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     public StateResourceIdentifier getState();
 
     /**
-     *  <p>Custom Fields for the Order. The Custom Fields' type must match the Custom Fields' type in the referenced Cart.</p>
+     *  <p>Custom Fields for the Order. The Custom Fields' type must match the Custom Fields' type in the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      *  <ul>
-     *   <li>If empty, the Custom Fields on the referenced Cart are added to the Order automatically.</li>
-     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order.</li>
+     *   <li>If empty, the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> are added to the Order automatically.</li>
+     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> and added to the Order.</li>
      *  </ul>
      * @return custom
      */
@@ -122,14 +122,14 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p><code>id</code> of the Cart used to create the Order.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> used to create the Order.</p>
      * @param id value to be set
      */
     @Deprecated
     public void setId(final String id);
 
     /**
-     *  <p>ResourceIdentifier to the Cart from which the Order is created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Cart from which the Order is created.</p>
      *  <p>This field is required, but is marked as optional for backwards compatibility reasons.</p>
      * @param cart value to be set
      */
@@ -137,7 +137,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     public void setCart(final CartResourceIdentifier cart);
 
     /**
-     *  <p><code>version</code> of the Cart from which the Order is created.</p>
+     *  <p><code>version</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> from which the Order is created.</p>
      * @param version value to be set
      */
 
@@ -152,7 +152,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
 
     /**
      *  <p>User-defined identifier for a purchase Order.</p>
-     *  <p>It is typically set by the Buyer and can be used with Quotes to track the purchase Order during the quote and order flow.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> and can be used with <span>Quotes</span> to track the purchase Order during the <span>quote and order flow</span>.</p>
      * @param purchaseOrderNumber value to be set
      */
 
@@ -187,10 +187,10 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     public void setState(final StateResourceIdentifier state);
 
     /**
-     *  <p>Custom Fields for the Order. The Custom Fields' type must match the Custom Fields' type in the referenced Cart.</p>
+     *  <p>Custom Fields for the Order. The Custom Fields' type must match the Custom Fields' type in the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      *  <ul>
-     *   <li>If empty, the Custom Fields on the referenced Cart are added to the Order automatically.</li>
-     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order.</li>
+     *   <li>If empty, the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> are added to the Order automatically.</li>
+     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> and added to the Order.</li>
      *  </ul>
      * @param custom value to be set
      */

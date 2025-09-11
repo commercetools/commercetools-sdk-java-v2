@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Base representation of an error response containing common fields to all errors.</p>
- *  <p>An error response may contain additional fields depending on the type of an error, for example, <code>attribute</code> in DuplicateAttributeValueError.</p>
+ *  <p>An error response may contain additional fields depending on the type of an error, for example, <code>attribute</code> in <span>DuplicateAttributeValueError</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ErrorObjectImpl implements ErrorObject, ModelBase {

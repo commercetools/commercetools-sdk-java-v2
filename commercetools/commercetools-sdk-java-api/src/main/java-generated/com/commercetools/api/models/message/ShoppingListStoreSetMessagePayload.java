@@ -40,7 +40,7 @@ public interface ShoppingListStoreSetMessagePayload extends MessagePayload {
     String SHOPPING_LIST_STORE_SET = "ShoppingListStoreSet";
 
     /**
-     *  <p>KeyReference to a Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:KeyReference" rel="nofollow">KeyReference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @return store
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface ShoppingListStoreSetMessagePayload extends MessagePayload {
     public StoreKeyReference getStore();
 
     /**
-     *  <p>KeyReference to a Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:KeyReference" rel="nofollow">KeyReference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param store value to be set
      */
 

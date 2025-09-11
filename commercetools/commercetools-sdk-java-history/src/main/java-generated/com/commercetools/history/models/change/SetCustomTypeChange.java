@@ -19,24 +19,24 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set Custom Type on Cart Discounts.</li>
- *   <li>Set Custom Type on Categories.</li>
- *   <li>Set Custom Type on Channels.</li>
- *   <li>Set Custom Type on Customers.</li>
- *   <li>Set Custom Type on Customer Groups.</li>
- *   <li>Set Custom Type on Discount Codes.</li>
- *   <li>Set Custom Type on Inventories.</li>
- *   <li>Set Custom Type on Orders.</li>
- *   <li>Set Custom Type on Order Edits.</li>
- *   <li>Set Custom Type on Staged Orders.</li>
- *   <li>Set Custom Type on Payments.</li>
- *   <li>Set Custom Type on Product Selections.</li>
- *   <li>Set Custom Type on Quotes.</li>
- *   <li>Set Custom Type on Staged Quotes.</li>
- *   <li>Set Custom Type on Quote Requests.</li>
- *   <li>Set Custom Type on Reviews.</li>
- *   <li>Set Custom Type on Shopping Lists.</li>
- *   <li>Set Custom Type on Stores.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountSetCustomTypeAction" rel="nofollow">Set Custom Type</a> on Cart Discounts.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CategorySetCustomTypeAction" rel="nofollow">Set Custom Type</a> on Categories.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelSetCustomTypeAction" rel="nofollow">Set Custom Type</a> on Channels.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomTypeAction" rel="nofollow">Set Custom Type</a> on Customers.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroupSetCustomTypeAction" rel="nofollow">Set Custom Type</a> on Customer Groups.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeSetCustomTypeAction" rel="nofollow">Set Custom Type</a> on Discount Codes.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntrySetCustomTypeAction" rel="nofollow">Set Custom Type</a> on Inventories.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomTypeAction" rel="nofollow">Set Custom Type</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEditSetCustomTypeAction" rel="nofollow">Set Custom Type</a> on Order Edits.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomTypeAction" rel="nofollow">Set Custom Type</a> on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetCustomTypeAction" rel="nofollow">Set Custom Type</a> on Payments.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetCustomTypeAction" rel="nofollow">Set Custom Type</a> on Product Selections.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteSetCustomTypeAction" rel="nofollow">Set Custom Type</a> on Quotes.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteSetCustomTypeAction" rel="nofollow">Set Custom Type</a> on Staged Quotes.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestSetCustomTypeAction" rel="nofollow">Set Custom Type</a> on Quote Requests.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewSetCustomTypeAction" rel="nofollow">Set Custom Type</a> on Reviews.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListSetCustomTypeAction" rel="nofollow">Set Custom Type</a> on Shopping Lists.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetCustomTypeAction" rel="nofollow">Set Custom Type</a> on Stores.</li>
  *  </ul>
  *
  * <hr>

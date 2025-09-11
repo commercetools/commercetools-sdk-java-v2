@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Set Valid To update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteSetValidToAction" rel="nofollow">Set Valid To</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface StagedQuoteValidToSetMessagePayload extends MessagePayload {
     String STAGED_QUOTE_VALID_TO_SET = "StagedQuoteValidToSet";
 
     /**
-     *  <p>Expiration date for the Staged Quote after the Set Valid To update action.</p>
+     *  <p>Expiration date for the Staged Quote after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteSetValidToAction" rel="nofollow">Set Valid To</a> update action.</p>
      * @return validTo
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface StagedQuoteValidToSetMessagePayload extends MessagePayload {
     public ZonedDateTime getValidTo();
 
     /**
-     *  <p>Expiration date for the Staged Quote after the Set Valid To update action.</p>
+     *  <p>Expiration date for the Staged Quote after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteSetValidToAction" rel="nofollow">Set Valid To</a> update action.</p>
      * @param validTo value to be set
      */
 

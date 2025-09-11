@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>If indexing is in progress or if Product Search is inactive, an ObjectNotFound error is returned. If inactive, you can reactivate it.</p>
+ *  <p>If indexing is in progress or if Product Search is inactive, an <a href="https://docs.commercetools.com/apis/ctp:api:type:ObjectNotFoundError" rel="nofollow">ObjectNotFound</a> error is returned. If inactive, you can <span>reactivate</span> it.</p>
  *
  * <hr>
  * <div class=code-example>

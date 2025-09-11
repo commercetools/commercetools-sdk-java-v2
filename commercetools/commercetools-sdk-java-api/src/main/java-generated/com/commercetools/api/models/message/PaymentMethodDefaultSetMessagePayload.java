@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Set Default update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetDefaultAction" rel="nofollow">Set Default</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface PaymentMethodDefaultSetMessagePayload extends MessagePayload {
     String PAYMENT_METHOD_DEFAULT_SET = "PaymentMethodDefaultSet";
 
     /**
-     *  <p>Default Payment Method after the Set Default update action.</p>
+     *  <p>Default Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetDefaultAction" rel="nofollow">Set Default</a> update action.</p>
      * @return default
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface PaymentMethodDefaultSetMessagePayload extends MessagePayload {
     public Boolean getDefault();
 
     /**
-     *  <p>Default Payment Method before the Set Default update action.</p>
+     *  <p>Default Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetDefaultAction" rel="nofollow">Set Default</a> update action.</p>
      * @return oldDefault
      */
     @NotNull
@@ -55,14 +55,14 @@ public interface PaymentMethodDefaultSetMessagePayload extends MessagePayload {
     public Boolean getOldDefault();
 
     /**
-     *  <p>Default Payment Method after the Set Default update action.</p>
+     *  <p>Default Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetDefaultAction" rel="nofollow">Set Default</a> update action.</p>
      * @param _default value to be set
      */
 
     public void setDefault(final Boolean _default);
 
     /**
-     *  <p>Default Payment Method before the Set Default update action.</p>
+     *  <p>Default Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetDefaultAction" rel="nofollow">Set Default</a> update action.</p>
      * @param oldDefault value to be set
      */
 

@@ -28,7 +28,7 @@ public class MyQuoteUpdateBuilder implements Builder<MyQuoteUpdate> {
     private java.util.List<com.commercetools.api.models.me.MyQuoteUpdateAction> actions;
 
     /**
-     *  <p>Expected version of the Quote to which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> to which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class MyQuoteUpdateBuilder implements Builder<MyQuoteUpdate> {
     }
 
     /**
-     *  <p>Update actions to be performed on the Quote.</p>
+     *  <p>Update actions to be performed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a>.</p>
      * @param actions value to be set
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class MyQuoteUpdateBuilder implements Builder<MyQuoteUpdate> {
     }
 
     /**
-     *  <p>Update actions to be performed on the Quote.</p>
+     *  <p>Update actions to be performed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a>.</p>
      * @param actions value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class MyQuoteUpdateBuilder implements Builder<MyQuoteUpdate> {
     }
 
     /**
-     *  <p>Update actions to be performed on the Quote.</p>
+     *  <p>Update actions to be performed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a>.</p>
      * @param actions value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class MyQuoteUpdateBuilder implements Builder<MyQuoteUpdate> {
     }
 
     /**
-     *  <p>Update actions to be performed on the Quote.</p>
+     *  <p>Update actions to be performed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a>.</p>
      * @param builder function to build the actions value
      * @return Builder
      */
@@ -91,7 +91,7 @@ public class MyQuoteUpdateBuilder implements Builder<MyQuoteUpdate> {
     }
 
     /**
-     *  <p>Update actions to be performed on the Quote.</p>
+     *  <p>Update actions to be performed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a>.</p>
      * @param builder function to build the actions value
      * @return Builder
      */
@@ -104,7 +104,7 @@ public class MyQuoteUpdateBuilder implements Builder<MyQuoteUpdate> {
     }
 
     /**
-     *  <p>Expected version of the Quote to which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> to which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @return version
      */
 
@@ -113,7 +113,7 @@ public class MyQuoteUpdateBuilder implements Builder<MyQuoteUpdate> {
     }
 
     /**
-     *  <p>Update actions to be performed on the Quote.</p>
+     *  <p>Update actions to be performed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a>.</p>
      * @return actions
      */
 

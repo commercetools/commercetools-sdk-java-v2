@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Set Schedule update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetScheduleAction" rel="nofollow">Set Schedule</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -48,7 +48,7 @@ public interface RecurringOrderScheduleSetMessage extends Message {
     String RECURRING_ORDER_SCHEDULE_SET = "RecurringOrderScheduleSet";
 
     /**
-     *  <p>Schedule of the Recurring Order after the Set Schedule update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicySchedule" rel="nofollow">Schedule</a> of the Recurring Order after the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetScheduleAction" rel="nofollow">Set Schedule</a> update action.</p>
      * @return recurrencePolicySchedule
      */
     @NotNull
@@ -57,7 +57,7 @@ public interface RecurringOrderScheduleSetMessage extends Message {
     public RecurrencePolicySchedule getRecurrencePolicySchedule();
 
     /**
-     *  <p>Schedule of the Recurring Order before the Set Schedule update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicySchedule" rel="nofollow">Schedule</a> of the Recurring Order before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetScheduleAction" rel="nofollow">Set Schedule</a> update action.</p>
      * @return oldRecurrencePolicySchedule
      */
     @NotNull
@@ -66,14 +66,14 @@ public interface RecurringOrderScheduleSetMessage extends Message {
     public RecurrencePolicySchedule getOldRecurrencePolicySchedule();
 
     /**
-     *  <p>Schedule of the Recurring Order after the Set Schedule update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicySchedule" rel="nofollow">Schedule</a> of the Recurring Order after the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetScheduleAction" rel="nofollow">Set Schedule</a> update action.</p>
      * @param recurrencePolicySchedule value to be set
      */
 
     public void setRecurrencePolicySchedule(final RecurrencePolicySchedule recurrencePolicySchedule);
 
     /**
-     *  <p>Schedule of the Recurring Order before the Set Schedule update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicySchedule" rel="nofollow">Schedule</a> of the Recurring Order before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetScheduleAction" rel="nofollow">Set Schedule</a> update action.</p>
      * @param oldRecurrencePolicySchedule value to be set
      */
 

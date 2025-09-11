@@ -39,6 +39,18 @@ public class InventoryEntryDraftQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, InventoryEntryDraftQueryBuilderDsl::of));
     }
 
+    public LongComparisonPredicateBuilder<InventoryEntryDraftQueryBuilderDsl> minCartQuantity() {
+        return new LongComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("minCartQuantity")),
+            p -> new CombinationQueryPredicate<>(p, InventoryEntryDraftQueryBuilderDsl::of));
+    }
+
+    public LongComparisonPredicateBuilder<InventoryEntryDraftQueryBuilderDsl> maxCartQuantity() {
+        return new LongComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("maxCartQuantity")),
+            p -> new CombinationQueryPredicate<>(p, InventoryEntryDraftQueryBuilderDsl::of));
+    }
+
     public LongComparisonPredicateBuilder<InventoryEntryDraftQueryBuilderDsl> restockableInDays() {
         return new LongComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("restockableInDays")),

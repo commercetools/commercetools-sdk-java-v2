@@ -87,7 +87,28 @@ public class ByProjectKeyRecurrencePoliciesByIDTest {
                         .recurrencePolicies()
                         .withId("test_ID")
                         .post(com.commercetools.api.models.recurrence_policy.RecurrencePolicyUpdate.of())
-                        .createHttpRequest(), "post", "test_projectKey/recurrence-policies/test_ID", } };
+                        .createHttpRequest(), "post", "test_projectKey/recurrence-policies/test_ID", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .recurrencePolicies()
+                                .withId("test_ID")
+                                .delete()
+                                .withVersion(2)
+                                .createHttpRequest(),
+                        "delete", "test_projectKey/recurrence-policies/test_ID?version=2", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .recurrencePolicies()
+                                .withId("test_ID")
+                                .delete()
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "delete", "test_projectKey/recurrence-policies/test_ID?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .recurrencePolicies()
+                        .withId("test_ID")
+                        .delete()
+                        .createHttpRequest(), "delete", "test_projectKey/recurrence-policies/test_ID", } };
     }
 
     public static Object[][] executeMethodParameters() {
@@ -109,6 +130,18 @@ public class ByProjectKeyRecurrencePoliciesByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .recurrencePolicies()
                         .withId("test_ID")
-                        .post(com.commercetools.api.models.recurrence_policy.RecurrencePolicyUpdate.of()), } };
+                        .post(com.commercetools.api.models.recurrence_policy.RecurrencePolicyUpdate.of()), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .recurrencePolicies()
+                        .withId("test_ID")
+                        .delete()
+                        .withVersion(2), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .recurrencePolicies()
+                        .withId("test_ID")
+                        .delete()
+                        .withExpand("expand"), },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").recurrencePolicies().withId("test_ID").delete(), } };
     }
 }

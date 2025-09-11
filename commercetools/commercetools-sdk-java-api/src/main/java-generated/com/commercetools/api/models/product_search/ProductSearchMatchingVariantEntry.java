@@ -32,7 +32,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ProductSearchMatchingVariantEntry {
 
     /**
-     *  <p><code>id</code> of the ProductVariant that matches the search query.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that matches the search query.</p>
      * @return id
      */
     @NotNull
@@ -48,7 +48,7 @@ public interface ProductSearchMatchingVariantEntry {
     public String getSku();
 
     /**
-     *  <p><code>id</code> of the ProductVariant that matches the search query.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that matches the search query.</p>
      * @param id value to be set
      */
 

@@ -35,7 +35,7 @@ public interface CustomerAddShippingAddressIdAction extends CustomerUpdateAction
     String ADD_SHIPPING_ADDRESS_ID = "addShippingAddressId";
 
     /**
-     *  <p><code>id</code> of the Address to become a shipping address.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become a shipping address.</p>
      * @return addressId
      */
 
@@ -43,7 +43,7 @@ public interface CustomerAddShippingAddressIdAction extends CustomerUpdateAction
     public String getAddressId();
 
     /**
-     *  <p><code>key</code> of the Address to become a shipping address.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become a shipping address.</p>
      * @return addressKey
      */
 
@@ -51,14 +51,14 @@ public interface CustomerAddShippingAddressIdAction extends CustomerUpdateAction
     public String getAddressKey();
 
     /**
-     *  <p><code>id</code> of the Address to become a shipping address.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become a shipping address.</p>
      * @param addressId value to be set
      */
 
     public void setAddressId(final String addressId);
 
     /**
-     *  <p><code>key</code> of the Address to become a shipping address.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become a shipping address.</p>
      * @param addressKey value to be set
      */
 

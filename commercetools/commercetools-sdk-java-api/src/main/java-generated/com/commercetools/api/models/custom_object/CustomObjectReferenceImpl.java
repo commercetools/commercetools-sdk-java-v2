@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Reference to a CustomObject.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomObject" rel="nofollow">CustomObject</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomObjectReferenceImpl implements CustomObjectReference, ModelBase {
@@ -56,7 +56,7 @@ public class CustomObjectReferenceImpl implements CustomObjectReference, ModelBa
     }
 
     /**
-     *  <p>Unique identifier of the referenced CustomObject.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomObject" rel="nofollow">CustomObject</a>.</p>
      */
 
     public String getId() {
@@ -64,7 +64,7 @@ public class CustomObjectReferenceImpl implements CustomObjectReference, ModelBa
     }
 
     /**
-     *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
+     *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with <span>Reference Expansion</span> for CustomObjects.</p>
      */
 
     public com.commercetools.api.models.custom_object.CustomObject getObj() {

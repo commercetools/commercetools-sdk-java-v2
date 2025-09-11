@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Remove Address update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitRemoveAddressAction" rel="nofollow">Remove Address</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface BusinessUnitAddressRemovedMessagePayload extends MessagePayload
     String BUSINESS_UNIT_ADDRESS_REMOVED = "BusinessUnitAddressRemoved";
 
     /**
-     *  <p>The address that was removed from the Business Unit.</p>
+     *  <p>The address that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return address
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface BusinessUnitAddressRemovedMessagePayload extends MessagePayload
     public Address getAddress();
 
     /**
-     *  <p>The address that was removed from the Business Unit.</p>
+     *  <p>The address that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param address value to be set
      */
 

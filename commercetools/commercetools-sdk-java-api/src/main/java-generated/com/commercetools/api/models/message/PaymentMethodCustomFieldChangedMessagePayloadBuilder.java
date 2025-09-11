@@ -43,7 +43,7 @@ public class PaymentMethodCustomFieldChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>CustomFieldValue based on the FieldType after the Set CustomField update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class PaymentMethodCustomFieldChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>CustomFieldValue based on the FieldType before the Set CustomField update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
      * @param oldValue value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class PaymentMethodCustomFieldChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>CustomFieldValue based on the FieldType after the Set CustomField update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
      * @return value
      */
 
@@ -83,7 +83,7 @@ public class PaymentMethodCustomFieldChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>CustomFieldValue based on the FieldType before the Set CustomField update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
      * @return oldValue
      */
 

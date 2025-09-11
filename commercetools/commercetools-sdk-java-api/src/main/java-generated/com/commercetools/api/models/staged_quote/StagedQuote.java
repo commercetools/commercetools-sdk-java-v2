@@ -114,7 +114,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     public StagedQuoteState getStagedQuoteState();
 
     /**
-     *  <p>The Buyer who requested the Quote.</p>
+     *  <p>The <span>Buyer</span> who requested the Quote.</p>
      * @return customer
      */
     @Valid
@@ -131,7 +131,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     public QuoteRequestReference getQuoteRequest();
 
     /**
-     *  <p>Cart containing the offered items. May contain either DirectDiscounts or CartDiscounts.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> containing the offered items. May contain either <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">DirectDiscounts</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a>.</p>
      * @return quotationCart
      */
     @NotNull
@@ -148,7 +148,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     public ZonedDateTime getValidTo();
 
     /**
-     *  <p>Message from the Seller included in the offer.</p>
+     *  <p>Message from the <span>Seller</span> included in the offer.</p>
      * @return sellerComment
      */
 
@@ -164,7 +164,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     public CustomFields getCustom();
 
     /**
-     *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      * @return state
      */
     @Valid
@@ -172,7 +172,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     public StateReference getState();
 
     /**
-     *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
+     *  <p>The Purchase Order Number is typically set by the <span>Buyer</span> on a <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> to track the purchase order during the <span>quote and order flow</span>.</p>
      * @return purchaseOrderNumber
      */
 
@@ -180,7 +180,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     public String getPurchaseOrderNumber();
 
     /**
-     *  <p>The BusinessUnit for the Staged Quote. Only available for B2B-enabled Projects.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> for the Staged Quote. Only available for <span>B2B</span>-enabled Projects.</p>
      * @return businessUnit
      */
     @Valid
@@ -188,7 +188,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     public BusinessUnitKeyReference getBusinessUnit();
 
     /**
-     *  <p>The Store to which the Buyer belongs.</p>
+     *  <p>The Store to which the <span>Buyer</span> belongs.</p>
      * @return store
      */
     @Valid
@@ -252,7 +252,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     public void setStagedQuoteState(final StagedQuoteState stagedQuoteState);
 
     /**
-     *  <p>The Buyer who requested the Quote.</p>
+     *  <p>The <span>Buyer</span> who requested the Quote.</p>
      * @param customer value to be set
      */
 
@@ -266,7 +266,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     public void setQuoteRequest(final QuoteRequestReference quoteRequest);
 
     /**
-     *  <p>Cart containing the offered items. May contain either DirectDiscounts or CartDiscounts.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> containing the offered items. May contain either <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">DirectDiscounts</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a>.</p>
      * @param quotationCart value to be set
      */
 
@@ -280,7 +280,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     public void setValidTo(final ZonedDateTime validTo);
 
     /**
-     *  <p>Message from the Seller included in the offer.</p>
+     *  <p>Message from the <span>Seller</span> included in the offer.</p>
      * @param sellerComment value to be set
      */
 
@@ -294,28 +294,28 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     public void setCustom(final CustomFields custom);
 
     /**
-     *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      * @param state value to be set
      */
 
     public void setState(final StateReference state);
 
     /**
-     *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
+     *  <p>The Purchase Order Number is typically set by the <span>Buyer</span> on a <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> to track the purchase order during the <span>quote and order flow</span>.</p>
      * @param purchaseOrderNumber value to be set
      */
 
     public void setPurchaseOrderNumber(final String purchaseOrderNumber);
 
     /**
-     *  <p>The BusinessUnit for the Staged Quote. Only available for B2B-enabled Projects.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> for the Staged Quote. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param businessUnit value to be set
      */
 
     public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);
 
     /**
-     *  <p>The Store to which the Buyer belongs.</p>
+     *  <p>The Store to which the <span>Buyer</span> belongs.</p>
      * @param store value to be set
      */
 

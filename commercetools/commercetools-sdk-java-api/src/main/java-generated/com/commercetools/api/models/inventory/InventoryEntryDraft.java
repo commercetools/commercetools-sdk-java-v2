@@ -38,7 +38,7 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
         com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<InventoryEntryDraft> {
 
     /**
-     *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> <code>sku</code> of the InventoryEntry.</p>
      * @return sku
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>User-defined unique identifier for the InventoryEntry.</p>
-     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing InventoryEntries with the Import API and the Merchant Center.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing InventoryEntries with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
      * @return key
      */
 
@@ -55,7 +55,7 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
     public String getKey();
 
     /**
-     *  <p>Channel that supplies this InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> that supplies this InventoryEntry.</p>
      * @return supplyChannel
      */
     @Valid
@@ -69,6 +69,22 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
     @NotNull
     @JsonProperty("quantityOnStock")
     public Long getQuantityOnStock();
+
+    /**
+     *  <p>Minimum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
+     * @return minCartQuantity
+     */
+
+    @JsonProperty("minCartQuantity")
+    public Integer getMinCartQuantity();
+
+    /**
+     *  <p>Maximum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
+     * @return maxCartQuantity
+     */
+
+    @JsonProperty("maxCartQuantity")
+    public Integer getMaxCartQuantity();
 
     /**
      *  <p>How often the InventoryEntry is restocked (in days).</p>
@@ -95,7 +111,7 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> <code>sku</code> of the InventoryEntry.</p>
      * @param sku value to be set
      */
 
@@ -103,14 +119,14 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>User-defined unique identifier for the InventoryEntry.</p>
-     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing InventoryEntries with the Import API and the Merchant Center.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing InventoryEntries with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>Channel that supplies this InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> that supplies this InventoryEntry.</p>
      * @param supplyChannel value to be set
      */
 
@@ -122,6 +138,20 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
      */
 
     public void setQuantityOnStock(final Long quantityOnStock);
+
+    /**
+     *  <p>Minimum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
+     * @param minCartQuantity value to be set
+     */
+
+    public void setMinCartQuantity(final Integer minCartQuantity);
+
+    /**
+     *  <p>Maximum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
+     * @param maxCartQuantity value to be set
+     */
+
+    public void setMaxCartQuantity(final Integer maxCartQuantity);
 
     /**
      *  <p>How often the InventoryEntry is restocked (in days).</p>
@@ -163,6 +193,8 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
         instance.setKey(template.getKey());
         instance.setSupplyChannel(template.getSupplyChannel());
         instance.setQuantityOnStock(template.getQuantityOnStock());
+        instance.setMinCartQuantity(template.getMinCartQuantity());
+        instance.setMaxCartQuantity(template.getMaxCartQuantity());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setExpectedDelivery(template.getExpectedDelivery());
         instance.setCustom(template.getCustom());
@@ -187,6 +219,8 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
         instance.setSupplyChannel(
             com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
         instance.setQuantityOnStock(template.getQuantityOnStock());
+        instance.setMinCartQuantity(template.getMinCartQuantity());
+        instance.setMaxCartQuantity(template.getMaxCartQuantity());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setExpectedDelivery(template.getExpectedDelivery());
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));

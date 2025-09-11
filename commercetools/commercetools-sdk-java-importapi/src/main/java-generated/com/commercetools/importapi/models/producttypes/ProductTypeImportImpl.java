@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Represents the data used to import a ProductType. Once imported, this data is persisted as a ProductType in the Project.</p>
+ *  <p>Represents the data used to import a ProductType. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a> in the Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeImportImpl implements ProductTypeImport, ModelBase {
@@ -50,7 +50,7 @@ public class ProductTypeImportImpl implements ProductTypeImport, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier. If a ProductType with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      */
 
     public String getKey() {
@@ -74,7 +74,7 @@ public class ProductTypeImportImpl implements ProductTypeImport, ModelBase {
     }
 
     /**
-     *  <p>The <code>attributes</code> of ProductType.</p>
+     *  <p>The <code>attributes</code> of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.producttypes.AttributeDefinition> getAttributes() {

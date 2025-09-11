@@ -17,10 +17,10 @@ import jakarta.validation.constraints.NotNull;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Change Name on Customer Groups.</li>
- *   <li>Change Name on Product Types.</li>
- *   <li>Change Name on Tax Categories.</li>
- *   <li>Change Name on Zones.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroupChangeNameAction" rel="nofollow">Change Name</a> on Customer Groups.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeChangeNameAction" rel="nofollow">Change Name</a> on Product Types.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategoryChangeNameAction" rel="nofollow">Change Name</a> on Tax Categories.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ZoneChangeNameAction" rel="nofollow">Change Name</a> on Zones.</li>
  *  </ul>
  *
  * <hr>

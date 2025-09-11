@@ -25,7 +25,7 @@ public class ApprovalFlowCreatedMessagePayloadBuilder implements Builder<Approva
     private com.commercetools.api.models.approval_flow.ApprovalFlow approvalFlow;
 
     /**
-     *  <p>The Approval Flow that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> that was created.</p>
      * @param builder function to build the approvalFlow value
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class ApprovalFlowCreatedMessagePayloadBuilder implements Builder<Approva
     }
 
     /**
-     *  <p>The Approval Flow that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> that was created.</p>
      * @param builder function to build the approvalFlow value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class ApprovalFlowCreatedMessagePayloadBuilder implements Builder<Approva
     }
 
     /**
-     *  <p>The Approval Flow that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> that was created.</p>
      * @param approvalFlow value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class ApprovalFlowCreatedMessagePayloadBuilder implements Builder<Approva
     }
 
     /**
-     *  <p>The Approval Flow that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> that was created.</p>
      * @return approvalFlow
      */
 

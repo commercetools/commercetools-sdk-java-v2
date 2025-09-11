@@ -20,7 +20,15 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Retrieves the active ShippingMethods that can ship to the given Location. ShippingMethods that have a <code>predicate</code> defined are automatically disqualified. If the <code>currency</code> parameter is given, then the ShippingMethods must also have a rate defined in the specified currency. Each ShippingMethod contains at least one ShippingRate with the flag <code>isMatching</code> set to <code>true</code>. If the <code>currency</code> parameter is given, exactly one ShippingRate will contain it. If a matching ShippingMethod has <code>isDefault</code> set to <code>true</code>, it is returned as the first item in the array.</p>
+ *  <p>Retrieves the active ShippingMethods that can ship to the provided <span>Location</span>.</p>
+ *  <p>The following applies:</p>
+ *  <ul>
+ *   <li>ShippingMethods that have a <code>predicate</code> defined are automatically disqualified.</li>
+ *   <li>If the <code>currency</code> parameter is provided, then the ShippingMethods must also have a rate defined in the specified currency.</li>
+ *   <li>Each ShippingMethod contains at least one ShippingRate with the flag <code>isMatching</code> set to <code>true</code>.</li>
+ *   <li>If the <code>currency</code> parameter is provided, exactly one ShippingRate will contain it.</li>
+ *   <li>If a matching ShippingMethod has <code>isDefault</code> set to <code>true</code>, it is returned as the first item in the array.</li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>

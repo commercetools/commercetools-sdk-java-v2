@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the Add Product update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionAddProductAction" rel="nofollow">Add Product</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -68,7 +68,7 @@ public interface AddProductChange extends Change {
     public Reference getNextValue();
 
     /**
-     *  <p>The Product Variants included in the Product Selection.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variants</a> included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a>.</p>
      * @return variantSelection
      */
     @NotNull
@@ -91,7 +91,7 @@ public interface AddProductChange extends Change {
     public void setNextValue(final Reference nextValue);
 
     /**
-     *  <p>The Product Variants included in the Product Selection.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variants</a> included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a>.</p>
      * @param variantSelection value to be set
      */
 

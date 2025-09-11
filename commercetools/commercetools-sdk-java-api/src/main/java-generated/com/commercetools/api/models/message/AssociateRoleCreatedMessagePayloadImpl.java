@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Create AssociateRole request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/associate-roles:POST" rel="nofollow">Create AssociateRole</a> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssociateRoleCreatedMessagePayloadImpl implements AssociateRoleCreatedMessagePayload, ModelBase {
@@ -52,7 +52,7 @@ public class AssociateRoleCreatedMessagePayloadImpl implements AssociateRoleCrea
     }
 
     /**
-     *  <p>The AssociateRole that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a> that was created.</p>
      */
 
     public com.commercetools.api.models.associate_role.AssociateRole getAssociateRole() {

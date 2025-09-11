@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Reference to a ProductType.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface ProductTypeReference extends Reference, com.commercetools.api.m
     String PRODUCT_TYPE = "product-type";
 
     /**
-     *  <p>Contains the representation of the expanded ProductType. Only present in responses to requests with Reference Expansion for ProductTypes.</p>
+     *  <p>Contains the representation of the expanded ProductType. Only present in responses to requests with <span>Reference Expansion</span> for ProductTypes.</p>
      * @return obj
      */
     @Valid
@@ -49,7 +49,7 @@ public interface ProductTypeReference extends Reference, com.commercetools.api.m
     public ProductType getObj();
 
     /**
-     *  <p>Unique identifier of the referenced ProductType.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>.</p>
      * @return id
      */
     @NotNull
@@ -57,14 +57,14 @@ public interface ProductTypeReference extends Reference, com.commercetools.api.m
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded ProductType. Only present in responses to requests with Reference Expansion for ProductTypes.</p>
+     *  <p>Contains the representation of the expanded ProductType. Only present in responses to requests with <span>Reference Expansion</span> for ProductTypes.</p>
      * @param obj value to be set
      */
 
     public void setObj(final ProductType obj);
 
     /**
-     *  <p>Unique identifier of the referenced ProductType.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>.</p>
      * @param id value to be set
      */
 

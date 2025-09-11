@@ -63,7 +63,7 @@ public class OrderSetCustomLineItemCustomTypeActionImpl implements OrderSetCusto
     }
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      */
 
     public String getCustomLineItemId() {
@@ -71,7 +71,7 @@ public class OrderSetCustomLineItemCustomTypeActionImpl implements OrderSetCusto
     }
 
     /**
-     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      */
 
     public String getCustomLineItemKey() {
@@ -79,7 +79,7 @@ public class OrderSetCustomLineItemCustomTypeActionImpl implements OrderSetCusto
     }
 
     /**
-     *  <p>Defines the Type that extends the Custom Line Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Custom Line Item.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Custom Line Item with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Custom Line Item.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -87,7 +87,7 @@ public class OrderSetCustomLineItemCustomTypeActionImpl implements OrderSetCusto
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Custom Line Item.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Custom Line Item.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

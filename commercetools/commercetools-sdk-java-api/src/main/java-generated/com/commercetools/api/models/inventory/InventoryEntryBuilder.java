@@ -57,6 +57,12 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     private Long availableQuantity;
 
     @Nullable
+    private Integer minCartQuantity;
+
+    @Nullable
+    private Integer maxCartQuantity;
+
+    @Nullable
     private Long restockableInDays;
 
     @Nullable
@@ -192,7 +198,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> <code>sku</code> of the InventoryEntry.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -203,7 +209,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     *  <p>Channel that supplies this InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> that supplies this InventoryEntry.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -215,7 +221,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     *  <p>Channel that supplies this InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> that supplies this InventoryEntry.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -227,7 +233,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     *  <p>Channel that supplies this InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> that supplies this InventoryEntry.</p>
      * @param supplyChannel value to be set
      * @return Builder
      */
@@ -257,6 +263,28 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     public InventoryEntryBuilder availableQuantity(final Long availableQuantity) {
         this.availableQuantity = availableQuantity;
+        return this;
+    }
+
+    /**
+     *  <p>Minimum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
+     * @param minCartQuantity value to be set
+     * @return Builder
+     */
+
+    public InventoryEntryBuilder minCartQuantity(@Nullable final Integer minCartQuantity) {
+        this.minCartQuantity = minCartQuantity;
+        return this;
+    }
+
+    /**
+     *  <p>Maximum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
+     * @param maxCartQuantity value to be set
+     * @return Builder
+     */
+
+    public InventoryEntryBuilder maxCartQuantity(@Nullable final Integer maxCartQuantity) {
+        this.maxCartQuantity = maxCartQuantity;
         return this;
     }
 
@@ -384,7 +412,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> <code>sku</code> of the InventoryEntry.</p>
      * @return sku
      */
 
@@ -393,7 +421,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     *  <p>Channel that supplies this InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> that supplies this InventoryEntry.</p>
      * @return supplyChannel
      */
 
@@ -418,6 +446,26 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     public Long getAvailableQuantity() {
         return this.availableQuantity;
+    }
+
+    /**
+     *  <p>Minimum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
+     * @return minCartQuantity
+     */
+
+    @Nullable
+    public Integer getMinCartQuantity() {
+        return this.minCartQuantity;
+    }
+
+    /**
+     *  <p>Maximum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
+     * @return maxCartQuantity
+     */
+
+    @Nullable
+    public Integer getMaxCartQuantity() {
+        return this.maxCartQuantity;
     }
 
     /**
@@ -463,7 +511,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
         Objects.requireNonNull(quantityOnStock, InventoryEntry.class + ": quantityOnStock is missing");
         Objects.requireNonNull(availableQuantity, InventoryEntry.class + ": availableQuantity is missing");
         return new InventoryEntryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, sku,
-            supplyChannel, quantityOnStock, availableQuantity, restockableInDays, expectedDelivery, custom);
+            supplyChannel, quantityOnStock, availableQuantity, minCartQuantity, maxCartQuantity, restockableInDays,
+            expectedDelivery, custom);
     }
 
     /**
@@ -472,7 +521,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
      */
     public InventoryEntry buildUnchecked() {
         return new InventoryEntryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, sku,
-            supplyChannel, quantityOnStock, availableQuantity, restockableInDays, expectedDelivery, custom);
+            supplyChannel, quantityOnStock, availableQuantity, minCartQuantity, maxCartQuantity, restockableInDays,
+            expectedDelivery, custom);
     }
 
     /**
@@ -501,6 +551,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
         builder.supplyChannel = template.getSupplyChannel();
         builder.quantityOnStock = template.getQuantityOnStock();
         builder.availableQuantity = template.getAvailableQuantity();
+        builder.minCartQuantity = template.getMinCartQuantity();
+        builder.maxCartQuantity = template.getMaxCartQuantity();
         builder.restockableInDays = template.getRestockableInDays();
         builder.expectedDelivery = template.getExpectedDelivery();
         builder.custom = template.getCustom();

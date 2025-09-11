@@ -126,7 +126,7 @@ public class AuthErrorResponseBuilder implements Builder<AuthErrorResponse> {
     }
 
     /**
-     *  <p>Error code as per the OAuth 2.0 specification. For example: <code>"access_denied"</code>.</p>
+     *  <p>Error code as per the <span>OAuth 2.0 specification</span>. For example: <code>"access_denied"</code>.</p>
      * @param error value to be set
      * @return Builder
      */
@@ -175,7 +175,7 @@ public class AuthErrorResponseBuilder implements Builder<AuthErrorResponse> {
     }
 
     /**
-     *  <p>Error code as per the OAuth 2.0 specification. For example: <code>"access_denied"</code>.</p>
+     *  <p>Error code as per the <span>OAuth 2.0 specification</span>. For example: <code>"access_denied"</code>.</p>
      * @return error
      */
 

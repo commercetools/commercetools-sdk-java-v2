@@ -74,7 +74,7 @@ public class ProductTypeDraftImpl implements ProductTypeDraft, ModelBase {
     }
 
     /**
-     *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
+     *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product_type.AttributeDefinitionDraft> getAttributes() {

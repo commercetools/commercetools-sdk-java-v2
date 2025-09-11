@@ -24,7 +24,7 @@ public class AssociateRoleNameSetMessagePayloadBuilder implements Builder<Associ
     private String name;
 
     /**
-     *  <p>Updated name of the AssociateRole.</p>
+     *  <p>Updated name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a>.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class AssociateRoleNameSetMessagePayloadBuilder implements Builder<Associ
     }
 
     /**
-     *  <p>Updated name of the AssociateRole.</p>
+     *  <p>Updated name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a>.</p>
      * @return name
      */
 

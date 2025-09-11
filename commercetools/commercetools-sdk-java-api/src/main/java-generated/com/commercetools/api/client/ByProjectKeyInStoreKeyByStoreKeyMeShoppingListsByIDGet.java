@@ -20,12 +20,12 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Retrieves a ShoppingList with the provided <code>id</code> for the authenticated Customer or anonymous user in a Store. Returns <code>200 OK</code> status if successful.</p>
- *  <p>A ResourceNotFound error is returned in the following scenarios:</p>
+ *  <p>Retrieves a ShoppingList with the provided <code>id</code> for the authenticated Customer or anonymous user in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. Returns <code>200 OK</code> status if successful.</p>
+ *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error is returned in the following scenarios:</p>
  *  <ul>
  *   <li>If no ShoppingList matches the provided <code>id</code> in a Store.</li>
  *   <li>If a ShoppingList matches the provided <code>id</code> but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store.</li>
- *   <li>If a ShoppingList matches the provided <code>id</code> in a Store but does not contain either an <code>anonymousId</code> that matches the anonymous_id:{id} scope, or a <code>customer</code> with <code>id</code> value that matches the customer:{id} scope.</li>
+ *   <li>If a ShoppingList matches the provided <code>id</code> in a Store but does not contain either an <code>anonymousId</code> that matches the <span>anonymous_id:{id}</span> scope, or a <code>customer</code> with <code>id</code> value that matches the <span>customer:{id}</span> scope.</li>
  *  </ul>
  *
  * <hr>

@@ -43,7 +43,7 @@ public class AssetChangeValueImpl implements AssetChangeValue, ModelBase {
     }
 
     /**
-     *  <p><code>id</code> of the Asset.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Asset" rel="nofollow">Asset</a>.</p>
      */
 
     public String getId() {

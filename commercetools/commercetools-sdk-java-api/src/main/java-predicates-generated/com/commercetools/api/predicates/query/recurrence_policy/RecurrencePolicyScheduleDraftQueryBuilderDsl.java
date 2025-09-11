@@ -19,7 +19,7 @@ public class RecurrencePolicyScheduleDraftQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, RecurrencePolicyScheduleDraftQueryBuilderDsl::of));
     }
 
-    public CombinationQueryPredicate<RecurrencePolicyScheduleDraftQueryBuilderDsl> asDayOfMonthScheduleDraft(
+    public CombinationQueryPredicate<RecurrencePolicyScheduleDraftQueryBuilderDsl> asDayOfMonth(
             Function<com.commercetools.api.predicates.query.recurrence_policy.DayOfMonthScheduleDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.recurrence_policy.DayOfMonthScheduleDraftQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(

@@ -25,7 +25,7 @@ public class ProductSelectionCreatedMessagePayloadBuilder implements Builder<Pro
     private com.commercetools.api.models.product_selection.ProductSelection productSelection;
 
     /**
-     *  <p>Product Selection that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a> that was created.</p>
      * @param builder function to build the productSelection value
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class ProductSelectionCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>Product Selection that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a> that was created.</p>
      * @param builder function to build the productSelection value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ProductSelectionCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>Product Selection that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a> that was created.</p>
      * @param productSelection value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class ProductSelectionCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>Product Selection that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a> that was created.</p>
      * @return productSelection
      */
 

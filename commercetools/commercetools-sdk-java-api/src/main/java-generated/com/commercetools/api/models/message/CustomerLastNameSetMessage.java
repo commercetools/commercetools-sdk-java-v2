@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Set Last Name update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetLastNameAction" rel="nofollow">Set Last Name</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,7 +42,7 @@ public interface CustomerLastNameSetMessage extends Message {
     String CUSTOMER_LAST_NAME_SET = "CustomerLastNameSet";
 
     /**
-     *  <p>The <code>lastName</code> that was set during the Set Last Name update action.</p>
+     *  <p>The <code>lastName</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetLastNameAction" rel="nofollow">Set Last Name</a> update action.</p>
      * @return lastName
      */
 
@@ -50,7 +50,7 @@ public interface CustomerLastNameSetMessage extends Message {
     public String getLastName();
 
     /**
-     *  <p>The <code>lastName</code> that was set during the Set Last Name update action.</p>
+     *  <p>The <code>lastName</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetLastNameAction" rel="nofollow">Set Last Name</a> update action.</p>
      * @param lastName value to be set
      */
 

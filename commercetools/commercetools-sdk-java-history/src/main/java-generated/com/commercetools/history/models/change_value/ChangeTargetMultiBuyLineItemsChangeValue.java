@@ -51,7 +51,7 @@ public interface ChangeTargetMultiBuyLineItemsChangeValue extends ChangeTargetCh
     public String getType();
 
     /**
-     *  <p>Valid LineItem target predicate.</p>
+     *  <p>Valid <span>LineItem target predicate</span>.</p>
      * @return predicate
      */
     @NotNull
@@ -91,7 +91,7 @@ public interface ChangeTargetMultiBuyLineItemsChangeValue extends ChangeTargetCh
     public SelectionMode getSelectionMode();
 
     /**
-     *  <p>Valid LineItem target predicate.</p>
+     *  <p>Valid <span>LineItem target predicate</span>.</p>
      * @param predicate value to be set
      */
 

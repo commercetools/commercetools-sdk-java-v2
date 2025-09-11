@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Updates the order of localized enum <code>values</code> in an AttributeLocalizedEnumType AttributeDefinition. It can update an AttributeLocalizedEnumType AttributeDefinition or an AttributeSetType of AttributeLocalizedEnumType AttributeDefinition.</p>
+ *  <p>Updates the order of localized enum <code>values</code> in an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumType" rel="nofollow">AttributeLocalizedEnumType</a> AttributeDefinition. It can update an AttributeLocalizedEnumType AttributeDefinition or an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeSetType" rel="nofollow">AttributeSetType</a> of AttributeLocalizedEnumType AttributeDefinition.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -49,7 +49,7 @@ public interface ProductTypeChangeLocalizedEnumValueOrderAction extends ProductT
     public String getAttributeName();
 
     /**
-     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
+     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an <a href="https://docs.commercetools.com/apis/ctp:api:type:EnumValuesMustMatchError" rel="nofollow">EnumValuesMustMatch</a> error is returned.</p>
      * @return values
      */
     @NotNull
@@ -65,7 +65,7 @@ public interface ProductTypeChangeLocalizedEnumValueOrderAction extends ProductT
     public void setAttributeName(final String attributeName);
 
     /**
-     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
+     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an <a href="https://docs.commercetools.com/apis/ctp:api:type:EnumValuesMustMatchError" rel="nofollow">EnumValuesMustMatch</a> error is returned.</p>
      * @param values values to be set
      */
 
@@ -73,7 +73,7 @@ public interface ProductTypeChangeLocalizedEnumValueOrderAction extends ProductT
     public void setValues(final AttributeLocalizedEnumValue... values);
 
     /**
-     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
+     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an <a href="https://docs.commercetools.com/apis/ctp:api:type:EnumValuesMustMatchError" rel="nofollow">EnumValuesMustMatch</a> error is returned.</p>
      * @param values values to be set
      */
 

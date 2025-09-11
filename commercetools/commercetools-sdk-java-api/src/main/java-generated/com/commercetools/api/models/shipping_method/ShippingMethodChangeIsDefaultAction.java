@@ -38,7 +38,7 @@ public interface ShippingMethodChangeIsDefaultAction extends ShippingMethodUpdat
     String CHANGE_IS_DEFAULT = "changeIsDefault";
 
     /**
-     *  <p>Value to set. Only one ShippingMethod can be default in a Project.</p>
+     *  <p>Value to set. Only one ShippingMethod can be default in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return isDefault
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface ShippingMethodChangeIsDefaultAction extends ShippingMethodUpdat
     public Boolean getIsDefault();
 
     /**
-     *  <p>Value to set. Only one ShippingMethod can be default in a Project.</p>
+     *  <p>Value to set. Only one ShippingMethod can be default in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param isDefault value to be set
      */
 

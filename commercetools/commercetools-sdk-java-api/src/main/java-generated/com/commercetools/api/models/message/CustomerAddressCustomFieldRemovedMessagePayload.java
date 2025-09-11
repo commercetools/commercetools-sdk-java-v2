@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after removing a Custom Field from an Address of a Customer using the Set CustomField in Address update action.</p>
+ *  <p>Generated after removing a Custom Field from an Address of a Customer using the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetAddressCustomFieldAction" rel="nofollow">Set CustomField in Address</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -46,7 +46,7 @@ public interface CustomerAddressCustomFieldRemovedMessagePayload extends Message
     public String getName();
 
     /**
-     *  <p><code>id</code> of the Address from which the Custom Field was removed.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> from which the Custom Field was removed.</p>
      * @return addressId
      */
 
@@ -61,7 +61,7 @@ public interface CustomerAddressCustomFieldRemovedMessagePayload extends Message
     public void setName(final String name);
 
     /**
-     *  <p><code>id</code> of the Address from which the Custom Field was removed.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> from which the Custom Field was removed.</p>
      * @param addressId value to be set
      */
 

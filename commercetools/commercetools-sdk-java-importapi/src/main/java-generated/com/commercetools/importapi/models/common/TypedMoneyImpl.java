@@ -79,7 +79,7 @@ public class TypedMoneyImpl implements TypedMoney, ModelBase {
     }
 
     /**
-     *  <p>The currency code compliant to ISO 4217.</p>
+     *  <p>The currency code compliant to <span>ISO 4217</span>.</p>
      */
 
     public String getCurrencyCode() {

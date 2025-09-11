@@ -51,7 +51,7 @@ public class ProductDiscountSetValidUntilActionImpl implements ProductDiscountSe
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. Take <span>Eventual Consistency</span> into account for calculated undiscounted values.</p>
      */
 
     public java.time.ZonedDateTime getValidUntil() {

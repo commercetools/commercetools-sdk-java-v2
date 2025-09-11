@@ -39,7 +39,7 @@ public class TypeImportBuilder implements Builder<TypeImport> {
     private java.util.List<com.commercetools.importapi.models.types.FieldDefinition> fieldDefinitions;
 
     /**
-     *  <p>User-defined unique identifier for the Type. If a Type with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier for the Type. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -252,7 +252,7 @@ public class TypeImportBuilder implements Builder<TypeImport> {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Type. If a Type with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier for the Type. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @return key
      */
 

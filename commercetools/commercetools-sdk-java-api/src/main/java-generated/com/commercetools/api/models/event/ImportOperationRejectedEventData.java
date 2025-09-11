@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The <code>data</code> of the Import Operation Rejected Event.</p>
+ *  <p>The <code>data</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ImportOperationRejectedEvent" rel="nofollow">Import Operation Rejected Event</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

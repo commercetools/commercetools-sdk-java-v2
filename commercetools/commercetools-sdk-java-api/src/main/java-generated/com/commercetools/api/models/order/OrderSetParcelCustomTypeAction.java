@@ -39,7 +39,7 @@ public interface OrderSetParcelCustomTypeAction extends OrderUpdateAction {
     String SET_PARCEL_CUSTOM_TYPE = "setParcelCustomType";
 
     /**
-     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @return parcelId
      */
@@ -48,7 +48,7 @@ public interface OrderSetParcelCustomTypeAction extends OrderUpdateAction {
     public String getParcelId();
 
     /**
-     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @return parcelKey
      */
@@ -57,7 +57,7 @@ public interface OrderSetParcelCustomTypeAction extends OrderUpdateAction {
     public String getParcelKey();
 
     /**
-     *  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Parcel with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
      * @return type
      */
     @Valid
@@ -65,7 +65,7 @@ public interface OrderSetParcelCustomTypeAction extends OrderUpdateAction {
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the Parcel.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Parcel.</p>
      * @return fields
      */
     @Valid
@@ -73,7 +73,7 @@ public interface OrderSetParcelCustomTypeAction extends OrderUpdateAction {
     public FieldContainer getFields();
 
     /**
-     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @param parcelId value to be set
      */
@@ -81,7 +81,7 @@ public interface OrderSetParcelCustomTypeAction extends OrderUpdateAction {
     public void setParcelId(final String parcelId);
 
     /**
-     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @param parcelKey value to be set
      */
@@ -89,14 +89,14 @@ public interface OrderSetParcelCustomTypeAction extends OrderUpdateAction {
     public void setParcelKey(final String parcelKey);
 
     /**
-     *  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Parcel with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields fields for the Parcel.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the Parcel.</p>
      * @param fields value to be set
      */
 

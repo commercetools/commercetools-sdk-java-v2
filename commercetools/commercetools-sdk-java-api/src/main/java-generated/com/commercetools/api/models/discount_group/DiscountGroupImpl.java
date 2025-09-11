@@ -38,6 +38,8 @@ public class DiscountGroupImpl implements DiscountGroup, ModelBase {
 
     private String sortOrder;
 
+    private Boolean isActive;
+
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
 
     private com.commercetools.api.models.common.CreatedBy createdBy;
@@ -52,7 +54,7 @@ public class DiscountGroupImpl implements DiscountGroup, ModelBase {
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("key") final String key,
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,
-            @JsonProperty("sortOrder") final String sortOrder,
+            @JsonProperty("sortOrder") final String sortOrder, @JsonProperty("isActive") final Boolean isActive,
             @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
             @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.id = id;
@@ -63,6 +65,7 @@ public class DiscountGroupImpl implements DiscountGroup, ModelBase {
         this.key = key;
         this.description = description;
         this.sortOrder = sortOrder;
+        this.isActive = isActive;
         this.lastModifiedBy = lastModifiedBy;
         this.createdBy = createdBy;
     }
@@ -139,6 +142,14 @@ public class DiscountGroupImpl implements DiscountGroup, ModelBase {
     }
 
     /**
+     *  <p>A DiscountGroup must be active for its CartDiscounts to be considered during discount application.</p>
+     */
+
+    public Boolean getIsActive() {
+        return this.isActive;
+    }
+
+    /**
      *  <p>IDs and references that last modified the DiscountGroup.</p>
      */
 
@@ -186,6 +197,10 @@ public class DiscountGroupImpl implements DiscountGroup, ModelBase {
         this.sortOrder = sortOrder;
     }
 
+    public void setIsActive(final Boolean isActive) {
+        this.isActive = isActive;
+    }
+
     public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
     }
@@ -212,6 +227,7 @@ public class DiscountGroupImpl implements DiscountGroup, ModelBase {
                 .append(key, that.key)
                 .append(description, that.description)
                 .append(sortOrder, that.sortOrder)
+                .append(isActive, that.isActive)
                 .append(lastModifiedBy, that.lastModifiedBy)
                 .append(createdBy, that.createdBy)
                 .append(id, that.id)
@@ -222,6 +238,7 @@ public class DiscountGroupImpl implements DiscountGroup, ModelBase {
                 .append(key, that.key)
                 .append(description, that.description)
                 .append(sortOrder, that.sortOrder)
+                .append(isActive, that.isActive)
                 .append(lastModifiedBy, that.lastModifiedBy)
                 .append(createdBy, that.createdBy)
                 .isEquals();
@@ -237,6 +254,7 @@ public class DiscountGroupImpl implements DiscountGroup, ModelBase {
                 .append(key)
                 .append(description)
                 .append(sortOrder)
+                .append(isActive)
                 .append(lastModifiedBy)
                 .append(createdBy)
                 .toHashCode();
@@ -252,6 +270,7 @@ public class DiscountGroupImpl implements DiscountGroup, ModelBase {
                 .append("key", key)
                 .append("description", description)
                 .append("sortOrder", sortOrder)
+                .append("isActive", isActive)
                 .append("lastModifiedBy", lastModifiedBy)
                 .append("createdBy", createdBy)
                 .build();

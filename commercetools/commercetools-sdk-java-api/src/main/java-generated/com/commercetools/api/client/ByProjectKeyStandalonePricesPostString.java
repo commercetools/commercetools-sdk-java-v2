@@ -21,10 +21,10 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creating a Standalone Price produces the StandalonePriceCreated Message.</p>
+ *  <p>Creating a Standalone Price produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceCreatedMessage" rel="nofollow">StandalonePriceCreated</a> Message.</p>
  *  <ul>
- *   <li>If the Standalone Price has the same price scope as an existing Standalone Price, a DuplicateStandalonePriceScope error is returned.</li>
- *   <li>If the Standalone Price has overlapping validity periods within the same price scope, a OverlappingStandalonePriceValidity error is returned. A Price without validity period does not conflict with a Price defined for a time period.</li>
+ *   <li>If the Standalone Price has the same price scope as an existing Standalone Price, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateStandalonePriceScopeError" rel="nofollow">DuplicateStandalonePriceScope</a> error is returned.</li>
+ *   <li>If the Standalone Price has overlapping validity periods within the same price scope, a <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingStandalonePriceValidityError" rel="nofollow">OverlappingStandalonePriceValidity</a> error is returned. A Price without validity period does not conflict with a Price defined for a time period.</li>
  *  </ul>
  *
  * <hr>

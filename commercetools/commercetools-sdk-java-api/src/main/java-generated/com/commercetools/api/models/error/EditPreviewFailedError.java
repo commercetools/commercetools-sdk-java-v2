@@ -18,7 +18,7 @@ import jakarta.validation.constraints.NotNull;
 
 /**
  *  <p>Returned when a preview to find an appropriate Shipping Method for an OrderEdit could not be generated.</p>
- *  <p>The error is returned as a failed response to the Get Shipping Methods for an OrderEdit request.</p>
+ *  <p>The error is returned as a failed response to the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-orderedit:GET" rel="nofollow">Get Shipping Methods for an OrderEdit</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

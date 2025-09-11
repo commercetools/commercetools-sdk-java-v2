@@ -11,6 +11,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RecurrencePolicyScheduleDraftBuilder {
 
+    public com.commercetools.api.models.recurrence_policy.DayOfMonthScheduleDraftBuilder dayOfMonthBuilder() {
+        return com.commercetools.api.models.recurrence_policy.DayOfMonthScheduleDraftBuilder.of();
+    }
+
     public com.commercetools.api.models.recurrence_policy.StandardScheduleDraftBuilder standardBuilder() {
         return com.commercetools.api.models.recurrence_policy.StandardScheduleDraftBuilder.of();
     }

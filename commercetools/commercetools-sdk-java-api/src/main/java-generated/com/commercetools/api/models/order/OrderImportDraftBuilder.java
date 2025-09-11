@@ -130,7 +130,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>The <code>id</code> of the Customer the Order belongs to.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> the Order belongs to.</p>
      * @param customerId value to be set
      * @return Builder
      */
@@ -141,7 +141,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>The Email address of the Customer the Order belongs to. Can be used instead of <code>customerId</code> when no check against existing Customers is required.</p>
+     *  <p>The Email address of the Customer the Order belongs to. Can be used instead of <code>customerId</code> when no check against existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customers</a> is required.</p>
      * @param customerEmail value to be set
      * @return Builder
      */
@@ -191,7 +191,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to the Business Unit the Order should belong to. When the <code>customerId</code> of the Order is also set, the Customer must be an Associate of the Business Unit. Only available for B2B-enabled Projects.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Business Unit the Order should belong to. When the <code>customerId</code> of the Order is also set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -205,7 +205,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to the Business Unit the Order should belong to. When the <code>customerId</code> of the Order is also set, the Customer must be an Associate of the Business Unit. Only available for B2B-enabled Projects.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Business Unit the Order should belong to. When the <code>customerId</code> of the Order is also set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -218,7 +218,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to the Business Unit the Order should belong to. When the <code>customerId</code> of the Order is also set, the Customer must be an Associate of the Business Unit. Only available for B2B-enabled Projects.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Business Unit the Order should belong to. When the <code>customerId</code> of the Order is also set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
@@ -230,8 +230,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>The Store the Order belongs to. Used for filtering.</p>
-     *  <p>If a LineItemImportDraft or a CustomLineItemImportDraft specifies a <code>distributionChannel</code> or a <code>supplyChannel</code> that is not defined for the referenced Store, the Order Import gets rejected. The same applies when the provided <code>country</code> is not defined for the referenced Store.</p>
+     *  <p>The Store the Order belongs to. Used for <span>filtering</span>.</p>
+     *  <p>If a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemImportDraft" rel="nofollow">LineItemImportDraft</a> or a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItemImportDraft" rel="nofollow">CustomLineItemImportDraft</a> specifies a <code>distributionChannel</code> or a <code>supplyChannel</code> that is not defined for the referenced Store, the Order Import gets rejected. The same applies when the provided <code>country</code> is not defined for the referenced Store.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -243,8 +243,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>The Store the Order belongs to. Used for filtering.</p>
-     *  <p>If a LineItemImportDraft or a CustomLineItemImportDraft specifies a <code>distributionChannel</code> or a <code>supplyChannel</code> that is not defined for the referenced Store, the Order Import gets rejected. The same applies when the provided <code>country</code> is not defined for the referenced Store.</p>
+     *  <p>The Store the Order belongs to. Used for <span>filtering</span>.</p>
+     *  <p>If a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemImportDraft" rel="nofollow">LineItemImportDraft</a> or a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItemImportDraft" rel="nofollow">CustomLineItemImportDraft</a> specifies a <code>distributionChannel</code> or a <code>supplyChannel</code> that is not defined for the referenced Store, the Order Import gets rejected. The same applies when the provided <code>country</code> is not defined for the referenced Store.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -256,8 +256,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>The Store the Order belongs to. Used for filtering.</p>
-     *  <p>If a LineItemImportDraft or a CustomLineItemImportDraft specifies a <code>distributionChannel</code> or a <code>supplyChannel</code> that is not defined for the referenced Store, the Order Import gets rejected. The same applies when the provided <code>country</code> is not defined for the referenced Store.</p>
+     *  <p>The Store the Order belongs to. Used for <span>filtering</span>.</p>
+     *  <p>If a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemImportDraft" rel="nofollow">LineItemImportDraft</a> or a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItemImportDraft" rel="nofollow">CustomLineItemImportDraft</a> specifies a <code>distributionChannel</code> or a <code>supplyChannel</code> that is not defined for the referenced Store, the Order Import gets rejected. The same applies when the provided <code>country</code> is not defined for the referenced Store.</p>
      * @param store value to be set
      * @return Builder
      */
@@ -269,7 +269,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>Line Items to add to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> to add to the Order.</p>
      *  <p>If not specified, <code>customLineItems</code> must not be empty.</p>
      * @param lineItems value to be set
      * @return Builder
@@ -282,7 +282,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>Line Items to add to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> to add to the Order.</p>
      *  <p>If not specified, <code>customLineItems</code> must not be empty.</p>
      * @param lineItems value to be set
      * @return Builder
@@ -295,7 +295,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>Line Items to add to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> to add to the Order.</p>
      *  <p>If not specified, <code>customLineItems</code> must not be empty.</p>
      * @param lineItems value to be set
      * @return Builder
@@ -311,7 +311,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>Line Items to add to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> to add to the Order.</p>
      *  <p>If not specified, <code>customLineItems</code> must not be empty.</p>
      * @param builder function to build the lineItems value
      * @return Builder
@@ -327,7 +327,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>Line Items to add to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> to add to the Order.</p>
      *  <p>If not specified, <code>customLineItems</code> must not be empty.</p>
      * @param builder function to build the lineItems value
      * @return Builder
@@ -341,7 +341,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>Line Items to add to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> to add to the Order.</p>
      *  <p>If not specified, <code>customLineItems</code> must not be empty.</p>
      * @param builder function to build the lineItems value
      * @return Builder
@@ -353,7 +353,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>Line Items to add to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> to add to the Order.</p>
      *  <p>If not specified, <code>customLineItems</code> must not be empty.</p>
      * @param builder function to build the lineItems value
      * @return Builder
@@ -365,7 +365,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>Custom Line Items to add to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> to add to the Cart.</p>
      *  <p>If not specified, <code>lineItems</code> must not be empty.</p>
      * @param customLineItems value to be set
      * @return Builder
@@ -378,7 +378,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>Custom Line Items to add to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> to add to the Cart.</p>
      *  <p>If not specified, <code>lineItems</code> must not be empty.</p>
      * @param customLineItems value to be set
      * @return Builder
@@ -391,7 +391,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>Custom Line Items to add to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> to add to the Cart.</p>
      *  <p>If not specified, <code>lineItems</code> must not be empty.</p>
      * @param customLineItems value to be set
      * @return Builder
@@ -407,7 +407,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>Custom Line Items to add to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> to add to the Cart.</p>
      *  <p>If not specified, <code>lineItems</code> must not be empty.</p>
      * @param builder function to build the customLineItems value
      * @return Builder
@@ -424,7 +424,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>Custom Line Items to add to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> to add to the Cart.</p>
      *  <p>If not specified, <code>lineItems</code> must not be empty.</p>
      * @param builder function to build the customLineItems value
      * @return Builder
@@ -439,7 +439,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>Custom Line Items to add to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> to add to the Cart.</p>
      *  <p>If not specified, <code>lineItems</code> must not be empty.</p>
      * @param builder function to build the customLineItems value
      * @return Builder
@@ -452,7 +452,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>Custom Line Items to add to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> to add to the Cart.</p>
      *  <p>If not specified, <code>lineItems</code> must not be empty.</p>
      * @param builder function to build the customLineItems value
      * @return Builder
@@ -535,7 +535,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>Determines how the total prices on LineItems and CustomLineItems are rounded when calculated.</p>
+     *  <p>Determines how the total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a> are rounded when calculated.</p>
      * @param priceRoundingMode value to be set
      * @return Builder
      */
@@ -978,7 +978,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>The <code>id</code> of the Customer the Order belongs to.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> the Order belongs to.</p>
      * @return customerId
      */
 
@@ -988,7 +988,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>The Email address of the Customer the Order belongs to. Can be used instead of <code>customerId</code> when no check against existing Customers is required.</p>
+     *  <p>The Email address of the Customer the Order belongs to. Can be used instead of <code>customerId</code> when no check against existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customers</a> is required.</p>
      * @return customerEmail
      */
 
@@ -1008,7 +1008,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to the Business Unit the Order should belong to. When the <code>customerId</code> of the Order is also set, the Customer must be an Associate of the Business Unit. Only available for B2B-enabled Projects.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Business Unit the Order should belong to. When the <code>customerId</code> of the Order is also set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit. Only available for <span>B2B</span>-enabled Projects.</p>
      * @return businessUnit
      */
 
@@ -1018,8 +1018,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>The Store the Order belongs to. Used for filtering.</p>
-     *  <p>If a LineItemImportDraft or a CustomLineItemImportDraft specifies a <code>distributionChannel</code> or a <code>supplyChannel</code> that is not defined for the referenced Store, the Order Import gets rejected. The same applies when the provided <code>country</code> is not defined for the referenced Store.</p>
+     *  <p>The Store the Order belongs to. Used for <span>filtering</span>.</p>
+     *  <p>If a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemImportDraft" rel="nofollow">LineItemImportDraft</a> or a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItemImportDraft" rel="nofollow">CustomLineItemImportDraft</a> specifies a <code>distributionChannel</code> or a <code>supplyChannel</code> that is not defined for the referenced Store, the Order Import gets rejected. The same applies when the provided <code>country</code> is not defined for the referenced Store.</p>
      * @return store
      */
 
@@ -1029,7 +1029,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>Line Items to add to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> to add to the Order.</p>
      *  <p>If not specified, <code>customLineItems</code> must not be empty.</p>
      * @return lineItems
      */
@@ -1040,7 +1040,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>Custom Line Items to add to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> to add to the Cart.</p>
      *  <p>If not specified, <code>lineItems</code> must not be empty.</p>
      * @return customLineItems
      */
@@ -1070,7 +1070,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
-     *  <p>Determines how the total prices on LineItems and CustomLineItems are rounded when calculated.</p>
+     *  <p>Determines how the total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a> are rounded when calculated.</p>
      * @return priceRoundingMode
      */
 

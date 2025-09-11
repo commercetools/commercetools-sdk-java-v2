@@ -15,8 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Removes enum values from an AttributeDefinition of AttributeEnumType, AttributeLocalizedEnumType, AttributeSetType of AttributeEnumType, or AttributeSetType of AttributeLocalizedEnumType.</p>
- *  <p>If the Attribute is <strong>not</strong> required, the Attributes of all Products using those enum keys will also be removed in an eventually consistent way. If the Attribute is required, the operation returns an EnumValueIsUsed error.</p>
+ *  <p>Removes enum values from an AttributeDefinition of <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeEnumType" rel="nofollow">AttributeEnumType</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumType" rel="nofollow">AttributeLocalizedEnumType</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeSetType" rel="nofollow">AttributeSetType</a> of AttributeEnumType, or AttributeSetType of AttributeLocalizedEnumType.</p>
+ *  <p>If the Attribute is <strong>not</strong> required, the Attributes of all Products using those enum keys will also be removed in an <span>eventually consistent</span> way. If the Attribute is required, the operation returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:EnumValueIsUsedError" rel="nofollow">EnumValueIsUsed</a> error.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -48,7 +48,7 @@ public interface ProductTypeRemoveEnumValuesAction extends ProductTypeUpdateActi
     public String getAttributeName();
 
     /**
-     *  <p>Keys of AttributeEnumType or AttributeLocalizedEnumType to remove.</p>
+     *  <p>Keys of <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeEnumType" rel="nofollow">AttributeEnumType</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumType" rel="nofollow">AttributeLocalizedEnumType</a> to remove.</p>
      * @return keys
      */
     @NotNull
@@ -63,7 +63,7 @@ public interface ProductTypeRemoveEnumValuesAction extends ProductTypeUpdateActi
     public void setAttributeName(final String attributeName);
 
     /**
-     *  <p>Keys of AttributeEnumType or AttributeLocalizedEnumType to remove.</p>
+     *  <p>Keys of <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeEnumType" rel="nofollow">AttributeEnumType</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumType" rel="nofollow">AttributeLocalizedEnumType</a> to remove.</p>
      * @param keys values to be set
      */
 
@@ -71,7 +71,7 @@ public interface ProductTypeRemoveEnumValuesAction extends ProductTypeUpdateActi
     public void setKeys(final String... keys);
 
     /**
-     *  <p>Keys of AttributeEnumType or AttributeLocalizedEnumType to remove.</p>
+     *  <p>Keys of <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeEnumType" rel="nofollow">AttributeEnumType</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumType" rel="nofollow">AttributeLocalizedEnumType</a> to remove.</p>
      * @param keys values to be set
      */
 

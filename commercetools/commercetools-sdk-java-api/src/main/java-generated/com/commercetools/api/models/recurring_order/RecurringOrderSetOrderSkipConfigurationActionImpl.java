@@ -57,7 +57,7 @@ public class RecurringOrderSetOrderSkipConfigurationActionImpl
     }
 
     /**
-     *  <p>Configuration for skipping the next orders of the Recurring Order.</p>
+     *  <p>Configuration for skipping the next orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      */
 
     public com.commercetools.api.models.recurring_order.SkipConfigurationDraft getSkipConfiguration() {
@@ -65,7 +65,7 @@ public class RecurringOrderSetOrderSkipConfigurationActionImpl
     }
 
     /**
-     *  <p>Date and time (UTC) the Recurring Order will resume and start to generate new orders.</p>
+     *  <p>Date and time (UTC) the Recurring Order will expire and stop generating new orders.</p>
      */
 
     public java.time.ZonedDateTime getUpdatedExpiresAt() {

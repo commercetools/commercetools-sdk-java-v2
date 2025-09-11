@@ -57,7 +57,7 @@ public class CartDiscountValueAbsoluteDraftImpl implements CartDiscountValueAbso
 
     /**
      *  <p>Money values in different currencies. An absolute Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
-     *  <p>If the array is empty or has multiple values of the same currency, the API returns an InvalidOperation error.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Money> getMoney() {
@@ -65,7 +65,7 @@ public class CartDiscountValueAbsoluteDraftImpl implements CartDiscountValueAbso
     }
 
     /**
-     *  <p>Determines how the discount applies on CartDiscountLineItemTarget and CartDiscountCustomLineItemTarget.</p>
+     *  <p>Determines how the discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountLineItemsTarget" rel="nofollow">CartDiscountLineItemTarget</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemTarget</a>.</p>
      *  <p>If not set, the default behavior is <code>ProportionateDistribution</code>.</p>
      */
 

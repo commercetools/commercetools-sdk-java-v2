@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Remove Billing Address Identifier update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitRemoveBillingAddressIdAction" rel="nofollow">Remove Billing Address Identifier</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitBillingAddressRemovedMessagePayloadImpl
@@ -53,7 +53,7 @@ public class BusinessUnitBillingAddressRemovedMessagePayloadImpl
     }
 
     /**
-     *  <p>The address that was removed from the billing addresses of the Business Unit.</p>
+     *  <p>The address that was removed from the billing addresses of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      */
 
     public com.commercetools.api.models.common.Address getAddress() {

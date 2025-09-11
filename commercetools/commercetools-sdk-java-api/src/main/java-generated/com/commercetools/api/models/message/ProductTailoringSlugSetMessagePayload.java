@@ -19,7 +19,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Product Tailoring Set Slug update action.</p>
+ *  <p>Generated after a successful Product Tailoring <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetSlugAction" rel="nofollow">Set Slug</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -69,7 +69,7 @@ public interface ProductTailoringSlugSetMessagePayload extends MessagePayload {
     public ProductReference getProduct();
 
     /**
-     *  <p>The slug of the Product Tailoring after the Set Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetSlugAction" rel="nofollow">Set Slug</a> update action.</p>
      * @return slug
      */
     @Valid
@@ -77,7 +77,7 @@ public interface ProductTailoringSlugSetMessagePayload extends MessagePayload {
     public LocalizedString getSlug();
 
     /**
-     *  <p>The slug of the ProductTailoring before the Set Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetSlugAction" rel="nofollow">Set Slug</a> update action.</p>
      * @return oldSlug
      */
     @Valid
@@ -106,14 +106,14 @@ public interface ProductTailoringSlugSetMessagePayload extends MessagePayload {
     public void setProduct(final ProductReference product);
 
     /**
-     *  <p>The slug of the Product Tailoring after the Set Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetSlugAction" rel="nofollow">Set Slug</a> update action.</p>
      * @param slug value to be set
      */
 
     public void setSlug(final LocalizedString slug);
 
     /**
-     *  <p>The slug of the ProductTailoring before the Set Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetSlugAction" rel="nofollow">Set Slug</a> update action.</p>
      * @param oldSlug value to be set
      */
 

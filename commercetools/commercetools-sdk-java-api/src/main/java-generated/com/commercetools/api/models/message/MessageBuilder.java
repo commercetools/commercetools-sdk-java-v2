@@ -331,6 +331,14 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.CustomerDateOfBirthSetMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.CustomerDefaultBillingAddressSetMessageBuilder customerDefaultBillingAddressSetBuilder() {
+        return com.commercetools.api.models.message.CustomerDefaultBillingAddressSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerDefaultShippingAddressSetMessageBuilder customerDefaultShippingAddressSetBuilder() {
+        return com.commercetools.api.models.message.CustomerDefaultShippingAddressSetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.CustomerDeletedMessageBuilder customerDeletedBuilder() {
         return com.commercetools.api.models.message.CustomerDeletedMessageBuilder.of();
     }
@@ -399,6 +407,10 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.CustomerPasswordUpdatedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.CustomerStoresSetMessageBuilder customerStoresSetBuilder() {
+        return com.commercetools.api.models.message.CustomerStoresSetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.CustomerTitleSetMessageBuilder customerTitleSetBuilder() {
         return com.commercetools.api.models.message.CustomerTitleSetMessageBuilder.of();
     }
@@ -457,6 +469,10 @@ public class MessageBuilder {
 
     public com.commercetools.api.models.message.DiscountGroupDeletedMessageBuilder discountGroupDeletedBuilder() {
         return com.commercetools.api.models.message.DiscountGroupDeletedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.DiscountGroupIsActiveSetMessageBuilder discountGroupIsActiveSetBuilder() {
+        return com.commercetools.api.models.message.DiscountGroupIsActiveSetMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.DiscountGroupKeySetMessageBuilder discountGroupKeySetBuilder() {
@@ -1013,6 +1029,14 @@ public class MessageBuilder {
 
     public com.commercetools.api.models.message.RecurringOrderCustomTypeSetMessageBuilder recurringOrderCustomTypeSetBuilder() {
         return com.commercetools.api.models.message.RecurringOrderCustomTypeSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.RecurringOrderDeletedMessageBuilder recurringOrderDeletedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderDeletedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.RecurringOrderExpiresAtSetMessageBuilder recurringOrderExpiresAtSetBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderExpiresAtSetMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.RecurringOrderKeySetMessageBuilder recurringOrderKeySetBuilder() {

@@ -77,7 +77,7 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
     }
 
     /**
-     *  <p><code>id</code> of the Delivery to which the Parcel was added.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> to which the Parcel was added.</p>
      * @param deliveryId value to be set
      * @return Builder
      */
@@ -106,7 +106,7 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
     }
 
     /**
-     *  <p><code>id</code> of the Delivery to which the Parcel was added.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> to which the Parcel was added.</p>
      * @return deliveryId
      */
 

@@ -31,7 +31,7 @@ import jakarta.validation.Valid;
 public interface SearchIndexingConfiguration {
 
     /**
-     *  <p>Configuration for the Product Projection Search and Search Term Suggestions APIs.</p>
+     *  <p>Configuration for the <span>Product Projection Search</span> and <span>Search Term Suggestions</span> APIs.</p>
      * @return products
      */
     @Valid
@@ -39,7 +39,7 @@ public interface SearchIndexingConfiguration {
     public SearchIndexingConfigurationValues getProducts();
 
     /**
-     *  <p>Configuration for the Product Search feature.</p>
+     *  <p>Configuration for the <span>Product Search</span> feature.</p>
      * @return productsSearch
      */
     @Valid
@@ -47,7 +47,7 @@ public interface SearchIndexingConfiguration {
     public SearchIndexingConfigurationValues getProductsSearch();
 
     /**
-     *  <p>Configuration for the Order Search feature.</p>
+     *  <p>Configuration for the <span>Order Search</span> feature.</p>
      * @return orders
      */
     @Valid
@@ -55,7 +55,7 @@ public interface SearchIndexingConfiguration {
     public SearchIndexingConfigurationValues getOrders();
 
     /**
-     *  <p>Configuration for the Customer Search feature.</p>
+     *  <p>Configuration for the <span>Customer Search</span> feature.</p>
      * @return customers
      */
     @Valid
@@ -63,7 +63,7 @@ public interface SearchIndexingConfiguration {
     public SearchIndexingConfigurationValues getCustomers();
 
     /**
-     *  <p>Configuration for the Business Unit Search feature.</p>
+     *  <p>Configuration for the <span>Business Unit Search</span> feature.</p>
      * @return businessUnits
      */
     @Valid
@@ -71,35 +71,35 @@ public interface SearchIndexingConfiguration {
     public SearchIndexingConfigurationValues getBusinessUnits();
 
     /**
-     *  <p>Configuration for the Product Projection Search and Search Term Suggestions APIs.</p>
+     *  <p>Configuration for the <span>Product Projection Search</span> and <span>Search Term Suggestions</span> APIs.</p>
      * @param products value to be set
      */
 
     public void setProducts(final SearchIndexingConfigurationValues products);
 
     /**
-     *  <p>Configuration for the Product Search feature.</p>
+     *  <p>Configuration for the <span>Product Search</span> feature.</p>
      * @param productsSearch value to be set
      */
 
     public void setProductsSearch(final SearchIndexingConfigurationValues productsSearch);
 
     /**
-     *  <p>Configuration for the Order Search feature.</p>
+     *  <p>Configuration for the <span>Order Search</span> feature.</p>
      * @param orders value to be set
      */
 
     public void setOrders(final SearchIndexingConfigurationValues orders);
 
     /**
-     *  <p>Configuration for the Customer Search feature.</p>
+     *  <p>Configuration for the <span>Customer Search</span> feature.</p>
      * @param customers value to be set
      */
 
     public void setCustomers(final SearchIndexingConfigurationValues customers);
 
     /**
-     *  <p>Configuration for the Business Unit Search feature.</p>
+     *  <p>Configuration for the <span>Business Unit Search</span> feature.</p>
      * @param businessUnits value to be set
      */
 

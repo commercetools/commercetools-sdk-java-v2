@@ -55,7 +55,7 @@ public class TypeChangeLabelActionImpl implements TypeChangeLabelAction, ModelBa
     }
 
     /**
-     *  <p>Name of the Field Definition to update.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">Field Definition</a> to update.</p>
      */
 
     public String getFieldName() {

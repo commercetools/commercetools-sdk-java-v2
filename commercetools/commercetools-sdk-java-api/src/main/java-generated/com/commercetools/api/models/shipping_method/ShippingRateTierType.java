@@ -17,13 +17,13 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ShippingRateTierType extends JsonEnum {
 
     /**
-    <p>CartValueTier based on the total value of the cart.</p> */
+    <p><span>CartValueTier</span> based on the total value of the cart.</p> */
     ShippingRateTierType CART_VALUE = ShippingRateTierTypeEnum.CART_VALUE;
     /**
-    <p>CartClassificationTier based on classifications assigned to the cart.</p> */
+    <p><span>CartClassificationTier</span> based on classifications assigned to the cart.</p> */
     ShippingRateTierType CART_CLASSIFICATION = ShippingRateTierTypeEnum.CART_CLASSIFICATION;
     /**
-    <p>CartScoreTier based on a scoring system applied to the cart.</p> */
+    <p><span>CartScoreTier</span> based on a scoring system applied to the cart.</p> */
     ShippingRateTierType CART_SCORE = ShippingRateTierTypeEnum.CART_SCORE;
 
     /**

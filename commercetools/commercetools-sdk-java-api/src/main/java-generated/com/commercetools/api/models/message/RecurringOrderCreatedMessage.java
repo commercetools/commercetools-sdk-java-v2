@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Create RecurringOrder request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/recurring-orders:POST" rel="nofollow">Create RecurringOrder</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface RecurringOrderCreatedMessage extends Message {
     String RECURRING_ORDER_CREATED = "RecurringOrderCreated";
 
     /**
-     *  <p>RecurringOrder that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was created.</p>
      * @return order
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface RecurringOrderCreatedMessage extends Message {
     public RecurringOrder getOrder();
 
     /**
-     *  <p>RecurringOrder that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was created.</p>
      * @param order value to be set
      */
 

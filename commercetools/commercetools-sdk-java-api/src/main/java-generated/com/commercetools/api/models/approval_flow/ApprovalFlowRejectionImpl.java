@@ -48,7 +48,7 @@ public class ApprovalFlowRejectionImpl implements ApprovalFlowRejection, ModelBa
     }
 
     /**
-     *  <p>Associate who rejected the Approval Flow.</p>
+     *  <p>Associate who rejected the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      */
 
     public com.commercetools.api.models.business_unit.Associate getRejecter() {
@@ -56,7 +56,7 @@ public class ApprovalFlowRejectionImpl implements ApprovalFlowRejection, ModelBa
     }
 
     /**
-     *  <p>Date and time (UTC) the Approval Flow was rejected.</p>
+     *  <p>Date and time (UTC) the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> was rejected.</p>
      */
 
     public java.time.ZonedDateTime getRejectedAt() {
@@ -64,7 +64,7 @@ public class ApprovalFlowRejectionImpl implements ApprovalFlowRejection, ModelBa
     }
 
     /**
-     *  <p>The reason for the rejection of the Approval Flow.</p>
+     *  <p>The reason for the rejection of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      */
 
     public String getReason() {

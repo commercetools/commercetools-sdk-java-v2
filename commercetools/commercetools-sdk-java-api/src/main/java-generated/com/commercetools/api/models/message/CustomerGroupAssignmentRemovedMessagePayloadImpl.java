@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Remove CustomerGroupAssignment update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerRemoveCustomerGroupAssignmentAction" rel="nofollow">Remove CustomerGroupAssignment</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerGroupAssignmentRemovedMessagePayloadImpl
@@ -53,7 +53,7 @@ public class CustomerGroupAssignmentRemovedMessagePayloadImpl
     }
 
     /**
-     *  <p>Customer Group removed during the Remove CustomerGroupAssignment update action.</p>
+     *  <p>Customer Group removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerRemoveCustomerGroupAssignmentAction" rel="nofollow">Remove CustomerGroupAssignment</a> update action.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerGroupAssignment getCustomerGroupAssignment() {

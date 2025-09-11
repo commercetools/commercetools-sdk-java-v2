@@ -160,7 +160,7 @@ public interface Address {
     public String getState();
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Two-digit country code as per <span>ISO 3166-1 alpha-2</span>.</p>
      * @return country
      */
     @NotNull
@@ -347,7 +347,7 @@ public interface Address {
     public void setState(final String state);
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Two-digit country code as per <span>ISO 3166-1 alpha-2</span>.</p>
      * @param country value to be set
      */
 

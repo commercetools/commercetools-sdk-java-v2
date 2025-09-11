@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Produces the ProductRemovedFromCategory Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemovedFromCategoryMessage" rel="nofollow">ProductRemovedFromCategory</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -30,7 +30,7 @@ public class ProductSelectionReferenceBuilder implements Builder<ProductSelectio
     private com.commercetools.api.models.product_selection.ProductSelection obj;
 
     /**
-     *  <p>Unique identifier of the referenced ProductSelection.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">ProductSelection</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ProductSelectionReferenceBuilder implements Builder<ProductSelectio
     }
 
     /**
-     *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>
+     *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with <span>Reference Expansion</span> for ProductSelections.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ProductSelectionReferenceBuilder implements Builder<ProductSelectio
     }
 
     /**
-     *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>
+     *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with <span>Reference Expansion</span> for ProductSelections.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class ProductSelectionReferenceBuilder implements Builder<ProductSelectio
     }
 
     /**
-     *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>
+     *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with <span>Reference Expansion</span> for ProductSelections.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class ProductSelectionReferenceBuilder implements Builder<ProductSelectio
     }
 
     /**
-     *  <p>Unique identifier of the referenced ProductSelection.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">ProductSelection</a>.</p>
      * @return id
      */
 
@@ -86,7 +86,7 @@ public class ProductSelectionReferenceBuilder implements Builder<ProductSelectio
     }
 
     /**
-     *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>
+     *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with <span>Reference Expansion</span> for ProductSelections.</p>
      * @return obj
      */
 

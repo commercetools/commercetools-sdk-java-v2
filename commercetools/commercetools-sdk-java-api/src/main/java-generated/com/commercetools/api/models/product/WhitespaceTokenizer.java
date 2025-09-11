@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Creates tokens by splitting the <code>text</code> field in SearchKeyword by whitespaces.</p>
+ *  <p>Creates tokens by splitting the <code>text</code> field in <a href="https://docs.commercetools.com/apis/ctp:api:type:SearchKeyword" rel="nofollow">SearchKeyword</a> by whitespaces.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

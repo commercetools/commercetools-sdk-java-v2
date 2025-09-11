@@ -38,7 +38,7 @@ public interface ProjectChangeCountryTaxRateFallbackEnabledAction extends Projec
     String CHANGE_COUNTRY_TAX_RATE_FALLBACK_ENABLED = "changeCountryTaxRateFallbackEnabled";
 
     /**
-     *  <p>When <code>true</code>, country <em>- no state</em> Tax Rate is used as fallback. See CartsConfiguration.</p>
+     *  <p>When <code>true</code>, country <em>- no state</em> Tax Rate is used as fallback. See <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">CartsConfiguration</a>.</p>
      * @return countryTaxRateFallbackEnabled
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface ProjectChangeCountryTaxRateFallbackEnabledAction extends Projec
     public Boolean getCountryTaxRateFallbackEnabled();
 
     /**
-     *  <p>When <code>true</code>, country <em>- no state</em> Tax Rate is used as fallback. See CartsConfiguration.</p>
+     *  <p>When <code>true</code>, country <em>- no state</em> Tax Rate is used as fallback. See <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">CartsConfiguration</a>.</p>
      * @param countryTaxRateFallbackEnabled value to be set
      */
 

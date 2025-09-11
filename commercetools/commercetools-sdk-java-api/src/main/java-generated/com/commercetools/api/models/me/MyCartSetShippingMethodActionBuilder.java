@@ -31,7 +31,7 @@ public class MyCartSetShippingMethodActionBuilder implements Builder<MyCartSetSh
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
-     *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param builder function to build the shippingMethod value
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class MyCartSetShippingMethodActionBuilder implements Builder<MyCartSetSh
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
-     *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param builder function to build the shippingMethod value
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class MyCartSetShippingMethodActionBuilder implements Builder<MyCartSetSh
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
-     *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param shippingMethod value to be set
      * @return Builder
      */
@@ -72,7 +72,7 @@ public class MyCartSetShippingMethodActionBuilder implements Builder<MyCartSetSh
     }
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -85,7 +85,7 @@ public class MyCartSetShippingMethodActionBuilder implements Builder<MyCartSetSh
     }
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -97,7 +97,7 @@ public class MyCartSetShippingMethodActionBuilder implements Builder<MyCartSetSh
     }
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param externalTaxRate value to be set
      * @return Builder
      */
@@ -110,7 +110,7 @@ public class MyCartSetShippingMethodActionBuilder implements Builder<MyCartSetSh
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
-     *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return shippingMethod
      */
 
@@ -120,7 +120,7 @@ public class MyCartSetShippingMethodActionBuilder implements Builder<MyCartSetSh
     }
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return externalTaxRate
      */
 

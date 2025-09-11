@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Holds the configuration for the Messages Query feature for the Project.</p>
+ *  <p>Holds the configuration for the <span>Messages Query</span> feature for the Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +32,7 @@ import jakarta.validation.constraints.NotNull;
 public interface MessagesConfiguration {
 
     /**
-     *  <p>When <code>true</code>, the Messages Query feature is active.</p>
+     *  <p>When <code>true</code>, the <span>Messages Query</span> feature is active.</p>
      * @return enabled
      */
     @NotNull
@@ -40,7 +40,7 @@ public interface MessagesConfiguration {
     public Boolean getEnabled();
 
     /**
-     *  <p>Specifies the number of days each Message should be available via the Messages Query API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API. This field may not be present on Projects created before 8 October 2018.</p>
+     *  <p>Specifies the number of days each Message should be available via the <span>Messages Query</span> API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API. This field may not be present on Projects created before 8 October 2018.</p>
      * @return deleteDaysAfterCreation
      */
 
@@ -48,14 +48,14 @@ public interface MessagesConfiguration {
     public Integer getDeleteDaysAfterCreation();
 
     /**
-     *  <p>When <code>true</code>, the Messages Query feature is active.</p>
+     *  <p>When <code>true</code>, the <span>Messages Query</span> feature is active.</p>
      * @param enabled value to be set
      */
 
     public void setEnabled(final Boolean enabled);
 
     /**
-     *  <p>Specifies the number of days each Message should be available via the Messages Query API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API. This field may not be present on Projects created before 8 October 2018.</p>
+     *  <p>Specifies the number of days each Message should be available via the <span>Messages Query</span> API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API. This field may not be present on Projects created before 8 October 2018.</p>
      * @param deleteDaysAfterCreation value to be set
      */
 

@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Returned when an external OAuth Introspection endpoint does not return a response within the time limit, or the response isn't compliant with RFC 7662 (for example, an HTTP status code like <code>500</code>).</p>
+ *  <p>Returned when an <span>external OAuth Introspection endpoint</span> does not return a response within the <span>time limit</span>, or the response isn't compliant with <span>RFC 7662</span> (for example, an HTTP status code like <code>500</code>).</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExternalOAuthFailedErrorImpl implements ExternalOAuthFailedError, ModelBase {

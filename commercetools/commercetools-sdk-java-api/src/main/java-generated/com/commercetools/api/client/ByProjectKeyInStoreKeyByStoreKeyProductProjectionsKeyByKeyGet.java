@@ -20,9 +20,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Gets the current or staged representation of a Product by its key in the specified Store. If the Store has defined some languages, countries, distribution, supply Channels, and/or Product Selection, they are used for projections based on locale, price, and inventory.</p>
- *  <p>If ProductSelection is used, it affects the availability of the Product in the specified Store.</p>
- *  <p>If a ProductTailoring exists for the Product with the given <code>key</code> and the given Store, this endpoint returns the ProductProjection with tailored data.</p>
+ *  <p>Gets the current or staged representation of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> by its key in the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. If the Store has defined some languages, countries, distribution, supply Channels, and/or Product Selection, they are used for projections based on <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionLocales" rel="nofollow">locale</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionPrices" rel="nofollow">price</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionInventoryEntries" rel="nofollow">inventory</a>.</p>
+ *  <p>If <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">ProductSelection</a> is used, it affects the <span>availability of the Product</span> in the specified Store.</p>
+ *  <p>If a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> exists for the Product with the given <code>key</code> and the given Store, this endpoint returns the ProductProjection with tailored data.</p>
  *  <p>When used with an API Client that has the <code>view_published_products:{projectKey}</code> scope, this endpoint only returns published (current) Product Projections.</p>
  *
  * <hr>

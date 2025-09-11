@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface DiscountCodeInfo {
 
     /**
-     *  <p>References a DiscountCode by key. If the referenced DiscountCode does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced DiscountCode is created.</p>
+     *  <p>References a DiscountCode by key. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced DiscountCode is created.</p>
      * @return discountCode
      */
     @NotNull
@@ -51,7 +51,7 @@ public interface DiscountCodeInfo {
     public DiscountCodeState getState();
 
     /**
-     *  <p>References a DiscountCode by key. If the referenced DiscountCode does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced DiscountCode is created.</p>
+     *  <p>References a DiscountCode by key. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced DiscountCode is created.</p>
      * @param discountCode value to be set
      */
 

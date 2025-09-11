@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Create Review request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/reviews:POST" rel="nofollow">Create Review</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface ReviewCreatedMessage extends Message {
     String REVIEW_CREATED = "ReviewCreated";
 
     /**
-     *  <p>Review that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> that was created.</p>
      * @return review
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface ReviewCreatedMessage extends Message {
     public Review getReview();
 
     /**
-     *  <p>Review that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> that was created.</p>
      * @param review value to be set
      */
 

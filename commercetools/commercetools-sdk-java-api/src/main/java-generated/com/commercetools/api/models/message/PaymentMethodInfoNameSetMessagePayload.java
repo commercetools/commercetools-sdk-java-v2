@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Generated after a successful Set MethodInfo Name update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoNameAction" rel="nofollow">Set MethodInfo Name</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface PaymentMethodInfoNameSetMessagePayload extends MessagePayload {
     String PAYMENT_METHOD_INFO_NAME_SET = "PaymentMethodInfoNameSet";
 
     /**
-     *  <p>Name of the Payment Method after the Set MethodInfo Name update action.</p>
+     *  <p>Name of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoNameAction" rel="nofollow">Set MethodInfo Name</a> update action.</p>
      * @return name
      */
     @Valid
@@ -46,7 +46,7 @@ public interface PaymentMethodInfoNameSetMessagePayload extends MessagePayload {
     public LocalizedString getName();
 
     /**
-     *  <p>Name of the Payment Method before the Set MethodInfo Name update action.</p>
+     *  <p>Name of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoNameAction" rel="nofollow">Set MethodInfo Name</a> update action.</p>
      * @return oldName
      */
     @Valid
@@ -54,14 +54,14 @@ public interface PaymentMethodInfoNameSetMessagePayload extends MessagePayload {
     public LocalizedString getOldName();
 
     /**
-     *  <p>Name of the Payment Method after the Set MethodInfo Name update action.</p>
+     *  <p>Name of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoNameAction" rel="nofollow">Set MethodInfo Name</a> update action.</p>
      * @param name value to be set
      */
 
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>Name of the Payment Method before the Set MethodInfo Name update action.</p>
+     *  <p>Name of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoNameAction" rel="nofollow">Set MethodInfo Name</a> update action.</p>
      * @param oldName value to be set
      */
 

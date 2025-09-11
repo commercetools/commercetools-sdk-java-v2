@@ -17,8 +17,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Use this method to create a password reset token for a global Customer during their password reset process.</p>
- *  <p>Creating a password reset token for the Customer produces the CustomerPasswordTokenCreated Message. The Message will include the token's value, if the token's validity is 60 minutes or less.</p>
+ *  <p>Use this method to create a password reset token for a global Customer during their <span>password reset process</span>.</p>
+ *  <p>Creating a password reset token for the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerPasswordTokenCreatedMessage" rel="nofollow">CustomerPasswordTokenCreated</a> Message. The Message will include the token's value, if the token's validity is 60 minutes or less.</p>
  *
  * <hr>
  * <div class=code-example>

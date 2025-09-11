@@ -17,8 +17,8 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>If the Payment has no current State, <code>initial</code> must be <code>true</code> for the new State. If the existing State has transitions set, the new State must be a valid transition. If the existing State has no transitions set, no validations are performed when transitioning to the new State.</p>
- *  <p>Transitioning the State of a Payment produces the PaymentStatusStateTransition Message.</p>
+ *  <p>If the Payment has no current <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>, <code>initial</code> must be <code>true</code> for the new State. If the existing State has transitions set, the new State must be a valid transition. If the existing State has no transitions set, no validations are performed when transitioning to the new State.</p>
+ *  <p>Transitioning the State of a Payment produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentStatusStateTransitionMessage" rel="nofollow">PaymentStatusStateTransition</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface PaymentTransitionStateAction extends PaymentUpdateAction {
     String TRANSITION_STATE = "transitionState";
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      * @return state
      */
     @NotNull
@@ -58,7 +58,7 @@ public interface PaymentTransitionStateAction extends PaymentUpdateAction {
     public Boolean getForce();
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      * @param state value to be set
      */
 

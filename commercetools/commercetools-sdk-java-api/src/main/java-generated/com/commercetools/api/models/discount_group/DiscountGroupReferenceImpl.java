@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Reference to a DiscountGroup.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroup" rel="nofollow">DiscountGroup</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountGroupReferenceImpl implements DiscountGroupReference, ModelBase {
@@ -56,7 +56,7 @@ public class DiscountGroupReferenceImpl implements DiscountGroupReference, Model
     }
 
     /**
-     *  <p>Unique identifier of the referenced DiscountGroup.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroup" rel="nofollow">DiscountGroup</a>.</p>
      */
 
     public String getId() {
@@ -64,7 +64,7 @@ public class DiscountGroupReferenceImpl implements DiscountGroupReference, Model
     }
 
     /**
-     *  <p>Contains the representation of the expanded DiscountGroup. Only present in responses to requests with Reference Expansion for DiscountGroups.</p>
+     *  <p>Contains the representation of the expanded DiscountGroup. Only present in responses to requests with <span>Reference Expansion</span> for DiscountGroups.</p>
      */
 
     public com.commercetools.api.models.discount_group.DiscountGroup getObj() {

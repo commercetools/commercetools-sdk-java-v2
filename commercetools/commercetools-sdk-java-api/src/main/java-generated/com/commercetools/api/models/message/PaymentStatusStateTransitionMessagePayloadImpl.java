@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Transition State update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentStatusStateTransitionMessagePayloadImpl
@@ -57,7 +57,7 @@ public class PaymentStatusStateTransitionMessagePayloadImpl
     }
 
     /**
-     *  <p>State of the Payment after the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -65,7 +65,7 @@ public class PaymentStatusStateTransitionMessagePayloadImpl
     }
 
     /**
-     *  <p>Whether State transition validations were turned off during the Change Transaction State update action.</p>
+     *  <p>Whether <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition validations were turned off during the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentChangeTransactionStateAction" rel="nofollow">Change Transaction State</a> update action.</p>
      */
 
     public Boolean getForce() {

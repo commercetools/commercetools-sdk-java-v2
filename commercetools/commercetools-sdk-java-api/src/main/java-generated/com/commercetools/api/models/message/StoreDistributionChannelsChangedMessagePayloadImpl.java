@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Add Distribution Channel, Remove Distribution Channel, or Set Distribution Channels update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreAddDistributionChannelAction" rel="nofollow">Add Distribution Channel</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreRemoveDistributionChannelAction" rel="nofollow">Remove Distribution Channel</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetDistributionChannelsAction" rel="nofollow">Set Distribution Channels</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreDistributionChannelsChangedMessagePayloadImpl
@@ -57,7 +57,7 @@ public class StoreDistributionChannelsChangedMessagePayloadImpl
     }
 
     /**
-     *  <p>Product distribution Channels that have been added to the Store.</p>
+     *  <p>Product distribution Channels that have been added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getAddedDistributionChannels() {
@@ -65,7 +65,7 @@ public class StoreDistributionChannelsChangedMessagePayloadImpl
     }
 
     /**
-     *  <p>Product distribution Channels that have been removed from the Store.</p>
+     *  <p>Product distribution Channels that have been removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getRemovedDistributionChannels() {

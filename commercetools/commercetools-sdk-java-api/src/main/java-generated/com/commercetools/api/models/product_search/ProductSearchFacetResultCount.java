@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Result of a count facet.</p>
+ *  <p>Result of a <span>count facet</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

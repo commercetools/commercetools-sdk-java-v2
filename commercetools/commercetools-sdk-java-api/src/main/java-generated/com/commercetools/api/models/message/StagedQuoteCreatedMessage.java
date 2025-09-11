@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Create StagedQuote request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/staged-quotes:POST" rel="nofollow">Create StagedQuote</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface StagedQuoteCreatedMessage extends Message {
     String STAGED_QUOTE_CREATED = "StagedQuoteCreated";
 
     /**
-     *  <p>Staged Quote that was created.</p>
+     *  <p><span>Staged Quote</span> that was created.</p>
      * @return stagedQuote
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface StagedQuoteCreatedMessage extends Message {
     public StagedQuote getStagedQuote();
 
     /**
-     *  <p>Staged Quote that was created.</p>
+     *  <p><span>Staged Quote</span> that was created.</p>
      * @param stagedQuote value to be set
      */
 

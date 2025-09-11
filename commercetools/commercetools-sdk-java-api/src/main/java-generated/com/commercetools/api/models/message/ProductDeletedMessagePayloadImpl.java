@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Delete Product request.</p>
+ *  <p>Generated after a successful <span>Delete Product</span> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDeletedMessagePayloadImpl implements ProductDeletedMessagePayload, ModelBase {
@@ -55,7 +55,7 @@ public class ProductDeletedMessagePayloadImpl implements ProductDeletedMessagePa
     }
 
     /**
-     *  <p>List of image URLs that were removed during the Delete Product request.</p>
+     *  <p>List of image URLs that were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Delete Product</a> request.</p>
      */
 
     public java.util.List<String> getRemovedImageUrls() {
@@ -63,7 +63,7 @@ public class ProductDeletedMessagePayloadImpl implements ProductDeletedMessagePa
     }
 
     /**
-     *  <p>Current Product Projection of the deleted Product.</p>
+     *  <p>Current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the deleted <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      */
 
     public com.commercetools.api.models.product.ProductProjection getCurrentProjection() {

@@ -38,7 +38,7 @@ public class ProductTypeRemoveEnumValuesActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Keys of AttributeEnumType or AttributeLocalizedEnumType to remove.</p>
+     *  <p>Keys of <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeEnumType" rel="nofollow">AttributeEnumType</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumType" rel="nofollow">AttributeLocalizedEnumType</a> to remove.</p>
      * @param keys value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class ProductTypeRemoveEnumValuesActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Keys of AttributeEnumType or AttributeLocalizedEnumType to remove.</p>
+     *  <p>Keys of <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeEnumType" rel="nofollow">AttributeEnumType</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumType" rel="nofollow">AttributeLocalizedEnumType</a> to remove.</p>
      * @param keys value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class ProductTypeRemoveEnumValuesActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Keys of AttributeEnumType or AttributeLocalizedEnumType to remove.</p>
+     *  <p>Keys of <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeEnumType" rel="nofollow">AttributeEnumType</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumType" rel="nofollow">AttributeLocalizedEnumType</a> to remove.</p>
      * @param keys value to be set
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class ProductTypeRemoveEnumValuesActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Keys of AttributeEnumType or AttributeLocalizedEnumType to remove.</p>
+     *  <p>Keys of <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeEnumType" rel="nofollow">AttributeEnumType</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumType" rel="nofollow">AttributeLocalizedEnumType</a> to remove.</p>
      * @return keys
      */
 

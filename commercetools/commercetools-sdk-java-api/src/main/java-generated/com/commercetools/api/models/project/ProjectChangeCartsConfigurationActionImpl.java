@@ -52,7 +52,7 @@ public class ProjectChangeCartsConfigurationActionImpl implements ProjectChangeC
     }
 
     /**
-     *  <p>Configuration for the Carts feature.</p>
+     *  <p>Configuration for the <span>Carts</span> feature.</p>
      */
 
     public com.commercetools.api.models.project.CartsConfiguration getCartsConfiguration() {

@@ -63,7 +63,7 @@ public class PaymentStatusImpl implements PaymentStatus, ModelBase {
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {

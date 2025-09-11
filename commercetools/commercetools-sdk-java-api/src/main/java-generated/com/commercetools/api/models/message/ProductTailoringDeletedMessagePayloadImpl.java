@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Delete Product Tailoring or Delete ProductTailoring assigned to Product in Store request.</p>
+ *  <p>Generated after a successful <span>Delete Product Tailoring</span> or <span>Delete ProductTailoring assigned to Product in Store</span> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTailoringDeletedMessagePayloadImpl implements ProductTailoringDeletedMessagePayload, ModelBase {

@@ -55,7 +55,7 @@ public class CustomerRemoveBillingAddressIdActionImpl implements CustomerRemoveB
     }
 
     /**
-     *  <p><code>id</code> of the Address to remove from <code>billingAddressesIds</code>.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>billingAddressesIds</code>.</p>
      */
 
     public String getAddressId() {
@@ -63,7 +63,7 @@ public class CustomerRemoveBillingAddressIdActionImpl implements CustomerRemoveB
     }
 
     /**
-     *  <p><code>key</code> of the Address to remove from <code>billingAddressesIds</code>.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>billingAddressesIds</code>.</p>
      */
 
     public String getAddressKey() {

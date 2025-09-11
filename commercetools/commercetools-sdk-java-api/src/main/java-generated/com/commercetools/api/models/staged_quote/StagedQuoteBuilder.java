@@ -216,7 +216,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>The Buyer who requested the Quote.</p>
+     *  <p>The <span>Buyer</span> who requested the Quote.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -228,7 +228,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>The Buyer who requested the Quote.</p>
+     *  <p>The <span>Buyer</span> who requested the Quote.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -240,7 +240,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>The Buyer who requested the Quote.</p>
+     *  <p>The <span>Buyer</span> who requested the Quote.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -289,7 +289,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>Cart containing the offered items. May contain either DirectDiscounts or CartDiscounts.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> containing the offered items. May contain either <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">DirectDiscounts</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a>.</p>
      * @param builder function to build the quotationCart value
      * @return Builder
      */
@@ -301,7 +301,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>Cart containing the offered items. May contain either DirectDiscounts or CartDiscounts.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> containing the offered items. May contain either <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">DirectDiscounts</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a>.</p>
      * @param builder function to build the quotationCart value
      * @return Builder
      */
@@ -313,7 +313,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>Cart containing the offered items. May contain either DirectDiscounts or CartDiscounts.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> containing the offered items. May contain either <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">DirectDiscounts</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a>.</p>
      * @param quotationCart value to be set
      * @return Builder
      */
@@ -335,7 +335,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>Message from the Seller included in the offer.</p>
+     *  <p>Message from the <span>Seller</span> included in the offer.</p>
      * @param sellerComment value to be set
      * @return Builder
      */
@@ -381,7 +381,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -393,7 +393,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -405,7 +405,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -416,7 +416,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
+     *  <p>The Purchase Order Number is typically set by the <span>Buyer</span> on a <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> to track the purchase order during the <span>quote and order flow</span>.</p>
      * @param purchaseOrderNumber value to be set
      * @return Builder
      */
@@ -427,7 +427,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>The BusinessUnit for the Staged Quote. Only available for B2B-enabled Projects.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> for the Staged Quote. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -441,7 +441,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>The BusinessUnit for the Staged Quote. Only available for B2B-enabled Projects.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> for the Staged Quote. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -454,7 +454,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>The BusinessUnit for the Staged Quote. Only available for B2B-enabled Projects.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> for the Staged Quote. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
@@ -466,7 +466,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>The Store to which the Buyer belongs.</p>
+     *  <p>The Store to which the <span>Buyer</span> belongs.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -478,7 +478,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>The Store to which the Buyer belongs.</p>
+     *  <p>The Store to which the <span>Buyer</span> belongs.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -490,7 +490,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>The Store to which the Buyer belongs.</p>
+     *  <p>The Store to which the <span>Buyer</span> belongs.</p>
      * @param store value to be set
      * @return Builder
      */
@@ -576,7 +576,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>The Buyer who requested the Quote.</p>
+     *  <p>The <span>Buyer</span> who requested the Quote.</p>
      * @return customer
      */
 
@@ -595,7 +595,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>Cart containing the offered items. May contain either DirectDiscounts or CartDiscounts.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> containing the offered items. May contain either <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">DirectDiscounts</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a>.</p>
      * @return quotationCart
      */
 
@@ -614,7 +614,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>Message from the Seller included in the offer.</p>
+     *  <p>Message from the <span>Seller</span> included in the offer.</p>
      * @return sellerComment
      */
 
@@ -634,7 +634,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      * @return state
      */
 
@@ -644,7 +644,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
+     *  <p>The Purchase Order Number is typically set by the <span>Buyer</span> on a <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> to track the purchase order during the <span>quote and order flow</span>.</p>
      * @return purchaseOrderNumber
      */
 
@@ -654,7 +654,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>The BusinessUnit for the Staged Quote. Only available for B2B-enabled Projects.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> for the Staged Quote. Only available for <span>B2B</span>-enabled Projects.</p>
      * @return businessUnit
      */
 
@@ -664,7 +664,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>The Store to which the Buyer belongs.</p>
+     *  <p>The Store to which the <span>Buyer</span> belongs.</p>
      * @return store
      */
 

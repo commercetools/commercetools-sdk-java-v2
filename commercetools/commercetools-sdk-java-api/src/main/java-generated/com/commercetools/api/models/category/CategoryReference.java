@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Reference to a Category.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface CategoryReference extends Reference, com.commercetools.api.mode
     String CATEGORY = "category";
 
     /**
-     *  <p>Contains the representation of the expanded Category. Only present in responses to requests with Reference Expansion for Categories.</p>
+     *  <p>Contains the representation of the expanded Category. Only present in responses to requests with <span>Reference Expansion</span> for Categories.</p>
      * @return obj
      */
     @Valid
@@ -49,7 +49,7 @@ public interface CategoryReference extends Reference, com.commercetools.api.mode
     public Category getObj();
 
     /**
-     *  <p>Unique identifier of the referenced Category.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a>.</p>
      * @return id
      */
     @NotNull
@@ -57,14 +57,14 @@ public interface CategoryReference extends Reference, com.commercetools.api.mode
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded Category. Only present in responses to requests with Reference Expansion for Categories.</p>
+     *  <p>Contains the representation of the expanded Category. Only present in responses to requests with <span>Reference Expansion</span> for Categories.</p>
      * @param obj value to be set
      */
 
     public void setObj(final Category obj);
 
     /**
-     *  <p>Unique identifier of the referenced Category.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a>.</p>
      * @param id value to be set
      */
 

@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Change Email update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -45,7 +45,7 @@ public interface CustomerEmailChangedMessage extends Message {
     String CUSTOMER_EMAIL_CHANGED = "CustomerEmailChanged";
 
     /**
-     *  <p>The <code>email</code> that was set during the Change Email update action.</p>
+     *  <p>The <code>email</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p>
      * @return email
      */
     @NotNull
@@ -53,7 +53,7 @@ public interface CustomerEmailChangedMessage extends Message {
     public String getEmail();
 
     /**
-     *  <p>The <code>email</code> that was set during the Change Email update action.</p>
+     *  <p>The <code>email</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p>
      * @param email value to be set
      */
 

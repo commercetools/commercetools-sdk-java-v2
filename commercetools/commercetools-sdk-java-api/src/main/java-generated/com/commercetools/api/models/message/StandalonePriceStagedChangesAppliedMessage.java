@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Apply Staged Changes update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceApplyStagedChangesAction" rel="nofollow">Apply Staged Changes</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface StandalonePriceStagedChangesAppliedMessage extends Message {
     String STANDALONE_PRICE_STAGED_CHANGES_APPLIED = "StandalonePriceStagedChangesApplied";
 
     /**
-     *  <p>Applied changes of the StandalonePrice after the Apply Staged Changes update action.</p>
+     *  <p>Applied changes of the <span>StandalonePrice</span> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceApplyStagedChangesAction" rel="nofollow">Apply Staged Changes</a> update action.</p>
      * @return stagedChanges
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface StandalonePriceStagedChangesAppliedMessage extends Message {
     public StagedStandalonePrice getStagedChanges();
 
     /**
-     *  <p>Applied changes of the StandalonePrice after the Apply Staged Changes update action.</p>
+     *  <p>Applied changes of the <span>StandalonePrice</span> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceApplyStagedChangesAction" rel="nofollow">Apply Staged Changes</a> update action.</p>
      * @param stagedChanges value to be set
      */
 

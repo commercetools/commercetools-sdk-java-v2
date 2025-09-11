@@ -702,6 +702,22 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for customerDefaultBillingAddressSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerDefaultBillingAddressSetMessagePayloadBuilder customerDefaultBillingAddressSetBuilder() {
+        return com.commercetools.api.models.message.CustomerDefaultBillingAddressSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for customerDefaultShippingAddressSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerDefaultShippingAddressSetMessagePayloadBuilder customerDefaultShippingAddressSetBuilder() {
+        return com.commercetools.api.models.message.CustomerDefaultShippingAddressSetMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for customerDeleted subtype
      * @return builder
      */
@@ -838,6 +854,14 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for customerStoresSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerStoresSetMessagePayloadBuilder customerStoresSetBuilder() {
+        return com.commercetools.api.models.message.CustomerStoresSetMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for customerTitleSet subtype
      * @return builder
      */
@@ -955,6 +979,14 @@ public interface MessagePayload extends MessagePayloadMixin {
      */
     public static com.commercetools.api.models.message.DiscountGroupDeletedMessagePayloadBuilder discountGroupDeletedBuilder() {
         return com.commercetools.api.models.message.DiscountGroupDeletedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for discountGroupIsActiveSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DiscountGroupIsActiveSetMessagePayloadBuilder discountGroupIsActiveSetBuilder() {
+        return com.commercetools.api.models.message.DiscountGroupIsActiveSetMessagePayloadBuilder.of();
     }
 
     /**
@@ -2067,6 +2099,22 @@ public interface MessagePayload extends MessagePayloadMixin {
      */
     public static com.commercetools.api.models.message.RecurringOrderCustomTypeSetMessagePayloadBuilder recurringOrderCustomTypeSetBuilder() {
         return com.commercetools.api.models.message.RecurringOrderCustomTypeSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrderDeleted subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderDeletedMessagePayloadBuilder recurringOrderDeletedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderDeletedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrderExpiresAtSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderExpiresAtSetMessagePayloadBuilder recurringOrderExpiresAtSetBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderExpiresAtSetMessagePayloadBuilder.of();
     }
 
     /**

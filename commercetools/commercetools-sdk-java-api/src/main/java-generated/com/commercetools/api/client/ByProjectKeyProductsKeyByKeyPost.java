@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>A failed response can return a DuplicatePriceScope, DuplicateVariantValues, DuplicateAttributeValue, or DuplicateAttributeValues error.</p>
+ *  <p>A failed response can return a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceScopeError" rel="nofollow">DuplicatePriceScope</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateVariantValuesError" rel="nofollow">DuplicateVariantValues</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateAttributeValueError" rel="nofollow">DuplicateAttributeValue</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateAttributeValuesError" rel="nofollow">DuplicateAttributeValues</a> error.</p>
  *
  * <hr>
  * <div class=code-example>

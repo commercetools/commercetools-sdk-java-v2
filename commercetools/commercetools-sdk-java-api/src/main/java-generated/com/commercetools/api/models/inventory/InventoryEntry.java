@@ -105,7 +105,7 @@ public interface InventoryEntry
     public String getKey();
 
     /**
-     *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> <code>sku</code> of the InventoryEntry.</p>
      * @return sku
      */
     @NotNull
@@ -113,7 +113,7 @@ public interface InventoryEntry
     public String getSku();
 
     /**
-     *  <p>Channel that supplies this InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> that supplies this InventoryEntry.</p>
      * @return supplyChannel
      */
     @Valid
@@ -135,6 +135,22 @@ public interface InventoryEntry
     @NotNull
     @JsonProperty("availableQuantity")
     public Long getAvailableQuantity();
+
+    /**
+     *  <p>Minimum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
+     * @return minCartQuantity
+     */
+
+    @JsonProperty("minCartQuantity")
+    public Integer getMinCartQuantity();
+
+    /**
+     *  <p>Maximum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
+     * @return maxCartQuantity
+     */
+
+    @JsonProperty("maxCartQuantity")
+    public Integer getMaxCartQuantity();
 
     /**
      *  <p>How often the InventoryEntry is restocked (in days).</p>
@@ -210,14 +226,14 @@ public interface InventoryEntry
     public void setKey(final String key);
 
     /**
-     *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> <code>sku</code> of the InventoryEntry.</p>
      * @param sku value to be set
      */
 
     public void setSku(final String sku);
 
     /**
-     *  <p>Channel that supplies this InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> that supplies this InventoryEntry.</p>
      * @param supplyChannel value to be set
      */
 
@@ -236,6 +252,20 @@ public interface InventoryEntry
      */
 
     public void setAvailableQuantity(final Long availableQuantity);
+
+    /**
+     *  <p>Minimum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
+     * @param minCartQuantity value to be set
+     */
+
+    public void setMinCartQuantity(final Integer minCartQuantity);
+
+    /**
+     *  <p>Maximum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
+     * @param maxCartQuantity value to be set
+     */
+
+    public void setMaxCartQuantity(final Integer maxCartQuantity);
 
     /**
      *  <p>How often the InventoryEntry is restocked (in days).</p>
@@ -284,6 +314,8 @@ public interface InventoryEntry
         instance.setSupplyChannel(template.getSupplyChannel());
         instance.setQuantityOnStock(template.getQuantityOnStock());
         instance.setAvailableQuantity(template.getAvailableQuantity());
+        instance.setMinCartQuantity(template.getMinCartQuantity());
+        instance.setMaxCartQuantity(template.getMaxCartQuantity());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setExpectedDelivery(template.getExpectedDelivery());
         instance.setCustom(template.getCustom());
@@ -316,6 +348,8 @@ public interface InventoryEntry
             com.commercetools.api.models.channel.ChannelReference.deepCopy(template.getSupplyChannel()));
         instance.setQuantityOnStock(template.getQuantityOnStock());
         instance.setAvailableQuantity(template.getAvailableQuantity());
+        instance.setMinCartQuantity(template.getMinCartQuantity());
+        instance.setMaxCartQuantity(template.getMaxCartQuantity());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setExpectedDelivery(template.getExpectedDelivery());
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));

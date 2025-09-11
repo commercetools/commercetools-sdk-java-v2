@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Returned when certain API-specific constraints were not met. For example, the specified Discount Code was never applied and cannot be updated.</p>
+ *  <p>Returned when certain API-specific constraints were not met. For example, the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">Discount Code</a> was never applied and cannot be updated.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

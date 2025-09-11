@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Create Payment request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/payments:POST" rel="nofollow">Create Payment</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface PaymentCreatedMessage extends Message {
     String PAYMENT_CREATED = "PaymentCreated";
 
     /**
-     *  <p>Payment that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was created.</p>
      * @return payment
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface PaymentCreatedMessage extends Message {
     public Payment getPayment();
 
     /**
-     *  <p>Payment that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was created.</p>
      * @param payment value to be set
      */
 

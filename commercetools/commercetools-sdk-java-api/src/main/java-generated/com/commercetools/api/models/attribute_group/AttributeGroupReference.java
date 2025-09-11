@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Reference to an AttributeGroup.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeGroup" rel="nofollow">AttributeGroup</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface AttributeGroupReference extends Reference, com.commercetools.ap
     String ATTRIBUTE_GROUP = "attribute-group";
 
     /**
-     *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with Reference Expansion for AttributeGroup.</p>
+     *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with <span>Reference Expansion</span> for AttributeGroup.</p>
      * @return obj
      */
     @Valid
@@ -49,7 +49,7 @@ public interface AttributeGroupReference extends Reference, com.commercetools.ap
     public AttributeGroup getObj();
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced AttributeGroup.</p>
+     *  <p>Platform-generated unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeGroup" rel="nofollow">AttributeGroup</a>.</p>
      * @return id
      */
     @NotNull
@@ -57,14 +57,14 @@ public interface AttributeGroupReference extends Reference, com.commercetools.ap
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with Reference Expansion for AttributeGroup.</p>
+     *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with <span>Reference Expansion</span> for AttributeGroup.</p>
      * @param obj value to be set
      */
 
     public void setObj(final AttributeGroup obj);
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced AttributeGroup.</p>
+     *  <p>Platform-generated unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeGroup" rel="nofollow">AttributeGroup</a>.</p>
      * @param id value to be set
      */
 

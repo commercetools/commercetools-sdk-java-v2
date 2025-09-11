@@ -33,7 +33,7 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>User-defined unique identifier of the Address to be updated.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to be updated.</p>
      * @param addressId value to be set
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
     }
 
     /**
-     *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>address</code> with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
     }
 
     /**
-     *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>address</code> with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
     }
 
     /**
-     *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>address</code> with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <code>address</code>.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <code>address</code>.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -104,7 +104,7 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <code>address</code>.</p>
      * @param fields value to be set
      * @return Builder
      */
@@ -116,7 +116,7 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
     }
 
     /**
-     *  <p>User-defined unique identifier of the Address to be updated.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to be updated.</p>
      * @return addressId
      */
 
@@ -125,7 +125,7 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
     }
 
     /**
-     *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>address</code> with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
      * @return type
      */
 
@@ -135,7 +135,7 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
+     *  <p>Sets the <span>Custom Fields</span> fields for the <code>address</code>.</p>
      * @return fields
      */
 

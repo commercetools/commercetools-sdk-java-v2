@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Deletes a PaymentMethod in the Project. This request generates the PaymentMethodDeleted Message.</p>
+ *  <p>Deletes a PaymentMethod in the Project. This request generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodDeletedMessage" rel="nofollow">PaymentMethodDeleted</a> Message.</p>
  *
  * <hr>
  * <div class=code-example>

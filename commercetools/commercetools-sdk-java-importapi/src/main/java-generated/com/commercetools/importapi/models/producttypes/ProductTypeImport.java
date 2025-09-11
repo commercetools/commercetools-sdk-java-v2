@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Represents the data used to import a ProductType. Once imported, this data is persisted as a ProductType in the Project.</p>
+ *  <p>Represents the data used to import a ProductType. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a> in the Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,7 +37,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ProductTypeImport extends ImportResource {
 
     /**
-     *  <p>User-defined unique identifier. If a ProductType with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @return key
      */
     @NotNull
@@ -61,7 +61,7 @@ public interface ProductTypeImport extends ImportResource {
     public String getDescription();
 
     /**
-     *  <p>The <code>attributes</code> of ProductType.</p>
+     *  <p>The <code>attributes</code> of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>.</p>
      * @return attributes
      */
     @Valid
@@ -69,7 +69,7 @@ public interface ProductTypeImport extends ImportResource {
     public List<AttributeDefinition> getAttributes();
 
     /**
-     *  <p>User-defined unique identifier. If a ProductType with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @param key value to be set
      */
 
@@ -90,7 +90,7 @@ public interface ProductTypeImport extends ImportResource {
     public void setDescription(final String description);
 
     /**
-     *  <p>The <code>attributes</code> of ProductType.</p>
+     *  <p>The <code>attributes</code> of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>.</p>
      * @param attributes values to be set
      */
 
@@ -98,7 +98,7 @@ public interface ProductTypeImport extends ImportResource {
     public void setAttributes(final AttributeDefinition... attributes);
 
     /**
-     *  <p>The <code>attributes</code> of ProductType.</p>
+     *  <p>The <code>attributes</code> of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>.</p>
      * @param attributes values to be set
      */
 

@@ -11,61 +11,69 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>The resource types that can be imported.</p>
+ *  <p>The resource type that can be imported.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ImportResourceType extends JsonEnum {
 
     /**
-    <p>The Category import resource type.</p> */
+    <p>The <span>Business Unit import</span> resource type.</p> */
+    ImportResourceType BUSINESS_UNIT = ImportResourceTypeEnum.BUSINESS_UNIT;
+    /**
+    <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:CategoryImport" rel="nofollow">Category import</a> resource type.</p> */
     ImportResourceType CATEGORY = ImportResourceTypeEnum.CATEGORY;
     /**
-    <p>The Customer import resource type.</p> */
+    <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:CustomerImport" rel="nofollow">Customer import</a> resource type.</p> */
     ImportResourceType CUSTOMER = ImportResourceTypeEnum.CUSTOMER;
     /**
-    <p>The Discount Code import resource type.</p> */
+    <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:DiscountCodeImport" rel="nofollow">Discount Code import</a> resource type.</p> */
     ImportResourceType DISCOUNT_CODE = ImportResourceTypeEnum.DISCOUNT_CODE;
     /**
-    <p>The Inventory import resource type.</p> */
+    <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:InventoryImport" rel="nofollow">Inventory import</a> resource type.</p> */
     ImportResourceType INVENTORY = ImportResourceTypeEnum.INVENTORY;
     /**
-    <p>The Order import resource type.</p> */
+    <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:OrderImport" rel="nofollow">Order import</a> resource type.</p> */
     ImportResourceType ORDER = ImportResourceTypeEnum.ORDER;
     /**
-    <p>The Order patch import resource type.</p> */
+    <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:OrderPatchImport" rel="nofollow">Order patch import</a> resource type.</p> */
     ImportResourceType ORDER_PATCH = ImportResourceTypeEnum.ORDER_PATCH;
     /**
-    <p>The Embedded Price import resource type.</p> */
+    <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:PriceImport" rel="nofollow">Embedded Price import</a> resource type.</p> */
     ImportResourceType PRICE = ImportResourceTypeEnum.PRICE;
     /**
-    <p>The Product import resource type.</p> */
+    <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductImport" rel="nofollow">Product import</a> resource type.</p> */
     ImportResourceType PRODUCT = ImportResourceTypeEnum.PRODUCT;
     /**
-    <p>The Product draft import resource type.</p> */
+    <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductDraftImport" rel="nofollow">Product draft import</a> resource type.</p> */
     ImportResourceType PRODUCT_DRAFT = ImportResourceTypeEnum.PRODUCT_DRAFT;
     /**
-    <p>The Product Selection import resource type.</p> */
+    <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductSelectionImport" rel="nofollow">Product Selection import</a> resource type.</p> */
     ImportResourceType PRODUCT_SELECTION = ImportResourceTypeEnum.PRODUCT_SELECTION;
     /**
-    <p>The Product Type import resource type.</p> */
+    <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductTypeImport" rel="nofollow">Product Type import</a> resource type.</p> */
     ImportResourceType PRODUCT_TYPE = ImportResourceTypeEnum.PRODUCT_TYPE;
     /**
-    <p>The Product Variant import resource type.</p> */
+    <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantImport" rel="nofollow">Product Variant import</a> resource type.</p> */
     ImportResourceType PRODUCT_VARIANT = ImportResourceTypeEnum.PRODUCT_VARIANT;
     /**
-    <p>The Product Variant patch resource type.</p> */
+    <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantPatch" rel="nofollow">Product Variant patch</a> resource type.</p> */
     ImportResourceType PRODUCT_VARIANT_PATCH = ImportResourceTypeEnum.PRODUCT_VARIANT_PATCH;
     /**
-    <p>The Standalone Price import resource type.</p> */
+    <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:StandalonePriceImport" rel="nofollow">Standalone Price import</a> resource type.</p> */
     ImportResourceType STANDALONE_PRICE = ImportResourceTypeEnum.STANDALONE_PRICE;
     /**
-    <p>The Type import resource type.</p> */
+    <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:TypeImport" rel="nofollow">Type import</a> resource type.</p> */
     ImportResourceType TYPE = ImportResourceTypeEnum.TYPE;
 
     /**
      * possible values of ImportResourceType
      */
     enum ImportResourceTypeEnum implements ImportResourceType {
+        /**
+         * business-unit
+         */
+        BUSINESS_UNIT("business-unit"),
+
         /**
          * category
          */

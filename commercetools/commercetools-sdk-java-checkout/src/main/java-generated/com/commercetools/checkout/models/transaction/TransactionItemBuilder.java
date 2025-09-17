@@ -25,12 +25,47 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class TransactionItemBuilder implements Builder<TransactionItem> {
 
     @Nullable
+    private com.commercetools.checkout.models.common.Amount amount;
+
+    @Nullable
     private com.commercetools.checkout.models.payment.PaymentReference payment;
 
     private com.commercetools.checkout.models.payment_integration.PaymentIntegrationReference paymentIntegration;
 
-    @Nullable
-    private com.commercetools.checkout.models.common.Amount amount;
+    /**
+     *  <p>Money value of the Transaction Item.</p>
+     * @param builder function to build the amount value
+     * @return Builder
+     */
+
+    public TransactionItemBuilder amount(
+            Function<com.commercetools.checkout.models.common.AmountBuilder, com.commercetools.checkout.models.common.AmountBuilder> builder) {
+        this.amount = builder.apply(com.commercetools.checkout.models.common.AmountBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Money value of the Transaction Item.</p>
+     * @param builder function to build the amount value
+     * @return Builder
+     */
+
+    public TransactionItemBuilder withAmount(
+            Function<com.commercetools.checkout.models.common.AmountBuilder, com.commercetools.checkout.models.common.Amount> builder) {
+        this.amount = builder.apply(com.commercetools.checkout.models.common.AmountBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Money value of the Transaction Item.</p>
+     * @param amount value to be set
+     * @return Builder
+     */
+
+    public TransactionItemBuilder amount(@Nullable final com.commercetools.checkout.models.common.Amount amount) {
+        this.amount = amount;
+        return this;
+    }
 
     /**
      *  <p>Reference to the <span>Payment</span> associated with the Transaction Item.</p>
@@ -109,37 +144,12 @@ public class TransactionItemBuilder implements Builder<TransactionItem> {
 
     /**
      *  <p>Money value of the Transaction Item.</p>
-     * @param builder function to build the amount value
-     * @return Builder
+     * @return amount
      */
 
-    public TransactionItemBuilder amount(
-            Function<com.commercetools.checkout.models.common.AmountBuilder, com.commercetools.checkout.models.common.AmountBuilder> builder) {
-        this.amount = builder.apply(com.commercetools.checkout.models.common.AmountBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Money value of the Transaction Item.</p>
-     * @param builder function to build the amount value
-     * @return Builder
-     */
-
-    public TransactionItemBuilder withAmount(
-            Function<com.commercetools.checkout.models.common.AmountBuilder, com.commercetools.checkout.models.common.Amount> builder) {
-        this.amount = builder.apply(com.commercetools.checkout.models.common.AmountBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>Money value of the Transaction Item.</p>
-     * @param amount value to be set
-     * @return Builder
-     */
-
-    public TransactionItemBuilder amount(@Nullable final com.commercetools.checkout.models.common.Amount amount) {
-        this.amount = amount;
-        return this;
+    @Nullable
+    public com.commercetools.checkout.models.common.Amount getAmount() {
+        return this.amount;
     }
 
     /**
@@ -162,22 +172,12 @@ public class TransactionItemBuilder implements Builder<TransactionItem> {
     }
 
     /**
-     *  <p>Money value of the Transaction Item.</p>
-     * @return amount
-     */
-
-    @Nullable
-    public com.commercetools.checkout.models.common.Amount getAmount() {
-        return this.amount;
-    }
-
-    /**
      * builds TransactionItem with checking for non-null required values
      * @return TransactionItem
      */
     public TransactionItem build() {
         Objects.requireNonNull(paymentIntegration, TransactionItem.class + ": paymentIntegration is missing");
-        return new TransactionItemImpl(payment, paymentIntegration, amount);
+        return new TransactionItemImpl(amount, payment, paymentIntegration);
     }
 
     /**
@@ -185,7 +185,7 @@ public class TransactionItemBuilder implements Builder<TransactionItem> {
      * @return TransactionItem
      */
     public TransactionItem buildUnchecked() {
-        return new TransactionItemImpl(payment, paymentIntegration, amount);
+        return new TransactionItemImpl(amount, payment, paymentIntegration);
     }
 
     /**
@@ -203,9 +203,9 @@ public class TransactionItemBuilder implements Builder<TransactionItem> {
      */
     public static TransactionItemBuilder of(final TransactionItem template) {
         TransactionItemBuilder builder = new TransactionItemBuilder();
+        builder.amount = template.getAmount();
         builder.payment = template.getPayment();
         builder.paymentIntegration = template.getPaymentIntegration();
-        builder.amount = template.getAmount();
         return builder;
     }
 

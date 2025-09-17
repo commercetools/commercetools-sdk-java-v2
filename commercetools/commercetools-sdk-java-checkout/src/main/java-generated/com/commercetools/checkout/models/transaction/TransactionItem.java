@@ -36,6 +36,14 @@ import jakarta.validation.constraints.NotNull;
 public interface TransactionItem {
 
     /**
+     *  <p>Money value of the Transaction Item.</p>
+     * @return amount
+     */
+    @Valid
+    @JsonProperty("amount")
+    public Amount getAmount();
+
+    /**
      *  <p>Reference to the <span>Payment</span> associated with the Transaction Item.</p>
      * @return payment
      */
@@ -54,11 +62,10 @@ public interface TransactionItem {
 
     /**
      *  <p>Money value of the Transaction Item.</p>
-     * @return amount
+     * @param amount value to be set
      */
-    @Valid
-    @JsonProperty("amount")
-    public Amount getAmount();
+
+    public void setAmount(final Amount amount);
 
     /**
      *  <p>Reference to the <span>Payment</span> associated with the Transaction Item.</p>
@@ -75,13 +82,6 @@ public interface TransactionItem {
     public void setPaymentIntegration(final PaymentIntegrationReference paymentIntegration);
 
     /**
-     *  <p>Money value of the Transaction Item.</p>
-     * @param amount value to be set
-     */
-
-    public void setAmount(final Amount amount);
-
-    /**
      * factory method
      * @return instance of TransactionItem
      */
@@ -96,9 +96,9 @@ public interface TransactionItem {
      */
     public static TransactionItem of(final TransactionItem template) {
         TransactionItemImpl instance = new TransactionItemImpl();
+        instance.setAmount(template.getAmount());
         instance.setPayment(template.getPayment());
         instance.setPaymentIntegration(template.getPaymentIntegration());
-        instance.setAmount(template.getAmount());
         return instance;
     }
 
@@ -115,10 +115,10 @@ public interface TransactionItem {
             return null;
         }
         TransactionItemImpl instance = new TransactionItemImpl();
+        instance.setAmount(com.commercetools.checkout.models.common.Amount.deepCopy(template.getAmount()));
         instance.setPayment(com.commercetools.checkout.models.payment.PaymentReference.deepCopy(template.getPayment()));
         instance.setPaymentIntegration(com.commercetools.checkout.models.payment_integration.PaymentIntegrationReference
                 .deepCopy(template.getPaymentIntegration()));
-        instance.setAmount(com.commercetools.checkout.models.common.Amount.deepCopy(template.getAmount()));
         return instance;
     }
 

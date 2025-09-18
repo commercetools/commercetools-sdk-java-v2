@@ -87,6 +87,14 @@ public interface TransactionDraft extends com.commercetools.api.models.Customiza
     public CustomFieldsDraft getCustom();
 
     /**
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP) in the current transaction.</p>
+     * @return interfaceId
+     */
+
+    @JsonProperty("interfaceId")
+    public String getInterfaceId();
+
+    /**
      *  <p>Date and time (UTC) the Transaction took place.</p>
      * @param timestamp value to be set
      */
@@ -129,6 +137,13 @@ public interface TransactionDraft extends com.commercetools.api.models.Customiza
     public void setCustom(final CustomFieldsDraft custom);
 
     /**
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP) in the current transaction.</p>
+     * @param interfaceId value to be set
+     */
+
+    public void setInterfaceId(final String interfaceId);
+
+    /**
      * factory method
      * @return instance of TransactionDraft
      */
@@ -149,6 +164,7 @@ public interface TransactionDraft extends com.commercetools.api.models.Customiza
         instance.setInteractionId(template.getInteractionId());
         instance.setState(template.getState());
         instance.setCustom(template.getCustom());
+        instance.setInterfaceId(template.getInterfaceId());
         return instance;
     }
 
@@ -171,6 +187,7 @@ public interface TransactionDraft extends com.commercetools.api.models.Customiza
         instance.setInteractionId(template.getInteractionId());
         instance.setState(template.getState());
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setInterfaceId(template.getInterfaceId());
         return instance;
     }
 

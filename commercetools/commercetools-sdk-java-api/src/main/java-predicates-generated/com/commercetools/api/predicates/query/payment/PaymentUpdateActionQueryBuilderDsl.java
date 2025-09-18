@@ -196,6 +196,13 @@ public class PaymentUpdateActionQueryBuilderDsl {
             PaymentUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<PaymentUpdateActionQueryBuilderDsl> asSetTransactionInterfaceId(
+            Function<com.commercetools.api.predicates.query.payment.PaymentSetTransactionInterfaceIdActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.payment.PaymentSetTransactionInterfaceIdActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.payment.PaymentSetTransactionInterfaceIdActionQueryBuilderDsl.of()),
+            PaymentUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<PaymentUpdateActionQueryBuilderDsl> asTransitionState(
             Function<com.commercetools.api.predicates.query.payment.PaymentTransitionStateActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.payment.PaymentTransitionStateActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

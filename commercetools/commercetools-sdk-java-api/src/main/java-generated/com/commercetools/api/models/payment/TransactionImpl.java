@@ -36,6 +36,8 @@ public class TransactionImpl implements Transaction, ModelBase {
 
     private com.commercetools.api.models.type.CustomFields custom;
 
+    private String interfaceId;
+
     /**
      * create instance with all properties
      */
@@ -46,7 +48,8 @@ public class TransactionImpl implements Transaction, ModelBase {
             @JsonProperty("amount") final com.commercetools.api.models.common.CentPrecisionMoney amount,
             @JsonProperty("interactionId") final String interactionId,
             @JsonProperty("state") final com.commercetools.api.models.payment.TransactionState state,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
+            @JsonProperty("interfaceId") final String interfaceId) {
         this.id = id;
         this.timestamp = timestamp;
         this.type = type;
@@ -54,6 +57,7 @@ public class TransactionImpl implements Transaction, ModelBase {
         this.interactionId = interactionId;
         this.state = state;
         this.custom = custom;
+        this.interfaceId = interfaceId;
     }
 
     /**
@@ -118,6 +122,14 @@ public class TransactionImpl implements Transaction, ModelBase {
         return this.custom;
     }
 
+    /**
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP) in the current transaction.</p>
+     */
+
+    public String getInterfaceId() {
+        return this.interfaceId;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -146,6 +158,10 @@ public class TransactionImpl implements Transaction, ModelBase {
         this.custom = custom;
     }
 
+    public void setInterfaceId(final String interfaceId) {
+        this.interfaceId = interfaceId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -163,6 +179,7 @@ public class TransactionImpl implements Transaction, ModelBase {
                 .append(interactionId, that.interactionId)
                 .append(state, that.state)
                 .append(custom, that.custom)
+                .append(interfaceId, that.interfaceId)
                 .append(id, that.id)
                 .append(timestamp, that.timestamp)
                 .append(type, that.type)
@@ -170,6 +187,7 @@ public class TransactionImpl implements Transaction, ModelBase {
                 .append(interactionId, that.interactionId)
                 .append(state, that.state)
                 .append(custom, that.custom)
+                .append(interfaceId, that.interfaceId)
                 .isEquals();
     }
 
@@ -182,6 +200,7 @@ public class TransactionImpl implements Transaction, ModelBase {
                 .append(interactionId)
                 .append(state)
                 .append(custom)
+                .append(interfaceId)
                 .toHashCode();
     }
 
@@ -194,6 +213,7 @@ public class TransactionImpl implements Transaction, ModelBase {
                 .append("interactionId", interactionId)
                 .append("state", state)
                 .append("custom", custom)
+                .append("interfaceId", interfaceId)
                 .build();
     }
 

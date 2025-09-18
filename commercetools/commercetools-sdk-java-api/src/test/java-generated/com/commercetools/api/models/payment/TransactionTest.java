@@ -31,7 +31,8 @@ public class TransactionTest {
                         Transaction.builder()
                                 .state(com.commercetools.api.models.payment.TransactionState.findEnum("Initial")) },
                 new Object[] { "custom",
-                        Transaction.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) } };
+                        Transaction.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
+                new Object[] { "interfaceId", Transaction.builder().interfaceId("interfaceId") } };
     }
 
     @Test
@@ -84,5 +85,12 @@ public class TransactionTest {
         Transaction value = Transaction.of();
         value.setCustom(new com.commercetools.api.models.type.CustomFieldsImpl());
         Assertions.assertThat(value.getCustom()).isEqualTo(new com.commercetools.api.models.type.CustomFieldsImpl());
+    }
+
+    @Test
+    public void interfaceId() {
+        Transaction value = Transaction.of();
+        value.setInterfaceId("interfaceId");
+        Assertions.assertThat(value.getInterfaceId()).isEqualTo("interfaceId");
     }
 }

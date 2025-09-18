@@ -38,6 +38,9 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    @Nullable
+    private String interfaceId;
+
     /**
      *  <p>Date and time (UTC) the Transaction took place.</p>
      * @param timestamp value to be set
@@ -143,6 +146,17 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
     }
 
     /**
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP) in the current transaction.</p>
+     * @param interfaceId value to be set
+     * @return Builder
+     */
+
+    public MyTransactionDraftBuilder interfaceId(@Nullable final String interfaceId) {
+        this.interfaceId = interfaceId;
+        return this;
+    }
+
+    /**
      *  <p>Date and time (UTC) the Transaction took place.</p>
      * @return timestamp
      */
@@ -191,13 +205,23 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
     }
 
     /**
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP) in the current transaction.</p>
+     * @return interfaceId
+     */
+
+    @Nullable
+    public String getInterfaceId() {
+        return this.interfaceId;
+    }
+
+    /**
      * builds MyTransactionDraft with checking for non-null required values
      * @return MyTransactionDraft
      */
     public MyTransactionDraft build() {
         Objects.requireNonNull(type, MyTransactionDraft.class + ": type is missing");
         Objects.requireNonNull(amount, MyTransactionDraft.class + ": amount is missing");
-        return new MyTransactionDraftImpl(timestamp, type, amount, interactionId, custom);
+        return new MyTransactionDraftImpl(timestamp, type, amount, interactionId, custom, interfaceId);
     }
 
     /**
@@ -205,7 +229,7 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
      * @return MyTransactionDraft
      */
     public MyTransactionDraft buildUnchecked() {
-        return new MyTransactionDraftImpl(timestamp, type, amount, interactionId, custom);
+        return new MyTransactionDraftImpl(timestamp, type, amount, interactionId, custom, interfaceId);
     }
 
     /**
@@ -228,6 +252,7 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
         builder.amount = template.getAmount();
         builder.interactionId = template.getInteractionId();
         builder.custom = template.getCustom();
+        builder.interfaceId = template.getInterfaceId();
         return builder;
     }
 

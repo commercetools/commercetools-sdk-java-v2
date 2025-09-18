@@ -1790,6 +1790,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for paymentTransactionInterfaceIdSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentTransactionInterfaceIdSetMessageBuilder paymentTransactionInterfaceIdSetBuilder() {
+        return com.commercetools.api.models.message.PaymentTransactionInterfaceIdSetMessageBuilder.of();
+    }
+
+    /**
      * builder for paymentTransactionStateChanged subtype
      * @return builder
      */

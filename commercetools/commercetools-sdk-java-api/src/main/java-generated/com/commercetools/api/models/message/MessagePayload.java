@@ -1614,6 +1614,14 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for paymentTransactionInterfaceIdSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentTransactionInterfaceIdSetMessagePayloadBuilder paymentTransactionInterfaceIdSetBuilder() {
+        return com.commercetools.api.models.message.PaymentTransactionInterfaceIdSetMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for paymentTransactionStateChanged subtype
      * @return builder
      */

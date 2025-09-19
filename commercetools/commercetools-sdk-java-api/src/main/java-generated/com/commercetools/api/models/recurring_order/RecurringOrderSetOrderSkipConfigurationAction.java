@@ -38,7 +38,7 @@ public interface RecurringOrderSetOrderSkipConfigurationAction extends Recurring
     String SET_ORDER_SKIP_CONFIGURATION = "setOrderSkipConfiguration";
 
     /**
-     *  <p>Configuration for skipping the next orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
+     *  <p>Configuration for skipping future orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @return skipConfiguration
      */
     @Valid
@@ -54,7 +54,7 @@ public interface RecurringOrderSetOrderSkipConfigurationAction extends Recurring
     public ZonedDateTime getUpdatedExpiresAt();
 
     /**
-     *  <p>Configuration for skipping the next orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
+     *  <p>Configuration for skipping future orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @param skipConfiguration value to be set
      */
 

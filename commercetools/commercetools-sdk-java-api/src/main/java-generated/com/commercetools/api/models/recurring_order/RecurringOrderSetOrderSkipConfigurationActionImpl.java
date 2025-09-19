@@ -57,7 +57,7 @@ public class RecurringOrderSetOrderSkipConfigurationActionImpl
     }
 
     /**
-     *  <p>Configuration for skipping the next orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
+     *  <p>Configuration for skipping future orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      */
 
     public com.commercetools.api.models.recurring_order.SkipConfigurationDraft getSkipConfiguration() {

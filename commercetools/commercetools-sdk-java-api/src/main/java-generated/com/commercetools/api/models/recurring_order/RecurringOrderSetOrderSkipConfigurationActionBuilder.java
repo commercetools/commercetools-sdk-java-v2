@@ -31,7 +31,7 @@ public class RecurringOrderSetOrderSkipConfigurationActionBuilder
     private java.time.ZonedDateTime updatedExpiresAt;
 
     /**
-     *  <p>Configuration for skipping the next orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
+     *  <p>Configuration for skipping future orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @param skipConfiguration value to be set
      * @return Builder
      */
@@ -43,7 +43,7 @@ public class RecurringOrderSetOrderSkipConfigurationActionBuilder
     }
 
     /**
-     *  <p>Configuration for skipping the next orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
+     *  <p>Configuration for skipping future orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @param builder function to build the skipConfiguration value
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class RecurringOrderSetOrderSkipConfigurationActionBuilder
     }
 
     /**
-     *  <p>Configuration for skipping the next orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
+     *  <p>Configuration for skipping future orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @return skipConfiguration
      */
 

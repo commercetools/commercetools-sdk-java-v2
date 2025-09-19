@@ -1,0 +1,22 @@
+
+package com.commercetools;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.payment.PaymentMethodInfo;
+
+import org.junit.jupiter.api.Test;
+
+public class PaymentMethodInfoMixinTest {
+    @Test
+    public void noCustomFieldTest() {
+        var paymentMethodInfo = PaymentMethodInfo.builder()
+                .paymentInterface("interface")
+                .method("method")
+                .name(LocalizedString.of())
+                .build();
+
+        assertNotNull(paymentMethodInfo.toDraft());
+    }
+}

@@ -1,12 +1,12 @@
 
 package com.commercetools.api.models.payment;
 
+import java.util.Optional;
+
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.payment_method.PaymentMethodToken;
 import com.commercetools.api.models.type.CustomFields;
 import com.commercetools.api.models.type.CustomFieldsMixin;
-
-import java.util.Optional;
 
 public interface PaymentMethodInfoMixin {
 

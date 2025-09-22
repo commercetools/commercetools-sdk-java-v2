@@ -96,7 +96,6 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
              .resource(resourceBuilder -> resourceBuilder)
              .resourceVersion(0.3)
              .product(productBuilder -> productBuilder)
-             .variantExclusion(variantExclusionBuilder -> variantExclusionBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -645,7 +644,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="variantExclusion(com.commercetools.api.models.product_selection.ProductVariantExclusion)">
 <h3>variantExclusion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionProductExcludedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionProductExcludedMessageBuilder</a></span>&nbsp;<span class="element-name">variantExclusion</span><wbr><span class="parameters">(<a href="../product_selection/ProductVariantExclusion.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantExclusion</a>&nbsp;variantExclusion)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionProductExcludedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionProductExcludedMessageBuilder</a></span>&nbsp;<span class="element-name">variantExclusion</span><wbr><span class="parameters">(@Nullable
+ <a href="../product_selection/ProductVariantExclusion.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantExclusion</a>&nbsp;variantExclusion)</span></div>
 <div class="block"><p>Product Variant Exclusion after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionExcludeProductAction" rel="nofollow">Exclude Product</a> update action.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -782,7 +782,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getVariantExclusion()">
 <h3>getVariantExclusion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../product_selection/ProductVariantExclusion.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantExclusion</a></span>&nbsp;<span class="element-name">getVariantExclusion</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../product_selection/ProductVariantExclusion.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantExclusion</a></span>&nbsp;<span class="element-name">getVariantExclusion</span>()</div>
 <div class="block"><p>Product Variant Exclusion after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionExcludeProductAction" rel="nofollow">Exclude Product</a> update action.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>

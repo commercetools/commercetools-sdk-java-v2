@@ -93,8 +93,6 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
              .resource(resourceBuilder -> resourceBuilder)
              .resourceVersion(0.3)
              .product(productBuilder -> productBuilder)
-             .oldVariantSelection(oldVariantSelectionBuilder -> oldVariantSelectionBuilder)
-             .newVariantSelection(newVariantSelectionBuilder -> newVariantSelectionBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -147,12 +145,12 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of ProductSelectionVariantSelectionChangedMessage</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../product_selection/ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../product_selection/ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNewVariantSelection()" class="member-name-link">getNewVariantSelection</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Product Variant Selection after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantSelectionAction" rel="nofollow">Set Variant Selection</a> update action.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../product_selection/ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../product_selection/ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOldVariantSelection()" class="member-name-link">getOldVariantSelection</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Product Variant Selection before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantSelectionAction" rel="nofollow">Set Variant Selection</a> update action.</div>
@@ -259,9 +257,8 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <li>
 <section class="detail" id="getOldVariantSelection()">
 <h3>getOldVariantSelection</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-@Valid
-</span><span class="return-type">@NotNull @Valid <a href="../product_selection/ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a></span>&nbsp;<span class="element-name">getOldVariantSelection</span>()</div>
+<div class="member-signature"><span class="annotations">@Valid
+</span><span class="return-type">@Valid <a href="../product_selection/ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a></span>&nbsp;<span class="element-name">getOldVariantSelection</span>()</div>
 <div class="block"><p>Product Variant Selection before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantSelectionAction" rel="nofollow">Set Variant Selection</a> update action.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -272,9 +269,8 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <li>
 <section class="detail" id="getNewVariantSelection()">
 <h3>getNewVariantSelection</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-@Valid
-</span><span class="return-type">@NotNull @Valid <a href="../product_selection/ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a></span>&nbsp;<span class="element-name">getNewVariantSelection</span>()</div>
+<div class="member-signature"><span class="annotations">@Valid
+</span><span class="return-type">@Valid <a href="../product_selection/ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a></span>&nbsp;<span class="element-name">getNewVariantSelection</span>()</div>
 <div class="block"><p>Product Variant Selection after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantSelectionAction" rel="nofollow">Set Variant Selection</a> update action.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>

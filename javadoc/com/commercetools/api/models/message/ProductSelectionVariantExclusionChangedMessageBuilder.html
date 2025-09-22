@@ -96,8 +96,6 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
              .resource(resourceBuilder -> resourceBuilder)
              .resourceVersion(0.3)
              .product(productBuilder -> productBuilder)
-             .oldVariantExclusion(oldVariantExclusionBuilder -> oldVariantExclusionBuilder)
-             .newVariantExclusion(newVariantExclusionBuilder -> newVariantExclusionBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -666,7 +664,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="oldVariantExclusion(com.commercetools.api.models.product_selection.ProductVariantExclusion)">
 <h3>oldVariantExclusion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantExclusionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantExclusionChangedMessageBuilder</a></span>&nbsp;<span class="element-name">oldVariantExclusion</span><wbr><span class="parameters">(<a href="../product_selection/ProductVariantExclusion.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantExclusion</a>&nbsp;oldVariantExclusion)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantExclusionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantExclusionChangedMessageBuilder</a></span>&nbsp;<span class="element-name">oldVariantExclusion</span><wbr><span class="parameters">(@Nullable
+ <a href="../product_selection/ProductVariantExclusion.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantExclusion</a>&nbsp;oldVariantExclusion)</span></div>
 <div class="block"><p>Product Variant Exclusion before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantExclusionAction" rel="nofollow">Set Variant Exclusion</a> update action.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -705,7 +704,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="newVariantExclusion(com.commercetools.api.models.product_selection.ProductVariantExclusion)">
 <h3>newVariantExclusion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantExclusionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantExclusionChangedMessageBuilder</a></span>&nbsp;<span class="element-name">newVariantExclusion</span><wbr><span class="parameters">(<a href="../product_selection/ProductVariantExclusion.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantExclusion</a>&nbsp;newVariantExclusion)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantExclusionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantExclusionChangedMessageBuilder</a></span>&nbsp;<span class="element-name">newVariantExclusion</span><wbr><span class="parameters">(@Nullable
+ <a href="../product_selection/ProductVariantExclusion.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantExclusion</a>&nbsp;newVariantExclusion)</span></div>
 <div class="block"><p>Product Variant Exclusion after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantExclusionAction" rel="nofollow">Set Variant Exclusion</a> update action.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -842,7 +842,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getOldVariantExclusion()">
 <h3>getOldVariantExclusion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../product_selection/ProductVariantExclusion.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantExclusion</a></span>&nbsp;<span class="element-name">getOldVariantExclusion</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../product_selection/ProductVariantExclusion.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantExclusion</a></span>&nbsp;<span class="element-name">getOldVariantExclusion</span>()</div>
 <div class="block"><p>Product Variant Exclusion before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantExclusionAction" rel="nofollow">Set Variant Exclusion</a> update action.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -853,7 +854,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getNewVariantExclusion()">
 <h3>getNewVariantExclusion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../product_selection/ProductVariantExclusion.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantExclusion</a></span>&nbsp;<span class="element-name">getNewVariantExclusion</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../product_selection/ProductVariantExclusion.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantExclusion</a></span>&nbsp;<span class="element-name">getNewVariantExclusion</span>()</div>
 <div class="block"><p>Product Variant Exclusion after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantExclusionAction" rel="nofollow">Set Variant Exclusion</a> update action.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>

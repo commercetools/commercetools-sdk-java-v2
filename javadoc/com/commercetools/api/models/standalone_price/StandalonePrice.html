@@ -584,7 +584,8 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <h3>getDiscounted</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/DiscountedPrice.html" title="interface in com.commercetools.api.models.common">DiscountedPrice</a></span>&nbsp;<span class="element-name">getDiscounted</span>()</div>
-<div class="block"><p>Set if a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> exists. If set, the API uses the <code>discounted</code> value for the <span>Line Item price selection</span>. When a <span>relative discount</span> is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the <span>half down rounding</span>.</p></div>
+<div class="block"><p>Set if a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> exists. If set, the API uses the <code>discounted</code> value for the <span>Line Item price selection</span>. When a <span>relative discount</span> is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the <span>half down rounding</span>.</p>
+  <p>If an <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueAbsolute" rel="nofollow">absolute discount</a> value exceeds the price of the Product Variant, the discounted price is a negative value.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>discounted</dd>
@@ -831,7 +832,8 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <section class="detail" id="setDiscounted(com.commercetools.api.models.common.DiscountedPrice)">
 <h3>setDiscounted</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setDiscounted</span><wbr><span class="parameters">(<a href="../common/DiscountedPrice.html" title="interface in com.commercetools.api.models.common">DiscountedPrice</a>&nbsp;discounted)</span></div>
-<div class="block"><p>Set if a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> exists. If set, the API uses the <code>discounted</code> value for the <span>Line Item price selection</span>. When a <span>relative discount</span> is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the <span>half down rounding</span>.</p></div>
+<div class="block"><p>Set if a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> exists. If set, the API uses the <code>discounted</code> value for the <span>Line Item price selection</span>. When a <span>relative discount</span> is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the <span>half down rounding</span>.</p>
+  <p>If an <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueAbsolute" rel="nofollow">absolute discount</a> value exceeds the price of the Product Variant, the discounted price is a negative value.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>discounted</code> - value to be set</dd>

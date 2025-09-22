@@ -89,7 +89,6 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
  <pre><code class='java'>
      ProductSelectionProductAddedMessagePayload productSelectionProductAddedMessagePayload = ProductSelectionProductAddedMessagePayload.builder()
              .product(productBuilder -> productBuilder)
-             .variantSelection(variantSelectionBuilder -> variantSelectionBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -248,7 +247,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="variantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection)">
 <h3>variantSelection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionProductAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionProductAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name">variantSelection</span><wbr><span class="parameters">(<a href="../product_selection/ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a>&nbsp;variantSelection)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionProductAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionProductAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name">variantSelection</span><wbr><span class="parameters">(@Nullable
+ <a href="../product_selection/ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a>&nbsp;variantSelection)</span></div>
 <div class="block"><p>Product Variant Selection after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionAddProductAction" rel="nofollow">Add Product</a> update action.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -285,7 +285,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getVariantSelection()">
 <h3>getVariantSelection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../product_selection/ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a></span>&nbsp;<span class="element-name">getVariantSelection</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../product_selection/ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a></span>&nbsp;<span class="element-name">getVariantSelection</span>()</div>
 <div class="block"><p>Product Variant Selection after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionAddProductAction" rel="nofollow">Add Product</a> update action.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>

@@ -215,6 +215,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>money</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDiscountValueAbsoluteDraftBuilder.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountValueAbsoluteDraftBuilder</a></span>&nbsp;<span class="element-name">money</span><wbr><span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>...&nbsp;money)</span></div>
 <div class="block"><p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+  <p>If the value exceeds the price of a Product Variant, the discounted price (of the Product Variant) will be a negative value.</p>
   <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -229,6 +230,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>money</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDiscountValueAbsoluteDraftBuilder.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountValueAbsoluteDraftBuilder</a></span>&nbsp;<span class="element-name">money</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&gt;&nbsp;money)</span></div>
 <div class="block"><p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+  <p>If the value exceeds the price of a Product Variant, the discounted price (of the Product Variant) will be a negative value.</p>
   <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -243,6 +245,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>plusMoney</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDiscountValueAbsoluteDraftBuilder.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountValueAbsoluteDraftBuilder</a></span>&nbsp;<span class="element-name">plusMoney</span><wbr><span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>...&nbsp;money)</span></div>
 <div class="block"><p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+  <p>If the value exceeds the price of a Product Variant, the discounted price (of the Product Variant) will be a negative value.</p>
   <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -257,6 +260,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>plusMoney</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDiscountValueAbsoluteDraftBuilder.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountValueAbsoluteDraftBuilder</a></span>&nbsp;<span class="element-name">plusMoney</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>,<wbr><a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+  <p>If the value exceeds the price of a Product Variant, the discounted price (of the Product Variant) will be a negative value.</p>
   <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -271,6 +275,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>withMoney</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDiscountValueAbsoluteDraftBuilder.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountValueAbsoluteDraftBuilder</a></span>&nbsp;<span class="element-name">withMoney</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>,<wbr><a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+  <p>If the value exceeds the price of a Product Variant, the discounted price (of the Product Variant) will be a negative value.</p>
   <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -285,6 +290,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>addMoney</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDiscountValueAbsoluteDraftBuilder.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountValueAbsoluteDraftBuilder</a></span>&nbsp;<span class="element-name">addMoney</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>,<wbr><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+  <p>If the value exceeds the price of a Product Variant, the discounted price (of the Product Variant) will be a negative value.</p>
   <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -299,6 +305,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>setMoney</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDiscountValueAbsoluteDraftBuilder.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountValueAbsoluteDraftBuilder</a></span>&nbsp;<span class="element-name">setMoney</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>,<wbr><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+  <p>If the value exceeds the price of a Product Variant, the discounted price (of the Product Variant) will be a negative value.</p>
   <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -313,6 +320,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getMoney</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&gt;</span>&nbsp;<span class="element-name">getMoney</span>()</div>
 <div class="block"><p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+  <p>If the value exceeds the price of a Product Variant, the discounted price (of the Product Variant) will be a negative value.</p>
   <p>If the array is empty or has multiple values of the same currency, the API returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>

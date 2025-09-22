@@ -1,4 +1,61 @@
 
+# 19.5.0 (2025-09-22)
+
+## What's Changed
+
+**Api changes**
+
+<details>
+<summary>Required Property(s)</summary>
+
+- changed property `variantSelection` of type `ProductSelectionProductAddedMessage` to be optional
+- changed property `variantExclusion` of type `ProductSelectionProductExcludedMessage` to be optional
+- changed property `oldVariantExclusion` of type `ProductSelectionVariantExclusionChangedMessage` to be optional
+- changed property `newVariantExclusion` of type `ProductSelectionVariantExclusionChangedMessage` to be optional
+- changed property `oldVariantSelection` of type `ProductSelectionVariantSelectionChangedMessage` to be optional
+- changed property `newVariantSelection` of type `ProductSelectionVariantSelectionChangedMessage` to be optional
+- changed property `variantSelection` of type `ProductSelectionProductAddedMessagePayload` to be optional
+- changed property `variantExclusion` of type `ProductSelectionProductExcludedMessagePayload` to be optional
+- changed property `oldVariantExclusion` of type `ProductSelectionVariantExclusionChangedMessagePayload` to be optional
+- changed property `newVariantExclusion` of type `ProductSelectionVariantExclusionChangedMessagePayload` to be optional
+- changed property `oldVariantSelection` of type `ProductSelectionVariantSelectionChangedMessagePayload` to be optional
+- changed property `newVariantSelection` of type `ProductSelectionVariantSelectionChangedMessagePayload` to be optional
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `interfaceId` to type `MyTransactionDraft`
+- added property `interfaceId` to type `Transaction`
+- added property `interfaceId` to type `TransactionDraft`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `PaymentTransactionInterfaceIdSetMessage`
+- added type `PaymentTransactionInterfaceIdSetMessagePayload`
+- added type `PaymentSetTransactionInterfaceIdAction`
+</details>
+
+
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/980
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/981
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/982
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/984
+* Checkout sdk by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/983
+* Bump io.projectreactor.netty:reactor-netty-http from 1.2.7 to 1.2.8 by @dependabot[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/948
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/986
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/987
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/988
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/989
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/990
+* SUPPORT-35419: making custom field not required by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/991
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.4.0...19.5.0
+
 # 19.4.0 (2025-09-01)
 
 **Api changes**

@@ -2021,6 +2021,7 @@ input CartDiscountValueBaseMoneyInput {
 
 input CartDiscountValueInput {
   relative: RelativeDiscountValueInput
+  relativeCart: RelativeCartDiscountValueInput
   absolute: AbsoluteDiscountValueInput
   absoluteCart: AbsoluteCartDiscountValueInput
   fixed: FixedPriceDiscountValueInput
@@ -10963,7 +10964,7 @@ input RecurringOrderDraft {
   custom: CustomFieldsDraft
   cart: ResourceIdentifierInput!
   cartVersion: Long!
-  startsAt: DateTime!
+  startsAt: DateTime
   expiresAt: DateTime
   state: ResourceIdentifierInput
   recurringOrderState: RecurringOrderState
@@ -11115,6 +11116,17 @@ type RefreshTokenLimitsProjection {
 
 input RejectApprovalFlow {
   reason: String
+}
+
+type RelativeCartDiscountValue implements CartDiscountValue {
+  permyriad: Int!
+  applicationMode: DiscountApplicationMode!
+  type: String!
+}
+
+input RelativeCartDiscountValueInput {
+  permyriad: Int!
+  applicationMode: DiscountApplicationMode!
 }
 
 type RelativeDiscountValue implements CartDiscountValue & ProductDiscountValue {

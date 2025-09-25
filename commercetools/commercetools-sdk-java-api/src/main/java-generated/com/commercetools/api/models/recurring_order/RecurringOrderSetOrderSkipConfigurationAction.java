@@ -39,11 +39,11 @@ public interface RecurringOrderSetOrderSkipConfigurationAction extends Recurring
 
     /**
      *  <p>Configuration for skipping future orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
-     * @return skipConfiguration
+     * @return skipConfigurationInputDraft
      */
     @Valid
-    @JsonProperty("skipConfiguration")
-    public SkipConfigurationDraft getSkipConfiguration();
+    @JsonProperty("skipConfigurationInputDraft")
+    public SkipConfigurationDraft getSkipConfigurationInputDraft();
 
     /**
      *  <p>Date and time (UTC) the Recurring Order will expire and stop generating new orders.</p>
@@ -55,10 +55,10 @@ public interface RecurringOrderSetOrderSkipConfigurationAction extends Recurring
 
     /**
      *  <p>Configuration for skipping future orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
-     * @param skipConfiguration value to be set
+     * @param skipConfigurationInputDraft value to be set
      */
 
-    public void setSkipConfiguration(final SkipConfigurationDraft skipConfiguration);
+    public void setSkipConfigurationInputDraft(final SkipConfigurationDraft skipConfigurationInputDraft);
 
     /**
      *  <p>Date and time (UTC) the Recurring Order will expire and stop generating new orders.</p>
@@ -83,7 +83,7 @@ public interface RecurringOrderSetOrderSkipConfigurationAction extends Recurring
     public static RecurringOrderSetOrderSkipConfigurationAction of(
             final RecurringOrderSetOrderSkipConfigurationAction template) {
         RecurringOrderSetOrderSkipConfigurationActionImpl instance = new RecurringOrderSetOrderSkipConfigurationActionImpl();
-        instance.setSkipConfiguration(template.getSkipConfiguration());
+        instance.setSkipConfigurationInputDraft(template.getSkipConfigurationInputDraft());
         instance.setUpdatedExpiresAt(template.getUpdatedExpiresAt());
         return instance;
     }
@@ -102,8 +102,8 @@ public interface RecurringOrderSetOrderSkipConfigurationAction extends Recurring
             return null;
         }
         RecurringOrderSetOrderSkipConfigurationActionImpl instance = new RecurringOrderSetOrderSkipConfigurationActionImpl();
-        instance.setSkipConfiguration(com.commercetools.api.models.recurring_order.SkipConfigurationDraft
-                .deepCopy(template.getSkipConfiguration()));
+        instance.setSkipConfigurationInputDraft(com.commercetools.api.models.recurring_order.SkipConfigurationDraft
+                .deepCopy(template.getSkipConfigurationInputDraft()));
         instance.setUpdatedExpiresAt(template.getUpdatedExpiresAt());
         return instance;
     }

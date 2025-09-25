@@ -29,7 +29,6 @@ import jakarta.validation.constraints.NotNull;
  *     RecurringOrderDraft recurringOrderDraft = RecurringOrderDraft.builder()
  *             .cart(cartBuilder -> cartBuilder)
  *             .cartVersion(0.3)
- *             .startsAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .build()
  * </code></pre>
  * </div>
@@ -64,10 +63,10 @@ public interface RecurringOrderDraft extends io.vrap.rmf.base.client.Draft<Recur
     public Long getCartVersion();
 
     /**
-     *  <p>Date and time (UTC) when the RecurringOrder will start.</p>
+     *  <p>Date and time (UTC) when the RecurringOrder will start. When specified, the date and time must be in the future. If not specified, the recurring order will start immediately.</p>
      * @return startsAt
      */
-    @NotNull
+
     @JsonProperty("startsAt")
     public ZonedDateTime getStartsAt();
 
@@ -117,7 +116,7 @@ public interface RecurringOrderDraft extends io.vrap.rmf.base.client.Draft<Recur
     public void setCartVersion(final Long cartVersion);
 
     /**
-     *  <p>Date and time (UTC) when the RecurringOrder will start.</p>
+     *  <p>Date and time (UTC) when the RecurringOrder will start. When specified, the date and time must be in the future. If not specified, the recurring order will start immediately.</p>
      * @param startsAt value to be set
      */
 

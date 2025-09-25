@@ -40,6 +40,7 @@ public interface CartDiscountChangeTargetAction extends CartDiscountUpdateAction
 
     /**
      *  <p>New value to set.</p>
+     *  <p>For a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueRelative" rel="nofollow">CartDiscountValueRelative</a>, if <code>applicationMode</code> is set, the target must be <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a>. If <code>applicationMode</code> is <code>ProportionateDistribution</code> or <code>EvenDistribution</code>, the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> <code>triggerPattern</code> must be non-empty. If either conditions are not met, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return target
      */
     @NotNull
@@ -49,6 +50,7 @@ public interface CartDiscountChangeTargetAction extends CartDiscountUpdateAction
 
     /**
      *  <p>New value to set.</p>
+     *  <p>For a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueRelative" rel="nofollow">CartDiscountValueRelative</a>, if <code>applicationMode</code> is set, the target must be <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a>. If <code>applicationMode</code> is <code>ProportionateDistribution</code> or <code>EvenDistribution</code>, the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> <code>triggerPattern</code> must be non-empty. If either conditions are not met, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param target value to be set
      */
 

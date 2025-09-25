@@ -42,6 +42,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet exten
         com.commercetools.api.client.ProjectionselectingtailoringTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet>,
         com.commercetools.api.client.PriceselectingTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet>,
         com.commercetools.api.client.LocaleprojectingTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet>,
+        com.commercetools.api.client.AttributefilteringTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet> {
@@ -137,6 +138,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet exten
 
     public List<String> getLocaleProjection() {
         return this.getQueryParam("localeProjection");
+    }
+
+    public List<String> getFilterAttributes() {
+        return this.getQueryParam("filter[attributes]");
     }
 
     public List<String> getExpand() {
@@ -858,6 +863,95 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet exten
             final Collection<TValue> localeProjection) {
         return copy().addQueryParams(localeProjection.stream()
                 .map(s -> new ParamEntry<>("localeProjection", s.toString()))
+                .collect(Collectors.toList()));
+    }
+
+    /**
+     * set filterAttributes with the specified value
+     * @param filterAttributes value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withFilterAttributes(
+            final TValue filterAttributes) {
+        return copy().withQueryParam("filter[attributes]", filterAttributes);
+    }
+
+    /**
+     * add additional filterAttributes query parameter
+     * @param filterAttributes value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addFilterAttributes(
+            final TValue filterAttributes) {
+        return copy().addQueryParam("filter[attributes]", filterAttributes);
+    }
+
+    /**
+     * set filterAttributes with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withFilterAttributes(
+            final Supplier<String> supplier) {
+        return copy().withQueryParam("filter[attributes]", supplier.get());
+    }
+
+    /**
+     * add additional filterAttributes query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addFilterAttributes(
+            final Supplier<String> supplier) {
+        return copy().addQueryParam("filter[attributes]", supplier.get());
+    }
+
+    /**
+     * set filterAttributes with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withFilterAttributes(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("filter[attributes]", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional filterAttributes query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addFilterAttributes(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("filter[attributes]", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set filterAttributes with the specified values
+     * @param filterAttributes values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withFilterAttributes(
+            final Collection<TValue> filterAttributes) {
+        return copy().withoutQueryParam("filter[attributes]")
+                .addQueryParams(filterAttributes.stream()
+                        .map(s -> new ParamEntry<>("filter[attributes]", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional filterAttributes query parameters
+     * @param filterAttributes values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addFilterAttributes(
+            final Collection<TValue> filterAttributes) {
+        return copy().addQueryParams(filterAttributes.stream()
+                .map(s -> new ParamEntry<>("filter[attributes]", s.toString()))
                 .collect(Collectors.toList()));
     }
 

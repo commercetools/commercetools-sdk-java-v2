@@ -47,11 +47,34 @@ public interface CartDiscountValueRelativeDraft
     public Long getPermyriad();
 
     /**
+     *  <p>Determines how the discount applies when using <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a>.</p>
+     *  <ul>
+     *   <li>If the mode is <code>IndividualApplication</code>, the discounted percentage is applied on each unit's price. The units matching the <code>triggerPattern</code> are not considered.</li>
+     *   <li>If the mode is <code>ProportionateDistribution</code> and <code>EvenDistribution</code> the discounted value is calculated from the total value of the units matching the <code>targetPattern</code> and distributed among the units matching the <code>targetPattern</code> or <code>triggerPattern</code>. These modes are allowed only if <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> <code>triggerPattern</code> is non-empty.</li>
+     *  </ul>
+     * @return applicationMode
+     */
+
+    @JsonProperty("applicationMode")
+    public DiscountApplicationMode getApplicationMode();
+
+    /**
      *  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>
      * @param permyriad value to be set
      */
 
     public void setPermyriad(final Long permyriad);
+
+    /**
+     *  <p>Determines how the discount applies when using <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a>.</p>
+     *  <ul>
+     *   <li>If the mode is <code>IndividualApplication</code>, the discounted percentage is applied on each unit's price. The units matching the <code>triggerPattern</code> are not considered.</li>
+     *   <li>If the mode is <code>ProportionateDistribution</code> and <code>EvenDistribution</code> the discounted value is calculated from the total value of the units matching the <code>targetPattern</code> and distributed among the units matching the <code>targetPattern</code> or <code>triggerPattern</code>. These modes are allowed only if <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> <code>triggerPattern</code> is non-empty.</li>
+     *  </ul>
+     * @param applicationMode value to be set
+     */
+
+    public void setApplicationMode(final DiscountApplicationMode applicationMode);
 
     /**
      * factory method
@@ -69,6 +92,7 @@ public interface CartDiscountValueRelativeDraft
     public static CartDiscountValueRelativeDraft of(final CartDiscountValueRelativeDraft template) {
         CartDiscountValueRelativeDraftImpl instance = new CartDiscountValueRelativeDraftImpl();
         instance.setPermyriad(template.getPermyriad());
+        instance.setApplicationMode(template.getApplicationMode());
         return instance;
     }
 
@@ -86,6 +110,7 @@ public interface CartDiscountValueRelativeDraft
         }
         CartDiscountValueRelativeDraftImpl instance = new CartDiscountValueRelativeDraftImpl();
         instance.setPermyriad(template.getPermyriad());
+        instance.setApplicationMode(template.getApplicationMode());
         return instance;
     }
 

@@ -34,6 +34,7 @@ import jakarta.validation.constraints.NotNull;
  *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .messages(messagesBuilder -> messagesBuilder)
  *             .carts(cartsBuilder -> cartsBuilder)
+ *             .discounts(discountsBuilder -> discountsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -165,6 +166,15 @@ public interface Project extends com.commercetools.api.models.WithKey {
     public BusinessUnitConfiguration getBusinessUnits();
 
     /**
+     *  <p>Holds configuration specific to discounts, including how Product and Cart Discounts are combined in every Cart of the Project.</p>
+     * @return discounts
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("discounts")
+    public DiscountsConfiguration getDiscounts();
+
+    /**
      *  <p>Current version of the Project.</p>
      * @param version value to be set
      */
@@ -294,6 +304,13 @@ public interface Project extends com.commercetools.api.models.WithKey {
     public void setBusinessUnits(final BusinessUnitConfiguration businessUnits);
 
     /**
+     *  <p>Holds configuration specific to discounts, including how Product and Cart Discounts are combined in every Cart of the Project.</p>
+     * @param discounts value to be set
+     */
+
+    public void setDiscounts(final DiscountsConfiguration discounts);
+
+    /**
      * factory method
      * @return instance of Project
      */
@@ -323,6 +340,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
         instance.setExternalOAuth(template.getExternalOAuth());
         instance.setSearchIndexing(template.getSearchIndexing());
         instance.setBusinessUnits(template.getBusinessUnits());
+        instance.setDiscounts(template.getDiscounts());
         return instance;
     }
 
@@ -360,6 +378,8 @@ public interface Project extends com.commercetools.api.models.WithKey {
             com.commercetools.api.models.project.SearchIndexingConfiguration.deepCopy(template.getSearchIndexing()));
         instance.setBusinessUnits(
             com.commercetools.api.models.project.BusinessUnitConfiguration.deepCopy(template.getBusinessUnits()));
+        instance.setDiscounts(
+            com.commercetools.api.models.project.DiscountsConfiguration.deepCopy(template.getDiscounts()));
         return instance;
     }
 

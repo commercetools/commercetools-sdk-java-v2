@@ -52,14 +52,21 @@ public final class ProductUtil {
                 .setImages(i -> (Image) variant.getImages())
                 .prices(variant.getPrices().stream().map(p -> PriceDraftImport.builder().key(p.getKey()).value(v ->
                         (p.getValue() instanceof CentPrecisionMoney) ?
-                                v.centPrecisionBuilder().centAmount(p.getValue().getCentAmount()).currencyCode(p.getValue().getCurrencyCode()).fractionDigits(p.getValue().getFractionDigits()) :
-                                v.highPrecisionBuilder().centAmount(p.getValue().getCentAmount()).currencyCode(p.getValue().getCurrencyCode()).fractionDigits(p.getValue().getFractionDigits())
+                                v.centPrecisionBuilder().centAmount(p.getValue().getCentAmount()).currencyCode(p.getValue()
+                                        .getCurrencyCode()).fractionDigits(p.getValue().getFractionDigits()) :
+                                v.highPrecisionBuilder().centAmount(p.getValue().getCentAmount()).currencyCode(p.getValue()
+                                        .getCurrencyCode()).fractionDigits(p.getValue().getFractionDigits())
                 ).build()).collect(Collectors.toList()))
                 .attributes(variant.getAttributes().stream().map(
                         ProductUtil::mapAttribute).collect(Collectors.toList()))
-                .assets(variant.getAssets());
+                .assets(importAssets(variant.getAssets())).build();
     }
 
+    private static List<com.commercetools.importapi.models.common.Asset> importAssets(List<com.commercetools.api.models.common.Asset> assets){
+        return assets.stream().map(a -> com.commercetools.importapi.models.common.Asset.builder().key(a.getKey())
+                .name((com.commercetools.importapi.models.common.LocalizedString)a.getName()).build()).collect(
+                Collectors.toList());
+    }
     private static CategoryKeyReference extractCategoryKeyReference(ProductProjection product) {
         return CategoryKeyReference.builder().key(product.getCategories().get(0).getObj().getKey()).build();
     }

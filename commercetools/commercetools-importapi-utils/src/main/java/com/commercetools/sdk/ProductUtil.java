@@ -21,10 +21,10 @@ import java.util.stream.Collectors;
 
 public final class ProductUtil {
 
-
     public static ProductDraftImport toProductDraftImport(ProductProjection product) {
     var draft = ProductDraftImport.builder().key(product.getKey())
-            .productType(p -> p.key(product.getProductType().getObj().getKey()))
+            .productType(p -> p.key(Optional.ofNullable(product.getProductType())
+                            .map( ProductTypeReference::getObj).map(ProductType::getKey).orElse(null)))
             .name(l -> l.values(product.getName().values()))
             .slug(l -> l.values(product.getSlug().values()))
             .description(d -> d.values(

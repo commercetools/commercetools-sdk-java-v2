@@ -16,7 +16,10 @@ public class ResourceNotFoundErrorTest {
     }
 
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { "message", ResourceNotFoundError.builder().message("message") } };
+        return new Object[][] { new Object[] { "message", ResourceNotFoundError.builder().message("message") },
+                new Object[] { "resourceIdentifier",
+                        ResourceNotFoundError.builder().resourceIdentifier("resourceIdentifier") },
+                new Object[] { "resourceId", ResourceNotFoundError.builder().resourceId("resourceId") } };
     }
 
     @Test
@@ -24,5 +27,19 @@ public class ResourceNotFoundErrorTest {
         ResourceNotFoundError value = ResourceNotFoundError.of();
         value.setMessage("message");
         Assertions.assertThat(value.getMessage()).isEqualTo("message");
+    }
+
+    @Test
+    public void resourceIdentifier() {
+        ResourceNotFoundError value = ResourceNotFoundError.of();
+        value.setResourceIdentifier("resourceIdentifier");
+        Assertions.assertThat(value.getResourceIdentifier()).isEqualTo("resourceIdentifier");
+    }
+
+    @Test
+    public void resourceId() {
+        ResourceNotFoundError value = ResourceNotFoundError.of();
+        value.setResourceId("resourceId");
+        Assertions.assertThat(value.getResourceId()).isEqualTo("resourceId");
     }
 }

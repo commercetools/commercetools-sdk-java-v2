@@ -21,19 +21,20 @@ public class RecurringOrderSetOrderSkipConfigurationActionTest {
 
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { "skipConfiguration",
+                new Object[] { "skipConfigurationInputDraft",
                         RecurringOrderSetOrderSkipConfigurationAction.builder()
-                                .skipConfiguration(
+                                .skipConfigurationInputDraft(
                                     new com.commercetools.api.models.recurring_order.SkipConfigurationDraftImpl()) },
                 new Object[] { "updatedExpiresAt", RecurringOrderSetOrderSkipConfigurationAction.builder()
                         .updatedExpiresAt(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
     }
 
     @Test
-    public void skipConfiguration() {
+    public void skipConfigurationInputDraft() {
         RecurringOrderSetOrderSkipConfigurationAction value = RecurringOrderSetOrderSkipConfigurationAction.of();
-        value.setSkipConfiguration(new com.commercetools.api.models.recurring_order.SkipConfigurationDraftImpl());
-        Assertions.assertThat(value.getSkipConfiguration())
+        value.setSkipConfigurationInputDraft(
+            new com.commercetools.api.models.recurring_order.SkipConfigurationDraftImpl());
+        Assertions.assertThat(value.getSkipConfigurationInputDraft())
                 .isEqualTo(new com.commercetools.api.models.recurring_order.SkipConfigurationDraftImpl());
     }
 

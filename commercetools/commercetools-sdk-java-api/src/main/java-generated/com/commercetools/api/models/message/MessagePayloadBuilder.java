@@ -787,6 +787,10 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.PaymentTransactionAddedMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.PaymentTransactionInterfaceIdSetMessagePayloadBuilder paymentTransactionInterfaceIdSetBuilder() {
+        return com.commercetools.api.models.message.PaymentTransactionInterfaceIdSetMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.PaymentTransactionStateChangedMessagePayloadBuilder paymentTransactionStateChangedBuilder() {
         return com.commercetools.api.models.message.PaymentTransactionStateChangedMessagePayloadBuilder.of();
     }

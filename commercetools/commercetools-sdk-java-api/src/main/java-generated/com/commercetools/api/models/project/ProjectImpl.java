@@ -52,6 +52,8 @@ public class ProjectImpl implements Project, ModelBase {
 
     private com.commercetools.api.models.project.BusinessUnitConfiguration businessUnits;
 
+    private com.commercetools.api.models.project.DiscountsConfiguration discounts;
+
     /**
      * create instance with all properties
      */
@@ -68,7 +70,8 @@ public class ProjectImpl implements Project, ModelBase {
             @JsonProperty("shippingRateInputType") final com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType,
             @JsonProperty("externalOAuth") final com.commercetools.api.models.project.ExternalOAuth externalOAuth,
             @JsonProperty("searchIndexing") final com.commercetools.api.models.project.SearchIndexingConfiguration searchIndexing,
-            @JsonProperty("businessUnits") final com.commercetools.api.models.project.BusinessUnitConfiguration businessUnits) {
+            @JsonProperty("businessUnits") final com.commercetools.api.models.project.BusinessUnitConfiguration businessUnits,
+            @JsonProperty("discounts") final com.commercetools.api.models.project.DiscountsConfiguration discounts) {
         this.version = version;
         this.key = key;
         this.name = name;
@@ -84,6 +87,7 @@ public class ProjectImpl implements Project, ModelBase {
         this.externalOAuth = externalOAuth;
         this.searchIndexing = searchIndexing;
         this.businessUnits = businessUnits;
+        this.discounts = discounts;
     }
 
     /**
@@ -212,6 +216,14 @@ public class ProjectImpl implements Project, ModelBase {
         return this.businessUnits;
     }
 
+    /**
+     *  <p>Holds configuration specific to discounts, including how Product and Cart Discounts are combined in every Cart of the Project.</p>
+     */
+
+    public com.commercetools.api.models.project.DiscountsConfiguration getDiscounts() {
+        return this.discounts;
+    }
+
     public void setVersion(final Long version) {
         this.version = version;
     }
@@ -286,6 +298,10 @@ public class ProjectImpl implements Project, ModelBase {
         this.businessUnits = businessUnits;
     }
 
+    public void setDiscounts(final com.commercetools.api.models.project.DiscountsConfiguration discounts) {
+        this.discounts = discounts;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -311,6 +327,7 @@ public class ProjectImpl implements Project, ModelBase {
                 .append(externalOAuth, that.externalOAuth)
                 .append(searchIndexing, that.searchIndexing)
                 .append(businessUnits, that.businessUnits)
+                .append(discounts, that.discounts)
                 .append(version, that.version)
                 .append(key, that.key)
                 .append(name, that.name)
@@ -326,6 +343,7 @@ public class ProjectImpl implements Project, ModelBase {
                 .append(externalOAuth, that.externalOAuth)
                 .append(searchIndexing, that.searchIndexing)
                 .append(businessUnits, that.businessUnits)
+                .append(discounts, that.discounts)
                 .isEquals();
     }
 
@@ -346,6 +364,7 @@ public class ProjectImpl implements Project, ModelBase {
                 .append(externalOAuth)
                 .append(searchIndexing)
                 .append(businessUnits)
+                .append(discounts)
                 .toHashCode();
     }
 
@@ -366,6 +385,7 @@ public class ProjectImpl implements Project, ModelBase {
                 .append("externalOAuth", externalOAuth)
                 .append("searchIndexing", searchIndexing)
                 .append("businessUnits", businessUnits)
+                .append("discounts", discounts)
                 .build();
     }
 

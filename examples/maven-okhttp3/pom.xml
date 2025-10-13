@@ -28,7 +28,7 @@
         </plugins>
     </build>
     <properties>
-        <commercetools.version>19.4.0</commercetools.version>
+        <commercetools.version>19.5.0</commercetools.version>
     </properties>
     <dependencies>
         <dependency>

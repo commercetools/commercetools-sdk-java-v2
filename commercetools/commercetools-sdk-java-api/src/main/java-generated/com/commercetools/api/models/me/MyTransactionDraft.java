@@ -80,6 +80,14 @@ public interface MyTransactionDraft extends com.commercetools.api.models.Customi
     public CustomFieldsDraft getCustom();
 
     /**
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP) in the current transaction.</p>
+     * @return interfaceId
+     */
+
+    @JsonProperty("interfaceId")
+    public String getInterfaceId();
+
+    /**
      *  <p>Date and time (UTC) the Transaction took place.</p>
      * @param timestamp value to be set
      */
@@ -115,6 +123,13 @@ public interface MyTransactionDraft extends com.commercetools.api.models.Customi
     public void setCustom(final CustomFieldsDraft custom);
 
     /**
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP) in the current transaction.</p>
+     * @param interfaceId value to be set
+     */
+
+    public void setInterfaceId(final String interfaceId);
+
+    /**
      * factory method
      * @return instance of MyTransactionDraft
      */
@@ -134,6 +149,7 @@ public interface MyTransactionDraft extends com.commercetools.api.models.Customi
         instance.setAmount(template.getAmount());
         instance.setInteractionId(template.getInteractionId());
         instance.setCustom(template.getCustom());
+        instance.setInterfaceId(template.getInterfaceId());
         return instance;
     }
 
@@ -155,6 +171,7 @@ public interface MyTransactionDraft extends com.commercetools.api.models.Customi
         instance.setAmount(com.commercetools.api.models.common.Money.deepCopy(template.getAmount()));
         instance.setInteractionId(template.getInteractionId());
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setInterfaceId(template.getInterfaceId());
         return instance;
     }
 

@@ -25,32 +25,32 @@ public class RecurringOrderSetOrderSkipConfigurationActionBuilder
         implements Builder<RecurringOrderSetOrderSkipConfigurationAction> {
 
     @Nullable
-    private com.commercetools.api.models.recurring_order.SkipConfigurationDraft skipConfiguration;
+    private com.commercetools.api.models.recurring_order.SkipConfigurationDraft skipConfigurationInputDraft;
 
     @Nullable
     private java.time.ZonedDateTime updatedExpiresAt;
 
     /**
-     *  <p>Configuration for skipping the next orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
-     * @param skipConfiguration value to be set
+     *  <p>Configuration for skipping future orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
+     * @param skipConfigurationInputDraft value to be set
      * @return Builder
      */
 
-    public RecurringOrderSetOrderSkipConfigurationActionBuilder skipConfiguration(
-            @Nullable final com.commercetools.api.models.recurring_order.SkipConfigurationDraft skipConfiguration) {
-        this.skipConfiguration = skipConfiguration;
+    public RecurringOrderSetOrderSkipConfigurationActionBuilder skipConfigurationInputDraft(
+            @Nullable final com.commercetools.api.models.recurring_order.SkipConfigurationDraft skipConfigurationInputDraft) {
+        this.skipConfigurationInputDraft = skipConfigurationInputDraft;
         return this;
     }
 
     /**
-     *  <p>Configuration for skipping the next orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
-     * @param builder function to build the skipConfiguration value
+     *  <p>Configuration for skipping future orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
+     * @param builder function to build the skipConfigurationInputDraft value
      * @return Builder
      */
 
-    public RecurringOrderSetOrderSkipConfigurationActionBuilder skipConfiguration(
+    public RecurringOrderSetOrderSkipConfigurationActionBuilder skipConfigurationInputDraft(
             Function<com.commercetools.api.models.recurring_order.SkipConfigurationDraftBuilder, Builder<? extends com.commercetools.api.models.recurring_order.SkipConfigurationDraft>> builder) {
-        this.skipConfiguration = builder
+        this.skipConfigurationInputDraft = builder
                 .apply(com.commercetools.api.models.recurring_order.SkipConfigurationDraftBuilder.of())
                 .build();
         return this;
@@ -69,13 +69,13 @@ public class RecurringOrderSetOrderSkipConfigurationActionBuilder
     }
 
     /**
-     *  <p>Configuration for skipping the next orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
-     * @return skipConfiguration
+     *  <p>Configuration for skipping future orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
+     * @return skipConfigurationInputDraft
      */
 
     @Nullable
-    public com.commercetools.api.models.recurring_order.SkipConfigurationDraft getSkipConfiguration() {
-        return this.skipConfiguration;
+    public com.commercetools.api.models.recurring_order.SkipConfigurationDraft getSkipConfigurationInputDraft() {
+        return this.skipConfigurationInputDraft;
     }
 
     /**
@@ -93,7 +93,7 @@ public class RecurringOrderSetOrderSkipConfigurationActionBuilder
      * @return RecurringOrderSetOrderSkipConfigurationAction
      */
     public RecurringOrderSetOrderSkipConfigurationAction build() {
-        return new RecurringOrderSetOrderSkipConfigurationActionImpl(skipConfiguration, updatedExpiresAt);
+        return new RecurringOrderSetOrderSkipConfigurationActionImpl(skipConfigurationInputDraft, updatedExpiresAt);
     }
 
     /**
@@ -101,7 +101,7 @@ public class RecurringOrderSetOrderSkipConfigurationActionBuilder
      * @return RecurringOrderSetOrderSkipConfigurationAction
      */
     public RecurringOrderSetOrderSkipConfigurationAction buildUnchecked() {
-        return new RecurringOrderSetOrderSkipConfigurationActionImpl(skipConfiguration, updatedExpiresAt);
+        return new RecurringOrderSetOrderSkipConfigurationActionImpl(skipConfigurationInputDraft, updatedExpiresAt);
     }
 
     /**
@@ -120,7 +120,7 @@ public class RecurringOrderSetOrderSkipConfigurationActionBuilder
     public static RecurringOrderSetOrderSkipConfigurationActionBuilder of(
             final RecurringOrderSetOrderSkipConfigurationAction template) {
         RecurringOrderSetOrderSkipConfigurationActionBuilder builder = new RecurringOrderSetOrderSkipConfigurationActionBuilder();
-        builder.skipConfiguration = template.getSkipConfiguration();
+        builder.skipConfigurationInputDraft = template.getSkipConfigurationInputDraft();
         builder.updatedExpiresAt = template.getUpdatedExpiresAt();
         return builder;
     }

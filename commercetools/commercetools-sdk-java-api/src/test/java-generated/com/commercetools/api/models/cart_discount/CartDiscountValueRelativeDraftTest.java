@@ -16,7 +16,11 @@ public class CartDiscountValueRelativeDraftTest {
     }
 
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { "permyriad", CartDiscountValueRelativeDraft.builder().permyriad(1L) } };
+        return new Object[][] { new Object[] { "permyriad", CartDiscountValueRelativeDraft.builder().permyriad(1L) },
+                new Object[] { "applicationMode",
+                        CartDiscountValueRelativeDraft.builder()
+                                .applicationMode(com.commercetools.api.models.cart_discount.DiscountApplicationMode
+                                        .findEnum("ProportionateDistribution")) } };
     }
 
     @Test
@@ -24,5 +28,15 @@ public class CartDiscountValueRelativeDraftTest {
         CartDiscountValueRelativeDraft value = CartDiscountValueRelativeDraft.of();
         value.setPermyriad(1L);
         Assertions.assertThat(value.getPermyriad()).isEqualTo(1L);
+    }
+
+    @Test
+    public void applicationMode() {
+        CartDiscountValueRelativeDraft value = CartDiscountValueRelativeDraft.of();
+        value.setApplicationMode(
+            com.commercetools.api.models.cart_discount.DiscountApplicationMode.findEnum("ProportionateDistribution"));
+        Assertions.assertThat(value.getApplicationMode())
+                .isEqualTo(com.commercetools.api.models.cart_discount.DiscountApplicationMode
+                        .findEnum("ProportionateDistribution"));
     }
 }

@@ -3,6 +3,8 @@ package com.commercetools.api.models.cart_discount;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -23,6 +25,9 @@ public class CartDiscountValueRelativeBuilder implements Builder<CartDiscountVal
 
     private Long permyriad;
 
+    @Nullable
+    private com.commercetools.api.models.cart_discount.DiscountApplicationMode applicationMode;
+
     /**
      *  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>
      * @param permyriad value to be set
@@ -31,6 +36,22 @@ public class CartDiscountValueRelativeBuilder implements Builder<CartDiscountVal
 
     public CartDiscountValueRelativeBuilder permyriad(final Long permyriad) {
         this.permyriad = permyriad;
+        return this;
+    }
+
+    /**
+     *  <p>Indicates how the discount applies when using <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a>.</p>
+     *  <ul>
+     *   <li>If the mode is <code>IndividualApplication</code>, the discounted percentage is applied on each unit's price. The units matching the <code>triggerPattern</code> are not considered.</li>
+     *   <li>If the mode is <code>ProportionateDistribution</code> and <code>EvenDistribution</code> the discounted value is calculated from the total value of the units matching the <code>targetPattern</code> and distributed among the units matching the <code>targetPattern</code> or <code>triggerPattern</code>. These modes are allowed only if <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> <code>triggerPattern</code> is non-empty.</li>
+     *  </ul>
+     * @param applicationMode value to be set
+     * @return Builder
+     */
+
+    public CartDiscountValueRelativeBuilder applicationMode(
+            @Nullable final com.commercetools.api.models.cart_discount.DiscountApplicationMode applicationMode) {
+        this.applicationMode = applicationMode;
         return this;
     }
 
@@ -44,12 +65,26 @@ public class CartDiscountValueRelativeBuilder implements Builder<CartDiscountVal
     }
 
     /**
+     *  <p>Indicates how the discount applies when using <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a>.</p>
+     *  <ul>
+     *   <li>If the mode is <code>IndividualApplication</code>, the discounted percentage is applied on each unit's price. The units matching the <code>triggerPattern</code> are not considered.</li>
+     *   <li>If the mode is <code>ProportionateDistribution</code> and <code>EvenDistribution</code> the discounted value is calculated from the total value of the units matching the <code>targetPattern</code> and distributed among the units matching the <code>targetPattern</code> or <code>triggerPattern</code>. These modes are allowed only if <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> <code>triggerPattern</code> is non-empty.</li>
+     *  </ul>
+     * @return applicationMode
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart_discount.DiscountApplicationMode getApplicationMode() {
+        return this.applicationMode;
+    }
+
+    /**
      * builds CartDiscountValueRelative with checking for non-null required values
      * @return CartDiscountValueRelative
      */
     public CartDiscountValueRelative build() {
         Objects.requireNonNull(permyriad, CartDiscountValueRelative.class + ": permyriad is missing");
-        return new CartDiscountValueRelativeImpl(permyriad);
+        return new CartDiscountValueRelativeImpl(permyriad, applicationMode);
     }
 
     /**
@@ -57,7 +92,7 @@ public class CartDiscountValueRelativeBuilder implements Builder<CartDiscountVal
      * @return CartDiscountValueRelative
      */
     public CartDiscountValueRelative buildUnchecked() {
-        return new CartDiscountValueRelativeImpl(permyriad);
+        return new CartDiscountValueRelativeImpl(permyriad, applicationMode);
     }
 
     /**
@@ -76,6 +111,7 @@ public class CartDiscountValueRelativeBuilder implements Builder<CartDiscountVal
     public static CartDiscountValueRelativeBuilder of(final CartDiscountValueRelative template) {
         CartDiscountValueRelativeBuilder builder = new CartDiscountValueRelativeBuilder();
         builder.permyriad = template.getPermyriad();
+        builder.applicationMode = template.getApplicationMode();
         return builder;
     }
 

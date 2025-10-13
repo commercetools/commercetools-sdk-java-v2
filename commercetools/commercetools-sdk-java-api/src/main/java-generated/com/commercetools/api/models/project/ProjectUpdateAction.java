@@ -189,6 +189,14 @@ public interface ProjectUpdateAction extends com.commercetools.api.models.Resour
     }
 
     /**
+     * builder for setDiscountsConfiguration subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.project.ProjectSetDiscountsConfigurationActionBuilder setDiscountsConfigurationBuilder() {
+        return com.commercetools.api.models.project.ProjectSetDiscountsConfigurationActionBuilder.of();
+    }
+
+    /**
      * builder for setExternalOAuth subtype
      * @return builder
      */

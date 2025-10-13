@@ -1,19 +1,25 @@
 **Api changes**
 
 <details>
-<summary>Required Property(s)</summary>
+<summary>Added Type(s)</summary>
 
-- changed property `variantSelection` of type `ProductSelectionProductAddedMessage` to be optional
-- changed property `variantExclusion` of type `ProductSelectionProductExcludedMessage` to be optional
-- changed property `oldVariantExclusion` of type `ProductSelectionVariantExclusionChangedMessage` to be optional
-- changed property `newVariantExclusion` of type `ProductSelectionVariantExclusionChangedMessage` to be optional
-- changed property `oldVariantSelection` of type `ProductSelectionVariantSelectionChangedMessage` to be optional
-- changed property `newVariantSelection` of type `ProductSelectionVariantSelectionChangedMessage` to be optional
-- changed property `variantSelection` of type `ProductSelectionProductAddedMessagePayload` to be optional
-- changed property `variantExclusion` of type `ProductSelectionProductExcludedMessagePayload` to be optional
-- changed property `oldVariantExclusion` of type `ProductSelectionVariantExclusionChangedMessagePayload` to be optional
-- changed property `newVariantExclusion` of type `ProductSelectionVariantExclusionChangedMessagePayload` to be optional
-- changed property `oldVariantSelection` of type `ProductSelectionVariantSelectionChangedMessagePayload` to be optional
-- changed property `newVariantSelection` of type `ProductSelectionVariantSelectionChangedMessagePayload` to be optional
+- added type `DiscountCombinationMode`
+- added type `DiscountsConfiguration`
+- added type `ProjectSetDiscountsConfigurationAction`
+</details>
+
+
+<details>
+<summary>Removed Property(s)</summary>
+
+- :warning: removed property `skipConfiguration` from type `RecurringOrderSetOrderSkipConfigurationAction`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `discounts` to type `Project`
+- added property `skipConfigurationInputDraft` to type `RecurringOrderSetOrderSkipConfigurationAction`
 </details>
 

@@ -47,5 +47,6 @@ generateJava {
             "Time": "String",
             "BigDecimal": "Double",
             "YearMonth": "String",
+            "SearchValueType": "Object"
     ]
 }

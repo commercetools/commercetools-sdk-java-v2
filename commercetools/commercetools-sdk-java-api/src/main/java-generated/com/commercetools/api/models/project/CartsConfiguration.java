@@ -30,8 +30,13 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CartsConfiguration {
 
     /**
-     *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDraft" rel="nofollow">CartDraft</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MyCartDraft" rel="nofollow">MyCartDraft</a>. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:ChangeSubscription" rel="nofollow">ChangeSubscription</a> for Carts exists, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceDeletedDeliveryPayload" rel="nofollow">ResourceDeletedDeliveryPayload</a> is sent upon deletion of a Cart.</p>
-     *  <p>This field may not be present on Projects created before January 2020.</p>
+     *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDraft" rel="nofollow">CartDraft</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MyCartDraft" rel="nofollow">MyCartDraft</a>.</p>
+     *  <ul>
+     *   <li>If a <a href="https://docs.commercetools.com/apis/ctp:api:type:ChangeSubscription" rel="nofollow">ChangeSubscription</a> for Carts exists, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceDeletedDeliveryPayload" rel="nofollow">ResourceDeletedDeliveryPayload</a> is sent upon deletion of a Cart.</li>
+     *   <li>Carts with <a href="https://docs.commercetools.com/apis/ctp:api:type:CartOrigin" rel="nofollow">CartOrigin</a> <code>Quote</code> or <code>RecurringOrder</code> are not affected by this configuration value.</li>
+     *   <li>Changing this value doesn't affect the retention of existing Carts. To update an existing Cart's retention use <span><code>setDeleteDaysAfterLastModification</code></span> on the Carts API.</li>
+     *   <li>This field may not be present on Projects created before January 2020.</li>
+     *  </ul>
      * @return deleteDaysAfterLastModification
      */
 
@@ -63,8 +68,13 @@ public interface CartsConfiguration {
     public RoundingMode getTaxRoundingMode();
 
     /**
-     *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDraft" rel="nofollow">CartDraft</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MyCartDraft" rel="nofollow">MyCartDraft</a>. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:ChangeSubscription" rel="nofollow">ChangeSubscription</a> for Carts exists, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceDeletedDeliveryPayload" rel="nofollow">ResourceDeletedDeliveryPayload</a> is sent upon deletion of a Cart.</p>
-     *  <p>This field may not be present on Projects created before January 2020.</p>
+     *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDraft" rel="nofollow">CartDraft</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MyCartDraft" rel="nofollow">MyCartDraft</a>.</p>
+     *  <ul>
+     *   <li>If a <a href="https://docs.commercetools.com/apis/ctp:api:type:ChangeSubscription" rel="nofollow">ChangeSubscription</a> for Carts exists, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceDeletedDeliveryPayload" rel="nofollow">ResourceDeletedDeliveryPayload</a> is sent upon deletion of a Cart.</li>
+     *   <li>Carts with <a href="https://docs.commercetools.com/apis/ctp:api:type:CartOrigin" rel="nofollow">CartOrigin</a> <code>Quote</code> or <code>RecurringOrder</code> are not affected by this configuration value.</li>
+     *   <li>Changing this value doesn't affect the retention of existing Carts. To update an existing Cart's retention use <span><code>setDeleteDaysAfterLastModification</code></span> on the Carts API.</li>
+     *   <li>This field may not be present on Projects created before January 2020.</li>
+     *  </ul>
      * @param deleteDaysAfterLastModification value to be set
      */
 

@@ -29,7 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@io.vrap.rmf.base.client.utils.json.SubType("counter")
+@io.vrap.rmf.base.client.utils.json.SubType("Counter")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CounterImpl.class)
 public interface Counter extends SkipConfiguration {
@@ -37,7 +37,7 @@ public interface Counter extends SkipConfiguration {
     /**
      * discriminator value for Counter
      */
-    String COUNTER = "counter";
+    String COUNTER = "Counter";
 
     /**
      *  <p>Number of Orders that will be skipped.</p>

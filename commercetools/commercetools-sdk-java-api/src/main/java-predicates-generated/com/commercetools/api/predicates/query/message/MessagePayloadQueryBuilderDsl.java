@@ -1126,6 +1126,14 @@ public class MessagePayloadQueryBuilderDsl {
             MessagePayloadQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asPaymentTransactionInterfaceIdSet(
+            Function<com.commercetools.api.predicates.query.message.PaymentTransactionInterfaceIdSetMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentTransactionInterfaceIdSetMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.PaymentTransactionInterfaceIdSetMessagePayloadQueryBuilderDsl
+                    .of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asPaymentTransactionStateChanged(
             Function<com.commercetools.api.predicates.query.message.PaymentTransactionStateChangedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentTransactionStateChangedMessagePayloadQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

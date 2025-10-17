@@ -29,6 +29,8 @@
 <details>
 <summary>Added Property(s)</summary>
 
+- added property `sku` to type `InventoryEntryQuantitySetMessage`
+- added property `sku` to type `InventoryEntryQuantitySetMessagePayload`
 - added property `discounts` to type `Project`
 - added property `skipConfigurationInputDraft` to type `RecurringOrderSetOrderSkipConfigurationAction`
 </details>

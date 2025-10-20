@@ -69,10 +69,18 @@ public class ByProjectKeyApplicationsKeyByKeyTest {
                         .withKey("test_key")
                         .head()
                         .createHttpRequest(), "head", "test_projectKey/applications/key=test_key", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .applications()
+                                .withKey("test_key")
+                                .delete()
+                                .withVersion(2)
+                                .createHttpRequest(),
+                        "delete", "test_projectKey/applications/key=test_key?version=2", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .applications()
                         .withKey("test_key")
-                        .delete(com.commercetools.checkout.models.application.Application.of())
+                        .delete()
                         .createHttpRequest(), "delete", "test_projectKey/applications/key=test_key", } };
     }
 
@@ -87,6 +95,9 @@ public class ByProjectKeyApplicationsKeyByKeyTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .applications()
                         .withKey("test_key")
-                        .delete(com.commercetools.checkout.models.application.Application.of()), } };
+                        .delete()
+                        .withVersion(2), },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").applications().withKey("test_key").delete(), } };
     }
 }

@@ -4,8 +4,12 @@ package com.commercetools.checkout.client;
 import java.net.URI;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 
@@ -25,14 +29,15 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *            .withProjectKey("{projectKey}")
  *            .paymentIntegrations()
  *            .withId("{id}")
- *            .delete(null)
+ *            .delete()
+ *            .withVersion(version)
  *            .execute()
  * }</code></pre>
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyPaymentIntegrationsByIdDelete extends
-        TypeBodyApiMethod<ByProjectKeyPaymentIntegrationsByIdDelete, com.commercetools.checkout.models.payment_integration.PaymentIntegration, com.commercetools.checkout.models.payment_integration.PaymentIntegration>
+        TypeApiMethod<ByProjectKeyPaymentIntegrationsByIdDelete, com.commercetools.checkout.models.payment_integration.PaymentIntegration>
         implements
         com.commercetools.checkout.client.Secured_by_manage_payment_integrationsTrait<ByProjectKeyPaymentIntegrationsByIdDelete> {
 
@@ -45,21 +50,16 @@ public class ByProjectKeyPaymentIntegrationsByIdDelete extends
     private String projectKey;
     private String id;
 
-    private com.commercetools.checkout.models.payment_integration.PaymentIntegration paymentIntegration;
-
-    public ByProjectKeyPaymentIntegrationsByIdDelete(final ApiHttpClient apiHttpClient, String projectKey, String id,
-            com.commercetools.checkout.models.payment_integration.PaymentIntegration paymentIntegration) {
+    public ByProjectKeyPaymentIntegrationsByIdDelete(final ApiHttpClient apiHttpClient, String projectKey, String id) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.id = id;
-        this.paymentIntegration = paymentIntegration;
     }
 
     public ByProjectKeyPaymentIntegrationsByIdDelete(ByProjectKeyPaymentIntegrationsByIdDelete t) {
         super(t);
         this.projectKey = t.projectKey;
         this.id = t.id;
-        this.paymentIntegration = t.paymentIntegration;
     }
 
     @Override
@@ -70,10 +70,7 @@ public class ByProjectKeyPaymentIntegrationsByIdDelete extends
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        return new ApiHttpRequest(ApiHttpMethod.DELETE, URI.create(httpRequestPath), getHeaders(),
-            io.vrap.rmf.base.client.utils.json.JsonUtils
-                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(paymentIntegration)));
-
+        return new ApiHttpRequest(ApiHttpMethod.DELETE, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -97,6 +94,10 @@ public class ByProjectKeyPaymentIntegrationsByIdDelete extends
         return this.id;
     }
 
+    public List<String> getVersion() {
+        return this.getQueryParam("version");
+    }
+
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
     }
@@ -105,15 +106,83 @@ public class ByProjectKeyPaymentIntegrationsByIdDelete extends
         this.id = id;
     }
 
-    public com.commercetools.checkout.models.payment_integration.PaymentIntegration getBody() {
-        return paymentIntegration;
+    /**
+     * set version with the specified value
+     * @param version value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyPaymentIntegrationsByIdDelete
+     */
+    public <TValue> ByProjectKeyPaymentIntegrationsByIdDelete withVersion(final TValue version) {
+        return copy().withQueryParam("version", version);
     }
 
-    public ByProjectKeyPaymentIntegrationsByIdDelete withBody(
-            com.commercetools.checkout.models.payment_integration.PaymentIntegration paymentIntegration) {
-        ByProjectKeyPaymentIntegrationsByIdDelete t = copy();
-        t.paymentIntegration = paymentIntegration;
-        return t;
+    /**
+     * add additional version query parameter
+     * @param version value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyPaymentIntegrationsByIdDelete
+     */
+    public <TValue> ByProjectKeyPaymentIntegrationsByIdDelete addVersion(final TValue version) {
+        return copy().addQueryParam("version", version);
+    }
+
+    /**
+     * set version with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyPaymentIntegrationsByIdDelete
+     */
+    public ByProjectKeyPaymentIntegrationsByIdDelete withVersion(final Supplier<Long> supplier) {
+        return copy().withQueryParam("version", supplier.get());
+    }
+
+    /**
+     * add additional version query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyPaymentIntegrationsByIdDelete
+     */
+    public ByProjectKeyPaymentIntegrationsByIdDelete addVersion(final Supplier<Long> supplier) {
+        return copy().addQueryParam("version", supplier.get());
+    }
+
+    /**
+     * set version with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyPaymentIntegrationsByIdDelete
+     */
+    public ByProjectKeyPaymentIntegrationsByIdDelete withVersion(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("version", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional version query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyPaymentIntegrationsByIdDelete
+     */
+    public ByProjectKeyPaymentIntegrationsByIdDelete addVersion(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("version", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set version with the specified values
+     * @param version values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyPaymentIntegrationsByIdDelete
+     */
+    public <TValue> ByProjectKeyPaymentIntegrationsByIdDelete withVersion(final Collection<TValue> version) {
+        return copy().withoutQueryParam("version")
+                .addQueryParams(
+                    version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional version query parameters
+     * @param version values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyPaymentIntegrationsByIdDelete
+     */
+    public <TValue> ByProjectKeyPaymentIntegrationsByIdDelete addVersion(final Collection<TValue> version) {
+        return copy().addQueryParams(
+            version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
     }
 
     @Override
@@ -126,15 +195,12 @@ public class ByProjectKeyPaymentIntegrationsByIdDelete extends
 
         ByProjectKeyPaymentIntegrationsByIdDelete that = (ByProjectKeyPaymentIntegrationsByIdDelete) o;
 
-        return new EqualsBuilder().append(projectKey, that.projectKey)
-                .append(id, that.id)
-                .append(paymentIntegration, that.paymentIntegration)
-                .isEquals();
+        return new EqualsBuilder().append(projectKey, that.projectKey).append(id, that.id).isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(projectKey).append(id).append(paymentIntegration).toHashCode();
+        return new HashCodeBuilder(17, 37).append(projectKey).append(id).toHashCode();
     }
 
     @Override

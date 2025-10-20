@@ -77,7 +77,15 @@ public class ByProjectKeyPaymentIntegrationsKeyByKeyTest {
                         apiRoot.withProjectKey("test_projectKey")
                                 .paymentIntegrations()
                                 .withKey("test_key")
-                                .delete(com.commercetools.checkout.models.payment_integration.PaymentIntegration.of())
+                                .delete()
+                                .withVersion(2)
+                                .createHttpRequest(),
+                        "delete", "test_projectKey/payment-integrations/key=test_key?version=2", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .paymentIntegrations()
+                                .withKey("test_key")
+                                .delete()
                                 .createHttpRequest(),
                         "delete", "test_projectKey/payment-integrations/key=test_key", } };
     }
@@ -96,6 +104,11 @@ public class ByProjectKeyPaymentIntegrationsKeyByKeyTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .paymentIntegrations()
                         .withKey("test_key")
-                        .delete(com.commercetools.checkout.models.payment_integration.PaymentIntegration.of()), } };
+                        .delete()
+                        .withVersion(2), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .paymentIntegrations()
+                        .withKey("test_key")
+                        .delete(), } };
     }
 }

@@ -46,19 +46,12 @@ public class ByProjectKeyPaymentIntegrationsByIdRequestBuilder {
                     .build());
     }
 
-    public ByProjectKeyPaymentIntegrationsByIdDelete delete(
-            com.commercetools.checkout.models.payment_integration.PaymentIntegration paymentIntegration) {
-        return new ByProjectKeyPaymentIntegrationsByIdDelete(apiHttpClient, projectKey, id, paymentIntegration);
+    public ByProjectKeyPaymentIntegrationsByIdDelete delete() {
+        return new ByProjectKeyPaymentIntegrationsByIdDelete(apiHttpClient, projectKey, id);
     }
 
-    public ByProjectKeyPaymentIntegrationsByIdDeleteString delete(final String paymentIntegration) {
-        return new ByProjectKeyPaymentIntegrationsByIdDeleteString(apiHttpClient, projectKey, id, paymentIntegration);
-    }
-
-    public ByProjectKeyPaymentIntegrationsByIdDelete delete(
-            UnaryOperator<com.commercetools.checkout.models.payment_integration.PaymentIntegrationBuilder> op) {
-        return delete(
-            op.apply(com.commercetools.checkout.models.payment_integration.PaymentIntegrationBuilder.of()).build());
+    public <TValue> ByProjectKeyPaymentIntegrationsByIdDelete delete(TValue version) {
+        return delete().withVersion(version);
     }
 
 }

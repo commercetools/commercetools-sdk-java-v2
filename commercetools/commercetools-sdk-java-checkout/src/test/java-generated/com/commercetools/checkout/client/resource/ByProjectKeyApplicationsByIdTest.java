@@ -72,7 +72,13 @@ public class ByProjectKeyApplicationsByIdTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .applications()
                         .withId("test_id")
-                        .delete(com.commercetools.checkout.models.application.Application.of())
+                        .delete()
+                        .withVersion(2)
+                        .createHttpRequest(), "delete", "test_projectKey/applications/test_id?version=2", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .applications()
+                        .withId("test_id")
+                        .delete()
                         .createHttpRequest(), "delete", "test_projectKey/applications/test_id", } };
     }
 
@@ -87,6 +93,8 @@ public class ByProjectKeyApplicationsByIdTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .applications()
                         .withId("test_id")
-                        .delete(com.commercetools.checkout.models.application.Application.of()), } };
+                        .delete()
+                        .withVersion(2), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").applications().withId("test_id").delete(), } };
     }
 }

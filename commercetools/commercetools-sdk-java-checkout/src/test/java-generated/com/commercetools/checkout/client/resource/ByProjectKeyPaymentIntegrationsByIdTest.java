@@ -73,10 +73,18 @@ public class ByProjectKeyPaymentIntegrationsByIdTest {
                         .post(
                             com.commercetools.checkout.models.payment_integration.PaymentIntegrationUpdateActions.of())
                         .createHttpRequest(), "post", "test_projectKey/payment-integrations/test_id", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .paymentIntegrations()
+                                .withId("test_id")
+                                .delete()
+                                .withVersion(2)
+                                .createHttpRequest(),
+                        "delete", "test_projectKey/payment-integrations/test_id?version=2", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .paymentIntegrations()
                         .withId("test_id")
-                        .delete(com.commercetools.checkout.models.payment_integration.PaymentIntegration.of())
+                        .delete()
                         .createHttpRequest(), "delete", "test_projectKey/payment-integrations/test_id", } };
     }
 
@@ -94,6 +102,9 @@ public class ByProjectKeyPaymentIntegrationsByIdTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .paymentIntegrations()
                         .withId("test_id")
-                        .delete(com.commercetools.checkout.models.payment_integration.PaymentIntegration.of()), } };
+                        .delete()
+                        .withVersion(2), },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").paymentIntegrations().withId("test_id").delete(), } };
     }
 }

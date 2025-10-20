@@ -43,18 +43,12 @@ public class ByProjectKeyApplicationsByIdRequestBuilder {
             op.apply(com.commercetools.checkout.models.application.ApplicationUpdateActionsBuilder.of()).build());
     }
 
-    public ByProjectKeyApplicationsByIdDelete delete(
-            com.commercetools.checkout.models.application.Application application) {
-        return new ByProjectKeyApplicationsByIdDelete(apiHttpClient, projectKey, id, application);
+    public ByProjectKeyApplicationsByIdDelete delete() {
+        return new ByProjectKeyApplicationsByIdDelete(apiHttpClient, projectKey, id);
     }
 
-    public ByProjectKeyApplicationsByIdDeleteString delete(final String application) {
-        return new ByProjectKeyApplicationsByIdDeleteString(apiHttpClient, projectKey, id, application);
-    }
-
-    public ByProjectKeyApplicationsByIdDelete delete(
-            UnaryOperator<com.commercetools.checkout.models.application.ApplicationBuilder> op) {
-        return delete(op.apply(com.commercetools.checkout.models.application.ApplicationBuilder.of()).build());
+    public <TValue> ByProjectKeyApplicationsByIdDelete delete(TValue version) {
+        return delete().withVersion(version);
     }
 
 }

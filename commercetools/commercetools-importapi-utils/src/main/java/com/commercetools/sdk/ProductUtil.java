@@ -1,4 +1,3 @@
-
 package com.commercetools.sdk;
 
 import java.time.LocalDate;
@@ -6,6 +5,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import com.commercetools.api.models.category.CategoryReference;
 import com.commercetools.api.models.common.CentPrecisionMoney;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.Money;
@@ -26,7 +26,11 @@ import com.commercetools.importapi.models.productvariants.BooleanAttribute;
 import com.commercetools.importapi.models.productvariants.NumberAttribute;
 
 public final class ProductUtil {
+    private static KeyResolverService<CategoryReference> catKeyResolverService;
 
+    public ProductUtil() {
+        catKeyResolverService = new ExpandObjResolverService<>();
+    }
     public static ProductDraftImport toProductDraftImport(ProductProjection product) {
         var draft = ProductDraftImport.builder()
                 .key(product.getKey())
@@ -151,7 +155,7 @@ public final class ProductUtil {
     private static List<CategoryKeyReference> extractCategoryKeyReference(ProductProjection product) {
         return product.getCategories()
                 .stream()
-                .map(c -> CategoryKeyReference.builder().key(c.getObj().getKey()).build())
+                .map(c -> CategoryKeyReference.builder().key(catKeyResolverService.resolveKey(c)).build())
                 .collect(Collectors.toList());
     }
 

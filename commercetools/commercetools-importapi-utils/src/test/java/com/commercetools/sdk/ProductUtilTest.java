@@ -4,12 +4,8 @@ package com.commercetools.sdk;
 import static com.commercetools.sdk.ProductUtil.toProductDraftImport;
 import static com.commercetools.sdk.TestUtils.stringFromResource;
 import static org.junit.jupiter.api.Assertions.*;
-
-import com.commercetools.api.models.product.Attribute;
 import com.commercetools.api.models.product.ProductProjection;
 import com.commercetools.api.models.product.ProductProjectionImpl;
-import com.commercetools.importapi.models.productvariants.NumberAttribute;
-import com.commercetools.importapi.models.productvariants.TextAttributeImpl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;

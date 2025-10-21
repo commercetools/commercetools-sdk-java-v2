@@ -5,8 +5,11 @@ import static com.commercetools.sdk.ProductUtil.toProductDraftImport;
 import static com.commercetools.sdk.TestUtils.stringFromResource;
 import static org.junit.jupiter.api.Assertions.*;
 
+import com.commercetools.api.models.product.Attribute;
 import com.commercetools.api.models.product.ProductProjection;
 import com.commercetools.api.models.product.ProductProjectionImpl;
+import com.commercetools.importapi.models.productvariants.NumberAttribute;
+import com.commercetools.importapi.models.productvariants.TextAttributeImpl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
@@ -34,6 +37,62 @@ public class ProductUtilTest {
         var transformedProduct = toProductDraftImport(testProduct);
         assertEquals(testProduct.getKey(), transformedProduct.getKey());
         //assertEquals(testProduct.getName(), transformedProduct.getName());
+    }
+
+    @Test
+    void productTransformTestAttributesString() {
+        String productProjectionExampleAttr = "src/test/resources/product-projection.example-attr-string.json";
+        var testProduct = JsonUtils.fromJsonString(stringFromResource(productProjectionExampleAttr),
+            ProductProjection.class);
+        var transformedProduct = toProductDraftImport(testProduct);
+        assertEquals(testProduct.getKey(), transformedProduct.getKey());
+        assertEquals(1, transformedProduct.getAttributes().size());
+        assertEquals("text", transformedProduct.getAttributes().get(0).getType());
+    }
+
+    @Test
+    void productTransformTestAttributesInt() {
+        String productProjectionExampleAttr = "src/test/resources/product-projection.example-attr-int.json";
+        var testProduct = JsonUtils.fromJsonString(stringFromResource(productProjectionExampleAttr),
+            ProductProjection.class);
+        var transformedProduct = toProductDraftImport(testProduct);
+        assertEquals(testProduct.getKey(), transformedProduct.getKey());
+        assertEquals(1, transformedProduct.getAttributes().size());
+        assertEquals("number", transformedProduct.getAttributes().get(0).getType());
+    }
+
+    @Test
+    void productTransformTestAttributesBool() {
+        String productProjectionExampleAttr = "src/test/resources/product-projection.example-attr-bool.json";
+        var testProduct = JsonUtils.fromJsonString(stringFromResource(productProjectionExampleAttr),
+            ProductProjection.class);
+        var transformedProduct = toProductDraftImport(testProduct);
+        assertEquals(testProduct.getKey(), transformedProduct.getKey());
+        assertEquals(1, transformedProduct.getAttributes().size());
+        assertEquals("boolean", transformedProduct.getAttributes().get(0).getType());
+    }
+
+    @Test
+    void productTransformTestAttributesDouble() {
+        String productProjectionExampleAttr = "src/test/resources/product-projection.example-attr-double.json";
+        var testProduct = JsonUtils.fromJsonString(stringFromResource(productProjectionExampleAttr),
+            ProductProjection.class);
+        var transformedProduct = toProductDraftImport(testProduct);
+        assertEquals(testProduct.getKey(), transformedProduct.getKey());
+        assertEquals(1, transformedProduct.getAttributes().size());
+        assertEquals("number", transformedProduct.getAttributes().get(0).getType());
+    }
+
+
+    @Test
+    void productTransformTestAttributesLong() {
+        String productProjectionExampleAttr = "src/test/resources/product-projection.example-attr-long.json";
+        var testProduct = JsonUtils.fromJsonString(stringFromResource(productProjectionExampleAttr),
+            ProductProjection.class);
+        var transformedProduct = toProductDraftImport(testProduct);
+        assertEquals(testProduct.getKey(), transformedProduct.getKey());
+        assertEquals(1, transformedProduct.getAttributes().size());
+        assertEquals("number", transformedProduct.getAttributes().get(0).getType());
     }
 
 }

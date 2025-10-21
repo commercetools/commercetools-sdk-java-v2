@@ -2126,6 +2126,14 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for recurringOrderFailed subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderFailedMessagePayloadBuilder recurringOrderFailedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderFailedMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for recurringOrderKeySet subtype
      * @return builder
      */

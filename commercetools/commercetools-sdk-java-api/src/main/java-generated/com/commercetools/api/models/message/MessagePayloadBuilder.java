@@ -1043,6 +1043,10 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.RecurringOrderExpiresAtSetMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.RecurringOrderFailedMessagePayloadBuilder recurringOrderFailedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderFailedMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.RecurringOrderKeySetMessagePayloadBuilder recurringOrderKeySetBuilder() {
         return com.commercetools.api.models.message.RecurringOrderKeySetMessagePayloadBuilder.of();
     }

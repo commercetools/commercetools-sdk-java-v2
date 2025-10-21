@@ -275,6 +275,10 @@ public class ErrorObjectBuilder {
         return com.commercetools.api.models.error.QueryTimedOutErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.RecurringOrderFailureErrorBuilder recurringOrderFailureBuilder() {
+        return com.commercetools.api.models.error.RecurringOrderFailureErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.ReferenceExistsErrorBuilder referenceExistsBuilder() {
         return com.commercetools.api.models.error.ReferenceExistsErrorBuilder.of();
     }

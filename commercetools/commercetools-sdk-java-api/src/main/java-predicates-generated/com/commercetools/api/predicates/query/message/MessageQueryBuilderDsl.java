@@ -1618,6 +1618,13 @@ public class MessageQueryBuilderDsl {
             MessageQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asRecurringOrderFailed(
+            Function<com.commercetools.api.predicates.query.message.RecurringOrderFailedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.RecurringOrderFailedMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.message.RecurringOrderFailedMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MessageQueryBuilderDsl> asRecurringOrderKeySet(
             Function<com.commercetools.api.predicates.query.message.RecurringOrderKeySetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.RecurringOrderKeySetMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

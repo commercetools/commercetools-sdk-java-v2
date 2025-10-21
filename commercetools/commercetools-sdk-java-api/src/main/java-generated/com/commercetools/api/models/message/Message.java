@@ -2302,6 +2302,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for recurringOrderFailed subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderFailedMessageBuilder recurringOrderFailedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderFailedMessageBuilder.of();
+    }
+
+    /**
      * builder for recurringOrderKeySet subtype
      * @return builder
      */

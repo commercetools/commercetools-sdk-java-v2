@@ -4,6 +4,7 @@ package com.commercetools.sdk;
 import static com.commercetools.sdk.ProductUtil.toProductDraftImport;
 import static com.commercetools.sdk.TestUtils.stringFromResource;
 import static org.junit.jupiter.api.Assertions.*;
+
 import com.commercetools.api.models.product.ProductProjection;
 import com.commercetools.api.models.product.ProductProjectionImpl;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -78,7 +79,6 @@ public class ProductUtilTest {
         assertEquals(1, transformedProduct.getAttributes().size());
         assertEquals("number", transformedProduct.getAttributes().get(0).getType());
     }
-
 
     @Test
     void productTransformTestAttributesLong() {

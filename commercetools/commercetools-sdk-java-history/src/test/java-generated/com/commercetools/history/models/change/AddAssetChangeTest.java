@@ -21,7 +21,9 @@ public class AddAssetChangeTest {
                         AddAssetChange.builder()
                                 .previousValue(new com.commercetools.history.models.common.AssetImpl()) },
                 new Object[] { "nextValue",
-                        AddAssetChange.builder().nextValue(new com.commercetools.history.models.common.AssetImpl()) } };
+                        AddAssetChange.builder().nextValue(new com.commercetools.history.models.common.AssetImpl()) },
+                new Object[] { "catalogData", AddAssetChange.builder().catalogData("catalogData") },
+                new Object[] { "variant", AddAssetChange.builder().variant("variant") } };
     }
 
     @Test
@@ -44,5 +46,19 @@ public class AddAssetChangeTest {
         AddAssetChange value = AddAssetChange.of();
         value.setNextValue(new com.commercetools.history.models.common.AssetImpl());
         Assertions.assertThat(value.getNextValue()).isEqualTo(new com.commercetools.history.models.common.AssetImpl());
+    }
+
+    @Test
+    public void catalogData() {
+        AddAssetChange value = AddAssetChange.of();
+        value.setCatalogData("catalogData");
+        Assertions.assertThat(value.getCatalogData()).isEqualTo("catalogData");
+    }
+
+    @Test
+    public void variant() {
+        AddAssetChange value = AddAssetChange.of();
+        value.setVariant("variant");
+        Assertions.assertThat(value.getVariant()).isEqualTo("variant");
     }
 }

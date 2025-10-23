@@ -24,7 +24,8 @@ public class RemovePriceChangeTest {
                         RemovePriceChange.builder()
                                 .nextValue(new com.commercetools.history.models.common.PriceImpl()) },
                 new Object[] { "catalogData", RemovePriceChange.builder().catalogData("catalogData") },
-                new Object[] { "priceId", RemovePriceChange.builder().priceId("priceId") } };
+                new Object[] { "priceId", RemovePriceChange.builder().priceId("priceId") },
+                new Object[] { "variant", RemovePriceChange.builder().variant("variant") } };
     }
 
     @Test
@@ -61,5 +62,12 @@ public class RemovePriceChangeTest {
         RemovePriceChange value = RemovePriceChange.of();
         value.setPriceId("priceId");
         Assertions.assertThat(value.getPriceId()).isEqualTo("priceId");
+    }
+
+    @Test
+    public void variant() {
+        RemovePriceChange value = RemovePriceChange.of();
+        value.setVariant("variant");
+        Assertions.assertThat(value.getVariant()).isEqualTo("variant");
     }
 }

@@ -25,7 +25,7 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
 
     private String change;
 
-    private com.commercetools.history.models.change_value.CustomFieldExpandedValue nextValue;
+    private com.commercetools.history.models.common.CustomFields nextValue;
 
     /**
      * set the value to the change
@@ -45,10 +45,8 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
      */
 
     public AddInterfaceInteractionChangeBuilder nextValue(
-            Function<com.commercetools.history.models.change_value.CustomFieldExpandedValueBuilder, com.commercetools.history.models.change_value.CustomFieldExpandedValueBuilder> builder) {
-        this.nextValue = builder
-                .apply(com.commercetools.history.models.change_value.CustomFieldExpandedValueBuilder.of())
-                .build();
+            Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of()).build();
         return this;
     }
 
@@ -59,9 +57,8 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
      */
 
     public AddInterfaceInteractionChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.change_value.CustomFieldExpandedValueBuilder, com.commercetools.history.models.change_value.CustomFieldExpandedValue> builder) {
-        this.nextValue = builder
-                .apply(com.commercetools.history.models.change_value.CustomFieldExpandedValueBuilder.of());
+            Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFields> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of());
         return this;
     }
 
@@ -72,7 +69,7 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
      */
 
     public AddInterfaceInteractionChangeBuilder nextValue(
-            final com.commercetools.history.models.change_value.CustomFieldExpandedValue nextValue) {
+            final com.commercetools.history.models.common.CustomFields nextValue) {
         this.nextValue = nextValue;
         return this;
     }
@@ -91,7 +88,7 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
      * @return nextValue
      */
 
-    public com.commercetools.history.models.change_value.CustomFieldExpandedValue getNextValue() {
+    public com.commercetools.history.models.common.CustomFields getNextValue() {
         return this.nextValue;
     }
 

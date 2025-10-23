@@ -26,7 +26,7 @@ public class RemoveEnumValuesChangeImpl implements RemoveEnumValuesChange, Model
 
     private String change;
 
-    private com.commercetools.history.models.change_value.EnumValue previousValue;
+    private com.commercetools.history.models.common.AttributePlainEnumValue previousValue;
 
     private String attributeName;
 
@@ -35,7 +35,7 @@ public class RemoveEnumValuesChangeImpl implements RemoveEnumValuesChange, Model
      */
     @JsonCreator
     RemoveEnumValuesChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("previousValue") final com.commercetools.history.models.change_value.EnumValue previousValue,
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.AttributePlainEnumValue previousValue,
             @JsonProperty("attributeName") final String attributeName) {
         this.change = change;
         this.previousValue = previousValue;
@@ -70,7 +70,7 @@ public class RemoveEnumValuesChangeImpl implements RemoveEnumValuesChange, Model
      *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.change_value.EnumValue getPreviousValue() {
+    public com.commercetools.history.models.common.AttributePlainEnumValue getPreviousValue() {
         return this.previousValue;
     }
 
@@ -86,7 +86,7 @@ public class RemoveEnumValuesChangeImpl implements RemoveEnumValuesChange, Model
         this.change = change;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.change_value.EnumValue previousValue) {
+    public void setPreviousValue(final com.commercetools.history.models.common.AttributePlainEnumValue previousValue) {
         this.previousValue = previousValue;
     }
 

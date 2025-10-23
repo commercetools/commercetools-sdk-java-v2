@@ -24,7 +24,6 @@ import jakarta.validation.constraints.NotNull;
  * <pre><code class='java'>
  *     SearchKeyword searchKeyword = SearchKeyword.builder()
  *             .text("{text}")
- *             .suggestTokenizer(suggestTokenizerBuilder -> suggestTokenizerBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -34,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface SearchKeyword {
 
     /**
-     *
+     *  <p>Text to return in the <a href="https://docs.commercetools.com/apis/ctp:api:type:SuggestionResult" rel="nofollow">SuggestionResult</a>.</p>
      * @return text
      */
     @NotNull
@@ -42,23 +41,22 @@ public interface SearchKeyword {
     public String getText();
 
     /**
-     *
+     *  <p>If no tokenizer is defined, the <code>text</code> is used as a single token.</p>
      * @return suggestTokenizer
      */
-    @NotNull
     @Valid
     @JsonProperty("suggestTokenizer")
     public SuggestTokenizer getSuggestTokenizer();
 
     /**
-     * set text
+     *  <p>Text to return in the <a href="https://docs.commercetools.com/apis/ctp:api:type:SuggestionResult" rel="nofollow">SuggestionResult</a>.</p>
      * @param text value to be set
      */
 
     public void setText(final String text);
 
     /**
-     * set suggestTokenizer
+     *  <p>If no tokenizer is defined, the <code>text</code> is used as a single token.</p>
      * @param suggestTokenizer value to be set
      */
 

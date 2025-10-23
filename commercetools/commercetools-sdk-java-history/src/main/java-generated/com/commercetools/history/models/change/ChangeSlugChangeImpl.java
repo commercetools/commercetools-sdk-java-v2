@@ -34,16 +34,20 @@ public class ChangeSlugChangeImpl implements ChangeSlugChange, ModelBase {
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
+    private String catalogData;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     ChangeSlugChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.LocalizedString previousValue,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.LocalizedString nextValue) {
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.LocalizedString nextValue,
+            @JsonProperty("catalogData") final String catalogData) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
+        this.catalogData = catalogData;
         this.type = CHANGE_SLUG_CHANGE;
     }
 
@@ -86,6 +90,18 @@ public class ChangeSlugChangeImpl implements ChangeSlugChange, ModelBase {
         return this.nextValue;
     }
 
+    /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
@@ -96,6 +112,10 @@ public class ChangeSlugChangeImpl implements ChangeSlugChange, ModelBase {
 
     public void setNextValue(final com.commercetools.history.models.common.LocalizedString nextValue) {
         this.nextValue = nextValue;
+    }
+
+    public void setCatalogData(final String catalogData) {
+        this.catalogData = catalogData;
     }
 
     @Override
@@ -112,10 +132,12 @@ public class ChangeSlugChangeImpl implements ChangeSlugChange, ModelBase {
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(catalogData, that.catalogData)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(catalogData, that.catalogData)
                 .isEquals();
     }
 
@@ -125,6 +147,7 @@ public class ChangeSlugChangeImpl implements ChangeSlugChange, ModelBase {
                 .append(change)
                 .append(previousValue)
                 .append(nextValue)
+                .append(catalogData)
                 .toHashCode();
     }
 
@@ -134,6 +157,7 @@ public class ChangeSlugChangeImpl implements ChangeSlugChange, ModelBase {
                 .append("change", change)
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
+                .append("catalogData", catalogData)
                 .build();
     }
 

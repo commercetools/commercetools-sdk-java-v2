@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .catalogData("{catalogData}")
  *             .priceId("{priceId}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -35,6 +36,7 @@ import jakarta.validation.constraints.NotNull;
 @io.vrap.rmf.base.client.utils.json.SubType("AddPriceChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AddPriceChangeImpl.class)
+@Deprecated
 public interface AddPriceChange extends Change {
 
     /**
@@ -68,6 +70,7 @@ public interface AddPriceChange extends Change {
     public Price getNextValue();
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -87,6 +90,15 @@ public interface AddPriceChange extends Change {
     public String getPriceId();
 
     /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+    @NotNull
+    @JsonProperty("variant")
+    public String getVariant();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -101,6 +113,7 @@ public interface AddPriceChange extends Change {
     public void setNextValue(final Price nextValue);
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -116,6 +129,14 @@ public interface AddPriceChange extends Change {
      */
 
     public void setPriceId(final String priceId);
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     */
+
+    public void setVariant(final String variant);
 
     /**
      * factory method
@@ -136,6 +157,7 @@ public interface AddPriceChange extends Change {
         instance.setNextValue(template.getNextValue());
         instance.setCatalogData(template.getCatalogData());
         instance.setPriceId(template.getPriceId());
+        instance.setVariant(template.getVariant());
         return instance;
     }
 
@@ -156,6 +178,7 @@ public interface AddPriceChange extends Change {
         instance.setNextValue(com.commercetools.history.models.common.Price.deepCopy(template.getNextValue()));
         instance.setCatalogData(template.getCatalogData());
         instance.setPriceId(template.getPriceId());
+        instance.setVariant(template.getVariant());
         return instance;
     }
 

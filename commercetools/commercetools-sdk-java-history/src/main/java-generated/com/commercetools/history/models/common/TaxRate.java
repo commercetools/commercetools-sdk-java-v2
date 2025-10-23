@@ -17,20 +17,17 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+ * TaxRate
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     TaxRate taxRate = TaxRate.builder()
- *             .id("{id}")
  *             .name("{name}")
- *             .amount(1)
+ *             .amount(0.3)
  *             .includedInPrice(true)
  *             .country("{country}")
- *             .state("{state}")
- *             .plusSubRates(subRatesBuilder -> subRatesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -40,15 +37,23 @@ import jakarta.validation.constraints.NotNull;
 public interface TaxRate {
 
     /**
-     *  <p>The ID is always set if the tax rate is part of a TaxCategory. The external tax rates in a Cart do not contain an <code>id</code>.</p>
+     *  <p>Present if the TaxRate is part of a <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a>. Absent for external TaxRates in <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a>.</p>
      * @return id
      */
-    @NotNull
+
     @JsonProperty("id")
     public String getId();
 
     /**
-     *
+     *  <p>User-defined unique identifier of the TaxRate. Present when set using <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRateDraft" rel="nofollow">TaxRateDraft</a>. Not available for external TaxRates created using <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
+     *  <p>Name of the TaxRate.</p>
      * @return name
      */
     @NotNull
@@ -56,15 +61,15 @@ public interface TaxRate {
     public String getName();
 
     /**
-     *  <p>Percentage in the range of [0..1]. The sum of the amounts of all <code>subRates</code>, if there are any.</p>
+     *  <p>Tax rate. If subrates are used, the amount is the sum of all rates in <code>subRates</code>.</p>
      * @return amount
      */
     @NotNull
     @JsonProperty("amount")
-    public Integer getAmount();
+    public Double getAmount();
 
     /**
-     *
+     *  <p>If <code>true</code>, tax is included in <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Prices</a>, and the <code>taxedPrice</code> is present on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>. In this case, the <code>totalNet</code> price on <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedPrice" rel="nofollow">TaxedPrice</a> includes the TaxRate.</p>
      * @return includedInPrice
      */
     @NotNull
@@ -72,7 +77,7 @@ public interface TaxRate {
     public Boolean getIncludedInPrice();
 
     /**
-     *  <p>Two-digit country code as per <span>ISO 3166-1 alpha-2</span>.</p>
+     *  <p>Country in which the tax rate is applied in <span>ISO 3166-1 alpha-2</span> format.</p>
      * @return country
      */
     @NotNull
@@ -80,66 +85,72 @@ public interface TaxRate {
     public String getCountry();
 
     /**
-     *  <p>The state in the country</p>
+     *  <p>State within the country, such as Texas in the United States.</p>
      * @return state
      */
-    @NotNull
+
     @JsonProperty("state")
     public String getState();
 
     /**
-     *
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      * @return subRates
      */
-    @NotNull
     @Valid
     @JsonProperty("subRates")
     public List<SubRate> getSubRates();
 
     /**
-     *  <p>The ID is always set if the tax rate is part of a TaxCategory. The external tax rates in a Cart do not contain an <code>id</code>.</p>
+     *  <p>Present if the TaxRate is part of a <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a>. Absent for external TaxRates in <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a>.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     * set name
+     *  <p>User-defined unique identifier of the TaxRate. Present when set using <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRateDraft" rel="nofollow">TaxRateDraft</a>. Not available for external TaxRates created using <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
+
+    /**
+     *  <p>Name of the TaxRate.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     *  <p>Percentage in the range of [0..1]. The sum of the amounts of all <code>subRates</code>, if there are any.</p>
+     *  <p>Tax rate. If subrates are used, the amount is the sum of all rates in <code>subRates</code>.</p>
      * @param amount value to be set
      */
 
-    public void setAmount(final Integer amount);
+    public void setAmount(final Double amount);
 
     /**
-     * set includedInPrice
+     *  <p>If <code>true</code>, tax is included in <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Prices</a>, and the <code>taxedPrice</code> is present on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>. In this case, the <code>totalNet</code> price on <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedPrice" rel="nofollow">TaxedPrice</a> includes the TaxRate.</p>
      * @param includedInPrice value to be set
      */
 
     public void setIncludedInPrice(final Boolean includedInPrice);
 
     /**
-     *  <p>Two-digit country code as per <span>ISO 3166-1 alpha-2</span>.</p>
+     *  <p>Country in which the tax rate is applied in <span>ISO 3166-1 alpha-2</span> format.</p>
      * @param country value to be set
      */
 
     public void setCountry(final String country);
 
     /**
-     *  <p>The state in the country</p>
+     *  <p>State within the country, such as Texas in the United States.</p>
      * @param state value to be set
      */
 
     public void setState(final String state);
 
     /**
-     * set subRates
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      * @param subRates values to be set
      */
 
@@ -147,7 +158,7 @@ public interface TaxRate {
     public void setSubRates(final SubRate... subRates);
 
     /**
-     * set subRates
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      * @param subRates values to be set
      */
 
@@ -169,6 +180,7 @@ public interface TaxRate {
     public static TaxRate of(final TaxRate template) {
         TaxRateImpl instance = new TaxRateImpl();
         instance.setId(template.getId());
+        instance.setKey(template.getKey());
         instance.setName(template.getName());
         instance.setAmount(template.getAmount());
         instance.setIncludedInPrice(template.getIncludedInPrice());
@@ -192,6 +204,7 @@ public interface TaxRate {
         }
         TaxRateImpl instance = new TaxRateImpl();
         instance.setId(template.getId());
+        instance.setKey(template.getKey());
         instance.setName(template.getName());
         instance.setAmount(template.getAmount());
         instance.setIncludedInPrice(template.getIncludedInPrice());

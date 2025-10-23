@@ -2,6 +2,7 @@
 package com.commercetools.history.models.common;
 
 import java.time.*;
+import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
@@ -16,19 +17,17 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * TextLineItem
+ *  <p>TextLineItems are Line Items that use text values instead of references to Products.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     TextLineItem textLineItem = TextLineItem.builder()
- *             .addedAt("{addedAt}")
- *             .custom(customBuilder -> customBuilder)
- *             .description(descriptionBuilder -> descriptionBuilder)
+ *             .addedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .id("{id}")
  *             .name(nameBuilder -> nameBuilder)
- *             .quantity(1)
+ *             .quantity(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -38,33 +37,31 @@ import jakarta.validation.constraints.NotNull;
 public interface TextLineItem {
 
     /**
-     *
+     *  <p>Date and time (UTC) the TextLineItem was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @return addedAt
      */
     @NotNull
     @JsonProperty("addedAt")
-    public String getAddedAt();
+    public ZonedDateTime getAddedAt();
 
     /**
-     *
+     *  <p>Custom Fields of the TextLineItem.</p>
      * @return custom
      */
-    @NotNull
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
 
     /**
-     *
+     *  <p>Description of the TextLineItem.</p>
      * @return description
      */
-    @NotNull
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     *
+     *  <p>Unique identifier of the TextLineItem.</p>
      * @return id
      */
     @NotNull
@@ -72,7 +69,15 @@ public interface TextLineItem {
     public String getId();
 
     /**
-     *
+     *  <p>User-defined identifier of the TextLineItem. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
+     *  <p>Name of the TextLineItem.</p>
      * @return name
      */
     @NotNull
@@ -81,54 +86,61 @@ public interface TextLineItem {
     public LocalizedString getName();
 
     /**
-     *
+     *  <p>Number of entries in the TextLineItem.</p>
      * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
-    public Integer getQuantity();
+    public Long getQuantity();
 
     /**
-     * set addedAt
+     *  <p>Date and time (UTC) the TextLineItem was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param addedAt value to be set
      */
 
-    public void setAddedAt(final String addedAt);
+    public void setAddedAt(final ZonedDateTime addedAt);
 
     /**
-     * set custom
+     *  <p>Custom Fields of the TextLineItem.</p>
      * @param custom value to be set
      */
 
     public void setCustom(final CustomFields custom);
 
     /**
-     * set description
+     *  <p>Description of the TextLineItem.</p>
      * @param description value to be set
      */
 
     public void setDescription(final LocalizedString description);
 
     /**
-     * set id
+     *  <p>Unique identifier of the TextLineItem.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     * set name
+     *  <p>User-defined identifier of the TextLineItem. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
+
+    /**
+     *  <p>Name of the TextLineItem.</p>
      * @param name value to be set
      */
 
     public void setName(final LocalizedString name);
 
     /**
-     * set quantity
+     *  <p>Number of entries in the TextLineItem.</p>
      * @param quantity value to be set
      */
 
-    public void setQuantity(final Integer quantity);
+    public void setQuantity(final Long quantity);
 
     /**
      * factory method
@@ -149,6 +161,7 @@ public interface TextLineItem {
         instance.setCustom(template.getCustom());
         instance.setDescription(template.getDescription());
         instance.setId(template.getId());
+        instance.setKey(template.getKey());
         instance.setName(template.getName());
         instance.setQuantity(template.getQuantity());
         return instance;
@@ -172,6 +185,7 @@ public interface TextLineItem {
         instance.setDescription(
             com.commercetools.history.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setId(template.getId());
+        instance.setKey(template.getKey());
         instance.setName(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setQuantity(template.getQuantity());
         return instance;

@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     DeliveryItem deliveryItem = DeliveryItem.builder()
  *             .id("{id}")
- *             .quantity(1)
+ *             .quantity(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -24,10 +24,10 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
 
     private String id;
 
-    private Integer quantity;
+    private Long quantity;
 
     /**
-     * set the value to the id
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> delivered.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -38,18 +38,18 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
     }
 
     /**
-     * set the value to the quantity
+     *  <p>Number of Line Items or Custom Line Items delivered.</p>
      * @param quantity value to be set
      * @return Builder
      */
 
-    public DeliveryItemBuilder quantity(final Integer quantity) {
+    public DeliveryItemBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
 
     /**
-     * value of id}
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> delivered.</p>
      * @return id
      */
 
@@ -58,11 +58,11 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
     }
 
     /**
-     * value of quantity}
+     *  <p>Number of Line Items or Custom Line Items delivered.</p>
      * @return quantity
      */
 
-    public Integer getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 

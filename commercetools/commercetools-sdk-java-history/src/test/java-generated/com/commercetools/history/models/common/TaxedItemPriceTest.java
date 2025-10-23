@@ -1,6 +1,8 @@
 
 package com.commercetools.history.models.common;
 
+import java.util.Collections;
+
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -18,22 +20,48 @@ public class TaxedItemPriceTest {
     public static Object[][] objectBuilder() {
         return new Object[][] {
                 new Object[] { "totalNet",
-                        TaxedItemPrice.builder().totalNet(new com.commercetools.history.models.common.MoneyImpl()) },
-                new Object[] { "totalGross", TaxedItemPrice.builder()
-                        .totalGross(new com.commercetools.history.models.common.MoneyImpl()) } };
+                        TaxedItemPrice.builder()
+                                .totalNet(new com.commercetools.history.models.common.CentPrecisionMoneyImpl()) },
+                new Object[] { "totalGross",
+                        TaxedItemPrice.builder()
+                                .totalGross(new com.commercetools.history.models.common.CentPrecisionMoneyImpl()) },
+                new Object[] { "taxPortions",
+                        TaxedItemPrice.builder()
+                                .taxPortions(Collections
+                                        .singletonList(new com.commercetools.history.models.common.TaxPortionImpl())) },
+                new Object[] { "totalTax", TaxedItemPrice.builder()
+                        .totalTax(new com.commercetools.history.models.common.CentPrecisionMoneyImpl()) } };
     }
 
     @Test
     public void totalNet() {
         TaxedItemPrice value = TaxedItemPrice.of();
-        value.setTotalNet(new com.commercetools.history.models.common.MoneyImpl());
-        Assertions.assertThat(value.getTotalNet()).isEqualTo(new com.commercetools.history.models.common.MoneyImpl());
+        value.setTotalNet(new com.commercetools.history.models.common.CentPrecisionMoneyImpl());
+        Assertions.assertThat(value.getTotalNet())
+                .isEqualTo(new com.commercetools.history.models.common.CentPrecisionMoneyImpl());
     }
 
     @Test
     public void totalGross() {
         TaxedItemPrice value = TaxedItemPrice.of();
-        value.setTotalGross(new com.commercetools.history.models.common.MoneyImpl());
-        Assertions.assertThat(value.getTotalGross()).isEqualTo(new com.commercetools.history.models.common.MoneyImpl());
+        value.setTotalGross(new com.commercetools.history.models.common.CentPrecisionMoneyImpl());
+        Assertions.assertThat(value.getTotalGross())
+                .isEqualTo(new com.commercetools.history.models.common.CentPrecisionMoneyImpl());
+    }
+
+    @Test
+    public void taxPortions() {
+        TaxedItemPrice value = TaxedItemPrice.of();
+        value.setTaxPortions(Collections.singletonList(new com.commercetools.history.models.common.TaxPortionImpl()));
+        Assertions.assertThat(value.getTaxPortions())
+                .isEqualTo(Collections.singletonList(new com.commercetools.history.models.common.TaxPortionImpl()));
+    }
+
+    @Test
+    public void totalTax() {
+        TaxedItemPrice value = TaxedItemPrice.of();
+        value.setTotalTax(new com.commercetools.history.models.common.CentPrecisionMoneyImpl());
+        Assertions.assertThat(value.getTotalTax())
+                .isEqualTo(new com.commercetools.history.models.common.CentPrecisionMoneyImpl());
     }
 }

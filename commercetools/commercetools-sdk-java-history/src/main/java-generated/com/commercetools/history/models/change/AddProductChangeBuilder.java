@@ -43,30 +43,6 @@ public class AddProductChangeBuilder implements Builder<AddProductChange> {
 
     /**
      *  <p>Value after the change.</p>
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public AddProductChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Value after the change.</p>
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public AddProductChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -77,29 +53,14 @@ public class AddProductChangeBuilder implements Builder<AddProductChange> {
     }
 
     /**
-     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variants</a> included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a>.</p>
-     * @param builder function to build the variantSelection value
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
-    public AddProductChangeBuilder variantSelection(
-            Function<com.commercetools.history.models.common.ProductVariantSelectionBuilder, com.commercetools.history.models.common.ProductVariantSelectionBuilder> builder) {
-        this.variantSelection = builder
-                .apply(com.commercetools.history.models.common.ProductVariantSelectionBuilder.of())
-                .build();
-        return this;
-    }
-
-    /**
-     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variants</a> included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a>.</p>
-     * @param builder function to build the variantSelection value
-     * @return Builder
-     */
-
-    public AddProductChangeBuilder withVariantSelection(
-            Function<com.commercetools.history.models.common.ProductVariantSelectionBuilder, com.commercetools.history.models.common.ProductVariantSelection> builder) {
-        this.variantSelection = builder
-                .apply(com.commercetools.history.models.common.ProductVariantSelectionBuilder.of());
+    public AddProductChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 
@@ -112,6 +73,20 @@ public class AddProductChangeBuilder implements Builder<AddProductChange> {
     public AddProductChangeBuilder variantSelection(
             final com.commercetools.history.models.common.ProductVariantSelection variantSelection) {
         this.variantSelection = variantSelection;
+        return this;
+    }
+
+    /**
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variants</a> included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a>.</p>
+     * @param builder function to build the variantSelection value
+     * @return Builder
+     */
+
+    public AddProductChangeBuilder variantSelection(
+            Function<com.commercetools.history.models.common.ProductVariantSelectionBuilder, Builder<? extends com.commercetools.history.models.common.ProductVariantSelection>> builder) {
+        this.variantSelection = builder
+                .apply(com.commercetools.history.models.common.ProductVariantSelectionBuilder.of())
+                .build();
         return this;
     }
 

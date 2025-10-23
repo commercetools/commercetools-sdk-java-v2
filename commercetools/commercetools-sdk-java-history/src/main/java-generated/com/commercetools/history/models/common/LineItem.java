@@ -2,8 +2,10 @@
 package com.commercetools.history.models.common;
 
 import java.time.*;
+import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
@@ -16,23 +18,27 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * LineItem
+ *  <p>The representation of a <span>Line Item</span> in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or in an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     LineItem lineItem = LineItem.builder()
- *             .addedAt("{addedAt}")
- *             .custom(customBuilder -> customBuilder)
  *             .id("{id}")
- *             .name(nameBuilder -> nameBuilder)
  *             .productId("{productId}")
- *             .productSlug(productSlugBuilder -> productSlugBuilder)
+ *             .name(nameBuilder -> nameBuilder)
  *             .productType(productTypeBuilder -> productTypeBuilder)
- *             .quantity(1)
  *             .variant(variantBuilder -> variantBuilder)
- *             .variantId(1)
+ *             .price(priceBuilder -> priceBuilder)
+ *             .quantity(0.3)
+ *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
+ *             .plusDiscountedPricePerQuantity(discountedPricePerQuantityBuilder -> discountedPricePerQuantityBuilder)
+ *             .plusTaxedPricePortions(taxedPricePortionsBuilder -> taxedPricePortionsBuilder)
+ *             .plusState(stateBuilder -> stateBuilder)
+ *             .plusPerMethodTaxRate(perMethodTaxRateBuilder -> perMethodTaxRateBuilder)
+ *             .priceMode(LineItemPriceMode.PLATFORM)
+ *             .lineItemMode(LineItemMode.STANDARD)
  *             .build()
  * </code></pre>
  * </div>
@@ -42,24 +48,7 @@ import jakarta.validation.constraints.NotNull;
 public interface LineItem {
 
     /**
-     *
-     * @return addedAt
-     */
-    @NotNull
-    @JsonProperty("addedAt")
-    public String getAddedAt();
-
-    /**
-     *
-     * @return custom
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("custom")
-    public CustomFields getCustom();
-
-    /**
-     *
+     *  <p>Unique identifier of the LineItem.</p>
      * @return id
      */
     @NotNull
@@ -67,7 +56,37 @@ public interface LineItem {
     public String getId();
 
     /**
-     *
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
+     * @return productId
+     */
+    @NotNull
+    @JsonProperty("productId")
+    public String getProductId();
+
+    /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
+     *  <p>This field is only present on:</p>
+     *  <ul>
+     *   <li>Line Items in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> when the <code>key</code> is available on that specific Product at the time the LineItem was created or updated on the Cart.</li>
+     *   <li>Line Items in an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> when the <code>key</code> is available on the specific Product at the time the Order was created from the Cart.</li>
+     *  </ul>
+     *  <p>Present on resources created or updated after 3 December 2021.</p>
+     * @return productKey
+     */
+
+    @JsonProperty("productKey")
+    public String getProductKey();
+
+    /**
+     *  <p>Name of the Product.</p>
      * @return name
      */
     @NotNull
@@ -76,125 +95,426 @@ public interface LineItem {
     public LocalizedString getName();
 
     /**
-     *
-     * @return productId
-     */
-    @NotNull
-    @JsonProperty("productId")
-    public String getProductId();
-
-    /**
-     *
+     *  <p><code>slug</code> of the current version of the Product. Updated automatically if the <code>slug</code> changes. Empty if the Product has been deleted. The <code>productSlug</code> field of LineItem is not expanded when using <span>Reference Expansion</span>.</p>
      * @return productSlug
      */
-    @NotNull
     @Valid
     @JsonProperty("productSlug")
     public LocalizedString getProductSlug();
 
     /**
-     *
+     *  <p>Product Type of the Product.</p>
      * @return productType
      */
     @NotNull
     @Valid
     @JsonProperty("productType")
-    public Reference getProductType();
+    public ProductTypeReference getProductType();
 
     /**
-     *
-     * @return quantity
-     */
-    @NotNull
-    @JsonProperty("quantity")
-    public Integer getQuantity();
-
-    /**
-     *
+     *  <p>Holds the data of the Product Variant added to the Cart.</p>
+     *  <p>The data is saved at the time the Product Variant is added to the Cart and is not updated automatically when Product Variant data changes. Must be updated using the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRecalculateAction" rel="nofollow">Recalculate</a> update action.</p>
      * @return variant
      */
     @NotNull
     @Valid
     @JsonProperty("variant")
-    public Variant getVariant();
+    public ProductVariant getVariant();
 
     /**
-     *
-     * @return variantId
+     *  <p>Price of a Line Item selected from the Product Variant according to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> <code>priceMode</code>. If the <code>priceMode</code> is <code>Embedded</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPriceModeEnum" rel="nofollow">ProductPriceMode</a> and the <code>variant</code> field hasn't been updated, the price may not correspond to a price in <code>variant.prices</code>.</p>
+     * @return price
      */
     @NotNull
-    @JsonProperty("variantId")
-    public Integer getVariantId();
+    @Valid
+    @JsonProperty("price")
+    public Price getPrice();
 
     /**
-     * set addedAt
-     * @param addedAt value to be set
+     *  <p>Number of Line Items of the given Product Variant present in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
+     * @return quantity
+     */
+    @NotNull
+    @JsonProperty("quantity")
+    public Long getQuantity();
+
+    /**
+     *  <p>Total price of this Line Item equalling <code>price</code> multiplied by <code>quantity</code>. If the Line Item is discounted, the total price is the <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>. Includes taxes if the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> <code>includedInPrice</code> is <code>true</code>.</p>
+     *  <p>If <code>ExternalPrice</code> <span>LineItemPriceMode</span> is used with high-precision money, then the total price is rounded by using the <code>HalfEven</code> rounding mode.</p>
+     * @return totalPrice
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("totalPrice")
+    public CentPrecisionMoney getTotalPrice();
+
+    /**
+     *  <p>Discounted price of a single quantity of the Line Item.</p>
+     * @return discountedPricePerQuantity
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("discountedPricePerQuantity")
+    public List<DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity();
+
+    /**
+     *  <p>Automatically set after <code>taxRate</code> is set.</p>
+     * @return taxedPrice
+     */
+    @Valid
+    @JsonProperty("taxedPrice")
+    public TaxedItemPrice getTaxedPrice();
+
+    /**
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">Shipping Method</a>. Only applicable for Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set after <code>perMethodTaxRate</code> is set.</p>
+     * @return taxedPricePortions
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("taxedPricePortions")
+    public List<MethodTaxedPrice> getTaxedPricePortions();
+
+    /**
+     *  <p>Tracks specific quantities of the Line Item within a given State. When a Line Item is added to a Cart, its full quantity is set to the built-in "Initial" state. State transitions for Line Items are managed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
+     * @return state
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("state")
+    public List<ItemState> getState();
+
+    /**
+     *  <ul>
+     *   <li>For a Cart with <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, the <code>taxRate</code> of Line Items is set automatically once a shipping address is set. The rate is based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> that applies for the shipping address.</li>
+     *   <li>For a Cart with <code>External</code> TaxMode, the <code>taxRate</code> of Line Items can be set using <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>.</li>
+     *  </ul>
+     * @return taxRate
+     */
+    @Valid
+    @JsonProperty("taxRate")
+    public TaxRate getTaxRate();
+
+    /**
+     *  <p>Tax Rate per Shipping Method for a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. For a Cart with <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> it is automatically set after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>. For a Cart with <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, the Tax Rate must be set with <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>.</p>
+     * @return perMethodTaxRate
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("perMethodTaxRate")
+    public List<MethodTaxRate> getPerMethodTaxRate();
+
+    /**
+     *  <p>Identifies <span>Inventory entries</span> that are reserved. The referenced Channel has the <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     * @return supplyChannel
+     */
+    @Valid
+    @JsonProperty("supplyChannel")
+    public ChannelReference getSupplyChannel();
+
+    /**
+     *  <p>Used to <span>select</span> a Product Price. The referenced Channel has the <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     * @return distributionChannel
+     */
+    @Valid
+    @JsonProperty("distributionChannel")
+    public ChannelReference getDistributionChannel();
+
+    /**
+     *  <p>Indicates how the Price for the Line Item is set.</p>
+     * @return priceMode
+     */
+    @NotNull
+    @JsonProperty("priceMode")
+    public LineItemPriceMode getPriceMode();
+
+    /**
+     *  <p>Indicates how the Line Item is added to the Cart.</p>
+     * @return lineItemMode
+     */
+    @NotNull
+    @JsonProperty("lineItemMode")
+    public LineItemMode getLineItemMode();
+
+    /**
+     *  <p>Inventory mode specific to this Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Only present if the inventory mode is different from the <code>inventoryMode</code> specified on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
+     * @return inventoryMode
      */
 
-    public void setAddedAt(final String addedAt);
+    @JsonProperty("inventoryMode")
+    public InventoryMode getInventoryMode();
 
     /**
-     * set custom
-     * @param custom value to be set
+     *  <p>Container for Line Item-specific addresses.</p>
+     * @return shippingDetails
+     */
+    @Valid
+    @JsonProperty("shippingDetails")
+    public ItemShippingDetails getShippingDetails();
+
+    /**
+     *  <p>Custom Fields of the Line Item.</p>
+     * @return custom
+     */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFields getCustom();
+
+    /**
+     *  <p>Date and time (UTC) the Line Item was added to the Cart.</p>
+     * @return addedAt
      */
 
-    public void setCustom(final CustomFields custom);
+    @JsonProperty("addedAt")
+    public ZonedDateTime getAddedAt();
 
     /**
-     * set id
+     *  <p>Date and time (UTC) the Line Item was last updated.</p>
+     * @return lastModifiedAt
+     */
+
+    @JsonProperty("lastModifiedAt")
+    public ZonedDateTime getLastModifiedAt();
+
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @return recurrenceInfo
+     */
+    @Valid
+    @JsonProperty("recurrenceInfo")
+    public LineItemRecurrenceInfo getRecurrenceInfo();
+
+    /**
+     *  <p>Unique identifier of the LineItem.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     * set name
-     * @param name value to be set
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @param key value to be set
      */
 
-    public void setName(final LocalizedString name);
+    public void setKey(final String key);
 
     /**
-     * set productId
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @param productId value to be set
      */
 
     public void setProductId(final String productId);
 
     /**
-     * set productSlug
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
+     *  <p>This field is only present on:</p>
+     *  <ul>
+     *   <li>Line Items in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> when the <code>key</code> is available on that specific Product at the time the LineItem was created or updated on the Cart.</li>
+     *   <li>Line Items in an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> when the <code>key</code> is available on the specific Product at the time the Order was created from the Cart.</li>
+     *  </ul>
+     *  <p>Present on resources created or updated after 3 December 2021.</p>
+     * @param productKey value to be set
+     */
+
+    public void setProductKey(final String productKey);
+
+    /**
+     *  <p>Name of the Product.</p>
+     * @param name value to be set
+     */
+
+    public void setName(final LocalizedString name);
+
+    /**
+     *  <p><code>slug</code> of the current version of the Product. Updated automatically if the <code>slug</code> changes. Empty if the Product has been deleted. The <code>productSlug</code> field of LineItem is not expanded when using <span>Reference Expansion</span>.</p>
      * @param productSlug value to be set
      */
 
     public void setProductSlug(final LocalizedString productSlug);
 
     /**
-     * set productType
+     *  <p>Product Type of the Product.</p>
      * @param productType value to be set
      */
 
-    public void setProductType(final Reference productType);
+    public void setProductType(final ProductTypeReference productType);
 
     /**
-     * set quantity
-     * @param quantity value to be set
-     */
-
-    public void setQuantity(final Integer quantity);
-
-    /**
-     * set variant
+     *  <p>Holds the data of the Product Variant added to the Cart.</p>
+     *  <p>The data is saved at the time the Product Variant is added to the Cart and is not updated automatically when Product Variant data changes. Must be updated using the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRecalculateAction" rel="nofollow">Recalculate</a> update action.</p>
      * @param variant value to be set
      */
 
-    public void setVariant(final Variant variant);
+    public void setVariant(final ProductVariant variant);
 
     /**
-     * set variantId
-     * @param variantId value to be set
+     *  <p>Price of a Line Item selected from the Product Variant according to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> <code>priceMode</code>. If the <code>priceMode</code> is <code>Embedded</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPriceModeEnum" rel="nofollow">ProductPriceMode</a> and the <code>variant</code> field hasn't been updated, the price may not correspond to a price in <code>variant.prices</code>.</p>
+     * @param price value to be set
      */
 
-    public void setVariantId(final Integer variantId);
+    public void setPrice(final Price price);
+
+    /**
+     *  <p>Number of Line Items of the given Product Variant present in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
+     * @param quantity value to be set
+     */
+
+    public void setQuantity(final Long quantity);
+
+    /**
+     *  <p>Total price of this Line Item equalling <code>price</code> multiplied by <code>quantity</code>. If the Line Item is discounted, the total price is the <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>. Includes taxes if the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> <code>includedInPrice</code> is <code>true</code>.</p>
+     *  <p>If <code>ExternalPrice</code> <span>LineItemPriceMode</span> is used with high-precision money, then the total price is rounded by using the <code>HalfEven</code> rounding mode.</p>
+     * @param totalPrice value to be set
+     */
+
+    public void setTotalPrice(final CentPrecisionMoney totalPrice);
+
+    /**
+     *  <p>Discounted price of a single quantity of the Line Item.</p>
+     * @param discountedPricePerQuantity values to be set
+     */
+
+    @JsonIgnore
+    public void setDiscountedPricePerQuantity(final DiscountedLineItemPriceForQuantity... discountedPricePerQuantity);
+
+    /**
+     *  <p>Discounted price of a single quantity of the Line Item.</p>
+     * @param discountedPricePerQuantity values to be set
+     */
+
+    public void setDiscountedPricePerQuantity(
+            final List<DiscountedLineItemPriceForQuantity> discountedPricePerQuantity);
+
+    /**
+     *  <p>Automatically set after <code>taxRate</code> is set.</p>
+     * @param taxedPrice value to be set
+     */
+
+    public void setTaxedPrice(final TaxedItemPrice taxedPrice);
+
+    /**
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">Shipping Method</a>. Only applicable for Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set after <code>perMethodTaxRate</code> is set.</p>
+     * @param taxedPricePortions values to be set
+     */
+
+    @JsonIgnore
+    public void setTaxedPricePortions(final MethodTaxedPrice... taxedPricePortions);
+
+    /**
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">Shipping Method</a>. Only applicable for Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set after <code>perMethodTaxRate</code> is set.</p>
+     * @param taxedPricePortions values to be set
+     */
+
+    public void setTaxedPricePortions(final List<MethodTaxedPrice> taxedPricePortions);
+
+    /**
+     *  <p>Tracks specific quantities of the Line Item within a given State. When a Line Item is added to a Cart, its full quantity is set to the built-in "Initial" state. State transitions for Line Items are managed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
+     * @param state values to be set
+     */
+
+    @JsonIgnore
+    public void setState(final ItemState... state);
+
+    /**
+     *  <p>Tracks specific quantities of the Line Item within a given State. When a Line Item is added to a Cart, its full quantity is set to the built-in "Initial" state. State transitions for Line Items are managed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
+     * @param state values to be set
+     */
+
+    public void setState(final List<ItemState> state);
+
+    /**
+     *  <ul>
+     *   <li>For a Cart with <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, the <code>taxRate</code> of Line Items is set automatically once a shipping address is set. The rate is based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> that applies for the shipping address.</li>
+     *   <li>For a Cart with <code>External</code> TaxMode, the <code>taxRate</code> of Line Items can be set using <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>.</li>
+     *  </ul>
+     * @param taxRate value to be set
+     */
+
+    public void setTaxRate(final TaxRate taxRate);
+
+    /**
+     *  <p>Tax Rate per Shipping Method for a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. For a Cart with <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> it is automatically set after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>. For a Cart with <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, the Tax Rate must be set with <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>.</p>
+     * @param perMethodTaxRate values to be set
+     */
+
+    @JsonIgnore
+    public void setPerMethodTaxRate(final MethodTaxRate... perMethodTaxRate);
+
+    /**
+     *  <p>Tax Rate per Shipping Method for a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. For a Cart with <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> it is automatically set after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>. For a Cart with <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, the Tax Rate must be set with <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>.</p>
+     * @param perMethodTaxRate values to be set
+     */
+
+    public void setPerMethodTaxRate(final List<MethodTaxRate> perMethodTaxRate);
+
+    /**
+     *  <p>Identifies <span>Inventory entries</span> that are reserved. The referenced Channel has the <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     * @param supplyChannel value to be set
+     */
+
+    public void setSupplyChannel(final ChannelReference supplyChannel);
+
+    /**
+     *  <p>Used to <span>select</span> a Product Price. The referenced Channel has the <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     * @param distributionChannel value to be set
+     */
+
+    public void setDistributionChannel(final ChannelReference distributionChannel);
+
+    /**
+     *  <p>Indicates how the Price for the Line Item is set.</p>
+     * @param priceMode value to be set
+     */
+
+    public void setPriceMode(final LineItemPriceMode priceMode);
+
+    /**
+     *  <p>Indicates how the Line Item is added to the Cart.</p>
+     * @param lineItemMode value to be set
+     */
+
+    public void setLineItemMode(final LineItemMode lineItemMode);
+
+    /**
+     *  <p>Inventory mode specific to this Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Only present if the inventory mode is different from the <code>inventoryMode</code> specified on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
+     * @param inventoryMode value to be set
+     */
+
+    public void setInventoryMode(final InventoryMode inventoryMode);
+
+    /**
+     *  <p>Container for Line Item-specific addresses.</p>
+     * @param shippingDetails value to be set
+     */
+
+    public void setShippingDetails(final ItemShippingDetails shippingDetails);
+
+    /**
+     *  <p>Custom Fields of the Line Item.</p>
+     * @param custom value to be set
+     */
+
+    public void setCustom(final CustomFields custom);
+
+    /**
+     *  <p>Date and time (UTC) the Line Item was added to the Cart.</p>
+     * @param addedAt value to be set
+     */
+
+    public void setAddedAt(final ZonedDateTime addedAt);
+
+    /**
+     *  <p>Date and time (UTC) the Line Item was last updated.</p>
+     * @param lastModifiedAt value to be set
+     */
+
+    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
+
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param recurrenceInfo value to be set
+     */
+
+    public void setRecurrenceInfo(final LineItemRecurrenceInfo recurrenceInfo);
 
     /**
      * factory method
@@ -211,16 +531,33 @@ public interface LineItem {
      */
     public static LineItem of(final LineItem template) {
         LineItemImpl instance = new LineItemImpl();
-        instance.setAddedAt(template.getAddedAt());
-        instance.setCustom(template.getCustom());
         instance.setId(template.getId());
-        instance.setName(template.getName());
+        instance.setKey(template.getKey());
         instance.setProductId(template.getProductId());
+        instance.setProductKey(template.getProductKey());
+        instance.setName(template.getName());
         instance.setProductSlug(template.getProductSlug());
         instance.setProductType(template.getProductType());
-        instance.setQuantity(template.getQuantity());
         instance.setVariant(template.getVariant());
-        instance.setVariantId(template.getVariantId());
+        instance.setPrice(template.getPrice());
+        instance.setQuantity(template.getQuantity());
+        instance.setTotalPrice(template.getTotalPrice());
+        instance.setDiscountedPricePerQuantity(template.getDiscountedPricePerQuantity());
+        instance.setTaxedPrice(template.getTaxedPrice());
+        instance.setTaxedPricePortions(template.getTaxedPricePortions());
+        instance.setState(template.getState());
+        instance.setTaxRate(template.getTaxRate());
+        instance.setPerMethodTaxRate(template.getPerMethodTaxRate());
+        instance.setSupplyChannel(template.getSupplyChannel());
+        instance.setDistributionChannel(template.getDistributionChannel());
+        instance.setPriceMode(template.getPriceMode());
+        instance.setLineItemMode(template.getLineItemMode());
+        instance.setInventoryMode(template.getInventoryMode());
+        instance.setShippingDetails(template.getShippingDetails());
+        instance.setCustom(template.getCustom());
+        instance.setAddedAt(template.getAddedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setRecurrenceInfo(template.getRecurrenceInfo());
         return instance;
     }
 
@@ -237,17 +574,57 @@ public interface LineItem {
             return null;
         }
         LineItemImpl instance = new LineItemImpl();
-        instance.setAddedAt(template.getAddedAt());
-        instance.setCustom(com.commercetools.history.models.common.CustomFields.deepCopy(template.getCustom()));
         instance.setId(template.getId());
-        instance.setName(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setKey(template.getKey());
         instance.setProductId(template.getProductId());
+        instance.setProductKey(template.getProductKey());
+        instance.setName(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setProductSlug(
             com.commercetools.history.models.common.LocalizedString.deepCopy(template.getProductSlug()));
-        instance.setProductType(com.commercetools.history.models.common.Reference.deepCopy(template.getProductType()));
+        instance.setProductType(
+            com.commercetools.history.models.common.ProductTypeReference.deepCopy(template.getProductType()));
+        instance.setVariant(com.commercetools.history.models.common.ProductVariant.deepCopy(template.getVariant()));
+        instance.setPrice(com.commercetools.history.models.common.Price.deepCopy(template.getPrice()));
         instance.setQuantity(template.getQuantity());
-        instance.setVariant(com.commercetools.history.models.common.Variant.deepCopy(template.getVariant()));
-        instance.setVariantId(template.getVariantId());
+        instance.setTotalPrice(
+            com.commercetools.history.models.common.CentPrecisionMoney.deepCopy(template.getTotalPrice()));
+        instance.setDiscountedPricePerQuantity(Optional.ofNullable(template.getDiscountedPricePerQuantity())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.DiscountedLineItemPriceForQuantity::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setTaxedPrice(
+            com.commercetools.history.models.common.TaxedItemPrice.deepCopy(template.getTaxedPrice()));
+        instance.setTaxedPricePortions(Optional.ofNullable(template.getTaxedPricePortions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.MethodTaxedPrice::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setState(Optional.ofNullable(template.getState())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.ItemState::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setTaxRate(com.commercetools.history.models.common.TaxRate.deepCopy(template.getTaxRate()));
+        instance.setPerMethodTaxRate(Optional.ofNullable(template.getPerMethodTaxRate())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.MethodTaxRate::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setSupplyChannel(
+            com.commercetools.history.models.common.ChannelReference.deepCopy(template.getSupplyChannel()));
+        instance.setDistributionChannel(
+            com.commercetools.history.models.common.ChannelReference.deepCopy(template.getDistributionChannel()));
+        instance.setPriceMode(template.getPriceMode());
+        instance.setLineItemMode(template.getLineItemMode());
+        instance.setInventoryMode(template.getInventoryMode());
+        instance.setShippingDetails(
+            com.commercetools.history.models.common.ItemShippingDetails.deepCopy(template.getShippingDetails()));
+        instance.setCustom(com.commercetools.history.models.common.CustomFields.deepCopy(template.getCustom()));
+        instance.setAddedAt(template.getAddedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setRecurrenceInfo(
+            com.commercetools.history.models.common.LineItemRecurrenceInfo.deepCopy(template.getRecurrenceInfo()));
         return instance;
     }
 

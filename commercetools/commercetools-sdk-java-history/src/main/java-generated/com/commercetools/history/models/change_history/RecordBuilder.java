@@ -332,7 +332,7 @@ public class RecordBuilder implements Builder<Record> {
      */
 
     public RecordBuilder plusStores(
-            Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReferenceBuilder> builder) {
+            Function<com.commercetools.history.models.common.KeyReferenceBuilder, Builder<? extends com.commercetools.history.models.common.KeyReference>> builder) {
         if (this.stores == null) {
             this.stores = new ArrayList<>();
         }
@@ -347,55 +347,9 @@ public class RecordBuilder implements Builder<Record> {
      */
 
     public RecordBuilder withStores(
-            Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReferenceBuilder> builder) {
+            Function<com.commercetools.history.models.common.KeyReferenceBuilder, Builder<? extends com.commercetools.history.models.common.KeyReference>> builder) {
         this.stores = new ArrayList<>();
         this.stores.add(builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of()).build());
-        return this;
-    }
-
-    /**
-     *  <p>References to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> associated with the <a href="https://docs.commercetools.com/apis/ctp:history:type:Change" rel="nofollow">Change</a>.</p>
-     * @param builder function to build the stores value
-     * @return Builder
-     */
-
-    public RecordBuilder addStores(
-            Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReference> builder) {
-        return plusStores(builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of()));
-    }
-
-    /**
-     *  <p>References to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> associated with the <a href="https://docs.commercetools.com/apis/ctp:history:type:Change" rel="nofollow">Change</a>.</p>
-     * @param builder function to build the stores value
-     * @return Builder
-     */
-
-    public RecordBuilder setStores(
-            Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReference> builder) {
-        return stores(builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of()));
-    }
-
-    /**
-     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> associated with the <a href="https://docs.commercetools.com/apis/ctp:history:type:Change" rel="nofollow">Change</a>. Only available for <span>B2B</span>-enabled Projects.</p>
-     * @param builder function to build the businessUnit value
-     * @return Builder
-     */
-
-    public RecordBuilder businessUnit(
-            Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReferenceBuilder> builder) {
-        this.businessUnit = builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> associated with the <a href="https://docs.commercetools.com/apis/ctp:history:type:Change" rel="nofollow">Change</a>. Only available for <span>B2B</span>-enabled Projects.</p>
-     * @param builder function to build the businessUnit value
-     * @return Builder
-     */
-
-    public RecordBuilder withBusinessUnit(
-            Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReference> builder) {
-        this.businessUnit = builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of());
         return this;
     }
 
@@ -408,6 +362,18 @@ public class RecordBuilder implements Builder<Record> {
     public RecordBuilder businessUnit(
             @Nullable final com.commercetools.history.models.common.KeyReference businessUnit) {
         this.businessUnit = businessUnit;
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> associated with the <a href="https://docs.commercetools.com/apis/ctp:history:type:Change" rel="nofollow">Change</a>. Only available for <span>B2B</span>-enabled Projects.</p>
+     * @param builder function to build the businessUnit value
+     * @return Builder
+     */
+
+    public RecordBuilder businessUnit(
+            Function<com.commercetools.history.models.common.KeyReferenceBuilder, Builder<? extends com.commercetools.history.models.common.KeyReference>> builder) {
+        this.businessUnit = builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of()).build();
         return this;
     }
 

@@ -23,48 +23,51 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionSettingBuilder implements Builder<ProductSelectionSetting> {
 
-    private com.commercetools.history.models.common.Reference productSelection;
+    private com.commercetools.history.models.common.ProductSelectionReference productSelection;
 
     private Boolean active;
 
     /**
-     * set the value to the productSelection using the builder function
+     *  <p>Reference to a ProductSelection.</p>
      * @param builder function to build the productSelection value
      * @return Builder
      */
 
     public ProductSelectionSettingBuilder productSelection(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.productSelection = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
+            Function<com.commercetools.history.models.common.ProductSelectionReferenceBuilder, com.commercetools.history.models.common.ProductSelectionReferenceBuilder> builder) {
+        this.productSelection = builder
+                .apply(com.commercetools.history.models.common.ProductSelectionReferenceBuilder.of())
+                .build();
         return this;
     }
 
     /**
-     * set the value to the productSelection using the builder function
+     *  <p>Reference to a ProductSelection.</p>
      * @param builder function to build the productSelection value
      * @return Builder
      */
 
     public ProductSelectionSettingBuilder withProductSelection(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        this.productSelection = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
+            Function<com.commercetools.history.models.common.ProductSelectionReferenceBuilder, com.commercetools.history.models.common.ProductSelectionReference> builder) {
+        this.productSelection = builder
+                .apply(com.commercetools.history.models.common.ProductSelectionReferenceBuilder.of());
         return this;
     }
 
     /**
-     * set the value to the productSelection
+     *  <p>Reference to a ProductSelection.</p>
      * @param productSelection value to be set
      * @return Builder
      */
 
     public ProductSelectionSettingBuilder productSelection(
-            final com.commercetools.history.models.common.Reference productSelection) {
+            final com.commercetools.history.models.common.ProductSelectionReference productSelection) {
         this.productSelection = productSelection;
         return this;
     }
 
     /**
-     * set the value to the active
+     *  <p>If <code>true</code>, all Products assigned to this Product Selection are part of the Store's assortment.</p>
      * @param active value to be set
      * @return Builder
      */
@@ -75,16 +78,16 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
     }
 
     /**
-     * value of productSelection}
+     *  <p>Reference to a ProductSelection.</p>
      * @return productSelection
      */
 
-    public com.commercetools.history.models.common.Reference getProductSelection() {
+    public com.commercetools.history.models.common.ProductSelectionReference getProductSelection() {
         return this.productSelection;
     }
 
     /**
-     * value of active}
+     *  <p>If <code>true</code>, all Products assigned to this Product Selection are part of the Store's assortment.</p>
      * @return active
      */
 

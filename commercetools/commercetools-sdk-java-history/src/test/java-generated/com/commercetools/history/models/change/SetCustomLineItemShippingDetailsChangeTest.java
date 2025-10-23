@@ -26,7 +26,9 @@ public class SetCustomLineItemShippingDetailsChangeTest {
                         SetCustomLineItemShippingDetailsChange.builder()
                                 .nextValue(new com.commercetools.history.models.common.ItemShippingDetailsImpl()) },
                 new Object[] { "customLineItemId",
-                        SetCustomLineItemShippingDetailsChange.builder().customLineItemId("customLineItemId") } };
+                        SetCustomLineItemShippingDetailsChange.builder().customLineItemId("customLineItemId") },
+                new Object[] { "customLineItem", SetCustomLineItemShippingDetailsChange.builder()
+                        .customLineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) } };
     }
 
     @Test
@@ -57,5 +59,13 @@ public class SetCustomLineItemShippingDetailsChangeTest {
         SetCustomLineItemShippingDetailsChange value = SetCustomLineItemShippingDetailsChange.of();
         value.setCustomLineItemId("customLineItemId");
         Assertions.assertThat(value.getCustomLineItemId()).isEqualTo("customLineItemId");
+    }
+
+    @Test
+    public void customLineItem() {
+        SetCustomLineItemShippingDetailsChange value = SetCustomLineItemShippingDetailsChange.of();
+        value.setCustomLineItem(new com.commercetools.history.models.common.LocalizedStringImpl());
+        Assertions.assertThat(value.getCustomLineItem())
+                .isEqualTo(new com.commercetools.history.models.common.LocalizedStringImpl());
     }
 }

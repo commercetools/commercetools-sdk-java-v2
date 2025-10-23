@@ -23,97 +23,101 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InheritedAssociateRoleAssignmentBuilder implements Builder<InheritedAssociateRoleAssignment> {
 
-    private com.commercetools.history.models.common.KeyReference associateRole;
+    private com.commercetools.history.models.common.AssociateRoleKeyReference associateRole;
 
-    private com.commercetools.history.models.common.KeyReference source;
+    private com.commercetools.history.models.common.BusinessUnitKeyReference source;
 
     /**
-     * set the value to the associateRole using the builder function
+     *  <p>Inherited role the Associate holds within a Business Unit.</p>
      * @param builder function to build the associateRole value
      * @return Builder
      */
 
     public InheritedAssociateRoleAssignmentBuilder associateRole(
-            Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReferenceBuilder> builder) {
-        this.associateRole = builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of()).build();
+            Function<com.commercetools.history.models.common.AssociateRoleKeyReferenceBuilder, com.commercetools.history.models.common.AssociateRoleKeyReferenceBuilder> builder) {
+        this.associateRole = builder
+                .apply(com.commercetools.history.models.common.AssociateRoleKeyReferenceBuilder.of())
+                .build();
         return this;
     }
 
     /**
-     * set the value to the associateRole using the builder function
+     *  <p>Inherited role the Associate holds within a Business Unit.</p>
      * @param builder function to build the associateRole value
      * @return Builder
      */
 
     public InheritedAssociateRoleAssignmentBuilder withAssociateRole(
-            Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReference> builder) {
-        this.associateRole = builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of());
+            Function<com.commercetools.history.models.common.AssociateRoleKeyReferenceBuilder, com.commercetools.history.models.common.AssociateRoleKeyReference> builder) {
+        this.associateRole = builder
+                .apply(com.commercetools.history.models.common.AssociateRoleKeyReferenceBuilder.of());
         return this;
     }
 
     /**
-     * set the value to the associateRole
+     *  <p>Inherited role the Associate holds within a Business Unit.</p>
      * @param associateRole value to be set
      * @return Builder
      */
 
     public InheritedAssociateRoleAssignmentBuilder associateRole(
-            final com.commercetools.history.models.common.KeyReference associateRole) {
+            final com.commercetools.history.models.common.AssociateRoleKeyReference associateRole) {
         this.associateRole = associateRole;
         return this;
     }
 
     /**
-     * set the value to the source using the builder function
+     *  <p>Reference to the parent Business Unit where the assignment is defined explicitly.</p>
      * @param builder function to build the source value
      * @return Builder
      */
 
     public InheritedAssociateRoleAssignmentBuilder source(
-            Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReferenceBuilder> builder) {
-        this.source = builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of()).build();
+            Function<com.commercetools.history.models.common.BusinessUnitKeyReferenceBuilder, com.commercetools.history.models.common.BusinessUnitKeyReferenceBuilder> builder) {
+        this.source = builder.apply(com.commercetools.history.models.common.BusinessUnitKeyReferenceBuilder.of())
+                .build();
         return this;
     }
 
     /**
-     * set the value to the source using the builder function
+     *  <p>Reference to the parent Business Unit where the assignment is defined explicitly.</p>
      * @param builder function to build the source value
      * @return Builder
      */
 
     public InheritedAssociateRoleAssignmentBuilder withSource(
-            Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReference> builder) {
-        this.source = builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of());
+            Function<com.commercetools.history.models.common.BusinessUnitKeyReferenceBuilder, com.commercetools.history.models.common.BusinessUnitKeyReference> builder) {
+        this.source = builder.apply(com.commercetools.history.models.common.BusinessUnitKeyReferenceBuilder.of());
         return this;
     }
 
     /**
-     * set the value to the source
+     *  <p>Reference to the parent Business Unit where the assignment is defined explicitly.</p>
      * @param source value to be set
      * @return Builder
      */
 
     public InheritedAssociateRoleAssignmentBuilder source(
-            final com.commercetools.history.models.common.KeyReference source) {
+            final com.commercetools.history.models.common.BusinessUnitKeyReference source) {
         this.source = source;
         return this;
     }
 
     /**
-     * value of associateRole}
+     *  <p>Inherited role the Associate holds within a Business Unit.</p>
      * @return associateRole
      */
 
-    public com.commercetools.history.models.common.KeyReference getAssociateRole() {
+    public com.commercetools.history.models.common.AssociateRoleKeyReference getAssociateRole() {
         return this.associateRole;
     }
 
     /**
-     * value of source}
+     *  <p>Reference to the parent Business Unit where the assignment is defined explicitly.</p>
      * @return source
      */
 
-    public com.commercetools.history.models.common.KeyReference getSource() {
+    public com.commercetools.history.models.common.BusinessUnitKeyReference getSource() {
         return this.source;
     }
 

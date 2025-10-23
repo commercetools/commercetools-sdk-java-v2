@@ -46,10 +46,6 @@ public class SuggestTokenizerImpl implements SuggestTokenizer, ModelBase {
         return this.type;
     }
 
-    public void setType(final String type) {
-        this.type = type;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o)

@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ResourceIdentifier resourceIdentifier = ResourceIdentifier.builder()
  *             .id("{id}")
  *             .key("{key}")
- *             .typeId(ReferenceTypeId.ASSOCIATE_ROLE)
+ *             .typeId(ReferenceTypeId.APPROVAL_FLOW)
  *             .build()
  * </code></pre>
  * </div>
@@ -52,7 +52,7 @@ public class ResourceIdentifierBuilder implements Builder<ResourceIdentifier> {
     }
 
     /**
-     * set the value to the typeId
+     *  <p>Type of resource the value should reference. Supported resource type identifiers are:</p>
      * @param typeId value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class ResourceIdentifierBuilder implements Builder<ResourceIdentifier> {
     }
 
     /**
-     * value of typeId}
+     *  <p>Type of resource the value should reference. Supported resource type identifiers are:</p>
      * @return typeId
      */
 

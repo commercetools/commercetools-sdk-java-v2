@@ -15,17 +15,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * Money
+ *  <p>Draft object to store money in cent amounts for a specific currency.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     Money money = Money.builder()
+ *             .centAmount(0.3)
  *             .currencyCode("{currencyCode}")
- *             .centAmount(1)
- *             .fractionDigits(1)
- *             .type(MoneyType.CENT_PRECISION)
  *             .build()
  * </code></pre>
  * </div>
@@ -33,6 +31,18 @@ import jakarta.validation.constraints.NotNull;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MoneyImpl.class)
 public interface Money {
+
+    /**
+     *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
+     *  <ul>
+     *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+     *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
+     *  </ul>
+     * @return centAmount
+     */
+    @NotNull
+    @JsonProperty("centAmount")
+    public Long getCentAmount();
 
     /**
      *  <p>Currency code compliant to <span>ISO 4217</span>.</p>
@@ -43,28 +53,15 @@ public interface Money {
     public String getCurrencyCode();
 
     /**
-     *
-     * @return centAmount
+     *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
+     *  <ul>
+     *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+     *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
+     *  </ul>
+     * @param centAmount value to be set
      */
-    @NotNull
-    @JsonProperty("centAmount")
-    public Integer getCentAmount();
 
-    /**
-     *
-     * @return fractionDigits
-     */
-    @NotNull
-    @JsonProperty("fractionDigits")
-    public Integer getFractionDigits();
-
-    /**
-     *
-     * @return type
-     */
-    @NotNull
-    @JsonProperty("type")
-    public MoneyType getType();
+    public void setCentAmount(final Long centAmount);
 
     /**
      *  <p>Currency code compliant to <span>ISO 4217</span>.</p>
@@ -72,27 +69,6 @@ public interface Money {
      */
 
     public void setCurrencyCode(final String currencyCode);
-
-    /**
-     * set centAmount
-     * @param centAmount value to be set
-     */
-
-    public void setCentAmount(final Integer centAmount);
-
-    /**
-     * set fractionDigits
-     * @param fractionDigits value to be set
-     */
-
-    public void setFractionDigits(final Integer fractionDigits);
-
-    /**
-     * set type
-     * @param type value to be set
-     */
-
-    public void setType(final MoneyType type);
 
     /**
      * factory method
@@ -109,10 +85,8 @@ public interface Money {
      */
     public static Money of(final Money template) {
         MoneyImpl instance = new MoneyImpl();
-        instance.setCurrencyCode(template.getCurrencyCode());
         instance.setCentAmount(template.getCentAmount());
-        instance.setFractionDigits(template.getFractionDigits());
-        instance.setType(template.getType());
+        instance.setCurrencyCode(template.getCurrencyCode());
         return instance;
     }
 
@@ -128,11 +102,13 @@ public interface Money {
         if (template == null) {
             return null;
         }
+
+        if (!(template instanceof MoneyImpl)) {
+            return template.copyDeep();
+        }
         MoneyImpl instance = new MoneyImpl();
-        instance.setCurrencyCode(template.getCurrencyCode());
         instance.setCentAmount(template.getCentAmount());
-        instance.setFractionDigits(template.getFractionDigits());
-        instance.setType(template.getType());
+        instance.setCurrencyCode(template.getCurrencyCode());
         return instance;
     }
 

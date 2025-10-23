@@ -36,6 +36,10 @@ public class SetAssetTagsChangeImpl implements SetAssetTagsChange, ModelBase {
 
     private com.commercetools.history.models.change_value.AssetChangeValue asset;
 
+    private String catalogData;
+
+    private String variant;
+
     /**
      * create instance with all properties
      */
@@ -43,11 +47,14 @@ public class SetAssetTagsChangeImpl implements SetAssetTagsChange, ModelBase {
     SetAssetTagsChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.util.List<String> previousValue,
             @JsonProperty("nextValue") final java.util.List<String> nextValue,
-            @JsonProperty("asset") final com.commercetools.history.models.change_value.AssetChangeValue asset) {
+            @JsonProperty("asset") final com.commercetools.history.models.change_value.AssetChangeValue asset,
+            @JsonProperty("catalogData") final String catalogData, @JsonProperty("variant") final String variant) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.asset = asset;
+        this.catalogData = catalogData;
+        this.variant = variant;
         this.type = SET_ASSET_TAGS_CHANGE;
     }
 
@@ -98,6 +105,27 @@ public class SetAssetTagsChangeImpl implements SetAssetTagsChange, ModelBase {
         return this.asset;
     }
 
+    /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
@@ -122,6 +150,14 @@ public class SetAssetTagsChangeImpl implements SetAssetTagsChange, ModelBase {
         this.asset = asset;
     }
 
+    public void setCatalogData(final String catalogData) {
+        this.catalogData = catalogData;
+    }
+
+    public void setVariant(final String variant) {
+        this.variant = variant;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -137,11 +173,15 @@ public class SetAssetTagsChangeImpl implements SetAssetTagsChange, ModelBase {
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(asset, that.asset)
+                .append(catalogData, that.catalogData)
+                .append(variant, that.variant)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(asset, that.asset)
+                .append(catalogData, that.catalogData)
+                .append(variant, that.variant)
                 .isEquals();
     }
 
@@ -152,6 +192,8 @@ public class SetAssetTagsChangeImpl implements SetAssetTagsChange, ModelBase {
                 .append(previousValue)
                 .append(nextValue)
                 .append(asset)
+                .append(catalogData)
+                .append(variant)
                 .toHashCode();
     }
 
@@ -162,6 +204,8 @@ public class SetAssetTagsChangeImpl implements SetAssetTagsChange, ModelBase {
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
                 .append("asset", asset)
+                .append("catalogData", catalogData)
+                .append("variant", variant)
                 .build();
     }
 

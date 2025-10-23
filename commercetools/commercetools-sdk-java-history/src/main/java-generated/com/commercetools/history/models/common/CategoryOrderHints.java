@@ -15,14 +15,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * CategoryOrderHints
+ *  <p>JSON object where the keys are <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> <code>id</code>, and the values are order hint values: strings representing a number between <code>0</code> and <code>1</code>, but not ending in <code>0</code>. Order hints allow controlling the order of Products and how they appear in Categories. Products without order hints have an order score below <code>0</code>. Order hints are not unique. If a subset of Products have the same value for order hint in a specific category, the behavior is undetermined.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     CategoryOrderHints categoryOrderHints = CategoryOrderHints.builder()
- *             ./^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$/("{/^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$/}")
+ *             ./^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/("{/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/}")
  *             .build()
  * </code></pre>
  * </div>
@@ -32,7 +32,7 @@ import jakarta.validation.constraints.NotNull;
 public interface CategoryOrderHints {
 
     /**
-     *
+     *  <p>A string representing a number between <code>0</code> and <code>1</code>, but not ending in <code>0</code>.</p>
      * @return map of the pattern property values
      */
     @NotNull
@@ -40,7 +40,7 @@ public interface CategoryOrderHints {
     public Map<String, String> values();
 
     /**
-     * set pattern property
+     *  <p>A string representing a number between <code>0</code> and <code>1</code>, but not ending in <code>0</code>.</p>
      * @param key property name
      * @param value property value
      */

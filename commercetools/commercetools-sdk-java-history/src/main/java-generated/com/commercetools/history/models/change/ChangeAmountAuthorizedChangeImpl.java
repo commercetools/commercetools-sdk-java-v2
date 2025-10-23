@@ -17,9 +17,10 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered automatically due to a user-initiated change.</p>
+ *  <p>This change is initiated by background processes after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentChangeAmountPlannedAction" rel="nofollow">Change AmountPlanned</a> update action is performed.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class ChangeAmountAuthorizedChangeImpl implements ChangeAmountAuthorizedChange, ModelBase {
 
     private String type;

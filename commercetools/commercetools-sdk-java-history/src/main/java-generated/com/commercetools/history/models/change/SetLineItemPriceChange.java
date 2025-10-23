@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .lineItem(lineItemBuilder -> lineItemBuilder)
+ *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -87,6 +88,14 @@ public interface SetLineItemPriceChange extends Change {
     public LocalizedString getLineItem();
 
     /**
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
+     * @return lineItemId
+     */
+    @NotNull
+    @JsonProperty("lineItemId")
+    public String getLineItemId();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -115,6 +124,13 @@ public interface SetLineItemPriceChange extends Change {
     public void setLineItem(final LocalizedString lineItem);
 
     /**
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
+     * @param lineItemId value to be set
+     */
+
+    public void setLineItemId(final String lineItemId);
+
+    /**
      * factory method
      * @return instance of SetLineItemPriceChange
      */
@@ -133,6 +149,7 @@ public interface SetLineItemPriceChange extends Change {
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
         instance.setLineItem(template.getLineItem());
+        instance.setLineItemId(template.getLineItemId());
         return instance;
     }
 
@@ -153,6 +170,7 @@ public interface SetLineItemPriceChange extends Change {
         instance.setPreviousValue(com.commercetools.history.models.common.Price.deepCopy(template.getPreviousValue()));
         instance.setNextValue(com.commercetools.history.models.common.Price.deepCopy(template.getNextValue()));
         instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
+        instance.setLineItemId(template.getLineItemId());
         return instance;
     }
 

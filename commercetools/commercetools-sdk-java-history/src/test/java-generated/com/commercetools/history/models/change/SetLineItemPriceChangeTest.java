@@ -23,8 +23,10 @@ public class SetLineItemPriceChangeTest {
                 new Object[] { "nextValue",
                         SetLineItemPriceChange.builder()
                                 .nextValue(new com.commercetools.history.models.common.PriceImpl()) },
-                new Object[] { "lineItem", SetLineItemPriceChange.builder()
-                        .lineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) } };
+                new Object[] { "lineItem",
+                        SetLineItemPriceChange.builder()
+                                .lineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "lineItemId", SetLineItemPriceChange.builder().lineItemId("lineItemId") } };
     }
 
     @Test
@@ -55,5 +57,12 @@ public class SetLineItemPriceChangeTest {
         value.setLineItem(new com.commercetools.history.models.common.LocalizedStringImpl());
         Assertions.assertThat(value.getLineItem())
                 .isEqualTo(new com.commercetools.history.models.common.LocalizedStringImpl());
+    }
+
+    @Test
+    public void lineItemId() {
+        SetLineItemPriceChange value = SetLineItemPriceChange.of();
+        value.setLineItemId("lineItemId");
+        Assertions.assertThat(value.getLineItemId()).isEqualTo("lineItemId");
     }
 }

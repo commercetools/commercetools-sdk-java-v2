@@ -26,24 +26,28 @@ public class ChangeEnumValueOrderChangeImpl implements ChangeEnumValueOrderChang
 
     private String change;
 
-    private java.util.List<com.commercetools.history.models.change_value.EnumValue> previousValue;
+    private java.util.List<com.commercetools.history.models.common.CustomFieldEnumValue> previousValue;
 
-    private java.util.List<com.commercetools.history.models.change_value.EnumValue> nextValue;
+    private java.util.List<com.commercetools.history.models.common.CustomFieldEnumValue> nextValue;
 
     private String fieldName;
+
+    private String attributeName;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     ChangeEnumValueOrderChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.change_value.EnumValue> previousValue,
-            @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.change_value.EnumValue> nextValue,
-            @JsonProperty("fieldName") final String fieldName) {
+            @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.CustomFieldEnumValue> previousValue,
+            @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.CustomFieldEnumValue> nextValue,
+            @JsonProperty("fieldName") final String fieldName,
+            @JsonProperty("attributeName") final String attributeName) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.fieldName = fieldName;
+        this.attributeName = attributeName;
         this.type = CHANGE_ENUM_VALUE_ORDER_CHANGE;
     }
 
@@ -74,7 +78,7 @@ public class ChangeEnumValueOrderChangeImpl implements ChangeEnumValueOrderChang
      *  <p>Value before the change.</p>
      */
 
-    public java.util.List<com.commercetools.history.models.change_value.EnumValue> getPreviousValue() {
+    public java.util.List<com.commercetools.history.models.common.CustomFieldEnumValue> getPreviousValue() {
         return this.previousValue;
     }
 
@@ -82,7 +86,7 @@ public class ChangeEnumValueOrderChangeImpl implements ChangeEnumValueOrderChang
      *  <p>Value after the change.</p>
      */
 
-    public java.util.List<com.commercetools.history.models.change_value.EnumValue> getNextValue() {
+    public java.util.List<com.commercetools.history.models.common.CustomFieldEnumValue> getNextValue() {
         return this.nextValue;
     }
 
@@ -94,29 +98,42 @@ public class ChangeEnumValueOrderChangeImpl implements ChangeEnumValueOrderChang
         return this.fieldName;
     }
 
+    /**
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
+     */
+
+    public String getAttributeName() {
+        return this.attributeName;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.change_value.EnumValue... previousValue) {
+    public void setPreviousValue(final com.commercetools.history.models.common.CustomFieldEnumValue... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
     }
 
     public void setPreviousValue(
-            final java.util.List<com.commercetools.history.models.change_value.EnumValue> previousValue) {
+            final java.util.List<com.commercetools.history.models.common.CustomFieldEnumValue> previousValue) {
         this.previousValue = previousValue;
     }
 
-    public void setNextValue(final com.commercetools.history.models.change_value.EnumValue... nextValue) {
+    public void setNextValue(final com.commercetools.history.models.common.CustomFieldEnumValue... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
     }
 
-    public void setNextValue(final java.util.List<com.commercetools.history.models.change_value.EnumValue> nextValue) {
+    public void setNextValue(
+            final java.util.List<com.commercetools.history.models.common.CustomFieldEnumValue> nextValue) {
         this.nextValue = nextValue;
     }
 
     public void setFieldName(final String fieldName) {
         this.fieldName = fieldName;
+    }
+
+    public void setAttributeName(final String attributeName) {
+        this.attributeName = attributeName;
     }
 
     @Override
@@ -134,11 +151,13 @@ public class ChangeEnumValueOrderChangeImpl implements ChangeEnumValueOrderChang
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(fieldName, that.fieldName)
+                .append(attributeName, that.attributeName)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(fieldName, that.fieldName)
+                .append(attributeName, that.attributeName)
                 .isEquals();
     }
 
@@ -149,6 +168,7 @@ public class ChangeEnumValueOrderChangeImpl implements ChangeEnumValueOrderChang
                 .append(previousValue)
                 .append(nextValue)
                 .append(fieldName)
+                .append(attributeName)
                 .toHashCode();
     }
 
@@ -159,6 +179,7 @@ public class ChangeEnumValueOrderChangeImpl implements ChangeEnumValueOrderChang
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
                 .append("fieldName", fieldName)
+                .append("attributeName", attributeName)
                 .build();
     }
 

@@ -35,7 +35,7 @@ import jakarta.validation.constraints.NotNull;
 public interface Associate {
 
     /**
-     *
+     *  <p>Roles assigned to the Associate within a Business Unit.</p>
      * @return associateRoleAssignments
      */
     @NotNull
@@ -44,16 +44,24 @@ public interface Associate {
     public List<AssociateRoleAssignment> getAssociateRoleAssignments();
 
     /**
-     *
+     *  <p>Deprecated type. Use <code>associateRoleAssignments</code> instead.</p>
+     * @return roles
+     */
+
+    @JsonProperty("roles")
+    public List<AssociateRoleDeprecated> getRoles();
+
+    /**
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</p>
      * @return customer
      */
     @NotNull
     @Valid
     @JsonProperty("customer")
-    public Reference getCustomer();
+    public CustomerReference getCustomer();
 
     /**
-     * set associateRoleAssignments
+     *  <p>Roles assigned to the Associate within a Business Unit.</p>
      * @param associateRoleAssignments values to be set
      */
 
@@ -61,18 +69,33 @@ public interface Associate {
     public void setAssociateRoleAssignments(final AssociateRoleAssignment... associateRoleAssignments);
 
     /**
-     * set associateRoleAssignments
+     *  <p>Roles assigned to the Associate within a Business Unit.</p>
      * @param associateRoleAssignments values to be set
      */
 
     public void setAssociateRoleAssignments(final List<AssociateRoleAssignment> associateRoleAssignments);
 
     /**
-     * set customer
+     *  <p>Deprecated type. Use <code>associateRoleAssignments</code> instead.</p>
+     * @param roles values to be set
+     */
+
+    @JsonIgnore
+    public void setRoles(final AssociateRoleDeprecated... roles);
+
+    /**
+     *  <p>Deprecated type. Use <code>associateRoleAssignments</code> instead.</p>
+     * @param roles values to be set
+     */
+
+    public void setRoles(final List<AssociateRoleDeprecated> roles);
+
+    /**
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</p>
      * @param customer value to be set
      */
 
-    public void setCustomer(final Reference customer);
+    public void setCustomer(final CustomerReference customer);
 
     /**
      * factory method
@@ -90,6 +113,7 @@ public interface Associate {
     public static Associate of(final Associate template) {
         AssociateImpl instance = new AssociateImpl();
         instance.setAssociateRoleAssignments(template.getAssociateRoleAssignments());
+        instance.setRoles(template.getRoles());
         instance.setCustomer(template.getCustomer());
         return instance;
     }
@@ -112,7 +136,9 @@ public interface Associate {
                         .map(com.commercetools.history.models.common.AssociateRoleAssignment::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setCustomer(com.commercetools.history.models.common.Reference.deepCopy(template.getCustomer()));
+        instance.setRoles(Optional.ofNullable(template.getRoles()).map(ArrayList::new).orElse(null));
+        instance.setCustomer(
+            com.commercetools.history.models.common.CustomerReference.deepCopy(template.getCustomer()));
         return instance;
     }
 

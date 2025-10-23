@@ -37,30 +37,6 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
 
     /**
      *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
-     * @param builder function to build the product value
-     * @return Builder
-     */
-
-    public ChangeValueGiftLineItemChangeValueBuilder product(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.product = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
-     * @param builder function to build the product value
-     * @return Builder
-     */
-
-    public ChangeValueGiftLineItemChangeValueBuilder withProduct(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        this.product = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param product value to be set
      * @return Builder
      */
@@ -68,6 +44,18 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     public ChangeValueGiftLineItemChangeValueBuilder product(
             final com.commercetools.history.models.common.Reference product) {
         this.product = product;
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public ChangeValueGiftLineItemChangeValueBuilder product(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
+        this.product = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 
@@ -84,30 +72,6 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
 
     /**
      *  <p>Channel with <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>InventorySupply</code>.</p>
-     * @param builder function to build the supplyChannel value
-     * @return Builder
-     */
-
-    public ChangeValueGiftLineItemChangeValueBuilder supplyChannel(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.supplyChannel = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Channel with <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>InventorySupply</code>.</p>
-     * @param builder function to build the supplyChannel value
-     * @return Builder
-     */
-
-    public ChangeValueGiftLineItemChangeValueBuilder withSupplyChannel(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        this.supplyChannel = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>Channel with <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>InventorySupply</code>.</p>
      * @param supplyChannel value to be set
      * @return Builder
      */
@@ -119,26 +83,14 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
-     *  <p>Channel with <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>ProductDistribution</code>.</p>
-     * @param builder function to build the distributionChannel value
+     *  <p>Channel with <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>InventorySupply</code>.</p>
+     * @param builder function to build the supplyChannel value
      * @return Builder
      */
 
-    public ChangeValueGiftLineItemChangeValueBuilder distributionChannel(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.distributionChannel = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Channel with <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>ProductDistribution</code>.</p>
-     * @param builder function to build the distributionChannel value
-     * @return Builder
-     */
-
-    public ChangeValueGiftLineItemChangeValueBuilder withDistributionChannel(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        this.distributionChannel = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
+    public ChangeValueGiftLineItemChangeValueBuilder supplyChannel(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 
@@ -151,6 +103,18 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     public ChangeValueGiftLineItemChangeValueBuilder distributionChannel(
             final com.commercetools.history.models.common.Reference distributionChannel) {
         this.distributionChannel = distributionChannel;
+        return this;
+    }
+
+    /**
+     *  <p>Channel with <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>ProductDistribution</code>.</p>
+     * @param builder function to build the distributionChannel value
+     * @return Builder
+     */
+
+    public ChangeValueGiftLineItemChangeValueBuilder distributionChannel(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
+        this.distributionChannel = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 

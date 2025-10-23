@@ -23,7 +23,7 @@ import jakarta.validation.constraints.NotNull;
  * <div class=code-example>
  * <pre><code class='java'>
  *     DiscountedLineItemPriceForQuantity discountedLineItemPriceForQuantity = DiscountedLineItemPriceForQuantity.builder()
- *             .quantity(1)
+ *             .quantity(0.3)
  *             .discountedPrice(discountedPriceBuilder -> discountedPriceBuilder)
  *             .build()
  * </code></pre>
@@ -34,15 +34,15 @@ import jakarta.validation.constraints.NotNull;
 public interface DiscountedLineItemPriceForQuantity {
 
     /**
-     *
+     *  <p>Number of Line Items or Custom Line Items in the Cart.</p>
      * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
-    public Integer getQuantity();
+    public Long getQuantity();
 
     /**
-     *
+     *  <p>Discounted price of the Line Item or Custom Line Item.</p>
      * @return discountedPrice
      */
     @NotNull
@@ -51,14 +51,14 @@ public interface DiscountedLineItemPriceForQuantity {
     public DiscountedLineItemPrice getDiscountedPrice();
 
     /**
-     * set quantity
+     *  <p>Number of Line Items or Custom Line Items in the Cart.</p>
      * @param quantity value to be set
      */
 
-    public void setQuantity(final Integer quantity);
+    public void setQuantity(final Long quantity);
 
     /**
-     * set discountedPrice
+     *  <p>Discounted price of the Line Item or Custom Line Item.</p>
      * @param discountedPrice value to be set
      */
 

@@ -18,6 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .catalogData("{catalogData}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -32,6 +33,8 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     private java.util.List<com.commercetools.history.models.common.Image> nextValue;
 
     private String catalogData;
+
+    private String variant;
 
     /**
      * set the value to the change
@@ -222,6 +225,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -232,6 +236,18 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
 
     public AddExternalImageChangeBuilder catalogData(final String catalogData) {
         this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     * @return Builder
+     */
+
+    public AddExternalImageChangeBuilder variant(final String variant) {
+        this.variant = variant;
         return this;
     }
 
@@ -263,6 +279,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -275,6 +292,16 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
+    /**
      * builds AddExternalImageChange with checking for non-null required values
      * @return AddExternalImageChange
      */
@@ -283,7 +310,8 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
         Objects.requireNonNull(previousValue, AddExternalImageChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, AddExternalImageChange.class + ": nextValue is missing");
         Objects.requireNonNull(catalogData, AddExternalImageChange.class + ": catalogData is missing");
-        return new AddExternalImageChangeImpl(change, previousValue, nextValue, catalogData);
+        Objects.requireNonNull(variant, AddExternalImageChange.class + ": variant is missing");
+        return new AddExternalImageChangeImpl(change, previousValue, nextValue, catalogData, variant);
     }
 
     /**
@@ -291,7 +319,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
      * @return AddExternalImageChange
      */
     public AddExternalImageChange buildUnchecked() {
-        return new AddExternalImageChangeImpl(change, previousValue, nextValue, catalogData);
+        return new AddExternalImageChangeImpl(change, previousValue, nextValue, catalogData, variant);
     }
 
     /**
@@ -313,6 +341,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
         builder.catalogData = template.getCatalogData();
+        builder.variant = template.getVariant();
         return builder;
     }
 

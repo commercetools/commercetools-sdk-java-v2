@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * ProductVariantChannelAvailabilityMap
+ *  <p>JSON object where the keys are supply <span>Channel</span> <code>id</code>, and the values are <span>ProductVariantChannelAvailability</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantChannelAvailabilityMapImpl implements ProductVariantChannelAvailabilityMap, ModelBase {
@@ -41,7 +41,7 @@ public class ProductVariantChannelAvailabilityMapImpl implements ProductVariantC
     }
 
     /**
-     *
+     *  <p>JSON object where the keys are supply <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> <code>id</code>, and the values are <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantChannelAvailability" rel="nofollow">ProductVariantChannelAvailability</a>.</p>
      */
 
     public Map<String, com.commercetools.history.models.common.ProductVariantChannelAvailability> values() {

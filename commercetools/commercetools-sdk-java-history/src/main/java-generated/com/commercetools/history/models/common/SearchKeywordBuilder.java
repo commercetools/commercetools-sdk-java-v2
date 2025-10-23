@@ -4,6 +4,8 @@ package com.commercetools.history.models.common;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,7 +17,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SearchKeyword searchKeyword = SearchKeyword.builder()
  *             .text("{text}")
- *             .suggestTokenizer(suggestTokenizerBuilder -> suggestTokenizerBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -25,10 +26,11 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
 
     private String text;
 
+    @Nullable
     private com.commercetools.history.models.common.SuggestTokenizer suggestTokenizer;
 
     /**
-     * set the value to the text
+     *  <p>Text to return in the <a href="https://docs.commercetools.com/apis/ctp:api:type:SuggestionResult" rel="nofollow">SuggestionResult</a>.</p>
      * @param text value to be set
      * @return Builder
      */
@@ -39,44 +41,32 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
     }
 
     /**
-     * set the value to the suggestTokenizer using the builder function
+     *  <p>If no tokenizer is defined, the <code>text</code> is used as a single token.</p>
+     * @param suggestTokenizer value to be set
+     * @return Builder
+     */
+
+    public SearchKeywordBuilder suggestTokenizer(
+            @Nullable final com.commercetools.history.models.common.SuggestTokenizer suggestTokenizer) {
+        this.suggestTokenizer = suggestTokenizer;
+        return this;
+    }
+
+    /**
+     *  <p>If no tokenizer is defined, the <code>text</code> is used as a single token.</p>
      * @param builder function to build the suggestTokenizer value
      * @return Builder
      */
 
     public SearchKeywordBuilder suggestTokenizer(
-            Function<com.commercetools.history.models.common.SuggestTokenizerBuilder, com.commercetools.history.models.common.SuggestTokenizerBuilder> builder) {
+            Function<com.commercetools.history.models.common.SuggestTokenizerBuilder, Builder<? extends com.commercetools.history.models.common.SuggestTokenizer>> builder) {
         this.suggestTokenizer = builder.apply(com.commercetools.history.models.common.SuggestTokenizerBuilder.of())
                 .build();
         return this;
     }
 
     /**
-     * set the value to the suggestTokenizer using the builder function
-     * @param builder function to build the suggestTokenizer value
-     * @return Builder
-     */
-
-    public SearchKeywordBuilder withSuggestTokenizer(
-            Function<com.commercetools.history.models.common.SuggestTokenizerBuilder, com.commercetools.history.models.common.SuggestTokenizer> builder) {
-        this.suggestTokenizer = builder.apply(com.commercetools.history.models.common.SuggestTokenizerBuilder.of());
-        return this;
-    }
-
-    /**
-     * set the value to the suggestTokenizer
-     * @param suggestTokenizer value to be set
-     * @return Builder
-     */
-
-    public SearchKeywordBuilder suggestTokenizer(
-            final com.commercetools.history.models.common.SuggestTokenizer suggestTokenizer) {
-        this.suggestTokenizer = suggestTokenizer;
-        return this;
-    }
-
-    /**
-     * value of text}
+     *  <p>Text to return in the <a href="https://docs.commercetools.com/apis/ctp:api:type:SuggestionResult" rel="nofollow">SuggestionResult</a>.</p>
      * @return text
      */
 
@@ -85,10 +75,11 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
     }
 
     /**
-     * value of suggestTokenizer}
+     *  <p>If no tokenizer is defined, the <code>text</code> is used as a single token.</p>
      * @return suggestTokenizer
      */
 
+    @Nullable
     public com.commercetools.history.models.common.SuggestTokenizer getSuggestTokenizer() {
         return this.suggestTokenizer;
     }
@@ -99,7 +90,6 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
      */
     public SearchKeyword build() {
         Objects.requireNonNull(text, SearchKeyword.class + ": text is missing");
-        Objects.requireNonNull(suggestTokenizer, SearchKeyword.class + ": suggestTokenizer is missing");
         return new SearchKeywordImpl(text, suggestTokenizer);
     }
 

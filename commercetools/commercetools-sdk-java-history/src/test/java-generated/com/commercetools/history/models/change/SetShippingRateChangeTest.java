@@ -19,9 +19,9 @@ public class SetShippingRateChangeTest {
         return new Object[][] { new Object[] { "change", SetShippingRateChange.builder().change("change") },
                 new Object[] { "previousValue",
                         SetShippingRateChange.builder()
-                                .previousValue(new com.commercetools.history.models.common.MoneyImpl()) },
+                                .previousValue(new com.commercetools.history.models.common.ShippingRateImpl()) },
                 new Object[] { "nextValue", SetShippingRateChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.MoneyImpl()) } };
+                        .nextValue(new com.commercetools.history.models.common.ShippingRateImpl()) } };
     }
 
     @Test
@@ -34,15 +34,16 @@ public class SetShippingRateChangeTest {
     @Test
     public void previousValue() {
         SetShippingRateChange value = SetShippingRateChange.of();
-        value.setPreviousValue(new com.commercetools.history.models.common.MoneyImpl());
+        value.setPreviousValue(new com.commercetools.history.models.common.ShippingRateImpl());
         Assertions.assertThat(value.getPreviousValue())
-                .isEqualTo(new com.commercetools.history.models.common.MoneyImpl());
+                .isEqualTo(new com.commercetools.history.models.common.ShippingRateImpl());
     }
 
     @Test
     public void nextValue() {
         SetShippingRateChange value = SetShippingRateChange.of();
-        value.setNextValue(new com.commercetools.history.models.common.MoneyImpl());
-        Assertions.assertThat(value.getNextValue()).isEqualTo(new com.commercetools.history.models.common.MoneyImpl());
+        value.setNextValue(new com.commercetools.history.models.common.ShippingRateImpl());
+        Assertions.assertThat(value.getNextValue())
+                .isEqualTo(new com.commercetools.history.models.common.ShippingRateImpl());
     }
 }

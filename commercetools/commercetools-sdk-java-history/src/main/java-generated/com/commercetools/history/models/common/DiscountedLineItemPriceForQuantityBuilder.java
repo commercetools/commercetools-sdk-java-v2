@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     DiscountedLineItemPriceForQuantity discountedLineItemPriceForQuantity = DiscountedLineItemPriceForQuantity.builder()
- *             .quantity(1)
+ *             .quantity(0.3)
  *             .discountedPrice(discountedPriceBuilder -> discountedPriceBuilder)
  *             .build()
  * </code></pre>
@@ -23,23 +23,23 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountedLineItemPriceForQuantityBuilder implements Builder<DiscountedLineItemPriceForQuantity> {
 
-    private Integer quantity;
+    private Long quantity;
 
     private com.commercetools.history.models.common.DiscountedLineItemPrice discountedPrice;
 
     /**
-     * set the value to the quantity
+     *  <p>Number of Line Items or Custom Line Items in the Cart.</p>
      * @param quantity value to be set
      * @return Builder
      */
 
-    public DiscountedLineItemPriceForQuantityBuilder quantity(final Integer quantity) {
+    public DiscountedLineItemPriceForQuantityBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
 
     /**
-     * set the value to the discountedPrice using the builder function
+     *  <p>Discounted price of the Line Item or Custom Line Item.</p>
      * @param builder function to build the discountedPrice value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
     }
 
     /**
-     * set the value to the discountedPrice using the builder function
+     *  <p>Discounted price of the Line Item or Custom Line Item.</p>
      * @param builder function to build the discountedPrice value
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
     }
 
     /**
-     * set the value to the discountedPrice
+     *  <p>Discounted price of the Line Item or Custom Line Item.</p>
      * @param discountedPrice value to be set
      * @return Builder
      */
@@ -78,16 +78,16 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
     }
 
     /**
-     * value of quantity}
+     *  <p>Number of Line Items or Custom Line Items in the Cart.</p>
      * @return quantity
      */
 
-    public Integer getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
     /**
-     * value of discountedPrice}
+     *  <p>Discounted price of the Line Item or Custom Line Item.</p>
      * @return discountedPrice
      */
 

@@ -26,9 +26,9 @@ public class ChangePlainEnumValueOrderChangeImpl implements ChangePlainEnumValue
 
     private String change;
 
-    private java.util.List<com.commercetools.history.models.change_value.EnumValue> previousValue;
+    private java.util.List<com.commercetools.history.models.common.AttributePlainEnumValue> previousValue;
 
-    private java.util.List<com.commercetools.history.models.change_value.EnumValue> nextValue;
+    private java.util.List<com.commercetools.history.models.common.AttributePlainEnumValue> nextValue;
 
     private String attributeName;
 
@@ -37,8 +37,8 @@ public class ChangePlainEnumValueOrderChangeImpl implements ChangePlainEnumValue
      */
     @JsonCreator
     ChangePlainEnumValueOrderChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.change_value.EnumValue> previousValue,
-            @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.change_value.EnumValue> nextValue,
+            @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.AttributePlainEnumValue> previousValue,
+            @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.AttributePlainEnumValue> nextValue,
             @JsonProperty("attributeName") final String attributeName) {
         this.change = change;
         this.previousValue = previousValue;
@@ -74,7 +74,7 @@ public class ChangePlainEnumValueOrderChangeImpl implements ChangePlainEnumValue
      *  <p>Value before the change.</p>
      */
 
-    public java.util.List<com.commercetools.history.models.change_value.EnumValue> getPreviousValue() {
+    public java.util.List<com.commercetools.history.models.common.AttributePlainEnumValue> getPreviousValue() {
         return this.previousValue;
     }
 
@@ -82,7 +82,7 @@ public class ChangePlainEnumValueOrderChangeImpl implements ChangePlainEnumValue
      *  <p>Value after the change.</p>
      */
 
-    public java.util.List<com.commercetools.history.models.change_value.EnumValue> getNextValue() {
+    public java.util.List<com.commercetools.history.models.common.AttributePlainEnumValue> getNextValue() {
         return this.nextValue;
     }
 
@@ -98,20 +98,22 @@ public class ChangePlainEnumValueOrderChangeImpl implements ChangePlainEnumValue
         this.change = change;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.change_value.EnumValue... previousValue) {
+    public void setPreviousValue(
+            final com.commercetools.history.models.common.AttributePlainEnumValue... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
     }
 
     public void setPreviousValue(
-            final java.util.List<com.commercetools.history.models.change_value.EnumValue> previousValue) {
+            final java.util.List<com.commercetools.history.models.common.AttributePlainEnumValue> previousValue) {
         this.previousValue = previousValue;
     }
 
-    public void setNextValue(final com.commercetools.history.models.change_value.EnumValue... nextValue) {
+    public void setNextValue(final com.commercetools.history.models.common.AttributePlainEnumValue... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
     }
 
-    public void setNextValue(final java.util.List<com.commercetools.history.models.change_value.EnumValue> nextValue) {
+    public void setNextValue(
+            final java.util.List<com.commercetools.history.models.common.AttributePlainEnumValue> nextValue) {
         this.nextValue = nextValue;
     }
 

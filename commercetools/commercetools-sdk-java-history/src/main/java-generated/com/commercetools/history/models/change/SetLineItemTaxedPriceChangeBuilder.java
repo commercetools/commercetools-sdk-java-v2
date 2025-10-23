@@ -19,6 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .lineItem(lineItemBuilder -> lineItemBuilder)
  *             .lineItemId("{lineItemId}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -35,6 +36,8 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
     private com.commercetools.history.models.common.LocalizedString lineItem;
 
     private String lineItemId;
+
+    private String variant;
 
     /**
      * set the value to the change
@@ -167,6 +170,18 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
     }
 
     /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     * @return Builder
+     */
+
+    public SetLineItemTaxedPriceChangeBuilder variant(final String variant) {
+        this.variant = variant;
+        return this;
+    }
+
+    /**
      * value of change}
      * @return change
      */
@@ -212,6 +227,16 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
     }
 
     /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
+    /**
      * builds SetLineItemTaxedPriceChange with checking for non-null required values
      * @return SetLineItemTaxedPriceChange
      */
@@ -221,7 +246,8 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
         Objects.requireNonNull(nextValue, SetLineItemTaxedPriceChange.class + ": nextValue is missing");
         Objects.requireNonNull(lineItem, SetLineItemTaxedPriceChange.class + ": lineItem is missing");
         Objects.requireNonNull(lineItemId, SetLineItemTaxedPriceChange.class + ": lineItemId is missing");
-        return new SetLineItemTaxedPriceChangeImpl(change, previousValue, nextValue, lineItem, lineItemId);
+        Objects.requireNonNull(variant, SetLineItemTaxedPriceChange.class + ": variant is missing");
+        return new SetLineItemTaxedPriceChangeImpl(change, previousValue, nextValue, lineItem, lineItemId, variant);
     }
 
     /**
@@ -229,7 +255,7 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
      * @return SetLineItemTaxedPriceChange
      */
     public SetLineItemTaxedPriceChange buildUnchecked() {
-        return new SetLineItemTaxedPriceChangeImpl(change, previousValue, nextValue, lineItem, lineItemId);
+        return new SetLineItemTaxedPriceChangeImpl(change, previousValue, nextValue, lineItem, lineItemId, variant);
     }
 
     /**
@@ -252,6 +278,7 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
         builder.nextValue = template.getNextValue();
         builder.lineItem = template.getLineItem();
         builder.lineItemId = template.getLineItemId();
+        builder.variant = template.getVariant();
         return builder;
     }
 

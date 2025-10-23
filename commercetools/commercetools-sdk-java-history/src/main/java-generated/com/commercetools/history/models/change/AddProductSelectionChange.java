@@ -34,6 +34,7 @@ import jakarta.validation.constraints.NotNull;
 @io.vrap.rmf.base.client.utils.json.SubType("AddProductSelectionChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AddProductSelectionChangeImpl.class)
+@Deprecated
 public interface AddProductSelectionChange extends Change {
 
     /**

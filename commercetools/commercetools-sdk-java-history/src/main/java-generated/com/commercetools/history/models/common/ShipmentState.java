@@ -11,12 +11,14 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ShipmentState
+ *  <p>Indicates the shipment status of the Order.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ShipmentState extends JsonEnum {
 
     ShipmentState SHIPPED = ShipmentStateEnum.SHIPPED;
+
+    ShipmentState DELIVERED = ShipmentStateEnum.DELIVERED;
 
     ShipmentState READY = ShipmentStateEnum.READY;
 
@@ -28,6 +30,8 @@ public interface ShipmentState extends JsonEnum {
 
     ShipmentState BACKORDER = ShipmentStateEnum.BACKORDER;
 
+    ShipmentState CANCELED = ShipmentStateEnum.CANCELED;
+
     /**
      * possible values of ShipmentState
      */
@@ -36,6 +40,11 @@ public interface ShipmentState extends JsonEnum {
          * Shipped
          */
         SHIPPED("Shipped"),
+
+        /**
+         * Delivered
+         */
+        DELIVERED("Delivered"),
 
         /**
          * Ready
@@ -60,7 +69,12 @@ public interface ShipmentState extends JsonEnum {
         /**
          * Backorder
          */
-        BACKORDER("Backorder");
+        BACKORDER("Backorder"),
+
+        /**
+         * Canceled
+         */
+        CANCELED("Canceled");
         private final String jsonName;
 
         private ShipmentStateEnum(final String jsonName) {

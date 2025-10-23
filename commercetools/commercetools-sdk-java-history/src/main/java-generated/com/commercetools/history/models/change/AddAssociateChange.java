@@ -33,6 +33,7 @@ import jakarta.validation.constraints.NotNull;
 @io.vrap.rmf.base.client.utils.json.SubType("AddAssociateChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AddAssociateChangeImpl.class)
+@Deprecated
 public interface AddAssociateChange extends Change {
 
     /**

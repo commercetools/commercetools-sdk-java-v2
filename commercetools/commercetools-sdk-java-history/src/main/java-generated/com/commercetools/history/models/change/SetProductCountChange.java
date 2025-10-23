@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered automatically by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionAddProductAction" rel="nofollow">Add Product</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionRemoveProductAction" rel="nofollow">Remove Product</a> update action.</p>
+ *  <p>This change is initiated by background processes after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionAddProductAction" rel="nofollow">Add Product</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionRemoveProductAction" rel="nofollow">Remove Product</a> update action is performed.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -2,6 +2,7 @@
 package com.commercetools.history.models.common;
 
 import java.time.*;
+import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
@@ -16,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * SyncInfo
+ *  <p>Contains synchronization activity information of the Order (like export or import).</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,8 +25,7 @@ import jakarta.validation.constraints.NotNull;
  * <pre><code class='java'>
  *     SyncInfo syncInfo = SyncInfo.builder()
  *             .channel(channelBuilder -> channelBuilder)
- *             .externalId("{externalId}")
- *             .syncedAt("{syncedAt}")
+ *             .syncedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .build()
  * </code></pre>
  * </div>
@@ -35,50 +35,50 @@ import jakarta.validation.constraints.NotNull;
 public interface SyncInfo {
 
     /**
-     *
+     *  <p>Connection to a synchronization destination.</p>
      * @return channel
      */
     @NotNull
     @Valid
     @JsonProperty("channel")
-    public Reference getChannel();
+    public ChannelReference getChannel();
 
     /**
-     *  <p>Can be used to reference an external order instance, file etc.</p>
+     *  <p>Identifier of an external order instance, file, or other resource.</p>
      * @return externalId
      */
-    @NotNull
+
     @JsonProperty("externalId")
     public String getExternalId();
 
     /**
-     *
+     *  <p>Date and time (UTC) the information was synced.</p>
      * @return syncedAt
      */
     @NotNull
     @JsonProperty("syncedAt")
-    public String getSyncedAt();
+    public ZonedDateTime getSyncedAt();
 
     /**
-     * set channel
+     *  <p>Connection to a synchronization destination.</p>
      * @param channel value to be set
      */
 
-    public void setChannel(final Reference channel);
+    public void setChannel(final ChannelReference channel);
 
     /**
-     *  <p>Can be used to reference an external order instance, file etc.</p>
+     *  <p>Identifier of an external order instance, file, or other resource.</p>
      * @param externalId value to be set
      */
 
     public void setExternalId(final String externalId);
 
     /**
-     * set syncedAt
+     *  <p>Date and time (UTC) the information was synced.</p>
      * @param syncedAt value to be set
      */
 
-    public void setSyncedAt(final String syncedAt);
+    public void setSyncedAt(final ZonedDateTime syncedAt);
 
     /**
      * factory method
@@ -114,7 +114,7 @@ public interface SyncInfo {
             return null;
         }
         SyncInfoImpl instance = new SyncInfoImpl();
-        instance.setChannel(com.commercetools.history.models.common.Reference.deepCopy(template.getChannel()));
+        instance.setChannel(com.commercetools.history.models.common.ChannelReference.deepCopy(template.getChannel()));
         instance.setExternalId(template.getExternalId());
         instance.setSyncedAt(template.getSyncedAt());
         return instance;

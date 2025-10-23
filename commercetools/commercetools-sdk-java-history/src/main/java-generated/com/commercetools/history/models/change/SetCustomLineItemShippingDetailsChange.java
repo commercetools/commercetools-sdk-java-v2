@@ -8,6 +8,7 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.ItemShippingDetails;
+import com.commercetools.history.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -32,6 +33,7 @@ import jakarta.validation.constraints.NotNull;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .customLineItemId("{customLineItemId}")
+ *             .customLineItem(customLineItemBuilder -> customLineItemBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -89,6 +91,15 @@ public interface SetCustomLineItemShippingDetailsChange extends Change {
     public String getCustomLineItemId();
 
     /**
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
+     * @return customLineItem
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("customLineItem")
+    public LocalizedString getCustomLineItem();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -117,6 +128,13 @@ public interface SetCustomLineItemShippingDetailsChange extends Change {
     public void setCustomLineItemId(final String customLineItemId);
 
     /**
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
+     * @param customLineItem value to be set
+     */
+
+    public void setCustomLineItem(final LocalizedString customLineItem);
+
+    /**
      * factory method
      * @return instance of SetCustomLineItemShippingDetailsChange
      */
@@ -135,6 +153,7 @@ public interface SetCustomLineItemShippingDetailsChange extends Change {
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItem(template.getCustomLineItem());
         return instance;
     }
 
@@ -158,6 +177,8 @@ public interface SetCustomLineItemShippingDetailsChange extends Change {
         instance.setNextValue(
             com.commercetools.history.models.common.ItemShippingDetails.deepCopy(template.getNextValue()));
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItem(
+            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getCustomLineItem()));
         return instance;
     }
 

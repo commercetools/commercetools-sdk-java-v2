@@ -22,7 +22,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountedLineItemPriceImpl implements DiscountedLineItemPrice, ModelBase {
 
-    private com.commercetools.history.models.common.Money value;
+    private com.commercetools.history.models.common.TypedMoney value;
 
     private java.util.List<com.commercetools.history.models.common.DiscountedLineItemPortion> includedDiscounts;
 
@@ -30,7 +30,7 @@ public class DiscountedLineItemPriceImpl implements DiscountedLineItemPrice, Mod
      * create instance with all properties
      */
     @JsonCreator
-    DiscountedLineItemPriceImpl(@JsonProperty("value") final com.commercetools.history.models.common.Money value,
+    DiscountedLineItemPriceImpl(@JsonProperty("value") final com.commercetools.history.models.common.TypedMoney value,
             @JsonProperty("includedDiscounts") final java.util.List<com.commercetools.history.models.common.DiscountedLineItemPortion> includedDiscounts) {
         this.value = value;
         this.includedDiscounts = includedDiscounts;
@@ -43,22 +43,22 @@ public class DiscountedLineItemPriceImpl implements DiscountedLineItemPrice, Mod
     }
 
     /**
-     *
+     *  <p>Money value of the discounted Line Item or Custom Line Item.</p>
      */
 
-    public com.commercetools.history.models.common.Money getValue() {
+    public com.commercetools.history.models.common.TypedMoney getValue() {
         return this.value;
     }
 
     /**
-     *
+     *  <p>Discount applicable on the Line Item or Custom Line Item.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.DiscountedLineItemPortion> getIncludedDiscounts() {
         return this.includedDiscounts;
     }
 
-    public void setValue(final com.commercetools.history.models.common.Money value) {
+    public void setValue(final com.commercetools.history.models.common.TypedMoney value) {
         this.value = value;
     }
 

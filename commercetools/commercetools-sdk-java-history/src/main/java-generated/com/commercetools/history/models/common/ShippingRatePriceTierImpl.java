@@ -47,10 +47,6 @@ public class ShippingRatePriceTierImpl implements ShippingRatePriceTier, ModelBa
         return this.type;
     }
 
-    public void setType(final com.commercetools.history.models.common.ShippingRateTierType type) {
-        this.type = type;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o)

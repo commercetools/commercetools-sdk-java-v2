@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered automatically due to a user-initiated change.</p>
+ *  <p>This change is initiated by background processes after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountSetValidFromAction" rel="nofollow">Set Valid From</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountSetValidUntilAction" rel="nofollow">Set Valid Until</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountSetValidFromAndUntilAction" rel="nofollow">Set Valid From and Until</a> update action is performed.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetIsValidChangeImpl implements SetIsValidChange, ModelBase {

@@ -26,7 +26,7 @@ public class RemoveLocalizedEnumValuesChangeImpl implements RemoveLocalizedEnumV
 
     private String change;
 
-    private com.commercetools.history.models.change_value.LocalizedEnumValue previousValue;
+    private com.commercetools.history.models.common.AttributeLocalizedEnumValue previousValue;
 
     private String attributeName;
 
@@ -35,7 +35,7 @@ public class RemoveLocalizedEnumValuesChangeImpl implements RemoveLocalizedEnumV
      */
     @JsonCreator
     RemoveLocalizedEnumValuesChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("previousValue") final com.commercetools.history.models.change_value.LocalizedEnumValue previousValue,
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.AttributeLocalizedEnumValue previousValue,
             @JsonProperty("attributeName") final String attributeName) {
         this.change = change;
         this.previousValue = previousValue;
@@ -70,7 +70,7 @@ public class RemoveLocalizedEnumValuesChangeImpl implements RemoveLocalizedEnumV
      *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.change_value.LocalizedEnumValue getPreviousValue() {
+    public com.commercetools.history.models.common.AttributeLocalizedEnumValue getPreviousValue() {
         return this.previousValue;
     }
 
@@ -86,7 +86,8 @@ public class RemoveLocalizedEnumValuesChangeImpl implements RemoveLocalizedEnumV
         this.change = change;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.change_value.LocalizedEnumValue previousValue) {
+    public void setPreviousValue(
+            final com.commercetools.history.models.common.AttributeLocalizedEnumValue previousValue) {
         this.previousValue = previousValue;
     }
 

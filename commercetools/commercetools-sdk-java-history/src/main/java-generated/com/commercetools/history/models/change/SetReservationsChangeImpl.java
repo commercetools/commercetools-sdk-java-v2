@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * SetReservationsChange
+ *  <p>This change is initiated by background processes after the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntryAddQuantityAction" rel="nofollow">Add Quantity</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntryRemoveQuantityAction" rel="nofollow">Remove Quantity</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntryChangeQuantityAction" rel="nofollow">Change Quantity</a> update action is performed.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetReservationsChangeImpl implements SetReservationsChange, ModelBase {
@@ -30,16 +30,24 @@ public class SetReservationsChangeImpl implements SetReservationsChange, ModelBa
 
     private java.util.List<com.commercetools.history.models.common.Reservation> nextValue;
 
+    private java.util.List<com.commercetools.history.models.common.Reservation> addedItems;
+
+    private java.util.List<com.commercetools.history.models.common.Reservation> removedItems;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetReservationsChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.Reservation> previousValue,
-            @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.Reservation> nextValue) {
+            @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.Reservation> nextValue,
+            @JsonProperty("addedItems") final java.util.List<com.commercetools.history.models.common.Reservation> addedItems,
+            @JsonProperty("removedItems") final java.util.List<com.commercetools.history.models.common.Reservation> removedItems) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
+        this.addedItems = addedItems;
+        this.removedItems = removedItems;
         this.type = SET_RESERVATIONS_CHANGE;
     }
 
@@ -82,6 +90,22 @@ public class SetReservationsChangeImpl implements SetReservationsChange, ModelBa
         return this.nextValue;
     }
 
+    /**
+     *  <p>Elements added to the array.</p>
+     */
+
+    public java.util.List<com.commercetools.history.models.common.Reservation> getAddedItems() {
+        return this.addedItems;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     */
+
+    public java.util.List<com.commercetools.history.models.common.Reservation> getRemovedItems() {
+        return this.removedItems;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
@@ -103,6 +127,23 @@ public class SetReservationsChangeImpl implements SetReservationsChange, ModelBa
         this.nextValue = nextValue;
     }
 
+    public void setAddedItems(final com.commercetools.history.models.common.Reservation... addedItems) {
+        this.addedItems = new ArrayList<>(Arrays.asList(addedItems));
+    }
+
+    public void setAddedItems(final java.util.List<com.commercetools.history.models.common.Reservation> addedItems) {
+        this.addedItems = addedItems;
+    }
+
+    public void setRemovedItems(final com.commercetools.history.models.common.Reservation... removedItems) {
+        this.removedItems = new ArrayList<>(Arrays.asList(removedItems));
+    }
+
+    public void setRemovedItems(
+            final java.util.List<com.commercetools.history.models.common.Reservation> removedItems) {
+        this.removedItems = removedItems;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -117,10 +158,14 @@ public class SetReservationsChangeImpl implements SetReservationsChange, ModelBa
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(addedItems, that.addedItems)
+                .append(removedItems, that.removedItems)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(addedItems, that.addedItems)
+                .append(removedItems, that.removedItems)
                 .isEquals();
     }
 
@@ -130,6 +175,8 @@ public class SetReservationsChangeImpl implements SetReservationsChange, ModelBa
                 .append(change)
                 .append(previousValue)
                 .append(nextValue)
+                .append(addedItems)
+                .append(removedItems)
                 .toHashCode();
     }
 
@@ -139,6 +186,8 @@ public class SetReservationsChangeImpl implements SetReservationsChange, ModelBa
                 .append("change", change)
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
+                .append("addedItems", addedItems)
+                .append("removedItems", removedItems)
                 .build();
     }
 

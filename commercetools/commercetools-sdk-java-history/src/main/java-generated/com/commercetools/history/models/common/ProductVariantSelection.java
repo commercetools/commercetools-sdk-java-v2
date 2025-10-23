@@ -15,80 +15,27 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * ProductVariantSelection
+ *  <p>Polymorphic base type for Product Variant Selections. The actual type is determined by the <code>type</code> field.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     ProductVariantSelection productVariantSelection = ProductVariantSelection.builder()
- *             .type(ProductVariantSelectionTypeEnum.INCLUSION)
- *             .plusSkus(skusBuilder -> skusBuilder)
  *             .build()
  * </code></pre>
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-@JsonDeserialize(as = ProductVariantSelectionImpl.class)
 public interface ProductVariantSelection {
 
     /**
-     *
+     *  <p>Determines whether the SKUs are to be included in, or excluded from, the Product Selection.</p>
      * @return type
      */
     @NotNull
     @JsonProperty("type")
     public ProductVariantSelectionTypeEnum getType();
-
-    /**
-     *
-     * @return skus
-     */
-    @NotNull
-    @JsonProperty("skus")
-    public List<String> getSkus();
-
-    /**
-     * set type
-     * @param type value to be set
-     */
-
-    public void setType(final ProductVariantSelectionTypeEnum type);
-
-    /**
-     * set skus
-     * @param skus values to be set
-     */
-
-    @JsonIgnore
-    public void setSkus(final String... skus);
-
-    /**
-     * set skus
-     * @param skus values to be set
-     */
-
-    public void setSkus(final List<String> skus);
-
-    /**
-     * factory method
-     * @return instance of ProductVariantSelection
-     */
-    public static ProductVariantSelection of() {
-        return new ProductVariantSelectionImpl();
-    }
-
-    /**
-     * factory method to create a shallow copy ProductVariantSelection
-     * @param template instance to be copied
-     * @return copy instance
-     */
-    public static ProductVariantSelection of(final ProductVariantSelection template) {
-        ProductVariantSelectionImpl instance = new ProductVariantSelectionImpl();
-        instance.setType(template.getType());
-        instance.setSkus(template.getSkus());
-        return instance;
-    }
 
     public ProductVariantSelection copyDeep();
 
@@ -103,26 +50,7 @@ public interface ProductVariantSelection {
             return null;
         }
         ProductVariantSelectionImpl instance = new ProductVariantSelectionImpl();
-        instance.setType(template.getType());
-        instance.setSkus(Optional.ofNullable(template.getSkus()).map(ArrayList::new).orElse(null));
         return instance;
-    }
-
-    /**
-     * builder factory method for ProductVariantSelection
-     * @return builder
-     */
-    public static ProductVariantSelectionBuilder builder() {
-        return ProductVariantSelectionBuilder.of();
-    }
-
-    /**
-     * create builder for ProductVariantSelection instance
-     * @param template instance with prefilled values for the builder
-     * @return builder
-     */
-    public static ProductVariantSelectionBuilder builder(final ProductVariantSelection template) {
-        return ProductVariantSelectionBuilder.of(template);
     }
 
     /**

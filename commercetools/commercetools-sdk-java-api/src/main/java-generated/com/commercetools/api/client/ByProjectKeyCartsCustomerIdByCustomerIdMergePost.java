@@ -16,8 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Merges items from an anonymous Cart into the most recently modified active Cart of a Customer. If no active Cart exists, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error is returned.</p>
- *  <p>For more information, see <span>Merge behavior</span>.</p>
+ *  <p>Merges items from an anonymous Cart into the most recently modified active Cart of a Customer. If no active Cart exists, the anonymous Cart becomes the Customer's active Cart. For more information, see <span>Merge behavior</span>.</p>
  *
  * <hr>
  * <div class=code-example>

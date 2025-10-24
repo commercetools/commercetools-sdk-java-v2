@@ -323,15 +323,7 @@ public final class ProductUtil {
         if (value instanceof  CustomObjectKeyReferenceImpl) {
             return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.keyValueDocumentBuilder().key (((CustomObjectKeyReferenceImpl) value).getKey())).build();
         }
-        /*if (value instanceof AttributeSetType) {
-            var elementType = ((AttributeSetType) value).getElementType();
-            if (elementType instanceof BooleanAttribute) {
-                return Attribute.booleanSetBuilder().name(attribute.getName()).value((List<Boolean>) value).build();
-            }
-            if (elementType instanceof NumberAttribute) {
-                return Attribute.numberSetBuilder().name(attribute.getName()).value((List<Double>) value).build();
-            }
-        }*/
+        /* TODO: AttributeNestedType */
         throw new IllegalArgumentException("Unsupported type: " + value.getClass());
     }
 }

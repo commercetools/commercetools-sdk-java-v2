@@ -35,11 +35,7 @@ import com.commercetools.importapi.models.productvariants.NumberAttribute;
 import io.vrap.rmf.base.client.Builder;
 
 public final class ProductUtil {
-    private static KeyResolverService keyResolverService;
-
-    public ProductUtil() {
-        keyResolverService = new ExpandObjResolverService();
-    }
+    private static KeyResolverService keyResolverService= new ExpandObjResolverService();
 
     public static ProductDraftImport toProductDraftImport(ProductProjection product) {
         var draft = ProductDraftImport.builder()
@@ -229,7 +225,7 @@ public final class ProductUtil {
         if (value instanceof ArrayList) {
             var list = (ArrayList<?>) value;
             if (list.isEmpty()) {
-                return Attribute.referenceSetBuilder().build();
+                return Attribute.textSetBuilder().value().build();
             }
             if (list.get(0) instanceof LocalDate) {
                 return Attribute.dateSetBuilder().name(attribute.getName()).value((ArrayList<LocalDate>) list).build();

@@ -188,7 +188,7 @@ public class ProductUtilTest {
         var transformedProduct = toProductDraftImport(testProduct);
         assertEquals(testProduct.getKey(), transformedProduct.getKey());
         assertEquals(1, transformedProduct.getAttributes().size());
-        assertEquals("reference", transformedProduct.getAttributes().get(0).getType());
+        assertEquals("text-set", transformedProduct.getAttributes().get(0).getType());
     }
 
     @Test

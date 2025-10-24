@@ -323,7 +323,7 @@ public final class ProductUtil {
         if (value instanceof  CustomObjectKeyReferenceImpl) {
             return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.keyValueDocumentBuilder().key (((CustomObjectKeyReferenceImpl) value).getKey())).build();
         }
-        /* TODO: AttributeNestedType */
+        /* TODO: AttributeNestedType is not supported yet */
         throw new IllegalArgumentException("Unsupported type: " + value.getClass());
     }
 }

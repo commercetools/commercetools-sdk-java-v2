@@ -35,16 +35,16 @@ import com.commercetools.importapi.models.productvariants.NumberAttribute;
 import io.vrap.rmf.base.client.Builder;
 
 public final class ProductUtil {
-    private static KeyResolverService<CategoryReference> catKeyResolverService;
+    private static KeyResolverService keyResolverService;
 
     public ProductUtil() {
-        catKeyResolverService = new ExpandObjResolverService<>();
+        keyResolverService = new ExpandObjResolverService();
     }
 
     public static ProductDraftImport toProductDraftImport(ProductProjection product) {
         var draft = ProductDraftImport.builder()
                 .key(product.getKey())
-                .productType(p -> p.key(product.getProductType().getObj().getKey()))
+                .productType(p -> p.key(keyResolverService.resolveKey(product.getProductType())))
                 .name(l -> getLocalizedStringBuilder(product.getName()))
                 .slug(l -> getLocalizedStringBuilder(product.getSlug()))
                 .description(Optional.ofNullable(product.getDescription())
@@ -85,7 +85,7 @@ public final class ProductUtil {
     }
 
     private static StateKeyReference getStateKeyReference(ProductProjection product) {
-        var key = Optional.ofNullable(product.getState()).map(StateReference::getObj).map(State::getKey).orElse(null);
+        var key = keyResolverService.resolveKey(product.getState());
         if (key != null) {
             return StateKeyReference.builder().key(key).build();
         }
@@ -93,10 +93,7 @@ public final class ProductUtil {
     }
 
     private static TaxCategoryKeyReference getTaxCategoryKeyReference(ProductProjection product) {
-        var key = Optional.ofNullable(product.getTaxCategory())
-                .map(TaxCategoryReference::getObj)
-                .map(TaxCategory::getKey)
-                .orElse(null);
+        var key = keyResolverService.resolveKey(product.getTaxCategory());
         if (key != null) {
             return TaxCategoryKeyReference.builder().key(key).build();
         }
@@ -170,7 +167,7 @@ public final class ProductUtil {
     private static List<CategoryKeyReference> extractCategoryKeyReference(ProductProjection product) {
         return product.getCategories()
                 .stream()
-                .map(c -> CategoryKeyReference.builder().key(catKeyResolverService.resolveKey(c)).build())
+                .map(c -> CategoryKeyReference.builder().key(keyResolverService.resolveKey(c)).build())
                 .collect(Collectors.toList());
     }
 

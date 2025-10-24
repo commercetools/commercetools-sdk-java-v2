@@ -1,16 +1,22 @@
 package com.commercetools.sdk;
 
+import java.sql.Time;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import com.commercetools.api.models.cart.CartReferenceImpl;
 import com.commercetools.api.models.category.CategoryReference;
+import com.commercetools.api.models.category.CategoryReferenceImpl;
 import com.commercetools.api.models.common.CentPrecisionMoney;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.common.Price;
 import com.commercetools.api.models.product.ProductPriceModeEnum;
 import com.commercetools.api.models.product.ProductProjection;
+import com.commercetools.api.models.product.ProductReferenceImpl;
 import com.commercetools.api.models.product.ProductVariant;
 import com.commercetools.api.models.product_type.*;
 import com.commercetools.api.models.state.State;
@@ -23,7 +29,9 @@ import com.commercetools.importapi.models.productdrafts.ProductDraftImport;
 import com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport;
 import com.commercetools.importapi.models.productvariants.Attribute;
 import com.commercetools.importapi.models.productvariants.BooleanAttribute;
+import com.commercetools.importapi.models.productvariants.DateTimeAttribute;
 import com.commercetools.importapi.models.productvariants.NumberAttribute;
+import io.vrap.rmf.base.client.Builder;
 
 public final class ProductUtil {
     private static KeyResolverService<CategoryReference> catKeyResolverService;
@@ -126,17 +134,22 @@ public final class ProductUtil {
                 .stream()
                 .map(p -> PriceDraftImport.builder()
                         .key(p.getKey())
-                        .value(v -> (p.getValue() instanceof CentPrecisionMoney)
-                                ? v.centPrecisionBuilder()
-                                        .centAmount(p.getValue().getCentAmount())
-                                        .currencyCode(p.getValue().getCurrencyCode())
-                                        .fractionDigits(p.getValue().getFractionDigits())
-                                : v.highPrecisionBuilder()
-                                        .centAmount(p.getValue().getCentAmount())
-                                        .currencyCode(p.getValue().getCurrencyCode())
-                                        .fractionDigits(p.getValue().getFractionDigits()))
+                        .value(v -> importApiTypedMoney(p.getValue(), v))
                         .build())
                 .collect(Collectors.toList());
+    }
+
+    private static Builder<? extends TypedMoney> importApiTypedMoney(
+            com.commercetools.api.models.common.TypedMoney p, TypedMoneyBuilder v) {
+        return (p instanceof HighPrecisionMoney) ?
+                v.highPrecisionBuilder()
+                        .centAmount(p.getCentAmount())
+                        .currencyCode(p.getCurrencyCode())
+                        .preciseAmount(((com.commercetools.api.models.common.HighPrecisionMoney)p).getPreciseAmount()) :
+                v.centPrecisionBuilder()
+                        .centAmount(p.getCentAmount())
+                        .currencyCode(p.getCurrencyCode())
+                        .fractionDigits(p.getFractionDigits());
     }
 
     private static List<com.commercetools.importapi.models.common.Asset> importAssets(
@@ -196,7 +209,8 @@ public final class ProductUtil {
                     .build();
         }
         if (value instanceof Money) {
-            return Attribute.moneyBuilder().name(attribute.getName()).value((TypedMoney) value).build();
+            return Attribute.moneyBuilder().name(attribute.getName()).value((v -> importApiTypedMoney(
+                    (com.commercetools.api.models.common.TypedMoney) value, v))).build();
         }
         if (value instanceof LocalDate) {
             return Attribute.dateBuilder().name(attribute.getName()).value((LocalDate) value).build();
@@ -204,11 +218,8 @@ public final class ProductUtil {
         if (value instanceof ZonedDateTime) {
             return Attribute.datetimeBuilder().name(attribute.getName()).value((ZonedDateTime) value).build();
         }
-        if (value instanceof AttributeReferenceType) {
-            return Attribute.referenceBuilder().name(attribute.getName()).value((KeyReference) value).build();
-        }
-        if (value instanceof AttributeReferenceTypeId) {
-            return Attribute.referenceBuilder().name(attribute.getName()).value((KeyReference) value).build();
+        if (value instanceof LocalTime) {
+            return Attribute.timeBuilder().name(attribute.getName()).value((LocalTime) value).build();
         }
         if (value instanceof AttributeConstraintEnum) {
             return Attribute.enumBuilder()
@@ -216,7 +227,108 @@ public final class ProductUtil {
                     .value(String.valueOf((AttributeConstraintEnum) value))
                     .build();
         }
-        if (value instanceof AttributeSetType) {
+        if (value instanceof ArrayList) {
+            var list = (ArrayList<?>) value;
+            if (list.isEmpty()) {
+                return Attribute.referenceSetBuilder().build();
+            }
+            if (list.get(0) instanceof LocalDate) {
+                return Attribute.dateSetBuilder().name(attribute.getName()).value((ArrayList<LocalDate>) list).build();
+            }
+            if (list.get(0) instanceof ZonedDateTime) {
+                return Attribute.datetimeSetBuilder().name(attribute.getName()).value((ArrayList<ZonedDateTime>) list).build();
+            }
+            if (list.get(0) instanceof LocalTime) {
+                return Attribute.timeSetBuilder().name(attribute.getName()).value((ArrayList<LocalTime>) list).build();
+            }
+            if (list.get(0) instanceof String) {
+                return Attribute.textSetBuilder().name(attribute.getName()).value((ArrayList<String>) list).build();
+            }
+            if (list.get(0) instanceof Integer) {
+                return Attribute.numberSetBuilder().name(attribute.getName()).value((ArrayList<Double>) list).build();
+            }
+            if (list.get(0) instanceof Long) {
+                return Attribute.numberSetBuilder().name(attribute.getName()).value((ArrayList<Double>) list).build();
+            }
+            if (list.get(0) instanceof Boolean) {
+                return Attribute.booleanSetBuilder().name(attribute.getName()).value((ArrayList<Boolean>) list).build();
+            }
+            if (list.get(0) instanceof Double) {
+                return Attribute.numberSetBuilder().name(attribute.getName()).value((ArrayList<Double>) list).build();
+            }
+            if (list.get(0) instanceof LocalizedString) {
+                return Attribute.ltextSetBuilder()
+                        .name(attribute.getName())
+                        .value(list.stream().map(v -> getLocalizedStringBuilder(((LocalizedString) v)).build()).collect(
+                                Collectors.toList()))
+                        .build();
+            }
+            if (list.get(0) instanceof AttributePlainEnumValue) {
+                return Attribute.enumSetBuilder()
+                        .name(attribute.getName())
+                        .value(((ArrayList<AttributePlainEnumValue>) list).stream().map(AttributePlainEnumValue::getKey).collect(
+                                Collectors.toList()))
+                        .build();
+            }
+            if (list.get(0) instanceof AttributeLocalizedEnumValue) {
+                return Attribute.enumSetBuilder()
+                        .name(attribute.getName())
+                        .value(((ArrayList<AttributeLocalizedEnumValue>) list).stream().map(AttributeLocalizedEnumValue::getKey).collect(
+                                Collectors.toList()))
+                        .build();
+            }
+            if (list.get(0) instanceof Money) {
+                return Attribute.moneySetBuilder().name(attribute.getName()).value(
+                        list.stream().map(v -> importApiTypedMoney((
+                                com.commercetools.api.models.common.TypedMoney)v, new TypedMoneyBuilder()).build()).collect(Collectors.toList())).build();
+            }
+        }
+        if (value instanceof ProductReferenceImpl) {
+            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.productBuilder().key (((ProductReferenceImpl) value).getObj().getKey())).build();
+        }
+        if (value instanceof ProductTypeReferenceImpl) {
+            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.productTypeBuilder().key (((ProductTypeReferenceImpl) value).getObj().getKey())).build();
+        }
+        if (value instanceof CartReferenceImpl) {
+            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.cartBuilder().key (((CartReferenceImpl) value).getObj().getKey())).build();
+        }
+        if (value instanceof BusinessUnitKeyReferenceImpl) {
+            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.businessUnitBuilder().key (((BusinessUnitKeyReferenceImpl) value).getKey())).build();
+        }
+        if (value instanceof CategoryReferenceImpl) {
+            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.categoryBuilder().key (((CategoryReferenceImpl) value).getObj().getKey())).build();
+        }
+        if (value instanceof ChannelKeyReferenceImpl) {
+            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.channelBuilder().key (((ChannelKeyReferenceImpl) value).getKey())).build();
+        }
+        if (value instanceof CustomerKeyReferenceImpl) {
+            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.customerBuilder().key (((CustomerKeyReferenceImpl) value).getKey())).build();
+        }
+        if (value instanceof AssociateRoleKeyReferenceImpl) {
+            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.associateRoleBuilder().key (((AssociateRoleKeyReferenceImpl) value).getKey())).build();
+        }
+        if (value instanceof DiscountCodeKeyReferenceImpl) {
+            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.discountCodeBuilder().key (((DiscountCodeKeyReferenceImpl) value).getKey())).build();
+        }
+        if (value instanceof CustomerGroupKeyReferenceImpl) {
+            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.customerGroupBuilder().key (((CustomerGroupKeyReferenceImpl) value).getKey())).build();
+        }
+        if (value instanceof OrderKeyReferenceImpl) {
+            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.orderBuilder().key (((OrderKeyReferenceImpl) value).getKey())).build();
+        }
+        if (value instanceof ShippingMethodKeyReferenceImpl) {
+            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.shippingMethodBuilder().key (((ShippingMethodKeyReferenceImpl) value).getKey())).build();
+        }
+        if (value instanceof StateKeyReferenceImpl) {
+            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.stateBuilder().key (((StateKeyReferenceImpl) value).getKey())).build();
+        }
+        if (value instanceof TaxCategoryKeyReferenceImpl) {
+            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.taxCategoryBuilder().key (((TaxCategoryKeyReferenceImpl) value).getKey())).build();
+        }
+        if (value instanceof  CustomObjectKeyReferenceImpl) {
+            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.keyValueDocumentBuilder().key (((CustomObjectKeyReferenceImpl) value).getKey())).build();
+        }
+        /*if (value instanceof AttributeSetType) {
             var elementType = ((AttributeSetType) value).getElementType();
             if (elementType instanceof BooleanAttribute) {
                 return Attribute.booleanSetBuilder().name(attribute.getName()).value((List<Boolean>) value).build();
@@ -224,7 +336,7 @@ public final class ProductUtil {
             if (elementType instanceof NumberAttribute) {
                 return Attribute.numberSetBuilder().name(attribute.getName()).value((List<Double>) value).build();
             }
-        }
+        }*/
         throw new IllegalArgumentException("Unsupported type: " + value.getClass());
     }
 }

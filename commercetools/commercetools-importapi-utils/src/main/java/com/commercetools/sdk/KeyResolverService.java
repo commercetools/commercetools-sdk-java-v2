@@ -1,3 +1,4 @@
+
 package com.commercetools.sdk;
 
 public interface KeyResolverService<T> {

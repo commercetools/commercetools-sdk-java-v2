@@ -1,3 +1,4 @@
+
 package com.commercetools.sdk;
 
 import java.sql.Time;
@@ -39,6 +40,7 @@ public final class ProductUtil {
     public ProductUtil() {
         catKeyResolverService = new ExpandObjResolverService<>();
     }
+
     public static ProductDraftImport toProductDraftImport(ProductProjection product) {
         var draft = ProductDraftImport.builder()
                 .key(product.getKey())

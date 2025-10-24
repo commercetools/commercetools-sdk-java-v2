@@ -4,6 +4,7 @@ package com.commercetools.sdk;
 import static com.commercetools.sdk.ProductUtil.toProductDraftImport;
 import static com.commercetools.sdk.TestUtils.stringFromResource;
 import static org.junit.jupiter.api.Assertions.*;
+
 import com.commercetools.api.models.product.ProductProjection;
 import com.commercetools.api.models.product.ProductProjectionImpl;
 import com.commercetools.importapi.models.productvariants.*;

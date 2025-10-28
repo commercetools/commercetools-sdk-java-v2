@@ -550,6 +550,22 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for cartFrozen subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartFrozenMessagePayloadBuilder cartFrozenBuilder() {
+        return com.commercetools.api.models.message.CartFrozenMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for cartUnfrozen subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartUnfrozenMessagePayloadBuilder cartUnfrozenBuilder() {
+        return com.commercetools.api.models.message.CartUnfrozenMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for categoryCreated subtype
      * @return builder
      */

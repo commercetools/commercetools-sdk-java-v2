@@ -255,6 +255,14 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.CartDiscountStoresSetMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.CartFrozenMessagePayloadBuilder cartFrozenBuilder() {
+        return com.commercetools.api.models.message.CartFrozenMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CartUnfrozenMessagePayloadBuilder cartUnfrozenBuilder() {
+        return com.commercetools.api.models.message.CartUnfrozenMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.CategoryCreatedMessagePayloadBuilder categoryCreatedBuilder() {
         return com.commercetools.api.models.message.CategoryCreatedMessagePayloadBuilder.of();
     }

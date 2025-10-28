@@ -550,6 +550,20 @@ public class MessageQueryBuilderDsl {
             MessageQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asCartFrozen(
+            Function<com.commercetools.api.predicates.query.message.CartFrozenMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CartFrozenMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.message.CartFrozenMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asCartUnfrozen(
+            Function<com.commercetools.api.predicates.query.message.CartUnfrozenMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CartUnfrozenMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.message.CartUnfrozenMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MessageQueryBuilderDsl> asCategoryCreated(
             Function<com.commercetools.api.predicates.query.message.CategoryCreatedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CategoryCreatedMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

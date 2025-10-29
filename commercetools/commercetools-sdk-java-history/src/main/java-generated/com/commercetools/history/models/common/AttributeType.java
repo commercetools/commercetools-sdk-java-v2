@@ -22,11 +22,13 @@ import jakarta.validation.constraints.NotNull;
  * <div class=code-example>
  * <pre><code class='java'>
  *     AttributeType attributeType = AttributeType.builder()
+ *             .name("{name}")
  *             .build()
  * </code></pre>
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@JsonDeserialize(as = AttributeTypeImpl.class)
 public interface AttributeType {
 
     /**
@@ -36,6 +38,32 @@ public interface AttributeType {
     @NotNull
     @JsonProperty("name")
     public String getName();
+
+    /**
+     * set name
+     * @param name value to be set
+     */
+
+    public void setName(final String name);
+
+    /**
+     * factory method
+     * @return instance of AttributeType
+     */
+    public static AttributeType of() {
+        return new AttributeTypeImpl();
+    }
+
+    /**
+     * factory method to create a shallow copy AttributeType
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    public static AttributeType of(final AttributeType template) {
+        AttributeTypeImpl instance = new AttributeTypeImpl();
+        instance.setName(template.getName());
+        return instance;
+    }
 
     public AttributeType copyDeep();
 
@@ -50,7 +78,25 @@ public interface AttributeType {
             return null;
         }
         AttributeTypeImpl instance = new AttributeTypeImpl();
+        instance.setName(template.getName());
         return instance;
+    }
+
+    /**
+     * builder factory method for AttributeType
+     * @return builder
+     */
+    public static AttributeTypeBuilder builder() {
+        return AttributeTypeBuilder.of();
+    }
+
+    /**
+     * create builder for AttributeType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
+    public static AttributeTypeBuilder builder(final AttributeType template) {
+        return AttributeTypeBuilder.of(template);
     }
 
     /**

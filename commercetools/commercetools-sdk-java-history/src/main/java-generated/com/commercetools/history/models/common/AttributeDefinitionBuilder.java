@@ -52,12 +52,13 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>Describes the Type of the Attribute.</p>
-     * @param type value to be set
+     * @param builder function to build the type value
      * @return Builder
      */
 
-    public AttributeDefinitionBuilder type(final com.commercetools.history.models.common.AttributeType type) {
-        this.type = type;
+    public AttributeDefinitionBuilder type(
+            Function<com.commercetools.history.models.common.AttributeTypeBuilder, com.commercetools.history.models.common.AttributeTypeBuilder> builder) {
+        this.type = builder.apply(com.commercetools.history.models.common.AttributeTypeBuilder.of()).build();
         return this;
     }
 
@@ -67,9 +68,20 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
      * @return Builder
      */
 
-    public AttributeDefinitionBuilder type(
-            Function<com.commercetools.history.models.common.AttributeTypeBuilder, Builder<? extends com.commercetools.history.models.common.AttributeType>> builder) {
-        this.type = builder.apply(com.commercetools.history.models.common.AttributeTypeBuilder.of()).build();
+    public AttributeDefinitionBuilder withType(
+            Function<com.commercetools.history.models.common.AttributeTypeBuilder, com.commercetools.history.models.common.AttributeType> builder) {
+        this.type = builder.apply(com.commercetools.history.models.common.AttributeTypeBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Describes the Type of the Attribute.</p>
+     * @param type value to be set
+     * @return Builder
+     */
+
+    public AttributeDefinitionBuilder type(final com.commercetools.history.models.common.AttributeType type) {
+        this.type = type;
         return this;
     }
 

@@ -35,7 +35,7 @@ public class MessageBuilder {
         return com.commercetools.checkout.models.responses.CartNotFoundBuilder.of();
     }
 
-    public com.commercetools.checkout.models.responses.CartWithExistingPaymentBuilder cartWithExisitingPaymentBuilder() {
+    public com.commercetools.checkout.models.responses.CartWithExistingPaymentBuilder cartWithExistingPaymentBuilder() {
         return com.commercetools.checkout.models.responses.CartWithExistingPaymentBuilder.of();
     }
 

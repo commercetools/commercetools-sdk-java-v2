@@ -1,7 +1,6 @@
 
 package com.commercetools.sdk;
 
-import java.sql.Time;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.ZonedDateTime;
@@ -9,38 +8,32 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 import com.commercetools.api.models.cart.CartReferenceImpl;
-import com.commercetools.api.models.category.CategoryReference;
 import com.commercetools.api.models.category.CategoryReferenceImpl;
-import com.commercetools.api.models.common.CentPrecisionMoney;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.Money;
-import com.commercetools.api.models.common.Price;
 import com.commercetools.api.models.product.ProductPriceModeEnum;
 import com.commercetools.api.models.product.ProductProjection;
 import com.commercetools.api.models.product.ProductReferenceImpl;
 import com.commercetools.api.models.product.ProductVariant;
 import com.commercetools.api.models.product_type.*;
-import com.commercetools.api.models.state.State;
-import com.commercetools.api.models.state.StateReference;
-import com.commercetools.api.models.tax_category.TaxCategory;
-import com.commercetools.api.models.tax_category.TaxCategoryReference;
 import com.commercetools.importapi.models.common.*;
 import com.commercetools.importapi.models.productdrafts.PriceDraftImport;
 import com.commercetools.importapi.models.productdrafts.ProductDraftImport;
 import com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport;
 import com.commercetools.importapi.models.productvariants.Attribute;
-import com.commercetools.importapi.models.productvariants.BooleanAttribute;
-import com.commercetools.importapi.models.productvariants.DateTimeAttribute;
-import com.commercetools.importapi.models.productvariants.NumberAttribute;
+
 import io.vrap.rmf.base.client.Builder;
+
 public class ProductUtil {
     private final KeyResolverService keyResolverService;
     public ProductUtil() {
         keyResolverService = new ExpandObjResolverService();
     }
+
     public ProductUtil(final KeyResolverService resolverService) {
         keyResolverService = resolverService;
     }
+
     public ProductDraftImport toProductDraftImport(ProductProjection product) {
         var draft = ProductDraftImport.builder()
                 .key(product.getKey())
@@ -140,12 +133,12 @@ public class ProductUtil {
 
     private static Builder<? extends TypedMoney> importApiTypedMoney(com.commercetools.api.models.common.TypedMoney p,
             TypedMoneyBuilder v) {
-        return (p instanceof HighPrecisionMoney) ?
-                v.highPrecisionBuilder()
+        return (p instanceof HighPrecisionMoney)
+                ? v.highPrecisionBuilder()
                         .centAmount(p.getCentAmount())
                         .currencyCode(p.getCurrencyCode())
-                        .preciseAmount(((com.commercetools.api.models.common.HighPrecisionMoney)p).getPreciseAmount()) :
-                v.centPrecisionBuilder()
+                        .preciseAmount(((com.commercetools.api.models.common.HighPrecisionMoney) p).getPreciseAmount())
+                : v.centPrecisionBuilder()
                         .centAmount(p.getCentAmount())
                         .currencyCode(p.getCurrencyCode())
                         .fractionDigits(p.getFractionDigits());
@@ -208,8 +201,10 @@ public class ProductUtil {
                     .build();
         }
         if (value instanceof Money) {
-            return Attribute.moneyBuilder().name(attribute.getName()).value((v -> importApiTypedMoney(
-                    (com.commercetools.api.models.common.TypedMoney) value, v))).build();
+            return Attribute.moneyBuilder()
+                    .name(attribute.getName())
+                    .value((v -> importApiTypedMoney((com.commercetools.api.models.common.TypedMoney) value, v)))
+                    .build();
         }
         if (value instanceof LocalDate) {
             return Attribute.dateBuilder().name(attribute.getName()).value((LocalDate) value).build();
@@ -235,7 +230,10 @@ public class ProductUtil {
                 return Attribute.dateSetBuilder().name(attribute.getName()).value((ArrayList<LocalDate>) list).build();
             }
             if (list.get(0) instanceof ZonedDateTime) {
-                return Attribute.datetimeSetBuilder().name(attribute.getName()).value((ArrayList<ZonedDateTime>) list).build();
+                return Attribute.datetimeSetBuilder()
+                        .name(attribute.getName())
+                        .value((ArrayList<ZonedDateTime>) list)
+                        .build();
             }
             if (list.get(0) instanceof LocalTime) {
                 return Attribute.timeSetBuilder().name(attribute.getName()).value((ArrayList<LocalTime>) list).build();
@@ -258,74 +256,126 @@ public class ProductUtil {
             if (list.get(0) instanceof LocalizedString) {
                 return Attribute.ltextSetBuilder()
                         .name(attribute.getName())
-                        .value(list.stream().map(v -> getLocalizedStringBuilder(((LocalizedString) v)).build()).collect(
-                                Collectors.toList()))
+                        .value(list.stream()
+                                .map(v -> getLocalizedStringBuilder(((LocalizedString) v)).build())
+                                .collect(Collectors.toList()))
                         .build();
             }
             if (list.get(0) instanceof AttributePlainEnumValue) {
                 return Attribute.enumSetBuilder()
                         .name(attribute.getName())
-                        .value(((ArrayList<AttributePlainEnumValue>) list).stream().map(AttributePlainEnumValue::getKey).collect(
-                                Collectors.toList()))
+                        .value(((ArrayList<AttributePlainEnumValue>) list).stream()
+                                .map(AttributePlainEnumValue::getKey)
+                                .collect(Collectors.toList()))
                         .build();
             }
             if (list.get(0) instanceof AttributeLocalizedEnumValue) {
                 return Attribute.enumSetBuilder()
                         .name(attribute.getName())
-                        .value(((ArrayList<AttributeLocalizedEnumValue>) list).stream().map(AttributeLocalizedEnumValue::getKey).collect(
-                                Collectors.toList()))
+                        .value(((ArrayList<AttributeLocalizedEnumValue>) list).stream()
+                                .map(AttributeLocalizedEnumValue::getKey)
+                                .collect(Collectors.toList()))
                         .build();
             }
             if (list.get(0) instanceof Money) {
-                return Attribute.moneySetBuilder().name(attribute.getName()).value(
-                        list.stream().map(v -> importApiTypedMoney((
-                                com.commercetools.api.models.common.TypedMoney)v, new TypedMoneyBuilder()).build()).collect(Collectors.toList())).build();
+                return Attribute.moneySetBuilder()
+                        .name(attribute.getName())
+                        .value(list.stream()
+                                .map(v -> importApiTypedMoney((com.commercetools.api.models.common.TypedMoney) v,
+                                    new TypedMoneyBuilder()).build())
+                                .collect(Collectors.toList()))
+                        .build();
             }
         }
         if (value instanceof ProductReferenceImpl) {
-            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.productBuilder().key (((ProductReferenceImpl) value).getObj().getKey())).build();
+            return Attribute.referenceBuilder()
+                    .name(attribute.getName())
+                    .value(r -> r.productBuilder().key(((ProductReferenceImpl) value).getObj().getKey()))
+                    .build();
         }
         if (value instanceof ProductTypeReferenceImpl) {
-            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.productTypeBuilder().key (((ProductTypeReferenceImpl) value).getObj().getKey())).build();
+            return Attribute.referenceBuilder()
+                    .name(attribute.getName())
+                    .value(r -> r.productTypeBuilder().key(((ProductTypeReferenceImpl) value).getObj().getKey()))
+                    .build();
         }
         if (value instanceof CartReferenceImpl) {
-            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.cartBuilder().key (((CartReferenceImpl) value).getObj().getKey())).build();
+            return Attribute.referenceBuilder()
+                    .name(attribute.getName())
+                    .value(r -> r.cartBuilder().key(((CartReferenceImpl) value).getObj().getKey()))
+                    .build();
         }
         if (value instanceof BusinessUnitKeyReferenceImpl) {
-            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.businessUnitBuilder().key (((BusinessUnitKeyReferenceImpl) value).getKey())).build();
+            return Attribute.referenceBuilder()
+                    .name(attribute.getName())
+                    .value(r -> r.businessUnitBuilder().key(((BusinessUnitKeyReferenceImpl) value).getKey()))
+                    .build();
         }
         if (value instanceof CategoryReferenceImpl) {
-            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.categoryBuilder().key (((CategoryReferenceImpl) value).getObj().getKey())).build();
+            return Attribute.referenceBuilder()
+                    .name(attribute.getName())
+                    .value(r -> r.categoryBuilder().key(((CategoryReferenceImpl) value).getObj().getKey()))
+                    .build();
         }
         if (value instanceof ChannelKeyReferenceImpl) {
-            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.channelBuilder().key (((ChannelKeyReferenceImpl) value).getKey())).build();
+            return Attribute.referenceBuilder()
+                    .name(attribute.getName())
+                    .value(r -> r.channelBuilder().key(((ChannelKeyReferenceImpl) value).getKey()))
+                    .build();
         }
         if (value instanceof CustomerKeyReferenceImpl) {
-            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.customerBuilder().key (((CustomerKeyReferenceImpl) value).getKey())).build();
+            return Attribute.referenceBuilder()
+                    .name(attribute.getName())
+                    .value(r -> r.customerBuilder().key(((CustomerKeyReferenceImpl) value).getKey()))
+                    .build();
         }
         if (value instanceof AssociateRoleKeyReferenceImpl) {
-            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.associateRoleBuilder().key (((AssociateRoleKeyReferenceImpl) value).getKey())).build();
+            return Attribute.referenceBuilder()
+                    .name(attribute.getName())
+                    .value(r -> r.associateRoleBuilder().key(((AssociateRoleKeyReferenceImpl) value).getKey()))
+                    .build();
         }
         if (value instanceof DiscountCodeKeyReferenceImpl) {
-            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.discountCodeBuilder().key (((DiscountCodeKeyReferenceImpl) value).getKey())).build();
+            return Attribute.referenceBuilder()
+                    .name(attribute.getName())
+                    .value(r -> r.discountCodeBuilder().key(((DiscountCodeKeyReferenceImpl) value).getKey()))
+                    .build();
         }
         if (value instanceof CustomerGroupKeyReferenceImpl) {
-            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.customerGroupBuilder().key (((CustomerGroupKeyReferenceImpl) value).getKey())).build();
+            return Attribute.referenceBuilder()
+                    .name(attribute.getName())
+                    .value(r -> r.customerGroupBuilder().key(((CustomerGroupKeyReferenceImpl) value).getKey()))
+                    .build();
         }
         if (value instanceof OrderKeyReferenceImpl) {
-            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.orderBuilder().key (((OrderKeyReferenceImpl) value).getKey())).build();
+            return Attribute.referenceBuilder()
+                    .name(attribute.getName())
+                    .value(r -> r.orderBuilder().key(((OrderKeyReferenceImpl) value).getKey()))
+                    .build();
         }
         if (value instanceof ShippingMethodKeyReferenceImpl) {
-            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.shippingMethodBuilder().key (((ShippingMethodKeyReferenceImpl) value).getKey())).build();
+            return Attribute.referenceBuilder()
+                    .name(attribute.getName())
+                    .value(r -> r.shippingMethodBuilder().key(((ShippingMethodKeyReferenceImpl) value).getKey()))
+                    .build();
         }
         if (value instanceof StateKeyReferenceImpl) {
-            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.stateBuilder().key (((StateKeyReferenceImpl) value).getKey())).build();
+            return Attribute.referenceBuilder()
+                    .name(attribute.getName())
+                    .value(r -> r.stateBuilder().key(((StateKeyReferenceImpl) value).getKey()))
+                    .build();
         }
         if (value instanceof TaxCategoryKeyReferenceImpl) {
-            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.taxCategoryBuilder().key (((TaxCategoryKeyReferenceImpl) value).getKey())).build();
+            return Attribute.referenceBuilder()
+                    .name(attribute.getName())
+                    .value(r -> r.taxCategoryBuilder().key(((TaxCategoryKeyReferenceImpl) value).getKey()))
+                    .build();
         }
-        if (value instanceof  CustomObjectKeyReferenceImpl) {
-            return Attribute.referenceBuilder().name(attribute.getName()).value(r -> r.keyValueDocumentBuilder().key (((CustomObjectKeyReferenceImpl) value).getKey())).build();
+        if (value instanceof CustomObjectKeyReferenceImpl) {
+            return Attribute.referenceBuilder()
+                    .name(attribute.getName())
+                    .value(r -> r.keyValueDocumentBuilder().key(((CustomObjectKeyReferenceImpl) value).getKey()))
+                    .build();
         }
         /* TODO: AttributeNestedType is not supported yet */
         throw new IllegalArgumentException("Unsupported type: " + value.getClass());

@@ -232,7 +232,7 @@ public class ProductUtilTest {
         var transformedProduct = util.toProductDraftImport(testProduct);
         assertEquals(testProduct.getKey(), transformedProduct.getKey());
         assertEquals("text-set", transformedProduct.getAttributes().get(0).getType());
-        assertEquals(2, ((TextSetAttribute)transformedProduct.getAttributes().get(0)).getValue().size());
+        assertEquals(2, ((TextSetAttribute) transformedProduct.getAttributes().get(0)).getValue().size());
     }
 
     @Test
@@ -243,7 +243,7 @@ public class ProductUtilTest {
         var transformedProduct = util.toProductDraftImport(testProduct);
         assertEquals(testProduct.getKey(), transformedProduct.getKey());
         assertEquals("number-set", transformedProduct.getAttributes().get(0).getType());
-        assertEquals(2, ((NumberSetAttribute)transformedProduct.getAttributes().get(0)).getValue().size());
+        assertEquals(2, ((NumberSetAttribute) transformedProduct.getAttributes().get(0)).getValue().size());
     }
 
     @Test
@@ -254,7 +254,7 @@ public class ProductUtilTest {
         var transformedProduct = util.toProductDraftImport(testProduct);
         assertEquals(testProduct.getKey(), transformedProduct.getKey());
         assertEquals("boolean-set", transformedProduct.getAttributes().get(0).getType());
-        assertEquals(2, ((BooleanSetAttribute)transformedProduct.getAttributes().get(0)).getValue().size());
+        assertEquals(2, ((BooleanSetAttribute) transformedProduct.getAttributes().get(0)).getValue().size());
     }
 
     @Test
@@ -265,7 +265,7 @@ public class ProductUtilTest {
         var transformedProduct = util.toProductDraftImport(testProduct);
         assertEquals(testProduct.getKey(), transformedProduct.getKey());
         assertEquals("number-set", transformedProduct.getAttributes().get(0).getType());
-        assertEquals(2, ((NumberSetAttribute)transformedProduct.getAttributes().get(0)).getValue().size());
+        assertEquals(2, ((NumberSetAttribute) transformedProduct.getAttributes().get(0)).getValue().size());
     }
 
     @Test
@@ -276,7 +276,7 @@ public class ProductUtilTest {
         var transformedProduct = util.toProductDraftImport(testProduct);
         assertEquals(testProduct.getKey(), transformedProduct.getKey());
         assertEquals("ltext-set", transformedProduct.getAttributes().get(0).getType());
-        assertEquals(2, ((LocalizableTextSetAttribute)transformedProduct.getAttributes().get(0)).getValue().size());
+        assertEquals(2, ((LocalizableTextSetAttribute) transformedProduct.getAttributes().get(0)).getValue().size());
     }
 
     @Test
@@ -287,6 +287,6 @@ public class ProductUtilTest {
         var transformedProduct = util.toProductDraftImport(testProduct);
         assertEquals(testProduct.getKey(), transformedProduct.getKey());
         assertEquals("money-set", transformedProduct.getAttributes().get(0).getType());
-        assertEquals(2, ((MoneySetAttribute)transformedProduct.getAttributes().get(0)).getValue().size());
+        assertEquals(2, ((MoneySetAttribute) transformedProduct.getAttributes().get(0)).getValue().size());
     }
 }

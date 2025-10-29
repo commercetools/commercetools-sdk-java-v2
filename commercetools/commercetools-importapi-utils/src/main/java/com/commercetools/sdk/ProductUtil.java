@@ -33,11 +33,15 @@ import com.commercetools.importapi.models.productvariants.BooleanAttribute;
 import com.commercetools.importapi.models.productvariants.DateTimeAttribute;
 import com.commercetools.importapi.models.productvariants.NumberAttribute;
 import io.vrap.rmf.base.client.Builder;
-
-public final class ProductUtil {
-    private static KeyResolverService keyResolverService= new ExpandObjResolverService();
-
-    public static ProductDraftImport toProductDraftImport(ProductProjection product) {
+public class ProductUtil {
+    private final KeyResolverService keyResolverService;
+    public ProductUtil() {
+        keyResolverService = new ExpandObjResolverService();
+    }
+    public ProductUtil(final KeyResolverService resolverService) {
+        keyResolverService = resolverService;
+    }
+    public ProductDraftImport toProductDraftImport(ProductProjection product) {
         var draft = ProductDraftImport.builder()
                 .key(product.getKey())
                 .productType(p -> p.key(keyResolverService.resolveKey(product.getProductType())))
@@ -69,7 +73,7 @@ public final class ProductUtil {
         return com.commercetools.importapi.models.common.LocalizedString.builder().values(s.values());
     }
 
-    private static com.commercetools.importapi.models.common.ProductPriceModeEnum mapPriceModeToImportApi(
+    private com.commercetools.importapi.models.common.ProductPriceModeEnum mapPriceModeToImportApi(
             ProductProjection product) {
         if (product.getPriceMode() == null) {
             return null;
@@ -80,7 +84,7 @@ public final class ProductUtil {
         return com.commercetools.importapi.models.common.ProductPriceModeEnum.ProductPriceModeEnumEnum.STANDALONE;
     }
 
-    private static StateKeyReference getStateKeyReference(ProductProjection product) {
+    private StateKeyReference getStateKeyReference(ProductProjection product) {
         var key = keyResolverService.resolveKey(product.getState());
         if (key != null) {
             return StateKeyReference.builder().key(key).build();
@@ -88,7 +92,7 @@ public final class ProductUtil {
         return null;
     }
 
-    private static TaxCategoryKeyReference getTaxCategoryKeyReference(ProductProjection product) {
+    private TaxCategoryKeyReference getTaxCategoryKeyReference(ProductProjection product) {
         var key = keyResolverService.resolveKey(product.getTaxCategory());
         if (key != null) {
             return TaxCategoryKeyReference.builder().key(key).build();
@@ -96,7 +100,7 @@ public final class ProductUtil {
         return null;
     }
 
-    private static List<ProductVariantDraftImport> extractProductVariantDraftImport(ProductProjection product) {
+    private List<ProductVariantDraftImport> extractProductVariantDraftImport(ProductProjection product) {
         return product.getVariants()
                 .stream()
                 .map(ProductUtil::extractProductVariantDraftImport)
@@ -134,8 +138,8 @@ public final class ProductUtil {
                 .collect(Collectors.toList());
     }
 
-    private static Builder<? extends TypedMoney> importApiTypedMoney(
-            com.commercetools.api.models.common.TypedMoney p, TypedMoneyBuilder v) {
+    private static Builder<? extends TypedMoney> importApiTypedMoney(com.commercetools.api.models.common.TypedMoney p,
+            TypedMoneyBuilder v) {
         return (p instanceof HighPrecisionMoney) ?
                 v.highPrecisionBuilder()
                         .centAmount(p.getCentAmount())
@@ -160,7 +164,7 @@ public final class ProductUtil {
                 .collect(Collectors.toList());
     }
 
-    private static List<CategoryKeyReference> extractCategoryKeyReference(ProductProjection product) {
+    private List<CategoryKeyReference> extractCategoryKeyReference(ProductProjection product) {
         return product.getCategories()
                 .stream()
                 .map(c -> CategoryKeyReference.builder().key(keyResolverService.resolveKey(c)).build())

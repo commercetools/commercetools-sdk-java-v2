@@ -18,14 +18,17 @@ import jakarta.validation.constraints.NotNull;
  *  <p>GeoJSON Geometry represents a <span>Geometry Object</span> as defined in the GeoJSON standard.</p>
  *
  * <hr>
- * Example to create an instance using the builder pattern
+ * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     GeoJson geoJson = GeoJson.builder()
+ *     GeoJson geoJson = GeoJson.pointBuilder()
+ *             plusCoordinates(coordinatesBuilder -> coordinatesBuilder)
  *             .build()
  * </code></pre>
  * </div>
  */
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = GeoJsonImpl.class, visible = true)
+@JsonDeserialize(as = GeoJsonImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface GeoJson {
 
@@ -49,8 +52,20 @@ public interface GeoJson {
         if (template == null) {
             return null;
         }
+
+        if (!(template instanceof GeoJsonImpl)) {
+            return template.copyDeep();
+        }
         GeoJsonImpl instance = new GeoJsonImpl();
         return instance;
+    }
+
+    /**
+     * builder for point subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.common.GeoLocationBuilder pointBuilder() {
+        return com.commercetools.history.models.common.GeoLocationBuilder.of();
     }
 
     /**

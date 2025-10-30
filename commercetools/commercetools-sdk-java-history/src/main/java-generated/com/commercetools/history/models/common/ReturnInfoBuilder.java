@@ -75,7 +75,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
      */
 
     public ReturnInfoBuilder plusItems(
-            Function<com.commercetools.history.models.common.ReturnItemBuilder, Builder<? extends com.commercetools.history.models.common.ReturnItem>> builder) {
+            Function<com.commercetools.history.models.common.ReturnItemBuilder, com.commercetools.history.models.common.ReturnItemBuilder> builder) {
         if (this.items == null) {
             this.items = new ArrayList<>();
         }
@@ -90,10 +90,32 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
      */
 
     public ReturnInfoBuilder withItems(
-            Function<com.commercetools.history.models.common.ReturnItemBuilder, Builder<? extends com.commercetools.history.models.common.ReturnItem>> builder) {
+            Function<com.commercetools.history.models.common.ReturnItemBuilder, com.commercetools.history.models.common.ReturnItemBuilder> builder) {
         this.items = new ArrayList<>();
         this.items.add(builder.apply(com.commercetools.history.models.common.ReturnItemBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public ReturnInfoBuilder addItems(
+            Function<com.commercetools.history.models.common.ReturnItemBuilder, com.commercetools.history.models.common.ReturnItem> builder) {
+        return plusItems(builder.apply(com.commercetools.history.models.common.ReturnItemBuilder.of()));
+    }
+
+    /**
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public ReturnInfoBuilder setItems(
+            Function<com.commercetools.history.models.common.ReturnItemBuilder, com.commercetools.history.models.common.ReturnItem> builder) {
+        return items(builder.apply(com.commercetools.history.models.common.ReturnItemBuilder.of()));
     }
 
     /**

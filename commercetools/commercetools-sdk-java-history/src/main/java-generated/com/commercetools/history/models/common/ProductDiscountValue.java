@@ -22,11 +22,13 @@ import jakarta.validation.constraints.NotNull;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ProductDiscountValue productDiscountValue = ProductDiscountValue.builder()
+ *             .type("{type}")
  *             .build()
  * </code></pre>
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@JsonDeserialize(as = ProductDiscountValueImpl.class)
 public interface ProductDiscountValue {
 
     /**
@@ -36,6 +38,32 @@ public interface ProductDiscountValue {
     @NotNull
     @JsonProperty("type")
     public String getType();
+
+    /**
+     * set type
+     * @param type value to be set
+     */
+
+    public void setType(final String type);
+
+    /**
+     * factory method
+     * @return instance of ProductDiscountValue
+     */
+    public static ProductDiscountValue of() {
+        return new ProductDiscountValueImpl();
+    }
+
+    /**
+     * factory method to create a shallow copy ProductDiscountValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    public static ProductDiscountValue of(final ProductDiscountValue template) {
+        ProductDiscountValueImpl instance = new ProductDiscountValueImpl();
+        instance.setType(template.getType());
+        return instance;
+    }
 
     public ProductDiscountValue copyDeep();
 
@@ -50,7 +78,25 @@ public interface ProductDiscountValue {
             return null;
         }
         ProductDiscountValueImpl instance = new ProductDiscountValueImpl();
+        instance.setType(template.getType());
         return instance;
+    }
+
+    /**
+     * builder factory method for ProductDiscountValue
+     * @return builder
+     */
+    public static ProductDiscountValueBuilder builder() {
+        return ProductDiscountValueBuilder.of();
+    }
+
+    /**
+     * create builder for ProductDiscountValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
+    public static ProductDiscountValueBuilder builder(final ProductDiscountValue template) {
+        return ProductDiscountValueBuilder.of(template);
     }
 
     /**

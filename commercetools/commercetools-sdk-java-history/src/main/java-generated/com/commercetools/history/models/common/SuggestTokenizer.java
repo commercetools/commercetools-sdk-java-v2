@@ -22,11 +22,13 @@ import jakarta.validation.constraints.NotNull;
  * <div class=code-example>
  * <pre><code class='java'>
  *     SuggestTokenizer suggestTokenizer = SuggestTokenizer.builder()
+ *             .type("{type}")
  *             .build()
  * </code></pre>
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@JsonDeserialize(as = SuggestTokenizerImpl.class)
 public interface SuggestTokenizer {
 
     /**
@@ -36,6 +38,32 @@ public interface SuggestTokenizer {
     @NotNull
     @JsonProperty("type")
     public String getType();
+
+    /**
+     * set type
+     * @param type value to be set
+     */
+
+    public void setType(final String type);
+
+    /**
+     * factory method
+     * @return instance of SuggestTokenizer
+     */
+    public static SuggestTokenizer of() {
+        return new SuggestTokenizerImpl();
+    }
+
+    /**
+     * factory method to create a shallow copy SuggestTokenizer
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    public static SuggestTokenizer of(final SuggestTokenizer template) {
+        SuggestTokenizerImpl instance = new SuggestTokenizerImpl();
+        instance.setType(template.getType());
+        return instance;
+    }
 
     public SuggestTokenizer copyDeep();
 
@@ -50,7 +78,25 @@ public interface SuggestTokenizer {
             return null;
         }
         SuggestTokenizerImpl instance = new SuggestTokenizerImpl();
+        instance.setType(template.getType());
         return instance;
+    }
+
+    /**
+     * builder factory method for SuggestTokenizer
+     * @return builder
+     */
+    public static SuggestTokenizerBuilder builder() {
+        return SuggestTokenizerBuilder.of();
+    }
+
+    /**
+     * create builder for SuggestTokenizer instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
+    public static SuggestTokenizerBuilder builder(final SuggestTokenizer template) {
+        return SuggestTokenizerBuilder.of(template);
     }
 
     /**

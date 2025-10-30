@@ -22,11 +22,13 @@ import jakarta.validation.constraints.NotNull;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ShippingRatePriceTier shippingRatePriceTier = ShippingRatePriceTier.builder()
+ *             .type(ShippingRateTierType.CART_VALUE)
  *             .build()
  * </code></pre>
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@JsonDeserialize(as = ShippingRatePriceTierImpl.class)
 public interface ShippingRatePriceTier {
 
     /**
@@ -36,6 +38,32 @@ public interface ShippingRatePriceTier {
     @NotNull
     @JsonProperty("type")
     public ShippingRateTierType getType();
+
+    /**
+     * set type
+     * @param type value to be set
+     */
+
+    public void setType(final ShippingRateTierType type);
+
+    /**
+     * factory method
+     * @return instance of ShippingRatePriceTier
+     */
+    public static ShippingRatePriceTier of() {
+        return new ShippingRatePriceTierImpl();
+    }
+
+    /**
+     * factory method to create a shallow copy ShippingRatePriceTier
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    public static ShippingRatePriceTier of(final ShippingRatePriceTier template) {
+        ShippingRatePriceTierImpl instance = new ShippingRatePriceTierImpl();
+        instance.setType(template.getType());
+        return instance;
+    }
 
     public ShippingRatePriceTier copyDeep();
 
@@ -50,7 +78,25 @@ public interface ShippingRatePriceTier {
             return null;
         }
         ShippingRatePriceTierImpl instance = new ShippingRatePriceTierImpl();
+        instance.setType(template.getType());
         return instance;
+    }
+
+    /**
+     * builder factory method for ShippingRatePriceTier
+     * @return builder
+     */
+    public static ShippingRatePriceTierBuilder builder() {
+        return ShippingRatePriceTierBuilder.of();
+    }
+
+    /**
+     * create builder for ShippingRatePriceTier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
+    public static ShippingRatePriceTierBuilder builder(final ShippingRatePriceTier template) {
+        return ShippingRatePriceTierBuilder.of(template);
     }
 
     /**

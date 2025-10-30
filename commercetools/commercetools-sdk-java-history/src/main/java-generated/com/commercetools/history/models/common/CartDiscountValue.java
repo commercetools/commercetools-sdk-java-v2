@@ -22,11 +22,13 @@ import jakarta.validation.constraints.NotNull;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartDiscountValue cartDiscountValue = CartDiscountValue.builder()
+ *             .type("{type}")
  *             .build()
  * </code></pre>
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@JsonDeserialize(as = CartDiscountValueImpl.class)
 public interface CartDiscountValue {
 
     /**
@@ -36,6 +38,32 @@ public interface CartDiscountValue {
     @NotNull
     @JsonProperty("type")
     public String getType();
+
+    /**
+     * set type
+     * @param type value to be set
+     */
+
+    public void setType(final String type);
+
+    /**
+     * factory method
+     * @return instance of CartDiscountValue
+     */
+    public static CartDiscountValue of() {
+        return new CartDiscountValueImpl();
+    }
+
+    /**
+     * factory method to create a shallow copy CartDiscountValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    public static CartDiscountValue of(final CartDiscountValue template) {
+        CartDiscountValueImpl instance = new CartDiscountValueImpl();
+        instance.setType(template.getType());
+        return instance;
+    }
 
     public CartDiscountValue copyDeep();
 
@@ -50,7 +78,25 @@ public interface CartDiscountValue {
             return null;
         }
         CartDiscountValueImpl instance = new CartDiscountValueImpl();
+        instance.setType(template.getType());
         return instance;
+    }
+
+    /**
+     * builder factory method for CartDiscountValue
+     * @return builder
+     */
+    public static CartDiscountValueBuilder builder() {
+        return CartDiscountValueBuilder.of();
+    }
+
+    /**
+     * create builder for CartDiscountValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
+    public static CartDiscountValueBuilder builder(final CartDiscountValue template) {
+        return CartDiscountValueBuilder.of(template);
     }
 
     /**

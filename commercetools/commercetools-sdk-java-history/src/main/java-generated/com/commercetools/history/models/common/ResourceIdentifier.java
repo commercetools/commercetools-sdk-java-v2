@@ -22,8 +22,6 @@ import jakarta.validation.constraints.NotNull;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ResourceIdentifier resourceIdentifier = ResourceIdentifier.builder()
- *             .id("{id}")
- *             .key("{key}")
  *             .typeId(ReferenceTypeId.APPROVAL_FLOW)
  *             .build()
  * </code></pre>
@@ -37,7 +35,7 @@ public interface ResourceIdentifier {
      *
      * @return id
      */
-    @NotNull
+
     @JsonProperty("id")
     public String getId();
 
@@ -45,7 +43,7 @@ public interface ResourceIdentifier {
      *
      * @return key
      */
-    @NotNull
+
     @JsonProperty("key")
     public String getKey();
 

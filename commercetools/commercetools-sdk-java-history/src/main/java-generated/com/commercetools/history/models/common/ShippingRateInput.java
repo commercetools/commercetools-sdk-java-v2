@@ -22,11 +22,13 @@ import jakarta.validation.constraints.NotNull;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ShippingRateInput shippingRateInput = ShippingRateInput.builder()
+ *             .type("{type}")
  *             .build()
  * </code></pre>
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@JsonDeserialize(as = ShippingRateInputImpl.class)
 public interface ShippingRateInput {
 
     /**
@@ -36,6 +38,32 @@ public interface ShippingRateInput {
     @NotNull
     @JsonProperty("type")
     public String getType();
+
+    /**
+     * set type
+     * @param type value to be set
+     */
+
+    public void setType(final String type);
+
+    /**
+     * factory method
+     * @return instance of ShippingRateInput
+     */
+    public static ShippingRateInput of() {
+        return new ShippingRateInputImpl();
+    }
+
+    /**
+     * factory method to create a shallow copy ShippingRateInput
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    public static ShippingRateInput of(final ShippingRateInput template) {
+        ShippingRateInputImpl instance = new ShippingRateInputImpl();
+        instance.setType(template.getType());
+        return instance;
+    }
 
     public ShippingRateInput copyDeep();
 
@@ -50,7 +78,25 @@ public interface ShippingRateInput {
             return null;
         }
         ShippingRateInputImpl instance = new ShippingRateInputImpl();
+        instance.setType(template.getType());
         return instance;
+    }
+
+    /**
+     * builder factory method for ShippingRateInput
+     * @return builder
+     */
+    public static ShippingRateInputBuilder builder() {
+        return ShippingRateInputBuilder.of();
+    }
+
+    /**
+     * create builder for ShippingRateInput instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
+    public static ShippingRateInputBuilder builder(final ShippingRateInput template) {
+        return ShippingRateInputBuilder.of(template);
     }
 
     /**

@@ -42,13 +42,14 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
 
     /**
      *  <p>If no tokenizer is defined, the <code>text</code> is used as a single token.</p>
-     * @param suggestTokenizer value to be set
+     * @param builder function to build the suggestTokenizer value
      * @return Builder
      */
 
     public SearchKeywordBuilder suggestTokenizer(
-            @Nullable final com.commercetools.history.models.common.SuggestTokenizer suggestTokenizer) {
-        this.suggestTokenizer = suggestTokenizer;
+            Function<com.commercetools.history.models.common.SuggestTokenizerBuilder, com.commercetools.history.models.common.SuggestTokenizerBuilder> builder) {
+        this.suggestTokenizer = builder.apply(com.commercetools.history.models.common.SuggestTokenizerBuilder.of())
+                .build();
         return this;
     }
 
@@ -58,10 +59,21 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
      * @return Builder
      */
 
+    public SearchKeywordBuilder withSuggestTokenizer(
+            Function<com.commercetools.history.models.common.SuggestTokenizerBuilder, com.commercetools.history.models.common.SuggestTokenizer> builder) {
+        this.suggestTokenizer = builder.apply(com.commercetools.history.models.common.SuggestTokenizerBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>If no tokenizer is defined, the <code>text</code> is used as a single token.</p>
+     * @param suggestTokenizer value to be set
+     * @return Builder
+     */
+
     public SearchKeywordBuilder suggestTokenizer(
-            Function<com.commercetools.history.models.common.SuggestTokenizerBuilder, Builder<? extends com.commercetools.history.models.common.SuggestTokenizer>> builder) {
-        this.suggestTokenizer = builder.apply(com.commercetools.history.models.common.SuggestTokenizerBuilder.of())
-                .build();
+            @Nullable final com.commercetools.history.models.common.SuggestTokenizer suggestTokenizer) {
+        this.suggestTokenizer = suggestTokenizer;
         return this;
     }
 

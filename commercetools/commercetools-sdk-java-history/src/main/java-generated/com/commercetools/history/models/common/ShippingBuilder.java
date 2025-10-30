@@ -126,13 +126,14 @@ public class ShippingBuilder implements Builder<Shipping> {
      *   <li>If <code>CartScore</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ScoreShippingRateInput" rel="nofollow">ScoreShippingRateInput</a>.</li>
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
-     * @param shippingRateInput value to be set
+     * @param builder function to build the shippingRateInput value
      * @return Builder
      */
 
     public ShippingBuilder shippingRateInput(
-            @Nullable final com.commercetools.history.models.common.ShippingRateInput shippingRateInput) {
-        this.shippingRateInput = shippingRateInput;
+            Function<com.commercetools.history.models.common.ShippingRateInputBuilder, com.commercetools.history.models.common.ShippingRateInputBuilder> builder) {
+        this.shippingRateInput = builder.apply(com.commercetools.history.models.common.ShippingRateInputBuilder.of())
+                .build();
         return this;
     }
 
@@ -147,10 +148,26 @@ public class ShippingBuilder implements Builder<Shipping> {
      * @return Builder
      */
 
+    public ShippingBuilder withShippingRateInput(
+            Function<com.commercetools.history.models.common.ShippingRateInputBuilder, com.commercetools.history.models.common.ShippingRateInput> builder) {
+        this.shippingRateInput = builder.apply(com.commercetools.history.models.common.ShippingRateInputBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Used as an input to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>:</p>
+     *  <ul>
+     *   <li>If <code>CartClassification</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ClassificationShippingRateInput" rel="nofollow">ClassificationShippingRateInput</a>.</li>
+     *   <li>If <code>CartScore</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ScoreShippingRateInput" rel="nofollow">ScoreShippingRateInput</a>.</li>
+     *   <li>If <code>CartValue</code>, it cannot be used.</li>
+     *  </ul>
+     * @param shippingRateInput value to be set
+     * @return Builder
+     */
+
     public ShippingBuilder shippingRateInput(
-            Function<com.commercetools.history.models.common.ShippingRateInputBuilder, Builder<? extends com.commercetools.history.models.common.ShippingRateInput>> builder) {
-        this.shippingRateInput = builder.apply(com.commercetools.history.models.common.ShippingRateInputBuilder.of())
-                .build();
+            @Nullable final com.commercetools.history.models.common.ShippingRateInput shippingRateInput) {
+        this.shippingRateInput = shippingRateInput;
         return this;
     }
 

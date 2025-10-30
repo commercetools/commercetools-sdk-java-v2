@@ -3,6 +3,8 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -13,8 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ResourceIdentifier resourceIdentifier = ResourceIdentifier.builder()
- *             .id("{id}")
- *             .key("{key}")
  *             .typeId(ReferenceTypeId.APPROVAL_FLOW)
  *             .build()
  * </code></pre>
@@ -23,8 +23,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ResourceIdentifierBuilder implements Builder<ResourceIdentifier> {
 
+    @Nullable
     private String id;
 
+    @Nullable
     private String key;
 
     private com.commercetools.history.models.common.ReferenceTypeId typeId;
@@ -35,7 +37,7 @@ public class ResourceIdentifierBuilder implements Builder<ResourceIdentifier> {
      * @return Builder
      */
 
-    public ResourceIdentifierBuilder id(final String id) {
+    public ResourceIdentifierBuilder id(@Nullable final String id) {
         this.id = id;
         return this;
     }
@@ -46,7 +48,7 @@ public class ResourceIdentifierBuilder implements Builder<ResourceIdentifier> {
      * @return Builder
      */
 
-    public ResourceIdentifierBuilder key(final String key) {
+    public ResourceIdentifierBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
@@ -67,6 +69,7 @@ public class ResourceIdentifierBuilder implements Builder<ResourceIdentifier> {
      * @return id
      */
 
+    @Nullable
     public String getId() {
         return this.id;
     }
@@ -76,6 +79,7 @@ public class ResourceIdentifierBuilder implements Builder<ResourceIdentifier> {
      * @return key
      */
 
+    @Nullable
     public String getKey() {
         return this.key;
     }
@@ -94,8 +98,6 @@ public class ResourceIdentifierBuilder implements Builder<ResourceIdentifier> {
      * @return ResourceIdentifier
      */
     public ResourceIdentifier build() {
-        Objects.requireNonNull(id, ResourceIdentifier.class + ": id is missing");
-        Objects.requireNonNull(key, ResourceIdentifier.class + ": key is missing");
         Objects.requireNonNull(typeId, ResourceIdentifier.class + ": typeId is missing");
         return new ResourceIdentifierImpl(id, key, typeId);
     }

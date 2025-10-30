@@ -46,6 +46,31 @@ public class SetVariantSelectionChangeBuilder implements Builder<SetVariantSelec
 
     /**
      *  <p>Value before the change.</p>
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetVariantSelectionChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.ProductVariantSelectionBuilder, com.commercetools.history.models.common.ProductVariantSelectionBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.ProductVariantSelectionBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Value before the change.</p>
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetVariantSelectionChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.ProductVariantSelectionBuilder, com.commercetools.history.models.common.ProductVariantSelection> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.ProductVariantSelectionBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -57,15 +82,27 @@ public class SetVariantSelectionChangeBuilder implements Builder<SetVariantSelec
     }
 
     /**
-     *  <p>Value before the change.</p>
-     * @param builder function to build the previousValue value
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
      * @return Builder
      */
 
-    public SetVariantSelectionChangeBuilder previousValue(
-            Function<com.commercetools.history.models.common.ProductVariantSelectionBuilder, Builder<? extends com.commercetools.history.models.common.ProductVariantSelection>> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.ProductVariantSelectionBuilder.of())
+    public SetVariantSelectionChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.ProductVariantSelectionBuilder, com.commercetools.history.models.common.ProductVariantSelectionBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ProductVariantSelectionBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetVariantSelectionChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.ProductVariantSelectionBuilder, com.commercetools.history.models.common.ProductVariantSelection> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ProductVariantSelectionBuilder.of());
         return this;
     }
 
@@ -78,19 +115,6 @@ public class SetVariantSelectionChangeBuilder implements Builder<SetVariantSelec
     public SetVariantSelectionChangeBuilder nextValue(
             final com.commercetools.history.models.common.ProductVariantSelection nextValue) {
         this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     *  <p>Value after the change.</p>
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public SetVariantSelectionChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.ProductVariantSelectionBuilder, Builder<? extends com.commercetools.history.models.common.ProductVariantSelection>> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.ProductVariantSelectionBuilder.of())
-                .build();
         return this;
     }
 

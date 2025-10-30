@@ -26,6 +26,7 @@ import jakarta.validation.constraints.NotNull;
  *     ReturnItem returnItem = ReturnItem.builder()
  *             .id("{id}")
  *             .quantity(0.3)
+ *             .type("{type}")
  *             .shipmentState(ReturnShipmentState.ADVISED)
  *             .paymentState(ReturnPaymentState.NON_REFUNDABLE)
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
@@ -35,6 +36,7 @@ import jakarta.validation.constraints.NotNull;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@JsonDeserialize(as = ReturnItemImpl.class)
 public interface ReturnItem {
 
     /**
@@ -143,6 +145,13 @@ public interface ReturnItem {
     public void setQuantity(final Long quantity);
 
     /**
+     * set type
+     * @param type value to be set
+     */
+
+    public void setType(final String type);
+
+    /**
      *  <p>User-defined description for the return.</p>
      * @param comment value to be set
      */
@@ -188,6 +197,34 @@ public interface ReturnItem {
 
     public void setCreatedAt(final ZonedDateTime createdAt);
 
+    /**
+     * factory method
+     * @return instance of ReturnItem
+     */
+    public static ReturnItem of() {
+        return new ReturnItemImpl();
+    }
+
+    /**
+     * factory method to create a shallow copy ReturnItem
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    public static ReturnItem of(final ReturnItem template) {
+        ReturnItemImpl instance = new ReturnItemImpl();
+        instance.setId(template.getId());
+        instance.setKey(template.getKey());
+        instance.setQuantity(template.getQuantity());
+        instance.setType(template.getType());
+        instance.setComment(template.getComment());
+        instance.setShipmentState(template.getShipmentState());
+        instance.setPaymentState(template.getPaymentState());
+        instance.setCustom(template.getCustom());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setCreatedAt(template.getCreatedAt());
+        return instance;
+    }
+
     public ReturnItem copyDeep();
 
     /**
@@ -204,6 +241,7 @@ public interface ReturnItem {
         instance.setId(template.getId());
         instance.setKey(template.getKey());
         instance.setQuantity(template.getQuantity());
+        instance.setType(template.getType());
         instance.setComment(template.getComment());
         instance.setShipmentState(template.getShipmentState());
         instance.setPaymentState(template.getPaymentState());
@@ -211,6 +249,23 @@ public interface ReturnItem {
         instance.setLastModifiedAt(template.getLastModifiedAt());
         instance.setCreatedAt(template.getCreatedAt());
         return instance;
+    }
+
+    /**
+     * builder factory method for ReturnItem
+     * @return builder
+     */
+    public static ReturnItemBuilder builder() {
+        return ReturnItemBuilder.of();
+    }
+
+    /**
+     * create builder for ReturnItem instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
+    public static ReturnItemBuilder builder(final ReturnItem template) {
+        return ReturnItemBuilder.of(template);
     }
 
     /**

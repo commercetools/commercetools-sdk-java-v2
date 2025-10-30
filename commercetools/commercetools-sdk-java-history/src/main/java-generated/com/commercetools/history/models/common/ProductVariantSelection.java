@@ -22,11 +22,13 @@ import jakarta.validation.constraints.NotNull;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ProductVariantSelection productVariantSelection = ProductVariantSelection.builder()
+ *             .type(ProductVariantSelectionTypeEnum.INCLUSION)
  *             .build()
  * </code></pre>
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@JsonDeserialize(as = ProductVariantSelectionImpl.class)
 public interface ProductVariantSelection {
 
     /**
@@ -36,6 +38,32 @@ public interface ProductVariantSelection {
     @NotNull
     @JsonProperty("type")
     public ProductVariantSelectionTypeEnum getType();
+
+    /**
+     *  <p>Determines whether the SKUs are to be included in, or excluded from, the Product Selection.</p>
+     * @param type value to be set
+     */
+
+    public void setType(final ProductVariantSelectionTypeEnum type);
+
+    /**
+     * factory method
+     * @return instance of ProductVariantSelection
+     */
+    public static ProductVariantSelection of() {
+        return new ProductVariantSelectionImpl();
+    }
+
+    /**
+     * factory method to create a shallow copy ProductVariantSelection
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    public static ProductVariantSelection of(final ProductVariantSelection template) {
+        ProductVariantSelectionImpl instance = new ProductVariantSelectionImpl();
+        instance.setType(template.getType());
+        return instance;
+    }
 
     public ProductVariantSelection copyDeep();
 
@@ -50,7 +78,25 @@ public interface ProductVariantSelection {
             return null;
         }
         ProductVariantSelectionImpl instance = new ProductVariantSelectionImpl();
+        instance.setType(template.getType());
         return instance;
+    }
+
+    /**
+     * builder factory method for ProductVariantSelection
+     * @return builder
+     */
+    public static ProductVariantSelectionBuilder builder() {
+        return ProductVariantSelectionBuilder.of();
+    }
+
+    /**
+     * create builder for ProductVariantSelection instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
+    public static ProductVariantSelectionBuilder builder(final ProductVariantSelection template) {
+        return ProductVariantSelectionBuilder.of(template);
     }
 
     /**

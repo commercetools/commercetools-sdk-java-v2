@@ -168,6 +168,10 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
         this.quantity = quantity;
     }
 
+    public void setType(final String type) {
+        this.type = type;
+    }
+
     public void setComment(final String comment) {
         this.comment = comment;
     }

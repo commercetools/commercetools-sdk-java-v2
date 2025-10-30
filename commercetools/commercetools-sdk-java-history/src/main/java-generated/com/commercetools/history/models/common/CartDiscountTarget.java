@@ -22,11 +22,13 @@ import jakarta.validation.constraints.NotNull;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartDiscountTarget cartDiscountTarget = CartDiscountTarget.builder()
+ *             .type("{type}")
  *             .build()
  * </code></pre>
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@JsonDeserialize(as = CartDiscountTargetImpl.class)
 public interface CartDiscountTarget {
 
     /**
@@ -36,6 +38,32 @@ public interface CartDiscountTarget {
     @NotNull
     @JsonProperty("type")
     public String getType();
+
+    /**
+     * set type
+     * @param type value to be set
+     */
+
+    public void setType(final String type);
+
+    /**
+     * factory method
+     * @return instance of CartDiscountTarget
+     */
+    public static CartDiscountTarget of() {
+        return new CartDiscountTargetImpl();
+    }
+
+    /**
+     * factory method to create a shallow copy CartDiscountTarget
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    public static CartDiscountTarget of(final CartDiscountTarget template) {
+        CartDiscountTargetImpl instance = new CartDiscountTargetImpl();
+        instance.setType(template.getType());
+        return instance;
+    }
 
     public CartDiscountTarget copyDeep();
 
@@ -50,7 +78,25 @@ public interface CartDiscountTarget {
             return null;
         }
         CartDiscountTargetImpl instance = new CartDiscountTargetImpl();
+        instance.setType(template.getType());
         return instance;
+    }
+
+    /**
+     * builder factory method for CartDiscountTarget
+     * @return builder
+     */
+    public static CartDiscountTargetBuilder builder() {
+        return CartDiscountTargetBuilder.of();
+    }
+
+    /**
+     * create builder for CartDiscountTarget instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
+    public static CartDiscountTargetBuilder builder(final CartDiscountTarget template) {
+        return CartDiscountTargetBuilder.of(template);
     }
 
     /**

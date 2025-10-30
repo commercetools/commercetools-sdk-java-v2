@@ -82,6 +82,14 @@ public interface InventoryEntryQuantitySetMessage extends Message {
     public Long getNewAvailableQuantity();
 
     /**
+     *  <p>SKU of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> for which the quantity was updated.</p>
+     * @return sku
+     */
+
+    @JsonProperty("sku")
+    public String getSku();
+
+    /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> where the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> quantity was set.</p>
      * @return supplyChannel
      */
@@ -116,6 +124,13 @@ public interface InventoryEntryQuantitySetMessage extends Message {
      */
 
     public void setNewAvailableQuantity(final Long newAvailableQuantity);
+
+    /**
+     *  <p>SKU of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> for which the quantity was updated.</p>
+     * @param sku value to be set
+     */
+
+    public void setSku(final String sku);
 
     /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> where the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> quantity was set.</p>
@@ -153,6 +168,7 @@ public interface InventoryEntryQuantitySetMessage extends Message {
         instance.setNewQuantityOnStock(template.getNewQuantityOnStock());
         instance.setOldAvailableQuantity(template.getOldAvailableQuantity());
         instance.setNewAvailableQuantity(template.getNewAvailableQuantity());
+        instance.setSku(template.getSku());
         instance.setSupplyChannel(template.getSupplyChannel());
         return instance;
     }
@@ -186,6 +202,7 @@ public interface InventoryEntryQuantitySetMessage extends Message {
         instance.setNewQuantityOnStock(template.getNewQuantityOnStock());
         instance.setOldAvailableQuantity(template.getOldAvailableQuantity());
         instance.setNewAvailableQuantity(template.getNewAvailableQuantity());
+        instance.setSku(template.getSku());
         instance.setSupplyChannel(
             com.commercetools.api.models.channel.ChannelReference.deepCopy(template.getSupplyChannel()));
         return instance;

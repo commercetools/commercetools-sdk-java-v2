@@ -16,6 +16,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .change("{change}")
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .plusAddedItems(addedItemsBuilder -> addedItemsBuilder)
+ *             .plusRemovedItems(removedItemsBuilder -> removedItemsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -28,6 +30,10 @@ public class SetChannelRolesChangeBuilder implements Builder<SetChannelRolesChan
     private java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> previousValue;
 
     private java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> nextValue;
+
+    private java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> addedItems;
+
+    private java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> removedItems;
 
     /**
      * set the value to the change
@@ -119,6 +125,84 @@ public class SetChannelRolesChangeBuilder implements Builder<SetChannelRolesChan
     }
 
     /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems value to be set
+     * @return Builder
+     */
+
+    public SetChannelRolesChangeBuilder addedItems(
+            final com.commercetools.history.models.common.ChannelRoleEnum... addedItems) {
+        this.addedItems = new ArrayList<>(Arrays.asList(addedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems value to be set
+     * @return Builder
+     */
+
+    public SetChannelRolesChangeBuilder addedItems(
+            final java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> addedItems) {
+        this.addedItems = addedItems;
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems value to be set
+     * @return Builder
+     */
+
+    public SetChannelRolesChangeBuilder plusAddedItems(
+            final com.commercetools.history.models.common.ChannelRoleEnum... addedItems) {
+        if (this.addedItems == null) {
+            this.addedItems = new ArrayList<>();
+        }
+        this.addedItems.addAll(Arrays.asList(addedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems value to be set
+     * @return Builder
+     */
+
+    public SetChannelRolesChangeBuilder removedItems(
+            final com.commercetools.history.models.common.ChannelRoleEnum... removedItems) {
+        this.removedItems = new ArrayList<>(Arrays.asList(removedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems value to be set
+     * @return Builder
+     */
+
+    public SetChannelRolesChangeBuilder removedItems(
+            final java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> removedItems) {
+        this.removedItems = removedItems;
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems value to be set
+     * @return Builder
+     */
+
+    public SetChannelRolesChangeBuilder plusRemovedItems(
+            final com.commercetools.history.models.common.ChannelRoleEnum... removedItems) {
+        if (this.removedItems == null) {
+            this.removedItems = new ArrayList<>();
+        }
+        this.removedItems.addAll(Arrays.asList(removedItems));
+        return this;
+    }
+
+    /**
      * value of change}
      * @return change
      */
@@ -146,6 +230,24 @@ public class SetChannelRolesChangeBuilder implements Builder<SetChannelRolesChan
     }
 
     /**
+     *  <p>Elements added to the array.</p>
+     * @return addedItems
+     */
+
+    public java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> getAddedItems() {
+        return this.addedItems;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @return removedItems
+     */
+
+    public java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> getRemovedItems() {
+        return this.removedItems;
+    }
+
+    /**
      * builds SetChannelRolesChange with checking for non-null required values
      * @return SetChannelRolesChange
      */
@@ -153,7 +255,9 @@ public class SetChannelRolesChangeBuilder implements Builder<SetChannelRolesChan
         Objects.requireNonNull(change, SetChannelRolesChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetChannelRolesChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetChannelRolesChange.class + ": nextValue is missing");
-        return new SetChannelRolesChangeImpl(change, previousValue, nextValue);
+        Objects.requireNonNull(addedItems, SetChannelRolesChange.class + ": addedItems is missing");
+        Objects.requireNonNull(removedItems, SetChannelRolesChange.class + ": removedItems is missing");
+        return new SetChannelRolesChangeImpl(change, previousValue, nextValue, addedItems, removedItems);
     }
 
     /**
@@ -161,7 +265,7 @@ public class SetChannelRolesChangeBuilder implements Builder<SetChannelRolesChan
      * @return SetChannelRolesChange
      */
     public SetChannelRolesChange buildUnchecked() {
-        return new SetChannelRolesChangeImpl(change, previousValue, nextValue);
+        return new SetChannelRolesChangeImpl(change, previousValue, nextValue, addedItems, removedItems);
     }
 
     /**
@@ -182,6 +286,8 @@ public class SetChannelRolesChangeBuilder implements Builder<SetChannelRolesChan
         builder.change = template.getChange();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.addedItems = template.getAddedItems();
+        builder.removedItems = template.getRemovedItems();
         return builder;
     }
 

@@ -32,6 +32,7 @@ import jakarta.validation.constraints.NotNull;
  *             .name("{name}")
  *             .customLineItem(customLineItemBuilder -> customLineItemBuilder)
  *             .customLineItemId("{customLineItemId}")
+ *             .customTypeId("{customTypeId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -104,6 +105,14 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
     public String getCustomLineItemId();
 
     /**
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
+     * @return customTypeId
+     */
+    @NotNull
+    @JsonProperty("customTypeId")
+    public String getCustomTypeId();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -146,6 +155,13 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
     public void setCustomLineItemId(final String customLineItemId);
 
     /**
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
+     * @param customTypeId value to be set
+     */
+
+    public void setCustomTypeId(final String customTypeId);
+
+    /**
      * factory method
      * @return instance of SetCustomLineItemCustomFieldChange
      */
@@ -166,6 +182,7 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
         instance.setName(template.getName());
         instance.setCustomLineItem(template.getCustomLineItem());
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomTypeId(template.getCustomTypeId());
         return instance;
     }
 
@@ -190,6 +207,7 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
         instance.setCustomLineItem(
             com.commercetools.history.models.common.LocalizedString.deepCopy(template.getCustomLineItem()));
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomTypeId(template.getCustomTypeId());
         return instance;
     }
 

@@ -44,7 +44,7 @@ public interface TransactionItem {
     public Amount getAmount();
 
     /**
-     *  <p>Reference to the <span>Payment</span> associated with the Transaction Item.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> associated with the Transaction Item.</p>
      * @return payment
      */
     @Valid
@@ -52,7 +52,7 @@ public interface TransactionItem {
     public PaymentReference getPayment();
 
     /**
-     *  <p>Reference to the <span>Payment Integration</span> to use to execute the payment.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntegration" rel="nofollow">Payment Integration</a> to use to execute the payment.</p>
      * @return paymentIntegration
      */
     @NotNull
@@ -68,14 +68,14 @@ public interface TransactionItem {
     public void setAmount(final Amount amount);
 
     /**
-     *  <p>Reference to the <span>Payment</span> associated with the Transaction Item.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> associated with the Transaction Item.</p>
      * @param payment value to be set
      */
 
     public void setPayment(final PaymentReference payment);
 
     /**
-     *  <p>Reference to the <span>Payment Integration</span> to use to execute the payment.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntegration" rel="nofollow">Payment Integration</a> to use to execute the payment.</p>
      * @param paymentIntegration value to be set
      */
 

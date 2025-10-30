@@ -23,9 +23,9 @@ import jakarta.validation.constraints.NotNull;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ReviewRatingStatistics reviewRatingStatistics = ReviewRatingStatistics.builder()
- *             .averageRating(1)
- *             .highestRating(1)
- *             .lowestRating(1)
+ *             .averageRating(0.3)
+ *             .highestRating(0.3)
+ *             .lowestRating(0.3)
  *             .count(1)
  *             .ratingsDistribution(ratingsDistributionBuilder -> ratingsDistributionBuilder)
  *             .build()
@@ -42,7 +42,7 @@ public interface ReviewRatingStatistics {
      */
     @NotNull
     @JsonProperty("averageRating")
-    public Integer getAverageRating();
+    public Double getAverageRating();
 
     /**
      *  <p>Highest rating of one target</p>
@@ -50,7 +50,7 @@ public interface ReviewRatingStatistics {
      */
     @NotNull
     @JsonProperty("highestRating")
-    public Integer getHighestRating();
+    public Double getHighestRating();
 
     /**
      *  <p>Lowest rating of one target</p>
@@ -58,7 +58,7 @@ public interface ReviewRatingStatistics {
      */
     @NotNull
     @JsonProperty("lowestRating")
-    public Integer getLowestRating();
+    public Double getLowestRating();
 
     /**
      *  <p>Number of ratings taken into account</p>
@@ -69,7 +69,7 @@ public interface ReviewRatingStatistics {
     public Integer getCount();
 
     /**
-     *  <p>The full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
+     *  <p>Full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
      * @return ratingsDistribution
      */
     @NotNull
@@ -82,21 +82,21 @@ public interface ReviewRatingStatistics {
      * @param averageRating value to be set
      */
 
-    public void setAverageRating(final Integer averageRating);
+    public void setAverageRating(final Double averageRating);
 
     /**
      *  <p>Highest rating of one target</p>
      * @param highestRating value to be set
      */
 
-    public void setHighestRating(final Integer highestRating);
+    public void setHighestRating(final Double highestRating);
 
     /**
      *  <p>Lowest rating of one target</p>
      * @param lowestRating value to be set
      */
 
-    public void setLowestRating(final Integer lowestRating);
+    public void setLowestRating(final Double lowestRating);
 
     /**
      *  <p>Number of ratings taken into account</p>
@@ -106,7 +106,7 @@ public interface ReviewRatingStatistics {
     public void setCount(final Integer count);
 
     /**
-     *  <p>The full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
+     *  <p>Full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
      * @param ratingsDistribution value to be set
      */
 

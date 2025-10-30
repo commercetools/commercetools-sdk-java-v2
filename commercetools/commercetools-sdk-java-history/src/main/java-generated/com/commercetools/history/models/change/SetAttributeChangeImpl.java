@@ -26,24 +26,27 @@ public class SetAttributeChangeImpl implements SetAttributeChange, ModelBase {
 
     private String change;
 
-    private com.commercetools.history.models.change_value.AttributeValue previousValue;
+    private com.commercetools.history.models.common.Attribute previousValue;
 
-    private com.commercetools.history.models.change_value.AttributeValue nextValue;
+    private com.commercetools.history.models.common.Attribute nextValue;
 
     private String catalogData;
+
+    private String variant;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetAttributeChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("previousValue") final com.commercetools.history.models.change_value.AttributeValue previousValue,
-            @JsonProperty("nextValue") final com.commercetools.history.models.change_value.AttributeValue nextValue,
-            @JsonProperty("catalogData") final String catalogData) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.Attribute previousValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.Attribute nextValue,
+            @JsonProperty("catalogData") final String catalogData, @JsonProperty("variant") final String variant) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.catalogData = catalogData;
+        this.variant = variant;
         this.type = SET_ATTRIBUTE_CHANGE;
     }
 
@@ -74,7 +77,7 @@ public class SetAttributeChangeImpl implements SetAttributeChange, ModelBase {
      *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.change_value.AttributeValue getPreviousValue() {
+    public com.commercetools.history.models.common.Attribute getPreviousValue() {
         return this.previousValue;
     }
 
@@ -82,11 +85,12 @@ public class SetAttributeChangeImpl implements SetAttributeChange, ModelBase {
      *  <p>Value after the change.</p>
      */
 
-    public com.commercetools.history.models.change_value.AttributeValue getNextValue() {
+    public com.commercetools.history.models.common.Attribute getNextValue() {
         return this.nextValue;
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -97,20 +101,33 @@ public class SetAttributeChangeImpl implements SetAttributeChange, ModelBase {
         return this.catalogData;
     }
 
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.change_value.AttributeValue previousValue) {
+    public void setPreviousValue(final com.commercetools.history.models.common.Attribute previousValue) {
         this.previousValue = previousValue;
     }
 
-    public void setNextValue(final com.commercetools.history.models.change_value.AttributeValue nextValue) {
+    public void setNextValue(final com.commercetools.history.models.common.Attribute nextValue) {
         this.nextValue = nextValue;
     }
 
     public void setCatalogData(final String catalogData) {
         this.catalogData = catalogData;
+    }
+
+    public void setVariant(final String variant) {
+        this.variant = variant;
     }
 
     @Override
@@ -128,11 +145,13 @@ public class SetAttributeChangeImpl implements SetAttributeChange, ModelBase {
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(catalogData, that.catalogData)
+                .append(variant, that.variant)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(catalogData, that.catalogData)
+                .append(variant, that.variant)
                 .isEquals();
     }
 
@@ -143,6 +162,7 @@ public class SetAttributeChangeImpl implements SetAttributeChange, ModelBase {
                 .append(previousValue)
                 .append(nextValue)
                 .append(catalogData)
+                .append(variant)
                 .toHashCode();
     }
 
@@ -153,6 +173,7 @@ public class SetAttributeChangeImpl implements SetAttributeChange, ModelBase {
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
                 .append("catalogData", catalogData)
+                .append("variant", variant)
                 .build();
     }
 

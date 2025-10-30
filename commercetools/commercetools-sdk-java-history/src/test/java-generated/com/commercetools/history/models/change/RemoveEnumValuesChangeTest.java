@@ -17,9 +17,8 @@ public class RemoveEnumValuesChangeTest {
 
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { "change", RemoveEnumValuesChange.builder().change("change") },
-                new Object[] { "previousValue",
-                        RemoveEnumValuesChange.builder()
-                                .previousValue(new com.commercetools.history.models.change_value.EnumValueImpl()) },
+                new Object[] { "previousValue", RemoveEnumValuesChange.builder()
+                        .previousValue(new com.commercetools.history.models.common.AttributePlainEnumValueImpl()) },
                 new Object[] { "attributeName", RemoveEnumValuesChange.builder().attributeName("attributeName") } };
     }
 
@@ -33,9 +32,9 @@ public class RemoveEnumValuesChangeTest {
     @Test
     public void previousValue() {
         RemoveEnumValuesChange value = RemoveEnumValuesChange.of();
-        value.setPreviousValue(new com.commercetools.history.models.change_value.EnumValueImpl());
+        value.setPreviousValue(new com.commercetools.history.models.common.AttributePlainEnumValueImpl());
         Assertions.assertThat(value.getPreviousValue())
-                .isEqualTo(new com.commercetools.history.models.change_value.EnumValueImpl());
+                .isEqualTo(new com.commercetools.history.models.common.AttributePlainEnumValueImpl());
     }
 
     @Test

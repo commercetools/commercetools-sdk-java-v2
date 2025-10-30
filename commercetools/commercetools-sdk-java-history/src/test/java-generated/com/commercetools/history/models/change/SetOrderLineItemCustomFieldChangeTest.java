@@ -26,7 +26,8 @@ public class SetOrderLineItemCustomFieldChangeTest {
                 new Object[] { "lineItem",
                         SetOrderLineItemCustomFieldChange.builder()
                                 .lineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { "variant", SetOrderLineItemCustomFieldChange.builder().variant("variant") } };
+                new Object[] { "variant", SetOrderLineItemCustomFieldChange.builder().variant("variant") },
+                new Object[] { "lineItemId", SetOrderLineItemCustomFieldChange.builder().lineItemId("lineItemId") } };
     }
 
     @Test
@@ -77,5 +78,12 @@ public class SetOrderLineItemCustomFieldChangeTest {
         SetOrderLineItemCustomFieldChange value = SetOrderLineItemCustomFieldChange.of();
         value.setVariant("variant");
         Assertions.assertThat(value.getVariant()).isEqualTo("variant");
+    }
+
+    @Test
+    public void lineItemId() {
+        SetOrderLineItemCustomFieldChange value = SetOrderLineItemCustomFieldChange.of();
+        value.setLineItemId("lineItemId");
+        Assertions.assertThat(value.getLineItemId()).isEqualTo("lineItemId");
     }
 }

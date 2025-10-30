@@ -13,8 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Draft type to create a <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> or a <a href="https://docs.commercetools.com/apis/ctp:api:type:KeyReference" rel="nofollow">KeyReference</a> to a resource. Provide either the <code>id</code> or (wherever supported) the <code>key</code> of the resource to reference, but depending on the API endpoint the response returns either a Reference or a KeyReference. For example, the field <code>parent</code> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:CategoryDraft" rel="nofollow">CategoryDraft</a> takes a ResourceIdentifier for its value while the value of the corresponding field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> is a Reference.</p>
- *  <p>Each resource type has its corresponding ResourceIdentifier, like <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelResourceIdentifier" rel="nofollow">ChannelResourceIdentifier</a>.</p>
+ *  <p>Draft type to create a <a href="https://docs.commercetools.com/apis/ctp:checkout:type:Reference" rel="nofollow">Reference</a> to a resource. Provide either the <code>id</code> or (wherever supported) the <code>key</code> of the resource to reference, but depending on the API endpoint the response returns a Reference.</p>
+ *  <p>Each resource type has its corresponding ResourceIdentifier, like <a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentResourceIdentifier" rel="nofollow">PaymentResourceIdentifier</a>.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern
@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ResourceIdentifier {
 
     /**
-     *  <p>Type of referenced resource. If given, it must match the expected <span>ReferenceTypeId</span> of the referenced resource.</p>
+     *  <p>Type of referenced resource. If given, it must match the expected <a href="https://docs.commercetools.com/apis/ctp:checkout:type:ReferenceTypeId" rel="nofollow">ReferenceTypeId</a> of the referenced resource.</p>
      * @return typeId
      */
 

@@ -11,7 +11,7 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Permissions grant granular access to <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Units</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>.</p>
+ *  <p>Permissions grant granular access to <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">Approval Rules</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flows</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Units</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface Permission extends JsonEnum {
@@ -87,6 +87,28 @@ public interface Permission extends JsonEnum {
     Permission CREATE_MY_QUOTE_REQUESTS_FROM_MY_CARTS = PermissionEnum.CREATE_MY_QUOTE_REQUESTS_FROM_MY_CARTS;
 
     Permission CREATE_QUOTE_REQUESTS_FROM_OTHERS_CARTS = PermissionEnum.CREATE_QUOTE_REQUESTS_FROM_OTHERS_CARTS;
+
+    Permission CREATE_APPROVAL_RULES = PermissionEnum.CREATE_APPROVAL_RULES;
+
+    Permission UPDATE_APPROVAL_RULES = PermissionEnum.UPDATE_APPROVAL_RULES;
+
+    Permission UPDATE_APPROVAL_FLOWS = PermissionEnum.UPDATE_APPROVAL_FLOWS;
+
+    Permission VIEW_MY_SHOPPING_LISTS = PermissionEnum.VIEW_MY_SHOPPING_LISTS;
+
+    Permission VIEW_OTHERS_SHOPPING_LISTS = PermissionEnum.VIEW_OTHERS_SHOPPING_LISTS;
+
+    Permission UPDATE_MY_SHOPPING_LISTS = PermissionEnum.UPDATE_MY_SHOPPING_LISTS;
+
+    Permission UPDATE_OTHERS_SHOPPING_LISTS = PermissionEnum.UPDATE_OTHERS_SHOPPING_LISTS;
+
+    Permission CREATE_MY_SHOPPING_LISTS = PermissionEnum.CREATE_MY_SHOPPING_LISTS;
+
+    Permission CREATE_OTHERS_SHOPPING_LISTS = PermissionEnum.CREATE_OTHERS_SHOPPING_LISTS;
+
+    Permission DELETE_MY_SHOPPING_LISTS = PermissionEnum.DELETE_MY_SHOPPING_LISTS;
+
+    Permission DELETE_OTHERS_SHOPPING_LISTS = PermissionEnum.DELETE_OTHERS_SHOPPING_LISTS;
 
     /**
      * possible values of Permission
@@ -270,7 +292,62 @@ public interface Permission extends JsonEnum {
         /**
          * CreateQuoteRequestsFromOthersCarts
          */
-        CREATE_QUOTE_REQUESTS_FROM_OTHERS_CARTS("CreateQuoteRequestsFromOthersCarts");
+        CREATE_QUOTE_REQUESTS_FROM_OTHERS_CARTS("CreateQuoteRequestsFromOthersCarts"),
+
+        /**
+         * CreateApprovalRules
+         */
+        CREATE_APPROVAL_RULES("CreateApprovalRules"),
+
+        /**
+         * UpdateApprovalRules
+         */
+        UPDATE_APPROVAL_RULES("UpdateApprovalRules"),
+
+        /**
+         * UpdateApprovalFlows
+         */
+        UPDATE_APPROVAL_FLOWS("UpdateApprovalFlows"),
+
+        /**
+         * ViewMyShoppingLists
+         */
+        VIEW_MY_SHOPPING_LISTS("ViewMyShoppingLists"),
+
+        /**
+         * ViewOthersShoppingLists
+         */
+        VIEW_OTHERS_SHOPPING_LISTS("ViewOthersShoppingLists"),
+
+        /**
+         * UpdateMyShoppingLists
+         */
+        UPDATE_MY_SHOPPING_LISTS("UpdateMyShoppingLists"),
+
+        /**
+         * UpdateOthersShoppingLists
+         */
+        UPDATE_OTHERS_SHOPPING_LISTS("UpdateOthersShoppingLists"),
+
+        /**
+         * CreateMyShoppingLists
+         */
+        CREATE_MY_SHOPPING_LISTS("CreateMyShoppingLists"),
+
+        /**
+         * CreateOthersShoppingLists
+         */
+        CREATE_OTHERS_SHOPPING_LISTS("CreateOthersShoppingLists"),
+
+        /**
+         * DeleteMyShoppingLists
+         */
+        DELETE_MY_SHOPPING_LISTS("DeleteMyShoppingLists"),
+
+        /**
+         * DeleteOthersShoppingLists
+         */
+        DELETE_OTHERS_SHOPPING_LISTS("DeleteOthersShoppingLists");
         private final String jsonName;
 
         private PermissionEnum(final String jsonName) {

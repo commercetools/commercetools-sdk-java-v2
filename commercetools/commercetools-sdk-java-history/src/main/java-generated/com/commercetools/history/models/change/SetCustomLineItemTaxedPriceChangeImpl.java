@@ -26,9 +26,9 @@ public class SetCustomLineItemTaxedPriceChangeImpl implements SetCustomLineItemT
 
     private String change;
 
-    private com.commercetools.history.models.common.Money previousValue;
+    private com.commercetools.history.models.common.TaxedItemPrice previousValue;
 
-    private com.commercetools.history.models.common.Money nextValue;
+    private com.commercetools.history.models.common.TaxedItemPrice nextValue;
 
     private com.commercetools.history.models.common.LocalizedString customLineItem;
 
@@ -39,8 +39,8 @@ public class SetCustomLineItemTaxedPriceChangeImpl implements SetCustomLineItemT
      */
     @JsonCreator
     SetCustomLineItemTaxedPriceChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.Money previousValue,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.Money nextValue,
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.TaxedItemPrice previousValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.TaxedItemPrice nextValue,
             @JsonProperty("customLineItem") final com.commercetools.history.models.common.LocalizedString customLineItem,
             @JsonProperty("customLineItemId") final String customLineItemId) {
         this.change = change;
@@ -78,7 +78,7 @@ public class SetCustomLineItemTaxedPriceChangeImpl implements SetCustomLineItemT
      *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.common.Money getPreviousValue() {
+    public com.commercetools.history.models.common.TaxedItemPrice getPreviousValue() {
         return this.previousValue;
     }
 
@@ -86,7 +86,7 @@ public class SetCustomLineItemTaxedPriceChangeImpl implements SetCustomLineItemT
      *  <p>Value after the change.</p>
      */
 
-    public com.commercetools.history.models.common.Money getNextValue() {
+    public com.commercetools.history.models.common.TaxedItemPrice getNextValue() {
         return this.nextValue;
     }
 
@@ -110,11 +110,11 @@ public class SetCustomLineItemTaxedPriceChangeImpl implements SetCustomLineItemT
         this.change = change;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.Money previousValue) {
+    public void setPreviousValue(final com.commercetools.history.models.common.TaxedItemPrice previousValue) {
         this.previousValue = previousValue;
     }
 
-    public void setNextValue(final com.commercetools.history.models.common.Money nextValue) {
+    public void setNextValue(final com.commercetools.history.models.common.TaxedItemPrice nextValue) {
         this.nextValue = nextValue;
     }
 

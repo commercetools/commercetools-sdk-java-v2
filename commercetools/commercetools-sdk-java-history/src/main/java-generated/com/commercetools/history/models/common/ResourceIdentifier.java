@@ -22,9 +22,7 @@ import jakarta.validation.constraints.NotNull;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ResourceIdentifier resourceIdentifier = ResourceIdentifier.builder()
- *             .id("{id}")
- *             .key("{key}")
- *             .typeId(ReferenceTypeId.ASSOCIATE_ROLE)
+ *             .typeId(ReferenceTypeId.APPROVAL_FLOW)
  *             .build()
  * </code></pre>
  * </div>
@@ -37,7 +35,7 @@ public interface ResourceIdentifier {
      *
      * @return id
      */
-    @NotNull
+
     @JsonProperty("id")
     public String getId();
 
@@ -45,12 +43,12 @@ public interface ResourceIdentifier {
      *
      * @return key
      */
-    @NotNull
+
     @JsonProperty("key")
     public String getKey();
 
     /**
-     *
+     *  <p>Type of resource the value should reference. Supported resource type identifiers are:</p>
      * @return typeId
      */
     @NotNull
@@ -72,7 +70,7 @@ public interface ResourceIdentifier {
     public void setKey(final String key);
 
     /**
-     * set typeId
+     *  <p>Type of resource the value should reference. Supported resource type identifiers are:</p>
      * @param typeId value to be set
      */
 
@@ -110,6 +108,10 @@ public interface ResourceIdentifier {
     public static ResourceIdentifier deepCopy(@Nullable final ResourceIdentifier template) {
         if (template == null) {
             return null;
+        }
+
+        if (!(template instanceof ResourceIdentifierImpl)) {
+            return template.copyDeep();
         }
         ResourceIdentifierImpl instance = new ResourceIdentifierImpl();
         instance.setId(template.getId());

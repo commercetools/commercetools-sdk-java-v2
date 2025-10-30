@@ -68,7 +68,7 @@ public class TransactionItemBuilder implements Builder<TransactionItem> {
     }
 
     /**
-     *  <p>Reference to the <span>Payment</span> associated with the Transaction Item.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> associated with the Transaction Item.</p>
      * @param builder function to build the payment value
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class TransactionItemBuilder implements Builder<TransactionItem> {
     }
 
     /**
-     *  <p>Reference to the <span>Payment</span> associated with the Transaction Item.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> associated with the Transaction Item.</p>
      * @param builder function to build the payment value
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class TransactionItemBuilder implements Builder<TransactionItem> {
     }
 
     /**
-     *  <p>Reference to the <span>Payment</span> associated with the Transaction Item.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> associated with the Transaction Item.</p>
      * @param payment value to be set
      * @return Builder
      */
@@ -104,7 +104,7 @@ public class TransactionItemBuilder implements Builder<TransactionItem> {
     }
 
     /**
-     *  <p>Reference to the <span>Payment Integration</span> to use to execute the payment.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntegration" rel="nofollow">Payment Integration</a> to use to execute the payment.</p>
      * @param builder function to build the paymentIntegration value
      * @return Builder
      */
@@ -118,7 +118,7 @@ public class TransactionItemBuilder implements Builder<TransactionItem> {
     }
 
     /**
-     *  <p>Reference to the <span>Payment Integration</span> to use to execute the payment.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntegration" rel="nofollow">Payment Integration</a> to use to execute the payment.</p>
      * @param builder function to build the paymentIntegration value
      * @return Builder
      */
@@ -131,7 +131,7 @@ public class TransactionItemBuilder implements Builder<TransactionItem> {
     }
 
     /**
-     *  <p>Reference to the <span>Payment Integration</span> to use to execute the payment.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntegration" rel="nofollow">Payment Integration</a> to use to execute the payment.</p>
      * @param paymentIntegration value to be set
      * @return Builder
      */
@@ -153,7 +153,7 @@ public class TransactionItemBuilder implements Builder<TransactionItem> {
     }
 
     /**
-     *  <p>Reference to the <span>Payment</span> associated with the Transaction Item.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> associated with the Transaction Item.</p>
      * @return payment
      */
 
@@ -163,7 +163,7 @@ public class TransactionItemBuilder implements Builder<TransactionItem> {
     }
 
     /**
-     *  <p>Reference to the <span>Payment Integration</span> to use to execute the payment.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntegration" rel="nofollow">Payment Integration</a> to use to execute the payment.</p>
      * @return paymentIntegration
      */
 

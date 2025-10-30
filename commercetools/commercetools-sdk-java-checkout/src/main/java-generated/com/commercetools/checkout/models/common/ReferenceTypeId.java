@@ -17,20 +17,23 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ReferenceTypeId extends JsonEnum {
 
     /**
-    <p>References a <span>Cart</span>.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p> */
     ReferenceTypeId CART = ReferenceTypeIdEnum.CART;
     /**
-    <p>References an <span>Order</span>.</p> */
+    <p>References an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p> */
     ReferenceTypeId ORDER = ReferenceTypeIdEnum.ORDER;
     /**
-    <p>References a <span>Payment</span>.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p> */
     ReferenceTypeId PAYMENT = ReferenceTypeIdEnum.PAYMENT;
     /**
-    <p>References an <span>Application</span>.</p> */
+    <p>References an <a href="https://docs.commercetools.com/apis/ctp:checkout:type:Application" rel="nofollow">Application</a>.</p> */
     ReferenceTypeId APPLICATION = ReferenceTypeIdEnum.APPLICATION;
     /**
-    <p>References a <span>Payment Integration</span>.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntegration" rel="nofollow">Payment Integration</a>.</p> */
     ReferenceTypeId PAYMENT_INTEGRATION = ReferenceTypeIdEnum.PAYMENT_INTEGRATION;
+    /**
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:checkout:type:ConnectorDeploymentReference" rel="nofollow">Connector Deployment</a>.</p> */
+    ReferenceTypeId DEPLOYMENT = ReferenceTypeIdEnum.DEPLOYMENT;
 
     /**
      * possible values of ReferenceTypeId
@@ -59,7 +62,12 @@ public interface ReferenceTypeId extends JsonEnum {
         /**
          * payment-integration
          */
-        PAYMENT_INTEGRATION("payment-integration");
+        PAYMENT_INTEGRATION("payment-integration"),
+
+        /**
+         * deployment
+         */
+        DEPLOYMENT("deployment");
         private final String jsonName;
 
         private ReferenceTypeIdEnum(final String jsonName) {

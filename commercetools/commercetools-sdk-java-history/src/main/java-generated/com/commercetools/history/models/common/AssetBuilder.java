@@ -4,6 +4,8 @@ package com.commercetools.history.models.common;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +17,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     Asset asset = Asset.builder()
  *             .id("{id}")
+ *             .plusSources(sourcesBuilder -> sourcesBuilder)
  *             .name(nameBuilder -> nameBuilder)
- *             .description(descriptionBuilder -> descriptionBuilder)
- *             .custom(customBuilder -> customBuilder)
- *             .key("{key}")
  *             .build()
  * </code></pre>
  * </div>
@@ -28,16 +28,24 @@ public class AssetBuilder implements Builder<Asset> {
 
     private String id;
 
+    private java.util.List<com.commercetools.history.models.common.AssetSource> sources;
+
     private com.commercetools.history.models.common.LocalizedString name;
 
+    @Nullable
     private com.commercetools.history.models.common.LocalizedString description;
 
+    @Nullable
+    private java.util.List<String> tags;
+
+    @Nullable
     private com.commercetools.history.models.common.CustomFields custom;
 
+    @Nullable
     private String key;
 
     /**
-     * set the value to the id
+     *  <p>Unique identifier of the Asset. Not required when importing Assets using the <span>Import API</span>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -48,7 +56,93 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     * set the value to the name using the builder function
+     * set values to the sources
+     * @param sources value to be set
+     * @return Builder
+     */
+
+    public AssetBuilder sources(final com.commercetools.history.models.common.AssetSource... sources) {
+        this.sources = new ArrayList<>(Arrays.asList(sources));
+        return this;
+    }
+
+    /**
+     * set value to the sources
+     * @param sources value to be set
+     * @return Builder
+     */
+
+    public AssetBuilder sources(final java.util.List<com.commercetools.history.models.common.AssetSource> sources) {
+        this.sources = sources;
+        return this;
+    }
+
+    /**
+     * add values to the sources
+     * @param sources value to be set
+     * @return Builder
+     */
+
+    public AssetBuilder plusSources(final com.commercetools.history.models.common.AssetSource... sources) {
+        if (this.sources == null) {
+            this.sources = new ArrayList<>();
+        }
+        this.sources.addAll(Arrays.asList(sources));
+        return this;
+    }
+
+    /**
+     * add the value to the sources using the builder function
+     * @param builder function to build the sources value
+     * @return Builder
+     */
+
+    public AssetBuilder plusSources(
+            Function<com.commercetools.history.models.common.AssetSourceBuilder, com.commercetools.history.models.common.AssetSourceBuilder> builder) {
+        if (this.sources == null) {
+            this.sources = new ArrayList<>();
+        }
+        this.sources.add(builder.apply(com.commercetools.history.models.common.AssetSourceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     * set the value to the sources using the builder function
+     * @param builder function to build the sources value
+     * @return Builder
+     */
+
+    public AssetBuilder withSources(
+            Function<com.commercetools.history.models.common.AssetSourceBuilder, com.commercetools.history.models.common.AssetSourceBuilder> builder) {
+        this.sources = new ArrayList<>();
+        this.sources.add(builder.apply(com.commercetools.history.models.common.AssetSourceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     * add the value to the sources using the builder function
+     * @param builder function to build the sources value
+     * @return Builder
+     */
+
+    public AssetBuilder addSources(
+            Function<com.commercetools.history.models.common.AssetSourceBuilder, com.commercetools.history.models.common.AssetSource> builder) {
+        return plusSources(builder.apply(com.commercetools.history.models.common.AssetSourceBuilder.of()));
+    }
+
+    /**
+     * set the value to the sources using the builder function
+     * @param builder function to build the sources value
+     * @return Builder
+     */
+
+    public AssetBuilder setSources(
+            Function<com.commercetools.history.models.common.AssetSourceBuilder, com.commercetools.history.models.common.AssetSource> builder) {
+        return sources(builder.apply(com.commercetools.history.models.common.AssetSourceBuilder.of()));
+    }
+
+    /**
+     *  <p>Name of the Asset.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -60,7 +154,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     * set the value to the name using the builder function
+     *  <p>Name of the Asset.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -72,7 +166,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     * set the value to the name
+     *  <p>Name of the Asset.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -83,7 +177,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     * set the value to the description using the builder function
+     *  <p>Description of the Asset.</p>
      * @param builder function to build the description value
      * @return Builder
      */
@@ -95,7 +189,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     * set the value to the description using the builder function
+     *  <p>Description of the Asset.</p>
      * @param builder function to build the description value
      * @return Builder
      */
@@ -107,18 +201,55 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     * set the value to the description
+     *  <p>Description of the Asset.</p>
      * @param description value to be set
      * @return Builder
      */
 
-    public AssetBuilder description(final com.commercetools.history.models.common.LocalizedString description) {
+    public AssetBuilder description(
+            @Nullable final com.commercetools.history.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
 
     /**
-     * set the value to the custom using the builder function
+     *  <p>Keywords for categorizing and organizing Assets.</p>
+     * @param tags value to be set
+     * @return Builder
+     */
+
+    public AssetBuilder tags(@Nullable final String... tags) {
+        this.tags = new ArrayList<>(Arrays.asList(tags));
+        return this;
+    }
+
+    /**
+     *  <p>Keywords for categorizing and organizing Assets.</p>
+     * @param tags value to be set
+     * @return Builder
+     */
+
+    public AssetBuilder tags(@Nullable final java.util.List<String> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+    /**
+     *  <p>Keywords for categorizing and organizing Assets.</p>
+     * @param tags value to be set
+     * @return Builder
+     */
+
+    public AssetBuilder plusTags(@Nullable final String... tags) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.addAll(Arrays.asList(tags));
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields defined for the Asset.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -130,7 +261,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     * set the value to the custom using the builder function
+     *  <p>Custom Fields defined for the Asset.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -142,29 +273,29 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     * set the value to the custom
+     *  <p>Custom Fields defined for the Asset.</p>
      * @param custom value to be set
      * @return Builder
      */
 
-    public AssetBuilder custom(final com.commercetools.history.models.common.CustomFields custom) {
+    public AssetBuilder custom(@Nullable final com.commercetools.history.models.common.CustomFields custom) {
         this.custom = custom;
         return this;
     }
 
     /**
-     * set the value to the key
+     *  <p>User-defined identifier of the Asset. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param key value to be set
      * @return Builder
      */
 
-    public AssetBuilder key(final String key) {
+    public AssetBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
 
     /**
-     * value of id}
+     *  <p>Unique identifier of the Asset. Not required when importing Assets using the <span>Import API</span>.</p>
      * @return id
      */
 
@@ -173,7 +304,16 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     * value of name}
+     * value of sources}
+     * @return sources
+     */
+
+    public java.util.List<com.commercetools.history.models.common.AssetSource> getSources() {
+        return this.sources;
+    }
+
+    /**
+     *  <p>Name of the Asset.</p>
      * @return name
      */
 
@@ -182,28 +322,41 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     * value of description}
+     *  <p>Description of the Asset.</p>
      * @return description
      */
 
+    @Nullable
     public com.commercetools.history.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
     /**
-     * value of custom}
+     *  <p>Keywords for categorizing and organizing Assets.</p>
+     * @return tags
+     */
+
+    @Nullable
+    public java.util.List<String> getTags() {
+        return this.tags;
+    }
+
+    /**
+     *  <p>Custom Fields defined for the Asset.</p>
      * @return custom
      */
 
+    @Nullable
     public com.commercetools.history.models.common.CustomFields getCustom() {
         return this.custom;
     }
 
     /**
-     * value of key}
+     *  <p>User-defined identifier of the Asset. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return key
      */
 
+    @Nullable
     public String getKey() {
         return this.key;
     }
@@ -214,11 +367,9 @@ public class AssetBuilder implements Builder<Asset> {
      */
     public Asset build() {
         Objects.requireNonNull(id, Asset.class + ": id is missing");
+        Objects.requireNonNull(sources, Asset.class + ": sources is missing");
         Objects.requireNonNull(name, Asset.class + ": name is missing");
-        Objects.requireNonNull(description, Asset.class + ": description is missing");
-        Objects.requireNonNull(custom, Asset.class + ": custom is missing");
-        Objects.requireNonNull(key, Asset.class + ": key is missing");
-        return new AssetImpl(id, name, description, custom, key);
+        return new AssetImpl(id, sources, name, description, tags, custom, key);
     }
 
     /**
@@ -226,7 +377,7 @@ public class AssetBuilder implements Builder<Asset> {
      * @return Asset
      */
     public Asset buildUnchecked() {
-        return new AssetImpl(id, name, description, custom, key);
+        return new AssetImpl(id, sources, name, description, tags, custom, key);
     }
 
     /**
@@ -245,8 +396,10 @@ public class AssetBuilder implements Builder<Asset> {
     public static AssetBuilder of(final Asset template) {
         AssetBuilder builder = new AssetBuilder();
         builder.id = template.getId();
+        builder.sources = template.getSources();
         builder.name = template.getName();
         builder.description = template.getDescription();
+        builder.tags = template.getTags();
         builder.custom = template.getCustom();
         builder.key = template.getKey();
         return builder;

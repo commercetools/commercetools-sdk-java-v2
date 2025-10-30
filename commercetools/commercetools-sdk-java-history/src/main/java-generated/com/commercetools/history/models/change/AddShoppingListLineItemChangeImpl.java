@@ -26,17 +26,17 @@ public class AddShoppingListLineItemChangeImpl implements AddShoppingListLineIte
 
     private String change;
 
-    private com.commercetools.history.models.common.LineItem previousValue;
+    private com.commercetools.history.models.common.ShoppingListLineItem previousValue;
 
-    private com.commercetools.history.models.common.LineItem nextValue;
+    private com.commercetools.history.models.common.ShoppingListLineItem nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     AddShoppingListLineItemChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.LineItem previousValue,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.LineItem nextValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.ShoppingListLineItem previousValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.ShoppingListLineItem nextValue) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
@@ -70,7 +70,7 @@ public class AddShoppingListLineItemChangeImpl implements AddShoppingListLineIte
      *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.common.LineItem getPreviousValue() {
+    public com.commercetools.history.models.common.ShoppingListLineItem getPreviousValue() {
         return this.previousValue;
     }
 
@@ -78,7 +78,7 @@ public class AddShoppingListLineItemChangeImpl implements AddShoppingListLineIte
      *  <p>Value after the change.</p>
      */
 
-    public com.commercetools.history.models.common.LineItem getNextValue() {
+    public com.commercetools.history.models.common.ShoppingListLineItem getNextValue() {
         return this.nextValue;
     }
 
@@ -86,11 +86,11 @@ public class AddShoppingListLineItemChangeImpl implements AddShoppingListLineIte
         this.change = change;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.LineItem previousValue) {
+    public void setPreviousValue(final com.commercetools.history.models.common.ShoppingListLineItem previousValue) {
         this.previousValue = previousValue;
     }
 
-    public void setNextValue(final com.commercetools.history.models.common.LineItem nextValue) {
+    public void setNextValue(final com.commercetools.history.models.common.ShoppingListLineItem nextValue) {
         this.nextValue = nextValue;
     }
 

@@ -31,7 +31,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@io.vrap.rmf.base.client.utils.json.SubType("cart_with_exisiting_payment")
+@io.vrap.rmf.base.client.utils.json.SubType("cart_with_existing_payment")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartWithExistingPaymentImpl.class)
 public interface CartWithExistingPayment extends ResponseMessage {
@@ -39,7 +39,7 @@ public interface CartWithExistingPayment extends ResponseMessage {
     /**
      * discriminator value for CartWithExistingPayment
      */
-    String CART_WITH_EXISITING_PAYMENT = "cart_with_exisiting_payment";
+    String CART_WITH_EXISTING_PAYMENT = "cart_with_existing_payment";
 
     /**
      *

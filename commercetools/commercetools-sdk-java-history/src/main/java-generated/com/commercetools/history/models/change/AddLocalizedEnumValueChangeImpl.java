@@ -30,7 +30,7 @@ public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueCha
 
     private String change;
 
-    private com.commercetools.history.models.common.AttributeLocalizedEnumValue nextValue;
+    private com.commercetools.history.models.common.CustomFieldLocalizedEnumValue nextValue;
 
     private String fieldName;
 
@@ -41,7 +41,7 @@ public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueCha
      */
     @JsonCreator
     AddLocalizedEnumValueChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.AttributeLocalizedEnumValue nextValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.CustomFieldLocalizedEnumValue nextValue,
             @JsonProperty("fieldName") final String fieldName,
             @JsonProperty("attributeName") final String attributeName) {
         this.change = change;
@@ -78,7 +78,7 @@ public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueCha
      *  <p>Value after the change.</p>
      */
 
-    public com.commercetools.history.models.common.AttributeLocalizedEnumValue getNextValue() {
+    public com.commercetools.history.models.common.CustomFieldLocalizedEnumValue getNextValue() {
         return this.nextValue;
     }
 
@@ -102,7 +102,7 @@ public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueCha
         this.change = change;
     }
 
-    public void setNextValue(final com.commercetools.history.models.common.AttributeLocalizedEnumValue nextValue) {
+    public void setNextValue(final com.commercetools.history.models.common.CustomFieldLocalizedEnumValue nextValue) {
         this.nextValue = nextValue;
     }
 

@@ -3,6 +3,8 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -14,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     Location location = Location.builder()
  *             .country("{country}")
- *             .state("{state}")
  *             .build()
  * </code></pre>
  * </div>
@@ -24,10 +25,11 @@ public class LocationBuilder implements Builder<Location> {
 
     private String country;
 
+    @Nullable
     private String state;
 
     /**
-     *  <p>Two-digit country code as per <span>ISO 3166-1 alpha-2</span>.</p>
+     *  <p>Country code of the geographic location.</p>
      * @param country value to be set
      * @return Builder
      */
@@ -38,18 +40,18 @@ public class LocationBuilder implements Builder<Location> {
     }
 
     /**
-     * set the value to the state
+     *  <p>State within the country.</p>
      * @param state value to be set
      * @return Builder
      */
 
-    public LocationBuilder state(final String state) {
+    public LocationBuilder state(@Nullable final String state) {
         this.state = state;
         return this;
     }
 
     /**
-     *  <p>Two-digit country code as per <span>ISO 3166-1 alpha-2</span>.</p>
+     *  <p>Country code of the geographic location.</p>
      * @return country
      */
 
@@ -58,10 +60,11 @@ public class LocationBuilder implements Builder<Location> {
     }
 
     /**
-     * value of state}
+     *  <p>State within the country.</p>
      * @return state
      */
 
+    @Nullable
     public String getState() {
         return this.state;
     }
@@ -72,7 +75,6 @@ public class LocationBuilder implements Builder<Location> {
      */
     public Location build() {
         Objects.requireNonNull(country, Location.class + ": country is missing");
-        Objects.requireNonNull(state, Location.class + ": state is missing");
         return new LocationImpl(country, state);
     }
 

@@ -109,32 +109,6 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     /**
      *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who made the change.</p>
      *  <p>Present only if the change was made using a token from the <span>password flow</span>.</p>
-     * @param builder function to build the customer value
-     * @return Builder
-     */
-
-    public ModifiedByBuilder customer(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.customer = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who made the change.</p>
-     *  <p>Present only if the change was made using a token from the <span>password flow</span>.</p>
-     * @param builder function to build the customer value
-     * @return Builder
-     */
-
-    public ModifiedByBuilder withCustomer(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        this.customer = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who made the change.</p>
-     *  <p>Present only if the change was made using a token from the <span>password flow</span>.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -145,26 +119,15 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> who made the change in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. Only available for <span>B2B</span>-enabled Projects when an Associate acts on behalf of a company using the <span>associate endpoints</span>.</p>
-     * @param builder function to build the associate value
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who made the change.</p>
+     *  <p>Present only if the change was made using a token from the <span>password flow</span>.</p>
+     * @param builder function to build the customer value
      * @return Builder
      */
 
-    public ModifiedByBuilder associate(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.associate = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> who made the change in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. Only available for <span>B2B</span>-enabled Projects when an Associate acts on behalf of a company using the <span>associate endpoints</span>.</p>
-     * @param builder function to build the associate value
-     * @return Builder
-     */
-
-    public ModifiedByBuilder withAssociate(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        this.associate = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
+    public ModifiedByBuilder customer(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
+        this.customer = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 
@@ -176,6 +139,18 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
 
     public ModifiedByBuilder associate(@Nullable final com.commercetools.history.models.common.Reference associate) {
         this.associate = associate;
+        return this;
+    }
+
+    /**
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> who made the change in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. Only available for <span>B2B</span>-enabled Projects when an Associate acts on behalf of a company using the <span>associate endpoints</span>.</p>
+     * @param builder function to build the associate value
+     * @return Builder
+     */
+
+    public ModifiedByBuilder associate(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
+        this.associate = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 

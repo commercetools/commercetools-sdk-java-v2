@@ -17,7 +17,7 @@ public class SubRateTest {
 
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { "name", SubRate.builder().name("name") },
-                new Object[] { "amount", SubRate.builder().amount(3) } };
+                new Object[] { "amount", SubRate.builder().amount(0.43789625) } };
     }
 
     @Test
@@ -30,7 +30,7 @@ public class SubRateTest {
     @Test
     public void amount() {
         SubRate value = SubRate.of();
-        value.setAmount(3);
-        Assertions.assertThat(value.getAmount()).isEqualTo(3);
+        value.setAmount(0.43789625);
+        Assertions.assertThat(value.getAmount()).isEqualTo(0.43789625);
     }
 }

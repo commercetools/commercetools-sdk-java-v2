@@ -17,14 +17,16 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * Parcel
+ *  <p>Information regarding the appearance, content, and shipment of a Parcel.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelImpl implements Parcel, ModelBase {
 
     private String id;
 
-    private String createdAt;
+    private String key;
+
+    private java.time.ZonedDateTime createdAt;
 
     private com.commercetools.history.models.common.ParcelMeasurements measurements;
 
@@ -32,19 +34,25 @@ public class ParcelImpl implements Parcel, ModelBase {
 
     private java.util.List<com.commercetools.history.models.common.DeliveryItem> items;
 
+    private com.commercetools.history.models.common.CustomFields custom;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
-    ParcelImpl(@JsonProperty("id") final String id, @JsonProperty("createdAt") final String createdAt,
+    ParcelImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key,
+            @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
             @JsonProperty("measurements") final com.commercetools.history.models.common.ParcelMeasurements measurements,
             @JsonProperty("trackingData") final com.commercetools.history.models.common.TrackingData trackingData,
-            @JsonProperty("items") final java.util.List<com.commercetools.history.models.common.DeliveryItem> items) {
+            @JsonProperty("items") final java.util.List<com.commercetools.history.models.common.DeliveryItem> items,
+            @JsonProperty("custom") final com.commercetools.history.models.common.CustomFields custom) {
         this.id = id;
+        this.key = key;
         this.createdAt = createdAt;
         this.measurements = measurements;
         this.trackingData = trackingData;
         this.items = items;
+        this.custom = custom;
     }
 
     /**
@@ -54,7 +62,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Parcel.</p>
      */
 
     public String getId() {
@@ -62,15 +70,23 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier of the Parcel.</p>
      */
 
-    public String getCreatedAt() {
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
+     *  <p>Date and time (UTC) the Parcel was created.</p>
+     */
+
+    public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
     /**
-     *
+     *  <p>Information about the dimensions of the Parcel.</p>
      */
 
     public com.commercetools.history.models.common.ParcelMeasurements getMeasurements() {
@@ -78,7 +94,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     *
+     *  <p>Shipment tracking information of the Parcel.</p>
      */
 
     public com.commercetools.history.models.common.TrackingData getTrackingData() {
@@ -86,18 +102,30 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     *
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.DeliveryItem> getItems() {
         return this.items;
     }
 
+    /**
+     *  <p>Custom Fields of the Parcel.</p>
+     */
+
+    public com.commercetools.history.models.common.CustomFields getCustom() {
+        return this.custom;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
 
-    public void setCreatedAt(final String createdAt) {
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
+    public void setCreatedAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
     }
 
@@ -117,6 +145,10 @@ public class ParcelImpl implements Parcel, ModelBase {
         this.items = items;
     }
 
+    public void setCustom(final com.commercetools.history.models.common.CustomFields custom) {
+        this.custom = custom;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -128,35 +160,43 @@ public class ParcelImpl implements Parcel, ModelBase {
         ParcelImpl that = (ParcelImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
+                .append(key, that.key)
                 .append(createdAt, that.createdAt)
                 .append(measurements, that.measurements)
                 .append(trackingData, that.trackingData)
                 .append(items, that.items)
+                .append(custom, that.custom)
                 .append(id, that.id)
+                .append(key, that.key)
                 .append(createdAt, that.createdAt)
                 .append(measurements, that.measurements)
                 .append(trackingData, that.trackingData)
                 .append(items, that.items)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(id)
+                .append(key)
                 .append(createdAt)
                 .append(measurements)
                 .append(trackingData)
                 .append(items)
+                .append(custom)
                 .toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("key", key)
                 .append("createdAt", createdAt)
                 .append("measurements", measurements)
                 .append("trackingData", trackingData)
                 .append("items", items)
+                .append("custom", custom)
                 .build();
     }
 

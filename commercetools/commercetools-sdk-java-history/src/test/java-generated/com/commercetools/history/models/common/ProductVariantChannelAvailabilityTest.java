@@ -18,9 +18,10 @@ public class ProductVariantChannelAvailabilityTest {
     public static Object[][] objectBuilder() {
         return new Object[][] {
                 new Object[] { "isOnStock", ProductVariantChannelAvailability.builder().isOnStock(true) },
-                new Object[] { "restockableInDays", ProductVariantChannelAvailability.builder().restockableInDays(4) },
-                new Object[] { "availableQuantity",
-                        ProductVariantChannelAvailability.builder().availableQuantity(3) } };
+                new Object[] { "restockableInDays", ProductVariantChannelAvailability.builder().restockableInDays(4L) },
+                new Object[] { "availableQuantity", ProductVariantChannelAvailability.builder().availableQuantity(3L) },
+                new Object[] { "id", ProductVariantChannelAvailability.builder().id("id") },
+                new Object[] { "version", ProductVariantChannelAvailability.builder().version(2L) } };
     }
 
     @Test
@@ -33,14 +34,28 @@ public class ProductVariantChannelAvailabilityTest {
     @Test
     public void restockableInDays() {
         ProductVariantChannelAvailability value = ProductVariantChannelAvailability.of();
-        value.setRestockableInDays(4);
-        Assertions.assertThat(value.getRestockableInDays()).isEqualTo(4);
+        value.setRestockableInDays(4L);
+        Assertions.assertThat(value.getRestockableInDays()).isEqualTo(4L);
     }
 
     @Test
     public void availableQuantity() {
         ProductVariantChannelAvailability value = ProductVariantChannelAvailability.of();
-        value.setAvailableQuantity(3);
-        Assertions.assertThat(value.getAvailableQuantity()).isEqualTo(3);
+        value.setAvailableQuantity(3L);
+        Assertions.assertThat(value.getAvailableQuantity()).isEqualTo(3L);
+    }
+
+    @Test
+    public void id() {
+        ProductVariantChannelAvailability value = ProductVariantChannelAvailability.of();
+        value.setId("id");
+        Assertions.assertThat(value.getId()).isEqualTo("id");
+    }
+
+    @Test
+    public void version() {
+        ProductVariantChannelAvailability value = ProductVariantChannelAvailability.of();
+        value.setVersion(2L);
+        Assertions.assertThat(value.getVersion()).isEqualTo(2L);
     }
 }

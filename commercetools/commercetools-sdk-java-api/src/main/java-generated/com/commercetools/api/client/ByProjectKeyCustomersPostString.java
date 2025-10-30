@@ -21,6 +21,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
+ *  <p>Allows converting an anonymous Cart to the active Cart of a Customer with <span>cart merge</span>.</p>
  *  <p>Creating a Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerCreatedMessage" rel="nofollow">CustomerCreated</a> Message. Simultaneously creating two Customers with the same email address can return a <a href="https://docs.commercetools.com/apis/ctp:api:type:LockedFieldError" rel="nofollow">LockedField</a> error.</p>
  *
  * <hr>

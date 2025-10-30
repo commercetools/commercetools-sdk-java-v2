@@ -275,6 +275,10 @@ public class GraphQLErrorObjectBuilder {
         return com.commercetools.api.models.error.GraphQLQueryTimedOutErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.GraphQLRecurringOrderFailureErrorBuilder recurringOrderFailureBuilder() {
+        return com.commercetools.api.models.error.GraphQLRecurringOrderFailureErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.GraphQLReferenceExistsErrorBuilder referenceExistsBuilder() {
         return com.commercetools.api.models.error.GraphQLReferenceExistsErrorBuilder.of();
     }

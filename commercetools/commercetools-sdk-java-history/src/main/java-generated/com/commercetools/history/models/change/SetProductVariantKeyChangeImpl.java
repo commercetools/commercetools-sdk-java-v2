@@ -32,17 +32,21 @@ public class SetProductVariantKeyChangeImpl implements SetProductVariantKeyChang
 
     private String catalogData;
 
+    private String variant;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetProductVariantKeyChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
-            @JsonProperty("nextValue") final String nextValue, @JsonProperty("catalogData") final String catalogData) {
+            @JsonProperty("nextValue") final String nextValue, @JsonProperty("catalogData") final String catalogData,
+            @JsonProperty("variant") final String variant) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.catalogData = catalogData;
+        this.variant = variant;
         this.type = SET_PRODUCT_VARIANT_KEY_CHANGE;
     }
 
@@ -86,6 +90,7 @@ public class SetProductVariantKeyChangeImpl implements SetProductVariantKeyChang
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -94,6 +99,15 @@ public class SetProductVariantKeyChangeImpl implements SetProductVariantKeyChang
 
     public String getCatalogData() {
         return this.catalogData;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     */
+
+    public String getVariant() {
+        return this.variant;
     }
 
     public void setChange(final String change) {
@@ -112,6 +126,10 @@ public class SetProductVariantKeyChangeImpl implements SetProductVariantKeyChang
         this.catalogData = catalogData;
     }
 
+    public void setVariant(final String variant) {
+        this.variant = variant;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -127,11 +145,13 @@ public class SetProductVariantKeyChangeImpl implements SetProductVariantKeyChang
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(catalogData, that.catalogData)
+                .append(variant, that.variant)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(catalogData, that.catalogData)
+                .append(variant, that.variant)
                 .isEquals();
     }
 
@@ -142,6 +162,7 @@ public class SetProductVariantKeyChangeImpl implements SetProductVariantKeyChang
                 .append(previousValue)
                 .append(nextValue)
                 .append(catalogData)
+                .append(variant)
                 .toHashCode();
     }
 
@@ -152,6 +173,7 @@ public class SetProductVariantKeyChangeImpl implements SetProductVariantKeyChang
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
                 .append("catalogData", catalogData)
+                .append("variant", variant)
                 .build();
     }
 

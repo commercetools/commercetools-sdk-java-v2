@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.history.models.change_value.EnumValue;
+import com.commercetools.history.models.common.CustomFieldEnumValue;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .fieldName("{fieldName}")
+ *             .attributeName("{attributeName}")
  *             .build()
  * </code></pre>
  * </div>
@@ -66,7 +67,7 @@ public interface ChangeEnumValueOrderChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("previousValue")
-    public List<EnumValue> getPreviousValue();
+    public List<CustomFieldEnumValue> getPreviousValue();
 
     /**
      *  <p>Value after the change.</p>
@@ -75,7 +76,7 @@ public interface ChangeEnumValueOrderChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("nextValue")
-    public List<EnumValue> getNextValue();
+    public List<CustomFieldEnumValue> getNextValue();
 
     /**
      *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>.</p>
@@ -84,6 +85,14 @@ public interface ChangeEnumValueOrderChange extends Change {
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
+
+    /**
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
+     * @return attributeName
+     */
+    @NotNull
+    @JsonProperty("attributeName")
+    public String getAttributeName();
 
     /**
      * set change
@@ -98,14 +107,14 @@ public interface ChangeEnumValueOrderChange extends Change {
      */
 
     @JsonIgnore
-    public void setPreviousValue(final EnumValue... previousValue);
+    public void setPreviousValue(final CustomFieldEnumValue... previousValue);
 
     /**
      *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
-    public void setPreviousValue(final List<EnumValue> previousValue);
+    public void setPreviousValue(final List<CustomFieldEnumValue> previousValue);
 
     /**
      *  <p>Value after the change.</p>
@@ -113,14 +122,14 @@ public interface ChangeEnumValueOrderChange extends Change {
      */
 
     @JsonIgnore
-    public void setNextValue(final EnumValue... nextValue);
+    public void setNextValue(final CustomFieldEnumValue... nextValue);
 
     /**
      *  <p>Value after the change.</p>
      * @param nextValue values to be set
      */
 
-    public void setNextValue(final List<EnumValue> nextValue);
+    public void setNextValue(final List<CustomFieldEnumValue> nextValue);
 
     /**
      *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>.</p>
@@ -128,6 +137,13 @@ public interface ChangeEnumValueOrderChange extends Change {
      */
 
     public void setFieldName(final String fieldName);
+
+    /**
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
+     * @param attributeName value to be set
+     */
+
+    public void setAttributeName(final String attributeName);
 
     /**
      * factory method
@@ -148,6 +164,7 @@ public interface ChangeEnumValueOrderChange extends Change {
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
         instance.setFieldName(template.getFieldName());
+        instance.setAttributeName(template.getAttributeName());
         return instance;
     }
 
@@ -167,15 +184,16 @@ public interface ChangeEnumValueOrderChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
                 .map(t -> t.stream()
-                        .map(com.commercetools.history.models.change_value.EnumValue::deepCopy)
+                        .map(com.commercetools.history.models.common.CustomFieldEnumValue::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setNextValue(Optional.ofNullable(template.getNextValue())
                 .map(t -> t.stream()
-                        .map(com.commercetools.history.models.change_value.EnumValue::deepCopy)
+                        .map(com.commercetools.history.models.common.CustomFieldEnumValue::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setFieldName(template.getFieldName());
+        instance.setAttributeName(template.getAttributeName());
         return instance;
     }
 

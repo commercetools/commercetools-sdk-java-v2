@@ -3,6 +3,8 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -14,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ItemShippingTarget itemShippingTarget = ItemShippingTarget.builder()
  *             .addressKey("{addressKey}")
- *             .quantity(1)
+ *             .quantity(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -24,10 +26,13 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
 
     private String addressKey;
 
-    private Integer quantity;
+    private Long quantity;
+
+    @Nullable
+    private String shippingMethodKey;
 
     /**
-     *  <p>The key of the address in the cart's <code>itemShippingAddresses</code></p>
+     *  <p>Key of the address in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> <code>itemShippingAddresses</code>. Duplicate address keys are not allowed.</p>
      * @param addressKey value to be set
      * @return Builder
      */
@@ -38,18 +43,31 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
     }
 
     /**
-     *  <p>The quantity of items that should go to the address with the specified <code>addressKey</code>. Only positive values are allowed. Using <code>0</code> as quantity is also possible in a draft object, but the element will not be present in the resulting ItemShippingDetails.</p>
+     *  <p>Quantity of Line Items or Custom Line Items shipped to the address with the specified <code>addressKey</code>.</p>
+     *  <p>If a quantity is updated to <code>0</code> when defining <a href="https://docs.commercetools.com/apis/ctp:api:type:ItemShippingDetailsDraft" rel="nofollow">ItemShippingDetailsDraft</a>, the <code>targets</code> are removed from a Line Item or Custom Line Item in the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ItemShippingDetails" rel="nofollow">ItemShippingDetails</a>.</p>
      * @param quantity value to be set
      * @return Builder
      */
 
-    public ItemShippingTargetBuilder quantity(final Integer quantity) {
+    public ItemShippingTargetBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
 
     /**
-     *  <p>The key of the address in the cart's <code>itemShippingAddresses</code></p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     *  <p>It connects Line Item or Custom Line Item quantities with individual Shipping Methods.</p>
+     * @param shippingMethodKey value to be set
+     * @return Builder
+     */
+
+    public ItemShippingTargetBuilder shippingMethodKey(@Nullable final String shippingMethodKey) {
+        this.shippingMethodKey = shippingMethodKey;
+        return this;
+    }
+
+    /**
+     *  <p>Key of the address in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> <code>itemShippingAddresses</code>. Duplicate address keys are not allowed.</p>
      * @return addressKey
      */
 
@@ -58,12 +76,24 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
     }
 
     /**
-     *  <p>The quantity of items that should go to the address with the specified <code>addressKey</code>. Only positive values are allowed. Using <code>0</code> as quantity is also possible in a draft object, but the element will not be present in the resulting ItemShippingDetails.</p>
+     *  <p>Quantity of Line Items or Custom Line Items shipped to the address with the specified <code>addressKey</code>.</p>
+     *  <p>If a quantity is updated to <code>0</code> when defining <a href="https://docs.commercetools.com/apis/ctp:api:type:ItemShippingDetailsDraft" rel="nofollow">ItemShippingDetailsDraft</a>, the <code>targets</code> are removed from a Line Item or Custom Line Item in the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ItemShippingDetails" rel="nofollow">ItemShippingDetails</a>.</p>
      * @return quantity
      */
 
-    public Integer getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     *  <p>It connects Line Item or Custom Line Item quantities with individual Shipping Methods.</p>
+     * @return shippingMethodKey
+     */
+
+    @Nullable
+    public String getShippingMethodKey() {
+        return this.shippingMethodKey;
     }
 
     /**
@@ -73,7 +103,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
     public ItemShippingTarget build() {
         Objects.requireNonNull(addressKey, ItemShippingTarget.class + ": addressKey is missing");
         Objects.requireNonNull(quantity, ItemShippingTarget.class + ": quantity is missing");
-        return new ItemShippingTargetImpl(addressKey, quantity);
+        return new ItemShippingTargetImpl(addressKey, quantity, shippingMethodKey);
     }
 
     /**
@@ -81,7 +111,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
      * @return ItemShippingTarget
      */
     public ItemShippingTarget buildUnchecked() {
-        return new ItemShippingTargetImpl(addressKey, quantity);
+        return new ItemShippingTargetImpl(addressKey, quantity, shippingMethodKey);
     }
 
     /**
@@ -101,6 +131,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
         ItemShippingTargetBuilder builder = new ItemShippingTargetBuilder();
         builder.addressKey = template.getAddressKey();
         builder.quantity = template.getQuantity();
+        builder.shippingMethodKey = template.getShippingMethodKey();
         return builder;
     }
 

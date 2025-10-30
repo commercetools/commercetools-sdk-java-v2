@@ -14,6 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Changes the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartState" rel="nofollow">CartState</a> from <code>Active</code> to <code>Frozen</code>. Results in a <a href="https://docs.commercetools.com/apis/ctp:api:type:FrozenCarts" rel="nofollow">Frozen Cart</a>. Fails with <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error when the Cart is empty.</p>
+ *  <p>Freezing a Cart produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartFrozenMessage" rel="nofollow">CartFrozen</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

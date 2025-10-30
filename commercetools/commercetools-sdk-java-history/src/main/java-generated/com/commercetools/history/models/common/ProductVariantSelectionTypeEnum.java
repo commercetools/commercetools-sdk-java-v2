@@ -20,6 +20,10 @@ public interface ProductVariantSelectionTypeEnum extends JsonEnum {
 
     ProductVariantSelectionTypeEnum EXCLUSION = ProductVariantSelectionTypeEnumEnum.EXCLUSION;
 
+    ProductVariantSelectionTypeEnum INCLUDE_ONLY = ProductVariantSelectionTypeEnumEnum.INCLUDE_ONLY;
+
+    ProductVariantSelectionTypeEnum INCLUDE_ALL_EXCEPT = ProductVariantSelectionTypeEnumEnum.INCLUDE_ALL_EXCEPT;
+
     /**
      * possible values of ProductVariantSelectionTypeEnum
      */
@@ -32,7 +36,17 @@ public interface ProductVariantSelectionTypeEnum extends JsonEnum {
         /**
          * exclusion
          */
-        EXCLUSION("exclusion");
+        EXCLUSION("exclusion"),
+
+        /**
+         * includeOnly
+         */
+        INCLUDE_ONLY("includeOnly"),
+
+        /**
+         * includeAllExcept
+         */
+        INCLUDE_ALL_EXCEPT("includeAllExcept");
         private final String jsonName;
 
         private ProductVariantSelectionTypeEnumEnum(final String jsonName) {

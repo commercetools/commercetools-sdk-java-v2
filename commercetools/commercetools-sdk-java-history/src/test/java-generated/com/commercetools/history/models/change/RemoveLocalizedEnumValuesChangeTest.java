@@ -18,7 +18,7 @@ public class RemoveLocalizedEnumValuesChangeTest {
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { "change", RemoveLocalizedEnumValuesChange.builder().change("change") },
                 new Object[] { "previousValue", RemoveLocalizedEnumValuesChange.builder()
-                        .previousValue(new com.commercetools.history.models.change_value.LocalizedEnumValueImpl()) },
+                        .previousValue(new com.commercetools.history.models.common.AttributeLocalizedEnumValueImpl()) },
                 new Object[] { "attributeName",
                         RemoveLocalizedEnumValuesChange.builder().attributeName("attributeName") } };
     }
@@ -33,9 +33,9 @@ public class RemoveLocalizedEnumValuesChangeTest {
     @Test
     public void previousValue() {
         RemoveLocalizedEnumValuesChange value = RemoveLocalizedEnumValuesChange.of();
-        value.setPreviousValue(new com.commercetools.history.models.change_value.LocalizedEnumValueImpl());
+        value.setPreviousValue(new com.commercetools.history.models.common.AttributeLocalizedEnumValueImpl());
         Assertions.assertThat(value.getPreviousValue())
-                .isEqualTo(new com.commercetools.history.models.change_value.LocalizedEnumValueImpl());
+                .isEqualTo(new com.commercetools.history.models.common.AttributeLocalizedEnumValueImpl());
     }
 
     @Test

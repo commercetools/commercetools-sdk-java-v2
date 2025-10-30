@@ -33,6 +33,7 @@ import jakarta.validation.constraints.NotNull;
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .lineItemId("{lineItemId}")
+ *             .customLineItemId("{customLineItemId}")
  *             .stateId("{stateId}")
  *             .build()
  * </code></pre>
@@ -83,12 +84,20 @@ public interface TransitionCustomLineItemStateChange extends Change {
     public List<ItemState> getNextValue();
 
     /**
-     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
      * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
+
+    /**
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
+     * @return customLineItemId
+     */
+    @NotNull
+    @JsonProperty("customLineItemId")
+    public String getCustomLineItemId();
 
     /**
      *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> involved in the transition.</p>
@@ -136,11 +145,18 @@ public interface TransitionCustomLineItemStateChange extends Change {
     public void setNextValue(final List<ItemState> nextValue);
 
     /**
-     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
+
+    /**
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
+     * @param customLineItemId value to be set
+     */
+
+    public void setCustomLineItemId(final String customLineItemId);
 
     /**
      *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> involved in the transition.</p>
@@ -168,6 +184,7 @@ public interface TransitionCustomLineItemStateChange extends Change {
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
         instance.setLineItemId(template.getLineItemId());
+        instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setStateId(template.getStateId());
         return instance;
     }
@@ -198,6 +215,7 @@ public interface TransitionCustomLineItemStateChange extends Change {
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setLineItemId(template.getLineItemId());
+        instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setStateId(template.getStateId());
         return instance;
     }

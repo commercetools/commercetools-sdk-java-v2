@@ -17,7 +17,8 @@ public class ItemShippingTargetTest {
 
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { "addressKey", ItemShippingTarget.builder().addressKey("addressKey") },
-                new Object[] { "quantity", ItemShippingTarget.builder().quantity(8) } };
+                new Object[] { "quantity", ItemShippingTarget.builder().quantity(8L) }, new Object[] {
+                        "shippingMethodKey", ItemShippingTarget.builder().shippingMethodKey("shippingMethodKey") } };
     }
 
     @Test
@@ -30,7 +31,14 @@ public class ItemShippingTargetTest {
     @Test
     public void quantity() {
         ItemShippingTarget value = ItemShippingTarget.of();
-        value.setQuantity(8);
-        Assertions.assertThat(value.getQuantity()).isEqualTo(8);
+        value.setQuantity(8L);
+        Assertions.assertThat(value.getQuantity()).isEqualTo(8L);
+    }
+
+    @Test
+    public void shippingMethodKey() {
+        ItemShippingTarget value = ItemShippingTarget.of();
+        value.setShippingMethodKey("shippingMethodKey");
+        Assertions.assertThat(value.getShippingMethodKey()).isEqualTo("shippingMethodKey");
     }
 }

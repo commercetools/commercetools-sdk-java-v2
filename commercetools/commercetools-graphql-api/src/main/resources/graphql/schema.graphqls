@@ -2048,6 +2048,10 @@ input CartDraft {
   origin: CartOrigin = Customer
 }
 
+type CartFrozen implements MessagePayload {
+  type: String!
+}
+
 type CartLimitWithCurrent implements LimitWithCurrent {
   limit: Long
   current: Long!
@@ -2055,6 +2059,22 @@ type CartLimitWithCurrent implements LimitWithCurrent {
 
 type CartLimitsProjection {
   total: CartLimitWithCurrent!
+}
+
+enum CartMergeMode {
+  """
+  `LineItem`s of the anonymous cart will be copied to the customer’s active cart that has been modified most recently.
+
+  The `CartState` of the anonymous cart gets changed to `Merged` while the `CartState` of the customer’s cart remains `Active`.
+
+  `CustomLineItems` and `CustomFields` of the anonymous cart will not be copied to the customers cart.
+
+  If a `LineItem` in the anonymous cart matches an existing line item in the customer’s cart (same product ID and variant ID), the maximum quantity of both LineItems is used as the new quantity. In that case `CustomFields` on the `LineItem` of the anonymous cart will not be in the resulting `LineItem`.
+  """
+  MergeWithExistingCustomerCart
+
+  "The anonymous cart is used as new active customer cart. No `LineItem`s get merged."
+  UseAsNewActiveCustomerCart
 }
 
 enum CartOrigin {
@@ -2105,6 +2125,10 @@ enum CartState {
 
   "The cart was ordered. No further operations on the cart are allowed."
   Ordered
+}
+
+type CartUnfrozen implements MessagePayload {
+  type: String!
 }
 
 input CartUpdateAction {
@@ -4612,6 +4636,17 @@ input EnumValueInput {
   label: String!
 }
 
+type RecurringOrderFailureError {
+  "Error identifier"
+  code: String!
+
+  "Plain text description of the cause of the error."
+  message: String!
+
+  "Information about the cause of the error."
+  details: Json!
+}
+
 type EventBridgeDestination implements Destination {
   source: String!
   region: String!
@@ -5306,6 +5341,7 @@ type InventoryEntryQuantitySet implements MessagePayload {
   newQuantityOnStock: Long!
   oldAvailableQuantity: Long!
   newAvailableQuantity: Long!
+  sku: String
   supplyChannel: Channel
   supplyChannelRef: Reference
   type: String!
@@ -5823,6 +5859,13 @@ interface MeQueryInterface implements CartQueryInterface & ActiveCartInterface &
     "Queries with specified key"
     key: String): ShoppingList
   shoppingLists(where: String, sort: [String!], limit: Int, offset: Int): ShoppingListQueryResult!
+}
+
+input MergeCartDraft {
+  anonymousCart: ResourceIdentifierInput
+  mergeMode: CartMergeMode = MergeWithExistingCustomerCart
+  anonymousId: String
+  updateProductData: Boolean = false
 }
 
 type Message implements Versioned & ReferenceExpandable {
@@ -6441,6 +6484,11 @@ type Mutation {
 
     "Create/modify entity as an associate in business-unit."
     asAssociate: AsAssociateArgument): Cart
+
+  mergeCart(customerId: String!, draft: MergeCartDraft!,
+
+    "The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions."
+    storeKey: KeyReferenceInput): Cart
 
   "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   createMyCart(draft: MyCartDraft!,
@@ -10452,10 +10500,10 @@ type Query {
   apiClient(id: String!): APIClientWithoutSecret
   apiClients(where: String, sort: [String!], limit: Int, offset: Int): APIClientWithoutSecretQueryResult!
   limits: ProjectCustomLimitsProjection!
-  productProjectionSearch(projectExpandedProducts: Boolean = false, locale: Locale, text: String, facets: [SearchFacetInput!] = [], filters: [SearchFilterInput!] = [], queryFilters: [SearchFilterInput!] = [], facetFilters: [SearchFilterInput!] = [], sorts: [String!] = [], limit: Int = 10, offset: Int = 0, fuzzy: Boolean = false, fuzzyLevel: Int, priceSelector: PriceSelectorInput, markMatchingVariants: Boolean = false,
+  productProjectionSearch(projectExpandedProducts: Boolean = false, locale: Locale, text: String, facets: [SearchFacetInput!] = [], filters: [SearchFilterInput!] = [], queryFilters: [SearchFilterInput!] = [], facetFilters: [SearchFilterInput!] = [], sorts: [String!] = [], limit: Int = 10, offset: Int = 0, fuzzy: Boolean = false, fuzzyLevel: Int, priceSelector: PriceSelectorInput, markMatchingVariants: Boolean,
 
     "Deprecated: please use 'markMatchingVariants'."
-    markMatchingVariant: Boolean = false, storeProjection: String, localeProjection: [Locale!], staged: Boolean = false): ProductProjectionSearchResult!
+    markMatchingVariant: Boolean, storeProjection: String, localeProjection: [Locale!], staged: Boolean = false): ProductProjectionSearchResult!
 
   """
   StandalonePrices are managed and queried through the StandalonePrices API
@@ -11013,6 +11061,15 @@ type RecurringOrderCustomFieldChanged implements MessagePayload {
   name: String!
   value: Json!
   previousValue: Json
+  type: String!
+}
+
+type RecurringOrderFailed implements MessagePayload {
+  cartId: String!
+  failedAt: DateTime!
+  failureReason: String!
+  orderScheduledAt: DateTime!
+  errors: [RecurringOrderFailureError!]
   type: String!
 }
 

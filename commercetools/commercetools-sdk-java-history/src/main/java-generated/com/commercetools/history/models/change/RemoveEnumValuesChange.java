@@ -7,7 +7,7 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.history.models.change_value.EnumValue;
+import com.commercetools.history.models.common.AttributePlainEnumValue;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -64,7 +64,7 @@ public interface RemoveEnumValuesChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("previousValue")
-    public EnumValue getPreviousValue();
+    public AttributePlainEnumValue getPreviousValue();
 
     /**
      *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
@@ -86,7 +86,7 @@ public interface RemoveEnumValuesChange extends Change {
      * @param previousValue value to be set
      */
 
-    public void setPreviousValue(final EnumValue previousValue);
+    public void setPreviousValue(final AttributePlainEnumValue previousValue);
 
     /**
      *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
@@ -131,7 +131,7 @@ public interface RemoveEnumValuesChange extends Change {
         RemoveEnumValuesChangeImpl instance = new RemoveEnumValuesChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(
-            com.commercetools.history.models.change_value.EnumValue.deepCopy(template.getPreviousValue()));
+            com.commercetools.history.models.common.AttributePlainEnumValue.deepCopy(template.getPreviousValue()));
         instance.setAttributeName(template.getAttributeName());
         return instance;
     }

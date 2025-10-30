@@ -36,6 +36,8 @@ public class SetCustomLineItemShippingDetailsChangeImpl implements SetCustomLine
 
     private String customLineItemId;
 
+    private com.commercetools.history.models.common.LocalizedString customLineItem;
+
     /**
      * create instance with all properties
      */
@@ -43,11 +45,13 @@ public class SetCustomLineItemShippingDetailsChangeImpl implements SetCustomLine
     SetCustomLineItemShippingDetailsChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.ItemShippingDetails previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.ItemShippingDetails nextValue,
-            @JsonProperty("customLineItemId") final String customLineItemId) {
+            @JsonProperty("customLineItemId") final String customLineItemId,
+            @JsonProperty("customLineItem") final com.commercetools.history.models.common.LocalizedString customLineItem) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.customLineItemId = customLineItemId;
+        this.customLineItem = customLineItem;
         this.type = SET_CUSTOM_LINE_ITEM_SHIPPING_DETAILS_CHANGE;
     }
 
@@ -98,6 +102,14 @@ public class SetCustomLineItemShippingDetailsChangeImpl implements SetCustomLine
         return this.customLineItemId;
     }
 
+    /**
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
+     */
+
+    public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {
+        return this.customLineItem;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
@@ -112,6 +124,10 @@ public class SetCustomLineItemShippingDetailsChangeImpl implements SetCustomLine
 
     public void setCustomLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+    }
+
+    public void setCustomLineItem(final com.commercetools.history.models.common.LocalizedString customLineItem) {
+        this.customLineItem = customLineItem;
     }
 
     @Override
@@ -129,11 +145,13 @@ public class SetCustomLineItemShippingDetailsChangeImpl implements SetCustomLine
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(customLineItemId, that.customLineItemId)
+                .append(customLineItem, that.customLineItem)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(customLineItemId, that.customLineItemId)
+                .append(customLineItem, that.customLineItem)
                 .isEquals();
     }
 
@@ -144,6 +162,7 @@ public class SetCustomLineItemShippingDetailsChangeImpl implements SetCustomLine
                 .append(previousValue)
                 .append(nextValue)
                 .append(customLineItemId)
+                .append(customLineItem)
                 .toHashCode();
     }
 
@@ -154,6 +173,7 @@ public class SetCustomLineItemShippingDetailsChangeImpl implements SetCustomLine
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
                 .append("customLineItemId", customLineItemId)
+                .append("customLineItem", customLineItem)
                 .build();
     }
 

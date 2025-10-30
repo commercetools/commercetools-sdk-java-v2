@@ -34,6 +34,8 @@ public class ChangeEnumValueLabelChangeImpl implements ChangeEnumValueLabelChang
 
     private String valueKey;
 
+    private String attributeName;
+
     /**
      * create instance with all properties
      */
@@ -41,12 +43,14 @@ public class ChangeEnumValueLabelChangeImpl implements ChangeEnumValueLabelChang
     ChangeEnumValueLabelChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
             @JsonProperty("nextValue") final String nextValue, @JsonProperty("fieldName") final String fieldName,
-            @JsonProperty("valueKey") final String valueKey) {
+            @JsonProperty("valueKey") final String valueKey,
+            @JsonProperty("attributeName") final String attributeName) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.fieldName = fieldName;
         this.valueKey = valueKey;
+        this.attributeName = attributeName;
         this.type = CHANGE_ENUM_VALUE_LABEL_CHANGE;
     }
 
@@ -105,6 +109,14 @@ public class ChangeEnumValueLabelChangeImpl implements ChangeEnumValueLabelChang
         return this.valueKey;
     }
 
+    /**
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
+     */
+
+    public String getAttributeName() {
+        return this.attributeName;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
@@ -125,6 +137,10 @@ public class ChangeEnumValueLabelChangeImpl implements ChangeEnumValueLabelChang
         this.valueKey = valueKey;
     }
 
+    public void setAttributeName(final String attributeName) {
+        this.attributeName = attributeName;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -141,12 +157,14 @@ public class ChangeEnumValueLabelChangeImpl implements ChangeEnumValueLabelChang
                 .append(nextValue, that.nextValue)
                 .append(fieldName, that.fieldName)
                 .append(valueKey, that.valueKey)
+                .append(attributeName, that.attributeName)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(fieldName, that.fieldName)
                 .append(valueKey, that.valueKey)
+                .append(attributeName, that.attributeName)
                 .isEquals();
     }
 
@@ -158,6 +176,7 @@ public class ChangeEnumValueLabelChangeImpl implements ChangeEnumValueLabelChang
                 .append(nextValue)
                 .append(fieldName)
                 .append(valueKey)
+                .append(attributeName)
                 .toHashCode();
     }
 
@@ -169,6 +188,7 @@ public class ChangeEnumValueLabelChangeImpl implements ChangeEnumValueLabelChang
                 .append("nextValue", nextValue)
                 .append("fieldName", fieldName)
                 .append("valueKey", valueKey)
+                .append("attributeName", attributeName)
                 .build();
     }
 

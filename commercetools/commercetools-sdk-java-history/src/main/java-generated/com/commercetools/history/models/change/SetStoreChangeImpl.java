@@ -30,17 +30,17 @@ public class SetStoreChangeImpl implements SetStoreChange, ModelBase {
 
     private String change;
 
-    private com.commercetools.history.models.common.Reference previousValue;
+    private com.commercetools.history.models.common.KeyReference previousValue;
 
-    private com.commercetools.history.models.common.Reference nextValue;
+    private com.commercetools.history.models.common.KeyReference nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetStoreChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.Reference previousValue,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.Reference nextValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.KeyReference previousValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.KeyReference nextValue) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
@@ -74,7 +74,7 @@ public class SetStoreChangeImpl implements SetStoreChange, ModelBase {
      *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.common.Reference getPreviousValue() {
+    public com.commercetools.history.models.common.KeyReference getPreviousValue() {
         return this.previousValue;
     }
 
@@ -82,7 +82,7 @@ public class SetStoreChangeImpl implements SetStoreChange, ModelBase {
      *  <p>Value after the change.</p>
      */
 
-    public com.commercetools.history.models.common.Reference getNextValue() {
+    public com.commercetools.history.models.common.KeyReference getNextValue() {
         return this.nextValue;
     }
 
@@ -90,11 +90,11 @@ public class SetStoreChangeImpl implements SetStoreChange, ModelBase {
         this.change = change;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.Reference previousValue) {
+    public void setPreviousValue(final com.commercetools.history.models.common.KeyReference previousValue) {
         this.previousValue = previousValue;
     }
 
-    public void setNextValue(final com.commercetools.history.models.common.Reference nextValue) {
+    public void setNextValue(final com.commercetools.history.models.common.KeyReference nextValue) {
         this.nextValue = nextValue;
     }
 

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+ *  <p>A geographical location representing a country and optionally a state within this country. A location can only be assigned to one Zone.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LocationImpl implements Location, ModelBase {
@@ -42,7 +42,7 @@ public class LocationImpl implements Location, ModelBase {
     }
 
     /**
-     *  <p>Two-digit country code as per <span>ISO 3166-1 alpha-2</span>.</p>
+     *  <p>Country code of the geographic location.</p>
      */
 
     public String getCountry() {
@@ -50,7 +50,7 @@ public class LocationImpl implements Location, ModelBase {
     }
 
     /**
-     *
+     *  <p>State within the country.</p>
      */
 
     public String getState() {

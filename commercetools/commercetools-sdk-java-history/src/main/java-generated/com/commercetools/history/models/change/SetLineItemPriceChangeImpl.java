@@ -32,6 +32,8 @@ public class SetLineItemPriceChangeImpl implements SetLineItemPriceChange, Model
 
     private com.commercetools.history.models.common.LocalizedString lineItem;
 
+    private String lineItemId;
+
     /**
      * create instance with all properties
      */
@@ -39,11 +41,13 @@ public class SetLineItemPriceChangeImpl implements SetLineItemPriceChange, Model
     SetLineItemPriceChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.Price previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.Price nextValue,
-            @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem) {
+            @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem,
+            @JsonProperty("lineItemId") final String lineItemId) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.lineItem = lineItem;
+        this.lineItemId = lineItemId;
         this.type = SET_LINE_ITEM_PRICE_CHANGE;
     }
 
@@ -94,6 +98,14 @@ public class SetLineItemPriceChangeImpl implements SetLineItemPriceChange, Model
         return this.lineItem;
     }
 
+    /**
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
+     */
+
+    public String getLineItemId() {
+        return this.lineItemId;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
@@ -108,6 +120,10 @@ public class SetLineItemPriceChangeImpl implements SetLineItemPriceChange, Model
 
     public void setLineItem(final com.commercetools.history.models.common.LocalizedString lineItem) {
         this.lineItem = lineItem;
+    }
+
+    public void setLineItemId(final String lineItemId) {
+        this.lineItemId = lineItemId;
     }
 
     @Override
@@ -125,11 +141,13 @@ public class SetLineItemPriceChangeImpl implements SetLineItemPriceChange, Model
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(lineItem, that.lineItem)
+                .append(lineItemId, that.lineItemId)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(lineItem, that.lineItem)
+                .append(lineItemId, that.lineItemId)
                 .isEquals();
     }
 
@@ -140,6 +158,7 @@ public class SetLineItemPriceChangeImpl implements SetLineItemPriceChange, Model
                 .append(previousValue)
                 .append(nextValue)
                 .append(lineItem)
+                .append(lineItemId)
                 .toHashCode();
     }
 
@@ -150,6 +169,7 @@ public class SetLineItemPriceChangeImpl implements SetLineItemPriceChange, Model
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
                 .append("lineItem", lineItem)
+                .append("lineItemId", lineItemId)
                 .build();
     }
 

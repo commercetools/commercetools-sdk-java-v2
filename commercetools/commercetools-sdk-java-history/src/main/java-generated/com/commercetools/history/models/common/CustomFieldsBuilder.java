@@ -23,71 +23,95 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldsBuilder implements Builder<CustomFields> {
 
-    private com.commercetools.history.models.common.Reference type;
+    private com.commercetools.history.models.common.TypeReference type;
 
-    private java.lang.Object fields;
+    private com.commercetools.history.models.common.FieldContainer fields;
 
     /**
-     * set the value to the type using the builder function
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that holds the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a> for the Custom Fields.</p>
      * @param builder function to build the type value
      * @return Builder
      */
 
     public CustomFieldsBuilder type(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.type = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
+            Function<com.commercetools.history.models.common.TypeReferenceBuilder, com.commercetools.history.models.common.TypeReferenceBuilder> builder) {
+        this.type = builder.apply(com.commercetools.history.models.common.TypeReferenceBuilder.of()).build();
         return this;
     }
 
     /**
-     * set the value to the type using the builder function
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that holds the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a> for the Custom Fields.</p>
      * @param builder function to build the type value
      * @return Builder
      */
 
     public CustomFieldsBuilder withType(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        this.type = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
+            Function<com.commercetools.history.models.common.TypeReferenceBuilder, com.commercetools.history.models.common.TypeReference> builder) {
+        this.type = builder.apply(com.commercetools.history.models.common.TypeReferenceBuilder.of());
         return this;
     }
 
     /**
-     * set the value to the type
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that holds the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a> for the Custom Fields.</p>
      * @param type value to be set
      * @return Builder
      */
 
-    public CustomFieldsBuilder type(final com.commercetools.history.models.common.Reference type) {
+    public CustomFieldsBuilder type(final com.commercetools.history.models.common.TypeReference type) {
         this.type = type;
         return this;
     }
 
     /**
-     *  <p>A valid JSON object, based on FieldDefinition.</p>
+     *  <p>Object containing the Custom Fields for the <span>customized resource or data type</span>.</p>
+     * @param builder function to build the fields value
+     * @return Builder
+     */
+
+    public CustomFieldsBuilder fields(
+            Function<com.commercetools.history.models.common.FieldContainerBuilder, com.commercetools.history.models.common.FieldContainerBuilder> builder) {
+        this.fields = builder.apply(com.commercetools.history.models.common.FieldContainerBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Object containing the Custom Fields for the <span>customized resource or data type</span>.</p>
+     * @param builder function to build the fields value
+     * @return Builder
+     */
+
+    public CustomFieldsBuilder withFields(
+            Function<com.commercetools.history.models.common.FieldContainerBuilder, com.commercetools.history.models.common.FieldContainer> builder) {
+        this.fields = builder.apply(com.commercetools.history.models.common.FieldContainerBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Object containing the Custom Fields for the <span>customized resource or data type</span>.</p>
      * @param fields value to be set
      * @return Builder
      */
 
-    public CustomFieldsBuilder fields(final java.lang.Object fields) {
+    public CustomFieldsBuilder fields(final com.commercetools.history.models.common.FieldContainer fields) {
         this.fields = fields;
         return this;
     }
 
     /**
-     * value of type}
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that holds the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a> for the Custom Fields.</p>
      * @return type
      */
 
-    public com.commercetools.history.models.common.Reference getType() {
+    public com.commercetools.history.models.common.TypeReference getType() {
         return this.type;
     }
 
     /**
-     *  <p>A valid JSON object, based on FieldDefinition.</p>
+     *  <p>Object containing the Custom Fields for the <span>customized resource or data type</span>.</p>
      * @return fields
      */
 
-    public java.lang.Object getFields() {
+    public com.commercetools.history.models.common.FieldContainer getFields() {
         return this.fields;
     }
 

@@ -43,7 +43,7 @@ public class SearchKeywordImpl implements SearchKeyword, ModelBase {
     }
 
     /**
-     *
+     *  <p>Text to return in the <a href="https://docs.commercetools.com/apis/ctp:api:type:SuggestionResult" rel="nofollow">SuggestionResult</a>.</p>
      */
 
     public String getText() {
@@ -51,7 +51,7 @@ public class SearchKeywordImpl implements SearchKeyword, ModelBase {
     }
 
     /**
-     *
+     *  <p>If no tokenizer is defined, the <code>text</code> is used as a single token.</p>
      */
 
     public com.commercetools.history.models.common.SuggestTokenizer getSuggestTokenizer() {

@@ -4,6 +4,7 @@ package com.commercetools.history.models.common;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
@@ -25,6 +26,7 @@ import jakarta.validation.constraints.NotNull;
  *     TaxedItemPrice taxedItemPrice = TaxedItemPrice.builder()
  *             .totalNet(totalNetBuilder -> totalNetBuilder)
  *             .totalGross(totalGrossBuilder -> totalGrossBuilder)
+ *             .plusTaxPortions(taxPortionsBuilder -> taxPortionsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -34,36 +36,78 @@ import jakarta.validation.constraints.NotNull;
 public interface TaxedItemPrice {
 
     /**
-     *
+     *  <p>Total net amount of the Line Item or Custom Line Item.</p>
      * @return totalNet
      */
     @NotNull
     @Valid
     @JsonProperty("totalNet")
-    public Money getTotalNet();
+    public CentPrecisionMoney getTotalNet();
 
     /**
-     *
+     *  <p>Total gross amount of the Line Item or Custom Line Item.</p>
      * @return totalGross
      */
     @NotNull
     @Valid
     @JsonProperty("totalGross")
-    public Money getTotalGross();
+    public CentPrecisionMoney getTotalGross();
 
     /**
-     * set totalNet
+     *  <p>Taxable portions added to the total net price.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
+     * @return taxPortions
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("taxPortions")
+    public List<TaxPortion> getTaxPortions();
+
+    /**
+     *  <p>Total tax applicable for the Line Item or Custom Line Item. Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
+     * @return totalTax
+     */
+    @Valid
+    @JsonProperty("totalTax")
+    public CentPrecisionMoney getTotalTax();
+
+    /**
+     *  <p>Total net amount of the Line Item or Custom Line Item.</p>
      * @param totalNet value to be set
      */
 
-    public void setTotalNet(final Money totalNet);
+    public void setTotalNet(final CentPrecisionMoney totalNet);
 
     /**
-     * set totalGross
+     *  <p>Total gross amount of the Line Item or Custom Line Item.</p>
      * @param totalGross value to be set
      */
 
-    public void setTotalGross(final Money totalGross);
+    public void setTotalGross(final CentPrecisionMoney totalGross);
+
+    /**
+     *  <p>Taxable portions added to the total net price.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
+     * @param taxPortions values to be set
+     */
+
+    @JsonIgnore
+    public void setTaxPortions(final TaxPortion... taxPortions);
+
+    /**
+     *  <p>Taxable portions added to the total net price.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
+     * @param taxPortions values to be set
+     */
+
+    public void setTaxPortions(final List<TaxPortion> taxPortions);
+
+    /**
+     *  <p>Total tax applicable for the Line Item or Custom Line Item. Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
+     * @param totalTax value to be set
+     */
+
+    public void setTotalTax(final CentPrecisionMoney totalTax);
 
     /**
      * factory method
@@ -82,6 +126,8 @@ public interface TaxedItemPrice {
         TaxedItemPriceImpl instance = new TaxedItemPriceImpl();
         instance.setTotalNet(template.getTotalNet());
         instance.setTotalGross(template.getTotalGross());
+        instance.setTaxPortions(template.getTaxPortions());
+        instance.setTotalTax(template.getTotalTax());
         return instance;
     }
 
@@ -98,8 +144,17 @@ public interface TaxedItemPrice {
             return null;
         }
         TaxedItemPriceImpl instance = new TaxedItemPriceImpl();
-        instance.setTotalNet(com.commercetools.history.models.common.Money.deepCopy(template.getTotalNet()));
-        instance.setTotalGross(com.commercetools.history.models.common.Money.deepCopy(template.getTotalGross()));
+        instance.setTotalNet(
+            com.commercetools.history.models.common.CentPrecisionMoney.deepCopy(template.getTotalNet()));
+        instance.setTotalGross(
+            com.commercetools.history.models.common.CentPrecisionMoney.deepCopy(template.getTotalGross()));
+        instance.setTaxPortions(Optional.ofNullable(template.getTaxPortions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.TaxPortion::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setTotalTax(
+            com.commercetools.history.models.common.CentPrecisionMoney.deepCopy(template.getTotalTax()));
         return instance;
     }
 

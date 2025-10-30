@@ -46,6 +46,10 @@ public class FieldTypeImpl implements FieldType, ModelBase {
         return this.name;
     }
 
+    public void setName(final String name) {
+        this.name = name;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)

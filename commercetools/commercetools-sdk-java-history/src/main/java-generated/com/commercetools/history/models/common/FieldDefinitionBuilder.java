@@ -40,12 +40,13 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
 
     /**
      *  <p>Data type of the Custom Field to define.</p>
-     * @param type value to be set
+     * @param builder function to build the type value
      * @return Builder
      */
 
-    public FieldDefinitionBuilder type(final com.commercetools.history.models.common.FieldType type) {
-        this.type = type;
+    public FieldDefinitionBuilder type(
+            Function<com.commercetools.history.models.common.FieldTypeBuilder, com.commercetools.history.models.common.FieldTypeBuilder> builder) {
+        this.type = builder.apply(com.commercetools.history.models.common.FieldTypeBuilder.of()).build();
         return this;
     }
 
@@ -55,9 +56,20 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
      * @return Builder
      */
 
-    public FieldDefinitionBuilder type(
-            Function<com.commercetools.history.models.common.FieldTypeBuilder, Builder<? extends com.commercetools.history.models.common.FieldType>> builder) {
-        this.type = builder.apply(com.commercetools.history.models.common.FieldTypeBuilder.of()).build();
+    public FieldDefinitionBuilder withType(
+            Function<com.commercetools.history.models.common.FieldTypeBuilder, com.commercetools.history.models.common.FieldType> builder) {
+        this.type = builder.apply(com.commercetools.history.models.common.FieldTypeBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Data type of the Custom Field to define.</p>
+     * @param type value to be set
+     * @return Builder
+     */
+
+    public FieldDefinitionBuilder type(final com.commercetools.history.models.common.FieldType type) {
+        this.type = type;
         return this;
     }
 

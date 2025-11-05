@@ -45,7 +45,9 @@ public class CategoriesTest {
     public void testLocalizedStringEntryEqualsOverride() {
         var entry = LocalizedStringEntry.of("en", "women");
         var entry2 = LocalizedStringEntry.of("en", "women");
+        var entry3 = LocalizedStringEntry.of("en", "woman");
         Assertions.assertThat(entry).isEqualTo(entry2);
+        Assertions.assertThat(entry).isNotEqualTo(entry3);
     }
 
     @Test

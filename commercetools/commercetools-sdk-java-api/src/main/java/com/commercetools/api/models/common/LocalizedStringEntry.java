@@ -42,6 +42,11 @@ public final class LocalizedStringEntry {
         return false;
     }
 
+    @Override
+    public int hashCode() {
+        return locale.hashCode() + value.hashCode();
+    }
+
     public Locale getLocale() {
         return locale;
     }

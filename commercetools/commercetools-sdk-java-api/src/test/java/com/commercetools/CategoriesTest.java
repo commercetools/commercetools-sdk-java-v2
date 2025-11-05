@@ -4,8 +4,8 @@ package com.commercetools;
 import java.net.URI;
 
 import com.commercetools.api.client.ByProjectKeyCategoriesPost;
-
 import com.commercetools.api.models.common.LocalizedStringEntry;
+
 import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.SerializerOnlyApiHttpClient;
 

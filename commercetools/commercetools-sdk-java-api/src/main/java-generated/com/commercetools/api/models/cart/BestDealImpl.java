@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Indicates the best deal logic applies to a Cart or Order and indicates the discount type that offers the best deal.</p>
+ *  <p>Indicates if a Product Discount or Cart Discount offers the best deal for a Cart or Order.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BestDealImpl implements BestDeal, ModelBase {

@@ -5,6 +5,7 @@ import java.net.URI;
 
 import com.commercetools.api.client.ByProjectKeyCategoriesPost;
 
+import com.commercetools.api.models.common.LocalizedStringEntry;
 import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.SerializerOnlyApiHttpClient;
 
@@ -31,5 +32,12 @@ public class CategoriesTest {
         Assertions.assertThat(request.getUri().toString()).isEqualTo("test/categories");
         Assertions.assertThat(newRequest.getUri().toString()).isEqualTo("https://example.com/test/categories");
         Assertions.assertThat(newRequest).isNotEqualTo(request);
+    }
+
+    @Test
+    public void testLocalizedStringEntryEqualsOverride() {
+        var entry = LocalizedStringEntry.of("en", "women");
+        var entry2 = LocalizedStringEntry.of("en", "women");
+        Assertions.assertThat(entry).isEqualTo(entry2);
     }
 }

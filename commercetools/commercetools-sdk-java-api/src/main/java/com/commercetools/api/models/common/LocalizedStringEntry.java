@@ -33,6 +33,15 @@ public final class LocalizedStringEntry {
         return of(locale, value);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (o instanceof LocalizedStringEntry) {
+            var e = (LocalizedStringEntry) o;
+            return locale.equals(e.locale) && value.equals(e.value);
+        }
+        return false;
+    }
+
     public Locale getLocale() {
         return locale;
     }

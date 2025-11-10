@@ -1,23 +1,4 @@
-plugins {
-    id("java")
-}
-
-group = "com.commercetools.sdk"
-version = "19.5.0-SNAPSHOT"
-
-repositories {
-    mavenCentral()
-}
-
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-
     implementation(project(":commercetools:commercetools-sdk-java-api"))
     implementation(project(":commercetools:commercetools-sdk-java-importapi"))
-}
-
-tasks.test {
-    useJUnitPlatform()
 }

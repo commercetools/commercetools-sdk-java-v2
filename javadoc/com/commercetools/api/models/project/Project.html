@@ -94,6 +94,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
              .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
              .messages(messagesBuilder -> messagesBuilder)
              .carts(cartsBuilder -> cartsBuilder)
+             .discounts(discountsBuilder -> discountsBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -154,100 +155,110 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Currency code of the country.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="ExternalOAuth.html" title="interface in com.commercetools.api.models.project">ExternalOAuth</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getExternalOAuth()" class="member-name-link">getExternalOAuth</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="DiscountsConfiguration.html" title="interface in com.commercetools.api.models.project">DiscountsConfiguration</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDiscounts()" class="member-name-link">getDiscounts</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Holds configuration specific to discounts, including how Product and Cart Discounts are combined in every Cart of the Project.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="ExternalOAuth.html" title="interface in com.commercetools.api.models.project">ExternalOAuth</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getExternalOAuth()" class="member-name-link">getExternalOAuth</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Represents a RFC 7662 compliant <span>OAuth 2.0 Token Introspection</span> endpoint.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getKey()" class="member-name-link">getKey</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getKey()" class="member-name-link">getKey</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">User-defined unique identifier of the Project.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLanguages()" class="member-name-link">getLanguages</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLanguages()" class="member-name-link">getLanguages</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Language of the country.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../message/MessagesConfiguration.html" title="interface in com.commercetools.api.models.message">MessagesConfiguration</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMessages()" class="member-name-link">getMessages</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../message/MessagesConfiguration.html" title="interface in com.commercetools.api.models.message">MessagesConfiguration</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMessages()" class="member-name-link">getMessages</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Holds the configuration for the <span>Messages Query</span> feature.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Name of the Project.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="SearchIndexingConfiguration.html" title="interface in com.commercetools.api.models.project">SearchIndexingConfiguration</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSearchIndexing()" class="member-name-link">getSearchIndexing</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="SearchIndexingConfiguration.html" title="interface in com.commercetools.api.models.project">SearchIndexingConfiguration</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSearchIndexing()" class="member-name-link">getSearchIndexing</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Controls indexing of resources to be provided on high performance read-only search endpoints.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="ShippingRateInputType.html" title="interface in com.commercetools.api.models.project">ShippingRateInputType</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getShippingRateInputType()" class="member-name-link">getShippingRateInputType</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="ShippingRateInputType.html" title="interface in com.commercetools.api.models.project">ShippingRateInputType</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getShippingRateInputType()" class="member-name-link">getShippingRateInputType</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Holds the configuration for the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">tiered shipping rates</a> feature.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="ShoppingListsConfiguration.html" title="interface in com.commercetools.api.models.project">ShoppingListsConfiguration</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getShoppingLists()" class="member-name-link">getShoppingLists</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="ShoppingListsConfiguration.html" title="interface in com.commercetools.api.models.project">ShoppingListsConfiguration</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getShoppingLists()" class="member-name-link">getShoppingLists</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Holds the configuration for the <span>Shopping Lists</span> feature.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTrialUntil()" class="member-name-link">getTrialUntil</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTrialUntil()" class="member-name-link">getTrialUntil</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Date in YYYY-MM format specifying when the trial period for the Project ends.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVersion()" class="member-name-link">getVersion</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVersion()" class="member-name-link">getVersion</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Current version of the Project.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="Project.html" title="interface in com.commercetools.api.models.project">Project</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="Project.html" title="interface in com.commercetools.api.models.project">Project</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="Project.html" title="interface in com.commercetools.api.models.project">Project</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.api.models.project.Project)" class="member-name-link">of</a><wbr>(<a href="Project.html" title="interface in com.commercetools.api.models.project">Project</a>&nbsp;template)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="Project.html" title="interface in com.commercetools.api.models.project">Project</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.api.models.project.Project)" class="member-name-link">of</a><wbr>(<a href="Project.html" title="interface in com.commercetools.api.models.project">Project</a>&nbsp;template)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a shallow copy Project</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setBusinessUnits(com.commercetools.api.models.project.BusinessUnitConfiguration)" class="member-name-link">setBusinessUnits</a><wbr>(<a href="BusinessUnitConfiguration.html" title="interface in com.commercetools.api.models.project">BusinessUnitConfiguration</a>&nbsp;businessUnits)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setBusinessUnits(com.commercetools.api.models.project.BusinessUnitConfiguration)" class="member-name-link">setBusinessUnits</a><wbr>(<a href="BusinessUnitConfiguration.html" title="interface in com.commercetools.api.models.project">BusinessUnitConfiguration</a>&nbsp;businessUnits)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Holds configuration specific to <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Units</a>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCarts(com.commercetools.api.models.project.CartsConfiguration)" class="member-name-link">setCarts</a><wbr>(<a href="CartsConfiguration.html" title="interface in com.commercetools.api.models.project">CartsConfiguration</a>&nbsp;carts)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCarts(com.commercetools.api.models.project.CartsConfiguration)" class="member-name-link">setCarts</a><wbr>(<a href="CartsConfiguration.html" title="interface in com.commercetools.api.models.project">CartsConfiguration</a>&nbsp;carts)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Holds the configuration for the <span>Carts</span> feature.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCountries(java.lang.String...)" class="member-name-link">setCountries</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;countries)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Country code of the geographic location.</div>
-</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCountries(java.util.List)" class="member-name-link">setCountries</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;countries)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCountries(java.lang.String...)" class="member-name-link">setCountries</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;countries)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Country code of the geographic location.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCreatedAt(java.time.ZonedDateTime)" class="member-name-link">setCreatedAt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCountries(java.util.List)" class="member-name-link">setCountries</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;countries)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Country code of the geographic location.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCreatedAt(java.time.ZonedDateTime)" class="member-name-link">setCreatedAt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Date and time (UTC) the Project was initially created.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCurrencies(java.lang.String...)" class="member-name-link">setCurrencies</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;currencies)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Currency code of the country.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCurrencies(java.lang.String...)" class="member-name-link">setCurrencies</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;currencies)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCurrencies(java.util.List)" class="member-name-link">setCurrencies</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;currencies)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Currency code of the country.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCurrencies(java.util.List)" class="member-name-link">setCurrencies</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;currencies)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setDiscounts(com.commercetools.api.models.project.DiscountsConfiguration)" class="member-name-link">setDiscounts</a><wbr>(<a href="DiscountsConfiguration.html" title="interface in com.commercetools.api.models.project">DiscountsConfiguration</a>&nbsp;discounts)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Currency code of the country.</div>
+<div class="block">Holds configuration specific to discounts, including how Product and Cart Discounts are combined in every Cart of the Project.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setExternalOAuth(com.commercetools.api.models.project.ExternalOAuth)" class="member-name-link">setExternalOAuth</a><wbr>(<a href="ExternalOAuth.html" title="interface in com.commercetools.api.models.project">ExternalOAuth</a>&nbsp;externalOAuth)</code></div>
@@ -512,6 +523,19 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 </section>
 </li>
 <li>
+<section class="detail" id="getDiscounts()">
+<h3>getDiscounts</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+@Valid
+</span><span class="return-type">@NotNull @Valid <a href="DiscountsConfiguration.html" title="interface in com.commercetools.api.models.project">DiscountsConfiguration</a></span>&nbsp;<span class="element-name">getDiscounts</span>()</div>
+<div class="block"><p>Holds configuration specific to discounts, including how Product and Cart Discounts are combined in every Cart of the Project.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>discounts</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setVersion(java.lang.Long)">
 <h3>setVersion</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setVersion</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
@@ -706,6 +730,17 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>businessUnits</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setDiscounts(com.commercetools.api.models.project.DiscountsConfiguration)">
+<h3>setDiscounts</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setDiscounts</span><wbr><span class="parameters">(<a href="DiscountsConfiguration.html" title="interface in com.commercetools.api.models.project">DiscountsConfiguration</a>&nbsp;discounts)</span></div>
+<div class="block"><p>Holds configuration specific to discounts, including how Product and Cart Discounts are combined in every Cart of the Project.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>discounts</code> - value to be set</dd>
 </dl>
 </section>
 </li>

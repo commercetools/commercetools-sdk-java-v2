@@ -90,7 +90,6 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
      RecurringOrderDraft recurringOrderDraft = RecurringOrderDraft.builder()
              .cart(cartBuilder -> cartBuilder)
              .cartVersion(0.3)
-             .startsAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
              .build()
  </code></pre>
  </div></div>
@@ -341,8 +340,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="startsAt(java.time.ZonedDateTime)">
 <h3>startsAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RecurringOrderDraftBuilder.html" title="class in com.commercetools.api.models.recurring_order">RecurringOrderDraftBuilder</a></span>&nbsp;<span class="element-name">startsAt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;startsAt)</span></div>
-<div class="block"><p>Date and time (UTC) when the RecurringOrder will start.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RecurringOrderDraftBuilder.html" title="class in com.commercetools.api.models.recurring_order">RecurringOrderDraftBuilder</a></span>&nbsp;<span class="element-name">startsAt</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;startsAt)</span></div>
+<div class="block"><p>Date and time (UTC) when the RecurringOrder will start. When specified, the date and time must be in the future. If not specified, the recurring order will start immediately.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>startsAt</code> - value to be set</dd>
@@ -482,8 +482,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getStartsAt()">
 <h3>getStartsAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getStartsAt</span>()</div>
-<div class="block"><p>Date and time (UTC) when the RecurringOrder will start.</p></div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getStartsAt</span>()</div>
+<div class="block"><p>Date and time (UTC) when the RecurringOrder will start. When specified, the date and time must be in the future. If not specified, the recurring order will start immediately.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>startsAt</dd>

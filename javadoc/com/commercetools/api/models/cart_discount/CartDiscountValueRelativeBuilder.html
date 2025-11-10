@@ -119,15 +119,25 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartDiscountValueRelative.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueRelative</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartDiscountValueRelativeBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueRelativeBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applicationMode(com.commercetools.api.models.cart_discount.DiscountApplicationMode)" class="member-name-link">applicationMode</a><wbr>(<a href="DiscountApplicationMode.html" title="interface in com.commercetools.api.models.cart_discount">DiscountApplicationMode</a>&nbsp;applicationMode)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">builds CartDiscountValueRelative with checking for non-null required values</div>
+<div class="block">Indicates how the discount applies when using <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartDiscountValueRelative.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueRelative</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#buildUnchecked()" class="member-name-link">buildUnchecked</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">builds CartDiscountValueRelative with checking for non-null required values</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartDiscountValueRelative.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueRelative</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#buildUnchecked()" class="member-name-link">buildUnchecked</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">builds CartDiscountValueRelative without checking for non-null required values</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DiscountApplicationMode.html" title="interface in com.commercetools.api.models.cart_discount">DiscountApplicationMode</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getApplicationMode()" class="member-name-link">getApplicationMode</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Indicates how the discount applies when using <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPermyriad()" class="member-name-link">getPermyriad</a>()</code></div>
@@ -194,6 +204,24 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="applicationMode(com.commercetools.api.models.cart_discount.DiscountApplicationMode)">
+<h3>applicationMode</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartDiscountValueRelativeBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueRelativeBuilder</a></span>&nbsp;<span class="element-name">applicationMode</span><wbr><span class="parameters">(@Nullable
+ <a href="DiscountApplicationMode.html" title="interface in com.commercetools.api.models.cart_discount">DiscountApplicationMode</a>&nbsp;applicationMode)</span></div>
+<div class="block"><p>Indicates how the discount applies when using <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a>.</p>
+  <ul>
+   <li>If the mode is <code>IndividualApplication</code>, the discounted percentage is applied on each unit's price. The units matching the <code>triggerPattern</code> are not considered.</li>
+   <li>If the mode is <code>ProportionateDistribution</code> and <code>EvenDistribution</code> the discounted value is calculated from the total value of the units matching the <code>targetPattern</code> and distributed among the units matching the <code>targetPattern</code> or <code>triggerPattern</code>. These modes are allowed only if <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> <code>triggerPattern</code> is non-empty.</li>
+  </ul></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>applicationMode</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getPermyriad()">
 <h3>getPermyriad</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getPermyriad</span>()</div>
@@ -201,6 +229,22 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>permyriad</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getApplicationMode()">
+<h3>getApplicationMode</h3>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountApplicationMode.html" title="interface in com.commercetools.api.models.cart_discount">DiscountApplicationMode</a></span>&nbsp;<span class="element-name">getApplicationMode</span>()</div>
+<div class="block"><p>Indicates how the discount applies when using <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a>.</p>
+  <ul>
+   <li>If the mode is <code>IndividualApplication</code>, the discounted percentage is applied on each unit's price. The units matching the <code>triggerPattern</code> are not considered.</li>
+   <li>If the mode is <code>ProportionateDistribution</code> and <code>EvenDistribution</code> the discounted value is calculated from the total value of the units matching the <code>targetPattern</code> and distributed among the units matching the <code>targetPattern</code> or <code>triggerPattern</code>. These modes are allowed only if <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> <code>triggerPattern</code> is non-empty.</li>
+  </ul></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>applicationMode</dd>
 </dl>
 </section>
 </li>

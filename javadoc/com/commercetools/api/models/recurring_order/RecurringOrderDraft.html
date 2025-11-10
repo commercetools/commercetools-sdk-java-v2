@@ -87,7 +87,6 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
      RecurringOrderDraft recurringOrderDraft = RecurringOrderDraft.builder()
              .cart(cartBuilder -> cartBuilder)
              .cartVersion(0.3)
-             .startsAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
              .build()
  </code></pre>
  </div></div>
@@ -148,7 +147,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStartsAt()" class="member-name-link">getStartsAt</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Date and time (UTC) when the RecurringOrder will start.</div>
@@ -266,9 +265,8 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <li>
 <section class="detail" id="getStartsAt()">
 <h3>getStartsAt</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getStartsAt</span>()</div>
-<div class="block"><p>Date and time (UTC) when the RecurringOrder will start.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getStartsAt</span>()</div>
+<div class="block"><p>Date and time (UTC) when the RecurringOrder will start. When specified, the date and time must be in the future. If not specified, the recurring order will start immediately.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>startsAt</dd>
@@ -347,7 +345,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setStartsAt(java.time.ZonedDateTime)">
 <h3>setStartsAt</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setStartsAt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;startsAt)</span></div>
-<div class="block"><p>Date and time (UTC) when the RecurringOrder will start.</p></div>
+<div class="block"><p>Date and time (UTC) when the RecurringOrder will start. When specified, the date and time must be in the future. If not specified, the recurring order will start immediately.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>startsAt</code> - value to be set</dd>

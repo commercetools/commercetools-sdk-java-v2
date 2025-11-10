@@ -1,4 +1,109 @@
 
+# 19.6.2 (2025-11-10)
+
+## What's Changed
+* fixing build.gradle by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1004
+
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `DiscountCombinationMode`
+- added type `DiscountsConfiguration`
+- added type `ProjectSetDiscountsConfigurationAction`
+</details>
+
+
+<details>
+<summary>Removed Property(s)</summary>
+
+- :warning: removed property `skipConfiguration` from type `RecurringOrderSetOrderSkipConfigurationAction`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `discounts` to type `Project`
+- added property `skipConfigurationInputDraft` to type `RecurringOrderSetOrderSkipConfigurationAction`
+</details>
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.6.1...19.6.2
+
+
+# 19.6.1 (2025-11-07)
+
+## What's Changed
+* DEVX-657: overriding equals and hashCode for LocalizedStringEntry by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1002
+
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `DiscountCombinationMode`
+- added type `DiscountsConfiguration`
+- added type `ProjectSetDiscountsConfigurationAction`
+</details>
+
+
+<details>
+<summary>Removed Property(s)</summary>
+
+- :warning: removed property `skipConfiguration` from type `RecurringOrderSetOrderSkipConfigurationAction`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `discounts` to type `Project`
+- added property `skipConfigurationInputDraft` to type `RecurringOrderSetOrderSkipConfigurationAction`
+</details>
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.6.0...19.6.1
+
+# 19.6.0 (2025-11-03)
+
+## What's Changed
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/992
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/993
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/994
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/995
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/996
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/997
+* DEVX-640-helper-method-from-Coco-product-to-import-API-product by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1000
+
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `DiscountCombinationMode`
+- added type `DiscountsConfiguration`
+- added type `ProjectSetDiscountsConfigurationAction`
+</details>
+
+
+<details>
+<summary>Removed Property(s)</summary>
+
+- :warning: removed property `skipConfiguration` from type `RecurringOrderSetOrderSkipConfigurationAction`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `discounts` to type `Project`
+- added property `skipConfigurationInputDraft` to type `RecurringOrderSetOrderSkipConfigurationAction`
+</details>
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.5.0...19.6.0
+
 # 19.5.0 (2025-09-22)
 
 ## What's Changed

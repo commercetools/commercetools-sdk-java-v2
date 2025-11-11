@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 import com.commercetools.api.client.ErrorableTrait;
+
 import io.vrap.rmf.base.client.*;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;

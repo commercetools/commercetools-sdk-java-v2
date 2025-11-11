@@ -17,7 +17,7 @@ import okhttp3.OkHttpClient;
 import okio.GzipSource;
 import okio.Okio;
 
-public class CtOkHttp4Client extends HttpClientBase {
+public class CtOkHttp5Client extends HttpClientBase {
 
     public static final int MAX_REQUESTS = 64;
     private final Supplier<OkHttpClient.Builder> clientBuilder = () -> new OkHttpClient.Builder()

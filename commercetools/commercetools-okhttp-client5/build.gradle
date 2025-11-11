@@ -1,0 +1,21 @@
+apply plugin: "me.champeau.jmh"
+
+jmh {
+    iterations = 5
+    benchmarkMode = ['thrpt']
+    threads = 25
+    fork = 3
+    timeOnIteration = '1s'
+    profilers = ['gc']
+}
+
+dependencies {
+    api project(":rmf:rmf-java-base")
+    api "com.squareup.okhttp3:okhttp:5.3.0" version {
+        strictly '[5.0,5.99999]'
+        prefer "5.3.0"
+    }
+    implementation "com.squareup.okio:okio:3.14.0"
+
+    implementation javax.validation
+}

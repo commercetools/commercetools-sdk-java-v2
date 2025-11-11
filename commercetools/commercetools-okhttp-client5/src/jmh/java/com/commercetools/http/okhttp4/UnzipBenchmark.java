@@ -19,11 +19,11 @@ public class UnzipBenchmark {
 
     @State(Scope.Benchmark)
     public static class InterceptorState {
-        private CtOkHttp4Client.UnzippingInterceptor interceptor;
+        private CtOkHttp5Client.UnzippingInterceptor interceptor;
 
         @Setup(Level.Trial)
         public void init() {
-            interceptor = new CtOkHttp4Client.UnzippingInterceptor();
+            interceptor = new CtOkHttp5Client.UnzippingInterceptor();
             printUsedMemory();
 
         }
@@ -60,7 +60,7 @@ public class UnzipBenchmark {
         Assertions.assertThat(unzipped.body().source().isOpen()).isTrue();
         Assertions.assertThat(inputStream.available()).isEqualTo(31);
 
-        ApiHttpResponse<byte[]> response = CtOkHttp4Client.toResponse(unzipped);
+        ApiHttpResponse<byte[]> response = CtOkHttp5Client.toResponse(unzipped);
 
         Assertions.assertThat(gzipped.body().source().isOpen()).isFalse();
         Assertions.assertThat(unzipped.body().source().isOpen()).isFalse();

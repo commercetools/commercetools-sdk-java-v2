@@ -9,9 +9,11 @@
 - added type `GraphQLRecurringOrderFailureError`
 - added type `CartFrozenMessage`
 - added type `CartUnfrozenMessage`
+- added type `OrderPaymentRemovedMessage`
 - added type `RecurringOrderFailedMessage`
 - added type `CartFrozenMessagePayload`
 - added type `CartUnfrozenMessagePayload`
+- added type `OrderPaymentRemovedMessagePayload`
 - added type `RecurringOrderFailedMessagePayload`
 - added type `DiscountCombinationMode`
 - added type `DiscountsConfiguration`
@@ -30,6 +32,8 @@
 <details>
 <summary>Removed Property(s)</summary>
 
+- :warning: removed property `payment` from type `OrderPaymentAddedMessage`
+- :warning: removed property `payment` from type `OrderPaymentAddedMessagePayload`
 - :warning: removed property `skipConfiguration` from type `RecurringOrderSetOrderSkipConfigurationAction`
 </details>
 
@@ -38,7 +42,9 @@
 <summary>Added Property(s)</summary>
 
 - added property `sku` to type `InventoryEntryQuantitySetMessage`
+- added property `paymentRef` to type `OrderPaymentAddedMessage`
 - added property `sku` to type `InventoryEntryQuantitySetMessagePayload`
+- added property `paymentRef` to type `OrderPaymentAddedMessagePayload`
 - added property `discounts` to type `Project`
 - added property `skipConfigurationInputDraft` to type `RecurringOrderSetOrderSkipConfigurationAction`
 </details>

@@ -17,13 +17,13 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderAddPaymentAction" rel="nofollow">Add Payment</a> update action or when a <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> is added via <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderAddPaymentAction" rel="nofollow">Order Edits</a>.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderRemovePaymentAction" rel="nofollow">Remove Payment</a> update action or when a <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> is removed via <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemovePaymentAction" rel="nofollow">Order Edits</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     OrderPaymentAddedMessage orderPaymentAddedMessage = OrderPaymentAddedMessage.builder()
+ *     OrderPaymentRemovedMessage orderPaymentRemovedMessage = OrderPaymentRemovedMessage.builder()
  *             .id("{id}")
  *             .version(0.3)
  *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
@@ -32,22 +32,23 @@ import jakarta.validation.constraints.NotNull;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
  *             .paymentRef(paymentRefBuilder -> paymentRefBuilder)
+ *             .removedPaymentInfo(true)
  *             .build()
  * </code></pre>
  * </div>
  */
-@io.vrap.rmf.base.client.utils.json.SubType("OrderPaymentAdded")
+@io.vrap.rmf.base.client.utils.json.SubType("OrderPaymentRemoved")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-@JsonDeserialize(as = OrderPaymentAddedMessageImpl.class)
-public interface OrderPaymentAddedMessage extends Message {
+@JsonDeserialize(as = OrderPaymentRemovedMessageImpl.class)
+public interface OrderPaymentRemovedMessage extends Message {
 
     /**
-     * discriminator value for OrderPaymentAddedMessage
+     * discriminator value for OrderPaymentRemovedMessage
      */
-    String ORDER_PAYMENT_ADDED = "OrderPaymentAdded";
+    String ORDER_PAYMENT_REMOVED = "OrderPaymentRemoved";
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @return paymentRef
      */
     @NotNull
@@ -56,27 +57,42 @@ public interface OrderPaymentAddedMessage extends Message {
     public PaymentReference getPaymentRef();
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
+     *  <p>Indicates whether the removal of the Payment resulted in no Payments remaining on the Order. The value is <code>true</code> if all Payments have been removed (none remain), and <code>false</code> if there are still Payments associated with the Order after the removal.</p>
+     * @return removedPaymentInfo
+     */
+    @NotNull
+    @JsonProperty("removedPaymentInfo")
+    public Boolean getRemovedPaymentInfo();
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param paymentRef value to be set
      */
 
     public void setPaymentRef(final PaymentReference paymentRef);
 
     /**
-     * factory method
-     * @return instance of OrderPaymentAddedMessage
+     *  <p>Indicates whether the removal of the Payment resulted in no Payments remaining on the Order. The value is <code>true</code> if all Payments have been removed (none remain), and <code>false</code> if there are still Payments associated with the Order after the removal.</p>
+     * @param removedPaymentInfo value to be set
      */
-    public static OrderPaymentAddedMessage of() {
-        return new OrderPaymentAddedMessageImpl();
+
+    public void setRemovedPaymentInfo(final Boolean removedPaymentInfo);
+
+    /**
+     * factory method
+     * @return instance of OrderPaymentRemovedMessage
+     */
+    public static OrderPaymentRemovedMessage of() {
+        return new OrderPaymentRemovedMessageImpl();
     }
 
     /**
-     * factory method to create a shallow copy OrderPaymentAddedMessage
+     * factory method to create a shallow copy OrderPaymentRemovedMessage
      * @param template instance to be copied
      * @return copy instance
      */
-    public static OrderPaymentAddedMessage of(final OrderPaymentAddedMessage template) {
-        OrderPaymentAddedMessageImpl instance = new OrderPaymentAddedMessageImpl();
+    public static OrderPaymentRemovedMessage of(final OrderPaymentRemovedMessage template) {
+        OrderPaymentRemovedMessageImpl instance = new OrderPaymentRemovedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
@@ -88,22 +104,23 @@ public interface OrderPaymentAddedMessage extends Message {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setPaymentRef(template.getPaymentRef());
+        instance.setRemovedPaymentInfo(template.getRemovedPaymentInfo());
         return instance;
     }
 
-    public OrderPaymentAddedMessage copyDeep();
+    public OrderPaymentRemovedMessage copyDeep();
 
     /**
-     * factory method to create a deep copy of OrderPaymentAddedMessage
+     * factory method to create a deep copy of OrderPaymentRemovedMessage
      * @param template instance to be copied
      * @return copy instance
      */
     @Nullable
-    public static OrderPaymentAddedMessage deepCopy(@Nullable final OrderPaymentAddedMessage template) {
+    public static OrderPaymentRemovedMessage deepCopy(@Nullable final OrderPaymentRemovedMessage template) {
         if (template == null) {
             return null;
         }
-        OrderPaymentAddedMessageImpl instance = new OrderPaymentAddedMessageImpl();
+        OrderPaymentRemovedMessageImpl instance = new OrderPaymentRemovedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
@@ -118,24 +135,25 @@ public interface OrderPaymentAddedMessage extends Message {
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setPaymentRef(
             com.commercetools.api.models.payment.PaymentReference.deepCopy(template.getPaymentRef()));
+        instance.setRemovedPaymentInfo(template.getRemovedPaymentInfo());
         return instance;
     }
 
     /**
-     * builder factory method for OrderPaymentAddedMessage
+     * builder factory method for OrderPaymentRemovedMessage
      * @return builder
      */
-    public static OrderPaymentAddedMessageBuilder builder() {
-        return OrderPaymentAddedMessageBuilder.of();
+    public static OrderPaymentRemovedMessageBuilder builder() {
+        return OrderPaymentRemovedMessageBuilder.of();
     }
 
     /**
-     * create builder for OrderPaymentAddedMessage instance
+     * create builder for OrderPaymentRemovedMessage instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static OrderPaymentAddedMessageBuilder builder(final OrderPaymentAddedMessage template) {
-        return OrderPaymentAddedMessageBuilder.of(template);
+    public static OrderPaymentRemovedMessageBuilder builder(final OrderPaymentRemovedMessage template) {
+        return OrderPaymentRemovedMessageBuilder.of(template);
     }
 
     /**
@@ -144,7 +162,7 @@ public interface OrderPaymentAddedMessage extends Message {
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withOrderPaymentAddedMessage(Function<OrderPaymentAddedMessage, T> helper) {
+    default <T> T withOrderPaymentRemovedMessage(Function<OrderPaymentRemovedMessage, T> helper) {
         return helper.apply(this);
     }
 
@@ -152,11 +170,11 @@ public interface OrderPaymentAddedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderPaymentAddedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderPaymentAddedMessage>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderPaymentRemovedMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderPaymentRemovedMessage>() {
             @Override
             public String toString() {
-                return "TypeReference<OrderPaymentAddedMessage>";
+                return "TypeReference<OrderPaymentRemovedMessage>";
             }
         };
     }

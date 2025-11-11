@@ -17,10 +17,10 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderAddPaymentAction" rel="nofollow">Add Payment</a> update action or when a <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> is added via <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderAddPaymentAction" rel="nofollow">Order Edits</a>.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderRemovePaymentAction" rel="nofollow">Remove Payment</a> update action or when a <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> is removed via <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemovePaymentAction" rel="nofollow">Order Edits</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, ModelBase {
+public class OrderPaymentRemovedMessageImpl implements OrderPaymentRemovedMessage, ModelBase {
 
     private String id;
 
@@ -46,11 +46,13 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
 
     private com.commercetools.api.models.payment.PaymentReference paymentRef;
 
+    private Boolean removedPaymentInfo;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
-    OrderPaymentAddedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
+    OrderPaymentRemovedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
             @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
             @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
@@ -59,7 +61,8 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("paymentRef") final com.commercetools.api.models.payment.PaymentReference paymentRef) {
+            @JsonProperty("paymentRef") final com.commercetools.api.models.payment.PaymentReference paymentRef,
+            @JsonProperty("removedPaymentInfo") final Boolean removedPaymentInfo) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -71,14 +74,15 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.paymentRef = paymentRef;
-        this.type = ORDER_PAYMENT_ADDED;
+        this.removedPaymentInfo = removedPaymentInfo;
+        this.type = ORDER_PAYMENT_REMOVED;
     }
 
     /**
      * create empty instance
      */
-    public OrderPaymentAddedMessageImpl() {
-        this.type = ORDER_PAYMENT_ADDED;
+    public OrderPaymentRemovedMessageImpl() {
+        this.type = ORDER_PAYMENT_REMOVED;
     }
 
     /**
@@ -170,11 +174,19 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
     }
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      */
 
     public com.commercetools.api.models.payment.PaymentReference getPaymentRef() {
         return this.paymentRef;
+    }
+
+    /**
+     *  <p>Indicates whether the removal of the Payment resulted in no Payments remaining on the Order. The value is <code>true</code> if all Payments have been removed (none remain), and <code>false</code> if there are still Payments associated with the Order after the removal.</p>
+     */
+
+    public Boolean getRemovedPaymentInfo() {
+        return this.removedPaymentInfo;
     }
 
     public void setId(final String id) {
@@ -222,6 +234,10 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
         this.paymentRef = paymentRef;
     }
 
+    public void setRemovedPaymentInfo(final Boolean removedPaymentInfo) {
+        this.removedPaymentInfo = removedPaymentInfo;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -230,7 +246,7 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
         if (o == null || getClass() != o.getClass())
             return false;
 
-        OrderPaymentAddedMessageImpl that = (OrderPaymentAddedMessageImpl) o;
+        OrderPaymentRemovedMessageImpl that = (OrderPaymentRemovedMessageImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
                 .append(version, that.version)
@@ -244,6 +260,7 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(paymentRef, that.paymentRef)
+                .append(removedPaymentInfo, that.removedPaymentInfo)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -256,6 +273,7 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(paymentRef, that.paymentRef)
+                .append(removedPaymentInfo, that.removedPaymentInfo)
                 .isEquals();
     }
 
@@ -273,6 +291,7 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
                 .append(paymentRef)
+                .append(removedPaymentInfo)
                 .toHashCode();
     }
 
@@ -290,11 +309,12 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
                 .append("type", type)
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
                 .append("paymentRef", paymentRef)
+                .append("removedPaymentInfo", removedPaymentInfo)
                 .build();
     }
 
     @Override
-    public OrderPaymentAddedMessage copyDeep() {
-        return OrderPaymentAddedMessage.deepCopy(this);
+    public OrderPaymentRemovedMessage copyDeep() {
+        return OrderPaymentRemovedMessage.deepCopy(this);
     }
 }

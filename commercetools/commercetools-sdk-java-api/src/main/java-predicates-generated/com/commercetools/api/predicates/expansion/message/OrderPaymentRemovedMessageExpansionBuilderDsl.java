@@ -8,20 +8,20 @@ import java.util.List;
 
 import com.commercetools.api.predicates.expansion.ExpansionDsl;
 
-public class OrderPaymentAddedMessageExpansionBuilderDsl implements ExpansionDsl {
+public class OrderPaymentRemovedMessageExpansionBuilderDsl implements ExpansionDsl {
 
     private final List<String> path;
 
-    private OrderPaymentAddedMessageExpansionBuilderDsl(final List<String> path) {
+    private OrderPaymentRemovedMessageExpansionBuilderDsl(final List<String> path) {
         this.path = path;
     }
 
-    public static OrderPaymentAddedMessageExpansionBuilderDsl of() {
-        return new OrderPaymentAddedMessageExpansionBuilderDsl(Collections.emptyList());
+    public static OrderPaymentRemovedMessageExpansionBuilderDsl of() {
+        return new OrderPaymentRemovedMessageExpansionBuilderDsl(Collections.emptyList());
     }
 
-    public static OrderPaymentAddedMessageExpansionBuilderDsl of(final List<String> path) {
-        return new OrderPaymentAddedMessageExpansionBuilderDsl(path);
+    public static OrderPaymentRemovedMessageExpansionBuilderDsl of(final List<String> path) {
+        return new OrderPaymentRemovedMessageExpansionBuilderDsl(path);
     }
 
     @Override

@@ -944,6 +944,13 @@ public class MessageQueryBuilderDsl {
             MessageQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asOrderPaymentRemoved(
+            Function<com.commercetools.api.predicates.query.message.OrderPaymentRemovedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.OrderPaymentRemovedMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.message.OrderPaymentRemovedMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MessageQueryBuilderDsl> asPaymentCreated(
             Function<com.commercetools.api.predicates.query.message.PaymentCreatedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentCreatedMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

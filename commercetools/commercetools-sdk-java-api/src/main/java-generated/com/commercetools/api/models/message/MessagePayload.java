@@ -1270,6 +1270,14 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for orderPaymentRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.OrderPaymentRemovedMessagePayloadBuilder orderPaymentRemovedBuilder() {
+        return com.commercetools.api.models.message.OrderPaymentRemovedMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for orderPaymentStateChanged subtype
      * @return builder
      */

@@ -10,12 +10,12 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderPaymentAddedMessageBuilder
+ * OrderPaymentRemovedMessageBuilder
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     OrderPaymentAddedMessage orderPaymentAddedMessage = OrderPaymentAddedMessage.builder()
+ *     OrderPaymentRemovedMessage orderPaymentRemovedMessage = OrderPaymentRemovedMessage.builder()
  *             .id("{id}")
  *             .version(0.3)
  *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
@@ -24,12 +24,13 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
  *             .paymentRef(paymentRefBuilder -> paymentRefBuilder)
+ *             .removedPaymentInfo(true)
  *             .build()
  * </code></pre>
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class OrderPaymentAddedMessageBuilder implements Builder<OrderPaymentAddedMessage> {
+public class OrderPaymentRemovedMessageBuilder implements Builder<OrderPaymentRemovedMessage> {
 
     private String id;
 
@@ -56,13 +57,15 @@ public class OrderPaymentAddedMessageBuilder implements Builder<OrderPaymentAdde
 
     private com.commercetools.api.models.payment.PaymentReference paymentRef;
 
+    private Boolean removedPaymentInfo;
+
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @param id value to be set
      * @return Builder
      */
 
-    public OrderPaymentAddedMessageBuilder id(final String id) {
+    public OrderPaymentRemovedMessageBuilder id(final String id) {
         this.id = id;
         return this;
     }
@@ -73,7 +76,7 @@ public class OrderPaymentAddedMessageBuilder implements Builder<OrderPaymentAdde
      * @return Builder
      */
 
-    public OrderPaymentAddedMessageBuilder version(final Long version) {
+    public OrderPaymentRemovedMessageBuilder version(final Long version) {
         this.version = version;
         return this;
     }
@@ -84,7 +87,7 @@ public class OrderPaymentAddedMessageBuilder implements Builder<OrderPaymentAdde
      * @return Builder
      */
 
-    public OrderPaymentAddedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
+    public OrderPaymentRemovedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
@@ -95,7 +98,7 @@ public class OrderPaymentAddedMessageBuilder implements Builder<OrderPaymentAdde
      * @return Builder
      */
 
-    public OrderPaymentAddedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
+    public OrderPaymentRemovedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
@@ -106,7 +109,7 @@ public class OrderPaymentAddedMessageBuilder implements Builder<OrderPaymentAdde
      * @return Builder
      */
 
-    public OrderPaymentAddedMessageBuilder lastModifiedBy(
+    public OrderPaymentRemovedMessageBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
@@ -118,7 +121,7 @@ public class OrderPaymentAddedMessageBuilder implements Builder<OrderPaymentAdde
      * @return Builder
      */
 
-    public OrderPaymentAddedMessageBuilder withLastModifiedBy(
+    public OrderPaymentRemovedMessageBuilder withLastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
         return this;
@@ -130,7 +133,7 @@ public class OrderPaymentAddedMessageBuilder implements Builder<OrderPaymentAdde
      * @return Builder
      */
 
-    public OrderPaymentAddedMessageBuilder lastModifiedBy(
+    public OrderPaymentRemovedMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -142,7 +145,7 @@ public class OrderPaymentAddedMessageBuilder implements Builder<OrderPaymentAdde
      * @return Builder
      */
 
-    public OrderPaymentAddedMessageBuilder createdBy(
+    public OrderPaymentRemovedMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
@@ -154,7 +157,7 @@ public class OrderPaymentAddedMessageBuilder implements Builder<OrderPaymentAdde
      * @return Builder
      */
 
-    public OrderPaymentAddedMessageBuilder withCreatedBy(
+    public OrderPaymentRemovedMessageBuilder withCreatedBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
@@ -166,7 +169,7 @@ public class OrderPaymentAddedMessageBuilder implements Builder<OrderPaymentAdde
      * @return Builder
      */
 
-    public OrderPaymentAddedMessageBuilder createdBy(
+    public OrderPaymentRemovedMessageBuilder createdBy(
             @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -178,7 +181,7 @@ public class OrderPaymentAddedMessageBuilder implements Builder<OrderPaymentAdde
      * @return Builder
      */
 
-    public OrderPaymentAddedMessageBuilder sequenceNumber(final Long sequenceNumber) {
+    public OrderPaymentRemovedMessageBuilder sequenceNumber(final Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
@@ -189,7 +192,7 @@ public class OrderPaymentAddedMessageBuilder implements Builder<OrderPaymentAdde
      * @return Builder
      */
 
-    public OrderPaymentAddedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
+    public OrderPaymentRemovedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
         this.resource = resource;
         return this;
     }
@@ -200,7 +203,7 @@ public class OrderPaymentAddedMessageBuilder implements Builder<OrderPaymentAdde
      * @return Builder
      */
 
-    public OrderPaymentAddedMessageBuilder resource(
+    public OrderPaymentRemovedMessageBuilder resource(
             Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
         this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
         return this;
@@ -212,7 +215,7 @@ public class OrderPaymentAddedMessageBuilder implements Builder<OrderPaymentAdde
      * @return Builder
      */
 
-    public OrderPaymentAddedMessageBuilder resourceVersion(final Long resourceVersion) {
+    public OrderPaymentRemovedMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
@@ -223,7 +226,7 @@ public class OrderPaymentAddedMessageBuilder implements Builder<OrderPaymentAdde
      * @return Builder
      */
 
-    public OrderPaymentAddedMessageBuilder resourceUserProvidedIdentifiers(
+    public OrderPaymentRemovedMessageBuilder resourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
         this.resourceUserProvidedIdentifiers = builder
                 .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
@@ -237,7 +240,7 @@ public class OrderPaymentAddedMessageBuilder implements Builder<OrderPaymentAdde
      * @return Builder
      */
 
-    public OrderPaymentAddedMessageBuilder withResourceUserProvidedIdentifiers(
+    public OrderPaymentRemovedMessageBuilder withResourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiers> builder) {
         this.resourceUserProvidedIdentifiers = builder
                 .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of());
@@ -250,45 +253,56 @@ public class OrderPaymentAddedMessageBuilder implements Builder<OrderPaymentAdde
      * @return Builder
      */
 
-    public OrderPaymentAddedMessageBuilder resourceUserProvidedIdentifiers(
+    public OrderPaymentRemovedMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param builder function to build the paymentRef value
      * @return Builder
      */
 
-    public OrderPaymentAddedMessageBuilder paymentRef(
+    public OrderPaymentRemovedMessageBuilder paymentRef(
             Function<com.commercetools.api.models.payment.PaymentReferenceBuilder, com.commercetools.api.models.payment.PaymentReferenceBuilder> builder) {
         this.paymentRef = builder.apply(com.commercetools.api.models.payment.PaymentReferenceBuilder.of()).build();
         return this;
     }
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param builder function to build the paymentRef value
      * @return Builder
      */
 
-    public OrderPaymentAddedMessageBuilder withPaymentRef(
+    public OrderPaymentRemovedMessageBuilder withPaymentRef(
             Function<com.commercetools.api.models.payment.PaymentReferenceBuilder, com.commercetools.api.models.payment.PaymentReference> builder) {
         this.paymentRef = builder.apply(com.commercetools.api.models.payment.PaymentReferenceBuilder.of());
         return this;
     }
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param paymentRef value to be set
      * @return Builder
      */
 
-    public OrderPaymentAddedMessageBuilder paymentRef(
+    public OrderPaymentRemovedMessageBuilder paymentRef(
             final com.commercetools.api.models.payment.PaymentReference paymentRef) {
         this.paymentRef = paymentRef;
+        return this;
+    }
+
+    /**
+     *  <p>Indicates whether the removal of the Payment resulted in no Payments remaining on the Order. The value is <code>true</code> if all Payments have been removed (none remain), and <code>false</code> if there are still Payments associated with the Order after the removal.</p>
+     * @param removedPaymentInfo value to be set
+     * @return Builder
+     */
+
+    public OrderPaymentRemovedMessageBuilder removedPaymentInfo(final Boolean removedPaymentInfo) {
+        this.removedPaymentInfo = removedPaymentInfo;
         return this;
     }
 
@@ -386,7 +400,7 @@ public class OrderPaymentAddedMessageBuilder implements Builder<OrderPaymentAdde
     }
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @return paymentRef
      */
 
@@ -395,46 +409,57 @@ public class OrderPaymentAddedMessageBuilder implements Builder<OrderPaymentAdde
     }
 
     /**
-     * builds OrderPaymentAddedMessage with checking for non-null required values
-     * @return OrderPaymentAddedMessage
+     *  <p>Indicates whether the removal of the Payment resulted in no Payments remaining on the Order. The value is <code>true</code> if all Payments have been removed (none remain), and <code>false</code> if there are still Payments associated with the Order after the removal.</p>
+     * @return removedPaymentInfo
      */
-    public OrderPaymentAddedMessage build() {
-        Objects.requireNonNull(id, OrderPaymentAddedMessage.class + ": id is missing");
-        Objects.requireNonNull(version, OrderPaymentAddedMessage.class + ": version is missing");
-        Objects.requireNonNull(createdAt, OrderPaymentAddedMessage.class + ": createdAt is missing");
-        Objects.requireNonNull(lastModifiedAt, OrderPaymentAddedMessage.class + ": lastModifiedAt is missing");
-        Objects.requireNonNull(sequenceNumber, OrderPaymentAddedMessage.class + ": sequenceNumber is missing");
-        Objects.requireNonNull(resource, OrderPaymentAddedMessage.class + ": resource is missing");
-        Objects.requireNonNull(resourceVersion, OrderPaymentAddedMessage.class + ": resourceVersion is missing");
-        Objects.requireNonNull(paymentRef, OrderPaymentAddedMessage.class + ": paymentRef is missing");
-        return new OrderPaymentAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, paymentRef);
+
+    public Boolean getRemovedPaymentInfo() {
+        return this.removedPaymentInfo;
     }
 
     /**
-     * builds OrderPaymentAddedMessage without checking for non-null required values
-     * @return OrderPaymentAddedMessage
+     * builds OrderPaymentRemovedMessage with checking for non-null required values
+     * @return OrderPaymentRemovedMessage
      */
-    public OrderPaymentAddedMessage buildUnchecked() {
-        return new OrderPaymentAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, paymentRef);
+    public OrderPaymentRemovedMessage build() {
+        Objects.requireNonNull(id, OrderPaymentRemovedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, OrderPaymentRemovedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, OrderPaymentRemovedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, OrderPaymentRemovedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, OrderPaymentRemovedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, OrderPaymentRemovedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, OrderPaymentRemovedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(paymentRef, OrderPaymentRemovedMessage.class + ": paymentRef is missing");
+        Objects.requireNonNull(removedPaymentInfo,
+            OrderPaymentRemovedMessage.class + ": removedPaymentInfo is missing");
+        return new OrderPaymentRemovedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, paymentRef, removedPaymentInfo);
     }
 
     /**
-     * factory method for an instance of OrderPaymentAddedMessageBuilder
+     * builds OrderPaymentRemovedMessage without checking for non-null required values
+     * @return OrderPaymentRemovedMessage
+     */
+    public OrderPaymentRemovedMessage buildUnchecked() {
+        return new OrderPaymentRemovedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, paymentRef, removedPaymentInfo);
+    }
+
+    /**
+     * factory method for an instance of OrderPaymentRemovedMessageBuilder
      * @return builder
      */
-    public static OrderPaymentAddedMessageBuilder of() {
-        return new OrderPaymentAddedMessageBuilder();
+    public static OrderPaymentRemovedMessageBuilder of() {
+        return new OrderPaymentRemovedMessageBuilder();
     }
 
     /**
-     * create builder for OrderPaymentAddedMessage instance
+     * create builder for OrderPaymentRemovedMessage instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static OrderPaymentAddedMessageBuilder of(final OrderPaymentAddedMessage template) {
-        OrderPaymentAddedMessageBuilder builder = new OrderPaymentAddedMessageBuilder();
+    public static OrderPaymentRemovedMessageBuilder of(final OrderPaymentRemovedMessage template) {
+        OrderPaymentRemovedMessageBuilder builder = new OrderPaymentRemovedMessageBuilder();
         builder.id = template.getId();
         builder.version = template.getVersion();
         builder.createdAt = template.getCreatedAt();
@@ -446,6 +471,7 @@ public class OrderPaymentAddedMessageBuilder implements Builder<OrderPaymentAdde
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.paymentRef = template.getPaymentRef();
+        builder.removedPaymentInfo = template.getRemovedPaymentInfo();
         return builder;
     }
 

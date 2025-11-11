@@ -24,15 +24,15 @@ public class OrderPaymentAddedMessagePayloadImpl implements OrderPaymentAddedMes
 
     private String type;
 
-    private com.commercetools.api.models.payment.PaymentReference payment;
+    private com.commercetools.api.models.payment.PaymentReference paymentRef;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     OrderPaymentAddedMessagePayloadImpl(
-            @JsonProperty("payment") final com.commercetools.api.models.payment.PaymentReference payment) {
-        this.payment = payment;
+            @JsonProperty("paymentRef") final com.commercetools.api.models.payment.PaymentReference paymentRef) {
+        this.paymentRef = paymentRef;
         this.type = ORDER_PAYMENT_ADDED;
     }
 
@@ -55,12 +55,12 @@ public class OrderPaymentAddedMessagePayloadImpl implements OrderPaymentAddedMes
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      */
 
-    public com.commercetools.api.models.payment.PaymentReference getPayment() {
-        return this.payment;
+    public com.commercetools.api.models.payment.PaymentReference getPaymentRef() {
+        return this.paymentRef;
     }
 
-    public void setPayment(final com.commercetools.api.models.payment.PaymentReference payment) {
-        this.payment = payment;
+    public void setPaymentRef(final com.commercetools.api.models.payment.PaymentReference paymentRef) {
+        this.paymentRef = paymentRef;
     }
 
     @Override
@@ -74,21 +74,21 @@ public class OrderPaymentAddedMessagePayloadImpl implements OrderPaymentAddedMes
         OrderPaymentAddedMessagePayloadImpl that = (OrderPaymentAddedMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
-                .append(payment, that.payment)
+                .append(paymentRef, that.paymentRef)
                 .append(type, that.type)
-                .append(payment, that.payment)
+                .append(paymentRef, that.paymentRef)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(payment).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(paymentRef).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
-                .append("payment", payment)
+                .append("paymentRef", paymentRef)
                 .build();
     }
 

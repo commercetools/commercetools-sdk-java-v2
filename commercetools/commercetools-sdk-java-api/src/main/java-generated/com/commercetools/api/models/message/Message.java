@@ -1446,6 +1446,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for orderPaymentRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.OrderPaymentRemovedMessageBuilder orderPaymentRemovedBuilder() {
+        return com.commercetools.api.models.message.OrderPaymentRemovedMessageBuilder.of();
+    }
+
+    /**
      * builder for orderPaymentStateChanged subtype
      * @return builder
      */

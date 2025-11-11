@@ -615,6 +615,10 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.OrderPaymentAddedMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.OrderPaymentRemovedMessagePayloadBuilder orderPaymentRemovedBuilder() {
+        return com.commercetools.api.models.message.OrderPaymentRemovedMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.OrderPaymentStateChangedMessagePayloadBuilder orderPaymentStateChangedBuilder() {
         return com.commercetools.api.models.message.OrderPaymentStateChangedMessagePayloadBuilder.of();
     }

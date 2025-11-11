@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * StagedOrderAddPaymentAction
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderPaymentAddedMessage" rel="nofollow">Order Payment Added</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

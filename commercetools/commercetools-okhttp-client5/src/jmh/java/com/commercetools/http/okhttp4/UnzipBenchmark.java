@@ -1,5 +1,5 @@
 
-package com.commercetools.http.okhttp4;
+package com.commercetools.http.okhttp5;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

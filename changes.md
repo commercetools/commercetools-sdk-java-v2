@@ -35,6 +35,7 @@
 - :warning: removed property `payment` from type `OrderPaymentAddedMessage`
 - :warning: removed property `payment` from type `OrderPaymentAddedMessagePayload`
 - :warning: removed property `skipConfiguration` from type `RecurringOrderSetOrderSkipConfigurationAction`
+- :warning: removed property `tierMinimumQuantity` from type `StandalonePriceRemovePriceTierAction`
 </details>
 
 
@@ -47,6 +48,7 @@
 - added property `paymentRef` to type `OrderPaymentAddedMessagePayload`
 - added property `discounts` to type `Project`
 - added property `skipConfigurationInputDraft` to type `RecurringOrderSetOrderSkipConfigurationAction`
+- added property `minimumQuantity` to type `StandalonePriceRemovePriceTierAction`
 </details>
 
 

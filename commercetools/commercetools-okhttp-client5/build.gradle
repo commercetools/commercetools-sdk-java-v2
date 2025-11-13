@@ -15,7 +15,7 @@ dependencies {
         strictly '[5.0,5.99999]'
         prefer "5.3.0"
     }
-    implementation "com.squareup.okio:okio:3.14.0"
+    implementation "com.squareup.okio:okio:3.16.2"
 
     implementation javax.validation
 }

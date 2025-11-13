@@ -11,8 +11,8 @@ public class SolutionInfoTest {
     public void version() {
         String version = new OkHttpClientSolutionInfo().getVersion();
 
-        Assertions.assertThat(new Semver(version, Semver.SemverType.LOOSE).compareTo(new Semver("4.12.0")))
+        Assertions.assertThat(new Semver(version, Semver.SemverType.LOOSE).compareTo(new Semver("5.3.0")))
                 .isGreaterThanOrEqualTo(0);
-        Assertions.assertThat(version).startsWith("4.");
+        Assertions.assertThat(version).startsWith("5.");
     }
 }

@@ -67,7 +67,7 @@ public class CtOkHttp5Client extends HttpClientBase {
                 .build();
     }
 
-    public CtOkHtt54Client(final ExecutorService executor, final int maxRequests, final int maxRequestsPerHost) {
+    public CtOkHttp5Client(final ExecutorService executor, final int maxRequests, final int maxRequestsPerHost) {
         super(executor);
         okHttpClient = clientBuilder.get()
                 .dispatcher(createDispatcher(executor, maxRequests, maxRequestsPerHost))

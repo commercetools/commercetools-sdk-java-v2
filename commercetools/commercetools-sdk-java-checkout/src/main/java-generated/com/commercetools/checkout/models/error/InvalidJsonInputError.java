@@ -24,7 +24,6 @@ import jakarta.validation.constraints.NotNull;
  * <pre><code class='java'>
  *     InvalidJsonInputError invalidJsonInputError = InvalidJsonInputError.builder()
  *             .message("{message}")
- *             .detailedErrorMessage("{detailedErrorMessage}")
  *             .build()
  * </code></pre>
  * </div>
@@ -59,7 +58,7 @@ public interface InvalidJsonInputError extends ErrorObject {
      *  <p>Further explanation about why the JSON is invalid.</p>
      * @return detailedErrorMessage
      */
-    @NotNull
+
     @JsonProperty("detailedErrorMessage")
     public String getDetailedErrorMessage();
 

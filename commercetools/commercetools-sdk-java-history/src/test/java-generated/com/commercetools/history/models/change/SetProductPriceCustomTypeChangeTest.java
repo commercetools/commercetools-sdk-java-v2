@@ -23,7 +23,9 @@ public class SetProductPriceCustomTypeChangeTest {
                 new Object[] { "nextValue",
                         SetProductPriceCustomTypeChange.builder()
                                 .nextValue(new com.commercetools.history.models.common.CustomFieldsImpl()) },
-                new Object[] { "catalogData", SetProductPriceCustomTypeChange.builder().catalogData("catalogData") } };
+                new Object[] { "catalogData", SetProductPriceCustomTypeChange.builder().catalogData("catalogData") },
+                new Object[] { "variant", SetProductPriceCustomTypeChange.builder().variant("variant") },
+                new Object[] { "priceId", SetProductPriceCustomTypeChange.builder().priceId("priceId") } };
     }
 
     @Test
@@ -54,5 +56,19 @@ public class SetProductPriceCustomTypeChangeTest {
         SetProductPriceCustomTypeChange value = SetProductPriceCustomTypeChange.of();
         value.setCatalogData("catalogData");
         Assertions.assertThat(value.getCatalogData()).isEqualTo("catalogData");
+    }
+
+    @Test
+    public void variant() {
+        SetProductPriceCustomTypeChange value = SetProductPriceCustomTypeChange.of();
+        value.setVariant("variant");
+        Assertions.assertThat(value.getVariant()).isEqualTo("variant");
+    }
+
+    @Test
+    public void priceId() {
+        SetProductPriceCustomTypeChange value = SetProductPriceCustomTypeChange.of();
+        value.setPriceId("priceId");
+        Assertions.assertThat(value.getPriceId()).isEqualTo("priceId");
     }
 }

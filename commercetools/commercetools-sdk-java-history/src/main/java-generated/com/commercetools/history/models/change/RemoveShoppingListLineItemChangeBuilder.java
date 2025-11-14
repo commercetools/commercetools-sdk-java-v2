@@ -26,9 +26,9 @@ public class RemoveShoppingListLineItemChangeBuilder implements Builder<RemoveSh
 
     private String change;
 
-    private com.commercetools.history.models.common.LineItem previousValue;
+    private com.commercetools.history.models.common.ShoppingListLineItem previousValue;
 
-    private com.commercetools.history.models.common.LineItem nextValue;
+    private com.commercetools.history.models.common.ShoppingListLineItem nextValue;
 
     /**
      * set the value to the change
@@ -48,8 +48,9 @@ public class RemoveShoppingListLineItemChangeBuilder implements Builder<RemoveSh
      */
 
     public RemoveShoppingListLineItemChangeBuilder previousValue(
-            Function<com.commercetools.history.models.common.LineItemBuilder, com.commercetools.history.models.common.LineItemBuilder> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.LineItemBuilder.of()).build();
+            Function<com.commercetools.history.models.common.ShoppingListLineItemBuilder, com.commercetools.history.models.common.ShoppingListLineItemBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.ShoppingListLineItemBuilder.of())
+                .build();
         return this;
     }
 
@@ -60,8 +61,8 @@ public class RemoveShoppingListLineItemChangeBuilder implements Builder<RemoveSh
      */
 
     public RemoveShoppingListLineItemChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.LineItemBuilder, com.commercetools.history.models.common.LineItem> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.LineItemBuilder.of());
+            Function<com.commercetools.history.models.common.ShoppingListLineItemBuilder, com.commercetools.history.models.common.ShoppingListLineItem> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.ShoppingListLineItemBuilder.of());
         return this;
     }
 
@@ -72,7 +73,7 @@ public class RemoveShoppingListLineItemChangeBuilder implements Builder<RemoveSh
      */
 
     public RemoveShoppingListLineItemChangeBuilder previousValue(
-            final com.commercetools.history.models.common.LineItem previousValue) {
+            final com.commercetools.history.models.common.ShoppingListLineItem previousValue) {
         this.previousValue = previousValue;
         return this;
     }
@@ -84,8 +85,9 @@ public class RemoveShoppingListLineItemChangeBuilder implements Builder<RemoveSh
      */
 
     public RemoveShoppingListLineItemChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.LineItemBuilder, com.commercetools.history.models.common.LineItemBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.LineItemBuilder.of()).build();
+            Function<com.commercetools.history.models.common.ShoppingListLineItemBuilder, com.commercetools.history.models.common.ShoppingListLineItemBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ShoppingListLineItemBuilder.of())
+                .build();
         return this;
     }
 
@@ -96,8 +98,8 @@ public class RemoveShoppingListLineItemChangeBuilder implements Builder<RemoveSh
      */
 
     public RemoveShoppingListLineItemChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.LineItemBuilder, com.commercetools.history.models.common.LineItem> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.LineItemBuilder.of());
+            Function<com.commercetools.history.models.common.ShoppingListLineItemBuilder, com.commercetools.history.models.common.ShoppingListLineItem> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ShoppingListLineItemBuilder.of());
         return this;
     }
 
@@ -108,7 +110,7 @@ public class RemoveShoppingListLineItemChangeBuilder implements Builder<RemoveSh
      */
 
     public RemoveShoppingListLineItemChangeBuilder nextValue(
-            final com.commercetools.history.models.common.LineItem nextValue) {
+            final com.commercetools.history.models.common.ShoppingListLineItem nextValue) {
         this.nextValue = nextValue;
         return this;
     }
@@ -127,7 +129,7 @@ public class RemoveShoppingListLineItemChangeBuilder implements Builder<RemoveSh
      * @return previousValue
      */
 
-    public com.commercetools.history.models.common.LineItem getPreviousValue() {
+    public com.commercetools.history.models.common.ShoppingListLineItem getPreviousValue() {
         return this.previousValue;
     }
 
@@ -136,7 +138,7 @@ public class RemoveShoppingListLineItemChangeBuilder implements Builder<RemoveSh
      * @return nextValue
      */
 
-    public com.commercetools.history.models.common.LineItem getNextValue() {
+    public com.commercetools.history.models.common.ShoppingListLineItem getNextValue() {
         return this.nextValue;
     }
 

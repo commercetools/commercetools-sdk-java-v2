@@ -47,7 +47,7 @@ public class CartResourceIdentifierImpl implements CartResourceIdentifier, Model
     }
 
     /**
-     *  <p>Type of referenced resource. If given, it must match the expected <span>ReferenceTypeId</span> of the referenced resource.</p>
+     *  <p>Type of referenced resource. If given, it must match the expected <a href="https://docs.commercetools.com/apis/ctp:checkout:type:ReferenceTypeId" rel="nofollow">ReferenceTypeId</a> of the referenced resource.</p>
      */
 
     public com.commercetools.checkout.models.common.ReferenceTypeId getTypeId() {

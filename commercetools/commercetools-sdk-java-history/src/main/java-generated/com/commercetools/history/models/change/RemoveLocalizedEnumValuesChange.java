@@ -7,7 +7,7 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.history.models.change_value.LocalizedEnumValue;
+import com.commercetools.history.models.common.AttributeLocalizedEnumValue;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -64,7 +64,7 @@ public interface RemoveLocalizedEnumValuesChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("previousValue")
-    public LocalizedEnumValue getPreviousValue();
+    public AttributeLocalizedEnumValue getPreviousValue();
 
     /**
      *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
@@ -86,7 +86,7 @@ public interface RemoveLocalizedEnumValuesChange extends Change {
      * @param previousValue value to be set
      */
 
-    public void setPreviousValue(final LocalizedEnumValue previousValue);
+    public void setPreviousValue(final AttributeLocalizedEnumValue previousValue);
 
     /**
      *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
@@ -131,7 +131,7 @@ public interface RemoveLocalizedEnumValuesChange extends Change {
         RemoveLocalizedEnumValuesChangeImpl instance = new RemoveLocalizedEnumValuesChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(
-            com.commercetools.history.models.change_value.LocalizedEnumValue.deepCopy(template.getPreviousValue()));
+            com.commercetools.history.models.common.AttributeLocalizedEnumValue.deepCopy(template.getPreviousValue()));
         instance.setAttributeName(template.getAttributeName());
         return instance;
     }

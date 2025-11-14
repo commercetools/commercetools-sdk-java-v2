@@ -22,7 +22,7 @@ import jakarta.validation.constraints.NotNull;
  *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountChangeNameAction" rel="nofollow">Change Name</a> on Cart Discounts.</li>
  *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CategoryChangeNameAction" rel="nofollow">Change Name</a> on Categories.</li>
  *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelChangeNameAction" rel="nofollow">Change Name</a> on Channels.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangeNameAction" rel="nofollow">Change Name</a> on Products.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangeNameAction" rel="nofollow">Change Product Name</a> on Products.</li>
  *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountChangeNameAction" rel="nofollow">Change Name</a> on Product Discounts.</li>
  *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionChangeNameAction" rel="nofollow">Change Name</a> on Product Selections.</li>
  *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListChangeNameAction" rel="nofollow">Change Name</a> on Shopping Lists.</li>

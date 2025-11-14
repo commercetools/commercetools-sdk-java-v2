@@ -23,8 +23,16 @@ public class SetTransitionsChangeTest {
                         SetTransitionsChange.builder()
                                 .previousValue(Collections
                                         .singletonList(new com.commercetools.history.models.common.ReferenceImpl())) },
-                new Object[] { "nextValue", SetTransitionsChange.builder()
-                        .nextValue(
+                new Object[] { "nextValue",
+                        SetTransitionsChange.builder()
+                                .nextValue(Collections
+                                        .singletonList(new com.commercetools.history.models.common.ReferenceImpl())) },
+                new Object[] { "addedItems",
+                        SetTransitionsChange.builder()
+                                .addedItems(Collections
+                                        .singletonList(new com.commercetools.history.models.common.ReferenceImpl())) },
+                new Object[] { "removedItems", SetTransitionsChange.builder()
+                        .removedItems(
                             Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl())) } };
     }
 
@@ -48,6 +56,22 @@ public class SetTransitionsChangeTest {
         SetTransitionsChange value = SetTransitionsChange.of();
         value.setNextValue(Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl()));
         Assertions.assertThat(value.getNextValue())
+                .isEqualTo(Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl()));
+    }
+
+    @Test
+    public void addedItems() {
+        SetTransitionsChange value = SetTransitionsChange.of();
+        value.setAddedItems(Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl()));
+        Assertions.assertThat(value.getAddedItems())
+                .isEqualTo(Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl()));
+    }
+
+    @Test
+    public void removedItems() {
+        SetTransitionsChange value = SetTransitionsChange.of();
+        value.setRemovedItems(Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl()));
+        Assertions.assertThat(value.getRemovedItems())
                 .isEqualTo(Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl()));
     }
 }

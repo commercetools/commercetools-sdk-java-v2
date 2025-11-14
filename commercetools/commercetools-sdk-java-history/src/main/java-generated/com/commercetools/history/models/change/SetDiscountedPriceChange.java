@@ -7,6 +7,7 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import com.commercetools.history.models.common.DiscountedPrice;
 import com.commercetools.history.models.common.Price;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -30,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  *             .catalogData("{catalogData}")
  *             .variant("{variant}")
  *             .priceId("{priceId}")
+ *             .price(priceBuilder -> priceBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -67,7 +69,7 @@ public interface SetDiscountedPriceChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("previousValue")
-    public Price getPreviousValue();
+    public DiscountedPrice getPreviousValue();
 
     /**
      *  <p>Value after the change.</p>
@@ -76,9 +78,10 @@ public interface SetDiscountedPriceChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("nextValue")
-    public Price getNextValue();
+    public DiscountedPrice getNextValue();
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -90,7 +93,8 @@ public interface SetDiscountedPriceChange extends Change {
     public String getCatalogData();
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      * @return variant
      */
     @NotNull
@@ -106,6 +110,15 @@ public interface SetDiscountedPriceChange extends Change {
     public String getPriceId();
 
     /**
+     *  <p>Embedded Price of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     * @return price
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("price")
+    public Price getPrice();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -117,16 +130,17 @@ public interface SetDiscountedPriceChange extends Change {
      * @param previousValue value to be set
      */
 
-    public void setPreviousValue(final Price previousValue);
+    public void setPreviousValue(final DiscountedPrice previousValue);
 
     /**
      *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
-    public void setNextValue(final Price nextValue);
+    public void setNextValue(final DiscountedPrice nextValue);
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -137,7 +151,8 @@ public interface SetDiscountedPriceChange extends Change {
     public void setCatalogData(final String catalogData);
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      * @param variant value to be set
      */
 
@@ -149,6 +164,13 @@ public interface SetDiscountedPriceChange extends Change {
      */
 
     public void setPriceId(final String priceId);
+
+    /**
+     *  <p>Embedded Price of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     * @param price value to be set
+     */
+
+    public void setPrice(final Price price);
 
     /**
      * factory method
@@ -171,6 +193,7 @@ public interface SetDiscountedPriceChange extends Change {
         instance.setCatalogData(template.getCatalogData());
         instance.setVariant(template.getVariant());
         instance.setPriceId(template.getPriceId());
+        instance.setPrice(template.getPrice());
         return instance;
     }
 
@@ -188,11 +211,14 @@ public interface SetDiscountedPriceChange extends Change {
         }
         SetDiscountedPriceChangeImpl instance = new SetDiscountedPriceChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPreviousValue(com.commercetools.history.models.common.Price.deepCopy(template.getPreviousValue()));
-        instance.setNextValue(com.commercetools.history.models.common.Price.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.DiscountedPrice.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(
+            com.commercetools.history.models.common.DiscountedPrice.deepCopy(template.getNextValue()));
         instance.setCatalogData(template.getCatalogData());
         instance.setVariant(template.getVariant());
         instance.setPriceId(template.getPriceId());
+        instance.setPrice(com.commercetools.history.models.common.Price.deepCopy(template.getPrice()));
         return instance;
     }
 

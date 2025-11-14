@@ -94,7 +94,8 @@ public interface SetLineItemProductKeyChange extends Change {
     public String getLineItemId();
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      * @return variant
      */
     @NotNull
@@ -137,7 +138,8 @@ public interface SetLineItemProductKeyChange extends Change {
     public void setLineItemId(final String lineItemId);
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      * @param variant value to be set
      */
 

@@ -18,6 +18,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .asset(assetBuilder -> assetBuilder)
+ *             .catalogData("{catalogData}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -32,6 +34,10 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     private java.util.List<com.commercetools.history.models.common.AssetSource> nextValue;
 
     private com.commercetools.history.models.change_value.AssetChangeValue asset;
+
+    private String catalogData;
+
+    private String variant;
 
     /**
      * set the value to the change
@@ -259,6 +265,33 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     }
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     * @return Builder
+     */
+
+    public SetAssetSourcesChangeBuilder catalogData(final String catalogData) {
+        this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     * @return Builder
+     */
+
+    public SetAssetSourcesChangeBuilder variant(final String variant) {
+        this.variant = variant;
+        return this;
+    }
+
+    /**
      * value of change}
      * @return change
      */
@@ -295,6 +328,29 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     }
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
+    /**
      * builds SetAssetSourcesChange with checking for non-null required values
      * @return SetAssetSourcesChange
      */
@@ -303,7 +359,9 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
         Objects.requireNonNull(previousValue, SetAssetSourcesChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetAssetSourcesChange.class + ": nextValue is missing");
         Objects.requireNonNull(asset, SetAssetSourcesChange.class + ": asset is missing");
-        return new SetAssetSourcesChangeImpl(change, previousValue, nextValue, asset);
+        Objects.requireNonNull(catalogData, SetAssetSourcesChange.class + ": catalogData is missing");
+        Objects.requireNonNull(variant, SetAssetSourcesChange.class + ": variant is missing");
+        return new SetAssetSourcesChangeImpl(change, previousValue, nextValue, asset, catalogData, variant);
     }
 
     /**
@@ -311,7 +369,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
      * @return SetAssetSourcesChange
      */
     public SetAssetSourcesChange buildUnchecked() {
-        return new SetAssetSourcesChangeImpl(change, previousValue, nextValue, asset);
+        return new SetAssetSourcesChangeImpl(change, previousValue, nextValue, asset, catalogData, variant);
     }
 
     /**
@@ -333,6 +391,8 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
         builder.asset = template.getAsset();
+        builder.catalogData = template.getCatalogData();
+        builder.variant = template.getVariant();
         return builder;
     }
 

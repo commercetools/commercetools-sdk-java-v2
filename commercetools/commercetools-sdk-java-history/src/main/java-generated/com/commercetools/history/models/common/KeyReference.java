@@ -15,33 +15,25 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * KeyReference
+ *  <p>A KeyReference represents a loose reference to another resource in the same Project identified by the resource's <code>key</code> field. If available, the <code>key</code> is immutable and mandatory. KeyReferences do not support <span>Reference Expansion</span>.</p>
  *
  * <hr>
- * Example to create an instance using the builder pattern
+ * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     KeyReference keyReference = KeyReference.builder()
- *             .key("{key}")
- *             .typeId(ReferenceTypeId.ASSOCIATE_ROLE)
+ *     KeyReference keyReference = KeyReference.associateRoleBuilder()
+ *             key("{key}")
  *             .build()
  * </code></pre>
  * </div>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "typeId", defaultImpl = KeyReferenceImpl.class, visible = true)
 @JsonDeserialize(as = KeyReferenceImpl.class)
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface KeyReference {
 
     /**
-     *
-     * @return key
-     */
-    @NotNull
-    @JsonProperty("key")
-    public String getKey();
-
-    /**
-     *
+     *  <p>Type of referenced resource.</p>
      * @return typeId
      */
     @NotNull
@@ -49,38 +41,19 @@ public interface KeyReference {
     public ReferenceTypeId getTypeId();
 
     /**
-     * set key
+     *  <p>User-defined unique and immutable key of the referenced resource.</p>
+     * @return key
+     */
+    @NotNull
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
+     *  <p>User-defined unique and immutable key of the referenced resource.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
-
-    /**
-     * set typeId
-     * @param typeId value to be set
-     */
-
-    public void setTypeId(final ReferenceTypeId typeId);
-
-    /**
-     * factory method
-     * @return instance of KeyReference
-     */
-    public static KeyReference of() {
-        return new KeyReferenceImpl();
-    }
-
-    /**
-     * factory method to create a shallow copy KeyReference
-     * @param template instance to be copied
-     * @return copy instance
-     */
-    public static KeyReference of(final KeyReference template) {
-        KeyReferenceImpl instance = new KeyReferenceImpl();
-        instance.setKey(template.getKey());
-        instance.setTypeId(template.getTypeId());
-        return instance;
-    }
 
     public KeyReference copyDeep();
 
@@ -94,27 +67,37 @@ public interface KeyReference {
         if (template == null) {
             return null;
         }
+
+        if (!(template instanceof KeyReferenceImpl)) {
+            return template.copyDeep();
+        }
         KeyReferenceImpl instance = new KeyReferenceImpl();
         instance.setKey(template.getKey());
-        instance.setTypeId(template.getTypeId());
         return instance;
     }
 
     /**
-     * builder factory method for KeyReference
+     * builder for associateRole subtype
      * @return builder
      */
-    public static KeyReferenceBuilder builder() {
-        return KeyReferenceBuilder.of();
+    public static com.commercetools.history.models.common.AssociateRoleKeyReferenceBuilder associateRoleBuilder() {
+        return com.commercetools.history.models.common.AssociateRoleKeyReferenceBuilder.of();
     }
 
     /**
-     * create builder for KeyReference instance
-     * @param template instance with prefilled values for the builder
+     * builder for businessUnit subtype
      * @return builder
      */
-    public static KeyReferenceBuilder builder(final KeyReference template) {
-        return KeyReferenceBuilder.of(template);
+    public static com.commercetools.history.models.common.BusinessUnitKeyReferenceBuilder businessUnitBuilder() {
+        return com.commercetools.history.models.common.BusinessUnitKeyReferenceBuilder.of();
+    }
+
+    /**
+     * builder for store subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.common.StoreKeyReferenceBuilder storeBuilder() {
+        return com.commercetools.history.models.common.StoreKeyReferenceBuilder.of();
     }
 
     /**

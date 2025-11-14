@@ -18,21 +18,24 @@ public class CustomFieldsTest {
     public static Object[][] objectBuilder() {
         return new Object[][] {
                 new Object[] { "type",
-                        CustomFields.builder().type(new com.commercetools.history.models.common.ReferenceImpl()) },
-                new Object[] { "fields", CustomFields.builder().fields("fields") } };
+                        CustomFields.builder().type(new com.commercetools.history.models.common.TypeReferenceImpl()) },
+                new Object[] { "fields", CustomFields.builder()
+                        .fields(new com.commercetools.history.models.common.FieldContainerImpl()) } };
     }
 
     @Test
     public void type() {
         CustomFields value = CustomFields.of();
-        value.setType(new com.commercetools.history.models.common.ReferenceImpl());
-        Assertions.assertThat(value.getType()).isEqualTo(new com.commercetools.history.models.common.ReferenceImpl());
+        value.setType(new com.commercetools.history.models.common.TypeReferenceImpl());
+        Assertions.assertThat(value.getType())
+                .isEqualTo(new com.commercetools.history.models.common.TypeReferenceImpl());
     }
 
     @Test
     public void fields() {
         CustomFields value = CustomFields.of();
-        value.setFields("fields");
-        Assertions.assertThat(value.getFields()).isEqualTo("fields");
+        value.setFields(new com.commercetools.history.models.common.FieldContainerImpl());
+        Assertions.assertThat(value.getFields())
+                .isEqualTo(new com.commercetools.history.models.common.FieldContainerImpl());
     }
 }

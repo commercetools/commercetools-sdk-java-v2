@@ -4,6 +4,8 @@ package com.commercetools.history.models.common;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,9 +17,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     AssetSource assetSource = AssetSource.builder()
  *             .uri("{uri}")
- *             .key("{key}")
- *             .dimensions(dimensionsBuilder -> dimensionsBuilder)
- *             .contentType("{contentType}")
  *             .build()
  * </code></pre>
  * </div>
@@ -27,14 +26,17 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
 
     private String uri;
 
+    @Nullable
     private String key;
 
+    @Nullable
     private com.commercetools.history.models.common.AssetDimensions dimensions;
 
+    @Nullable
     private String contentType;
 
     /**
-     * set the value to the uri
+     *  <p>URI of the AssetSource.</p>
      * @param uri value to be set
      * @return Builder
      */
@@ -45,18 +47,18 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     * set the value to the key
+     *  <p>User-defined identifier of the AssetSource. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:Asset" rel="nofollow">Asset</a>.</p>
      * @param key value to be set
      * @return Builder
      */
 
-    public AssetSourceBuilder key(final String key) {
+    public AssetSourceBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
 
     /**
-     * set the value to the dimensions using the builder function
+     *  <p>Width and height of the AssetSource.</p>
      * @param builder function to build the dimensions value
      * @return Builder
      */
@@ -68,7 +70,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     * set the value to the dimensions using the builder function
+     *  <p>Width and height of the AssetSource.</p>
      * @param builder function to build the dimensions value
      * @return Builder
      */
@@ -80,29 +82,30 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     * set the value to the dimensions
+     *  <p>Width and height of the AssetSource.</p>
      * @param dimensions value to be set
      * @return Builder
      */
 
-    public AssetSourceBuilder dimensions(final com.commercetools.history.models.common.AssetDimensions dimensions) {
+    public AssetSourceBuilder dimensions(
+            @Nullable final com.commercetools.history.models.common.AssetDimensions dimensions) {
         this.dimensions = dimensions;
         return this;
     }
 
     /**
-     * set the value to the contentType
+     *  <p>Indicates the type of content, for example <code>application/pdf</code>.</p>
      * @param contentType value to be set
      * @return Builder
      */
 
-    public AssetSourceBuilder contentType(final String contentType) {
+    public AssetSourceBuilder contentType(@Nullable final String contentType) {
         this.contentType = contentType;
         return this;
     }
 
     /**
-     * value of uri}
+     *  <p>URI of the AssetSource.</p>
      * @return uri
      */
 
@@ -111,28 +114,31 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     * value of key}
+     *  <p>User-defined identifier of the AssetSource. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:Asset" rel="nofollow">Asset</a>.</p>
      * @return key
      */
 
+    @Nullable
     public String getKey() {
         return this.key;
     }
 
     /**
-     * value of dimensions}
+     *  <p>Width and height of the AssetSource.</p>
      * @return dimensions
      */
 
+    @Nullable
     public com.commercetools.history.models.common.AssetDimensions getDimensions() {
         return this.dimensions;
     }
 
     /**
-     * value of contentType}
+     *  <p>Indicates the type of content, for example <code>application/pdf</code>.</p>
      * @return contentType
      */
 
+    @Nullable
     public String getContentType() {
         return this.contentType;
     }
@@ -143,9 +149,6 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
      */
     public AssetSource build() {
         Objects.requireNonNull(uri, AssetSource.class + ": uri is missing");
-        Objects.requireNonNull(key, AssetSource.class + ": key is missing");
-        Objects.requireNonNull(dimensions, AssetSource.class + ": dimensions is missing");
-        Objects.requireNonNull(contentType, AssetSource.class + ": contentType is missing");
         return new AssetSourceImpl(uri, key, dimensions, contentType);
     }
 

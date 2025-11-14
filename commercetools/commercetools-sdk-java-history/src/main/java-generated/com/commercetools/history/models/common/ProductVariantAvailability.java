@@ -13,20 +13,15 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
-import jakarta.validation.constraints.NotNull;
 
 /**
- * ProductVariantAvailability
+ *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> information of the Product Variant. If there is a supply <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for the InventoryEntry, then <code>channels</code> is returned. If not, then <code>isOnStock</code>, <code>restockableInDays</code>, and <code>availableQuantity</code> are returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     ProductVariantAvailability productVariantAvailability = ProductVariantAvailability.builder()
- *             .isOnStock(true)
- *             .restockableInDays(1)
- *             .availableQuantity(1)
- *             .channels(channelsBuilder -> channelsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -36,65 +31,94 @@ import jakarta.validation.constraints.NotNull;
 public interface ProductVariantAvailability {
 
     /**
-     *
-     * @return isOnStock
-     */
-    @NotNull
-    @JsonProperty("isOnStock")
-    public Boolean getIsOnStock();
-
-    /**
-     *
-     * @return restockableInDays
-     */
-    @NotNull
-    @JsonProperty("restockableInDays")
-    public Integer getRestockableInDays();
-
-    /**
-     *
-     * @return availableQuantity
-     */
-    @NotNull
-    @JsonProperty("availableQuantity")
-    public Integer getAvailableQuantity();
-
-    /**
-     *
+     *  <p>For each <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> with a supply Channel, an entry is added to <code>channels</code>.</p>
      * @return channels
      */
-    @NotNull
     @Valid
     @JsonProperty("channels")
     public ProductVariantChannelAvailabilityMap getChannels();
 
     /**
-     * set isOnStock
+     *  <p>Indicates whether a Product Variant is in stock.</p>
+     * @return isOnStock
+     */
+
+    @JsonProperty("isOnStock")
+    public Boolean getIsOnStock();
+
+    /**
+     *  <p>Number of days to restock a Product Variant once it is out of stock.</p>
+     * @return restockableInDays
+     */
+
+    @JsonProperty("restockableInDays")
+    public Long getRestockableInDays();
+
+    /**
+     *  <p>Number of items of the Product Variant that are in stock.</p>
+     * @return availableQuantity
+     */
+
+    @JsonProperty("availableQuantity")
+    public Long getAvailableQuantity();
+
+    /**
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
+     * @return id
+     */
+
+    @JsonProperty("id")
+    public String getId();
+
+    /**
+     *  <p>Current version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
+     * @return version
+     */
+
+    @JsonProperty("version")
+    public Long getVersion();
+
+    /**
+     *  <p>For each <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> with a supply Channel, an entry is added to <code>channels</code>.</p>
+     * @param channels value to be set
+     */
+
+    public void setChannels(final ProductVariantChannelAvailabilityMap channels);
+
+    /**
+     *  <p>Indicates whether a Product Variant is in stock.</p>
      * @param isOnStock value to be set
      */
 
     public void setIsOnStock(final Boolean isOnStock);
 
     /**
-     * set restockableInDays
+     *  <p>Number of days to restock a Product Variant once it is out of stock.</p>
      * @param restockableInDays value to be set
      */
 
-    public void setRestockableInDays(final Integer restockableInDays);
+    public void setRestockableInDays(final Long restockableInDays);
 
     /**
-     * set availableQuantity
+     *  <p>Number of items of the Product Variant that are in stock.</p>
      * @param availableQuantity value to be set
      */
 
-    public void setAvailableQuantity(final Integer availableQuantity);
+    public void setAvailableQuantity(final Long availableQuantity);
 
     /**
-     * set channels
-     * @param channels value to be set
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
+     * @param id value to be set
      */
 
-    public void setChannels(final ProductVariantChannelAvailabilityMap channels);
+    public void setId(final String id);
+
+    /**
+     *  <p>Current version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
+     * @param version value to be set
+     */
+
+    public void setVersion(final Long version);
 
     /**
      * factory method
@@ -111,10 +135,12 @@ public interface ProductVariantAvailability {
      */
     public static ProductVariantAvailability of(final ProductVariantAvailability template) {
         ProductVariantAvailabilityImpl instance = new ProductVariantAvailabilityImpl();
+        instance.setChannels(template.getChannels());
         instance.setIsOnStock(template.getIsOnStock());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setAvailableQuantity(template.getAvailableQuantity());
-        instance.setChannels(template.getChannels());
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
         return instance;
     }
 
@@ -131,11 +157,13 @@ public interface ProductVariantAvailability {
             return null;
         }
         ProductVariantAvailabilityImpl instance = new ProductVariantAvailabilityImpl();
+        instance.setChannels(com.commercetools.history.models.common.ProductVariantChannelAvailabilityMap
+                .deepCopy(template.getChannels()));
         instance.setIsOnStock(template.getIsOnStock());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setAvailableQuantity(template.getAvailableQuantity());
-        instance.setChannels(com.commercetools.history.models.common.ProductVariantChannelAvailabilityMap
-                .deepCopy(template.getChannels()));
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
         return instance;
     }
 

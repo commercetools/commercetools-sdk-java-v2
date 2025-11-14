@@ -7,7 +7,7 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.history.models.change_value.EnumValue;
+import com.commercetools.history.models.common.CustomFieldEnumValue;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  *             .change("{change}")
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .fieldName("{fieldName}")
+ *             .attributeName("{attributeName}")
  *             .build()
  * </code></pre>
  * </div>
@@ -64,7 +65,7 @@ public interface AddEnumValueChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("nextValue")
-    public EnumValue getNextValue();
+    public CustomFieldEnumValue getNextValue();
 
     /**
      *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>.</p>
@@ -73,6 +74,14 @@ public interface AddEnumValueChange extends Change {
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
+
+    /**
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
+     * @return attributeName
+     */
+    @NotNull
+    @JsonProperty("attributeName")
+    public String getAttributeName();
 
     /**
      * set change
@@ -86,7 +95,7 @@ public interface AddEnumValueChange extends Change {
      * @param nextValue value to be set
      */
 
-    public void setNextValue(final EnumValue nextValue);
+    public void setNextValue(final CustomFieldEnumValue nextValue);
 
     /**
      *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>.</p>
@@ -94,6 +103,13 @@ public interface AddEnumValueChange extends Change {
      */
 
     public void setFieldName(final String fieldName);
+
+    /**
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
+     * @param attributeName value to be set
+     */
+
+    public void setAttributeName(final String attributeName);
 
     /**
      * factory method
@@ -113,6 +129,7 @@ public interface AddEnumValueChange extends Change {
         instance.setChange(template.getChange());
         instance.setNextValue(template.getNextValue());
         instance.setFieldName(template.getFieldName());
+        instance.setAttributeName(template.getAttributeName());
         return instance;
     }
 
@@ -131,8 +148,9 @@ public interface AddEnumValueChange extends Change {
         AddEnumValueChangeImpl instance = new AddEnumValueChangeImpl();
         instance.setChange(template.getChange());
         instance.setNextValue(
-            com.commercetools.history.models.change_value.EnumValue.deepCopy(template.getNextValue()));
+            com.commercetools.history.models.common.CustomFieldEnumValue.deepCopy(template.getNextValue()));
         instance.setFieldName(template.getFieldName());
+        instance.setAttributeName(template.getAttributeName());
         return instance;
     }
 

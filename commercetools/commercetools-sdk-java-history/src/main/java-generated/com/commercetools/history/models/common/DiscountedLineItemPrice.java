@@ -35,16 +35,16 @@ import jakarta.validation.constraints.NotNull;
 public interface DiscountedLineItemPrice {
 
     /**
-     *
+     *  <p>Money value of the discounted Line Item or Custom Line Item.</p>
      * @return value
      */
     @NotNull
     @Valid
     @JsonProperty("value")
-    public Money getValue();
+    public TypedMoney getValue();
 
     /**
-     *
+     *  <p>Discount applicable on the Line Item or Custom Line Item.</p>
      * @return includedDiscounts
      */
     @NotNull
@@ -53,14 +53,14 @@ public interface DiscountedLineItemPrice {
     public List<DiscountedLineItemPortion> getIncludedDiscounts();
 
     /**
-     * set value
+     *  <p>Money value of the discounted Line Item or Custom Line Item.</p>
      * @param value value to be set
      */
 
-    public void setValue(final Money value);
+    public void setValue(final TypedMoney value);
 
     /**
-     * set includedDiscounts
+     *  <p>Discount applicable on the Line Item or Custom Line Item.</p>
      * @param includedDiscounts values to be set
      */
 
@@ -68,7 +68,7 @@ public interface DiscountedLineItemPrice {
     public void setIncludedDiscounts(final DiscountedLineItemPortion... includedDiscounts);
 
     /**
-     * set includedDiscounts
+     *  <p>Discount applicable on the Line Item or Custom Line Item.</p>
      * @param includedDiscounts values to be set
      */
 
@@ -107,7 +107,7 @@ public interface DiscountedLineItemPrice {
             return null;
         }
         DiscountedLineItemPriceImpl instance = new DiscountedLineItemPriceImpl();
-        instance.setValue(com.commercetools.history.models.common.Money.deepCopy(template.getValue()));
+        instance.setValue(com.commercetools.history.models.common.TypedMoney.deepCopy(template.getValue()));
         instance.setIncludedDiscounts(Optional.ofNullable(template.getIncludedDiscounts())
                 .map(t -> t.stream()
                         .map(com.commercetools.history.models.common.DiscountedLineItemPortion::deepCopy)

@@ -64,7 +64,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *  <p>New value to set. If absent or <code>0</code>, the Line Item is removed from the Cart.</p>
+     *  <p>Amount to subtract from the LineItem quantity. If omitted, the LineItem is removed from the Order.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -212,7 +212,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *  <p>New value to set. If absent or <code>0</code>, the Line Item is removed from the Cart.</p>
+     *  <p>Amount to subtract from the LineItem quantity. If omitted, the LineItem is removed from the Order.</p>
      * @return quantity
      */
 

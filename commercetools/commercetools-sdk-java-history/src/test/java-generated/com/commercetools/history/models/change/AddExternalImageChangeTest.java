@@ -27,7 +27,8 @@ public class AddExternalImageChangeTest {
                         AddExternalImageChange.builder()
                                 .nextValue(Collections
                                         .singletonList(new com.commercetools.history.models.common.ImageImpl())) },
-                new Object[] { "catalogData", AddExternalImageChange.builder().catalogData("catalogData") } };
+                new Object[] { "catalogData", AddExternalImageChange.builder().catalogData("catalogData") },
+                new Object[] { "variant", AddExternalImageChange.builder().variant("variant") } };
     }
 
     @Test
@@ -58,5 +59,12 @@ public class AddExternalImageChangeTest {
         AddExternalImageChange value = AddExternalImageChange.of();
         value.setCatalogData("catalogData");
         Assertions.assertThat(value.getCatalogData()).isEqualTo("catalogData");
+    }
+
+    @Test
+    public void variant() {
+        AddExternalImageChange value = AddExternalImageChange.of();
+        value.setVariant("variant");
+        Assertions.assertThat(value.getVariant()).isEqualTo("variant");
     }
 }

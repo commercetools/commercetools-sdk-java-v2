@@ -34,28 +34,28 @@ import jakarta.validation.constraints.NotNull;
 public interface PaymentInfo {
 
     /**
-     *
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">References</a> to the Payments associated with the Order.</p>
      * @return payments
      */
     @NotNull
     @Valid
     @JsonProperty("payments")
-    public List<Reference> getPayments();
+    public List<PaymentReference> getPayments();
 
     /**
-     * set payments
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">References</a> to the Payments associated with the Order.</p>
      * @param payments values to be set
      */
 
     @JsonIgnore
-    public void setPayments(final Reference... payments);
+    public void setPayments(final PaymentReference... payments);
 
     /**
-     * set payments
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">References</a> to the Payments associated with the Order.</p>
      * @param payments values to be set
      */
 
-    public void setPayments(final List<Reference> payments);
+    public void setPayments(final List<PaymentReference> payments);
 
     /**
      * factory method
@@ -91,7 +91,7 @@ public interface PaymentInfo {
         PaymentInfoImpl instance = new PaymentInfoImpl();
         instance.setPayments(Optional.ofNullable(template.getPayments())
                 .map(t -> t.stream()
-                        .map(com.commercetools.history.models.common.Reference::deepCopy)
+                        .map(com.commercetools.history.models.common.PaymentReference::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         return instance;

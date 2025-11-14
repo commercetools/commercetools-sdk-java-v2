@@ -23,7 +23,7 @@ import jakarta.validation.constraints.NotNull;
  * <pre><code class='java'>
  *     DeliveryItem deliveryItem = DeliveryItem.builder()
  *             .id("{id}")
- *             .quantity(1)
+ *             .quantity(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface DeliveryItem {
 
     /**
-     *
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> delivered.</p>
      * @return id
      */
     @NotNull
@@ -41,26 +41,26 @@ public interface DeliveryItem {
     public String getId();
 
     /**
-     *
+     *  <p>Number of Line Items or Custom Line Items delivered.</p>
      * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
-    public Integer getQuantity();
+    public Long getQuantity();
 
     /**
-     * set id
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> delivered.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     * set quantity
+     *  <p>Number of Line Items or Custom Line Items delivered.</p>
      * @param quantity value to be set
      */
 
-    public void setQuantity(final Integer quantity);
+    public void setQuantity(final Long quantity);
 
     /**
      * factory method

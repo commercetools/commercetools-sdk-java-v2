@@ -26,7 +26,7 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
 
     private String change;
 
-    private com.commercetools.history.models.change_value.LocalizedEnumValue previousValue;
+    private com.commercetools.history.models.common.AttributeLocalizedEnumValue previousValue;
 
     private String attributeName;
 
@@ -48,8 +48,9 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
      */
 
     public RemoveLocalizedEnumValuesChangeBuilder previousValue(
-            Function<com.commercetools.history.models.change_value.LocalizedEnumValueBuilder, com.commercetools.history.models.change_value.LocalizedEnumValueBuilder> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.change_value.LocalizedEnumValueBuilder.of())
+            Function<com.commercetools.history.models.common.AttributeLocalizedEnumValueBuilder, com.commercetools.history.models.common.AttributeLocalizedEnumValueBuilder> builder) {
+        this.previousValue = builder
+                .apply(com.commercetools.history.models.common.AttributeLocalizedEnumValueBuilder.of())
                 .build();
         return this;
     }
@@ -61,9 +62,9 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
      */
 
     public RemoveLocalizedEnumValuesChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.change_value.LocalizedEnumValueBuilder, com.commercetools.history.models.change_value.LocalizedEnumValue> builder) {
+            Function<com.commercetools.history.models.common.AttributeLocalizedEnumValueBuilder, com.commercetools.history.models.common.AttributeLocalizedEnumValue> builder) {
         this.previousValue = builder
-                .apply(com.commercetools.history.models.change_value.LocalizedEnumValueBuilder.of());
+                .apply(com.commercetools.history.models.common.AttributeLocalizedEnumValueBuilder.of());
         return this;
     }
 
@@ -74,7 +75,7 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
      */
 
     public RemoveLocalizedEnumValuesChangeBuilder previousValue(
-            final com.commercetools.history.models.change_value.LocalizedEnumValue previousValue) {
+            final com.commercetools.history.models.common.AttributeLocalizedEnumValue previousValue) {
         this.previousValue = previousValue;
         return this;
     }
@@ -104,7 +105,7 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
      * @return previousValue
      */
 
-    public com.commercetools.history.models.change_value.LocalizedEnumValue getPreviousValue() {
+    public com.commercetools.history.models.common.AttributeLocalizedEnumValue getPreviousValue() {
         return this.previousValue;
     }
 

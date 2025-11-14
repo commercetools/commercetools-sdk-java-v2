@@ -17,9 +17,8 @@ public class AssociateRoleAssignmentTest {
 
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { "associateRole",
-                        AssociateRoleAssignment.builder()
-                                .associateRole(new com.commercetools.history.models.common.KeyReferenceImpl()) },
+                new Object[] { "associateRole", AssociateRoleAssignment.builder()
+                        .associateRole(new com.commercetools.history.models.common.AssociateRoleKeyReferenceImpl()) },
                 new Object[] { "inheritance",
                         AssociateRoleAssignment.builder()
                                 .inheritance(com.commercetools.history.models.common.AssociateRoleInheritanceMode
@@ -29,9 +28,9 @@ public class AssociateRoleAssignmentTest {
     @Test
     public void associateRole() {
         AssociateRoleAssignment value = AssociateRoleAssignment.of();
-        value.setAssociateRole(new com.commercetools.history.models.common.KeyReferenceImpl());
+        value.setAssociateRole(new com.commercetools.history.models.common.AssociateRoleKeyReferenceImpl());
         Assertions.assertThat(value.getAssociateRole())
-                .isEqualTo(new com.commercetools.history.models.common.KeyReferenceImpl());
+                .isEqualTo(new com.commercetools.history.models.common.AssociateRoleKeyReferenceImpl());
     }
 
     @Test

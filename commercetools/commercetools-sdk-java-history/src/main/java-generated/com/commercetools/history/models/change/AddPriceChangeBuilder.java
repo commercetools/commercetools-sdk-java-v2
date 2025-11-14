@@ -18,11 +18,13 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .catalogData("{catalogData}")
  *             .priceId("{priceId}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
 
     private String change;
@@ -32,6 +34,8 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
     private String catalogData;
 
     private String priceId;
+
+    private String variant;
 
     /**
      * set the value to the change
@@ -80,6 +84,7 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -105,6 +110,18 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
     }
 
     /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     * @return Builder
+     */
+
+    public AddPriceChangeBuilder variant(final String variant) {
+        this.variant = variant;
+        return this;
+    }
+
+    /**
      * value of change}
      * @return change
      */
@@ -123,6 +140,7 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -144,6 +162,16 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
     }
 
     /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
+    /**
      * builds AddPriceChange with checking for non-null required values
      * @return AddPriceChange
      */
@@ -152,7 +180,8 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
         Objects.requireNonNull(nextValue, AddPriceChange.class + ": nextValue is missing");
         Objects.requireNonNull(catalogData, AddPriceChange.class + ": catalogData is missing");
         Objects.requireNonNull(priceId, AddPriceChange.class + ": priceId is missing");
-        return new AddPriceChangeImpl(change, nextValue, catalogData, priceId);
+        Objects.requireNonNull(variant, AddPriceChange.class + ": variant is missing");
+        return new AddPriceChangeImpl(change, nextValue, catalogData, priceId, variant);
     }
 
     /**
@@ -160,7 +189,7 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
      * @return AddPriceChange
      */
     public AddPriceChange buildUnchecked() {
-        return new AddPriceChangeImpl(change, nextValue, catalogData, priceId);
+        return new AddPriceChangeImpl(change, nextValue, catalogData, priceId, variant);
     }
 
     /**
@@ -182,6 +211,7 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
         builder.nextValue = template.getNextValue();
         builder.catalogData = template.getCatalogData();
         builder.priceId = template.getPriceId();
+        builder.variant = template.getVariant();
         return builder;
     }
 

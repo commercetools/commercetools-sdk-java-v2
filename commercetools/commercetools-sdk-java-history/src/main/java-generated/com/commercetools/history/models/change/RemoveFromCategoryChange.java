@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .category(categoryBuilder -> categoryBuilder)
+ *             .catalogData("{catalogData}")
  *             .build()
  * </code></pre>
  * </div>
@@ -87,6 +88,18 @@ public interface RemoveFromCategoryChange extends Change {
     public Reference getCategory();
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+    @NotNull
+    @JsonProperty("catalogData")
+    public String getCatalogData();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -131,6 +144,17 @@ public interface RemoveFromCategoryChange extends Change {
     public void setCategory(final Reference category);
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     */
+
+    public void setCatalogData(final String catalogData);
+
+    /**
      * factory method
      * @return instance of RemoveFromCategoryChange
      */
@@ -149,6 +173,7 @@ public interface RemoveFromCategoryChange extends Change {
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
         instance.setCategory(template.getCategory());
+        instance.setCatalogData(template.getCatalogData());
         return instance;
     }
 
@@ -177,6 +202,7 @@ public interface RemoveFromCategoryChange extends Change {
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setCategory(com.commercetools.history.models.common.Reference.deepCopy(template.getCategory()));
+        instance.setCatalogData(template.getCatalogData());
         return instance;
     }
 

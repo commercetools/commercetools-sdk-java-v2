@@ -18,6 +18,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .catalogData("{catalogData}")
+ *             .variant("{variant}")
+ *             .priceId("{priceId}")
+ *             .customTypeId("{customTypeId}")
+ *             .name("{name}")
  *             .build()
  * </code></pre>
  * </div>
@@ -32,6 +36,14 @@ public class SetProductPriceCustomFieldChangeBuilder implements Builder<SetProdu
     private com.commercetools.history.models.common.CustomFields nextValue;
 
     private String catalogData;
+
+    private String variant;
+
+    private String priceId;
+
+    private String customTypeId;
+
+    private String name;
 
     /**
      * set the value to the change
@@ -117,6 +129,7 @@ public class SetProductPriceCustomFieldChangeBuilder implements Builder<SetProdu
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -127,6 +140,51 @@ public class SetProductPriceCustomFieldChangeBuilder implements Builder<SetProdu
 
     public SetProductPriceCustomFieldChangeBuilder catalogData(final String catalogData) {
         this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     * @return Builder
+     */
+
+    public SetProductPriceCustomFieldChangeBuilder variant(final String variant) {
+        this.variant = variant;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the Embedded <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</p>
+     * @param priceId value to be set
+     * @return Builder
+     */
+
+    public SetProductPriceCustomFieldChangeBuilder priceId(final String priceId) {
+        this.priceId = priceId;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
+     * @param customTypeId value to be set
+     * @return Builder
+     */
+
+    public SetProductPriceCustomFieldChangeBuilder customTypeId(final String customTypeId) {
+        this.customTypeId = customTypeId;
+        return this;
+    }
+
+    /**
+     *  <p>Name of the <span>Custom Field</span>.</p>
+     * @param name value to be set
+     * @return Builder
+     */
+
+    public SetProductPriceCustomFieldChangeBuilder name(final String name) {
+        this.name = name;
         return this;
     }
 
@@ -158,6 +216,7 @@ public class SetProductPriceCustomFieldChangeBuilder implements Builder<SetProdu
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -170,6 +229,43 @@ public class SetProductPriceCustomFieldChangeBuilder implements Builder<SetProdu
     }
 
     /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
+    /**
+     *  <p><code>id</code> of the Embedded <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</p>
+     * @return priceId
+     */
+
+    public String getPriceId() {
+        return this.priceId;
+    }
+
+    /**
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
+     * @return customTypeId
+     */
+
+    public String getCustomTypeId() {
+        return this.customTypeId;
+    }
+
+    /**
+     *  <p>Name of the <span>Custom Field</span>.</p>
+     * @return name
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
      * builds SetProductPriceCustomFieldChange with checking for non-null required values
      * @return SetProductPriceCustomFieldChange
      */
@@ -178,7 +274,12 @@ public class SetProductPriceCustomFieldChangeBuilder implements Builder<SetProdu
         Objects.requireNonNull(previousValue, SetProductPriceCustomFieldChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetProductPriceCustomFieldChange.class + ": nextValue is missing");
         Objects.requireNonNull(catalogData, SetProductPriceCustomFieldChange.class + ": catalogData is missing");
-        return new SetProductPriceCustomFieldChangeImpl(change, previousValue, nextValue, catalogData);
+        Objects.requireNonNull(variant, SetProductPriceCustomFieldChange.class + ": variant is missing");
+        Objects.requireNonNull(priceId, SetProductPriceCustomFieldChange.class + ": priceId is missing");
+        Objects.requireNonNull(customTypeId, SetProductPriceCustomFieldChange.class + ": customTypeId is missing");
+        Objects.requireNonNull(name, SetProductPriceCustomFieldChange.class + ": name is missing");
+        return new SetProductPriceCustomFieldChangeImpl(change, previousValue, nextValue, catalogData, variant, priceId,
+            customTypeId, name);
     }
 
     /**
@@ -186,7 +287,8 @@ public class SetProductPriceCustomFieldChangeBuilder implements Builder<SetProdu
      * @return SetProductPriceCustomFieldChange
      */
     public SetProductPriceCustomFieldChange buildUnchecked() {
-        return new SetProductPriceCustomFieldChangeImpl(change, previousValue, nextValue, catalogData);
+        return new SetProductPriceCustomFieldChangeImpl(change, previousValue, nextValue, catalogData, variant, priceId,
+            customTypeId, name);
     }
 
     /**
@@ -208,6 +310,10 @@ public class SetProductPriceCustomFieldChangeBuilder implements Builder<SetProdu
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
         builder.catalogData = template.getCatalogData();
+        builder.variant = template.getVariant();
+        builder.priceId = template.getPriceId();
+        builder.customTypeId = template.getCustomTypeId();
+        builder.name = template.getName();
         return builder;
     }
 

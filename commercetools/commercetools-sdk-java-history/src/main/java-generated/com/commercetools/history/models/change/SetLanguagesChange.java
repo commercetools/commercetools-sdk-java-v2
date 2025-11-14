@@ -25,6 +25,8 @@ import jakarta.validation.constraints.NotNull;
  *             .change("{change}")
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .plusAddedItems(addedItemsBuilder -> addedItemsBuilder)
+ *             .plusRemovedItems(removedItemsBuilder -> removedItemsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -72,6 +74,22 @@ public interface SetLanguagesChange extends Change {
     public List<String> getNextValue();
 
     /**
+     *  <p>Elements added to the array.</p>
+     * @return addedItems
+     */
+    @NotNull
+    @JsonProperty("addedItems")
+    public List<String> getAddedItems();
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @return removedItems
+     */
+    @NotNull
+    @JsonProperty("removedItems")
+    public List<String> getRemovedItems();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -109,6 +127,36 @@ public interface SetLanguagesChange extends Change {
     public void setNextValue(final List<String> nextValue);
 
     /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems values to be set
+     */
+
+    @JsonIgnore
+    public void setAddedItems(final String... addedItems);
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems values to be set
+     */
+
+    public void setAddedItems(final List<String> addedItems);
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems values to be set
+     */
+
+    @JsonIgnore
+    public void setRemovedItems(final String... removedItems);
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems values to be set
+     */
+
+    public void setRemovedItems(final List<String> removedItems);
+
+    /**
      * factory method
      * @return instance of SetLanguagesChange
      */
@@ -126,6 +174,8 @@ public interface SetLanguagesChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setAddedItems(template.getAddedItems());
+        instance.setRemovedItems(template.getRemovedItems());
         return instance;
     }
 
@@ -145,6 +195,8 @@ public interface SetLanguagesChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue()).map(ArrayList::new).orElse(null));
         instance.setNextValue(Optional.ofNullable(template.getNextValue()).map(ArrayList::new).orElse(null));
+        instance.setAddedItems(Optional.ofNullable(template.getAddedItems()).map(ArrayList::new).orElse(null));
+        instance.setRemovedItems(Optional.ofNullable(template.getRemovedItems()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

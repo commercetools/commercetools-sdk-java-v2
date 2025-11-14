@@ -43,30 +43,6 @@ public class ChangeParentUnitChangeBuilder implements Builder<ChangeParentUnitCh
 
     /**
      *  <p>Value before the change.</p>
-     * @param builder function to build the previousValue value
-     * @return Builder
-     */
-
-    public ChangeParentUnitChangeBuilder previousValue(
-            Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReferenceBuilder> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Value before the change.</p>
-     * @param builder function to build the previousValue value
-     * @return Builder
-     */
-
-    public ChangeParentUnitChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReference> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -78,26 +54,14 @@ public class ChangeParentUnitChangeBuilder implements Builder<ChangeParentUnitCh
     }
 
     /**
-     *  <p>Value after the change.</p>
-     * @param builder function to build the nextValue value
+     *  <p>Value before the change.</p>
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
-    public ChangeParentUnitChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReferenceBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Value after the change.</p>
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public ChangeParentUnitChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReference> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of());
+    public ChangeParentUnitChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.KeyReferenceBuilder, Builder<? extends com.commercetools.history.models.common.KeyReference>> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of()).build();
         return this;
     }
 
@@ -110,6 +74,18 @@ public class ChangeParentUnitChangeBuilder implements Builder<ChangeParentUnitCh
     public ChangeParentUnitChangeBuilder nextValue(
             final com.commercetools.history.models.common.KeyReference nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public ChangeParentUnitChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.KeyReferenceBuilder, Builder<? extends com.commercetools.history.models.common.KeyReference>> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of()).build();
         return this;
     }
 

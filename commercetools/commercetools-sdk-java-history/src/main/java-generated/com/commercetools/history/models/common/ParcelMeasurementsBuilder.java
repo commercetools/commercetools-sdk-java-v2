@@ -3,6 +3,8 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -13,10 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ParcelMeasurements parcelMeasurements = ParcelMeasurements.builder()
- *             .heightInMillimeter(1)
- *             .lengthInMillimeter(1)
- *             .widthInMillimeter(1)
- *             .weightInGram(1)
  *             .build()
  * </code></pre>
  * </div>
@@ -24,90 +22,98 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
 
+    @Nullable
     private Integer heightInMillimeter;
 
+    @Nullable
     private Integer lengthInMillimeter;
 
+    @Nullable
     private Integer widthInMillimeter;
 
+    @Nullable
     private Integer weightInGram;
 
     /**
-     * set the value to the heightInMillimeter
+     *  <p>Height of the Parcel.</p>
      * @param heightInMillimeter value to be set
      * @return Builder
      */
 
-    public ParcelMeasurementsBuilder heightInMillimeter(final Integer heightInMillimeter) {
+    public ParcelMeasurementsBuilder heightInMillimeter(@Nullable final Integer heightInMillimeter) {
         this.heightInMillimeter = heightInMillimeter;
         return this;
     }
 
     /**
-     * set the value to the lengthInMillimeter
+     *  <p>Length of the Parcel.</p>
      * @param lengthInMillimeter value to be set
      * @return Builder
      */
 
-    public ParcelMeasurementsBuilder lengthInMillimeter(final Integer lengthInMillimeter) {
+    public ParcelMeasurementsBuilder lengthInMillimeter(@Nullable final Integer lengthInMillimeter) {
         this.lengthInMillimeter = lengthInMillimeter;
         return this;
     }
 
     /**
-     * set the value to the widthInMillimeter
+     *  <p>Width of the Parcel.</p>
      * @param widthInMillimeter value to be set
      * @return Builder
      */
 
-    public ParcelMeasurementsBuilder widthInMillimeter(final Integer widthInMillimeter) {
+    public ParcelMeasurementsBuilder widthInMillimeter(@Nullable final Integer widthInMillimeter) {
         this.widthInMillimeter = widthInMillimeter;
         return this;
     }
 
     /**
-     * set the value to the weightInGram
+     *  <p>Weight of the Parcel.</p>
      * @param weightInGram value to be set
      * @return Builder
      */
 
-    public ParcelMeasurementsBuilder weightInGram(final Integer weightInGram) {
+    public ParcelMeasurementsBuilder weightInGram(@Nullable final Integer weightInGram) {
         this.weightInGram = weightInGram;
         return this;
     }
 
     /**
-     * value of heightInMillimeter}
+     *  <p>Height of the Parcel.</p>
      * @return heightInMillimeter
      */
 
+    @Nullable
     public Integer getHeightInMillimeter() {
         return this.heightInMillimeter;
     }
 
     /**
-     * value of lengthInMillimeter}
+     *  <p>Length of the Parcel.</p>
      * @return lengthInMillimeter
      */
 
+    @Nullable
     public Integer getLengthInMillimeter() {
         return this.lengthInMillimeter;
     }
 
     /**
-     * value of widthInMillimeter}
+     *  <p>Width of the Parcel.</p>
      * @return widthInMillimeter
      */
 
+    @Nullable
     public Integer getWidthInMillimeter() {
         return this.widthInMillimeter;
     }
 
     /**
-     * value of weightInGram}
+     *  <p>Weight of the Parcel.</p>
      * @return weightInGram
      */
 
+    @Nullable
     public Integer getWeightInGram() {
         return this.weightInGram;
     }
@@ -117,10 +123,6 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
      * @return ParcelMeasurements
      */
     public ParcelMeasurements build() {
-        Objects.requireNonNull(heightInMillimeter, ParcelMeasurements.class + ": heightInMillimeter is missing");
-        Objects.requireNonNull(lengthInMillimeter, ParcelMeasurements.class + ": lengthInMillimeter is missing");
-        Objects.requireNonNull(widthInMillimeter, ParcelMeasurements.class + ": widthInMillimeter is missing");
-        Objects.requireNonNull(weightInGram, ParcelMeasurements.class + ": weightInGram is missing");
         return new ParcelMeasurementsImpl(heightInMillimeter, lengthInMillimeter, widthInMillimeter, weightInGram);
     }
 

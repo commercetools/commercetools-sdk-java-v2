@@ -118,7 +118,7 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>Date and time (UTC) the Return Item was intitially created.</p>
+     *  <p>Date and time (UTC) the Return Item was initially created.</p>
      * @return createdAt
      */
     @NotNull
@@ -186,7 +186,7 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
     /**
-     *  <p>Date and time (UTC) the Return Item was intitially created.</p>
+     *  <p>Date and time (UTC) the Return Item was initially created.</p>
      * @param createdAt value to be set
      */
 

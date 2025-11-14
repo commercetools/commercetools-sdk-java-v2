@@ -22,7 +22,11 @@ public class SetLanguagesChangeTest {
                 new Object[] { "previousValue",
                         SetLanguagesChange.builder().previousValue(Collections.singletonList("previousValue")) },
                 new Object[] { "nextValue",
-                        SetLanguagesChange.builder().nextValue(Collections.singletonList("nextValue")) } };
+                        SetLanguagesChange.builder().nextValue(Collections.singletonList("nextValue")) },
+                new Object[] { "addedItems",
+                        SetLanguagesChange.builder().addedItems(Collections.singletonList("addedItems")) },
+                new Object[] { "removedItems",
+                        SetLanguagesChange.builder().removedItems(Collections.singletonList("removedItems")) } };
     }
 
     @Test
@@ -44,5 +48,19 @@ public class SetLanguagesChangeTest {
         SetLanguagesChange value = SetLanguagesChange.of();
         value.setNextValue(Collections.singletonList("nextValue"));
         Assertions.assertThat(value.getNextValue()).isEqualTo(Collections.singletonList("nextValue"));
+    }
+
+    @Test
+    public void addedItems() {
+        SetLanguagesChange value = SetLanguagesChange.of();
+        value.setAddedItems(Collections.singletonList("addedItems"));
+        Assertions.assertThat(value.getAddedItems()).isEqualTo(Collections.singletonList("addedItems"));
+    }
+
+    @Test
+    public void removedItems() {
+        SetLanguagesChange value = SetLanguagesChange.of();
+        value.setRemovedItems(Collections.singletonList("removedItems"));
+        Assertions.assertThat(value.getRemovedItems()).isEqualTo(Collections.singletonList("removedItems"));
     }
 }

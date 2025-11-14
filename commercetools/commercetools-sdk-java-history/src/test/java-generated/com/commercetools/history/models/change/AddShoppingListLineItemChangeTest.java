@@ -17,11 +17,10 @@ public class AddShoppingListLineItemChangeTest {
 
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { "change", AddShoppingListLineItemChange.builder().change("change") },
-                new Object[] { "previousValue",
-                        AddShoppingListLineItemChange.builder()
-                                .previousValue(new com.commercetools.history.models.common.LineItemImpl()) },
+                new Object[] { "previousValue", AddShoppingListLineItemChange.builder()
+                        .previousValue(new com.commercetools.history.models.common.ShoppingListLineItemImpl()) },
                 new Object[] { "nextValue", AddShoppingListLineItemChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.LineItemImpl()) } };
+                        .nextValue(new com.commercetools.history.models.common.ShoppingListLineItemImpl()) } };
     }
 
     @Test
@@ -34,16 +33,16 @@ public class AddShoppingListLineItemChangeTest {
     @Test
     public void previousValue() {
         AddShoppingListLineItemChange value = AddShoppingListLineItemChange.of();
-        value.setPreviousValue(new com.commercetools.history.models.common.LineItemImpl());
+        value.setPreviousValue(new com.commercetools.history.models.common.ShoppingListLineItemImpl());
         Assertions.assertThat(value.getPreviousValue())
-                .isEqualTo(new com.commercetools.history.models.common.LineItemImpl());
+                .isEqualTo(new com.commercetools.history.models.common.ShoppingListLineItemImpl());
     }
 
     @Test
     public void nextValue() {
         AddShoppingListLineItemChange value = AddShoppingListLineItemChange.of();
-        value.setNextValue(new com.commercetools.history.models.common.LineItemImpl());
+        value.setNextValue(new com.commercetools.history.models.common.ShoppingListLineItemImpl());
         Assertions.assertThat(value.getNextValue())
-                .isEqualTo(new com.commercetools.history.models.common.LineItemImpl());
+                .isEqualTo(new com.commercetools.history.models.common.ShoppingListLineItemImpl());
     }
 }

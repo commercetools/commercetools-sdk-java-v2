@@ -15,7 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * ItemShippingTarget
+ *  <p>Determines the address (as a reference to an address in <code>itemShippingAddresses</code>) and the quantity shipped to the address.</p>
+ *  <p>If multiple shipping addresses are present for a Line Item or Custom Line Item, sub-quantities must be specified. An array of addresses and sub-quantities is stored per Line Item or Custom Line Item.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -23,7 +24,7 @@ import jakarta.validation.constraints.NotNull;
  * <pre><code class='java'>
  *     ItemShippingTarget itemShippingTarget = ItemShippingTarget.builder()
  *             .addressKey("{addressKey}")
- *             .quantity(1)
+ *             .quantity(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -33,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ItemShippingTarget {
 
     /**
-     *  <p>The key of the address in the cart's <code>itemShippingAddresses</code></p>
+     *  <p>Key of the address in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> <code>itemShippingAddresses</code>. Duplicate address keys are not allowed.</p>
      * @return addressKey
      */
     @NotNull
@@ -41,26 +42,45 @@ public interface ItemShippingTarget {
     public String getAddressKey();
 
     /**
-     *  <p>The quantity of items that should go to the address with the specified <code>addressKey</code>. Only positive values are allowed. Using <code>0</code> as quantity is also possible in a draft object, but the element will not be present in the resulting ItemShippingDetails.</p>
+     *  <p>Quantity of Line Items or Custom Line Items shipped to the address with the specified <code>addressKey</code>.</p>
+     *  <p>If a quantity is updated to <code>0</code> when defining <a href="https://docs.commercetools.com/apis/ctp:api:type:ItemShippingDetailsDraft" rel="nofollow">ItemShippingDetailsDraft</a>, the <code>targets</code> are removed from a Line Item or Custom Line Item in the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ItemShippingDetails" rel="nofollow">ItemShippingDetails</a>.</p>
      * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
-    public Integer getQuantity();
+    public Long getQuantity();
 
     /**
-     *  <p>The key of the address in the cart's <code>itemShippingAddresses</code></p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     *  <p>It connects Line Item or Custom Line Item quantities with individual Shipping Methods.</p>
+     * @return shippingMethodKey
+     */
+
+    @JsonProperty("shippingMethodKey")
+    public String getShippingMethodKey();
+
+    /**
+     *  <p>Key of the address in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> <code>itemShippingAddresses</code>. Duplicate address keys are not allowed.</p>
      * @param addressKey value to be set
      */
 
     public void setAddressKey(final String addressKey);
 
     /**
-     *  <p>The quantity of items that should go to the address with the specified <code>addressKey</code>. Only positive values are allowed. Using <code>0</code> as quantity is also possible in a draft object, but the element will not be present in the resulting ItemShippingDetails.</p>
+     *  <p>Quantity of Line Items or Custom Line Items shipped to the address with the specified <code>addressKey</code>.</p>
+     *  <p>If a quantity is updated to <code>0</code> when defining <a href="https://docs.commercetools.com/apis/ctp:api:type:ItemShippingDetailsDraft" rel="nofollow">ItemShippingDetailsDraft</a>, the <code>targets</code> are removed from a Line Item or Custom Line Item in the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ItemShippingDetails" rel="nofollow">ItemShippingDetails</a>.</p>
      * @param quantity value to be set
      */
 
-    public void setQuantity(final Integer quantity);
+    public void setQuantity(final Long quantity);
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     *  <p>It connects Line Item or Custom Line Item quantities with individual Shipping Methods.</p>
+     * @param shippingMethodKey value to be set
+     */
+
+    public void setShippingMethodKey(final String shippingMethodKey);
 
     /**
      * factory method
@@ -79,6 +99,7 @@ public interface ItemShippingTarget {
         ItemShippingTargetImpl instance = new ItemShippingTargetImpl();
         instance.setAddressKey(template.getAddressKey());
         instance.setQuantity(template.getQuantity());
+        instance.setShippingMethodKey(template.getShippingMethodKey());
         return instance;
     }
 
@@ -97,6 +118,7 @@ public interface ItemShippingTarget {
         ItemShippingTargetImpl instance = new ItemShippingTargetImpl();
         instance.setAddressKey(template.getAddressKey());
         instance.setQuantity(template.getQuantity());
+        instance.setShippingMethodKey(template.getShippingMethodKey());
         return instance;
     }
 

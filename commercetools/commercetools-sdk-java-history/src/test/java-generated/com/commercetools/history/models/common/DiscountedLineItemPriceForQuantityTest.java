@@ -17,7 +17,7 @@ public class DiscountedLineItemPriceForQuantityTest {
     }
 
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { "quantity", DiscountedLineItemPriceForQuantity.builder().quantity(8) },
+        return new Object[][] { new Object[] { "quantity", DiscountedLineItemPriceForQuantity.builder().quantity(8L) },
                 new Object[] { "discountedPrice", DiscountedLineItemPriceForQuantity.builder()
                         .discountedPrice(new com.commercetools.history.models.common.DiscountedLineItemPriceImpl()) } };
     }
@@ -25,8 +25,8 @@ public class DiscountedLineItemPriceForQuantityTest {
     @Test
     public void quantity() {
         DiscountedLineItemPriceForQuantity value = DiscountedLineItemPriceForQuantity.of();
-        value.setQuantity(8);
-        Assertions.assertThat(value.getQuantity()).isEqualTo(8);
+        value.setQuantity(8L);
+        Assertions.assertThat(value.getQuantity()).isEqualTo(8L);
     }
 
     @Test

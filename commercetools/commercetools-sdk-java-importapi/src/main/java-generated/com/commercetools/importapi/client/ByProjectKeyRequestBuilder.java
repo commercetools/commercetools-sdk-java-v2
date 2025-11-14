@@ -23,16 +23,28 @@ public class ByProjectKeyRequestBuilder {
         return new ByProjectKeyImportOperationsRequestBuilder(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyBusinessUnitsRequestBuilder businessUnits() {
+        return new ByProjectKeyBusinessUnitsRequestBuilder(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyCategoriesRequestBuilder categories() {
         return new ByProjectKeyCategoriesRequestBuilder(apiHttpClient, projectKey);
+    }
+
+    public ByProjectKeyCustomersRequestBuilder customers() {
+        return new ByProjectKeyCustomersRequestBuilder(apiHttpClient, projectKey);
+    }
+
+    public ByProjectKeyDiscountCodesRequestBuilder discountCodes() {
+        return new ByProjectKeyDiscountCodesRequestBuilder(apiHttpClient, projectKey);
     }
 
     public ByProjectKeyPricesRequestBuilder prices() {
         return new ByProjectKeyPricesRequestBuilder(apiHttpClient, projectKey);
     }
 
-    public ByProjectKeyStandalonePricesRequestBuilder standalonePrices() {
-        return new ByProjectKeyStandalonePricesRequestBuilder(apiHttpClient, projectKey);
+    public ByProjectKeyInventoriesRequestBuilder inventories() {
+        return new ByProjectKeyInventoriesRequestBuilder(apiHttpClient, projectKey);
     }
 
     public ByProjectKeyProductsRequestBuilder products() {
@@ -55,6 +67,10 @@ public class ByProjectKeyRequestBuilder {
         return new ByProjectKeyProductVariantPatchesRequestBuilder(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyProductSelectionsRequestBuilder productSelections() {
+        return new ByProjectKeyProductSelectionsRequestBuilder(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyOrdersRequestBuilder orders() {
         return new ByProjectKeyOrdersRequestBuilder(apiHttpClient, projectKey);
     }
@@ -63,28 +79,12 @@ public class ByProjectKeyRequestBuilder {
         return new ByProjectKeyOrderPatchesRequestBuilder(apiHttpClient, projectKey);
     }
 
-    public ByProjectKeyCustomersRequestBuilder customers() {
-        return new ByProjectKeyCustomersRequestBuilder(apiHttpClient, projectKey);
-    }
-
-    public ByProjectKeyInventoriesRequestBuilder inventories() {
-        return new ByProjectKeyInventoriesRequestBuilder(apiHttpClient, projectKey);
+    public ByProjectKeyStandalonePricesRequestBuilder standalonePrices() {
+        return new ByProjectKeyStandalonePricesRequestBuilder(apiHttpClient, projectKey);
     }
 
     public ByProjectKeyTypesRequestBuilder types() {
         return new ByProjectKeyTypesRequestBuilder(apiHttpClient, projectKey);
-    }
-
-    public ByProjectKeyDiscountCodesRequestBuilder discountCodes() {
-        return new ByProjectKeyDiscountCodesRequestBuilder(apiHttpClient, projectKey);
-    }
-
-    public ByProjectKeyProductSelectionsRequestBuilder productSelections() {
-        return new ByProjectKeyProductSelectionsRequestBuilder(apiHttpClient, projectKey);
-    }
-
-    public ByProjectKeyBusinessUnitsRequestBuilder businessUnits() {
-        return new ByProjectKeyBusinessUnitsRequestBuilder(apiHttpClient, projectKey);
     }
 
 }

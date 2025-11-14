@@ -7,7 +7,7 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.history.models.common.Delivery;
+import com.commercetools.history.models.change_value.DeliveryChangeValue;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -63,7 +63,7 @@ public interface RemoveDeliveryItemsChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("previousValue")
-    public Delivery getPreviousValue();
+    public DeliveryChangeValue getPreviousValue();
 
     /**
      * set change
@@ -77,7 +77,7 @@ public interface RemoveDeliveryItemsChange extends Change {
      * @param previousValue value to be set
      */
 
-    public void setPreviousValue(final Delivery previousValue);
+    public void setPreviousValue(final DeliveryChangeValue previousValue);
 
     /**
      * factory method
@@ -114,7 +114,7 @@ public interface RemoveDeliveryItemsChange extends Change {
         RemoveDeliveryItemsChangeImpl instance = new RemoveDeliveryItemsChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(
-            com.commercetools.history.models.common.Delivery.deepCopy(template.getPreviousValue()));
+            com.commercetools.history.models.change_value.DeliveryChangeValue.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

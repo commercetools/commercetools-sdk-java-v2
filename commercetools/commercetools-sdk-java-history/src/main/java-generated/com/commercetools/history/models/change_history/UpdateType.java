@@ -80,8 +80,6 @@ public interface UpdateType extends JsonEnum {
 
     UpdateType CHANGE_ADDRESS = UpdateTypeEnum.CHANGE_ADDRESS;
 
-    UpdateType CHANGE_AMOUNT_AUTHORIZED = UpdateTypeEnum.CHANGE_AMOUNT_AUTHORIZED;
-
     UpdateType CHANGE_AMOUNT_PLANNED = UpdateTypeEnum.CHANGE_AMOUNT_PLANNED;
 
     UpdateType CHANGE_ASSET_NAME = UpdateTypeEnum.CHANGE_ASSET_NAME;
@@ -725,11 +723,6 @@ public interface UpdateType extends JsonEnum {
          * changeAddress
          */
         CHANGE_ADDRESS("changeAddress"),
-
-        /**
-         * changeAmountAuthorized
-         */
-        CHANGE_AMOUNT_AUTHORIZED("changeAmountAuthorized"),
 
         /**
          * changeAmountPlanned

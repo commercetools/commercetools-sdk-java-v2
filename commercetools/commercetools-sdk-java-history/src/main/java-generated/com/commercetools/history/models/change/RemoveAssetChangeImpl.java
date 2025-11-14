@@ -32,14 +32,21 @@ public class RemoveAssetChangeImpl implements RemoveAssetChange, ModelBase {
 
     private com.commercetools.history.models.common.Asset previousValue;
 
+    private String catalogData;
+
+    private String variant;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     RemoveAssetChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.Asset previousValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.Asset previousValue,
+            @JsonProperty("catalogData") final String catalogData, @JsonProperty("variant") final String variant) {
         this.change = change;
         this.previousValue = previousValue;
+        this.catalogData = catalogData;
+        this.variant = variant;
         this.type = REMOVE_ASSET_CHANGE;
     }
 
@@ -74,12 +81,41 @@ public class RemoveAssetChangeImpl implements RemoveAssetChange, ModelBase {
         return this.previousValue;
     }
 
+    /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
 
     public void setPreviousValue(final com.commercetools.history.models.common.Asset previousValue) {
         this.previousValue = previousValue;
+    }
+
+    public void setCatalogData(final String catalogData) {
+        this.catalogData = catalogData;
+    }
+
+    public void setVariant(final String variant) {
+        this.variant = variant;
     }
 
     @Override
@@ -95,15 +131,24 @@ public class RemoveAssetChangeImpl implements RemoveAssetChange, ModelBase {
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
+                .append(catalogData, that.catalogData)
+                .append(variant, that.variant)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
+                .append(catalogData, that.catalogData)
+                .append(variant, that.variant)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(previousValue).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(change)
+                .append(previousValue)
+                .append(catalogData)
+                .append(variant)
+                .toHashCode();
     }
 
     @Override
@@ -111,6 +156,8 @@ public class RemoveAssetChangeImpl implements RemoveAssetChange, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
                 .append("change", change)
                 .append("previousValue", previousValue)
+                .append("catalogData", catalogData)
+                .append("variant", variant)
                 .build();
     }
 

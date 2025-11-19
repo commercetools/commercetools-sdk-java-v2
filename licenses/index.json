@@ -452,8 +452,29 @@
             ]
         },
         {
+            "moduleName": "com.squareup.okhttp3:okhttp",
+            "moduleVersion": "5.3.2"
+        },
+        {
+            "moduleName": "com.squareup.okhttp3:okhttp-jvm",
+            "moduleVersion": "5.3.2",
+            "moduleUrls": [
+                "https://square.github.io/okhttp/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
             "moduleName": "com.squareup.okio:okio",
             "moduleVersion": "3.14.0"
+        },
+        {
+            "moduleName": "com.squareup.okio:okio",
+            "moduleVersion": "3.16.4"
         },
         {
             "moduleName": "com.squareup.okio:okio",
@@ -462,6 +483,19 @@
         {
             "moduleName": "com.squareup.okio:okio-jvm",
             "moduleVersion": "3.14.0",
+            "moduleUrls": [
+                "https://github.com/square/okio/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "com.squareup.okio:okio-jvm",
+            "moduleVersion": "3.16.4",
             "moduleUrls": [
                 "https://github.com/square/okio/"
             ],
@@ -2019,6 +2053,19 @@
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib",
             "moduleVersion": "2.1.21",
+            "moduleUrls": [
+                "https://kotlinlang.org/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "org.jetbrains.kotlin:kotlin-stdlib",
+            "moduleVersion": "2.2.21",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],

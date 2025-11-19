@@ -84,7 +84,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.module:jackson-module-jakarta-xmlbind-annotations",
-            "moduleVersion": "2.13.3",
+            "moduleVersion": "2.19.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-base"
             ],

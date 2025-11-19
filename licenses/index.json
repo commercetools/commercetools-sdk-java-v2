@@ -141,7 +141,20 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor",
-            "moduleVersion": "2.19.1",
+            "moduleVersion": "2.13.5",
+            "moduleUrls": [
+                "http://github.com/FasterXML/jackson-dataformats-binary"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor",
+            "moduleVersion": "2.18.3",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-dataformats-binary"
             ],
@@ -167,7 +180,20 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.module:jackson-module-jakarta-xmlbind-annotations",
-            "moduleVersion": "2.19.1",
+            "moduleVersion": "2.13.3",
+            "moduleUrls": [
+                "https://github.com/FasterXML/jackson-modules-base"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "com.fasterxml.jackson.module:jackson-module-jakarta-xmlbind-annotations",
+            "moduleVersion": "2.18.3",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-base"
             ],
@@ -180,7 +206,20 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.module:jackson-module-parameter-names",
-            "moduleVersion": "2.19.1",
+            "moduleVersion": "2.13.5",
+            "moduleUrls": [
+                "https://github.com/FasterXML/jackson-modules-java8/jackson-module-parameter-names"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "com.fasterxml.jackson.module:jackson-module-parameter-names",
+            "moduleVersion": "2.18.3",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-module-parameter-names"
             ],
@@ -452,16 +491,68 @@
             ]
         },
         {
-            "moduleName": "com.squareup.okio:okio",
-            "moduleVersion": "3.14.0"
+            "moduleName": "com.squareup.okhttp3:okhttp",
+            "moduleVersion": "5.3.2"
+        },
+        {
+            "moduleName": "com.squareup.okhttp3:okhttp-jvm",
+            "moduleVersion": "5.3.2",
+            "moduleUrls": [
+                "https://square.github.io/okhttp/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
         },
         {
             "moduleName": "com.squareup.okio:okio",
-            "moduleVersion": "3.6.0"
+            "moduleVersion": "3.14.0",
+            "moduleUrls": [
+                "https://github.com/square/okio/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "com.squareup.okio:okio",
+            "moduleVersion": "3.16.4"
+        },
+        {
+            "moduleName": "com.squareup.okio:okio",
+            "moduleVersion": "3.6.0",
+            "moduleUrls": [
+                "https://github.com/square/okio/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
         },
         {
             "moduleName": "com.squareup.okio:okio-jvm",
             "moduleVersion": "3.14.0",
+            "moduleUrls": [
+                "https://github.com/square/okio/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "com.squareup.okio:okio-jvm",
+            "moduleVersion": "3.16.4",
             "moduleUrls": [
                 "https://github.com/square/okio/"
             ],
@@ -2019,6 +2110,19 @@
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib",
             "moduleVersion": "2.1.21",
+            "moduleUrls": [
+                "https://kotlinlang.org/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "org.jetbrains.kotlin:kotlin-stdlib",
+            "moduleVersion": "2.2.21",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],

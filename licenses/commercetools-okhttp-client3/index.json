@@ -90,7 +90,16 @@
         },
         {
             "moduleName": "com.squareup.okio:okio",
-            "moduleVersion": "3.14.0"
+            "moduleVersion": "3.14.0",
+            "moduleUrls": [
+                "https://github.com/square/okio/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
         },
         {
             "moduleName": "com.squareup.okio:okio-jvm",

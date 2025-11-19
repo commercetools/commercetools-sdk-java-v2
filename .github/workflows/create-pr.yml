@@ -36,7 +36,7 @@ jobs:
         with:
           token: ${{ steps.generate_github_token.outputs.token }}
 
-      - uses: gradle/actions/wrapper-validation@ac638b010cf58a27ee6c972d7336334ccaf61c96 # v4.4.1
+      - uses: gradle/actions/wrapper-validation@748248ddd2a24f49513d8f472f81c3a07d4d50e1 # v4.4.4
 
       - uses: jenschude/auto-create-pr-action@a5369414c74963e6ec065dab49066d3711b8c1db # v0.3.2
         if: github.ref_name == 'gen-sdk-updates'

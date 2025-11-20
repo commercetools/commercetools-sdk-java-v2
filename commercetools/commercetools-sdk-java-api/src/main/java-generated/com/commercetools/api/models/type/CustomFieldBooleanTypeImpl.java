@@ -32,7 +32,7 @@ public class CustomFieldBooleanTypeImpl implements CustomFieldBooleanType, Model
     }
 
     /**
-     *
+     *  <p>Discriminator that determines the type of the field.</p>
      */
 
     public String getName() {

@@ -46,7 +46,7 @@ public interface FieldDefinition {
     public FieldType getType();
 
     /**
-     *  <p>Name of the Custom Field to define. Must be unique for a given <a href="https://docs.commercetools.com/apis/ctp:import:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>. In case there is a FieldDefinition with the same <code>name</code> in another Type, both FieldDefinitions must have the same <code>type</code>. This value cannot be changed after the Type is imported.</p>
+     *  <p>Name of the Custom Field that you want to define. The name must be unique for a given <a href="https://docs.commercetools.com/apis/ctp:import:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>. If a FieldDefinition with the same <code>name</code> is defined in another <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> for the same <a href="https://docs.commercetools.com/apis/ctp:import:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>, then both FieldDefinitions must have the same <code>type</code>. This value can't be changed after you import the Type.</p>
      * @return name
      */
     @NotNull
@@ -86,7 +86,7 @@ public interface FieldDefinition {
     public void setType(final FieldType type);
 
     /**
-     *  <p>Name of the Custom Field to define. Must be unique for a given <a href="https://docs.commercetools.com/apis/ctp:import:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>. In case there is a FieldDefinition with the same <code>name</code> in another Type, both FieldDefinitions must have the same <code>type</code>. This value cannot be changed after the Type is imported.</p>
+     *  <p>Name of the Custom Field that you want to define. The name must be unique for a given <a href="https://docs.commercetools.com/apis/ctp:import:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>. If a FieldDefinition with the same <code>name</code> is defined in another <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> for the same <a href="https://docs.commercetools.com/apis/ctp:import:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>, then both FieldDefinitions must have the same <code>type</code>. This value can't be changed after you import the Type.</p>
      * @param name value to be set
      */
 

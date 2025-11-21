@@ -35,7 +35,7 @@ import jakarta.validation.constraints.NotNull;
 public interface InheritedAssociate {
 
     /**
-     *
+     *  <p>Inherited roles of the Associate within a Business Unit.</p>
      * @return associateRoleAssignments
      */
     @NotNull
@@ -44,16 +44,16 @@ public interface InheritedAssociate {
     public List<InheritedAssociateRoleAssignment> getAssociateRoleAssignments();
 
     /**
-     *
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</p>
      * @return customer
      */
     @NotNull
     @Valid
     @JsonProperty("customer")
-    public Reference getCustomer();
+    public CustomerReference getCustomer();
 
     /**
-     * set associateRoleAssignments
+     *  <p>Inherited roles of the Associate within a Business Unit.</p>
      * @param associateRoleAssignments values to be set
      */
 
@@ -61,18 +61,18 @@ public interface InheritedAssociate {
     public void setAssociateRoleAssignments(final InheritedAssociateRoleAssignment... associateRoleAssignments);
 
     /**
-     * set associateRoleAssignments
+     *  <p>Inherited roles of the Associate within a Business Unit.</p>
      * @param associateRoleAssignments values to be set
      */
 
     public void setAssociateRoleAssignments(final List<InheritedAssociateRoleAssignment> associateRoleAssignments);
 
     /**
-     * set customer
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</p>
      * @param customer value to be set
      */
 
-    public void setCustomer(final Reference customer);
+    public void setCustomer(final CustomerReference customer);
 
     /**
      * factory method
@@ -112,7 +112,8 @@ public interface InheritedAssociate {
                         .map(com.commercetools.history.models.common.InheritedAssociateRoleAssignment::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setCustomer(com.commercetools.history.models.common.Reference.deepCopy(template.getCustomer()));
+        instance.setCustomer(
+            com.commercetools.history.models.common.CustomerReference.deepCopy(template.getCustomer()));
         return instance;
     }
 

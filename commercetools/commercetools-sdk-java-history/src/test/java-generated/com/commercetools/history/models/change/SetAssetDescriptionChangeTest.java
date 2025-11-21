@@ -23,8 +23,11 @@ public class SetAssetDescriptionChangeTest {
                 new Object[] { "nextValue",
                         SetAssetDescriptionChange.builder()
                                 .nextValue(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { "asset", SetAssetDescriptionChange.builder()
-                        .asset(new com.commercetools.history.models.change_value.AssetChangeValueImpl()) } };
+                new Object[] { "asset",
+                        SetAssetDescriptionChange.builder()
+                                .asset(new com.commercetools.history.models.change_value.AssetChangeValueImpl()) },
+                new Object[] { "catalogData", SetAssetDescriptionChange.builder().catalogData("catalogData") },
+                new Object[] { "variant", SetAssetDescriptionChange.builder().variant("variant") } };
     }
 
     @Test
@@ -56,5 +59,19 @@ public class SetAssetDescriptionChangeTest {
         value.setAsset(new com.commercetools.history.models.change_value.AssetChangeValueImpl());
         Assertions.assertThat(value.getAsset())
                 .isEqualTo(new com.commercetools.history.models.change_value.AssetChangeValueImpl());
+    }
+
+    @Test
+    public void catalogData() {
+        SetAssetDescriptionChange value = SetAssetDescriptionChange.of();
+        value.setCatalogData("catalogData");
+        Assertions.assertThat(value.getCatalogData()).isEqualTo("catalogData");
+    }
+
+    @Test
+    public void variant() {
+        SetAssetDescriptionChange value = SetAssetDescriptionChange.of();
+        value.setVariant("variant");
+        Assertions.assertThat(value.getVariant()).isEqualTo("variant");
     }
 }

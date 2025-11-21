@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.history.models.change_value.LocalizedEnumValue;
+import com.commercetools.history.models.common.AttributeLocalizedEnumValue;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -71,7 +71,7 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("previousValue")
-    public List<LocalizedEnumValue> getPreviousValue();
+    public List<AttributeLocalizedEnumValue> getPreviousValue();
 
     /**
      *  <p>Value after the change.</p>
@@ -80,7 +80,7 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("nextValue")
-    public List<LocalizedEnumValue> getNextValue();
+    public List<AttributeLocalizedEnumValue> getNextValue();
 
     /**
      *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>; only present on changes to Types.</p>
@@ -111,14 +111,14 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
      */
 
     @JsonIgnore
-    public void setPreviousValue(final LocalizedEnumValue... previousValue);
+    public void setPreviousValue(final AttributeLocalizedEnumValue... previousValue);
 
     /**
      *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
-    public void setPreviousValue(final List<LocalizedEnumValue> previousValue);
+    public void setPreviousValue(final List<AttributeLocalizedEnumValue> previousValue);
 
     /**
      *  <p>Value after the change.</p>
@@ -126,14 +126,14 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
      */
 
     @JsonIgnore
-    public void setNextValue(final LocalizedEnumValue... nextValue);
+    public void setNextValue(final AttributeLocalizedEnumValue... nextValue);
 
     /**
      *  <p>Value after the change.</p>
      * @param nextValue values to be set
      */
 
-    public void setNextValue(final List<LocalizedEnumValue> nextValue);
+    public void setNextValue(final List<AttributeLocalizedEnumValue> nextValue);
 
     /**
      *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>; only present on changes to Types.</p>
@@ -189,12 +189,12 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
                 .map(t -> t.stream()
-                        .map(com.commercetools.history.models.change_value.LocalizedEnumValue::deepCopy)
+                        .map(com.commercetools.history.models.common.AttributeLocalizedEnumValue::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setNextValue(Optional.ofNullable(template.getNextValue())
                 .map(t -> t.stream()
-                        .map(com.commercetools.history.models.change_value.LocalizedEnumValue::deepCopy)
+                        .map(com.commercetools.history.models.common.AttributeLocalizedEnumValue::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setFieldName(template.getFieldName());

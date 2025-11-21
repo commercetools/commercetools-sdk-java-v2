@@ -18,6 +18,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .lineItemId("{lineItemId}")
+ *             .lineItem(lineItemBuilder -> lineItemBuilder)
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -32,6 +34,10 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
     private com.commercetools.history.models.common.ItemShippingDetails nextValue;
 
     private String lineItemId;
+
+    private com.commercetools.history.models.common.LocalizedString lineItem;
+
+    private String variant;
 
     /**
      * set the value to the change
@@ -129,6 +135,54 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
     }
 
     /**
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
+     * @param builder function to build the lineItem value
+     * @return Builder
+     */
+
+    public SetLineItemShippingDetailsChangeBuilder lineItem(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
+     * @param builder function to build the lineItem value
+     * @return Builder
+     */
+
+    public SetLineItemShippingDetailsChangeBuilder withLineItem(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
+     * @param lineItem value to be set
+     * @return Builder
+     */
+
+    public SetLineItemShippingDetailsChangeBuilder lineItem(
+            final com.commercetools.history.models.common.LocalizedString lineItem) {
+        this.lineItem = lineItem;
+        return this;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     * @return Builder
+     */
+
+    public SetLineItemShippingDetailsChangeBuilder variant(final String variant) {
+        this.variant = variant;
+        return this;
+    }
+
+    /**
      * value of change}
      * @return change
      */
@@ -165,6 +219,25 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
     }
 
     /**
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
+     * @return lineItem
+     */
+
+    public com.commercetools.history.models.common.LocalizedString getLineItem() {
+        return this.lineItem;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
+    /**
      * builds SetLineItemShippingDetailsChange with checking for non-null required values
      * @return SetLineItemShippingDetailsChange
      */
@@ -173,7 +246,10 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
         Objects.requireNonNull(previousValue, SetLineItemShippingDetailsChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetLineItemShippingDetailsChange.class + ": nextValue is missing");
         Objects.requireNonNull(lineItemId, SetLineItemShippingDetailsChange.class + ": lineItemId is missing");
-        return new SetLineItemShippingDetailsChangeImpl(change, previousValue, nextValue, lineItemId);
+        Objects.requireNonNull(lineItem, SetLineItemShippingDetailsChange.class + ": lineItem is missing");
+        Objects.requireNonNull(variant, SetLineItemShippingDetailsChange.class + ": variant is missing");
+        return new SetLineItemShippingDetailsChangeImpl(change, previousValue, nextValue, lineItemId, lineItem,
+            variant);
     }
 
     /**
@@ -181,7 +257,8 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
      * @return SetLineItemShippingDetailsChange
      */
     public SetLineItemShippingDetailsChange buildUnchecked() {
-        return new SetLineItemShippingDetailsChangeImpl(change, previousValue, nextValue, lineItemId);
+        return new SetLineItemShippingDetailsChangeImpl(change, previousValue, nextValue, lineItemId, lineItem,
+            variant);
     }
 
     /**
@@ -203,6 +280,8 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItem = template.getLineItem();
+        builder.variant = template.getVariant();
         return builder;
     }
 

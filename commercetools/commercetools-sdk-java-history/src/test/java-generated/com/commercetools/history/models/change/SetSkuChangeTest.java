@@ -19,7 +19,8 @@ public class SetSkuChangeTest {
         return new Object[][] { new Object[] { "change", SetSkuChange.builder().change("change") },
                 new Object[] { "previousValue", SetSkuChange.builder().previousValue("previousValue") },
                 new Object[] { "nextValue", SetSkuChange.builder().nextValue("nextValue") },
-                new Object[] { "catalogData", SetSkuChange.builder().catalogData("catalogData") } };
+                new Object[] { "catalogData", SetSkuChange.builder().catalogData("catalogData") },
+                new Object[] { "variant", SetSkuChange.builder().variant("variant") } };
     }
 
     @Test
@@ -48,5 +49,12 @@ public class SetSkuChangeTest {
         SetSkuChange value = SetSkuChange.of();
         value.setCatalogData("catalogData");
         Assertions.assertThat(value.getCatalogData()).isEqualTo("catalogData");
+    }
+
+    @Test
+    public void variant() {
+        SetSkuChange value = SetSkuChange.of();
+        value.setVariant("variant");
+        Assertions.assertThat(value.getVariant()).isEqualTo("variant");
     }
 }

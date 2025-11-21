@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered automatically due to a user-initiated change.</p>
+ *  <p>This change is initiated by background processes when a discount is applied through a Discount Code.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

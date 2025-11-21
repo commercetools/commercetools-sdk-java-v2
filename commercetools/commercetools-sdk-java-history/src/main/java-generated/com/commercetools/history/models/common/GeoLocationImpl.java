@@ -30,16 +30,16 @@ public class GeoLocationImpl implements GeoLocation, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    GeoLocationImpl(@JsonProperty("type") final String type,
-            @JsonProperty("coordinates") final java.util.List<Integer> coordinates) {
-        this.type = type;
+    GeoLocationImpl(@JsonProperty("coordinates") final java.util.List<Integer> coordinates) {
         this.coordinates = coordinates;
+        this.type = POINT;
     }
 
     /**
      * create empty instance
      */
     public GeoLocationImpl() {
+        this.type = POINT;
     }
 
     /**
@@ -56,10 +56,6 @@ public class GeoLocationImpl implements GeoLocation, ModelBase {
 
     public java.util.List<Integer> getCoordinates() {
         return this.coordinates;
-    }
-
-    public void setType(final String type) {
-        this.type = type;
     }
 
     public void setCoordinates(final Integer... coordinates) {

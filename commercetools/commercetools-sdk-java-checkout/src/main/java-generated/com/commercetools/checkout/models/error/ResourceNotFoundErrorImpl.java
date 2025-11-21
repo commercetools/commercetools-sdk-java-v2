@@ -26,12 +26,20 @@ public class ResourceNotFoundErrorImpl implements ResourceNotFoundError, ModelBa
 
     private String message;
 
+    private String resourceIdentifier;
+
+    private String resourceId;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
-    ResourceNotFoundErrorImpl(@JsonProperty("message") final String message) {
+    ResourceNotFoundErrorImpl(@JsonProperty("message") final String message,
+            @JsonProperty("resourceIdentifier") final String resourceIdentifier,
+            @JsonProperty("resourceId") final String resourceId) {
         this.message = message;
+        this.resourceIdentifier = resourceIdentifier;
+        this.resourceId = resourceId;
         this.code = RESOURCE_NOT_FOUND;
     }
 
@@ -51,15 +59,39 @@ public class ResourceNotFoundErrorImpl implements ResourceNotFoundError, ModelBa
     }
 
     /**
-     *  <p><code>"The Resource with ID $resourceId was not found."</code></p>
+     *  <p><code>"The Resource with $resourceIdentifier $resourceId was not found."</code></p>
      */
 
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     *  <p>The identifier type used (e.g., <code>id</code>, <code>key</code>).</p>
+     */
+
+    public String getResourceIdentifier() {
+        return this.resourceIdentifier;
+    }
+
+    /**
+     *  <p>The actual identifier value.</p>
+     */
+
+    public String getResourceId() {
+        return this.resourceId;
+    }
+
     public void setMessage(final String message) {
         this.message = message;
+    }
+
+    public void setResourceIdentifier(final String resourceIdentifier) {
+        this.resourceIdentifier = resourceIdentifier;
+    }
+
+    public void setResourceId(final String resourceId) {
+        this.resourceId = resourceId;
     }
 
     @Override
@@ -74,20 +106,30 @@ public class ResourceNotFoundErrorImpl implements ResourceNotFoundError, ModelBa
 
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)
+                .append(resourceIdentifier, that.resourceIdentifier)
+                .append(resourceId, that.resourceId)
                 .append(code, that.code)
                 .append(message, that.message)
+                .append(resourceIdentifier, that.resourceIdentifier)
+                .append(resourceId, that.resourceId)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code).append(message).toHashCode();
+        return new HashCodeBuilder(17, 37).append(code)
+                .append(message)
+                .append(resourceIdentifier)
+                .append(resourceId)
+                .toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
                 .append("message", message)
+                .append("resourceIdentifier", resourceIdentifier)
+                .append("resourceId", resourceId)
                 .build();
     }
 

@@ -17,12 +17,14 @@ public class SetAttributeChangeTest {
 
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { "change", SetAttributeChange.builder().change("change") },
-                new Object[] { "previousValue", SetAttributeChange.builder()
-                        .previousValue(new com.commercetools.history.models.change_value.AttributeValueImpl()) },
+                new Object[] { "previousValue",
+                        SetAttributeChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.AttributeImpl()) },
                 new Object[] { "nextValue",
                         SetAttributeChange.builder()
-                                .nextValue(new com.commercetools.history.models.change_value.AttributeValueImpl()) },
-                new Object[] { "catalogData", SetAttributeChange.builder().catalogData("catalogData") } };
+                                .nextValue(new com.commercetools.history.models.common.AttributeImpl()) },
+                new Object[] { "catalogData", SetAttributeChange.builder().catalogData("catalogData") },
+                new Object[] { "variant", SetAttributeChange.builder().variant("variant") } };
     }
 
     @Test
@@ -35,17 +37,17 @@ public class SetAttributeChangeTest {
     @Test
     public void previousValue() {
         SetAttributeChange value = SetAttributeChange.of();
-        value.setPreviousValue(new com.commercetools.history.models.change_value.AttributeValueImpl());
+        value.setPreviousValue(new com.commercetools.history.models.common.AttributeImpl());
         Assertions.assertThat(value.getPreviousValue())
-                .isEqualTo(new com.commercetools.history.models.change_value.AttributeValueImpl());
+                .isEqualTo(new com.commercetools.history.models.common.AttributeImpl());
     }
 
     @Test
     public void nextValue() {
         SetAttributeChange value = SetAttributeChange.of();
-        value.setNextValue(new com.commercetools.history.models.change_value.AttributeValueImpl());
+        value.setNextValue(new com.commercetools.history.models.common.AttributeImpl());
         Assertions.assertThat(value.getNextValue())
-                .isEqualTo(new com.commercetools.history.models.change_value.AttributeValueImpl());
+                .isEqualTo(new com.commercetools.history.models.common.AttributeImpl());
     }
 
     @Test
@@ -53,5 +55,12 @@ public class SetAttributeChangeTest {
         SetAttributeChange value = SetAttributeChange.of();
         value.setCatalogData("catalogData");
         Assertions.assertThat(value.getCatalogData()).isEqualTo("catalogData");
+    }
+
+    @Test
+    public void variant() {
+        SetAttributeChange value = SetAttributeChange.of();
+        value.setVariant("variant");
+        Assertions.assertThat(value.getVariant()).isEqualTo("variant");
     }
 }

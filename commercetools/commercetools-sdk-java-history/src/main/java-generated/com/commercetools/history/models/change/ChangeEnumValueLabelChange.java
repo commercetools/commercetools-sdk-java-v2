@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  *             .nextValue("{nextValue}")
  *             .fieldName("{fieldName}")
  *             .valueKey("{valueKey}")
+ *             .attributeName("{attributeName}")
  *             .build()
  * </code></pre>
  * </div>
@@ -90,6 +91,14 @@ public interface ChangeEnumValueLabelChange extends Change {
     public String getValueKey();
 
     /**
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
+     * @return attributeName
+     */
+    @NotNull
+    @JsonProperty("attributeName")
+    public String getAttributeName();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -125,6 +134,13 @@ public interface ChangeEnumValueLabelChange extends Change {
     public void setValueKey(final String valueKey);
 
     /**
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
+     * @param attributeName value to be set
+     */
+
+    public void setAttributeName(final String attributeName);
+
+    /**
      * factory method
      * @return instance of ChangeEnumValueLabelChange
      */
@@ -144,6 +160,7 @@ public interface ChangeEnumValueLabelChange extends Change {
         instance.setNextValue(template.getNextValue());
         instance.setFieldName(template.getFieldName());
         instance.setValueKey(template.getValueKey());
+        instance.setAttributeName(template.getAttributeName());
         return instance;
     }
 
@@ -165,6 +182,7 @@ public interface ChangeEnumValueLabelChange extends Change {
         instance.setNextValue(template.getNextValue());
         instance.setFieldName(template.getFieldName());
         instance.setValueKey(template.getValueKey());
+        instance.setAttributeName(template.getAttributeName());
         return instance;
     }
 

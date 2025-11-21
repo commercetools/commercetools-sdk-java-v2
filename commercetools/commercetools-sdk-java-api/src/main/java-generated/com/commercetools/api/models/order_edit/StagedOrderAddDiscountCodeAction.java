@@ -16,7 +16,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Adds a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> to the Cart to activate the related <span>Cart Discounts</span>. Adding a Discount Code is only possible if no <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">DirectDiscount</a> has been applied to the Order.</p>
+ *  <p>Adds a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> to the Order to activate the related <span>Cart Discounts</span>. If the related Cart Discounts are inactive or invalid, or belong to a different Store than the Order, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeNonApplicableError" rel="nofollow">DiscountCodeNonApplicableError</a> is returned.</p>
+ *  <p>A Discount Code can be added only if no <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">DirectDiscount</a> has been applied to the Order.</p>
  *  <p>The maximum number of Discount Codes in a Cart is restricted by a <span>limit</span>.</p>
  *  <p>Specific Error Code: <a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a></p>
  *

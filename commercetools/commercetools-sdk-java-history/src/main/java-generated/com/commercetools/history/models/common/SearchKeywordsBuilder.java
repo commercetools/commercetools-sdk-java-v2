@@ -24,7 +24,7 @@ public class SearchKeywordsBuilder implements Builder<SearchKeywords> {
     private Map<String, java.util.List<com.commercetools.history.models.common.SearchKeyword>> values = new HashMap<>();
 
     /**
-     * assign pattern properties to the builder
+     *  <p>Key-value pair where the keys are of type <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a> and the values are an array of <a href="https://docs.commercetools.com/apis/ctp:api:type:SearchKeyword" rel="nofollow">SearchKeyword</a>.</p>
      * @param values properties to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class SearchKeywordsBuilder implements Builder<SearchKeywords> {
     }
 
     /**
-     * assign a pattern property to the builder
+     *  <p>Key-value pair where the keys are of type <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a> and the values are an array of <a href="https://docs.commercetools.com/apis/ctp:api:type:SearchKeyword" rel="nofollow">SearchKeyword</a>.</p>
      * @param key property name
      * @param value property value
      * @return Builder
@@ -52,7 +52,7 @@ public class SearchKeywordsBuilder implements Builder<SearchKeywords> {
     }
 
     /**
-     * values of pattern properties
+     *  <p>Key-value pair where the keys are of type <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a> and the values are an array of <a href="https://docs.commercetools.com/apis/ctp:api:type:SearchKeyword" rel="nofollow">SearchKeyword</a>.</p>
      * @return pattern properties
      */
 

@@ -17,6 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue("{previousValue}")
  *             .nextValue("{nextValue}")
  *             .catalogData("{catalogData}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -31,6 +32,8 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
     private String nextValue;
 
     private String catalogData;
+
+    private String variant;
 
     /**
      * set the value to the change
@@ -66,6 +69,7 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -76,6 +80,18 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
 
     public SetProductVariantKeyChangeBuilder catalogData(final String catalogData) {
         this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     * @return Builder
+     */
+
+    public SetProductVariantKeyChangeBuilder variant(final String variant) {
+        this.variant = variant;
         return this;
     }
 
@@ -107,6 +123,7 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -119,6 +136,16 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
     }
 
     /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
+    /**
      * builds SetProductVariantKeyChange with checking for non-null required values
      * @return SetProductVariantKeyChange
      */
@@ -127,7 +154,8 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
         Objects.requireNonNull(previousValue, SetProductVariantKeyChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetProductVariantKeyChange.class + ": nextValue is missing");
         Objects.requireNonNull(catalogData, SetProductVariantKeyChange.class + ": catalogData is missing");
-        return new SetProductVariantKeyChangeImpl(change, previousValue, nextValue, catalogData);
+        Objects.requireNonNull(variant, SetProductVariantKeyChange.class + ": variant is missing");
+        return new SetProductVariantKeyChangeImpl(change, previousValue, nextValue, catalogData, variant);
     }
 
     /**
@@ -135,7 +163,7 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
      * @return SetProductVariantKeyChange
      */
     public SetProductVariantKeyChange buildUnchecked() {
-        return new SetProductVariantKeyChangeImpl(change, previousValue, nextValue, catalogData);
+        return new SetProductVariantKeyChangeImpl(change, previousValue, nextValue, catalogData, variant);
     }
 
     /**
@@ -157,6 +185,7 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
         builder.catalogData = template.getCatalogData();
+        builder.variant = template.getVariant();
         return builder;
     }
 

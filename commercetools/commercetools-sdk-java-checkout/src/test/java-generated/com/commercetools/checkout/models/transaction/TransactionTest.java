@@ -23,8 +23,7 @@ public class TransactionTest {
                 new Object[] { "key", Transaction.builder().key("key") },
                 new Object[] { "version", Transaction.builder().version(2) },
                 new Object[] { "application", Transaction.builder()
-                        .application(
-                            new com.commercetools.checkout.models.application.ApplicationResourceIdentifierImpl()) },
+                        .application(new com.commercetools.checkout.models.application.ApplicationReferenceImpl()) },
                 new Object[] { "transactionItems",
                         Transaction.builder()
                                 .transactionItems(Collections.singletonList(
@@ -64,9 +63,9 @@ public class TransactionTest {
     @Test
     public void application() {
         Transaction value = Transaction.of();
-        value.setApplication(new com.commercetools.checkout.models.application.ApplicationResourceIdentifierImpl());
+        value.setApplication(new com.commercetools.checkout.models.application.ApplicationReferenceImpl());
         Assertions.assertThat(value.getApplication())
-                .isEqualTo(new com.commercetools.checkout.models.application.ApplicationResourceIdentifierImpl());
+                .isEqualTo(new com.commercetools.checkout.models.application.ApplicationReferenceImpl());
     }
 
     @Test

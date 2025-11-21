@@ -28,7 +28,7 @@ public class TransactionImpl implements Transaction, ModelBase {
 
     private Integer version;
 
-    private com.commercetools.checkout.models.application.ApplicationResourceIdentifier application;
+    private com.commercetools.checkout.models.application.ApplicationReference application;
 
     private java.util.List<com.commercetools.checkout.models.transaction.TransactionItem> transactionItems;
 
@@ -48,7 +48,7 @@ public class TransactionImpl implements Transaction, ModelBase {
     @JsonCreator
     TransactionImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key,
             @JsonProperty("version") final Integer version,
-            @JsonProperty("application") final com.commercetools.checkout.models.application.ApplicationResourceIdentifier application,
+            @JsonProperty("application") final com.commercetools.checkout.models.application.ApplicationReference application,
             @JsonProperty("transactionItems") final java.util.List<com.commercetools.checkout.models.transaction.TransactionItem> transactionItems,
             @JsonProperty("cart") final com.commercetools.checkout.models.cart.CartReference cart,
             @JsonProperty("transactionStatus") final com.commercetools.checkout.models.transaction.TransactionStatus transactionStatus,
@@ -98,10 +98,10 @@ public class TransactionImpl implements Transaction, ModelBase {
     }
 
     /**
-     *  <p><span>Application</span> for which the payment must be executed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:checkout:type:Application" rel="nofollow">Application</a> for which the payment must be executed.</p>
      */
 
-    public com.commercetools.checkout.models.application.ApplicationResourceIdentifier getApplication() {
+    public com.commercetools.checkout.models.application.ApplicationReference getApplication() {
         return this.application;
     }
 
@@ -165,8 +165,7 @@ public class TransactionImpl implements Transaction, ModelBase {
         this.version = version;
     }
 
-    public void setApplication(
-            final com.commercetools.checkout.models.application.ApplicationResourceIdentifier application) {
+    public void setApplication(final com.commercetools.checkout.models.application.ApplicationReference application) {
         this.application = application;
     }
 

@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:StateRemoveRolesAction" rel="nofollow">Remove State roles</a> update action.</p>
+ *  <p>This Change is no longer triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:StateRemoveRolesAction" rel="nofollow">Remove State roles</a> update action. It has been deprecated and replaced by the <a href="https://docs.commercetools.com/apis/ctp:history:type:SetStateRolesChange" rel="nofollow">SetStateRolesChange</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,6 +33,7 @@ import jakarta.validation.constraints.NotNull;
 @io.vrap.rmf.base.client.utils.json.SubType("RemoveStateRolesChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = RemoveStateRolesChangeImpl.class)
+@Deprecated
 public interface RemoveStateRolesChange extends Change {
 
     /**

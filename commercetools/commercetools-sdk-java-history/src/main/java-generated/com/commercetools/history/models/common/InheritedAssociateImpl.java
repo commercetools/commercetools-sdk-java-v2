@@ -24,7 +24,7 @@ public class InheritedAssociateImpl implements InheritedAssociate, ModelBase {
 
     private java.util.List<com.commercetools.history.models.common.InheritedAssociateRoleAssignment> associateRoleAssignments;
 
-    private com.commercetools.history.models.common.Reference customer;
+    private com.commercetools.history.models.common.CustomerReference customer;
 
     /**
      * create instance with all properties
@@ -32,7 +32,7 @@ public class InheritedAssociateImpl implements InheritedAssociate, ModelBase {
     @JsonCreator
     InheritedAssociateImpl(
             @JsonProperty("associateRoleAssignments") final java.util.List<com.commercetools.history.models.common.InheritedAssociateRoleAssignment> associateRoleAssignments,
-            @JsonProperty("customer") final com.commercetools.history.models.common.Reference customer) {
+            @JsonProperty("customer") final com.commercetools.history.models.common.CustomerReference customer) {
         this.associateRoleAssignments = associateRoleAssignments;
         this.customer = customer;
     }
@@ -44,7 +44,7 @@ public class InheritedAssociateImpl implements InheritedAssociate, ModelBase {
     }
 
     /**
-     *
+     *  <p>Inherited roles of the Associate within a Business Unit.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.InheritedAssociateRoleAssignment> getAssociateRoleAssignments() {
@@ -52,10 +52,10 @@ public class InheritedAssociateImpl implements InheritedAssociate, ModelBase {
     }
 
     /**
-     *
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</p>
      */
 
-    public com.commercetools.history.models.common.Reference getCustomer() {
+    public com.commercetools.history.models.common.CustomerReference getCustomer() {
         return this.customer;
     }
 
@@ -69,7 +69,7 @@ public class InheritedAssociateImpl implements InheritedAssociate, ModelBase {
         this.associateRoleAssignments = associateRoleAssignments;
     }
 
-    public void setCustomer(final com.commercetools.history.models.common.Reference customer) {
+    public void setCustomer(final com.commercetools.history.models.common.CustomerReference customer) {
         this.customer = customer;
     }
 

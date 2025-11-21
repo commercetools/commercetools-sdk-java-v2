@@ -13,8 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     AssetDimensions assetDimensions = AssetDimensions.builder()
- *             .w(1)
- *             .h(1)
+ *             .w(0.3)
+ *             .h(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -27,7 +27,7 @@ public class AssetDimensionsBuilder implements Builder<AssetDimensions> {
     private Integer h;
 
     /**
-     * set the value to the w
+     *  <p>Width of the Asset source.</p>
      * @param w value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class AssetDimensionsBuilder implements Builder<AssetDimensions> {
     }
 
     /**
-     * set the value to the h
+     *  <p>Height of the Asset source.</p>
      * @param h value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class AssetDimensionsBuilder implements Builder<AssetDimensions> {
     }
 
     /**
-     * value of w}
+     *  <p>Width of the Asset source.</p>
      * @return w
      */
 
@@ -58,7 +58,7 @@ public class AssetDimensionsBuilder implements Builder<AssetDimensions> {
     }
 
     /**
-     * value of h}
+     *  <p>Height of the Asset source.</p>
      * @return h
      */
 

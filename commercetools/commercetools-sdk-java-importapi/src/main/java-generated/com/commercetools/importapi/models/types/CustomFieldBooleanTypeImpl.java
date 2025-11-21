@@ -32,7 +32,7 @@ public class CustomFieldBooleanTypeImpl implements CustomFieldBooleanType, Model
     }
 
     /**
-     *  <p>Name of the field type. Must be unique for a given <a href="https://docs.commercetools.com/apis/ctp:import:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>. In case there is a FieldDefinition with the same <code>name</code> in another Type, both FieldDefinitions must have the same <code>type</code>. This value cannot be changed after the Type is imported.</p>
+     *  <p>Discriminator that determines the type of the field. This value can't be changed after you import the Type.</p>
      */
 
     public String getName() {

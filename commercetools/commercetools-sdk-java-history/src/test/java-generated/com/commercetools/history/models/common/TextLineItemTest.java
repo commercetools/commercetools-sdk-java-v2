@@ -1,6 +1,8 @@
 
 package com.commercetools.history.models.common;
 
+import java.time.ZonedDateTime;
+
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -16,24 +18,26 @@ public class TextLineItemTest {
     }
 
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { "addedAt", TextLineItem.builder().addedAt("addedAt") },
+        return new Object[][] {
+                new Object[] { "addedAt", TextLineItem.builder().addedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
                 new Object[] { "custom",
                         TextLineItem.builder().custom(new com.commercetools.history.models.common.CustomFieldsImpl()) },
                 new Object[] { "description",
                         TextLineItem.builder()
                                 .description(new com.commercetools.history.models.common.LocalizedStringImpl()) },
                 new Object[] { "id", TextLineItem.builder().id("id") },
+                new Object[] { "key", TextLineItem.builder().key("key") },
                 new Object[] { "name",
                         TextLineItem.builder()
                                 .name(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { "quantity", TextLineItem.builder().quantity(8) } };
+                new Object[] { "quantity", TextLineItem.builder().quantity(8L) } };
     }
 
     @Test
     public void addedAt() {
         TextLineItem value = TextLineItem.of();
-        value.setAddedAt("addedAt");
-        Assertions.assertThat(value.getAddedAt()).isEqualTo("addedAt");
+        value.setAddedAt(ZonedDateTime.parse("2023-06-01T12:00Z"));
+        Assertions.assertThat(value.getAddedAt()).isEqualTo(ZonedDateTime.parse("2023-06-01T12:00Z"));
     }
 
     @Test
@@ -60,6 +64,13 @@ public class TextLineItemTest {
     }
 
     @Test
+    public void key() {
+        TextLineItem value = TextLineItem.of();
+        value.setKey("key");
+        Assertions.assertThat(value.getKey()).isEqualTo("key");
+    }
+
+    @Test
     public void name() {
         TextLineItem value = TextLineItem.of();
         value.setName(new com.commercetools.history.models.common.LocalizedStringImpl());
@@ -70,7 +81,7 @@ public class TextLineItemTest {
     @Test
     public void quantity() {
         TextLineItem value = TextLineItem.of();
-        value.setQuantity(8);
-        Assertions.assertThat(value.getQuantity()).isEqualTo(8);
+        value.setQuantity(8L);
+        Assertions.assertThat(value.getQuantity()).isEqualTo(8L);
     }
 }

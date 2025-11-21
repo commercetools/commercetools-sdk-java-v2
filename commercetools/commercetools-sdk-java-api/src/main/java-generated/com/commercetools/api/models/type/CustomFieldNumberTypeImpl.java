@@ -32,7 +32,7 @@ public class CustomFieldNumberTypeImpl implements CustomFieldNumberType, ModelBa
     }
 
     /**
-     *
+     *  <p>Discriminator that determines the type of the field.</p>
      */
 
     public String getName() {

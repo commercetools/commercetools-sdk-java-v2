@@ -26,7 +26,8 @@ public class SetLineItemTaxedPriceChangeTest {
                 new Object[] { "lineItem",
                         SetLineItemTaxedPriceChange.builder()
                                 .lineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { "lineItemId", SetLineItemTaxedPriceChange.builder().lineItemId("lineItemId") } };
+                new Object[] { "lineItemId", SetLineItemTaxedPriceChange.builder().lineItemId("lineItemId") },
+                new Object[] { "variant", SetLineItemTaxedPriceChange.builder().variant("variant") } };
     }
 
     @Test
@@ -65,5 +66,12 @@ public class SetLineItemTaxedPriceChangeTest {
         SetLineItemTaxedPriceChange value = SetLineItemTaxedPriceChange.of();
         value.setLineItemId("lineItemId");
         Assertions.assertThat(value.getLineItemId()).isEqualTo("lineItemId");
+    }
+
+    @Test
+    public void variant() {
+        SetLineItemTaxedPriceChange value = SetLineItemTaxedPriceChange.of();
+        value.setVariant("variant");
+        Assertions.assertThat(value.getVariant()).isEqualTo("variant");
     }
 }

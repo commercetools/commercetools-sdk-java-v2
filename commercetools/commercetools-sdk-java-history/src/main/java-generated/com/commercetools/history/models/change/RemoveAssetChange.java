@@ -30,6 +30,8 @@ import jakarta.validation.constraints.NotNull;
  *     RemoveAssetChange removeAssetChange = RemoveAssetChange.builder()
  *             .change("{change}")
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .catalogData("{catalogData}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -70,6 +72,27 @@ public interface RemoveAssetChange extends Change {
     public Asset getPreviousValue();
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+    @NotNull
+    @JsonProperty("catalogData")
+    public String getCatalogData();
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+    @NotNull
+    @JsonProperty("variant")
+    public String getVariant();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -82,6 +105,25 @@ public interface RemoveAssetChange extends Change {
      */
 
     public void setPreviousValue(final Asset previousValue);
+
+    /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     */
+
+    public void setCatalogData(final String catalogData);
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     */
+
+    public void setVariant(final String variant);
 
     /**
      * factory method
@@ -100,6 +142,8 @@ public interface RemoveAssetChange extends Change {
         RemoveAssetChangeImpl instance = new RemoveAssetChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setCatalogData(template.getCatalogData());
+        instance.setVariant(template.getVariant());
         return instance;
     }
 
@@ -118,6 +162,8 @@ public interface RemoveAssetChange extends Change {
         RemoveAssetChangeImpl instance = new RemoveAssetChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(com.commercetools.history.models.common.Asset.deepCopy(template.getPreviousValue()));
+        instance.setCatalogData(template.getCatalogData());
+        instance.setVariant(template.getVariant());
         return instance;
     }
 

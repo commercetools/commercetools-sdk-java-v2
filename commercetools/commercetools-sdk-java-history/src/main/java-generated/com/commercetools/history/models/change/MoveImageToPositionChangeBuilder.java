@@ -18,6 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .catalogData("{catalogData}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -32,6 +33,8 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     private java.util.List<com.commercetools.history.models.common.Image> nextValue;
 
     private String catalogData;
+
+    private String variant;
 
     /**
      * set the value to the change
@@ -223,6 +226,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -233,6 +237,18 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
 
     public MoveImageToPositionChangeBuilder catalogData(final String catalogData) {
         this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     * @return Builder
+     */
+
+    public MoveImageToPositionChangeBuilder variant(final String variant) {
+        this.variant = variant;
         return this;
     }
 
@@ -264,6 +280,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -276,6 +293,16 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     }
 
     /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
+    /**
      * builds MoveImageToPositionChange with checking for non-null required values
      * @return MoveImageToPositionChange
      */
@@ -284,7 +311,8 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
         Objects.requireNonNull(previousValue, MoveImageToPositionChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, MoveImageToPositionChange.class + ": nextValue is missing");
         Objects.requireNonNull(catalogData, MoveImageToPositionChange.class + ": catalogData is missing");
-        return new MoveImageToPositionChangeImpl(change, previousValue, nextValue, catalogData);
+        Objects.requireNonNull(variant, MoveImageToPositionChange.class + ": variant is missing");
+        return new MoveImageToPositionChangeImpl(change, previousValue, nextValue, catalogData, variant);
     }
 
     /**
@@ -292,7 +320,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
      * @return MoveImageToPositionChange
      */
     public MoveImageToPositionChange buildUnchecked() {
-        return new MoveImageToPositionChangeImpl(change, previousValue, nextValue, catalogData);
+        return new MoveImageToPositionChangeImpl(change, previousValue, nextValue, catalogData, variant);
     }
 
     /**
@@ -314,6 +342,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
         builder.catalogData = template.getCatalogData();
+        builder.variant = template.getVariant();
         return builder;
     }
 

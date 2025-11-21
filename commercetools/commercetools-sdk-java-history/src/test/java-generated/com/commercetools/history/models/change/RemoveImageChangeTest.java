@@ -27,7 +27,8 @@ public class RemoveImageChangeTest {
                         RemoveImageChange.builder()
                                 .nextValue(Collections
                                         .singletonList(new com.commercetools.history.models.common.ImageImpl())) },
-                new Object[] { "catalogData", RemoveImageChange.builder().catalogData("catalogData") } };
+                new Object[] { "catalogData", RemoveImageChange.builder().catalogData("catalogData") },
+                new Object[] { "variant", RemoveImageChange.builder().variant("variant") } };
     }
 
     @Test
@@ -58,5 +59,12 @@ public class RemoveImageChangeTest {
         RemoveImageChange value = RemoveImageChange.of();
         value.setCatalogData("catalogData");
         Assertions.assertThat(value.getCatalogData()).isEqualTo("catalogData");
+    }
+
+    @Test
+    public void variant() {
+        RemoveImageChange value = RemoveImageChange.of();
+        value.setVariant("variant");
+        Assertions.assertThat(value.getVariant()).isEqualTo("variant");
     }
 }

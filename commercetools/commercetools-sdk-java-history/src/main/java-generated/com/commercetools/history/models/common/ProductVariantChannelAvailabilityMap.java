@@ -16,14 +16,14 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * ProductVariantChannelAvailabilityMap
+ *  <p>JSON object where the keys are supply <span>Channel</span> <code>id</code>, and the values are <span>ProductVariantChannelAvailability</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     ProductVariantChannelAvailabilityMap productVariantChannelAvailabilityMap = ProductVariantChannelAvailabilityMap.builder()
- *             .//(//Builder -> //Builder)
+ *             ./^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/(/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/Builder -> /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/Builder)
  *             .build()
  * </code></pre>
  * </div>
@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ProductVariantChannelAvailabilityMap {
 
     /**
-     *
+     *  <p>JSON object where the keys are supply <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> <code>id</code>, and the values are <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantChannelAvailability" rel="nofollow">ProductVariantChannelAvailability</a>.</p>
      * @return map of the pattern property values
      */
     @NotNull
@@ -42,7 +42,7 @@ public interface ProductVariantChannelAvailabilityMap {
     public Map<String, ProductVariantChannelAvailability> values();
 
     /**
-     * set pattern property
+     *  <p>JSON object where the keys are supply <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> <code>id</code>, and the values are <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantChannelAvailability" rel="nofollow">ProductVariantChannelAvailability</a>.</p>
      * @param key property name
      * @param value property value
      */

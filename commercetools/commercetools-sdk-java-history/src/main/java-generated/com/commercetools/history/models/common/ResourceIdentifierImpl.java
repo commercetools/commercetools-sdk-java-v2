@@ -62,7 +62,7 @@ public class ResourceIdentifierImpl implements ResourceIdentifier, ModelBase {
     }
 
     /**
-     *
+     *  <p>Type of resource the value should reference. Supported resource type identifiers are:</p>
      */
 
     public com.commercetools.history.models.common.ReferenceTypeId getTypeId() {

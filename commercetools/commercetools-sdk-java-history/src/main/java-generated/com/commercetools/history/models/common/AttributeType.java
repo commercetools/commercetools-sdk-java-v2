@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * AttributeType
+ *  <p>Umbrella type for specific attribute types discriminated by property <code>name</code>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

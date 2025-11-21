@@ -4,6 +4,8 @@ package com.commercetools.history.models.common;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,6 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     TaxedItemPrice taxedItemPrice = TaxedItemPrice.builder()
  *             .totalNet(totalNetBuilder -> totalNetBuilder)
  *             .totalGross(totalGrossBuilder -> totalGrossBuilder)
+ *             .plusTaxPortions(taxPortionsBuilder -> taxPortionsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -23,96 +26,253 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
 
-    private com.commercetools.history.models.common.Money totalNet;
+    private com.commercetools.history.models.common.CentPrecisionMoney totalNet;
 
-    private com.commercetools.history.models.common.Money totalGross;
+    private com.commercetools.history.models.common.CentPrecisionMoney totalGross;
+
+    private java.util.List<com.commercetools.history.models.common.TaxPortion> taxPortions;
+
+    @Nullable
+    private com.commercetools.history.models.common.CentPrecisionMoney totalTax;
 
     /**
-     * set the value to the totalNet using the builder function
+     *  <p>Total net amount of the Line Item or Custom Line Item.</p>
      * @param builder function to build the totalNet value
      * @return Builder
      */
 
     public TaxedItemPriceBuilder totalNet(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
-        this.totalNet = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
+            Function<com.commercetools.history.models.common.CentPrecisionMoneyBuilder, com.commercetools.history.models.common.CentPrecisionMoneyBuilder> builder) {
+        this.totalNet = builder.apply(com.commercetools.history.models.common.CentPrecisionMoneyBuilder.of()).build();
         return this;
     }
 
     /**
-     * set the value to the totalNet using the builder function
+     *  <p>Total net amount of the Line Item or Custom Line Item.</p>
      * @param builder function to build the totalNet value
      * @return Builder
      */
 
     public TaxedItemPriceBuilder withTotalNet(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
-        this.totalNet = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
+            Function<com.commercetools.history.models.common.CentPrecisionMoneyBuilder, com.commercetools.history.models.common.CentPrecisionMoney> builder) {
+        this.totalNet = builder.apply(com.commercetools.history.models.common.CentPrecisionMoneyBuilder.of());
         return this;
     }
 
     /**
-     * set the value to the totalNet
+     *  <p>Total net amount of the Line Item or Custom Line Item.</p>
      * @param totalNet value to be set
      * @return Builder
      */
 
-    public TaxedItemPriceBuilder totalNet(final com.commercetools.history.models.common.Money totalNet) {
+    public TaxedItemPriceBuilder totalNet(final com.commercetools.history.models.common.CentPrecisionMoney totalNet) {
         this.totalNet = totalNet;
         return this;
     }
 
     /**
-     * set the value to the totalGross using the builder function
+     *  <p>Total gross amount of the Line Item or Custom Line Item.</p>
      * @param builder function to build the totalGross value
      * @return Builder
      */
 
     public TaxedItemPriceBuilder totalGross(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
-        this.totalGross = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
+            Function<com.commercetools.history.models.common.CentPrecisionMoneyBuilder, com.commercetools.history.models.common.CentPrecisionMoneyBuilder> builder) {
+        this.totalGross = builder.apply(com.commercetools.history.models.common.CentPrecisionMoneyBuilder.of()).build();
         return this;
     }
 
     /**
-     * set the value to the totalGross using the builder function
+     *  <p>Total gross amount of the Line Item or Custom Line Item.</p>
      * @param builder function to build the totalGross value
      * @return Builder
      */
 
     public TaxedItemPriceBuilder withTotalGross(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
-        this.totalGross = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
+            Function<com.commercetools.history.models.common.CentPrecisionMoneyBuilder, com.commercetools.history.models.common.CentPrecisionMoney> builder) {
+        this.totalGross = builder.apply(com.commercetools.history.models.common.CentPrecisionMoneyBuilder.of());
         return this;
     }
 
     /**
-     * set the value to the totalGross
+     *  <p>Total gross amount of the Line Item or Custom Line Item.</p>
      * @param totalGross value to be set
      * @return Builder
      */
 
-    public TaxedItemPriceBuilder totalGross(final com.commercetools.history.models.common.Money totalGross) {
+    public TaxedItemPriceBuilder totalGross(
+            final com.commercetools.history.models.common.CentPrecisionMoney totalGross) {
         this.totalGross = totalGross;
         return this;
     }
 
     /**
-     * value of totalNet}
+     *  <p>Taxable portions added to the total net price.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
+     * @param taxPortions value to be set
+     * @return Builder
+     */
+
+    public TaxedItemPriceBuilder taxPortions(final com.commercetools.history.models.common.TaxPortion... taxPortions) {
+        this.taxPortions = new ArrayList<>(Arrays.asList(taxPortions));
+        return this;
+    }
+
+    /**
+     *  <p>Taxable portions added to the total net price.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
+     * @param taxPortions value to be set
+     * @return Builder
+     */
+
+    public TaxedItemPriceBuilder taxPortions(
+            final java.util.List<com.commercetools.history.models.common.TaxPortion> taxPortions) {
+        this.taxPortions = taxPortions;
+        return this;
+    }
+
+    /**
+     *  <p>Taxable portions added to the total net price.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
+     * @param taxPortions value to be set
+     * @return Builder
+     */
+
+    public TaxedItemPriceBuilder plusTaxPortions(
+            final com.commercetools.history.models.common.TaxPortion... taxPortions) {
+        if (this.taxPortions == null) {
+            this.taxPortions = new ArrayList<>();
+        }
+        this.taxPortions.addAll(Arrays.asList(taxPortions));
+        return this;
+    }
+
+    /**
+     *  <p>Taxable portions added to the total net price.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
+     * @param builder function to build the taxPortions value
+     * @return Builder
+     */
+
+    public TaxedItemPriceBuilder plusTaxPortions(
+            Function<com.commercetools.history.models.common.TaxPortionBuilder, com.commercetools.history.models.common.TaxPortionBuilder> builder) {
+        if (this.taxPortions == null) {
+            this.taxPortions = new ArrayList<>();
+        }
+        this.taxPortions.add(builder.apply(com.commercetools.history.models.common.TaxPortionBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Taxable portions added to the total net price.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
+     * @param builder function to build the taxPortions value
+     * @return Builder
+     */
+
+    public TaxedItemPriceBuilder withTaxPortions(
+            Function<com.commercetools.history.models.common.TaxPortionBuilder, com.commercetools.history.models.common.TaxPortionBuilder> builder) {
+        this.taxPortions = new ArrayList<>();
+        this.taxPortions.add(builder.apply(com.commercetools.history.models.common.TaxPortionBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Taxable portions added to the total net price.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
+     * @param builder function to build the taxPortions value
+     * @return Builder
+     */
+
+    public TaxedItemPriceBuilder addTaxPortions(
+            Function<com.commercetools.history.models.common.TaxPortionBuilder, com.commercetools.history.models.common.TaxPortion> builder) {
+        return plusTaxPortions(builder.apply(com.commercetools.history.models.common.TaxPortionBuilder.of()));
+    }
+
+    /**
+     *  <p>Taxable portions added to the total net price.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
+     * @param builder function to build the taxPortions value
+     * @return Builder
+     */
+
+    public TaxedItemPriceBuilder setTaxPortions(
+            Function<com.commercetools.history.models.common.TaxPortionBuilder, com.commercetools.history.models.common.TaxPortion> builder) {
+        return taxPortions(builder.apply(com.commercetools.history.models.common.TaxPortionBuilder.of()));
+    }
+
+    /**
+     *  <p>Total tax applicable for the Line Item or Custom Line Item. Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
+     * @param builder function to build the totalTax value
+     * @return Builder
+     */
+
+    public TaxedItemPriceBuilder totalTax(
+            Function<com.commercetools.history.models.common.CentPrecisionMoneyBuilder, com.commercetools.history.models.common.CentPrecisionMoneyBuilder> builder) {
+        this.totalTax = builder.apply(com.commercetools.history.models.common.CentPrecisionMoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Total tax applicable for the Line Item or Custom Line Item. Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
+     * @param builder function to build the totalTax value
+     * @return Builder
+     */
+
+    public TaxedItemPriceBuilder withTotalTax(
+            Function<com.commercetools.history.models.common.CentPrecisionMoneyBuilder, com.commercetools.history.models.common.CentPrecisionMoney> builder) {
+        this.totalTax = builder.apply(com.commercetools.history.models.common.CentPrecisionMoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Total tax applicable for the Line Item or Custom Line Item. Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
+     * @param totalTax value to be set
+     * @return Builder
+     */
+
+    public TaxedItemPriceBuilder totalTax(
+            @Nullable final com.commercetools.history.models.common.CentPrecisionMoney totalTax) {
+        this.totalTax = totalTax;
+        return this;
+    }
+
+    /**
+     *  <p>Total net amount of the Line Item or Custom Line Item.</p>
      * @return totalNet
      */
 
-    public com.commercetools.history.models.common.Money getTotalNet() {
+    public com.commercetools.history.models.common.CentPrecisionMoney getTotalNet() {
         return this.totalNet;
     }
 
     /**
-     * value of totalGross}
+     *  <p>Total gross amount of the Line Item or Custom Line Item.</p>
      * @return totalGross
      */
 
-    public com.commercetools.history.models.common.Money getTotalGross() {
+    public com.commercetools.history.models.common.CentPrecisionMoney getTotalGross() {
         return this.totalGross;
+    }
+
+    /**
+     *  <p>Taxable portions added to the total net price.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
+     * @return taxPortions
+     */
+
+    public java.util.List<com.commercetools.history.models.common.TaxPortion> getTaxPortions() {
+        return this.taxPortions;
+    }
+
+    /**
+     *  <p>Total tax applicable for the Line Item or Custom Line Item. Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
+     * @return totalTax
+     */
+
+    @Nullable
+    public com.commercetools.history.models.common.CentPrecisionMoney getTotalTax() {
+        return this.totalTax;
     }
 
     /**
@@ -122,7 +282,8 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
     public TaxedItemPrice build() {
         Objects.requireNonNull(totalNet, TaxedItemPrice.class + ": totalNet is missing");
         Objects.requireNonNull(totalGross, TaxedItemPrice.class + ": totalGross is missing");
-        return new TaxedItemPriceImpl(totalNet, totalGross);
+        Objects.requireNonNull(taxPortions, TaxedItemPrice.class + ": taxPortions is missing");
+        return new TaxedItemPriceImpl(totalNet, totalGross, taxPortions, totalTax);
     }
 
     /**
@@ -130,7 +291,7 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
      * @return TaxedItemPrice
      */
     public TaxedItemPrice buildUnchecked() {
-        return new TaxedItemPriceImpl(totalNet, totalGross);
+        return new TaxedItemPriceImpl(totalNet, totalGross, taxPortions, totalTax);
     }
 
     /**
@@ -150,6 +311,8 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
         TaxedItemPriceBuilder builder = new TaxedItemPriceBuilder();
         builder.totalNet = template.getTotalNet();
         builder.totalGross = template.getTotalGross();
+        builder.taxPortions = template.getTaxPortions();
+        builder.totalTax = template.getTotalTax();
         return builder;
     }
 

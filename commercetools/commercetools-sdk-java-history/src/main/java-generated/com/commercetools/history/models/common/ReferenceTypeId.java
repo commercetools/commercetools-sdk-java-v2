@@ -11,12 +11,18 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ReferenceTypeId
+ *  <p>Type of resource the value should reference. Supported resource type identifiers are:</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ReferenceTypeId extends JsonEnum {
 
+    ReferenceTypeId APPROVAL_FLOW = ReferenceTypeIdEnum.APPROVAL_FLOW;
+
+    ReferenceTypeId APPROVAL_RULE = ReferenceTypeIdEnum.APPROVAL_RULE;
+
     ReferenceTypeId ASSOCIATE_ROLE = ReferenceTypeIdEnum.ASSOCIATE_ROLE;
+
+    ReferenceTypeId ATTRIBUTE_GROUP = ReferenceTypeIdEnum.ATTRIBUTE_GROUP;
 
     ReferenceTypeId BUSINESS_UNIT = ReferenceTypeIdEnum.BUSINESS_UNIT;
 
@@ -36,7 +42,11 @@ public interface ReferenceTypeId extends JsonEnum {
 
     ReferenceTypeId CUSTOMER_PASSWORD_TOKEN = ReferenceTypeIdEnum.CUSTOMER_PASSWORD_TOKEN;
 
+    ReferenceTypeId DIRECT_DISCOUNT = ReferenceTypeIdEnum.DIRECT_DISCOUNT;
+
     ReferenceTypeId DISCOUNT_CODE = ReferenceTypeIdEnum.DISCOUNT_CODE;
+
+    ReferenceTypeId DISCOUNT_GROUP = ReferenceTypeIdEnum.DISCOUNT_GROUP;
 
     ReferenceTypeId EXTENSION = ReferenceTypeIdEnum.EXTENSION;
 
@@ -56,13 +66,21 @@ public interface ReferenceTypeId extends JsonEnum {
 
     ReferenceTypeId PRODUCT_DISCOUNT = ReferenceTypeIdEnum.PRODUCT_DISCOUNT;
 
+    ReferenceTypeId PRODUCT_PRICE = ReferenceTypeIdEnum.PRODUCT_PRICE;
+
     ReferenceTypeId PRODUCT_SELECTION = ReferenceTypeIdEnum.PRODUCT_SELECTION;
+
+    ReferenceTypeId PRODUCT_TAILORING = ReferenceTypeIdEnum.PRODUCT_TAILORING;
 
     ReferenceTypeId PRODUCT_TYPE = ReferenceTypeIdEnum.PRODUCT_TYPE;
 
     ReferenceTypeId QUOTE = ReferenceTypeIdEnum.QUOTE;
 
     ReferenceTypeId QUOTE_REQUEST = ReferenceTypeIdEnum.QUOTE_REQUEST;
+
+    ReferenceTypeId RECURRENCE_POLICY = ReferenceTypeIdEnum.RECURRENCE_POLICY;
+
+    ReferenceTypeId RECURRING_ORDER = ReferenceTypeIdEnum.RECURRING_ORDER;
 
     ReferenceTypeId REVIEW = ReferenceTypeIdEnum.REVIEW;
 
@@ -71,6 +89,8 @@ public interface ReferenceTypeId extends JsonEnum {
     ReferenceTypeId SHOPPING_LIST = ReferenceTypeIdEnum.SHOPPING_LIST;
 
     ReferenceTypeId STAGED_QUOTE = ReferenceTypeIdEnum.STAGED_QUOTE;
+
+    ReferenceTypeId STANDALONE_PRICE = ReferenceTypeIdEnum.STANDALONE_PRICE;
 
     ReferenceTypeId STATE = ReferenceTypeIdEnum.STATE;
 
@@ -89,9 +109,24 @@ public interface ReferenceTypeId extends JsonEnum {
      */
     enum ReferenceTypeIdEnum implements ReferenceTypeId {
         /**
+         * approval-flow
+         */
+        APPROVAL_FLOW("approval-flow"),
+
+        /**
+         * approval-rule
+         */
+        APPROVAL_RULE("approval-rule"),
+
+        /**
          * associate-role
          */
         ASSOCIATE_ROLE("associate-role"),
+
+        /**
+         * attribute-group
+         */
+        ATTRIBUTE_GROUP("attribute-group"),
 
         /**
          * business-unit
@@ -139,9 +174,19 @@ public interface ReferenceTypeId extends JsonEnum {
         CUSTOMER_PASSWORD_TOKEN("customer-password-token"),
 
         /**
+         * direct-discount
+         */
+        DIRECT_DISCOUNT("direct-discount"),
+
+        /**
          * discount-code
          */
         DISCOUNT_CODE("discount-code"),
+
+        /**
+         * discount-group
+         */
+        DISCOUNT_GROUP("discount-group"),
 
         /**
          * extension
@@ -189,9 +234,19 @@ public interface ReferenceTypeId extends JsonEnum {
         PRODUCT_DISCOUNT("product-discount"),
 
         /**
+         * product-price
+         */
+        PRODUCT_PRICE("product-price"),
+
+        /**
          * product-selection
          */
         PRODUCT_SELECTION("product-selection"),
+
+        /**
+         * product-tailoring
+         */
+        PRODUCT_TAILORING("product-tailoring"),
 
         /**
          * product-type
@@ -207,6 +262,16 @@ public interface ReferenceTypeId extends JsonEnum {
          * quote-request
          */
         QUOTE_REQUEST("quote-request"),
+
+        /**
+         * recurrence-policy
+         */
+        RECURRENCE_POLICY("recurrence-policy"),
+
+        /**
+         * recurring-order
+         */
+        RECURRING_ORDER("recurring-order"),
 
         /**
          * review
@@ -227,6 +292,11 @@ public interface ReferenceTypeId extends JsonEnum {
          * staged-quote
          */
         STAGED_QUOTE("staged-quote"),
+
+        /**
+         * standalone-price
+         */
+        STANDALONE_PRICE("standalone-price"),
 
         /**
          * state

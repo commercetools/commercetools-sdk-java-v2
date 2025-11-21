@@ -23,47 +23,35 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineItemPrice> {
 
-    private com.commercetools.history.models.common.Money value;
+    private com.commercetools.history.models.common.TypedMoney value;
 
     private java.util.List<com.commercetools.history.models.common.DiscountedLineItemPortion> includedDiscounts;
 
     /**
-     * set the value to the value using the builder function
-     * @param builder function to build the value value
-     * @return Builder
-     */
-
-    public DiscountedLineItemPriceBuilder value(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
-        this.value = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     * set the value to the value using the builder function
-     * @param builder function to build the value value
-     * @return Builder
-     */
-
-    public DiscountedLineItemPriceBuilder withValue(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
-        this.value = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
-        return this;
-    }
-
-    /**
-     * set the value to the value
+     *  <p>Money value of the discounted Line Item or Custom Line Item.</p>
      * @param value value to be set
      * @return Builder
      */
 
-    public DiscountedLineItemPriceBuilder value(final com.commercetools.history.models.common.Money value) {
+    public DiscountedLineItemPriceBuilder value(final com.commercetools.history.models.common.TypedMoney value) {
         this.value = value;
         return this;
     }
 
     /**
-     * set values to the includedDiscounts
+     *  <p>Money value of the discounted Line Item or Custom Line Item.</p>
+     * @param builder function to build the value value
+     * @return Builder
+     */
+
+    public DiscountedLineItemPriceBuilder value(
+            Function<com.commercetools.history.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.history.models.common.TypedMoney>> builder) {
+        this.value = builder.apply(com.commercetools.history.models.common.TypedMoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Discount applicable on the Line Item or Custom Line Item.</p>
      * @param includedDiscounts value to be set
      * @return Builder
      */
@@ -75,7 +63,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     }
 
     /**
-     * set value to the includedDiscounts
+     *  <p>Discount applicable on the Line Item or Custom Line Item.</p>
      * @param includedDiscounts value to be set
      * @return Builder
      */
@@ -87,7 +75,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     }
 
     /**
-     * add values to the includedDiscounts
+     *  <p>Discount applicable on the Line Item or Custom Line Item.</p>
      * @param includedDiscounts value to be set
      * @return Builder
      */
@@ -102,7 +90,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     }
 
     /**
-     * add the value to the includedDiscounts using the builder function
+     *  <p>Discount applicable on the Line Item or Custom Line Item.</p>
      * @param builder function to build the includedDiscounts value
      * @return Builder
      */
@@ -118,7 +106,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     }
 
     /**
-     * set the value to the includedDiscounts using the builder function
+     *  <p>Discount applicable on the Line Item or Custom Line Item.</p>
      * @param builder function to build the includedDiscounts value
      * @return Builder
      */
@@ -132,7 +120,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     }
 
     /**
-     * add the value to the includedDiscounts using the builder function
+     *  <p>Discount applicable on the Line Item or Custom Line Item.</p>
      * @param builder function to build the includedDiscounts value
      * @return Builder
      */
@@ -144,7 +132,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     }
 
     /**
-     * set the value to the includedDiscounts using the builder function
+     *  <p>Discount applicable on the Line Item or Custom Line Item.</p>
      * @param builder function to build the includedDiscounts value
      * @return Builder
      */
@@ -156,16 +144,16 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     }
 
     /**
-     * value of value}
+     *  <p>Money value of the discounted Line Item or Custom Line Item.</p>
      * @return value
      */
 
-    public com.commercetools.history.models.common.Money getValue() {
+    public com.commercetools.history.models.common.TypedMoney getValue() {
         return this.value;
     }
 
     /**
-     * value of includedDiscounts}
+     *  <p>Discount applicable on the Line Item or Custom Line Item.</p>
      * @return includedDiscounts
      */
 

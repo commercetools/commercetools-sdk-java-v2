@@ -19,16 +19,17 @@ public class ProductSelectionSettingTest {
         return new Object[][] {
                 new Object[] { "productSelection",
                         ProductSelectionSetting.builder()
-                                .productSelection(new com.commercetools.history.models.common.ReferenceImpl()) },
+                                .productSelection(
+                                    new com.commercetools.history.models.common.ProductSelectionReferenceImpl()) },
                 new Object[] { "active", ProductSelectionSetting.builder().active(true) } };
     }
 
     @Test
     public void productSelection() {
         ProductSelectionSetting value = ProductSelectionSetting.of();
-        value.setProductSelection(new com.commercetools.history.models.common.ReferenceImpl());
+        value.setProductSelection(new com.commercetools.history.models.common.ProductSelectionReferenceImpl());
         Assertions.assertThat(value.getProductSelection())
-                .isEqualTo(new com.commercetools.history.models.common.ReferenceImpl());
+                .isEqualTo(new com.commercetools.history.models.common.ProductSelectionReferenceImpl());
     }
 
     @Test

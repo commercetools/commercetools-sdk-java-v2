@@ -26,7 +26,8 @@ public class SetOrderLineItemCustomTypeChangeTest {
                 new Object[] { "lineItem",
                         SetOrderLineItemCustomTypeChange.builder()
                                 .lineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { "variant", SetOrderLineItemCustomTypeChange.builder().variant("variant") } };
+                new Object[] { "variant", SetOrderLineItemCustomTypeChange.builder().variant("variant") },
+                new Object[] { "lineItemId", SetOrderLineItemCustomTypeChange.builder().lineItemId("lineItemId") } };
     }
 
     @Test
@@ -65,5 +66,12 @@ public class SetOrderLineItemCustomTypeChangeTest {
         SetOrderLineItemCustomTypeChange value = SetOrderLineItemCustomTypeChange.of();
         value.setVariant("variant");
         Assertions.assertThat(value.getVariant()).isEqualTo("variant");
+    }
+
+    @Test
+    public void lineItemId() {
+        SetOrderLineItemCustomTypeChange value = SetOrderLineItemCustomTypeChange.of();
+        value.setLineItemId("lineItemId");
+        Assertions.assertThat(value.getLineItemId()).isEqualTo("lineItemId");
     }
 }

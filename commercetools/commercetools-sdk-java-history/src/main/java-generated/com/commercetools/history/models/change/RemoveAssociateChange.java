@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitRemoveAssociateAction" rel="nofollow">Remove Associate</a> update action.</p>
+ *  <p>This Change is no longer triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitRemoveAssociateAction" rel="nofollow">Remove Associate</a> update action. It has been deprecated and replaced by the <a href="https://docs.commercetools.com/apis/ctp:history:type:SetAssociatesChange" rel="nofollow">SetAssociatesChange</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,6 +33,7 @@ import jakarta.validation.constraints.NotNull;
 @io.vrap.rmf.base.client.utils.json.SubType("RemoveAssociateChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = RemoveAssociateChangeImpl.class)
+@Deprecated
 public interface RemoveAssociateChange extends Change {
 
     /**

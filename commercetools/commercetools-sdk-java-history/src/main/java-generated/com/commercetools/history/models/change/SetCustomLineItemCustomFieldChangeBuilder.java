@@ -18,6 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .customLineItem(customLineItemBuilder -> customLineItemBuilder)
  *             .customLineItemId("{customLineItemId}")
+ *             .customTypeId("{customTypeId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -36,6 +37,8 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     private com.commercetools.history.models.common.LocalizedString customLineItem;
 
     private String customLineItemId;
+
+    private String customTypeId;
 
     /**
      * set the value to the change
@@ -130,6 +133,17 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
+     * @param customTypeId value to be set
+     * @return Builder
+     */
+
+    public SetCustomLineItemCustomFieldChangeBuilder customTypeId(final String customTypeId) {
+        this.customTypeId = customTypeId;
+        return this;
+    }
+
+    /**
      * value of change}
      * @return change
      */
@@ -184,6 +198,15 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
+     * @return customTypeId
+     */
+
+    public String getCustomTypeId() {
+        return this.customTypeId;
+    }
+
+    /**
      * builds SetCustomLineItemCustomFieldChange with checking for non-null required values
      * @return SetCustomLineItemCustomFieldChange
      */
@@ -196,8 +219,9 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
             SetCustomLineItemCustomFieldChange.class + ": customLineItem is missing");
         Objects.requireNonNull(customLineItemId,
             SetCustomLineItemCustomFieldChange.class + ": customLineItemId is missing");
+        Objects.requireNonNull(customTypeId, SetCustomLineItemCustomFieldChange.class + ": customTypeId is missing");
         return new SetCustomLineItemCustomFieldChangeImpl(change, previousValue, nextValue, name, customLineItem,
-            customLineItemId);
+            customLineItemId, customTypeId);
     }
 
     /**
@@ -206,7 +230,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
      */
     public SetCustomLineItemCustomFieldChange buildUnchecked() {
         return new SetCustomLineItemCustomFieldChangeImpl(change, previousValue, nextValue, name, customLineItem,
-            customLineItemId);
+            customLineItemId, customTypeId);
     }
 
     /**
@@ -230,6 +254,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
         builder.name = template.getName();
         builder.customLineItem = template.getCustomLineItem();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customTypeId = template.getCustomTypeId();
         return builder;
     }
 

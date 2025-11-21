@@ -7,7 +7,7 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.history.models.common.TaxedPrice;
+import com.commercetools.history.models.common.TaxedItemPrice;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -64,7 +64,7 @@ public interface SetShippingInfoTaxedPriceChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("previousValue")
-    public TaxedPrice getPreviousValue();
+    public TaxedItemPrice getPreviousValue();
 
     /**
      *  <p>Value after the change.</p>
@@ -73,7 +73,7 @@ public interface SetShippingInfoTaxedPriceChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("nextValue")
-    public TaxedPrice getNextValue();
+    public TaxedItemPrice getNextValue();
 
     /**
      * set change
@@ -87,14 +87,14 @@ public interface SetShippingInfoTaxedPriceChange extends Change {
      * @param previousValue value to be set
      */
 
-    public void setPreviousValue(final TaxedPrice previousValue);
+    public void setPreviousValue(final TaxedItemPrice previousValue);
 
     /**
      *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
-    public void setNextValue(final TaxedPrice nextValue);
+    public void setNextValue(final TaxedItemPrice nextValue);
 
     /**
      * factory method
@@ -132,8 +132,8 @@ public interface SetShippingInfoTaxedPriceChange extends Change {
         SetShippingInfoTaxedPriceChangeImpl instance = new SetShippingInfoTaxedPriceChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(
-            com.commercetools.history.models.common.TaxedPrice.deepCopy(template.getPreviousValue()));
-        instance.setNextValue(com.commercetools.history.models.common.TaxedPrice.deepCopy(template.getNextValue()));
+            com.commercetools.history.models.common.TaxedItemPrice.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.TaxedItemPrice.deepCopy(template.getNextValue()));
         return instance;
     }
 

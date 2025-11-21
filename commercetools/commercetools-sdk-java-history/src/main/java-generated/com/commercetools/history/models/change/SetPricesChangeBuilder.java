@@ -19,6 +19,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .catalogData("{catalogData}")
  *             .variant("{variant}")
+ *             .plusAddedItems(addedItemsBuilder -> addedItemsBuilder)
+ *             .plusRemovedItems(removedItemsBuilder -> removedItemsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -35,6 +37,10 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     private String catalogData;
 
     private String variant;
+
+    private java.util.List<com.commercetools.history.models.common.Price> addedItems;
+
+    private java.util.List<com.commercetools.history.models.common.Price> removedItems;
 
     /**
      * set the value to the change
@@ -223,6 +229,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -237,7 +244,8 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      * @param variant value to be set
      * @return Builder
      */
@@ -245,6 +253,181 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     public SetPricesChangeBuilder variant(final String variant) {
         this.variant = variant;
         return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems value to be set
+     * @return Builder
+     */
+
+    public SetPricesChangeBuilder addedItems(final com.commercetools.history.models.common.Price... addedItems) {
+        this.addedItems = new ArrayList<>(Arrays.asList(addedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems value to be set
+     * @return Builder
+     */
+
+    public SetPricesChangeBuilder addedItems(
+            final java.util.List<com.commercetools.history.models.common.Price> addedItems) {
+        this.addedItems = addedItems;
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems value to be set
+     * @return Builder
+     */
+
+    public SetPricesChangeBuilder plusAddedItems(final com.commercetools.history.models.common.Price... addedItems) {
+        if (this.addedItems == null) {
+            this.addedItems = new ArrayList<>();
+        }
+        this.addedItems.addAll(Arrays.asList(addedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param builder function to build the addedItems value
+     * @return Builder
+     */
+
+    public SetPricesChangeBuilder plusAddedItems(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
+        if (this.addedItems == null) {
+            this.addedItems = new ArrayList<>();
+        }
+        this.addedItems.add(builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param builder function to build the addedItems value
+     * @return Builder
+     */
+
+    public SetPricesChangeBuilder withAddedItems(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
+        this.addedItems = new ArrayList<>();
+        this.addedItems.add(builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param builder function to build the addedItems value
+     * @return Builder
+     */
+
+    public SetPricesChangeBuilder addAddedItems(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.Price> builder) {
+        return plusAddedItems(builder.apply(com.commercetools.history.models.common.PriceBuilder.of()));
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param builder function to build the addedItems value
+     * @return Builder
+     */
+
+    public SetPricesChangeBuilder setAddedItems(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.Price> builder) {
+        return addedItems(builder.apply(com.commercetools.history.models.common.PriceBuilder.of()));
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems value to be set
+     * @return Builder
+     */
+
+    public SetPricesChangeBuilder removedItems(final com.commercetools.history.models.common.Price... removedItems) {
+        this.removedItems = new ArrayList<>(Arrays.asList(removedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems value to be set
+     * @return Builder
+     */
+
+    public SetPricesChangeBuilder removedItems(
+            final java.util.List<com.commercetools.history.models.common.Price> removedItems) {
+        this.removedItems = removedItems;
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems value to be set
+     * @return Builder
+     */
+
+    public SetPricesChangeBuilder plusRemovedItems(
+            final com.commercetools.history.models.common.Price... removedItems) {
+        if (this.removedItems == null) {
+            this.removedItems = new ArrayList<>();
+        }
+        this.removedItems.addAll(Arrays.asList(removedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param builder function to build the removedItems value
+     * @return Builder
+     */
+
+    public SetPricesChangeBuilder plusRemovedItems(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
+        if (this.removedItems == null) {
+            this.removedItems = new ArrayList<>();
+        }
+        this.removedItems.add(builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param builder function to build the removedItems value
+     * @return Builder
+     */
+
+    public SetPricesChangeBuilder withRemovedItems(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
+        this.removedItems = new ArrayList<>();
+        this.removedItems.add(builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param builder function to build the removedItems value
+     * @return Builder
+     */
+
+    public SetPricesChangeBuilder addRemovedItems(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.Price> builder) {
+        return plusRemovedItems(builder.apply(com.commercetools.history.models.common.PriceBuilder.of()));
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param builder function to build the removedItems value
+     * @return Builder
+     */
+
+    public SetPricesChangeBuilder setRemovedItems(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.Price> builder) {
+        return removedItems(builder.apply(com.commercetools.history.models.common.PriceBuilder.of()));
     }
 
     /**
@@ -275,6 +458,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -287,12 +471,31 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      * @return variant
      */
 
     public String getVariant() {
         return this.variant;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @return addedItems
+     */
+
+    public java.util.List<com.commercetools.history.models.common.Price> getAddedItems() {
+        return this.addedItems;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @return removedItems
+     */
+
+    public java.util.List<com.commercetools.history.models.common.Price> getRemovedItems() {
+        return this.removedItems;
     }
 
     /**
@@ -305,7 +508,10 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
         Objects.requireNonNull(nextValue, SetPricesChange.class + ": nextValue is missing");
         Objects.requireNonNull(catalogData, SetPricesChange.class + ": catalogData is missing");
         Objects.requireNonNull(variant, SetPricesChange.class + ": variant is missing");
-        return new SetPricesChangeImpl(change, previousValue, nextValue, catalogData, variant);
+        Objects.requireNonNull(addedItems, SetPricesChange.class + ": addedItems is missing");
+        Objects.requireNonNull(removedItems, SetPricesChange.class + ": removedItems is missing");
+        return new SetPricesChangeImpl(change, previousValue, nextValue, catalogData, variant, addedItems,
+            removedItems);
     }
 
     /**
@@ -313,7 +519,8 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
      * @return SetPricesChange
      */
     public SetPricesChange buildUnchecked() {
-        return new SetPricesChangeImpl(change, previousValue, nextValue, catalogData, variant);
+        return new SetPricesChangeImpl(change, previousValue, nextValue, catalogData, variant, addedItems,
+            removedItems);
     }
 
     /**
@@ -336,6 +543,8 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
         builder.nextValue = template.getNextValue();
         builder.catalogData = template.getCatalogData();
         builder.variant = template.getVariant();
+        builder.addedItems = template.getAddedItems();
+        builder.removedItems = template.getRemovedItems();
         return builder;
     }
 

@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * OrderRemovePaymentAction
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderPaymentRemovedMessage" rel="nofollow">Order Payment Removed</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

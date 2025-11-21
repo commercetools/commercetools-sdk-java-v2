@@ -26,9 +26,9 @@ public class SetShippingRateChangeBuilder implements Builder<SetShippingRateChan
 
     private String change;
 
-    private com.commercetools.history.models.common.Money previousValue;
+    private com.commercetools.history.models.common.ShippingRate previousValue;
 
-    private com.commercetools.history.models.common.Money nextValue;
+    private com.commercetools.history.models.common.ShippingRate nextValue;
 
     /**
      * set the value to the change
@@ -48,8 +48,8 @@ public class SetShippingRateChangeBuilder implements Builder<SetShippingRateChan
      */
 
     public SetShippingRateChangeBuilder previousValue(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
+            Function<com.commercetools.history.models.common.ShippingRateBuilder, com.commercetools.history.models.common.ShippingRateBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.ShippingRateBuilder.of()).build();
         return this;
     }
 
@@ -60,8 +60,8 @@ public class SetShippingRateChangeBuilder implements Builder<SetShippingRateChan
      */
 
     public SetShippingRateChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
+            Function<com.commercetools.history.models.common.ShippingRateBuilder, com.commercetools.history.models.common.ShippingRate> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.ShippingRateBuilder.of());
         return this;
     }
 
@@ -72,7 +72,7 @@ public class SetShippingRateChangeBuilder implements Builder<SetShippingRateChan
      */
 
     public SetShippingRateChangeBuilder previousValue(
-            final com.commercetools.history.models.common.Money previousValue) {
+            final com.commercetools.history.models.common.ShippingRate previousValue) {
         this.previousValue = previousValue;
         return this;
     }
@@ -84,8 +84,8 @@ public class SetShippingRateChangeBuilder implements Builder<SetShippingRateChan
      */
 
     public SetShippingRateChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
+            Function<com.commercetools.history.models.common.ShippingRateBuilder, com.commercetools.history.models.common.ShippingRateBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ShippingRateBuilder.of()).build();
         return this;
     }
 
@@ -96,8 +96,8 @@ public class SetShippingRateChangeBuilder implements Builder<SetShippingRateChan
      */
 
     public SetShippingRateChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
+            Function<com.commercetools.history.models.common.ShippingRateBuilder, com.commercetools.history.models.common.ShippingRate> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ShippingRateBuilder.of());
         return this;
     }
 
@@ -107,7 +107,8 @@ public class SetShippingRateChangeBuilder implements Builder<SetShippingRateChan
      * @return Builder
      */
 
-    public SetShippingRateChangeBuilder nextValue(final com.commercetools.history.models.common.Money nextValue) {
+    public SetShippingRateChangeBuilder nextValue(
+            final com.commercetools.history.models.common.ShippingRate nextValue) {
         this.nextValue = nextValue;
         return this;
     }
@@ -126,7 +127,7 @@ public class SetShippingRateChangeBuilder implements Builder<SetShippingRateChan
      * @return previousValue
      */
 
-    public com.commercetools.history.models.common.Money getPreviousValue() {
+    public com.commercetools.history.models.common.ShippingRate getPreviousValue() {
         return this.previousValue;
     }
 
@@ -135,7 +136,7 @@ public class SetShippingRateChangeBuilder implements Builder<SetShippingRateChan
      * @return nextValue
      */
 
-    public com.commercetools.history.models.common.Money getNextValue() {
+    public com.commercetools.history.models.common.ShippingRate getNextValue() {
         return this.nextValue;
     }
 

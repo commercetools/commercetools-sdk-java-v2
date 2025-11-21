@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered automatically due to a user-initiated change.</p>
+ *  <p>This change is initiated by background processes when a discount is applied through a Discount Code.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetApplicationVersionChangeImpl implements SetApplicationVersionChange, ModelBase {

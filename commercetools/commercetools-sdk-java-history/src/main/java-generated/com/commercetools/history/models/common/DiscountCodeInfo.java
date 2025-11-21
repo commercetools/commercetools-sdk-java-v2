@@ -34,16 +34,16 @@ import jakarta.validation.constraints.NotNull;
 public interface DiscountCodeInfo {
 
     /**
-     *
+     *  <p>Discount Code associated with the Cart or Order.</p>
      * @return discountCode
      */
     @NotNull
     @Valid
     @JsonProperty("discountCode")
-    public Reference getDiscountCode();
+    public DiscountCodeReference getDiscountCode();
 
     /**
-     *
+     *  <p>Indicates the state of the Discount Code applied to the Cart or Order.</p>
      * @return state
      */
     @NotNull
@@ -51,14 +51,14 @@ public interface DiscountCodeInfo {
     public DiscountCodeState getState();
 
     /**
-     * set discountCode
+     *  <p>Discount Code associated with the Cart or Order.</p>
      * @param discountCode value to be set
      */
 
-    public void setDiscountCode(final Reference discountCode);
+    public void setDiscountCode(final DiscountCodeReference discountCode);
 
     /**
-     * set state
+     *  <p>Indicates the state of the Discount Code applied to the Cart or Order.</p>
      * @param state value to be set
      */
 
@@ -98,7 +98,7 @@ public interface DiscountCodeInfo {
         }
         DiscountCodeInfoImpl instance = new DiscountCodeInfoImpl();
         instance.setDiscountCode(
-            com.commercetools.history.models.common.Reference.deepCopy(template.getDiscountCode()));
+            com.commercetools.history.models.common.DiscountCodeReference.deepCopy(template.getDiscountCode()));
         instance.setState(template.getState());
         return instance;
     }

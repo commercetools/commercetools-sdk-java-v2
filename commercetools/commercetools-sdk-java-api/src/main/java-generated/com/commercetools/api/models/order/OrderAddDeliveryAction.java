@@ -19,6 +19,7 @@ import jakarta.validation.Valid;
 
 /**
  *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> can only be added to an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> if its <code>shippingInfo</code> (for <code>shippingMode</code> = <code>Single</code>), or its <code>shipping</code> (for <code>shippingMode</code> = <code>Multiple</code>) exists.</p>
+ *  <p>Multiple Deliveries can be added to the same Order to represent split or partial shipments. However, the API doesn't validate that the cumulative quantities of Line Items or Custom Line Items across all Deliveries match or stay within the originally ordered quantities. For more information, see <span>Multiple Deliveries</span> on the Shipping and Delivery overview page.</p>
  *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryAddedMessage" rel="nofollow">Delivery Added</a> Message.</p>
  *
  * <hr>

@@ -17,6 +17,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .change("{change}")
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .plusAddedItems(addedItemsBuilder -> addedItemsBuilder)
+ *             .plusRemovedItems(removedItemsBuilder -> removedItemsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -29,6 +31,10 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
     private java.util.List<com.commercetools.history.models.common.Reservation> previousValue;
 
     private java.util.List<com.commercetools.history.models.common.Reservation> nextValue;
+
+    private java.util.List<com.commercetools.history.models.common.Reservation> addedItems;
+
+    private java.util.List<com.commercetools.history.models.common.Reservation> removedItems;
 
     /**
      * set the value to the change
@@ -220,6 +226,184 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
     }
 
     /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems value to be set
+     * @return Builder
+     */
+
+    public SetReservationsChangeBuilder addedItems(
+            final com.commercetools.history.models.common.Reservation... addedItems) {
+        this.addedItems = new ArrayList<>(Arrays.asList(addedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems value to be set
+     * @return Builder
+     */
+
+    public SetReservationsChangeBuilder addedItems(
+            final java.util.List<com.commercetools.history.models.common.Reservation> addedItems) {
+        this.addedItems = addedItems;
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems value to be set
+     * @return Builder
+     */
+
+    public SetReservationsChangeBuilder plusAddedItems(
+            final com.commercetools.history.models.common.Reservation... addedItems) {
+        if (this.addedItems == null) {
+            this.addedItems = new ArrayList<>();
+        }
+        this.addedItems.addAll(Arrays.asList(addedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param builder function to build the addedItems value
+     * @return Builder
+     */
+
+    public SetReservationsChangeBuilder plusAddedItems(
+            Function<com.commercetools.history.models.common.ReservationBuilder, com.commercetools.history.models.common.ReservationBuilder> builder) {
+        if (this.addedItems == null) {
+            this.addedItems = new ArrayList<>();
+        }
+        this.addedItems.add(builder.apply(com.commercetools.history.models.common.ReservationBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param builder function to build the addedItems value
+     * @return Builder
+     */
+
+    public SetReservationsChangeBuilder withAddedItems(
+            Function<com.commercetools.history.models.common.ReservationBuilder, com.commercetools.history.models.common.ReservationBuilder> builder) {
+        this.addedItems = new ArrayList<>();
+        this.addedItems.add(builder.apply(com.commercetools.history.models.common.ReservationBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param builder function to build the addedItems value
+     * @return Builder
+     */
+
+    public SetReservationsChangeBuilder addAddedItems(
+            Function<com.commercetools.history.models.common.ReservationBuilder, com.commercetools.history.models.common.Reservation> builder) {
+        return plusAddedItems(builder.apply(com.commercetools.history.models.common.ReservationBuilder.of()));
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param builder function to build the addedItems value
+     * @return Builder
+     */
+
+    public SetReservationsChangeBuilder setAddedItems(
+            Function<com.commercetools.history.models.common.ReservationBuilder, com.commercetools.history.models.common.Reservation> builder) {
+        return addedItems(builder.apply(com.commercetools.history.models.common.ReservationBuilder.of()));
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems value to be set
+     * @return Builder
+     */
+
+    public SetReservationsChangeBuilder removedItems(
+            final com.commercetools.history.models.common.Reservation... removedItems) {
+        this.removedItems = new ArrayList<>(Arrays.asList(removedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems value to be set
+     * @return Builder
+     */
+
+    public SetReservationsChangeBuilder removedItems(
+            final java.util.List<com.commercetools.history.models.common.Reservation> removedItems) {
+        this.removedItems = removedItems;
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems value to be set
+     * @return Builder
+     */
+
+    public SetReservationsChangeBuilder plusRemovedItems(
+            final com.commercetools.history.models.common.Reservation... removedItems) {
+        if (this.removedItems == null) {
+            this.removedItems = new ArrayList<>();
+        }
+        this.removedItems.addAll(Arrays.asList(removedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param builder function to build the removedItems value
+     * @return Builder
+     */
+
+    public SetReservationsChangeBuilder plusRemovedItems(
+            Function<com.commercetools.history.models.common.ReservationBuilder, com.commercetools.history.models.common.ReservationBuilder> builder) {
+        if (this.removedItems == null) {
+            this.removedItems = new ArrayList<>();
+        }
+        this.removedItems.add(builder.apply(com.commercetools.history.models.common.ReservationBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param builder function to build the removedItems value
+     * @return Builder
+     */
+
+    public SetReservationsChangeBuilder withRemovedItems(
+            Function<com.commercetools.history.models.common.ReservationBuilder, com.commercetools.history.models.common.ReservationBuilder> builder) {
+        this.removedItems = new ArrayList<>();
+        this.removedItems.add(builder.apply(com.commercetools.history.models.common.ReservationBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param builder function to build the removedItems value
+     * @return Builder
+     */
+
+    public SetReservationsChangeBuilder addRemovedItems(
+            Function<com.commercetools.history.models.common.ReservationBuilder, com.commercetools.history.models.common.Reservation> builder) {
+        return plusRemovedItems(builder.apply(com.commercetools.history.models.common.ReservationBuilder.of()));
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param builder function to build the removedItems value
+     * @return Builder
+     */
+
+    public SetReservationsChangeBuilder setRemovedItems(
+            Function<com.commercetools.history.models.common.ReservationBuilder, com.commercetools.history.models.common.Reservation> builder) {
+        return removedItems(builder.apply(com.commercetools.history.models.common.ReservationBuilder.of()));
+    }
+
+    /**
      * value of change}
      * @return change
      */
@@ -247,6 +431,24 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
     }
 
     /**
+     *  <p>Elements added to the array.</p>
+     * @return addedItems
+     */
+
+    public java.util.List<com.commercetools.history.models.common.Reservation> getAddedItems() {
+        return this.addedItems;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @return removedItems
+     */
+
+    public java.util.List<com.commercetools.history.models.common.Reservation> getRemovedItems() {
+        return this.removedItems;
+    }
+
+    /**
      * builds SetReservationsChange with checking for non-null required values
      * @return SetReservationsChange
      */
@@ -254,7 +456,9 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
         Objects.requireNonNull(change, SetReservationsChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetReservationsChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetReservationsChange.class + ": nextValue is missing");
-        return new SetReservationsChangeImpl(change, previousValue, nextValue);
+        Objects.requireNonNull(addedItems, SetReservationsChange.class + ": addedItems is missing");
+        Objects.requireNonNull(removedItems, SetReservationsChange.class + ": removedItems is missing");
+        return new SetReservationsChangeImpl(change, previousValue, nextValue, addedItems, removedItems);
     }
 
     /**
@@ -262,7 +466,7 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
      * @return SetReservationsChange
      */
     public SetReservationsChange buildUnchecked() {
-        return new SetReservationsChangeImpl(change, previousValue, nextValue);
+        return new SetReservationsChangeImpl(change, previousValue, nextValue, addedItems, removedItems);
     }
 
     /**
@@ -283,6 +487,8 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
         builder.change = template.getChange();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.addedItems = template.getAddedItems();
+        builder.removedItems = template.getRemovedItems();
         return builder;
     }
 

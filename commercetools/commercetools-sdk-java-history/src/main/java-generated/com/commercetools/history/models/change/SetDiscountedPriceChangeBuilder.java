@@ -20,6 +20,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .catalogData("{catalogData}")
  *             .variant("{variant}")
  *             .priceId("{priceId}")
+ *             .price(priceBuilder -> priceBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -29,15 +30,17 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
 
     private String change;
 
-    private com.commercetools.history.models.common.Price previousValue;
+    private com.commercetools.history.models.common.DiscountedPrice previousValue;
 
-    private com.commercetools.history.models.common.Price nextValue;
+    private com.commercetools.history.models.common.DiscountedPrice nextValue;
 
     private String catalogData;
 
     private String variant;
 
     private String priceId;
+
+    private com.commercetools.history.models.common.Price price;
 
     /**
      * set the value to the change
@@ -57,8 +60,8 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
      */
 
     public SetDiscountedPriceChangeBuilder previousValue(
-            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build();
+            Function<com.commercetools.history.models.common.DiscountedPriceBuilder, com.commercetools.history.models.common.DiscountedPriceBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.DiscountedPriceBuilder.of()).build();
         return this;
     }
 
@@ -69,8 +72,8 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
      */
 
     public SetDiscountedPriceChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.Price> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.PriceBuilder.of());
+            Function<com.commercetools.history.models.common.DiscountedPriceBuilder, com.commercetools.history.models.common.DiscountedPrice> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.DiscountedPriceBuilder.of());
         return this;
     }
 
@@ -81,7 +84,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
      */
 
     public SetDiscountedPriceChangeBuilder previousValue(
-            final com.commercetools.history.models.common.Price previousValue) {
+            final com.commercetools.history.models.common.DiscountedPrice previousValue) {
         this.previousValue = previousValue;
         return this;
     }
@@ -93,8 +96,8 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
      */
 
     public SetDiscountedPriceChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build();
+            Function<com.commercetools.history.models.common.DiscountedPriceBuilder, com.commercetools.history.models.common.DiscountedPriceBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.DiscountedPriceBuilder.of()).build();
         return this;
     }
 
@@ -105,8 +108,8 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
      */
 
     public SetDiscountedPriceChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.Price> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.PriceBuilder.of());
+            Function<com.commercetools.history.models.common.DiscountedPriceBuilder, com.commercetools.history.models.common.DiscountedPrice> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.DiscountedPriceBuilder.of());
         return this;
     }
 
@@ -116,12 +119,14 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
      * @return Builder
      */
 
-    public SetDiscountedPriceChangeBuilder nextValue(final com.commercetools.history.models.common.Price nextValue) {
+    public SetDiscountedPriceChangeBuilder nextValue(
+            final com.commercetools.history.models.common.DiscountedPrice nextValue) {
         this.nextValue = nextValue;
         return this;
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -136,7 +141,8 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      * @param variant value to be set
      * @return Builder
      */
@@ -158,6 +164,41 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
+     *  <p>Embedded Price of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     * @param builder function to build the price value
+     * @return Builder
+     */
+
+    public SetDiscountedPriceChangeBuilder price(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
+        this.price = builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Embedded Price of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     * @param builder function to build the price value
+     * @return Builder
+     */
+
+    public SetDiscountedPriceChangeBuilder withPrice(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.Price> builder) {
+        this.price = builder.apply(com.commercetools.history.models.common.PriceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Embedded Price of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     * @param price value to be set
+     * @return Builder
+     */
+
+    public SetDiscountedPriceChangeBuilder price(final com.commercetools.history.models.common.Price price) {
+        this.price = price;
+        return this;
+    }
+
+    /**
      * value of change}
      * @return change
      */
@@ -171,7 +212,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
      * @return previousValue
      */
 
-    public com.commercetools.history.models.common.Price getPreviousValue() {
+    public com.commercetools.history.models.common.DiscountedPrice getPreviousValue() {
         return this.previousValue;
     }
 
@@ -180,11 +221,12 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
      * @return nextValue
      */
 
-    public com.commercetools.history.models.common.Price getNextValue() {
+    public com.commercetools.history.models.common.DiscountedPrice getNextValue() {
         return this.nextValue;
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -197,7 +239,8 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      * @return variant
      */
 
@@ -215,6 +258,15 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
+     *  <p>Embedded Price of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     * @return price
+     */
+
+    public com.commercetools.history.models.common.Price getPrice() {
+        return this.price;
+    }
+
+    /**
      * builds SetDiscountedPriceChange with checking for non-null required values
      * @return SetDiscountedPriceChange
      */
@@ -225,7 +277,8 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
         Objects.requireNonNull(catalogData, SetDiscountedPriceChange.class + ": catalogData is missing");
         Objects.requireNonNull(variant, SetDiscountedPriceChange.class + ": variant is missing");
         Objects.requireNonNull(priceId, SetDiscountedPriceChange.class + ": priceId is missing");
-        return new SetDiscountedPriceChangeImpl(change, previousValue, nextValue, catalogData, variant, priceId);
+        Objects.requireNonNull(price, SetDiscountedPriceChange.class + ": price is missing");
+        return new SetDiscountedPriceChangeImpl(change, previousValue, nextValue, catalogData, variant, priceId, price);
     }
 
     /**
@@ -233,7 +286,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
      * @return SetDiscountedPriceChange
      */
     public SetDiscountedPriceChange buildUnchecked() {
-        return new SetDiscountedPriceChangeImpl(change, previousValue, nextValue, catalogData, variant, priceId);
+        return new SetDiscountedPriceChangeImpl(change, previousValue, nextValue, catalogData, variant, priceId, price);
     }
 
     /**
@@ -257,6 +310,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
         builder.catalogData = template.getCatalogData();
         builder.variant = template.getVariant();
         builder.priceId = template.getPriceId();
+        builder.price = template.getPrice();
         return builder;
     }
 

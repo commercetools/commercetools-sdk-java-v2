@@ -17,9 +17,8 @@ public class DiscountCodeInfoTest {
 
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { "discountCode",
-                        DiscountCodeInfo.builder()
-                                .discountCode(new com.commercetools.history.models.common.ReferenceImpl()) },
+                new Object[] { "discountCode", DiscountCodeInfo.builder()
+                        .discountCode(new com.commercetools.history.models.common.DiscountCodeReferenceImpl()) },
                 new Object[] { "state", DiscountCodeInfo.builder()
                         .state(com.commercetools.history.models.common.DiscountCodeState.findEnum("NotActive")) } };
     }
@@ -27,9 +26,9 @@ public class DiscountCodeInfoTest {
     @Test
     public void discountCode() {
         DiscountCodeInfo value = DiscountCodeInfo.of();
-        value.setDiscountCode(new com.commercetools.history.models.common.ReferenceImpl());
+        value.setDiscountCode(new com.commercetools.history.models.common.DiscountCodeReferenceImpl());
         Assertions.assertThat(value.getDiscountCode())
-                .isEqualTo(new com.commercetools.history.models.common.ReferenceImpl());
+                .isEqualTo(new com.commercetools.history.models.common.DiscountCodeReferenceImpl());
     }
 
     @Test

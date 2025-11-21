@@ -32,6 +32,8 @@ public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEnt
 
     private Long newAvailableQuantity;
 
+    private String sku;
+
     private com.commercetools.api.models.channel.ChannelReference supplyChannel;
 
     /**
@@ -42,11 +44,13 @@ public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEnt
             @JsonProperty("newQuantityOnStock") final Long newQuantityOnStock,
             @JsonProperty("oldAvailableQuantity") final Long oldAvailableQuantity,
             @JsonProperty("newAvailableQuantity") final Long newAvailableQuantity,
+            @JsonProperty("sku") final String sku,
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
         this.oldQuantityOnStock = oldQuantityOnStock;
         this.newQuantityOnStock = newQuantityOnStock;
         this.oldAvailableQuantity = oldAvailableQuantity;
         this.newAvailableQuantity = newAvailableQuantity;
+        this.sku = sku;
         this.supplyChannel = supplyChannel;
         this.type = INVENTORY_ENTRY_QUANTITY_SET;
     }
@@ -99,6 +103,14 @@ public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEnt
     }
 
     /**
+     *  <p>SKU of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> for which the quantity was updated.</p>
+     */
+
+    public String getSku() {
+        return this.sku;
+    }
+
+    /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> where the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> quantity was set.</p>
      */
 
@@ -122,6 +134,10 @@ public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEnt
         this.newAvailableQuantity = newAvailableQuantity;
     }
 
+    public void setSku(final String sku) {
+        this.sku = sku;
+    }
+
     public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
         this.supplyChannel = supplyChannel;
     }
@@ -141,12 +157,14 @@ public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEnt
                 .append(newQuantityOnStock, that.newQuantityOnStock)
                 .append(oldAvailableQuantity, that.oldAvailableQuantity)
                 .append(newAvailableQuantity, that.newAvailableQuantity)
+                .append(sku, that.sku)
                 .append(supplyChannel, that.supplyChannel)
                 .append(type, that.type)
                 .append(oldQuantityOnStock, that.oldQuantityOnStock)
                 .append(newQuantityOnStock, that.newQuantityOnStock)
                 .append(oldAvailableQuantity, that.oldAvailableQuantity)
                 .append(newAvailableQuantity, that.newAvailableQuantity)
+                .append(sku, that.sku)
                 .append(supplyChannel, that.supplyChannel)
                 .isEquals();
     }
@@ -158,6 +176,7 @@ public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEnt
                 .append(newQuantityOnStock)
                 .append(oldAvailableQuantity)
                 .append(newAvailableQuantity)
+                .append(sku)
                 .append(supplyChannel)
                 .toHashCode();
     }
@@ -169,6 +188,7 @@ public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEnt
                 .append("newQuantityOnStock", newQuantityOnStock)
                 .append("oldAvailableQuantity", oldAvailableQuantity)
                 .append("newAvailableQuantity", newAvailableQuantity)
+                .append("sku", sku)
                 .append("supplyChannel", supplyChannel)
                 .build();
     }

@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderPaymentAddedMessagePayload orderPaymentAddedMessagePayload = OrderPaymentAddedMessagePayload.builder()
- *             .payment(paymentBuilder -> paymentBuilder)
+ *             .paymentRef(paymentRefBuilder -> paymentRefBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -22,51 +22,51 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderPaymentAddedMessagePayloadBuilder implements Builder<OrderPaymentAddedMessagePayload> {
 
-    private com.commercetools.api.models.payment.PaymentReference payment;
+    private com.commercetools.api.models.payment.PaymentReference paymentRef;
 
     /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
-     * @param builder function to build the payment value
+     * @param builder function to build the paymentRef value
      * @return Builder
      */
 
-    public OrderPaymentAddedMessagePayloadBuilder payment(
+    public OrderPaymentAddedMessagePayloadBuilder paymentRef(
             Function<com.commercetools.api.models.payment.PaymentReferenceBuilder, com.commercetools.api.models.payment.PaymentReferenceBuilder> builder) {
-        this.payment = builder.apply(com.commercetools.api.models.payment.PaymentReferenceBuilder.of()).build();
+        this.paymentRef = builder.apply(com.commercetools.api.models.payment.PaymentReferenceBuilder.of()).build();
         return this;
     }
 
     /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
-     * @param builder function to build the payment value
+     * @param builder function to build the paymentRef value
      * @return Builder
      */
 
-    public OrderPaymentAddedMessagePayloadBuilder withPayment(
+    public OrderPaymentAddedMessagePayloadBuilder withPaymentRef(
             Function<com.commercetools.api.models.payment.PaymentReferenceBuilder, com.commercetools.api.models.payment.PaymentReference> builder) {
-        this.payment = builder.apply(com.commercetools.api.models.payment.PaymentReferenceBuilder.of());
+        this.paymentRef = builder.apply(com.commercetools.api.models.payment.PaymentReferenceBuilder.of());
         return this;
     }
 
     /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
-     * @param payment value to be set
+     * @param paymentRef value to be set
      * @return Builder
      */
 
-    public OrderPaymentAddedMessagePayloadBuilder payment(
-            final com.commercetools.api.models.payment.PaymentReference payment) {
-        this.payment = payment;
+    public OrderPaymentAddedMessagePayloadBuilder paymentRef(
+            final com.commercetools.api.models.payment.PaymentReference paymentRef) {
+        this.paymentRef = paymentRef;
         return this;
     }
 
     /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
-     * @return payment
+     * @return paymentRef
      */
 
-    public com.commercetools.api.models.payment.PaymentReference getPayment() {
-        return this.payment;
+    public com.commercetools.api.models.payment.PaymentReference getPaymentRef() {
+        return this.paymentRef;
     }
 
     /**
@@ -74,8 +74,8 @@ public class OrderPaymentAddedMessagePayloadBuilder implements Builder<OrderPaym
      * @return OrderPaymentAddedMessagePayload
      */
     public OrderPaymentAddedMessagePayload build() {
-        Objects.requireNonNull(payment, OrderPaymentAddedMessagePayload.class + ": payment is missing");
-        return new OrderPaymentAddedMessagePayloadImpl(payment);
+        Objects.requireNonNull(paymentRef, OrderPaymentAddedMessagePayload.class + ": paymentRef is missing");
+        return new OrderPaymentAddedMessagePayloadImpl(paymentRef);
     }
 
     /**
@@ -83,7 +83,7 @@ public class OrderPaymentAddedMessagePayloadBuilder implements Builder<OrderPaym
      * @return OrderPaymentAddedMessagePayload
      */
     public OrderPaymentAddedMessagePayload buildUnchecked() {
-        return new OrderPaymentAddedMessagePayloadImpl(payment);
+        return new OrderPaymentAddedMessagePayloadImpl(paymentRef);
     }
 
     /**
@@ -101,7 +101,7 @@ public class OrderPaymentAddedMessagePayloadBuilder implements Builder<OrderPaym
      */
     public static OrderPaymentAddedMessagePayloadBuilder of(final OrderPaymentAddedMessagePayload template) {
         OrderPaymentAddedMessagePayloadBuilder builder = new OrderPaymentAddedMessagePayloadBuilder();
-        builder.payment = template.getPayment();
+        builder.paymentRef = template.getPaymentRef();
         return builder;
     }
 

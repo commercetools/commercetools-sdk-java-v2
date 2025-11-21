@@ -24,14 +24,14 @@ public class StandalonePriceRemovePriceTierActionImpl implements StandalonePrice
 
     private String action;
 
-    private Long tierMinimumQuantity;
+    private Long minimumQuantity;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    StandalonePriceRemovePriceTierActionImpl(@JsonProperty("tierMinimumQuantity") final Long tierMinimumQuantity) {
-        this.tierMinimumQuantity = tierMinimumQuantity;
+    StandalonePriceRemovePriceTierActionImpl(@JsonProperty("minimumQuantity") final Long minimumQuantity) {
+        this.minimumQuantity = minimumQuantity;
         this.action = REMOVE_PRICE_TIER;
     }
 
@@ -54,12 +54,12 @@ public class StandalonePriceRemovePriceTierActionImpl implements StandalonePrice
      *  <p>The <code>minimumQuantity</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">PriceTier</a> to be removed from the <code>tiers</code> field of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      */
 
-    public Long getTierMinimumQuantity() {
-        return this.tierMinimumQuantity;
+    public Long getMinimumQuantity() {
+        return this.minimumQuantity;
     }
 
-    public void setTierMinimumQuantity(final Long tierMinimumQuantity) {
-        this.tierMinimumQuantity = tierMinimumQuantity;
+    public void setMinimumQuantity(final Long minimumQuantity) {
+        this.minimumQuantity = minimumQuantity;
     }
 
     @Override
@@ -73,21 +73,21 @@ public class StandalonePriceRemovePriceTierActionImpl implements StandalonePrice
         StandalonePriceRemovePriceTierActionImpl that = (StandalonePriceRemovePriceTierActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
-                .append(tierMinimumQuantity, that.tierMinimumQuantity)
+                .append(minimumQuantity, that.minimumQuantity)
                 .append(action, that.action)
-                .append(tierMinimumQuantity, that.tierMinimumQuantity)
+                .append(minimumQuantity, that.minimumQuantity)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(tierMinimumQuantity).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(minimumQuantity).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
-                .append("tierMinimumQuantity", tierMinimumQuantity)
+                .append("minimumQuantity", minimumQuantity)
                 .build();
     }
 

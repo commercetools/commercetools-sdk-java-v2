@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * ReturnInfo
+ *  <p>Stores information about returns connected to an Order.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReturnInfoImpl implements ReturnInfo, ModelBase {
@@ -26,7 +26,7 @@ public class ReturnInfoImpl implements ReturnInfo, ModelBase {
 
     private String returnTrackingId;
 
-    private String returnDate;
+    private java.time.ZonedDateTime returnDate;
 
     /**
      * create instance with all properties
@@ -35,7 +35,7 @@ public class ReturnInfoImpl implements ReturnInfo, ModelBase {
     ReturnInfoImpl(
             @JsonProperty("items") final java.util.List<com.commercetools.history.models.common.ReturnItem> items,
             @JsonProperty("returnTrackingId") final String returnTrackingId,
-            @JsonProperty("returnDate") final String returnDate) {
+            @JsonProperty("returnDate") final java.time.ZonedDateTime returnDate) {
         this.items = items;
         this.returnTrackingId = returnTrackingId;
         this.returnDate = returnDate;
@@ -48,7 +48,7 @@ public class ReturnInfoImpl implements ReturnInfo, ModelBase {
     }
 
     /**
-     *
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.ReturnItem> getItems() {
@@ -56,7 +56,7 @@ public class ReturnInfoImpl implements ReturnInfo, ModelBase {
     }
 
     /**
-     *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
+     *  <p>User-defined identifier to track the return.</p>
      */
 
     public String getReturnTrackingId() {
@@ -64,10 +64,10 @@ public class ReturnInfoImpl implements ReturnInfo, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the return is initiated.</p>
      */
 
-    public String getReturnDate() {
+    public java.time.ZonedDateTime getReturnDate() {
         return this.returnDate;
     }
 
@@ -83,7 +83,7 @@ public class ReturnInfoImpl implements ReturnInfo, ModelBase {
         this.returnTrackingId = returnTrackingId;
     }
 
-    public void setReturnDate(final String returnDate) {
+    public void setReturnDate(final java.time.ZonedDateTime returnDate) {
         this.returnDate = returnDate;
     }
 

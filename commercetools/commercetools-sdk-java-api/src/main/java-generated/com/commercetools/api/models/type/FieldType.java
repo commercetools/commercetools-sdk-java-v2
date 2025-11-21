@@ -32,7 +32,7 @@ import jakarta.validation.constraints.NotNull;
 public interface FieldType {
 
     /**
-     *
+     *  <p>Discriminator that determines the type of the field.</p>
      * @return name
      */
     @NotNull

@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Authenticates a global Customer.</p>
- *  <p>If the Customer has multiple active Carts, the anonymous Cart is <span>merged</span> into the most recently modified active Cart.</p>
+ *  <p>Allows <span>merging</span> items from an anonymous Cart into the most recently modified active Cart of a Customer. If no active Cart exists, the anonymous Cart becomes the Customer's active Cart. If the Customer has multiple active Carts, the anonymous Cart is merged into the most recently modified active Cart.</p>
  *  <p>If an account with the given credentials is not found, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidCredentialsError" rel="nofollow">InvalidCredentials</a> error is returned.</p>
  *
  * <hr>

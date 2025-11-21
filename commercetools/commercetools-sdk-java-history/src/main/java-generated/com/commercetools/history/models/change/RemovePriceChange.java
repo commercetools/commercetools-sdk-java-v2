@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemovePriceAction" rel="nofollow">Remove Embedded Price</a> update action.</p>
+ *  <p>This Change is no longer triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemovePriceAction" rel="nofollow">Remove Embedded Price</a> update action. It has been deprecated and replaced by the <a href="https://docs.commercetools.com/apis/ctp:history:type:SetPricesChange" rel="nofollow">SetPricesChange</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .catalogData("{catalogData}")
  *             .priceId("{priceId}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -36,6 +37,7 @@ import jakarta.validation.constraints.NotNull;
 @io.vrap.rmf.base.client.utils.json.SubType("RemovePriceChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = RemovePriceChangeImpl.class)
+@Deprecated
 public interface RemovePriceChange extends Change {
 
     /**
@@ -78,6 +80,7 @@ public interface RemovePriceChange extends Change {
     public Price getNextValue();
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -95,6 +98,15 @@ public interface RemovePriceChange extends Change {
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+    @NotNull
+    @JsonProperty("variant")
+    public String getVariant();
 
     /**
      * set change
@@ -118,6 +130,7 @@ public interface RemovePriceChange extends Change {
     public void setNextValue(final Price nextValue);
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -133,6 +146,14 @@ public interface RemovePriceChange extends Change {
      */
 
     public void setPriceId(final String priceId);
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     */
+
+    public void setVariant(final String variant);
 
     /**
      * factory method
@@ -154,6 +175,7 @@ public interface RemovePriceChange extends Change {
         instance.setNextValue(template.getNextValue());
         instance.setCatalogData(template.getCatalogData());
         instance.setPriceId(template.getPriceId());
+        instance.setVariant(template.getVariant());
         return instance;
     }
 
@@ -175,6 +197,7 @@ public interface RemovePriceChange extends Change {
         instance.setNextValue(com.commercetools.history.models.common.Price.deepCopy(template.getNextValue()));
         instance.setCatalogData(template.getCatalogData());
         instance.setPriceId(template.getPriceId());
+        instance.setVariant(template.getVariant());
         return instance;
     }
 

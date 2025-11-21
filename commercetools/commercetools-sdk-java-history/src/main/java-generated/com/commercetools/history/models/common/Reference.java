@@ -15,33 +15,25 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * Reference
+ *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelReference" rel="nofollow">ChannelReference</a>. A referenced resource can be embedded through <span>Reference Expansion</span>. The expanded reference is the value of an additional <code>obj</code> field then.</p>
  *
  * <hr>
- * Example to create an instance using the builder pattern
+ * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     Reference reference = Reference.builder()
- *             .id("{id}")
- *             .typeId(ReferenceTypeId.ASSOCIATE_ROLE)
+ *     Reference reference = Reference.cartDiscountBuilder()
+ *             id("{id}")
  *             .build()
  * </code></pre>
  * </div>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "typeId", defaultImpl = ReferenceImpl.class, visible = true)
 @JsonDeserialize(as = ReferenceImpl.class)
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface Reference {
 
     /**
-     *
-     * @return id
-     */
-    @NotNull
-    @JsonProperty("id")
-    public String getId();
-
-    /**
-     *
+     *  <p>Type of referenced resource.</p>
      * @return typeId
      */
     @NotNull
@@ -49,38 +41,19 @@ public interface Reference {
     public ReferenceTypeId getTypeId();
 
     /**
-     * set id
+     *  <p>Unique ID of the referenced resource.</p>
+     * @return id
+     */
+    @NotNull
+    @JsonProperty("id")
+    public String getId();
+
+    /**
+     *  <p>Unique ID of the referenced resource.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
-
-    /**
-     * set typeId
-     * @param typeId value to be set
-     */
-
-    public void setTypeId(final ReferenceTypeId typeId);
-
-    /**
-     * factory method
-     * @return instance of Reference
-     */
-    public static Reference of() {
-        return new ReferenceImpl();
-    }
-
-    /**
-     * factory method to create a shallow copy Reference
-     * @param template instance to be copied
-     * @return copy instance
-     */
-    public static Reference of(final Reference template) {
-        ReferenceImpl instance = new ReferenceImpl();
-        instance.setId(template.getId());
-        instance.setTypeId(template.getTypeId());
-        return instance;
-    }
 
     public Reference copyDeep();
 
@@ -94,27 +67,141 @@ public interface Reference {
         if (template == null) {
             return null;
         }
+
+        if (!(template instanceof ReferenceImpl)) {
+            return template.copyDeep();
+        }
         ReferenceImpl instance = new ReferenceImpl();
         instance.setId(template.getId());
-        instance.setTypeId(template.getTypeId());
         return instance;
     }
 
     /**
-     * builder factory method for Reference
+     * builder for cartDiscount subtype
      * @return builder
      */
-    public static ReferenceBuilder builder() {
-        return ReferenceBuilder.of();
+    public static com.commercetools.history.models.common.CartDiscountReferenceBuilder cartDiscountBuilder() {
+        return com.commercetools.history.models.common.CartDiscountReferenceBuilder.of();
     }
 
     /**
-     * create builder for Reference instance
-     * @param template instance with prefilled values for the builder
+     * builder for category subtype
      * @return builder
      */
-    public static ReferenceBuilder builder(final Reference template) {
-        return ReferenceBuilder.of(template);
+    public static com.commercetools.history.models.common.CategoryReferenceBuilder categoryBuilder() {
+        return com.commercetools.history.models.common.CategoryReferenceBuilder.of();
+    }
+
+    /**
+     * builder for channel subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.common.ChannelReferenceBuilder channelBuilder() {
+        return com.commercetools.history.models.common.ChannelReferenceBuilder.of();
+    }
+
+    /**
+     * builder for customerGroup subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.common.CustomerGroupReferenceBuilder customerGroupBuilder() {
+        return com.commercetools.history.models.common.CustomerGroupReferenceBuilder.of();
+    }
+
+    /**
+     * builder for customer subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.common.CustomerReferenceBuilder customerBuilder() {
+        return com.commercetools.history.models.common.CustomerReferenceBuilder.of();
+    }
+
+    /**
+     * builder for discountCode subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.common.DiscountCodeReferenceBuilder discountCodeBuilder() {
+        return com.commercetools.history.models.common.DiscountCodeReferenceBuilder.of();
+    }
+
+    /**
+     * builder for payment subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.common.PaymentReferenceBuilder paymentBuilder() {
+        return com.commercetools.history.models.common.PaymentReferenceBuilder.of();
+    }
+
+    /**
+     * builder for productDiscount subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.common.ProductDiscountReferenceBuilder productDiscountBuilder() {
+        return com.commercetools.history.models.common.ProductDiscountReferenceBuilder.of();
+    }
+
+    /**
+     * builder for product subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.common.ProductReferenceBuilder productBuilder() {
+        return com.commercetools.history.models.common.ProductReferenceBuilder.of();
+    }
+
+    /**
+     * builder for productSelection subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.common.ProductSelectionReferenceBuilder productSelectionBuilder() {
+        return com.commercetools.history.models.common.ProductSelectionReferenceBuilder.of();
+    }
+
+    /**
+     * builder for productType subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.common.ProductTypeReferenceBuilder productTypeBuilder() {
+        return com.commercetools.history.models.common.ProductTypeReferenceBuilder.of();
+    }
+
+    /**
+     * builder for recurrencePolicy subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.common.RecurrencePolicyReferenceBuilder recurrencePolicyBuilder() {
+        return com.commercetools.history.models.common.RecurrencePolicyReferenceBuilder.of();
+    }
+
+    /**
+     * builder for shippingMethod subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.common.ShippingMethodReferenceBuilder shippingMethodBuilder() {
+        return com.commercetools.history.models.common.ShippingMethodReferenceBuilder.of();
+    }
+
+    /**
+     * builder for state subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.common.StateReferenceBuilder stateBuilder() {
+        return com.commercetools.history.models.common.StateReferenceBuilder.of();
+    }
+
+    /**
+     * builder for taxCategory subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.common.TaxCategoryReferenceBuilder taxCategoryBuilder() {
+        return com.commercetools.history.models.common.TaxCategoryReferenceBuilder.of();
+    }
+
+    /**
+     * builder for type subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.common.TypeReferenceBuilder typeBuilder() {
+        return com.commercetools.history.models.common.TypeReferenceBuilder.of();
     }
 
     /**

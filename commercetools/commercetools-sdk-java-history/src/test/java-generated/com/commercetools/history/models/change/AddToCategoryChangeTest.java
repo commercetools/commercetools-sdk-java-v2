@@ -27,8 +27,10 @@ public class AddToCategoryChangeTest {
                         AddToCategoryChange.builder()
                                 .nextValue(Collections
                                         .singletonList(new com.commercetools.history.models.common.ReferenceImpl())) },
-                new Object[] { "category", AddToCategoryChange.builder()
-                        .category(new com.commercetools.history.models.common.ReferenceImpl()) } };
+                new Object[] { "category",
+                        AddToCategoryChange.builder()
+                                .category(new com.commercetools.history.models.common.ReferenceImpl()) },
+                new Object[] { "catalogData", AddToCategoryChange.builder().catalogData("catalogData") } };
     }
 
     @Test
@@ -60,5 +62,12 @@ public class AddToCategoryChangeTest {
         value.setCategory(new com.commercetools.history.models.common.ReferenceImpl());
         Assertions.assertThat(value.getCategory())
                 .isEqualTo(new com.commercetools.history.models.common.ReferenceImpl());
+    }
+
+    @Test
+    public void catalogData() {
+        AddToCategoryChange value = AddToCategoryChange.of();
+        value.setCatalogData("catalogData");
+        Assertions.assertThat(value.getCatalogData()).isEqualTo("catalogData");
     }
 }

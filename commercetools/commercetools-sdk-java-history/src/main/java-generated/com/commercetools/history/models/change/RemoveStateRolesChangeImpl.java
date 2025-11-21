@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:StateRemoveRolesAction" rel="nofollow">Remove State roles</a> update action.</p>
+ *  <p>This Change is no longer triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:StateRemoveRolesAction" rel="nofollow">Remove State roles</a> update action. It has been deprecated and replaced by the <a href="https://docs.commercetools.com/apis/ctp:history:type:SetStateRolesChange" rel="nofollow">SetStateRolesChange</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @Deprecated

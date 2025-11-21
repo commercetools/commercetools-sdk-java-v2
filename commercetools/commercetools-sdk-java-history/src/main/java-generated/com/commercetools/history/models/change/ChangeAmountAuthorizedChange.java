@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>This change is initiated by background processes after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentChangeAmountPlannedAction" rel="nofollow">Change AmountPlanned</a> update action is performed.</p>
+ *  <p>This change is no longer initiated by background processes after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentChangeAmountPlannedAction" rel="nofollow">Change AmountPlanned</a> update action is performed. It has been deprecated since the corresponding field on the Payment does not exist anymore.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

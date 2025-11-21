@@ -55,10 +55,6 @@ public class ProductUpdateActionBuilder {
         return com.commercetools.api.models.product.ProductChangeSlugActionBuilder.of();
     }
 
-    public com.commercetools.api.models.product.ProductLegacySetSkuActionBuilder legacySetSkuBuilder() {
-        return com.commercetools.api.models.product.ProductLegacySetSkuActionBuilder.of();
-    }
-
     public com.commercetools.api.models.product.ProductMoveImageToPositionActionBuilder moveImageToPositionBuilder() {
         return com.commercetools.api.models.product.ProductMoveImageToPositionActionBuilder.of();
     }

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>This change is initiated by background processes after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentChangeAmountPlannedAction" rel="nofollow">Change AmountPlanned</a> update action is performed.</p>
+ *  <p>This change is no longer initiated by background processes after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentChangeAmountPlannedAction" rel="nofollow">Change AmountPlanned</a> update action is performed. It has been deprecated since the corresponding field on the Payment does not exist anymore.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @Deprecated

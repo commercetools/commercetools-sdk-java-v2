@@ -35,6 +35,8 @@ public class SetLineItemDiscountedPricePerQuantityChangeImpl
 
     private String variant;
 
+    private String lineItemId;
+
     /**
      * create instance with all properties
      */
@@ -43,12 +45,13 @@ public class SetLineItemDiscountedPricePerQuantityChangeImpl
             @JsonProperty("previousValue") final com.commercetools.history.models.common.DiscountedLineItemPriceForQuantity previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.DiscountedLineItemPriceForQuantity nextValue,
             @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem,
-            @JsonProperty("variant") final String variant) {
+            @JsonProperty("variant") final String variant, @JsonProperty("lineItemId") final String lineItemId) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.lineItem = lineItem;
         this.variant = variant;
+        this.lineItemId = lineItemId;
         this.type = SET_LINE_ITEM_DISCOUNTED_PRICE_PER_QUANTITY_CHANGE;
     }
 
@@ -100,11 +103,20 @@ public class SetLineItemDiscountedPricePerQuantityChangeImpl
     }
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      */
 
     public String getVariant() {
         return this.variant;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
+     */
+
+    public String getLineItemId() {
+        return this.lineItemId;
     }
 
     public void setChange(final String change) {
@@ -129,6 +141,10 @@ public class SetLineItemDiscountedPricePerQuantityChangeImpl
         this.variant = variant;
     }
 
+    public void setLineItemId(final String lineItemId) {
+        this.lineItemId = lineItemId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -145,12 +161,14 @@ public class SetLineItemDiscountedPricePerQuantityChangeImpl
                 .append(nextValue, that.nextValue)
                 .append(lineItem, that.lineItem)
                 .append(variant, that.variant)
+                .append(lineItemId, that.lineItemId)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(lineItem, that.lineItem)
                 .append(variant, that.variant)
+                .append(lineItemId, that.lineItemId)
                 .isEquals();
     }
 
@@ -162,6 +180,7 @@ public class SetLineItemDiscountedPricePerQuantityChangeImpl
                 .append(nextValue)
                 .append(lineItem)
                 .append(variant)
+                .append(lineItemId)
                 .toHashCode();
     }
 
@@ -173,6 +192,7 @@ public class SetLineItemDiscountedPricePerQuantityChangeImpl
                 .append("nextValue", nextValue)
                 .append("lineItem", lineItem)
                 .append("variant", variant)
+                .append("lineItemId", lineItemId)
                 .build();
     }
 

@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.checkout.models.application.ApplicationResourceIdentifier;
+import com.commercetools.checkout.models.application.ApplicationReference;
 import com.commercetools.checkout.models.cart.CartReference;
 import com.commercetools.checkout.models.cart.OrderReference;
 import com.fasterxml.jackson.annotation.*;
@@ -68,13 +68,13 @@ public interface Transaction {
     public Integer getVersion();
 
     /**
-     *  <p><span>Application</span> for which the payment must be executed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:checkout:type:Application" rel="nofollow">Application</a> for which the payment must be executed.</p>
      * @return application
      */
     @NotNull
     @Valid
     @JsonProperty("application")
-    public ApplicationResourceIdentifier getApplication();
+    public ApplicationReference getApplication();
 
     /**
      *  <p>Transaction Item associated with the Transaction.</p>
@@ -148,11 +148,11 @@ public interface Transaction {
     public void setVersion(final Integer version);
 
     /**
-     *  <p><span>Application</span> for which the payment must be executed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:checkout:type:Application" rel="nofollow">Application</a> for which the payment must be executed.</p>
      * @param application value to be set
      */
 
-    public void setApplication(final ApplicationResourceIdentifier application);
+    public void setApplication(final ApplicationReference application);
 
     /**
      *  <p>Transaction Item associated with the Transaction.</p>
@@ -248,8 +248,8 @@ public interface Transaction {
         instance.setId(template.getId());
         instance.setKey(template.getKey());
         instance.setVersion(template.getVersion());
-        instance.setApplication(com.commercetools.checkout.models.application.ApplicationResourceIdentifier
-                .deepCopy(template.getApplication()));
+        instance.setApplication(
+            com.commercetools.checkout.models.application.ApplicationReference.deepCopy(template.getApplication()));
         instance.setTransactionItems(Optional.ofNullable(template.getTransactionItems())
                 .map(t -> t.stream()
                         .map(com.commercetools.checkout.models.transaction.TransactionItem::deepCopy)

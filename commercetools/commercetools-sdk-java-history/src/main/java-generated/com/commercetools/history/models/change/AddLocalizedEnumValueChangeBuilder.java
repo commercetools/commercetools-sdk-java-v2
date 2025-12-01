@@ -27,7 +27,7 @@ public class AddLocalizedEnumValueChangeBuilder implements Builder<AddLocalizedE
 
     private String change;
 
-    private com.commercetools.history.models.common.AttributeLocalizedEnumValue nextValue;
+    private com.commercetools.history.models.common.CustomFieldLocalizedEnumValue nextValue;
 
     private String fieldName;
 
@@ -51,8 +51,9 @@ public class AddLocalizedEnumValueChangeBuilder implements Builder<AddLocalizedE
      */
 
     public AddLocalizedEnumValueChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.AttributeLocalizedEnumValueBuilder, com.commercetools.history.models.common.AttributeLocalizedEnumValueBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.AttributeLocalizedEnumValueBuilder.of())
+            Function<com.commercetools.history.models.common.CustomFieldLocalizedEnumValueBuilder, com.commercetools.history.models.common.CustomFieldLocalizedEnumValueBuilder> builder) {
+        this.nextValue = builder
+                .apply(com.commercetools.history.models.common.CustomFieldLocalizedEnumValueBuilder.of())
                 .build();
         return this;
     }
@@ -64,8 +65,9 @@ public class AddLocalizedEnumValueChangeBuilder implements Builder<AddLocalizedE
      */
 
     public AddLocalizedEnumValueChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.AttributeLocalizedEnumValueBuilder, com.commercetools.history.models.common.AttributeLocalizedEnumValue> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.AttributeLocalizedEnumValueBuilder.of());
+            Function<com.commercetools.history.models.common.CustomFieldLocalizedEnumValueBuilder, com.commercetools.history.models.common.CustomFieldLocalizedEnumValue> builder) {
+        this.nextValue = builder
+                .apply(com.commercetools.history.models.common.CustomFieldLocalizedEnumValueBuilder.of());
         return this;
     }
 
@@ -76,7 +78,7 @@ public class AddLocalizedEnumValueChangeBuilder implements Builder<AddLocalizedE
      */
 
     public AddLocalizedEnumValueChangeBuilder nextValue(
-            final com.commercetools.history.models.common.AttributeLocalizedEnumValue nextValue) {
+            final com.commercetools.history.models.common.CustomFieldLocalizedEnumValue nextValue) {
         this.nextValue = nextValue;
         return this;
     }
@@ -117,7 +119,7 @@ public class AddLocalizedEnumValueChangeBuilder implements Builder<AddLocalizedE
      * @return nextValue
      */
 
-    public com.commercetools.history.models.common.AttributeLocalizedEnumValue getNextValue() {
+    public com.commercetools.history.models.common.CustomFieldLocalizedEnumValue getNextValue() {
         return this.nextValue;
     }
 

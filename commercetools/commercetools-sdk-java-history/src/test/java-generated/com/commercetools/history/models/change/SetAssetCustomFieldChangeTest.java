@@ -21,8 +21,11 @@ public class SetAssetCustomFieldChangeTest {
                 new Object[] { "nextValue", SetAssetCustomFieldChange.builder().nextValue("nextValue") },
                 new Object[] { "name", SetAssetCustomFieldChange.builder().name("name") },
                 new Object[] { "customTypeId", SetAssetCustomFieldChange.builder().customTypeId("customTypeId") },
-                new Object[] { "asset", SetAssetCustomFieldChange.builder()
-                        .asset(new com.commercetools.history.models.change_value.AssetChangeValueImpl()) } };
+                new Object[] { "asset",
+                        SetAssetCustomFieldChange.builder()
+                                .asset(new com.commercetools.history.models.change_value.AssetChangeValueImpl()) },
+                new Object[] { "catalogData", SetAssetCustomFieldChange.builder().catalogData("catalogData") },
+                new Object[] { "variant", SetAssetCustomFieldChange.builder().variant("variant") } };
     }
 
     @Test
@@ -66,5 +69,19 @@ public class SetAssetCustomFieldChangeTest {
         value.setAsset(new com.commercetools.history.models.change_value.AssetChangeValueImpl());
         Assertions.assertThat(value.getAsset())
                 .isEqualTo(new com.commercetools.history.models.change_value.AssetChangeValueImpl());
+    }
+
+    @Test
+    public void catalogData() {
+        SetAssetCustomFieldChange value = SetAssetCustomFieldChange.of();
+        value.setCatalogData("catalogData");
+        Assertions.assertThat(value.getCatalogData()).isEqualTo("catalogData");
+    }
+
+    @Test
+    public void variant() {
+        SetAssetCustomFieldChange value = SetAssetCustomFieldChange.of();
+        value.setVariant("variant");
+        Assertions.assertThat(value.getVariant()).isEqualTo("variant");
     }
 }

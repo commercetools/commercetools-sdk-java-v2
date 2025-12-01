@@ -43,14 +43,14 @@ public class CartWithExistingPaymentImpl implements CartWithExistingPayment, Mod
         this.message = message;
         this.correlationId = correlationId;
         this.payload = payload;
-        this.code = CART_WITH_EXISITING_PAYMENT;
+        this.code = CART_WITH_EXISTING_PAYMENT;
     }
 
     /**
      * create empty instance
      */
     public CartWithExistingPaymentImpl() {
-        this.code = CART_WITH_EXISITING_PAYMENT;
+        this.code = CART_WITH_EXISTING_PAYMENT;
     }
 
     /**

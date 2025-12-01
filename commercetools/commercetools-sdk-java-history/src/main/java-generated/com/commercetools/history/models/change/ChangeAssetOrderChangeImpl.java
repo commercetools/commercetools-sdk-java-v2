@@ -34,16 +34,23 @@ public class ChangeAssetOrderChangeImpl implements ChangeAssetOrderChange, Model
 
     private java.util.List<com.commercetools.history.models.common.LocalizedString> nextValue;
 
+    private String catalogData;
+
+    private String variant;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     ChangeAssetOrderChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.LocalizedString> previousValue,
-            @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.LocalizedString> nextValue) {
+            @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.LocalizedString> nextValue,
+            @JsonProperty("catalogData") final String catalogData, @JsonProperty("variant") final String variant) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
+        this.catalogData = catalogData;
+        this.variant = variant;
         this.type = CHANGE_ASSET_ORDER_CHANGE;
     }
 
@@ -86,6 +93,27 @@ public class ChangeAssetOrderChangeImpl implements ChangeAssetOrderChange, Model
         return this.nextValue;
     }
 
+    /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
@@ -107,6 +135,14 @@ public class ChangeAssetOrderChangeImpl implements ChangeAssetOrderChange, Model
         this.nextValue = nextValue;
     }
 
+    public void setCatalogData(final String catalogData) {
+        this.catalogData = catalogData;
+    }
+
+    public void setVariant(final String variant) {
+        this.variant = variant;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -121,10 +157,14 @@ public class ChangeAssetOrderChangeImpl implements ChangeAssetOrderChange, Model
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(catalogData, that.catalogData)
+                .append(variant, that.variant)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(catalogData, that.catalogData)
+                .append(variant, that.variant)
                 .isEquals();
     }
 
@@ -134,6 +174,8 @@ public class ChangeAssetOrderChangeImpl implements ChangeAssetOrderChange, Model
                 .append(change)
                 .append(previousValue)
                 .append(nextValue)
+                .append(catalogData)
+                .append(variant)
                 .toHashCode();
     }
 
@@ -143,6 +185,8 @@ public class ChangeAssetOrderChangeImpl implements ChangeAssetOrderChange, Model
                 .append("change", change)
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
+                .append("catalogData", catalogData)
+                .append("variant", variant)
                 .build();
     }
 

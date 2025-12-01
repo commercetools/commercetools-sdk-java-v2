@@ -4,6 +4,8 @@ package com.commercetools.history.models.common;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -25,10 +27,13 @@ public class AssociateBuilder implements Builder<Associate> {
 
     private java.util.List<com.commercetools.history.models.common.AssociateRoleAssignment> associateRoleAssignments;
 
-    private com.commercetools.history.models.common.Reference customer;
+    @Nullable
+    private java.util.List<com.commercetools.history.models.common.AssociateRoleDeprecated> roles;
+
+    private com.commercetools.history.models.common.CustomerReference customer;
 
     /**
-     * set values to the associateRoleAssignments
+     *  <p>Roles assigned to the Associate within a Business Unit.</p>
      * @param associateRoleAssignments value to be set
      * @return Builder
      */
@@ -40,7 +45,7 @@ public class AssociateBuilder implements Builder<Associate> {
     }
 
     /**
-     * set value to the associateRoleAssignments
+     *  <p>Roles assigned to the Associate within a Business Unit.</p>
      * @param associateRoleAssignments value to be set
      * @return Builder
      */
@@ -52,7 +57,7 @@ public class AssociateBuilder implements Builder<Associate> {
     }
 
     /**
-     * add values to the associateRoleAssignments
+     *  <p>Roles assigned to the Associate within a Business Unit.</p>
      * @param associateRoleAssignments value to be set
      * @return Builder
      */
@@ -67,7 +72,7 @@ public class AssociateBuilder implements Builder<Associate> {
     }
 
     /**
-     * add the value to the associateRoleAssignments using the builder function
+     *  <p>Roles assigned to the Associate within a Business Unit.</p>
      * @param builder function to build the associateRoleAssignments value
      * @return Builder
      */
@@ -83,7 +88,7 @@ public class AssociateBuilder implements Builder<Associate> {
     }
 
     /**
-     * set the value to the associateRoleAssignments using the builder function
+     *  <p>Roles assigned to the Associate within a Business Unit.</p>
      * @param builder function to build the associateRoleAssignments value
      * @return Builder
      */
@@ -97,7 +102,7 @@ public class AssociateBuilder implements Builder<Associate> {
     }
 
     /**
-     * add the value to the associateRoleAssignments using the builder function
+     *  <p>Roles assigned to the Associate within a Business Unit.</p>
      * @param builder function to build the associateRoleAssignments value
      * @return Builder
      */
@@ -109,7 +114,7 @@ public class AssociateBuilder implements Builder<Associate> {
     }
 
     /**
-     * set the value to the associateRoleAssignments using the builder function
+     *  <p>Roles assigned to the Associate within a Business Unit.</p>
      * @param builder function to build the associateRoleAssignments value
      * @return Builder
      */
@@ -121,42 +126,81 @@ public class AssociateBuilder implements Builder<Associate> {
     }
 
     /**
-     * set the value to the customer using the builder function
+     *  <p>Deprecated type. Use <code>associateRoleAssignments</code> instead.</p>
+     * @param roles value to be set
+     * @return Builder
+     */
+
+    public AssociateBuilder roles(
+            @Nullable final com.commercetools.history.models.common.AssociateRoleDeprecated... roles) {
+        this.roles = new ArrayList<>(Arrays.asList(roles));
+        return this;
+    }
+
+    /**
+     *  <p>Deprecated type. Use <code>associateRoleAssignments</code> instead.</p>
+     * @param roles value to be set
+     * @return Builder
+     */
+
+    public AssociateBuilder roles(
+            @Nullable final java.util.List<com.commercetools.history.models.common.AssociateRoleDeprecated> roles) {
+        this.roles = roles;
+        return this;
+    }
+
+    /**
+     *  <p>Deprecated type. Use <code>associateRoleAssignments</code> instead.</p>
+     * @param roles value to be set
+     * @return Builder
+     */
+
+    public AssociateBuilder plusRoles(
+            @Nullable final com.commercetools.history.models.common.AssociateRoleDeprecated... roles) {
+        if (this.roles == null) {
+            this.roles = new ArrayList<>();
+        }
+        this.roles.addAll(Arrays.asList(roles));
+        return this;
+    }
+
+    /**
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
 
     public AssociateBuilder customer(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.customer = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
+            Function<com.commercetools.history.models.common.CustomerReferenceBuilder, com.commercetools.history.models.common.CustomerReferenceBuilder> builder) {
+        this.customer = builder.apply(com.commercetools.history.models.common.CustomerReferenceBuilder.of()).build();
         return this;
     }
 
     /**
-     * set the value to the customer using the builder function
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
 
     public AssociateBuilder withCustomer(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        this.customer = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
+            Function<com.commercetools.history.models.common.CustomerReferenceBuilder, com.commercetools.history.models.common.CustomerReference> builder) {
+        this.customer = builder.apply(com.commercetools.history.models.common.CustomerReferenceBuilder.of());
         return this;
     }
 
     /**
-     * set the value to the customer
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</p>
      * @param customer value to be set
      * @return Builder
      */
 
-    public AssociateBuilder customer(final com.commercetools.history.models.common.Reference customer) {
+    public AssociateBuilder customer(final com.commercetools.history.models.common.CustomerReference customer) {
         this.customer = customer;
         return this;
     }
 
     /**
-     * value of associateRoleAssignments}
+     *  <p>Roles assigned to the Associate within a Business Unit.</p>
      * @return associateRoleAssignments
      */
 
@@ -165,11 +209,21 @@ public class AssociateBuilder implements Builder<Associate> {
     }
 
     /**
-     * value of customer}
+     *  <p>Deprecated type. Use <code>associateRoleAssignments</code> instead.</p>
+     * @return roles
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.history.models.common.AssociateRoleDeprecated> getRoles() {
+        return this.roles;
+    }
+
+    /**
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</p>
      * @return customer
      */
 
-    public com.commercetools.history.models.common.Reference getCustomer() {
+    public com.commercetools.history.models.common.CustomerReference getCustomer() {
         return this.customer;
     }
 
@@ -180,7 +234,7 @@ public class AssociateBuilder implements Builder<Associate> {
     public Associate build() {
         Objects.requireNonNull(associateRoleAssignments, Associate.class + ": associateRoleAssignments is missing");
         Objects.requireNonNull(customer, Associate.class + ": customer is missing");
-        return new AssociateImpl(associateRoleAssignments, customer);
+        return new AssociateImpl(associateRoleAssignments, roles, customer);
     }
 
     /**
@@ -188,7 +242,7 @@ public class AssociateBuilder implements Builder<Associate> {
      * @return Associate
      */
     public Associate buildUnchecked() {
-        return new AssociateImpl(associateRoleAssignments, customer);
+        return new AssociateImpl(associateRoleAssignments, roles, customer);
     }
 
     /**
@@ -207,6 +261,7 @@ public class AssociateBuilder implements Builder<Associate> {
     public static AssociateBuilder of(final Associate template) {
         AssociateBuilder builder = new AssociateBuilder();
         builder.associateRoleAssignments = template.getAssociateRoleAssignments();
+        builder.roles = template.getRoles();
         builder.customer = template.getCustomer();
         return builder;
     }

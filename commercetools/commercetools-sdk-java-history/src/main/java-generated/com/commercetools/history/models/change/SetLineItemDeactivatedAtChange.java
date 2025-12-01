@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * SetLineItemDeactivatedAtChange
+ *  <p>This change is initiated by background processes after the <span>Delete Product</span> request or <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemoveVariantAction" rel="nofollow">Remove ProductVariant</a> update action is performed.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

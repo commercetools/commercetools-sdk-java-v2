@@ -19,10 +19,10 @@ public class SetCustomLineItemTaxedPriceChangeTest {
         return new Object[][] { new Object[] { "change", SetCustomLineItemTaxedPriceChange.builder().change("change") },
                 new Object[] { "previousValue",
                         SetCustomLineItemTaxedPriceChange.builder()
-                                .previousValue(new com.commercetools.history.models.common.MoneyImpl()) },
+                                .previousValue(new com.commercetools.history.models.common.TaxedItemPriceImpl()) },
                 new Object[] { "nextValue",
                         SetCustomLineItemTaxedPriceChange.builder()
-                                .nextValue(new com.commercetools.history.models.common.MoneyImpl()) },
+                                .nextValue(new com.commercetools.history.models.common.TaxedItemPriceImpl()) },
                 new Object[] { "customLineItem",
                         SetCustomLineItemTaxedPriceChange.builder()
                                 .customLineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) },
@@ -40,16 +40,17 @@ public class SetCustomLineItemTaxedPriceChangeTest {
     @Test
     public void previousValue() {
         SetCustomLineItemTaxedPriceChange value = SetCustomLineItemTaxedPriceChange.of();
-        value.setPreviousValue(new com.commercetools.history.models.common.MoneyImpl());
+        value.setPreviousValue(new com.commercetools.history.models.common.TaxedItemPriceImpl());
         Assertions.assertThat(value.getPreviousValue())
-                .isEqualTo(new com.commercetools.history.models.common.MoneyImpl());
+                .isEqualTo(new com.commercetools.history.models.common.TaxedItemPriceImpl());
     }
 
     @Test
     public void nextValue() {
         SetCustomLineItemTaxedPriceChange value = SetCustomLineItemTaxedPriceChange.of();
-        value.setNextValue(new com.commercetools.history.models.common.MoneyImpl());
-        Assertions.assertThat(value.getNextValue()).isEqualTo(new com.commercetools.history.models.common.MoneyImpl());
+        value.setNextValue(new com.commercetools.history.models.common.TaxedItemPriceImpl());
+        Assertions.assertThat(value.getNextValue())
+                .isEqualTo(new com.commercetools.history.models.common.TaxedItemPriceImpl());
     }
 
     @Test

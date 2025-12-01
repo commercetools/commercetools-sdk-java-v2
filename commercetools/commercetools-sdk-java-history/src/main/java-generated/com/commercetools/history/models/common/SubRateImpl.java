@@ -17,20 +17,20 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * SubRate
+ *  <p>It is used to calculate the <span>taxPortions</span> field in a Cart or Order.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SubRateImpl implements SubRate, ModelBase {
 
     private String name;
 
-    private Integer amount;
+    private Double amount;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    SubRateImpl(@JsonProperty("name") final String name, @JsonProperty("amount") final Integer amount) {
+    SubRateImpl(@JsonProperty("name") final String name, @JsonProperty("amount") final Double amount) {
         this.name = name;
         this.amount = amount;
     }
@@ -42,7 +42,7 @@ public class SubRateImpl implements SubRate, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the SubRate.</p>
      */
 
     public String getName() {
@@ -53,7 +53,7 @@ public class SubRateImpl implements SubRate, ModelBase {
      *
      */
 
-    public Integer getAmount() {
+    public Double getAmount() {
         return this.amount;
     }
 
@@ -61,7 +61,7 @@ public class SubRateImpl implements SubRate, ModelBase {
         this.name = name;
     }
 
-    public void setAmount(final Integer amount) {
+    public void setAmount(final Double amount) {
         this.amount = amount;
     }
 

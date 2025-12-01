@@ -18,8 +18,7 @@ public class AddInterfaceInteractionChangeTest {
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { "change", AddInterfaceInteractionChange.builder().change("change") },
                 new Object[] { "nextValue", AddInterfaceInteractionChange.builder()
-                        .nextValue(
-                            new com.commercetools.history.models.change_value.CustomFieldExpandedValueImpl()) } };
+                        .nextValue(new com.commercetools.history.models.common.CustomFieldsImpl()) } };
     }
 
     @Test
@@ -32,8 +31,8 @@ public class AddInterfaceInteractionChangeTest {
     @Test
     public void nextValue() {
         AddInterfaceInteractionChange value = AddInterfaceInteractionChange.of();
-        value.setNextValue(new com.commercetools.history.models.change_value.CustomFieldExpandedValueImpl());
+        value.setNextValue(new com.commercetools.history.models.common.CustomFieldsImpl());
         Assertions.assertThat(value.getNextValue())
-                .isEqualTo(new com.commercetools.history.models.change_value.CustomFieldExpandedValueImpl());
+                .isEqualTo(new com.commercetools.history.models.common.CustomFieldsImpl());
     }
 }

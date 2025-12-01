@@ -32,7 +32,7 @@ public class CustomFieldDateTimeTypeImpl implements CustomFieldDateTimeType, Mod
     }
 
     /**
-     *
+     *  <p>Discriminator that determines the type of the field.</p>
      */
 
     public String getName() {

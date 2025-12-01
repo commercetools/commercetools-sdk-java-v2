@@ -43,7 +43,7 @@ public class CustomFieldSetTypeImpl implements CustomFieldSetType, ModelBase {
     }
 
     /**
-     *
+     *  <p>Discriminator that determines the type of the field.</p>
      */
 
     public String getName() {

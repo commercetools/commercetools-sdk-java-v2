@@ -32,6 +32,8 @@ public class AddToCategoryChangeImpl implements AddToCategoryChange, ModelBase {
 
     private com.commercetools.history.models.common.Reference category;
 
+    private String catalogData;
+
     /**
      * create instance with all properties
      */
@@ -39,11 +41,13 @@ public class AddToCategoryChangeImpl implements AddToCategoryChange, ModelBase {
     AddToCategoryChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.Reference> previousValue,
             @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.Reference> nextValue,
-            @JsonProperty("category") final com.commercetools.history.models.common.Reference category) {
+            @JsonProperty("category") final com.commercetools.history.models.common.Reference category,
+            @JsonProperty("catalogData") final String catalogData) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.category = category;
+        this.catalogData = catalogData;
         this.type = ADD_TO_CATEGORY_CHANGE;
     }
 
@@ -94,6 +98,18 @@ public class AddToCategoryChangeImpl implements AddToCategoryChange, ModelBase {
         return this.category;
     }
 
+    /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
@@ -119,6 +135,10 @@ public class AddToCategoryChangeImpl implements AddToCategoryChange, ModelBase {
         this.category = category;
     }
 
+    public void setCatalogData(final String catalogData) {
+        this.catalogData = catalogData;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -134,11 +154,13 @@ public class AddToCategoryChangeImpl implements AddToCategoryChange, ModelBase {
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(category, that.category)
+                .append(catalogData, that.catalogData)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(category, that.category)
+                .append(catalogData, that.catalogData)
                 .isEquals();
     }
 
@@ -149,6 +171,7 @@ public class AddToCategoryChangeImpl implements AddToCategoryChange, ModelBase {
                 .append(previousValue)
                 .append(nextValue)
                 .append(category)
+                .append(catalogData)
                 .toHashCode();
     }
 
@@ -159,6 +182,7 @@ public class AddToCategoryChangeImpl implements AddToCategoryChange, ModelBase {
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
                 .append("category", category)
+                .append("catalogData", catalogData)
                 .build();
     }
 

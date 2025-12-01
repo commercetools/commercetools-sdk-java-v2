@@ -17,23 +17,24 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * SyncInfo
+ *  <p>Contains synchronization activity information of the Order (like export or import).</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SyncInfoImpl implements SyncInfo, ModelBase {
 
-    private com.commercetools.history.models.common.Reference channel;
+    private com.commercetools.history.models.common.ChannelReference channel;
 
     private String externalId;
 
-    private String syncedAt;
+    private java.time.ZonedDateTime syncedAt;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    SyncInfoImpl(@JsonProperty("channel") final com.commercetools.history.models.common.Reference channel,
-            @JsonProperty("externalId") final String externalId, @JsonProperty("syncedAt") final String syncedAt) {
+    SyncInfoImpl(@JsonProperty("channel") final com.commercetools.history.models.common.ChannelReference channel,
+            @JsonProperty("externalId") final String externalId,
+            @JsonProperty("syncedAt") final java.time.ZonedDateTime syncedAt) {
         this.channel = channel;
         this.externalId = externalId;
         this.syncedAt = syncedAt;
@@ -46,15 +47,15 @@ public class SyncInfoImpl implements SyncInfo, ModelBase {
     }
 
     /**
-     *
+     *  <p>Connection to a synchronization destination.</p>
      */
 
-    public com.commercetools.history.models.common.Reference getChannel() {
+    public com.commercetools.history.models.common.ChannelReference getChannel() {
         return this.channel;
     }
 
     /**
-     *  <p>Can be used to reference an external order instance, file etc.</p>
+     *  <p>Identifier of an external order instance, file, or other resource.</p>
      */
 
     public String getExternalId() {
@@ -62,14 +63,14 @@ public class SyncInfoImpl implements SyncInfo, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the information was synced.</p>
      */
 
-    public String getSyncedAt() {
+    public java.time.ZonedDateTime getSyncedAt() {
         return this.syncedAt;
     }
 
-    public void setChannel(final com.commercetools.history.models.common.Reference channel) {
+    public void setChannel(final com.commercetools.history.models.common.ChannelReference channel) {
         this.channel = channel;
     }
 
@@ -77,7 +78,7 @@ public class SyncInfoImpl implements SyncInfo, ModelBase {
         this.externalId = externalId;
     }
 
-    public void setSyncedAt(final String syncedAt) {
+    public void setSyncedAt(final java.time.ZonedDateTime syncedAt) {
         this.syncedAt = syncedAt;
     }
 

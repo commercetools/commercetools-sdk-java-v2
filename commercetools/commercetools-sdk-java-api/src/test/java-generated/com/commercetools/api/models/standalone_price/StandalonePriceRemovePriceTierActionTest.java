@@ -17,14 +17,14 @@ public class StandalonePriceRemovePriceTierActionTest {
     }
 
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { "tierMinimumQuantity",
-                StandalonePriceRemovePriceTierAction.builder().tierMinimumQuantity(3L) } };
+        return new Object[][] { new Object[] { "minimumQuantity",
+                StandalonePriceRemovePriceTierAction.builder().minimumQuantity(1L) } };
     }
 
     @Test
-    public void tierMinimumQuantity() {
+    public void minimumQuantity() {
         StandalonePriceRemovePriceTierAction value = StandalonePriceRemovePriceTierAction.of();
-        value.setTierMinimumQuantity(3L);
-        Assertions.assertThat(value.getTierMinimumQuantity()).isEqualTo(3L);
+        value.setMinimumQuantity(1L);
+        Assertions.assertThat(value.getMinimumQuantity()).isEqualTo(1L);
     }
 }

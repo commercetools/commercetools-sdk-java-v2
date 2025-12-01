@@ -23,8 +23,10 @@ public class FieldDefinitionTest {
                 new Object[] { "label",
                         FieldDefinition.builder()
                                 .label(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "required", FieldDefinition.builder().required(true) },
                 new Object[] { "inputHint", FieldDefinition.builder()
-                        .inputHint(com.commercetools.history.models.common.TextInputHint.findEnum("SingleLine")) } };
+                        .inputHint(
+                            com.commercetools.history.models.common.TypeTextInputHint.findEnum("SingleLine")) } };
     }
 
     @Test
@@ -50,10 +52,17 @@ public class FieldDefinitionTest {
     }
 
     @Test
+    public void required() {
+        FieldDefinition value = FieldDefinition.of();
+        value.setRequired(true);
+        Assertions.assertThat(value.getRequired()).isEqualTo(true);
+    }
+
+    @Test
     public void inputHint() {
         FieldDefinition value = FieldDefinition.of();
-        value.setInputHint(com.commercetools.history.models.common.TextInputHint.findEnum("SingleLine"));
+        value.setInputHint(com.commercetools.history.models.common.TypeTextInputHint.findEnum("SingleLine"));
         Assertions.assertThat(value.getInputHint())
-                .isEqualTo(com.commercetools.history.models.common.TextInputHint.findEnum("SingleLine"));
+                .isEqualTo(com.commercetools.history.models.common.TypeTextInputHint.findEnum("SingleLine"));
     }
 }

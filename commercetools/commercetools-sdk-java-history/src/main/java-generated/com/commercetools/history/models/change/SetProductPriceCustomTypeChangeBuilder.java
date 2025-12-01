@@ -18,6 +18,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .catalogData("{catalogData}")
+ *             .variant("{variant}")
+ *             .priceId("{priceId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -32,6 +34,10 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     private com.commercetools.history.models.common.CustomFields nextValue;
 
     private String catalogData;
+
+    private String variant;
+
+    private String priceId;
 
     /**
      * set the value to the change
@@ -117,6 +123,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -127,6 +134,29 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
 
     public SetProductPriceCustomTypeChangeBuilder catalogData(final String catalogData) {
         this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     * @return Builder
+     */
+
+    public SetProductPriceCustomTypeChangeBuilder variant(final String variant) {
+        this.variant = variant;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the Embedded <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</p>
+     * @param priceId value to be set
+     * @return Builder
+     */
+
+    public SetProductPriceCustomTypeChangeBuilder priceId(final String priceId) {
+        this.priceId = priceId;
         return this;
     }
 
@@ -158,6 +188,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -170,6 +201,25 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     }
 
     /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
+    /**
+     *  <p><code>id</code> of the Embedded <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</p>
+     * @return priceId
+     */
+
+    public String getPriceId() {
+        return this.priceId;
+    }
+
+    /**
      * builds SetProductPriceCustomTypeChange with checking for non-null required values
      * @return SetProductPriceCustomTypeChange
      */
@@ -178,7 +228,9 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
         Objects.requireNonNull(previousValue, SetProductPriceCustomTypeChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetProductPriceCustomTypeChange.class + ": nextValue is missing");
         Objects.requireNonNull(catalogData, SetProductPriceCustomTypeChange.class + ": catalogData is missing");
-        return new SetProductPriceCustomTypeChangeImpl(change, previousValue, nextValue, catalogData);
+        Objects.requireNonNull(variant, SetProductPriceCustomTypeChange.class + ": variant is missing");
+        Objects.requireNonNull(priceId, SetProductPriceCustomTypeChange.class + ": priceId is missing");
+        return new SetProductPriceCustomTypeChangeImpl(change, previousValue, nextValue, catalogData, variant, priceId);
     }
 
     /**
@@ -186,7 +238,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
      * @return SetProductPriceCustomTypeChange
      */
     public SetProductPriceCustomTypeChange buildUnchecked() {
-        return new SetProductPriceCustomTypeChangeImpl(change, previousValue, nextValue, catalogData);
+        return new SetProductPriceCustomTypeChangeImpl(change, previousValue, nextValue, catalogData, variant, priceId);
     }
 
     /**
@@ -208,6 +260,8 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
         builder.catalogData = template.getCatalogData();
+        builder.variant = template.getVariant();
+        builder.priceId = template.getPriceId();
         return builder;
     }
 

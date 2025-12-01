@@ -21,7 +21,7 @@ public class DiscountedLineItemPriceTest {
         return new Object[][] {
                 new Object[] { "value",
                         DiscountedLineItemPrice.builder()
-                                .value(new com.commercetools.history.models.common.MoneyImpl()) },
+                                .value(new com.commercetools.history.models.common.TypedMoneyImpl()) },
                 new Object[] { "includedDiscounts",
                         DiscountedLineItemPrice.builder()
                                 .includedDiscounts(Collections.singletonList(
@@ -31,8 +31,8 @@ public class DiscountedLineItemPriceTest {
     @Test
     public void value() {
         DiscountedLineItemPrice value = DiscountedLineItemPrice.of();
-        value.setValue(new com.commercetools.history.models.common.MoneyImpl());
-        Assertions.assertThat(value.getValue()).isEqualTo(new com.commercetools.history.models.common.MoneyImpl());
+        value.setValue(new com.commercetools.history.models.common.TypedMoneyImpl());
+        Assertions.assertThat(value.getValue()).isEqualTo(new com.commercetools.history.models.common.TypedMoneyImpl());
     }
 
     @Test

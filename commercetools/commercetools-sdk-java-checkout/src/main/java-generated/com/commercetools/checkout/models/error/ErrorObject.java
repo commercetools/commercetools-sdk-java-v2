@@ -21,8 +21,11 @@ import jakarta.validation.constraints.NotNull;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     ErrorObject errorObject = ErrorObject.connectorFailedBuilder()
+ *     ErrorObject errorObject = ErrorObject.concurrentModificationBuilder()
  *             message("{message}")
+ *             resourceId("{resourceId}")
+ *             expectedVersion(0.3)
+ *             currentVersion(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -77,6 +80,14 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for concurrentModification subtype
+     * @return builder
+     */
+    public static com.commercetools.checkout.models.error.ConcurrentModificationErrorBuilder concurrentModificationBuilder() {
+        return com.commercetools.checkout.models.error.ConcurrentModificationErrorBuilder.of();
+    }
+
+    /**
      * builder for connectorFailed subtype
      * @return builder
      */
@@ -85,11 +96,27 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for duplicateFieldWithConflictingResource subtype
+     * @return builder
+     */
+    public static com.commercetools.checkout.models.error.DuplicateFieldWithConflictingResourceErrorBuilder duplicateFieldWithConflictingResourceBuilder() {
+        return com.commercetools.checkout.models.error.DuplicateFieldWithConflictingResourceErrorBuilder.of();
+    }
+
+    /**
      * builder for general subtype
      * @return builder
      */
     public static com.commercetools.checkout.models.error.GeneralErrorBuilder generalBuilder() {
         return com.commercetools.checkout.models.error.GeneralErrorBuilder.of();
+    }
+
+    /**
+     * builder for invalidField subtype
+     * @return builder
+     */
+    public static com.commercetools.checkout.models.error.InvalidFieldErrorBuilder invalidFieldBuilder() {
+        return com.commercetools.checkout.models.error.InvalidFieldErrorBuilder.of();
     }
 
     /**
@@ -109,6 +136,30 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for invalidOperation subtype
+     * @return builder
+     */
+    public static com.commercetools.checkout.models.error.InvalidOperationErrorBuilder invalidOperationBuilder() {
+        return com.commercetools.checkout.models.error.InvalidOperationErrorBuilder.of();
+    }
+
+    /**
+     * builder for maxResourceLimitExceeded subtype
+     * @return builder
+     */
+    public static com.commercetools.checkout.models.error.MaxResourceLimitExceededErrorBuilder maxResourceLimitExceededBuilder() {
+        return com.commercetools.checkout.models.error.MaxResourceLimitExceededErrorBuilder.of();
+    }
+
+    /**
+     * builder for missingProjectKey subtype
+     * @return builder
+     */
+    public static com.commercetools.checkout.models.error.MissingProjectKeyErrorBuilder missingProjectKeyBuilder() {
+        return com.commercetools.checkout.models.error.MissingProjectKeyErrorBuilder.of();
+    }
+
+    /**
      * builder for multipleActionsNotAllowed subtype
      * @return builder
      */
@@ -125,6 +176,14 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for referencedResourceNotFound subtype
+     * @return builder
+     */
+    public static com.commercetools.checkout.models.error.ReferencedResourceNotFoundErrorBuilder referencedResourceNotFoundBuilder() {
+        return com.commercetools.checkout.models.error.ReferencedResourceNotFoundErrorBuilder.of();
+    }
+
+    /**
      * builder for requiredField subtype
      * @return builder
      */
@@ -138,6 +197,22 @@ public interface ErrorObject {
      */
     public static com.commercetools.checkout.models.error.ResourceNotFoundErrorBuilder resourceNotFoundBuilder() {
         return com.commercetools.checkout.models.error.ResourceNotFoundErrorBuilder.of();
+    }
+
+    /**
+     * builder for serviceUnavailable subtype
+     * @return builder
+     */
+    public static com.commercetools.checkout.models.error.ServiceUnavailableErrorBuilder serviceUnavailableBuilder() {
+        return com.commercetools.checkout.models.error.ServiceUnavailableErrorBuilder.of();
+    }
+
+    /**
+     * builder for syntaxError subtype
+     * @return builder
+     */
+    public static com.commercetools.checkout.models.error.SyntaxErrorErrorBuilder syntaxErrorBuilder() {
+        return com.commercetools.checkout.models.error.SyntaxErrorErrorBuilder.of();
     }
 
     /**

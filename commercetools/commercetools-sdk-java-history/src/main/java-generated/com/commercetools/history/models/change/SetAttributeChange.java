@@ -7,7 +7,7 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.history.models.change_value.AttributeValue;
+import com.commercetools.history.models.common.Attribute;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .catalogData("{catalogData}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -65,7 +66,7 @@ public interface SetAttributeChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("previousValue")
-    public AttributeValue getPreviousValue();
+    public Attribute getPreviousValue();
 
     /**
      *  <p>Value after the change.</p>
@@ -74,9 +75,10 @@ public interface SetAttributeChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("nextValue")
-    public AttributeValue getNextValue();
+    public Attribute getNextValue();
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -86,6 +88,15 @@ public interface SetAttributeChange extends Change {
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+    @NotNull
+    @JsonProperty("variant")
+    public String getVariant();
 
     /**
      * set change
@@ -99,16 +110,17 @@ public interface SetAttributeChange extends Change {
      * @param previousValue value to be set
      */
 
-    public void setPreviousValue(final AttributeValue previousValue);
+    public void setPreviousValue(final Attribute previousValue);
 
     /**
      *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
-    public void setNextValue(final AttributeValue nextValue);
+    public void setNextValue(final Attribute nextValue);
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -117,6 +129,14 @@ public interface SetAttributeChange extends Change {
      */
 
     public void setCatalogData(final String catalogData);
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     */
+
+    public void setVariant(final String variant);
 
     /**
      * factory method
@@ -137,6 +157,7 @@ public interface SetAttributeChange extends Change {
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
         instance.setCatalogData(template.getCatalogData());
+        instance.setVariant(template.getVariant());
         return instance;
     }
 
@@ -155,10 +176,10 @@ public interface SetAttributeChange extends Change {
         SetAttributeChangeImpl instance = new SetAttributeChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(
-            com.commercetools.history.models.change_value.AttributeValue.deepCopy(template.getPreviousValue()));
-        instance.setNextValue(
-            com.commercetools.history.models.change_value.AttributeValue.deepCopy(template.getNextValue()));
+            com.commercetools.history.models.common.Attribute.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.Attribute.deepCopy(template.getNextValue()));
         instance.setCatalogData(template.getCatalogData());
+        instance.setVariant(template.getVariant());
         return instance;
     }
 

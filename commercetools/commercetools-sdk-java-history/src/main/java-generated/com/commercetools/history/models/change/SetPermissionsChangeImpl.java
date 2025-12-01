@@ -30,16 +30,24 @@ public class SetPermissionsChangeImpl implements SetPermissionsChange, ModelBase
 
     private java.util.List<com.commercetools.history.models.common.Permission> nextValue;
 
+    private java.util.List<com.commercetools.history.models.common.Permission> addedItems;
+
+    private java.util.List<com.commercetools.history.models.common.Permission> removedItems;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetPermissionsChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.Permission> previousValue,
-            @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.Permission> nextValue) {
+            @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.Permission> nextValue,
+            @JsonProperty("addedItems") final java.util.List<com.commercetools.history.models.common.Permission> addedItems,
+            @JsonProperty("removedItems") final java.util.List<com.commercetools.history.models.common.Permission> removedItems) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
+        this.addedItems = addedItems;
+        this.removedItems = removedItems;
         this.type = SET_PERMISSIONS_CHANGE;
     }
 
@@ -82,6 +90,22 @@ public class SetPermissionsChangeImpl implements SetPermissionsChange, ModelBase
         return this.nextValue;
     }
 
+    /**
+     *  <p>Elements added to the array.</p>
+     */
+
+    public java.util.List<com.commercetools.history.models.common.Permission> getAddedItems() {
+        return this.addedItems;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     */
+
+    public java.util.List<com.commercetools.history.models.common.Permission> getRemovedItems() {
+        return this.removedItems;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
@@ -103,6 +127,22 @@ public class SetPermissionsChangeImpl implements SetPermissionsChange, ModelBase
         this.nextValue = nextValue;
     }
 
+    public void setAddedItems(final com.commercetools.history.models.common.Permission... addedItems) {
+        this.addedItems = new ArrayList<>(Arrays.asList(addedItems));
+    }
+
+    public void setAddedItems(final java.util.List<com.commercetools.history.models.common.Permission> addedItems) {
+        this.addedItems = addedItems;
+    }
+
+    public void setRemovedItems(final com.commercetools.history.models.common.Permission... removedItems) {
+        this.removedItems = new ArrayList<>(Arrays.asList(removedItems));
+    }
+
+    public void setRemovedItems(final java.util.List<com.commercetools.history.models.common.Permission> removedItems) {
+        this.removedItems = removedItems;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -117,10 +157,14 @@ public class SetPermissionsChangeImpl implements SetPermissionsChange, ModelBase
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(addedItems, that.addedItems)
+                .append(removedItems, that.removedItems)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(addedItems, that.addedItems)
+                .append(removedItems, that.removedItems)
                 .isEquals();
     }
 
@@ -130,6 +174,8 @@ public class SetPermissionsChangeImpl implements SetPermissionsChange, ModelBase
                 .append(change)
                 .append(previousValue)
                 .append(nextValue)
+                .append(addedItems)
+                .append(removedItems)
                 .toHashCode();
     }
 
@@ -139,6 +185,8 @@ public class SetPermissionsChangeImpl implements SetPermissionsChange, ModelBase
                 .append("change", change)
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
+                .append("addedItems", addedItems)
+                .append("removedItems", removedItems)
                 .build();
     }
 

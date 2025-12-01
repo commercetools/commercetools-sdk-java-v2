@@ -23,8 +23,11 @@ public class AssociateTest {
                         Associate.builder()
                                 .associateRoleAssignments(Collections.singletonList(
                                     new com.commercetools.history.models.common.AssociateRoleAssignmentImpl())) },
-                new Object[] { "customer",
-                        Associate.builder().customer(new com.commercetools.history.models.common.ReferenceImpl()) } };
+                new Object[] { "roles", Associate.builder()
+                        .roles(Collections.singletonList(
+                            com.commercetools.history.models.common.AssociateRoleDeprecated.findEnum("Admin"))) },
+                new Object[] { "customer", Associate.builder()
+                        .customer(new com.commercetools.history.models.common.CustomerReferenceImpl()) } };
     }
 
     @Test
@@ -38,10 +41,20 @@ public class AssociateTest {
     }
 
     @Test
+    public void roles() {
+        Associate value = Associate.of();
+        value.setRoles(Collections
+                .singletonList(com.commercetools.history.models.common.AssociateRoleDeprecated.findEnum("Admin")));
+        Assertions.assertThat(value.getRoles())
+                .isEqualTo(Collections.singletonList(
+                    com.commercetools.history.models.common.AssociateRoleDeprecated.findEnum("Admin")));
+    }
+
+    @Test
     public void customer() {
         Associate value = Associate.of();
-        value.setCustomer(new com.commercetools.history.models.common.ReferenceImpl());
+        value.setCustomer(new com.commercetools.history.models.common.CustomerReferenceImpl());
         Assertions.assertThat(value.getCustomer())
-                .isEqualTo(new com.commercetools.history.models.common.ReferenceImpl());
+                .isEqualTo(new com.commercetools.history.models.common.CustomerReferenceImpl());
     }
 }

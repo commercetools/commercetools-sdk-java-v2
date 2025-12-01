@@ -19,9 +19,9 @@ public class SetStoreChangeTest {
         return new Object[][] { new Object[] { "change", SetStoreChange.builder().change("change") },
                 new Object[] { "previousValue",
                         SetStoreChange.builder()
-                                .previousValue(new com.commercetools.history.models.common.ReferenceImpl()) },
+                                .previousValue(new com.commercetools.history.models.common.KeyReferenceImpl()) },
                 new Object[] { "nextValue", SetStoreChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.ReferenceImpl()) } };
+                        .nextValue(new com.commercetools.history.models.common.KeyReferenceImpl()) } };
     }
 
     @Test
@@ -34,16 +34,16 @@ public class SetStoreChangeTest {
     @Test
     public void previousValue() {
         SetStoreChange value = SetStoreChange.of();
-        value.setPreviousValue(new com.commercetools.history.models.common.ReferenceImpl());
+        value.setPreviousValue(new com.commercetools.history.models.common.KeyReferenceImpl());
         Assertions.assertThat(value.getPreviousValue())
-                .isEqualTo(new com.commercetools.history.models.common.ReferenceImpl());
+                .isEqualTo(new com.commercetools.history.models.common.KeyReferenceImpl());
     }
 
     @Test
     public void nextValue() {
         SetStoreChange value = SetStoreChange.of();
-        value.setNextValue(new com.commercetools.history.models.common.ReferenceImpl());
+        value.setNextValue(new com.commercetools.history.models.common.KeyReferenceImpl());
         Assertions.assertThat(value.getNextValue())
-                .isEqualTo(new com.commercetools.history.models.common.ReferenceImpl());
+                .isEqualTo(new com.commercetools.history.models.common.KeyReferenceImpl());
     }
 }

@@ -16,11 +16,15 @@ public class MoneyTest {
     }
 
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { "currencyCode", Money.builder().currencyCode("currencyCode") },
-                new Object[] { "centAmount", Money.builder().centAmount(3) },
-                new Object[] { "fractionDigits", Money.builder().fractionDigits(4) },
-                new Object[] { "type", Money.builder()
-                        .type(com.commercetools.history.models.common.MoneyType.findEnum("centPrecision")) } };
+        return new Object[][] { new Object[] { "centAmount", Money.builder().centAmount(3L) },
+                new Object[] { "currencyCode", Money.builder().currencyCode("currencyCode") } };
+    }
+
+    @Test
+    public void centAmount() {
+        Money value = Money.of();
+        value.setCentAmount(3L);
+        Assertions.assertThat(value.getCentAmount()).isEqualTo(3L);
     }
 
     @Test
@@ -28,27 +32,5 @@ public class MoneyTest {
         Money value = Money.of();
         value.setCurrencyCode("currencyCode");
         Assertions.assertThat(value.getCurrencyCode()).isEqualTo("currencyCode");
-    }
-
-    @Test
-    public void centAmount() {
-        Money value = Money.of();
-        value.setCentAmount(3);
-        Assertions.assertThat(value.getCentAmount()).isEqualTo(3);
-    }
-
-    @Test
-    public void fractionDigits() {
-        Money value = Money.of();
-        value.setFractionDigits(4);
-        Assertions.assertThat(value.getFractionDigits()).isEqualTo(4);
-    }
-
-    @Test
-    public void type() {
-        Money value = Money.of();
-        value.setType(com.commercetools.history.models.common.MoneyType.findEnum("centPrecision"));
-        Assertions.assertThat(value.getType())
-                .isEqualTo(com.commercetools.history.models.common.MoneyType.findEnum("centPrecision"));
     }
 }

@@ -19,10 +19,10 @@ public class OrderPaymentAddedMessagePayloadQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, OrderPaymentAddedMessagePayloadQueryBuilderDsl::of));
     }
 
-    public CombinationQueryPredicate<OrderPaymentAddedMessagePayloadQueryBuilderDsl> payment(
+    public CombinationQueryPredicate<OrderPaymentAddedMessagePayloadQueryBuilderDsl> paymentRef(
             Function<com.commercetools.api.predicates.query.payment.PaymentReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.payment.PaymentReferenceQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("payment"))
+                .parent(ConstantQueryPredicate.of().constant("paymentRef"))
                 .inner(fn.apply(com.commercetools.api.predicates.query.payment.PaymentReferenceQueryBuilderDsl.of())),
             OrderPaymentAddedMessagePayloadQueryBuilderDsl::of);
     }

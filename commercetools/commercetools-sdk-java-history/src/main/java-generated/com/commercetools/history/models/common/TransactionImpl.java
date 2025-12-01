@@ -17,38 +17,43 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * Transaction
+ *  <p>Represents a financial transaction typically created as a result of a notification from the payment service.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TransactionImpl implements Transaction, ModelBase {
 
     private String id;
 
-    private String timestamp;
+    private java.time.ZonedDateTime timestamp;
 
     private com.commercetools.history.models.common.TransactionType type;
 
-    private com.commercetools.history.models.common.Money amount;
+    private com.commercetools.history.models.common.CentPrecisionMoney amount;
 
     private String interactionId;
 
     private com.commercetools.history.models.common.TransactionState state;
 
+    private com.commercetools.history.models.common.CustomFields custom;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
-    TransactionImpl(@JsonProperty("id") final String id, @JsonProperty("timestamp") final String timestamp,
+    TransactionImpl(@JsonProperty("id") final String id,
+            @JsonProperty("timestamp") final java.time.ZonedDateTime timestamp,
             @JsonProperty("type") final com.commercetools.history.models.common.TransactionType type,
-            @JsonProperty("amount") final com.commercetools.history.models.common.Money amount,
+            @JsonProperty("amount") final com.commercetools.history.models.common.CentPrecisionMoney amount,
             @JsonProperty("interactionId") final String interactionId,
-            @JsonProperty("state") final com.commercetools.history.models.common.TransactionState state) {
+            @JsonProperty("state") final com.commercetools.history.models.common.TransactionState state,
+            @JsonProperty("custom") final com.commercetools.history.models.common.CustomFields custom) {
         this.id = id;
         this.timestamp = timestamp;
         this.type = type;
         this.amount = amount;
         this.interactionId = interactionId;
         this.state = state;
+        this.custom = custom;
     }
 
     /**
@@ -66,15 +71,15 @@ public class TransactionImpl implements Transaction, ModelBase {
     }
 
     /**
-     *  <p>Time at which the transaction took place.</p>
+     *  <p>Date and time (UTC) the Transaction took place.</p>
      */
 
-    public String getTimestamp() {
+    public java.time.ZonedDateTime getTimestamp() {
         return this.timestamp;
     }
 
     /**
-     *
+     *  <p>Type of the Transaction. For example, <code>Authorization</code>.</p>
      */
 
     public com.commercetools.history.models.common.TransactionType getType() {
@@ -82,15 +87,15 @@ public class TransactionImpl implements Transaction, ModelBase {
     }
 
     /**
-     *
+     *  <p>Money value of the Transaction.</p>
      */
 
-    public com.commercetools.history.models.common.Money getAmount() {
+    public com.commercetools.history.models.common.CentPrecisionMoney getAmount() {
         return this.amount;
     }
 
     /**
-     *  <p>Identifier used by the interface that manages the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
+     *  <p>Identifier used by the interface that manages the Transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction can be found with this ID.</p>
      */
 
     public String getInteractionId() {
@@ -98,18 +103,26 @@ public class TransactionImpl implements Transaction, ModelBase {
     }
 
     /**
-     *
+     *  <p>State of the Transaction.</p>
      */
 
     public com.commercetools.history.models.common.TransactionState getState() {
         return this.state;
     }
 
+    /**
+     *  <p>Custom Fields defined for the Transaction.</p>
+     */
+
+    public com.commercetools.history.models.common.CustomFields getCustom() {
+        return this.custom;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
 
-    public void setTimestamp(final String timestamp) {
+    public void setTimestamp(final java.time.ZonedDateTime timestamp) {
         this.timestamp = timestamp;
     }
 
@@ -117,7 +130,7 @@ public class TransactionImpl implements Transaction, ModelBase {
         this.type = type;
     }
 
-    public void setAmount(final com.commercetools.history.models.common.Money amount) {
+    public void setAmount(final com.commercetools.history.models.common.CentPrecisionMoney amount) {
         this.amount = amount;
     }
 
@@ -127,6 +140,10 @@ public class TransactionImpl implements Transaction, ModelBase {
 
     public void setState(final com.commercetools.history.models.common.TransactionState state) {
         this.state = state;
+    }
+
+    public void setCustom(final com.commercetools.history.models.common.CustomFields custom) {
+        this.custom = custom;
     }
 
     @Override
@@ -145,12 +162,14 @@ public class TransactionImpl implements Transaction, ModelBase {
                 .append(amount, that.amount)
                 .append(interactionId, that.interactionId)
                 .append(state, that.state)
+                .append(custom, that.custom)
                 .append(id, that.id)
                 .append(timestamp, that.timestamp)
                 .append(type, that.type)
                 .append(amount, that.amount)
                 .append(interactionId, that.interactionId)
                 .append(state, that.state)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -162,6 +181,7 @@ public class TransactionImpl implements Transaction, ModelBase {
                 .append(amount)
                 .append(interactionId)
                 .append(state)
+                .append(custom)
                 .toHashCode();
     }
 
@@ -173,6 +193,7 @@ public class TransactionImpl implements Transaction, ModelBase {
                 .append("amount", amount)
                 .append("interactionId", interactionId)
                 .append("state", state)
+                .append("custom", custom)
                 .build();
     }
 

@@ -55,7 +55,7 @@ public class TransactionItemImpl implements TransactionItem, ModelBase {
     }
 
     /**
-     *  <p>Reference to the <span>Payment</span> associated with the Transaction Item.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> associated with the Transaction Item.</p>
      */
 
     public com.commercetools.checkout.models.payment.PaymentReference getPayment() {
@@ -63,7 +63,7 @@ public class TransactionItemImpl implements TransactionItem, ModelBase {
     }
 
     /**
-     *  <p>Reference to the <span>Payment Integration</span> to use to execute the payment.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntegration" rel="nofollow">Payment Integration</a> to use to execute the payment.</p>
      */
 
     public com.commercetools.checkout.models.payment_integration.PaymentIntegrationReference getPaymentIntegration() {

@@ -26,7 +26,9 @@ public class ChangeAssetOrderChangeTest {
                 new Object[] { "nextValue",
                         ChangeAssetOrderChange.builder()
                                 .nextValue(Collections.singletonList(
-                                    new com.commercetools.history.models.common.LocalizedStringImpl())) } };
+                                    new com.commercetools.history.models.common.LocalizedStringImpl())) },
+                new Object[] { "catalogData", ChangeAssetOrderChange.builder().catalogData("catalogData") },
+                new Object[] { "variant", ChangeAssetOrderChange.builder().variant("variant") } };
     }
 
     @Test
@@ -54,5 +56,19 @@ public class ChangeAssetOrderChangeTest {
         Assertions.assertThat(value.getNextValue())
                 .isEqualTo(
                     Collections.singletonList(new com.commercetools.history.models.common.LocalizedStringImpl()));
+    }
+
+    @Test
+    public void catalogData() {
+        ChangeAssetOrderChange value = ChangeAssetOrderChange.of();
+        value.setCatalogData("catalogData");
+        Assertions.assertThat(value.getCatalogData()).isEqualTo("catalogData");
+    }
+
+    @Test
+    public void variant() {
+        ChangeAssetOrderChange value = ChangeAssetOrderChange.of();
+        value.setVariant("variant");
+        Assertions.assertThat(value.getVariant()).isEqualTo("variant");
     }
 }

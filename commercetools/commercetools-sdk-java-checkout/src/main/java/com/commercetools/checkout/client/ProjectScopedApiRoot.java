@@ -7,4 +7,8 @@ public interface ProjectScopedApiRoot {
     ByProjectKeyTransactionsRequestBuilder transactions();
 
     ByProjectKeyPaymentIntentsRequestBuilder paymentIntents();
+
+    ByProjectKeyPaymentIntegrationsRequestBuilder paymentIntegrations();
+
+    public ByProjectKeyApplicationsRequestBuilder applications();
 }

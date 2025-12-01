@@ -40,36 +40,24 @@ public class QuoteRequestLabelBuilder implements Builder<QuoteRequestLabel> {
 
     /**
      *  <p>The <span>Buyer</span> who raised the Quote Request.</p>
-     * @param builder function to build the customer value
-     * @return Builder
-     */
-
-    public QuoteRequestLabelBuilder customer(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.customer = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>The <span>Buyer</span> who raised the Quote Request.</p>
-     * @param builder function to build the customer value
-     * @return Builder
-     */
-
-    public QuoteRequestLabelBuilder withCustomer(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        this.customer = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>The <span>Buyer</span> who raised the Quote Request.</p>
      * @param customer value to be set
      * @return Builder
      */
 
     public QuoteRequestLabelBuilder customer(final com.commercetools.history.models.common.Reference customer) {
         this.customer = customer;
+        return this;
+    }
+
+    /**
+     *  <p>The <span>Buyer</span> who raised the Quote Request.</p>
+     * @param builder function to build the customer value
+     * @return Builder
+     */
+
+    public QuoteRequestLabelBuilder customer(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
+        this.customer = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 

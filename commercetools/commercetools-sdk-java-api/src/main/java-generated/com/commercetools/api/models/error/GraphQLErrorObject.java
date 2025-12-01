@@ -606,6 +606,14 @@ public interface GraphQLErrorObject {
     }
 
     /**
+     * builder for recurringOrderFailure subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLRecurringOrderFailureErrorBuilder recurringOrderFailureBuilder() {
+        return com.commercetools.api.models.error.GraphQLRecurringOrderFailureErrorBuilder.of();
+    }
+
+    /**
      * builder for referenceExists subtype
      * @return builder
      */

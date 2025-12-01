@@ -34,16 +34,16 @@ import jakarta.validation.constraints.NotNull;
 public interface ProductSelectionSetting {
 
     /**
-     *
+     *  <p>Reference to a ProductSelection.</p>
      * @return productSelection
      */
     @NotNull
     @Valid
     @JsonProperty("productSelection")
-    public Reference getProductSelection();
+    public ProductSelectionReference getProductSelection();
 
     /**
-     *
+     *  <p>If <code>true</code>, all Products assigned to this Product Selection are part of the Store's assortment.</p>
      * @return active
      */
     @NotNull
@@ -51,14 +51,14 @@ public interface ProductSelectionSetting {
     public Boolean getActive();
 
     /**
-     * set productSelection
+     *  <p>Reference to a ProductSelection.</p>
      * @param productSelection value to be set
      */
 
-    public void setProductSelection(final Reference productSelection);
+    public void setProductSelection(final ProductSelectionReference productSelection);
 
     /**
-     * set active
+     *  <p>If <code>true</code>, all Products assigned to this Product Selection are part of the Store's assortment.</p>
      * @param active value to be set
      */
 
@@ -98,7 +98,7 @@ public interface ProductSelectionSetting {
         }
         ProductSelectionSettingImpl instance = new ProductSelectionSettingImpl();
         instance.setProductSelection(
-            com.commercetools.history.models.common.Reference.deepCopy(template.getProductSelection()));
+            com.commercetools.history.models.common.ProductSelectionReference.deepCopy(template.getProductSelection()));
         instance.setActive(template.getActive());
         return instance;
     }

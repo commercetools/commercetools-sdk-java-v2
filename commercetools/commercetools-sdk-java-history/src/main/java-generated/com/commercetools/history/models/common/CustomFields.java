@@ -16,7 +16,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * CustomFields
+ *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,36 +34,36 @@ import jakarta.validation.constraints.NotNull;
 public interface CustomFields {
 
     /**
-     *
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that holds the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a> for the Custom Fields.</p>
      * @return type
      */
     @NotNull
     @Valid
     @JsonProperty("type")
-    public Reference getType();
+    public TypeReference getType();
 
     /**
-     *  <p>A valid JSON object, based on FieldDefinition.</p>
+     *  <p>Object containing the Custom Fields for the <span>customized resource or data type</span>.</p>
      * @return fields
      */
     @NotNull
     @Valid
     @JsonProperty("fields")
-    public Object getFields();
+    public FieldContainer getFields();
 
     /**
-     * set type
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that holds the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a> for the Custom Fields.</p>
      * @param type value to be set
      */
 
-    public void setType(final Reference type);
+    public void setType(final TypeReference type);
 
     /**
-     *  <p>A valid JSON object, based on FieldDefinition.</p>
+     *  <p>Object containing the Custom Fields for the <span>customized resource or data type</span>.</p>
      * @param fields value to be set
      */
 
-    public void setFields(final Object fields);
+    public void setFields(final FieldContainer fields);
 
     /**
      * factory method
@@ -98,8 +98,8 @@ public interface CustomFields {
             return null;
         }
         CustomFieldsImpl instance = new CustomFieldsImpl();
-        instance.setType(com.commercetools.history.models.common.Reference.deepCopy(template.getType()));
-        instance.setFields(template.getFields());
+        instance.setType(com.commercetools.history.models.common.TypeReference.deepCopy(template.getType()));
+        instance.setFields(com.commercetools.history.models.common.FieldContainer.deepCopy(template.getFields()));
         return instance;
     }
 

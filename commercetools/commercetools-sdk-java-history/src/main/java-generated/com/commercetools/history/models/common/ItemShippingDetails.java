@@ -35,7 +35,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ItemShippingDetails {
 
     /**
-     *
+     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
      * @return targets
      */
     @NotNull
@@ -44,7 +44,10 @@ public interface ItemShippingDetails {
     public List<ItemShippingTarget> getTargets();
 
     /**
-     *  <p>true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise. A cart cannot be ordered when the value is <code>false</code>. The error InvalidItemShippingDetails will be triggered.</p>
+     *  <ul>
+     *   <li><code>true</code> if the quantity of Line Items or Custom Line Items is equal to the sum of sub-quantities defined in <code>targets</code>.</li>
+     *   <li><code>false</code> if the quantity of Line Items or Custom Line Items is not equal to the sum of sub-quantities defined in <code>targets</code>. Ordering a Cart when the value is <code>false</code> returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidItemShippingDetailsError" rel="nofollow">InvalidItemShippingDetails</a> error.</li>
+     *  </ul>
      * @return valid
      */
     @NotNull
@@ -52,7 +55,7 @@ public interface ItemShippingDetails {
     public Boolean getValid();
 
     /**
-     * set targets
+     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
      * @param targets values to be set
      */
 
@@ -60,14 +63,17 @@ public interface ItemShippingDetails {
     public void setTargets(final ItemShippingTarget... targets);
 
     /**
-     * set targets
+     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
      * @param targets values to be set
      */
 
     public void setTargets(final List<ItemShippingTarget> targets);
 
     /**
-     *  <p>true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise. A cart cannot be ordered when the value is <code>false</code>. The error InvalidItemShippingDetails will be triggered.</p>
+     *  <ul>
+     *   <li><code>true</code> if the quantity of Line Items or Custom Line Items is equal to the sum of sub-quantities defined in <code>targets</code>.</li>
+     *   <li><code>false</code> if the quantity of Line Items or Custom Line Items is not equal to the sum of sub-quantities defined in <code>targets</code>. Ordering a Cart when the value is <code>false</code> returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidItemShippingDetailsError" rel="nofollow">InvalidItemShippingDetails</a> error.</li>
+     *  </ul>
      * @param valid value to be set
      */
 

@@ -15,6 +15,7 @@ import com.commercetools.api.models.discount_code.DiscountCode;
 import commercetools.discount_code.DiscountCodeFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 
+import io.vrap.rmf.base.client.error.ForbiddenException;
 import io.vrap.rmf.base.client.error.NotFoundException;
 
 import org.assertj.core.api.Assertions;
@@ -156,7 +157,7 @@ public class CartQueryTests {
     @Test
     public void pathTraversal() {
         CartsFixtures.withCart(cart -> {
-            NotFoundException e = org.junit.jupiter.api.Assertions.assertThrows(NotFoundException.class, () -> {
+            ForbiddenException e = org.junit.jupiter.api.Assertions.assertThrows(ForbiddenException.class, () -> {
                 CommercetoolsTestUtils.getProjectApiRoot().carts().withId("../categories").get().executeBlocking();
             });
             Assertions.assertThat(e.getMessage()).contains("..%2Fcategories");

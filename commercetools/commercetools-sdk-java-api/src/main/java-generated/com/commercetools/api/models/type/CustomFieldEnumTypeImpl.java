@@ -44,7 +44,7 @@ public class CustomFieldEnumTypeImpl implements CustomFieldEnumType, ModelBase {
     }
 
     /**
-     *
+     *  <p>Discriminator that determines the type of the field.</p>
      */
 
     public String getName() {

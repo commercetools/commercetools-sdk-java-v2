@@ -17,7 +17,12 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetAddressCustomFieldAction" rel="nofollow">Set Address Custom Field</a> update action.</p>
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetAddressCustomFieldAction" rel="nofollow">Set Address Custom Field</a> on Business Units.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetAddressCustomFieldAction" rel="nofollow">Set Address Custom Field</a> on Customers.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelSetAddressCustomFieldAction" rel="nofollow">Set Address Custom Field</a> on Channels.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern

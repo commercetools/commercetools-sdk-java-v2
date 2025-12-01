@@ -17,21 +17,21 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * CustomFields
+ *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldsImpl implements CustomFields, ModelBase {
 
-    private com.commercetools.history.models.common.Reference type;
+    private com.commercetools.history.models.common.TypeReference type;
 
-    private java.lang.Object fields;
+    private com.commercetools.history.models.common.FieldContainer fields;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    CustomFieldsImpl(@JsonProperty("type") final com.commercetools.history.models.common.Reference type,
-            @JsonProperty("fields") final java.lang.Object fields) {
+    CustomFieldsImpl(@JsonProperty("type") final com.commercetools.history.models.common.TypeReference type,
+            @JsonProperty("fields") final com.commercetools.history.models.common.FieldContainer fields) {
         this.type = type;
         this.fields = fields;
     }
@@ -43,26 +43,26 @@ public class CustomFieldsImpl implements CustomFields, ModelBase {
     }
 
     /**
-     *
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that holds the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a> for the Custom Fields.</p>
      */
 
-    public com.commercetools.history.models.common.Reference getType() {
+    public com.commercetools.history.models.common.TypeReference getType() {
         return this.type;
     }
 
     /**
-     *  <p>A valid JSON object, based on FieldDefinition.</p>
+     *  <p>Object containing the Custom Fields for the <span>customized resource or data type</span>.</p>
      */
 
-    public java.lang.Object getFields() {
+    public com.commercetools.history.models.common.FieldContainer getFields() {
         return this.fields;
     }
 
-    public void setType(final com.commercetools.history.models.common.Reference type) {
+    public void setType(final com.commercetools.history.models.common.TypeReference type) {
         this.type = type;
     }
 
-    public void setFields(final java.lang.Object fields) {
+    public void setFields(final com.commercetools.history.models.common.FieldContainer fields) {
         this.fields = fields;
     }
 

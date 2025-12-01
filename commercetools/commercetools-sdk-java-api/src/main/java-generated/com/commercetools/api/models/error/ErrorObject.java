@@ -624,6 +624,14 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for recurringOrderFailure subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.RecurringOrderFailureErrorBuilder recurringOrderFailureBuilder() {
+        return com.commercetools.api.models.error.RecurringOrderFailureErrorBuilder.of();
+    }
+
+    /**
      * builder for referenceExists subtype
      * @return builder
      */

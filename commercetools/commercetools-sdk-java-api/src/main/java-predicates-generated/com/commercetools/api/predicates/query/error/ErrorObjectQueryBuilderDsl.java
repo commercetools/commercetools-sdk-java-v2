@@ -497,6 +497,13 @@ public class ErrorObjectQueryBuilderDsl {
             ErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asRecurringOrderFailure(
+            Function<com.commercetools.api.predicates.query.error.RecurringOrderFailureErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.RecurringOrderFailureErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.error.RecurringOrderFailureErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asReferenceExists(
             Function<com.commercetools.api.predicates.query.error.ReferenceExistsErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.ReferenceExistsErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

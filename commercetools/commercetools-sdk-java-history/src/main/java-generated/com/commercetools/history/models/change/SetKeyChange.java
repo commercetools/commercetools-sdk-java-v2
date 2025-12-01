@@ -21,6 +21,8 @@ import jakarta.validation.constraints.NotNull;
  *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CategorySetKeyAction" rel="nofollow">Set Key</a> on Categories.</li>
  *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetKeyAction" rel="nofollow">Set Key</a> on Customers.</li>
  *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroupSetKeyAction" rel="nofollow">Set Key</a> on Customer Groups.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeSetKeyAction" rel="nofollow">Set Key</a> on Discount Codes.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntrySetKeyAction" rel="nofollow">Set Key</a> on Inventories.</li>
  *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetKeyAction" rel="nofollow">Set Key</a> on Payments.</li>
  *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetKeyAction" rel="nofollow">Set Key</a> on Products.</li>
  *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountSetKeyAction" rel="nofollow">Set Key</a> on Product Discounts.</li>

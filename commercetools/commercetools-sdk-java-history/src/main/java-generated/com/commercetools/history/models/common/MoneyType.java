@@ -11,7 +11,7 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * MoneyType
+ *  <p>Determines the type of money used.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface MoneyType extends JsonEnum {

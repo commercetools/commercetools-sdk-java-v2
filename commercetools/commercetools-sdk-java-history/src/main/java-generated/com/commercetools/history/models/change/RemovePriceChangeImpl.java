@@ -17,9 +17,10 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemovePriceAction" rel="nofollow">Remove Embedded Price</a> update action.</p>
+ *  <p>This Change is no longer triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemovePriceAction" rel="nofollow">Remove Embedded Price</a> update action. It has been deprecated and replaced by the <a href="https://docs.commercetools.com/apis/ctp:history:type:SetPricesChange" rel="nofollow">SetPricesChange</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class RemovePriceChangeImpl implements RemovePriceChange, ModelBase {
 
     private String type;
@@ -34,6 +35,8 @@ public class RemovePriceChangeImpl implements RemovePriceChange, ModelBase {
 
     private String priceId;
 
+    private String variant;
+
     /**
      * create instance with all properties
      */
@@ -41,12 +44,14 @@ public class RemovePriceChangeImpl implements RemovePriceChange, ModelBase {
     RemovePriceChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.Price previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.Price nextValue,
-            @JsonProperty("catalogData") final String catalogData, @JsonProperty("priceId") final String priceId) {
+            @JsonProperty("catalogData") final String catalogData, @JsonProperty("priceId") final String priceId,
+            @JsonProperty("variant") final String variant) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.catalogData = catalogData;
         this.priceId = priceId;
+        this.variant = variant;
         this.type = REMOVE_PRICE_CHANGE;
     }
 
@@ -90,6 +95,7 @@ public class RemovePriceChangeImpl implements RemovePriceChange, ModelBase {
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -106,6 +112,15 @@ public class RemovePriceChangeImpl implements RemovePriceChange, ModelBase {
 
     public String getPriceId() {
         return this.priceId;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     */
+
+    public String getVariant() {
+        return this.variant;
     }
 
     public void setChange(final String change) {
@@ -128,6 +143,10 @@ public class RemovePriceChangeImpl implements RemovePriceChange, ModelBase {
         this.priceId = priceId;
     }
 
+    public void setVariant(final String variant) {
+        this.variant = variant;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -144,12 +163,14 @@ public class RemovePriceChangeImpl implements RemovePriceChange, ModelBase {
                 .append(nextValue, that.nextValue)
                 .append(catalogData, that.catalogData)
                 .append(priceId, that.priceId)
+                .append(variant, that.variant)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(catalogData, that.catalogData)
                 .append(priceId, that.priceId)
+                .append(variant, that.variant)
                 .isEquals();
     }
 
@@ -161,6 +182,7 @@ public class RemovePriceChangeImpl implements RemovePriceChange, ModelBase {
                 .append(nextValue)
                 .append(catalogData)
                 .append(priceId)
+                .append(variant)
                 .toHashCode();
     }
 
@@ -172,6 +194,7 @@ public class RemovePriceChangeImpl implements RemovePriceChange, ModelBase {
                 .append("nextValue", nextValue)
                 .append("catalogData", catalogData)
                 .append("priceId", priceId)
+                .append("variant", variant)
                 .build();
     }
 

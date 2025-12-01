@@ -18,6 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .catalogData("{catalogData}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -27,11 +28,13 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
 
     private String change;
 
-    private com.commercetools.history.models.change_value.AttributeValue previousValue;
+    private com.commercetools.history.models.common.Attribute previousValue;
 
-    private com.commercetools.history.models.change_value.AttributeValue nextValue;
+    private com.commercetools.history.models.common.Attribute nextValue;
 
     private String catalogData;
+
+    private String variant;
 
     /**
      * set the value to the change
@@ -51,9 +54,8 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
      */
 
     public SetAttributeChangeBuilder previousValue(
-            Function<com.commercetools.history.models.change_value.AttributeValueBuilder, com.commercetools.history.models.change_value.AttributeValueBuilder> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.change_value.AttributeValueBuilder.of())
-                .build();
+            Function<com.commercetools.history.models.common.AttributeBuilder, com.commercetools.history.models.common.AttributeBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.AttributeBuilder.of()).build();
         return this;
     }
 
@@ -64,8 +66,8 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
      */
 
     public SetAttributeChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.change_value.AttributeValueBuilder, com.commercetools.history.models.change_value.AttributeValue> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.change_value.AttributeValueBuilder.of());
+            Function<com.commercetools.history.models.common.AttributeBuilder, com.commercetools.history.models.common.Attribute> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.AttributeBuilder.of());
         return this;
     }
 
@@ -76,7 +78,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
      */
 
     public SetAttributeChangeBuilder previousValue(
-            final com.commercetools.history.models.change_value.AttributeValue previousValue) {
+            final com.commercetools.history.models.common.Attribute previousValue) {
         this.previousValue = previousValue;
         return this;
     }
@@ -88,9 +90,8 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
      */
 
     public SetAttributeChangeBuilder nextValue(
-            Function<com.commercetools.history.models.change_value.AttributeValueBuilder, com.commercetools.history.models.change_value.AttributeValueBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.change_value.AttributeValueBuilder.of())
-                .build();
+            Function<com.commercetools.history.models.common.AttributeBuilder, com.commercetools.history.models.common.AttributeBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.AttributeBuilder.of()).build();
         return this;
     }
 
@@ -101,8 +102,8 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
      */
 
     public SetAttributeChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.change_value.AttributeValueBuilder, com.commercetools.history.models.change_value.AttributeValue> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.change_value.AttributeValueBuilder.of());
+            Function<com.commercetools.history.models.common.AttributeBuilder, com.commercetools.history.models.common.Attribute> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.AttributeBuilder.of());
         return this;
     }
 
@@ -112,13 +113,13 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
      * @return Builder
      */
 
-    public SetAttributeChangeBuilder nextValue(
-            final com.commercetools.history.models.change_value.AttributeValue nextValue) {
+    public SetAttributeChangeBuilder nextValue(final com.commercetools.history.models.common.Attribute nextValue) {
         this.nextValue = nextValue;
         return this;
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -129,6 +130,18 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
 
     public SetAttributeChangeBuilder catalogData(final String catalogData) {
         this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     * @return Builder
+     */
+
+    public SetAttributeChangeBuilder variant(final String variant) {
+        this.variant = variant;
         return this;
     }
 
@@ -146,7 +159,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
      * @return previousValue
      */
 
-    public com.commercetools.history.models.change_value.AttributeValue getPreviousValue() {
+    public com.commercetools.history.models.common.Attribute getPreviousValue() {
         return this.previousValue;
     }
 
@@ -155,11 +168,12 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
      * @return nextValue
      */
 
-    public com.commercetools.history.models.change_value.AttributeValue getNextValue() {
+    public com.commercetools.history.models.common.Attribute getNextValue() {
         return this.nextValue;
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -172,6 +186,16 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
     }
 
     /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
+    /**
      * builds SetAttributeChange with checking for non-null required values
      * @return SetAttributeChange
      */
@@ -180,7 +204,8 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
         Objects.requireNonNull(previousValue, SetAttributeChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetAttributeChange.class + ": nextValue is missing");
         Objects.requireNonNull(catalogData, SetAttributeChange.class + ": catalogData is missing");
-        return new SetAttributeChangeImpl(change, previousValue, nextValue, catalogData);
+        Objects.requireNonNull(variant, SetAttributeChange.class + ": variant is missing");
+        return new SetAttributeChangeImpl(change, previousValue, nextValue, catalogData, variant);
     }
 
     /**
@@ -188,7 +213,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
      * @return SetAttributeChange
      */
     public SetAttributeChange buildUnchecked() {
-        return new SetAttributeChangeImpl(change, previousValue, nextValue, catalogData);
+        return new SetAttributeChangeImpl(change, previousValue, nextValue, catalogData, variant);
     }
 
     /**
@@ -210,6 +235,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
         builder.catalogData = template.getCatalogData();
+        builder.variant = template.getVariant();
         return builder;
     }
 

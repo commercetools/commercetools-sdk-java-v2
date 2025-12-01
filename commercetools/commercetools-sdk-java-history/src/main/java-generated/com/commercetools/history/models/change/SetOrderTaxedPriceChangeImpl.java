@@ -26,9 +26,9 @@ public class SetOrderTaxedPriceChangeImpl implements SetOrderTaxedPriceChange, M
 
     private String change;
 
-    private com.commercetools.history.models.common.TaxedItemPrice previousValue;
+    private com.commercetools.history.models.common.TaxedPrice previousValue;
 
-    private com.commercetools.history.models.common.TaxedItemPrice nextValue;
+    private com.commercetools.history.models.common.TaxedPrice nextValue;
 
     private com.commercetools.history.models.common.TaxMode taxMode;
 
@@ -37,8 +37,8 @@ public class SetOrderTaxedPriceChangeImpl implements SetOrderTaxedPriceChange, M
      */
     @JsonCreator
     SetOrderTaxedPriceChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.TaxedItemPrice previousValue,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.TaxedItemPrice nextValue,
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.TaxedPrice previousValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.TaxedPrice nextValue,
             @JsonProperty("taxMode") final com.commercetools.history.models.common.TaxMode taxMode) {
         this.change = change;
         this.previousValue = previousValue;
@@ -74,7 +74,7 @@ public class SetOrderTaxedPriceChangeImpl implements SetOrderTaxedPriceChange, M
      *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.common.TaxedItemPrice getPreviousValue() {
+    public com.commercetools.history.models.common.TaxedPrice getPreviousValue() {
         return this.previousValue;
     }
 
@@ -82,12 +82,12 @@ public class SetOrderTaxedPriceChangeImpl implements SetOrderTaxedPriceChange, M
      *  <p>Value after the change.</p>
      */
 
-    public com.commercetools.history.models.common.TaxedItemPrice getNextValue() {
+    public com.commercetools.history.models.common.TaxedPrice getNextValue() {
         return this.nextValue;
     }
 
     /**
-     *
+     *  <p>Indicates how taxes are set on the Cart.</p>
      */
 
     public com.commercetools.history.models.common.TaxMode getTaxMode() {
@@ -98,11 +98,11 @@ public class SetOrderTaxedPriceChangeImpl implements SetOrderTaxedPriceChange, M
         this.change = change;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.TaxedItemPrice previousValue) {
+    public void setPreviousValue(final com.commercetools.history.models.common.TaxedPrice previousValue) {
         this.previousValue = previousValue;
     }
 
-    public void setNextValue(final com.commercetools.history.models.common.TaxedItemPrice nextValue) {
+    public void setNextValue(final com.commercetools.history.models.common.TaxedPrice nextValue) {
         this.nextValue = nextValue;
     }
 

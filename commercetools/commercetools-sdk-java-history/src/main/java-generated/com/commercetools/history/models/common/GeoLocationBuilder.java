@@ -13,7 +13,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     GeoLocation geoLocation = GeoLocation.builder()
- *             .type("{type}")
  *             .plusCoordinates(coordinatesBuilder -> coordinatesBuilder)
  *             .build()
  * </code></pre>
@@ -22,20 +21,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GeoLocationBuilder implements Builder<GeoLocation> {
 
-    private String type;
-
     private java.util.List<Integer> coordinates;
-
-    /**
-     * set the value to the type
-     * @param type value to be set
-     * @return Builder
-     */
-
-    public GeoLocationBuilder type(final String type) {
-        this.type = type;
-        return this;
-    }
 
     /**
      * set values to the coordinates
@@ -74,15 +60,6 @@ public class GeoLocationBuilder implements Builder<GeoLocation> {
     }
 
     /**
-     * value of type}
-     * @return type
-     */
-
-    public String getType() {
-        return this.type;
-    }
-
-    /**
      * value of coordinates}
      * @return coordinates
      */
@@ -96,9 +73,8 @@ public class GeoLocationBuilder implements Builder<GeoLocation> {
      * @return GeoLocation
      */
     public GeoLocation build() {
-        Objects.requireNonNull(type, GeoLocation.class + ": type is missing");
         Objects.requireNonNull(coordinates, GeoLocation.class + ": coordinates is missing");
-        return new GeoLocationImpl(type, coordinates);
+        return new GeoLocationImpl(coordinates);
     }
 
     /**
@@ -106,7 +82,7 @@ public class GeoLocationBuilder implements Builder<GeoLocation> {
      * @return GeoLocation
      */
     public GeoLocation buildUnchecked() {
-        return new GeoLocationImpl(type, coordinates);
+        return new GeoLocationImpl(coordinates);
     }
 
     /**
@@ -124,7 +100,6 @@ public class GeoLocationBuilder implements Builder<GeoLocation> {
      */
     public static GeoLocationBuilder of(final GeoLocation template) {
         GeoLocationBuilder builder = new GeoLocationBuilder();
-        builder.type = template.getType();
         builder.coordinates = template.getCoordinates();
         return builder;
     }

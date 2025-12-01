@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Reference to an <span>Application</span>.</p>
+ *  <p>Reference to an <a href="https://docs.commercetools.com/apis/ctp:checkout:type:Application" rel="nofollow">Application</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ApplicationReferenceImpl implements ApplicationReference, ModelBase {

@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  *             .change("{change}")
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .catalogData("{catalogData}")
  *             .build()
  * </code></pre>
  * </div>
@@ -80,6 +81,18 @@ public interface ChangeSlugChange extends Change {
     public LocalizedString getNextValue();
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+    @NotNull
+    @JsonProperty("catalogData")
+    public String getCatalogData();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -101,6 +114,17 @@ public interface ChangeSlugChange extends Change {
     public void setNextValue(final LocalizedString nextValue);
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     */
+
+    public void setCatalogData(final String catalogData);
+
+    /**
      * factory method
      * @return instance of ChangeSlugChange
      */
@@ -118,6 +142,7 @@ public interface ChangeSlugChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setCatalogData(template.getCatalogData());
         return instance;
     }
 
@@ -139,6 +164,7 @@ public interface ChangeSlugChange extends Change {
             com.commercetools.history.models.common.LocalizedString.deepCopy(template.getPreviousValue()));
         instance.setNextValue(
             com.commercetools.history.models.common.LocalizedString.deepCopy(template.getNextValue()));
+        instance.setCatalogData(template.getCatalogData());
         return instance;
     }
 

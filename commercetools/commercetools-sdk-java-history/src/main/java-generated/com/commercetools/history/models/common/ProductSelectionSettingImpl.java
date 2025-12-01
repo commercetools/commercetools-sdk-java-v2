@@ -22,7 +22,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionSettingImpl implements ProductSelectionSetting, ModelBase {
 
-    private com.commercetools.history.models.common.Reference productSelection;
+    private com.commercetools.history.models.common.ProductSelectionReference productSelection;
 
     private Boolean active;
 
@@ -31,7 +31,7 @@ public class ProductSelectionSettingImpl implements ProductSelectionSetting, Mod
      */
     @JsonCreator
     ProductSelectionSettingImpl(
-            @JsonProperty("productSelection") final com.commercetools.history.models.common.Reference productSelection,
+            @JsonProperty("productSelection") final com.commercetools.history.models.common.ProductSelectionReference productSelection,
             @JsonProperty("active") final Boolean active) {
         this.productSelection = productSelection;
         this.active = active;
@@ -44,22 +44,23 @@ public class ProductSelectionSettingImpl implements ProductSelectionSetting, Mod
     }
 
     /**
-     *
+     *  <p>Reference to a ProductSelection.</p>
      */
 
-    public com.commercetools.history.models.common.Reference getProductSelection() {
+    public com.commercetools.history.models.common.ProductSelectionReference getProductSelection() {
         return this.productSelection;
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, all Products assigned to this Product Selection are part of the Store's assortment.</p>
      */
 
     public Boolean getActive() {
         return this.active;
     }
 
-    public void setProductSelection(final com.commercetools.history.models.common.Reference productSelection) {
+    public void setProductSelection(
+            final com.commercetools.history.models.common.ProductSelectionReference productSelection) {
         this.productSelection = productSelection;
     }
 

@@ -1,6 +1,8 @@
 
 package com.commercetools.history.models.common;
 
+import java.util.Collections;
+
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -17,11 +19,16 @@ public class AssetTest {
 
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { "id", Asset.builder().id("id") },
+                new Object[] { "sources",
+                        Asset.builder()
+                                .sources(Collections.singletonList(
+                                    new com.commercetools.history.models.common.AssetSourceImpl())) },
                 new Object[] { "name",
                         Asset.builder().name(new com.commercetools.history.models.common.LocalizedStringImpl()) },
                 new Object[] { "description",
                         Asset.builder()
                                 .description(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "tags", Asset.builder().tags(Collections.singletonList("tags")) },
                 new Object[] { "custom",
                         Asset.builder().custom(new com.commercetools.history.models.common.CustomFieldsImpl()) },
                 new Object[] { "key", Asset.builder().key("key") } };
@@ -32,6 +39,14 @@ public class AssetTest {
         Asset value = Asset.of();
         value.setId("id");
         Assertions.assertThat(value.getId()).isEqualTo("id");
+    }
+
+    @Test
+    public void sources() {
+        Asset value = Asset.of();
+        value.setSources(Collections.singletonList(new com.commercetools.history.models.common.AssetSourceImpl()));
+        Assertions.assertThat(value.getSources())
+                .isEqualTo(Collections.singletonList(new com.commercetools.history.models.common.AssetSourceImpl()));
     }
 
     @Test
@@ -48,6 +63,13 @@ public class AssetTest {
         value.setDescription(new com.commercetools.history.models.common.LocalizedStringImpl());
         Assertions.assertThat(value.getDescription())
                 .isEqualTo(new com.commercetools.history.models.common.LocalizedStringImpl());
+    }
+
+    @Test
+    public void tags() {
+        Asset value = Asset.of();
+        value.setTags(Collections.singletonList("tags"));
+        Assertions.assertThat(value.getTags()).isEqualTo(Collections.singletonList("tags"));
     }
 
     @Test

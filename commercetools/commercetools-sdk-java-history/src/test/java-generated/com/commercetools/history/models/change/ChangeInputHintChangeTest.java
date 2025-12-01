@@ -17,10 +17,12 @@ public class ChangeInputHintChangeTest {
 
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { "change", ChangeInputHintChange.builder().change("change") },
-                new Object[] { "previousValue", ChangeInputHintChange.builder()
-                        .previousValue(com.commercetools.history.models.common.TextInputHint.findEnum("SingleLine")) },
+                new Object[] { "previousValue",
+                        ChangeInputHintChange.builder()
+                                .previousValue(
+                                    com.commercetools.history.models.common.TypeTextInputHint.findEnum("SingleLine")) },
                 new Object[] { "nextValue", ChangeInputHintChange.builder()
-                        .nextValue(com.commercetools.history.models.common.TextInputHint.findEnum("SingleLine")) },
+                        .nextValue(com.commercetools.history.models.common.TypeTextInputHint.findEnum("SingleLine")) },
                 new Object[] { "fieldName", ChangeInputHintChange.builder().fieldName("fieldName") },
                 new Object[] { "attributeName", ChangeInputHintChange.builder().attributeName("attributeName") } };
     }
@@ -35,17 +37,17 @@ public class ChangeInputHintChangeTest {
     @Test
     public void previousValue() {
         ChangeInputHintChange value = ChangeInputHintChange.of();
-        value.setPreviousValue(com.commercetools.history.models.common.TextInputHint.findEnum("SingleLine"));
+        value.setPreviousValue(com.commercetools.history.models.common.TypeTextInputHint.findEnum("SingleLine"));
         Assertions.assertThat(value.getPreviousValue())
-                .isEqualTo(com.commercetools.history.models.common.TextInputHint.findEnum("SingleLine"));
+                .isEqualTo(com.commercetools.history.models.common.TypeTextInputHint.findEnum("SingleLine"));
     }
 
     @Test
     public void nextValue() {
         ChangeInputHintChange value = ChangeInputHintChange.of();
-        value.setNextValue(com.commercetools.history.models.common.TextInputHint.findEnum("SingleLine"));
+        value.setNextValue(com.commercetools.history.models.common.TypeTextInputHint.findEnum("SingleLine"));
         Assertions.assertThat(value.getNextValue())
-                .isEqualTo(com.commercetools.history.models.common.TextInputHint.findEnum("SingleLine"));
+                .isEqualTo(com.commercetools.history.models.common.TypeTextInputHint.findEnum("SingleLine"));
     }
 
     @Test

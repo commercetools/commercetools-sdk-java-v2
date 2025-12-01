@@ -23,7 +23,7 @@ public class InheritedAssociateTest {
                         .associateRoleAssignments(Collections.singletonList(
                             new com.commercetools.history.models.common.InheritedAssociateRoleAssignmentImpl())) },
                 new Object[] { "customer", InheritedAssociate.builder()
-                        .customer(new com.commercetools.history.models.common.ReferenceImpl()) } };
+                        .customer(new com.commercetools.history.models.common.CustomerReferenceImpl()) } };
     }
 
     @Test
@@ -39,8 +39,8 @@ public class InheritedAssociateTest {
     @Test
     public void customer() {
         InheritedAssociate value = InheritedAssociate.of();
-        value.setCustomer(new com.commercetools.history.models.common.ReferenceImpl());
+        value.setCustomer(new com.commercetools.history.models.common.CustomerReferenceImpl());
         Assertions.assertThat(value.getCustomer())
-                .isEqualTo(new com.commercetools.history.models.common.ReferenceImpl());
+                .isEqualTo(new com.commercetools.history.models.common.CustomerReferenceImpl());
     }
 }

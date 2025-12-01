@@ -3,6 +3,8 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -13,11 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     TrackingData trackingData = TrackingData.builder()
- *             .trackingId("{trackingId}")
- *             .carrier("{carrier}")
- *             .provider("{provider}")
- *             .providerTransaction("{providerTransaction}")
- *             .isReturn(true)
  *             .build()
  * </code></pre>
  * </div>
@@ -25,112 +22,128 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TrackingDataBuilder implements Builder<TrackingData> {
 
+    @Nullable
     private String trackingId;
 
+    @Nullable
     private String carrier;
 
+    @Nullable
     private String provider;
 
+    @Nullable
     private String providerTransaction;
 
+    @Nullable
     private Boolean isReturn;
 
     /**
-     *  <p>The ID to track one parcel.</p>
+     *  <p>Identifier to track the Parcel.</p>
      * @param trackingId value to be set
      * @return Builder
      */
 
-    public TrackingDataBuilder trackingId(final String trackingId) {
+    public TrackingDataBuilder trackingId(@Nullable final String trackingId) {
         this.trackingId = trackingId;
         return this;
     }
 
     /**
-     *  <p>The carrier that delivers the parcel.</p>
+     *  <p>Name of the carrier that delivers the Parcel.</p>
      * @param carrier value to be set
      * @return Builder
      */
 
-    public TrackingDataBuilder carrier(final String carrier) {
+    public TrackingDataBuilder carrier(@Nullable final String carrier) {
         this.carrier = carrier;
         return this;
     }
 
     /**
-     * set the value to the provider
+     *  <p>Name of the provider that serves as facade to several carriers.</p>
      * @param provider value to be set
      * @return Builder
      */
 
-    public TrackingDataBuilder provider(final String provider) {
+    public TrackingDataBuilder provider(@Nullable final String provider) {
         this.provider = provider;
         return this;
     }
 
     /**
-     * set the value to the providerTransaction
+     *  <p>Transaction identifier with the <code>provider</code>.</p>
      * @param providerTransaction value to be set
      * @return Builder
      */
 
-    public TrackingDataBuilder providerTransaction(final String providerTransaction) {
+    public TrackingDataBuilder providerTransaction(@Nullable final String providerTransaction) {
         this.providerTransaction = providerTransaction;
         return this;
     }
 
     /**
-     *  <p>Flag to distinguish if the parcel is on the way to the customer (false) or on the way back (true).</p>
+     *  <ul>
+     *   <li>If <code>true</code>, the Parcel is being returned.</li>
+     *   <li>If <code>false</code>, the Parcel is being delivered to the customer.</li>
+     *  </ul>
      * @param isReturn value to be set
      * @return Builder
      */
 
-    public TrackingDataBuilder isReturn(final Boolean isReturn) {
+    public TrackingDataBuilder isReturn(@Nullable final Boolean isReturn) {
         this.isReturn = isReturn;
         return this;
     }
 
     /**
-     *  <p>The ID to track one parcel.</p>
+     *  <p>Identifier to track the Parcel.</p>
      * @return trackingId
      */
 
+    @Nullable
     public String getTrackingId() {
         return this.trackingId;
     }
 
     /**
-     *  <p>The carrier that delivers the parcel.</p>
+     *  <p>Name of the carrier that delivers the Parcel.</p>
      * @return carrier
      */
 
+    @Nullable
     public String getCarrier() {
         return this.carrier;
     }
 
     /**
-     * value of provider}
+     *  <p>Name of the provider that serves as facade to several carriers.</p>
      * @return provider
      */
 
+    @Nullable
     public String getProvider() {
         return this.provider;
     }
 
     /**
-     * value of providerTransaction}
+     *  <p>Transaction identifier with the <code>provider</code>.</p>
      * @return providerTransaction
      */
 
+    @Nullable
     public String getProviderTransaction() {
         return this.providerTransaction;
     }
 
     /**
-     *  <p>Flag to distinguish if the parcel is on the way to the customer (false) or on the way back (true).</p>
+     *  <ul>
+     *   <li>If <code>true</code>, the Parcel is being returned.</li>
+     *   <li>If <code>false</code>, the Parcel is being delivered to the customer.</li>
+     *  </ul>
      * @return isReturn
      */
 
+    @Nullable
     public Boolean getIsReturn() {
         return this.isReturn;
     }
@@ -140,11 +153,6 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
      * @return TrackingData
      */
     public TrackingData build() {
-        Objects.requireNonNull(trackingId, TrackingData.class + ": trackingId is missing");
-        Objects.requireNonNull(carrier, TrackingData.class + ": carrier is missing");
-        Objects.requireNonNull(provider, TrackingData.class + ": provider is missing");
-        Objects.requireNonNull(providerTransaction, TrackingData.class + ": providerTransaction is missing");
-        Objects.requireNonNull(isReturn, TrackingData.class + ": isReturn is missing");
         return new TrackingDataImpl(trackingId, carrier, provider, providerTransaction, isReturn);
     }
 

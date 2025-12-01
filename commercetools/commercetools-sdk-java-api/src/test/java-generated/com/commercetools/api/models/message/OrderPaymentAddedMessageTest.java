@@ -16,15 +16,15 @@ public class OrderPaymentAddedMessageTest {
     }
 
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { "payment", OrderPaymentAddedMessage.builder()
-                .payment(new com.commercetools.api.models.payment.PaymentReferenceImpl()) } };
+        return new Object[][] { new Object[] { "paymentRef", OrderPaymentAddedMessage.builder()
+                .paymentRef(new com.commercetools.api.models.payment.PaymentReferenceImpl()) } };
     }
 
     @Test
-    public void payment() {
+    public void paymentRef() {
         OrderPaymentAddedMessage value = OrderPaymentAddedMessage.of();
-        value.setPayment(new com.commercetools.api.models.payment.PaymentReferenceImpl());
-        Assertions.assertThat(value.getPayment())
+        value.setPaymentRef(new com.commercetools.api.models.payment.PaymentReferenceImpl());
+        Assertions.assertThat(value.getPaymentRef())
                 .isEqualTo(new com.commercetools.api.models.payment.PaymentReferenceImpl());
     }
 }

@@ -27,8 +27,8 @@ import jakarta.validation.constraints.NotNull;
  *             .name("{name}")
  *             .label(labelBuilder -> labelBuilder)
  *             .isRequired(true)
+ *             .level(AttributeLevelEnum.PRODUCT)
  *             .attributeConstraint(AttributeConstraintEnum.NONE)
- *             .inputTip(inputTipBuilder -> inputTipBuilder)
  *             .inputHint(TextInputHint.SINGLE_LINE)
  *             .isSearchable(true)
  *             .build()
@@ -40,7 +40,7 @@ import jakarta.validation.constraints.NotNull;
 public interface AttributeDefinition {
 
     /**
-     *
+     *  <p>Describes the Type of the Attribute.</p>
      * @return type
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface AttributeDefinition {
     public AttributeType getType();
 
     /**
-     *  <p>The unique name of the attribute used in the API. The name must be between two and 256 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). When using the same <code>name</code> for an attribute in two or more product types all fields of the AttributeDefinition of this attribute need to be the same across the product types, otherwise an AttributeDefinitionAlreadyExists error code will be returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
+     *  <p>User-defined name of the Attribute that is unique within the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return name
      */
     @NotNull
@@ -57,7 +57,7 @@ public interface AttributeDefinition {
     public String getName();
 
     /**
-     *
+     *  <p>Human-readable label for the Attribute.</p>
      * @return label
      */
     @NotNull
@@ -66,7 +66,7 @@ public interface AttributeDefinition {
     public LocalizedString getLabel();
 
     /**
-     *  <p>Whether the attribute is required to have a value.</p>
+     *  <p>If <code>true</code>, the Attribute must have a value on a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return isRequired
      */
     @NotNull
@@ -74,7 +74,15 @@ public interface AttributeDefinition {
     public Boolean getIsRequired();
 
     /**
-     *
+     *  <p>Specifies whether the Attribute is defined at the Product or Variant level.</p>
+     * @return level
+     */
+    @NotNull
+    @JsonProperty("level")
+    public AttributeLevelEnum getLevel();
+
+    /**
+     *  <p>Specifies how Attributes are validated across all variants of a Product.</p>
      * @return attributeConstraint
      */
     @NotNull
@@ -82,16 +90,15 @@ public interface AttributeDefinition {
     public AttributeConstraintEnum getAttributeConstraint();
 
     /**
-     *
+     *  <p>Provides additional Attribute information to aid content managers configure Product details.</p>
      * @return inputTip
      */
-    @NotNull
     @Valid
     @JsonProperty("inputTip")
     public LocalizedString getInputTip();
 
     /**
-     *
+     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeTextType" rel="nofollow">AttributeTextType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizableTextType" rel="nofollow">AttributeLocalizableTextType</a>).</p>
      * @return inputHint
      */
     @NotNull
@@ -99,7 +106,8 @@ public interface AttributeDefinition {
     public TextInputHint getInputHint();
 
     /**
-     *  <p>Whether the attribute's values should generally be enabled in product search. This determines whether the value is stored in products for matching terms in the context of full-text search queries and can be used in facets &amp; filters as part of product search queries. The exact features that are enabled/disabled with this flag depend on the concrete attribute type and are described there. The max size of a searchable field is <strong>restricted to 10922 characters</strong>. This constraint is enforced at both product creation and product update. If the length of the input exceeds the maximum size an InvalidField error is returned.</p>
+     *  <p>If <code>true</code>, the Attribute's values are available in the <span>Product Search</span> or the <span>Product Projection Search</span> API for use in full-text search queries, filters, and facets. However, if an Attribute's <code>level</code> is set as <code>Product</code>, then Product Projection Search does <strong>not support</strong> the Attribute.</p>
+     *  <p>The exact features that are available with this flag depend on the specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeType" rel="nofollow">AttributeType</a>. The maximum size of a searchable field is <strong>restricted</strong> by the <span>Field content size limit</span>. This constraint is enforced at both <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/products:POST" rel="nofollow">Product creation</a> and <span>Product update</span>. If the length of the input exceeds the maximum size, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @return isSearchable
      */
     @NotNull
@@ -107,56 +115,64 @@ public interface AttributeDefinition {
     public Boolean getIsSearchable();
 
     /**
-     * set type
+     *  <p>Describes the Type of the Attribute.</p>
      * @param type value to be set
      */
 
     public void setType(final AttributeType type);
 
     /**
-     *  <p>The unique name of the attribute used in the API. The name must be between two and 256 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). When using the same <code>name</code> for an attribute in two or more product types all fields of the AttributeDefinition of this attribute need to be the same across the product types, otherwise an AttributeDefinitionAlreadyExists error code will be returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
+     *  <p>User-defined name of the Attribute that is unique within the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     * set label
+     *  <p>Human-readable label for the Attribute.</p>
      * @param label value to be set
      */
 
     public void setLabel(final LocalizedString label);
 
     /**
-     *  <p>Whether the attribute is required to have a value.</p>
+     *  <p>If <code>true</code>, the Attribute must have a value on a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param isRequired value to be set
      */
 
     public void setIsRequired(final Boolean isRequired);
 
     /**
-     * set attributeConstraint
+     *  <p>Specifies whether the Attribute is defined at the Product or Variant level.</p>
+     * @param level value to be set
+     */
+
+    public void setLevel(final AttributeLevelEnum level);
+
+    /**
+     *  <p>Specifies how Attributes are validated across all variants of a Product.</p>
      * @param attributeConstraint value to be set
      */
 
     public void setAttributeConstraint(final AttributeConstraintEnum attributeConstraint);
 
     /**
-     * set inputTip
+     *  <p>Provides additional Attribute information to aid content managers configure Product details.</p>
      * @param inputTip value to be set
      */
 
     public void setInputTip(final LocalizedString inputTip);
 
     /**
-     * set inputHint
+     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeTextType" rel="nofollow">AttributeTextType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizableTextType" rel="nofollow">AttributeLocalizableTextType</a>).</p>
      * @param inputHint value to be set
      */
 
     public void setInputHint(final TextInputHint inputHint);
 
     /**
-     *  <p>Whether the attribute's values should generally be enabled in product search. This determines whether the value is stored in products for matching terms in the context of full-text search queries and can be used in facets &amp; filters as part of product search queries. The exact features that are enabled/disabled with this flag depend on the concrete attribute type and are described there. The max size of a searchable field is <strong>restricted to 10922 characters</strong>. This constraint is enforced at both product creation and product update. If the length of the input exceeds the maximum size an InvalidField error is returned.</p>
+     *  <p>If <code>true</code>, the Attribute's values are available in the <span>Product Search</span> or the <span>Product Projection Search</span> API for use in full-text search queries, filters, and facets. However, if an Attribute's <code>level</code> is set as <code>Product</code>, then Product Projection Search does <strong>not support</strong> the Attribute.</p>
+     *  <p>The exact features that are available with this flag depend on the specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeType" rel="nofollow">AttributeType</a>. The maximum size of a searchable field is <strong>restricted</strong> by the <span>Field content size limit</span>. This constraint is enforced at both <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/products:POST" rel="nofollow">Product creation</a> and <span>Product update</span>. If the length of the input exceeds the maximum size, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @param isSearchable value to be set
      */
 
@@ -181,6 +197,7 @@ public interface AttributeDefinition {
         instance.setName(template.getName());
         instance.setLabel(template.getLabel());
         instance.setIsRequired(template.getIsRequired());
+        instance.setLevel(template.getLevel());
         instance.setAttributeConstraint(template.getAttributeConstraint());
         instance.setInputTip(template.getInputTip());
         instance.setInputHint(template.getInputHint());
@@ -205,6 +222,7 @@ public interface AttributeDefinition {
         instance.setName(template.getName());
         instance.setLabel(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLabel()));
         instance.setIsRequired(template.getIsRequired());
+        instance.setLevel(template.getLevel());
         instance.setAttributeConstraint(template.getAttributeConstraint());
         instance.setInputTip(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getInputTip()));
         instance.setInputHint(template.getInputHint());

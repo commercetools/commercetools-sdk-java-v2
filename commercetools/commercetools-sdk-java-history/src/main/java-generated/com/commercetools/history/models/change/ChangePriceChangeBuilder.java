@@ -19,6 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .catalogData("{catalogData}")
  *             .priceId("{priceId}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -35,6 +36,8 @@ public class ChangePriceChangeBuilder implements Builder<ChangePriceChange> {
     private String catalogData;
 
     private String priceId;
+
+    private String variant;
 
     /**
      * set the value to the change
@@ -118,6 +121,7 @@ public class ChangePriceChangeBuilder implements Builder<ChangePriceChange> {
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -139,6 +143,18 @@ public class ChangePriceChangeBuilder implements Builder<ChangePriceChange> {
 
     public ChangePriceChangeBuilder priceId(final String priceId) {
         this.priceId = priceId;
+        return this;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     * @return Builder
+     */
+
+    public ChangePriceChangeBuilder variant(final String variant) {
+        this.variant = variant;
         return this;
     }
 
@@ -170,6 +186,7 @@ public class ChangePriceChangeBuilder implements Builder<ChangePriceChange> {
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -191,6 +208,16 @@ public class ChangePriceChangeBuilder implements Builder<ChangePriceChange> {
     }
 
     /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
+    /**
      * builds ChangePriceChange with checking for non-null required values
      * @return ChangePriceChange
      */
@@ -200,7 +227,8 @@ public class ChangePriceChangeBuilder implements Builder<ChangePriceChange> {
         Objects.requireNonNull(nextValue, ChangePriceChange.class + ": nextValue is missing");
         Objects.requireNonNull(catalogData, ChangePriceChange.class + ": catalogData is missing");
         Objects.requireNonNull(priceId, ChangePriceChange.class + ": priceId is missing");
-        return new ChangePriceChangeImpl(change, previousValue, nextValue, catalogData, priceId);
+        Objects.requireNonNull(variant, ChangePriceChange.class + ": variant is missing");
+        return new ChangePriceChangeImpl(change, previousValue, nextValue, catalogData, priceId, variant);
     }
 
     /**
@@ -208,7 +236,7 @@ public class ChangePriceChangeBuilder implements Builder<ChangePriceChange> {
      * @return ChangePriceChange
      */
     public ChangePriceChange buildUnchecked() {
-        return new ChangePriceChangeImpl(change, previousValue, nextValue, catalogData, priceId);
+        return new ChangePriceChangeImpl(change, previousValue, nextValue, catalogData, priceId, variant);
     }
 
     /**
@@ -231,6 +259,7 @@ public class ChangePriceChangeBuilder implements Builder<ChangePriceChange> {
         builder.nextValue = template.getNextValue();
         builder.catalogData = template.getCatalogData();
         builder.priceId = template.getPriceId();
+        builder.variant = template.getVariant();
         return builder;
     }
 

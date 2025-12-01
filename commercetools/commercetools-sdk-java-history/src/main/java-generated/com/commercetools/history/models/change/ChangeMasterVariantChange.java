@@ -77,6 +77,7 @@ public interface ChangeMasterVariantChange extends Change {
     public Variant getNextValue();
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -109,6 +110,7 @@ public interface ChangeMasterVariantChange extends Change {
     public void setNextValue(final Variant nextValue);
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>

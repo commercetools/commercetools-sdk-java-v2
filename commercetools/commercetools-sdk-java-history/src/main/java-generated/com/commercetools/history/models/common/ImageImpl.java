@@ -47,7 +47,7 @@ public class ImageImpl implements Image, ModelBase {
     }
 
     /**
-     *
+     *  <p>URL of the image in its original size that must be unique within a single <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      */
 
     public String getUrl() {
@@ -55,7 +55,7 @@ public class ImageImpl implements Image, ModelBase {
     }
 
     /**
-     *
+     *  <p>Dimensions of the original image.</p>
      */
 
     public com.commercetools.history.models.common.ImageDimensions getDimensions() {
@@ -63,7 +63,7 @@ public class ImageImpl implements Image, ModelBase {
     }
 
     /**
-     *
+     *  <p>Custom label for the image.</p>
      */
 
     public String getLabel() {

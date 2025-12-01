@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.history.models.change_value.EnumValue;
+import com.commercetools.history.models.common.AttributePlainEnumValue;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -66,7 +66,7 @@ public interface ChangePlainEnumValueOrderChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("previousValue")
-    public List<EnumValue> getPreviousValue();
+    public List<AttributePlainEnumValue> getPreviousValue();
 
     /**
      *  <p>Value after the change.</p>
@@ -75,7 +75,7 @@ public interface ChangePlainEnumValueOrderChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("nextValue")
-    public List<EnumValue> getNextValue();
+    public List<AttributePlainEnumValue> getNextValue();
 
     /**
      *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
@@ -98,14 +98,14 @@ public interface ChangePlainEnumValueOrderChange extends Change {
      */
 
     @JsonIgnore
-    public void setPreviousValue(final EnumValue... previousValue);
+    public void setPreviousValue(final AttributePlainEnumValue... previousValue);
 
     /**
      *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
-    public void setPreviousValue(final List<EnumValue> previousValue);
+    public void setPreviousValue(final List<AttributePlainEnumValue> previousValue);
 
     /**
      *  <p>Value after the change.</p>
@@ -113,14 +113,14 @@ public interface ChangePlainEnumValueOrderChange extends Change {
      */
 
     @JsonIgnore
-    public void setNextValue(final EnumValue... nextValue);
+    public void setNextValue(final AttributePlainEnumValue... nextValue);
 
     /**
      *  <p>Value after the change.</p>
      * @param nextValue values to be set
      */
 
-    public void setNextValue(final List<EnumValue> nextValue);
+    public void setNextValue(final List<AttributePlainEnumValue> nextValue);
 
     /**
      *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
@@ -167,12 +167,12 @@ public interface ChangePlainEnumValueOrderChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
                 .map(t -> t.stream()
-                        .map(com.commercetools.history.models.change_value.EnumValue::deepCopy)
+                        .map(com.commercetools.history.models.common.AttributePlainEnumValue::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setNextValue(Optional.ofNullable(template.getNextValue())
                 .map(t -> t.stream()
-                        .map(com.commercetools.history.models.change_value.EnumValue::deepCopy)
+                        .map(com.commercetools.history.models.common.AttributePlainEnumValue::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setAttributeName(template.getAttributeName());

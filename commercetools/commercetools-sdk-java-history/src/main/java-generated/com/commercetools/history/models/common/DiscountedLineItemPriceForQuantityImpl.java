@@ -22,7 +22,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountedLineItemPriceForQuantityImpl implements DiscountedLineItemPriceForQuantity, ModelBase {
 
-    private Integer quantity;
+    private Long quantity;
 
     private com.commercetools.history.models.common.DiscountedLineItemPrice discountedPrice;
 
@@ -30,7 +30,7 @@ public class DiscountedLineItemPriceForQuantityImpl implements DiscountedLineIte
      * create instance with all properties
      */
     @JsonCreator
-    DiscountedLineItemPriceForQuantityImpl(@JsonProperty("quantity") final Integer quantity,
+    DiscountedLineItemPriceForQuantityImpl(@JsonProperty("quantity") final Long quantity,
             @JsonProperty("discountedPrice") final com.commercetools.history.models.common.DiscountedLineItemPrice discountedPrice) {
         this.quantity = quantity;
         this.discountedPrice = discountedPrice;
@@ -43,22 +43,22 @@ public class DiscountedLineItemPriceForQuantityImpl implements DiscountedLineIte
     }
 
     /**
-     *
+     *  <p>Number of Line Items or Custom Line Items in the Cart.</p>
      */
 
-    public Integer getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
     /**
-     *
+     *  <p>Discounted price of the Line Item or Custom Line Item.</p>
      */
 
     public com.commercetools.history.models.common.DiscountedLineItemPrice getDiscountedPrice() {
         return this.discountedPrice;
     }
 
-    public void setQuantity(final Integer quantity) {
+    public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
 

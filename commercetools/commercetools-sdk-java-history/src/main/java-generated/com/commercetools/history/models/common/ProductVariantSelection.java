@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * ProductVariantSelection
+ *  <p>Polymorphic base type for Product Variant Selections. The actual type is determined by the <code>type</code> field.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -23,7 +23,6 @@ import jakarta.validation.constraints.NotNull;
  * <pre><code class='java'>
  *     ProductVariantSelection productVariantSelection = ProductVariantSelection.builder()
  *             .type(ProductVariantSelectionTypeEnum.INCLUSION)
- *             .plusSkus(skusBuilder -> skusBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -33,7 +32,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ProductVariantSelection {
 
     /**
-     *
+     *  <p>Determines whether the SKUs are to be included in, or excluded from, the Product Selection.</p>
      * @return type
      */
     @NotNull
@@ -41,34 +40,11 @@ public interface ProductVariantSelection {
     public ProductVariantSelectionTypeEnum getType();
 
     /**
-     *
-     * @return skus
-     */
-    @NotNull
-    @JsonProperty("skus")
-    public List<String> getSkus();
-
-    /**
-     * set type
+     *  <p>Determines whether the SKUs are to be included in, or excluded from, the Product Selection.</p>
      * @param type value to be set
      */
 
     public void setType(final ProductVariantSelectionTypeEnum type);
-
-    /**
-     * set skus
-     * @param skus values to be set
-     */
-
-    @JsonIgnore
-    public void setSkus(final String... skus);
-
-    /**
-     * set skus
-     * @param skus values to be set
-     */
-
-    public void setSkus(final List<String> skus);
 
     /**
      * factory method
@@ -86,7 +62,6 @@ public interface ProductVariantSelection {
     public static ProductVariantSelection of(final ProductVariantSelection template) {
         ProductVariantSelectionImpl instance = new ProductVariantSelectionImpl();
         instance.setType(template.getType());
-        instance.setSkus(template.getSkus());
         return instance;
     }
 
@@ -104,7 +79,6 @@ public interface ProductVariantSelection {
         }
         ProductVariantSelectionImpl instance = new ProductVariantSelectionImpl();
         instance.setType(template.getType());
-        instance.setSkus(Optional.ofNullable(template.getSkus()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

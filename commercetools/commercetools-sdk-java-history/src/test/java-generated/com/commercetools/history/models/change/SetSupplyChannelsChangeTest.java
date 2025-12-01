@@ -23,8 +23,16 @@ public class SetSupplyChannelsChangeTest {
                         SetSupplyChannelsChange.builder()
                                 .previousValue(Collections
                                         .singletonList(new com.commercetools.history.models.common.ReferenceImpl())) },
-                new Object[] { "nextValue", SetSupplyChannelsChange.builder()
-                        .nextValue(
+                new Object[] { "nextValue",
+                        SetSupplyChannelsChange.builder()
+                                .nextValue(Collections
+                                        .singletonList(new com.commercetools.history.models.common.ReferenceImpl())) },
+                new Object[] { "addedItems",
+                        SetSupplyChannelsChange.builder()
+                                .addedItems(Collections
+                                        .singletonList(new com.commercetools.history.models.common.ReferenceImpl())) },
+                new Object[] { "removedItems", SetSupplyChannelsChange.builder()
+                        .removedItems(
                             Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl())) } };
     }
 
@@ -48,6 +56,22 @@ public class SetSupplyChannelsChangeTest {
         SetSupplyChannelsChange value = SetSupplyChannelsChange.of();
         value.setNextValue(Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl()));
         Assertions.assertThat(value.getNextValue())
+                .isEqualTo(Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl()));
+    }
+
+    @Test
+    public void addedItems() {
+        SetSupplyChannelsChange value = SetSupplyChannelsChange.of();
+        value.setAddedItems(Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl()));
+        Assertions.assertThat(value.getAddedItems())
+                .isEqualTo(Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl()));
+    }
+
+    @Test
+    public void removedItems() {
+        SetSupplyChannelsChange value = SetSupplyChannelsChange.of();
+        value.setRemovedItems(Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl()));
+        Assertions.assertThat(value.getRemovedItems())
                 .isEqualTo(Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl()));
     }
 }

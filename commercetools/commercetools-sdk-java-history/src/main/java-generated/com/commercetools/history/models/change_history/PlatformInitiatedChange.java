@@ -18,13 +18,39 @@ public interface PlatformInitiatedChange extends JsonEnum {
 
     PlatformInitiatedChange EXCLUDE_ALL = PlatformInitiatedChangeEnum.EXCLUDE_ALL;
 
+    PlatformInitiatedChange ADD_INHERITED_ASSOCIATE = PlatformInitiatedChangeEnum.ADD_INHERITED_ASSOCIATE;
+
+    PlatformInitiatedChange CHANGE_INCLUDED_IN_STATISTICS = PlatformInitiatedChangeEnum.CHANGE_INCLUDED_IN_STATISTICS;
+
+    PlatformInitiatedChange CHANGE_INHERITED_ASSOCIATE = PlatformInitiatedChangeEnum.CHANGE_INHERITED_ASSOCIATE;
+
+    PlatformInitiatedChange CHANGE_LAST_VARIANT_ID = PlatformInitiatedChangeEnum.CHANGE_LAST_VARIANT_ID;
+
     PlatformInitiatedChange CHANGE_LINE_ITEM_NAME = PlatformInitiatedChangeEnum.CHANGE_LINE_ITEM_NAME;
+
+    PlatformInitiatedChange CHANGE_LINE_ITEM_PUBLISHED = PlatformInitiatedChangeEnum.CHANGE_LINE_ITEM_PUBLISHED;
 
     PlatformInitiatedChange CHANGE_REVIEW_RATING_STATISTICS = PlatformInitiatedChangeEnum.CHANGE_REVIEW_RATING_STATISTICS;
 
+    PlatformInitiatedChange CHANGE_TOP_LEVEL_UNIT = PlatformInitiatedChangeEnum.CHANGE_TOP_LEVEL_UNIT;
+
+    PlatformInitiatedChange REMOVE_INHERITED_ASSOCIATE = PlatformInitiatedChangeEnum.REMOVE_INHERITED_ASSOCIATE;
+
+    PlatformInitiatedChange SET_ANCESTORS = PlatformInitiatedChangeEnum.SET_ANCESTORS;
+
     PlatformInitiatedChange SET_APPLICATION_VERSION = PlatformInitiatedChangeEnum.SET_APPLICATION_VERSION;
 
+    PlatformInitiatedChange SET_INHERITED_ASSOCIATES = PlatformInitiatedChangeEnum.SET_INHERITED_ASSOCIATES;
+
+    PlatformInitiatedChange SET_INHERITED_STORES = PlatformInitiatedChangeEnum.SET_INHERITED_STORES;
+
     PlatformInitiatedChange SET_IS_VALID = PlatformInitiatedChangeEnum.SET_IS_VALID;
+
+    PlatformInitiatedChange SET_LINE_ITEM_DEACTIVATED_AT = PlatformInitiatedChangeEnum.SET_LINE_ITEM_DEACTIVATED_AT;
+
+    PlatformInitiatedChange SET_PRODUCT_COUNT = PlatformInitiatedChangeEnum.SET_PRODUCT_COUNT;
+
+    PlatformInitiatedChange SET_RESERVATIONS = PlatformInitiatedChangeEnum.SET_RESERVATIONS;
 
     PlatformInitiatedChange SET_VARIANT_AVAILABILITY = PlatformInitiatedChangeEnum.SET_VARIANT_AVAILABILITY;
 
@@ -38,9 +64,34 @@ public interface PlatformInitiatedChange extends JsonEnum {
         EXCLUDE_ALL("excludeAll"),
 
         /**
+         * addInheritedAssociate
+         */
+        ADD_INHERITED_ASSOCIATE("addInheritedAssociate"),
+
+        /**
+         * changeIncludedInStatistics
+         */
+        CHANGE_INCLUDED_IN_STATISTICS("changeIncludedInStatistics"),
+
+        /**
+         * changeInheritedAssociate
+         */
+        CHANGE_INHERITED_ASSOCIATE("changeInheritedAssociate"),
+
+        /**
+         * changeLastVariantId
+         */
+        CHANGE_LAST_VARIANT_ID("changeLastVariantId"),
+
+        /**
          * changeLineItemName
          */
         CHANGE_LINE_ITEM_NAME("changeLineItemName"),
+
+        /**
+         * changeLineItemPublished
+         */
+        CHANGE_LINE_ITEM_PUBLISHED("changeLineItemPublished"),
 
         /**
          * changeReviewRatingStatistics
@@ -48,14 +99,54 @@ public interface PlatformInitiatedChange extends JsonEnum {
         CHANGE_REVIEW_RATING_STATISTICS("changeReviewRatingStatistics"),
 
         /**
+         * changeTopLevelUnit
+         */
+        CHANGE_TOP_LEVEL_UNIT("changeTopLevelUnit"),
+
+        /**
+         * removeInheritedAssociate
+         */
+        REMOVE_INHERITED_ASSOCIATE("removeInheritedAssociate"),
+
+        /**
+         * setAncestors
+         */
+        SET_ANCESTORS("setAncestors"),
+
+        /**
          * setApplicationVersion
          */
         SET_APPLICATION_VERSION("setApplicationVersion"),
 
         /**
+         * setInheritedAssociates
+         */
+        SET_INHERITED_ASSOCIATES("setInheritedAssociates"),
+
+        /**
+         * setInheritedStores
+         */
+        SET_INHERITED_STORES("setInheritedStores"),
+
+        /**
          * setIsValid
          */
         SET_IS_VALID("setIsValid"),
+
+        /**
+         * setLineItemDeactivatedAt
+         */
+        SET_LINE_ITEM_DEACTIVATED_AT("setLineItemDeactivatedAt"),
+
+        /**
+         * setProductCount
+         */
+        SET_PRODUCT_COUNT("setProductCount"),
+
+        /**
+         * setReservations
+         */
+        SET_RESERVATIONS("setReservations"),
 
         /**
          * setVariantAvailability

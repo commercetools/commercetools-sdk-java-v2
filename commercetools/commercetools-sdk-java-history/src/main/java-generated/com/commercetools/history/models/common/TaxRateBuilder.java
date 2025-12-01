@@ -4,6 +4,8 @@ package com.commercetools.history.models.common;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -14,13 +16,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     TaxRate taxRate = TaxRate.builder()
- *             .id("{id}")
  *             .name("{name}")
- *             .amount(1)
+ *             .amount(0.3)
  *             .includedInPrice(true)
  *             .country("{country}")
- *             .state("{state}")
- *             .plusSubRates(subRatesBuilder -> subRatesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -28,33 +27,50 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxRateBuilder implements Builder<TaxRate> {
 
+    @Nullable
     private String id;
+
+    @Nullable
+    private String key;
 
     private String name;
 
-    private Integer amount;
+    private Double amount;
 
     private Boolean includedInPrice;
 
     private String country;
 
+    @Nullable
     private String state;
 
+    @Nullable
     private java.util.List<com.commercetools.history.models.common.SubRate> subRates;
 
     /**
-     *  <p>The ID is always set if the tax rate is part of a TaxCategory. The external tax rates in a Cart do not contain an <code>id</code>.</p>
+     *  <p>Present if the TaxRate is part of a <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a>. Absent for external TaxRates in <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a>.</p>
      * @param id value to be set
      * @return Builder
      */
 
-    public TaxRateBuilder id(final String id) {
+    public TaxRateBuilder id(@Nullable final String id) {
         this.id = id;
         return this;
     }
 
     /**
-     * set the value to the name
+     *  <p>User-defined unique identifier of the TaxRate. Present when set using <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRateDraft" rel="nofollow">TaxRateDraft</a>. Not available for external TaxRates created using <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public TaxRateBuilder key(@Nullable final String key) {
+        this.key = key;
+        return this;
+    }
+
+    /**
+     *  <p>Name of the TaxRate.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -65,18 +81,18 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     *  <p>Percentage in the range of [0..1]. The sum of the amounts of all <code>subRates</code>, if there are any.</p>
+     *  <p>Tax rate. If subrates are used, the amount is the sum of all rates in <code>subRates</code>.</p>
      * @param amount value to be set
      * @return Builder
      */
 
-    public TaxRateBuilder amount(final Integer amount) {
+    public TaxRateBuilder amount(final Double amount) {
         this.amount = amount;
         return this;
     }
 
     /**
-     * set the value to the includedInPrice
+     *  <p>If <code>true</code>, tax is included in <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Prices</a>, and the <code>taxedPrice</code> is present on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>. In this case, the <code>totalNet</code> price on <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedPrice" rel="nofollow">TaxedPrice</a> includes the TaxRate.</p>
      * @param includedInPrice value to be set
      * @return Builder
      */
@@ -87,7 +103,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     *  <p>Two-digit country code as per <span>ISO 3166-1 alpha-2</span>.</p>
+     *  <p>Country in which the tax rate is applied in <span>ISO 3166-1 alpha-2</span> format.</p>
      * @param country value to be set
      * @return Builder
      */
@@ -98,45 +114,46 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     *  <p>The state in the country</p>
+     *  <p>State within the country, such as Texas in the United States.</p>
      * @param state value to be set
      * @return Builder
      */
 
-    public TaxRateBuilder state(final String state) {
+    public TaxRateBuilder state(@Nullable final String state) {
         this.state = state;
         return this;
     }
 
     /**
-     * set values to the subRates
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      * @param subRates value to be set
      * @return Builder
      */
 
-    public TaxRateBuilder subRates(final com.commercetools.history.models.common.SubRate... subRates) {
+    public TaxRateBuilder subRates(@Nullable final com.commercetools.history.models.common.SubRate... subRates) {
         this.subRates = new ArrayList<>(Arrays.asList(subRates));
         return this;
     }
 
     /**
-     * set value to the subRates
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      * @param subRates value to be set
      * @return Builder
      */
 
-    public TaxRateBuilder subRates(final java.util.List<com.commercetools.history.models.common.SubRate> subRates) {
+    public TaxRateBuilder subRates(
+            @Nullable final java.util.List<com.commercetools.history.models.common.SubRate> subRates) {
         this.subRates = subRates;
         return this;
     }
 
     /**
-     * add values to the subRates
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      * @param subRates value to be set
      * @return Builder
      */
 
-    public TaxRateBuilder plusSubRates(final com.commercetools.history.models.common.SubRate... subRates) {
+    public TaxRateBuilder plusSubRates(@Nullable final com.commercetools.history.models.common.SubRate... subRates) {
         if (this.subRates == null) {
             this.subRates = new ArrayList<>();
         }
@@ -145,7 +162,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     * add the value to the subRates using the builder function
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      * @param builder function to build the subRates value
      * @return Builder
      */
@@ -160,7 +177,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     * set the value to the subRates using the builder function
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      * @param builder function to build the subRates value
      * @return Builder
      */
@@ -173,7 +190,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     * add the value to the subRates using the builder function
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      * @param builder function to build the subRates value
      * @return Builder
      */
@@ -184,7 +201,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     * set the value to the subRates using the builder function
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      * @param builder function to build the subRates value
      * @return Builder
      */
@@ -195,16 +212,27 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     *  <p>The ID is always set if the tax rate is part of a TaxCategory. The external tax rates in a Cart do not contain an <code>id</code>.</p>
+     *  <p>Present if the TaxRate is part of a <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a>. Absent for external TaxRates in <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a>.</p>
      * @return id
      */
 
+    @Nullable
     public String getId() {
         return this.id;
     }
 
     /**
-     * value of name}
+     *  <p>User-defined unique identifier of the TaxRate. Present when set using <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRateDraft" rel="nofollow">TaxRateDraft</a>. Not available for external TaxRates created using <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
+     *  <p>Name of the TaxRate.</p>
      * @return name
      */
 
@@ -213,16 +241,16 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     *  <p>Percentage in the range of [0..1]. The sum of the amounts of all <code>subRates</code>, if there are any.</p>
+     *  <p>Tax rate. If subrates are used, the amount is the sum of all rates in <code>subRates</code>.</p>
      * @return amount
      */
 
-    public Integer getAmount() {
+    public Double getAmount() {
         return this.amount;
     }
 
     /**
-     * value of includedInPrice}
+     *  <p>If <code>true</code>, tax is included in <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Prices</a>, and the <code>taxedPrice</code> is present on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>. In this case, the <code>totalNet</code> price on <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedPrice" rel="nofollow">TaxedPrice</a> includes the TaxRate.</p>
      * @return includedInPrice
      */
 
@@ -231,7 +259,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     *  <p>Two-digit country code as per <span>ISO 3166-1 alpha-2</span>.</p>
+     *  <p>Country in which the tax rate is applied in <span>ISO 3166-1 alpha-2</span> format.</p>
      * @return country
      */
 
@@ -240,19 +268,21 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     *  <p>The state in the country</p>
+     *  <p>State within the country, such as Texas in the United States.</p>
      * @return state
      */
 
+    @Nullable
     public String getState() {
         return this.state;
     }
 
     /**
-     * value of subRates}
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      * @return subRates
      */
 
+    @Nullable
     public java.util.List<com.commercetools.history.models.common.SubRate> getSubRates() {
         return this.subRates;
     }
@@ -262,14 +292,11 @@ public class TaxRateBuilder implements Builder<TaxRate> {
      * @return TaxRate
      */
     public TaxRate build() {
-        Objects.requireNonNull(id, TaxRate.class + ": id is missing");
         Objects.requireNonNull(name, TaxRate.class + ": name is missing");
         Objects.requireNonNull(amount, TaxRate.class + ": amount is missing");
         Objects.requireNonNull(includedInPrice, TaxRate.class + ": includedInPrice is missing");
         Objects.requireNonNull(country, TaxRate.class + ": country is missing");
-        Objects.requireNonNull(state, TaxRate.class + ": state is missing");
-        Objects.requireNonNull(subRates, TaxRate.class + ": subRates is missing");
-        return new TaxRateImpl(id, name, amount, includedInPrice, country, state, subRates);
+        return new TaxRateImpl(id, key, name, amount, includedInPrice, country, state, subRates);
     }
 
     /**
@@ -277,7 +304,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
      * @return TaxRate
      */
     public TaxRate buildUnchecked() {
-        return new TaxRateImpl(id, name, amount, includedInPrice, country, state, subRates);
+        return new TaxRateImpl(id, key, name, amount, includedInPrice, country, state, subRates);
     }
 
     /**
@@ -296,6 +323,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     public static TaxRateBuilder of(final TaxRate template) {
         TaxRateBuilder builder = new TaxRateBuilder();
         builder.id = template.getId();
+        builder.key = template.getKey();
         builder.name = template.getName();
         builder.amount = template.getAmount();
         builder.includedInPrice = template.getIncludedInPrice();

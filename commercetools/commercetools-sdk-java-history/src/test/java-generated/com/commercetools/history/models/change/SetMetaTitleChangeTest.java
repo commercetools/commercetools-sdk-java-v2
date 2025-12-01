@@ -20,8 +20,10 @@ public class SetMetaTitleChangeTest {
                 new Object[] { "previousValue",
                         SetMetaTitleChange.builder()
                                 .previousValue(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { "nextValue", SetMetaTitleChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.LocalizedStringImpl()) } };
+                new Object[] { "nextValue",
+                        SetMetaTitleChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "catalogData", SetMetaTitleChange.builder().catalogData("catalogData") } };
     }
 
     @Test
@@ -45,5 +47,12 @@ public class SetMetaTitleChangeTest {
         value.setNextValue(new com.commercetools.history.models.common.LocalizedStringImpl());
         Assertions.assertThat(value.getNextValue())
                 .isEqualTo(new com.commercetools.history.models.common.LocalizedStringImpl());
+    }
+
+    @Test
+    public void catalogData() {
+        SetMetaTitleChange value = SetMetaTitleChange.of();
+        value.setCatalogData("catalogData");
+        Assertions.assertThat(value.getCatalogData()).isEqualTo("catalogData");
     }
 }

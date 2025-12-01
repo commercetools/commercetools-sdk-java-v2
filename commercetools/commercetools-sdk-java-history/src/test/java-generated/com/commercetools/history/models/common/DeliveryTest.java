@@ -1,6 +1,7 @@
 
 package com.commercetools.history.models.common;
 
+import java.time.ZonedDateTime;
 import java.util.Collections;
 
 import org.assertj.core.api.Assertions;
@@ -19,7 +20,8 @@ public class DeliveryTest {
 
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { "id", Delivery.builder().id("id") },
-                new Object[] { "createdAt", Delivery.builder().createdAt("createdAt") },
+                new Object[] { "key", Delivery.builder().key("key") },
+                new Object[] { "createdAt", Delivery.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
                 new Object[] { "items",
                         Delivery.builder()
                                 .items(Collections.singletonList(
@@ -42,10 +44,17 @@ public class DeliveryTest {
     }
 
     @Test
+    public void key() {
+        Delivery value = Delivery.of();
+        value.setKey("key");
+        Assertions.assertThat(value.getKey()).isEqualTo("key");
+    }
+
+    @Test
     public void createdAt() {
         Delivery value = Delivery.of();
-        value.setCreatedAt("createdAt");
-        Assertions.assertThat(value.getCreatedAt()).isEqualTo("createdAt");
+        value.setCreatedAt(ZonedDateTime.parse("2023-06-01T12:00Z"));
+        Assertions.assertThat(value.getCreatedAt()).isEqualTo(ZonedDateTime.parse("2023-06-01T12:00Z"));
     }
 
     @Test

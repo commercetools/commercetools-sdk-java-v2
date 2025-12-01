@@ -39,7 +39,7 @@ public class FieldTypeImpl implements FieldType, ModelBase {
     }
 
     /**
-     *
+     *  <p>Discriminator that determines the type of the field.</p>
      */
 
     public String getName() {

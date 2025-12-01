@@ -1,8 +1,6 @@
 
 package com.commercetools.history.models.common;
 
-import java.util.Collections;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -18,12 +16,9 @@ public class ProductVariantSelectionTest {
     }
 
     public static Object[][] objectBuilder() {
-        return new Object[][] {
-                new Object[] { "type",
-                        ProductVariantSelection.builder()
-                                .type(com.commercetools.history.models.common.ProductVariantSelectionTypeEnum
-                                        .findEnum("inclusion")) },
-                new Object[] { "skus", ProductVariantSelection.builder().skus(Collections.singletonList("skus")) } };
+        return new Object[][] { new Object[] { "type", ProductVariantSelection.builder()
+                .type(
+                    com.commercetools.history.models.common.ProductVariantSelectionTypeEnum.findEnum("inclusion")) } };
     }
 
     @Test
@@ -33,12 +28,5 @@ public class ProductVariantSelectionTest {
         Assertions.assertThat(value.getType())
                 .isEqualTo(
                     com.commercetools.history.models.common.ProductVariantSelectionTypeEnum.findEnum("inclusion"));
-    }
-
-    @Test
-    public void skus() {
-        ProductVariantSelection value = ProductVariantSelection.of();
-        value.setSkus(Collections.singletonList("skus"));
-        Assertions.assertThat(value.getSkus()).isEqualTo(Collections.singletonList("skus"));
     }
 }

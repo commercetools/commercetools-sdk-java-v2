@@ -36,6 +36,10 @@ public class SetLineItemShippingDetailsChangeImpl implements SetLineItemShipping
 
     private String lineItemId;
 
+    private com.commercetools.history.models.common.LocalizedString lineItem;
+
+    private String variant;
+
     /**
      * create instance with all properties
      */
@@ -43,11 +47,15 @@ public class SetLineItemShippingDetailsChangeImpl implements SetLineItemShipping
     SetLineItemShippingDetailsChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.ItemShippingDetails previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.ItemShippingDetails nextValue,
-            @JsonProperty("lineItemId") final String lineItemId) {
+            @JsonProperty("lineItemId") final String lineItemId,
+            @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem,
+            @JsonProperty("variant") final String variant) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.lineItemId = lineItemId;
+        this.lineItem = lineItem;
+        this.variant = variant;
         this.type = SET_LINE_ITEM_SHIPPING_DETAILS_CHANGE;
     }
 
@@ -98,6 +106,23 @@ public class SetLineItemShippingDetailsChangeImpl implements SetLineItemShipping
         return this.lineItemId;
     }
 
+    /**
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
+     */
+
+    public com.commercetools.history.models.common.LocalizedString getLineItem() {
+        return this.lineItem;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
@@ -112,6 +137,14 @@ public class SetLineItemShippingDetailsChangeImpl implements SetLineItemShipping
 
     public void setLineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
+    }
+
+    public void setLineItem(final com.commercetools.history.models.common.LocalizedString lineItem) {
+        this.lineItem = lineItem;
+    }
+
+    public void setVariant(final String variant) {
+        this.variant = variant;
     }
 
     @Override
@@ -129,11 +162,15 @@ public class SetLineItemShippingDetailsChangeImpl implements SetLineItemShipping
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItem, that.lineItem)
+                .append(variant, that.variant)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItem, that.lineItem)
+                .append(variant, that.variant)
                 .isEquals();
     }
 
@@ -144,6 +181,8 @@ public class SetLineItemShippingDetailsChangeImpl implements SetLineItemShipping
                 .append(previousValue)
                 .append(nextValue)
                 .append(lineItemId)
+                .append(lineItem)
+                .append(variant)
                 .toHashCode();
     }
 
@@ -154,6 +193,8 @@ public class SetLineItemShippingDetailsChangeImpl implements SetLineItemShipping
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
                 .append("lineItemId", lineItemId)
+                .append("lineItem", lineItem)
+                .append("variant", variant)
                 .build();
     }
 

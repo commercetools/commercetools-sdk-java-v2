@@ -160,10 +160,10 @@ public interface Message {
     }
 
     /**
-     * builder for cartWithExisitingPayment subtype
+     * builder for cartWithExistingPayment subtype
      * @return builder
      */
-    public static com.commercetools.checkout.models.responses.CartWithExistingPaymentBuilder cartWithExisitingPaymentBuilder() {
+    public static com.commercetools.checkout.models.responses.CartWithExistingPaymentBuilder cartWithExistingPaymentBuilder() {
         return com.commercetools.checkout.models.responses.CartWithExistingPaymentBuilder.of();
     }
 

@@ -11,7 +11,7 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * TextInputHint
+ *  <p>A text input hint is a string with one of the following values:</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface TextInputHint extends JsonEnum {

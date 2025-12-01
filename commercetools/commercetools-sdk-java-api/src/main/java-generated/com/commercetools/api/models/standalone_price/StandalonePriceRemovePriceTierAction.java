@@ -22,7 +22,7 @@ import jakarta.validation.constraints.NotNull;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StandalonePriceRemovePriceTierAction standalonePriceRemovePriceTierAction = StandalonePriceRemovePriceTierAction.builder()
- *             .tierMinimumQuantity(0.3)
+ *             .minimumQuantity(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -39,18 +39,18 @@ public interface StandalonePriceRemovePriceTierAction extends StandalonePriceUpd
 
     /**
      *  <p>The <code>minimumQuantity</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">PriceTier</a> to be removed from the <code>tiers</code> field of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
-     * @return tierMinimumQuantity
+     * @return minimumQuantity
      */
     @NotNull
-    @JsonProperty("tierMinimumQuantity")
-    public Long getTierMinimumQuantity();
+    @JsonProperty("minimumQuantity")
+    public Long getMinimumQuantity();
 
     /**
      *  <p>The <code>minimumQuantity</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">PriceTier</a> to be removed from the <code>tiers</code> field of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
-     * @param tierMinimumQuantity value to be set
+     * @param minimumQuantity value to be set
      */
 
-    public void setTierMinimumQuantity(final Long tierMinimumQuantity);
+    public void setMinimumQuantity(final Long minimumQuantity);
 
     /**
      * factory method
@@ -67,7 +67,7 @@ public interface StandalonePriceRemovePriceTierAction extends StandalonePriceUpd
      */
     public static StandalonePriceRemovePriceTierAction of(final StandalonePriceRemovePriceTierAction template) {
         StandalonePriceRemovePriceTierActionImpl instance = new StandalonePriceRemovePriceTierActionImpl();
-        instance.setTierMinimumQuantity(template.getTierMinimumQuantity());
+        instance.setMinimumQuantity(template.getMinimumQuantity());
         return instance;
     }
 
@@ -85,7 +85,7 @@ public interface StandalonePriceRemovePriceTierAction extends StandalonePriceUpd
             return null;
         }
         StandalonePriceRemovePriceTierActionImpl instance = new StandalonePriceRemovePriceTierActionImpl();
-        instance.setTierMinimumQuantity(template.getTierMinimumQuantity());
+        instance.setMinimumQuantity(template.getMinimumQuantity());
         return instance;
     }
 

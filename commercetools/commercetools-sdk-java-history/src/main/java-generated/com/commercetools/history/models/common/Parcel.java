@@ -2,6 +2,7 @@
 package com.commercetools.history.models.common;
 
 import java.time.*;
+import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -17,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * Parcel
+ *  <p>Information regarding the appearance, content, and shipment of a Parcel.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,10 +26,7 @@ import jakarta.validation.constraints.NotNull;
  * <pre><code class='java'>
  *     Parcel parcel = Parcel.builder()
  *             .id("{id}")
- *             .createdAt("{createdAt}")
- *             .measurements(measurementsBuilder -> measurementsBuilder)
- *             .trackingData(trackingDataBuilder -> trackingDataBuilder)
- *             .plusItems(itemsBuilder -> itemsBuilder)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .build()
  * </code></pre>
  * </div>
@@ -38,7 +36,7 @@ import jakarta.validation.constraints.NotNull;
 public interface Parcel {
 
     /**
-     *
+     *  <p>Unique identifier of the Parcel.</p>
      * @return id
      */
     @NotNull
@@ -46,70 +44,90 @@ public interface Parcel {
     public String getId();
 
     /**
-     *
+     *  <p>User-defined unique identifier of the Parcel.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
+     *  <p>Date and time (UTC) the Parcel was created.</p>
      * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
-    public String getCreatedAt();
+    public ZonedDateTime getCreatedAt();
 
     /**
-     *
+     *  <p>Information about the dimensions of the Parcel.</p>
      * @return measurements
      */
-    @NotNull
     @Valid
     @JsonProperty("measurements")
     public ParcelMeasurements getMeasurements();
 
     /**
-     *
+     *  <p>Shipment tracking information of the Parcel.</p>
      * @return trackingData
      */
-    @NotNull
     @Valid
     @JsonProperty("trackingData")
     public TrackingData getTrackingData();
 
     /**
-     *
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @return items
      */
-    @NotNull
     @Valid
     @JsonProperty("items")
     public List<DeliveryItem> getItems();
 
     /**
-     * set id
+     *  <p>Custom Fields of the Parcel.</p>
+     * @return custom
+     */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFields getCustom();
+
+    /**
+     *  <p>Unique identifier of the Parcel.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     * set createdAt
+     *  <p>User-defined unique identifier of the Parcel.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
+
+    /**
+     *  <p>Date and time (UTC) the Parcel was created.</p>
      * @param createdAt value to be set
      */
 
-    public void setCreatedAt(final String createdAt);
+    public void setCreatedAt(final ZonedDateTime createdAt);
 
     /**
-     * set measurements
+     *  <p>Information about the dimensions of the Parcel.</p>
      * @param measurements value to be set
      */
 
     public void setMeasurements(final ParcelMeasurements measurements);
 
     /**
-     * set trackingData
+     *  <p>Shipment tracking information of the Parcel.</p>
      * @param trackingData value to be set
      */
 
     public void setTrackingData(final TrackingData trackingData);
 
     /**
-     * set items
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param items values to be set
      */
 
@@ -117,11 +135,18 @@ public interface Parcel {
     public void setItems(final DeliveryItem... items);
 
     /**
-     * set items
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param items values to be set
      */
 
     public void setItems(final List<DeliveryItem> items);
+
+    /**
+     *  <p>Custom Fields of the Parcel.</p>
+     * @param custom value to be set
+     */
+
+    public void setCustom(final CustomFields custom);
 
     /**
      * factory method
@@ -139,10 +164,12 @@ public interface Parcel {
     public static Parcel of(final Parcel template) {
         ParcelImpl instance = new ParcelImpl();
         instance.setId(template.getId());
+        instance.setKey(template.getKey());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setMeasurements(template.getMeasurements());
         instance.setTrackingData(template.getTrackingData());
         instance.setItems(template.getItems());
+        instance.setCustom(template.getCustom());
         return instance;
     }
 
@@ -160,6 +187,7 @@ public interface Parcel {
         }
         ParcelImpl instance = new ParcelImpl();
         instance.setId(template.getId());
+        instance.setKey(template.getKey());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setMeasurements(
             com.commercetools.history.models.common.ParcelMeasurements.deepCopy(template.getMeasurements()));
@@ -170,6 +198,7 @@ public interface Parcel {
                         .map(com.commercetools.history.models.common.DeliveryItem::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setCustom(com.commercetools.history.models.common.CustomFields.deepCopy(template.getCustom()));
         return instance;
     }
 

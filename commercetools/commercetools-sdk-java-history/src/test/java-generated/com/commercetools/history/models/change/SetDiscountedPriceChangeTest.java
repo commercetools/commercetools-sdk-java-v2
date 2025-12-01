@@ -19,13 +19,15 @@ public class SetDiscountedPriceChangeTest {
         return new Object[][] { new Object[] { "change", SetDiscountedPriceChange.builder().change("change") },
                 new Object[] { "previousValue",
                         SetDiscountedPriceChange.builder()
-                                .previousValue(new com.commercetools.history.models.common.PriceImpl()) },
+                                .previousValue(new com.commercetools.history.models.common.DiscountedPriceImpl()) },
                 new Object[] { "nextValue",
                         SetDiscountedPriceChange.builder()
-                                .nextValue(new com.commercetools.history.models.common.PriceImpl()) },
+                                .nextValue(new com.commercetools.history.models.common.DiscountedPriceImpl()) },
                 new Object[] { "catalogData", SetDiscountedPriceChange.builder().catalogData("catalogData") },
                 new Object[] { "variant", SetDiscountedPriceChange.builder().variant("variant") },
-                new Object[] { "priceId", SetDiscountedPriceChange.builder().priceId("priceId") } };
+                new Object[] { "priceId", SetDiscountedPriceChange.builder().priceId("priceId") },
+                new Object[] { "price", SetDiscountedPriceChange.builder()
+                        .price(new com.commercetools.history.models.common.PriceImpl()) } };
     }
 
     @Test
@@ -38,16 +40,17 @@ public class SetDiscountedPriceChangeTest {
     @Test
     public void previousValue() {
         SetDiscountedPriceChange value = SetDiscountedPriceChange.of();
-        value.setPreviousValue(new com.commercetools.history.models.common.PriceImpl());
+        value.setPreviousValue(new com.commercetools.history.models.common.DiscountedPriceImpl());
         Assertions.assertThat(value.getPreviousValue())
-                .isEqualTo(new com.commercetools.history.models.common.PriceImpl());
+                .isEqualTo(new com.commercetools.history.models.common.DiscountedPriceImpl());
     }
 
     @Test
     public void nextValue() {
         SetDiscountedPriceChange value = SetDiscountedPriceChange.of();
-        value.setNextValue(new com.commercetools.history.models.common.PriceImpl());
-        Assertions.assertThat(value.getNextValue()).isEqualTo(new com.commercetools.history.models.common.PriceImpl());
+        value.setNextValue(new com.commercetools.history.models.common.DiscountedPriceImpl());
+        Assertions.assertThat(value.getNextValue())
+                .isEqualTo(new com.commercetools.history.models.common.DiscountedPriceImpl());
     }
 
     @Test
@@ -69,5 +72,12 @@ public class SetDiscountedPriceChangeTest {
         SetDiscountedPriceChange value = SetDiscountedPriceChange.of();
         value.setPriceId("priceId");
         Assertions.assertThat(value.getPriceId()).isEqualTo("priceId");
+    }
+
+    @Test
+    public void price() {
+        SetDiscountedPriceChange value = SetDiscountedPriceChange.of();
+        value.setPrice(new com.commercetools.history.models.common.PriceImpl());
+        Assertions.assertThat(value.getPrice()).isEqualTo(new com.commercetools.history.models.common.PriceImpl());
     }
 }

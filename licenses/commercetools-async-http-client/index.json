@@ -141,7 +141,7 @@
         },
         {
             "moduleName": "io.netty:netty-buffer",
-            "moduleVersion": "4.2.2.Final",
+            "moduleVersion": "4.2.5.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -154,7 +154,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec",
-            "moduleVersion": "4.2.2.Final",
+            "moduleVersion": "4.2.5.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -167,7 +167,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-base",
-            "moduleVersion": "4.2.2.Final",
+            "moduleVersion": "4.2.5.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -180,7 +180,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-compression",
-            "moduleVersion": "4.2.2.Final",
+            "moduleVersion": "4.2.5.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -193,7 +193,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-http",
-            "moduleVersion": "4.2.2.Final",
+            "moduleVersion": "4.2.5.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -206,7 +206,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-marshalling",
-            "moduleVersion": "4.2.2.Final",
+            "moduleVersion": "4.2.5.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -219,7 +219,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-protobuf",
-            "moduleVersion": "4.2.2.Final",
+            "moduleVersion": "4.2.5.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -232,7 +232,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-socks",
-            "moduleVersion": "4.2.2.Final",
+            "moduleVersion": "4.2.5.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -245,7 +245,7 @@
         },
         {
             "moduleName": "io.netty:netty-common",
-            "moduleVersion": "4.2.2.Final",
+            "moduleVersion": "4.2.5.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -258,7 +258,7 @@
         },
         {
             "moduleName": "io.netty:netty-handler",
-            "moduleVersion": "4.2.2.Final",
+            "moduleVersion": "4.2.5.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -271,7 +271,7 @@
         },
         {
             "moduleName": "io.netty:netty-handler-proxy",
-            "moduleVersion": "4.2.2.Final",
+            "moduleVersion": "4.2.5.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -284,7 +284,7 @@
         },
         {
             "moduleName": "io.netty:netty-resolver",
-            "moduleVersion": "4.2.2.Final",
+            "moduleVersion": "4.2.5.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -297,7 +297,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport",
-            "moduleVersion": "4.2.2.Final",
+            "moduleVersion": "4.2.5.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -336,7 +336,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport-native-unix-common",
-            "moduleVersion": "4.2.2.Final",
+            "moduleVersion": "4.2.5.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],

@@ -19,3 +19,5 @@ include 'commercetools:commercetools-reactornetty-client'
 include 'commercetools:commercetools-async-http-client'
 include 'commercetools:internal-docs'
 include 'commercetools:commercetools-money'
+
+include 'commercetools:commercetools-importapi-utils'

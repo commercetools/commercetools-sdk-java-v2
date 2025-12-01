@@ -48,7 +48,6 @@ public class ProjectApiRoot implements Closeable, ProjectScopedApiRoot {
         return with().applications();
     }
 
-
     public ByProjectKeyRequestBuilder withProjectKey(final String projectKey) {
         return ApiRoot.fromClient(apiHttpClient).withProjectKey(projectKey);
     }

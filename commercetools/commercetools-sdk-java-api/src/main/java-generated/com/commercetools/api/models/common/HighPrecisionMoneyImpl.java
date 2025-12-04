@@ -60,6 +60,7 @@ public class HighPrecisionMoneyImpl implements HighPrecisionMoney, ModelBase {
      *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
      *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
      *  </ul>
+     *  <p><code>centAmount</code> is represented as 64-bit integers. If this limit is exceeded, a <span>MoneyOverflow</span> error will be returned.</p>
      */
 
     public Long getCentAmount() {

@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>Retrieves a StagedQuote with the provided <code>id</code>.</p>
  *
  * <hr>
  * <div class=code-example>

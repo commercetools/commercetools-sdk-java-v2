@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
  *             .email("{email}")
+ *             .oldEmail("{oldEmail}")
  *             .build()
  * </code></pre>
  * </div>
@@ -53,11 +54,26 @@ public interface CustomerEmailChangedMessage extends Message {
     public String getEmail();
 
     /**
+     *  <p>The <code>email</code> that was set before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p>
+     * @return oldEmail
+     */
+    @NotNull
+    @JsonProperty("oldEmail")
+    public String getOldEmail();
+
+    /**
      *  <p>The <code>email</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p>
      * @param email value to be set
      */
 
     public void setEmail(final String email);
+
+    /**
+     *  <p>The <code>email</code> that was set before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p>
+     * @param oldEmail value to be set
+     */
+
+    public void setOldEmail(final String oldEmail);
 
     /**
      * factory method
@@ -85,6 +101,7 @@ public interface CustomerEmailChangedMessage extends Message {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setEmail(template.getEmail());
+        instance.setOldEmail(template.getOldEmail());
         return instance;
     }
 
@@ -114,6 +131,7 @@ public interface CustomerEmailChangedMessage extends Message {
         instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setEmail(template.getEmail());
+        instance.setOldEmail(template.getOldEmail());
         return instance;
     }
 

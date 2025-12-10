@@ -44,6 +44,8 @@ public class CustomerDeletedMessageImpl implements CustomerDeletedMessage, Model
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    private String email;
+
     /**
      * create instance with all properties
      */
@@ -56,7 +58,8 @@ public class CustomerDeletedMessageImpl implements CustomerDeletedMessage, Model
             @JsonProperty("sequenceNumber") final Long sequenceNumber,
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
-            @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+            @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
+            @JsonProperty("email") final String email) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -67,6 +70,7 @@ public class CustomerDeletedMessageImpl implements CustomerDeletedMessage, Model
         this.resource = resource;
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+        this.email = email;
         this.type = CUSTOMER_DELETED;
     }
 
@@ -165,6 +169,14 @@ public class CustomerDeletedMessageImpl implements CustomerDeletedMessage, Model
         return this.resourceUserProvidedIdentifiers;
     }
 
+    /**
+     *  <p>The email address of the Customer that was deleted.</p>
+     */
+
+    public String getEmail() {
+        return this.email;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -206,6 +218,10 @@ public class CustomerDeletedMessageImpl implements CustomerDeletedMessage, Model
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
     }
 
+    public void setEmail(final String email) {
+        this.email = email;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -227,6 +243,7 @@ public class CustomerDeletedMessageImpl implements CustomerDeletedMessage, Model
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(email, that.email)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -238,6 +255,7 @@ public class CustomerDeletedMessageImpl implements CustomerDeletedMessage, Model
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(email, that.email)
                 .isEquals();
     }
 
@@ -254,6 +272,7 @@ public class CustomerDeletedMessageImpl implements CustomerDeletedMessage, Model
                 .append(resourceVersion)
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
+                .append(email)
                 .toHashCode();
     }
 
@@ -270,6 +289,7 @@ public class CustomerDeletedMessageImpl implements CustomerDeletedMessage, Model
                 .append("resourceVersion", resourceVersion)
                 .append("type", type)
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
+                .append("email", email)
                 .build();
     }
 

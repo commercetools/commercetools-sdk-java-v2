@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
@@ -23,10 +24,20 @@ public class CustomerDeletedMessagePayloadImpl implements CustomerDeletedMessage
 
     private String type;
 
+    private String email;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
+    CustomerDeletedMessagePayloadImpl(@JsonProperty("email") final String email) {
+        this.email = email;
+        this.type = CUSTOMER_DELETED;
+    }
+
+    /**
+     * create empty instance
+     */
     public CustomerDeletedMessagePayloadImpl() {
         this.type = CUSTOMER_DELETED;
     }
@@ -39,6 +50,18 @@ public class CustomerDeletedMessagePayloadImpl implements CustomerDeletedMessage
         return this.type;
     }
 
+    /**
+     *  <p>The email address of the Customer that was deleted.</p>
+     */
+
+    public String getEmail() {
+        return this.email;
+    }
+
+    public void setEmail(final String email) {
+        this.email = email;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -49,17 +72,23 @@ public class CustomerDeletedMessagePayloadImpl implements CustomerDeletedMessage
 
         CustomerDeletedMessagePayloadImpl that = (CustomerDeletedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(type, that.type).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(email, that.email)
+                .append(type, that.type)
+                .append(email, that.email)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(email).toHashCode();
     }
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("email", email)
+                .build();
     }
 
     @Override

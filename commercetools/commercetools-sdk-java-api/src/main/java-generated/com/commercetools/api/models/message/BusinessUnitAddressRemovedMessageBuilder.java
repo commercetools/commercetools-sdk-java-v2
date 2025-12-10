@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
  *             .address(addressBuilder -> addressBuilder)
+ *             .plusAddressRoles(addressRolesBuilder -> addressRolesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -55,6 +56,8 @@ public class BusinessUnitAddressRemovedMessageBuilder implements Builder<Busines
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
     private com.commercetools.api.models.common.Address address;
+
+    private java.util.List<com.commercetools.api.models.common.AddressRole> addressRoles;
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
@@ -293,6 +296,45 @@ public class BusinessUnitAddressRemovedMessageBuilder implements Builder<Busines
     }
 
     /**
+     *  <p>Indicates if the address was used for shipping or billing purposes.</p>
+     * @param addressRoles value to be set
+     * @return Builder
+     */
+
+    public BusinessUnitAddressRemovedMessageBuilder addressRoles(
+            final com.commercetools.api.models.common.AddressRole... addressRoles) {
+        this.addressRoles = new ArrayList<>(Arrays.asList(addressRoles));
+        return this;
+    }
+
+    /**
+     *  <p>Indicates if the address was used for shipping or billing purposes.</p>
+     * @param addressRoles value to be set
+     * @return Builder
+     */
+
+    public BusinessUnitAddressRemovedMessageBuilder addressRoles(
+            final java.util.List<com.commercetools.api.models.common.AddressRole> addressRoles) {
+        this.addressRoles = addressRoles;
+        return this;
+    }
+
+    /**
+     *  <p>Indicates if the address was used for shipping or billing purposes.</p>
+     * @param addressRoles value to be set
+     * @return Builder
+     */
+
+    public BusinessUnitAddressRemovedMessageBuilder plusAddressRoles(
+            final com.commercetools.api.models.common.AddressRole... addressRoles) {
+        if (this.addressRoles == null) {
+            this.addressRoles = new ArrayList<>();
+        }
+        this.addressRoles.addAll(Arrays.asList(addressRoles));
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @return id
      */
@@ -395,6 +437,15 @@ public class BusinessUnitAddressRemovedMessageBuilder implements Builder<Busines
     }
 
     /**
+     *  <p>Indicates if the address was used for shipping or billing purposes.</p>
+     * @return addressRoles
+     */
+
+    public java.util.List<com.commercetools.api.models.common.AddressRole> getAddressRoles() {
+        return this.addressRoles;
+    }
+
+    /**
      * builds BusinessUnitAddressRemovedMessage with checking for non-null required values
      * @return BusinessUnitAddressRemovedMessage
      */
@@ -408,8 +459,10 @@ public class BusinessUnitAddressRemovedMessageBuilder implements Builder<Busines
         Objects.requireNonNull(resourceVersion,
             BusinessUnitAddressRemovedMessage.class + ": resourceVersion is missing");
         Objects.requireNonNull(address, BusinessUnitAddressRemovedMessage.class + ": address is missing");
+        Objects.requireNonNull(addressRoles, BusinessUnitAddressRemovedMessage.class + ": addressRoles is missing");
         return new BusinessUnitAddressRemovedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
-            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, address);
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, address,
+            addressRoles);
     }
 
     /**
@@ -418,7 +471,8 @@ public class BusinessUnitAddressRemovedMessageBuilder implements Builder<Busines
      */
     public BusinessUnitAddressRemovedMessage buildUnchecked() {
         return new BusinessUnitAddressRemovedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
-            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, address);
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, address,
+            addressRoles);
     }
 
     /**
@@ -447,6 +501,7 @@ public class BusinessUnitAddressRemovedMessageBuilder implements Builder<Busines
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.address = template.getAddress();
+        builder.addressRoles = template.getAddressRoles();
         return builder;
     }
 

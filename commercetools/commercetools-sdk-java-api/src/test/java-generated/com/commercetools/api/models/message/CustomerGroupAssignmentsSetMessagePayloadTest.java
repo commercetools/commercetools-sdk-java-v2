@@ -19,10 +19,15 @@ public class CustomerGroupAssignmentsSetMessagePayloadTest {
     }
 
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { "customerGroupAssignments",
-                CustomerGroupAssignmentsSetMessagePayload.builder()
-                        .customerGroupAssignments(Collections.singletonList(
-                            new com.commercetools.api.models.customer.CustomerGroupAssignmentImpl())) } };
+        return new Object[][] {
+                new Object[] { "customerGroupAssignments",
+                        CustomerGroupAssignmentsSetMessagePayload.builder()
+                                .customerGroupAssignments(Collections.singletonList(
+                                    new com.commercetools.api.models.customer.CustomerGroupAssignmentImpl())) },
+                new Object[] { "oldCustomerGroupAssignments",
+                        CustomerGroupAssignmentsSetMessagePayload.builder()
+                                .oldCustomerGroupAssignments(Collections.singletonList(
+                                    new com.commercetools.api.models.customer.CustomerGroupAssignmentImpl())) } };
     }
 
     @Test
@@ -31,6 +36,16 @@ public class CustomerGroupAssignmentsSetMessagePayloadTest {
         value.setCustomerGroupAssignments(
             Collections.singletonList(new com.commercetools.api.models.customer.CustomerGroupAssignmentImpl()));
         Assertions.assertThat(value.getCustomerGroupAssignments())
+                .isEqualTo(
+                    Collections.singletonList(new com.commercetools.api.models.customer.CustomerGroupAssignmentImpl()));
+    }
+
+    @Test
+    public void oldCustomerGroupAssignments() {
+        CustomerGroupAssignmentsSetMessagePayload value = CustomerGroupAssignmentsSetMessagePayload.of();
+        value.setOldCustomerGroupAssignments(
+            Collections.singletonList(new com.commercetools.api.models.customer.CustomerGroupAssignmentImpl()));
+        Assertions.assertThat(value.getOldCustomerGroupAssignments())
                 .isEqualTo(
                     Collections.singletonList(new com.commercetools.api.models.customer.CustomerGroupAssignmentImpl()));
     }

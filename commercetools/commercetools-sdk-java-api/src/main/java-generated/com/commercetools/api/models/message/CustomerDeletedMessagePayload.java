@@ -35,6 +35,21 @@ public interface CustomerDeletedMessagePayload extends MessagePayload {
     String CUSTOMER_DELETED = "CustomerDeleted";
 
     /**
+     *  <p>The email address of the Customer that was deleted.</p>
+     * @return email
+     */
+
+    @JsonProperty("email")
+    public String getEmail();
+
+    /**
+     *  <p>The email address of the Customer that was deleted.</p>
+     * @param email value to be set
+     */
+
+    public void setEmail(final String email);
+
+    /**
      * factory method
      * @return instance of CustomerDeletedMessagePayload
      */
@@ -49,6 +64,7 @@ public interface CustomerDeletedMessagePayload extends MessagePayload {
      */
     public static CustomerDeletedMessagePayload of(final CustomerDeletedMessagePayload template) {
         CustomerDeletedMessagePayloadImpl instance = new CustomerDeletedMessagePayloadImpl();
+        instance.setEmail(template.getEmail());
         return instance;
     }
 
@@ -65,6 +81,7 @@ public interface CustomerDeletedMessagePayload extends MessagePayload {
             return null;
         }
         CustomerDeletedMessagePayloadImpl instance = new CustomerDeletedMessagePayloadImpl();
+        instance.setEmail(template.getEmail());
         return instance;
     }
 

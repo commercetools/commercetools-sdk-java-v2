@@ -38,6 +38,7 @@ public class ProductSearchRequestBuilder implements Builder<ProductSearchRequest
     @Nullable
     private Boolean markMatchingVariants;
 
+    @Deprecated
     @Nullable
     private com.commercetools.api.models.product_search.ProductSearchProjectionParams productProjectionParameters;
 
@@ -204,11 +205,11 @@ public class ProductSearchRequestBuilder implements Builder<ProductSearchRequest
     }
 
     /**
-     *  <p>Controls data integration <span>with Product Projection parameters</span>. If not set, the result does not include the Product Projection.</p>
+     *  <p>Controls deprecated data integration <span>with Product Projection parameters</span>. If not set, the result does not include the Product Projection.</p>
      * @param builder function to build the productProjectionParameters value
      * @return Builder
      */
-
+    @Deprecated
     public ProductSearchRequestBuilder productProjectionParameters(
             Function<com.commercetools.api.models.product_search.ProductSearchProjectionParamsBuilder, com.commercetools.api.models.product_search.ProductSearchProjectionParamsBuilder> builder) {
         this.productProjectionParameters = builder
@@ -218,11 +219,11 @@ public class ProductSearchRequestBuilder implements Builder<ProductSearchRequest
     }
 
     /**
-     *  <p>Controls data integration <span>with Product Projection parameters</span>. If not set, the result does not include the Product Projection.</p>
+     *  <p>Controls deprecated data integration <span>with Product Projection parameters</span>. If not set, the result does not include the Product Projection.</p>
      * @param builder function to build the productProjectionParameters value
      * @return Builder
      */
-
+    @Deprecated
     public ProductSearchRequestBuilder withProductProjectionParameters(
             Function<com.commercetools.api.models.product_search.ProductSearchProjectionParamsBuilder, com.commercetools.api.models.product_search.ProductSearchProjectionParams> builder) {
         this.productProjectionParameters = builder
@@ -231,11 +232,11 @@ public class ProductSearchRequestBuilder implements Builder<ProductSearchRequest
     }
 
     /**
-     *  <p>Controls data integration <span>with Product Projection parameters</span>. If not set, the result does not include the Product Projection.</p>
+     *  <p>Controls deprecated data integration <span>with Product Projection parameters</span>. If not set, the result does not include the Product Projection.</p>
      * @param productProjectionParameters value to be set
      * @return Builder
      */
-
+    @Deprecated
     public ProductSearchRequestBuilder productProjectionParameters(
             @Nullable final com.commercetools.api.models.product_search.ProductSearchProjectionParams productProjectionParameters) {
         this.productProjectionParameters = productProjectionParameters;
@@ -424,10 +425,10 @@ public class ProductSearchRequestBuilder implements Builder<ProductSearchRequest
     }
 
     /**
-     *  <p>Controls data integration <span>with Product Projection parameters</span>. If not set, the result does not include the Product Projection.</p>
+     *  <p>Controls deprecated data integration <span>with Product Projection parameters</span>. If not set, the result does not include the Product Projection.</p>
      * @return productProjectionParameters
      */
-
+    @Deprecated
     @Nullable
     public com.commercetools.api.models.product_search.ProductSearchProjectionParams getProductProjectionParameters() {
         return this.productProjectionParameters;

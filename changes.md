@@ -18,6 +18,21 @@
 
 
 <details>
+<summary>MarkDeprecated Type(s)</summary>
+
+- marked type `ProductSearchProjectionParams` as deprecated
+</details>
+
+
+<details>
+<summary>MarkDeprecated Property(s)</summary>
+
+- marked property `ProductSearchRequest::productProjectionParameters` as deprecated
+- marked property `ProductSearchResult::productProjection` as deprecated
+</details>
+
+
+<details>
 <summary>Required Property(s)</summary>
 
 - :warning: changed property `customerGroupAssignments` of type `CustomerGroupAssignmentsSetMessage` to be required

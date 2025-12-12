@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>The query parameters used for <span>data integration with Product Projection parameters</span>.</p>
+ *  <p>The query parameters used for the deprecated <span>data integration with Product Projection parameters</span> in Product Search.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSearchProjectionParamsImpl.class)
+@Deprecated
 public interface ProductSearchProjectionParams {
 
     /**
@@ -37,7 +38,7 @@ public interface ProductSearchProjectionParams {
     public List<String> getExpand();
 
     /**
-     *  <p>Set to <code>true</code> to retrieve the <a href="https://docs.commercetools.com/apis/ctp:api:type:CurrentStaged" rel="nofollow">staged</a> Product Projection</p>
+     *  <p>Set to <code>true</code> to retrieve the <span>staged</span> Product Projection</p>
      * @return staged
      */
 
@@ -85,7 +86,7 @@ public interface ProductSearchProjectionParams {
     public String getPriceChannel();
 
     /**
-     *  <p>Used for <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionLocales" rel="nofollow">locale-based projection</a>.</p>
+     *  <p>Used for <span>locale-based projection</span>.</p>
      * @return localeProjection
      */
 
@@ -93,7 +94,7 @@ public interface ProductSearchProjectionParams {
     public List<String> getLocaleProjection();
 
     /**
-     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. If the Store has defined <code>languages</code>, <code>countries</code>, <code>distributionChannels</code>, or <code>supplyChannels</code>, they are used for projections based on <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionLocales" rel="nofollow">locale</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionPrices" rel="nofollow">price</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionInventoryEntries" rel="nofollow">inventory</a>.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. If the Store has defined <code>languages</code>, <code>countries</code>, <code>distributionChannels</code>, or <code>supplyChannels</code>, they are used for projections based on <span>locale</span>, <span>price</span>, and <span>inventory</span>.</p>
      *  <p>For Projects with active <span>Product Selections</span>, the API does not take the <span>availability of the Product in the specified Store</span> into account.</p>
      *  <p><span>Product Tailoring</span> modifies the product information returned in API responses. However, you can only specify <span>query expressions</span> for the original Product data, not for tailored data.</p>
      * @return storeProjection
@@ -118,7 +119,7 @@ public interface ProductSearchProjectionParams {
     public void setExpand(final List<String> expand);
 
     /**
-     *  <p>Set to <code>true</code> to retrieve the <a href="https://docs.commercetools.com/apis/ctp:api:type:CurrentStaged" rel="nofollow">staged</a> Product Projection</p>
+     *  <p>Set to <code>true</code> to retrieve the <span>staged</span> Product Projection</p>
      * @param staged value to be set
      */
 
@@ -168,7 +169,7 @@ public interface ProductSearchProjectionParams {
     public void setPriceChannel(final String priceChannel);
 
     /**
-     *  <p>Used for <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionLocales" rel="nofollow">locale-based projection</a>.</p>
+     *  <p>Used for <span>locale-based projection</span>.</p>
      * @param localeProjection values to be set
      */
 
@@ -176,14 +177,14 @@ public interface ProductSearchProjectionParams {
     public void setLocaleProjection(final String... localeProjection);
 
     /**
-     *  <p>Used for <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionLocales" rel="nofollow">locale-based projection</a>.</p>
+     *  <p>Used for <span>locale-based projection</span>.</p>
      * @param localeProjection values to be set
      */
 
     public void setLocaleProjection(final List<String> localeProjection);
 
     /**
-     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. If the Store has defined <code>languages</code>, <code>countries</code>, <code>distributionChannels</code>, or <code>supplyChannels</code>, they are used for projections based on <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionLocales" rel="nofollow">locale</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionPrices" rel="nofollow">price</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionInventoryEntries" rel="nofollow">inventory</a>.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. If the Store has defined <code>languages</code>, <code>countries</code>, <code>distributionChannels</code>, or <code>supplyChannels</code>, they are used for projections based on <span>locale</span>, <span>price</span>, and <span>inventory</span>.</p>
      *  <p>For Projects with active <span>Product Selections</span>, the API does not take the <span>availability of the Product in the specified Store</span> into account.</p>
      *  <p><span>Product Tailoring</span> modifies the product information returned in API responses. However, you can only specify <span>query expressions</span> for the original Product data, not for tailored data.</p>
      * @param storeProjection value to be set

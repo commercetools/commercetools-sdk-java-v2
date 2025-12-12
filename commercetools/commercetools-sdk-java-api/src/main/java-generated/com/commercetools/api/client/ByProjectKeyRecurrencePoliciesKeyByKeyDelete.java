@@ -22,6 +22,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 /**
  *  <p>Deletes a Recurrence Policy in the Project.</p>
  *  <p>A Recurrence Policy can be deleted only if it is not referenced by any Embedded Price, Standalone Price, or (Custom) Line Item, otherwise a <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferenceExistsError" rel="nofollow">ReferenceExists</a> error is returned.</p>
+ *  <p>The <code>manage_recurring_orders:{projectKey}</code> scope is deprecated for use on this endpoint. Update your clients to use the <code>manage_recurrence_policies:{projectKey}</code> scope instead. For more information, see the <span>Deprecations and removals</span> list.</p>
  *
  * <hr>
  * <div class=code-example>

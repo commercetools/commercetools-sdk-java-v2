@@ -15,6 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 
 /**
  *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</p>
@@ -24,6 +25,8 @@ import jakarta.validation.Valid;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CustomerGroupAssignmentsSetMessagePayload customerGroupAssignmentsSetMessagePayload = CustomerGroupAssignmentsSetMessagePayload.builder()
+ *             .plusCustomerGroupAssignments(customerGroupAssignmentsBuilder -> customerGroupAssignmentsBuilder)
+ *             .plusOldCustomerGroupAssignments(oldCustomerGroupAssignmentsBuilder -> oldCustomerGroupAssignmentsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -42,9 +45,19 @@ public interface CustomerGroupAssignmentsSetMessagePayload extends MessagePayloa
      *  <p>Customer Groups assigned to the Customer during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</p>
      * @return customerGroupAssignments
      */
+    @NotNull
     @Valid
     @JsonProperty("customerGroupAssignments")
     public List<CustomerGroupAssignment> getCustomerGroupAssignments();
+
+    /**
+     *  <p>Customer Groups assigned to the Customer before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</p>
+     * @return oldCustomerGroupAssignments
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("oldCustomerGroupAssignments")
+    public List<CustomerGroupAssignment> getOldCustomerGroupAssignments();
 
     /**
      *  <p>Customer Groups assigned to the Customer during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</p>
@@ -60,6 +73,21 @@ public interface CustomerGroupAssignmentsSetMessagePayload extends MessagePayloa
      */
 
     public void setCustomerGroupAssignments(final List<CustomerGroupAssignment> customerGroupAssignments);
+
+    /**
+     *  <p>Customer Groups assigned to the Customer before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</p>
+     * @param oldCustomerGroupAssignments values to be set
+     */
+
+    @JsonIgnore
+    public void setOldCustomerGroupAssignments(final CustomerGroupAssignment... oldCustomerGroupAssignments);
+
+    /**
+     *  <p>Customer Groups assigned to the Customer before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</p>
+     * @param oldCustomerGroupAssignments values to be set
+     */
+
+    public void setOldCustomerGroupAssignments(final List<CustomerGroupAssignment> oldCustomerGroupAssignments);
 
     /**
      * factory method
@@ -78,6 +106,7 @@ public interface CustomerGroupAssignmentsSetMessagePayload extends MessagePayloa
             final CustomerGroupAssignmentsSetMessagePayload template) {
         CustomerGroupAssignmentsSetMessagePayloadImpl instance = new CustomerGroupAssignmentsSetMessagePayloadImpl();
         instance.setCustomerGroupAssignments(template.getCustomerGroupAssignments());
+        instance.setOldCustomerGroupAssignments(template.getOldCustomerGroupAssignments());
         return instance;
     }
 
@@ -96,6 +125,11 @@ public interface CustomerGroupAssignmentsSetMessagePayload extends MessagePayloa
         }
         CustomerGroupAssignmentsSetMessagePayloadImpl instance = new CustomerGroupAssignmentsSetMessagePayloadImpl();
         instance.setCustomerGroupAssignments(Optional.ofNullable(template.getCustomerGroupAssignments())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.customer.CustomerGroupAssignment::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setOldCustomerGroupAssignments(Optional.ofNullable(template.getOldCustomerGroupAssignments())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.customer.CustomerGroupAssignment::deepCopy)
                         .collect(Collectors.toList()))

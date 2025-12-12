@@ -53,6 +53,9 @@ public class CustomerDeletedMessageBuilder implements Builder<CustomerDeletedMes
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    @Nullable
+    private String email;
+
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @param id value to be set
@@ -254,6 +257,17 @@ public class CustomerDeletedMessageBuilder implements Builder<CustomerDeletedMes
     }
 
     /**
+     *  <p>The email address of the Customer that was deleted.</p>
+     * @param email value to be set
+     * @return Builder
+     */
+
+    public CustomerDeletedMessageBuilder email(@Nullable final String email) {
+        this.email = email;
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @return id
      */
@@ -347,6 +361,16 @@ public class CustomerDeletedMessageBuilder implements Builder<CustomerDeletedMes
     }
 
     /**
+     *  <p>The email address of the Customer that was deleted.</p>
+     * @return email
+     */
+
+    @Nullable
+    public String getEmail() {
+        return this.email;
+    }
+
+    /**
      * builds CustomerDeletedMessage with checking for non-null required values
      * @return CustomerDeletedMessage
      */
@@ -359,7 +383,7 @@ public class CustomerDeletedMessageBuilder implements Builder<CustomerDeletedMes
         Objects.requireNonNull(resource, CustomerDeletedMessage.class + ": resource is missing");
         Objects.requireNonNull(resourceVersion, CustomerDeletedMessage.class + ": resourceVersion is missing");
         return new CustomerDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, email);
     }
 
     /**
@@ -368,7 +392,7 @@ public class CustomerDeletedMessageBuilder implements Builder<CustomerDeletedMes
      */
     public CustomerDeletedMessage buildUnchecked() {
         return new CustomerDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, email);
     }
 
     /**
@@ -396,6 +420,7 @@ public class CustomerDeletedMessageBuilder implements Builder<CustomerDeletedMes
         builder.resource = template.getResource();
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
+        builder.email = template.getEmail();
         return builder;
     }
 

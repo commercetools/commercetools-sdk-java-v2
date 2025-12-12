@@ -21,7 +21,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>Updates a Quote for the authenticated Customer using one or more <span>update actions</span>.</p>
  *
  * <hr>
  * <div class=code-example>

@@ -21,6 +21,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Checks if one or more Recurrence Policies exist for the provided query predicate. Returns a <code>200</code> status if any Recurrence Policies match the query predicate, or a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">NotFound</a> error otherwise.</p>
+ *  <p>The <code>view_recurring_orders:{projectKey}</code> scope is deprecated for use on this endpoint. Update your clients to use the <code>view_recurrence_policies:{projectKey}</code> scope instead. For more information, see the <span>Deprecations and removals</span> list.</p>
  *
  * <hr>
  * <div class=code-example>

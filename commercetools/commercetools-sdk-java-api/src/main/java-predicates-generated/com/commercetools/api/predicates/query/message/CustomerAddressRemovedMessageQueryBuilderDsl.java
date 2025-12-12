@@ -100,4 +100,10 @@ public class CustomerAddressRemovedMessageQueryBuilderDsl {
             CustomerAddressRemovedMessageQueryBuilderDsl::of);
     }
 
+    public StringCollectionPredicateBuilder<CustomerAddressRemovedMessageQueryBuilderDsl> addressRoles() {
+        return new StringCollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("addressRoles")),
+            p -> new CombinationQueryPredicate<>(p, CustomerAddressRemovedMessageQueryBuilderDsl::of));
+    }
+
 }

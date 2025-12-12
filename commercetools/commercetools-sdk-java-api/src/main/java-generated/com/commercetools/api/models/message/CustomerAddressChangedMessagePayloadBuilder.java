@@ -15,6 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     CustomerAddressChangedMessagePayload customerAddressChangedMessagePayload = CustomerAddressChangedMessagePayload.builder()
  *             .address(addressBuilder -> addressBuilder)
+ *             .plusAddressRoles(addressRolesBuilder -> addressRolesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -23,6 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class CustomerAddressChangedMessagePayloadBuilder implements Builder<CustomerAddressChangedMessagePayload> {
 
     private com.commercetools.api.models.common.Address address;
+
+    private java.util.List<com.commercetools.api.models.common.AddressRole> addressRoles;
 
     /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeAddressAction" rel="nofollow">Change Address</a> update action.</p>
@@ -61,6 +64,45 @@ public class CustomerAddressChangedMessagePayloadBuilder implements Builder<Cust
     }
 
     /**
+     *  <p>Indicates if the address was used for shipping or billing purposes.</p>
+     * @param addressRoles value to be set
+     * @return Builder
+     */
+
+    public CustomerAddressChangedMessagePayloadBuilder addressRoles(
+            final com.commercetools.api.models.common.AddressRole... addressRoles) {
+        this.addressRoles = new ArrayList<>(Arrays.asList(addressRoles));
+        return this;
+    }
+
+    /**
+     *  <p>Indicates if the address was used for shipping or billing purposes.</p>
+     * @param addressRoles value to be set
+     * @return Builder
+     */
+
+    public CustomerAddressChangedMessagePayloadBuilder addressRoles(
+            final java.util.List<com.commercetools.api.models.common.AddressRole> addressRoles) {
+        this.addressRoles = addressRoles;
+        return this;
+    }
+
+    /**
+     *  <p>Indicates if the address was used for shipping or billing purposes.</p>
+     * @param addressRoles value to be set
+     * @return Builder
+     */
+
+    public CustomerAddressChangedMessagePayloadBuilder plusAddressRoles(
+            final com.commercetools.api.models.common.AddressRole... addressRoles) {
+        if (this.addressRoles == null) {
+            this.addressRoles = new ArrayList<>();
+        }
+        this.addressRoles.addAll(Arrays.asList(addressRoles));
+        return this;
+    }
+
+    /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeAddressAction" rel="nofollow">Change Address</a> update action.</p>
      * @return address
      */
@@ -70,12 +112,22 @@ public class CustomerAddressChangedMessagePayloadBuilder implements Builder<Cust
     }
 
     /**
+     *  <p>Indicates if the address was used for shipping or billing purposes.</p>
+     * @return addressRoles
+     */
+
+    public java.util.List<com.commercetools.api.models.common.AddressRole> getAddressRoles() {
+        return this.addressRoles;
+    }
+
+    /**
      * builds CustomerAddressChangedMessagePayload with checking for non-null required values
      * @return CustomerAddressChangedMessagePayload
      */
     public CustomerAddressChangedMessagePayload build() {
         Objects.requireNonNull(address, CustomerAddressChangedMessagePayload.class + ": address is missing");
-        return new CustomerAddressChangedMessagePayloadImpl(address);
+        Objects.requireNonNull(addressRoles, CustomerAddressChangedMessagePayload.class + ": addressRoles is missing");
+        return new CustomerAddressChangedMessagePayloadImpl(address, addressRoles);
     }
 
     /**
@@ -83,7 +135,7 @@ public class CustomerAddressChangedMessagePayloadBuilder implements Builder<Cust
      * @return CustomerAddressChangedMessagePayload
      */
     public CustomerAddressChangedMessagePayload buildUnchecked() {
-        return new CustomerAddressChangedMessagePayloadImpl(address);
+        return new CustomerAddressChangedMessagePayloadImpl(address, addressRoles);
     }
 
     /**
@@ -102,6 +154,7 @@ public class CustomerAddressChangedMessagePayloadBuilder implements Builder<Cust
     public static CustomerAddressChangedMessagePayloadBuilder of(final CustomerAddressChangedMessagePayload template) {
         CustomerAddressChangedMessagePayloadBuilder builder = new CustomerAddressChangedMessagePayloadBuilder();
         builder.address = template.getAddress();
+        builder.addressRoles = template.getAddressRoles();
         return builder;
     }
 

@@ -28,4 +28,10 @@ public class CustomerAddressChangedMessagePayloadQueryBuilderDsl {
             CustomerAddressChangedMessagePayloadQueryBuilderDsl::of);
     }
 
+    public StringCollectionPredicateBuilder<CustomerAddressChangedMessagePayloadQueryBuilderDsl> addressRoles() {
+        return new StringCollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("addressRoles")),
+            p -> new CombinationQueryPredicate<>(p, CustomerAddressChangedMessagePayloadQueryBuilderDsl::of));
+    }
+
 }

@@ -23,6 +23,7 @@ import jakarta.validation.constraints.NotNull;
  * <pre><code class='java'>
  *     CustomerEmailChangedMessagePayload customerEmailChangedMessagePayload = CustomerEmailChangedMessagePayload.builder()
  *             .email("{email}")
+ *             .oldEmail("{oldEmail}")
  *             .build()
  * </code></pre>
  * </div>
@@ -46,11 +47,26 @@ public interface CustomerEmailChangedMessagePayload extends MessagePayload {
     public String getEmail();
 
     /**
+     *  <p>The <code>email</code> that was set before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p>
+     * @return oldEmail
+     */
+    @NotNull
+    @JsonProperty("oldEmail")
+    public String getOldEmail();
+
+    /**
      *  <p>The <code>email</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p>
      * @param email value to be set
      */
 
     public void setEmail(final String email);
+
+    /**
+     *  <p>The <code>email</code> that was set before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p>
+     * @param oldEmail value to be set
+     */
+
+    public void setOldEmail(final String oldEmail);
 
     /**
      * factory method
@@ -68,6 +84,7 @@ public interface CustomerEmailChangedMessagePayload extends MessagePayload {
     public static CustomerEmailChangedMessagePayload of(final CustomerEmailChangedMessagePayload template) {
         CustomerEmailChangedMessagePayloadImpl instance = new CustomerEmailChangedMessagePayloadImpl();
         instance.setEmail(template.getEmail());
+        instance.setOldEmail(template.getOldEmail());
         return instance;
     }
 
@@ -86,6 +103,7 @@ public interface CustomerEmailChangedMessagePayload extends MessagePayload {
         }
         CustomerEmailChangedMessagePayloadImpl instance = new CustomerEmailChangedMessagePayloadImpl();
         instance.setEmail(template.getEmail());
+        instance.setOldEmail(template.getOldEmail());
         return instance;
     }
 

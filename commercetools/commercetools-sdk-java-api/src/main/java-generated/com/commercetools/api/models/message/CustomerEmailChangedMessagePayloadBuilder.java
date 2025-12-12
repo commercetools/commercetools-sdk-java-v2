@@ -14,6 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     CustomerEmailChangedMessagePayload customerEmailChangedMessagePayload = CustomerEmailChangedMessagePayload.builder()
  *             .email("{email}")
+ *             .oldEmail("{oldEmail}")
  *             .build()
  * </code></pre>
  * </div>
@@ -22,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class CustomerEmailChangedMessagePayloadBuilder implements Builder<CustomerEmailChangedMessagePayload> {
 
     private String email;
+
+    private String oldEmail;
 
     /**
      *  <p>The <code>email</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p>
@@ -35,6 +38,17 @@ public class CustomerEmailChangedMessagePayloadBuilder implements Builder<Custom
     }
 
     /**
+     *  <p>The <code>email</code> that was set before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p>
+     * @param oldEmail value to be set
+     * @return Builder
+     */
+
+    public CustomerEmailChangedMessagePayloadBuilder oldEmail(final String oldEmail) {
+        this.oldEmail = oldEmail;
+        return this;
+    }
+
+    /**
      *  <p>The <code>email</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p>
      * @return email
      */
@@ -44,12 +58,22 @@ public class CustomerEmailChangedMessagePayloadBuilder implements Builder<Custom
     }
 
     /**
+     *  <p>The <code>email</code> that was set before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p>
+     * @return oldEmail
+     */
+
+    public String getOldEmail() {
+        return this.oldEmail;
+    }
+
+    /**
      * builds CustomerEmailChangedMessagePayload with checking for non-null required values
      * @return CustomerEmailChangedMessagePayload
      */
     public CustomerEmailChangedMessagePayload build() {
         Objects.requireNonNull(email, CustomerEmailChangedMessagePayload.class + ": email is missing");
-        return new CustomerEmailChangedMessagePayloadImpl(email);
+        Objects.requireNonNull(oldEmail, CustomerEmailChangedMessagePayload.class + ": oldEmail is missing");
+        return new CustomerEmailChangedMessagePayloadImpl(email, oldEmail);
     }
 
     /**
@@ -57,7 +81,7 @@ public class CustomerEmailChangedMessagePayloadBuilder implements Builder<Custom
      * @return CustomerEmailChangedMessagePayload
      */
     public CustomerEmailChangedMessagePayload buildUnchecked() {
-        return new CustomerEmailChangedMessagePayloadImpl(email);
+        return new CustomerEmailChangedMessagePayloadImpl(email, oldEmail);
     }
 
     /**
@@ -76,6 +100,7 @@ public class CustomerEmailChangedMessagePayloadBuilder implements Builder<Custom
     public static CustomerEmailChangedMessagePayloadBuilder of(final CustomerEmailChangedMessagePayload template) {
         CustomerEmailChangedMessagePayloadBuilder builder = new CustomerEmailChangedMessagePayloadBuilder();
         builder.email = template.getEmail();
+        builder.oldEmail = template.getOldEmail();
         return builder;
     }
 

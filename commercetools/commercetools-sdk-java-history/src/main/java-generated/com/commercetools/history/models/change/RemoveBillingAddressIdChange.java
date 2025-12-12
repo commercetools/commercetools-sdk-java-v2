@@ -75,7 +75,7 @@ public interface RemoveBillingAddressIdChange extends Change {
     public List<String> getNextValue();
 
     /**
-     *  <p>Address removed from <code>billingAddressesIds</code>.</p>
+     *  <p>Address removed from <code>billingAddressIds</code>.</p>
      * @return address
      */
     @NotNull
@@ -121,7 +121,7 @@ public interface RemoveBillingAddressIdChange extends Change {
     public void setNextValue(final List<String> nextValue);
 
     /**
-     *  <p>Address removed from <code>billingAddressesIds</code>.</p>
+     *  <p>Address removed from <code>billingAddressIds</code>.</p>
      * @param address value to be set
      */
 

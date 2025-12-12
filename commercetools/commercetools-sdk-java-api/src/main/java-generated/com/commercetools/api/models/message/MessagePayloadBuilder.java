@@ -307,6 +307,14 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.CustomerAddressRemovedMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.CustomerBillingAddressAddedMessagePayloadBuilder customerBillingAddressAddedBuilder() {
+        return com.commercetools.api.models.message.CustomerBillingAddressAddedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerBillingAddressRemovedMessagePayloadBuilder customerBillingAddressRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerBillingAddressRemovedMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.CustomerCompanyNameSetMessagePayloadBuilder customerCompanyNameSetBuilder() {
         return com.commercetools.api.models.message.CustomerCompanyNameSetMessagePayloadBuilder.of();
     }
@@ -363,6 +371,10 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.CustomerEmailVerifiedMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.CustomerExternalIdSetMessagePayloadBuilder customerExternalIdSetBuilder() {
+        return com.commercetools.api.models.message.CustomerExternalIdSetMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.CustomerFirstNameSetMessagePayloadBuilder customerFirstNameSetBuilder() {
         return com.commercetools.api.models.message.CustomerFirstNameSetMessagePayloadBuilder.of();
     }
@@ -413,6 +425,14 @@ public class MessagePayloadBuilder {
 
     public com.commercetools.api.models.message.CustomerPasswordUpdatedMessagePayloadBuilder customerPasswordUpdatedBuilder() {
         return com.commercetools.api.models.message.CustomerPasswordUpdatedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerShippingAddressAddedMessagePayloadBuilder customerShippingAddressAddedBuilder() {
+        return com.commercetools.api.models.message.CustomerShippingAddressAddedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerShippingAddressRemovedMessagePayloadBuilder customerShippingAddressRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerShippingAddressRemovedMessagePayloadBuilder.of();
     }
 
     public com.commercetools.api.models.message.CustomerStoresSetMessagePayloadBuilder customerStoresSetBuilder() {

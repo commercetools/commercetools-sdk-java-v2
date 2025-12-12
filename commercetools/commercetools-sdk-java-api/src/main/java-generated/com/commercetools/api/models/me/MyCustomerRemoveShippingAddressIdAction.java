@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Removes an existing shipping address from <code>shippingAddressesIds</code>. If the shipping address is the default shipping address, the <code>defaultShippingAddressId</code> is unset. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+ *  <p>Removes an existing shipping address from <code>shippingAddressIds</code>. If the shipping address is the default shipping address, the <code>defaultShippingAddressId</code> is unset. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +35,7 @@ public interface MyCustomerRemoveShippingAddressIdAction extends MyCustomerUpdat
     String REMOVE_SHIPPING_ADDRESS_ID = "removeShippingAddressId";
 
     /**
-     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>shippingAddressesIds</code>.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>shippingAddressIds</code>.</p>
      * @return addressId
      */
 
@@ -43,7 +43,7 @@ public interface MyCustomerRemoveShippingAddressIdAction extends MyCustomerUpdat
     public String getAddressId();
 
     /**
-     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>shippingAddressesIds</code>.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>shippingAddressIds</code>.</p>
      * @return addressKey
      */
 
@@ -51,14 +51,14 @@ public interface MyCustomerRemoveShippingAddressIdAction extends MyCustomerUpdat
     public String getAddressKey();
 
     /**
-     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>shippingAddressesIds</code>.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>shippingAddressIds</code>.</p>
      * @param addressId value to be set
      */
 
     public void setAddressId(final String addressId);
 
     /**
-     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>shippingAddressesIds</code>.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>shippingAddressIds</code>.</p>
      * @param addressKey value to be set
      */
 

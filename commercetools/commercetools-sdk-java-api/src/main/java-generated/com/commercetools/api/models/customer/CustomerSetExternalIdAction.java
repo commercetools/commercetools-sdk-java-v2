@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CustomerSetExternalIdAction
+ *  <p>This action generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerExternalIdSetMessage" rel="nofollow">CustomerExternalIdSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

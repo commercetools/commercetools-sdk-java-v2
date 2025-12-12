@@ -74,10 +74,11 @@ public interface ProductSearchRequest {
     public Boolean getMarkMatchingVariants();
 
     /**
-     *  <p>Controls data integration <span>with Product Projection parameters</span>. If not set, the result does not include the Product Projection.</p>
+     *  <p>Controls deprecated data integration <span>with Product Projection parameters</span>. If not set, the result does not include the Product Projection.</p>
      * @return productProjectionParameters
      */
     @Valid
+    @Deprecated
     @JsonProperty("productProjectionParameters")
     public ProductSearchProjectionParams getProductProjectionParameters();
 
@@ -141,10 +142,10 @@ public interface ProductSearchRequest {
     public void setMarkMatchingVariants(final Boolean markMatchingVariants);
 
     /**
-     *  <p>Controls data integration <span>with Product Projection parameters</span>. If not set, the result does not include the Product Projection.</p>
+     *  <p>Controls deprecated data integration <span>with Product Projection parameters</span>. If not set, the result does not include the Product Projection.</p>
      * @param productProjectionParameters value to be set
      */
-
+    @Deprecated
     public void setProductProjectionParameters(final ProductSearchProjectionParams productProjectionParameters);
 
     /**

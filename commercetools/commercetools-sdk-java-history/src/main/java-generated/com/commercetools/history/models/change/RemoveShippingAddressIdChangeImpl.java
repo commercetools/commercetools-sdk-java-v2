@@ -87,7 +87,7 @@ public class RemoveShippingAddressIdChangeImpl implements RemoveShippingAddressI
     }
 
     /**
-     *  <p>Address removed from <code>shippingAddressesIds</code>.</p>
+     *  <p>Address removed from <code>shippingAddressIds</code>.</p>
      */
 
     public com.commercetools.history.models.common.Address getAddress() {

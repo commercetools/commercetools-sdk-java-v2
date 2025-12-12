@@ -26,6 +26,7 @@ public class ProductSearchResultImpl implements ProductSearchResult, ModelBase {
 
     private com.commercetools.api.models.product_search.ProductSearchMatchingVariants matchingVariants;
 
+    @Deprecated
     private com.commercetools.api.models.product.ProductProjection productProjection;
 
     /**
@@ -63,9 +64,9 @@ public class ProductSearchResultImpl implements ProductSearchResult, ModelBase {
     }
 
     /**
-     *  <p>Projected data of the Product with <code>id</code>. Only present if data integration <span>with Product Projection parameters</span> is requested.</p>
+     *  <p>Projected data of the Product with <code>id</code>. Only present if deprecated data integration <span>with Product Projection parameters</span> is requested.</p>
      */
-
+    @Deprecated
     public com.commercetools.api.models.product.ProductProjection getProductProjection() {
         return this.productProjection;
     }
@@ -79,6 +80,7 @@ public class ProductSearchResultImpl implements ProductSearchResult, ModelBase {
         this.matchingVariants = matchingVariants;
     }
 
+    @Deprecated
     public void setProductProjection(final com.commercetools.api.models.product.ProductProjection productProjection) {
         this.productProjection = productProjection;
     }

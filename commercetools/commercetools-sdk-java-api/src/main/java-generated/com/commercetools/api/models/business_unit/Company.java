@@ -32,6 +32,8 @@ import jakarta.validation.constraints.NotNull;
  *             .storeMode(BusinessUnitStoreMode.EXPLICIT)
  *             .name("{name}")
  *             .plusAddresses(addressesBuilder -> addressesBuilder)
+ *             .plusShippingAddressIds(shippingAddressIdsBuilder -> shippingAddressIdsBuilder)
+ *             .plusBillingAddressIds(billingAddressIdsBuilder -> billingAddressIdsBuilder)
  *             .associateMode(BusinessUnitAssociateMode.EXPLICIT)
  *             .plusAssociates(associatesBuilder -> associatesBuilder)
  *             .topLevelUnit(topLevelUnitBuilder -> topLevelUnitBuilder)

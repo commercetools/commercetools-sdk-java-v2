@@ -22,7 +22,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .email("{email}")
  *             .plusAddresses(addressesBuilder -> addressesBuilder)
+ *             .plusShippingAddressIds(shippingAddressIdsBuilder -> shippingAddressIdsBuilder)
+ *             .plusBillingAddressIds(billingAddressIdsBuilder -> billingAddressIdsBuilder)
  *             .isEmailVerified(true)
+ *             .plusCustomerGroupAssignments(customerGroupAssignmentsBuilder -> customerGroupAssignmentsBuilder)
  *             .plusStores(storesBuilder -> storesBuilder)
  *             .authenticationMode(AuthenticationMode.PASSWORD)
  *             .build()
@@ -86,13 +89,11 @@ public class CustomerBuilder implements Builder<Customer> {
     @Nullable
     private String defaultShippingAddressId;
 
-    @Nullable
     private java.util.List<String> shippingAddressIds;
 
     @Nullable
     private String defaultBillingAddressId;
 
-    @Nullable
     private java.util.List<String> billingAddressIds;
 
     private Boolean isEmailVerified;
@@ -100,7 +101,6 @@ public class CustomerBuilder implements Builder<Customer> {
     @Nullable
     private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
 
-    @Nullable
     private java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments;
 
     @Nullable
@@ -467,7 +467,7 @@ public class CustomerBuilder implements Builder<Customer> {
      * @return Builder
      */
 
-    public CustomerBuilder shippingAddressIds(@Nullable final String... shippingAddressIds) {
+    public CustomerBuilder shippingAddressIds(final String... shippingAddressIds) {
         this.shippingAddressIds = new ArrayList<>(Arrays.asList(shippingAddressIds));
         return this;
     }
@@ -478,7 +478,7 @@ public class CustomerBuilder implements Builder<Customer> {
      * @return Builder
      */
 
-    public CustomerBuilder shippingAddressIds(@Nullable final java.util.List<String> shippingAddressIds) {
+    public CustomerBuilder shippingAddressIds(final java.util.List<String> shippingAddressIds) {
         this.shippingAddressIds = shippingAddressIds;
         return this;
     }
@@ -489,7 +489,7 @@ public class CustomerBuilder implements Builder<Customer> {
      * @return Builder
      */
 
-    public CustomerBuilder plusShippingAddressIds(@Nullable final String... shippingAddressIds) {
+    public CustomerBuilder plusShippingAddressIds(final String... shippingAddressIds) {
         if (this.shippingAddressIds == null) {
             this.shippingAddressIds = new ArrayList<>();
         }
@@ -514,7 +514,7 @@ public class CustomerBuilder implements Builder<Customer> {
      * @return Builder
      */
 
-    public CustomerBuilder billingAddressIds(@Nullable final String... billingAddressIds) {
+    public CustomerBuilder billingAddressIds(final String... billingAddressIds) {
         this.billingAddressIds = new ArrayList<>(Arrays.asList(billingAddressIds));
         return this;
     }
@@ -525,7 +525,7 @@ public class CustomerBuilder implements Builder<Customer> {
      * @return Builder
      */
 
-    public CustomerBuilder billingAddressIds(@Nullable final java.util.List<String> billingAddressIds) {
+    public CustomerBuilder billingAddressIds(final java.util.List<String> billingAddressIds) {
         this.billingAddressIds = billingAddressIds;
         return this;
     }
@@ -536,7 +536,7 @@ public class CustomerBuilder implements Builder<Customer> {
      * @return Builder
      */
 
-    public CustomerBuilder plusBillingAddressIds(@Nullable final String... billingAddressIds) {
+    public CustomerBuilder plusBillingAddressIds(final String... billingAddressIds) {
         if (this.billingAddressIds == null) {
             this.billingAddressIds = new ArrayList<>();
         }
@@ -602,7 +602,7 @@ public class CustomerBuilder implements Builder<Customer> {
      */
 
     public CustomerBuilder customerGroupAssignments(
-            @Nullable final com.commercetools.api.models.customer.CustomerGroupAssignment... customerGroupAssignments) {
+            final com.commercetools.api.models.customer.CustomerGroupAssignment... customerGroupAssignments) {
         this.customerGroupAssignments = new ArrayList<>(Arrays.asList(customerGroupAssignments));
         return this;
     }
@@ -615,7 +615,7 @@ public class CustomerBuilder implements Builder<Customer> {
      */
 
     public CustomerBuilder customerGroupAssignments(
-            @Nullable final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments) {
+            final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments) {
         this.customerGroupAssignments = customerGroupAssignments;
         return this;
     }
@@ -628,7 +628,7 @@ public class CustomerBuilder implements Builder<Customer> {
      */
 
     public CustomerBuilder plusCustomerGroupAssignments(
-            @Nullable final com.commercetools.api.models.customer.CustomerGroupAssignment... customerGroupAssignments) {
+            final com.commercetools.api.models.customer.CustomerGroupAssignment... customerGroupAssignments) {
         if (this.customerGroupAssignments == null) {
             this.customerGroupAssignments = new ArrayList<>();
         }
@@ -1077,7 +1077,6 @@ public class CustomerBuilder implements Builder<Customer> {
      * @return shippingAddressIds
      */
 
-    @Nullable
     public java.util.List<String> getShippingAddressIds() {
         return this.shippingAddressIds;
     }
@@ -1097,7 +1096,6 @@ public class CustomerBuilder implements Builder<Customer> {
      * @return billingAddressIds
      */
 
-    @Nullable
     public java.util.List<String> getBillingAddressIds() {
         return this.billingAddressIds;
     }
@@ -1127,7 +1125,6 @@ public class CustomerBuilder implements Builder<Customer> {
      * @return customerGroupAssignments
      */
 
-    @Nullable
     public java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> getCustomerGroupAssignments() {
         return this.customerGroupAssignments;
     }
@@ -1195,7 +1192,10 @@ public class CustomerBuilder implements Builder<Customer> {
         Objects.requireNonNull(lastModifiedAt, Customer.class + ": lastModifiedAt is missing");
         Objects.requireNonNull(email, Customer.class + ": email is missing");
         Objects.requireNonNull(addresses, Customer.class + ": addresses is missing");
+        Objects.requireNonNull(shippingAddressIds, Customer.class + ": shippingAddressIds is missing");
+        Objects.requireNonNull(billingAddressIds, Customer.class + ": billingAddressIds is missing");
         Objects.requireNonNull(isEmailVerified, Customer.class + ": isEmailVerified is missing");
+        Objects.requireNonNull(customerGroupAssignments, Customer.class + ": customerGroupAssignments is missing");
         Objects.requireNonNull(stores, Customer.class + ": stores is missing");
         Objects.requireNonNull(authenticationMode, Customer.class + ": authenticationMode is missing");
         return new CustomerImpl(id, version, createdAt, lastModifiedAt, key, customerNumber, externalId, lastModifiedBy,

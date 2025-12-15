@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .storeMode(BusinessUnitStoreMode.EXPLICIT)
  *             .name("{name}")
  *             .plusAddresses(addressesBuilder -> addressesBuilder)
+ *             .plusShippingAddressIds(shippingAddressIdsBuilder -> shippingAddressIdsBuilder)
+ *             .plusBillingAddressIds(billingAddressIdsBuilder -> billingAddressIdsBuilder)
  *             .associateMode(BusinessUnitAssociateMode.EXPLICIT)
  *             .plusAssociates(associatesBuilder -> associatesBuilder)
  *             .topLevelUnit(topLevelUnitBuilder -> topLevelUnitBuilder)
@@ -75,13 +77,11 @@ public class CompanyBuilder implements Builder<Company> {
 
     private java.util.List<com.commercetools.api.models.common.Address> addresses;
 
-    @Nullable
     private java.util.List<String> shippingAddressIds;
 
     @Nullable
     private String defaultShippingAddressId;
 
-    @Nullable
     private java.util.List<String> billingAddressIds;
 
     @Nullable
@@ -690,7 +690,7 @@ public class CompanyBuilder implements Builder<Company> {
      * @return Builder
      */
 
-    public CompanyBuilder shippingAddressIds(@Nullable final String... shippingAddressIds) {
+    public CompanyBuilder shippingAddressIds(final String... shippingAddressIds) {
         this.shippingAddressIds = new ArrayList<>(Arrays.asList(shippingAddressIds));
         return this;
     }
@@ -701,7 +701,7 @@ public class CompanyBuilder implements Builder<Company> {
      * @return Builder
      */
 
-    public CompanyBuilder shippingAddressIds(@Nullable final java.util.List<String> shippingAddressIds) {
+    public CompanyBuilder shippingAddressIds(final java.util.List<String> shippingAddressIds) {
         this.shippingAddressIds = shippingAddressIds;
         return this;
     }
@@ -712,7 +712,7 @@ public class CompanyBuilder implements Builder<Company> {
      * @return Builder
      */
 
-    public CompanyBuilder plusShippingAddressIds(@Nullable final String... shippingAddressIds) {
+    public CompanyBuilder plusShippingAddressIds(final String... shippingAddressIds) {
         if (this.shippingAddressIds == null) {
             this.shippingAddressIds = new ArrayList<>();
         }
@@ -737,7 +737,7 @@ public class CompanyBuilder implements Builder<Company> {
      * @return Builder
      */
 
-    public CompanyBuilder billingAddressIds(@Nullable final String... billingAddressIds) {
+    public CompanyBuilder billingAddressIds(final String... billingAddressIds) {
         this.billingAddressIds = new ArrayList<>(Arrays.asList(billingAddressIds));
         return this;
     }
@@ -748,7 +748,7 @@ public class CompanyBuilder implements Builder<Company> {
      * @return Builder
      */
 
-    public CompanyBuilder billingAddressIds(@Nullable final java.util.List<String> billingAddressIds) {
+    public CompanyBuilder billingAddressIds(final java.util.List<String> billingAddressIds) {
         this.billingAddressIds = billingAddressIds;
         return this;
     }
@@ -759,7 +759,7 @@ public class CompanyBuilder implements Builder<Company> {
      * @return Builder
      */
 
-    public CompanyBuilder plusBillingAddressIds(@Nullable final String... billingAddressIds) {
+    public CompanyBuilder plusBillingAddressIds(final String... billingAddressIds) {
         if (this.billingAddressIds == null) {
             this.billingAddressIds = new ArrayList<>();
         }
@@ -1218,7 +1218,6 @@ public class CompanyBuilder implements Builder<Company> {
      * @return shippingAddressIds
      */
 
-    @Nullable
     public java.util.List<String> getShippingAddressIds() {
         return this.shippingAddressIds;
     }
@@ -1238,7 +1237,6 @@ public class CompanyBuilder implements Builder<Company> {
      * @return billingAddressIds
      */
 
-    @Nullable
     public java.util.List<String> getBillingAddressIds() {
         return this.billingAddressIds;
     }
@@ -1323,6 +1321,8 @@ public class CompanyBuilder implements Builder<Company> {
         Objects.requireNonNull(storeMode, Company.class + ": storeMode is missing");
         Objects.requireNonNull(name, Company.class + ": name is missing");
         Objects.requireNonNull(addresses, Company.class + ": addresses is missing");
+        Objects.requireNonNull(shippingAddressIds, Company.class + ": shippingAddressIds is missing");
+        Objects.requireNonNull(billingAddressIds, Company.class + ": billingAddressIds is missing");
         Objects.requireNonNull(associateMode, Company.class + ": associateMode is missing");
         Objects.requireNonNull(associates, Company.class + ": associates is missing");
         Objects.requireNonNull(topLevelUnit, Company.class + ": topLevelUnit is missing");

@@ -41,6 +41,8 @@ import jakarta.validation.constraints.NotNull;
  *             storeMode(BusinessUnitStoreMode.EXPLICIT)
  *             name("{name}")
  *             plusAddresses(addressesBuilder -> addressesBuilder)
+ *             plusShippingAddressIds(shippingAddressIdsBuilder -> shippingAddressIdsBuilder)
+ *             plusBillingAddressIds(billingAddressIdsBuilder -> billingAddressIdsBuilder)
  *             associateMode(BusinessUnitAssociateMode.EXPLICIT)
  *             plusAssociates(associatesBuilder -> associatesBuilder)
  *             topLevelUnit(topLevelUnitBuilder -> topLevelUnitBuilder)
@@ -198,7 +200,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
      *  <p>Unique identifiers of addresses used as shipping addresses.</p>
      * @return shippingAddressIds
      */
-
+    @NotNull
     @JsonProperty("shippingAddressIds")
     public List<String> getShippingAddressIds();
 
@@ -214,7 +216,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
      *  <p>Unique identifiers of addresses used as billing addresses.</p>
      * @return billingAddressIds
      */
-
+    @NotNull
     @JsonProperty("billingAddressIds")
     public List<String> getBillingAddressIds();
 

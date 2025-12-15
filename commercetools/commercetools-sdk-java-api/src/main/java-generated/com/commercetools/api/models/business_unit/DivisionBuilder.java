@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .storeMode(BusinessUnitStoreMode.EXPLICIT)
  *             .name("{name}")
  *             .plusAddresses(addressesBuilder -> addressesBuilder)
+ *             .plusShippingAddressIds(shippingAddressIdsBuilder -> shippingAddressIdsBuilder)
+ *             .plusBillingAddressIds(billingAddressIdsBuilder -> billingAddressIdsBuilder)
  *             .associateMode(BusinessUnitAssociateMode.EXPLICIT)
  *             .plusAssociates(associatesBuilder -> associatesBuilder)
  *             .parentUnit(parentUnitBuilder -> parentUnitBuilder)
@@ -76,13 +78,11 @@ public class DivisionBuilder implements Builder<Division> {
 
     private java.util.List<com.commercetools.api.models.common.Address> addresses;
 
-    @Nullable
     private java.util.List<String> shippingAddressIds;
 
     @Nullable
     private String defaultShippingAddressId;
 
-    @Nullable
     private java.util.List<String> billingAddressIds;
 
     @Nullable
@@ -690,7 +690,7 @@ public class DivisionBuilder implements Builder<Division> {
      * @return Builder
      */
 
-    public DivisionBuilder shippingAddressIds(@Nullable final String... shippingAddressIds) {
+    public DivisionBuilder shippingAddressIds(final String... shippingAddressIds) {
         this.shippingAddressIds = new ArrayList<>(Arrays.asList(shippingAddressIds));
         return this;
     }
@@ -701,7 +701,7 @@ public class DivisionBuilder implements Builder<Division> {
      * @return Builder
      */
 
-    public DivisionBuilder shippingAddressIds(@Nullable final java.util.List<String> shippingAddressIds) {
+    public DivisionBuilder shippingAddressIds(final java.util.List<String> shippingAddressIds) {
         this.shippingAddressIds = shippingAddressIds;
         return this;
     }
@@ -712,7 +712,7 @@ public class DivisionBuilder implements Builder<Division> {
      * @return Builder
      */
 
-    public DivisionBuilder plusShippingAddressIds(@Nullable final String... shippingAddressIds) {
+    public DivisionBuilder plusShippingAddressIds(final String... shippingAddressIds) {
         if (this.shippingAddressIds == null) {
             this.shippingAddressIds = new ArrayList<>();
         }
@@ -737,7 +737,7 @@ public class DivisionBuilder implements Builder<Division> {
      * @return Builder
      */
 
-    public DivisionBuilder billingAddressIds(@Nullable final String... billingAddressIds) {
+    public DivisionBuilder billingAddressIds(final String... billingAddressIds) {
         this.billingAddressIds = new ArrayList<>(Arrays.asList(billingAddressIds));
         return this;
     }
@@ -748,7 +748,7 @@ public class DivisionBuilder implements Builder<Division> {
      * @return Builder
      */
 
-    public DivisionBuilder billingAddressIds(@Nullable final java.util.List<String> billingAddressIds) {
+    public DivisionBuilder billingAddressIds(final java.util.List<String> billingAddressIds) {
         this.billingAddressIds = billingAddressIds;
         return this;
     }
@@ -759,7 +759,7 @@ public class DivisionBuilder implements Builder<Division> {
      * @return Builder
      */
 
-    public DivisionBuilder plusBillingAddressIds(@Nullable final String... billingAddressIds) {
+    public DivisionBuilder plusBillingAddressIds(final String... billingAddressIds) {
         if (this.billingAddressIds == null) {
             this.billingAddressIds = new ArrayList<>();
         }
@@ -1218,7 +1218,6 @@ public class DivisionBuilder implements Builder<Division> {
      * @return shippingAddressIds
      */
 
-    @Nullable
     public java.util.List<String> getShippingAddressIds() {
         return this.shippingAddressIds;
     }
@@ -1238,7 +1237,6 @@ public class DivisionBuilder implements Builder<Division> {
      * @return billingAddressIds
      */
 
-    @Nullable
     public java.util.List<String> getBillingAddressIds() {
         return this.billingAddressIds;
     }
@@ -1322,6 +1320,8 @@ public class DivisionBuilder implements Builder<Division> {
         Objects.requireNonNull(storeMode, Division.class + ": storeMode is missing");
         Objects.requireNonNull(name, Division.class + ": name is missing");
         Objects.requireNonNull(addresses, Division.class + ": addresses is missing");
+        Objects.requireNonNull(shippingAddressIds, Division.class + ": shippingAddressIds is missing");
+        Objects.requireNonNull(billingAddressIds, Division.class + ": billingAddressIds is missing");
         Objects.requireNonNull(associateMode, Division.class + ": associateMode is missing");
         Objects.requireNonNull(associates, Division.class + ": associates is missing");
         Objects.requireNonNull(parentUnit, Division.class + ": parentUnit is missing");

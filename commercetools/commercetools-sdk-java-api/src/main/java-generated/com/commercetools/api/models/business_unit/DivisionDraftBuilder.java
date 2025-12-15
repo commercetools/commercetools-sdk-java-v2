@@ -69,6 +69,9 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    @Nullable
+    private java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> customerGroupAssignments;
+
     private com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier parentUnit;
 
     /**
@@ -565,6 +568,106 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
     }
 
     /**
+     *  <p>Customer Groups to assign the Business Unit to.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @param customerGroupAssignments value to be set
+     * @return Builder
+     */
+
+    public DivisionDraftBuilder customerGroupAssignments(
+            @Nullable final com.commercetools.api.models.customer.CustomerGroupAssignmentDraft... customerGroupAssignments) {
+        this.customerGroupAssignments = new ArrayList<>(Arrays.asList(customerGroupAssignments));
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups to assign the Business Unit to.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @param customerGroupAssignments value to be set
+     * @return Builder
+     */
+
+    public DivisionDraftBuilder customerGroupAssignments(
+            @Nullable final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> customerGroupAssignments) {
+        this.customerGroupAssignments = customerGroupAssignments;
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups to assign the Business Unit to.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @param customerGroupAssignments value to be set
+     * @return Builder
+     */
+
+    public DivisionDraftBuilder plusCustomerGroupAssignments(
+            @Nullable final com.commercetools.api.models.customer.CustomerGroupAssignmentDraft... customerGroupAssignments) {
+        if (this.customerGroupAssignments == null) {
+            this.customerGroupAssignments = new ArrayList<>();
+        }
+        this.customerGroupAssignments.addAll(Arrays.asList(customerGroupAssignments));
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups to assign the Business Unit to.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @param builder function to build the customerGroupAssignments value
+     * @return Builder
+     */
+
+    public DivisionDraftBuilder plusCustomerGroupAssignments(
+            Function<com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder, com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder> builder) {
+        if (this.customerGroupAssignments == null) {
+            this.customerGroupAssignments = new ArrayList<>();
+        }
+        this.customerGroupAssignments.add(
+            builder.apply(com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups to assign the Business Unit to.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @param builder function to build the customerGroupAssignments value
+     * @return Builder
+     */
+
+    public DivisionDraftBuilder withCustomerGroupAssignments(
+            Function<com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder, com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder> builder) {
+        this.customerGroupAssignments = new ArrayList<>();
+        this.customerGroupAssignments.add(
+            builder.apply(com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups to assign the Business Unit to.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @param builder function to build the customerGroupAssignments value
+     * @return Builder
+     */
+
+    public DivisionDraftBuilder addCustomerGroupAssignments(
+            Function<com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder, com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> builder) {
+        return plusCustomerGroupAssignments(
+            builder.apply(com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Customer Groups to assign the Business Unit to.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @param builder function to build the customerGroupAssignments value
+     * @return Builder
+     */
+
+    public DivisionDraftBuilder setCustomerGroupAssignments(
+            Function<com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder, com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> builder) {
+        return customerGroupAssignments(
+            builder.apply(com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder.of()));
+    }
+
+    /**
      *  <p>The parent unit of this Division. Can be a Company or a Division.</p>
      * @param builder function to build the parentUnit value
      * @return Builder
@@ -754,6 +857,17 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
     }
 
     /**
+     *  <p>Customer Groups to assign the Business Unit to.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @return customerGroupAssignments
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> getCustomerGroupAssignments() {
+        return this.customerGroupAssignments;
+    }
+
+    /**
      *  <p>The parent unit of this Division. Can be a Company or a Division.</p>
      * @return parentUnit
      */
@@ -772,7 +886,7 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
         Objects.requireNonNull(parentUnit, DivisionDraft.class + ": parentUnit is missing");
         return new DivisionDraftImpl(key, status, stores, storeMode, name, contactEmail, associateMode, associates,
             approvalRuleMode, addresses, shippingAddresses, defaultShippingAddress, billingAddresses,
-            defaultBillingAddress, custom, parentUnit);
+            defaultBillingAddress, custom, customerGroupAssignments, parentUnit);
     }
 
     /**
@@ -782,7 +896,7 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
     public DivisionDraft buildUnchecked() {
         return new DivisionDraftImpl(key, status, stores, storeMode, name, contactEmail, associateMode, associates,
             approvalRuleMode, addresses, shippingAddresses, defaultShippingAddress, billingAddresses,
-            defaultBillingAddress, custom, parentUnit);
+            defaultBillingAddress, custom, customerGroupAssignments, parentUnit);
     }
 
     /**
@@ -815,6 +929,7 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
         builder.billingAddresses = template.getBillingAddresses();
         builder.defaultBillingAddress = template.getDefaultBillingAddress();
         builder.custom = template.getCustom();
+        builder.customerGroupAssignments = template.getCustomerGroupAssignments();
         builder.parentUnit = template.getParentUnit();
         return builder;
     }

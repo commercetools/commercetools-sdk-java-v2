@@ -3,12 +3,21 @@
 <details>
 <summary>Added Type(s)</summary>
 
+- added type `BusinessUnitAddCustomerGroupAssignmentAction`
+- added type `BusinessUnitRemoveCustomerGroupAssignmentAction`
+- added type `BusinessUnitSetCustomerGroupAssignmentsAction`
 - added type `AddressRole`
+- added type `BusinessUnitCustomerGroupAssignmentAddedMessage`
+- added type `BusinessUnitCustomerGroupAssignmentRemovedMessage`
+- added type `BusinessUnitCustomerGroupAssignmentsSetMessage`
 - added type `CustomerBillingAddressAddedMessage`
 - added type `CustomerBillingAddressRemovedMessage`
 - added type `CustomerExternalIdSetMessage`
 - added type `CustomerShippingAddressAddedMessage`
 - added type `CustomerShippingAddressRemovedMessage`
+- added type `BusinessUnitCustomerGroupAssignmentAddedMessagePayload`
+- added type `BusinessUnitCustomerGroupAssignmentRemovedMessagePayload`
+- added type `BusinessUnitCustomerGroupAssignmentsSetMessagePayload`
 - added type `CustomerBillingAddressAddedMessagePayload`
 - added type `CustomerBillingAddressRemovedMessagePayload`
 - added type `CustomerExternalIdSetMessagePayload`
@@ -43,6 +52,12 @@
 <details>
 <summary>Added Property(s)</summary>
 
+- added property `customerGroupAssignments` to type `BusinessUnit`
+- added property `customerGroupAssignments` to type `BusinessUnitDraft`
+- added property `customerGroupAssignments` to type `Company`
+- added property `customerGroupAssignments` to type `CompanyDraft`
+- added property `customerGroupAssignments` to type `Division`
+- added property `customerGroupAssignments` to type `DivisionDraft`
 - added property `addressRoles` to type `BusinessUnitAddressChangedMessage`
 - added property `addressRoles` to type `BusinessUnitAddressRemovedMessage`
 - added property `addressRoles` to type `CustomerAddressChangedMessage`

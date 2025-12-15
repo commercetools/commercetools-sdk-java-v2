@@ -179,6 +179,18 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.BusinessUnitCustomTypeSetMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentAddedMessageBuilder businessUnitCustomerGroupAssignmentAddedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentRemovedMessageBuilder businessUnitCustomerGroupAssignmentRemovedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentsSetMessageBuilder businessUnitCustomerGroupAssignmentsSetBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentsSetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.BusinessUnitDefaultBillingAddressSetMessageBuilder businessUnitDefaultBillingAddressSetBuilder() {
         return com.commercetools.api.models.message.BusinessUnitDefaultBillingAddressSetMessageBuilder.of();
     }

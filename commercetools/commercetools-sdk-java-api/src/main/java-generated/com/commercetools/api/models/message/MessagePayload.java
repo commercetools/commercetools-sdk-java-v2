@@ -398,6 +398,31 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for businessUnitCustomerGroupAssignmentAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentAddedMessagePayloadBuilder businessUnitCustomerGroupAssignmentAddedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentAddedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitCustomerGroupAssignmentRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentRemovedMessagePayloadBuilder businessUnitCustomerGroupAssignmentRemovedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentRemovedMessagePayloadBuilder
+                .of();
+    }
+
+    /**
+     * builder for businessUnitCustomerGroupAssignmentsSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentsSetMessagePayloadBuilder businessUnitCustomerGroupAssignmentsSetBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentsSetMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for businessUnitDefaultBillingAddressSet subtype
      * @return builder
      */

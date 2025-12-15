@@ -52,6 +52,8 @@ public class DivisionImpl implements Division, ModelBase {
 
     private com.commercetools.api.models.type.CustomFields custom;
 
+    private java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments;
+
     private java.util.List<com.commercetools.api.models.common.Address> addresses;
 
     private java.util.List<String> shippingAddressIds;
@@ -90,6 +92,7 @@ public class DivisionImpl implements Division, ModelBase {
             @JsonProperty("storeMode") final com.commercetools.api.models.business_unit.BusinessUnitStoreMode storeMode,
             @JsonProperty("name") final String name, @JsonProperty("contactEmail") final String contactEmail,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
+            @JsonProperty("customerGroupAssignments") final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments,
             @JsonProperty("addresses") final java.util.List<com.commercetools.api.models.common.Address> addresses,
             @JsonProperty("shippingAddressIds") final java.util.List<String> shippingAddressIds,
             @JsonProperty("defaultShippingAddressId") final String defaultShippingAddressId,
@@ -115,6 +118,7 @@ public class DivisionImpl implements Division, ModelBase {
         this.name = name;
         this.contactEmail = contactEmail;
         this.custom = custom;
+        this.customerGroupAssignments = customerGroupAssignments;
         this.addresses = addresses;
         this.shippingAddressIds = shippingAddressIds;
         this.defaultShippingAddressId = defaultShippingAddressId;
@@ -256,6 +260,15 @@ public class DivisionImpl implements Division, ModelBase {
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
+    }
+
+    /**
+     *  <p>Customer Groups assigned to the Business Unit.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> getCustomerGroupAssignments() {
+        return this.customerGroupAssignments;
     }
 
     /**
@@ -411,6 +424,16 @@ public class DivisionImpl implements Division, ModelBase {
         this.custom = custom;
     }
 
+    public void setCustomerGroupAssignments(
+            final com.commercetools.api.models.customer.CustomerGroupAssignment... customerGroupAssignments) {
+        this.customerGroupAssignments = new ArrayList<>(Arrays.asList(customerGroupAssignments));
+    }
+
+    public void setCustomerGroupAssignments(
+            final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments) {
+        this.customerGroupAssignments = customerGroupAssignments;
+    }
+
     public void setAddresses(final com.commercetools.api.models.common.Address... addresses) {
         this.addresses = new ArrayList<>(Arrays.asList(addresses));
     }
@@ -505,6 +528,7 @@ public class DivisionImpl implements Division, ModelBase {
                 .append(name, that.name)
                 .append(contactEmail, that.contactEmail)
                 .append(custom, that.custom)
+                .append(customerGroupAssignments, that.customerGroupAssignments)
                 .append(addresses, that.addresses)
                 .append(shippingAddressIds, that.shippingAddressIds)
                 .append(defaultShippingAddressId, that.defaultShippingAddressId)
@@ -531,6 +555,7 @@ public class DivisionImpl implements Division, ModelBase {
                 .append(name, that.name)
                 .append(contactEmail, that.contactEmail)
                 .append(custom, that.custom)
+                .append(customerGroupAssignments, that.customerGroupAssignments)
                 .append(addresses, that.addresses)
                 .append(shippingAddressIds, that.shippingAddressIds)
                 .append(defaultShippingAddressId, that.defaultShippingAddressId)
@@ -562,6 +587,7 @@ public class DivisionImpl implements Division, ModelBase {
                 .append(name)
                 .append(contactEmail)
                 .append(custom)
+                .append(customerGroupAssignments)
                 .append(addresses)
                 .append(shippingAddressIds)
                 .append(defaultShippingAddressId)
@@ -593,6 +619,7 @@ public class DivisionImpl implements Division, ModelBase {
                 .append("name", name)
                 .append("contactEmail", contactEmail)
                 .append("custom", custom)
+                .append("customerGroupAssignments", customerGroupAssignments)
                 .append("addresses", addresses)
                 .append("shippingAddressIds", shippingAddressIds)
                 .append("defaultShippingAddressId", defaultShippingAddressId)

@@ -574,6 +574,30 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for businessUnitCustomerGroupAssignmentAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentAddedMessageBuilder businessUnitCustomerGroupAssignmentAddedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitCustomerGroupAssignmentRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentRemovedMessageBuilder businessUnitCustomerGroupAssignmentRemovedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitCustomerGroupAssignmentsSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentsSetMessageBuilder businessUnitCustomerGroupAssignmentsSetBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentsSetMessageBuilder.of();
+    }
+
+    /**
      * builder for businessUnitDefaultBillingAddressSet subtype
      * @return builder
      */

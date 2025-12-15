@@ -86,6 +86,14 @@ public interface BusinessUnitUpdateAction
     }
 
     /**
+     * builder for addCustomerGroupAssignment subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.business_unit.BusinessUnitAddCustomerGroupAssignmentActionBuilder addCustomerGroupAssignmentBuilder() {
+        return com.commercetools.api.models.business_unit.BusinessUnitAddCustomerGroupAssignmentActionBuilder.of();
+    }
+
+    /**
      * builder for addShippingAddressId subtype
      * @return builder
      */
@@ -182,6 +190,14 @@ public interface BusinessUnitUpdateAction
     }
 
     /**
+     * builder for removeCustomerGroupAssignment subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.business_unit.BusinessUnitRemoveCustomerGroupAssignmentActionBuilder removeCustomerGroupAssignmentBuilder() {
+        return com.commercetools.api.models.business_unit.BusinessUnitRemoveCustomerGroupAssignmentActionBuilder.of();
+    }
+
+    /**
      * builder for removeShippingAddressId subtype
      * @return builder
      */
@@ -243,6 +259,14 @@ public interface BusinessUnitUpdateAction
      */
     public static com.commercetools.api.models.business_unit.BusinessUnitSetCustomTypeActionBuilder setCustomTypeBuilder() {
         return com.commercetools.api.models.business_unit.BusinessUnitSetCustomTypeActionBuilder.of();
+    }
+
+    /**
+     * builder for setCustomerGroupAssignments subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.business_unit.BusinessUnitSetCustomerGroupAssignmentsActionBuilder setCustomerGroupAssignmentsBuilder() {
+        return com.commercetools.api.models.business_unit.BusinessUnitSetCustomerGroupAssignmentsActionBuilder.of();
     }
 
     /**

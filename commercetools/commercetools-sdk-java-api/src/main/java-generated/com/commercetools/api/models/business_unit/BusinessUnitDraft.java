@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.BaseAddress;
+import com.commercetools.api.models.customer.CustomerGroupAssignmentDraft;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
@@ -169,6 +170,15 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
     public CustomFieldsDraft getCustom();
 
     /**
+     *  <p>Customer Groups to assign the Business Unit to.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @return customerGroupAssignments
+     */
+    @Valid
+    @JsonProperty("customerGroupAssignments")
+    public List<CustomerGroupAssignmentDraft> getCustomerGroupAssignments();
+
+    /**
      *  <p>User-defined unique and immutable identifier for the Business Unit.</p>
      * @param key value to be set
      */
@@ -317,6 +327,23 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
 
     public void setCustom(final CustomFieldsDraft custom);
 
+    /**
+     *  <p>Customer Groups to assign the Business Unit to.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @param customerGroupAssignments values to be set
+     */
+
+    @JsonIgnore
+    public void setCustomerGroupAssignments(final CustomerGroupAssignmentDraft... customerGroupAssignments);
+
+    /**
+     *  <p>Customer Groups to assign the Business Unit to.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @param customerGroupAssignments values to be set
+     */
+
+    public void setCustomerGroupAssignments(final List<CustomerGroupAssignmentDraft> customerGroupAssignments);
+
     public BusinessUnitDraft copyDeep();
 
     /**
@@ -363,6 +390,11 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
             Optional.ofNullable(template.getBillingAddresses()).map(ArrayList::new).orElse(null));
         instance.setDefaultBillingAddress(template.getDefaultBillingAddress());
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setCustomerGroupAssignments(Optional.ofNullable(template.getCustomerGroupAssignments())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.customer.CustomerGroupAssignmentDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

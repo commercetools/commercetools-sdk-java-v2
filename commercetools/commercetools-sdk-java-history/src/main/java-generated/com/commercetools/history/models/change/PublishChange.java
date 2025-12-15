@@ -15,7 +15,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishAction" rel="nofollow">Publish</a> update action.</p>
+ *  <p>Change triggered when:</p>
+ *  <ul>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> <code>published</code> transitions from <code>false</code> to <code>true</code>.</li>
+ *   <li>Any update action updates the current catalog (using <code>staged=false</code>) and the resulting Product is in a published state.</li>
+ *  </ul>
+ *  <p>For better traceability of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishAction" rel="nofollow">Publish</a> update action, use the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishedMessage" rel="nofollow">ProductPublished</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -18,14 +18,17 @@ import jakarta.validation.constraints.NotNull;
  * DiscountTypeCombination
  *
  * <hr>
- * Example to create an instance using the builder pattern
+ * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     DiscountTypeCombination discountTypeCombination = DiscountTypeCombination.builder()
+ *     DiscountTypeCombination discountTypeCombination = DiscountTypeCombination.bestDealBuilder()
+ *             chosenDiscountType("{chosenDiscountType}")
  *             .build()
  * </code></pre>
  * </div>
  */
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = DiscountTypeCombinationImpl.class, visible = true)
+@JsonDeserialize(as = DiscountTypeCombinationImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface DiscountTypeCombination {
 
@@ -49,8 +52,28 @@ public interface DiscountTypeCombination {
         if (template == null) {
             return null;
         }
+
+        if (!(template instanceof DiscountTypeCombinationImpl)) {
+            return template.copyDeep();
+        }
         DiscountTypeCombinationImpl instance = new DiscountTypeCombinationImpl();
         return instance;
+    }
+
+    /**
+     * builder for bestDeal subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.common.BestDealBuilder bestDealBuilder() {
+        return com.commercetools.history.models.common.BestDealBuilder.of();
+    }
+
+    /**
+     * builder for stacking subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.common.StackingBuilder stackingBuilder() {
+        return com.commercetools.history.models.common.StackingBuilder.of();
     }
 
     /**

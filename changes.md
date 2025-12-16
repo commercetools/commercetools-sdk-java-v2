@@ -90,6 +90,8 @@
 
 - added type `DirectDiscount`
 - added type `DiscountTypeCombination`
+- added type `BestDeal`
+- added type `Stacking`
 - added type `ShippingMethodLabel`
 - added type `ChangeCustomLineItemPriceRoundingModeChange`
 - added type `ChangeLineItemPriceRoundingModeChange`

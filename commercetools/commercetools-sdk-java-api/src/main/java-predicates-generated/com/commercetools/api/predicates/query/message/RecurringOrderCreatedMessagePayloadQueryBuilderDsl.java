@@ -19,11 +19,11 @@ public class RecurringOrderCreatedMessagePayloadQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, RecurringOrderCreatedMessagePayloadQueryBuilderDsl::of));
     }
 
-    public CombinationQueryPredicate<RecurringOrderCreatedMessagePayloadQueryBuilderDsl> order(
+    public CombinationQueryPredicate<RecurringOrderCreatedMessagePayloadQueryBuilderDsl> recurringOrder(
             Function<com.commercetools.api.predicates.query.recurring_order.RecurringOrderQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.recurring_order.RecurringOrderQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("order"))
+                    .parent(ConstantQueryPredicate.of().constant("recurringOrder"))
                     .inner(fn.apply(
                         com.commercetools.api.predicates.query.recurring_order.RecurringOrderQueryBuilderDsl.of())),
             RecurringOrderCreatedMessagePayloadQueryBuilderDsl::of);

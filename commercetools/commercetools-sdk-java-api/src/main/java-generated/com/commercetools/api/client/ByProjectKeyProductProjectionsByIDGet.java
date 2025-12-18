@@ -20,7 +20,13 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Gets the current or staged representation of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> by its ID. When used with an API Client that has the <code>view_published_products:{projectKey}</code> scope, this endpoint only returns published (current) Product Projections.</p>
+ *  <p>Retrieves the <span>projected</span> representation of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> by its ID.</p>
+ *  <p>By default, this endpoint returns the <code>current</code> representation of Products where the <code>published</code> flag is <code>true</code>. If a Product is unpublished (<code>published=false</code>), the endpoint returns a <span>Not Found</span> error.</p>
+ *  <p>Required access scopes:</p>
+ *  <ul>
+ *   <li><p>To retrieve the current representation of published Products (published data), the <code>view_published_products:{projectKey}</code> scope is required.</p></li>
+ *   <li><p>To retrieve the staged representation of Products (draft data) or access unpublished Products, the API Client must have the <code>view_products:{projectKey}</code> scope.</p></li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>

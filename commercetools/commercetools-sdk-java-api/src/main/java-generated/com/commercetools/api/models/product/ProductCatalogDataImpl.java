@@ -51,7 +51,7 @@ public class ProductCatalogDataImpl implements ProductCatalogData, ModelBase {
     }
 
     /**
-     *  <p><code>true</code> if the Product is published.</p>
+     *  <p>If <code>true</code>, the <code>current</code> representation of the Product is retrievable in the <span>Product Projection</span> endpoints and indexed for <span>Product Search</span>.</p>
      */
 
     public Boolean getPublished() {

@@ -36,7 +36,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ProductCatalogData extends ProductCatalogDataMixin {
 
     /**
-     *  <p><code>true</code> if the Product is published.</p>
+     *  <p>If <code>true</code>, the <code>current</code> representation of the Product is retrievable in the <span>Product Projection</span> endpoints and indexed for <span>Product Search</span>.</p>
      * @return published
      */
     @NotNull
@@ -70,7 +70,7 @@ public interface ProductCatalogData extends ProductCatalogDataMixin {
     public Boolean getHasStagedChanges();
 
     /**
-     *  <p><code>true</code> if the Product is published.</p>
+     *  <p>If <code>true</code>, the <code>current</code> representation of the Product is retrievable in the <span>Product Projection</span> endpoints and indexed for <span>Product Search</span>.</p>
      * @param published value to be set
      */
 

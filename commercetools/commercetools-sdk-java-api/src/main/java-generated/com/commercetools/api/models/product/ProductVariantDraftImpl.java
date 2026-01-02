@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Creates a Product Variant when included in the <code>masterVariant</code> and <code>variants</code> fields of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDraft" rel="nofollow">ProductDraft</a>.</p>
+ * ProductVariantDraft
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantDraftImpl implements ProductVariantDraft, ModelBase {

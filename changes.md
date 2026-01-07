@@ -230,3 +230,26 @@
 - added enum `setVariantExclusion` to type `UpdateType`
 </details>
 
+**Checkout changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `ExpressContainerNotFound`
+- added type `ExpressMultipleContainersFound`
+- added type `ExpressPaymentCancelled`
+- added type `ExpressPaymentCompleted`
+- added type `ExpressPaymentFailed`
+- added type `ExpressPaymentIntegrationNotAvailable`
+- added type `ExpressPaymentInterrupted`
+- added type `ExpressPaymentStarted`
+- added type `NoExpressPaymentIntegrations`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `Express` to type `PaymentComponentType`
+</details>
+

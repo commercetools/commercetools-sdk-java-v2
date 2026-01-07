@@ -75,6 +75,38 @@ public class MessageBuilder {
         return com.commercetools.checkout.models.responses.ExpiredSessionBuilder.of();
     }
 
+    public com.commercetools.checkout.models.responses.ExpressContainerNotFoundBuilder expressContainerNotFoundBuilder() {
+        return com.commercetools.checkout.models.responses.ExpressContainerNotFoundBuilder.of();
+    }
+
+    public com.commercetools.checkout.models.responses.ExpressMultipleContainersFoundBuilder expressMultipleContainersFoundBuilder() {
+        return com.commercetools.checkout.models.responses.ExpressMultipleContainersFoundBuilder.of();
+    }
+
+    public com.commercetools.checkout.models.responses.ExpressPaymentCancelledBuilder expressPaymentCancelledBuilder() {
+        return com.commercetools.checkout.models.responses.ExpressPaymentCancelledBuilder.of();
+    }
+
+    public com.commercetools.checkout.models.responses.ExpressPaymentCompletedBuilder expressPaymentCompletedBuilder() {
+        return com.commercetools.checkout.models.responses.ExpressPaymentCompletedBuilder.of();
+    }
+
+    public com.commercetools.checkout.models.responses.ExpressPaymentFailedBuilder expressPaymentFailedBuilder() {
+        return com.commercetools.checkout.models.responses.ExpressPaymentFailedBuilder.of();
+    }
+
+    public com.commercetools.checkout.models.responses.ExpressPaymentIntegrationNotAvailableBuilder expressPaymentIntegrationNotAvailableBuilder() {
+        return com.commercetools.checkout.models.responses.ExpressPaymentIntegrationNotAvailableBuilder.of();
+    }
+
+    public com.commercetools.checkout.models.responses.ExpressPaymentInterruptedBuilder expressPaymentInterruptedBuilder() {
+        return com.commercetools.checkout.models.responses.ExpressPaymentInterruptedBuilder.of();
+    }
+
+    public com.commercetools.checkout.models.responses.ExpressPaymentStartedBuilder expressPaymentStartedBuilder() {
+        return com.commercetools.checkout.models.responses.ExpressPaymentStartedBuilder.of();
+    }
+
     public com.commercetools.checkout.models.responses.ExternalTermsAndConditionsPendingBuilder externalTermsAndConditionsPendingBuilder() {
         return com.commercetools.checkout.models.responses.ExternalTermsAndConditionsPendingBuilder.of();
     }
@@ -129,6 +161,10 @@ public class MessageBuilder {
 
     public com.commercetools.checkout.models.responses.MultipleVendorButtonContainersBuilder multipleVendorButtonContainersBuilder() {
         return com.commercetools.checkout.models.responses.MultipleVendorButtonContainersBuilder.of();
+    }
+
+    public com.commercetools.checkout.models.responses.NoExpressPaymentIntegrationsBuilder noExpressPaymentIntegrationsBuilder() {
+        return com.commercetools.checkout.models.responses.NoExpressPaymentIntegrationsBuilder.of();
     }
 
     public com.commercetools.checkout.models.responses.NoPaymentIntegrationsBuilder noPaymentIntegrationsBuilder() {

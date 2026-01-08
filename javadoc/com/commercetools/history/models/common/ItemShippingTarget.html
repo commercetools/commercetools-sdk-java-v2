@@ -73,7 +73,8 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ItemShippingTarget</span></div>
-<div class="block">ItemShippingTarget
+<div class="block"><p>Determines the address (as a reference to an address in <code>itemShippingAddresses</code>) and the quantity shipped to the address.</p>
+  <p>If multiple shipping addresses are present for a Line Item or Custom Line Item, sub-quantities must be specified. An array of addresses and sub-quantities is stored per Line Item or Custom Line Item.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -81,7 +82,7 @@ loadScripts(document, 'script');</script>
  <pre><code class='java'>
      ItemShippingTarget itemShippingTarget = ItemShippingTarget.builder()
              .addressKey("{addressKey}")
-             .quantity(1)
+             .quantity(0.3)
              .build()
  </code></pre>
  </div></div>
@@ -120,32 +121,42 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAddressKey()" class="member-name-link">getAddressKey</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The key of the address in the cart's <code>itemShippingAddresses</code></div>
+<div class="block">Key of the address in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> <code>itemShippingAddresses</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getQuantity()" class="member-name-link">getQuantity</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The quantity of items that should go to the address with the specified <code>addressKey</code>.</div>
+<div class="block">Quantity of Line Items or Custom Line Items shipped to the address with the specified <code>addressKey</code>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
-<div class="block">factory method</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getShippingMethodKey()" class="member-name-link">getShippingMethodKey</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.history.models.common.ItemShippingTarget)" class="member-name-link">of</a><wbr>(<a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a>&nbsp;template)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">factory method</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.history.models.common.ItemShippingTarget)" class="member-name-link">of</a><wbr>(<a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a>&nbsp;template)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a shallow copy ItemShippingTarget</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAddressKey(java.lang.String)" class="member-name-link">setAddressKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;addressKey)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Key of the address in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> <code>itemShippingAddresses</code>.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAddressKey(java.lang.String)" class="member-name-link">setAddressKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;addressKey)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setQuantity(java.lang.Long)" class="member-name-link">setQuantity</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantity)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The key of the address in the cart's <code>itemShippingAddresses</code></div>
+<div class="block">Quantity of Line Items or Custom Line Items shipped to the address with the specified <code>addressKey</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setQuantity(java.lang.Integer)" class="member-name-link">setQuantity</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;quantity)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setShippingMethodKey(java.lang.String)" class="member-name-link">setShippingMethodKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;shippingMethodKey)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The quantity of items that should go to the address with the specified <code>addressKey</code>.</div>
+<div class="block">User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -176,7 +187,7 @@ loadScripts(document, 'script');</script>
 <h3>getAddressKey</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getAddressKey</span>()</div>
-<div class="block"><p>The key of the address in the cart's <code>itemShippingAddresses</code></p></div>
+<div class="block"><p>Key of the address in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> <code>itemShippingAddresses</code>. Duplicate address keys are not allowed.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>addressKey</dd>
@@ -187,8 +198,9 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getQuantity()">
 <h3>getQuantity</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getQuantity</span>()</div>
-<div class="block"><p>The quantity of items that should go to the address with the specified <code>addressKey</code>. Only positive values are allowed. Using <code>0</code> as quantity is also possible in a draft object, but the element will not be present in the resulting ItemShippingDetails.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getQuantity</span>()</div>
+<div class="block"><p>Quantity of Line Items or Custom Line Items shipped to the address with the specified <code>addressKey</code>.</p>
+  <p>If a quantity is updated to <code>0</code> when defining <a href="https://docs.commercetools.com/apis/ctp:api:type:ItemShippingDetailsDraft" rel="nofollow">ItemShippingDetailsDraft</a>, the <code>targets</code> are removed from a Line Item or Custom Line Item in the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ItemShippingDetails" rel="nofollow">ItemShippingDetails</a>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>quantity</dd>
@@ -196,10 +208,22 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="getShippingMethodKey()">
+<h3>getShippingMethodKey</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getShippingMethodKey</span>()</div>
+<div class="block"><p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+  <p>It connects Line Item or Custom Line Item quantities with individual Shipping Methods.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>shippingMethodKey</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setAddressKey(java.lang.String)">
 <h3>setAddressKey</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setAddressKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;addressKey)</span></div>
-<div class="block"><p>The key of the address in the cart's <code>itemShippingAddresses</code></p></div>
+<div class="block"><p>Key of the address in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> <code>itemShippingAddresses</code>. Duplicate address keys are not allowed.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>addressKey</code> - value to be set</dd>
@@ -207,13 +231,26 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="setQuantity(java.lang.Integer)">
+<section class="detail" id="setQuantity(java.lang.Long)">
 <h3>setQuantity</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setQuantity</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;quantity)</span></div>
-<div class="block"><p>The quantity of items that should go to the address with the specified <code>addressKey</code>. Only positive values are allowed. Using <code>0</code> as quantity is also possible in a draft object, but the element will not be present in the resulting ItemShippingDetails.</p></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setQuantity</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantity)</span></div>
+<div class="block"><p>Quantity of Line Items or Custom Line Items shipped to the address with the specified <code>addressKey</code>.</p>
+  <p>If a quantity is updated to <code>0</code> when defining <a href="https://docs.commercetools.com/apis/ctp:api:type:ItemShippingDetailsDraft" rel="nofollow">ItemShippingDetailsDraft</a>, the <code>targets</code> are removed from a Line Item or Custom Line Item in the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ItemShippingDetails" rel="nofollow">ItemShippingDetails</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>quantity</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setShippingMethodKey(java.lang.String)">
+<h3>setShippingMethodKey</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setShippingMethodKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;shippingMethodKey)</span></div>
+<div class="block"><p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+  <p>It connects Line Item or Custom Line Item quantities with individual Shipping Methods.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>shippingMethodKey</code> - value to be set</dd>
 </dl>
 </section>
 </li>

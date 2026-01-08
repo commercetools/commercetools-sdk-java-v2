@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">AssetSource</span></div>
-<div class="block">AssetSource
+<div class="block"><p>Representation of an <span>Asset</span> in a specific format, for example a video in a certain encoding, or an image in a certain resolution.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -81,9 +81,6 @@ loadScripts(document, 'script');</script>
  <pre><code class='java'>
      AssetSource assetSource = AssetSource.builder()
              .uri("{uri}")
-             .key("{key}")
-             .dimensions(dimensionsBuilder -> dimensionsBuilder)
-             .contentType("{contentType}")
              .build()
  </code></pre>
  </div></div>
@@ -119,18 +116,26 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of AssetSource</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getContentType()" class="member-name-link">getContentType</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="AssetDimensions.html" title="interface in com.commercetools.history.models.common">AssetDimensions</a></code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Indicates the type of content, for example <code>application/pdf</code>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="AssetDimensions.html" title="interface in com.commercetools.history.models.common">AssetDimensions</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDimensions()" class="member-name-link">getDimensions</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Width and height of the AssetSource.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getKey()" class="member-name-link">getKey</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">User-defined identifier of the AssetSource.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUri()" class="member-name-link">getUri</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">URI of the AssetSource.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="AssetSource.html" title="interface in com.commercetools.history.models.common">AssetSource</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
@@ -144,22 +149,22 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setContentType(java.lang.String)" class="member-name-link">setContentType</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;contentType)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set contentType</div>
+<div class="block">Indicates the type of content, for example <code>application/pdf</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setDimensions(com.commercetools.history.models.common.AssetDimensions)" class="member-name-link">setDimensions</a><wbr>(<a href="AssetDimensions.html" title="interface in com.commercetools.history.models.common">AssetDimensions</a>&nbsp;dimensions)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set dimensions</div>
+<div class="block">Width and height of the AssetSource.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setKey(java.lang.String)" class="member-name-link">setKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set key</div>
+<div class="block">User-defined identifier of the AssetSource.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setUri(java.lang.String)" class="member-name-link">setUri</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;uri)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set uri</div>
+<div class="block">URI of the AssetSource.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="AssetSource.html" title="interface in com.commercetools.history.models.common">AssetSource</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -190,6 +195,7 @@ loadScripts(document, 'script');</script>
 <h3>getUri</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getUri</span>()</div>
+<div class="block"><p>URI of the AssetSource.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>uri</dd>
@@ -199,8 +205,8 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
+<div class="block"><p>User-defined identifier of the AssetSource. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:Asset" rel="nofollow">Asset</a>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>key</dd>
@@ -210,9 +216,9 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getDimensions()">
 <h3>getDimensions</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-@Valid
-</span><span class="return-type">@NotNull @Valid <a href="AssetDimensions.html" title="interface in com.commercetools.history.models.common">AssetDimensions</a></span>&nbsp;<span class="element-name">getDimensions</span>()</div>
+<div class="member-signature"><span class="annotations">@Valid
+</span><span class="return-type">@Valid <a href="AssetDimensions.html" title="interface in com.commercetools.history.models.common">AssetDimensions</a></span>&nbsp;<span class="element-name">getDimensions</span>()</div>
+<div class="block"><p>Width and height of the AssetSource.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>dimensions</dd>
@@ -222,8 +228,8 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getContentType()">
 <h3>getContentType</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getContentType</span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getContentType</span>()</div>
+<div class="block"><p>Indicates the type of content, for example <code>application/pdf</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>contentType</dd>
@@ -234,7 +240,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setUri(java.lang.String)">
 <h3>setUri</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setUri</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;uri)</span></div>
-<div class="block">set uri</div>
+<div class="block"><p>URI of the AssetSource.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>uri</code> - value to be set</dd>
@@ -245,7 +251,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
-<div class="block">set key</div>
+<div class="block"><p>User-defined identifier of the AssetSource. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:Asset" rel="nofollow">Asset</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>key</code> - value to be set</dd>
@@ -256,7 +262,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setDimensions(com.commercetools.history.models.common.AssetDimensions)">
 <h3>setDimensions</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setDimensions</span><wbr><span class="parameters">(<a href="AssetDimensions.html" title="interface in com.commercetools.history.models.common">AssetDimensions</a>&nbsp;dimensions)</span></div>
-<div class="block">set dimensions</div>
+<div class="block"><p>Width and height of the AssetSource.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>dimensions</code> - value to be set</dd>
@@ -267,7 +273,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setContentType(java.lang.String)">
 <h3>setContentType</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setContentType</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;contentType)</span></div>
-<div class="block">set contentType</div>
+<div class="block"><p>Indicates the type of content, for example <code>application/pdf</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>contentType</code> - value to be set</dd>

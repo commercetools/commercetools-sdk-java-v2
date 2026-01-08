@@ -89,6 +89,8 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
              .previousValue(previousValueBuilder -> previousValueBuilder)
              .nextValue(nextValueBuilder -> nextValueBuilder)
              .catalogData("{catalogData}")
+             .variant("{variant}")
+             .priceId("{priceId}")
              .build()
  </code></pre>
  </div></div>
@@ -144,10 +146,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCatalogData()" class="member-name-link">getCatalogData</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
-   <code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.
-   <code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.
-  </div>
+<div class="block">Product data that was updated.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getChange()" class="member-name-link">getChange</a>()</code></div>
@@ -165,9 +164,19 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <div class="block">Value before the change.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPriceId()" class="member-name-link">getPriceId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>id</code> of the Embedded <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Unique discriminator value to reliably deserialize the data type.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVariant()" class="member-name-link">getVariant</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Identifier of the updated Product Variant.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="SetProductPriceCustomTypeChange.html" title="interface in com.commercetools.history.models.change">SetProductPriceCustomTypeChange</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -182,10 +191,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCatalogData(java.lang.String)" class="member-name-link">setCatalogData</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;catalogData)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
-   <code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.
-   <code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.
-  </div>
+<div class="block">Product data that was updated.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setChange(java.lang.String)" class="member-name-link">setChange</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</code></div>
@@ -201,6 +207,16 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setPreviousValue(com.commercetools.history.models.common.CustomFields)" class="member-name-link">setPreviousValue</a><wbr>(<a href="../common/CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a>&nbsp;previousValue)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Value before the change.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setPriceId(java.lang.String)" class="member-name-link">setPriceId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;priceId)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>id</code> of the Embedded <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setVariant(java.lang.String)" class="member-name-link">setVariant</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;variant)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Identifier of the updated Product Variant.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SetProductPriceCustomTypeChange.html" title="interface in com.commercetools.history.models.change">SetProductPriceCustomTypeChange</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -314,13 +330,39 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <h3>getCatalogData</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCatalogData</span>()</div>
-<div class="block"><ul>
+<div class="block"><p>Product data that was updated.</p>
+  <ul>
    <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
    <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
   </ul></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>catalogData</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getVariant()">
+<h3>getVariant</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getVariant</span>()</div>
+<div class="block"><p>Identifier of the updated Product Variant.</p>
+  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>variant</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPriceId()">
+<h3>getPriceId</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getPriceId</span>()</div>
+<div class="block"><p><code>id</code> of the Embedded <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>priceId</dd>
 </dl>
 </section>
 </li>
@@ -363,13 +405,37 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="setCatalogData(java.lang.String)">
 <h3>setCatalogData</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCatalogData</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;catalogData)</span></div>
-<div class="block"><ul>
+<div class="block"><p>Product data that was updated.</p>
+  <ul>
    <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
    <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
   </ul></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>catalogData</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setVariant(java.lang.String)">
+<h3>setVariant</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setVariant</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;variant)</span></div>
+<div class="block"><p>Identifier of the updated Product Variant.</p>
+  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>variant</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setPriceId(java.lang.String)">
+<h3>setPriceId</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setPriceId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;priceId)</span></div>
+<div class="block"><p><code>id</code> of the Embedded <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>priceId</code> - value to be set</dd>
 </dl>
 </section>
 </li>

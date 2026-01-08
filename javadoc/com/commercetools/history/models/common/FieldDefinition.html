@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">FieldDefinition</span></div>
-<div class="block">FieldDefinition
+<div class="block"><p>Defines a <span>Custom Field</span> and its meta-information. This FieldDefinition is similar to an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> of <span>Product Types</span>.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -83,7 +83,7 @@ loadScripts(document, 'script');</script>
              .type(typeBuilder -> typeBuilder)
              .name("{name}")
              .label(labelBuilder -> labelBuilder)
-             .inputHint(TextInputHint.SINGLE_LINE)
+             .required(true)
              .build()
  </code></pre>
  </div></div>
@@ -119,49 +119,65 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of FieldDefinition</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="TextInputHint.html" title="interface in com.commercetools.history.models.common">TextInputHint</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="TypeTextInputHint.html" title="interface in com.commercetools.history.models.common">TypeTextInputHint</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getInputHint()" class="member-name-link">getInputHint</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Defines the visual representation of the field in user interfaces like the Merchant Center.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLabel()" class="member-name-link">getLabel</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">A human-readable label for the field.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The name of the field.</div>
+<div class="block">Name of the Custom Field to define.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="FieldType.html" title="interface in com.commercetools.history.models.common">FieldType</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="FieldDefinition.html" title="interface in com.commercetools.history.models.common">FieldDefinition</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
-<div class="block">factory method</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRequired()" class="member-name-link">getRequired</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Defines whether the field is required to have a value.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="FieldType.html" title="interface in com.commercetools.history.models.common">FieldType</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Data type of the Custom Field to define.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="FieldDefinition.html" title="interface in com.commercetools.history.models.common">FieldDefinition</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.history.models.common.FieldDefinition)" class="member-name-link">of</a><wbr>(<a href="FieldDefinition.html" title="interface in com.commercetools.history.models.common">FieldDefinition</a>&nbsp;template)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">factory method</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="FieldDefinition.html" title="interface in com.commercetools.history.models.common">FieldDefinition</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.history.models.common.FieldDefinition)" class="member-name-link">of</a><wbr>(<a href="FieldDefinition.html" title="interface in com.commercetools.history.models.common">FieldDefinition</a>&nbsp;template)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a shallow copy FieldDefinition</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setInputHint(com.commercetools.history.models.common.TypeTextInputHint)" class="member-name-link">setInputHint</a><wbr>(<a href="TypeTextInputHint.html" title="interface in com.commercetools.history.models.common">TypeTextInputHint</a>&nbsp;inputHint)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Defines the visual representation of the field in user interfaces like the Merchant Center.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setInputHint(com.commercetools.history.models.common.TextInputHint)" class="member-name-link">setInputHint</a><wbr>(<a href="TextInputHint.html" title="interface in com.commercetools.history.models.common">TextInputHint</a>&nbsp;inputHint)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setLabel(com.commercetools.history.models.common.LocalizedString)" class="member-name-link">setLabel</a><wbr>(<a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;label)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set inputHint</div>
+<div class="block">A human-readable label for the field.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setLabel(com.commercetools.history.models.common.LocalizedString)" class="member-name-link">setLabel</a><wbr>(<a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;label)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setName(java.lang.String)" class="member-name-link">setName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set label</div>
+<div class="block">Name of the Custom Field to define.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setName(java.lang.String)" class="member-name-link">setName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setRequired(java.lang.Boolean)" class="member-name-link">setRequired</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;required)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The name of the field.</div>
+<div class="block">Defines whether the field is required to have a value.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setType(com.commercetools.history.models.common.FieldType)" class="member-name-link">setType</a><wbr>(<a href="FieldType.html" title="interface in com.commercetools.history.models.common">FieldType</a>&nbsp;type)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set type</div>
+<div class="block">Data type of the Custom Field to define.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="FieldDefinition.html" title="interface in com.commercetools.history.models.common">FieldDefinition</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -193,6 +209,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="FieldType.html" title="interface in com.commercetools.history.models.common">FieldType</a></span>&nbsp;<span class="element-name">getType</span>()</div>
+<div class="block"><p>Data type of the Custom Field to define.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>type</dd>
@@ -204,7 +221,7 @@ loadScripts(document, 'script');</script>
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getName</span>()</div>
-<div class="block"><p>The name of the field. The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). The name must be unique for a given resource type ID. In case there is a field with the same name in another type it has to have the same FieldType also.</p></div>
+<div class="block"><p>Name of the Custom Field to define. Must be unique for a given <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>. In case there is a FieldDefinition with the same <code>name</code> in another <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>, both FieldDefinitions must have the same <code>type</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>name</dd>
@@ -217,6 +234,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></span>&nbsp;<span class="element-name">getLabel</span>()</div>
+<div class="block"><p>A human-readable label for the field.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>label</dd>
@@ -224,10 +242,22 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="getRequired()">
+<h3>getRequired</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getRequired</span>()</div>
+<div class="block"><p>Defines whether the field is required to have a value.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>required</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getInputHint()">
 <h3>getInputHint</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="TextInputHint.html" title="interface in com.commercetools.history.models.common">TextInputHint</a></span>&nbsp;<span class="element-name">getInputHint</span>()</div>
+<div class="member-signature"><span class="return-type"><a href="TypeTextInputHint.html" title="interface in com.commercetools.history.models.common">TypeTextInputHint</a></span>&nbsp;<span class="element-name">getInputHint</span>()</div>
+<div class="block"><p>Defines the visual representation of the field in user interfaces like the Merchant Center. It is only relevant for string-based <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldTypes</a> like <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldStringType" rel="nofollow">CustomFieldStringType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedStringType" rel="nofollow">CustomFieldLocalizedStringType</a>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>inputHint</dd>
@@ -238,7 +268,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setType(com.commercetools.history.models.common.FieldType)">
 <h3>setType</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setType</span><wbr><span class="parameters">(<a href="FieldType.html" title="interface in com.commercetools.history.models.common">FieldType</a>&nbsp;type)</span></div>
-<div class="block">set type</div>
+<div class="block"><p>Data type of the Custom Field to define.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>type</code> - value to be set</dd>
@@ -249,7 +279,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setName(java.lang.String)">
 <h3>setName</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setName</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
-<div class="block"><p>The name of the field. The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). The name must be unique for a given resource type ID. In case there is a field with the same name in another type it has to have the same FieldType also.</p></div>
+<div class="block"><p>Name of the Custom Field to define. Must be unique for a given <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>. In case there is a FieldDefinition with the same <code>name</code> in another <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>, both FieldDefinitions must have the same <code>type</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>name</code> - value to be set</dd>
@@ -260,7 +290,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setLabel(com.commercetools.history.models.common.LocalizedString)">
 <h3>setLabel</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setLabel</span><wbr><span class="parameters">(<a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;label)</span></div>
-<div class="block">set label</div>
+<div class="block"><p>A human-readable label for the field.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>label</code> - value to be set</dd>
@@ -268,10 +298,21 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="setInputHint(com.commercetools.history.models.common.TextInputHint)">
+<section class="detail" id="setRequired(java.lang.Boolean)">
+<h3>setRequired</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setRequired</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;required)</span></div>
+<div class="block"><p>Defines whether the field is required to have a value.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>required</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setInputHint(com.commercetools.history.models.common.TypeTextInputHint)">
 <h3>setInputHint</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setInputHint</span><wbr><span class="parameters">(<a href="TextInputHint.html" title="interface in com.commercetools.history.models.common">TextInputHint</a>&nbsp;inputHint)</span></div>
-<div class="block">set inputHint</div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setInputHint</span><wbr><span class="parameters">(<a href="TypeTextInputHint.html" title="interface in com.commercetools.history.models.common">TypeTextInputHint</a>&nbsp;inputHint)</span></div>
+<div class="block"><p>Defines the visual representation of the field in user interfaces like the Merchant Center. It is only relevant for string-based <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldTypes</a> like <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldStringType" rel="nofollow">CustomFieldStringType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedStringType" rel="nofollow">CustomFieldLocalizedStringType</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>inputHint</code> - value to be set</dd>

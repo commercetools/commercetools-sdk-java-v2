@@ -202,7 +202,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <h3>TRACK_ONLY</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="InventoryMode.html" title="interface in com.commercetools.api.models.cart">InventoryMode</a></span>&nbsp;<span class="element-name">TRACK_ONLY</span></div>
 <div class="block"><p>Orders are tracked on the Inventory, and ordering a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> deducts the available quantity on the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
-    <p>An <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders:POST" rel="nofollow">Order can be created</a> even if the Line Item quantity is zero or negative, but if no matching Inventory Entry exists for the Line Item, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OutOfStockError" rel="nofollow">OutOfStock</a> error is returned.</p></div>
+    <p>An <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders:POST" rel="nofollow">Order can be created</a> even if the Inventory Entry quantity is zero or negative. However, if no matching Inventory Entry exists for the Line Item, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OutOfStockError" rel="nofollow">OutOfStock</a> error is returned.</p></div>
 </section>
 </li>
 <li>

@@ -94,7 +94,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
              .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
              .email("{email}")
              .plusAddresses(addressesBuilder -> addressesBuilder)
+             .plusShippingAddressIds(shippingAddressIdsBuilder -> shippingAddressIdsBuilder)
+             .plusBillingAddressIds(billingAddressIdsBuilder -> billingAddressIdsBuilder)
              .isEmailVerified(true)
+             .plusCustomerGroupAssignments(customerGroupAssignmentsBuilder -> customerGroupAssignmentsBuilder)
              .plusStores(storesBuilder -> storesBuilder)
              .authenticationMode(AuthenticationMode.PASSWORD)
              .build()
@@ -1046,8 +1049,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="shippingAddressIds(java.lang.String...)">
 <h3>shippingAddressIds</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a></span>&nbsp;<span class="element-name">shippingAddressIds</span><wbr><span class="parameters">(@Nullable
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;shippingAddressIds)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a></span>&nbsp;<span class="element-name">shippingAddressIds</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;shippingAddressIds)</span></div>
 <div class="block"><p>IDs of addresses in <code>addresses</code> used as shipping addresses.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -1060,8 +1062,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="shippingAddressIds(java.util.List)">
 <h3>shippingAddressIds</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a></span>&nbsp;<span class="element-name">shippingAddressIds</span><wbr><span class="parameters">(@Nullable
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;shippingAddressIds)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a></span>&nbsp;<span class="element-name">shippingAddressIds</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;shippingAddressIds)</span></div>
 <div class="block"><p>IDs of addresses in <code>addresses</code> used as shipping addresses.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -1074,8 +1075,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusShippingAddressIds(java.lang.String...)">
 <h3>plusShippingAddressIds</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a></span>&nbsp;<span class="element-name">plusShippingAddressIds</span><wbr><span class="parameters">(@Nullable
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;shippingAddressIds)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a></span>&nbsp;<span class="element-name">plusShippingAddressIds</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;shippingAddressIds)</span></div>
 <div class="block"><p>IDs of addresses in <code>addresses</code> used as shipping addresses.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -1102,8 +1102,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="billingAddressIds(java.lang.String...)">
 <h3>billingAddressIds</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a></span>&nbsp;<span class="element-name">billingAddressIds</span><wbr><span class="parameters">(@Nullable
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;billingAddressIds)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a></span>&nbsp;<span class="element-name">billingAddressIds</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;billingAddressIds)</span></div>
 <div class="block"><p>IDs of addresses in <code>addresses</code> used as billing addresses.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -1116,8 +1115,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="billingAddressIds(java.util.List)">
 <h3>billingAddressIds</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a></span>&nbsp;<span class="element-name">billingAddressIds</span><wbr><span class="parameters">(@Nullable
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;billingAddressIds)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a></span>&nbsp;<span class="element-name">billingAddressIds</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;billingAddressIds)</span></div>
 <div class="block"><p>IDs of addresses in <code>addresses</code> used as billing addresses.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -1130,8 +1128,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusBillingAddressIds(java.lang.String...)">
 <h3>plusBillingAddressIds</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a></span>&nbsp;<span class="element-name">plusBillingAddressIds</span><wbr><span class="parameters">(@Nullable
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;billingAddressIds)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a></span>&nbsp;<span class="element-name">plusBillingAddressIds</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;billingAddressIds)</span></div>
 <div class="block"><p>IDs of addresses in <code>addresses</code> used as billing addresses.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -1197,8 +1194,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="customerGroupAssignments(com.commercetools.api.models.customer.CustomerGroupAssignment...)">
 <h3>customerGroupAssignments</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a></span>&nbsp;<span class="element-name">customerGroupAssignments</span><wbr><span class="parameters">(@Nullable
- <a href="CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>...&nbsp;customerGroupAssignments)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a></span>&nbsp;<span class="element-name">customerGroupAssignments</span><wbr><span class="parameters">(<a href="CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>...&nbsp;customerGroupAssignments)</span></div>
 <div class="block"><p>Customer Groups that the Customer belongs to.</p>
   <p>Used for <span>Line Item price selection</span>.</p></div>
 <dl class="notes">
@@ -1212,8 +1208,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="customerGroupAssignments(java.util.List)">
 <h3>customerGroupAssignments</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a></span>&nbsp;<span class="element-name">customerGroupAssignments</span><wbr><span class="parameters">(@Nullable
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>&gt;&nbsp;customerGroupAssignments)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a></span>&nbsp;<span class="element-name">customerGroupAssignments</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>&gt;&nbsp;customerGroupAssignments)</span></div>
 <div class="block"><p>Customer Groups that the Customer belongs to.</p>
   <p>Used for <span>Line Item price selection</span>.</p></div>
 <dl class="notes">
@@ -1227,8 +1222,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusCustomerGroupAssignments(com.commercetools.api.models.customer.CustomerGroupAssignment...)">
 <h3>plusCustomerGroupAssignments</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a></span>&nbsp;<span class="element-name">plusCustomerGroupAssignments</span><wbr><span class="parameters">(@Nullable
- <a href="CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>...&nbsp;customerGroupAssignments)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a></span>&nbsp;<span class="element-name">plusCustomerGroupAssignments</span><wbr><span class="parameters">(<a href="CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>...&nbsp;customerGroupAssignments)</span></div>
 <div class="block"><p>Customer Groups that the Customer belongs to.</p>
   <p>Used for <span>Line Item price selection</span>.</p></div>
 <dl class="notes">
@@ -1733,8 +1727,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getShippingAddressIds()">
 <h3>getShippingAddressIds</h3>
-<div class="member-signature"><span class="annotations">@Nullable
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getShippingAddressIds</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getShippingAddressIds</span>()</div>
 <div class="block"><p>IDs of addresses in <code>addresses</code> used as shipping addresses.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -1757,8 +1750,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getBillingAddressIds()">
 <h3>getBillingAddressIds</h3>
-<div class="member-signature"><span class="annotations">@Nullable
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getBillingAddressIds</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getBillingAddressIds</span>()</div>
 <div class="block"><p>IDs of addresses in <code>addresses</code> used as billing addresses.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -1792,8 +1784,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getCustomerGroupAssignments()">
 <h3>getCustomerGroupAssignments</h3>
-<div class="member-signature"><span class="annotations">@Nullable
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>&gt;</span>&nbsp;<span class="element-name">getCustomerGroupAssignments</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>&gt;</span>&nbsp;<span class="element-name">getCustomerGroupAssignments</span>()</div>
 <div class="block"><p>Customer Groups that the Customer belongs to.</p>
   <p>Used for <span>Line Item price selection</span>.</p></div>
 <dl class="notes">

@@ -93,6 +93,7 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
              .resource(resourceBuilder -> resourceBuilder)
              .resourceVersion(0.3)
              .email("{email}")
+             .oldEmail("{oldEmail}")
              .build()
  </code></pre>
  </div></div>
@@ -150,20 +151,30 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">The <code>email</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CustomerEmailChangedMessage.html" title="interface in com.commercetools.api.models.message">CustomerEmailChangedMessage</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
-<div class="block">factory method</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOldEmail()" class="member-name-link">getOldEmail</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">The <code>email</code> that was set before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CustomerEmailChangedMessage.html" title="interface in com.commercetools.api.models.message">CustomerEmailChangedMessage</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.api.models.message.CustomerEmailChangedMessage)" class="member-name-link">of</a><wbr>(<a href="CustomerEmailChangedMessage.html" title="interface in com.commercetools.api.models.message">CustomerEmailChangedMessage</a>&nbsp;template)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">factory method</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CustomerEmailChangedMessage.html" title="interface in com.commercetools.api.models.message">CustomerEmailChangedMessage</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.api.models.message.CustomerEmailChangedMessage)" class="member-name-link">of</a><wbr>(<a href="CustomerEmailChangedMessage.html" title="interface in com.commercetools.api.models.message">CustomerEmailChangedMessage</a>&nbsp;template)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a shallow copy CustomerEmailChangedMessage</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setEmail(java.lang.String)" class="member-name-link">setEmail</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;email)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setEmail(java.lang.String)" class="member-name-link">setEmail</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;email)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">The <code>email</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setOldEmail(java.lang.String)" class="member-name-link">setOldEmail</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;oldEmail)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">The <code>email</code> that was set before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CustomerEmailChangedMessage.html" title="interface in com.commercetools.api.models.message">CustomerEmailChangedMessage</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -234,6 +245,18 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 </section>
 </li>
 <li>
+<section class="detail" id="getOldEmail()">
+<h3>getOldEmail</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getOldEmail</span>()</div>
+<div class="block"><p>The <code>email</code> that was set before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>oldEmail</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setEmail(java.lang.String)">
 <h3>setEmail</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setEmail</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;email)</span></div>
@@ -241,6 +264,17 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>email</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setOldEmail(java.lang.String)">
+<h3>setOldEmail</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setOldEmail</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;oldEmail)</span></div>
+<div class="block"><p>The <code>email</code> that was set before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>oldEmail</code> - value to be set</dd>
 </dl>
 </section>
 </li>

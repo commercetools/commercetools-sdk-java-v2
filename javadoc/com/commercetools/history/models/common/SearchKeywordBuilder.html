@@ -89,7 +89,6 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
  <pre><code class='java'>
      SearchKeyword searchKeyword = SearchKeyword.builder()
              .text("{text}")
-             .suggestTokenizer(suggestTokenizerBuilder -> suggestTokenizerBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -133,12 +132,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SuggestTokenizer.html" title="interface in com.commercetools.history.models.common">SuggestTokenizer</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSuggestTokenizer()" class="member-name-link">getSuggestTokenizer</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of suggestTokenizer}</div>
+<div class="block">If no tokenizer is defined, the <code>text</code> is used as a single token.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getText()" class="member-name-link">getText</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of text}</div>
+<div class="block">Text to return in the <a href="https://docs.commercetools.com/apis/ctp:api:type:SuggestionResult" rel="nofollow">SuggestionResult</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="SearchKeywordBuilder.html" title="class in com.commercetools.history.models.common">SearchKeywordBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -153,22 +152,22 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SearchKeywordBuilder.html" title="class in com.commercetools.history.models.common">SearchKeywordBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#suggestTokenizer(com.commercetools.history.models.common.SuggestTokenizer)" class="member-name-link">suggestTokenizer</a><wbr>(<a href="SuggestTokenizer.html" title="interface in com.commercetools.history.models.common">SuggestTokenizer</a>&nbsp;suggestTokenizer)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the suggestTokenizer</div>
+<div class="block">If no tokenizer is defined, the <code>text</code> is used as a single token.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SearchKeywordBuilder.html" title="class in com.commercetools.history.models.common">SearchKeywordBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#suggestTokenizer(java.util.function.Function)" class="member-name-link">suggestTokenizer</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SuggestTokenizerBuilder.html" title="class in com.commercetools.history.models.common">SuggestTokenizerBuilder</a>,<wbr><a href="SuggestTokenizerBuilder.html" title="class in com.commercetools.history.models.common">SuggestTokenizerBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the suggestTokenizer using the builder function</div>
+<div class="block">If no tokenizer is defined, the <code>text</code> is used as a single token.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SearchKeywordBuilder.html" title="class in com.commercetools.history.models.common">SearchKeywordBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#text(java.lang.String)" class="member-name-link">text</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the text</div>
+<div class="block">Text to return in the <a href="https://docs.commercetools.com/apis/ctp:api:type:SuggestionResult" rel="nofollow">SuggestionResult</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SearchKeywordBuilder.html" title="class in com.commercetools.history.models.common">SearchKeywordBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withSuggestTokenizer(java.util.function.Function)" class="member-name-link">withSuggestTokenizer</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SuggestTokenizerBuilder.html" title="class in com.commercetools.history.models.common">SuggestTokenizerBuilder</a>,<wbr><a href="SuggestTokenizer.html" title="interface in com.commercetools.history.models.common">SuggestTokenizer</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the suggestTokenizer using the builder function</div>
+<div class="block">If no tokenizer is defined, the <code>text</code> is used as a single token.</div>
 </div>
 </div>
 </div>
@@ -205,7 +204,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="text(java.lang.String)">
 <h3>text</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SearchKeywordBuilder.html" title="class in com.commercetools.history.models.common">SearchKeywordBuilder</a></span>&nbsp;<span class="element-name">text</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text)</span></div>
-<div class="block">set the value to the text</div>
+<div class="block"><p>Text to return in the <a href="https://docs.commercetools.com/apis/ctp:api:type:SuggestionResult" rel="nofollow">SuggestionResult</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>text</code> - value to be set</dd>
@@ -218,7 +217,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="suggestTokenizer(java.util.function.Function)">
 <h3>suggestTokenizer</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SearchKeywordBuilder.html" title="class in com.commercetools.history.models.common">SearchKeywordBuilder</a></span>&nbsp;<span class="element-name">suggestTokenizer</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SuggestTokenizerBuilder.html" title="class in com.commercetools.history.models.common">SuggestTokenizerBuilder</a>,<wbr><a href="SuggestTokenizerBuilder.html" title="class in com.commercetools.history.models.common">SuggestTokenizerBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the suggestTokenizer using the builder function</div>
+<div class="block"><p>If no tokenizer is defined, the <code>text</code> is used as a single token.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the suggestTokenizer value</dd>
@@ -231,7 +230,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withSuggestTokenizer(java.util.function.Function)">
 <h3>withSuggestTokenizer</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SearchKeywordBuilder.html" title="class in com.commercetools.history.models.common">SearchKeywordBuilder</a></span>&nbsp;<span class="element-name">withSuggestTokenizer</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SuggestTokenizerBuilder.html" title="class in com.commercetools.history.models.common">SuggestTokenizerBuilder</a>,<wbr><a href="SuggestTokenizer.html" title="interface in com.commercetools.history.models.common">SuggestTokenizer</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the suggestTokenizer using the builder function</div>
+<div class="block"><p>If no tokenizer is defined, the <code>text</code> is used as a single token.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the suggestTokenizer value</dd>
@@ -243,8 +242,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="suggestTokenizer(com.commercetools.history.models.common.SuggestTokenizer)">
 <h3>suggestTokenizer</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SearchKeywordBuilder.html" title="class in com.commercetools.history.models.common">SearchKeywordBuilder</a></span>&nbsp;<span class="element-name">suggestTokenizer</span><wbr><span class="parameters">(<a href="SuggestTokenizer.html" title="interface in com.commercetools.history.models.common">SuggestTokenizer</a>&nbsp;suggestTokenizer)</span></div>
-<div class="block">set the value to the suggestTokenizer</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SearchKeywordBuilder.html" title="class in com.commercetools.history.models.common">SearchKeywordBuilder</a></span>&nbsp;<span class="element-name">suggestTokenizer</span><wbr><span class="parameters">(@Nullable
+ <a href="SuggestTokenizer.html" title="interface in com.commercetools.history.models.common">SuggestTokenizer</a>&nbsp;suggestTokenizer)</span></div>
+<div class="block"><p>If no tokenizer is defined, the <code>text</code> is used as a single token.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>suggestTokenizer</code> - value to be set</dd>
@@ -257,7 +257,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getText()">
 <h3>getText</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getText</span>()</div>
-<div class="block">value of text}</div>
+<div class="block"><p>Text to return in the <a href="https://docs.commercetools.com/apis/ctp:api:type:SuggestionResult" rel="nofollow">SuggestionResult</a>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>text</dd>
@@ -267,8 +267,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getSuggestTokenizer()">
 <h3>getSuggestTokenizer</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SuggestTokenizer.html" title="interface in com.commercetools.history.models.common">SuggestTokenizer</a></span>&nbsp;<span class="element-name">getSuggestTokenizer</span>()</div>
-<div class="block">value of suggestTokenizer}</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SuggestTokenizer.html" title="interface in com.commercetools.history.models.common">SuggestTokenizer</a></span>&nbsp;<span class="element-name">getSuggestTokenizer</span>()</div>
+<div class="block"><p>If no tokenizer is defined, the <code>text</code> is used as a single token.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>suggestTokenizer</dd>

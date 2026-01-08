@@ -93,6 +93,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
              .previousValue(previousValueBuilder -> previousValueBuilder)
              .nextValue(nextValueBuilder -> nextValueBuilder)
              .customLineItemId("{customLineItemId}")
+             .customLineItem(customLineItemBuilder -> customLineItemBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -150,40 +151,50 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><span>Type of change</span> on a resource that is similar to the update action it relates to, where possible.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCustomLineItemId()" class="member-name-link">getCustomLineItemId</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCustomLineItem()" class="member-name-link">getCustomLineItem</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/ItemShippingDetails.html" title="interface in com.commercetools.history.models.common">ItemShippingDetails</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNextValue()" class="member-name-link">getNextValue</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Value after the change.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/ItemShippingDetails.html" title="interface in com.commercetools.history.models.common">ItemShippingDetails</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPreviousValue()" class="member-name-link">getPreviousValue</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Value before the change.</div>
+<div class="block">Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCustomLineItemId()" class="member-name-link">getCustomLineItemId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/ItemShippingDetails.html" title="interface in com.commercetools.history.models.common">ItemShippingDetails</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNextValue()" class="member-name-link">getNextValue</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Value after the change.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/ItemShippingDetails.html" title="interface in com.commercetools.history.models.common">ItemShippingDetails</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPreviousValue()" class="member-name-link">getPreviousValue</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Value before the change.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Unique discriminator value to reliably deserialize the data type.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="SetCustomLineItemShippingDetailsChange.html" title="interface in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChange</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="SetCustomLineItemShippingDetailsChange.html" title="interface in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChange</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="SetCustomLineItemShippingDetailsChange.html" title="interface in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChange</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.history.models.change.SetCustomLineItemShippingDetailsChange)" class="member-name-link">of</a><wbr>(<a href="SetCustomLineItemShippingDetailsChange.html" title="interface in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChange</a>&nbsp;template)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="SetCustomLineItemShippingDetailsChange.html" title="interface in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChange</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.history.models.change.SetCustomLineItemShippingDetailsChange)" class="member-name-link">of</a><wbr>(<a href="SetCustomLineItemShippingDetailsChange.html" title="interface in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChange</a>&nbsp;template)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a shallow copy SetCustomLineItemShippingDetailsChange</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setChange(java.lang.String)" class="member-name-link">setChange</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setChange(java.lang.String)" class="member-name-link">setChange</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">set change</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCustomLineItem(com.commercetools.history.models.common.LocalizedString)" class="member-name-link">setCustomLineItem</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;customLineItem)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCustomLineItemId(java.lang.String)" class="member-name-link">setCustomLineItemId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customLineItemId)</code></div>
@@ -320,6 +331,19 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 </section>
 </li>
 <li>
+<section class="detail" id="getCustomLineItem()">
+<h3>getCustomLineItem</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+@Valid
+</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></span>&nbsp;<span class="element-name">getCustomLineItem</span>()</div>
+<div class="block"><p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>customLineItem</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setChange(java.lang.String)">
 <h3>setChange</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setChange</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
@@ -362,6 +386,17 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>customLineItemId</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setCustomLineItem(com.commercetools.history.models.common.LocalizedString)">
+<h3>setCustomLineItem</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCustomLineItem</span><wbr><span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;customLineItem)</span></div>
+<div class="block"><p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>customLineItem</code> - value to be set</dd>
 </dl>
 </section>
 </li>

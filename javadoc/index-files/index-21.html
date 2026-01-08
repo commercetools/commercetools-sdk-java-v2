@@ -199,7 +199,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/history/models/change/UnpublishChange.html" class="type-name-link" title="interface in com.commercetools.history.models.change">UnpublishChange</a> - Interface in <a href="../com/commercetools/history/models/change/package-summary.html">com.commercetools.history.models.change</a></dt>
 <dd>
-<div class="block">Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductUnpublishAction" rel="nofollow">Unpublish</a> update action.</div>
+<div class="block">Change triggered when <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> <code>published</code> transitions from <code>true</code> to <code>false</code>.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/change/Change.html#unpublishChangeBuilder()" class="member-name-link">unpublishChangeBuilder()</a> - Static method in interface com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/Change.html" title="interface in com.commercetools.history.models.change">Change</a></dt>
 <dd>
@@ -497,11 +497,21 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">UpdateApprovalFlows</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/Permission.PermissionEnum.html#UPDATE_APPROVAL_FLOWS" class="member-name-link">UPDATE_APPROVAL_FLOWS</a> - Enum constant in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/Permission.PermissionEnum.html" title="enum in com.commercetools.history.models.common">Permission.PermissionEnum</a></dt>
+<dd>
+<div class="block">UpdateApprovalFlows</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/associate_role/Permission.html#UPDATE_APPROVAL_FLOWS" class="member-name-link">UPDATE_APPROVAL_FLOWS</a> - Static variable in interface com.commercetools.api.models.associate_role.<a href="../com/commercetools/api/models/associate_role/Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></dt>
 <dd>
 <div class="block">An Associate can update Approval Flows.</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/Permission.html#UPDATE_APPROVAL_FLOWS" class="member-name-link">UPDATE_APPROVAL_FLOWS</a> - Static variable in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/Permission.html" title="interface in com.commercetools.history.models.common">Permission</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/associate_role/Permission.PermissionEnum.html#UPDATE_APPROVAL_RULES" class="member-name-link">UPDATE_APPROVAL_RULES</a> - Enum constant in enum com.commercetools.api.models.associate_role.<a href="../com/commercetools/api/models/associate_role/Permission.PermissionEnum.html" title="enum in com.commercetools.api.models.associate_role">Permission.PermissionEnum</a></dt>
+<dd>
+<div class="block">UpdateApprovalRules</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/Permission.PermissionEnum.html#UPDATE_APPROVAL_RULES" class="member-name-link">UPDATE_APPROVAL_RULES</a> - Enum constant in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/Permission.PermissionEnum.html" title="enum in com.commercetools.history.models.common">Permission.PermissionEnum</a></dt>
 <dd>
 <div class="block">UpdateApprovalRules</div>
 </dd>
@@ -509,6 +519,8 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">An Associate can update Approval Rules.</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/Permission.html#UPDATE_APPROVAL_RULES" class="member-name-link">UPDATE_APPROVAL_RULES</a> - Static variable in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/Permission.html" title="interface in com.commercetools.history.models.common">Permission</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/associate_role/Permission.PermissionEnum.html#UPDATE_ASSOCIATES" class="member-name-link">UPDATE_ASSOCIATES</a> - Enum constant in enum com.commercetools.api.models.associate_role.<a href="../com/commercetools/api/models/associate_role/Permission.PermissionEnum.html" title="enum in com.commercetools.api.models.associate_role">Permission.PermissionEnum</a></dt>
 <dd>
 <div class="block">UpdateAssociates</div>
@@ -559,6 +571,10 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/history/models/change_history/UpdateType.html#UPDATE_ITEM_SHIPPING_ADDRESS" class="member-name-link">UPDATE_ITEM_SHIPPING_ADDRESS</a> - Static variable in interface com.commercetools.history.models.change_history.<a href="../com/commercetools/history/models/change_history/UpdateType.html" title="interface in com.commercetools.history.models.change_history">UpdateType</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/history/models/change/UpdateItemShippingAddressChange.html#UPDATE_ITEM_SHIPPING_ADDRESS_CHANGE" class="member-name-link">UPDATE_ITEM_SHIPPING_ADDRESS_CHANGE</a> - Static variable in interface com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/UpdateItemShippingAddressChange.html" title="interface in com.commercetools.history.models.change">UpdateItemShippingAddressChange</a></dt>
+<dd>
+<div class="block">discriminator value for UpdateItemShippingAddressChange</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/associate_role/Permission.PermissionEnum.html#UPDATE_MY_CARTS" class="member-name-link">UPDATE_MY_CARTS</a> - Enum constant in enum com.commercetools.api.models.associate_role.<a href="../com/commercetools/api/models/associate_role/Permission.PermissionEnum.html" title="enum in com.commercetools.api.models.associate_role">Permission.PermissionEnum</a></dt>
 <dd>
 <div class="block">UpdateMyCarts</div>
@@ -605,10 +621,16 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">UpdateMyShoppingLists</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/Permission.PermissionEnum.html#UPDATE_MY_SHOPPING_LISTS" class="member-name-link">UPDATE_MY_SHOPPING_LISTS</a> - Enum constant in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/Permission.PermissionEnum.html" title="enum in com.commercetools.history.models.common">Permission.PermissionEnum</a></dt>
+<dd>
+<div class="block">UpdateMyShoppingLists</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/associate_role/Permission.html#UPDATE_MY_SHOPPING_LISTS" class="member-name-link">UPDATE_MY_SHOPPING_LISTS</a> - Static variable in interface com.commercetools.api.models.associate_role.<a href="../com/commercetools/api/models/associate_role/Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></dt>
 <dd>
 <div class="block">An Associate can update their own B2B Shopping Lists.</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/Permission.html#UPDATE_MY_SHOPPING_LISTS" class="member-name-link">UPDATE_MY_SHOPPING_LISTS</a> - Static variable in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/Permission.html" title="interface in com.commercetools.history.models.common">Permission</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/associate_role/Permission.PermissionEnum.html#UPDATE_OTHERS_CARTS" class="member-name-link">UPDATE_OTHERS_CARTS</a> - Enum constant in enum com.commercetools.api.models.associate_role.<a href="../com/commercetools/api/models/associate_role/Permission.PermissionEnum.html" title="enum in com.commercetools.api.models.associate_role">Permission.PermissionEnum</a></dt>
 <dd>
 <div class="block">UpdateOthersCarts</div>
@@ -655,10 +677,16 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">UpdateOthersShoppingLists</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/Permission.PermissionEnum.html#UPDATE_OTHERS_SHOPPING_LISTS" class="member-name-link">UPDATE_OTHERS_SHOPPING_LISTS</a> - Enum constant in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/Permission.PermissionEnum.html" title="enum in com.commercetools.history.models.common">Permission.PermissionEnum</a></dt>
+<dd>
+<div class="block">UpdateOthersShoppingLists</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/associate_role/Permission.html#UPDATE_OTHERS_SHOPPING_LISTS" class="member-name-link">UPDATE_OTHERS_SHOPPING_LISTS</a> - Static variable in interface com.commercetools.api.models.associate_role.<a href="../com/commercetools/api/models/associate_role/Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></dt>
 <dd>
 <div class="block">An Associate can update B2B Shopping Lists that belong to other Associates.</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/Permission.html#UPDATE_OTHERS_SHOPPING_LISTS" class="member-name-link">UPDATE_OTHERS_SHOPPING_LISTS</a> - Static variable in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/Permission.html" title="interface in com.commercetools.history.models.common">Permission</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/associate_role/Permission.PermissionEnum.html#UPDATE_PARENT_UNIT" class="member-name-link">UPDATE_PARENT_UNIT</a> - Enum constant in enum com.commercetools.api.models.associate_role.<a href="../com/commercetools/api/models/associate_role/Permission.PermissionEnum.html" title="enum in com.commercetools.api.models.associate_role">Permission.PermissionEnum</a></dt>
 <dd>
 <div class="block">UpdateParentUnit</div>
@@ -815,6 +843,25 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/order/StagedOrderUpdateActionBuilder.html#updateItemShippingAddressBuilder()" class="member-name-link">updateItemShippingAddressBuilder()</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/StagedOrderUpdateActionBuilder.html" title="class in com.commercetools.api.models.order">StagedOrderUpdateActionBuilder</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/history/models/change/UpdateItemShippingAddressChange.html" class="type-name-link" title="interface in com.commercetools.history.models.change">UpdateItemShippingAddressChange</a> - Interface in <a href="../com/commercetools/history/models/change/package-summary.html">com.commercetools.history.models.change</a></dt>
+<dd>
+<div class="block">Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderUpdateItemShippingAddressAction" rel="nofollow">Update ItemShippingAddress</a> update action.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/Change.html#updateItemShippingAddressChangeBuilder()" class="member-name-link">updateItemShippingAddressChangeBuilder()</a> - Static method in interface com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/Change.html" title="interface in com.commercetools.history.models.change">Change</a></dt>
+<dd>
+<div class="block">builder for updateItemShippingAddressChange subtype</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/ChangeBuilder.html#updateItemShippingAddressChangeBuilder()" class="member-name-link">updateItemShippingAddressChangeBuilder()</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/ChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/history/models/change/UpdateItemShippingAddressChangeBuilder.html" class="type-name-link" title="class in com.commercetools.history.models.change">UpdateItemShippingAddressChangeBuilder</a> - Class in <a href="../com/commercetools/history/models/change/package-summary.html">com.commercetools.history.models.change</a></dt>
+<dd>
+<div class="block">UpdateItemShippingAddressChangeBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/UpdateItemShippingAddressChangeBuilder.html#%3Cinit%3E()" class="member-name-link">UpdateItemShippingAddressChangeBuilder()</a> - Constructor for class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/UpdateItemShippingAddressChangeBuilder.html" title="class in com.commercetools.history.models.change">UpdateItemShippingAddressChangeBuilder</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/graphql/api/GraphQL.html#updateMyBusinessUnit(java.util.function.UnaryOperator)" class="member-name-link">updateMyBusinessUnit(UnaryOperator&lt;UpdateMyBusinessUnitGraphQLQuery.Builder&gt;)</a> - Static method in class com.commercetools.graphql.api.<a href="../com/commercetools/graphql/api/GraphQL.html" title="class in com.commercetools.graphql.api">GraphQL</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/graphql/api/GraphQL.html#updateMyCart(java.util.function.UnaryOperator)" class="member-name-link">updateMyCart(UnaryOperator&lt;UpdateMyCartGraphQLQuery.Builder&gt;)</a> - Static method in class com.commercetools.graphql.api.<a href="../com/commercetools/graphql/api/GraphQL.html" title="class in com.commercetools.graphql.api">GraphQL</a></dt>
@@ -844,6 +891,13 @@ loadScripts(document, 'script');</script>
 <div class="block">
    Leave empty or set as <code>false</code> to update only the Prices and TaxRates of the Line Items.
    Set as <code>true</code> to update the Product data (such as <code>name</code>, <code>variant</code>, <code>productType</code>, and Product Attributes) of the Line Items.
+  </div>
+</dd>
+<dt><a href="../com/commercetools/api/models/cart/MergeCartDraftBuilder.html#updateProductData(java.lang.Boolean)" class="member-name-link">updateProductData(Boolean)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/MergeCartDraftBuilder.html" title="class in com.commercetools.api.models.cart">MergeCartDraftBuilder</a></dt>
+<dd>
+<div class="block">
+   If <code>true</code>, the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart will be updated.
+   If <code>false</code>, only the prices, discounts, and tax rates will be updated.
   </div>
 </dd>
 <dt><a href="../com/commercetools/api/models/customer/CustomerSigninBuilder.html#updateProductData(java.lang.Boolean)" class="member-name-link">updateProductData(Boolean)</a> - Method in class com.commercetools.api.models.customer.<a href="../com/commercetools/api/models/customer/CustomerSigninBuilder.html" title="class in com.commercetools.api.models.customer">CustomerSigninBuilder</a></dt>
@@ -956,7 +1010,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/history/models/common/AssetSourceBuilder.html#uri(java.lang.String)" class="member-name-link">uri(String)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/AssetSourceBuilder.html" title="class in com.commercetools.history.models.common">AssetSourceBuilder</a></dt>
 <dd>
-<div class="block">set the value to the uri</div>
+<div class="block">URI of the AssetSource.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/common/AssetSourceBuilder.html#uri(java.lang.String)" class="member-name-link">uri(String)</a> - Method in class com.commercetools.importapi.models.common.<a href="../com/commercetools/importapi/models/common/AssetSourceBuilder.html" title="class in com.commercetools.importapi.models.common">AssetSourceBuilder</a></dt>
 <dd>
@@ -980,7 +1034,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/history/models/common/ImageBuilder.html#url(java.lang.String)" class="member-name-link">url(String)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ImageBuilder.html" title="class in com.commercetools.history.models.common">ImageBuilder</a></dt>
 <dd>
-<div class="block">set the value to the url</div>
+<div class="block">URL of the image in its original size that must be unique within a single <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/common/ImageBuilder.html#url(java.lang.String)" class="member-name-link">url(String)</a> - Method in class com.commercetools.importapi.models.common.<a href="../com/commercetools/importapi/models/common/ImageBuilder.html" title="class in com.commercetools.importapi.models.common">ImageBuilder</a></dt>
 <dd>
@@ -988,9 +1042,17 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/common/DefaultCurrencyUnits.html#USD" class="member-name-link">USD</a> - Static variable in class com.commercetools.api.models.common.<a href="../com/commercetools/api/models/common/DefaultCurrencyUnits.html" title="class in com.commercetools.api.models.common">DefaultCurrencyUnits</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/cart/CartMergeMode.CartMergeModeEnum.html#USE_AS_NEW_ACTIVE_CUSTOMER_CART" class="member-name-link">USE_AS_NEW_ACTIVE_CUSTOMER_CART</a> - Enum constant in enum com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartMergeMode.CartMergeModeEnum.html" title="enum in com.commercetools.api.models.cart">CartMergeMode.CartMergeModeEnum</a></dt>
+<dd>
+<div class="block">UseAsNewActiveCustomerCart</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/customer/AnonymousCartSignInMode.AnonymousCartSignInModeEnum.html#USE_AS_NEW_ACTIVE_CUSTOMER_CART" class="member-name-link">USE_AS_NEW_ACTIVE_CUSTOMER_CART</a> - Enum constant in enum com.commercetools.api.models.customer.<a href="../com/commercetools/api/models/customer/AnonymousCartSignInMode.AnonymousCartSignInModeEnum.html" title="enum in com.commercetools.api.models.customer">AnonymousCartSignInMode.AnonymousCartSignInModeEnum</a></dt>
 <dd>
 <div class="block">UseAsNewActiveCustomerCart</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/cart/CartMergeMode.html#USE_AS_NEW_ACTIVE_CUSTOMER_CART" class="member-name-link">USE_AS_NEW_ACTIVE_CUSTOMER_CART</a> - Static variable in interface com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartMergeMode.html" title="interface in com.commercetools.api.models.cart">CartMergeMode</a></dt>
+<dd>
+<div class="block">Uses the anonymous Cart as the new active Customer Cart, replacing the existing one.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/customer/AnonymousCartSignInMode.html#USE_AS_NEW_ACTIVE_CUSTOMER_CART" class="member-name-link">USE_AS_NEW_ACTIVE_CUSTOMER_CART</a> - Static variable in interface com.commercetools.api.models.customer.<a href="../com/commercetools/api/models/customer/AnonymousCartSignInMode.html" title="interface in com.commercetools.api.models.customer">AnonymousCartSignInMode</a></dt>
 <dd>

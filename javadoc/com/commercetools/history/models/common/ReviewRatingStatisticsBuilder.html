@@ -88,9 +88,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
  <div class=code-example>
  <pre><code class='java'>
      ReviewRatingStatistics reviewRatingStatistics = ReviewRatingStatistics.builder()
-             .averageRating(1)
-             .highestRating(1)
-             .lowestRating(1)
+             .averageRating(0.3)
+             .highestRating(0.3)
+             .lowestRating(0.3)
              .count(1)
              .ratingsDistribution(ratingsDistributionBuilder -> ratingsDistributionBuilder)
              .build()
@@ -124,7 +124,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ReviewRatingStatisticsBuilder.html" title="class in com.commercetools.history.models.common">ReviewRatingStatisticsBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#averageRating(java.lang.Integer)" class="member-name-link">averageRating</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;averageRating)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#averageRating(java.lang.Double)" class="member-name-link">averageRating</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;averageRating)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Average rating of one target This number is rounded with 5 decimals.</div>
 </div>
@@ -143,7 +143,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Number of ratings taken into account</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAverageRating()" class="member-name-link">getAverageRating</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Average rating of one target This number is rounded with 5 decimals.</div>
@@ -153,12 +153,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Number of ratings taken into account</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getHighestRating()" class="member-name-link">getHighestRating</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Highest rating of one target</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLowestRating()" class="member-name-link">getLowestRating</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Lowest rating of one target</div>
@@ -166,15 +166,15 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRatingsDistribution()" class="member-name-link">getRatingsDistribution</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The full distribution of the ratings.</div>
+<div class="block">Full distribution of the ratings.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ReviewRatingStatisticsBuilder.html" title="class in com.commercetools.history.models.common">ReviewRatingStatisticsBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#highestRating(java.lang.Integer)" class="member-name-link">highestRating</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;highestRating)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#highestRating(java.lang.Double)" class="member-name-link">highestRating</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;highestRating)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Highest rating of one target</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ReviewRatingStatisticsBuilder.html" title="class in com.commercetools.history.models.common">ReviewRatingStatisticsBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lowestRating(java.lang.Integer)" class="member-name-link">lowestRating</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;lowestRating)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lowestRating(java.lang.Double)" class="member-name-link">lowestRating</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;lowestRating)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Lowest rating of one target</div>
 </div>
@@ -191,7 +191,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ReviewRatingStatisticsBuilder.html" title="class in com.commercetools.history.models.common">ReviewRatingStatisticsBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#ratingsDistribution(java.lang.Object)" class="member-name-link">ratingsDistribution</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;ratingsDistribution)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The full distribution of the ratings.</div>
+<div class="block">Full distribution of the ratings.</div>
 </div>
 </div>
 </div>
@@ -225,9 +225,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="averageRating(java.lang.Integer)">
+<section class="detail" id="averageRating(java.lang.Double)">
 <h3>averageRating</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReviewRatingStatisticsBuilder.html" title="class in com.commercetools.history.models.common">ReviewRatingStatisticsBuilder</a></span>&nbsp;<span class="element-name">averageRating</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;averageRating)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReviewRatingStatisticsBuilder.html" title="class in com.commercetools.history.models.common">ReviewRatingStatisticsBuilder</a></span>&nbsp;<span class="element-name">averageRating</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;averageRating)</span></div>
 <div class="block"><p>Average rating of one target This number is rounded with 5 decimals.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -238,9 +238,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="highestRating(java.lang.Integer)">
+<section class="detail" id="highestRating(java.lang.Double)">
 <h3>highestRating</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReviewRatingStatisticsBuilder.html" title="class in com.commercetools.history.models.common">ReviewRatingStatisticsBuilder</a></span>&nbsp;<span class="element-name">highestRating</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;highestRating)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReviewRatingStatisticsBuilder.html" title="class in com.commercetools.history.models.common">ReviewRatingStatisticsBuilder</a></span>&nbsp;<span class="element-name">highestRating</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;highestRating)</span></div>
 <div class="block"><p>Highest rating of one target</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -251,9 +251,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="lowestRating(java.lang.Integer)">
+<section class="detail" id="lowestRating(java.lang.Double)">
 <h3>lowestRating</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReviewRatingStatisticsBuilder.html" title="class in com.commercetools.history.models.common">ReviewRatingStatisticsBuilder</a></span>&nbsp;<span class="element-name">lowestRating</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;lowestRating)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReviewRatingStatisticsBuilder.html" title="class in com.commercetools.history.models.common">ReviewRatingStatisticsBuilder</a></span>&nbsp;<span class="element-name">lowestRating</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;lowestRating)</span></div>
 <div class="block"><p>Lowest rating of one target</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -280,7 +280,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="ratingsDistribution(java.lang.Object)">
 <h3>ratingsDistribution</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReviewRatingStatisticsBuilder.html" title="class in com.commercetools.history.models.common">ReviewRatingStatisticsBuilder</a></span>&nbsp;<span class="element-name">ratingsDistribution</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;ratingsDistribution)</span></div>
-<div class="block"><p>The full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p></div>
+<div class="block"><p>Full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>ratingsDistribution</code> - value to be set</dd>
@@ -292,7 +292,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getAverageRating()">
 <h3>getAverageRating</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getAverageRating</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name">getAverageRating</span>()</div>
 <div class="block"><p>Average rating of one target This number is rounded with 5 decimals.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -303,7 +303,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getHighestRating()">
 <h3>getHighestRating</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getHighestRating</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name">getHighestRating</span>()</div>
 <div class="block"><p>Highest rating of one target</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -314,7 +314,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getLowestRating()">
 <h3>getLowestRating</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getLowestRating</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name">getLowestRating</span>()</div>
 <div class="block"><p>Lowest rating of one target</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -337,7 +337,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getRatingsDistribution()">
 <h3>getRatingsDistribution</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">getRatingsDistribution</span>()</div>
-<div class="block"><p>The full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p></div>
+<div class="block"><p>Full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>ratingsDistribution</dd>

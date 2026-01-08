@@ -97,6 +97,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
              .storeMode(BusinessUnitStoreMode.EXPLICIT)
              .name("{name}")
              .plusAddresses(addressesBuilder -> addressesBuilder)
+             .plusShippingAddressIds(shippingAddressIdsBuilder -> shippingAddressIdsBuilder)
+             .plusBillingAddressIds(billingAddressIdsBuilder -> billingAddressIdsBuilder)
              .associateMode(BusinessUnitAssociateMode.EXPLICIT)
              .plusAssociates(associatesBuilder -> associatesBuilder)
              .parentUnit(parentUnitBuilder -> parentUnitBuilder)
@@ -143,154 +145,174 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">Associates that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addInheritedAssociates(java.util.function.Function)" class="member-name-link">addInheritedAssociates</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="InheritedAssociateBuilder.html" title="class in com.commercetools.api.models.business_unit">InheritedAssociateBuilder</a>,<wbr><a href="InheritedAssociate.html" title="interface in com.commercetools.api.models.business_unit">InheritedAssociate</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addCustomerGroupAssignments(java.util.function.Function)" class="member-name-link">addCustomerGroupAssignments</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer/CustomerGroupAssignmentBuilder.html" title="class in com.commercetools.api.models.customer">CustomerGroupAssignmentBuilder</a>,<wbr><a href="../customer/CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Customer Groups assigned to the Business Unit.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addInheritedAssociates(java.util.function.Function)" class="member-name-link">addInheritedAssociates</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="InheritedAssociateBuilder.html" title="class in com.commercetools.api.models.business_unit">InheritedAssociateBuilder</a>,<wbr><a href="InheritedAssociate.html" title="interface in com.commercetools.api.models.business_unit">InheritedAssociate</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Associates that are inherited from a parent Business Unit.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addInheritedStores(java.util.function.Function)" class="member-name-link">addInheritedStores</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../store/StoreKeyReferenceBuilder.html" title="class in com.commercetools.api.models.store">StoreKeyReferenceBuilder</a>,<wbr><a href="../store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addInheritedStores(java.util.function.Function)" class="member-name-link">addInheritedStores</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../store/StoreKeyReferenceBuilder.html" title="class in com.commercetools.api.models.store">StoreKeyReferenceBuilder</a>,<wbr><a href="../store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Stores that are inherited from a parent Business Unit.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addresses(com.commercetools.api.models.common.Address...)" class="member-name-link">addresses</a><wbr>(<a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>...&nbsp;addresses)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Addresses used by the Business Unit.</div>
-</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addresses(java.util.List)" class="member-name-link">addresses</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;&nbsp;addresses)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addresses(com.commercetools.api.models.common.Address...)" class="member-name-link">addresses</a><wbr>(<a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>...&nbsp;addresses)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Addresses used by the Business Unit.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addStores(java.util.function.Function)" class="member-name-link">addStores</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../store/StoreKeyReferenceBuilder.html" title="class in com.commercetools.api.models.store">StoreKeyReferenceBuilder</a>,<wbr><a href="../store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addresses(java.util.List)" class="member-name-link">addresses</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;&nbsp;addresses)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Addresses used by the Business Unit.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addStores(java.util.function.Function)" class="member-name-link">addStores</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../store/StoreKeyReferenceBuilder.html" title="class in com.commercetools.api.models.store">StoreKeyReferenceBuilder</a>,<wbr><a href="../store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">References to <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#approvalRuleMode(com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode)" class="member-name-link">approvalRuleMode</a><wbr>(<a href="BusinessUnitApprovalRuleMode.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitApprovalRuleMode</a>&nbsp;approvalRuleMode)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#approvalRuleMode(com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode)" class="member-name-link">approvalRuleMode</a><wbr>(<a href="BusinessUnitApprovalRuleMode.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitApprovalRuleMode</a>&nbsp;approvalRuleMode)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Determines whether a Business Unit can inherit Approval Rules from a parent.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#associateMode(com.commercetools.api.models.business_unit.BusinessUnitAssociateMode)" class="member-name-link">associateMode</a><wbr>(<a href="BusinessUnitAssociateMode.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitAssociateMode</a>&nbsp;associateMode)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#associateMode(com.commercetools.api.models.business_unit.BusinessUnitAssociateMode)" class="member-name-link">associateMode</a><wbr>(<a href="BusinessUnitAssociateMode.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitAssociateMode</a>&nbsp;associateMode)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Determines whether the Division can inherit Associates from a parent.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#associates(com.commercetools.api.models.business_unit.Associate...)" class="member-name-link">associates</a><wbr>(<a href="Associate.html" title="interface in com.commercetools.api.models.business_unit">Associate</a>...&nbsp;associates)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Associates that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</div>
-</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#associates(java.util.List)" class="member-name-link">associates</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Associate.html" title="interface in com.commercetools.api.models.business_unit">Associate</a>&gt;&nbsp;associates)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#associates(com.commercetools.api.models.business_unit.Associate...)" class="member-name-link">associates</a><wbr>(<a href="Associate.html" title="interface in com.commercetools.api.models.business_unit">Associate</a>...&nbsp;associates)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Associates that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#billingAddressIds(java.lang.String...)" class="member-name-link">billingAddressIds</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;billingAddressIds)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#associates(java.util.List)" class="member-name-link">associates</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Associate.html" title="interface in com.commercetools.api.models.business_unit">Associate</a>&gt;&nbsp;associates)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Unique identifiers of addresses used as billing addresses.</div>
+<div class="block">Associates that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#billingAddressIds(java.util.List)" class="member-name-link">billingAddressIds</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;billingAddressIds)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#billingAddressIds(java.lang.String...)" class="member-name-link">billingAddressIds</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;billingAddressIds)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Unique identifiers of addresses used as billing addresses.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Division.html" title="interface in com.commercetools.api.models.business_unit">Division</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#billingAddressIds(java.util.List)" class="member-name-link">billingAddressIds</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;billingAddressIds)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">builds Division with checking for non-null required values</div>
+<div class="block">Unique identifiers of addresses used as billing addresses.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Division.html" title="interface in com.commercetools.api.models.business_unit">Division</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#buildUnchecked()" class="member-name-link">buildUnchecked</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">builds Division with checking for non-null required values</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Division.html" title="interface in com.commercetools.api.models.business_unit">Division</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#buildUnchecked()" class="member-name-link">buildUnchecked</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">builds Division without checking for non-null required values</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#contactEmail(java.lang.String)" class="member-name-link">contactEmail</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;contactEmail)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#contactEmail(java.lang.String)" class="member-name-link">contactEmail</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;contactEmail)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Email address of the Business Unit.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createdAt(java.time.ZonedDateTime)" class="member-name-link">createdAt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createdAt(java.time.ZonedDateTime)" class="member-name-link">createdAt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Date and time (UTC) the Business Unit was initially created.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createdBy(com.commercetools.api.models.common.CreatedBy)" class="member-name-link">createdBy</a><wbr>(<a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&nbsp;createdBy)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">IDs and references that created the BusinessUnit.</div>
-</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createdBy(java.util.function.Function)" class="member-name-link">createdBy</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>,<wbr><a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createdBy(com.commercetools.api.models.common.CreatedBy)" class="member-name-link">createdBy</a><wbr>(<a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&nbsp;createdBy)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">IDs and references that created the BusinessUnit.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#custom(com.commercetools.api.models.type.CustomFields)" class="member-name-link">custom</a><wbr>(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createdBy(java.util.function.Function)" class="member-name-link">createdBy</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>,<wbr><a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Custom Fields for the Business Unit.</div>
+<div class="block">IDs and references that created the BusinessUnit.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#custom(java.util.function.Function)" class="member-name-link">custom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>,<wbr><a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#custom(com.commercetools.api.models.type.CustomFields)" class="member-name-link">custom</a><wbr>(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Custom Fields for the Business Unit.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#defaultBillingAddressId(java.lang.String)" class="member-name-link">defaultBillingAddressId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;defaultBillingAddressId)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#custom(java.util.function.Function)" class="member-name-link">custom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>,<wbr><a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Custom Fields for the Business Unit.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#customerGroupAssignments(com.commercetools.api.models.customer.CustomerGroupAssignment...)" class="member-name-link">customerGroupAssignments</a><wbr>(<a href="../customer/CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>...&nbsp;customerGroupAssignments)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Customer Groups assigned to the Business Unit.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#customerGroupAssignments(java.util.List)" class="member-name-link">customerGroupAssignments</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../customer/CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>&gt;&nbsp;customerGroupAssignments)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Customer Groups assigned to the Business Unit.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#defaultBillingAddressId(java.lang.String)" class="member-name-link">defaultBillingAddressId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;defaultBillingAddressId)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Unique identifier of the address used as the default billing address.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#defaultShippingAddressId(java.lang.String)" class="member-name-link">defaultShippingAddressId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;defaultShippingAddressId)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#defaultShippingAddressId(java.lang.String)" class="member-name-link">defaultShippingAddressId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;defaultShippingAddressId)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Unique identifier of the address used as the default shipping address.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAddresses()" class="member-name-link">getAddresses</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAddresses()" class="member-name-link">getAddresses</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Addresses used by the Business Unit.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BusinessUnitApprovalRuleMode.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitApprovalRuleMode</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getApprovalRuleMode()" class="member-name-link">getApprovalRuleMode</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BusinessUnitApprovalRuleMode.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitApprovalRuleMode</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getApprovalRuleMode()" class="member-name-link">getApprovalRuleMode</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Determines whether a Business Unit can inherit Approval Rules from a parent.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BusinessUnitAssociateMode.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitAssociateMode</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAssociateMode()" class="member-name-link">getAssociateMode</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BusinessUnitAssociateMode.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitAssociateMode</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAssociateMode()" class="member-name-link">getAssociateMode</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Determines whether the Division can inherit Associates from a parent.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Associate.html" title="interface in com.commercetools.api.models.business_unit">Associate</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAssociates()" class="member-name-link">getAssociates</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Associate.html" title="interface in com.commercetools.api.models.business_unit">Associate</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAssociates()" class="member-name-link">getAssociates</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Associates that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBillingAddressIds()" class="member-name-link">getBillingAddressIds</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBillingAddressIds()" class="member-name-link">getBillingAddressIds</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Unique identifiers of addresses used as billing addresses.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContactEmail()" class="member-name-link">getContactEmail</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContactEmail()" class="member-name-link">getContactEmail</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Email address of the Business Unit.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCreatedAt()" class="member-name-link">getCreatedAt</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCreatedAt()" class="member-name-link">getCreatedAt</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Date and time (UTC) the Business Unit was initially created.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCreatedBy()" class="member-name-link">getCreatedBy</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCreatedBy()" class="member-name-link">getCreatedBy</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">IDs and references that created the BusinessUnit.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCustom()" class="member-name-link">getCustom</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCustom()" class="member-name-link">getCustom</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Custom Fields for the Business Unit.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../customer/CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCustomerGroupAssignments()" class="member-name-link">getCustomerGroupAssignments</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Customer Groups assigned to the Business Unit.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDefaultBillingAddressId()" class="member-name-link">getDefaultBillingAddressId</a>()</code></div>
@@ -468,6 +490,16 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">Unique identifiers of addresses used as billing addresses.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusCustomerGroupAssignments(com.commercetools.api.models.customer.CustomerGroupAssignment...)" class="member-name-link">plusCustomerGroupAssignments</a><wbr>(<a href="../customer/CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>...&nbsp;customerGroupAssignments)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Customer Groups assigned to the Business Unit.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusCustomerGroupAssignments(java.util.function.Function)" class="member-name-link">plusCustomerGroupAssignments</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer/CustomerGroupAssignmentBuilder.html" title="class in com.commercetools.api.models.customer">CustomerGroupAssignmentBuilder</a>,<wbr><a href="../customer/CustomerGroupAssignmentBuilder.html" title="class in com.commercetools.api.models.customer">CustomerGroupAssignmentBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Customer Groups assigned to the Business Unit.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusInheritedAssociates(com.commercetools.api.models.business_unit.InheritedAssociate...)" class="member-name-link">plusInheritedAssociates</a><wbr>(<a href="InheritedAssociate.html" title="interface in com.commercetools.api.models.business_unit">InheritedAssociate</a>...&nbsp;inheritedAssociates)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Associates that are inherited from a parent Business Unit.</div>
@@ -513,84 +545,94 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">Associates that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInheritedAssociates(java.util.function.Function)" class="member-name-link">setInheritedAssociates</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="InheritedAssociateBuilder.html" title="class in com.commercetools.api.models.business_unit">InheritedAssociateBuilder</a>,<wbr><a href="InheritedAssociate.html" title="interface in com.commercetools.api.models.business_unit">InheritedAssociate</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCustomerGroupAssignments(java.util.function.Function)" class="member-name-link">setCustomerGroupAssignments</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer/CustomerGroupAssignmentBuilder.html" title="class in com.commercetools.api.models.customer">CustomerGroupAssignmentBuilder</a>,<wbr><a href="../customer/CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Customer Groups assigned to the Business Unit.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInheritedAssociates(java.util.function.Function)" class="member-name-link">setInheritedAssociates</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="InheritedAssociateBuilder.html" title="class in com.commercetools.api.models.business_unit">InheritedAssociateBuilder</a>,<wbr><a href="InheritedAssociate.html" title="interface in com.commercetools.api.models.business_unit">InheritedAssociate</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Associates that are inherited from a parent Business Unit.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInheritedStores(java.util.function.Function)" class="member-name-link">setInheritedStores</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../store/StoreKeyReferenceBuilder.html" title="class in com.commercetools.api.models.store">StoreKeyReferenceBuilder</a>,<wbr><a href="../store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInheritedStores(java.util.function.Function)" class="member-name-link">setInheritedStores</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../store/StoreKeyReferenceBuilder.html" title="class in com.commercetools.api.models.store">StoreKeyReferenceBuilder</a>,<wbr><a href="../store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Stores that are inherited from a parent Business Unit.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setStores(java.util.function.Function)" class="member-name-link">setStores</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../store/StoreKeyReferenceBuilder.html" title="class in com.commercetools.api.models.store">StoreKeyReferenceBuilder</a>,<wbr><a href="../store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setStores(java.util.function.Function)" class="member-name-link">setStores</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../store/StoreKeyReferenceBuilder.html" title="class in com.commercetools.api.models.store">StoreKeyReferenceBuilder</a>,<wbr><a href="../store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">References to <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingAddressIds(java.lang.String...)" class="member-name-link">shippingAddressIds</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;shippingAddressIds)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Unique identifiers of addresses used as shipping addresses.</div>
-</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingAddressIds(java.util.List)" class="member-name-link">shippingAddressIds</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;shippingAddressIds)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingAddressIds(java.lang.String...)" class="member-name-link">shippingAddressIds</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;shippingAddressIds)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Unique identifiers of addresses used as shipping addresses.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#status(com.commercetools.api.models.business_unit.BusinessUnitStatus)" class="member-name-link">status</a><wbr>(<a href="BusinessUnitStatus.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitStatus</a>&nbsp;status)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingAddressIds(java.util.List)" class="member-name-link">shippingAddressIds</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;shippingAddressIds)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Unique identifiers of addresses used as shipping addresses.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#status(com.commercetools.api.models.business_unit.BusinessUnitStatus)" class="member-name-link">status</a><wbr>(<a href="BusinessUnitStatus.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitStatus</a>&nbsp;status)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Indicates whether the Business Unit can be edited and used in <span>Orders</span>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#storeMode(com.commercetools.api.models.business_unit.BusinessUnitStoreMode)" class="member-name-link">storeMode</a><wbr>(<a href="BusinessUnitStoreMode.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitStoreMode</a>&nbsp;storeMode)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#storeMode(com.commercetools.api.models.business_unit.BusinessUnitStoreMode)" class="member-name-link">storeMode</a><wbr>(<a href="BusinessUnitStoreMode.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitStoreMode</a>&nbsp;storeMode)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Defines whether the Stores of the Division are set explicitly or inherited from a parent Business Unit.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stores(com.commercetools.api.models.store.StoreKeyReference...)" class="member-name-link">stores</a><wbr>(<a href="../store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a>...&nbsp;stores)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">References to <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with.</div>
-</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stores(java.util.List)" class="member-name-link">stores</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a>&gt;&nbsp;stores)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stores(com.commercetools.api.models.store.StoreKeyReference...)" class="member-name-link">stores</a><wbr>(<a href="../store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a>...&nbsp;stores)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">References to <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#topLevelUnit(com.commercetools.api.models.business_unit.BusinessUnitKeyReference)" class="member-name-link">topLevelUnit</a><wbr>(<a href="BusinessUnitKeyReference.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitKeyReference</a>&nbsp;topLevelUnit)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stores(java.util.List)" class="member-name-link">stores</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a>&gt;&nbsp;stores)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Top-level unit of the Business Unit.</div>
+<div class="block">References to <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#topLevelUnit(java.util.function.Function)" class="member-name-link">topLevelUnit</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="BusinessUnitKeyReferenceBuilder.html" title="class in com.commercetools.api.models.business_unit">BusinessUnitKeyReferenceBuilder</a>,<wbr><a href="BusinessUnitKeyReferenceBuilder.html" title="class in com.commercetools.api.models.business_unit">BusinessUnitKeyReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#topLevelUnit(com.commercetools.api.models.business_unit.BusinessUnitKeyReference)" class="member-name-link">topLevelUnit</a><wbr>(<a href="BusinessUnitKeyReference.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitKeyReference</a>&nbsp;topLevelUnit)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Top-level unit of the Business Unit.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#version(java.lang.Long)" class="member-name-link">version</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#topLevelUnit(java.util.function.Function)" class="member-name-link">topLevelUnit</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="BusinessUnitKeyReferenceBuilder.html" title="class in com.commercetools.api.models.business_unit">BusinessUnitKeyReferenceBuilder</a>,<wbr><a href="BusinessUnitKeyReferenceBuilder.html" title="class in com.commercetools.api.models.business_unit">BusinessUnitKeyReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Top-level unit of the Business Unit.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#version(java.lang.Long)" class="member-name-link">version</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Current version of the Business Unit.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withAddresses(java.util.function.Function)" class="member-name-link">withAddresses</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/AddressBuilder.html" title="class in com.commercetools.api.models.common">AddressBuilder</a>,<wbr><a href="../common/AddressBuilder.html" title="class in com.commercetools.api.models.common">AddressBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withAddresses(java.util.function.Function)" class="member-name-link">withAddresses</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/AddressBuilder.html" title="class in com.commercetools.api.models.common">AddressBuilder</a>,<wbr><a href="../common/AddressBuilder.html" title="class in com.commercetools.api.models.common">AddressBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Addresses used by the Business Unit.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withAssociates(java.util.function.Function)" class="member-name-link">withAssociates</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AssociateBuilder.html" title="class in com.commercetools.api.models.business_unit">AssociateBuilder</a>,<wbr><a href="AssociateBuilder.html" title="class in com.commercetools.api.models.business_unit">AssociateBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withAssociates(java.util.function.Function)" class="member-name-link">withAssociates</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AssociateBuilder.html" title="class in com.commercetools.api.models.business_unit">AssociateBuilder</a>,<wbr><a href="AssociateBuilder.html" title="class in com.commercetools.api.models.business_unit">AssociateBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Associates that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCreatedBy(java.util.function.Function)" class="member-name-link">withCreatedBy</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>,<wbr><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCreatedBy(java.util.function.Function)" class="member-name-link">withCreatedBy</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>,<wbr><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">IDs and references that created the BusinessUnit.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCustom(java.util.function.Function)" class="member-name-link">withCustom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>,<wbr><a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCustom(java.util.function.Function)" class="member-name-link">withCustom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>,<wbr><a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Custom Fields for the Business Unit.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCustomerGroupAssignments(java.util.function.Function)" class="member-name-link">withCustomerGroupAssignments</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer/CustomerGroupAssignmentBuilder.html" title="class in com.commercetools.api.models.customer">CustomerGroupAssignmentBuilder</a>,<wbr><a href="../customer/CustomerGroupAssignmentBuilder.html" title="class in com.commercetools.api.models.customer">CustomerGroupAssignmentBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Customer Groups assigned to the Business Unit.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withInheritedAssociates(java.util.function.Function)" class="member-name-link">withInheritedAssociates</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="InheritedAssociateBuilder.html" title="class in com.commercetools.api.models.business_unit">InheritedAssociateBuilder</a>,<wbr><a href="InheritedAssociateBuilder.html" title="class in com.commercetools.api.models.business_unit">InheritedAssociateBuilder</a>&gt;&nbsp;builder)</code></div>
@@ -1094,6 +1136,107 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="customerGroupAssignments(com.commercetools.api.models.customer.CustomerGroupAssignment...)">
+<h3>customerGroupAssignments</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></span>&nbsp;<span class="element-name">customerGroupAssignments</span><wbr><span class="parameters">(@Nullable
+ <a href="../customer/CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>...&nbsp;customerGroupAssignments)</span></div>
+<div class="block"><p>Customer Groups assigned to the Business Unit.</p>
+  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>customerGroupAssignments</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="customerGroupAssignments(java.util.List)">
+<h3>customerGroupAssignments</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></span>&nbsp;<span class="element-name">customerGroupAssignments</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../customer/CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>&gt;&nbsp;customerGroupAssignments)</span></div>
+<div class="block"><p>Customer Groups assigned to the Business Unit.</p>
+  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>customerGroupAssignments</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="plusCustomerGroupAssignments(com.commercetools.api.models.customer.CustomerGroupAssignment...)">
+<h3>plusCustomerGroupAssignments</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></span>&nbsp;<span class="element-name">plusCustomerGroupAssignments</span><wbr><span class="parameters">(@Nullable
+ <a href="../customer/CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>...&nbsp;customerGroupAssignments)</span></div>
+<div class="block"><p>Customer Groups assigned to the Business Unit.</p>
+  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>customerGroupAssignments</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="plusCustomerGroupAssignments(java.util.function.Function)">
+<h3>plusCustomerGroupAssignments</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></span>&nbsp;<span class="element-name">plusCustomerGroupAssignments</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer/CustomerGroupAssignmentBuilder.html" title="class in com.commercetools.api.models.customer">CustomerGroupAssignmentBuilder</a>,<wbr><a href="../customer/CustomerGroupAssignmentBuilder.html" title="class in com.commercetools.api.models.customer">CustomerGroupAssignmentBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Customer Groups assigned to the Business Unit.</p>
+  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the customerGroupAssignments value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="withCustomerGroupAssignments(java.util.function.Function)">
+<h3>withCustomerGroupAssignments</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></span>&nbsp;<span class="element-name">withCustomerGroupAssignments</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer/CustomerGroupAssignmentBuilder.html" title="class in com.commercetools.api.models.customer">CustomerGroupAssignmentBuilder</a>,<wbr><a href="../customer/CustomerGroupAssignmentBuilder.html" title="class in com.commercetools.api.models.customer">CustomerGroupAssignmentBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Customer Groups assigned to the Business Unit.</p>
+  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the customerGroupAssignments value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addCustomerGroupAssignments(java.util.function.Function)">
+<h3>addCustomerGroupAssignments</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></span>&nbsp;<span class="element-name">addCustomerGroupAssignments</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer/CustomerGroupAssignmentBuilder.html" title="class in com.commercetools.api.models.customer">CustomerGroupAssignmentBuilder</a>,<wbr><a href="../customer/CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Customer Groups assigned to the Business Unit.</p>
+  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the customerGroupAssignments value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setCustomerGroupAssignments(java.util.function.Function)">
+<h3>setCustomerGroupAssignments</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></span>&nbsp;<span class="element-name">setCustomerGroupAssignments</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer/CustomerGroupAssignmentBuilder.html" title="class in com.commercetools.api.models.customer">CustomerGroupAssignmentBuilder</a>,<wbr><a href="../customer/CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Customer Groups assigned to the Business Unit.</p>
+  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the customerGroupAssignments value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="addresses(com.commercetools.api.models.common.Address...)">
 <h3>addresses</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></span>&nbsp;<span class="element-name">addresses</span><wbr><span class="parameters">(<a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>...&nbsp;addresses)</span></div>
@@ -1187,8 +1330,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="shippingAddressIds(java.lang.String...)">
 <h3>shippingAddressIds</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></span>&nbsp;<span class="element-name">shippingAddressIds</span><wbr><span class="parameters">(@Nullable
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;shippingAddressIds)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></span>&nbsp;<span class="element-name">shippingAddressIds</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;shippingAddressIds)</span></div>
 <div class="block"><p>Unique identifiers of addresses used as shipping addresses.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -1201,8 +1343,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="shippingAddressIds(java.util.List)">
 <h3>shippingAddressIds</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></span>&nbsp;<span class="element-name">shippingAddressIds</span><wbr><span class="parameters">(@Nullable
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;shippingAddressIds)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></span>&nbsp;<span class="element-name">shippingAddressIds</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;shippingAddressIds)</span></div>
 <div class="block"><p>Unique identifiers of addresses used as shipping addresses.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -1215,8 +1356,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusShippingAddressIds(java.lang.String...)">
 <h3>plusShippingAddressIds</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></span>&nbsp;<span class="element-name">plusShippingAddressIds</span><wbr><span class="parameters">(@Nullable
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;shippingAddressIds)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></span>&nbsp;<span class="element-name">plusShippingAddressIds</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;shippingAddressIds)</span></div>
 <div class="block"><p>Unique identifiers of addresses used as shipping addresses.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -1243,8 +1383,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="billingAddressIds(java.lang.String...)">
 <h3>billingAddressIds</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></span>&nbsp;<span class="element-name">billingAddressIds</span><wbr><span class="parameters">(@Nullable
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;billingAddressIds)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></span>&nbsp;<span class="element-name">billingAddressIds</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;billingAddressIds)</span></div>
 <div class="block"><p>Unique identifiers of addresses used as billing addresses.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -1257,8 +1396,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="billingAddressIds(java.util.List)">
 <h3>billingAddressIds</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></span>&nbsp;<span class="element-name">billingAddressIds</span><wbr><span class="parameters">(@Nullable
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;billingAddressIds)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></span>&nbsp;<span class="element-name">billingAddressIds</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;billingAddressIds)</span></div>
 <div class="block"><p>Unique identifiers of addresses used as billing addresses.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -1271,8 +1409,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusBillingAddressIds(java.lang.String...)">
 <h3>plusBillingAddressIds</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></span>&nbsp;<span class="element-name">plusBillingAddressIds</span><wbr><span class="parameters">(@Nullable
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;billingAddressIds)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DivisionBuilder.html" title="class in com.commercetools.api.models.business_unit">DivisionBuilder</a></span>&nbsp;<span class="element-name">plusBillingAddressIds</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;billingAddressIds)</span></div>
 <div class="block"><p>Unique identifiers of addresses used as billing addresses.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -1748,6 +1885,19 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="getCustomerGroupAssignments()">
+<h3>getCustomerGroupAssignments</h3>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../customer/CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>&gt;</span>&nbsp;<span class="element-name">getCustomerGroupAssignments</span>()</div>
+<div class="block"><p>Customer Groups assigned to the Business Unit.</p>
+  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>customerGroupAssignments</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getAddresses()">
 <h3>getAddresses</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;</span>&nbsp;<span class="element-name">getAddresses</span>()</div>
@@ -1761,8 +1911,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getShippingAddressIds()">
 <h3>getShippingAddressIds</h3>
-<div class="member-signature"><span class="annotations">@Nullable
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getShippingAddressIds</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getShippingAddressIds</span>()</div>
 <div class="block"><p>Unique identifiers of addresses used as shipping addresses.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -1785,8 +1934,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getBillingAddressIds()">
 <h3>getBillingAddressIds</h3>
-<div class="member-signature"><span class="annotations">@Nullable
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getBillingAddressIds</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getBillingAddressIds</span>()</div>
 <div class="block"><p>Unique identifiers of addresses used as billing addresses.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>

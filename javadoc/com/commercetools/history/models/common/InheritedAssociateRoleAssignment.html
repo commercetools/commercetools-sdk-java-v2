@@ -117,12 +117,16 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of InheritedAssociateRoleAssignment</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="AssociateRoleKeyReference.html" title="interface in com.commercetools.history.models.common">AssociateRoleKeyReference</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAssociateRole()" class="member-name-link">getAssociateRole</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a></code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Inherited role the Associate holds within a Business Unit.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="BusinessUnitKeyReference.html" title="interface in com.commercetools.history.models.common">BusinessUnitKeyReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSource()" class="member-name-link">getSource</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Reference to the parent Business Unit where the assignment is defined explicitly.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="InheritedAssociateRoleAssignment.html" title="interface in com.commercetools.history.models.common">InheritedAssociateRoleAssignment</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
@@ -134,14 +138,14 @@ loadScripts(document, 'script');</script>
 <div class="block">factory method to create a shallow copy InheritedAssociateRoleAssignment</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAssociateRole(com.commercetools.history.models.common.KeyReference)" class="member-name-link">setAssociateRole</a><wbr>(<a href="KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a>&nbsp;associateRole)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAssociateRole(com.commercetools.history.models.common.AssociateRoleKeyReference)" class="member-name-link">setAssociateRole</a><wbr>(<a href="AssociateRoleKeyReference.html" title="interface in com.commercetools.history.models.common">AssociateRoleKeyReference</a>&nbsp;associateRole)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set associateRole</div>
+<div class="block">Inherited role the Associate holds within a Business Unit.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setSource(com.commercetools.history.models.common.KeyReference)" class="member-name-link">setSource</a><wbr>(<a href="KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a>&nbsp;source)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setSource(com.commercetools.history.models.common.BusinessUnitKeyReference)" class="member-name-link">setSource</a><wbr>(<a href="BusinessUnitKeyReference.html" title="interface in com.commercetools.history.models.common">BusinessUnitKeyReference</a>&nbsp;source)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set source</div>
+<div class="block">Reference to the parent Business Unit where the assignment is defined explicitly.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="InheritedAssociateRoleAssignment.html" title="interface in com.commercetools.history.models.common">InheritedAssociateRoleAssignment</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -172,7 +176,8 @@ loadScripts(document, 'script');</script>
 <h3>getAssociateRole</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a></span>&nbsp;<span class="element-name">getAssociateRole</span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="AssociateRoleKeyReference.html" title="interface in com.commercetools.history.models.common">AssociateRoleKeyReference</a></span>&nbsp;<span class="element-name">getAssociateRole</span>()</div>
+<div class="block"><p>Inherited role the Associate holds within a Business Unit.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>associateRole</dd>
@@ -184,7 +189,8 @@ loadScripts(document, 'script');</script>
 <h3>getSource</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a></span>&nbsp;<span class="element-name">getSource</span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="BusinessUnitKeyReference.html" title="interface in com.commercetools.history.models.common">BusinessUnitKeyReference</a></span>&nbsp;<span class="element-name">getSource</span>()</div>
+<div class="block"><p>Reference to the parent Business Unit where the assignment is defined explicitly.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>source</dd>
@@ -192,10 +198,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="setAssociateRole(com.commercetools.history.models.common.KeyReference)">
+<section class="detail" id="setAssociateRole(com.commercetools.history.models.common.AssociateRoleKeyReference)">
 <h3>setAssociateRole</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setAssociateRole</span><wbr><span class="parameters">(<a href="KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a>&nbsp;associateRole)</span></div>
-<div class="block">set associateRole</div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setAssociateRole</span><wbr><span class="parameters">(<a href="AssociateRoleKeyReference.html" title="interface in com.commercetools.history.models.common">AssociateRoleKeyReference</a>&nbsp;associateRole)</span></div>
+<div class="block"><p>Inherited role the Associate holds within a Business Unit.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>associateRole</code> - value to be set</dd>
@@ -203,10 +209,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="setSource(com.commercetools.history.models.common.KeyReference)">
+<section class="detail" id="setSource(com.commercetools.history.models.common.BusinessUnitKeyReference)">
 <h3>setSource</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setSource</span><wbr><span class="parameters">(<a href="KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a>&nbsp;source)</span></div>
-<div class="block">set source</div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setSource</span><wbr><span class="parameters">(<a href="BusinessUnitKeyReference.html" title="interface in com.commercetools.history.models.common">BusinessUnitKeyReference</a>&nbsp;source)</span></div>
+<div class="block"><p>Reference to the parent Business Unit where the assignment is defined explicitly.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>source</code> - value to be set</dd>

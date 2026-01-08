@@ -73,14 +73,14 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">CategoryOrderHints</span></div>
-<div class="block">CategoryOrderHints
+<div class="block"><p>JSON object where the keys are <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> <code>id</code>, and the values are order hint values: strings representing a number between <code>0</code> and <code>1</code>, but not ending in <code>0</code>. Order hints allow controlling the order of Products and how they appear in Categories. Products without order hints have an order score below <code>0</code>. Order hints are not unique. If a subset of Products have the same value for order hint in a specific category, the behavior is undetermined.</p>
 
  <hr>
  Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
      CategoryOrderHints categoryOrderHints = CategoryOrderHints.builder()
-             ./^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$/("{/^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$/}")
+             ./^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/("{/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/}")
              .build()
  </code></pre>
  </div></div>
@@ -130,7 +130,7 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setValue(java.lang.String,java.lang.String)" class="member-name-link">setValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set pattern property</div>
+<div class="block">A string representing a number between <code>0</code> and <code>1</code>, but not ending in <code>0</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CategoryOrderHints.html" title="interface in com.commercetools.history.models.common">CategoryOrderHints</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -139,7 +139,9 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#values()" class="member-name-link">values</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">A string representing a number between <code>0</code> and <code>1</code>, but not ending in <code>0</code>.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withCategoryOrderHints(java.util.function.Function)" class="member-name-link">withCategoryOrderHints</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CategoryOrderHints.html" title="interface in com.commercetools.history.models.common">CategoryOrderHints</a>,<wbr>T&gt;&nbsp;helper)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
@@ -164,6 +166,7 @@ loadScripts(document, 'script');</script>
 <h3>values</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">values</span>()</div>
+<div class="block"><p>A string representing a number between <code>0</code> and <code>1</code>, but not ending in <code>0</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>map of the pattern property values</dd>
@@ -175,7 +178,7 @@ loadScripts(document, 'script');</script>
 <h3>setValue</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
-<div class="block">set pattern property</div>
+<div class="block"><p>A string representing a number between <code>0</code> and <code>1</code>, but not ending in <code>0</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>key</code> - property name</dd>

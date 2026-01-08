@@ -88,9 +88,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
  <div class=code-example>
  <pre><code class='java'>
      ResourceIdentifier resourceIdentifier = ResourceIdentifier.builder()
-             .id("{id}")
-             .key("{key}")
-             .typeId(ReferenceTypeId.ASSOCIATE_ROLE)
+             .typeId(ReferenceTypeId.APPROVAL_FLOW)
              .build()
  </code></pre>
  </div></div>
@@ -144,7 +142,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ReferenceTypeId.html" title="interface in com.commercetools.history.models.common">ReferenceTypeId</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTypeId()" class="member-name-link">getTypeId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of typeId}</div>
+<div class="block">Type of resource the value should reference.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ResourceIdentifierBuilder.html" title="class in com.commercetools.history.models.common">ResourceIdentifierBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#id(java.lang.String)" class="member-name-link">id</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
@@ -169,7 +167,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ResourceIdentifierBuilder.html" title="class in com.commercetools.history.models.common">ResourceIdentifierBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#typeId(com.commercetools.history.models.common.ReferenceTypeId)" class="member-name-link">typeId</a><wbr>(<a href="ReferenceTypeId.html" title="interface in com.commercetools.history.models.common">ReferenceTypeId</a>&nbsp;typeId)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the typeId</div>
+<div class="block">Type of resource the value should reference.</div>
 </div>
 </div>
 </div>
@@ -205,7 +203,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="id(java.lang.String)">
 <h3>id</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ResourceIdentifierBuilder.html" title="class in com.commercetools.history.models.common">ResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name">id</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ResourceIdentifierBuilder.html" title="class in com.commercetools.history.models.common">ResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name">id</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
 <div class="block">set the value to the id</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -218,7 +217,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="key(java.lang.String)">
 <h3>key</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ResourceIdentifierBuilder.html" title="class in com.commercetools.history.models.common">ResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name">key</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ResourceIdentifierBuilder.html" title="class in com.commercetools.history.models.common">ResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name">key</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 <div class="block">set the value to the key</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -232,7 +232,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="typeId(com.commercetools.history.models.common.ReferenceTypeId)">
 <h3>typeId</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ResourceIdentifierBuilder.html" title="class in com.commercetools.history.models.common">ResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name">typeId</span><wbr><span class="parameters">(<a href="ReferenceTypeId.html" title="interface in com.commercetools.history.models.common">ReferenceTypeId</a>&nbsp;typeId)</span></div>
-<div class="block">set the value to the typeId</div>
+<div class="block"><p>Type of resource the value should reference. Supported resource type identifiers are:</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>typeId</code> - value to be set</dd>
@@ -244,7 +244,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getId</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getId</span>()</div>
 <div class="block">value of id}</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -255,7 +256,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
 <div class="block">value of key}</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -267,7 +269,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getTypeId()">
 <h3>getTypeId</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReferenceTypeId.html" title="interface in com.commercetools.history.models.common">ReferenceTypeId</a></span>&nbsp;<span class="element-name">getTypeId</span>()</div>
-<div class="block">value of typeId}</div>
+<div class="block"><p>Type of resource the value should reference. Supported resource type identifiers are:</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>typeId</dd>

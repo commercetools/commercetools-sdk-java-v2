@@ -85,7 +85,7 @@ extends <a href="StandalonePriceUpdateAction.html" title="interface in com.comme
  <div class=code-example>
  <pre><code class='java'>
      StandalonePriceRemovePriceTierAction standalonePriceRemovePriceTierAction = StandalonePriceRemovePriceTierAction.builder()
-             .tierMinimumQuantity(0.3)
+             .minimumQuantity(0.3)
              .build()
  </code></pre>
  </div></div>
@@ -139,7 +139,7 @@ extends <a href="StandalonePriceUpdateAction.html" title="interface in com.comme
 <div class="block">factory method to create a deep copy of StandalonePriceRemovePriceTierAction</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTierMinimumQuantity()" class="member-name-link">getTierMinimumQuantity</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMinimumQuantity()" class="member-name-link">getMinimumQuantity</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">The <code>minimumQuantity</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">PriceTier</a> to be removed from the <code>tiers</code> field of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</div>
 </div>
@@ -154,7 +154,7 @@ extends <a href="StandalonePriceUpdateAction.html" title="interface in com.comme
 <div class="block">factory method to create a shallow copy StandalonePriceRemovePriceTierAction</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTierMinimumQuantity(java.lang.Long)" class="member-name-link">setTierMinimumQuantity</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;tierMinimumQuantity)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setMinimumQuantity(java.lang.Long)" class="member-name-link">setMinimumQuantity</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;minimumQuantity)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">The <code>minimumQuantity</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">PriceTier</a> to be removed from the <code>tiers</code> field of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</div>
 </div>
@@ -212,25 +212,25 @@ extends <a href="StandalonePriceUpdateAction.html" title="interface in com.comme
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="getTierMinimumQuantity()">
-<h3>getTierMinimumQuantity</h3>
+<section class="detail" id="getMinimumQuantity()">
+<h3>getMinimumQuantity</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getTierMinimumQuantity</span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getMinimumQuantity</span>()</div>
 <div class="block"><p>The <code>minimumQuantity</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">PriceTier</a> to be removed from the <code>tiers</code> field of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>tierMinimumQuantity</dd>
+<dd>minimumQuantity</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="setTierMinimumQuantity(java.lang.Long)">
-<h3>setTierMinimumQuantity</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTierMinimumQuantity</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;tierMinimumQuantity)</span></div>
+<section class="detail" id="setMinimumQuantity(java.lang.Long)">
+<h3>setMinimumQuantity</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setMinimumQuantity</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;minimumQuantity)</span></div>
 <div class="block"><p>The <code>minimumQuantity</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">PriceTier</a> to be removed from the <code>tiers</code> field of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>tierMinimumQuantity</code> - value to be set</dd>
+<dd><code>minimumQuantity</code> - value to be set</dd>
 </dl>
 </section>
 </li>

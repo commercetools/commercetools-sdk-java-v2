@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">Transaction</span></div>
-<div class="block">Transaction
+<div class="block"><p>Represents a financial transaction typically created as a result of a notification from the payment service.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -81,10 +81,8 @@ loadScripts(document, 'script');</script>
  <pre><code class='java'>
      Transaction transaction = Transaction.builder()
              .id("{id}")
-             .timestamp("{timestamp}")
              .type(TransactionType.AUTHORIZATION)
              .amount(amountBuilder -> amountBuilder)
-             .interactionId("{interactionId}")
              .state(TransactionState.INITIAL)
              .build()
  </code></pre>
@@ -121,44 +119,60 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of Transaction</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAmount()" class="member-name-link">getAmount</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Money value of the Transaction.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCustom()" class="member-name-link">getCustom</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Custom Fields defined for the Transaction.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Unique identifier of the Transaction.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getInteractionId()" class="member-name-link">getInteractionId</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Identifier used by the interface that manages the transaction (usually the PSP).</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getInteractionId()" class="member-name-link">getInteractionId</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Identifier used by the interface that manages the Transaction (usually the PSP).</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="TransactionState.html" title="interface in com.commercetools.history.models.common">TransactionState</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getState()" class="member-name-link">getState</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTimestamp()" class="member-name-link">getTimestamp</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="TransactionState.html" title="interface in com.commercetools.history.models.common">TransactionState</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getState()" class="member-name-link">getState</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Time at which the transaction took place.</div>
+<div class="block">State of the Transaction.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="TransactionType.html" title="interface in com.commercetools.history.models.common">TransactionType</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="Transaction.html" title="interface in com.commercetools.history.models.common">Transaction</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
-<div class="block">factory method</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTimestamp()" class="member-name-link">getTimestamp</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Date and time (UTC) the Transaction took place.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="TransactionType.html" title="interface in com.commercetools.history.models.common">TransactionType</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Type of the Transaction.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="Transaction.html" title="interface in com.commercetools.history.models.common">Transaction</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.history.models.common.Transaction)" class="member-name-link">of</a><wbr>(<a href="Transaction.html" title="interface in com.commercetools.history.models.common">Transaction</a>&nbsp;template)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">factory method</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="Transaction.html" title="interface in com.commercetools.history.models.common">Transaction</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.history.models.common.Transaction)" class="member-name-link">of</a><wbr>(<a href="Transaction.html" title="interface in com.commercetools.history.models.common">Transaction</a>&nbsp;template)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a shallow copy Transaction</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAmount(com.commercetools.history.models.common.CentPrecisionMoney)" class="member-name-link">setAmount</a><wbr>(<a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a>&nbsp;amount)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Money value of the Transaction.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAmount(com.commercetools.history.models.common.Money)" class="member-name-link">setAmount</a><wbr>(<a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a>&nbsp;amount)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCustom(com.commercetools.history.models.common.CustomFields)" class="member-name-link">setCustom</a><wbr>(<a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a>&nbsp;custom)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set amount</div>
+<div class="block">Custom Fields defined for the Transaction.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setId(java.lang.String)" class="member-name-link">setId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
@@ -168,22 +182,22 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setInteractionId(java.lang.String)" class="member-name-link">setInteractionId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;interactionId)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Identifier used by the interface that manages the transaction (usually the PSP).</div>
+<div class="block">Identifier used by the interface that manages the Transaction (usually the PSP).</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setState(com.commercetools.history.models.common.TransactionState)" class="member-name-link">setState</a><wbr>(<a href="TransactionState.html" title="interface in com.commercetools.history.models.common">TransactionState</a>&nbsp;state)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set state</div>
+<div class="block">State of the Transaction.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTimestamp(java.lang.String)" class="member-name-link">setTimestamp</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;timestamp)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTimestamp(java.time.ZonedDateTime)" class="member-name-link">setTimestamp</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;timestamp)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Time at which the transaction took place.</div>
+<div class="block">Date and time (UTC) the Transaction took place.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setType(com.commercetools.history.models.common.TransactionType)" class="member-name-link">setType</a><wbr>(<a href="TransactionType.html" title="interface in com.commercetools.history.models.common">TransactionType</a>&nbsp;type)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set type</div>
+<div class="block">Type of the Transaction.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Transaction.html" title="interface in com.commercetools.history.models.common">Transaction</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -224,9 +238,8 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getTimestamp()">
 <h3>getTimestamp</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getTimestamp</span>()</div>
-<div class="block"><p>Time at which the transaction took place.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getTimestamp</span>()</div>
+<div class="block"><p>Date and time (UTC) the Transaction took place.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>timestamp</dd>
@@ -238,6 +251,7 @@ loadScripts(document, 'script');</script>
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="TransactionType.html" title="interface in com.commercetools.history.models.common">TransactionType</a></span>&nbsp;<span class="element-name">getType</span>()</div>
+<div class="block"><p>Type of the Transaction. For example, <code>Authorization</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>type</dd>
@@ -249,7 +263,8 @@ loadScripts(document, 'script');</script>
 <h3>getAmount</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a></span>&nbsp;<span class="element-name">getAmount</span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a></span>&nbsp;<span class="element-name">getAmount</span>()</div>
+<div class="block"><p>Money value of the Transaction.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>amount</dd>
@@ -259,9 +274,8 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getInteractionId()">
 <h3>getInteractionId</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getInteractionId</span>()</div>
-<div class="block"><p>Identifier used by the interface that manages the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getInteractionId</span>()</div>
+<div class="block"><p>Identifier used by the interface that manages the Transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction can be found with this ID.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>interactionId</dd>
@@ -273,9 +287,22 @@ loadScripts(document, 'script');</script>
 <h3>getState</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="TransactionState.html" title="interface in com.commercetools.history.models.common">TransactionState</a></span>&nbsp;<span class="element-name">getState</span>()</div>
+<div class="block"><p>State of the Transaction.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>state</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCustom()">
+<h3>getCustom</h3>
+<div class="member-signature"><span class="annotations">@Valid
+</span><span class="return-type">@Valid <a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a></span>&nbsp;<span class="element-name">getCustom</span>()</div>
+<div class="block"><p>Custom Fields defined for the Transaction.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>custom</dd>
 </dl>
 </section>
 </li>
@@ -291,10 +318,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="setTimestamp(java.lang.String)">
+<section class="detail" id="setTimestamp(java.time.ZonedDateTime)">
 <h3>setTimestamp</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTimestamp</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;timestamp)</span></div>
-<div class="block"><p>Time at which the transaction took place.</p></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTimestamp</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;timestamp)</span></div>
+<div class="block"><p>Date and time (UTC) the Transaction took place.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>timestamp</code> - value to be set</dd>
@@ -305,7 +332,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setType(com.commercetools.history.models.common.TransactionType)">
 <h3>setType</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setType</span><wbr><span class="parameters">(<a href="TransactionType.html" title="interface in com.commercetools.history.models.common">TransactionType</a>&nbsp;type)</span></div>
-<div class="block">set type</div>
+<div class="block"><p>Type of the Transaction. For example, <code>Authorization</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>type</code> - value to be set</dd>
@@ -313,10 +340,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="setAmount(com.commercetools.history.models.common.Money)">
+<section class="detail" id="setAmount(com.commercetools.history.models.common.CentPrecisionMoney)">
 <h3>setAmount</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setAmount</span><wbr><span class="parameters">(<a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a>&nbsp;amount)</span></div>
-<div class="block">set amount</div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setAmount</span><wbr><span class="parameters">(<a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a>&nbsp;amount)</span></div>
+<div class="block"><p>Money value of the Transaction.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>amount</code> - value to be set</dd>
@@ -327,7 +354,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setInteractionId(java.lang.String)">
 <h3>setInteractionId</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setInteractionId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;interactionId)</span></div>
-<div class="block"><p>Identifier used by the interface that manages the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p></div>
+<div class="block"><p>Identifier used by the interface that manages the Transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction can be found with this ID.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>interactionId</code> - value to be set</dd>
@@ -338,10 +365,21 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setState(com.commercetools.history.models.common.TransactionState)">
 <h3>setState</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setState</span><wbr><span class="parameters">(<a href="TransactionState.html" title="interface in com.commercetools.history.models.common">TransactionState</a>&nbsp;state)</span></div>
-<div class="block">set state</div>
+<div class="block"><p>State of the Transaction.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>state</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setCustom(com.commercetools.history.models.common.CustomFields)">
+<h3>setCustom</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCustom</span><wbr><span class="parameters">(<a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a>&nbsp;custom)</span></div>
+<div class="block"><p>Custom Fields defined for the Transaction.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>custom</code> - value to be set</dd>
 </dl>
 </section>
 </li>

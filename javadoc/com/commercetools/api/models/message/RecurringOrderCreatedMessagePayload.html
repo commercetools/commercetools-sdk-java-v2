@@ -85,7 +85,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
  <div class=code-example>
  <pre><code class='java'>
      RecurringOrderCreatedMessagePayload recurringOrderCreatedMessagePayload = RecurringOrderCreatedMessagePayload.builder()
-             .order(orderBuilder -> orderBuilder)
+             .recurringOrder(recurringOrderBuilder -> recurringOrderBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -139,7 +139,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <div class="block">factory method to create a deep copy of RecurringOrderCreatedMessagePayload</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../recurring_order/RecurringOrder.html" title="interface in com.commercetools.api.models.recurring_order">RecurringOrder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOrder()" class="member-name-link">getOrder</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRecurringOrder()" class="member-name-link">getRecurringOrder</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was created.</div>
 </div>
@@ -154,7 +154,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <div class="block">factory method to create a shallow copy RecurringOrderCreatedMessagePayload</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setOrder(com.commercetools.api.models.recurring_order.RecurringOrder)" class="member-name-link">setOrder</a><wbr>(<a href="../recurring_order/RecurringOrder.html" title="interface in com.commercetools.api.models.recurring_order">RecurringOrder</a>&nbsp;order)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setRecurringOrder(com.commercetools.api.models.recurring_order.RecurringOrder)" class="member-name-link">setRecurringOrder</a><wbr>(<a href="../recurring_order/RecurringOrder.html" title="interface in com.commercetools.api.models.recurring_order">RecurringOrder</a>&nbsp;recurringOrder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was created.</div>
 </div>
@@ -212,26 +212,26 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="getOrder()">
-<h3>getOrder</h3>
+<section class="detail" id="getRecurringOrder()">
+<h3>getRecurringOrder</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../recurring_order/RecurringOrder.html" title="interface in com.commercetools.api.models.recurring_order">RecurringOrder</a></span>&nbsp;<span class="element-name">getOrder</span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../recurring_order/RecurringOrder.html" title="interface in com.commercetools.api.models.recurring_order">RecurringOrder</a></span>&nbsp;<span class="element-name">getRecurringOrder</span>()</div>
 <div class="block"><p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>order</dd>
+<dd>recurringOrder</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="setOrder(com.commercetools.api.models.recurring_order.RecurringOrder)">
-<h3>setOrder</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setOrder</span><wbr><span class="parameters">(<a href="../recurring_order/RecurringOrder.html" title="interface in com.commercetools.api.models.recurring_order">RecurringOrder</a>&nbsp;order)</span></div>
+<section class="detail" id="setRecurringOrder(com.commercetools.api.models.recurring_order.RecurringOrder)">
+<h3>setRecurringOrder</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setRecurringOrder</span><wbr><span class="parameters">(<a href="../recurring_order/RecurringOrder.html" title="interface in com.commercetools.api.models.recurring_order">RecurringOrder</a>&nbsp;recurringOrder)</span></div>
 <div class="block"><p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>order</code> - value to be set</dd>
+<dd><code>recurringOrder</code> - value to be set</dd>
 </dl>
 </section>
 </li>

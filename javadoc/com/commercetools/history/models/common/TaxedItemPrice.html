@@ -82,6 +82,7 @@ loadScripts(document, 'script');</script>
      TaxedItemPrice taxedItemPrice = TaxedItemPrice.builder()
              .totalNet(totalNetBuilder -> totalNetBuilder)
              .totalGross(totalGrossBuilder -> totalGrossBuilder)
+             .plusTaxPortions(taxPortionsBuilder -> taxPortionsBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -117,12 +118,26 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of TaxedItemPrice</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTotalGross()" class="member-name-link">getTotalGross</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTotalNet()" class="member-name-link">getTotalNet</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TaxPortion.html" title="interface in com.commercetools.history.models.common">TaxPortion</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTaxPortions()" class="member-name-link">getTaxPortions</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Taxable portions added to the total net price.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTotalGross()" class="member-name-link">getTotalGross</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Total gross amount of the Line Item or Custom Line Item.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTotalNet()" class="member-name-link">getTotalNet</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Total net amount of the Line Item or Custom Line Item.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTotalTax()" class="member-name-link">getTotalTax</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Total tax applicable for the Line Item or Custom Line Item.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="TaxedItemPrice.html" title="interface in com.commercetools.history.models.common">TaxedItemPrice</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
@@ -134,23 +149,38 @@ loadScripts(document, 'script');</script>
 <div class="block">factory method to create a shallow copy TaxedItemPrice</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTotalGross(com.commercetools.history.models.common.Money)" class="member-name-link">setTotalGross</a><wbr>(<a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a>&nbsp;totalGross)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTaxPortions(com.commercetools.history.models.common.TaxPortion...)" class="member-name-link">setTaxPortions</a><wbr>(<a href="TaxPortion.html" title="interface in com.commercetools.history.models.common">TaxPortion</a>...&nbsp;taxPortions)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set totalGross</div>
+<div class="block">Taxable portions added to the total net price.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTotalNet(com.commercetools.history.models.common.Money)" class="member-name-link">setTotalNet</a><wbr>(<a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a>&nbsp;totalNet)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTaxPortions(java.util.List)" class="member-name-link">setTaxPortions</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TaxPortion.html" title="interface in com.commercetools.history.models.common">TaxPortion</a>&gt;&nbsp;taxPortions)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set totalNet</div>
+<div class="block">Taxable portions added to the total net price.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="TaxedItemPrice.html" title="interface in com.commercetools.history.models.common">TaxedItemPrice</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTotalGross(com.commercetools.history.models.common.CentPrecisionMoney)" class="member-name-link">setTotalGross</a><wbr>(<a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a>&nbsp;totalGross)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Total gross amount of the Line Item or Custom Line Item.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTotalNet(com.commercetools.history.models.common.CentPrecisionMoney)" class="member-name-link">setTotalNet</a><wbr>(<a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a>&nbsp;totalNet)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Total net amount of the Line Item or Custom Line Item.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTotalTax(com.commercetools.history.models.common.CentPrecisionMoney)" class="member-name-link">setTotalTax</a><wbr>(<a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a>&nbsp;totalTax)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Total tax applicable for the Line Item or Custom Line Item.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="TaxedItemPrice.html" title="interface in com.commercetools.history.models.common">TaxedItemPrice</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withTaxedItemPrice(java.util.function.Function)" class="member-name-link">withTaxedItemPrice</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TaxedItemPrice.html" title="interface in com.commercetools.history.models.common">TaxedItemPrice</a>,<wbr>T&gt;&nbsp;helper)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withTaxedItemPrice(java.util.function.Function)" class="member-name-link">withTaxedItemPrice</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TaxedItemPrice.html" title="interface in com.commercetools.history.models.common">TaxedItemPrice</a>,<wbr>T&gt;&nbsp;helper)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">accessor map function</div>
 </div>
 </div>
@@ -172,7 +202,8 @@ loadScripts(document, 'script');</script>
 <h3>getTotalNet</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a></span>&nbsp;<span class="element-name">getTotalNet</span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a></span>&nbsp;<span class="element-name">getTotalNet</span>()</div>
+<div class="block"><p>Total net amount of the Line Item or Custom Line Item.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>totalNet</dd>
@@ -184,7 +215,8 @@ loadScripts(document, 'script');</script>
 <h3>getTotalGross</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a></span>&nbsp;<span class="element-name">getTotalGross</span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a></span>&nbsp;<span class="element-name">getTotalGross</span>()</div>
+<div class="block"><p>Total gross amount of the Line Item or Custom Line Item.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>totalGross</dd>
@@ -192,10 +224,36 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="setTotalNet(com.commercetools.history.models.common.Money)">
+<section class="detail" id="getTaxPortions()">
+<h3>getTaxPortions</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+@Valid
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TaxPortion.html" title="interface in com.commercetools.history.models.common">TaxPortion</a>&gt;</span>&nbsp;<span class="element-name">getTaxPortions</span>()</div>
+<div class="block"><p>Taxable portions added to the total net price.</p>
+  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>taxPortions</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getTotalTax()">
+<h3>getTotalTax</h3>
+<div class="member-signature"><span class="annotations">@Valid
+</span><span class="return-type">@Valid <a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a></span>&nbsp;<span class="element-name">getTotalTax</span>()</div>
+<div class="block"><p>Total tax applicable for the Line Item or Custom Line Item. Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>totalTax</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setTotalNet(com.commercetools.history.models.common.CentPrecisionMoney)">
 <h3>setTotalNet</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTotalNet</span><wbr><span class="parameters">(<a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a>&nbsp;totalNet)</span></div>
-<div class="block">set totalNet</div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTotalNet</span><wbr><span class="parameters">(<a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a>&nbsp;totalNet)</span></div>
+<div class="block"><p>Total net amount of the Line Item or Custom Line Item.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>totalNet</code> - value to be set</dd>
@@ -203,13 +261,48 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="setTotalGross(com.commercetools.history.models.common.Money)">
+<section class="detail" id="setTotalGross(com.commercetools.history.models.common.CentPrecisionMoney)">
 <h3>setTotalGross</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTotalGross</span><wbr><span class="parameters">(<a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a>&nbsp;totalGross)</span></div>
-<div class="block">set totalGross</div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTotalGross</span><wbr><span class="parameters">(<a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a>&nbsp;totalGross)</span></div>
+<div class="block"><p>Total gross amount of the Line Item or Custom Line Item.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>totalGross</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setTaxPortions(com.commercetools.history.models.common.TaxPortion...)">
+<h3>setTaxPortions</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTaxPortions</span><wbr><span class="parameters">(<a href="TaxPortion.html" title="interface in com.commercetools.history.models.common">TaxPortion</a>...&nbsp;taxPortions)</span></div>
+<div class="block"><p>Taxable portions added to the total net price.</p>
+  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>taxPortions</code> - values to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setTaxPortions(java.util.List)">
+<h3>setTaxPortions</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTaxPortions</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TaxPortion.html" title="interface in com.commercetools.history.models.common">TaxPortion</a>&gt;&nbsp;taxPortions)</span></div>
+<div class="block"><p>Taxable portions added to the total net price.</p>
+  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>taxPortions</code> - values to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setTotalTax(com.commercetools.history.models.common.CentPrecisionMoney)">
+<h3>setTotalTax</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTotalTax</span><wbr><span class="parameters">(<a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a>&nbsp;totalTax)</span></div>
+<div class="block"><p>Total tax applicable for the Line Item or Custom Line Item. Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>totalTax</code> - value to be set</dd>
 </dl>
 </section>
 </li>

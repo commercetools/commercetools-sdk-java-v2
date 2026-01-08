@@ -88,6 +88,8 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
              .change("{change}")
              .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
              .plusNextValue(nextValueBuilder -> nextValueBuilder)
+             .plusAddedItems(addedItemsBuilder -> addedItemsBuilder)
+             .plusRemovedItems(removedItemsBuilder -> removedItemsBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -140,20 +142,30 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of SetStoresChange</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getChange()" class="member-name-link">getChange</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAddedItems()" class="member-name-link">getAddedItems</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Elements added to the array.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getChange()" class="member-name-link">getChange</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><span>Type of change</span> on a resource that is similar to the update action it relates to, where possible.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNextValue()" class="member-name-link">getNextValue</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNextValue()" class="member-name-link">getNextValue</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Value after the change.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPreviousValue()" class="member-name-link">getPreviousValue</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPreviousValue()" class="member-name-link">getPreviousValue</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Value before the change.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRemovedItems()" class="member-name-link">getRemovedItems</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Elements removed from the array.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
@@ -169,6 +181,16 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.history.models.change.SetStoresChange)" class="member-name-link">of</a><wbr>(<a href="SetStoresChange.html" title="interface in com.commercetools.history.models.change">SetStoresChange</a>&nbsp;template)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a shallow copy SetStoresChange</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAddedItems(com.commercetools.history.models.common.KeyReference...)" class="member-name-link">setAddedItems</a><wbr>(<a href="../common/KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a>...&nbsp;addedItems)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Elements added to the array.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAddedItems(java.util.List)" class="member-name-link">setAddedItems</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a>&gt;&nbsp;addedItems)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Elements added to the array.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setChange(java.lang.String)" class="member-name-link">setChange</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</code></div>
@@ -194,6 +216,16 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setPreviousValue(java.util.List)" class="member-name-link">setPreviousValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&gt;&nbsp;previousValue)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Value before the change.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setRemovedItems(com.commercetools.history.models.common.KeyReference...)" class="member-name-link">setRemovedItems</a><wbr>(<a href="../common/KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a>...&nbsp;removedItems)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Elements removed from the array.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setRemovedItems(java.util.List)" class="member-name-link">setRemovedItems</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a>&gt;&nbsp;removedItems)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Elements removed from the array.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SetStoresChange.html" title="interface in com.commercetools.history.models.change">SetStoresChange</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -303,6 +335,32 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 </section>
 </li>
 <li>
+<section class="detail" id="getAddedItems()">
+<h3>getAddedItems</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+@Valid
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a>&gt;</span>&nbsp;<span class="element-name">getAddedItems</span>()</div>
+<div class="block"><p>Elements added to the array.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>addedItems</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getRemovedItems()">
+<h3>getRemovedItems</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+@Valid
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a>&gt;</span>&nbsp;<span class="element-name">getRemovedItems</span>()</div>
+<div class="block"><p>Elements removed from the array.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>removedItems</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setChange(java.lang.String)">
 <h3>setChange</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setChange</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
@@ -356,6 +414,50 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>nextValue</code> - values to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setAddedItems(com.commercetools.history.models.common.KeyReference...)">
+<h3>setAddedItems</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setAddedItems</span><wbr><span class="parameters">(<a href="../common/KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a>...&nbsp;addedItems)</span></div>
+<div class="block"><p>Elements added to the array.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>addedItems</code> - values to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setAddedItems(java.util.List)">
+<h3>setAddedItems</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setAddedItems</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a>&gt;&nbsp;addedItems)</span></div>
+<div class="block"><p>Elements added to the array.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>addedItems</code> - values to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setRemovedItems(com.commercetools.history.models.common.KeyReference...)">
+<h3>setRemovedItems</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setRemovedItems</span><wbr><span class="parameters">(<a href="../common/KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a>...&nbsp;removedItems)</span></div>
+<div class="block"><p>Elements removed from the array.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>removedItems</code> - values to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setRemovedItems(java.util.List)">
+<h3>setRemovedItems</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setRemovedItems</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a>&gt;&nbsp;removedItems)</span></div>
+<div class="block"><p>Elements removed from the array.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>removedItems</code> - values to be set</dd>
 </dl>
 </section>
 </li>

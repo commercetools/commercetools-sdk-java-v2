@@ -81,8 +81,6 @@ loadScripts(document, 'script');</script>
  <pre><code class='java'>
      ShippingRate shippingRate = ShippingRate.builder()
              .price(priceBuilder -> priceBuilder)
-             .freeAbove(freeAboveBuilder -> freeAboveBuilder)
-             .isMatching(true)
              .plusTiers(tiersBuilder -> tiersBuilder)
              .build()
  </code></pre>
@@ -119,20 +117,26 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of ShippingRate</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFreeAbove()" class="member-name-link">getFreeAbove</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><span>Free shipping</span> is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getIsMatching()" class="member-name-link">getIsMatching</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Only appears in response to requests for ShippingMethods by Cart or location to mark this shipping rate as one that matches the Cart or location.</div>
+<div class="block"><code>true</code> if the ShippingRate matches given <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Location" rel="nofollow">Location</a>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPrice()" class="member-name-link">getPrice</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Currency amount of the ShippingRate.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.history.models.common">ShippingRatePriceTier</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTiers()" class="member-name-link">getTiers</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Price tiers for the ShippingRate.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ShippingRate.html" title="interface in com.commercetools.history.models.common">ShippingRate</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
@@ -144,29 +148,29 @@ loadScripts(document, 'script');</script>
 <div class="block">factory method to create a shallow copy ShippingRate</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setFreeAbove(com.commercetools.history.models.common.Money)" class="member-name-link">setFreeAbove</a><wbr>(<a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a>&nbsp;freeAbove)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setFreeAbove(com.commercetools.history.models.common.CentPrecisionMoney)" class="member-name-link">setFreeAbove</a><wbr>(<a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a>&nbsp;freeAbove)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set freeAbove</div>
+<div class="block"><span>Free shipping</span> is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setIsMatching(java.lang.Boolean)" class="member-name-link">setIsMatching</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isMatching)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Only appears in response to requests for ShippingMethods by Cart or location to mark this shipping rate as one that matches the Cart or location.</div>
+<div class="block"><code>true</code> if the ShippingRate matches given <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Location" rel="nofollow">Location</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setPrice(com.commercetools.history.models.common.Money)" class="member-name-link">setPrice</a><wbr>(<a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a>&nbsp;price)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setPrice(com.commercetools.history.models.common.CentPrecisionMoney)" class="member-name-link">setPrice</a><wbr>(<a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a>&nbsp;price)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set price</div>
+<div class="block">Currency amount of the ShippingRate.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTiers(com.commercetools.history.models.common.ShippingRatePriceTier...)" class="member-name-link">setTiers</a><wbr>(<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.history.models.common">ShippingRatePriceTier</a>...&nbsp;tiers)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set tiers</div>
+<div class="block">Price tiers for the ShippingRate.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTiers(java.util.List)" class="member-name-link">setTiers</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.history.models.common">ShippingRatePriceTier</a>&gt;&nbsp;tiers)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set tiers</div>
+<div class="block">Price tiers for the ShippingRate.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ShippingRate.html" title="interface in com.commercetools.history.models.common">ShippingRate</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -197,7 +201,8 @@ loadScripts(document, 'script');</script>
 <h3>getPrice</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a></span>&nbsp;<span class="element-name">getPrice</span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a></span>&nbsp;<span class="element-name">getPrice</span>()</div>
+<div class="block"><p>Currency amount of the ShippingRate.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>price</dd>
@@ -207,9 +212,9 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getFreeAbove()">
 <h3>getFreeAbove</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-@Valid
-</span><span class="return-type">@NotNull @Valid <a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a></span>&nbsp;<span class="element-name">getFreeAbove</span>()</div>
+<div class="member-signature"><span class="annotations">@Valid
+</span><span class="return-type">@Valid <a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a></span>&nbsp;<span class="element-name">getFreeAbove</span>()</div>
+<div class="block"><p><span>Free shipping</span> is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>freeAbove</dd>
@@ -219,9 +224,8 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getIsMatching()">
 <h3>getIsMatching</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getIsMatching</span>()</div>
-<div class="block"><p>Only appears in response to requests for ShippingMethods by Cart or location to mark this shipping rate as one that matches the Cart or location.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getIsMatching</span>()</div>
+<div class="block"><p><code>true</code> if the ShippingRate matches given <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Location" rel="nofollow">Location</a>. Only appears in response to requests for <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-cart:GET" rel="nofollow">Get ShippingMethods for a Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-location:GET" rel="nofollow">Get ShippingMethods for a Location</a>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>isMatching</dd>
@@ -234,6 +238,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.history.models.common">ShippingRatePriceTier</a>&gt;</span>&nbsp;<span class="element-name">getTiers</span>()</div>
+<div class="block"><p>Price tiers for the ShippingRate.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>tiers</dd>
@@ -241,10 +246,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="setPrice(com.commercetools.history.models.common.Money)">
+<section class="detail" id="setPrice(com.commercetools.history.models.common.CentPrecisionMoney)">
 <h3>setPrice</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setPrice</span><wbr><span class="parameters">(<a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a>&nbsp;price)</span></div>
-<div class="block">set price</div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setPrice</span><wbr><span class="parameters">(<a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a>&nbsp;price)</span></div>
+<div class="block"><p>Currency amount of the ShippingRate.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>price</code> - value to be set</dd>
@@ -252,10 +257,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="setFreeAbove(com.commercetools.history.models.common.Money)">
+<section class="detail" id="setFreeAbove(com.commercetools.history.models.common.CentPrecisionMoney)">
 <h3>setFreeAbove</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setFreeAbove</span><wbr><span class="parameters">(<a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a>&nbsp;freeAbove)</span></div>
-<div class="block">set freeAbove</div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setFreeAbove</span><wbr><span class="parameters">(<a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a>&nbsp;freeAbove)</span></div>
+<div class="block"><p><span>Free shipping</span> is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>freeAbove</code> - value to be set</dd>
@@ -266,7 +271,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setIsMatching(java.lang.Boolean)">
 <h3>setIsMatching</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setIsMatching</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isMatching)</span></div>
-<div class="block"><p>Only appears in response to requests for ShippingMethods by Cart or location to mark this shipping rate as one that matches the Cart or location.</p></div>
+<div class="block"><p><code>true</code> if the ShippingRate matches given <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Location" rel="nofollow">Location</a>. Only appears in response to requests for <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-cart:GET" rel="nofollow">Get ShippingMethods for a Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-location:GET" rel="nofollow">Get ShippingMethods for a Location</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>isMatching</code> - value to be set</dd>
@@ -277,7 +282,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setTiers(com.commercetools.history.models.common.ShippingRatePriceTier...)">
 <h3>setTiers</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTiers</span><wbr><span class="parameters">(<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.history.models.common">ShippingRatePriceTier</a>...&nbsp;tiers)</span></div>
-<div class="block">set tiers</div>
+<div class="block"><p>Price tiers for the ShippingRate.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>tiers</code> - values to be set</dd>
@@ -288,7 +293,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setTiers(java.util.List)">
 <h3>setTiers</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTiers</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.history.models.common">ShippingRatePriceTier</a>&gt;&nbsp;tiers)</span></div>
-<div class="block">set tiers</div>
+<div class="block"><p>Price tiers for the ShippingRate.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>tiers</code> - values to be set</dd>

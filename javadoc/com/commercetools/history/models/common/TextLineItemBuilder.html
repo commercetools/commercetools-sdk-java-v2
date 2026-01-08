@@ -88,12 +88,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
  <div class=code-example>
  <pre><code class='java'>
      TextLineItem textLineItem = TextLineItem.builder()
-             .addedAt("{addedAt}")
-             .custom(customBuilder -> customBuilder)
-             .description(descriptionBuilder -> descriptionBuilder)
+             .addedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
              .id("{id}")
              .name(nameBuilder -> nameBuilder)
-             .quantity(1)
+             .quantity(0.3)
              .build()
  </code></pre>
  </div></div>
@@ -125,9 +123,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addedAt(java.lang.String)" class="member-name-link">addedAt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;addedAt)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addedAt(java.time.ZonedDateTime)" class="member-name-link">addedAt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;addedAt)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the addedAt</div>
+<div class="block">Date and time (UTC) the TextLineItem was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TextLineItem.html" title="interface in com.commercetools.history.models.common">TextLineItem</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
@@ -142,67 +140,77 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#custom(com.commercetools.history.models.common.CustomFields)" class="member-name-link">custom</a><wbr>(<a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a>&nbsp;custom)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the custom</div>
+<div class="block">Custom Fields of the TextLineItem.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#custom(java.util.function.Function)" class="member-name-link">custom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomFieldsBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldsBuilder</a>,<wbr><a href="CustomFieldsBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldsBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the custom using the builder function</div>
+<div class="block">Custom Fields of the TextLineItem.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#description(com.commercetools.history.models.common.LocalizedString)" class="member-name-link">description</a><wbr>(<a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;description)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the description</div>
+<div class="block">Description of the TextLineItem.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#description(java.util.function.Function)" class="member-name-link">description</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a>,<wbr><a href="LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the description using the builder function</div>
+<div class="block">Description of the TextLineItem.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAddedAt()" class="member-name-link">getAddedAt</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of addedAt}</div>
+<div class="block">Date and time (UTC) the TextLineItem was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCustom()" class="member-name-link">getCustom</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of custom}</div>
+<div class="block">Custom Fields of the TextLineItem.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDescription()" class="member-name-link">getDescription</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of description}</div>
+<div class="block">Description of the TextLineItem.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of id}</div>
+<div class="block">Unique identifier of the TextLineItem.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getKey()" class="member-name-link">getKey</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of name}</div>
+<div class="block">User-defined identifier of the TextLineItem.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getQuantity()" class="member-name-link">getQuantity</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of quantity}</div>
+<div class="block">Name of the TextLineItem.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getQuantity()" class="member-name-link">getQuantity</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Number of entries in the TextLineItem.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#id(java.lang.String)" class="member-name-link">id</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Unique identifier of the TextLineItem.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#id(java.lang.String)" class="member-name-link">id</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#key(java.lang.String)" class="member-name-link">key</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the id</div>
+<div class="block">User-defined identifier of the TextLineItem.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#name(com.commercetools.history.models.common.LocalizedString)" class="member-name-link">name</a><wbr>(<a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;name)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the name</div>
+<div class="block">Name of the TextLineItem.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#name(java.util.function.Function)" class="member-name-link">name</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a>,<wbr><a href="LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the name using the builder function</div>
+<div class="block">Name of the TextLineItem.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -215,24 +223,24 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">create builder for TextLineItem instance</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#quantity(java.lang.Integer)" class="member-name-link">quantity</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;quantity)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#quantity(java.lang.Long)" class="member-name-link">quantity</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantity)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the quantity</div>
+<div class="block">Number of entries in the TextLineItem.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCustom(java.util.function.Function)" class="member-name-link">withCustom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomFieldsBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldsBuilder</a>,<wbr><a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the custom using the builder function</div>
+<div class="block">Custom Fields of the TextLineItem.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withDescription(java.util.function.Function)" class="member-name-link">withDescription</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a>,<wbr><a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the description using the builder function</div>
+<div class="block">Description of the TextLineItem.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withName(java.util.function.Function)" class="member-name-link">withName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a>,<wbr><a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the name using the builder function</div>
+<div class="block">Name of the TextLineItem.</div>
 </div>
 </div>
 </div>
@@ -266,10 +274,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="addedAt(java.lang.String)">
+<section class="detail" id="addedAt(java.time.ZonedDateTime)">
 <h3>addedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></span>&nbsp;<span class="element-name">addedAt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;addedAt)</span></div>
-<div class="block">set the value to the addedAt</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></span>&nbsp;<span class="element-name">addedAt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;addedAt)</span></div>
+<div class="block"><p>Date and time (UTC) the TextLineItem was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>addedAt</code> - value to be set</dd>
@@ -282,7 +290,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="custom(java.util.function.Function)">
 <h3>custom</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></span>&nbsp;<span class="element-name">custom</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomFieldsBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldsBuilder</a>,<wbr><a href="CustomFieldsBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldsBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the custom using the builder function</div>
+<div class="block"><p>Custom Fields of the TextLineItem.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the custom value</dd>
@@ -295,7 +303,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withCustom(java.util.function.Function)">
 <h3>withCustom</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></span>&nbsp;<span class="element-name">withCustom</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomFieldsBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldsBuilder</a>,<wbr><a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the custom using the builder function</div>
+<div class="block"><p>Custom Fields of the TextLineItem.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the custom value</dd>
@@ -307,8 +315,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="custom(com.commercetools.history.models.common.CustomFields)">
 <h3>custom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></span>&nbsp;<span class="element-name">custom</span><wbr><span class="parameters">(<a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a>&nbsp;custom)</span></div>
-<div class="block">set the value to the custom</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></span>&nbsp;<span class="element-name">custom</span><wbr><span class="parameters">(@Nullable
+ <a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a>&nbsp;custom)</span></div>
+<div class="block"><p>Custom Fields of the TextLineItem.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>custom</code> - value to be set</dd>
@@ -321,7 +330,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="description(java.util.function.Function)">
 <h3>description</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></span>&nbsp;<span class="element-name">description</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a>,<wbr><a href="LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the description using the builder function</div>
+<div class="block"><p>Description of the TextLineItem.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the description value</dd>
@@ -334,7 +343,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withDescription(java.util.function.Function)">
 <h3>withDescription</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></span>&nbsp;<span class="element-name">withDescription</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a>,<wbr><a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the description using the builder function</div>
+<div class="block"><p>Description of the TextLineItem.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the description value</dd>
@@ -346,8 +355,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="description(com.commercetools.history.models.common.LocalizedString)">
 <h3>description</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></span>&nbsp;<span class="element-name">description</span><wbr><span class="parameters">(<a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;description)</span></div>
-<div class="block">set the value to the description</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></span>&nbsp;<span class="element-name">description</span><wbr><span class="parameters">(@Nullable
+ <a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;description)</span></div>
+<div class="block"><p>Description of the TextLineItem.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>description</code> - value to be set</dd>
@@ -360,7 +370,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="id(java.lang.String)">
 <h3>id</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></span>&nbsp;<span class="element-name">id</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
-<div class="block">set the value to the id</div>
+<div class="block"><p>Unique identifier of the TextLineItem.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>id</code> - value to be set</dd>
@@ -370,10 +380,24 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="key(java.lang.String)">
+<h3>key</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></span>&nbsp;<span class="element-name">key</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="block"><p>User-defined identifier of the TextLineItem. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>key</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="name(java.util.function.Function)">
 <h3>name</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></span>&nbsp;<span class="element-name">name</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a>,<wbr><a href="LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the name using the builder function</div>
+<div class="block"><p>Name of the TextLineItem.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the name value</dd>
@@ -386,7 +410,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withName(java.util.function.Function)">
 <h3>withName</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></span>&nbsp;<span class="element-name">withName</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a>,<wbr><a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the name using the builder function</div>
+<div class="block"><p>Name of the TextLineItem.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the name value</dd>
@@ -399,7 +423,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="name(com.commercetools.history.models.common.LocalizedString)">
 <h3>name</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></span>&nbsp;<span class="element-name">name</span><wbr><span class="parameters">(<a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;name)</span></div>
-<div class="block">set the value to the name</div>
+<div class="block"><p>Name of the TextLineItem.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>name</code> - value to be set</dd>
@@ -409,10 +433,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="quantity(java.lang.Integer)">
+<section class="detail" id="quantity(java.lang.Long)">
 <h3>quantity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></span>&nbsp;<span class="element-name">quantity</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;quantity)</span></div>
-<div class="block">set the value to the quantity</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></span>&nbsp;<span class="element-name">quantity</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantity)</span></div>
+<div class="block"><p>Number of entries in the TextLineItem.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>quantity</code> - value to be set</dd>
@@ -424,8 +448,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getAddedAt()">
 <h3>getAddedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getAddedAt</span>()</div>
-<div class="block">value of addedAt}</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getAddedAt</span>()</div>
+<div class="block"><p>Date and time (UTC) the TextLineItem was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>addedAt</dd>
@@ -435,8 +459,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getCustom()">
 <h3>getCustom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a></span>&nbsp;<span class="element-name">getCustom</span>()</div>
-<div class="block">value of custom}</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a></span>&nbsp;<span class="element-name">getCustom</span>()</div>
+<div class="block"><p>Custom Fields of the TextLineItem.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>custom</dd>
@@ -446,8 +471,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getDescription()">
 <h3>getDescription</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></span>&nbsp;<span class="element-name">getDescription</span>()</div>
-<div class="block">value of description}</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></span>&nbsp;<span class="element-name">getDescription</span>()</div>
+<div class="block"><p>Description of the TextLineItem.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>description</dd>
@@ -458,7 +484,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getId()">
 <h3>getId</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getId</span>()</div>
-<div class="block">value of id}</div>
+<div class="block"><p>Unique identifier of the TextLineItem.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>id</dd>
@@ -466,10 +492,22 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="getKey()">
+<h3>getKey</h3>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
+<div class="block"><p>User-defined identifier of the TextLineItem. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>key</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></span>&nbsp;<span class="element-name">getName</span>()</div>
-<div class="block">value of name}</div>
+<div class="block"><p>Name of the TextLineItem.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>name</dd>
@@ -479,8 +517,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getQuantity()">
 <h3>getQuantity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getQuantity</span>()</div>
-<div class="block">value of quantity}</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getQuantity</span>()</div>
+<div class="block"><p>Number of entries in the TextLineItem.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>quantity</dd>

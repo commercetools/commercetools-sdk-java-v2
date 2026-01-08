@@ -95,7 +95,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
              .sequenceNumber(0.3)
              .resource(resourceBuilder -> resourceBuilder)
              .resourceVersion(0.3)
-             .payment(paymentBuilder -> paymentBuilder)
+             .paymentRef(paymentRefBuilder -> paymentRefBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -177,7 +177,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">IDs and references that last modified the Message.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../payment/PaymentReference.html" title="interface in com.commercetools.api.models.payment">PaymentReference</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPayment()" class="member-name-link">getPayment</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPaymentRef()" class="member-name-link">getPaymentRef</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</div>
 </div>
@@ -237,12 +237,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">create builder for OrderPaymentAddedMessage instance</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderPaymentAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderPaymentAddedMessageBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#payment(com.commercetools.api.models.payment.PaymentReference)" class="member-name-link">payment</a><wbr>(<a href="../payment/PaymentReference.html" title="interface in com.commercetools.api.models.payment">PaymentReference</a>&nbsp;payment)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#paymentRef(com.commercetools.api.models.payment.PaymentReference)" class="member-name-link">paymentRef</a><wbr>(<a href="../payment/PaymentReference.html" title="interface in com.commercetools.api.models.payment">PaymentReference</a>&nbsp;paymentRef)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderPaymentAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderPaymentAddedMessageBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#payment(java.util.function.Function)" class="member-name-link">payment</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../payment/PaymentReferenceBuilder.html" title="class in com.commercetools.api.models.payment">PaymentReferenceBuilder</a>,<wbr><a href="../payment/PaymentReferenceBuilder.html" title="class in com.commercetools.api.models.payment">PaymentReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#paymentRef(java.util.function.Function)" class="member-name-link">paymentRef</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../payment/PaymentReferenceBuilder.html" title="class in com.commercetools.api.models.payment">PaymentReferenceBuilder</a>,<wbr><a href="../payment/PaymentReferenceBuilder.html" title="class in com.commercetools.api.models.payment">PaymentReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</div>
 </div>
@@ -292,7 +292,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">IDs and references that last modified the Message.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderPaymentAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderPaymentAddedMessageBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withPayment(java.util.function.Function)" class="member-name-link">withPayment</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../payment/PaymentReferenceBuilder.html" title="class in com.commercetools.api.models.payment">PaymentReferenceBuilder</a>,<wbr><a href="../payment/PaymentReference.html" title="interface in com.commercetools.api.models.payment">PaymentReference</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withPaymentRef(java.util.function.Function)" class="member-name-link">withPaymentRef</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../payment/PaymentReferenceBuilder.html" title="class in com.commercetools.api.models.payment">PaymentReferenceBuilder</a>,<wbr><a href="../payment/PaymentReference.html" title="interface in com.commercetools.api.models.payment">PaymentReference</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</div>
 </div>
@@ -557,39 +557,39 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="payment(java.util.function.Function)">
-<h3>payment</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderPaymentAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderPaymentAddedMessageBuilder</a></span>&nbsp;<span class="element-name">payment</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../payment/PaymentReferenceBuilder.html" title="class in com.commercetools.api.models.payment">PaymentReferenceBuilder</a>,<wbr><a href="../payment/PaymentReferenceBuilder.html" title="class in com.commercetools.api.models.payment">PaymentReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<section class="detail" id="paymentRef(java.util.function.Function)">
+<h3>paymentRef</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderPaymentAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderPaymentAddedMessageBuilder</a></span>&nbsp;<span class="element-name">paymentRef</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../payment/PaymentReferenceBuilder.html" title="class in com.commercetools.api.models.payment">PaymentReferenceBuilder</a>,<wbr><a href="../payment/PaymentReferenceBuilder.html" title="class in com.commercetools.api.models.payment">PaymentReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>builder</code> - function to build the payment value</dd>
+<dd><code>builder</code> - function to build the paymentRef value</dd>
 <dt>Returns:</dt>
 <dd>Builder</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="withPayment(java.util.function.Function)">
-<h3>withPayment</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderPaymentAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderPaymentAddedMessageBuilder</a></span>&nbsp;<span class="element-name">withPayment</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../payment/PaymentReferenceBuilder.html" title="class in com.commercetools.api.models.payment">PaymentReferenceBuilder</a>,<wbr><a href="../payment/PaymentReference.html" title="interface in com.commercetools.api.models.payment">PaymentReference</a>&gt;&nbsp;builder)</span></div>
+<section class="detail" id="withPaymentRef(java.util.function.Function)">
+<h3>withPaymentRef</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderPaymentAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderPaymentAddedMessageBuilder</a></span>&nbsp;<span class="element-name">withPaymentRef</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../payment/PaymentReferenceBuilder.html" title="class in com.commercetools.api.models.payment">PaymentReferenceBuilder</a>,<wbr><a href="../payment/PaymentReference.html" title="interface in com.commercetools.api.models.payment">PaymentReference</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>builder</code> - function to build the payment value</dd>
+<dd><code>builder</code> - function to build the paymentRef value</dd>
 <dt>Returns:</dt>
 <dd>Builder</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="payment(com.commercetools.api.models.payment.PaymentReference)">
-<h3>payment</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderPaymentAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderPaymentAddedMessageBuilder</a></span>&nbsp;<span class="element-name">payment</span><wbr><span class="parameters">(<a href="../payment/PaymentReference.html" title="interface in com.commercetools.api.models.payment">PaymentReference</a>&nbsp;payment)</span></div>
+<section class="detail" id="paymentRef(com.commercetools.api.models.payment.PaymentReference)">
+<h3>paymentRef</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderPaymentAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderPaymentAddedMessageBuilder</a></span>&nbsp;<span class="element-name">paymentRef</span><wbr><span class="parameters">(<a href="../payment/PaymentReference.html" title="interface in com.commercetools.api.models.payment">PaymentReference</a>&nbsp;paymentRef)</span></div>
 <div class="block"><p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>payment</code> - value to be set</dd>
+<dd><code>paymentRef</code> - value to be set</dd>
 <dt>Returns:</dt>
 <dd>Builder</dd>
 </dl>
@@ -709,13 +709,13 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="getPayment()">
-<h3>getPayment</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../payment/PaymentReference.html" title="interface in com.commercetools.api.models.payment">PaymentReference</a></span>&nbsp;<span class="element-name">getPayment</span>()</div>
+<section class="detail" id="getPaymentRef()">
+<h3>getPaymentRef</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../payment/PaymentReference.html" title="interface in com.commercetools.api.models.payment">PaymentReference</a></span>&nbsp;<span class="element-name">getPaymentRef</span>()</div>
 <div class="block"><p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>payment</dd>
+<dd>paymentRef</dd>
 </dl>
 </section>
 </li>

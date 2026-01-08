@@ -91,6 +91,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
              .change("{change}")
              .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
              .plusNextValue(nextValueBuilder -> nextValueBuilder)
+             .plusAddedItems(addedItemsBuilder -> addedItemsBuilder)
+             .plusRemovedItems(removedItemsBuilder -> removedItemsBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -122,14 +124,34 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addNextValue(java.util.function.Function)" class="member-name-link">addNextValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>,<wbr><a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addAddedItems(java.util.function.Function)" class="member-name-link">addAddedItems</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>,<wbr><a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Value after the change.</div>
+<div class="block">Elements added to the array.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addPreviousValue(java.util.function.Function)" class="member-name-link">addPreviousValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>,<wbr><a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addedItems(com.commercetools.history.models.common.StoreCountry...)" class="member-name-link">addedItems</a><wbr>(<a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>...&nbsp;addedItems)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Elements added to the array.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addedItems(java.util.List)" class="member-name-link">addedItems</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>&gt;&nbsp;addedItems)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Elements added to the array.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addNextValue(java.util.function.Function)" class="member-name-link">addNextValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>,<wbr><a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Value after the change.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addPreviousValue(java.util.function.Function)" class="member-name-link">addPreviousValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>,<wbr><a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value before the change.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addRemovedItems(java.util.function.Function)" class="member-name-link">addRemovedItems</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>,<wbr><a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Elements removed from the array.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetCountriesChange.html" title="interface in com.commercetools.history.models.change">SetCountriesChange</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
@@ -146,20 +168,30 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">set the value to the change</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getChange()" class="member-name-link">getChange</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAddedItems()" class="member-name-link">getAddedItems</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Elements added to the array.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getChange()" class="member-name-link">getChange</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">value of change}</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNextValue()" class="member-name-link">getNextValue</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNextValue()" class="member-name-link">getNextValue</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value after the change.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPreviousValue()" class="member-name-link">getPreviousValue</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPreviousValue()" class="member-name-link">getPreviousValue</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value before the change.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRemovedItems()" class="member-name-link">getRemovedItems</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Elements removed from the array.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nextValue(com.commercetools.history.models.common.StoreCountry...)" class="member-name-link">nextValue</a><wbr>(<a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>...&nbsp;nextValue)</code></div>
@@ -182,6 +214,16 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">create builder for SetCountriesChange instance</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusAddedItems(com.commercetools.history.models.common.StoreCountry...)" class="member-name-link">plusAddedItems</a><wbr>(<a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>...&nbsp;addedItems)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Elements added to the array.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusAddedItems(java.util.function.Function)" class="member-name-link">plusAddedItems</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>,<wbr><a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Elements added to the array.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusNextValue(com.commercetools.history.models.common.StoreCountry...)" class="member-name-link">plusNextValue</a><wbr>(<a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>...&nbsp;nextValue)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value after the change.</div>
@@ -202,6 +244,16 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">Value before the change.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusRemovedItems(com.commercetools.history.models.common.StoreCountry...)" class="member-name-link">plusRemovedItems</a><wbr>(<a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>...&nbsp;removedItems)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Elements removed from the array.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusRemovedItems(java.util.function.Function)" class="member-name-link">plusRemovedItems</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>,<wbr><a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Elements removed from the array.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#previousValue(com.commercetools.history.models.common.StoreCountry...)" class="member-name-link">previousValue</a><wbr>(<a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>...&nbsp;previousValue)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value before the change.</div>
@@ -212,24 +264,54 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">Value before the change.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNextValue(java.util.function.Function)" class="member-name-link">setNextValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>,<wbr><a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removedItems(com.commercetools.history.models.common.StoreCountry...)" class="member-name-link">removedItems</a><wbr>(<a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>...&nbsp;removedItems)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Value after the change.</div>
+<div class="block">Elements removed from the array.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPreviousValue(java.util.function.Function)" class="member-name-link">setPreviousValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>,<wbr><a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removedItems(java.util.List)" class="member-name-link">removedItems</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>&gt;&nbsp;removedItems)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Value before the change.</div>
+<div class="block">Elements removed from the array.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withNextValue(java.util.function.Function)" class="member-name-link">withNextValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>,<wbr><a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAddedItems(java.util.function.Function)" class="member-name-link">setAddedItems</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>,<wbr><a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Value after the change.</div>
+<div class="block">Elements added to the array.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withPreviousValue(java.util.function.Function)" class="member-name-link">withPreviousValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>,<wbr><a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNextValue(java.util.function.Function)" class="member-name-link">setNextValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>,<wbr><a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Value after the change.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPreviousValue(java.util.function.Function)" class="member-name-link">setPreviousValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>,<wbr><a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value before the change.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRemovedItems(java.util.function.Function)" class="member-name-link">setRemovedItems</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>,<wbr><a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Elements removed from the array.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withAddedItems(java.util.function.Function)" class="member-name-link">withAddedItems</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>,<wbr><a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Elements added to the array.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withNextValue(java.util.function.Function)" class="member-name-link">withNextValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>,<wbr><a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Value after the change.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withPreviousValue(java.util.function.Function)" class="member-name-link">withPreviousValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>,<wbr><a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Value before the change.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withRemovedItems(java.util.function.Function)" class="member-name-link">withRemovedItems</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>,<wbr><a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Elements removed from the array.</div>
 </div>
 </div>
 </div>
@@ -458,6 +540,188 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="addedItems(com.commercetools.history.models.common.StoreCountry...)">
+<h3>addedItems</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></span>&nbsp;<span class="element-name">addedItems</span><wbr><span class="parameters">(<a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>...&nbsp;addedItems)</span></div>
+<div class="block"><p>Elements added to the array.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>addedItems</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addedItems(java.util.List)">
+<h3>addedItems</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></span>&nbsp;<span class="element-name">addedItems</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>&gt;&nbsp;addedItems)</span></div>
+<div class="block"><p>Elements added to the array.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>addedItems</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="plusAddedItems(com.commercetools.history.models.common.StoreCountry...)">
+<h3>plusAddedItems</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></span>&nbsp;<span class="element-name">plusAddedItems</span><wbr><span class="parameters">(<a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>...&nbsp;addedItems)</span></div>
+<div class="block"><p>Elements added to the array.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>addedItems</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="plusAddedItems(java.util.function.Function)">
+<h3>plusAddedItems</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></span>&nbsp;<span class="element-name">plusAddedItems</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>,<wbr><a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Elements added to the array.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the addedItems value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="withAddedItems(java.util.function.Function)">
+<h3>withAddedItems</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></span>&nbsp;<span class="element-name">withAddedItems</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>,<wbr><a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Elements added to the array.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the addedItems value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addAddedItems(java.util.function.Function)">
+<h3>addAddedItems</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></span>&nbsp;<span class="element-name">addAddedItems</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>,<wbr><a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Elements added to the array.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the addedItems value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setAddedItems(java.util.function.Function)">
+<h3>setAddedItems</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></span>&nbsp;<span class="element-name">setAddedItems</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>,<wbr><a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Elements added to the array.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the addedItems value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="removedItems(com.commercetools.history.models.common.StoreCountry...)">
+<h3>removedItems</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></span>&nbsp;<span class="element-name">removedItems</span><wbr><span class="parameters">(<a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>...&nbsp;removedItems)</span></div>
+<div class="block"><p>Elements removed from the array.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>removedItems</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="removedItems(java.util.List)">
+<h3>removedItems</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></span>&nbsp;<span class="element-name">removedItems</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>&gt;&nbsp;removedItems)</span></div>
+<div class="block"><p>Elements removed from the array.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>removedItems</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="plusRemovedItems(com.commercetools.history.models.common.StoreCountry...)">
+<h3>plusRemovedItems</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></span>&nbsp;<span class="element-name">plusRemovedItems</span><wbr><span class="parameters">(<a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>...&nbsp;removedItems)</span></div>
+<div class="block"><p>Elements removed from the array.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>removedItems</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="plusRemovedItems(java.util.function.Function)">
+<h3>plusRemovedItems</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></span>&nbsp;<span class="element-name">plusRemovedItems</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>,<wbr><a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Elements removed from the array.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the removedItems value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="withRemovedItems(java.util.function.Function)">
+<h3>withRemovedItems</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></span>&nbsp;<span class="element-name">withRemovedItems</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>,<wbr><a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Elements removed from the array.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the removedItems value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addRemovedItems(java.util.function.Function)">
+<h3>addRemovedItems</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></span>&nbsp;<span class="element-name">addRemovedItems</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>,<wbr><a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Elements removed from the array.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the removedItems value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setRemovedItems(java.util.function.Function)">
+<h3>setRemovedItems</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCountriesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCountriesChangeBuilder</a></span>&nbsp;<span class="element-name">setRemovedItems</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreCountryBuilder.html" title="class in com.commercetools.history.models.common">StoreCountryBuilder</a>,<wbr><a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Elements removed from the array.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the removedItems value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getChange()">
 <h3>getChange</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getChange</span>()</div>
@@ -487,6 +751,28 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>nextValue</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getAddedItems()">
+<h3>getAddedItems</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>&gt;</span>&nbsp;<span class="element-name">getAddedItems</span>()</div>
+<div class="block"><p>Elements added to the array.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>addedItems</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getRemovedItems()">
+<h3>getRemovedItems</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StoreCountry.html" title="interface in com.commercetools.history.models.common">StoreCountry</a>&gt;</span>&nbsp;<span class="element-name">getRemovedItems</span>()</div>
+<div class="block"><p>Elements removed from the array.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>removedItems</dd>
 </dl>
 </section>
 </li>

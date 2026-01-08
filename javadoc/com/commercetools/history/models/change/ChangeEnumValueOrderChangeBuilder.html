@@ -92,6 +92,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
              .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
              .plusNextValue(nextValueBuilder -> nextValueBuilder)
              .fieldName("{fieldName}")
+             .attributeName("{attributeName}")
              .build()
  </code></pre>
  </div></div>
@@ -123,34 +124,44 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addNextValue(java.util.function.Function)" class="member-name-link">addNextValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>,<wbr><a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addNextValue(java.util.function.Function)" class="member-name-link">addNextValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomFieldEnumValueBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldEnumValueBuilder</a>,<wbr><a href="../common/CustomFieldEnumValue.html" title="interface in com.commercetools.history.models.common">CustomFieldEnumValue</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value after the change.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addPreviousValue(java.util.function.Function)" class="member-name-link">addPreviousValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>,<wbr><a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addPreviousValue(java.util.function.Function)" class="member-name-link">addPreviousValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomFieldEnumValueBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldEnumValueBuilder</a>,<wbr><a href="../common/CustomFieldEnumValue.html" title="interface in com.commercetools.history.models.common">CustomFieldEnumValue</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value before the change.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeEnumValueOrderChange.html" title="interface in com.commercetools.history.models.change">ChangeEnumValueOrderChange</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#attributeName(java.lang.String)" class="member-name-link">attributeName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">builds ChangeEnumValueOrderChange with checking for non-null required values</div>
+<div class="block">Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeEnumValueOrderChange.html" title="interface in com.commercetools.history.models.change">ChangeEnumValueOrderChange</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#buildUnchecked()" class="member-name-link">buildUnchecked</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">builds ChangeEnumValueOrderChange with checking for non-null required values</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeEnumValueOrderChange.html" title="interface in com.commercetools.history.models.change">ChangeEnumValueOrderChange</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#buildUnchecked()" class="member-name-link">buildUnchecked</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">builds ChangeEnumValueOrderChange without checking for non-null required values</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#change(java.lang.String)" class="member-name-link">change</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#change(java.lang.String)" class="member-name-link">change</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">set the value to the change</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#fieldName(java.lang.String)" class="member-name-link">fieldName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fieldName)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#fieldName(java.lang.String)" class="member-name-link">fieldName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fieldName)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAttributeName()" class="member-name-link">getAttributeName</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getChange()" class="member-name-link">getChange</a>()</code></div>
@@ -162,23 +173,23 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a>&gt;</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CustomFieldEnumValue.html" title="interface in com.commercetools.history.models.common">CustomFieldEnumValue</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNextValue()" class="member-name-link">getNextValue</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value after the change.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a>&gt;</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CustomFieldEnumValue.html" title="interface in com.commercetools.history.models.common">CustomFieldEnumValue</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPreviousValue()" class="member-name-link">getPreviousValue</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value before the change.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nextValue(com.commercetools.history.models.change_value.EnumValue...)" class="member-name-link">nextValue</a><wbr>(<a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a>...&nbsp;nextValue)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nextValue(com.commercetools.history.models.common.CustomFieldEnumValue...)" class="member-name-link">nextValue</a><wbr>(<a href="../common/CustomFieldEnumValue.html" title="interface in com.commercetools.history.models.common">CustomFieldEnumValue</a>...&nbsp;nextValue)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value after the change.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nextValue(java.util.List)" class="member-name-link">nextValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a>&gt;&nbsp;nextValue)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nextValue(java.util.List)" class="member-name-link">nextValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CustomFieldEnumValue.html" title="interface in com.commercetools.history.models.common">CustomFieldEnumValue</a>&gt;&nbsp;nextValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value after the change.</div>
 </div>
@@ -193,52 +204,52 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">create builder for ChangeEnumValueOrderChange instance</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusNextValue(com.commercetools.history.models.change_value.EnumValue...)" class="member-name-link">plusNextValue</a><wbr>(<a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a>...&nbsp;nextValue)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusNextValue(com.commercetools.history.models.common.CustomFieldEnumValue...)" class="member-name-link">plusNextValue</a><wbr>(<a href="../common/CustomFieldEnumValue.html" title="interface in com.commercetools.history.models.common">CustomFieldEnumValue</a>...&nbsp;nextValue)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value after the change.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusNextValue(java.util.function.Function)" class="member-name-link">plusNextValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>,<wbr><a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusNextValue(java.util.function.Function)" class="member-name-link">plusNextValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomFieldEnumValueBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldEnumValueBuilder</a>,<wbr><a href="../common/CustomFieldEnumValueBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldEnumValueBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value after the change.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusPreviousValue(com.commercetools.history.models.change_value.EnumValue...)" class="member-name-link">plusPreviousValue</a><wbr>(<a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a>...&nbsp;previousValue)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusPreviousValue(com.commercetools.history.models.common.CustomFieldEnumValue...)" class="member-name-link">plusPreviousValue</a><wbr>(<a href="../common/CustomFieldEnumValue.html" title="interface in com.commercetools.history.models.common">CustomFieldEnumValue</a>...&nbsp;previousValue)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value before the change.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusPreviousValue(java.util.function.Function)" class="member-name-link">plusPreviousValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>,<wbr><a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusPreviousValue(java.util.function.Function)" class="member-name-link">plusPreviousValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomFieldEnumValueBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldEnumValueBuilder</a>,<wbr><a href="../common/CustomFieldEnumValueBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldEnumValueBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value before the change.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#previousValue(com.commercetools.history.models.change_value.EnumValue...)" class="member-name-link">previousValue</a><wbr>(<a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a>...&nbsp;previousValue)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#previousValue(com.commercetools.history.models.common.CustomFieldEnumValue...)" class="member-name-link">previousValue</a><wbr>(<a href="../common/CustomFieldEnumValue.html" title="interface in com.commercetools.history.models.common">CustomFieldEnumValue</a>...&nbsp;previousValue)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value before the change.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#previousValue(java.util.List)" class="member-name-link">previousValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a>&gt;&nbsp;previousValue)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#previousValue(java.util.List)" class="member-name-link">previousValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CustomFieldEnumValue.html" title="interface in com.commercetools.history.models.common">CustomFieldEnumValue</a>&gt;&nbsp;previousValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value before the change.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNextValue(java.util.function.Function)" class="member-name-link">setNextValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>,<wbr><a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNextValue(java.util.function.Function)" class="member-name-link">setNextValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomFieldEnumValueBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldEnumValueBuilder</a>,<wbr><a href="../common/CustomFieldEnumValue.html" title="interface in com.commercetools.history.models.common">CustomFieldEnumValue</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value after the change.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPreviousValue(java.util.function.Function)" class="member-name-link">setPreviousValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>,<wbr><a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPreviousValue(java.util.function.Function)" class="member-name-link">setPreviousValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomFieldEnumValueBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldEnumValueBuilder</a>,<wbr><a href="../common/CustomFieldEnumValue.html" title="interface in com.commercetools.history.models.common">CustomFieldEnumValue</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value before the change.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withNextValue(java.util.function.Function)" class="member-name-link">withNextValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>,<wbr><a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withNextValue(java.util.function.Function)" class="member-name-link">withNextValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomFieldEnumValueBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldEnumValueBuilder</a>,<wbr><a href="../common/CustomFieldEnumValueBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldEnumValueBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value after the change.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withPreviousValue(java.util.function.Function)" class="member-name-link">withPreviousValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>,<wbr><a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withPreviousValue(java.util.function.Function)" class="member-name-link">withPreviousValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomFieldEnumValueBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldEnumValueBuilder</a>,<wbr><a href="../common/CustomFieldEnumValueBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldEnumValueBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value before the change.</div>
 </div>
@@ -287,9 +298,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="previousValue(com.commercetools.history.models.change_value.EnumValue...)">
+<section class="detail" id="previousValue(com.commercetools.history.models.common.CustomFieldEnumValue...)">
 <h3>previousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">previousValue</span><wbr><span class="parameters">(<a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a>...&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">previousValue</span><wbr><span class="parameters">(<a href="../common/CustomFieldEnumValue.html" title="interface in com.commercetools.history.models.common">CustomFieldEnumValue</a>...&nbsp;previousValue)</span></div>
 <div class="block"><p>Value before the change.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -302,7 +313,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="previousValue(java.util.List)">
 <h3>previousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">previousValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a>&gt;&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">previousValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CustomFieldEnumValue.html" title="interface in com.commercetools.history.models.common">CustomFieldEnumValue</a>&gt;&nbsp;previousValue)</span></div>
 <div class="block"><p>Value before the change.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -313,9 +324,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="plusPreviousValue(com.commercetools.history.models.change_value.EnumValue...)">
+<section class="detail" id="plusPreviousValue(com.commercetools.history.models.common.CustomFieldEnumValue...)">
 <h3>plusPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">plusPreviousValue</span><wbr><span class="parameters">(<a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a>...&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">plusPreviousValue</span><wbr><span class="parameters">(<a href="../common/CustomFieldEnumValue.html" title="interface in com.commercetools.history.models.common">CustomFieldEnumValue</a>...&nbsp;previousValue)</span></div>
 <div class="block"><p>Value before the change.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -328,7 +339,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusPreviousValue(java.util.function.Function)">
 <h3>plusPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">plusPreviousValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>,<wbr><a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">plusPreviousValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomFieldEnumValueBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldEnumValueBuilder</a>,<wbr><a href="../common/CustomFieldEnumValueBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldEnumValueBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Value before the change.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -341,7 +352,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="withPreviousValue(java.util.function.Function)">
 <h3>withPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">withPreviousValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>,<wbr><a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">withPreviousValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomFieldEnumValueBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldEnumValueBuilder</a>,<wbr><a href="../common/CustomFieldEnumValueBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldEnumValueBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Value before the change.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -354,7 +365,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="addPreviousValue(java.util.function.Function)">
 <h3>addPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">addPreviousValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>,<wbr><a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">addPreviousValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomFieldEnumValueBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldEnumValueBuilder</a>,<wbr><a href="../common/CustomFieldEnumValue.html" title="interface in com.commercetools.history.models.common">CustomFieldEnumValue</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Value before the change.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -367,7 +378,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="setPreviousValue(java.util.function.Function)">
 <h3>setPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">setPreviousValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>,<wbr><a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">setPreviousValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomFieldEnumValueBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldEnumValueBuilder</a>,<wbr><a href="../common/CustomFieldEnumValue.html" title="interface in com.commercetools.history.models.common">CustomFieldEnumValue</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Value before the change.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -378,9 +389,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="nextValue(com.commercetools.history.models.change_value.EnumValue...)">
+<section class="detail" id="nextValue(com.commercetools.history.models.common.CustomFieldEnumValue...)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">nextValue</span><wbr><span class="parameters">(<a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a>...&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">nextValue</span><wbr><span class="parameters">(<a href="../common/CustomFieldEnumValue.html" title="interface in com.commercetools.history.models.common">CustomFieldEnumValue</a>...&nbsp;nextValue)</span></div>
 <div class="block"><p>Value after the change.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -393,7 +404,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="nextValue(java.util.List)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">nextValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a>&gt;&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">nextValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CustomFieldEnumValue.html" title="interface in com.commercetools.history.models.common">CustomFieldEnumValue</a>&gt;&nbsp;nextValue)</span></div>
 <div class="block"><p>Value after the change.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -404,9 +415,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="plusNextValue(com.commercetools.history.models.change_value.EnumValue...)">
+<section class="detail" id="plusNextValue(com.commercetools.history.models.common.CustomFieldEnumValue...)">
 <h3>plusNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">plusNextValue</span><wbr><span class="parameters">(<a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a>...&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">plusNextValue</span><wbr><span class="parameters">(<a href="../common/CustomFieldEnumValue.html" title="interface in com.commercetools.history.models.common">CustomFieldEnumValue</a>...&nbsp;nextValue)</span></div>
 <div class="block"><p>Value after the change.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -419,7 +430,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusNextValue(java.util.function.Function)">
 <h3>plusNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">plusNextValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>,<wbr><a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">plusNextValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomFieldEnumValueBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldEnumValueBuilder</a>,<wbr><a href="../common/CustomFieldEnumValueBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldEnumValueBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Value after the change.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -432,7 +443,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="withNextValue(java.util.function.Function)">
 <h3>withNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">withNextValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>,<wbr><a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">withNextValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomFieldEnumValueBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldEnumValueBuilder</a>,<wbr><a href="../common/CustomFieldEnumValueBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldEnumValueBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Value after the change.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -445,7 +456,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="addNextValue(java.util.function.Function)">
 <h3>addNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">addNextValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>,<wbr><a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">addNextValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomFieldEnumValueBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldEnumValueBuilder</a>,<wbr><a href="../common/CustomFieldEnumValue.html" title="interface in com.commercetools.history.models.common">CustomFieldEnumValue</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Value after the change.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -458,7 +469,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="setNextValue(java.util.function.Function)">
 <h3>setNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">setNextValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>,<wbr><a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">setNextValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomFieldEnumValueBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldEnumValueBuilder</a>,<wbr><a href="../common/CustomFieldEnumValue.html" title="interface in com.commercetools.history.models.common">CustomFieldEnumValue</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Value after the change.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -482,6 +493,19 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="attributeName(java.lang.String)">
+<h3>attributeName</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeEnumValueOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeEnumValueOrderChangeBuilder</a></span>&nbsp;<span class="element-name">attributeName</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</span></div>
+<div class="block"><p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>attributeName</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getChange()">
 <h3>getChange</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getChange</span>()</div>
@@ -495,7 +519,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getPreviousValue()">
 <h3>getPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a>&gt;</span>&nbsp;<span class="element-name">getPreviousValue</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CustomFieldEnumValue.html" title="interface in com.commercetools.history.models.common">CustomFieldEnumValue</a>&gt;</span>&nbsp;<span class="element-name">getPreviousValue</span>()</div>
 <div class="block"><p>Value before the change.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -506,7 +530,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getNextValue()">
 <h3>getNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a>&gt;</span>&nbsp;<span class="element-name">getNextValue</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CustomFieldEnumValue.html" title="interface in com.commercetools.history.models.common">CustomFieldEnumValue</a>&gt;</span>&nbsp;<span class="element-name">getNextValue</span>()</div>
 <div class="block"><p>Value after the change.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -522,6 +546,17 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>fieldName</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getAttributeName()">
+<h3>getAttributeName</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getAttributeName</span>()</div>
+<div class="block"><p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>attributeName</dd>
 </dl>
 </section>
 </li>

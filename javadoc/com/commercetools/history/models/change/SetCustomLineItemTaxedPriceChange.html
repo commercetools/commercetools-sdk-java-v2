@@ -157,12 +157,12 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.history.models.common">Money</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/TaxedItemPrice.html" title="interface in com.commercetools.history.models.common">TaxedItemPrice</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNextValue()" class="member-name-link">getNextValue</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Value after the change.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.history.models.common">Money</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/TaxedItemPrice.html" title="interface in com.commercetools.history.models.common">TaxedItemPrice</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPreviousValue()" class="member-name-link">getPreviousValue</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Value before the change.</div>
@@ -198,12 +198,12 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <div class="block"><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setNextValue(com.commercetools.history.models.common.Money)" class="member-name-link">setNextValue</a><wbr>(<a href="../common/Money.html" title="interface in com.commercetools.history.models.common">Money</a>&nbsp;nextValue)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setNextValue(com.commercetools.history.models.common.TaxedItemPrice)" class="member-name-link">setNextValue</a><wbr>(<a href="../common/TaxedItemPrice.html" title="interface in com.commercetools.history.models.common">TaxedItemPrice</a>&nbsp;nextValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Value after the change.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setPreviousValue(com.commercetools.history.models.common.Money)" class="member-name-link">setPreviousValue</a><wbr>(<a href="../common/Money.html" title="interface in com.commercetools.history.models.common">Money</a>&nbsp;previousValue)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setPreviousValue(com.commercetools.history.models.common.TaxedItemPrice)" class="member-name-link">setPreviousValue</a><wbr>(<a href="../common/TaxedItemPrice.html" title="interface in com.commercetools.history.models.common">TaxedItemPrice</a>&nbsp;previousValue)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Value before the change.</div>
 </div>
@@ -293,7 +293,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <h3>getPreviousValue</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.history.models.common">Money</a></span>&nbsp;<span class="element-name">getPreviousValue</span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/TaxedItemPrice.html" title="interface in com.commercetools.history.models.common">TaxedItemPrice</a></span>&nbsp;<span class="element-name">getPreviousValue</span>()</div>
 <div class="block"><p>Value before the change.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -306,7 +306,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <h3>getNextValue</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.history.models.common">Money</a></span>&nbsp;<span class="element-name">getNextValue</span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/TaxedItemPrice.html" title="interface in com.commercetools.history.models.common">TaxedItemPrice</a></span>&nbsp;<span class="element-name">getNextValue</span>()</div>
 <div class="block"><p>Value after the change.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -353,9 +353,9 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 </section>
 </li>
 <li>
-<section class="detail" id="setPreviousValue(com.commercetools.history.models.common.Money)">
+<section class="detail" id="setPreviousValue(com.commercetools.history.models.common.TaxedItemPrice)">
 <h3>setPreviousValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setPreviousValue</span><wbr><span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.history.models.common">Money</a>&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setPreviousValue</span><wbr><span class="parameters">(<a href="../common/TaxedItemPrice.html" title="interface in com.commercetools.history.models.common">TaxedItemPrice</a>&nbsp;previousValue)</span></div>
 <div class="block"><p>Value before the change.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -364,9 +364,9 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 </section>
 </li>
 <li>
-<section class="detail" id="setNextValue(com.commercetools.history.models.common.Money)">
+<section class="detail" id="setNextValue(com.commercetools.history.models.common.TaxedItemPrice)">
 <h3>setNextValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setNextValue</span><wbr><span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.history.models.common">Money</a>&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setNextValue</span><wbr><span class="parameters">(<a href="../common/TaxedItemPrice.html" title="interface in com.commercetools.history.models.common">TaxedItemPrice</a>&nbsp;nextValue)</span></div>
 <div class="block"><p>Value after the change.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>

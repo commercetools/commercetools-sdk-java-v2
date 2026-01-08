@@ -119,11 +119,15 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTargets()" class="member-name-link">getTargets</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getValid()" class="member-name-link">getValid</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise.</div>
+<div class="block">
+   <code>true</code> if the quantity of Line Items or Custom Line Items is equal to the sum of sub-quantities defined in <code>targets</code>.
+   <code>false</code> if the quantity of Line Items or Custom Line Items is not equal to the sum of sub-quantities defined in <code>targets</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ItemShippingDetails.html" title="interface in com.commercetools.history.models.common">ItemShippingDetails</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -138,17 +142,19 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTargets(com.commercetools.history.models.common.ItemShippingTarget...)" class="member-name-link">setTargets</a><wbr>(<a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a>...&nbsp;targets)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set targets</div>
+<div class="block">Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTargets(java.util.List)" class="member-name-link">setTargets</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a>&gt;&nbsp;targets)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set targets</div>
+<div class="block">Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setValid(java.lang.Boolean)" class="member-name-link">setValid</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;valid)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise.</div>
+<div class="block">
+   <code>true</code> if the quantity of Line Items or Custom Line Items is equal to the sum of sub-quantities defined in <code>targets</code>.
+   <code>false</code> if the quantity of Line Items or Custom Line Items is not equal to the sum of sub-quantities defined in <code>targets</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ItemShippingDetails.html" title="interface in com.commercetools.history.models.common">ItemShippingDetails</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -180,6 +186,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a>&gt;</span>&nbsp;<span class="element-name">getTargets</span>()</div>
+<div class="block"><p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>targets</dd>
@@ -191,7 +198,10 @@ loadScripts(document, 'script');</script>
 <h3>getValid</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getValid</span>()</div>
-<div class="block"><p>true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise. A cart cannot be ordered when the value is <code>false</code>. The error InvalidItemShippingDetails will be triggered.</p></div>
+<div class="block"><ul>
+   <li><code>true</code> if the quantity of Line Items or Custom Line Items is equal to the sum of sub-quantities defined in <code>targets</code>.</li>
+   <li><code>false</code> if the quantity of Line Items or Custom Line Items is not equal to the sum of sub-quantities defined in <code>targets</code>. Ordering a Cart when the value is <code>false</code> returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidItemShippingDetailsError" rel="nofollow">InvalidItemShippingDetails</a> error.</li>
+  </ul></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>valid</dd>
@@ -202,7 +212,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setTargets(com.commercetools.history.models.common.ItemShippingTarget...)">
 <h3>setTargets</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTargets</span><wbr><span class="parameters">(<a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a>...&nbsp;targets)</span></div>
-<div class="block">set targets</div>
+<div class="block"><p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>targets</code> - values to be set</dd>
@@ -213,7 +223,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setTargets(java.util.List)">
 <h3>setTargets</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTargets</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a>&gt;&nbsp;targets)</span></div>
-<div class="block">set targets</div>
+<div class="block"><p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>targets</code> - values to be set</dd>
@@ -224,7 +234,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setValid(java.lang.Boolean)">
 <h3>setValid</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setValid</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;valid)</span></div>
-<div class="block"><p>true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise. A cart cannot be ordered when the value is <code>false</code>. The error InvalidItemShippingDetails will be triggered.</p></div>
+<div class="block"><ul>
+   <li><code>true</code> if the quantity of Line Items or Custom Line Items is equal to the sum of sub-quantities defined in <code>targets</code>.</li>
+   <li><code>false</code> if the quantity of Line Items or Custom Line Items is not equal to the sum of sub-quantities defined in <code>targets</code>. Ordering a Cart when the value is <code>false</code> returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidItemShippingDetailsError" rel="nofollow">InvalidItemShippingDetails</a> error.</li>
+  </ul></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>valid</code> - value to be set</dd>

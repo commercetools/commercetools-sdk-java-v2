@@ -88,7 +88,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
  <div class=code-example>
  <pre><code class='java'>
      DiscountedLineItemPriceForQuantity discountedLineItemPriceForQuantity = DiscountedLineItemPriceForQuantity.builder()
-             .quantity(1)
+             .quantity(0.3)
              .discountedPrice(discountedPriceBuilder -> discountedPriceBuilder)
              .build()
  </code></pre>
@@ -133,22 +133,22 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DiscountedLineItemPriceForQuantityBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceForQuantityBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#discountedPrice(com.commercetools.history.models.common.DiscountedLineItemPrice)" class="member-name-link">discountedPrice</a><wbr>(<a href="DiscountedLineItemPrice.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPrice</a>&nbsp;discountedPrice)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the discountedPrice</div>
+<div class="block">Discounted price of the Line Item or Custom Line Item.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DiscountedLineItemPriceForQuantityBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceForQuantityBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#discountedPrice(java.util.function.Function)" class="member-name-link">discountedPrice</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a>,<wbr><a href="DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the discountedPrice using the builder function</div>
+<div class="block">Discounted price of the Line Item or Custom Line Item.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DiscountedLineItemPrice.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPrice</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDiscountedPrice()" class="member-name-link">getDiscountedPrice</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of discountedPrice}</div>
+<div class="block">Discounted price of the Line Item or Custom Line Item.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getQuantity()" class="member-name-link">getQuantity</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of quantity}</div>
+<div class="block">Number of Line Items or Custom Line Items in the Cart.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DiscountedLineItemPriceForQuantityBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceForQuantityBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -161,14 +161,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">create builder for DiscountedLineItemPriceForQuantity instance</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DiscountedLineItemPriceForQuantityBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceForQuantityBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#quantity(java.lang.Integer)" class="member-name-link">quantity</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;quantity)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#quantity(java.lang.Long)" class="member-name-link">quantity</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantity)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the quantity</div>
+<div class="block">Number of Line Items or Custom Line Items in the Cart.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DiscountedLineItemPriceForQuantityBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceForQuantityBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withDiscountedPrice(java.util.function.Function)" class="member-name-link">withDiscountedPrice</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a>,<wbr><a href="DiscountedLineItemPrice.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPrice</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the discountedPrice using the builder function</div>
+<div class="block">Discounted price of the Line Item or Custom Line Item.</div>
 </div>
 </div>
 </div>
@@ -202,10 +202,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="quantity(java.lang.Integer)">
+<section class="detail" id="quantity(java.lang.Long)">
 <h3>quantity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPriceForQuantityBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceForQuantityBuilder</a></span>&nbsp;<span class="element-name">quantity</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;quantity)</span></div>
-<div class="block">set the value to the quantity</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPriceForQuantityBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceForQuantityBuilder</a></span>&nbsp;<span class="element-name">quantity</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantity)</span></div>
+<div class="block"><p>Number of Line Items or Custom Line Items in the Cart.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>quantity</code> - value to be set</dd>
@@ -218,7 +218,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="discountedPrice(java.util.function.Function)">
 <h3>discountedPrice</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPriceForQuantityBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceForQuantityBuilder</a></span>&nbsp;<span class="element-name">discountedPrice</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a>,<wbr><a href="DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the discountedPrice using the builder function</div>
+<div class="block"><p>Discounted price of the Line Item or Custom Line Item.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the discountedPrice value</dd>
@@ -231,7 +231,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withDiscountedPrice(java.util.function.Function)">
 <h3>withDiscountedPrice</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPriceForQuantityBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceForQuantityBuilder</a></span>&nbsp;<span class="element-name">withDiscountedPrice</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a>,<wbr><a href="DiscountedLineItemPrice.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPrice</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the discountedPrice using the builder function</div>
+<div class="block"><p>Discounted price of the Line Item or Custom Line Item.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the discountedPrice value</dd>
@@ -244,7 +244,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="discountedPrice(com.commercetools.history.models.common.DiscountedLineItemPrice)">
 <h3>discountedPrice</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPriceForQuantityBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceForQuantityBuilder</a></span>&nbsp;<span class="element-name">discountedPrice</span><wbr><span class="parameters">(<a href="DiscountedLineItemPrice.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPrice</a>&nbsp;discountedPrice)</span></div>
-<div class="block">set the value to the discountedPrice</div>
+<div class="block"><p>Discounted price of the Line Item or Custom Line Item.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>discountedPrice</code> - value to be set</dd>
@@ -256,8 +256,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getQuantity()">
 <h3>getQuantity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getQuantity</span>()</div>
-<div class="block">value of quantity}</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getQuantity</span>()</div>
+<div class="block"><p>Number of Line Items or Custom Line Items in the Cart.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>quantity</dd>
@@ -268,7 +268,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getDiscountedPrice()">
 <h3>getDiscountedPrice</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPrice.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPrice</a></span>&nbsp;<span class="element-name">getDiscountedPrice</span>()</div>
-<div class="block">value of discountedPrice}</div>
+<div class="block"><p>Discounted price of the Line Item or Custom Line Item.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>discountedPrice</dd>

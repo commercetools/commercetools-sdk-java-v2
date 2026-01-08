@@ -88,10 +88,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
  <div class=code-example>
  <pre><code class='java'>
      Money money = Money.builder()
+             .centAmount(0.3)
              .currencyCode("{currencyCode}")
-             .centAmount(1)
-             .fractionDigits(1)
-             .type(MoneyType.CENT_PRECISION)
              .build()
  </code></pre>
  </div></div>
@@ -133,54 +131,34 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">builds Money without checking for non-null required values</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#centAmount(java.lang.Integer)" class="member-name-link">centAmount</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;centAmount)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#centAmount(java.lang.Long)" class="member-name-link">centAmount</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;centAmount)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the centAmount</div>
+<div class="block">Amount in the smallest indivisible unit of a currency, such as:</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#currencyCode(java.lang.String)" class="member-name-link">currencyCode</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;currencyCode)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Currency code compliant to <span>ISO 4217</span>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#fractionDigits(java.lang.Integer)" class="member-name-link">fractionDigits</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;fractionDigits)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCentAmount()" class="member-name-link">getCentAmount</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the fractionDigits</div>
+<div class="block">Amount in the smallest indivisible unit of a currency, such as:</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCentAmount()" class="member-name-link">getCentAmount</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCurrencyCode()" class="member-name-link">getCurrencyCode</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of centAmount}</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCurrencyCode()" class="member-name-link">getCurrencyCode</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Currency code compliant to <span>ISO 4217</span>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFractionDigits()" class="member-name-link">getFractionDigits</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of fractionDigits}</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MoneyType.html" title="interface in com.commercetools.history.models.common">MoneyType</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of type}</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">factory method for an instance of MoneyBuilder</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(com.commercetools.history.models.common.Money)" class="member-name-link">of</a><wbr>(<a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a>&nbsp;template)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(com.commercetools.history.models.common.Money)" class="member-name-link">of</a><wbr>(<a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a>&nbsp;template)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">create builder for Money instance</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#type(com.commercetools.history.models.common.MoneyType)" class="member-name-link">type</a><wbr>(<a href="MoneyType.html" title="interface in com.commercetools.history.models.common">MoneyType</a>&nbsp;type)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the type</div>
 </div>
 </div>
 </div>
@@ -214,6 +192,23 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="centAmount(java.lang.Long)">
+<h3>centAmount</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a></span>&nbsp;<span class="element-name">centAmount</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;centAmount)</span></div>
+<div class="block"><p>Amount in the smallest indivisible unit of a currency, such as:</p>
+  <ul>
+   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
+  </ul></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>centAmount</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="currencyCode(java.lang.String)">
 <h3>currencyCode</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a></span>&nbsp;<span class="element-name">currencyCode</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;currencyCode)</span></div>
@@ -227,41 +222,17 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="centAmount(java.lang.Integer)">
-<h3>centAmount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a></span>&nbsp;<span class="element-name">centAmount</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;centAmount)</span></div>
-<div class="block">set the value to the centAmount</div>
+<section class="detail" id="getCentAmount()">
+<h3>getCentAmount</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getCentAmount</span>()</div>
+<div class="block"><p>Amount in the smallest indivisible unit of a currency, such as:</p>
+  <ul>
+   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
+  </ul></div>
 <dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>centAmount</code> - value to be set</dd>
 <dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="fractionDigits(java.lang.Integer)">
-<h3>fractionDigits</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a></span>&nbsp;<span class="element-name">fractionDigits</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;fractionDigits)</span></div>
-<div class="block">set the value to the fractionDigits</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>fractionDigits</code> - value to be set</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="type(com.commercetools.history.models.common.MoneyType)">
-<h3>type</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a></span>&nbsp;<span class="element-name">type</span><wbr><span class="parameters">(<a href="MoneyType.html" title="interface in com.commercetools.history.models.common">MoneyType</a>&nbsp;type)</span></div>
-<div class="block">set the value to the type</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>type</code> - value to be set</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
+<dd>centAmount</dd>
 </dl>
 </section>
 </li>
@@ -273,39 +244,6 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>currencyCode</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getCentAmount()">
-<h3>getCentAmount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getCentAmount</span>()</div>
-<div class="block">value of centAmount}</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>centAmount</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getFractionDigits()">
-<h3>getFractionDigits</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getFractionDigits</span>()</div>
-<div class="block">value of fractionDigits}</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>fractionDigits</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getType()">
-<h3>getType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MoneyType.html" title="interface in com.commercetools.history.models.common">MoneyType</a></span>&nbsp;<span class="element-name">getType</span>()</div>
-<div class="block">value of type}</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>type</dd>
 </dl>
 </section>
 </li>

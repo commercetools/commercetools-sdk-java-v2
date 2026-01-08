@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ProductVariantSelection</span></div>
-<div class="block">ProductVariantSelection
+<div class="block"><p>Polymorphic base type for Product Variant Selections. The actual type is determined by the <code>type</code> field.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -81,7 +81,6 @@ loadScripts(document, 'script');</script>
  <pre><code class='java'>
      ProductVariantSelection productVariantSelection = ProductVariantSelection.builder()
              .type(ProductVariantSelectionTypeEnum.INCLUSION)
-             .plusSkus(skusBuilder -> skusBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -117,45 +116,34 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of ProductVariantSelection</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSkus()" class="member-name-link">getSkus</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="ProductVariantSelectionTypeEnum.html" title="interface in com.commercetools.history.models.common">ProductVariantSelectionTypeEnum</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProductVariantSelection.html" title="interface in com.commercetools.history.models.common">ProductVariantSelection</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
-<div class="block">factory method</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="ProductVariantSelectionTypeEnum.html" title="interface in com.commercetools.history.models.common">ProductVariantSelectionTypeEnum</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Determines whether the SKUs are to be included in, or excluded from, the Product Selection.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProductVariantSelection.html" title="interface in com.commercetools.history.models.common">ProductVariantSelection</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.history.models.common.ProductVariantSelection)" class="member-name-link">of</a><wbr>(<a href="ProductVariantSelection.html" title="interface in com.commercetools.history.models.common">ProductVariantSelection</a>&nbsp;template)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">factory method</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProductVariantSelection.html" title="interface in com.commercetools.history.models.common">ProductVariantSelection</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.history.models.common.ProductVariantSelection)" class="member-name-link">of</a><wbr>(<a href="ProductVariantSelection.html" title="interface in com.commercetools.history.models.common">ProductVariantSelection</a>&nbsp;template)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a shallow copy ProductVariantSelection</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setSkus(java.lang.String...)" class="member-name-link">setSkus</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;skus)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set skus</div>
-</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setSkus(java.util.List)" class="member-name-link">setSkus</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;skus)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setType(com.commercetools.history.models.common.ProductVariantSelectionTypeEnum)" class="member-name-link">setType</a><wbr>(<a href="ProductVariantSelectionTypeEnum.html" title="interface in com.commercetools.history.models.common">ProductVariantSelectionTypeEnum</a>&nbsp;type)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set skus</div>
+<div class="block">Determines whether the SKUs are to be included in, or excluded from, the Product Selection.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setType(com.commercetools.history.models.common.ProductVariantSelectionTypeEnum)" class="member-name-link">setType</a><wbr>(<a href="ProductVariantSelectionTypeEnum.html" title="interface in com.commercetools.history.models.common">ProductVariantSelectionTypeEnum</a>&nbsp;type)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set type</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductVariantSelection.html" title="interface in com.commercetools.history.models.common">ProductVariantSelection</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductVariantSelection.html" title="interface in com.commercetools.history.models.common">ProductVariantSelection</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withProductVariantSelection(java.util.function.Function)" class="member-name-link">withProductVariantSelection</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantSelection.html" title="interface in com.commercetools.history.models.common">ProductVariantSelection</a>,<wbr>T&gt;&nbsp;helper)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withProductVariantSelection(java.util.function.Function)" class="member-name-link">withProductVariantSelection</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantSelection.html" title="interface in com.commercetools.history.models.common">ProductVariantSelection</a>,<wbr>T&gt;&nbsp;helper)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">accessor map function</div>
 </div>
 </div>
@@ -177,6 +165,7 @@ loadScripts(document, 'script');</script>
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="ProductVariantSelectionTypeEnum.html" title="interface in com.commercetools.history.models.common">ProductVariantSelectionTypeEnum</a></span>&nbsp;<span class="element-name">getType</span>()</div>
+<div class="block"><p>Determines whether the SKUs are to be included in, or excluded from, the Product Selection.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>type</dd>
@@ -184,46 +173,13 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="getSkus()">
-<h3>getSkus</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getSkus</span>()</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>skus</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="setType(com.commercetools.history.models.common.ProductVariantSelectionTypeEnum)">
 <h3>setType</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setType</span><wbr><span class="parameters">(<a href="ProductVariantSelectionTypeEnum.html" title="interface in com.commercetools.history.models.common">ProductVariantSelectionTypeEnum</a>&nbsp;type)</span></div>
-<div class="block">set type</div>
+<div class="block"><p>Determines whether the SKUs are to be included in, or excluded from, the Product Selection.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>type</code> - value to be set</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setSkus(java.lang.String...)">
-<h3>setSkus</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setSkus</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;skus)</span></div>
-<div class="block">set skus</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>skus</code> - values to be set</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setSkus(java.util.List)">
-<h3>setSkus</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setSkus</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;skus)</span></div>
-<div class="block">set skus</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>skus</code> - values to be set</dd>
 </dl>
 </section>
 </li>

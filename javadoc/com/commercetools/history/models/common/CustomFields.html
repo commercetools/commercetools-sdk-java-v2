@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">CustomFields</span></div>
-<div class="block">CustomFields
+<div class="block"><p>Serves as value of the <code>custom</code> field on a resource or data type customized with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -117,14 +117,16 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of CustomFields</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="FieldContainer.html" title="interface in com.commercetools.history.models.common">FieldContainer</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFields()" class="member-name-link">getFields</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">A valid JSON object, based on FieldDefinition.</div>
+<div class="block">Object containing the Custom Fields for the <span>customized resource or data type</span>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="TypeReference.html" title="interface in com.commercetools.history.models.common">TypeReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that holds the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a> for the Custom Fields.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
@@ -136,14 +138,14 @@ loadScripts(document, 'script');</script>
 <div class="block">factory method to create a shallow copy CustomFields</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setFields(java.lang.Object)" class="member-name-link">setFields</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;fields)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setFields(com.commercetools.history.models.common.FieldContainer)" class="member-name-link">setFields</a><wbr>(<a href="FieldContainer.html" title="interface in com.commercetools.history.models.common">FieldContainer</a>&nbsp;fields)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">A valid JSON object, based on FieldDefinition.</div>
+<div class="block">Object containing the Custom Fields for the <span>customized resource or data type</span>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setType(com.commercetools.history.models.common.Reference)" class="member-name-link">setType</a><wbr>(<a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&nbsp;type)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setType(com.commercetools.history.models.common.TypeReference)" class="member-name-link">setType</a><wbr>(<a href="TypeReference.html" title="interface in com.commercetools.history.models.common">TypeReference</a>&nbsp;type)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set type</div>
+<div class="block">Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that holds the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a> for the Custom Fields.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -174,7 +176,8 @@ loadScripts(document, 'script');</script>
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a></span>&nbsp;<span class="element-name">getType</span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="TypeReference.html" title="interface in com.commercetools.history.models.common">TypeReference</a></span>&nbsp;<span class="element-name">getType</span>()</div>
+<div class="block"><p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that holds the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a> for the Custom Fields.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>type</dd>
@@ -186,8 +189,8 @@ loadScripts(document, 'script');</script>
 <h3>getFields</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">getFields</span>()</div>
-<div class="block"><p>A valid JSON object, based on FieldDefinition.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="FieldContainer.html" title="interface in com.commercetools.history.models.common">FieldContainer</a></span>&nbsp;<span class="element-name">getFields</span>()</div>
+<div class="block"><p>Object containing the Custom Fields for the <span>customized resource or data type</span>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>fields</dd>
@@ -195,10 +198,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="setType(com.commercetools.history.models.common.Reference)">
+<section class="detail" id="setType(com.commercetools.history.models.common.TypeReference)">
 <h3>setType</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setType</span><wbr><span class="parameters">(<a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&nbsp;type)</span></div>
-<div class="block">set type</div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setType</span><wbr><span class="parameters">(<a href="TypeReference.html" title="interface in com.commercetools.history.models.common">TypeReference</a>&nbsp;type)</span></div>
+<div class="block"><p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that holds the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a> for the Custom Fields.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>type</code> - value to be set</dd>
@@ -206,10 +209,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="setFields(java.lang.Object)">
+<section class="detail" id="setFields(com.commercetools.history.models.common.FieldContainer)">
 <h3>setFields</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setFields</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;fields)</span></div>
-<div class="block"><p>A valid JSON object, based on FieldDefinition.</p></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setFields</span><wbr><span class="parameters">(<a href="FieldContainer.html" title="interface in com.commercetools.history.models.common">FieldContainer</a>&nbsp;fields)</span></div>
+<div class="block"><p>Object containing the Custom Fields for the <span>customized resource or data type</span>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>fields</code> - value to be set</dd>

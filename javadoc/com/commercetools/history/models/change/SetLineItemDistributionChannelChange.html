@@ -170,7 +170,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVariant()" class="member-name-link">getVariant</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
+<div class="block">Identifier of the updated Product Variant.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="SetLineItemDistributionChannelChange.html" title="interface in com.commercetools.history.models.change">SetLineItemDistributionChannelChange</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -205,7 +205,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setVariant(java.lang.String)" class="member-name-link">setVariant</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;variant)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
+<div class="block">Identifier of the updated Product Variant.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SetLineItemDistributionChannelChange.html" title="interface in com.commercetools.history.models.change">SetLineItemDistributionChannelChange</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -332,7 +332,8 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <h3>getVariant</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getVariant</span>()</div>
-<div class="block"><p><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p></div>
+<div class="block"><p>Identifier of the updated Product Variant.</p>
+  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>variant</dd>
@@ -389,7 +390,8 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="setVariant(java.lang.String)">
 <h3>setVariant</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setVariant</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;variant)</span></div>
-<div class="block"><p><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p></div>
+<div class="block"><p>Identifier of the updated Product Variant.</p>
+  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>variant</code> - value to be set</dd>

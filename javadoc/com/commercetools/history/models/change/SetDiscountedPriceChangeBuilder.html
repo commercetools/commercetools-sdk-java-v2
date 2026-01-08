@@ -94,6 +94,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
              .catalogData("{catalogData}")
              .variant("{variant}")
              .priceId("{priceId}")
+             .price(priceBuilder -> priceBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -137,10 +138,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#catalogData(java.lang.String)" class="member-name-link">catalogData</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;catalogData)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
-   <code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.
-   <code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.
-  </div>
+<div class="block">Product data that was updated.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#change(java.lang.String)" class="member-name-link">change</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</code></div>
@@ -150,85 +148,102 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCatalogData()" class="member-name-link">getCatalogData</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
-   <code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.
-   <code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.
-  </div>
+<div class="block">Product data that was updated.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getChange()" class="member-name-link">getChange</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">value of change}</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/DiscountedPrice.html" title="interface in com.commercetools.history.models.common">DiscountedPrice</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNextValue()" class="member-name-link">getNextValue</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value after the change.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/DiscountedPrice.html" title="interface in com.commercetools.history.models.common">DiscountedPrice</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPreviousValue()" class="member-name-link">getPreviousValue</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value before the change.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPriceId()" class="member-name-link">getPriceId</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPrice()" class="member-name-link">getPrice</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>id</code> of the Embedded <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</div>
+<div class="block">Embedded Price of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVariant()" class="member-name-link">getVariant</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPriceId()" class="member-name-link">getPriceId</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nextValue(com.commercetools.history.models.common.Price)" class="member-name-link">nextValue</a><wbr>(<a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a>&nbsp;nextValue)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Value after the change.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nextValue(java.util.function.Function)" class="member-name-link">nextValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceBuilder.html" title="class in com.commercetools.history.models.common">PriceBuilder</a>,<wbr><a href="../common/PriceBuilder.html" title="class in com.commercetools.history.models.common">PriceBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Value after the change.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">factory method for an instance of SetDiscountedPriceChangeBuilder</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(com.commercetools.history.models.change.SetDiscountedPriceChange)" class="member-name-link">of</a><wbr>(<a href="SetDiscountedPriceChange.html" title="interface in com.commercetools.history.models.change">SetDiscountedPriceChange</a>&nbsp;template)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">create builder for SetDiscountedPriceChange instance</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#previousValue(com.commercetools.history.models.common.Price)" class="member-name-link">previousValue</a><wbr>(<a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a>&nbsp;previousValue)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Value before the change.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#previousValue(java.util.function.Function)" class="member-name-link">previousValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceBuilder.html" title="class in com.commercetools.history.models.common">PriceBuilder</a>,<wbr><a href="../common/PriceBuilder.html" title="class in com.commercetools.history.models.common">PriceBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Value before the change.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#priceId(java.lang.String)" class="member-name-link">priceId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;priceId)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>id</code> of the Embedded <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVariant()" class="member-name-link">getVariant</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Identifier of the updated Product Variant.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#variant(java.lang.String)" class="member-name-link">variant</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;variant)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nextValue(com.commercetools.history.models.common.DiscountedPrice)" class="member-name-link">nextValue</a><wbr>(<a href="../common/DiscountedPrice.html" title="interface in com.commercetools.history.models.common">DiscountedPrice</a>&nbsp;nextValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
+<div class="block">Value after the change.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withNextValue(java.util.function.Function)" class="member-name-link">withNextValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceBuilder.html" title="class in com.commercetools.history.models.common">PriceBuilder</a>,<wbr><a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nextValue(java.util.function.Function)" class="member-name-link">nextValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/DiscountedPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedPriceBuilder</a>,<wbr><a href="../common/DiscountedPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedPriceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value after the change.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">factory method for an instance of SetDiscountedPriceChangeBuilder</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(com.commercetools.history.models.change.SetDiscountedPriceChange)" class="member-name-link">of</a><wbr>(<a href="SetDiscountedPriceChange.html" title="interface in com.commercetools.history.models.change">SetDiscountedPriceChange</a>&nbsp;template)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">create builder for SetDiscountedPriceChange instance</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withPreviousValue(java.util.function.Function)" class="member-name-link">withPreviousValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceBuilder.html" title="class in com.commercetools.history.models.common">PriceBuilder</a>,<wbr><a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#previousValue(com.commercetools.history.models.common.DiscountedPrice)" class="member-name-link">previousValue</a><wbr>(<a href="../common/DiscountedPrice.html" title="interface in com.commercetools.history.models.common">DiscountedPrice</a>&nbsp;previousValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value before the change.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#previousValue(java.util.function.Function)" class="member-name-link">previousValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/DiscountedPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedPriceBuilder</a>,<wbr><a href="../common/DiscountedPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedPriceBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Value before the change.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#price(com.commercetools.history.models.common.Price)" class="member-name-link">price</a><wbr>(<a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a>&nbsp;price)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Embedded Price of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#price(java.util.function.Function)" class="member-name-link">price</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceBuilder.html" title="class in com.commercetools.history.models.common">PriceBuilder</a>,<wbr><a href="../common/PriceBuilder.html" title="class in com.commercetools.history.models.common">PriceBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Embedded Price of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#priceId(java.lang.String)" class="member-name-link">priceId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;priceId)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>id</code> of the Embedded <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#variant(java.lang.String)" class="member-name-link">variant</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;variant)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Identifier of the updated Product Variant.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withNextValue(java.util.function.Function)" class="member-name-link">withNextValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/DiscountedPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedPriceBuilder</a>,<wbr><a href="../common/DiscountedPrice.html" title="interface in com.commercetools.history.models.common">DiscountedPrice</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Value after the change.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withPreviousValue(java.util.function.Function)" class="member-name-link">withPreviousValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/DiscountedPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedPriceBuilder</a>,<wbr><a href="../common/DiscountedPrice.html" title="interface in com.commercetools.history.models.common">DiscountedPrice</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Value before the change.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withPrice(java.util.function.Function)" class="member-name-link">withPrice</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceBuilder.html" title="class in com.commercetools.history.models.common">PriceBuilder</a>,<wbr><a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Embedded Price of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
 </div>
 </div>
 </div>
@@ -277,7 +292,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="previousValue(java.util.function.Function)">
 <h3>previousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></span>&nbsp;<span class="element-name">previousValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceBuilder.html" title="class in com.commercetools.history.models.common">PriceBuilder</a>,<wbr><a href="../common/PriceBuilder.html" title="class in com.commercetools.history.models.common">PriceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></span>&nbsp;<span class="element-name">previousValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/DiscountedPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedPriceBuilder</a>,<wbr><a href="../common/DiscountedPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedPriceBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Value before the change.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -290,7 +305,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="withPreviousValue(java.util.function.Function)">
 <h3>withPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></span>&nbsp;<span class="element-name">withPreviousValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceBuilder.html" title="class in com.commercetools.history.models.common">PriceBuilder</a>,<wbr><a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></span>&nbsp;<span class="element-name">withPreviousValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/DiscountedPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedPriceBuilder</a>,<wbr><a href="../common/DiscountedPrice.html" title="interface in com.commercetools.history.models.common">DiscountedPrice</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Value before the change.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -301,9 +316,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="previousValue(com.commercetools.history.models.common.Price)">
+<section class="detail" id="previousValue(com.commercetools.history.models.common.DiscountedPrice)">
 <h3>previousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></span>&nbsp;<span class="element-name">previousValue</span><wbr><span class="parameters">(<a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a>&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></span>&nbsp;<span class="element-name">previousValue</span><wbr><span class="parameters">(<a href="../common/DiscountedPrice.html" title="interface in com.commercetools.history.models.common">DiscountedPrice</a>&nbsp;previousValue)</span></div>
 <div class="block"><p>Value before the change.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -316,7 +331,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="nextValue(java.util.function.Function)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></span>&nbsp;<span class="element-name">nextValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceBuilder.html" title="class in com.commercetools.history.models.common">PriceBuilder</a>,<wbr><a href="../common/PriceBuilder.html" title="class in com.commercetools.history.models.common">PriceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></span>&nbsp;<span class="element-name">nextValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/DiscountedPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedPriceBuilder</a>,<wbr><a href="../common/DiscountedPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedPriceBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Value after the change.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -329,7 +344,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="withNextValue(java.util.function.Function)">
 <h3>withNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></span>&nbsp;<span class="element-name">withNextValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceBuilder.html" title="class in com.commercetools.history.models.common">PriceBuilder</a>,<wbr><a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></span>&nbsp;<span class="element-name">withNextValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/DiscountedPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedPriceBuilder</a>,<wbr><a href="../common/DiscountedPrice.html" title="interface in com.commercetools.history.models.common">DiscountedPrice</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Value after the change.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -340,9 +355,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="nextValue(com.commercetools.history.models.common.Price)">
+<section class="detail" id="nextValue(com.commercetools.history.models.common.DiscountedPrice)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></span>&nbsp;<span class="element-name">nextValue</span><wbr><span class="parameters">(<a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a>&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></span>&nbsp;<span class="element-name">nextValue</span><wbr><span class="parameters">(<a href="../common/DiscountedPrice.html" title="interface in com.commercetools.history.models.common">DiscountedPrice</a>&nbsp;nextValue)</span></div>
 <div class="block"><p>Value after the change.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -356,7 +371,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="catalogData(java.lang.String)">
 <h3>catalogData</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></span>&nbsp;<span class="element-name">catalogData</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;catalogData)</span></div>
-<div class="block"><ul>
+<div class="block"><p>Product data that was updated.</p>
+  <ul>
    <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
    <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
   </ul></div>
@@ -372,7 +388,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="variant(java.lang.String)">
 <h3>variant</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></span>&nbsp;<span class="element-name">variant</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;variant)</span></div>
-<div class="block"><p><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p></div>
+<div class="block"><p>Identifier of the updated Product Variant.</p>
+  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>variant</code> - value to be set</dd>
@@ -395,6 +412,45 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="price(java.util.function.Function)">
+<h3>price</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></span>&nbsp;<span class="element-name">price</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceBuilder.html" title="class in com.commercetools.history.models.common">PriceBuilder</a>,<wbr><a href="../common/PriceBuilder.html" title="class in com.commercetools.history.models.common">PriceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Embedded Price of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the price value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="withPrice(java.util.function.Function)">
+<h3>withPrice</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></span>&nbsp;<span class="element-name">withPrice</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceBuilder.html" title="class in com.commercetools.history.models.common">PriceBuilder</a>,<wbr><a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Embedded Price of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the price value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="price(com.commercetools.history.models.common.Price)">
+<h3>price</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></span>&nbsp;<span class="element-name">price</span><wbr><span class="parameters">(<a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a>&nbsp;price)</span></div>
+<div class="block"><p>Embedded Price of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>price</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getChange()">
 <h3>getChange</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getChange</span>()</div>
@@ -408,7 +464,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getPreviousValue()">
 <h3>getPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a></span>&nbsp;<span class="element-name">getPreviousValue</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/DiscountedPrice.html" title="interface in com.commercetools.history.models.common">DiscountedPrice</a></span>&nbsp;<span class="element-name">getPreviousValue</span>()</div>
 <div class="block"><p>Value before the change.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -419,7 +475,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getNextValue()">
 <h3>getNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a></span>&nbsp;<span class="element-name">getNextValue</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/DiscountedPrice.html" title="interface in com.commercetools.history.models.common">DiscountedPrice</a></span>&nbsp;<span class="element-name">getNextValue</span>()</div>
 <div class="block"><p>Value after the change.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -431,7 +487,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getCatalogData()">
 <h3>getCatalogData</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCatalogData</span>()</div>
-<div class="block"><ul>
+<div class="block"><p>Product data that was updated.</p>
+  <ul>
    <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
    <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
   </ul></div>
@@ -445,7 +502,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getVariant()">
 <h3>getVariant</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getVariant</span>()</div>
-<div class="block"><p><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p></div>
+<div class="block"><p>Identifier of the updated Product Variant.</p>
+  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>variant</dd>
@@ -460,6 +518,17 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>priceId</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPrice()">
+<h3>getPrice</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a></span>&nbsp;<span class="element-name">getPrice</span>()</div>
+<div class="block"><p>Embedded Price of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>price</dd>
 </dl>
 </section>
 </li>

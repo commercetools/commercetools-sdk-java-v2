@@ -60,7 +60,9 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#valid(java.lang.Boolean)" class="member-name-link">valid(Boolean)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a></dt>
 <dd>
-<div class="block">true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise.</div>
+<div class="block">
+   <code>true</code> if the quantity of Line Items or Custom Line Items is equal to the sum of sub-quantities defined in <code>targets</code>.
+   <code>false</code> if the quantity of Line Items or Custom Line Items is not equal to the sum of sub-quantities defined in <code>targets</code>.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/common/ProcessingState.ProcessingStateEnum.html#VALIDATION_FAILED" class="member-name-link">VALIDATION_FAILED</a> - Enum constant in enum com.commercetools.importapi.models.common.<a href="../com/commercetools/importapi/models/common/ProcessingState.ProcessingStateEnum.html" title="enum in com.commercetools.importapi.models.common">ProcessingState.ProcessingStateEnum</a></dt>
 <dd>
@@ -205,6 +207,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/standalone_price/StandalonePriceSetValidFromAndUntilActionBuilder.html#validFrom(java.time.ZonedDateTime)" class="member-name-link">validFrom(ZonedDateTime)</a> - Method in class com.commercetools.api.models.standalone_price.<a href="../com/commercetools/api/models/standalone_price/StandalonePriceSetValidFromAndUntilActionBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceSetValidFromAndUntilActionBuilder</a></dt>
 <dd>
 <div class="block">Value to set.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/PriceBuilder.html#validFrom(java.time.ZonedDateTime)" class="member-name-link">validFrom(ZonedDateTime)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/PriceBuilder.html" title="class in com.commercetools.history.models.common">PriceBuilder</a></dt>
+<dd>
+<div class="block">Date and time from which this Price is valid.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/ScopedPriceBuilder.html#validFrom(java.time.ZonedDateTime)" class="member-name-link">validFrom(ZonedDateTime)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ScopedPriceBuilder.html" title="class in com.commercetools.history.models.common">ScopedPriceBuilder</a></dt>
+<dd>
+<div class="block">Date and time from which the Price is valid.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/discount_codes/DiscountCodeImportBuilder.html#validFrom(java.time.ZonedDateTime)" class="member-name-link">validFrom(ZonedDateTime)</a> - Method in class com.commercetools.importapi.models.discount_codes.<a href="../com/commercetools/importapi/models/discount_codes/DiscountCodeImportBuilder.html" title="class in com.commercetools.importapi.models.discount_codes">DiscountCodeImportBuilder</a></dt>
 <dd>
@@ -394,6 +404,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/standalone_price/StandalonePriceSetValidUntilActionBuilder.html#validUntil(java.time.ZonedDateTime)" class="member-name-link">validUntil(ZonedDateTime)</a> - Method in class com.commercetools.api.models.standalone_price.<a href="../com/commercetools/api/models/standalone_price/StandalonePriceSetValidUntilActionBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceSetValidUntilActionBuilder</a></dt>
 <dd>
 <div class="block">Value to set.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/PriceBuilder.html#validUntil(java.time.ZonedDateTime)" class="member-name-link">validUntil(ZonedDateTime)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/PriceBuilder.html" title="class in com.commercetools.history.models.common">PriceBuilder</a></dt>
+<dd>
+<div class="block">Date and time until this Price is valid.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/ScopedPriceBuilder.html#validUntil(java.time.ZonedDateTime)" class="member-name-link">validUntil(ZonedDateTime)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ScopedPriceBuilder.html" title="class in com.commercetools.history.models.common">ScopedPriceBuilder</a></dt>
+<dd>
+<div class="block">Date and time until which the Price is valid.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/discount_codes/DiscountCodeImportBuilder.html#validUntil(java.time.ZonedDateTime)" class="member-name-link">validUntil(ZonedDateTime)</a> - Method in class com.commercetools.importapi.models.discount_codes.<a href="../com/commercetools/importapi/models/discount_codes/DiscountCodeImportBuilder.html" title="class in com.commercetools.importapi.models.discount_codes">DiscountCodeImportBuilder</a></dt>
 <dd>
@@ -595,17 +613,33 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">New value to set.</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/DirectDiscountBuilder.html#value(com.commercetools.history.models.common.CartDiscountValue)" class="member-name-link">value(CartDiscountValue)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/DirectDiscountBuilder.html" title="class in com.commercetools.history.models.common">DirectDiscountBuilder</a></dt>
+<dd>
+<div class="block">Effect of the Discount on the Cart.</div>
+</dd>
 <dt><a href="../com/commercetools/history/models/label/LocalizedLabelBuilder.html#value(com.commercetools.history.models.common.LocalizedString)" class="member-name-link">value(LocalizedString)</a> - Method in class com.commercetools.history.models.label.<a href="../com/commercetools/history/models/label/LocalizedLabelBuilder.html" title="class in com.commercetools.history.models.label">LocalizedLabelBuilder</a></dt>
 <dd>
 <div class="block">Changed value.</div>
 </dd>
-<dt><a href="../com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#value(com.commercetools.history.models.common.Money)" class="member-name-link">value(Money)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a></dt>
+<dt><a href="../com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#value(com.commercetools.history.models.common.TypedMoney)" class="member-name-link">value(TypedMoney)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a></dt>
 <dd>
-<div class="block">set the value to the value</div>
+<div class="block">Money value of the discounted Line Item or Custom Line Item.</div>
 </dd>
-<dt><a href="../com/commercetools/history/models/common/PriceBuilder.html#value(com.commercetools.history.models.common.Money)" class="member-name-link">value(Money)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/PriceBuilder.html" title="class in com.commercetools.history.models.common">PriceBuilder</a></dt>
+<dt><a href="../com/commercetools/history/models/common/DiscountedPriceBuilder.html#value(com.commercetools.history.models.common.TypedMoney)" class="member-name-link">value(TypedMoney)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/DiscountedPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedPriceBuilder</a></dt>
 <dd>
-<div class="block">set the value to the value</div>
+<div class="block">Money value of the discounted price.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/PriceBuilder.html#value(com.commercetools.history.models.common.TypedMoney)" class="member-name-link">value(TypedMoney)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/PriceBuilder.html" title="class in com.commercetools.history.models.common">PriceBuilder</a></dt>
+<dd>
+<div class="block">Money value of this Price.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/PriceTierBuilder.html#value(com.commercetools.history.models.common.TypedMoney)" class="member-name-link">value(TypedMoney)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/PriceTierBuilder.html" title="class in com.commercetools.history.models.common">PriceTierBuilder</a></dt>
+<dd>
+<div class="block">Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>quantity</code>.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/ScopedPriceBuilder.html#value(com.commercetools.history.models.common.TypedMoney)" class="member-name-link">value(TypedMoney)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ScopedPriceBuilder.html" title="class in com.commercetools.history.models.common">ScopedPriceBuilder</a></dt>
+<dd>
+<div class="block">Original value of the Price.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/customfields/ReferenceFieldBuilder.html#value(com.commercetools.importapi.models.common.KeyReference)" class="member-name-link">value(KeyReference)</a> - Method in class com.commercetools.importapi.models.customfields.<a href="../com/commercetools/importapi/models/customfields/ReferenceFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">ReferenceFieldBuilder</a></dt>
 <dd>
@@ -1275,6 +1309,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a>.</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/AttributeBuilder.html#value(java.lang.Object)" class="member-name-link">value(Object)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/AttributeBuilder.html" title="class in com.commercetools.history.models.common">AttributeBuilder</a></dt>
+<dd>
+<div class="block">The <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeType" rel="nofollow">AttributeType</a> determines the format of the Attribute <code>value</code> to be provided:</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/customer/CustomerTokenBuilder.html#value(java.lang.String)" class="member-name-link">value(String)</a> - Method in class com.commercetools.api.models.customer.<a href="../com/commercetools/api/models/customer/CustomerTokenBuilder.html" title="class in com.commercetools.api.models.customer">CustomerTokenBuilder</a></dt>
 <dd>
 <div class="block">Value of the token.</div>
@@ -1539,17 +1577,33 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">New value to set.</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/DirectDiscountBuilder.html#value(java.util.function.Function)" class="member-name-link">value(Function&lt;CartDiscountValueBuilder, CartDiscountValueBuilder&gt;)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/DirectDiscountBuilder.html" title="class in com.commercetools.history.models.common">DirectDiscountBuilder</a></dt>
+<dd>
+<div class="block">Effect of the Discount on the Cart.</div>
+</dd>
 <dt><a href="../com/commercetools/history/models/label/LocalizedLabelBuilder.html#value(java.util.function.Function)" class="member-name-link">value(Function&lt;LocalizedStringBuilder, LocalizedStringBuilder&gt;)</a> - Method in class com.commercetools.history.models.label.<a href="../com/commercetools/history/models/label/LocalizedLabelBuilder.html" title="class in com.commercetools.history.models.label">LocalizedLabelBuilder</a></dt>
 <dd>
 <div class="block">Changed value.</div>
 </dd>
-<dt><a href="../com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#value(java.util.function.Function)" class="member-name-link">value(Function&lt;MoneyBuilder, MoneyBuilder&gt;)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a></dt>
+<dt><a href="../com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#value(java.util.function.Function)" class="member-name-link">value(Function&lt;TypedMoneyBuilder, Builder&lt;? extends TypedMoney&gt;&gt;)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a></dt>
 <dd>
-<div class="block">set the value to the value using the builder function</div>
+<div class="block">Money value of the discounted Line Item or Custom Line Item.</div>
 </dd>
-<dt><a href="../com/commercetools/history/models/common/PriceBuilder.html#value(java.util.function.Function)" class="member-name-link">value(Function&lt;MoneyBuilder, MoneyBuilder&gt;)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/PriceBuilder.html" title="class in com.commercetools.history.models.common">PriceBuilder</a></dt>
+<dt><a href="../com/commercetools/history/models/common/DiscountedPriceBuilder.html#value(java.util.function.Function)" class="member-name-link">value(Function&lt;TypedMoneyBuilder, Builder&lt;? extends TypedMoney&gt;&gt;)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/DiscountedPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedPriceBuilder</a></dt>
 <dd>
-<div class="block">set the value to the value using the builder function</div>
+<div class="block">Money value of the discounted price.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/PriceBuilder.html#value(java.util.function.Function)" class="member-name-link">value(Function&lt;TypedMoneyBuilder, Builder&lt;? extends TypedMoney&gt;&gt;)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/PriceBuilder.html" title="class in com.commercetools.history.models.common">PriceBuilder</a></dt>
+<dd>
+<div class="block">Money value of this Price.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/PriceTierBuilder.html#value(java.util.function.Function)" class="member-name-link">value(Function&lt;TypedMoneyBuilder, Builder&lt;? extends TypedMoney&gt;&gt;)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/PriceTierBuilder.html" title="class in com.commercetools.history.models.common">PriceTierBuilder</a></dt>
+<dd>
+<div class="block">Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>quantity</code>.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/ScopedPriceBuilder.html#value(java.util.function.Function)" class="member-name-link">value(Function&lt;TypedMoneyBuilder, Builder&lt;? extends TypedMoney&gt;&gt;)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ScopedPriceBuilder.html" title="class in com.commercetools.history.models.common">ScopedPriceBuilder</a></dt>
+<dd>
+<div class="block">Original value of the Price.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/customfields/ReferenceFieldBuilder.html#value(java.util.function.Function)" class="member-name-link">value(Function&lt;KeyReferenceBuilder, Builder&lt;? extends KeyReference&gt;&gt;)</a> - Method in class com.commercetools.importapi.models.customfields.<a href="../com/commercetools/importapi/models/customfields/ReferenceFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">ReferenceFieldBuilder</a></dt>
 <dd>
@@ -1761,6 +1815,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/cart/CartMergeMode.CartMergeModeEnum.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartMergeMode.CartMergeModeEnum.html" title="enum in com.commercetools.api.models.cart">CartMergeMode.CartMergeModeEnum</a></dt>
+<dd>
+<div class="block">Returns the enum constant of this type with the specified name.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/cart/CartOrigin.CartOriginEnum.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartOrigin.CartOriginEnum.html" title="enum in com.commercetools.api.models.cart">CartOrigin.CartOriginEnum</a></dt>
 <dd>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
@@ -1814,6 +1872,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/channel/ChannelRoleEnum.ChannelRoleEnumEnum.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum com.commercetools.api.models.channel.<a href="../com/commercetools/api/models/channel/ChannelRoleEnum.ChannelRoleEnumEnum.html" title="enum in com.commercetools.api.models.channel">ChannelRoleEnum.ChannelRoleEnumEnum</a></dt>
+<dd>
+<div class="block">Returns the enum constant of this type with the specified name.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/common/AddressRole.AddressRoleEnum.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum com.commercetools.api.models.common.<a href="../com/commercetools/api/models/common/AddressRole.AddressRoleEnum.html" title="enum in com.commercetools.api.models.common">AddressRole.AddressRoleEnum</a></dt>
 <dd>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
 </dd>
@@ -2109,6 +2171,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/AssociateRoleDeprecated.AssociateRoleDeprecatedEnum.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/AssociateRoleDeprecated.AssociateRoleDeprecatedEnum.html" title="enum in com.commercetools.history.models.common">AssociateRoleDeprecated.AssociateRoleDeprecatedEnum</a></dt>
+<dd>
+<div class="block">Returns the enum constant of this type with the specified name.</div>
+</dd>
 <dt><a href="../com/commercetools/history/models/common/AssociateRoleInheritanceMode.AssociateRoleInheritanceModeEnum.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/AssociateRoleInheritanceMode.AssociateRoleInheritanceModeEnum.html" title="enum in com.commercetools.history.models.common">AssociateRoleInheritanceMode.AssociateRoleInheritanceModeEnum</a></dt>
 <dd>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
@@ -2117,7 +2183,15 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/AttributeLevelEnum.AttributeLevelEnumEnum.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/AttributeLevelEnum.AttributeLevelEnumEnum.html" title="enum in com.commercetools.history.models.common">AttributeLevelEnum.AttributeLevelEnumEnum</a></dt>
+<dd>
+<div class="block">Returns the enum constant of this type with the specified name.</div>
+</dd>
 <dt><a href="../com/commercetools/history/models/common/AuthenticationMode.AuthenticationModeEnum.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/AuthenticationMode.AuthenticationModeEnum.html" title="enum in com.commercetools.history.models.common">AuthenticationMode.AuthenticationModeEnum</a></dt>
+<dd>
+<div class="block">Returns the enum constant of this type with the specified name.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/BusinessUnitApprovalRuleMode.BusinessUnitApprovalRuleModeEnum.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/BusinessUnitApprovalRuleMode.BusinessUnitApprovalRuleModeEnum.html" title="enum in com.commercetools.history.models.common">BusinessUnitApprovalRuleMode.BusinessUnitApprovalRuleModeEnum</a></dt>
 <dd>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
 </dd>
@@ -2133,11 +2207,31 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/BusinessUnitType.BusinessUnitTypeEnum.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/BusinessUnitType.BusinessUnitTypeEnum.html" title="enum in com.commercetools.history.models.common">BusinessUnitType.BusinessUnitTypeEnum</a></dt>
+<dd>
+<div class="block">Returns the enum constant of this type with the specified name.</div>
+</dd>
 <dt><a href="../com/commercetools/history/models/common/ChannelRoleEnum.ChannelRoleEnumEnum.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ChannelRoleEnum.ChannelRoleEnumEnum.html" title="enum in com.commercetools.history.models.common">ChannelRoleEnum.ChannelRoleEnumEnum</a></dt>
 <dd>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/CustomLineItemPriceMode.CustomLineItemPriceModeEnum.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/CustomLineItemPriceMode.CustomLineItemPriceModeEnum.html" title="enum in com.commercetools.history.models.common">CustomLineItemPriceMode.CustomLineItemPriceModeEnum</a></dt>
+<dd>
+<div class="block">Returns the enum constant of this type with the specified name.</div>
+</dd>
 <dt><a href="../com/commercetools/history/models/common/DiscountCodeState.DiscountCodeStateEnum.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/DiscountCodeState.DiscountCodeStateEnum.html" title="enum in com.commercetools.history.models.common">DiscountCodeState.DiscountCodeStateEnum</a></dt>
+<dd>
+<div class="block">Returns the enum constant of this type with the specified name.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/InventoryMode.InventoryModeEnum.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/InventoryMode.InventoryModeEnum.html" title="enum in com.commercetools.history.models.common">InventoryMode.InventoryModeEnum</a></dt>
+<dd>
+<div class="block">Returns the enum constant of this type with the specified name.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/LineItemMode.LineItemModeEnum.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/LineItemMode.LineItemModeEnum.html" title="enum in com.commercetools.history.models.common">LineItemMode.LineItemModeEnum</a></dt>
+<dd>
+<div class="block">Returns the enum constant of this type with the specified name.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/LineItemPriceMode.LineItemPriceModeEnum.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/LineItemPriceMode.LineItemPriceModeEnum.html" title="enum in com.commercetools.history.models.common">LineItemPriceMode.LineItemPriceModeEnum</a></dt>
 <dd>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
 </dd>
@@ -2157,6 +2251,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/PriceSelectionMode.PriceSelectionModeEnum.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/PriceSelectionMode.PriceSelectionModeEnum.html" title="enum in com.commercetools.history.models.common">PriceSelectionMode.PriceSelectionModeEnum</a></dt>
+<dd>
+<div class="block">Returns the enum constant of this type with the specified name.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/ProductPriceModeEnum.ProductPriceModeEnumEnum.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ProductPriceModeEnum.ProductPriceModeEnumEnum.html" title="enum in com.commercetools.history.models.common">ProductPriceModeEnum.ProductPriceModeEnumEnum</a></dt>
+<dd>
+<div class="block">Returns the enum constant of this type with the specified name.</div>
+</dd>
 <dt><a href="../com/commercetools/history/models/common/ProductVariantSelectionTypeEnum.ProductVariantSelectionTypeEnumEnum.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ProductVariantSelectionTypeEnum.ProductVariantSelectionTypeEnumEnum.html" title="enum in com.commercetools.history.models.common">ProductVariantSelectionTypeEnum.ProductVariantSelectionTypeEnumEnum</a></dt>
 <dd>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
@@ -2170,6 +2272,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/common/ReferenceTypeId.ReferenceTypeIdEnum.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ReferenceTypeId.ReferenceTypeIdEnum.html" title="enum in com.commercetools.history.models.common">ReferenceTypeId.ReferenceTypeIdEnum</a></dt>
+<dd>
+<div class="block">Returns the enum constant of this type with the specified name.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/ResourceTypeId.ResourceTypeIdEnum.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ResourceTypeId.ResourceTypeIdEnum.html" title="enum in com.commercetools.history.models.common">ResourceTypeId.ResourceTypeIdEnum</a></dt>
 <dd>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
 </dd>
@@ -2190,6 +2296,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/common/ShipmentState.ShipmentStateEnum.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ShipmentState.ShipmentStateEnum.html" title="enum in com.commercetools.history.models.common">ShipmentState.ShipmentStateEnum</a></dt>
+<dd>
+<div class="block">Returns the enum constant of this type with the specified name.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/ShippingMethodState.ShippingMethodStateEnum.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ShippingMethodState.ShippingMethodStateEnum.html" title="enum in com.commercetools.history.models.common">ShippingMethodState.ShippingMethodStateEnum</a></dt>
 <dd>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
 </dd>
@@ -2230,6 +2340,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/common/TransactionType.TransactionTypeEnum.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/TransactionType.TransactionTypeEnum.html" title="enum in com.commercetools.history.models.common">TransactionType.TransactionTypeEnum</a></dt>
+<dd>
+<div class="block">Returns the enum constant of this type with the specified name.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/TypeTextInputHint.TypeTextInputHintEnum.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/TypeTextInputHint.TypeTextInputHintEnum.html" title="enum in com.commercetools.history.models.common">TypeTextInputHint.TypeTextInputHintEnum</a></dt>
 <dd>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
 </dd>
@@ -2503,6 +2617,15 @@ the order they are declared.</div>
 <dd>
 <div class="block">possible enum values</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/cart/CartMergeMode.CartMergeModeEnum.html#values()" class="member-name-link">values()</a> - Static method in enum com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartMergeMode.CartMergeModeEnum.html" title="enum in com.commercetools.api.models.cart">CartMergeMode.CartMergeModeEnum</a></dt>
+<dd>
+<div class="block">Returns an array containing the constants of this enum type, in
+the order they are declared.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/cart/CartMergeMode.html#values()" class="member-name-link">values()</a> - Static method in interface com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartMergeMode.html" title="interface in com.commercetools.api.models.cart">CartMergeMode</a></dt>
+<dd>
+<div class="block">possible enum values</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/cart/CartOrigin.CartOriginEnum.html#values()" class="member-name-link">values()</a> - Static method in enum com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartOrigin.CartOriginEnum.html" title="enum in com.commercetools.api.models.cart">CartOrigin.CartOriginEnum</a></dt>
 <dd>
 <div class="block">Returns an array containing the constants of this enum type, in
@@ -2626,6 +2749,15 @@ the order they are declared.</div>
 the order they are declared.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/channel/ChannelRoleEnum.html#values()" class="member-name-link">values()</a> - Static method in interface com.commercetools.api.models.channel.<a href="../com/commercetools/api/models/channel/ChannelRoleEnum.html" title="interface in com.commercetools.api.models.channel">ChannelRoleEnum</a></dt>
+<dd>
+<div class="block">possible enum values</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/common/AddressRole.AddressRoleEnum.html#values()" class="member-name-link">values()</a> - Static method in enum com.commercetools.api.models.common.<a href="../com/commercetools/api/models/common/AddressRole.AddressRoleEnum.html" title="enum in com.commercetools.api.models.common">AddressRole.AddressRoleEnum</a></dt>
+<dd>
+<div class="block">Returns an array containing the constants of this enum type, in
+the order they are declared.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/common/AddressRole.html#values()" class="member-name-link">values()</a> - Static method in interface com.commercetools.api.models.common.<a href="../com/commercetools/api/models/common/AddressRole.html" title="interface in com.commercetools.api.models.common">AddressRole</a></dt>
 <dd>
 <div class="block">possible enum values</div>
 </dd>
@@ -3310,6 +3442,15 @@ the order they are declared.</div>
 <dd>
 <div class="block">possible enum values</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/AssociateRoleDeprecated.AssociateRoleDeprecatedEnum.html#values()" class="member-name-link">values()</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/AssociateRoleDeprecated.AssociateRoleDeprecatedEnum.html" title="enum in com.commercetools.history.models.common">AssociateRoleDeprecated.AssociateRoleDeprecatedEnum</a></dt>
+<dd>
+<div class="block">Returns an array containing the constants of this enum type, in
+the order they are declared.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/AssociateRoleDeprecated.html#values()" class="member-name-link">values()</a> - Static method in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/AssociateRoleDeprecated.html" title="interface in com.commercetools.history.models.common">AssociateRoleDeprecated</a></dt>
+<dd>
+<div class="block">possible enum values</div>
+</dd>
 <dt><a href="../com/commercetools/history/models/common/AssociateRoleInheritanceMode.AssociateRoleInheritanceModeEnum.html#values()" class="member-name-link">values()</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/AssociateRoleInheritanceMode.AssociateRoleInheritanceModeEnum.html" title="enum in com.commercetools.history.models.common">AssociateRoleInheritanceMode.AssociateRoleInheritanceModeEnum</a></dt>
 <dd>
 <div class="block">Returns an array containing the constants of this enum type, in
@@ -3328,12 +3469,30 @@ the order they are declared.</div>
 <dd>
 <div class="block">possible enum values</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/AttributeLevelEnum.AttributeLevelEnumEnum.html#values()" class="member-name-link">values()</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/AttributeLevelEnum.AttributeLevelEnumEnum.html" title="enum in com.commercetools.history.models.common">AttributeLevelEnum.AttributeLevelEnumEnum</a></dt>
+<dd>
+<div class="block">Returns an array containing the constants of this enum type, in
+the order they are declared.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/AttributeLevelEnum.html#values()" class="member-name-link">values()</a> - Static method in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/AttributeLevelEnum.html" title="interface in com.commercetools.history.models.common">AttributeLevelEnum</a></dt>
+<dd>
+<div class="block">possible enum values</div>
+</dd>
 <dt><a href="../com/commercetools/history/models/common/AuthenticationMode.AuthenticationModeEnum.html#values()" class="member-name-link">values()</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/AuthenticationMode.AuthenticationModeEnum.html" title="enum in com.commercetools.history.models.common">AuthenticationMode.AuthenticationModeEnum</a></dt>
 <dd>
 <div class="block">Returns an array containing the constants of this enum type, in
 the order they are declared.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/common/AuthenticationMode.html#values()" class="member-name-link">values()</a> - Static method in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/AuthenticationMode.html" title="interface in com.commercetools.history.models.common">AuthenticationMode</a></dt>
+<dd>
+<div class="block">possible enum values</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/BusinessUnitApprovalRuleMode.BusinessUnitApprovalRuleModeEnum.html#values()" class="member-name-link">values()</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/BusinessUnitApprovalRuleMode.BusinessUnitApprovalRuleModeEnum.html" title="enum in com.commercetools.history.models.common">BusinessUnitApprovalRuleMode.BusinessUnitApprovalRuleModeEnum</a></dt>
+<dd>
+<div class="block">Returns an array containing the constants of this enum type, in
+the order they are declared.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/BusinessUnitApprovalRuleMode.html#values()" class="member-name-link">values()</a> - Static method in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/BusinessUnitApprovalRuleMode.html" title="interface in com.commercetools.history.models.common">BusinessUnitApprovalRuleMode</a></dt>
 <dd>
 <div class="block">possible enum values</div>
 </dd>
@@ -3364,14 +3523,34 @@ the order they are declared.</div>
 <dd>
 <div class="block">possible enum values</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/BusinessUnitType.BusinessUnitTypeEnum.html#values()" class="member-name-link">values()</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/BusinessUnitType.BusinessUnitTypeEnum.html" title="enum in com.commercetools.history.models.common">BusinessUnitType.BusinessUnitTypeEnum</a></dt>
+<dd>
+<div class="block">Returns an array containing the constants of this enum type, in
+the order they are declared.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/BusinessUnitType.html#values()" class="member-name-link">values()</a> - Static method in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/BusinessUnitType.html" title="interface in com.commercetools.history.models.common">BusinessUnitType</a></dt>
+<dd>
+<div class="block">possible enum values</div>
+</dd>
 <dt><a href="../com/commercetools/history/models/common/CategoryOrderHints.html#values()" class="member-name-link">values()</a> - Method in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/CategoryOrderHints.html" title="interface in com.commercetools.history.models.common">CategoryOrderHints</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">A string representing a number between <code>0</code> and <code>1</code>, but not ending in <code>0</code>.</div>
+</dd>
 <dt><a href="../com/commercetools/history/models/common/ChannelRoleEnum.ChannelRoleEnumEnum.html#values()" class="member-name-link">values()</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ChannelRoleEnum.ChannelRoleEnumEnum.html" title="enum in com.commercetools.history.models.common">ChannelRoleEnum.ChannelRoleEnumEnum</a></dt>
 <dd>
 <div class="block">Returns an array containing the constants of this enum type, in
 the order they are declared.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/common/ChannelRoleEnum.html#values()" class="member-name-link">values()</a> - Static method in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ChannelRoleEnum.html" title="interface in com.commercetools.history.models.common">ChannelRoleEnum</a></dt>
+<dd>
+<div class="block">possible enum values</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/CustomLineItemPriceMode.CustomLineItemPriceModeEnum.html#values()" class="member-name-link">values()</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/CustomLineItemPriceMode.CustomLineItemPriceModeEnum.html" title="enum in com.commercetools.history.models.common">CustomLineItemPriceMode.CustomLineItemPriceModeEnum</a></dt>
+<dd>
+<div class="block">Returns an array containing the constants of this enum type, in
+the order they are declared.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/CustomLineItemPriceMode.html#values()" class="member-name-link">values()</a> - Static method in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/CustomLineItemPriceMode.html" title="interface in com.commercetools.history.models.common">CustomLineItemPriceMode</a></dt>
 <dd>
 <div class="block">possible enum values</div>
 </dd>
@@ -3384,8 +3563,41 @@ the order they are declared.</div>
 <dd>
 <div class="block">possible enum values</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/FieldContainer.html#values()" class="member-name-link">values()</a> - Method in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/FieldContainer.html" title="interface in com.commercetools.history.models.common">FieldContainer</a></dt>
+<dd>
+<div class="block">JSON object with keys matching the names of Custom Fields (that is, <code>name</code>s in the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a>) and values given by <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a>.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/InventoryMode.InventoryModeEnum.html#values()" class="member-name-link">values()</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/InventoryMode.InventoryModeEnum.html" title="enum in com.commercetools.history.models.common">InventoryMode.InventoryModeEnum</a></dt>
+<dd>
+<div class="block">Returns an array containing the constants of this enum type, in
+the order they are declared.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/InventoryMode.html#values()" class="member-name-link">values()</a> - Static method in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/InventoryMode.html" title="interface in com.commercetools.history.models.common">InventoryMode</a></dt>
+<dd>
+<div class="block">possible enum values</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/LineItemMode.LineItemModeEnum.html#values()" class="member-name-link">values()</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/LineItemMode.LineItemModeEnum.html" title="enum in com.commercetools.history.models.common">LineItemMode.LineItemModeEnum</a></dt>
+<dd>
+<div class="block">Returns an array containing the constants of this enum type, in
+the order they are declared.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/LineItemMode.html#values()" class="member-name-link">values()</a> - Static method in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/LineItemMode.html" title="interface in com.commercetools.history.models.common">LineItemMode</a></dt>
+<dd>
+<div class="block">possible enum values</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/LineItemPriceMode.LineItemPriceModeEnum.html#values()" class="member-name-link">values()</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/LineItemPriceMode.LineItemPriceModeEnum.html" title="enum in com.commercetools.history.models.common">LineItemPriceMode.LineItemPriceModeEnum</a></dt>
+<dd>
+<div class="block">Returns an array containing the constants of this enum type, in
+the order they are declared.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/LineItemPriceMode.html#values()" class="member-name-link">values()</a> - Static method in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/LineItemPriceMode.html" title="interface in com.commercetools.history.models.common">LineItemPriceMode</a></dt>
+<dd>
+<div class="block">possible enum values</div>
+</dd>
 <dt><a href="../com/commercetools/history/models/common/LocalizedString.html#values()" class="member-name-link">values()</a> - Method in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">String used for the specified language.</div>
+</dd>
 <dt><a href="../com/commercetools/history/models/common/MoneyType.MoneyTypeEnum.html#values()" class="member-name-link">values()</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/MoneyType.MoneyTypeEnum.html" title="enum in com.commercetools.history.models.common">MoneyType.MoneyTypeEnum</a></dt>
 <dd>
 <div class="block">Returns an array containing the constants of this enum type, in
@@ -3422,8 +3634,28 @@ the order they are declared.</div>
 <dd>
 <div class="block">possible enum values</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/PriceSelectionMode.PriceSelectionModeEnum.html#values()" class="member-name-link">values()</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/PriceSelectionMode.PriceSelectionModeEnum.html" title="enum in com.commercetools.history.models.common">PriceSelectionMode.PriceSelectionModeEnum</a></dt>
+<dd>
+<div class="block">Returns an array containing the constants of this enum type, in
+the order they are declared.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/PriceSelectionMode.html#values()" class="member-name-link">values()</a> - Static method in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/PriceSelectionMode.html" title="interface in com.commercetools.history.models.common">PriceSelectionMode</a></dt>
+<dd>
+<div class="block">possible enum values</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/ProductPriceModeEnum.ProductPriceModeEnumEnum.html#values()" class="member-name-link">values()</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ProductPriceModeEnum.ProductPriceModeEnumEnum.html" title="enum in com.commercetools.history.models.common">ProductPriceModeEnum.ProductPriceModeEnumEnum</a></dt>
+<dd>
+<div class="block">Returns an array containing the constants of this enum type, in
+the order they are declared.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/ProductPriceModeEnum.html#values()" class="member-name-link">values()</a> - Static method in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ProductPriceModeEnum.html" title="interface in com.commercetools.history.models.common">ProductPriceModeEnum</a></dt>
+<dd>
+<div class="block">possible enum values</div>
+</dd>
 <dt><a href="../com/commercetools/history/models/common/ProductVariantChannelAvailabilityMap.html#values()" class="member-name-link">values()</a> - Method in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ProductVariantChannelAvailabilityMap.html" title="interface in com.commercetools.history.models.common">ProductVariantChannelAvailabilityMap</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">JSON object where the keys are supply <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> <code>id</code>, and the values are <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantChannelAvailability" rel="nofollow">ProductVariantChannelAvailability</a>.</div>
+</dd>
 <dt><a href="../com/commercetools/history/models/common/ProductVariantSelectionTypeEnum.ProductVariantSelectionTypeEnumEnum.html#values()" class="member-name-link">values()</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ProductVariantSelectionTypeEnum.ProductVariantSelectionTypeEnumEnum.html" title="enum in com.commercetools.history.models.common">ProductVariantSelectionTypeEnum.ProductVariantSelectionTypeEnumEnum</a></dt>
 <dd>
 <div class="block">Returns an array containing the constants of this enum type, in
@@ -3460,6 +3692,15 @@ the order they are declared.</div>
 <dd>
 <div class="block">possible enum values</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/ResourceTypeId.ResourceTypeIdEnum.html#values()" class="member-name-link">values()</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ResourceTypeId.ResourceTypeIdEnum.html" title="enum in com.commercetools.history.models.common">ResourceTypeId.ResourceTypeIdEnum</a></dt>
+<dd>
+<div class="block">Returns an array containing the constants of this enum type, in
+the order they are declared.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/ResourceTypeId.html#values()" class="member-name-link">values()</a> - Static method in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ResourceTypeId.html" title="interface in com.commercetools.history.models.common">ResourceTypeId</a></dt>
+<dd>
+<div class="block">possible enum values</div>
+</dd>
 <dt><a href="../com/commercetools/history/models/common/ReturnPaymentState.ReturnPaymentStateEnum.html#values()" class="member-name-link">values()</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ReturnPaymentState.ReturnPaymentStateEnum.html" title="enum in com.commercetools.history.models.common">ReturnPaymentState.ReturnPaymentStateEnum</a></dt>
 <dd>
 <div class="block">Returns an array containing the constants of this enum type, in
@@ -3488,7 +3729,9 @@ the order they are declared.</div>
 <div class="block">possible enum values</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/common/SearchKeywords.html#values()" class="member-name-link">values()</a> - Method in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/SearchKeywords.html" title="interface in com.commercetools.history.models.common">SearchKeywords</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Key-value pair where the keys are of type <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a> and the values are an array of <a href="https://docs.commercetools.com/apis/ctp:api:type:SearchKeyword" rel="nofollow">SearchKeyword</a>.</div>
+</dd>
 <dt><a href="../com/commercetools/history/models/common/SelectionMode.SelectionModeEnum.html#values()" class="member-name-link">values()</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/SelectionMode.SelectionModeEnum.html" title="enum in com.commercetools.history.models.common">SelectionMode.SelectionModeEnum</a></dt>
 <dd>
 <div class="block">Returns an array containing the constants of this enum type, in
@@ -3504,6 +3747,15 @@ the order they are declared.</div>
 the order they are declared.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/common/ShipmentState.html#values()" class="member-name-link">values()</a> - Static method in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ShipmentState.html" title="interface in com.commercetools.history.models.common">ShipmentState</a></dt>
+<dd>
+<div class="block">possible enum values</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/ShippingMethodState.ShippingMethodStateEnum.html#values()" class="member-name-link">values()</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ShippingMethodState.ShippingMethodStateEnum.html" title="enum in com.commercetools.history.models.common">ShippingMethodState.ShippingMethodStateEnum</a></dt>
+<dd>
+<div class="block">Returns an array containing the constants of this enum type, in
+the order they are declared.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/ShippingMethodState.html#values()" class="member-name-link">values()</a> - Static method in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ShippingMethodState.html" title="interface in com.commercetools.history.models.common">ShippingMethodState</a></dt>
 <dd>
 <div class="block">possible enum values</div>
 </dd>
@@ -3594,6 +3846,15 @@ the order they are declared.</div>
 the order they are declared.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/common/TransactionType.html#values()" class="member-name-link">values()</a> - Static method in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/TransactionType.html" title="interface in com.commercetools.history.models.common">TransactionType</a></dt>
+<dd>
+<div class="block">possible enum values</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/TypeTextInputHint.TypeTextInputHintEnum.html#values()" class="member-name-link">values()</a> - Static method in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/TypeTextInputHint.TypeTextInputHintEnum.html" title="enum in com.commercetools.history.models.common">TypeTextInputHint.TypeTextInputHintEnum</a></dt>
+<dd>
+<div class="block">Returns an array containing the constants of this enum type, in
+the order they are declared.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/TypeTextInputHint.html#values()" class="member-name-link">values()</a> - Static method in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/TypeTextInputHint.html" title="interface in com.commercetools.history.models.common">TypeTextInputHint</a></dt>
 <dd>
 <div class="block">possible enum values</div>
 </dd>
@@ -4055,7 +4316,7 @@ the order they are declared.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/common/ProductVariantChannelAvailabilityMapBuilder.html#values(java.util.Map)" class="member-name-link">values(Map&lt;String, ProductVariantChannelAvailability&gt;)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ProductVariantChannelAvailabilityMapBuilder.html" title="class in com.commercetools.history.models.common">ProductVariantChannelAvailabilityMapBuilder</a></dt>
 <dd>
-<div class="block">assign pattern properties to the builder</div>
+<div class="block">JSON object where the keys are supply <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> <code>id</code>, and the values are <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantChannelAvailability" rel="nofollow">ProductVariantChannelAvailability</a>.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/customfields/FieldContainerBuilder.html#values(java.util.Map)" class="member-name-link">values(Map&lt;String, CustomField&gt;)</a> - Method in class com.commercetools.importapi.models.customfields.<a href="../com/commercetools/importapi/models/customfields/FieldContainerBuilder.html" title="class in com.commercetools.importapi.models.customfields">FieldContainerBuilder</a></dt>
 <dd>
@@ -4465,6 +4726,10 @@ the order they are declared.</div>
 <dd>
 <div class="block">Error-specific additional fields.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/error/GraphQLRecurringOrderFailureErrorBuilder.html#values(java.util.Map)" class="member-name-link">values(Map&lt;String, Object&gt;)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLRecurringOrderFailureErrorBuilder.html" title="class in com.commercetools.api.models.error">GraphQLRecurringOrderFailureErrorBuilder</a></dt>
+<dd>
+<div class="block">Error-specific additional fields.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/error/GraphQLReferencedResourceNotFoundErrorBuilder.html#values(java.util.Map)" class="member-name-link">values(Map&lt;String, Object&gt;)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLReferencedResourceNotFoundErrorBuilder.html" title="class in com.commercetools.api.models.error">GraphQLReferencedResourceNotFoundErrorBuilder</a></dt>
 <dd>
 <div class="block">Error-specific additional fields.</div>
@@ -4653,6 +4918,10 @@ the order they are declared.</div>
 <dd>
 <div class="block">Error-specific additional fields.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/error/RecurringOrderFailureErrorBuilder.html#values(java.util.Map)" class="member-name-link">values(Map&lt;String, Object&gt;)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/RecurringOrderFailureErrorBuilder.html" title="class in com.commercetools.api.models.error">RecurringOrderFailureErrorBuilder</a></dt>
+<dd>
+<div class="block">Error-specific additional fields.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/error/ReferencedResourceNotFoundErrorBuilder.html#values(java.util.Map)" class="member-name-link">values(Map&lt;String, Object&gt;)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/ReferencedResourceNotFoundErrorBuilder.html" title="class in com.commercetools.api.models.error">ReferencedResourceNotFoundErrorBuilder</a></dt>
 <dd>
 <div class="block">Error-specific additional fields.</div>
@@ -4717,6 +4986,10 @@ the order they are declared.</div>
 <dd>
 <div class="block">JSON object with keys matching the names of Custom Fields (that is, <code>name</code>s in the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a>) and values given by <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a>.</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/FieldContainerBuilder.html#values(java.util.Map)" class="member-name-link">values(Map&lt;String, Object&gt;)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/FieldContainerBuilder.html" title="class in com.commercetools.history.models.common">FieldContainerBuilder</a></dt>
+<dd>
+<div class="block">JSON object with keys matching the names of Custom Fields (that is, <code>name</code>s in the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a>) and values given by <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a>.</div>
+</dd>
 <dt><a href="../com/commercetools/history/models/error/GraphQLTooManyRequestsErrorBuilder.html#values(java.util.Map)" class="member-name-link">values(Map&lt;String, Object&gt;)</a> - Method in class com.commercetools.history.models.error.<a href="../com/commercetools/history/models/error/GraphQLTooManyRequestsErrorBuilder.html" title="class in com.commercetools.history.models.error">GraphQLTooManyRequestsErrorBuilder</a></dt>
 <dd>
 <div class="block">Error-specific additional fields.</div>
@@ -4733,11 +5006,11 @@ the order they are declared.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/common/CategoryOrderHintsBuilder.html#values(java.util.Map)" class="member-name-link">values(Map&lt;String, String&gt;)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/CategoryOrderHintsBuilder.html" title="class in com.commercetools.history.models.common">CategoryOrderHintsBuilder</a></dt>
 <dd>
-<div class="block">assign pattern properties to the builder</div>
+<div class="block">A string representing a number between <code>0</code> and <code>1</code>, but not ending in <code>0</code>.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/common/LocalizedStringBuilder.html#values(java.util.Map)" class="member-name-link">values(Map&lt;String, String&gt;)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a></dt>
 <dd>
-<div class="block">assign pattern properties to the builder</div>
+<div class="block">String used for the specified language.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/common/LocalizedStringBuilder.html#values(java.util.Map)" class="member-name-link">values(Map&lt;String, String&gt;)</a> - Method in class com.commercetools.importapi.models.common.<a href="../com/commercetools/importapi/models/common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a></dt>
 <dd>
@@ -4753,7 +5026,7 @@ the order they are declared.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/common/SearchKeywordsBuilder.html#values(java.util.Map)" class="member-name-link">values(Map&lt;String, List&lt;SearchKeyword&gt;&gt;)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/SearchKeywordsBuilder.html" title="class in com.commercetools.history.models.common">SearchKeywordsBuilder</a></dt>
 <dd>
-<div class="block">assign pattern properties to the builder</div>
+<div class="block">Key-value pair where the keys are of type <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a> and the values are an array of <a href="https://docs.commercetools.com/apis/ctp:api:type:SearchKeyword" rel="nofollow">SearchKeyword</a>.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/products/SearchKeywordsBuilder.html#values(java.util.Map)" class="member-name-link">values(Map&lt;String, List&lt;SearchKeyword&gt;&gt;)</a> - Method in class com.commercetools.importapi.models.products.<a href="../com/commercetools/importapi/models/products/SearchKeywordsBuilder.html" title="class in com.commercetools.importapi.models.products">SearchKeywordsBuilder</a></dt>
 <dd>
@@ -4841,61 +5114,183 @@ the order they are declared.</div>
 <dd>
 <div class="block">Data of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
 </dd>
-<dt><a href="../com/commercetools/history/models/common/LineItemBuilder.html#variant(com.commercetools.history.models.common.Variant)" class="member-name-link">variant(Variant)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/LineItemBuilder.html" title="class in com.commercetools.history.models.common">LineItemBuilder</a></dt>
+<dt><a href="../com/commercetools/history/models/common/LineItemBuilder.html#variant(com.commercetools.history.models.common.ProductVariant)" class="member-name-link">variant(ProductVariant)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/LineItemBuilder.html" title="class in com.commercetools.history.models.common">LineItemBuilder</a></dt>
 <dd>
-<div class="block">set the value to the variant</div>
+<div class="block">Holds the data of the Product Variant added to the Cart.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/ShoppingListLineItemBuilder.html#variant(com.commercetools.history.models.common.ProductVariant)" class="member-name-link">variant(ProductVariant)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ShoppingListLineItemBuilder.html" title="class in com.commercetools.history.models.common">ShoppingListLineItemBuilder</a></dt>
+<dd>
+<div class="block">Data of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#variant(com.commercetools.importapi.models.orders.LineItemProductVariantImportDraft)" class="member-name-link">variant(LineItemProductVariantImportDraft)</a> - Method in class com.commercetools.importapi.models.orders.<a href="../com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></dt>
 <dd>
 <div class="block">Maps to <code>ProductVariantImportDraft</code>.</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/change/AddAssetChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/AddAssetChangeBuilder.html" title="class in com.commercetools.history.models.change">AddAssetChangeBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/AddPriceChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/AddPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">AddPriceChangeBuilder</a></dt>
+<dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/ChangeAssetNameChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/ChangeAssetNameChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeAssetNameChangeBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/ChangeAssetOrderChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/ChangeAssetOrderChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeAssetOrderChangeBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/ChangeLineItemPriceRoundingModeChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/ChangeLineItemPriceRoundingModeChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeLineItemPriceRoundingModeChangeBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/ChangePriceChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/ChangePriceChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangePriceChangeBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/MoveImageToPositionChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/MoveImageToPositionChangeBuilder.html" title="class in com.commercetools.history.models.change">MoveImageToPositionChangeBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/RemoveAssetChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/RemoveAssetChangeBuilder.html" title="class in com.commercetools.history.models.change">RemoveAssetChangeBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/RemoveImageChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/RemoveImageChangeBuilder.html" title="class in com.commercetools.history.models.change">RemoveImageChangeBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/RemovePriceChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/RemovePriceChangeBuilder.html" title="class in com.commercetools.history.models.change">RemovePriceChangeBuilder</a></dt>
+<dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/SetAssetCustomFieldChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetAssetCustomFieldChangeBuilder.html" title="class in com.commercetools.history.models.change">SetAssetCustomFieldChangeBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/SetAssetCustomTypeChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetAssetCustomTypeChangeBuilder.html" title="class in com.commercetools.history.models.change">SetAssetCustomTypeChangeBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/SetAssetDescriptionChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetAssetDescriptionChangeBuilder.html" title="class in com.commercetools.history.models.change">SetAssetDescriptionChangeBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/SetAssetKeyChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetAssetKeyChangeBuilder.html" title="class in com.commercetools.history.models.change">SetAssetKeyChangeBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/SetAssetSourcesChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetAssetSourcesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetAssetSourcesChangeBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/SetAssetTagsChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetAssetTagsChangeBuilder.html" title="class in com.commercetools.history.models.change">SetAssetTagsChangeBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/SetAttributeChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetAttributeChangeBuilder.html" title="class in com.commercetools.history.models.change">SetAttributeChangeBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
 <dt><a href="../com/commercetools/history/models/change/SetDiscountedPriceChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetDiscountedPriceChangeBuilder</a></dt>
 <dd>
-<div class="block"><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/SetImageLabelChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetImageLabelChangeBuilder.html" title="class in com.commercetools.history.models.change">SetImageLabelChangeBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the updated Product Variant.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/change/SetLineItemDiscountedPriceChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetLineItemDiscountedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetLineItemDiscountedPriceChangeBuilder</a></dt>
 <dd>
-<div class="block"><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
+<div class="block">Identifier of the updated Product Variant.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChangeBuilder.html" title="class in com.commercetools.history.models.change">SetLineItemDiscountedPricePerQuantityChangeBuilder</a></dt>
 <dd>
-<div class="block"><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
+<div class="block">Identifier of the updated Product Variant.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/change/SetLineItemDistributionChannelChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetLineItemDistributionChannelChangeBuilder.html" title="class in com.commercetools.history.models.change">SetLineItemDistributionChannelChangeBuilder</a></dt>
 <dd>
-<div class="block"><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
+<div class="block">Identifier of the updated Product Variant.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/change/SetLineItemProductKeyChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetLineItemProductKeyChangeBuilder.html" title="class in com.commercetools.history.models.change">SetLineItemProductKeyChangeBuilder</a></dt>
 <dd>
-<div class="block"><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
+<div class="block">Identifier of the updated Product Variant.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/change/SetLineItemProductSlugChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetLineItemProductSlugChangeBuilder.html" title="class in com.commercetools.history.models.change">SetLineItemProductSlugChangeBuilder</a></dt>
 <dd>
-<div class="block"><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/SetLineItemShippingDetailsChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetLineItemShippingDetailsChangeBuilder.html" title="class in com.commercetools.history.models.change">SetLineItemShippingDetailsChangeBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the updated Product Variant.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/change/SetLineItemTaxAmountChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetLineItemTaxAmountChangeBuilder.html" title="class in com.commercetools.history.models.change">SetLineItemTaxAmountChangeBuilder</a></dt>
 <dd>
-<div class="block"><code>sku</code> or <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/SetLineItemTaxedPriceChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetLineItemTaxedPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetLineItemTaxedPriceChangeBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the updated Product Variant.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/change/SetLineItemTaxRateChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetLineItemTaxRateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetLineItemTaxRateChangeBuilder</a></dt>
 <dd>
-<div class="block"><code>sku</code> or <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/SetLineItemTotalPriceChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetLineItemTotalPriceChangeBuilder.html" title="class in com.commercetools.history.models.change">SetLineItemTotalPriceChangeBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the updated Product Variant.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/change/SetOrderLineItemCustomFieldChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetOrderLineItemCustomFieldChangeBuilder.html" title="class in com.commercetools.history.models.change">SetOrderLineItemCustomFieldChangeBuilder</a></dt>
 <dd>
-<div class="block"><code>sku</code> or <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
+<div class="block">Identifier of the updated Product Variant.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/change/SetOrderLineItemCustomTypeChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetOrderLineItemCustomTypeChangeBuilder.html" title="class in com.commercetools.history.models.change">SetOrderLineItemCustomTypeChangeBuilder</a></dt>
 <dd>
-<div class="block"><code>sku</code> or <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/SetPriceKeyChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetPriceKeyChangeBuilder.html" title="class in com.commercetools.history.models.change">SetPriceKeyChangeBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the updated Product Variant.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/change/SetPricesChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetPricesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetPricesChangeBuilder</a></dt>
 <dd>
-<div class="block"><code>sku</code> or <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/SetProductPriceCustomFieldChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetProductPriceCustomFieldChangeBuilder.html" title="class in com.commercetools.history.models.change">SetProductPriceCustomFieldChangeBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/SetProductPriceCustomTypeChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetProductPriceCustomTypeChangeBuilder.html" title="class in com.commercetools.history.models.change">SetProductPriceCustomTypeChangeBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/SetProductVariantKeyChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetProductVariantKeyChangeBuilder.html" title="class in com.commercetools.history.models.change">SetProductVariantKeyChangeBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/SetReturnItemLineItemCustomFieldChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetReturnItemLineItemCustomFieldChangeBuilder.html" title="class in com.commercetools.history.models.change">SetReturnItemLineItemCustomFieldChangeBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/SetReturnItemLineItemCustomTypeChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetReturnItemLineItemCustomTypeChangeBuilder.html" title="class in com.commercetools.history.models.change">SetReturnItemLineItemCustomTypeChangeBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the updated Product Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/SetSkuChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetSkuChangeBuilder.html" title="class in com.commercetools.history.models.change">SetSkuChangeBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the updated Product Variant.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/change/SetVariantAvailabilityChangeBuilder.html#variant(java.lang.String)" class="member-name-link">variant(String)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/SetVariantAvailabilityChangeBuilder.html" title="class in com.commercetools.history.models.change">SetVariantAvailabilityChangeBuilder</a></dt>
 <dd>
-<div class="block"><code>sku</code> or <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
+<div class="block">Identifier of the updated Product Variant.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/order/LineItemImportDraftBuilder.html#variant(java.util.function.Function)" class="member-name-link">variant(Function&lt;ProductVariantImportDraftBuilder, ProductVariantImportDraftBuilder&gt;)</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/LineItemImportDraftBuilder.html" title="class in com.commercetools.api.models.order">LineItemImportDraftBuilder</a></dt>
 <dd>
@@ -4941,9 +5336,13 @@ the order they are declared.</div>
 <dd>
 <div class="block">Data of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
 </dd>
-<dt><a href="../com/commercetools/history/models/common/LineItemBuilder.html#variant(java.util.function.Function)" class="member-name-link">variant(Function&lt;VariantBuilder, VariantBuilder&gt;)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/LineItemBuilder.html" title="class in com.commercetools.history.models.common">LineItemBuilder</a></dt>
+<dt><a href="../com/commercetools/history/models/common/LineItemBuilder.html#variant(java.util.function.Function)" class="member-name-link">variant(Function&lt;ProductVariantBuilder, ProductVariantBuilder&gt;)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/LineItemBuilder.html" title="class in com.commercetools.history.models.common">LineItemBuilder</a></dt>
 <dd>
-<div class="block">set the value to the variant using the builder function</div>
+<div class="block">Holds the data of the Product Variant added to the Cart.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/ShoppingListLineItemBuilder.html#variant(java.util.function.Function)" class="member-name-link">variant(Function&lt;ProductVariantBuilder, ProductVariantBuilder&gt;)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ShoppingListLineItemBuilder.html" title="class in com.commercetools.history.models.common">ShoppingListLineItemBuilder</a></dt>
+<dd>
+<div class="block">Data of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#variant(java.util.function.Function)" class="member-name-link">variant(Function&lt;LineItemProductVariantImportDraftBuilder, LineItemProductVariantImportDraftBuilder&gt;)</a> - Method in class com.commercetools.importapi.models.orders.<a href="../com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></dt>
 <dd>
@@ -4961,6 +5360,10 @@ the order they are declared.</div>
 <dd>
 <div class="block">Variant</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/AttributeLevelEnum.AttributeLevelEnumEnum.html#VARIANT" class="member-name-link">VARIANT</a> - Enum constant in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/AttributeLevelEnum.AttributeLevelEnumEnum.html" title="enum in com.commercetools.history.models.common">AttributeLevelEnum.AttributeLevelEnumEnum</a></dt>
+<dd>
+<div class="block">Variant</div>
+</dd>
 <dt><a href="../com/commercetools/importapi/models/producttypes/AttributeLevel.AttributeLevelEnum.html#VARIANT" class="member-name-link">VARIANT</a> - Enum constant in enum com.commercetools.importapi.models.producttypes.<a href="../com/commercetools/importapi/models/producttypes/AttributeLevel.AttributeLevelEnum.html" title="enum in com.commercetools.importapi.models.producttypes">AttributeLevel.AttributeLevelEnum</a></dt>
 <dd>
 <div class="block">Variant</div>
@@ -4969,6 +5372,8 @@ the order they are declared.</div>
 <dd>
 <div class="block">Attributes are defined at the Product Variant level.</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/AttributeLevelEnum.html#VARIANT" class="member-name-link">VARIANT</a> - Static variable in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/AttributeLevelEnum.html" title="interface in com.commercetools.history.models.common">AttributeLevelEnum</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/importapi/models/producttypes/AttributeLevel.html#VARIANT" class="member-name-link">VARIANT</a> - Static variable in interface com.commercetools.importapi.models.producttypes.<a href="../com/commercetools/importapi/models/producttypes/AttributeLevel.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeLevel</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/history/models/common/VariantBuilder.html" class="type-name-link" title="class in com.commercetools.history.models.common">VariantBuilder</a> - Class in <a href="../com/commercetools/history/models/common/package-summary.html">com.commercetools.history.models.common</a></dt>
@@ -5008,6 +5413,10 @@ the order they are declared.</div>
 <dd>
 <div class="block">Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/change/ExcludeProductChangeBuilder.html#variantExclusion(com.commercetools.history.models.common.ProductVariantExclusion)" class="member-name-link">variantExclusion(ProductVariantExclusion)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/ExcludeProductChangeBuilder.html" title="class in com.commercetools.history.models.change">ExcludeProductChangeBuilder</a></dt>
+<dd>
+<div class="block">Only Product Variants with the explicitly listed SKUs are part of a Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</div>
+</dd>
 <dt><a href="../com/commercetools/importapi/models/product_selections/ProductSelectionAssignmentBuilder.html#variantExclusion(com.commercetools.importapi.models.product_selections.VariantExclusion)" class="member-name-link">variantExclusion(VariantExclusion)</a> - Method in class com.commercetools.importapi.models.product_selections.<a href="../com/commercetools/importapi/models/product_selections/ProductSelectionAssignmentBuilder.html" title="class in com.commercetools.importapi.models.product_selections">ProductSelectionAssignmentBuilder</a></dt>
 <dd>
 <div class="block">Variant exclusion specifying excluded SKUs.</div>
@@ -5039,6 +5448,10 @@ the order they are declared.</div>
 <dt><a href="../com/commercetools/api/models/product_selection/ProductSelectionSetVariantExclusionActionBuilder.html#variantExclusion(java.util.function.Function)" class="member-name-link">variantExclusion(Function&lt;ProductVariantExclusionBuilder, ProductVariantExclusionBuilder&gt;)</a> - Method in class com.commercetools.api.models.product_selection.<a href="../com/commercetools/api/models/product_selection/ProductSelectionSetVariantExclusionActionBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionSetVariantExclusionActionBuilder</a></dt>
 <dd>
 <div class="block">Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/change/ExcludeProductChangeBuilder.html#variantExclusion(java.util.function.Function)" class="member-name-link">variantExclusion(Function&lt;ProductVariantExclusionBuilder, ProductVariantExclusionBuilder&gt;)</a> - Method in class com.commercetools.history.models.change.<a href="../com/commercetools/history/models/change/ExcludeProductChangeBuilder.html" title="class in com.commercetools.history.models.change">ExcludeProductChangeBuilder</a></dt>
+<dd>
+<div class="block">Only Product Variants with the explicitly listed SKUs are part of a Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/product_selections/ProductSelectionAssignmentBuilder.html#variantExclusion(java.util.function.Function)" class="member-name-link">variantExclusion(Function&lt;VariantExclusionBuilder, VariantExclusionBuilder&gt;)</a> - Method in class com.commercetools.importapi.models.product_selections.<a href="../com/commercetools/importapi/models/product_selections/ProductSelectionAssignmentBuilder.html" title="class in com.commercetools.importapi.models.product_selections">ProductSelectionAssignmentBuilder</a></dt>
 <dd>
@@ -5081,10 +5494,6 @@ the order they are declared.</div>
 <dd>
 <div class="block">ID of the specified Product Variant.</div>
 </dd>
-<dt><a href="../com/commercetools/api/models/product/ProductLegacySetSkuActionBuilder.html#variantId(java.lang.Integer)" class="member-name-link">variantId(Integer)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/ProductLegacySetSkuActionBuilder.html" title="class in com.commercetools.api.models.product">ProductLegacySetSkuActionBuilder</a></dt>
-<dd>
-<div class="block">set the value to the variantId</div>
-</dd>
 <dt><a href="../com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValueBuilder.html#variantId(java.lang.Integer)" class="member-name-link">variantId(Integer)</a> - Method in class com.commercetools.history.models.change_value.<a href="../com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeValueGiftLineItemChangeValueBuilder</a></dt>
 <dd>
 <div class="block"><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
@@ -5092,10 +5501,6 @@ the order they are declared.</div>
 <dt><a href="../com/commercetools/history/models/change_value/ShoppingListLineItemValueBuilder.html#variantId(java.lang.Integer)" class="member-name-link">variantId(Integer)</a> - Method in class com.commercetools.history.models.change_value.<a href="../com/commercetools/history/models/change_value/ShoppingListLineItemValueBuilder.html" title="class in com.commercetools.history.models.change_value">ShoppingListLineItemValueBuilder</a></dt>
 <dd>
 <div class="block"><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> the ShoppingListLineItem refers to.</div>
-</dd>
-<dt><a href="../com/commercetools/history/models/common/LineItemBuilder.html#variantId(java.lang.Integer)" class="member-name-link">variantId(Integer)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/LineItemBuilder.html" title="class in com.commercetools.history.models.common">LineItemBuilder</a></dt>
-<dd>
-<div class="block">set the value to the variantId</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemBuilder.html#variantId(java.lang.Long)" class="member-name-link">variantId(Long)</a> - Method in class com.commercetools.api.models.cart_discount.<a href="../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemBuilder</a></dt>
 <dd>
@@ -5408,6 +5813,10 @@ the order they are declared.</div>
 <dt><a href="../com/commercetools/api/models/shopping_list/ShoppingListLineItemDraftBuilder.html#variantId(java.lang.Long)" class="member-name-link">variantId(Long)</a> - Method in class com.commercetools.api.models.shopping_list.<a href="../com/commercetools/api/models/shopping_list/ShoppingListLineItemDraftBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListLineItemDraftBuilder</a></dt>
 <dd>
 <div class="block"><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/ShoppingListLineItemBuilder.html#variantId(java.lang.Long)" class="member-name-link">variantId(Long)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ShoppingListLineItemBuilder.html" title="class in com.commercetools.history.models.common">ShoppingListLineItemBuilder</a></dt>
+<dd>
+<div class="block"><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> the ShoppingListLineItem refers to.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/VariantIdentifier.html" class="type-name-link" title="interface in com.commercetools.api.models.product">VariantIdentifier</a> - Interface in <a href="../com/commercetools/api/models/product/package-summary.html">com.commercetools.api.models.product</a></dt>
 <dd>&nbsp;</dd>
@@ -6101,6 +6510,18 @@ the order they are declared.</div>
 <dd>
 <div class="block">Version of a resource.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitCustomerGroupAssignmentAddedMessageBuilder.html#version(java.lang.Long)" class="member-name-link">version(Long)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitCustomerGroupAssignmentAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitCustomerGroupAssignmentAddedMessageBuilder</a></dt>
+<dd>
+<div class="block">Version of a resource.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitCustomerGroupAssignmentRemovedMessageBuilder.html#version(java.lang.Long)" class="member-name-link">version(Long)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitCustomerGroupAssignmentRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitCustomerGroupAssignmentRemovedMessageBuilder</a></dt>
+<dd>
+<div class="block">Version of a resource.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitCustomerGroupAssignmentsSetMessageBuilder.html#version(java.lang.Long)" class="member-name-link">version(Long)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitCustomerGroupAssignmentsSetMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitCustomerGroupAssignmentsSetMessageBuilder</a></dt>
+<dd>
+<div class="block">Version of a resource.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/BusinessUnitCustomFieldAddedMessageBuilder.html#version(java.lang.Long)" class="member-name-link">version(Long)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitCustomFieldAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitCustomFieldAddedMessageBuilder</a></dt>
 <dd>
 <div class="block">Version of a resource.</div>
@@ -6197,6 +6618,14 @@ the order they are declared.</div>
 <dd>
 <div class="block">Version of a resource.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/CartFrozenMessageBuilder.html#version(java.lang.Long)" class="member-name-link">version(Long)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CartFrozenMessageBuilder.html" title="class in com.commercetools.api.models.message">CartFrozenMessageBuilder</a></dt>
+<dd>
+<div class="block">Version of a resource.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/CartUnfrozenMessageBuilder.html#version(java.lang.Long)" class="member-name-link">version(Long)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CartUnfrozenMessageBuilder.html" title="class in com.commercetools.api.models.message">CartUnfrozenMessageBuilder</a></dt>
+<dd>
+<div class="block">Version of a resource.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/CategoryCreatedMessageBuilder.html#version(java.lang.Long)" class="member-name-link">version(Long)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CategoryCreatedMessageBuilder.html" title="class in com.commercetools.api.models.message">CategoryCreatedMessageBuilder</a></dt>
 <dd>
 <div class="block">Version of a resource.</div>
@@ -6234,6 +6663,14 @@ the order they are declared.</div>
 <div class="block">Version of a resource.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerAddressRemovedMessageBuilder.html#version(java.lang.Long)" class="member-name-link">version(Long)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerAddressRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerAddressRemovedMessageBuilder</a></dt>
+<dd>
+<div class="block">Version of a resource.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerBillingAddressAddedMessageBuilder.html#version(java.lang.Long)" class="member-name-link">version(Long)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerBillingAddressAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerBillingAddressAddedMessageBuilder</a></dt>
+<dd>
+<div class="block">Version of a resource.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerBillingAddressRemovedMessageBuilder.html#version(java.lang.Long)" class="member-name-link">version(Long)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerBillingAddressRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerBillingAddressRemovedMessageBuilder</a></dt>
 <dd>
 <div class="block">Version of a resource.</div>
 </dd>
@@ -6293,6 +6730,10 @@ the order they are declared.</div>
 <dd>
 <div class="block">Version of a resource.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerExternalIdSetMessageBuilder.html#version(java.lang.Long)" class="member-name-link">version(Long)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerExternalIdSetMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerExternalIdSetMessageBuilder</a></dt>
+<dd>
+<div class="block">Version of a resource.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerFirstNameSetMessageBuilder.html#version(java.lang.Long)" class="member-name-link">version(Long)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerFirstNameSetMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerFirstNameSetMessageBuilder</a></dt>
 <dd>
 <div class="block">Version of a resource.</div>
@@ -6342,6 +6783,14 @@ the order they are declared.</div>
 <div class="block">Version of a resource.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerPasswordUpdatedMessageBuilder.html#version(java.lang.Long)" class="member-name-link">version(Long)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerPasswordUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerPasswordUpdatedMessageBuilder</a></dt>
+<dd>
+<div class="block">Version of a resource.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerShippingAddressAddedMessageBuilder.html#version(java.lang.Long)" class="member-name-link">version(Long)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerShippingAddressAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerShippingAddressAddedMessageBuilder</a></dt>
+<dd>
+<div class="block">Version of a resource.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerShippingAddressRemovedMessageBuilder.html#version(java.lang.Long)" class="member-name-link">version(Long)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerShippingAddressRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerShippingAddressRemovedMessageBuilder</a></dt>
 <dd>
 <div class="block">Version of a resource.</div>
 </dd>
@@ -6546,6 +6995,10 @@ the order they are declared.</div>
 <div class="block">Version of a resource.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/OrderPaymentAddedMessageBuilder.html#version(java.lang.Long)" class="member-name-link">version(Long)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/OrderPaymentAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderPaymentAddedMessageBuilder</a></dt>
+<dd>
+<div class="block">Version of a resource.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/OrderPaymentRemovedMessageBuilder.html#version(java.lang.Long)" class="member-name-link">version(Long)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/OrderPaymentRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderPaymentRemovedMessageBuilder</a></dt>
 <dd>
 <div class="block">Version of a resource.</div>
 </dd>
@@ -6985,6 +7438,10 @@ the order they are declared.</div>
 <dd>
 <div class="block">Version of a resource.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/RecurringOrderFailedMessageBuilder.html#version(java.lang.Long)" class="member-name-link">version(Long)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/RecurringOrderFailedMessageBuilder.html" title="class in com.commercetools.api.models.message">RecurringOrderFailedMessageBuilder</a></dt>
+<dd>
+<div class="block">Version of a resource.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/RecurringOrderKeySetMessageBuilder.html#version(java.lang.Long)" class="member-name-link">version(Long)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/RecurringOrderKeySetMessageBuilder.html" title="class in com.commercetools.api.models.message">RecurringOrderKeySetMessageBuilder</a></dt>
 <dd>
 <div class="block">Version of a resource.</div>
@@ -7393,6 +7850,14 @@ the order they are declared.</div>
 <dd>
 <div class="block">Expected version of the Zone on which the changes should be applied.</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/ProductVariantAvailabilityBuilder.html#version(java.lang.Long)" class="member-name-link">version(Long)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ProductVariantAvailabilityBuilder.html" title="class in com.commercetools.history.models.common">ProductVariantAvailabilityBuilder</a></dt>
+<dd>
+<div class="block">Current version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</div>
+</dd>
+<dt><a href="../com/commercetools/history/models/common/ProductVariantChannelAvailabilityBuilder.html#version(java.lang.Long)" class="member-name-link">version(Long)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ProductVariantChannelAvailabilityBuilder.html" title="class in com.commercetools.history.models.common">ProductVariantChannelAvailabilityBuilder</a></dt>
+<dd>
+<div class="block">Current version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</div>
+</dd>
 <dt><a href="../com/commercetools/importapi/models/importcontainers/ImportContainerBuilder.html#version(java.lang.Long)" class="member-name-link">version(Long)</a> - Method in class com.commercetools.importapi.models.importcontainers.<a href="../com/commercetools/importapi/models/importcontainers/ImportContainerBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerBuilder</a></dt>
 <dd>
 <div class="block">Current version of the ImportContainer.</div>
@@ -7483,10 +7948,16 @@ the order they are declared.</div>
 <dd>
 <div class="block">ViewMyShoppingLists</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/Permission.PermissionEnum.html#VIEW_MY_SHOPPING_LISTS" class="member-name-link">VIEW_MY_SHOPPING_LISTS</a> - Enum constant in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/Permission.PermissionEnum.html" title="enum in com.commercetools.history.models.common">Permission.PermissionEnum</a></dt>
+<dd>
+<div class="block">ViewMyShoppingLists</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/associate_role/Permission.html#VIEW_MY_SHOPPING_LISTS" class="member-name-link">VIEW_MY_SHOPPING_LISTS</a> - Static variable in interface com.commercetools.api.models.associate_role.<a href="../com/commercetools/api/models/associate_role/Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></dt>
 <dd>
 <div class="block">An Associate can view their own B2B Shopping Lists.</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/Permission.html#VIEW_MY_SHOPPING_LISTS" class="member-name-link">VIEW_MY_SHOPPING_LISTS</a> - Static variable in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/Permission.html" title="interface in com.commercetools.history.models.common">Permission</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/associate_role/Permission.PermissionEnum.html#VIEW_OTHERS_CARTS" class="member-name-link">VIEW_OTHERS_CARTS</a> - Enum constant in enum com.commercetools.api.models.associate_role.<a href="../com/commercetools/api/models/associate_role/Permission.PermissionEnum.html" title="enum in com.commercetools.api.models.associate_role">Permission.PermissionEnum</a></dt>
 <dd>
 <div class="block">ViewOthersCarts</div>
@@ -7547,10 +8018,16 @@ the order they are declared.</div>
 <dd>
 <div class="block">ViewOthersShoppingLists</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/Permission.PermissionEnum.html#VIEW_OTHERS_SHOPPING_LISTS" class="member-name-link">VIEW_OTHERS_SHOPPING_LISTS</a> - Enum constant in enum com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/Permission.PermissionEnum.html" title="enum in com.commercetools.history.models.common">Permission.PermissionEnum</a></dt>
+<dd>
+<div class="block">ViewOthersShoppingLists</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/associate_role/Permission.html#VIEW_OTHERS_SHOPPING_LISTS" class="member-name-link">VIEW_OTHERS_SHOPPING_LISTS</a> - Static variable in interface com.commercetools.api.models.associate_role.<a href="../com/commercetools/api/models/associate_role/Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></dt>
 <dd>
 <div class="block">An Associate can view B2B Shopping Lists that belong to other Associates.</div>
 </dd>
+<dt><a href="../com/commercetools/history/models/common/Permission.html#VIEW_OTHERS_SHOPPING_LISTS" class="member-name-link">VIEW_OTHERS_SHOPPING_LISTS</a> - Static variable in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/Permission.html" title="interface in com.commercetools.history.models.common">Permission</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../io/vrap/rmf/base/client/VrapHttpClient.html" class="type-name-link" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a> - Interface in <a href="../io/vrap/rmf/base/client/package-summary.html">io.vrap.rmf.base.client</a></dt>
 <dd>
 <div class="block">Wrapper interface for a HTTP client</div>

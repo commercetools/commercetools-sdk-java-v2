@@ -88,13 +88,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
  <div class=code-example>
  <pre><code class='java'>
      TaxRate taxRate = TaxRate.builder()
-             .id("{id}")
              .name("{name}")
-             .amount(1)
+             .amount(0.3)
              .includedInPrice(true)
              .country("{country}")
-             .state("{state}")
-             .plusSubRates(subRatesBuilder -> subRatesBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -128,12 +125,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addSubRates(java.util.function.Function)" class="member-name-link">addSubRates</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SubRateBuilder.html" title="class in com.commercetools.history.models.common">SubRateBuilder</a>,<wbr><a href="SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">add the value to the subRates using the builder function</div>
+<div class="block">Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes).</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#amount(java.lang.Integer)" class="member-name-link">amount</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;amount)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#amount(java.lang.Double)" class="member-name-link">amount</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;amount)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Percentage in the range of [0..1].</div>
+<div class="block">Tax rate.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxRate.html" title="interface in com.commercetools.history.models.common">TaxRate</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
@@ -148,57 +145,67 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#country(java.lang.String)" class="member-name-link">country</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;country)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Two-digit country code as per <span>ISO 3166-1 alpha-2</span>.</div>
+<div class="block">Country in which the tax rate is applied in <span>ISO 3166-1 alpha-2</span> format.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAmount()" class="member-name-link">getAmount</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Percentage in the range of [0..1].</div>
+<div class="block">Tax rate.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCountry()" class="member-name-link">getCountry</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Two-digit country code as per <span>ISO 3166-1 alpha-2</span>.</div>
+<div class="block">Country in which the tax rate is applied in <span>ISO 3166-1 alpha-2</span> format.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The ID is always set if the tax rate is part of a TaxCategory.</div>
+<div class="block">Present if the TaxRate is part of a <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIncludedInPrice()" class="member-name-link">getIncludedInPrice</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of includedInPrice}</div>
+<div class="block">If <code>true</code>, tax is included in <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Prices</a>, and the <code>taxedPrice</code> is present on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getKey()" class="member-name-link">getKey</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of name}</div>
+<div class="block">User-defined unique identifier of the TaxRate.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getState()" class="member-name-link">getState</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The state in the country</div>
+<div class="block">Name of the TaxRate.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSubRates()" class="member-name-link">getSubRates</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getState()" class="member-name-link">getState</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of subRates}</div>
+<div class="block">State within the country, such as Texas in the United States.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#id(java.lang.String)" class="member-name-link">id</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSubRates()" class="member-name-link">getSubRates</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The ID is always set if the tax rate is part of a TaxCategory.</div>
+<div class="block">Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes).</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#includedInPrice(java.lang.Boolean)" class="member-name-link">includedInPrice</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;includedInPrice)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#id(java.lang.String)" class="member-name-link">id</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the includedInPrice</div>
+<div class="block">Present if the TaxRate is part of a <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a>.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#includedInPrice(java.lang.Boolean)" class="member-name-link">includedInPrice</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;includedInPrice)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">If <code>true</code>, tax is included in <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Prices</a>, and the <code>taxedPrice</code> is present on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#key(java.lang.String)" class="member-name-link">key</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">User-defined unique identifier of the TaxRate.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#name(java.lang.String)" class="member-name-link">name</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the name</div>
+<div class="block">Name of the TaxRate.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -213,37 +220,37 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusSubRates(com.commercetools.history.models.common.SubRate...)" class="member-name-link">plusSubRates</a><wbr>(<a href="SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>...&nbsp;subRates)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">add values to the subRates</div>
+<div class="block">Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes).</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusSubRates(java.util.function.Function)" class="member-name-link">plusSubRates</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SubRateBuilder.html" title="class in com.commercetools.history.models.common">SubRateBuilder</a>,<wbr><a href="SubRateBuilder.html" title="class in com.commercetools.history.models.common">SubRateBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">add the value to the subRates using the builder function</div>
+<div class="block">Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes).</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSubRates(java.util.function.Function)" class="member-name-link">setSubRates</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SubRateBuilder.html" title="class in com.commercetools.history.models.common">SubRateBuilder</a>,<wbr><a href="SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the subRates using the builder function</div>
+<div class="block">Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes).</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#state(java.lang.String)" class="member-name-link">state</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;state)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The state in the country</div>
+<div class="block">State within the country, such as Texas in the United States.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#subRates(com.commercetools.history.models.common.SubRate...)" class="member-name-link">subRates</a><wbr>(<a href="SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>...&nbsp;subRates)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set values to the subRates</div>
+<div class="block">Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes).</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#subRates(java.util.List)" class="member-name-link">subRates</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>&gt;&nbsp;subRates)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set value to the subRates</div>
+<div class="block">Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes).</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withSubRates(java.util.function.Function)" class="member-name-link">withSubRates</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SubRateBuilder.html" title="class in com.commercetools.history.models.common">SubRateBuilder</a>,<wbr><a href="SubRateBuilder.html" title="class in com.commercetools.history.models.common">SubRateBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the subRates using the builder function</div>
+<div class="block">Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes).</div>
 </div>
 </div>
 </div>
@@ -279,8 +286,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="id(java.lang.String)">
 <h3>id</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></span>&nbsp;<span class="element-name">id</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
-<div class="block"><p>The ID is always set if the tax rate is part of a TaxCategory. The external tax rates in a Cart do not contain an <code>id</code>.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></span>&nbsp;<span class="element-name">id</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="block"><p>Present if the TaxRate is part of a <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a>. Absent for external TaxRates in <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>id</code> - value to be set</dd>
@@ -290,10 +298,24 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="key(java.lang.String)">
+<h3>key</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></span>&nbsp;<span class="element-name">key</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="block"><p>User-defined unique identifier of the TaxRate. Present when set using <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRateDraft" rel="nofollow">TaxRateDraft</a>. Not available for external TaxRates created using <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>key</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="name(java.lang.String)">
 <h3>name</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></span>&nbsp;<span class="element-name">name</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
-<div class="block">set the value to the name</div>
+<div class="block"><p>Name of the TaxRate.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>name</code> - value to be set</dd>
@@ -303,10 +325,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="amount(java.lang.Integer)">
+<section class="detail" id="amount(java.lang.Double)">
 <h3>amount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></span>&nbsp;<span class="element-name">amount</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;amount)</span></div>
-<div class="block"><p>Percentage in the range of [0..1]. The sum of the amounts of all <code>subRates</code>, if there are any.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></span>&nbsp;<span class="element-name">amount</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;amount)</span></div>
+<div class="block"><p>Tax rate. If subrates are used, the amount is the sum of all rates in <code>subRates</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>amount</code> - value to be set</dd>
@@ -319,7 +341,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="includedInPrice(java.lang.Boolean)">
 <h3>includedInPrice</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></span>&nbsp;<span class="element-name">includedInPrice</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;includedInPrice)</span></div>
-<div class="block">set the value to the includedInPrice</div>
+<div class="block"><p>If <code>true</code>, tax is included in <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Prices</a>, and the <code>taxedPrice</code> is present on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>. In this case, the <code>totalNet</code> price on <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedPrice" rel="nofollow">TaxedPrice</a> includes the TaxRate.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>includedInPrice</code> - value to be set</dd>
@@ -332,7 +354,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="country(java.lang.String)">
 <h3>country</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></span>&nbsp;<span class="element-name">country</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;country)</span></div>
-<div class="block"><p>Two-digit country code as per <span>ISO 3166-1 alpha-2</span>.</p></div>
+<div class="block"><p>Country in which the tax rate is applied in <span>ISO 3166-1 alpha-2</span> format.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>country</code> - value to be set</dd>
@@ -344,8 +366,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="state(java.lang.String)">
 <h3>state</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></span>&nbsp;<span class="element-name">state</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;state)</span></div>
-<div class="block"><p>The state in the country</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></span>&nbsp;<span class="element-name">state</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;state)</span></div>
+<div class="block"><p>State within the country, such as Texas in the United States.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>state</code> - value to be set</dd>
@@ -357,8 +380,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="subRates(com.commercetools.history.models.common.SubRate...)">
 <h3>subRates</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></span>&nbsp;<span class="element-name">subRates</span><wbr><span class="parameters">(<a href="SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>...&nbsp;subRates)</span></div>
-<div class="block">set values to the subRates</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></span>&nbsp;<span class="element-name">subRates</span><wbr><span class="parameters">(@Nullable
+ <a href="SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>...&nbsp;subRates)</span></div>
+<div class="block"><p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>subRates</code> - value to be set</dd>
@@ -370,8 +394,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="subRates(java.util.List)">
 <h3>subRates</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></span>&nbsp;<span class="element-name">subRates</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>&gt;&nbsp;subRates)</span></div>
-<div class="block">set value to the subRates</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></span>&nbsp;<span class="element-name">subRates</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>&gt;&nbsp;subRates)</span></div>
+<div class="block"><p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>subRates</code> - value to be set</dd>
@@ -383,8 +408,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusSubRates(com.commercetools.history.models.common.SubRate...)">
 <h3>plusSubRates</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></span>&nbsp;<span class="element-name">plusSubRates</span><wbr><span class="parameters">(<a href="SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>...&nbsp;subRates)</span></div>
-<div class="block">add values to the subRates</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></span>&nbsp;<span class="element-name">plusSubRates</span><wbr><span class="parameters">(@Nullable
+ <a href="SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>...&nbsp;subRates)</span></div>
+<div class="block"><p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>subRates</code> - value to be set</dd>
@@ -397,7 +423,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="plusSubRates(java.util.function.Function)">
 <h3>plusSubRates</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></span>&nbsp;<span class="element-name">plusSubRates</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SubRateBuilder.html" title="class in com.commercetools.history.models.common">SubRateBuilder</a>,<wbr><a href="SubRateBuilder.html" title="class in com.commercetools.history.models.common">SubRateBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block">add the value to the subRates using the builder function</div>
+<div class="block"><p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the subRates value</dd>
@@ -410,7 +436,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withSubRates(java.util.function.Function)">
 <h3>withSubRates</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></span>&nbsp;<span class="element-name">withSubRates</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SubRateBuilder.html" title="class in com.commercetools.history.models.common">SubRateBuilder</a>,<wbr><a href="SubRateBuilder.html" title="class in com.commercetools.history.models.common">SubRateBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the subRates using the builder function</div>
+<div class="block"><p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the subRates value</dd>
@@ -423,7 +449,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="addSubRates(java.util.function.Function)">
 <h3>addSubRates</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></span>&nbsp;<span class="element-name">addSubRates</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SubRateBuilder.html" title="class in com.commercetools.history.models.common">SubRateBuilder</a>,<wbr><a href="SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>&gt;&nbsp;builder)</span></div>
-<div class="block">add the value to the subRates using the builder function</div>
+<div class="block"><p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the subRates value</dd>
@@ -436,7 +462,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="setSubRates(java.util.function.Function)">
 <h3>setSubRates</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a></span>&nbsp;<span class="element-name">setSubRates</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SubRateBuilder.html" title="class in com.commercetools.history.models.common">SubRateBuilder</a>,<wbr><a href="SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the subRates using the builder function</div>
+<div class="block"><p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the subRates value</dd>
@@ -448,8 +474,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getId</span>()</div>
-<div class="block"><p>The ID is always set if the tax rate is part of a TaxCategory. The external tax rates in a Cart do not contain an <code>id</code>.</p></div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getId</span>()</div>
+<div class="block"><p>Present if the TaxRate is part of a <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a>. Absent for external TaxRates in <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>id</dd>
@@ -457,10 +484,22 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="getKey()">
+<h3>getKey</h3>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
+<div class="block"><p>User-defined unique identifier of the TaxRate. Present when set using <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRateDraft" rel="nofollow">TaxRateDraft</a>. Not available for external TaxRates created using <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>key</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getName</span>()</div>
-<div class="block">value of name}</div>
+<div class="block"><p>Name of the TaxRate.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>name</dd>
@@ -470,8 +509,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getAmount()">
 <h3>getAmount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getAmount</span>()</div>
-<div class="block"><p>Percentage in the range of [0..1]. The sum of the amounts of all <code>subRates</code>, if there are any.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name">getAmount</span>()</div>
+<div class="block"><p>Tax rate. If subrates are used, the amount is the sum of all rates in <code>subRates</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>amount</dd>
@@ -482,7 +521,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getIncludedInPrice()">
 <h3>getIncludedInPrice</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getIncludedInPrice</span>()</div>
-<div class="block">value of includedInPrice}</div>
+<div class="block"><p>If <code>true</code>, tax is included in <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Prices</a>, and the <code>taxedPrice</code> is present on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>. In this case, the <code>totalNet</code> price on <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedPrice" rel="nofollow">TaxedPrice</a> includes the TaxRate.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>includedInPrice</dd>
@@ -493,7 +532,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getCountry()">
 <h3>getCountry</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCountry</span>()</div>
-<div class="block"><p>Two-digit country code as per <span>ISO 3166-1 alpha-2</span>.</p></div>
+<div class="block"><p>Country in which the tax rate is applied in <span>ISO 3166-1 alpha-2</span> format.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>country</dd>
@@ -503,8 +542,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getState()">
 <h3>getState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getState</span>()</div>
-<div class="block"><p>The state in the country</p></div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getState</span>()</div>
+<div class="block"><p>State within the country, such as Texas in the United States.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>state</dd>
@@ -514,8 +554,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getSubRates()">
 <h3>getSubRates</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>&gt;</span>&nbsp;<span class="element-name">getSubRates</span>()</div>
-<div class="block">value of subRates}</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="SubRate.html" title="interface in com.commercetools.history.models.common">SubRate</a>&gt;</span>&nbsp;<span class="element-name">getSubRates</span>()</div>
+<div class="block"><p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>subRates</dd>

@@ -85,6 +85,8 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
  <div class=code-example>
  <pre><code class='java'>
      CustomerGroupAssignmentsSetMessagePayload customerGroupAssignmentsSetMessagePayload = CustomerGroupAssignmentsSetMessagePayload.builder()
+             .plusCustomerGroupAssignments(customerGroupAssignmentsBuilder -> customerGroupAssignmentsBuilder)
+             .plusOldCustomerGroupAssignments(oldCustomerGroupAssignmentsBuilder -> oldCustomerGroupAssignmentsBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -137,39 +139,54 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of CustomerGroupAssignmentsSetMessagePayload</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../customer/CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>&gt;</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../customer/CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCustomerGroupAssignments()" class="member-name-link">getCustomerGroupAssignments</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Customer Groups assigned to the Customer during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CustomerGroupAssignmentsSetMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomerGroupAssignmentsSetMessagePayload</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
-<div class="block">factory method</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../customer/CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOldCustomerGroupAssignments()" class="member-name-link">getOldCustomerGroupAssignments</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Customer Groups assigned to the Customer before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CustomerGroupAssignmentsSetMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomerGroupAssignmentsSetMessagePayload</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.api.models.message.CustomerGroupAssignmentsSetMessagePayload)" class="member-name-link">of</a><wbr>(<a href="CustomerGroupAssignmentsSetMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomerGroupAssignmentsSetMessagePayload</a>&nbsp;template)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">factory method</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CustomerGroupAssignmentsSetMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomerGroupAssignmentsSetMessagePayload</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.api.models.message.CustomerGroupAssignmentsSetMessagePayload)" class="member-name-link">of</a><wbr>(<a href="CustomerGroupAssignmentsSetMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomerGroupAssignmentsSetMessagePayload</a>&nbsp;template)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a shallow copy CustomerGroupAssignmentsSetMessagePayload</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCustomerGroupAssignments(com.commercetools.api.models.customer.CustomerGroupAssignment...)" class="member-name-link">setCustomerGroupAssignments</a><wbr>(<a href="../customer/CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>...&nbsp;customerGroupAssignments)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Customer Groups assigned to the Customer during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCustomerGroupAssignments(com.commercetools.api.models.customer.CustomerGroupAssignment...)" class="member-name-link">setCustomerGroupAssignments</a><wbr>(<a href="../customer/CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>...&nbsp;customerGroupAssignments)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCustomerGroupAssignments(java.util.List)" class="member-name-link">setCustomerGroupAssignments</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../customer/CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>&gt;&nbsp;customerGroupAssignments)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Customer Groups assigned to the Customer during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCustomerGroupAssignments(java.util.List)" class="member-name-link">setCustomerGroupAssignments</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../customer/CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>&gt;&nbsp;customerGroupAssignments)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setOldCustomerGroupAssignments(com.commercetools.api.models.customer.CustomerGroupAssignment...)" class="member-name-link">setOldCustomerGroupAssignments</a><wbr>(<a href="../customer/CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>...&nbsp;oldCustomerGroupAssignments)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Customer Groups assigned to the Customer during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</div>
+<div class="block">Customer Groups assigned to the Customer before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CustomerGroupAssignmentsSetMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomerGroupAssignmentsSetMessagePayload</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setOldCustomerGroupAssignments(java.util.List)" class="member-name-link">setOldCustomerGroupAssignments</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../customer/CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>&gt;&nbsp;oldCustomerGroupAssignments)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Customer Groups assigned to the Customer before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CustomerGroupAssignmentsSetMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomerGroupAssignmentsSetMessagePayload</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withCustomerGroupAssignmentsSetMessagePayload(java.util.function.Function)" class="member-name-link">withCustomerGroupAssignmentsSetMessagePayload</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomerGroupAssignmentsSetMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomerGroupAssignmentsSetMessagePayload</a>,<wbr>T&gt;&nbsp;helper)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withCustomerGroupAssignmentsSetMessagePayload(java.util.function.Function)" class="member-name-link">withCustomerGroupAssignmentsSetMessagePayload</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomerGroupAssignmentsSetMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomerGroupAssignmentsSetMessagePayload</a>,<wbr>T&gt;&nbsp;helper)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">accessor map function</div>
 </div>
 </div>
@@ -218,12 +235,26 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="getCustomerGroupAssignments()">
 <h3>getCustomerGroupAssignments</h3>
-<div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../customer/CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>&gt;</span>&nbsp;<span class="element-name">getCustomerGroupAssignments</span>()</div>
+<div class="member-signature"><span class="annotations">@NotNull
+@Valid
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../customer/CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>&gt;</span>&nbsp;<span class="element-name">getCustomerGroupAssignments</span>()</div>
 <div class="block"><p>Customer Groups assigned to the Customer during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>customerGroupAssignments</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getOldCustomerGroupAssignments()">
+<h3>getOldCustomerGroupAssignments</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+@Valid
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../customer/CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>&gt;</span>&nbsp;<span class="element-name">getOldCustomerGroupAssignments</span>()</div>
+<div class="block"><p>Customer Groups assigned to the Customer before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>oldCustomerGroupAssignments</dd>
 </dl>
 </section>
 </li>
@@ -246,6 +277,28 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>customerGroupAssignments</code> - values to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setOldCustomerGroupAssignments(com.commercetools.api.models.customer.CustomerGroupAssignment...)">
+<h3>setOldCustomerGroupAssignments</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setOldCustomerGroupAssignments</span><wbr><span class="parameters">(<a href="../customer/CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>...&nbsp;oldCustomerGroupAssignments)</span></div>
+<div class="block"><p>Customer Groups assigned to the Customer before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>oldCustomerGroupAssignments</code> - values to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setOldCustomerGroupAssignments(java.util.List)">
+<h3>setOldCustomerGroupAssignments</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setOldCustomerGroupAssignments</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../customer/CustomerGroupAssignment.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignment</a>&gt;&nbsp;oldCustomerGroupAssignments)</span></div>
+<div class="block"><p>Customer Groups assigned to the Customer before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>oldCustomerGroupAssignments</code> - values to be set</dd>
 </dl>
 </section>
 </li>

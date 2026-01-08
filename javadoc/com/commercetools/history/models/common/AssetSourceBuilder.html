@@ -89,9 +89,6 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
  <pre><code class='java'>
      AssetSource assetSource = AssetSource.builder()
              .uri("{uri}")
-             .key("{key}")
-             .dimensions(dimensionsBuilder -> dimensionsBuilder)
-             .contentType("{contentType}")
              .build()
  </code></pre>
  </div></div>
@@ -135,42 +132,42 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AssetSourceBuilder.html" title="class in com.commercetools.history.models.common">AssetSourceBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#contentType(java.lang.String)" class="member-name-link">contentType</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;contentType)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the contentType</div>
+<div class="block">Indicates the type of content, for example <code>application/pdf</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AssetSourceBuilder.html" title="class in com.commercetools.history.models.common">AssetSourceBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#dimensions(com.commercetools.history.models.common.AssetDimensions)" class="member-name-link">dimensions</a><wbr>(<a href="AssetDimensions.html" title="interface in com.commercetools.history.models.common">AssetDimensions</a>&nbsp;dimensions)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the dimensions</div>
+<div class="block">Width and height of the AssetSource.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AssetSourceBuilder.html" title="class in com.commercetools.history.models.common">AssetSourceBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#dimensions(java.util.function.Function)" class="member-name-link">dimensions</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AssetDimensionsBuilder.html" title="class in com.commercetools.history.models.common">AssetDimensionsBuilder</a>,<wbr><a href="AssetDimensionsBuilder.html" title="class in com.commercetools.history.models.common">AssetDimensionsBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the dimensions using the builder function</div>
+<div class="block">Width and height of the AssetSource.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContentType()" class="member-name-link">getContentType</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of contentType}</div>
+<div class="block">Indicates the type of content, for example <code>application/pdf</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AssetDimensions.html" title="interface in com.commercetools.history.models.common">AssetDimensions</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDimensions()" class="member-name-link">getDimensions</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of dimensions}</div>
+<div class="block">Width and height of the AssetSource.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getKey()" class="member-name-link">getKey</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of key}</div>
+<div class="block">User-defined identifier of the AssetSource.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUri()" class="member-name-link">getUri</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of uri}</div>
+<div class="block">URI of the AssetSource.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AssetSourceBuilder.html" title="class in com.commercetools.history.models.common">AssetSourceBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#key(java.lang.String)" class="member-name-link">key</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the key</div>
+<div class="block">User-defined identifier of the AssetSource.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="AssetSourceBuilder.html" title="class in com.commercetools.history.models.common">AssetSourceBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -185,12 +182,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AssetSourceBuilder.html" title="class in com.commercetools.history.models.common">AssetSourceBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#uri(java.lang.String)" class="member-name-link">uri</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;uri)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the uri</div>
+<div class="block">URI of the AssetSource.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AssetSourceBuilder.html" title="class in com.commercetools.history.models.common">AssetSourceBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withDimensions(java.util.function.Function)" class="member-name-link">withDimensions</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AssetDimensionsBuilder.html" title="class in com.commercetools.history.models.common">AssetDimensionsBuilder</a>,<wbr><a href="AssetDimensions.html" title="interface in com.commercetools.history.models.common">AssetDimensions</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the dimensions using the builder function</div>
+<div class="block">Width and height of the AssetSource.</div>
 </div>
 </div>
 </div>
@@ -227,7 +224,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="uri(java.lang.String)">
 <h3>uri</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssetSourceBuilder.html" title="class in com.commercetools.history.models.common">AssetSourceBuilder</a></span>&nbsp;<span class="element-name">uri</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;uri)</span></div>
-<div class="block">set the value to the uri</div>
+<div class="block"><p>URI of the AssetSource.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>uri</code> - value to be set</dd>
@@ -239,8 +236,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="key(java.lang.String)">
 <h3>key</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssetSourceBuilder.html" title="class in com.commercetools.history.models.common">AssetSourceBuilder</a></span>&nbsp;<span class="element-name">key</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
-<div class="block">set the value to the key</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssetSourceBuilder.html" title="class in com.commercetools.history.models.common">AssetSourceBuilder</a></span>&nbsp;<span class="element-name">key</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="block"><p>User-defined identifier of the AssetSource. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:Asset" rel="nofollow">Asset</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>key</code> - value to be set</dd>
@@ -253,7 +251,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="dimensions(java.util.function.Function)">
 <h3>dimensions</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssetSourceBuilder.html" title="class in com.commercetools.history.models.common">AssetSourceBuilder</a></span>&nbsp;<span class="element-name">dimensions</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AssetDimensionsBuilder.html" title="class in com.commercetools.history.models.common">AssetDimensionsBuilder</a>,<wbr><a href="AssetDimensionsBuilder.html" title="class in com.commercetools.history.models.common">AssetDimensionsBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the dimensions using the builder function</div>
+<div class="block"><p>Width and height of the AssetSource.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the dimensions value</dd>
@@ -266,7 +264,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withDimensions(java.util.function.Function)">
 <h3>withDimensions</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssetSourceBuilder.html" title="class in com.commercetools.history.models.common">AssetSourceBuilder</a></span>&nbsp;<span class="element-name">withDimensions</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AssetDimensionsBuilder.html" title="class in com.commercetools.history.models.common">AssetDimensionsBuilder</a>,<wbr><a href="AssetDimensions.html" title="interface in com.commercetools.history.models.common">AssetDimensions</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the dimensions using the builder function</div>
+<div class="block"><p>Width and height of the AssetSource.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the dimensions value</dd>
@@ -278,8 +276,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="dimensions(com.commercetools.history.models.common.AssetDimensions)">
 <h3>dimensions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssetSourceBuilder.html" title="class in com.commercetools.history.models.common">AssetSourceBuilder</a></span>&nbsp;<span class="element-name">dimensions</span><wbr><span class="parameters">(<a href="AssetDimensions.html" title="interface in com.commercetools.history.models.common">AssetDimensions</a>&nbsp;dimensions)</span></div>
-<div class="block">set the value to the dimensions</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssetSourceBuilder.html" title="class in com.commercetools.history.models.common">AssetSourceBuilder</a></span>&nbsp;<span class="element-name">dimensions</span><wbr><span class="parameters">(@Nullable
+ <a href="AssetDimensions.html" title="interface in com.commercetools.history.models.common">AssetDimensions</a>&nbsp;dimensions)</span></div>
+<div class="block"><p>Width and height of the AssetSource.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>dimensions</code> - value to be set</dd>
@@ -291,8 +290,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="contentType(java.lang.String)">
 <h3>contentType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssetSourceBuilder.html" title="class in com.commercetools.history.models.common">AssetSourceBuilder</a></span>&nbsp;<span class="element-name">contentType</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;contentType)</span></div>
-<div class="block">set the value to the contentType</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssetSourceBuilder.html" title="class in com.commercetools.history.models.common">AssetSourceBuilder</a></span>&nbsp;<span class="element-name">contentType</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;contentType)</span></div>
+<div class="block"><p>Indicates the type of content, for example <code>application/pdf</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>contentType</code> - value to be set</dd>
@@ -305,7 +305,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getUri()">
 <h3>getUri</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getUri</span>()</div>
-<div class="block">value of uri}</div>
+<div class="block"><p>URI of the AssetSource.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>uri</dd>
@@ -315,8 +315,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
-<div class="block">value of key}</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
+<div class="block"><p>User-defined identifier of the AssetSource. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:Asset" rel="nofollow">Asset</a>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>key</dd>
@@ -326,8 +327,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getDimensions()">
 <h3>getDimensions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssetDimensions.html" title="interface in com.commercetools.history.models.common">AssetDimensions</a></span>&nbsp;<span class="element-name">getDimensions</span>()</div>
-<div class="block">value of dimensions}</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssetDimensions.html" title="interface in com.commercetools.history.models.common">AssetDimensions</a></span>&nbsp;<span class="element-name">getDimensions</span>()</div>
+<div class="block"><p>Width and height of the AssetSource.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>dimensions</dd>
@@ -337,8 +339,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getContentType()">
 <h3>getContentType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getContentType</span>()</div>
-<div class="block">value of contentType}</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getContentType</span>()</div>
+<div class="block"><p>Indicates the type of content, for example <code>application/pdf</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>contentType</dd>

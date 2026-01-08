@@ -123,17 +123,17 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addAssociateRoleAssignments(java.util.function.Function)" class="member-name-link">addAssociateRoleAssignments</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AssociateRoleAssignmentBuilder.html" title="class in com.commercetools.history.models.common">AssociateRoleAssignmentBuilder</a>,<wbr><a href="AssociateRoleAssignment.html" title="interface in com.commercetools.history.models.common">AssociateRoleAssignment</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">add the value to the associateRoleAssignments using the builder function</div>
+<div class="block">Roles assigned to the Associate within a Business Unit.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#associateRoleAssignments(com.commercetools.history.models.common.AssociateRoleAssignment...)" class="member-name-link">associateRoleAssignments</a><wbr>(<a href="AssociateRoleAssignment.html" title="interface in com.commercetools.history.models.common">AssociateRoleAssignment</a>...&nbsp;associateRoleAssignments)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set values to the associateRoleAssignments</div>
+<div class="block">Roles assigned to the Associate within a Business Unit.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#associateRoleAssignments(java.util.List)" class="member-name-link">associateRoleAssignments</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AssociateRoleAssignment.html" title="interface in com.commercetools.history.models.common">AssociateRoleAssignment</a>&gt;&nbsp;associateRoleAssignments)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set value to the associateRoleAssignments</div>
+<div class="block">Roles assigned to the Associate within a Business Unit.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Associate.html" title="interface in com.commercetools.history.models.common">Associate</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
@@ -146,59 +146,79 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">builds Associate without checking for non-null required values</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#customer(com.commercetools.history.models.common.Reference)" class="member-name-link">customer</a><wbr>(<a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&nbsp;customer)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#customer(com.commercetools.history.models.common.CustomerReference)" class="member-name-link">customer</a><wbr>(<a href="CustomerReference.html" title="interface in com.commercetools.history.models.common">CustomerReference</a>&nbsp;customer)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the customer</div>
+<div class="block">The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#customer(java.util.function.Function)" class="member-name-link">customer</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>,<wbr><a href="ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#customer(java.util.function.Function)" class="member-name-link">customer</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomerReferenceBuilder.html" title="class in com.commercetools.history.models.common">CustomerReferenceBuilder</a>,<wbr><a href="CustomerReferenceBuilder.html" title="class in com.commercetools.history.models.common">CustomerReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the customer using the builder function</div>
+<div class="block">The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AssociateRoleAssignment.html" title="interface in com.commercetools.history.models.common">AssociateRoleAssignment</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAssociateRoleAssignments()" class="member-name-link">getAssociateRoleAssignments</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of associateRoleAssignments}</div>
+<div class="block">Roles assigned to the Associate within a Business Unit.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerReference.html" title="interface in com.commercetools.history.models.common">CustomerReference</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCustomer()" class="member-name-link">getCustomer</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of customer}</div>
+<div class="block">The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">factory method for an instance of AssociateBuilder</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AssociateRoleDeprecated.html" title="interface in com.commercetools.history.models.common">AssociateRoleDeprecated</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRoles()" class="member-name-link">getRoles</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Deprecated type.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(com.commercetools.history.models.common.Associate)" class="member-name-link">of</a><wbr>(<a href="Associate.html" title="interface in com.commercetools.history.models.common">Associate</a>&nbsp;template)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">factory method for an instance of AssociateBuilder</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(com.commercetools.history.models.common.Associate)" class="member-name-link">of</a><wbr>(<a href="Associate.html" title="interface in com.commercetools.history.models.common">Associate</a>&nbsp;template)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">create builder for Associate instance</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusAssociateRoleAssignments(com.commercetools.history.models.common.AssociateRoleAssignment...)" class="member-name-link">plusAssociateRoleAssignments</a><wbr>(<a href="AssociateRoleAssignment.html" title="interface in com.commercetools.history.models.common">AssociateRoleAssignment</a>...&nbsp;associateRoleAssignments)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Roles assigned to the Associate within a Business Unit.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusAssociateRoleAssignments(com.commercetools.history.models.common.AssociateRoleAssignment...)" class="member-name-link">plusAssociateRoleAssignments</a><wbr>(<a href="AssociateRoleAssignment.html" title="interface in com.commercetools.history.models.common">AssociateRoleAssignment</a>...&nbsp;associateRoleAssignments)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusAssociateRoleAssignments(java.util.function.Function)" class="member-name-link">plusAssociateRoleAssignments</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AssociateRoleAssignmentBuilder.html" title="class in com.commercetools.history.models.common">AssociateRoleAssignmentBuilder</a>,<wbr><a href="AssociateRoleAssignmentBuilder.html" title="class in com.commercetools.history.models.common">AssociateRoleAssignmentBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">add values to the associateRoleAssignments</div>
+<div class="block">Roles assigned to the Associate within a Business Unit.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusAssociateRoleAssignments(java.util.function.Function)" class="member-name-link">plusAssociateRoleAssignments</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AssociateRoleAssignmentBuilder.html" title="class in com.commercetools.history.models.common">AssociateRoleAssignmentBuilder</a>,<wbr><a href="AssociateRoleAssignmentBuilder.html" title="class in com.commercetools.history.models.common">AssociateRoleAssignmentBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusRoles(com.commercetools.history.models.common.AssociateRoleDeprecated...)" class="member-name-link">plusRoles</a><wbr>(<a href="AssociateRoleDeprecated.html" title="interface in com.commercetools.history.models.common">AssociateRoleDeprecated</a>...&nbsp;roles)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">add the value to the associateRoleAssignments using the builder function</div>
+<div class="block">Deprecated type.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#roles(com.commercetools.history.models.common.AssociateRoleDeprecated...)" class="member-name-link">roles</a><wbr>(<a href="AssociateRoleDeprecated.html" title="interface in com.commercetools.history.models.common">AssociateRoleDeprecated</a>...&nbsp;roles)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Deprecated type.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#roles(java.util.List)" class="member-name-link">roles</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AssociateRoleDeprecated.html" title="interface in com.commercetools.history.models.common">AssociateRoleDeprecated</a>&gt;&nbsp;roles)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Deprecated type.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAssociateRoleAssignments(java.util.function.Function)" class="member-name-link">setAssociateRoleAssignments</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AssociateRoleAssignmentBuilder.html" title="class in com.commercetools.history.models.common">AssociateRoleAssignmentBuilder</a>,<wbr><a href="AssociateRoleAssignment.html" title="interface in com.commercetools.history.models.common">AssociateRoleAssignment</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the associateRoleAssignments using the builder function</div>
+<div class="block">Roles assigned to the Associate within a Business Unit.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withAssociateRoleAssignments(java.util.function.Function)" class="member-name-link">withAssociateRoleAssignments</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AssociateRoleAssignmentBuilder.html" title="class in com.commercetools.history.models.common">AssociateRoleAssignmentBuilder</a>,<wbr><a href="AssociateRoleAssignmentBuilder.html" title="class in com.commercetools.history.models.common">AssociateRoleAssignmentBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the associateRoleAssignments using the builder function</div>
+<div class="block">Roles assigned to the Associate within a Business Unit.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCustomer(java.util.function.Function)" class="member-name-link">withCustomer</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>,<wbr><a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCustomer(java.util.function.Function)" class="member-name-link">withCustomer</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomerReferenceBuilder.html" title="class in com.commercetools.history.models.common">CustomerReferenceBuilder</a>,<wbr><a href="CustomerReference.html" title="interface in com.commercetools.history.models.common">CustomerReference</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the customer using the builder function</div>
+<div class="block">The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</div>
 </div>
 </div>
 </div>
@@ -235,7 +255,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="associateRoleAssignments(com.commercetools.history.models.common.AssociateRoleAssignment...)">
 <h3>associateRoleAssignments</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></span>&nbsp;<span class="element-name">associateRoleAssignments</span><wbr><span class="parameters">(<a href="AssociateRoleAssignment.html" title="interface in com.commercetools.history.models.common">AssociateRoleAssignment</a>...&nbsp;associateRoleAssignments)</span></div>
-<div class="block">set values to the associateRoleAssignments</div>
+<div class="block"><p>Roles assigned to the Associate within a Business Unit.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>associateRoleAssignments</code> - value to be set</dd>
@@ -248,7 +268,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="associateRoleAssignments(java.util.List)">
 <h3>associateRoleAssignments</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></span>&nbsp;<span class="element-name">associateRoleAssignments</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AssociateRoleAssignment.html" title="interface in com.commercetools.history.models.common">AssociateRoleAssignment</a>&gt;&nbsp;associateRoleAssignments)</span></div>
-<div class="block">set value to the associateRoleAssignments</div>
+<div class="block"><p>Roles assigned to the Associate within a Business Unit.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>associateRoleAssignments</code> - value to be set</dd>
@@ -261,7 +281,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="plusAssociateRoleAssignments(com.commercetools.history.models.common.AssociateRoleAssignment...)">
 <h3>plusAssociateRoleAssignments</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></span>&nbsp;<span class="element-name">plusAssociateRoleAssignments</span><wbr><span class="parameters">(<a href="AssociateRoleAssignment.html" title="interface in com.commercetools.history.models.common">AssociateRoleAssignment</a>...&nbsp;associateRoleAssignments)</span></div>
-<div class="block">add values to the associateRoleAssignments</div>
+<div class="block"><p>Roles assigned to the Associate within a Business Unit.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>associateRoleAssignments</code> - value to be set</dd>
@@ -274,7 +294,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="plusAssociateRoleAssignments(java.util.function.Function)">
 <h3>plusAssociateRoleAssignments</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></span>&nbsp;<span class="element-name">plusAssociateRoleAssignments</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AssociateRoleAssignmentBuilder.html" title="class in com.commercetools.history.models.common">AssociateRoleAssignmentBuilder</a>,<wbr><a href="AssociateRoleAssignmentBuilder.html" title="class in com.commercetools.history.models.common">AssociateRoleAssignmentBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block">add the value to the associateRoleAssignments using the builder function</div>
+<div class="block"><p>Roles assigned to the Associate within a Business Unit.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the associateRoleAssignments value</dd>
@@ -287,7 +307,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withAssociateRoleAssignments(java.util.function.Function)">
 <h3>withAssociateRoleAssignments</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></span>&nbsp;<span class="element-name">withAssociateRoleAssignments</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AssociateRoleAssignmentBuilder.html" title="class in com.commercetools.history.models.common">AssociateRoleAssignmentBuilder</a>,<wbr><a href="AssociateRoleAssignmentBuilder.html" title="class in com.commercetools.history.models.common">AssociateRoleAssignmentBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the associateRoleAssignments using the builder function</div>
+<div class="block"><p>Roles assigned to the Associate within a Business Unit.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the associateRoleAssignments value</dd>
@@ -300,7 +320,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="addAssociateRoleAssignments(java.util.function.Function)">
 <h3>addAssociateRoleAssignments</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></span>&nbsp;<span class="element-name">addAssociateRoleAssignments</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AssociateRoleAssignmentBuilder.html" title="class in com.commercetools.history.models.common">AssociateRoleAssignmentBuilder</a>,<wbr><a href="AssociateRoleAssignment.html" title="interface in com.commercetools.history.models.common">AssociateRoleAssignment</a>&gt;&nbsp;builder)</span></div>
-<div class="block">add the value to the associateRoleAssignments using the builder function</div>
+<div class="block"><p>Roles assigned to the Associate within a Business Unit.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the associateRoleAssignments value</dd>
@@ -313,7 +333,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="setAssociateRoleAssignments(java.util.function.Function)">
 <h3>setAssociateRoleAssignments</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></span>&nbsp;<span class="element-name">setAssociateRoleAssignments</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AssociateRoleAssignmentBuilder.html" title="class in com.commercetools.history.models.common">AssociateRoleAssignmentBuilder</a>,<wbr><a href="AssociateRoleAssignment.html" title="interface in com.commercetools.history.models.common">AssociateRoleAssignment</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the associateRoleAssignments using the builder function</div>
+<div class="block"><p>Roles assigned to the Associate within a Business Unit.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the associateRoleAssignments value</dd>
@@ -323,10 +343,52 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="roles(com.commercetools.history.models.common.AssociateRoleDeprecated...)">
+<h3>roles</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></span>&nbsp;<span class="element-name">roles</span><wbr><span class="parameters">(@Nullable
+ <a href="AssociateRoleDeprecated.html" title="interface in com.commercetools.history.models.common">AssociateRoleDeprecated</a>...&nbsp;roles)</span></div>
+<div class="block"><p>Deprecated type. Use <code>associateRoleAssignments</code> instead.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>roles</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="roles(java.util.List)">
+<h3>roles</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></span>&nbsp;<span class="element-name">roles</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AssociateRoleDeprecated.html" title="interface in com.commercetools.history.models.common">AssociateRoleDeprecated</a>&gt;&nbsp;roles)</span></div>
+<div class="block"><p>Deprecated type. Use <code>associateRoleAssignments</code> instead.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>roles</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="plusRoles(com.commercetools.history.models.common.AssociateRoleDeprecated...)">
+<h3>plusRoles</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></span>&nbsp;<span class="element-name">plusRoles</span><wbr><span class="parameters">(@Nullable
+ <a href="AssociateRoleDeprecated.html" title="interface in com.commercetools.history.models.common">AssociateRoleDeprecated</a>...&nbsp;roles)</span></div>
+<div class="block"><p>Deprecated type. Use <code>associateRoleAssignments</code> instead.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>roles</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="customer(java.util.function.Function)">
 <h3>customer</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></span>&nbsp;<span class="element-name">customer</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>,<wbr><a href="ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the customer using the builder function</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></span>&nbsp;<span class="element-name">customer</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomerReferenceBuilder.html" title="class in com.commercetools.history.models.common">CustomerReferenceBuilder</a>,<wbr><a href="CustomerReferenceBuilder.html" title="class in com.commercetools.history.models.common">CustomerReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the customer value</dd>
@@ -338,8 +400,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="withCustomer(java.util.function.Function)">
 <h3>withCustomer</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></span>&nbsp;<span class="element-name">withCustomer</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>,<wbr><a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the customer using the builder function</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></span>&nbsp;<span class="element-name">withCustomer</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomerReferenceBuilder.html" title="class in com.commercetools.history.models.common">CustomerReferenceBuilder</a>,<wbr><a href="CustomerReference.html" title="interface in com.commercetools.history.models.common">CustomerReference</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the customer value</dd>
@@ -349,10 +411,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="customer(com.commercetools.history.models.common.Reference)">
+<section class="detail" id="customer(com.commercetools.history.models.common.CustomerReference)">
 <h3>customer</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></span>&nbsp;<span class="element-name">customer</span><wbr><span class="parameters">(<a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&nbsp;customer)</span></div>
-<div class="block">set the value to the customer</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssociateBuilder.html" title="class in com.commercetools.history.models.common">AssociateBuilder</a></span>&nbsp;<span class="element-name">customer</span><wbr><span class="parameters">(<a href="CustomerReference.html" title="interface in com.commercetools.history.models.common">CustomerReference</a>&nbsp;customer)</span></div>
+<div class="block"><p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>customer</code> - value to be set</dd>
@@ -365,7 +427,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getAssociateRoleAssignments()">
 <h3>getAssociateRoleAssignments</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AssociateRoleAssignment.html" title="interface in com.commercetools.history.models.common">AssociateRoleAssignment</a>&gt;</span>&nbsp;<span class="element-name">getAssociateRoleAssignments</span>()</div>
-<div class="block">value of associateRoleAssignments}</div>
+<div class="block"><p>Roles assigned to the Associate within a Business Unit.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>associateRoleAssignments</dd>
@@ -373,10 +435,22 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="getRoles()">
+<h3>getRoles</h3>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AssociateRoleDeprecated.html" title="interface in com.commercetools.history.models.common">AssociateRoleDeprecated</a>&gt;</span>&nbsp;<span class="element-name">getRoles</span>()</div>
+<div class="block"><p>Deprecated type. Use <code>associateRoleAssignments</code> instead.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>roles</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getCustomer()">
 <h3>getCustomer</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a></span>&nbsp;<span class="element-name">getCustomer</span>()</div>
-<div class="block">value of customer}</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerReference.html" title="interface in com.commercetools.history.models.common">CustomerReference</a></span>&nbsp;<span class="element-name">getCustomer</span>()</div>
+<div class="block"><p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>customer</dd>

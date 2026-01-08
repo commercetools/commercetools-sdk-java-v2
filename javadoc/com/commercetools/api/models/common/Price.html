@@ -145,7 +145,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="DiscountedPrice.html" title="interface in com.commercetools.api.models.common">DiscountedPrice</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDiscounted()" class="member-name-link">getDiscounted</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Is set if a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> has been applied.</div>
+<div class="block">Set if a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> exists.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
@@ -215,7 +215,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setDiscounted(com.commercetools.api.models.common.DiscountedPrice)" class="member-name-link">setDiscounted</a><wbr>(<a href="DiscountedPrice.html" title="interface in com.commercetools.api.models.common">DiscountedPrice</a>&nbsp;discounted)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Is set if a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> has been applied.</div>
+<div class="block">Set if a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> exists.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setId(java.lang.String)" class="member-name-link">setId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
@@ -384,7 +384,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <h3>getDiscounted</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="DiscountedPrice.html" title="interface in com.commercetools.api.models.common">DiscountedPrice</a></span>&nbsp;<span class="element-name">getDiscounted</span>()</div>
-<div class="block"><p>Is set if a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> has been applied. If set, the API uses the DiscountedPrice value for the <span>Line Item price selection</span>. When a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueRelative" rel="nofollow">relative discount</a> has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with <span>half-down rounding</span>.</p>
+<div class="block"><p>Set if a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> exists. If set, the API uses the DiscountedPrice value for the <span>Line Item price selection</span>. When a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueRelative" rel="nofollow">relative discount</a> has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with <span>half-down rounding</span>.</p>
   <p>If an <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueAbsolute" rel="nofollow">absolute discount</a> value exceeds the price of the Product Variant, the discounted price is a negative value.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -523,7 +523,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <section class="detail" id="setDiscounted(com.commercetools.api.models.common.DiscountedPrice)">
 <h3>setDiscounted</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setDiscounted</span><wbr><span class="parameters">(<a href="DiscountedPrice.html" title="interface in com.commercetools.api.models.common">DiscountedPrice</a>&nbsp;discounted)</span></div>
-<div class="block"><p>Is set if a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> has been applied. If set, the API uses the DiscountedPrice value for the <span>Line Item price selection</span>. When a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueRelative" rel="nofollow">relative discount</a> has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with <span>half-down rounding</span>.</p>
+<div class="block"><p>Set if a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> exists. If set, the API uses the DiscountedPrice value for the <span>Line Item price selection</span>. When a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueRelative" rel="nofollow">relative discount</a> has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with <span>half-down rounding</span>.</p>
   <p>If an <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueAbsolute" rel="nofollow">absolute discount</a> value exceeds the price of the Product Variant, the discounted price is a negative value.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>

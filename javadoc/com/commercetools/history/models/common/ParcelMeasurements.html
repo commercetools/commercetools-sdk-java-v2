@@ -80,10 +80,6 @@ loadScripts(document, 'script');</script>
  <div class=code-example>
  <pre><code class='java'>
      ParcelMeasurements parcelMeasurements = ParcelMeasurements.builder()
-             .heightInMillimeter(1)
-             .lengthInMillimeter(1)
-             .widthInMillimeter(1)
-             .weightInGram(1)
              .build()
  </code></pre>
  </div></div>
@@ -119,18 +115,26 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of ParcelMeasurements</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getHeightInMillimeter()" class="member-name-link">getHeightInMillimeter</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Height of the Parcel.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLengthInMillimeter()" class="member-name-link">getLengthInMillimeter</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Length of the Parcel.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getWeightInGram()" class="member-name-link">getWeightInGram</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Weight of the Parcel.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getWidthInMillimeter()" class="member-name-link">getWidthInMillimeter</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Width of the Parcel.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ParcelMeasurements.html" title="interface in com.commercetools.history.models.common">ParcelMeasurements</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
@@ -144,22 +148,22 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setHeightInMillimeter(java.lang.Integer)" class="member-name-link">setHeightInMillimeter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;heightInMillimeter)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set heightInMillimeter</div>
+<div class="block">Height of the Parcel.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setLengthInMillimeter(java.lang.Integer)" class="member-name-link">setLengthInMillimeter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;lengthInMillimeter)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set lengthInMillimeter</div>
+<div class="block">Length of the Parcel.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setWeightInGram(java.lang.Integer)" class="member-name-link">setWeightInGram</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;weightInGram)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set weightInGram</div>
+<div class="block">Weight of the Parcel.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setWidthInMillimeter(java.lang.Integer)" class="member-name-link">setWidthInMillimeter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;widthInMillimeter)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set widthInMillimeter</div>
+<div class="block">Width of the Parcel.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ParcelMeasurements.html" title="interface in com.commercetools.history.models.common">ParcelMeasurements</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -188,8 +192,8 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getHeightInMillimeter()">
 <h3>getHeightInMillimeter</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getHeightInMillimeter</span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getHeightInMillimeter</span>()</div>
+<div class="block"><p>Height of the Parcel.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>heightInMillimeter</dd>
@@ -199,8 +203,8 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getLengthInMillimeter()">
 <h3>getLengthInMillimeter</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getLengthInMillimeter</span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getLengthInMillimeter</span>()</div>
+<div class="block"><p>Length of the Parcel.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>lengthInMillimeter</dd>
@@ -210,8 +214,8 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getWidthInMillimeter()">
 <h3>getWidthInMillimeter</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getWidthInMillimeter</span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getWidthInMillimeter</span>()</div>
+<div class="block"><p>Width of the Parcel.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>widthInMillimeter</dd>
@@ -221,8 +225,8 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getWeightInGram()">
 <h3>getWeightInGram</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getWeightInGram</span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getWeightInGram</span>()</div>
+<div class="block"><p>Weight of the Parcel.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>weightInGram</dd>
@@ -233,7 +237,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setHeightInMillimeter(java.lang.Integer)">
 <h3>setHeightInMillimeter</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setHeightInMillimeter</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;heightInMillimeter)</span></div>
-<div class="block">set heightInMillimeter</div>
+<div class="block"><p>Height of the Parcel.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>heightInMillimeter</code> - value to be set</dd>
@@ -244,7 +248,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setLengthInMillimeter(java.lang.Integer)">
 <h3>setLengthInMillimeter</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setLengthInMillimeter</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;lengthInMillimeter)</span></div>
-<div class="block">set lengthInMillimeter</div>
+<div class="block"><p>Length of the Parcel.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>lengthInMillimeter</code> - value to be set</dd>
@@ -255,7 +259,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setWidthInMillimeter(java.lang.Integer)">
 <h3>setWidthInMillimeter</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setWidthInMillimeter</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;widthInMillimeter)</span></div>
-<div class="block">set widthInMillimeter</div>
+<div class="block"><p>Width of the Parcel.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>widthInMillimeter</code> - value to be set</dd>
@@ -266,7 +270,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setWeightInGram(java.lang.Integer)">
 <h3>setWeightInGram</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setWeightInGram</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;weightInGram)</span></div>
-<div class="block">set weightInGram</div>
+<div class="block"><p>Weight of the Parcel.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>weightInGram</code> - value to be set</dd>

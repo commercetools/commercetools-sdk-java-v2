@@ -132,7 +132,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Name of the field type.</div>
+<div class="block">Discriminator that determines the type of the field.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CustomFieldLocalizedEnumTypeBuilder.html" title="class in com.commercetools.importapi.models.types">CustomFieldLocalizedEnumTypeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#localizedEnumBuilder()" class="member-name-link">localizedEnumBuilder</a>()</code></div>
@@ -203,7 +203,7 @@ loadScripts(document, 'script');</script>
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getName</span>()</div>
-<div class="block"><p>Name of the field type. Must be unique for a given <a href="https://docs.commercetools.com/apis/ctp:import:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>. In case there is a FieldDefinition with the same <code>name</code> in another Type, both FieldDefinitions must have the same <code>type</code>. This value cannot be changed after the Type is imported.</p></div>
+<div class="block"><p>Discriminator that determines the type of the field. This value can't be changed after you import the Type.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>name</dd>

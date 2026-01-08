@@ -91,6 +91,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
              .change("{change}")
              .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
              .plusNextValue(nextValueBuilder -> nextValueBuilder)
+             .plusAddedItems(addedItemsBuilder -> addedItemsBuilder)
+             .plusRemovedItems(removedItemsBuilder -> removedItemsBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -121,6 +123,16 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetStateRolesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetStateRolesChangeBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addedItems(com.commercetools.history.models.common.StateRoleEnum...)" class="member-name-link">addedItems</a><wbr>(<a href="../common/StateRoleEnum.html" title="interface in com.commercetools.history.models.common">StateRoleEnum</a>...&nbsp;addedItems)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Elements added to the array.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetStateRolesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetStateRolesChangeBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addedItems(java.util.List)" class="member-name-link">addedItems</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StateRoleEnum.html" title="interface in com.commercetools.history.models.common">StateRoleEnum</a>&gt;&nbsp;addedItems)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Elements added to the array.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetStateRolesChange.html" title="interface in com.commercetools.history.models.change">SetStateRolesChange</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -136,20 +148,30 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">set the value to the change</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getChange()" class="member-name-link">getChange</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StateRoleEnum.html" title="interface in com.commercetools.history.models.common">StateRoleEnum</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAddedItems()" class="member-name-link">getAddedItems</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Elements added to the array.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getChange()" class="member-name-link">getChange</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">value of change}</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StateRoleEnum.html" title="interface in com.commercetools.history.models.common">StateRoleEnum</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNextValue()" class="member-name-link">getNextValue</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StateRoleEnum.html" title="interface in com.commercetools.history.models.common">StateRoleEnum</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNextValue()" class="member-name-link">getNextValue</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value after the change.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StateRoleEnum.html" title="interface in com.commercetools.history.models.common">StateRoleEnum</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPreviousValue()" class="member-name-link">getPreviousValue</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StateRoleEnum.html" title="interface in com.commercetools.history.models.common">StateRoleEnum</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPreviousValue()" class="member-name-link">getPreviousValue</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value before the change.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StateRoleEnum.html" title="interface in com.commercetools.history.models.common">StateRoleEnum</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRemovedItems()" class="member-name-link">getRemovedItems</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Elements removed from the array.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetStateRolesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetStateRolesChangeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nextValue(com.commercetools.history.models.common.StateRoleEnum...)" class="member-name-link">nextValue</a><wbr>(<a href="../common/StateRoleEnum.html" title="interface in com.commercetools.history.models.common">StateRoleEnum</a>...&nbsp;nextValue)</code></div>
@@ -172,14 +194,24 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">create builder for SetStateRolesChange instance</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetStateRolesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetStateRolesChangeBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusNextValue(com.commercetools.history.models.common.StateRoleEnum...)" class="member-name-link">plusNextValue</a><wbr>(<a href="../common/StateRoleEnum.html" title="interface in com.commercetools.history.models.common">StateRoleEnum</a>...&nbsp;nextValue)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusAddedItems(com.commercetools.history.models.common.StateRoleEnum...)" class="member-name-link">plusAddedItems</a><wbr>(<a href="../common/StateRoleEnum.html" title="interface in com.commercetools.history.models.common">StateRoleEnum</a>...&nbsp;addedItems)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Value after the change.</div>
+<div class="block">Elements added to the array.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetStateRolesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetStateRolesChangeBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusPreviousValue(com.commercetools.history.models.common.StateRoleEnum...)" class="member-name-link">plusPreviousValue</a><wbr>(<a href="../common/StateRoleEnum.html" title="interface in com.commercetools.history.models.common">StateRoleEnum</a>...&nbsp;previousValue)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusNextValue(com.commercetools.history.models.common.StateRoleEnum...)" class="member-name-link">plusNextValue</a><wbr>(<a href="../common/StateRoleEnum.html" title="interface in com.commercetools.history.models.common">StateRoleEnum</a>...&nbsp;nextValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Value after the change.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetStateRolesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetStateRolesChangeBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusPreviousValue(com.commercetools.history.models.common.StateRoleEnum...)" class="member-name-link">plusPreviousValue</a><wbr>(<a href="../common/StateRoleEnum.html" title="interface in com.commercetools.history.models.common">StateRoleEnum</a>...&nbsp;previousValue)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value before the change.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetStateRolesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetStateRolesChangeBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusRemovedItems(com.commercetools.history.models.common.StateRoleEnum...)" class="member-name-link">plusRemovedItems</a><wbr>(<a href="../common/StateRoleEnum.html" title="interface in com.commercetools.history.models.common">StateRoleEnum</a>...&nbsp;removedItems)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Elements removed from the array.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetStateRolesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetStateRolesChangeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#previousValue(com.commercetools.history.models.common.StateRoleEnum...)" class="member-name-link">previousValue</a><wbr>(<a href="../common/StateRoleEnum.html" title="interface in com.commercetools.history.models.common">StateRoleEnum</a>...&nbsp;previousValue)</code></div>
@@ -190,6 +222,16 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#previousValue(java.util.List)" class="member-name-link">previousValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StateRoleEnum.html" title="interface in com.commercetools.history.models.common">StateRoleEnum</a>&gt;&nbsp;previousValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value before the change.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetStateRolesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetStateRolesChangeBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removedItems(com.commercetools.history.models.common.StateRoleEnum...)" class="member-name-link">removedItems</a><wbr>(<a href="../common/StateRoleEnum.html" title="interface in com.commercetools.history.models.common">StateRoleEnum</a>...&nbsp;removedItems)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Elements removed from the array.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetStateRolesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetStateRolesChangeBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removedItems(java.util.List)" class="member-name-link">removedItems</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StateRoleEnum.html" title="interface in com.commercetools.history.models.common">StateRoleEnum</a>&gt;&nbsp;removedItems)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Elements removed from the array.</div>
 </div>
 </div>
 </div>
@@ -314,6 +356,84 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="addedItems(com.commercetools.history.models.common.StateRoleEnum...)">
+<h3>addedItems</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetStateRolesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetStateRolesChangeBuilder</a></span>&nbsp;<span class="element-name">addedItems</span><wbr><span class="parameters">(<a href="../common/StateRoleEnum.html" title="interface in com.commercetools.history.models.common">StateRoleEnum</a>...&nbsp;addedItems)</span></div>
+<div class="block"><p>Elements added to the array.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>addedItems</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addedItems(java.util.List)">
+<h3>addedItems</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetStateRolesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetStateRolesChangeBuilder</a></span>&nbsp;<span class="element-name">addedItems</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StateRoleEnum.html" title="interface in com.commercetools.history.models.common">StateRoleEnum</a>&gt;&nbsp;addedItems)</span></div>
+<div class="block"><p>Elements added to the array.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>addedItems</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="plusAddedItems(com.commercetools.history.models.common.StateRoleEnum...)">
+<h3>plusAddedItems</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetStateRolesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetStateRolesChangeBuilder</a></span>&nbsp;<span class="element-name">plusAddedItems</span><wbr><span class="parameters">(<a href="../common/StateRoleEnum.html" title="interface in com.commercetools.history.models.common">StateRoleEnum</a>...&nbsp;addedItems)</span></div>
+<div class="block"><p>Elements added to the array.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>addedItems</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="removedItems(com.commercetools.history.models.common.StateRoleEnum...)">
+<h3>removedItems</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetStateRolesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetStateRolesChangeBuilder</a></span>&nbsp;<span class="element-name">removedItems</span><wbr><span class="parameters">(<a href="../common/StateRoleEnum.html" title="interface in com.commercetools.history.models.common">StateRoleEnum</a>...&nbsp;removedItems)</span></div>
+<div class="block"><p>Elements removed from the array.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>removedItems</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="removedItems(java.util.List)">
+<h3>removedItems</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetStateRolesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetStateRolesChangeBuilder</a></span>&nbsp;<span class="element-name">removedItems</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StateRoleEnum.html" title="interface in com.commercetools.history.models.common">StateRoleEnum</a>&gt;&nbsp;removedItems)</span></div>
+<div class="block"><p>Elements removed from the array.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>removedItems</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="plusRemovedItems(com.commercetools.history.models.common.StateRoleEnum...)">
+<h3>plusRemovedItems</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetStateRolesChangeBuilder.html" title="class in com.commercetools.history.models.change">SetStateRolesChangeBuilder</a></span>&nbsp;<span class="element-name">plusRemovedItems</span><wbr><span class="parameters">(<a href="../common/StateRoleEnum.html" title="interface in com.commercetools.history.models.common">StateRoleEnum</a>...&nbsp;removedItems)</span></div>
+<div class="block"><p>Elements removed from the array.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>removedItems</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getChange()">
 <h3>getChange</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getChange</span>()</div>
@@ -343,6 +463,28 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>nextValue</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getAddedItems()">
+<h3>getAddedItems</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StateRoleEnum.html" title="interface in com.commercetools.history.models.common">StateRoleEnum</a>&gt;</span>&nbsp;<span class="element-name">getAddedItems</span>()</div>
+<div class="block"><p>Elements added to the array.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>addedItems</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getRemovedItems()">
+<h3>getRemovedItems</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StateRoleEnum.html" title="interface in com.commercetools.history.models.common">StateRoleEnum</a>&gt;</span>&nbsp;<span class="element-name">getRemovedItems</span>()</div>
+<div class="block"><p>Elements removed from the array.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>removedItems</dd>
 </dl>
 </section>
 </li>

@@ -85,7 +85,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="BestDeal.html" title="interface in com.commercetools.api.models.cart">BestDeal</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
-<div class="block">Indicates the best deal logic applies to a Cart or Order and indicates the discount type that offers the best deal.</div>
+<div class="block">Indicates if a Product Discount or Cart Discount offers the best deal for a Cart or Order.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="BestDealBuilder.html" title="class in com.commercetools.api.models.cart">BestDealBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
@@ -370,6 +370,14 @@ loadScripts(document, 'script');</script>
  
  Example to create an instance using the builder pattern
  </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="CartMergeMode.html" title="interface in com.commercetools.api.models.cart">CartMergeMode</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="block">Determines how to manually merge an anonymous Cart with an existing Customer Cart.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab3"><a href="CartMergeMode.CartMergeModeEnum.html" title="enum in com.commercetools.api.models.cart">CartMergeMode.CartMergeModeEnum</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab3">
+<div class="block">possible values of CartMergeMode</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="CartMixin.html" title="interface in com.commercetools.api.models.cart">CartMixin</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">&nbsp;</div>
@@ -1487,6 +1495,17 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color class-summary class-summary-tab3"><a href="LineItemPriceMode.LineItemPriceModeEnum.html" title="enum in com.commercetools.api.models.cart">LineItemPriceMode.LineItemPriceModeEnum</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab3">
 <div class="block">possible values of LineItemPriceMode</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="MergeCartDraft.html" title="interface in com.commercetools.api.models.cart">MergeCartDraft</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">Used for merging an anonymous Cart with a Customer Cart with the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/carts/customer-id={customerId}/merge:POST" rel="nofollow">Merge Cart</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/carts/customer-id={customerId}/merge:POST" rel="nofollow">Merge Cart in Store</a> endpoints.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="MergeCartDraftBuilder.html" title="class in com.commercetools.api.models.cart">MergeCartDraftBuilder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">MergeCartDraftBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="MethodExternalTaxRateDraft.html" title="interface in com.commercetools.api.models.cart">MethodExternalTaxRateDraft</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">

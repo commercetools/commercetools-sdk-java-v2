@@ -82,7 +82,9 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">DiscountCodeState</span><span class="extends-implements">
 extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="interface in io.vrap.rmf.base.client">JsonEnum</a></span></div>
-<div class="block">DiscountCodeState</div>
+<div class="block"><p>Indicates the state of a Discount Code in a Cart.</p>
+  <p>If an Order is created from a Cart with a state other than <code>MatchesCart</code> or <code>ApplicationStoppedByGroupBestDeal</code>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeNonApplicableError" rel="nofollow">DiscountCodeNonApplicable</a> error is returned.</p>
+  <p>For Orders created from a Cart with a <code>ApplicationStoppedByGroupBestDeal</code> state, the discount code is not applied.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -199,6 +201,12 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 </section>
 </li>
 <li>
+<section class="detail" id="NOT_VALID">
+<h3>NOT_VALID</h3>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="DiscountCodeState.html" title="interface in com.commercetools.history.models.common">DiscountCodeState</a></span>&nbsp;<span class="element-name">NOT_VALID</span></div>
+</section>
+</li>
+<li>
 <section class="detail" id="DOES_NOT_MATCH_CART">
 <h3>DOES_NOT_MATCH_CART</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="DiscountCodeState.html" title="interface in com.commercetools.history.models.common">DiscountCodeState</a></span>&nbsp;<span class="element-name">DOES_NOT_MATCH_CART</span></div>
@@ -226,12 +234,6 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <section class="detail" id="APPLICATION_STOPPED_BY_GROUP_BEST_DEAL">
 <h3>APPLICATION_STOPPED_BY_GROUP_BEST_DEAL</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="DiscountCodeState.html" title="interface in com.commercetools.history.models.common">DiscountCodeState</a></span>&nbsp;<span class="element-name">APPLICATION_STOPPED_BY_GROUP_BEST_DEAL</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="NOT_VALID">
-<h3>NOT_VALID</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="DiscountCodeState.html" title="interface in com.commercetools.history.models.common">DiscountCodeState</a></span>&nbsp;<span class="element-name">NOT_VALID</span></div>
 </section>
 </li>
 </ul>

@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">Location</span></div>
-<div class="block"><p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+<div class="block"><p>A geographical location representing a country and optionally a state within this country. A location can only be assigned to one Zone.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -81,7 +81,6 @@ loadScripts(document, 'script');</script>
  <pre><code class='java'>
      Location location = Location.builder()
              .country("{country}")
-             .state("{state}")
              .build()
  </code></pre>
  </div></div>
@@ -120,11 +119,13 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCountry()" class="member-name-link">getCountry</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Two-digit country code as per <span>ISO 3166-1 alpha-2</span>.</div>
+<div class="block">Country code of the geographic location.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getState()" class="member-name-link">getState</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">State within the country.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="Location.html" title="interface in com.commercetools.history.models.common">Location</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
@@ -138,12 +139,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCountry(java.lang.String)" class="member-name-link">setCountry</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;country)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Two-digit country code as per <span>ISO 3166-1 alpha-2</span>.</div>
+<div class="block">Country code of the geographic location.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setState(java.lang.String)" class="member-name-link">setState</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;state)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set state</div>
+<div class="block">State within the country.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Location.html" title="interface in com.commercetools.history.models.common">Location</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -174,7 +175,7 @@ loadScripts(document, 'script');</script>
 <h3>getCountry</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCountry</span>()</div>
-<div class="block"><p>Two-digit country code as per <span>ISO 3166-1 alpha-2</span>.</p></div>
+<div class="block"><p>Country code of the geographic location.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>country</dd>
@@ -184,8 +185,8 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getState()">
 <h3>getState</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getState</span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getState</span>()</div>
+<div class="block"><p>State within the country.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>state</dd>
@@ -196,7 +197,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setCountry(java.lang.String)">
 <h3>setCountry</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCountry</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;country)</span></div>
-<div class="block"><p>Two-digit country code as per <span>ISO 3166-1 alpha-2</span>.</p></div>
+<div class="block"><p>Country code of the geographic location.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>country</code> - value to be set</dd>
@@ -207,7 +208,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setState(java.lang.String)">
 <h3>setState</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setState</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;state)</span></div>
-<div class="block">set state</div>
+<div class="block"><p>State within the country.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>state</code> - value to be set</dd>

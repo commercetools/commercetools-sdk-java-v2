@@ -89,8 +89,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
  <pre><code class='java'>
      SyncInfo syncInfo = SyncInfo.builder()
              .channel(channelBuilder -> channelBuilder)
-             .externalId("{externalId}")
-             .syncedAt("{syncedAt}")
+             .syncedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
              .build()
  </code></pre>
  </div></div>
@@ -132,34 +131,34 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">builds SyncInfo without checking for non-null required values</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SyncInfoBuilder.html" title="class in com.commercetools.history.models.common">SyncInfoBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#channel(com.commercetools.history.models.common.Reference)" class="member-name-link">channel</a><wbr>(<a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&nbsp;channel)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#channel(com.commercetools.history.models.common.ChannelReference)" class="member-name-link">channel</a><wbr>(<a href="ChannelReference.html" title="interface in com.commercetools.history.models.common">ChannelReference</a>&nbsp;channel)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the channel</div>
+<div class="block">Connection to a synchronization destination.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SyncInfoBuilder.html" title="class in com.commercetools.history.models.common">SyncInfoBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#channel(java.util.function.Function)" class="member-name-link">channel</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>,<wbr><a href="ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#channel(java.util.function.Function)" class="member-name-link">channel</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChannelReferenceBuilder.html" title="class in com.commercetools.history.models.common">ChannelReferenceBuilder</a>,<wbr><a href="ChannelReferenceBuilder.html" title="class in com.commercetools.history.models.common">ChannelReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the channel using the builder function</div>
+<div class="block">Connection to a synchronization destination.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SyncInfoBuilder.html" title="class in com.commercetools.history.models.common">SyncInfoBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#externalId(java.lang.String)" class="member-name-link">externalId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;externalId)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Can be used to reference an external order instance, file etc.</div>
+<div class="block">Identifier of an external order instance, file, or other resource.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChannelReference.html" title="interface in com.commercetools.history.models.common">ChannelReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getChannel()" class="member-name-link">getChannel</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of channel}</div>
+<div class="block">Connection to a synchronization destination.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getExternalId()" class="member-name-link">getExternalId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Can be used to reference an external order instance, file etc.</div>
+<div class="block">Identifier of an external order instance, file, or other resource.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSyncedAt()" class="member-name-link">getSyncedAt</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of syncedAt}</div>
+<div class="block">Date and time (UTC) the information was synced.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="SyncInfoBuilder.html" title="class in com.commercetools.history.models.common">SyncInfoBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -172,14 +171,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">create builder for SyncInfo instance</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SyncInfoBuilder.html" title="class in com.commercetools.history.models.common">SyncInfoBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#syncedAt(java.lang.String)" class="member-name-link">syncedAt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;syncedAt)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#syncedAt(java.time.ZonedDateTime)" class="member-name-link">syncedAt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;syncedAt)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the syncedAt</div>
+<div class="block">Date and time (UTC) the information was synced.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SyncInfoBuilder.html" title="class in com.commercetools.history.models.common">SyncInfoBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withChannel(java.util.function.Function)" class="member-name-link">withChannel</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>,<wbr><a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withChannel(java.util.function.Function)" class="member-name-link">withChannel</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChannelReferenceBuilder.html" title="class in com.commercetools.history.models.common">ChannelReferenceBuilder</a>,<wbr><a href="ChannelReference.html" title="interface in com.commercetools.history.models.common">ChannelReference</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the channel using the builder function</div>
+<div class="block">Connection to a synchronization destination.</div>
 </div>
 </div>
 </div>
@@ -215,8 +214,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="channel(java.util.function.Function)">
 <h3>channel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SyncInfoBuilder.html" title="class in com.commercetools.history.models.common">SyncInfoBuilder</a></span>&nbsp;<span class="element-name">channel</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>,<wbr><a href="ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the channel using the builder function</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SyncInfoBuilder.html" title="class in com.commercetools.history.models.common">SyncInfoBuilder</a></span>&nbsp;<span class="element-name">channel</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChannelReferenceBuilder.html" title="class in com.commercetools.history.models.common">ChannelReferenceBuilder</a>,<wbr><a href="ChannelReferenceBuilder.html" title="class in com.commercetools.history.models.common">ChannelReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Connection to a synchronization destination.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the channel value</dd>
@@ -228,8 +227,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="withChannel(java.util.function.Function)">
 <h3>withChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SyncInfoBuilder.html" title="class in com.commercetools.history.models.common">SyncInfoBuilder</a></span>&nbsp;<span class="element-name">withChannel</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>,<wbr><a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the channel using the builder function</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SyncInfoBuilder.html" title="class in com.commercetools.history.models.common">SyncInfoBuilder</a></span>&nbsp;<span class="element-name">withChannel</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChannelReferenceBuilder.html" title="class in com.commercetools.history.models.common">ChannelReferenceBuilder</a>,<wbr><a href="ChannelReference.html" title="interface in com.commercetools.history.models.common">ChannelReference</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Connection to a synchronization destination.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the channel value</dd>
@@ -239,10 +238,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="channel(com.commercetools.history.models.common.Reference)">
+<section class="detail" id="channel(com.commercetools.history.models.common.ChannelReference)">
 <h3>channel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SyncInfoBuilder.html" title="class in com.commercetools.history.models.common">SyncInfoBuilder</a></span>&nbsp;<span class="element-name">channel</span><wbr><span class="parameters">(<a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&nbsp;channel)</span></div>
-<div class="block">set the value to the channel</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SyncInfoBuilder.html" title="class in com.commercetools.history.models.common">SyncInfoBuilder</a></span>&nbsp;<span class="element-name">channel</span><wbr><span class="parameters">(<a href="ChannelReference.html" title="interface in com.commercetools.history.models.common">ChannelReference</a>&nbsp;channel)</span></div>
+<div class="block"><p>Connection to a synchronization destination.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>channel</code> - value to be set</dd>
@@ -254,8 +253,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="externalId(java.lang.String)">
 <h3>externalId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SyncInfoBuilder.html" title="class in com.commercetools.history.models.common">SyncInfoBuilder</a></span>&nbsp;<span class="element-name">externalId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;externalId)</span></div>
-<div class="block"><p>Can be used to reference an external order instance, file etc.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SyncInfoBuilder.html" title="class in com.commercetools.history.models.common">SyncInfoBuilder</a></span>&nbsp;<span class="element-name">externalId</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;externalId)</span></div>
+<div class="block"><p>Identifier of an external order instance, file, or other resource.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>externalId</code> - value to be set</dd>
@@ -265,10 +265,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="syncedAt(java.lang.String)">
+<section class="detail" id="syncedAt(java.time.ZonedDateTime)">
 <h3>syncedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SyncInfoBuilder.html" title="class in com.commercetools.history.models.common">SyncInfoBuilder</a></span>&nbsp;<span class="element-name">syncedAt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;syncedAt)</span></div>
-<div class="block">set the value to the syncedAt</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SyncInfoBuilder.html" title="class in com.commercetools.history.models.common">SyncInfoBuilder</a></span>&nbsp;<span class="element-name">syncedAt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;syncedAt)</span></div>
+<div class="block"><p>Date and time (UTC) the information was synced.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>syncedAt</code> - value to be set</dd>
@@ -280,8 +280,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getChannel()">
 <h3>getChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a></span>&nbsp;<span class="element-name">getChannel</span>()</div>
-<div class="block">value of channel}</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelReference.html" title="interface in com.commercetools.history.models.common">ChannelReference</a></span>&nbsp;<span class="element-name">getChannel</span>()</div>
+<div class="block"><p>Connection to a synchronization destination.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>channel</dd>
@@ -291,8 +291,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getExternalId()">
 <h3>getExternalId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getExternalId</span>()</div>
-<div class="block"><p>Can be used to reference an external order instance, file etc.</p></div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getExternalId</span>()</div>
+<div class="block"><p>Identifier of an external order instance, file, or other resource.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>externalId</dd>
@@ -302,8 +303,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getSyncedAt()">
 <h3>getSyncedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getSyncedAt</span>()</div>
-<div class="block">value of syncedAt}</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getSyncedAt</span>()</div>
+<div class="block"><p>Date and time (UTC) the information was synced.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>syncedAt</dd>

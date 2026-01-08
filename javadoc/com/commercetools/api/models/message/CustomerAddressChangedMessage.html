@@ -93,6 +93,7 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
              .resource(resourceBuilder -> resourceBuilder)
              .resourceVersion(0.3)
              .address(addressBuilder -> addressBuilder)
+             .plusAddressRoles(addressRolesBuilder -> addressRolesBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -150,29 +151,44 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeAddressAction" rel="nofollow">Change Address</a> update action.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CustomerAddressChangedMessage.html" title="interface in com.commercetools.api.models.message">CustomerAddressChangedMessage</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
-<div class="block">factory method</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/AddressRole.html" title="interface in com.commercetools.api.models.common">AddressRole</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAddressRoles()" class="member-name-link">getAddressRoles</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Indicates if the address was used for shipping or billing purposes.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CustomerAddressChangedMessage.html" title="interface in com.commercetools.api.models.message">CustomerAddressChangedMessage</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.api.models.message.CustomerAddressChangedMessage)" class="member-name-link">of</a><wbr>(<a href="CustomerAddressChangedMessage.html" title="interface in com.commercetools.api.models.message">CustomerAddressChangedMessage</a>&nbsp;template)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">factory method</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CustomerAddressChangedMessage.html" title="interface in com.commercetools.api.models.message">CustomerAddressChangedMessage</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.api.models.message.CustomerAddressChangedMessage)" class="member-name-link">of</a><wbr>(<a href="CustomerAddressChangedMessage.html" title="interface in com.commercetools.api.models.message">CustomerAddressChangedMessage</a>&nbsp;template)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a shallow copy CustomerAddressChangedMessage</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAddress(com.commercetools.api.models.common.Address)" class="member-name-link">setAddress</a><wbr>(<a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;address)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAddress(com.commercetools.api.models.common.Address)" class="member-name-link">setAddress</a><wbr>(<a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;address)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeAddressAction" rel="nofollow">Change Address</a> update action.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CustomerAddressChangedMessage.html" title="interface in com.commercetools.api.models.message">CustomerAddressChangedMessage</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAddressRoles(com.commercetools.api.models.common.AddressRole...)" class="member-name-link">setAddressRoles</a><wbr>(<a href="../common/AddressRole.html" title="interface in com.commercetools.api.models.common">AddressRole</a>...&nbsp;addressRoles)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Indicates if the address was used for shipping or billing purposes.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAddressRoles(java.util.List)" class="member-name-link">setAddressRoles</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/AddressRole.html" title="interface in com.commercetools.api.models.common">AddressRole</a>&gt;&nbsp;addressRoles)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Indicates if the address was used for shipping or billing purposes.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CustomerAddressChangedMessage.html" title="interface in com.commercetools.api.models.message">CustomerAddressChangedMessage</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withCustomerAddressChangedMessage(java.util.function.Function)" class="member-name-link">withCustomerAddressChangedMessage</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomerAddressChangedMessage.html" title="interface in com.commercetools.api.models.message">CustomerAddressChangedMessage</a>,<wbr>T&gt;&nbsp;helper)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withCustomerAddressChangedMessage(java.util.function.Function)" class="member-name-link">withCustomerAddressChangedMessage</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomerAddressChangedMessage.html" title="interface in com.commercetools.api.models.message">CustomerAddressChangedMessage</a>,<wbr>T&gt;&nbsp;helper)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">accessor map function</div>
 </div>
 </div>
@@ -235,6 +251,18 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 </section>
 </li>
 <li>
+<section class="detail" id="getAddressRoles()">
+<h3>getAddressRoles</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/AddressRole.html" title="interface in com.commercetools.api.models.common">AddressRole</a>&gt;</span>&nbsp;<span class="element-name">getAddressRoles</span>()</div>
+<div class="block"><p>Indicates if the address was used for shipping or billing purposes.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>addressRoles</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setAddress(com.commercetools.api.models.common.Address)">
 <h3>setAddress</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setAddress</span><wbr><span class="parameters">(<a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;address)</span></div>
@@ -242,6 +270,28 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>address</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setAddressRoles(com.commercetools.api.models.common.AddressRole...)">
+<h3>setAddressRoles</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setAddressRoles</span><wbr><span class="parameters">(<a href="../common/AddressRole.html" title="interface in com.commercetools.api.models.common">AddressRole</a>...&nbsp;addressRoles)</span></div>
+<div class="block"><p>Indicates if the address was used for shipping or billing purposes.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>addressRoles</code> - values to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setAddressRoles(java.util.List)">
+<h3>setAddressRoles</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setAddressRoles</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/AddressRole.html" title="interface in com.commercetools.api.models.common">AddressRole</a>&gt;&nbsp;addressRoles)</span></div>
+<div class="block"><p>Indicates if the address was used for shipping or billing purposes.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>addressRoles</code> - values to be set</dd>
 </dl>
 </section>
 </li>

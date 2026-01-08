@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">Delivery</span></div>
-<div class="block">Delivery
+<div class="block"><p>Contains information on how items are shipped to Customers, for example, a delivery note.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -81,7 +81,7 @@ loadScripts(document, 'script');</script>
  <pre><code class='java'>
      Delivery delivery = Delivery.builder()
              .id("{id}")
-             .createdAt("{createdAt}")
+             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
              .plusItems(itemsBuilder -> itemsBuilder)
              .plusParcels(parcelsBuilder -> parcelsBuilder)
              .build()
@@ -121,73 +121,93 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="Address.html" title="interface in com.commercetools.history.models.common">Address</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAddress()" class="member-name-link">getAddress</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Address to which Parcels are delivered.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCreatedAt()" class="member-name-link">getCreatedAt</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Date and time (UTC) the Delivery was created.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCustom()" class="member-name-link">getCustom</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Custom Fields for the Transaction.</div>
+<div class="block">Custom Fields of the Delivery.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Unique identifier of the Delivery.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="DeliveryItem.html" title="interface in com.commercetools.history.models.common">DeliveryItem</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getItems()" class="member-name-link">getItems</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Parcel.html" title="interface in com.commercetools.history.models.common">Parcel</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getParcels()" class="member-name-link">getParcels</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="Delivery.html" title="interface in com.commercetools.history.models.common">Delivery</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
-<div class="block">factory method</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Line Items or Custom Line Items that are delivered.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getKey()" class="member-name-link">getKey</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">User-defined unique identifier of the Delivery.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Parcel.html" title="interface in com.commercetools.history.models.common">Parcel</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getParcels()" class="member-name-link">getParcels</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Information regarding the appearance, content, and shipment of a Parcel.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="Delivery.html" title="interface in com.commercetools.history.models.common">Delivery</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.history.models.common.Delivery)" class="member-name-link">of</a><wbr>(<a href="Delivery.html" title="interface in com.commercetools.history.models.common">Delivery</a>&nbsp;template)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">factory method</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="Delivery.html" title="interface in com.commercetools.history.models.common">Delivery</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.history.models.common.Delivery)" class="member-name-link">of</a><wbr>(<a href="Delivery.html" title="interface in com.commercetools.history.models.common">Delivery</a>&nbsp;template)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a shallow copy Delivery</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAddress(com.commercetools.history.models.common.Address)" class="member-name-link">setAddress</a><wbr>(<a href="Address.html" title="interface in com.commercetools.history.models.common">Address</a>&nbsp;address)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set address</div>
-</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCreatedAt(java.lang.String)" class="member-name-link">setCreatedAt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;createdAt)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAddress(com.commercetools.history.models.common.Address)" class="member-name-link">setAddress</a><wbr>(<a href="Address.html" title="interface in com.commercetools.history.models.common">Address</a>&nbsp;address)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set createdAt</div>
+<div class="block">Address to which Parcels are delivered.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCustom(com.commercetools.history.models.common.CustomFields)" class="member-name-link">setCustom</a><wbr>(<a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a>&nbsp;custom)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCreatedAt(java.time.ZonedDateTime)" class="member-name-link">setCreatedAt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Custom Fields for the Transaction.</div>
+<div class="block">Date and time (UTC) the Delivery was created.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setId(java.lang.String)" class="member-name-link">setId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCustom(com.commercetools.history.models.common.CustomFields)" class="member-name-link">setCustom</a><wbr>(<a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a>&nbsp;custom)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set id</div>
+<div class="block">Custom Fields of the Delivery.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setItems(com.commercetools.history.models.common.DeliveryItem...)" class="member-name-link">setItems</a><wbr>(<a href="DeliveryItem.html" title="interface in com.commercetools.history.models.common">DeliveryItem</a>...&nbsp;items)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setId(java.lang.String)" class="member-name-link">setId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set items</div>
+<div class="block">Unique identifier of the Delivery.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setItems(java.util.List)" class="member-name-link">setItems</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="DeliveryItem.html" title="interface in com.commercetools.history.models.common">DeliveryItem</a>&gt;&nbsp;items)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setItems(com.commercetools.history.models.common.DeliveryItem...)" class="member-name-link">setItems</a><wbr>(<a href="DeliveryItem.html" title="interface in com.commercetools.history.models.common">DeliveryItem</a>...&nbsp;items)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set items</div>
+<div class="block">Line Items or Custom Line Items that are delivered.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setItems(java.util.List)" class="member-name-link">setItems</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="DeliveryItem.html" title="interface in com.commercetools.history.models.common">DeliveryItem</a>&gt;&nbsp;items)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Line Items or Custom Line Items that are delivered.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setKey(java.lang.String)" class="member-name-link">setKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">User-defined unique identifier of the Delivery.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setParcels(com.commercetools.history.models.common.Parcel...)" class="member-name-link">setParcels</a><wbr>(<a href="Parcel.html" title="interface in com.commercetools.history.models.common">Parcel</a>...&nbsp;parcels)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set parcels</div>
+<div class="block">Information regarding the appearance, content, and shipment of a Parcel.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setParcels(java.util.List)" class="member-name-link">setParcels</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Parcel.html" title="interface in com.commercetools.history.models.common">Parcel</a>&gt;&nbsp;parcels)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set parcels</div>
+<div class="block">Information regarding the appearance, content, and shipment of a Parcel.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Delivery.html" title="interface in com.commercetools.history.models.common">Delivery</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -218,6 +238,7 @@ loadScripts(document, 'script');</script>
 <h3>getId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getId</span>()</div>
+<div class="block"><p>Unique identifier of the Delivery.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>id</dd>
@@ -225,10 +246,22 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="getKey()">
+<h3>getKey</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
+<div class="block"><p>User-defined unique identifier of the Delivery.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>key</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getCreatedAt()">
 <h3>getCreatedAt</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCreatedAt</span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getCreatedAt</span>()</div>
+<div class="block"><p>Date and time (UTC) the Delivery was created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>createdAt</dd>
@@ -241,6 +274,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="DeliveryItem.html" title="interface in com.commercetools.history.models.common">DeliveryItem</a>&gt;</span>&nbsp;<span class="element-name">getItems</span>()</div>
+<div class="block"><p>Line Items or Custom Line Items that are delivered.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>items</dd>
@@ -253,6 +287,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Parcel.html" title="interface in com.commercetools.history.models.common">Parcel</a>&gt;</span>&nbsp;<span class="element-name">getParcels</span>()</div>
+<div class="block"><p>Information regarding the appearance, content, and shipment of a Parcel.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>parcels</dd>
@@ -264,6 +299,7 @@ loadScripts(document, 'script');</script>
 <h3>getAddress</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="Address.html" title="interface in com.commercetools.history.models.common">Address</a></span>&nbsp;<span class="element-name">getAddress</span>()</div>
+<div class="block"><p>Address to which Parcels are delivered.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>address</dd>
@@ -275,7 +311,7 @@ loadScripts(document, 'script');</script>
 <h3>getCustom</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a></span>&nbsp;<span class="element-name">getCustom</span>()</div>
-<div class="block"><p>Custom Fields for the Transaction.</p></div>
+<div class="block"><p>Custom Fields of the Delivery.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>custom</dd>
@@ -286,7 +322,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setId(java.lang.String)">
 <h3>setId</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
-<div class="block">set id</div>
+<div class="block"><p>Unique identifier of the Delivery.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>id</code> - value to be set</dd>
@@ -294,10 +330,21 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="setCreatedAt(java.lang.String)">
+<section class="detail" id="setKey(java.lang.String)">
+<h3>setKey</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="block"><p>User-defined unique identifier of the Delivery.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>key</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setCreatedAt(java.time.ZonedDateTime)">
 <h3>setCreatedAt</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCreatedAt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;createdAt)</span></div>
-<div class="block">set createdAt</div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCreatedAt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
+<div class="block"><p>Date and time (UTC) the Delivery was created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>createdAt</code> - value to be set</dd>
@@ -308,7 +355,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setItems(com.commercetools.history.models.common.DeliveryItem...)">
 <h3>setItems</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setItems</span><wbr><span class="parameters">(<a href="DeliveryItem.html" title="interface in com.commercetools.history.models.common">DeliveryItem</a>...&nbsp;items)</span></div>
-<div class="block">set items</div>
+<div class="block"><p>Line Items or Custom Line Items that are delivered.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>items</code> - values to be set</dd>
@@ -319,7 +366,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setItems(java.util.List)">
 <h3>setItems</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setItems</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="DeliveryItem.html" title="interface in com.commercetools.history.models.common">DeliveryItem</a>&gt;&nbsp;items)</span></div>
-<div class="block">set items</div>
+<div class="block"><p>Line Items or Custom Line Items that are delivered.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>items</code> - values to be set</dd>
@@ -330,7 +377,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setParcels(com.commercetools.history.models.common.Parcel...)">
 <h3>setParcels</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setParcels</span><wbr><span class="parameters">(<a href="Parcel.html" title="interface in com.commercetools.history.models.common">Parcel</a>...&nbsp;parcels)</span></div>
-<div class="block">set parcels</div>
+<div class="block"><p>Information regarding the appearance, content, and shipment of a Parcel.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>parcels</code> - values to be set</dd>
@@ -341,7 +388,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setParcels(java.util.List)">
 <h3>setParcels</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setParcels</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Parcel.html" title="interface in com.commercetools.history.models.common">Parcel</a>&gt;&nbsp;parcels)</span></div>
-<div class="block">set parcels</div>
+<div class="block"><p>Information regarding the appearance, content, and shipment of a Parcel.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>parcels</code> - values to be set</dd>
@@ -352,7 +399,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setAddress(com.commercetools.history.models.common.Address)">
 <h3>setAddress</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setAddress</span><wbr><span class="parameters">(<a href="Address.html" title="interface in com.commercetools.history.models.common">Address</a>&nbsp;address)</span></div>
-<div class="block">set address</div>
+<div class="block"><p>Address to which Parcels are delivered.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>address</code> - value to be set</dd>
@@ -363,7 +410,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setCustom(com.commercetools.history.models.common.CustomFields)">
 <h3>setCustom</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCustom</span><wbr><span class="parameters">(<a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a>&nbsp;custom)</span></div>
-<div class="block"><p>Custom Fields for the Transaction.</p></div>
+<div class="block"><p>Custom Fields of the Delivery.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>custom</code> - value to be set</dd>

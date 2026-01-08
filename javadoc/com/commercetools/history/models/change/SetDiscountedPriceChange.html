@@ -91,6 +91,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
              .catalogData("{catalogData}")
              .variant("{variant}")
              .priceId("{priceId}")
+             .price(priceBuilder -> priceBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -146,73 +147,77 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCatalogData()" class="member-name-link">getCatalogData</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
-   <code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.
-   <code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.
-  </div>
+<div class="block">Product data that was updated.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getChange()" class="member-name-link">getChange</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><span>Type of change</span> on a resource that is similar to the update action it relates to, where possible.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/DiscountedPrice.html" title="interface in com.commercetools.history.models.common">DiscountedPrice</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNextValue()" class="member-name-link">getNextValue</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Value after the change.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/DiscountedPrice.html" title="interface in com.commercetools.history.models.common">DiscountedPrice</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPreviousValue()" class="member-name-link">getPreviousValue</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Value before the change.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPriceId()" class="member-name-link">getPriceId</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPrice()" class="member-name-link">getPrice</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>id</code> of the Embedded <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</div>
+<div class="block">Embedded Price of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPriceId()" class="member-name-link">getPriceId</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Unique discriminator value to reliably deserialize the data type.</div>
+<div class="block"><code>id</code> of the Embedded <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVariant()" class="member-name-link">getVariant</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
+<div class="block">Unique discriminator value to reliably deserialize the data type.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="SetDiscountedPriceChange.html" title="interface in com.commercetools.history.models.change">SetDiscountedPriceChange</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
-<div class="block">factory method</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVariant()" class="member-name-link">getVariant</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Identifier of the updated Product Variant.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="SetDiscountedPriceChange.html" title="interface in com.commercetools.history.models.change">SetDiscountedPriceChange</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.history.models.change.SetDiscountedPriceChange)" class="member-name-link">of</a><wbr>(<a href="SetDiscountedPriceChange.html" title="interface in com.commercetools.history.models.change">SetDiscountedPriceChange</a>&nbsp;template)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">factory method</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="SetDiscountedPriceChange.html" title="interface in com.commercetools.history.models.change">SetDiscountedPriceChange</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.history.models.change.SetDiscountedPriceChange)" class="member-name-link">of</a><wbr>(<a href="SetDiscountedPriceChange.html" title="interface in com.commercetools.history.models.change">SetDiscountedPriceChange</a>&nbsp;template)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a shallow copy SetDiscountedPriceChange</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCatalogData(java.lang.String)" class="member-name-link">setCatalogData</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;catalogData)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
-   <code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.
-   <code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.
-  </div>
-</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setChange(java.lang.String)" class="member-name-link">setChange</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCatalogData(java.lang.String)" class="member-name-link">setCatalogData</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;catalogData)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Product data that was updated.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setChange(java.lang.String)" class="member-name-link">setChange</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">set change</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setNextValue(com.commercetools.history.models.common.Price)" class="member-name-link">setNextValue</a><wbr>(<a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a>&nbsp;nextValue)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setNextValue(com.commercetools.history.models.common.DiscountedPrice)" class="member-name-link">setNextValue</a><wbr>(<a href="../common/DiscountedPrice.html" title="interface in com.commercetools.history.models.common">DiscountedPrice</a>&nbsp;nextValue)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Value after the change.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setPreviousValue(com.commercetools.history.models.common.Price)" class="member-name-link">setPreviousValue</a><wbr>(<a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a>&nbsp;previousValue)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setPreviousValue(com.commercetools.history.models.common.DiscountedPrice)" class="member-name-link">setPreviousValue</a><wbr>(<a href="../common/DiscountedPrice.html" title="interface in com.commercetools.history.models.common">DiscountedPrice</a>&nbsp;previousValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Value before the change.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setPrice(com.commercetools.history.models.common.Price)" class="member-name-link">setPrice</a><wbr>(<a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a>&nbsp;price)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Embedded Price of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setPriceId(java.lang.String)" class="member-name-link">setPriceId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;priceId)</code></div>
@@ -222,7 +227,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setVariant(java.lang.String)" class="member-name-link">setVariant</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;variant)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
+<div class="block">Identifier of the updated Product Variant.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SetDiscountedPriceChange.html" title="interface in com.commercetools.history.models.change">SetDiscountedPriceChange</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -310,7 +315,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <h3>getPreviousValue</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a></span>&nbsp;<span class="element-name">getPreviousValue</span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/DiscountedPrice.html" title="interface in com.commercetools.history.models.common">DiscountedPrice</a></span>&nbsp;<span class="element-name">getPreviousValue</span>()</div>
 <div class="block"><p>Value before the change.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -323,7 +328,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <h3>getNextValue</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a></span>&nbsp;<span class="element-name">getNextValue</span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/DiscountedPrice.html" title="interface in com.commercetools.history.models.common">DiscountedPrice</a></span>&nbsp;<span class="element-name">getNextValue</span>()</div>
 <div class="block"><p>Value after the change.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -336,7 +341,8 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <h3>getCatalogData</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCatalogData</span>()</div>
-<div class="block"><ul>
+<div class="block"><p>Product data that was updated.</p>
+  <ul>
    <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
    <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
   </ul></div>
@@ -351,7 +357,8 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <h3>getVariant</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getVariant</span>()</div>
-<div class="block"><p><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p></div>
+<div class="block"><p>Identifier of the updated Product Variant.</p>
+  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>variant</dd>
@@ -371,6 +378,19 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 </section>
 </li>
 <li>
+<section class="detail" id="getPrice()">
+<h3>getPrice</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+@Valid
+</span><span class="return-type">@NotNull @Valid <a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a></span>&nbsp;<span class="element-name">getPrice</span>()</div>
+<div class="block"><p>Embedded Price of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>price</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setChange(java.lang.String)">
 <h3>setChange</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setChange</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
@@ -384,9 +404,9 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 </section>
 </li>
 <li>
-<section class="detail" id="setPreviousValue(com.commercetools.history.models.common.Price)">
+<section class="detail" id="setPreviousValue(com.commercetools.history.models.common.DiscountedPrice)">
 <h3>setPreviousValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setPreviousValue</span><wbr><span class="parameters">(<a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a>&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setPreviousValue</span><wbr><span class="parameters">(<a href="../common/DiscountedPrice.html" title="interface in com.commercetools.history.models.common">DiscountedPrice</a>&nbsp;previousValue)</span></div>
 <div class="block"><p>Value before the change.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -395,9 +415,9 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 </section>
 </li>
 <li>
-<section class="detail" id="setNextValue(com.commercetools.history.models.common.Price)">
+<section class="detail" id="setNextValue(com.commercetools.history.models.common.DiscountedPrice)">
 <h3>setNextValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setNextValue</span><wbr><span class="parameters">(<a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a>&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setNextValue</span><wbr><span class="parameters">(<a href="../common/DiscountedPrice.html" title="interface in com.commercetools.history.models.common">DiscountedPrice</a>&nbsp;nextValue)</span></div>
 <div class="block"><p>Value after the change.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -409,7 +429,8 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="setCatalogData(java.lang.String)">
 <h3>setCatalogData</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCatalogData</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;catalogData)</span></div>
-<div class="block"><ul>
+<div class="block"><p>Product data that was updated.</p>
+  <ul>
    <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
    <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
   </ul></div>
@@ -423,7 +444,8 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="setVariant(java.lang.String)">
 <h3>setVariant</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setVariant</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;variant)</span></div>
-<div class="block"><p><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p></div>
+<div class="block"><p>Identifier of the updated Product Variant.</p>
+  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>variant</code> - value to be set</dd>
@@ -438,6 +460,17 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>priceId</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setPrice(com.commercetools.history.models.common.Price)">
+<h3>setPrice</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setPrice</span><wbr><span class="parameters">(<a href="../common/Price.html" title="interface in com.commercetools.history.models.common">Price</a>&nbsp;price)</span></div>
+<div class="block"><p>Embedded Price of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>price</code> - value to be set</dd>
 </dl>
 </section>
 </li>

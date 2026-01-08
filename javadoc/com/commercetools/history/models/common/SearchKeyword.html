@@ -81,7 +81,6 @@ loadScripts(document, 'script');</script>
  <pre><code class='java'>
      SearchKeyword searchKeyword = SearchKeyword.builder()
              .text("{text}")
-             .suggestTokenizer(suggestTokenizerBuilder -> suggestTokenizerBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -117,12 +116,16 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of SearchKeyword</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="SuggestTokenizer.html" title="interface in com.commercetools.history.models.common">SuggestTokenizer</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="SuggestTokenizer.html" title="interface in com.commercetools.history.models.common">SuggestTokenizer</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSuggestTokenizer()" class="member-name-link">getSuggestTokenizer</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">If no tokenizer is defined, the <code>text</code> is used as a single token.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getText()" class="member-name-link">getText</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Text to return in the <a href="https://docs.commercetools.com/apis/ctp:api:type:SuggestionResult" rel="nofollow">SuggestionResult</a>.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="SearchKeyword.html" title="interface in com.commercetools.history.models.common">SearchKeyword</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
@@ -136,12 +139,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setSuggestTokenizer(com.commercetools.history.models.common.SuggestTokenizer)" class="member-name-link">setSuggestTokenizer</a><wbr>(<a href="SuggestTokenizer.html" title="interface in com.commercetools.history.models.common">SuggestTokenizer</a>&nbsp;suggestTokenizer)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set suggestTokenizer</div>
+<div class="block">If no tokenizer is defined, the <code>text</code> is used as a single token.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setText(java.lang.String)" class="member-name-link">setText</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set text</div>
+<div class="block">Text to return in the <a href="https://docs.commercetools.com/apis/ctp:api:type:SuggestionResult" rel="nofollow">SuggestionResult</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SearchKeyword.html" title="interface in com.commercetools.history.models.common">SearchKeyword</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -172,6 +175,7 @@ loadScripts(document, 'script');</script>
 <h3>getText</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getText</span>()</div>
+<div class="block"><p>Text to return in the <a href="https://docs.commercetools.com/apis/ctp:api:type:SuggestionResult" rel="nofollow">SuggestionResult</a>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>text</dd>
@@ -181,9 +185,9 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getSuggestTokenizer()">
 <h3>getSuggestTokenizer</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-@Valid
-</span><span class="return-type">@NotNull @Valid <a href="SuggestTokenizer.html" title="interface in com.commercetools.history.models.common">SuggestTokenizer</a></span>&nbsp;<span class="element-name">getSuggestTokenizer</span>()</div>
+<div class="member-signature"><span class="annotations">@Valid
+</span><span class="return-type">@Valid <a href="SuggestTokenizer.html" title="interface in com.commercetools.history.models.common">SuggestTokenizer</a></span>&nbsp;<span class="element-name">getSuggestTokenizer</span>()</div>
+<div class="block"><p>If no tokenizer is defined, the <code>text</code> is used as a single token.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>suggestTokenizer</dd>
@@ -194,7 +198,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setText(java.lang.String)">
 <h3>setText</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setText</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text)</span></div>
-<div class="block">set text</div>
+<div class="block"><p>Text to return in the <a href="https://docs.commercetools.com/apis/ctp:api:type:SuggestionResult" rel="nofollow">SuggestionResult</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>text</code> - value to be set</dd>
@@ -205,7 +209,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setSuggestTokenizer(com.commercetools.history.models.common.SuggestTokenizer)">
 <h3>setSuggestTokenizer</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setSuggestTokenizer</span><wbr><span class="parameters">(<a href="SuggestTokenizer.html" title="interface in com.commercetools.history.models.common">SuggestTokenizer</a>&nbsp;suggestTokenizer)</span></div>
-<div class="block">set suggestTokenizer</div>
+<div class="block"><p>If no tokenizer is defined, the <code>text</code> is used as a single token.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>suggestTokenizer</code> - value to be set</dd>

@@ -71,17 +71,20 @@ loadScripts(document, 'script');</script>
 <h1 title="Interface Reference" class="title">Interface Reference</h1>
 </div>
 <section class="class-description" id="class-description">
+<dl class="notes">
+<dt>All Known Subinterfaces:</dt>
+<dd><code><a href="CartDiscountReference.html" title="interface in com.commercetools.history.models.common">CartDiscountReference</a></code>, <code><a href="CategoryReference.html" title="interface in com.commercetools.history.models.common">CategoryReference</a></code>, <code><a href="ChannelReference.html" title="interface in com.commercetools.history.models.common">ChannelReference</a></code>, <code><a href="CustomerGroupReference.html" title="interface in com.commercetools.history.models.common">CustomerGroupReference</a></code>, <code><a href="CustomerReference.html" title="interface in com.commercetools.history.models.common">CustomerReference</a></code>, <code><a href="DiscountCodeReference.html" title="interface in com.commercetools.history.models.common">DiscountCodeReference</a></code>, <code><a href="PaymentReference.html" title="interface in com.commercetools.history.models.common">PaymentReference</a></code>, <code><a href="ProductDiscountReference.html" title="interface in com.commercetools.history.models.common">ProductDiscountReference</a></code>, <code><a href="ProductReference.html" title="interface in com.commercetools.history.models.common">ProductReference</a></code>, <code><a href="ProductSelectionReference.html" title="interface in com.commercetools.history.models.common">ProductSelectionReference</a></code>, <code><a href="ProductTypeReference.html" title="interface in com.commercetools.history.models.common">ProductTypeReference</a></code>, <code><a href="RecurrencePolicyReference.html" title="interface in com.commercetools.history.models.common">RecurrencePolicyReference</a></code>, <code><a href="ShippingMethodReference.html" title="interface in com.commercetools.history.models.common">ShippingMethodReference</a></code>, <code><a href="StateReference.html" title="interface in com.commercetools.history.models.common">StateReference</a></code>, <code><a href="TaxCategoryReference.html" title="interface in com.commercetools.history.models.common">TaxCategoryReference</a></code>, <code><a href="TypeReference.html" title="interface in com.commercetools.history.models.common">TypeReference</a></code></dd>
+</dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">Reference</span></div>
-<div class="block">Reference
+<div class="block"><p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelReference" rel="nofollow">ChannelReference</a>. A referenced resource can be embedded through <span>Reference Expansion</span>. The expanded reference is the value of an additional <code>obj</code> field then.</p>
 
  <hr>
- Example to create an instance using the builder pattern
+ Example to create a subtype instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-     Reference reference = Reference.builder()
-             .id("{id}")
-             .typeId(ReferenceTypeId.ASSOCIATE_ROLE)
+     Reference reference = Reference.cartDiscountBuilder()
+             id("{id}")
              .build()
  </code></pre>
  </div></div>
@@ -99,58 +102,117 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#builder()" class="member-name-link">builder</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CartDiscountReferenceBuilder.html" title="class in com.commercetools.history.models.common">CartDiscountReferenceBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#cartDiscountBuilder()" class="member-name-link">cartDiscountBuilder</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
-<div class="block">builder factory method for Reference</div>
+<div class="block">builder for cartDiscount subtype</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#builder(com.commercetools.history.models.common.Reference)" class="member-name-link">builder</a><wbr>(<a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&nbsp;template)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CategoryReferenceBuilder.html" title="class in com.commercetools.history.models.common">CategoryReferenceBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#categoryBuilder()" class="member-name-link">categoryBuilder</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
-<div class="block">create builder for Reference instance</div>
+<div class="block">builder for category subtype</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#copyDeep()" class="member-name-link">copyDeep</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#deepCopy(com.commercetools.history.models.common.Reference)" class="member-name-link">deepCopy</a><wbr>(<a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&nbsp;template)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ChannelReferenceBuilder.html" title="class in com.commercetools.history.models.common">ChannelReferenceBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#channelBuilder()" class="member-name-link">channelBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for channel subtype</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#copyDeep()" class="member-name-link">copyDeep</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CustomerReferenceBuilder.html" title="class in com.commercetools.history.models.common">CustomerReferenceBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#customerBuilder()" class="member-name-link">customerBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for customer subtype</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CustomerGroupReferenceBuilder.html" title="class in com.commercetools.history.models.common">CustomerGroupReferenceBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#customerGroupBuilder()" class="member-name-link">customerGroupBuilder</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for customerGroup subtype</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#deepCopy(com.commercetools.history.models.common.Reference)" class="member-name-link">deepCopy</a><wbr>(<a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&nbsp;template)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of Reference</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="DiscountCodeReferenceBuilder.html" title="class in com.commercetools.history.models.common">DiscountCodeReferenceBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#discountCodeBuilder()" class="member-name-link">discountCodeBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for discountCode subtype</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Unique ID of the referenced resource.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="ReferenceTypeId.html" title="interface in com.commercetools.history.models.common">ReferenceTypeId</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTypeId()" class="member-name-link">getTypeId</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
-<div class="block">factory method</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Type of referenced resource.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.history.models.common.Reference)" class="member-name-link">of</a><wbr>(<a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&nbsp;template)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="PaymentReferenceBuilder.html" title="class in com.commercetools.history.models.common">PaymentReferenceBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#paymentBuilder()" class="member-name-link">paymentBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for payment subtype</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProductReferenceBuilder.html" title="class in com.commercetools.history.models.common">ProductReferenceBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#productBuilder()" class="member-name-link">productBuilder</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
-<div class="block">factory method to create a shallow copy Reference</div>
+<div class="block">builder for product subtype</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProductDiscountReferenceBuilder.html" title="class in com.commercetools.history.models.common">ProductDiscountReferenceBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#productDiscountBuilder()" class="member-name-link">productDiscountBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for productDiscount subtype</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProductSelectionReferenceBuilder.html" title="class in com.commercetools.history.models.common">ProductSelectionReferenceBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#productSelectionBuilder()" class="member-name-link">productSelectionBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for productSelection subtype</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProductTypeReferenceBuilder.html" title="class in com.commercetools.history.models.common">ProductTypeReferenceBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#productTypeBuilder()" class="member-name-link">productTypeBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for productType subtype</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RecurrencePolicyReferenceBuilder.html" title="class in com.commercetools.history.models.common">RecurrencePolicyReferenceBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#recurrencePolicyBuilder()" class="member-name-link">recurrencePolicyBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for recurrencePolicy subtype</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setId(java.lang.String)" class="member-name-link">setId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set id</div>
+<div class="block">Unique ID of the referenced resource.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTypeId(com.commercetools.history.models.common.ReferenceTypeId)" class="member-name-link">setTypeId</a><wbr>(<a href="ReferenceTypeId.html" title="interface in com.commercetools.history.models.common">ReferenceTypeId</a>&nbsp;typeId)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set typeId</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ShippingMethodReferenceBuilder.html" title="class in com.commercetools.history.models.common">ShippingMethodReferenceBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#shippingMethodBuilder()" class="member-name-link">shippingMethodBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for shippingMethod subtype</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="StateReferenceBuilder.html" title="class in com.commercetools.history.models.common">StateReferenceBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#stateBuilder()" class="member-name-link">stateBuilder</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for state subtype</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="TaxCategoryReferenceBuilder.html" title="class in com.commercetools.history.models.common">TaxCategoryReferenceBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#taxCategoryBuilder()" class="member-name-link">taxCategoryBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for taxCategory subtype</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="TypeReferenceBuilder.html" title="class in com.commercetools.history.models.common">TypeReferenceBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeBuilder()" class="member-name-link">typeBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for type subtype</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withReference(java.util.function.Function)" class="member-name-link">withReference</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>,<wbr>T&gt;&nbsp;helper)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withReference(java.util.function.Function)" class="member-name-link">withReference</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>,<wbr>T&gt;&nbsp;helper)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">accessor map function</div>
 </div>
 </div>
@@ -168,21 +230,11 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="getId()">
-<h3>getId</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getId</span>()</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>id</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="getTypeId()">
 <h3>getTypeId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="ReferenceTypeId.html" title="interface in com.commercetools.history.models.common">ReferenceTypeId</a></span>&nbsp;<span class="element-name">getTypeId</span>()</div>
+<div class="block"><p>Type of referenced resource.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>typeId</dd>
@@ -190,48 +242,25 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="getId()">
+<h3>getId</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getId</span>()</div>
+<div class="block"><p>Unique ID of the referenced resource.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>id</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setId(java.lang.String)">
 <h3>setId</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
-<div class="block">set id</div>
+<div class="block"><p>Unique ID of the referenced resource.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>id</code> - value to be set</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setTypeId(com.commercetools.history.models.common.ReferenceTypeId)">
-<h3>setTypeId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTypeId</span><wbr><span class="parameters">(<a href="ReferenceTypeId.html" title="interface in com.commercetools.history.models.common">ReferenceTypeId</a>&nbsp;typeId)</span></div>
-<div class="block">set typeId</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>typeId</code> - value to be set</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="of()">
-<h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a></span>&nbsp;<span class="element-name">of</span>()</div>
-<div class="block">factory method</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>instance of Reference</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="of(com.commercetools.history.models.common.Reference)">
-<h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a></span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(<a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&nbsp;template)</span></div>
-<div class="block">factory method to create a shallow copy Reference</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>template</code> - instance to be copied</dd>
-<dt>Returns:</dt>
-<dd>copy instance</dd>
 </dl>
 </section>
 </li>
@@ -257,10 +286,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="builder()">
-<h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a></span>&nbsp;<span class="element-name">builder</span>()</div>
-<div class="block">builder factory method for Reference</div>
+<section class="detail" id="cartDiscountBuilder()">
+<h3>cartDiscountBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountReferenceBuilder.html" title="class in com.commercetools.history.models.common">CartDiscountReferenceBuilder</a></span>&nbsp;<span class="element-name">cartDiscountBuilder</span>()</div>
+<div class="block">builder for cartDiscount subtype</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>builder</dd>
@@ -268,13 +297,165 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="builder(com.commercetools.history.models.common.Reference)">
-<h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a></span>&nbsp;<span class="element-name">builder</span><wbr><span class="parameters">(<a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&nbsp;template)</span></div>
-<div class="block">create builder for Reference instance</div>
+<section class="detail" id="categoryBuilder()">
+<h3>categoryBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryReferenceBuilder.html" title="class in com.commercetools.history.models.common">CategoryReferenceBuilder</a></span>&nbsp;<span class="element-name">categoryBuilder</span>()</div>
+<div class="block">builder for category subtype</div>
 <dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>template</code> - instance with prefilled values for the builder</dd>
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="channelBuilder()">
+<h3>channelBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChannelReferenceBuilder.html" title="class in com.commercetools.history.models.common">ChannelReferenceBuilder</a></span>&nbsp;<span class="element-name">channelBuilder</span>()</div>
+<div class="block">builder for channel subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="customerGroupBuilder()">
+<h3>customerGroupBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerGroupReferenceBuilder.html" title="class in com.commercetools.history.models.common">CustomerGroupReferenceBuilder</a></span>&nbsp;<span class="element-name">customerGroupBuilder</span>()</div>
+<div class="block">builder for customerGroup subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="customerBuilder()">
+<h3>customerBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerReferenceBuilder.html" title="class in com.commercetools.history.models.common">CustomerReferenceBuilder</a></span>&nbsp;<span class="element-name">customerBuilder</span>()</div>
+<div class="block">builder for customer subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="discountCodeBuilder()">
+<h3>discountCodeBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DiscountCodeReferenceBuilder.html" title="class in com.commercetools.history.models.common">DiscountCodeReferenceBuilder</a></span>&nbsp;<span class="element-name">discountCodeBuilder</span>()</div>
+<div class="block">builder for discountCode subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="paymentBuilder()">
+<h3>paymentBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentReferenceBuilder.html" title="class in com.commercetools.history.models.common">PaymentReferenceBuilder</a></span>&nbsp;<span class="element-name">paymentBuilder</span>()</div>
+<div class="block">builder for payment subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="productDiscountBuilder()">
+<h3>productDiscountBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDiscountReferenceBuilder.html" title="class in com.commercetools.history.models.common">ProductDiscountReferenceBuilder</a></span>&nbsp;<span class="element-name">productDiscountBuilder</span>()</div>
+<div class="block">builder for productDiscount subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="productBuilder()">
+<h3>productBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductReferenceBuilder.html" title="class in com.commercetools.history.models.common">ProductReferenceBuilder</a></span>&nbsp;<span class="element-name">productBuilder</span>()</div>
+<div class="block">builder for product subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="productSelectionBuilder()">
+<h3>productSelectionBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSelectionReferenceBuilder.html" title="class in com.commercetools.history.models.common">ProductSelectionReferenceBuilder</a></span>&nbsp;<span class="element-name">productSelectionBuilder</span>()</div>
+<div class="block">builder for productSelection subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="productTypeBuilder()">
+<h3>productTypeBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeReferenceBuilder.html" title="class in com.commercetools.history.models.common">ProductTypeReferenceBuilder</a></span>&nbsp;<span class="element-name">productTypeBuilder</span>()</div>
+<div class="block">builder for productType subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="recurrencePolicyBuilder()">
+<h3>recurrencePolicyBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RecurrencePolicyReferenceBuilder.html" title="class in com.commercetools.history.models.common">RecurrencePolicyReferenceBuilder</a></span>&nbsp;<span class="element-name">recurrencePolicyBuilder</span>()</div>
+<div class="block">builder for recurrencePolicy subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="shippingMethodBuilder()">
+<h3>shippingMethodBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingMethodReferenceBuilder.html" title="class in com.commercetools.history.models.common">ShippingMethodReferenceBuilder</a></span>&nbsp;<span class="element-name">shippingMethodBuilder</span>()</div>
+<div class="block">builder for shippingMethod subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="stateBuilder()">
+<h3>stateBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StateReferenceBuilder.html" title="class in com.commercetools.history.models.common">StateReferenceBuilder</a></span>&nbsp;<span class="element-name">stateBuilder</span>()</div>
+<div class="block">builder for state subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="taxCategoryBuilder()">
+<h3>taxCategoryBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TaxCategoryReferenceBuilder.html" title="class in com.commercetools.history.models.common">TaxCategoryReferenceBuilder</a></span>&nbsp;<span class="element-name">taxCategoryBuilder</span>()</div>
+<div class="block">builder for taxCategory subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="typeBuilder()">
+<h3>typeBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeReferenceBuilder.html" title="class in com.commercetools.history.models.common">TypeReferenceBuilder</a></span>&nbsp;<span class="element-name">typeBuilder</span>()</div>
+<div class="block">builder for type subtype</div>
+<dl class="notes">
 <dt>Returns:</dt>
 <dd>builder</dd>
 </dl>

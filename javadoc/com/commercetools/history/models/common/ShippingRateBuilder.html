@@ -89,8 +89,6 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
  <pre><code class='java'>
      ShippingRate shippingRate = ShippingRate.builder()
              .price(priceBuilder -> priceBuilder)
-             .freeAbove(freeAboveBuilder -> freeAboveBuilder)
-             .isMatching(true)
              .plusTiers(tiersBuilder -> tiersBuilder)
              .build()
  </code></pre>
@@ -125,7 +123,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addTiers(java.util.function.Function)" class="member-name-link">addTiers</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShippingRatePriceTierBuilder.html" title="class in com.commercetools.history.models.common">ShippingRatePriceTierBuilder</a>,<wbr><a href="ShippingRatePriceTier.html" title="interface in com.commercetools.history.models.common">ShippingRatePriceTier</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">add the value to the tiers using the builder function</div>
+<div class="block">Price tiers for the ShippingRate.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ShippingRate.html" title="interface in com.commercetools.history.models.common">ShippingRate</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
@@ -138,39 +136,39 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">builds ShippingRate without checking for non-null required values</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#freeAbove(com.commercetools.history.models.common.Money)" class="member-name-link">freeAbove</a><wbr>(<a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a>&nbsp;freeAbove)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#freeAbove(com.commercetools.history.models.common.CentPrecisionMoney)" class="member-name-link">freeAbove</a><wbr>(<a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a>&nbsp;freeAbove)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the freeAbove</div>
+<div class="block"><span>Free shipping</span> is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#freeAbove(java.util.function.Function)" class="member-name-link">freeAbove</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a>,<wbr><a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#freeAbove(java.util.function.Function)" class="member-name-link">freeAbove</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CentPrecisionMoneyBuilder.html" title="class in com.commercetools.history.models.common">CentPrecisionMoneyBuilder</a>,<wbr><a href="CentPrecisionMoneyBuilder.html" title="class in com.commercetools.history.models.common">CentPrecisionMoneyBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the freeAbove using the builder function</div>
+<div class="block"><span>Free shipping</span> is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFreeAbove()" class="member-name-link">getFreeAbove</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of freeAbove}</div>
+<div class="block"><span>Free shipping</span> is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIsMatching()" class="member-name-link">getIsMatching</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Only appears in response to requests for ShippingMethods by Cart or location to mark this shipping rate as one that matches the Cart or location.</div>
+<div class="block"><code>true</code> if the ShippingRate matches given <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Location" rel="nofollow">Location</a>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPrice()" class="member-name-link">getPrice</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of price}</div>
+<div class="block">Currency amount of the ShippingRate.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.history.models.common">ShippingRatePriceTier</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTiers()" class="member-name-link">getTiers</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of tiers}</div>
+<div class="block">Price tiers for the ShippingRate.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isMatching(java.lang.Boolean)" class="member-name-link">isMatching</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isMatching)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Only appears in response to requests for ShippingMethods by Cart or location to mark this shipping rate as one that matches the Cart or location.</div>
+<div class="block"><code>true</code> if the ShippingRate matches given <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Location" rel="nofollow">Location</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -185,52 +183,52 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusTiers(com.commercetools.history.models.common.ShippingRatePriceTier...)" class="member-name-link">plusTiers</a><wbr>(<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.history.models.common">ShippingRatePriceTier</a>...&nbsp;tiers)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">add values to the tiers</div>
+<div class="block">Price tiers for the ShippingRate.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusTiers(java.util.function.Function)" class="member-name-link">plusTiers</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShippingRatePriceTierBuilder.html" title="class in com.commercetools.history.models.common">ShippingRatePriceTierBuilder</a>,<wbr><a href="ShippingRatePriceTierBuilder.html" title="class in com.commercetools.history.models.common">ShippingRatePriceTierBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">add the value to the tiers using the builder function</div>
+<div class="block">Price tiers for the ShippingRate.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#price(com.commercetools.history.models.common.Money)" class="member-name-link">price</a><wbr>(<a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a>&nbsp;price)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#price(com.commercetools.history.models.common.CentPrecisionMoney)" class="member-name-link">price</a><wbr>(<a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a>&nbsp;price)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the price</div>
+<div class="block">Currency amount of the ShippingRate.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#price(java.util.function.Function)" class="member-name-link">price</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a>,<wbr><a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#price(java.util.function.Function)" class="member-name-link">price</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CentPrecisionMoneyBuilder.html" title="class in com.commercetools.history.models.common">CentPrecisionMoneyBuilder</a>,<wbr><a href="CentPrecisionMoneyBuilder.html" title="class in com.commercetools.history.models.common">CentPrecisionMoneyBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the price using the builder function</div>
+<div class="block">Currency amount of the ShippingRate.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTiers(java.util.function.Function)" class="member-name-link">setTiers</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShippingRatePriceTierBuilder.html" title="class in com.commercetools.history.models.common">ShippingRatePriceTierBuilder</a>,<wbr><a href="ShippingRatePriceTier.html" title="interface in com.commercetools.history.models.common">ShippingRatePriceTier</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the tiers using the builder function</div>
+<div class="block">Price tiers for the ShippingRate.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tiers(com.commercetools.history.models.common.ShippingRatePriceTier...)" class="member-name-link">tiers</a><wbr>(<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.history.models.common">ShippingRatePriceTier</a>...&nbsp;tiers)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set values to the tiers</div>
+<div class="block">Price tiers for the ShippingRate.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tiers(java.util.List)" class="member-name-link">tiers</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.history.models.common">ShippingRatePriceTier</a>&gt;&nbsp;tiers)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set value to the tiers</div>
+<div class="block">Price tiers for the ShippingRate.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withFreeAbove(java.util.function.Function)" class="member-name-link">withFreeAbove</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a>,<wbr><a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withFreeAbove(java.util.function.Function)" class="member-name-link">withFreeAbove</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CentPrecisionMoneyBuilder.html" title="class in com.commercetools.history.models.common">CentPrecisionMoneyBuilder</a>,<wbr><a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the freeAbove using the builder function</div>
+<div class="block"><span>Free shipping</span> is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withPrice(java.util.function.Function)" class="member-name-link">withPrice</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a>,<wbr><a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withPrice(java.util.function.Function)" class="member-name-link">withPrice</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CentPrecisionMoneyBuilder.html" title="class in com.commercetools.history.models.common">CentPrecisionMoneyBuilder</a>,<wbr><a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the price using the builder function</div>
+<div class="block">Currency amount of the ShippingRate.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTiers(java.util.function.Function)" class="member-name-link">withTiers</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShippingRatePriceTierBuilder.html" title="class in com.commercetools.history.models.common">ShippingRatePriceTierBuilder</a>,<wbr><a href="ShippingRatePriceTierBuilder.html" title="class in com.commercetools.history.models.common">ShippingRatePriceTierBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the tiers using the builder function</div>
+<div class="block">Price tiers for the ShippingRate.</div>
 </div>
 </div>
 </div>
@@ -266,8 +264,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="price(java.util.function.Function)">
 <h3>price</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></span>&nbsp;<span class="element-name">price</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a>,<wbr><a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the price using the builder function</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></span>&nbsp;<span class="element-name">price</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CentPrecisionMoneyBuilder.html" title="class in com.commercetools.history.models.common">CentPrecisionMoneyBuilder</a>,<wbr><a href="CentPrecisionMoneyBuilder.html" title="class in com.commercetools.history.models.common">CentPrecisionMoneyBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Currency amount of the ShippingRate.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the price value</dd>
@@ -279,8 +277,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="withPrice(java.util.function.Function)">
 <h3>withPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></span>&nbsp;<span class="element-name">withPrice</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a>,<wbr><a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the price using the builder function</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></span>&nbsp;<span class="element-name">withPrice</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CentPrecisionMoneyBuilder.html" title="class in com.commercetools.history.models.common">CentPrecisionMoneyBuilder</a>,<wbr><a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Currency amount of the ShippingRate.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the price value</dd>
@@ -290,10 +288,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="price(com.commercetools.history.models.common.Money)">
+<section class="detail" id="price(com.commercetools.history.models.common.CentPrecisionMoney)">
 <h3>price</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></span>&nbsp;<span class="element-name">price</span><wbr><span class="parameters">(<a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a>&nbsp;price)</span></div>
-<div class="block">set the value to the price</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></span>&nbsp;<span class="element-name">price</span><wbr><span class="parameters">(<a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a>&nbsp;price)</span></div>
+<div class="block"><p>Currency amount of the ShippingRate.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>price</code> - value to be set</dd>
@@ -305,8 +303,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="freeAbove(java.util.function.Function)">
 <h3>freeAbove</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></span>&nbsp;<span class="element-name">freeAbove</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a>,<wbr><a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the freeAbove using the builder function</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></span>&nbsp;<span class="element-name">freeAbove</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CentPrecisionMoneyBuilder.html" title="class in com.commercetools.history.models.common">CentPrecisionMoneyBuilder</a>,<wbr><a href="CentPrecisionMoneyBuilder.html" title="class in com.commercetools.history.models.common">CentPrecisionMoneyBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p><span>Free shipping</span> is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the freeAbove value</dd>
@@ -318,8 +316,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="withFreeAbove(java.util.function.Function)">
 <h3>withFreeAbove</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></span>&nbsp;<span class="element-name">withFreeAbove</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a>,<wbr><a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the freeAbove using the builder function</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></span>&nbsp;<span class="element-name">withFreeAbove</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CentPrecisionMoneyBuilder.html" title="class in com.commercetools.history.models.common">CentPrecisionMoneyBuilder</a>,<wbr><a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p><span>Free shipping</span> is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the freeAbove value</dd>
@@ -329,10 +327,11 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="freeAbove(com.commercetools.history.models.common.Money)">
+<section class="detail" id="freeAbove(com.commercetools.history.models.common.CentPrecisionMoney)">
 <h3>freeAbove</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></span>&nbsp;<span class="element-name">freeAbove</span><wbr><span class="parameters">(<a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a>&nbsp;freeAbove)</span></div>
-<div class="block">set the value to the freeAbove</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></span>&nbsp;<span class="element-name">freeAbove</span><wbr><span class="parameters">(@Nullable
+ <a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a>&nbsp;freeAbove)</span></div>
+<div class="block"><p><span>Free shipping</span> is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>freeAbove</code> - value to be set</dd>
@@ -344,8 +343,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="isMatching(java.lang.Boolean)">
 <h3>isMatching</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></span>&nbsp;<span class="element-name">isMatching</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isMatching)</span></div>
-<div class="block"><p>Only appears in response to requests for ShippingMethods by Cart or location to mark this shipping rate as one that matches the Cart or location.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></span>&nbsp;<span class="element-name">isMatching</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isMatching)</span></div>
+<div class="block"><p><code>true</code> if the ShippingRate matches given <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Location" rel="nofollow">Location</a>. Only appears in response to requests for <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-cart:GET" rel="nofollow">Get ShippingMethods for a Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-location:GET" rel="nofollow">Get ShippingMethods for a Location</a>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>isMatching</code> - value to be set</dd>
@@ -358,7 +358,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="tiers(com.commercetools.history.models.common.ShippingRatePriceTier...)">
 <h3>tiers</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></span>&nbsp;<span class="element-name">tiers</span><wbr><span class="parameters">(<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.history.models.common">ShippingRatePriceTier</a>...&nbsp;tiers)</span></div>
-<div class="block">set values to the tiers</div>
+<div class="block"><p>Price tiers for the ShippingRate.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>tiers</code> - value to be set</dd>
@@ -371,7 +371,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="tiers(java.util.List)">
 <h3>tiers</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></span>&nbsp;<span class="element-name">tiers</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.history.models.common">ShippingRatePriceTier</a>&gt;&nbsp;tiers)</span></div>
-<div class="block">set value to the tiers</div>
+<div class="block"><p>Price tiers for the ShippingRate.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>tiers</code> - value to be set</dd>
@@ -384,7 +384,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="plusTiers(com.commercetools.history.models.common.ShippingRatePriceTier...)">
 <h3>plusTiers</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></span>&nbsp;<span class="element-name">plusTiers</span><wbr><span class="parameters">(<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.history.models.common">ShippingRatePriceTier</a>...&nbsp;tiers)</span></div>
-<div class="block">add values to the tiers</div>
+<div class="block"><p>Price tiers for the ShippingRate.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>tiers</code> - value to be set</dd>
@@ -397,7 +397,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="plusTiers(java.util.function.Function)">
 <h3>plusTiers</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></span>&nbsp;<span class="element-name">plusTiers</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShippingRatePriceTierBuilder.html" title="class in com.commercetools.history.models.common">ShippingRatePriceTierBuilder</a>,<wbr><a href="ShippingRatePriceTierBuilder.html" title="class in com.commercetools.history.models.common">ShippingRatePriceTierBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block">add the value to the tiers using the builder function</div>
+<div class="block"><p>Price tiers for the ShippingRate.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the tiers value</dd>
@@ -410,7 +410,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withTiers(java.util.function.Function)">
 <h3>withTiers</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></span>&nbsp;<span class="element-name">withTiers</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShippingRatePriceTierBuilder.html" title="class in com.commercetools.history.models.common">ShippingRatePriceTierBuilder</a>,<wbr><a href="ShippingRatePriceTierBuilder.html" title="class in com.commercetools.history.models.common">ShippingRatePriceTierBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the tiers using the builder function</div>
+<div class="block"><p>Price tiers for the ShippingRate.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the tiers value</dd>
@@ -423,7 +423,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="addTiers(java.util.function.Function)">
 <h3>addTiers</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></span>&nbsp;<span class="element-name">addTiers</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShippingRatePriceTierBuilder.html" title="class in com.commercetools.history.models.common">ShippingRatePriceTierBuilder</a>,<wbr><a href="ShippingRatePriceTier.html" title="interface in com.commercetools.history.models.common">ShippingRatePriceTier</a>&gt;&nbsp;builder)</span></div>
-<div class="block">add the value to the tiers using the builder function</div>
+<div class="block"><p>Price tiers for the ShippingRate.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the tiers value</dd>
@@ -436,7 +436,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="setTiers(java.util.function.Function)">
 <h3>setTiers</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></span>&nbsp;<span class="element-name">setTiers</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShippingRatePriceTierBuilder.html" title="class in com.commercetools.history.models.common">ShippingRatePriceTierBuilder</a>,<wbr><a href="ShippingRatePriceTier.html" title="interface in com.commercetools.history.models.common">ShippingRatePriceTier</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the tiers using the builder function</div>
+<div class="block"><p>Price tiers for the ShippingRate.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the tiers value</dd>
@@ -448,8 +448,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getPrice()">
 <h3>getPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a></span>&nbsp;<span class="element-name">getPrice</span>()</div>
-<div class="block">value of price}</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a></span>&nbsp;<span class="element-name">getPrice</span>()</div>
+<div class="block"><p>Currency amount of the ShippingRate.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>price</dd>
@@ -459,8 +459,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getFreeAbove()">
 <h3>getFreeAbove</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a></span>&nbsp;<span class="element-name">getFreeAbove</span>()</div>
-<div class="block">value of freeAbove}</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CentPrecisionMoney.html" title="interface in com.commercetools.history.models.common">CentPrecisionMoney</a></span>&nbsp;<span class="element-name">getFreeAbove</span>()</div>
+<div class="block"><p><span>Free shipping</span> is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>freeAbove</dd>
@@ -470,8 +471,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getIsMatching()">
 <h3>getIsMatching</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getIsMatching</span>()</div>
-<div class="block"><p>Only appears in response to requests for ShippingMethods by Cart or location to mark this shipping rate as one that matches the Cart or location.</p></div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getIsMatching</span>()</div>
+<div class="block"><p><code>true</code> if the ShippingRate matches given <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Location" rel="nofollow">Location</a>. Only appears in response to requests for <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-cart:GET" rel="nofollow">Get ShippingMethods for a Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-location:GET" rel="nofollow">Get ShippingMethods for a Location</a>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>isMatching</dd>
@@ -482,7 +484,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getTiers()">
 <h3>getTiers</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.history.models.common">ShippingRatePriceTier</a>&gt;</span>&nbsp;<span class="element-name">getTiers</span>()</div>
-<div class="block">value of tiers}</div>
+<div class="block"><p>Price tiers for the ShippingRate.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>tiers</dd>

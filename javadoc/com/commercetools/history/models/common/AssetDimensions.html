@@ -73,15 +73,15 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">AssetDimensions</span></div>
-<div class="block">AssetDimensions
+<div class="block"><p>Dimensions of the Asset source specified by the number of pixels.</p>
 
  <hr>
  Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
      AssetDimensions assetDimensions = AssetDimensions.builder()
-             .w(1)
-             .h(1)
+             .w(0.3)
+             .h(0.3)
              .build()
  </code></pre>
  </div></div>
@@ -119,10 +119,14 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getH()" class="member-name-link">getH</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Height of the Asset source.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getW()" class="member-name-link">getW</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Width of the Asset source.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="AssetDimensions.html" title="interface in com.commercetools.history.models.common">AssetDimensions</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
@@ -136,12 +140,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setH(java.lang.Integer)" class="member-name-link">setH</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;h)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set h</div>
+<div class="block">Height of the Asset source.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setW(java.lang.Integer)" class="member-name-link">setW</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;w)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set w</div>
+<div class="block">Width of the Asset source.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="AssetDimensions.html" title="interface in com.commercetools.history.models.common">AssetDimensions</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -172,6 +176,7 @@ loadScripts(document, 'script');</script>
 <h3>getW</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getW</span>()</div>
+<div class="block"><p>Width of the Asset source.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>w</dd>
@@ -183,6 +188,7 @@ loadScripts(document, 'script');</script>
 <h3>getH</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getH</span>()</div>
+<div class="block"><p>Height of the Asset source.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>h</dd>
@@ -193,7 +199,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setW(java.lang.Integer)">
 <h3>setW</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setW</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;w)</span></div>
-<div class="block">set w</div>
+<div class="block"><p>Width of the Asset source.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>w</code> - value to be set</dd>
@@ -204,7 +210,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setH(java.lang.Integer)">
 <h3>setH</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setH</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;h)</span></div>
-<div class="block">set h</div>
+<div class="block"><p>Height of the Asset source.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>h</code> - value to be set</dd>

@@ -80,7 +80,7 @@ loadScripts(document, 'script');</script>
  <div class=code-example>
  <pre><code class='java'>
      ItemState itemState = ItemState.builder()
-             .quantity(1)
+             .quantity(0.3)
              .state(stateBuilder -> stateBuilder)
              .build()
  </code></pre>
@@ -117,12 +117,16 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of ItemState</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getQuantity()" class="member-name-link">getQuantity</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a></code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Number of Line Items or Custom Line Items in this State.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="StateReference.html" title="interface in com.commercetools.history.models.common">StateReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getState()" class="member-name-link">getState</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">State of the Line Items or Custom Line Items in a custom workflow.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ItemState.html" title="interface in com.commercetools.history.models.common">ItemState</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
@@ -134,14 +138,14 @@ loadScripts(document, 'script');</script>
 <div class="block">factory method to create a shallow copy ItemState</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setQuantity(java.lang.Integer)" class="member-name-link">setQuantity</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;quantity)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setQuantity(java.lang.Long)" class="member-name-link">setQuantity</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantity)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set quantity</div>
+<div class="block">Number of Line Items or Custom Line Items in this State.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setState(com.commercetools.history.models.common.Reference)" class="member-name-link">setState</a><wbr>(<a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&nbsp;state)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setState(com.commercetools.history.models.common.StateReference)" class="member-name-link">setState</a><wbr>(<a href="StateReference.html" title="interface in com.commercetools.history.models.common">StateReference</a>&nbsp;state)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set state</div>
+<div class="block">State of the Line Items or Custom Line Items in a custom workflow.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ItemState.html" title="interface in com.commercetools.history.models.common">ItemState</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -171,7 +175,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getQuantity()">
 <h3>getQuantity</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getQuantity</span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getQuantity</span>()</div>
+<div class="block"><p>Number of Line Items or Custom Line Items in this State.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>quantity</dd>
@@ -183,7 +188,8 @@ loadScripts(document, 'script');</script>
 <h3>getState</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a></span>&nbsp;<span class="element-name">getState</span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="StateReference.html" title="interface in com.commercetools.history.models.common">StateReference</a></span>&nbsp;<span class="element-name">getState</span>()</div>
+<div class="block"><p>State of the Line Items or Custom Line Items in a custom workflow.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>state</dd>
@@ -191,10 +197,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="setQuantity(java.lang.Integer)">
+<section class="detail" id="setQuantity(java.lang.Long)">
 <h3>setQuantity</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setQuantity</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;quantity)</span></div>
-<div class="block">set quantity</div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setQuantity</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantity)</span></div>
+<div class="block"><p>Number of Line Items or Custom Line Items in this State.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>quantity</code> - value to be set</dd>
@@ -202,10 +208,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="setState(com.commercetools.history.models.common.Reference)">
+<section class="detail" id="setState(com.commercetools.history.models.common.StateReference)">
 <h3>setState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setState</span><wbr><span class="parameters">(<a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&nbsp;state)</span></div>
-<div class="block">set state</div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setState</span><wbr><span class="parameters">(<a href="StateReference.html" title="interface in com.commercetools.history.models.common">StateReference</a>&nbsp;state)</span></div>
+<div class="block"><p>State of the Line Items or Custom Line Items in a custom workflow.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>state</code> - value to be set</dd>

@@ -89,7 +89,7 @@ implements <a href="ErrorableTrait.html" title="interface in com.commercetools.a
 <div class="block"><p>Checks if a ShoppingList exists with the provided <code>id</code> for the authenticated Customer or anonymous user. Returns a <code>200</code> status if successful.</p>
   <p>A <span>Not Found</span> error is returned in the following scenarios:</p>
   <ul>
-   <li>If no ShoppingList exists for the provided <code>id</code>.</li>
+   <li>If no ShoppingList exists with the provided <code>id</code>.</li>
    <li>If a ShoppingList exists but does not contain either an <code>anonymousId</code> that matches the <span>anonymous_id:{id}</span> scope, or a <code>customer</code> with <code>id</code> value that matches the <span>customer:{id}</span> scope.</li>
   </ul>
 

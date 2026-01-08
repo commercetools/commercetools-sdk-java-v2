@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ReturnInfo</span></div>
-<div class="block">ReturnInfo
+<div class="block"><p>Stores information about returns connected to an Order.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -81,8 +81,6 @@ loadScripts(document, 'script');</script>
  <pre><code class='java'>
      ReturnInfo returnInfo = ReturnInfo.builder()
              .plusItems(itemsBuilder -> itemsBuilder)
-             .returnTrackingId("{returnTrackingId}")
-             .returnDate("{returnDate}")
              .build()
  </code></pre>
  </div></div>
@@ -120,14 +118,18 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ReturnItem.html" title="interface in com.commercetools.history.models.common">ReturnItem</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getItems()" class="member-name-link">getItems</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Information on the Line Items or Custom Line Items returned.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReturnDate()" class="member-name-link">getReturnDate</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Date and time (UTC) the return is initiated.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReturnTrackingId()" class="member-name-link">getReturnTrackingId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Identifies, which return tracking ID is connected to this particular return.</div>
+<div class="block">User-defined identifier to track the return.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ReturnInfo.html" title="interface in com.commercetools.history.models.common">ReturnInfo</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -142,22 +144,22 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setItems(com.commercetools.history.models.common.ReturnItem...)" class="member-name-link">setItems</a><wbr>(<a href="ReturnItem.html" title="interface in com.commercetools.history.models.common">ReturnItem</a>...&nbsp;items)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set items</div>
+<div class="block">Information on the Line Items or Custom Line Items returned.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setItems(java.util.List)" class="member-name-link">setItems</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ReturnItem.html" title="interface in com.commercetools.history.models.common">ReturnItem</a>&gt;&nbsp;items)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set items</div>
+<div class="block">Information on the Line Items or Custom Line Items returned.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setReturnDate(java.lang.String)" class="member-name-link">setReturnDate</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;returnDate)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setReturnDate(java.time.ZonedDateTime)" class="member-name-link">setReturnDate</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;returnDate)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set returnDate</div>
+<div class="block">Date and time (UTC) the return is initiated.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setReturnTrackingId(java.lang.String)" class="member-name-link">setReturnTrackingId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;returnTrackingId)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Identifies, which return tracking ID is connected to this particular return.</div>
+<div class="block">User-defined identifier to track the return.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ReturnInfo.html" title="interface in com.commercetools.history.models.common">ReturnInfo</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -189,6 +191,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ReturnItem.html" title="interface in com.commercetools.history.models.common">ReturnItem</a>&gt;</span>&nbsp;<span class="element-name">getItems</span>()</div>
+<div class="block"><p>Information on the Line Items or Custom Line Items returned.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>items</dd>
@@ -198,9 +201,8 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getReturnTrackingId()">
 <h3>getReturnTrackingId</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getReturnTrackingId</span>()</div>
-<div class="block"><p>Identifies, which return tracking ID is connected to this particular return.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getReturnTrackingId</span>()</div>
+<div class="block"><p>User-defined identifier to track the return.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>returnTrackingId</dd>
@@ -210,8 +212,8 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getReturnDate()">
 <h3>getReturnDate</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getReturnDate</span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getReturnDate</span>()</div>
+<div class="block"><p>Date and time (UTC) the return is initiated.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>returnDate</dd>
@@ -222,7 +224,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setItems(com.commercetools.history.models.common.ReturnItem...)">
 <h3>setItems</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setItems</span><wbr><span class="parameters">(<a href="ReturnItem.html" title="interface in com.commercetools.history.models.common">ReturnItem</a>...&nbsp;items)</span></div>
-<div class="block">set items</div>
+<div class="block"><p>Information on the Line Items or Custom Line Items returned.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>items</code> - values to be set</dd>
@@ -233,7 +235,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setItems(java.util.List)">
 <h3>setItems</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setItems</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ReturnItem.html" title="interface in com.commercetools.history.models.common">ReturnItem</a>&gt;&nbsp;items)</span></div>
-<div class="block">set items</div>
+<div class="block"><p>Information on the Line Items or Custom Line Items returned.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>items</code> - values to be set</dd>
@@ -244,7 +246,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setReturnTrackingId(java.lang.String)">
 <h3>setReturnTrackingId</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setReturnTrackingId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;returnTrackingId)</span></div>
-<div class="block"><p>Identifies, which return tracking ID is connected to this particular return.</p></div>
+<div class="block"><p>User-defined identifier to track the return.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>returnTrackingId</code> - value to be set</dd>
@@ -252,10 +254,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="setReturnDate(java.lang.String)">
+<section class="detail" id="setReturnDate(java.time.ZonedDateTime)">
 <h3>setReturnDate</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setReturnDate</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;returnDate)</span></div>
-<div class="block">set returnDate</div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setReturnDate</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;returnDate)</span></div>
+<div class="block"><p>Date and time (UTC) the return is initiated.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>returnDate</code> - value to be set</dd>

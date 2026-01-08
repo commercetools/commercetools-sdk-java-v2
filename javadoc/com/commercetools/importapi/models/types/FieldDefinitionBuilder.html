@@ -145,7 +145,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Name of the Custom Field to define.</div>
+<div class="block">Name of the Custom Field that you want to define.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRequired()" class="member-name-link">getRequired</a>()</code></div>
@@ -175,7 +175,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="FieldDefinitionBuilder.html" title="class in com.commercetools.importapi.models.types">FieldDefinitionBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#name(java.lang.String)" class="member-name-link">name</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Name of the Custom Field to define.</div>
+<div class="block">Name of the Custom Field that you want to define.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="FieldDefinitionBuilder.html" title="class in com.commercetools.importapi.models.types">FieldDefinitionBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -268,7 +268,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="name(java.lang.String)">
 <h3>name</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="FieldDefinitionBuilder.html" title="class in com.commercetools.importapi.models.types">FieldDefinitionBuilder</a></span>&nbsp;<span class="element-name">name</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
-<div class="block"><p>Name of the Custom Field to define. Must be unique for a given <a href="https://docs.commercetools.com/apis/ctp:import:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>. In case there is a FieldDefinition with the same <code>name</code> in another Type, both FieldDefinitions must have the same <code>type</code>. This value cannot be changed after the Type is imported.</p></div>
+<div class="block"><p>Name of the Custom Field that you want to define. The name must be unique for a given <a href="https://docs.commercetools.com/apis/ctp:import:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>. If a FieldDefinition with the same <code>name</code> is defined in another <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> for the same <a href="https://docs.commercetools.com/apis/ctp:import:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>, then both FieldDefinitions must have the same <code>type</code>. This value can't be changed after you import the Type.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>name</code> - value to be set</dd>
@@ -358,7 +358,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getName()">
 <h3>getName</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getName</span>()</div>
-<div class="block"><p>Name of the Custom Field to define. Must be unique for a given <a href="https://docs.commercetools.com/apis/ctp:import:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>. In case there is a FieldDefinition with the same <code>name</code> in another Type, both FieldDefinitions must have the same <code>type</code>. This value cannot be changed after the Type is imported.</p></div>
+<div class="block"><p>Name of the Custom Field that you want to define. The name must be unique for a given <a href="https://docs.commercetools.com/apis/ctp:import:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>. If a FieldDefinition with the same <code>name</code> is defined in another <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> for the same <a href="https://docs.commercetools.com/apis/ctp:import:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>, then both FieldDefinitions must have the same <code>type</code>. This value can't be changed after you import the Type.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>name</dd>

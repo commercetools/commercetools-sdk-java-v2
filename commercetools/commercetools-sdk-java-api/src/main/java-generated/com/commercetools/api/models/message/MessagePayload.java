@@ -583,6 +583,14 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for cartPurchaseOrderNumberSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartPurchaseOrderNumberSetMessagePayloadBuilder cartPurchaseOrderNumberSetBuilder() {
+        return com.commercetools.api.models.message.CartPurchaseOrderNumberSetMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for cartUnfrozen subtype
      * @return builder
      */

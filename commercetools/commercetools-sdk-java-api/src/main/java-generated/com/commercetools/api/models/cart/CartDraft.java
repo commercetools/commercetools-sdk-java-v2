@@ -292,6 +292,15 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public CustomFieldsDraft getCustom();
 
     /**
+     *  <p>User-defined identifier of a purchase order.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> or Merchant to track the purchase order during the <span>quote and order flow</span>.</p>
+     * @return purchaseOrderNumber
+     */
+
+    @JsonProperty("purchaseOrderNumber")
+    public String getPurchaseOrderNumber();
+
+    /**
      *  <p>Currency the Cart uses.</p>
      * @param currency value to be set
      */
@@ -562,6 +571,14 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public void setCustom(final CustomFieldsDraft custom);
 
     /**
+     *  <p>User-defined identifier of a purchase order.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> or Merchant to track the purchase order during the <span>quote and order flow</span>.</p>
+     * @param purchaseOrderNumber value to be set
+     */
+
+    public void setPurchaseOrderNumber(final String purchaseOrderNumber);
+
+    /**
      * factory method
      * @return instance of CartDraft
      */
@@ -606,6 +623,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
         instance.setOrigin(template.getOrigin());
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
         instance.setCustom(template.getCustom());
+        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         return instance;
     }
 
@@ -679,6 +697,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
         instance.setOrigin(template.getOrigin());
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         return instance;
     }
 

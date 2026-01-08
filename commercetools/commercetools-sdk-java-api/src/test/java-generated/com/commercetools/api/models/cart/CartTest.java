@@ -106,6 +106,7 @@ public class CartTest {
                 new Object[] { "discountTypeCombination", Cart.builder()
                         .discountTypeCombination(new com.commercetools.api.models.cart.DiscountTypeCombinationImpl()) },
                 new Object[] { "deleteDaysAfterLastModification", Cart.builder().deleteDaysAfterLastModification(3) },
+                new Object[] { "purchaseOrderNumber", Cart.builder().purchaseOrderNumber("purchaseOrderNumber") },
                 new Object[] { "createdAt", Cart.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
                 new Object[] { "lastModifiedAt",
                         Cart.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
@@ -431,6 +432,13 @@ public class CartTest {
         Cart value = Cart.of();
         value.setDeleteDaysAfterLastModification(3);
         Assertions.assertThat(value.getDeleteDaysAfterLastModification()).isEqualTo(3);
+    }
+
+    @Test
+    public void purchaseOrderNumber() {
+        Cart value = Cart.of();
+        value.setPurchaseOrderNumber("purchaseOrderNumber");
+        Assertions.assertThat(value.getPurchaseOrderNumber()).isEqualTo("purchaseOrderNumber");
     }
 
     @Test

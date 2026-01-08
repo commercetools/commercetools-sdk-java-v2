@@ -416,6 +416,15 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public Integer getDeleteDaysAfterLastModification();
 
     /**
+     *  <p>User-defined identifier of a purchase order.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> or Merchant to track the purchase order during the <span>quote and order flow</span>.</p>
+     * @return purchaseOrderNumber
+     */
+
+    @JsonProperty("purchaseOrderNumber")
+    public String getPurchaseOrderNumber();
+
+    /**
      *  <p>Date and time (UTC) the Cart was initially created.</p>
      * @return createdAt
      */
@@ -804,6 +813,14 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification);
 
     /**
+     *  <p>User-defined identifier of a purchase order.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> or Merchant to track the purchase order during the <span>quote and order flow</span>.</p>
+     * @param purchaseOrderNumber value to be set
+     */
+
+    public void setPurchaseOrderNumber(final String purchaseOrderNumber);
+
+    /**
      *  <p>Date and time (UTC) the Cart was initially created.</p>
      * @param createdAt value to be set
      */
@@ -889,6 +906,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
         instance.setCustom(template.getCustom());
         instance.setDiscountTypeCombination(template.getDiscountTypeCombination());
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
+        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setLastModifiedBy(template.getLastModifiedBy());
         instance.setCreatedBy(template.getCreatedBy());
         return instance;
@@ -987,6 +1005,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
         instance.setDiscountTypeCombination(
             com.commercetools.api.models.cart.DiscountTypeCombination.deepCopy(template.getDiscountTypeCombination()));
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
+        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setLastModifiedBy(
             com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));

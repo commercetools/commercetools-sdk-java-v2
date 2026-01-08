@@ -108,6 +108,8 @@ public class CartImpl implements Cart, ModelBase {
 
     private Integer deleteDaysAfterLastModification;
 
+    private String purchaseOrderNumber;
+
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
 
     private com.commercetools.api.models.common.CreatedBy createdBy;
@@ -156,6 +158,7 @@ public class CartImpl implements Cart, ModelBase {
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("discountTypeCombination") final com.commercetools.api.models.cart.DiscountTypeCombination discountTypeCombination,
             @JsonProperty("deleteDaysAfterLastModification") final Integer deleteDaysAfterLastModification,
+            @JsonProperty("purchaseOrderNumber") final String purchaseOrderNumber,
             @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
             @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.id = id;
@@ -201,6 +204,7 @@ public class CartImpl implements Cart, ModelBase {
         this.custom = custom;
         this.discountTypeCombination = discountTypeCombination;
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
+        this.purchaseOrderNumber = purchaseOrderNumber;
         this.lastModifiedBy = lastModifiedBy;
         this.createdBy = createdBy;
     }
@@ -568,6 +572,15 @@ public class CartImpl implements Cart, ModelBase {
     }
 
     /**
+     *  <p>User-defined identifier of a purchase order.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> or Merchant to track the purchase order during the <span>quote and order flow</span>.</p>
+     */
+
+    public String getPurchaseOrderNumber() {
+        return this.purchaseOrderNumber;
+    }
+
+    /**
      *  <p>IDs and references that last modified the Cart.</p>
      */
 
@@ -793,6 +806,10 @@ public class CartImpl implements Cart, ModelBase {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
     }
 
+    public void setPurchaseOrderNumber(final String purchaseOrderNumber) {
+        this.purchaseOrderNumber = purchaseOrderNumber;
+    }
+
     public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
     }
@@ -854,6 +871,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(custom, that.custom)
                 .append(discountTypeCombination, that.discountTypeCombination)
                 .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .append(purchaseOrderNumber, that.purchaseOrderNumber)
                 .append(lastModifiedBy, that.lastModifiedBy)
                 .append(createdBy, that.createdBy)
                 .append(id, that.id)
@@ -899,6 +917,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(custom, that.custom)
                 .append(discountTypeCombination, that.discountTypeCombination)
                 .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .append(purchaseOrderNumber, that.purchaseOrderNumber)
                 .append(lastModifiedBy, that.lastModifiedBy)
                 .append(createdBy, that.createdBy)
                 .isEquals();
@@ -949,6 +968,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(custom)
                 .append(discountTypeCombination)
                 .append(deleteDaysAfterLastModification)
+                .append(purchaseOrderNumber)
                 .append(lastModifiedBy)
                 .append(createdBy)
                 .toHashCode();
@@ -999,6 +1019,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append("custom", custom)
                 .append("discountTypeCombination", discountTypeCombination)
                 .append("deleteDaysAfterLastModification", deleteDaysAfterLastModification)
+                .append("purchaseOrderNumber", purchaseOrderNumber)
                 .append("lastModifiedBy", lastModifiedBy)
                 .append("createdBy", createdBy)
                 .build();

@@ -82,6 +82,8 @@ public class CartDraftImpl implements CartDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    private String purchaseOrderNumber;
+
     /**
      * create instance with all properties
      */
@@ -113,7 +115,8 @@ public class CartDraftImpl implements CartDraft, ModelBase {
             @JsonProperty("country") final String country, @JsonProperty("locale") final String locale,
             @JsonProperty("origin") final com.commercetools.api.models.cart.CartOrigin origin,
             @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+            @JsonProperty("purchaseOrderNumber") final String purchaseOrderNumber) {
         this.currency = currency;
         this.key = key;
         this.customerId = customerId;
@@ -144,6 +147,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
         this.origin = origin;
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         this.custom = custom;
+        this.purchaseOrderNumber = purchaseOrderNumber;
     }
 
     /**
@@ -403,6 +407,15 @@ public class CartDraftImpl implements CartDraft, ModelBase {
         return this.custom;
     }
 
+    /**
+     *  <p>User-defined identifier of a purchase order.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> or Merchant to track the purchase order during the <span>quote and order flow</span>.</p>
+     */
+
+    public String getPurchaseOrderNumber() {
+        return this.purchaseOrderNumber;
+    }
+
     public void setCurrency(final String currency) {
         this.currency = currency;
     }
@@ -555,6 +568,10 @@ public class CartDraftImpl implements CartDraft, ModelBase {
         this.custom = custom;
     }
 
+    public void setPurchaseOrderNumber(final String purchaseOrderNumber) {
+        this.purchaseOrderNumber = purchaseOrderNumber;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -595,6 +612,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .append(origin, that.origin)
                 .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
                 .append(custom, that.custom)
+                .append(purchaseOrderNumber, that.purchaseOrderNumber)
                 .append(currency, that.currency)
                 .append(key, that.key)
                 .append(customerId, that.customerId)
@@ -625,6 +643,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .append(origin, that.origin)
                 .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
                 .append(custom, that.custom)
+                .append(purchaseOrderNumber, that.purchaseOrderNumber)
                 .isEquals();
     }
 
@@ -660,6 +679,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .append(origin)
                 .append(deleteDaysAfterLastModification)
                 .append(custom)
+                .append(purchaseOrderNumber)
                 .toHashCode();
     }
 
@@ -695,6 +715,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .append("origin", origin)
                 .append("deleteDaysAfterLastModification", deleteDaysAfterLastModification)
                 .append("custom", custom)
+                .append("purchaseOrderNumber", purchaseOrderNumber)
                 .build();
     }
 

@@ -263,6 +263,10 @@ public class CartUpdateActionBuilder {
         return com.commercetools.api.models.cart.CartSetLocaleActionBuilder.of();
     }
 
+    public com.commercetools.api.models.cart.CartSetPurchaseOrderNumberActionBuilder setPurchaseOrderNumberBuilder() {
+        return com.commercetools.api.models.cart.CartSetPurchaseOrderNumberActionBuilder.of();
+    }
+
     public com.commercetools.api.models.cart.CartSetShippingAddressActionBuilder setShippingAddressBuilder() {
         return com.commercetools.api.models.cart.CartSetShippingAddressActionBuilder.of();
     }

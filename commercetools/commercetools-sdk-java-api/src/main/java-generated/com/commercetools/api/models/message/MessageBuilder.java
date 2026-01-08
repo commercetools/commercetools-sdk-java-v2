@@ -271,6 +271,10 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.CartFrozenMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.CartPurchaseOrderNumberSetMessageBuilder cartPurchaseOrderNumberSetBuilder() {
+        return com.commercetools.api.models.message.CartPurchaseOrderNumberSetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.CartUnfrozenMessageBuilder cartUnfrozenBuilder() {
         return com.commercetools.api.models.message.CartUnfrozenMessageBuilder.of();
     }

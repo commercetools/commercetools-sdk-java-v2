@@ -567,6 +567,14 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
     }
 
     /**
+     * builder for setPurchaseOrderNumber subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.cart.CartSetPurchaseOrderNumberActionBuilder setPurchaseOrderNumberBuilder() {
+        return com.commercetools.api.models.cart.CartSetPurchaseOrderNumberActionBuilder.of();
+    }
+
+    /**
      * builder for setShippingAddress subtype
      * @return builder
      */

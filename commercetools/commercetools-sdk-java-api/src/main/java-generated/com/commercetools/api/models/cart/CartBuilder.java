@@ -153,6 +153,9 @@ public class CartBuilder implements Builder<Cart> {
     private Integer deleteDaysAfterLastModification;
 
     @Nullable
+    private String purchaseOrderNumber;
+
+    @Nullable
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
 
     @Nullable
@@ -1558,6 +1561,18 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
+     *  <p>User-defined identifier of a purchase order.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> or Merchant to track the purchase order during the <span>quote and order flow</span>.</p>
+     * @param purchaseOrderNumber value to be set
+     * @return Builder
+     */
+
+    public CartBuilder purchaseOrderNumber(@Nullable final String purchaseOrderNumber) {
+        this.purchaseOrderNumber = purchaseOrderNumber;
+        return this;
+    }
+
+    /**
      *  <p>IDs and references that last modified the Cart.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
@@ -2051,6 +2066,17 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
+     *  <p>User-defined identifier of a purchase order.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> or Merchant to track the purchase order during the <span>quote and order flow</span>.</p>
+     * @return purchaseOrderNumber
+     */
+
+    @Nullable
+    public String getPurchaseOrderNumber() {
+        return this.purchaseOrderNumber;
+    }
+
+    /**
      *  <p>IDs and references that last modified the Cart.</p>
      * @return lastModifiedBy
      */
@@ -2101,7 +2127,7 @@ public class CartBuilder implements Builder<Cart> {
             inventoryMode, cartState, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo,
             shippingRateInput, shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts,
             refusedGifts, paymentInfo, country, locale, origin, custom, discountTypeCombination,
-            deleteDaysAfterLastModification, lastModifiedBy, createdBy);
+            deleteDaysAfterLastModification, purchaseOrderNumber, lastModifiedBy, createdBy);
     }
 
     /**
@@ -2115,7 +2141,7 @@ public class CartBuilder implements Builder<Cart> {
             inventoryMode, cartState, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo,
             shippingRateInput, shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts,
             refusedGifts, paymentInfo, country, locale, origin, custom, discountTypeCombination,
-            deleteDaysAfterLastModification, lastModifiedBy, createdBy);
+            deleteDaysAfterLastModification, purchaseOrderNumber, lastModifiedBy, createdBy);
     }
 
     /**
@@ -2176,6 +2202,7 @@ public class CartBuilder implements Builder<Cart> {
         builder.custom = template.getCustom();
         builder.discountTypeCombination = template.getDiscountTypeCombination();
         builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
+        builder.purchaseOrderNumber = template.getPurchaseOrderNumber();
         builder.lastModifiedBy = template.getLastModifiedBy();
         builder.createdBy = template.getCreatedBy();
         return builder;

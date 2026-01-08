@@ -322,7 +322,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
     public StateReference getState();
 
     /**
-     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the <span>Buyer</span>.</p>
+     *  <p>Identifier for a purchase order, usually in a B2B context. The purchase order number is typically entered by the <span>Buyer</span>.</p>
      * @return purchaseOrderNumber
      */
 
@@ -595,7 +595,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
     public void setState(final StateReference state);
 
     /**
-     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the <span>Buyer</span>.</p>
+     *  <p>Identifier for a purchase order, usually in a B2B context. The purchase order number is typically entered by the <span>Buyer</span>.</p>
      * @param purchaseOrderNumber value to be set
      */
 

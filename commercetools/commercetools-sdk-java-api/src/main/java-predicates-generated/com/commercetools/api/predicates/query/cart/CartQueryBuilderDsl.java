@@ -373,6 +373,12 @@ public class CartQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CartQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<CartQueryBuilderDsl> purchaseOrderNumber() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("purchaseOrderNumber")),
+            p -> new CombinationQueryPredicate<>(p, CartQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<CartQueryBuilderDsl> lastModifiedBy(
             Function<com.commercetools.api.predicates.query.common.LastModifiedByQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.LastModifiedByQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

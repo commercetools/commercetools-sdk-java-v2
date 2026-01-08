@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if one or more Quotes exist for the provided query predicate. Returns a <code>200</code> status if any Quotes match the query predicate, or a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error otherwise.</p>
+ *  <p>Checks if one or more Quotes exist for the provided query predicate for the authenticated Customer. Returns a <code>200 OK</code> status if any Quotes match the query predicate, or a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error otherwise.</p>
  *
  * <hr>
  * <div class=code-example>

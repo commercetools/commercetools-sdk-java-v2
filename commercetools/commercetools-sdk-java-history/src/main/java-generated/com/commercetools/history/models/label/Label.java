@@ -150,11 +150,27 @@ public interface Label {
     }
 
     /**
+     * builder for shippingMethodLabel subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.label.ShippingMethodLabelBuilder shippingMethodLabelBuilder() {
+        return com.commercetools.history.models.label.ShippingMethodLabelBuilder.of();
+    }
+
+    /**
      * builder for stagedQuoteLabel subtype
      * @return builder
      */
     public static com.commercetools.history.models.label.StagedQuoteLabelBuilder stagedQuoteLabelBuilder() {
         return com.commercetools.history.models.label.StagedQuoteLabelBuilder.of();
+    }
+
+    /**
+     * builder for standalonePriceLabel subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.label.StandalonePriceLabelBuilder standalonePriceLabelBuilder() {
+        return com.commercetools.history.models.label.StandalonePriceLabelBuilder.of();
     }
 
     /**

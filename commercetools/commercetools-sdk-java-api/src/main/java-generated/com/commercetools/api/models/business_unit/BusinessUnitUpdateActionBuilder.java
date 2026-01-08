@@ -23,6 +23,10 @@ public class BusinessUnitUpdateActionBuilder {
         return com.commercetools.api.models.business_unit.BusinessUnitAddBillingAddressIdActionBuilder.of();
     }
 
+    public com.commercetools.api.models.business_unit.BusinessUnitAddCustomerGroupAssignmentActionBuilder addCustomerGroupAssignmentBuilder() {
+        return com.commercetools.api.models.business_unit.BusinessUnitAddCustomerGroupAssignmentActionBuilder.of();
+    }
+
     public com.commercetools.api.models.business_unit.BusinessUnitAddShippingAddressIdActionBuilder addShippingAddressIdBuilder() {
         return com.commercetools.api.models.business_unit.BusinessUnitAddShippingAddressIdActionBuilder.of();
     }
@@ -71,6 +75,10 @@ public class BusinessUnitUpdateActionBuilder {
         return com.commercetools.api.models.business_unit.BusinessUnitRemoveBillingAddressIdActionBuilder.of();
     }
 
+    public com.commercetools.api.models.business_unit.BusinessUnitRemoveCustomerGroupAssignmentActionBuilder removeCustomerGroupAssignmentBuilder() {
+        return com.commercetools.api.models.business_unit.BusinessUnitRemoveCustomerGroupAssignmentActionBuilder.of();
+    }
+
     public com.commercetools.api.models.business_unit.BusinessUnitRemoveShippingAddressIdActionBuilder removeShippingAddressIdBuilder() {
         return com.commercetools.api.models.business_unit.BusinessUnitRemoveShippingAddressIdActionBuilder.of();
     }
@@ -101,6 +109,10 @@ public class BusinessUnitUpdateActionBuilder {
 
     public com.commercetools.api.models.business_unit.BusinessUnitSetCustomTypeActionBuilder setCustomTypeBuilder() {
         return com.commercetools.api.models.business_unit.BusinessUnitSetCustomTypeActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.business_unit.BusinessUnitSetCustomerGroupAssignmentsActionBuilder setCustomerGroupAssignmentsBuilder() {
+        return com.commercetools.api.models.business_unit.BusinessUnitSetCustomerGroupAssignmentsActionBuilder.of();
     }
 
     public com.commercetools.api.models.business_unit.BusinessUnitSetDefaultBillingAddressActionBuilder setDefaultBillingAddressBuilder() {

@@ -44,7 +44,7 @@ public class RecurringOrderCreatedMessageImpl implements RecurringOrderCreatedMe
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
-    private com.commercetools.api.models.recurring_order.RecurringOrder order;
+    private com.commercetools.api.models.recurring_order.RecurringOrder recurringOrder;
 
     /**
      * create instance with all properties
@@ -59,7 +59,7 @@ public class RecurringOrderCreatedMessageImpl implements RecurringOrderCreatedMe
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("order") final com.commercetools.api.models.recurring_order.RecurringOrder order) {
+            @JsonProperty("recurringOrder") final com.commercetools.api.models.recurring_order.RecurringOrder recurringOrder) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -70,7 +70,7 @@ public class RecurringOrderCreatedMessageImpl implements RecurringOrderCreatedMe
         this.resource = resource;
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-        this.order = order;
+        this.recurringOrder = recurringOrder;
         this.type = RECURRING_ORDER_CREATED;
     }
 
@@ -173,8 +173,8 @@ public class RecurringOrderCreatedMessageImpl implements RecurringOrderCreatedMe
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was created.</p>
      */
 
-    public com.commercetools.api.models.recurring_order.RecurringOrder getOrder() {
-        return this.order;
+    public com.commercetools.api.models.recurring_order.RecurringOrder getRecurringOrder() {
+        return this.recurringOrder;
     }
 
     public void setId(final String id) {
@@ -218,8 +218,8 @@ public class RecurringOrderCreatedMessageImpl implements RecurringOrderCreatedMe
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
     }
 
-    public void setOrder(final com.commercetools.api.models.recurring_order.RecurringOrder order) {
-        this.order = order;
+    public void setRecurringOrder(final com.commercetools.api.models.recurring_order.RecurringOrder recurringOrder) {
+        this.recurringOrder = recurringOrder;
     }
 
     @Override
@@ -243,7 +243,7 @@ public class RecurringOrderCreatedMessageImpl implements RecurringOrderCreatedMe
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
-                .append(order, that.order)
+                .append(recurringOrder, that.recurringOrder)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -255,7 +255,7 @@ public class RecurringOrderCreatedMessageImpl implements RecurringOrderCreatedMe
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
-                .append(order, that.order)
+                .append(recurringOrder, that.recurringOrder)
                 .isEquals();
     }
 
@@ -272,7 +272,7 @@ public class RecurringOrderCreatedMessageImpl implements RecurringOrderCreatedMe
                 .append(resourceVersion)
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
-                .append(order)
+                .append(recurringOrder)
                 .toHashCode();
     }
 
@@ -289,7 +289,7 @@ public class RecurringOrderCreatedMessageImpl implements RecurringOrderCreatedMe
                 .append("resourceVersion", resourceVersion)
                 .append("type", type)
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
-                .append("order", order)
+                .append("recurringOrder", recurringOrder)
                 .build();
     }
 

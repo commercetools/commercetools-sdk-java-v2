@@ -24,15 +24,15 @@ public class RecurringOrderCreatedMessagePayloadImpl implements RecurringOrderCr
 
     private String type;
 
-    private com.commercetools.api.models.recurring_order.RecurringOrder order;
+    private com.commercetools.api.models.recurring_order.RecurringOrder recurringOrder;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     RecurringOrderCreatedMessagePayloadImpl(
-            @JsonProperty("order") final com.commercetools.api.models.recurring_order.RecurringOrder order) {
-        this.order = order;
+            @JsonProperty("recurringOrder") final com.commercetools.api.models.recurring_order.RecurringOrder recurringOrder) {
+        this.recurringOrder = recurringOrder;
         this.type = RECURRING_ORDER_CREATED;
     }
 
@@ -55,12 +55,12 @@ public class RecurringOrderCreatedMessagePayloadImpl implements RecurringOrderCr
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was created.</p>
      */
 
-    public com.commercetools.api.models.recurring_order.RecurringOrder getOrder() {
-        return this.order;
+    public com.commercetools.api.models.recurring_order.RecurringOrder getRecurringOrder() {
+        return this.recurringOrder;
     }
 
-    public void setOrder(final com.commercetools.api.models.recurring_order.RecurringOrder order) {
-        this.order = order;
+    public void setRecurringOrder(final com.commercetools.api.models.recurring_order.RecurringOrder recurringOrder) {
+        this.recurringOrder = recurringOrder;
     }
 
     @Override
@@ -74,21 +74,21 @@ public class RecurringOrderCreatedMessagePayloadImpl implements RecurringOrderCr
         RecurringOrderCreatedMessagePayloadImpl that = (RecurringOrderCreatedMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
-                .append(order, that.order)
+                .append(recurringOrder, that.recurringOrder)
                 .append(type, that.type)
-                .append(order, that.order)
+                .append(recurringOrder, that.recurringOrder)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(order).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(recurringOrder).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
-                .append("order", order)
+                .append("recurringOrder", recurringOrder)
                 .build();
     }
 

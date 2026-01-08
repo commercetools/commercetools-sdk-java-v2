@@ -22,6 +22,9 @@ public interface PaymentComponentType extends JsonEnum {
     /**
     <p>A component that renders all the payment methods.</p> */
     PaymentComponentType DROP_IN = PaymentComponentTypeEnum.DROP_IN;
+    /**
+    <p>A component that renders Express Payments.</p> */
+    PaymentComponentType EXPRESS = PaymentComponentTypeEnum.EXPRESS;
 
     /**
      * possible values of PaymentComponentType
@@ -35,7 +38,12 @@ public interface PaymentComponentType extends JsonEnum {
         /**
          * DropIn
          */
-        DROP_IN("DropIn");
+        DROP_IN("DropIn"),
+
+        /**
+         * Express
+         */
+        EXPRESS("Express");
         private final String jsonName;
 
         private PaymentComponentTypeEnum(final String jsonName) {

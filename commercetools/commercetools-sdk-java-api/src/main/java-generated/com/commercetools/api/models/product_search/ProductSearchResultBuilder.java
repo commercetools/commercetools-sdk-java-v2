@@ -29,6 +29,7 @@ public class ProductSearchResultBuilder implements Builder<ProductSearchResult> 
     @Nullable
     private com.commercetools.api.models.product_search.ProductSearchMatchingVariants matchingVariants;
 
+    @Deprecated
     @Nullable
     private com.commercetools.api.models.product.ProductProjection productProjection;
 
@@ -83,11 +84,11 @@ public class ProductSearchResultBuilder implements Builder<ProductSearchResult> 
     }
 
     /**
-     *  <p>Projected data of the Product with <code>id</code>. Only present if data integration <span>with Product Projection parameters</span> is requested.</p>
+     *  <p>Projected data of the Product with <code>id</code>. Only present if deprecated data integration <span>with Product Projection parameters</span> is requested.</p>
      * @param builder function to build the productProjection value
      * @return Builder
      */
-
+    @Deprecated
     public ProductSearchResultBuilder productProjection(
             Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjectionBuilder> builder) {
         this.productProjection = builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of())
@@ -96,11 +97,11 @@ public class ProductSearchResultBuilder implements Builder<ProductSearchResult> 
     }
 
     /**
-     *  <p>Projected data of the Product with <code>id</code>. Only present if data integration <span>with Product Projection parameters</span> is requested.</p>
+     *  <p>Projected data of the Product with <code>id</code>. Only present if deprecated data integration <span>with Product Projection parameters</span> is requested.</p>
      * @param builder function to build the productProjection value
      * @return Builder
      */
-
+    @Deprecated
     public ProductSearchResultBuilder withProductProjection(
             Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjection> builder) {
         this.productProjection = builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of());
@@ -108,11 +109,11 @@ public class ProductSearchResultBuilder implements Builder<ProductSearchResult> 
     }
 
     /**
-     *  <p>Projected data of the Product with <code>id</code>. Only present if data integration <span>with Product Projection parameters</span> is requested.</p>
+     *  <p>Projected data of the Product with <code>id</code>. Only present if deprecated data integration <span>with Product Projection parameters</span> is requested.</p>
      * @param productProjection value to be set
      * @return Builder
      */
-
+    @Deprecated
     public ProductSearchResultBuilder productProjection(
             @Nullable final com.commercetools.api.models.product.ProductProjection productProjection) {
         this.productProjection = productProjection;
@@ -139,10 +140,10 @@ public class ProductSearchResultBuilder implements Builder<ProductSearchResult> 
     }
 
     /**
-     *  <p>Projected data of the Product with <code>id</code>. Only present if data integration <span>with Product Projection parameters</span> is requested.</p>
+     *  <p>Projected data of the Product with <code>id</code>. Only present if deprecated data integration <span>with Product Projection parameters</span> is requested.</p>
      * @return productProjection
      */
-
+    @Deprecated
     @Nullable
     public com.commercetools.api.models.product.ProductProjection getProductProjection() {
         return this.productProjection;

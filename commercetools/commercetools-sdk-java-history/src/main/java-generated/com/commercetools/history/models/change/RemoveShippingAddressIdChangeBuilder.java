@@ -117,7 +117,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     *  <p>Address removed from <code>shippingAddressesIds</code>.</p>
+     *  <p>Address removed from <code>shippingAddressIds</code>.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -129,7 +129,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     *  <p>Address removed from <code>shippingAddressesIds</code>.</p>
+     *  <p>Address removed from <code>shippingAddressIds</code>.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -141,7 +141,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     *  <p>Address removed from <code>shippingAddressesIds</code>.</p>
+     *  <p>Address removed from <code>shippingAddressIds</code>.</p>
      * @param address value to be set
      * @return Builder
      */
@@ -179,7 +179,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     *  <p>Address removed from <code>shippingAddressesIds</code>.</p>
+     *  <p>Address removed from <code>shippingAddressIds</code>.</p>
      * @return address
      */
 

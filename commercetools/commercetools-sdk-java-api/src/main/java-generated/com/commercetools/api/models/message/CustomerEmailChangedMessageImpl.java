@@ -46,6 +46,8 @@ public class CustomerEmailChangedMessageImpl implements CustomerEmailChangedMess
 
     private String email;
 
+    private String oldEmail;
+
     /**
      * create instance with all properties
      */
@@ -59,7 +61,7 @@ public class CustomerEmailChangedMessageImpl implements CustomerEmailChangedMess
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("email") final String email) {
+            @JsonProperty("email") final String email, @JsonProperty("oldEmail") final String oldEmail) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -71,6 +73,7 @@ public class CustomerEmailChangedMessageImpl implements CustomerEmailChangedMess
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.email = email;
+        this.oldEmail = oldEmail;
         this.type = CUSTOMER_EMAIL_CHANGED;
     }
 
@@ -177,6 +180,14 @@ public class CustomerEmailChangedMessageImpl implements CustomerEmailChangedMess
         return this.email;
     }
 
+    /**
+     *  <p>The <code>email</code> that was set before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p>
+     */
+
+    public String getOldEmail() {
+        return this.oldEmail;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -222,6 +233,10 @@ public class CustomerEmailChangedMessageImpl implements CustomerEmailChangedMess
         this.email = email;
     }
 
+    public void setOldEmail(final String oldEmail) {
+        this.oldEmail = oldEmail;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -244,6 +259,7 @@ public class CustomerEmailChangedMessageImpl implements CustomerEmailChangedMess
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(email, that.email)
+                .append(oldEmail, that.oldEmail)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -256,6 +272,7 @@ public class CustomerEmailChangedMessageImpl implements CustomerEmailChangedMess
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(email, that.email)
+                .append(oldEmail, that.oldEmail)
                 .isEquals();
     }
 
@@ -273,6 +290,7 @@ public class CustomerEmailChangedMessageImpl implements CustomerEmailChangedMess
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
                 .append(email)
+                .append(oldEmail)
                 .toHashCode();
     }
 
@@ -290,6 +308,7 @@ public class CustomerEmailChangedMessageImpl implements CustomerEmailChangedMess
                 .append("type", type)
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
                 .append("email", email)
+                .append("oldEmail", oldEmail)
                 .build();
     }
 

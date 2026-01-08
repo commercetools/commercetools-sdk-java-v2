@@ -125,6 +125,22 @@ public class BusinessUnitQueryBuilderDsl {
             BusinessUnitQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<BusinessUnitQueryBuilderDsl> customerGroupAssignments(
+            Function<com.commercetools.api.predicates.query.customer.CustomerGroupAssignmentQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.customer.CustomerGroupAssignmentQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("customerGroupAssignments"))
+                    .inner(fn.apply(
+                        com.commercetools.api.predicates.query.customer.CustomerGroupAssignmentQueryBuilderDsl.of())),
+            BusinessUnitQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<BusinessUnitQueryBuilderDsl> customerGroupAssignments() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customerGroupAssignments")),
+            p -> new CombinationQueryPredicate<>(p, BusinessUnitQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<BusinessUnitQueryBuilderDsl> addresses(
             Function<com.commercetools.api.predicates.query.common.AddressQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.AddressQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

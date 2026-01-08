@@ -170,7 +170,7 @@ public class ProductTailoringImpl implements ProductTailoring, ModelBase {
     }
 
     /**
-     *  <p>Current (published) data of the ProductTailoring.</p>
+     *  <p>Current data of the ProductTailoring returned in the <span>Product Projection</span> response when the ProductTailoring is published.</p>
      */
 
     public com.commercetools.api.models.product_tailoring.ProductTailoringData getCurrent() {
@@ -178,7 +178,7 @@ public class ProductTailoringImpl implements ProductTailoring, ModelBase {
     }
 
     /**
-     *  <p>Staged (unpublished) data of the ProductTailoring.</p>
+     *  <p>Staged data of the ProductTailoring. This data is not returned in the Product Projection response by default.</p>
      */
 
     public com.commercetools.api.models.product_tailoring.ProductTailoringData getStaged() {

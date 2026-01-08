@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Removes an existing billing address from <code>billingAddressesIds</code>. If the billing address is the default billing address, the <code>defaultBillingAddressId</code> is unset. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+ *  <p>Removes an existing billing address from <code>billingAddressIds</code>. If the billing address is the default billing address, the <code>defaultBillingAddressId</code> is unset. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerRemoveBillingAddressIdActionImpl implements MyCustomerRemoveBillingAddressIdAction, ModelBase {
@@ -55,7 +55,7 @@ public class MyCustomerRemoveBillingAddressIdActionImpl implements MyCustomerRem
     }
 
     /**
-     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>billingAddressesIds</code>.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>billingAddressIds</code>.</p>
      */
 
     public String getAddressId() {
@@ -63,7 +63,7 @@ public class MyCustomerRemoveBillingAddressIdActionImpl implements MyCustomerRem
     }
 
     /**
-     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>billingAddressesIds</code>.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>billingAddressIds</code>.</p>
      */
 
     public String getAddressKey() {

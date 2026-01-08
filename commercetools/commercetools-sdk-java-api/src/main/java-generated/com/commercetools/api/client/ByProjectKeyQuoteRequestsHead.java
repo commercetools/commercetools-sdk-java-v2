@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if one or more QuoteRequests exist for the provided query predicate. Returns a <code>200</code> status if any QuoteRequests match the query predicate, or a <code>404</code> status otherwise.</p>
+ *  <p>Checks if one or more QuoteRequests exist for the provided query predicate. Returns a <code>200 OK</code> status if any QuoteRequests match the query predicate, or a <span>Not Found</span> error otherwise.</p>
  *
  * <hr>
  * <div class=code-example>

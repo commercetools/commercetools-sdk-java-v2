@@ -54,6 +54,8 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    private java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> customerGroupAssignments;
+
     private com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier parentUnit;
 
     /**
@@ -74,6 +76,7 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
             @JsonProperty("billingAddresses") final java.util.List<Integer> billingAddresses,
             @JsonProperty("defaultBillingAddress") final Integer defaultBillingAddress,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+            @JsonProperty("customerGroupAssignments") final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> customerGroupAssignments,
             @JsonProperty("parentUnit") final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier parentUnit) {
         this.key = key;
         this.status = status;
@@ -90,6 +93,7 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
         this.billingAddresses = billingAddresses;
         this.defaultBillingAddress = defaultBillingAddress;
         this.custom = custom;
+        this.customerGroupAssignments = customerGroupAssignments;
         this.parentUnit = parentUnit;
         this.unitType = BusinessUnitType.findEnum("Division");
     }
@@ -232,6 +236,15 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
     }
 
     /**
+     *  <p>Customer Groups to assign the Business Unit to.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> getCustomerGroupAssignments() {
+        return this.customerGroupAssignments;
+    }
+
+    /**
      *  <p>The parent unit of this Division. Can be a Company or a Division.</p>
      */
 
@@ -322,6 +335,16 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
         this.custom = custom;
     }
 
+    public void setCustomerGroupAssignments(
+            final com.commercetools.api.models.customer.CustomerGroupAssignmentDraft... customerGroupAssignments) {
+        this.customerGroupAssignments = new ArrayList<>(Arrays.asList(customerGroupAssignments));
+    }
+
+    public void setCustomerGroupAssignments(
+            final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> customerGroupAssignments) {
+        this.customerGroupAssignments = customerGroupAssignments;
+    }
+
     public void setParentUnit(
             final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier parentUnit) {
         this.parentUnit = parentUnit;
@@ -353,6 +376,7 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
                 .append(billingAddresses, that.billingAddresses)
                 .append(defaultBillingAddress, that.defaultBillingAddress)
                 .append(custom, that.custom)
+                .append(customerGroupAssignments, that.customerGroupAssignments)
                 .append(parentUnit, that.parentUnit)
                 .append(key, that.key)
                 .append(status, that.status)
@@ -370,6 +394,7 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
                 .append(billingAddresses, that.billingAddresses)
                 .append(defaultBillingAddress, that.defaultBillingAddress)
                 .append(custom, that.custom)
+                .append(customerGroupAssignments, that.customerGroupAssignments)
                 .append(parentUnit, that.parentUnit)
                 .isEquals();
     }
@@ -392,6 +417,7 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
                 .append(billingAddresses)
                 .append(defaultBillingAddress)
                 .append(custom)
+                .append(customerGroupAssignments)
                 .append(parentUnit)
                 .toHashCode();
     }
@@ -414,6 +440,7 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
                 .append("billingAddresses", billingAddresses)
                 .append("defaultBillingAddress", defaultBillingAddress)
                 .append("custom", custom)
+                .append("customerGroupAssignments", customerGroupAssignments)
                 .append("parentUnit", parentUnit)
                 .build();
     }

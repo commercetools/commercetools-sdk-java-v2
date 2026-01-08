@@ -15,6 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     BusinessUnitAddressChangedMessagePayload businessUnitAddressChangedMessagePayload = BusinessUnitAddressChangedMessagePayload.builder()
  *             .address(addressBuilder -> addressBuilder)
+ *             .plusAddressRoles(addressRolesBuilder -> addressRolesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -24,6 +25,8 @@ public class BusinessUnitAddressChangedMessagePayloadBuilder
         implements Builder<BusinessUnitAddressChangedMessagePayload> {
 
     private com.commercetools.api.models.common.Address address;
+
+    private java.util.List<com.commercetools.api.models.common.AddressRole> addressRoles;
 
     /**
      *  <p>Updated address of the Business Unit.</p>
@@ -62,6 +65,45 @@ public class BusinessUnitAddressChangedMessagePayloadBuilder
     }
 
     /**
+     *  <p>Indicates if the address was used for shipping or billing purposes.</p>
+     * @param addressRoles value to be set
+     * @return Builder
+     */
+
+    public BusinessUnitAddressChangedMessagePayloadBuilder addressRoles(
+            final com.commercetools.api.models.common.AddressRole... addressRoles) {
+        this.addressRoles = new ArrayList<>(Arrays.asList(addressRoles));
+        return this;
+    }
+
+    /**
+     *  <p>Indicates if the address was used for shipping or billing purposes.</p>
+     * @param addressRoles value to be set
+     * @return Builder
+     */
+
+    public BusinessUnitAddressChangedMessagePayloadBuilder addressRoles(
+            final java.util.List<com.commercetools.api.models.common.AddressRole> addressRoles) {
+        this.addressRoles = addressRoles;
+        return this;
+    }
+
+    /**
+     *  <p>Indicates if the address was used for shipping or billing purposes.</p>
+     * @param addressRoles value to be set
+     * @return Builder
+     */
+
+    public BusinessUnitAddressChangedMessagePayloadBuilder plusAddressRoles(
+            final com.commercetools.api.models.common.AddressRole... addressRoles) {
+        if (this.addressRoles == null) {
+            this.addressRoles = new ArrayList<>();
+        }
+        this.addressRoles.addAll(Arrays.asList(addressRoles));
+        return this;
+    }
+
+    /**
      *  <p>Updated address of the Business Unit.</p>
      * @return address
      */
@@ -71,12 +113,23 @@ public class BusinessUnitAddressChangedMessagePayloadBuilder
     }
 
     /**
+     *  <p>Indicates if the address was used for shipping or billing purposes.</p>
+     * @return addressRoles
+     */
+
+    public java.util.List<com.commercetools.api.models.common.AddressRole> getAddressRoles() {
+        return this.addressRoles;
+    }
+
+    /**
      * builds BusinessUnitAddressChangedMessagePayload with checking for non-null required values
      * @return BusinessUnitAddressChangedMessagePayload
      */
     public BusinessUnitAddressChangedMessagePayload build() {
         Objects.requireNonNull(address, BusinessUnitAddressChangedMessagePayload.class + ": address is missing");
-        return new BusinessUnitAddressChangedMessagePayloadImpl(address);
+        Objects.requireNonNull(addressRoles,
+            BusinessUnitAddressChangedMessagePayload.class + ": addressRoles is missing");
+        return new BusinessUnitAddressChangedMessagePayloadImpl(address, addressRoles);
     }
 
     /**
@@ -84,7 +137,7 @@ public class BusinessUnitAddressChangedMessagePayloadBuilder
      * @return BusinessUnitAddressChangedMessagePayload
      */
     public BusinessUnitAddressChangedMessagePayload buildUnchecked() {
-        return new BusinessUnitAddressChangedMessagePayloadImpl(address);
+        return new BusinessUnitAddressChangedMessagePayloadImpl(address, addressRoles);
     }
 
     /**
@@ -104,6 +157,7 @@ public class BusinessUnitAddressChangedMessagePayloadBuilder
             final BusinessUnitAddressChangedMessagePayload template) {
         BusinessUnitAddressChangedMessagePayloadBuilder builder = new BusinessUnitAddressChangedMessagePayloadBuilder();
         builder.address = template.getAddress();
+        builder.addressRoles = template.getAddressRoles();
         return builder;
     }
 

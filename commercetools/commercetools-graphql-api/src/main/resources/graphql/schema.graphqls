@@ -661,6 +661,11 @@ input AddressInput {
   custom: CustomFieldsDraft
 }
 
+enum AddressRole {
+  Billing
+  Shipping
+}
+
 enum AnonymousCartSignInMode {
   """
   `LineItem`s of the anonymous cart will be copied to the customer’s active cart that has been modified most recently.
@@ -1400,6 +1405,9 @@ type BusinessUnit implements Versioned & ReferenceExpandable {
   topLevelUnitRef: KeyReference
   topLevelUnit: BusinessUnit!
   approvalRuleMode: BusinessUnitApprovalRuleMode!
+
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+  customerGroupAssignments: [CustomerGroupAssignment!]
   id: String!
   version: Long!
   createdAt: DateTime!
@@ -1415,13 +1423,14 @@ type BusinessUnitAddressAdded implements MessagePayload {
 
 type BusinessUnitAddressChanged implements MessagePayload {
   address: Address!
+  addressRoles: [AddressRole!]!
   type: String!
 }
 
 type BusinessUnitAddressCustomFieldAdded implements MessagePayload {
   name: String!
   value: Json!
-  addressId: String
+  addressId: String!
   type: String!
 }
 
@@ -1429,31 +1438,32 @@ type BusinessUnitAddressCustomFieldChanged implements MessagePayload {
   name: String!
   value: Json!
   oldValue: Json
-  addressId: String
+  addressId: String!
   type: String!
 }
 
 type BusinessUnitAddressCustomFieldRemoved implements MessagePayload {
   name: String!
-  addressId: String
+  addressId: String!
   type: String!
 }
 
 type BusinessUnitAddressCustomTypeRemoved implements MessagePayload {
   oldTypeId: String
-  addressId: String
+  addressId: String!
   type: String!
 }
 
 type BusinessUnitAddressCustomTypeSet implements MessagePayload {
   customFields: CustomFieldsType!
   oldTypeId: String
-  addressId: String
+  addressId: String!
   type: String!
 }
 
 type BusinessUnitAddressRemoved implements MessagePayload {
   address: Address!
+  addressRoles: [AddressRole!]!
   type: String!
 }
 
@@ -1563,6 +1573,25 @@ type BusinessUnitCustomTypeSet implements MessagePayload {
   type: String!
 }
 
+"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+type BusinessUnitCustomerGroupAssignmentAdded implements MessagePayload {
+  customerGroupAssignment: CustomerGroupAssignment!
+  type: String!
+}
+
+"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+type BusinessUnitCustomerGroupAssignmentRemoved implements MessagePayload {
+  customerGroupAssignment: CustomerGroupAssignment!
+  type: String!
+}
+
+"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+type BusinessUnitCustomerGroupAssignmentsSet implements MessagePayload {
+  customerGroupAssignments: [CustomerGroupAssignment!]
+  oldCustomerGroupAssignments: [CustomerGroupAssignment!]
+  type: String!
+}
+
 type BusinessUnitDefaultBillingAddressSet implements MessagePayload {
   address: Address
   type: String!
@@ -1602,6 +1631,9 @@ input BusinessUnitDraft {
   associates: [AssociateDraft!]
   associateMode: BusinessUnitAssociateMode
   approvalRuleMode: BusinessUnitApprovalRuleMode
+
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+  customerGroupAssignments: [CustomerGroupAssignmentDraft!]
 }
 
 type BusinessUnitNameChanged implements MessagePayload {
@@ -1667,8 +1699,12 @@ type BusinessUnitStoreModeChanged implements MessagePayload {
   oldStoreMode: String!
   stores: [Store!]
   oldStores: [Store!]
+  inheritedStores: [Store!]
+  oldInheritedStores: [Store!]
   storesRef: [KeyReference!]
   oldStoresRef: [KeyReference!]
+  inheritedStoresRef: [KeyReference!]
+  oldInheritedStoresRef: [KeyReference!]
   type: String!
 }
 
@@ -1740,6 +1776,15 @@ input BusinessUnitUpdateAction {
 
   "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   setUnitType: SetBusinessUnitUnitType
+
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+  addCustomerGroupAssignment: AddCustomerGroupAssignment
+
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+  removeCustomerGroupAssignment: RemoveCustomerGroupAssignment
+
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+  setCustomerGroupAssignments: SetCustomerGroupAssignments
 }
 
 input CancelQuoteRequest {
@@ -3638,7 +3683,7 @@ type Customer implements Versioned & ReferenceExpandable {
   billingAddresses: [Address!]!
   storesRef: [KeyReference!]!
   stores: [Store!]!
-  customerGroupAssignments: [CustomerGroupAssignment!]
+  customerGroupAssignments: [CustomerGroupAssignment!]!
   custom: CustomFieldsType
   id: String!
   version: Long!
@@ -3660,13 +3705,14 @@ type CustomerAddressAdded implements MessagePayload {
 
 type CustomerAddressChanged implements MessagePayload {
   address: Address!
+  addressRoles: [AddressRole!]!
   type: String!
 }
 
 type CustomerAddressCustomFieldAdded implements MessagePayload {
   name: String!
   value: Json!
-  addressId: String
+  addressId: String!
   type: String!
 }
 
@@ -3674,30 +3720,41 @@ type CustomerAddressCustomFieldChanged implements MessagePayload {
   name: String!
   value: Json!
   previousValue: Json
-  addressId: String
+  addressId: String!
   type: String!
 }
 
 type CustomerAddressCustomFieldRemoved implements MessagePayload {
   name: String!
-  addressId: String
+  addressId: String!
   type: String!
 }
 
 type CustomerAddressCustomTypeRemoved implements MessagePayload {
   previousTypeId: String
-  addressId: String
+  addressId: String!
   type: String!
 }
 
 type CustomerAddressCustomTypeSet implements MessagePayload {
   customFields: CustomFieldsType!
   previousTypeId: String
-  addressId: String
+  addressId: String!
   type: String!
 }
 
 type CustomerAddressRemoved implements MessagePayload {
+  address: Address!
+  addressRoles: [AddressRole!]!
+  type: String!
+}
+
+type CustomerBillingAddressAdded implements MessagePayload {
+  address: Address!
+  type: String!
+}
+
+type CustomerBillingAddressRemoved implements MessagePayload {
   address: Address!
   type: String!
 }
@@ -3757,11 +3814,13 @@ type CustomerDefaultShippingAddressSet implements MessagePayload {
 }
 
 type CustomerDeleted implements MessagePayload {
+  email: String
   type: String!
 }
 
 type CustomerEmailChanged implements MessagePayload {
   email: String!
+  oldEmail: String!
   type: String!
 }
 
@@ -3787,6 +3846,11 @@ type CustomerEmailTokenCreated implements MessagePayload {
 }
 
 type CustomerEmailVerified implements MessagePayload {
+  type: String!
+}
+
+type CustomerExternalIdSet implements MessagePayload {
+  externalId: String
   type: String!
 }
 
@@ -3829,6 +3893,7 @@ type CustomerGroupAssignmentRemoved implements MessagePayload {
 
 type CustomerGroupAssignmentsSet implements MessagePayload {
   customerGroupAssignments: [CustomerGroupAssignment!]!
+  oldCustomerGroupAssignments: [CustomerGroupAssignment!]!
   type: String!
 }
 
@@ -3977,6 +4042,16 @@ type CustomerSearchConfiguration {
 enum CustomerSearchStatus {
   Activated
   Deactivated
+}
+
+type CustomerShippingAddressAdded implements MessagePayload {
+  address: Address!
+  type: String!
+}
+
+type CustomerShippingAddressRemoved implements MessagePayload {
+  address: Address!
+  type: String!
 }
 
 input CustomerSignInDraft {
@@ -5435,7 +5510,6 @@ type KeyReference {
 "A key that references a resource."
 scalar KeyReferenceInput
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 enum Level {
   "The attribute can be used on the variant level"
   Variant
@@ -8669,7 +8743,6 @@ type ProductData {
     key: String): ProductVariant
   skus: [String!]!
 
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   attributesRaw: [RawProductAttribute!]!
 }
 
@@ -8796,8 +8869,6 @@ input ProductDraft {
   metaDescription: [LocalizedStringItemInputType!]
   metaKeywords: [LocalizedStringItemInputType!]
   masterVariant: ProductVariantInput
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   attributes: [ProductAttributeInput!] = []
   variants: [ProductVariantInput!] = []
   taxCategory: ResourceIdentifierInput
@@ -9163,8 +9234,6 @@ type ProductProjectionMessagePayload {
   published: Boolean!
   masterVariant: ProductVariant!
   variants: [ProductVariant!]!
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   attributes: [RawProductAttribute!]!
   taxCategoryRef: Reference
   taxCategory: TaxCategory
@@ -9731,8 +9800,6 @@ input ProductTailoringDraft {
   metaKeywords: [LocalizedStringItemInputType!]
   publish: Boolean
   variants: [ProductVariantTailoringInput!] = []
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   attributes: [ProductAttributeInput!] = []
 }
 
@@ -9825,8 +9892,6 @@ input ProductTailoringUpdateAction {
   removeVariant: RemoveProductVariantTailoring
   publish: PublishTailoring
   unpublish: UnpublishTailoring
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   setProductAttribute: SetProductLevelTailoringAttribute
   addAsset: AddProductTailoringAsset
   addExternalImage: AddProductTailoringExternalImage
@@ -9936,8 +10001,6 @@ input ProductUpdateAction {
   revertStagedChanges: RevertStagedChanges
   revertStagedVariantChanges: RevertStagedVariantChanges
   publish: PublishProduct
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   setProductAttribute: ProductLevelAttributeInput
   unpublish: UnpublishProduct
   transitionState: TransitionProductState
@@ -10921,7 +10984,6 @@ type RawProductAttribute {
   name: String!
   value: Json!
 
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   attributesRaw: [RawProductAttribute!]
   attributeDefinition: AttributeDefinition
   referencedResource: ReferenceExpandable

@@ -42,6 +42,21 @@ public interface CustomerDeletedMessage extends Message {
     String CUSTOMER_DELETED = "CustomerDeleted";
 
     /**
+     *  <p>The email address of the Customer that was deleted.</p>
+     * @return email
+     */
+
+    @JsonProperty("email")
+    public String getEmail();
+
+    /**
+     *  <p>The email address of the Customer that was deleted.</p>
+     * @param email value to be set
+     */
+
+    public void setEmail(final String email);
+
+    /**
      * factory method
      * @return instance of CustomerDeletedMessage
      */
@@ -66,6 +81,7 @@ public interface CustomerDeletedMessage extends Message {
         instance.setResource(template.getResource());
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setEmail(template.getEmail());
         return instance;
     }
 
@@ -94,6 +110,7 @@ public interface CustomerDeletedMessage extends Message {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setEmail(template.getEmail());
         return instance;
     }
 

@@ -13,6 +13,7 @@ import com.commercetools.api.models.common.Address;
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
+import com.commercetools.api.models.customer.CustomerGroupAssignment;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
@@ -40,6 +41,8 @@ import jakarta.validation.constraints.NotNull;
  *             storeMode(BusinessUnitStoreMode.EXPLICIT)
  *             name("{name}")
  *             plusAddresses(addressesBuilder -> addressesBuilder)
+ *             plusShippingAddressIds(shippingAddressIdsBuilder -> shippingAddressIdsBuilder)
+ *             plusBillingAddressIds(billingAddressIdsBuilder -> billingAddressIdsBuilder)
  *             associateMode(BusinessUnitAssociateMode.EXPLICIT)
  *             plusAssociates(associatesBuilder -> associatesBuilder)
  *             topLevelUnit(topLevelUnitBuilder -> topLevelUnitBuilder)
@@ -176,6 +179,15 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     public CustomFields getCustom();
 
     /**
+     *  <p>Customer Groups assigned to the Business Unit.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @return customerGroupAssignments
+     */
+    @Valid
+    @JsonProperty("customerGroupAssignments")
+    public List<CustomerGroupAssignment> getCustomerGroupAssignments();
+
+    /**
      *  <p>Addresses used by the Business Unit.</p>
      * @return addresses
      */
@@ -188,7 +200,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
      *  <p>Unique identifiers of addresses used as shipping addresses.</p>
      * @return shippingAddressIds
      */
-
+    @NotNull
     @JsonProperty("shippingAddressIds")
     public List<String> getShippingAddressIds();
 
@@ -204,7 +216,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
      *  <p>Unique identifiers of addresses used as billing addresses.</p>
      * @return billingAddressIds
      */
-
+    @NotNull
     @JsonProperty("billingAddressIds")
     public List<String> getBillingAddressIds();
 
@@ -385,6 +397,23 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     public void setCustom(final CustomFields custom);
 
     /**
+     *  <p>Customer Groups assigned to the Business Unit.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @param customerGroupAssignments values to be set
+     */
+
+    @JsonIgnore
+    public void setCustomerGroupAssignments(final CustomerGroupAssignment... customerGroupAssignments);
+
+    /**
+     *  <p>Customer Groups assigned to the Business Unit.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @param customerGroupAssignments values to be set
+     */
+
+    public void setCustomerGroupAssignments(final List<CustomerGroupAssignment> customerGroupAssignments);
+
+    /**
      *  <p>Addresses used by the Business Unit.</p>
      * @param addresses values to be set
      */
@@ -541,6 +570,11 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
         instance.setName(template.getName());
         instance.setContactEmail(template.getContactEmail());
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setCustomerGroupAssignments(Optional.ofNullable(template.getCustomerGroupAssignments())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.customer.CustomerGroupAssignment::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setAddresses(Optional.ofNullable(template.getAddresses())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.common.Address::deepCopy)

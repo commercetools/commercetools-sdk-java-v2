@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .storeMode(BusinessUnitStoreMode.EXPLICIT)
  *             .name("{name}")
  *             .plusAddresses(addressesBuilder -> addressesBuilder)
+ *             .plusShippingAddressIds(shippingAddressIdsBuilder -> shippingAddressIdsBuilder)
+ *             .plusBillingAddressIds(billingAddressIdsBuilder -> billingAddressIdsBuilder)
  *             .associateMode(BusinessUnitAssociateMode.EXPLICIT)
  *             .plusAssociates(associatesBuilder -> associatesBuilder)
  *             .parentUnit(parentUnitBuilder -> parentUnitBuilder)
@@ -71,15 +73,16 @@ public class DivisionBuilder implements Builder<Division> {
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
+    @Nullable
+    private java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments;
+
     private java.util.List<com.commercetools.api.models.common.Address> addresses;
 
-    @Nullable
     private java.util.List<String> shippingAddressIds;
 
     @Nullable
     private String defaultShippingAddressId;
 
-    @Nullable
     private java.util.List<String> billingAddressIds;
 
     @Nullable
@@ -496,6 +499,106 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
+     *  <p>Customer Groups assigned to the Business Unit.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @param customerGroupAssignments value to be set
+     * @return Builder
+     */
+
+    public DivisionBuilder customerGroupAssignments(
+            @Nullable final com.commercetools.api.models.customer.CustomerGroupAssignment... customerGroupAssignments) {
+        this.customerGroupAssignments = new ArrayList<>(Arrays.asList(customerGroupAssignments));
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups assigned to the Business Unit.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @param customerGroupAssignments value to be set
+     * @return Builder
+     */
+
+    public DivisionBuilder customerGroupAssignments(
+            @Nullable final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments) {
+        this.customerGroupAssignments = customerGroupAssignments;
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups assigned to the Business Unit.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @param customerGroupAssignments value to be set
+     * @return Builder
+     */
+
+    public DivisionBuilder plusCustomerGroupAssignments(
+            @Nullable final com.commercetools.api.models.customer.CustomerGroupAssignment... customerGroupAssignments) {
+        if (this.customerGroupAssignments == null) {
+            this.customerGroupAssignments = new ArrayList<>();
+        }
+        this.customerGroupAssignments.addAll(Arrays.asList(customerGroupAssignments));
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups assigned to the Business Unit.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @param builder function to build the customerGroupAssignments value
+     * @return Builder
+     */
+
+    public DivisionBuilder plusCustomerGroupAssignments(
+            Function<com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder, com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder> builder) {
+        if (this.customerGroupAssignments == null) {
+            this.customerGroupAssignments = new ArrayList<>();
+        }
+        this.customerGroupAssignments
+                .add(builder.apply(com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups assigned to the Business Unit.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @param builder function to build the customerGroupAssignments value
+     * @return Builder
+     */
+
+    public DivisionBuilder withCustomerGroupAssignments(
+            Function<com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder, com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder> builder) {
+        this.customerGroupAssignments = new ArrayList<>();
+        this.customerGroupAssignments
+                .add(builder.apply(com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups assigned to the Business Unit.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @param builder function to build the customerGroupAssignments value
+     * @return Builder
+     */
+
+    public DivisionBuilder addCustomerGroupAssignments(
+            Function<com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder, com.commercetools.api.models.customer.CustomerGroupAssignment> builder) {
+        return plusCustomerGroupAssignments(
+            builder.apply(com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder.of()));
+    }
+
+    /**
+     *  <p>Customer Groups assigned to the Business Unit.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @param builder function to build the customerGroupAssignments value
+     * @return Builder
+     */
+
+    public DivisionBuilder setCustomerGroupAssignments(
+            Function<com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder, com.commercetools.api.models.customer.CustomerGroupAssignment> builder) {
+        return customerGroupAssignments(
+            builder.apply(com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder.of()));
+    }
+
+    /**
      *  <p>Addresses used by the Business Unit.</p>
      * @param addresses value to be set
      * @return Builder
@@ -587,7 +690,7 @@ public class DivisionBuilder implements Builder<Division> {
      * @return Builder
      */
 
-    public DivisionBuilder shippingAddressIds(@Nullable final String... shippingAddressIds) {
+    public DivisionBuilder shippingAddressIds(final String... shippingAddressIds) {
         this.shippingAddressIds = new ArrayList<>(Arrays.asList(shippingAddressIds));
         return this;
     }
@@ -598,7 +701,7 @@ public class DivisionBuilder implements Builder<Division> {
      * @return Builder
      */
 
-    public DivisionBuilder shippingAddressIds(@Nullable final java.util.List<String> shippingAddressIds) {
+    public DivisionBuilder shippingAddressIds(final java.util.List<String> shippingAddressIds) {
         this.shippingAddressIds = shippingAddressIds;
         return this;
     }
@@ -609,7 +712,7 @@ public class DivisionBuilder implements Builder<Division> {
      * @return Builder
      */
 
-    public DivisionBuilder plusShippingAddressIds(@Nullable final String... shippingAddressIds) {
+    public DivisionBuilder plusShippingAddressIds(final String... shippingAddressIds) {
         if (this.shippingAddressIds == null) {
             this.shippingAddressIds = new ArrayList<>();
         }
@@ -634,7 +737,7 @@ public class DivisionBuilder implements Builder<Division> {
      * @return Builder
      */
 
-    public DivisionBuilder billingAddressIds(@Nullable final String... billingAddressIds) {
+    public DivisionBuilder billingAddressIds(final String... billingAddressIds) {
         this.billingAddressIds = new ArrayList<>(Arrays.asList(billingAddressIds));
         return this;
     }
@@ -645,7 +748,7 @@ public class DivisionBuilder implements Builder<Division> {
      * @return Builder
      */
 
-    public DivisionBuilder billingAddressIds(@Nullable final java.util.List<String> billingAddressIds) {
+    public DivisionBuilder billingAddressIds(final java.util.List<String> billingAddressIds) {
         this.billingAddressIds = billingAddressIds;
         return this;
     }
@@ -656,7 +759,7 @@ public class DivisionBuilder implements Builder<Division> {
      * @return Builder
      */
 
-    public DivisionBuilder plusBillingAddressIds(@Nullable final String... billingAddressIds) {
+    public DivisionBuilder plusBillingAddressIds(final String... billingAddressIds) {
         if (this.billingAddressIds == null) {
             this.billingAddressIds = new ArrayList<>();
         }
@@ -1091,6 +1194,17 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
+     *  <p>Customer Groups assigned to the Business Unit.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @return customerGroupAssignments
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> getCustomerGroupAssignments() {
+        return this.customerGroupAssignments;
+    }
+
+    /**
      *  <p>Addresses used by the Business Unit.</p>
      * @return addresses
      */
@@ -1104,7 +1218,6 @@ public class DivisionBuilder implements Builder<Division> {
      * @return shippingAddressIds
      */
 
-    @Nullable
     public java.util.List<String> getShippingAddressIds() {
         return this.shippingAddressIds;
     }
@@ -1124,7 +1237,6 @@ public class DivisionBuilder implements Builder<Division> {
      * @return billingAddressIds
      */
 
-    @Nullable
     public java.util.List<String> getBillingAddressIds() {
         return this.billingAddressIds;
     }
@@ -1208,15 +1320,17 @@ public class DivisionBuilder implements Builder<Division> {
         Objects.requireNonNull(storeMode, Division.class + ": storeMode is missing");
         Objects.requireNonNull(name, Division.class + ": name is missing");
         Objects.requireNonNull(addresses, Division.class + ": addresses is missing");
+        Objects.requireNonNull(shippingAddressIds, Division.class + ": shippingAddressIds is missing");
+        Objects.requireNonNull(billingAddressIds, Division.class + ": billingAddressIds is missing");
         Objects.requireNonNull(associateMode, Division.class + ": associateMode is missing");
         Objects.requireNonNull(associates, Division.class + ": associates is missing");
         Objects.requireNonNull(parentUnit, Division.class + ": parentUnit is missing");
         Objects.requireNonNull(topLevelUnit, Division.class + ": topLevelUnit is missing");
         Objects.requireNonNull(approvalRuleMode, Division.class + ": approvalRuleMode is missing");
         return new DivisionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, status, stores,
-            inheritedStores, storeMode, name, contactEmail, custom, addresses, shippingAddressIds,
-            defaultShippingAddressId, billingAddressIds, defaultBillingAddressId, associateMode, associates,
-            inheritedAssociates, parentUnit, topLevelUnit, approvalRuleMode);
+            inheritedStores, storeMode, name, contactEmail, custom, customerGroupAssignments, addresses,
+            shippingAddressIds, defaultShippingAddressId, billingAddressIds, defaultBillingAddressId, associateMode,
+            associates, inheritedAssociates, parentUnit, topLevelUnit, approvalRuleMode);
     }
 
     /**
@@ -1225,9 +1339,9 @@ public class DivisionBuilder implements Builder<Division> {
      */
     public Division buildUnchecked() {
         return new DivisionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, status, stores,
-            inheritedStores, storeMode, name, contactEmail, custom, addresses, shippingAddressIds,
-            defaultShippingAddressId, billingAddressIds, defaultBillingAddressId, associateMode, associates,
-            inheritedAssociates, parentUnit, topLevelUnit, approvalRuleMode);
+            inheritedStores, storeMode, name, contactEmail, custom, customerGroupAssignments, addresses,
+            shippingAddressIds, defaultShippingAddressId, billingAddressIds, defaultBillingAddressId, associateMode,
+            associates, inheritedAssociates, parentUnit, topLevelUnit, approvalRuleMode);
     }
 
     /**
@@ -1259,6 +1373,7 @@ public class DivisionBuilder implements Builder<Division> {
         builder.name = template.getName();
         builder.contactEmail = template.getContactEmail();
         builder.custom = template.getCustom();
+        builder.customerGroupAssignments = template.getCustomerGroupAssignments();
         builder.addresses = template.getAddresses();
         builder.shippingAddressIds = template.getShippingAddressIds();
         builder.defaultShippingAddressId = template.getDefaultShippingAddressId();

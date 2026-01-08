@@ -132,7 +132,7 @@ public interface ProductTailoring extends BaseResource {
     public Boolean getPublished();
 
     /**
-     *  <p>Current (published) data of the ProductTailoring.</p>
+     *  <p>Current data of the ProductTailoring returned in the <span>Product Projection</span> response when the ProductTailoring is published.</p>
      * @return current
      */
     @NotNull
@@ -141,7 +141,7 @@ public interface ProductTailoring extends BaseResource {
     public ProductTailoringData getCurrent();
 
     /**
-     *  <p>Staged (unpublished) data of the ProductTailoring.</p>
+     *  <p>Staged data of the ProductTailoring. This data is not returned in the Product Projection response by default.</p>
      * @return staged
      */
     @NotNull
@@ -236,14 +236,14 @@ public interface ProductTailoring extends BaseResource {
     public void setPublished(final Boolean published);
 
     /**
-     *  <p>Current (published) data of the ProductTailoring.</p>
+     *  <p>Current data of the ProductTailoring returned in the <span>Product Projection</span> response when the ProductTailoring is published.</p>
      * @param current value to be set
      */
 
     public void setCurrent(final ProductTailoringData current);
 
     /**
-     *  <p>Staged (unpublished) data of the ProductTailoring.</p>
+     *  <p>Staged data of the ProductTailoring. This data is not returned in the Product Projection response by default.</p>
      * @param staged value to be set
      */
 

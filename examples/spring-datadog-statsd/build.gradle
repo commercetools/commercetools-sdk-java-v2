@@ -20,7 +20,7 @@ repositories {
 
 ext {
     versions = [
-            commercetools: "19.6.2",
+            commercetools: "19.7.0",
     ]
 }
 

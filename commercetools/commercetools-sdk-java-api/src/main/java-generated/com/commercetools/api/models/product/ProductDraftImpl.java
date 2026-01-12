@@ -134,7 +134,6 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     /**
      *  <p>User-defined unique identifier for the Product.</p>
      *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Products with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
-     *  <p>To update a Product using the Import API or Merchant Center, the Product <code>key</code> must match the pattern <code>^[A-Za-z0-9_-]{2,256}$</code>.</p>
      */
 
     public String getKey() {

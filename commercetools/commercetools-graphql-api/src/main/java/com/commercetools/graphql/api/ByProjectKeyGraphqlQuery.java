@@ -8,7 +8,11 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 import com.commercetools.api.client.ErrorableTrait;
+import com.commercetools.graphql.CommercetoolsTestUtils;
 
+import com.commercetools.api.client.ProjectApiRoot;
+import com.commercetools.graphql.api.types.Order;
+import com.commercetools.graphql.api.types.OrderQueryResult;
 import io.vrap.rmf.base.client.*;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
@@ -71,6 +75,29 @@ public class ByProjectKeyGraphqlQuery<T>
     public CompletableFuture<ApiHttpResponse<GraphQLResponse<T>>> execute(final ApiHttpClient client) {
         return execute(client, GraphQLDataResponse.class).thenApply(response -> response
                 .withBody(graphQLDataResponse -> GraphQLResponse.of(response.getBody(), graphQLRequest)));
+    }
+
+    public List<Order> graphQLOrders(int limit) {
+        final ProjectApiRoot projectRoot = CommercetoolsTestUtils.getProjectApiRoot();
+        List<com.commercetools.graphql.api.types.Order> allOrders = new ArrayList<>();
+        boolean limitNotReached = true;
+        String lastId = null;
+        while (limitNotReached) {
+            GraphQLRequestBuilder<OrderQueryResult> orderBuilder = GraphQL.query(
+                    "query { orders { results { id, version } } }").dataMapper(GraphQLData::getOrders);
+
+            if (lastId != null)
+                orderBuilder.variables(builder -> builder.addValue("where", "id > lastId"));
+
+            var result = projectRoot.graphql().query(orderBuilder.build()).executeBlocking();
+            var orders = result.getBody().getData().getResults();
+            allOrders.addAll(orders);
+            var length = orders.size();
+            lastId = result.getBody().getData().getResults().get(length - 1).getId();
+
+            limitNotReached = length >= limit;
+        }
+        return allOrders;
     }
 
     public String getProjectKey() {

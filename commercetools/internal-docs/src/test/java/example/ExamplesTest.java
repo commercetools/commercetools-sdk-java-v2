@@ -35,6 +35,11 @@ import com.commercetools.api.models.product.ProductVariantBuilder;
 import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
 import com.commercetools.api.models.project.Project;
 import com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse;
+import com.commercetools.graphql.CommercetoolsTestUtils;
+import com.commercetools.graphql.api.GraphQL;
+import com.commercetools.graphql.api.GraphQLData;
+import com.commercetools.graphql.api.GraphQLRequestBuilder;
+import com.commercetools.graphql.api.types.OrderQueryResult;
 import com.commercetools.http.apachehttp.CtApacheHttpClient;
 import com.commercetools.http.javanet.CtJavaNetHttpClient;
 import com.commercetools.http.netty.CtNettyHttpClient;
@@ -377,6 +382,27 @@ public class ExamplesTest {
                 .thenApply(lists -> lists.stream().flatMap(List::stream).collect(Collectors.toList()))
                 .toCompletableFuture()
                 .join();
+    }
+
+    public void graphQLAllOrders() {
+        final ProjectApiRoot projectRoot = CommercetoolsTestUtils.getProjectApiRoot();
+        boolean limitNotReached = true;
+        int limit = 10;
+        String lastId = null;
+        while (limitNotReached) {
+            GraphQLRequestBuilder<OrderQueryResult> orderBuilder = GraphQL.query(
+                    "query { orders { results { id, version } } }").dataMapper(GraphQLData::getOrders);
+
+            if (lastId != null)
+                orderBuilder.variables(builder -> builder.addValue("where", "id > lastId"));
+
+            var result = projectRoot.graphql().query(orderBuilder.build()).executeBlocking();
+            var orders = result.getBody().getData().getResults();
+            var length = orders.size();
+            lastId = result.getBody().getData().getResults().get(length - 1).getId();
+
+            limitNotReached = length >= limit;
+        }
     }
 
     public void middleware() {

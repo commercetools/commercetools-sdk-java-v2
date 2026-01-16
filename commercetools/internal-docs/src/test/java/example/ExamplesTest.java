@@ -391,10 +391,9 @@ public class ExamplesTest {
         int limit = 10;
         String lastId = null;
         while (limitNotReached) {
-            GraphQLRequestBuilder<OrderQueryResult> orderBuilder = GraphQL.query(
-                    "query getOrders() { " +
-                            "orders (limit: " + limit + ") {" +
-                            "results {id}}}").dataMapper(GraphQLData::getOrders);
+            GraphQLRequestBuilder<OrderQueryResult> orderBuilder = GraphQL
+                    .query("query getOrders() { " + "orders (limit: " + limit + ") {" + "results {id}}}")
+                    .dataMapper(GraphQLData::getOrders);
 
             if (lastId != null) {
                 String whereQuery = "id > " + lastId;

@@ -384,6 +384,7 @@ public class ExamplesTest {
                 .join();
     }
 
+    @Test
     public void graphQLAllOrders() {
         final ProjectApiRoot projectRoot = CommercetoolsTestUtils.getProjectApiRoot();
         boolean limitNotReached = true;
@@ -391,10 +392,14 @@ public class ExamplesTest {
         String lastId = null;
         while (limitNotReached) {
             GraphQLRequestBuilder<OrderQueryResult> orderBuilder = GraphQL.query(
-                    "query { orders { results { id, version } } }").dataMapper(GraphQLData::getOrders);
+                    "query getOrders() { " +
+                            "orders (limit: " + limit + ") {" +
+                            "results {id}}}").dataMapper(GraphQLData::getOrders);
 
-            if (lastId != null)
-                orderBuilder.variables(builder -> builder.addValue("where", "id > lastId"));
+            if (lastId != null) {
+                String whereQuery = "id > " + lastId;
+                orderBuilder.variables(builder -> builder.addValue("where", whereQuery));
+            }
 
             var result = projectRoot.graphql().query(orderBuilder.build()).executeBlocking();
             var orders = result.getBody().getData().getResults();

@@ -35,7 +35,6 @@ import com.commercetools.api.models.product.ProductVariantBuilder;
 import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
 import com.commercetools.api.models.project.Project;
 import com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse;
-import com.commercetools.graphql.CommercetoolsTestUtils;
 import com.commercetools.graphql.api.GraphQL;
 import com.commercetools.graphql.api.GraphQLData;
 import com.commercetools.graphql.api.GraphQLRequestBuilder;
@@ -45,6 +44,7 @@ import com.commercetools.http.javanet.CtJavaNetHttpClient;
 import com.commercetools.http.netty.CtNettyHttpClient;
 import com.commercetools.http.okhttp4.CtOkHttp4Client;
 
+import commercetools.utils.CommercetoolsTestUtils;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.http.ErrorMiddleware;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;

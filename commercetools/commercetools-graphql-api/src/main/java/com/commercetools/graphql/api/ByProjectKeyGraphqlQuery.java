@@ -9,9 +9,6 @@ import java.util.concurrent.CompletableFuture;
 
 import com.commercetools.api.client.ErrorableTrait;
 
-import com.commercetools.api.client.ProjectApiRoot;
-import com.commercetools.graphql.api.types.Order;
-import com.commercetools.graphql.api.types.OrderQueryResult;
 import io.vrap.rmf.base.client.*;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;

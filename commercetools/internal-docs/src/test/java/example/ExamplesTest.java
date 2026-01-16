@@ -43,8 +43,8 @@ import com.commercetools.http.apachehttp.CtApacheHttpClient;
 import com.commercetools.http.javanet.CtJavaNetHttpClient;
 import com.commercetools.http.netty.CtNettyHttpClient;
 import com.commercetools.http.okhttp4.CtOkHttp4Client;
-
 import commercetools.utils.CommercetoolsTestUtils;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.http.ErrorMiddleware;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;

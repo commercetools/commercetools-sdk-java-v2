@@ -150,6 +150,9 @@ public class CartBuilder implements Builder<Cart> {
     private com.commercetools.api.models.cart.DiscountTypeCombination discountTypeCombination;
 
     @Nullable
+    private com.commercetools.api.models.cart.CartLock lock;
+
+    @Nullable
     private Integer deleteDaysAfterLastModification;
 
     @Nullable
@@ -1550,6 +1553,41 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
+     *  <p>Indicates whether the Cart has been <span>locked</span>, preventing edits.</p>
+     * @param builder function to build the lock value
+     * @return Builder
+     */
+
+    public CartBuilder lock(
+            Function<com.commercetools.api.models.cart.CartLockBuilder, com.commercetools.api.models.cart.CartLockBuilder> builder) {
+        this.lock = builder.apply(com.commercetools.api.models.cart.CartLockBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Indicates whether the Cart has been <span>locked</span>, preventing edits.</p>
+     * @param builder function to build the lock value
+     * @return Builder
+     */
+
+    public CartBuilder withLock(
+            Function<com.commercetools.api.models.cart.CartLockBuilder, com.commercetools.api.models.cart.CartLock> builder) {
+        this.lock = builder.apply(com.commercetools.api.models.cart.CartLockBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Indicates whether the Cart has been <span>locked</span>, preventing edits.</p>
+     * @param lock value to be set
+     * @return Builder
+     */
+
+    public CartBuilder lock(@Nullable final com.commercetools.api.models.cart.CartLock lock) {
+        this.lock = lock;
+        return this;
+    }
+
+    /**
      *  <p>Number of days after the last modification before a Cart is deleted. Configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a>.</p>
      * @param deleteDaysAfterLastModification value to be set
      * @return Builder
@@ -2056,6 +2094,16 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
+     *  <p>Indicates whether the Cart has been <span>locked</span>, preventing edits.</p>
+     * @return lock
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.CartLock getLock() {
+        return this.lock;
+    }
+
+    /**
      *  <p>Number of days after the last modification before a Cart is deleted. Configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a>.</p>
      * @return deleteDaysAfterLastModification
      */
@@ -2126,7 +2174,7 @@ public class CartBuilder implements Builder<Cart> {
             taxedShippingPrice, discountOnTotalPrice, taxMode, priceRoundingMode, taxRoundingMode, taxCalculationMode,
             inventoryMode, cartState, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo,
             shippingRateInput, shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts,
-            refusedGifts, paymentInfo, country, locale, origin, custom, discountTypeCombination,
+            refusedGifts, paymentInfo, country, locale, origin, custom, discountTypeCombination, lock,
             deleteDaysAfterLastModification, purchaseOrderNumber, lastModifiedBy, createdBy);
     }
 
@@ -2140,7 +2188,7 @@ public class CartBuilder implements Builder<Cart> {
             taxedShippingPrice, discountOnTotalPrice, taxMode, priceRoundingMode, taxRoundingMode, taxCalculationMode,
             inventoryMode, cartState, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo,
             shippingRateInput, shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts,
-            refusedGifts, paymentInfo, country, locale, origin, custom, discountTypeCombination,
+            refusedGifts, paymentInfo, country, locale, origin, custom, discountTypeCombination, lock,
             deleteDaysAfterLastModification, purchaseOrderNumber, lastModifiedBy, createdBy);
     }
 
@@ -2201,6 +2249,7 @@ public class CartBuilder implements Builder<Cart> {
         builder.origin = template.getOrigin();
         builder.custom = template.getCustom();
         builder.discountTypeCombination = template.getDiscountTypeCombination();
+        builder.lock = template.getLock();
         builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
         builder.purchaseOrderNumber = template.getPurchaseOrderNumber();
         builder.lastModifiedBy = template.getLastModifiedBy();

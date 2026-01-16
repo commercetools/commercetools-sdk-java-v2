@@ -105,6 +105,7 @@ public class CartTest {
                         Cart.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
                 new Object[] { "discountTypeCombination", Cart.builder()
                         .discountTypeCombination(new com.commercetools.api.models.cart.DiscountTypeCombinationImpl()) },
+                new Object[] { "lock", Cart.builder().lock(new com.commercetools.api.models.cart.CartLockImpl()) },
                 new Object[] { "deleteDaysAfterLastModification", Cart.builder().deleteDaysAfterLastModification(3) },
                 new Object[] { "purchaseOrderNumber", Cart.builder().purchaseOrderNumber("purchaseOrderNumber") },
                 new Object[] { "createdAt", Cart.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
@@ -425,6 +426,13 @@ public class CartTest {
         value.setDiscountTypeCombination(new com.commercetools.api.models.cart.DiscountTypeCombinationImpl());
         Assertions.assertThat(value.getDiscountTypeCombination())
                 .isEqualTo(new com.commercetools.api.models.cart.DiscountTypeCombinationImpl());
+    }
+
+    @Test
+    public void lock() {
+        Cart value = Cart.of();
+        value.setLock(new com.commercetools.api.models.cart.CartLockImpl());
+        Assertions.assertThat(value.getLock()).isEqualTo(new com.commercetools.api.models.cart.CartLockImpl());
     }
 
     @Test

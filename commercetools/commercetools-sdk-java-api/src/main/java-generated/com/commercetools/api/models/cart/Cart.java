@@ -408,6 +408,14 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public DiscountTypeCombination getDiscountTypeCombination();
 
     /**
+     *  <p>Indicates whether the Cart has been <span>locked</span>, preventing edits.</p>
+     * @return lock
+     */
+    @Valid
+    @JsonProperty("lock")
+    public CartLock getLock();
+
+    /**
      *  <p>Number of days after the last modification before a Cart is deleted. Configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a>.</p>
      * @return deleteDaysAfterLastModification
      */
@@ -806,6 +814,13 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setDiscountTypeCombination(final DiscountTypeCombination discountTypeCombination);
 
     /**
+     *  <p>Indicates whether the Cart has been <span>locked</span>, preventing edits.</p>
+     * @param lock value to be set
+     */
+
+    public void setLock(final CartLock lock);
+
+    /**
      *  <p>Number of days after the last modification before a Cart is deleted. Configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a>.</p>
      * @param deleteDaysAfterLastModification value to be set
      */
@@ -905,6 +920,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
         instance.setOrigin(template.getOrigin());
         instance.setCustom(template.getCustom());
         instance.setDiscountTypeCombination(template.getDiscountTypeCombination());
+        instance.setLock(template.getLock());
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
         instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setLastModifiedBy(template.getLastModifiedBy());
@@ -1004,6 +1020,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         instance.setDiscountTypeCombination(
             com.commercetools.api.models.cart.DiscountTypeCombination.deepCopy(template.getDiscountTypeCombination()));
+        instance.setLock(com.commercetools.api.models.cart.CartLock.deepCopy(template.getLock()));
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
         instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setLastModifiedBy(

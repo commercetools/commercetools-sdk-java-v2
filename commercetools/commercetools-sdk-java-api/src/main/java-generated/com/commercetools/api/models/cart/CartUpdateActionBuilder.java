@@ -91,6 +91,10 @@ public class CartUpdateActionBuilder {
         return com.commercetools.api.models.cart.CartFreezeCartActionBuilder.of();
     }
 
+    public com.commercetools.api.models.cart.CartLockCartActionBuilder lockCartBuilder() {
+        return com.commercetools.api.models.cart.CartLockCartActionBuilder.of();
+    }
+
     public com.commercetools.api.models.cart.CartRecalculateActionBuilder recalculateBuilder() {
         return com.commercetools.api.models.cart.CartRecalculateActionBuilder.of();
     }
@@ -305,6 +309,10 @@ public class CartUpdateActionBuilder {
 
     public com.commercetools.api.models.cart.CartUnfreezeCartActionBuilder unfreezeCartBuilder() {
         return com.commercetools.api.models.cart.CartUnfreezeCartActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.cart.CartUnlockCartActionBuilder unlockCartBuilder() {
+        return com.commercetools.api.models.cart.CartUnlockCartActionBuilder.of();
     }
 
     public com.commercetools.api.models.cart.CartUpdateItemShippingAddressActionBuilder updateItemShippingAddressBuilder() {

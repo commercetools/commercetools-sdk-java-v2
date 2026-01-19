@@ -367,6 +367,15 @@ public class CartQueryBuilderDsl {
             CartQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<CartQueryBuilderDsl> lock(
+            Function<com.commercetools.api.predicates.query.cart.CartLockQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.CartLockQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("lock"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.cart.CartLockQueryBuilderDsl.of())),
+            CartQueryBuilderDsl::of);
+    }
+
     public LongComparisonPredicateBuilder<CartQueryBuilderDsl> deleteDaysAfterLastModification() {
         return new LongComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("deleteDaysAfterLastModification")),

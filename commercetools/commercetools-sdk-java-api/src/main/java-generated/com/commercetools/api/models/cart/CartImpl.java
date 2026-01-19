@@ -106,6 +106,8 @@ public class CartImpl implements Cart, ModelBase {
 
     private com.commercetools.api.models.cart.DiscountTypeCombination discountTypeCombination;
 
+    private com.commercetools.api.models.cart.CartLock lock;
+
     private Integer deleteDaysAfterLastModification;
 
     private String purchaseOrderNumber;
@@ -157,6 +159,7 @@ public class CartImpl implements Cart, ModelBase {
             @JsonProperty("origin") final com.commercetools.api.models.cart.CartOrigin origin,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("discountTypeCombination") final com.commercetools.api.models.cart.DiscountTypeCombination discountTypeCombination,
+            @JsonProperty("lock") final com.commercetools.api.models.cart.CartLock lock,
             @JsonProperty("deleteDaysAfterLastModification") final Integer deleteDaysAfterLastModification,
             @JsonProperty("purchaseOrderNumber") final String purchaseOrderNumber,
             @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
@@ -203,6 +206,7 @@ public class CartImpl implements Cart, ModelBase {
         this.origin = origin;
         this.custom = custom;
         this.discountTypeCombination = discountTypeCombination;
+        this.lock = lock;
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         this.purchaseOrderNumber = purchaseOrderNumber;
         this.lastModifiedBy = lastModifiedBy;
@@ -564,6 +568,14 @@ public class CartImpl implements Cart, ModelBase {
     }
 
     /**
+     *  <p>Indicates whether the Cart has been <span>locked</span>, preventing edits.</p>
+     */
+
+    public com.commercetools.api.models.cart.CartLock getLock() {
+        return this.lock;
+    }
+
+    /**
      *  <p>Number of days after the last modification before a Cart is deleted. Configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a>.</p>
      */
 
@@ -802,6 +814,10 @@ public class CartImpl implements Cart, ModelBase {
         this.discountTypeCombination = discountTypeCombination;
     }
 
+    public void setLock(final com.commercetools.api.models.cart.CartLock lock) {
+        this.lock = lock;
+    }
+
     public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
     }
@@ -870,6 +886,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(origin, that.origin)
                 .append(custom, that.custom)
                 .append(discountTypeCombination, that.discountTypeCombination)
+                .append(lock, that.lock)
                 .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
                 .append(purchaseOrderNumber, that.purchaseOrderNumber)
                 .append(lastModifiedBy, that.lastModifiedBy)
@@ -916,6 +933,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(origin, that.origin)
                 .append(custom, that.custom)
                 .append(discountTypeCombination, that.discountTypeCombination)
+                .append(lock, that.lock)
                 .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
                 .append(purchaseOrderNumber, that.purchaseOrderNumber)
                 .append(lastModifiedBy, that.lastModifiedBy)
@@ -967,6 +985,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(origin)
                 .append(custom)
                 .append(discountTypeCombination)
+                .append(lock)
                 .append(deleteDaysAfterLastModification)
                 .append(purchaseOrderNumber)
                 .append(lastModifiedBy)
@@ -1018,6 +1037,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append("origin", origin)
                 .append("custom", custom)
                 .append("discountTypeCombination", discountTypeCombination)
+                .append("lock", lock)
                 .append("deleteDaysAfterLastModification", deleteDaysAfterLastModification)
                 .append("purchaseOrderNumber", purchaseOrderNumber)
                 .append("lastModifiedBy", lastModifiedBy)

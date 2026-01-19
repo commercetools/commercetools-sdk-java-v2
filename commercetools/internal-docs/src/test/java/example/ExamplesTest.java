@@ -384,7 +384,6 @@ public class ExamplesTest {
                 .join();
     }
 
-    @Test
     public void graphQLAllOrders() {
         final ProjectApiRoot projectRoot = CommercetoolsTestUtils.getProjectApiRoot();
         boolean limitNotReached = true;

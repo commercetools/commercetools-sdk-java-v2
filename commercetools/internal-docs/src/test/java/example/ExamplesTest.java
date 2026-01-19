@@ -35,6 +35,7 @@ import com.commercetools.api.models.product.ProductVariantBuilder;
 import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
 import com.commercetools.api.models.project.Project;
 import com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse;
+import com.commercetools.graphql.CommercetoolsTestUtils;
 import com.commercetools.graphql.api.GraphQL;
 import com.commercetools.graphql.api.GraphQLData;
 import com.commercetools.graphql.api.GraphQLRequestBuilder;
@@ -44,7 +45,6 @@ import com.commercetools.http.javanet.CtJavaNetHttpClient;
 import com.commercetools.http.netty.CtNettyHttpClient;
 import com.commercetools.http.okhttp4.CtOkHttp4Client;
 
-import commercetools.utils.CommercetoolsTestUtils;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.http.ErrorMiddleware;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
@@ -388,11 +388,11 @@ public class ExamplesTest {
     public void graphQLAllOrders() {
         final ProjectApiRoot projectRoot = CommercetoolsTestUtils.getProjectApiRoot();
         boolean limitNotReached = true;
-        int limit = 10;
+        int limit = 10, total_length = 0;
         String lastId = null;
         while (limitNotReached) {
             GraphQLRequestBuilder<OrderQueryResult> orderBuilder = GraphQL
-                    .query("query getOrders() { " + "orders (limit: " + limit + ") {" + "results {id}}}")
+                    .query("query getOrders { " + "orders (limit: " + limit + ") {" + "results {id}}}")
                     .dataMapper(GraphQLData::getOrders);
 
             if (lastId != null) {
@@ -403,9 +403,10 @@ public class ExamplesTest {
             var result = projectRoot.graphql().query(orderBuilder.build()).executeBlocking();
             var orders = result.getBody().getData().getResults();
             var length = orders.size();
+            total_length += length;
             lastId = result.getBody().getData().getResults().get(length - 1).getId();
 
-            limitNotReached = length >= limit;
+            limitNotReached = total_length < limit;
         }
     }
 

@@ -2,6 +2,7 @@ import com.commercetools.sdk.plugins.GraphQLPlugin
 
 plugins {
     id "com.netflix.dgs.codegen" version "8.1.0"
+    id 'java'
 }
 
 apply plugin:'com.netflix.dgs.codegen'
@@ -11,6 +12,19 @@ java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(17)
     }
+}
+
+tasks.register('integrationTestJar', Jar) {
+    archiveClassifier = 'test-utils'
+    from sourceSets.integrationTest.output
+}
+
+configurations {
+    integrationTestArtifacts
+}
+
+artifacts {
+    integrationTestArtifacts integrationTestJar
 }
 
 dependencies {

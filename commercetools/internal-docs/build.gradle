@@ -1,4 +1,5 @@
 dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.x.x'
     implementation project(":commercetools:commercetools-sdk-java-api")
     implementation project(":commercetools:commercetools-sdk-java-importapi")
     implementation project(":commercetools:commercetools-sdk-java-history")
@@ -10,9 +11,8 @@ dependencies {
     implementation project(":commercetools:commercetools-graphql-api")
     implementation project(":commercetools:commercetools-monitoring-newrelic")
     implementation project(":commercetools:commercetools-monitoring-datadog")
-
-    testImplementation ctsdkv1.client version ctsdkv1.version
-    implementation ctsdkv1.models version ctsdkv1.version
+    testImplementation project(path: ':commercetools:commercetools-graphql-api', configuration: 'integrationTestArtifacts')
+    testImplementation 'com.commercetools.sdk.jvm.core:commercetools-models:2.16.0'
     testImplementation project(":commercetools:commercetools-javanet-client")
 
     testImplementation commons.io version commons.io_version

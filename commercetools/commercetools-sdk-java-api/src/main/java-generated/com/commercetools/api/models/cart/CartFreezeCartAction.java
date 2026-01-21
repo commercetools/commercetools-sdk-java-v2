@@ -13,8 +13,14 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Changes the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartState" rel="nofollow">CartState</a> from <code>Active</code> to <code>Frozen</code>. Results in a <a href="https://docs.commercetools.com/apis/ctp:api:type:FrozenCarts" rel="nofollow">Frozen Cart</a>. Fails with <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error when the Cart is empty.</p>
- *  <p>Freezing a Cart produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartFrozenMessage" rel="nofollow">CartFrozen</a> Message.</p>
+ *  <p>Freezes the Cart based on the provided <a href="https://docs.commercetools.com/apis/ctp:api:type:FreezeStrategy" rel="nofollow">FreezeStrategy</a>.</p>
+ *  <p>The following behavior occurs:</p>
+ *  <ul>
+ *   <li>Changes the Cart State from <code>Active</code> to <code>Frozen</code>.</li>
+ *   <li>Sets the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:FreezeStrategy" rel="nofollow">FreezeStrategy</a> on the Cart's <code>freezeStrategy</code> field.</li>
+ *   <li>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartFrozenMessage" rel="nofollow">CartFrozen</a> Message.</li>
+ *  </ul>
+ *  <p>If the Cart is empty, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,6 +42,21 @@ public interface CartFreezeCartAction extends CartUpdateAction {
     String FREEZE_CART = "freezeCart";
 
     /**
+     *  <p>Strategy that determines the freezing behavior.</p>
+     * @return strategy
+     */
+
+    @JsonProperty("strategy")
+    public FreezeStrategy getStrategy();
+
+    /**
+     *  <p>Strategy that determines the freezing behavior.</p>
+     * @param strategy value to be set
+     */
+
+    public void setStrategy(final FreezeStrategy strategy);
+
+    /**
      * factory method
      * @return instance of CartFreezeCartAction
      */
@@ -50,6 +71,7 @@ public interface CartFreezeCartAction extends CartUpdateAction {
      */
     public static CartFreezeCartAction of(final CartFreezeCartAction template) {
         CartFreezeCartActionImpl instance = new CartFreezeCartActionImpl();
+        instance.setStrategy(template.getStrategy());
         return instance;
     }
 
@@ -66,6 +88,7 @@ public interface CartFreezeCartAction extends CartUpdateAction {
             return null;
         }
         CartFreezeCartActionImpl instance = new CartFreezeCartActionImpl();
+        instance.setStrategy(template.getStrategy());
         return instance;
     }
 

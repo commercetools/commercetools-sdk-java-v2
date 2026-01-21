@@ -4,6 +4,7 @@
 <summary>Added Type(s)</summary>
 
 - added type `CartLock`
+- added type `FreezeStrategy`
 - added type `CartLockCartAction`
 - added type `CartSetPurchaseOrderNumberAction`
 - added type `CartUnlockCartAction`
@@ -15,8 +16,10 @@
 <details>
 <summary>Added Property(s)</summary>
 
+- added property `freezeStrategy` to type `Cart`
 - added property `lock` to type `Cart`
 - added property `purchaseOrderNumber` to type `Cart`
 - added property `purchaseOrderNumber` to type `CartDraft`
+- added property `strategy` to type `CartFreezeCartAction`
 </details>
 

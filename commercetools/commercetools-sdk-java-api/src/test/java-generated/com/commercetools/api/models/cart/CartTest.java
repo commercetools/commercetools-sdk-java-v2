@@ -62,6 +62,8 @@ public class CartTest {
                                 .inventoryMode(com.commercetools.api.models.cart.InventoryMode.findEnum("None")) },
                 new Object[] { "cartState",
                         Cart.builder().cartState(com.commercetools.api.models.cart.CartState.findEnum("Active")) },
+                new Object[] { "freezeStrategy", Cart.builder()
+                        .freezeStrategy(com.commercetools.api.models.cart.FreezeStrategy.findEnum("SoftFreeze")) },
                 new Object[] { "billingAddress",
                         Cart.builder().billingAddress(new com.commercetools.api.models.common.AddressImpl()) },
                 new Object[] { "shippingAddress",
@@ -283,6 +285,14 @@ public class CartTest {
         value.setCartState(com.commercetools.api.models.cart.CartState.findEnum("Active"));
         Assertions.assertThat(value.getCartState())
                 .isEqualTo(com.commercetools.api.models.cart.CartState.findEnum("Active"));
+    }
+
+    @Test
+    public void freezeStrategy() {
+        Cart value = Cart.of();
+        value.setFreezeStrategy(com.commercetools.api.models.cart.FreezeStrategy.findEnum("SoftFreeze"));
+        Assertions.assertThat(value.getFreezeStrategy())
+                .isEqualTo(com.commercetools.api.models.cart.FreezeStrategy.findEnum("SoftFreeze"));
     }
 
     @Test

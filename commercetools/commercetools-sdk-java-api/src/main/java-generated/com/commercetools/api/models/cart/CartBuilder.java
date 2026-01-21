@@ -103,6 +103,9 @@ public class CartBuilder implements Builder<Cart> {
     private com.commercetools.api.models.cart.CartState cartState;
 
     @Nullable
+    private com.commercetools.api.models.cart.FreezeStrategy freezeStrategy;
+
+    @Nullable
     private com.commercetools.api.models.common.Address billingAddress;
 
     @Nullable
@@ -774,6 +777,17 @@ public class CartBuilder implements Builder<Cart> {
 
     public CartBuilder cartState(final com.commercetools.api.models.cart.CartState cartState) {
         this.cartState = cartState;
+        return this;
+    }
+
+    /**
+     *  <p>Determines freezing behavior when <code>cartState</code> is <code>Frozen</code>.</p>
+     * @param freezeStrategy value to be set
+     * @return Builder
+     */
+
+    public CartBuilder freezeStrategy(@Nullable final com.commercetools.api.models.cart.FreezeStrategy freezeStrategy) {
+        this.freezeStrategy = freezeStrategy;
         return this;
     }
 
@@ -1915,6 +1929,16 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
+     *  <p>Determines freezing behavior when <code>cartState</code> is <code>Frozen</code>.</p>
+     * @return freezeStrategy
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.FreezeStrategy getFreezeStrategy() {
+        return this.freezeStrategy;
+    }
+
+    /**
      *  <p>Billing address associated with the Cart.</p>
      * @return billingAddress
      */
@@ -2172,9 +2196,9 @@ public class CartBuilder implements Builder<Cart> {
         return new CartImpl(id, version, createdAt, lastModifiedAt, key, customerId, customerEmail, customerGroup,
             anonymousId, businessUnit, store, lineItems, customLineItems, totalLineItemQuantity, totalPrice, taxedPrice,
             taxedShippingPrice, discountOnTotalPrice, taxMode, priceRoundingMode, taxRoundingMode, taxCalculationMode,
-            inventoryMode, cartState, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo,
-            shippingRateInput, shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts,
-            refusedGifts, paymentInfo, country, locale, origin, custom, discountTypeCombination, lock,
+            inventoryMode, cartState, freezeStrategy, billingAddress, shippingAddress, shippingMode, shippingKey,
+            shippingInfo, shippingRateInput, shippingCustomFields, shipping, itemShippingAddresses, discountCodes,
+            directDiscounts, refusedGifts, paymentInfo, country, locale, origin, custom, discountTypeCombination, lock,
             deleteDaysAfterLastModification, purchaseOrderNumber, lastModifiedBy, createdBy);
     }
 
@@ -2186,9 +2210,9 @@ public class CartBuilder implements Builder<Cart> {
         return new CartImpl(id, version, createdAt, lastModifiedAt, key, customerId, customerEmail, customerGroup,
             anonymousId, businessUnit, store, lineItems, customLineItems, totalLineItemQuantity, totalPrice, taxedPrice,
             taxedShippingPrice, discountOnTotalPrice, taxMode, priceRoundingMode, taxRoundingMode, taxCalculationMode,
-            inventoryMode, cartState, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo,
-            shippingRateInput, shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts,
-            refusedGifts, paymentInfo, country, locale, origin, custom, discountTypeCombination, lock,
+            inventoryMode, cartState, freezeStrategy, billingAddress, shippingAddress, shippingMode, shippingKey,
+            shippingInfo, shippingRateInput, shippingCustomFields, shipping, itemShippingAddresses, discountCodes,
+            directDiscounts, refusedGifts, paymentInfo, country, locale, origin, custom, discountTypeCombination, lock,
             deleteDaysAfterLastModification, purchaseOrderNumber, lastModifiedBy, createdBy);
     }
 
@@ -2231,6 +2255,7 @@ public class CartBuilder implements Builder<Cart> {
         builder.taxCalculationMode = template.getTaxCalculationMode();
         builder.inventoryMode = template.getInventoryMode();
         builder.cartState = template.getCartState();
+        builder.freezeStrategy = template.getFreezeStrategy();
         builder.billingAddress = template.getBillingAddress();
         builder.shippingAddress = template.getShippingAddress();
         builder.shippingMode = template.getShippingMode();

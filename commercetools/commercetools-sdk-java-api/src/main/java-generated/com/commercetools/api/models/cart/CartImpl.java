@@ -70,6 +70,8 @@ public class CartImpl implements Cart, ModelBase {
 
     private com.commercetools.api.models.cart.CartState cartState;
 
+    private com.commercetools.api.models.cart.FreezeStrategy freezeStrategy;
+
     private com.commercetools.api.models.common.Address billingAddress;
 
     private com.commercetools.api.models.common.Address shippingAddress;
@@ -142,6 +144,7 @@ public class CartImpl implements Cart, ModelBase {
             @JsonProperty("taxCalculationMode") final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode,
             @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
             @JsonProperty("cartState") final com.commercetools.api.models.cart.CartState cartState,
+            @JsonProperty("freezeStrategy") final com.commercetools.api.models.cart.FreezeStrategy freezeStrategy,
             @JsonProperty("billingAddress") final com.commercetools.api.models.common.Address billingAddress,
             @JsonProperty("shippingAddress") final com.commercetools.api.models.common.Address shippingAddress,
             @JsonProperty("shippingMode") final com.commercetools.api.models.cart.ShippingMode shippingMode,
@@ -188,6 +191,7 @@ public class CartImpl implements Cart, ModelBase {
         this.taxCalculationMode = taxCalculationMode;
         this.inventoryMode = inventoryMode;
         this.cartState = cartState;
+        this.freezeStrategy = freezeStrategy;
         this.billingAddress = billingAddress;
         this.shippingAddress = shippingAddress;
         this.shippingMode = shippingMode;
@@ -415,6 +419,14 @@ public class CartImpl implements Cart, ModelBase {
 
     public com.commercetools.api.models.cart.CartState getCartState() {
         return this.cartState;
+    }
+
+    /**
+     *  <p>Determines freezing behavior when <code>cartState</code> is <code>Frozen</code>.</p>
+     */
+
+    public com.commercetools.api.models.cart.FreezeStrategy getFreezeStrategy() {
+        return this.freezeStrategy;
     }
 
     /**
@@ -716,6 +728,10 @@ public class CartImpl implements Cart, ModelBase {
         this.cartState = cartState;
     }
 
+    public void setFreezeStrategy(final com.commercetools.api.models.cart.FreezeStrategy freezeStrategy) {
+        this.freezeStrategy = freezeStrategy;
+    }
+
     public void setBillingAddress(final com.commercetools.api.models.common.Address billingAddress) {
         this.billingAddress = billingAddress;
     }
@@ -868,6 +884,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(taxCalculationMode, that.taxCalculationMode)
                 .append(inventoryMode, that.inventoryMode)
                 .append(cartState, that.cartState)
+                .append(freezeStrategy, that.freezeStrategy)
                 .append(billingAddress, that.billingAddress)
                 .append(shippingAddress, that.shippingAddress)
                 .append(shippingMode, that.shippingMode)
@@ -915,6 +932,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(taxCalculationMode, that.taxCalculationMode)
                 .append(inventoryMode, that.inventoryMode)
                 .append(cartState, that.cartState)
+                .append(freezeStrategy, that.freezeStrategy)
                 .append(billingAddress, that.billingAddress)
                 .append(shippingAddress, that.shippingAddress)
                 .append(shippingMode, that.shippingMode)
@@ -967,6 +985,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(taxCalculationMode)
                 .append(inventoryMode)
                 .append(cartState)
+                .append(freezeStrategy)
                 .append(billingAddress)
                 .append(shippingAddress)
                 .append(shippingMode)
@@ -1019,6 +1038,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append("taxCalculationMode", taxCalculationMode)
                 .append("inventoryMode", inventoryMode)
                 .append("cartState", cartState)
+                .append("freezeStrategy", freezeStrategy)
                 .append("billingAddress", billingAddress)
                 .append("shippingAddress", shippingAddress)
                 .append("shippingMode", shippingMode)

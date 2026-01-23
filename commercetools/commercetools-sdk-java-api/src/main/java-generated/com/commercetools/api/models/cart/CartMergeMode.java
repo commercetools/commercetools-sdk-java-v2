@@ -11,16 +11,16 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Determines how to manually merge an anonymous Cart with an existing Customer Cart.</p>
+ *  <p>Determines how to manually merge an anonymous Cart with an existing Customer Cart. For more information about merge mode behaviors, merge rules, and tax recalculation, see <span>Merge a Cart</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface CartMergeMode extends JsonEnum {
 
     /**
-    <p>Merges the anonymous Cart with the existing Customer Cart. Line Items from the anonymous Cart are added to the Customer Cart.</p> */
+    <p>Merges the anonymous Cart with the existing Customer Cart.</p> */
     CartMergeMode MERGE_WITH_EXISTING_CUSTOMER_CART = CartMergeModeEnum.MERGE_WITH_EXISTING_CUSTOMER_CART;
     /**
-    <p>Uses the anonymous Cart as the new active Customer Cart, replacing the existing one.</p> */
+    <p>Uses the anonymous Cart as the new active Customer Cart, replacing the existing one. No items from the previous active Cart are merged.</p> */
     CartMergeMode USE_AS_NEW_ACTIVE_CUSTOMER_CART = CartMergeModeEnum.USE_AS_NEW_ACTIVE_CUSTOMER_CART;
 
     /**

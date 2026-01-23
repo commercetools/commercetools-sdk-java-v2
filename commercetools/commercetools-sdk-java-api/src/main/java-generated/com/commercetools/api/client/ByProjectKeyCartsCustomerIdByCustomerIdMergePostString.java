@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Merges items from an anonymous Cart into the most recently modified active Cart of a Customer. If no active Cart exists, the anonymous Cart becomes the Customer's active Cart. For more information, see <span>Merge behavior</span>.</p>
+ *  <p>Merges items from an anonymous Cart into the most recently modified active Cart of a Customer. If no active Cart exists, the anonymous Cart becomes the Customer's active Cart. For more information about merge mode behaviors, merge rules, and tax recalculation, see <span>Merge a Cart</span>.</p>
  *
  * <hr>
  * <div class=code-example>

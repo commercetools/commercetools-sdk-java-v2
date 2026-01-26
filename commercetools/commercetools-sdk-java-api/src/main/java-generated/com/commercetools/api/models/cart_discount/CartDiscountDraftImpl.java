@@ -52,6 +52,8 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
 
     private com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifier discountGroup;
 
+    private com.commercetools.api.models.recurring_order.RecurringOrderScopeDraft recurringOrderScope;
+
     /**
      * create instance with all properties
      */
@@ -70,7 +72,8 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
             @JsonProperty("requiresDiscountCode") final Boolean requiresDiscountCode,
             @JsonProperty("stackingMode") final com.commercetools.api.models.cart_discount.StackingMode stackingMode,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
-            @JsonProperty("discountGroup") final com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifier discountGroup) {
+            @JsonProperty("discountGroup") final com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifier discountGroup,
+            @JsonProperty("recurringOrderScope") final com.commercetools.api.models.recurring_order.RecurringOrderScopeDraft recurringOrderScope) {
         this.name = name;
         this.key = key;
         this.description = description;
@@ -86,6 +89,7 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
         this.stackingMode = stackingMode;
         this.custom = custom;
         this.discountGroup = discountGroup;
+        this.recurringOrderScope = recurringOrderScope;
     }
 
     /**
@@ -222,6 +226,15 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
         return this.discountGroup;
     }
 
+    /**
+     *  <p>Scope of the Cart Discount for Recurring Orders.</p>
+     *  <p>If not set, the default is <a href="https://docs.commercetools.com/apis/ctp:api:type:NonRecurringOrdersOnlyDraft" rel="nofollow">NonRecurringOrdersOnlyDraft</a>.</p>
+     */
+
+    public com.commercetools.api.models.recurring_order.RecurringOrderScopeDraft getRecurringOrderScope() {
+        return this.recurringOrderScope;
+    }
+
     public void setName(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
     }
@@ -287,6 +300,11 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
         this.discountGroup = discountGroup;
     }
 
+    public void setRecurringOrderScope(
+            final com.commercetools.api.models.recurring_order.RecurringOrderScopeDraft recurringOrderScope) {
+        this.recurringOrderScope = recurringOrderScope;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -312,6 +330,7 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
                 .append(stackingMode, that.stackingMode)
                 .append(custom, that.custom)
                 .append(discountGroup, that.discountGroup)
+                .append(recurringOrderScope, that.recurringOrderScope)
                 .append(name, that.name)
                 .append(key, that.key)
                 .append(description, that.description)
@@ -327,6 +346,7 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
                 .append(stackingMode, that.stackingMode)
                 .append(custom, that.custom)
                 .append(discountGroup, that.discountGroup)
+                .append(recurringOrderScope, that.recurringOrderScope)
                 .isEquals();
     }
 
@@ -347,6 +367,7 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
                 .append(stackingMode)
                 .append(custom)
                 .append(discountGroup)
+                .append(recurringOrderScope)
                 .toHashCode();
     }
 
@@ -367,6 +388,7 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
                 .append("stackingMode", stackingMode)
                 .append("custom", custom)
                 .append("discountGroup", discountGroup)
+                .append("recurringOrderScope", recurringOrderScope)
                 .build();
     }
 

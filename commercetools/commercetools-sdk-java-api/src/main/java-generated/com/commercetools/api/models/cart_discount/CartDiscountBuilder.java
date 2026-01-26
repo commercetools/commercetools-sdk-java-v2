@@ -29,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .requiresDiscountCode(true)
  *             .plusReferences(referencesBuilder -> referencesBuilder)
  *             .stackingMode(StackingMode.STACKING)
+ *             .recurringOrderScope(recurringOrderScopeBuilder -> recurringOrderScopeBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -88,6 +89,8 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     @Nullable
     private com.commercetools.api.models.discount_group.DiscountGroupReference discountGroup;
+
+    private com.commercetools.api.models.recurring_order.RecurringOrderScope recurringOrderScope;
 
     /**
      *  <p>Unique identifier of the CartDiscount.</p>
@@ -663,6 +666,34 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
+     *  <p>Scope of the Cart Discount for Recurring Orders.</p>
+     *  <p>The default is <a href="https://docs.commercetools.com/apis/ctp:api:type:NonRecurringOrdersOnly" rel="nofollow">NonRecurringOrdersOnly</a>.</p>
+     * @param recurringOrderScope value to be set
+     * @return Builder
+     */
+
+    public CartDiscountBuilder recurringOrderScope(
+            final com.commercetools.api.models.recurring_order.RecurringOrderScope recurringOrderScope) {
+        this.recurringOrderScope = recurringOrderScope;
+        return this;
+    }
+
+    /**
+     *  <p>Scope of the Cart Discount for Recurring Orders.</p>
+     *  <p>The default is <a href="https://docs.commercetools.com/apis/ctp:api:type:NonRecurringOrdersOnly" rel="nofollow">NonRecurringOrdersOnly</a>.</p>
+     * @param builder function to build the recurringOrderScope value
+     * @return Builder
+     */
+
+    public CartDiscountBuilder recurringOrderScope(
+            Function<com.commercetools.api.models.recurring_order.RecurringOrderScopeBuilder, Builder<? extends com.commercetools.api.models.recurring_order.RecurringOrderScope>> builder) {
+        this.recurringOrderScope = builder
+                .apply(com.commercetools.api.models.recurring_order.RecurringOrderScopeBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the CartDiscount.</p>
      * @return id
      */
@@ -876,6 +907,16 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
+     *  <p>Scope of the Cart Discount for Recurring Orders.</p>
+     *  <p>The default is <a href="https://docs.commercetools.com/apis/ctp:api:type:NonRecurringOrdersOnly" rel="nofollow">NonRecurringOrdersOnly</a>.</p>
+     * @return recurringOrderScope
+     */
+
+    public com.commercetools.api.models.recurring_order.RecurringOrderScope getRecurringOrderScope() {
+        return this.recurringOrderScope;
+    }
+
+    /**
      * builds CartDiscount with checking for non-null required values
      * @return CartDiscount
      */
@@ -893,9 +934,10 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
         Objects.requireNonNull(requiresDiscountCode, CartDiscount.class + ": requiresDiscountCode is missing");
         Objects.requireNonNull(references, CartDiscount.class + ": references is missing");
         Objects.requireNonNull(stackingMode, CartDiscount.class + ": stackingMode is missing");
+        Objects.requireNonNull(recurringOrderScope, CartDiscount.class + ": recurringOrderScope is missing");
         return new CartDiscountImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, key,
             description, value, cartPredicate, target, sortOrder, stores, isActive, validFrom, validUntil,
-            requiresDiscountCode, references, stackingMode, custom, discountGroup);
+            requiresDiscountCode, references, stackingMode, custom, discountGroup, recurringOrderScope);
     }
 
     /**
@@ -905,7 +947,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     public CartDiscount buildUnchecked() {
         return new CartDiscountImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, key,
             description, value, cartPredicate, target, sortOrder, stores, isActive, validFrom, validUntil,
-            requiresDiscountCode, references, stackingMode, custom, discountGroup);
+            requiresDiscountCode, references, stackingMode, custom, discountGroup, recurringOrderScope);
     }
 
     /**
@@ -945,6 +987,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
         builder.stackingMode = template.getStackingMode();
         builder.custom = template.getCustom();
         builder.discountGroup = template.getDiscountGroup();
+        builder.recurringOrderScope = template.getRecurringOrderScope();
         return builder;
     }
 

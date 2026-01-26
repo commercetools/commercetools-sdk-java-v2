@@ -66,6 +66,8 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
 
     private com.commercetools.api.models.discount_group.DiscountGroupReference discountGroup;
 
+    private com.commercetools.api.models.recurring_order.RecurringOrderScope recurringOrderScope;
+
     /**
      * create instance with all properties
      */
@@ -90,7 +92,8 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
             @JsonProperty("references") final java.util.List<com.commercetools.api.models.common.Reference> references,
             @JsonProperty("stackingMode") final com.commercetools.api.models.cart_discount.StackingMode stackingMode,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
-            @JsonProperty("discountGroup") final com.commercetools.api.models.discount_group.DiscountGroupReference discountGroup) {
+            @JsonProperty("discountGroup") final com.commercetools.api.models.discount_group.DiscountGroupReference discountGroup,
+            @JsonProperty("recurringOrderScope") final com.commercetools.api.models.recurring_order.RecurringOrderScope recurringOrderScope) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -113,6 +116,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
         this.stackingMode = stackingMode;
         this.custom = custom;
         this.discountGroup = discountGroup;
+        this.recurringOrderScope = recurringOrderScope;
     }
 
     /**
@@ -303,6 +307,15 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
         return this.discountGroup;
     }
 
+    /**
+     *  <p>Scope of the Cart Discount for Recurring Orders.</p>
+     *  <p>The default is <a href="https://docs.commercetools.com/apis/ctp:api:type:NonRecurringOrdersOnly" rel="nofollow">NonRecurringOrdersOnly</a>.</p>
+     */
+
+    public com.commercetools.api.models.recurring_order.RecurringOrderScope getRecurringOrderScope() {
+        return this.recurringOrderScope;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -400,6 +413,11 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
         this.discountGroup = discountGroup;
     }
 
+    public void setRecurringOrderScope(
+            final com.commercetools.api.models.recurring_order.RecurringOrderScope recurringOrderScope) {
+        this.recurringOrderScope = recurringOrderScope;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -432,6 +450,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
                 .append(stackingMode, that.stackingMode)
                 .append(custom, that.custom)
                 .append(discountGroup, that.discountGroup)
+                .append(recurringOrderScope, that.recurringOrderScope)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -454,6 +473,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
                 .append(stackingMode, that.stackingMode)
                 .append(custom, that.custom)
                 .append(discountGroup, that.discountGroup)
+                .append(recurringOrderScope, that.recurringOrderScope)
                 .isEquals();
     }
 
@@ -481,6 +501,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
                 .append(stackingMode)
                 .append(custom)
                 .append(discountGroup)
+                .append(recurringOrderScope)
                 .toHashCode();
     }
 
@@ -508,6 +529,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
                 .append("stackingMode", stackingMode)
                 .append("custom", custom)
                 .append("discountGroup", discountGroup)
+                .append("recurringOrderScope", recurringOrderScope)
                 .build();
     }
 

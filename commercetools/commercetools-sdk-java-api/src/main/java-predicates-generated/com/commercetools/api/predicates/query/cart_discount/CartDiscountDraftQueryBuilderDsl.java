@@ -131,4 +131,14 @@ public class CartDiscountDraftQueryBuilderDsl {
             CartDiscountDraftQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<CartDiscountDraftQueryBuilderDsl> recurringOrderScope(
+            Function<com.commercetools.api.predicates.query.recurring_order.RecurringOrderScopeDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.recurring_order.RecurringOrderScopeDraftQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("recurringOrderScope"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.recurring_order.RecurringOrderScopeDraftQueryBuilderDsl
+                            .of())),
+            CartDiscountDraftQueryBuilderDsl::of);
+    }
+
 }

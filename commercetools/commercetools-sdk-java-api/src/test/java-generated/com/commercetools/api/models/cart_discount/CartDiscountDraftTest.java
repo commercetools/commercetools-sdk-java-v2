@@ -52,7 +52,10 @@ public class CartDiscountDraftTest {
                                 .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
                 new Object[] { "discountGroup", CartDiscountDraft.builder()
                         .discountGroup(
-                            new com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifierImpl()) } };
+                            new com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifierImpl()) },
+                new Object[] { "recurringOrderScope", CartDiscountDraft.builder()
+                        .recurringOrderScope(
+                            new com.commercetools.api.models.recurring_order.RecurringOrderScopeDraftImpl()) } };
     }
 
     @Test
@@ -167,5 +170,13 @@ public class CartDiscountDraftTest {
         value.setDiscountGroup(new com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifierImpl());
         Assertions.assertThat(value.getDiscountGroup())
                 .isEqualTo(new com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifierImpl());
+    }
+
+    @Test
+    public void recurringOrderScope() {
+        CartDiscountDraft value = CartDiscountDraft.of();
+        value.setRecurringOrderScope(new com.commercetools.api.models.recurring_order.RecurringOrderScopeDraftImpl());
+        Assertions.assertThat(value.getRecurringOrderScope())
+                .isEqualTo(new com.commercetools.api.models.recurring_order.RecurringOrderScopeDraftImpl());
     }
 }

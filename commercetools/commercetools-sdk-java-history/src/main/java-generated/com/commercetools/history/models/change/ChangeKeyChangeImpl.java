@@ -17,12 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelChangeKeyAction" rel="nofollow">Change Key</a> on Channels.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StateChangeKeyAction" rel="nofollow">Change State key</a> on States.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:TypeChangeKeyAction" rel="nofollow">Change Key</a> on Types.</li>
- *  </ul>
+ * ChangeKeyChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeKeyChangeImpl implements ChangeKeyChange, ModelBase {

@@ -17,13 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroupChangeNameAction" rel="nofollow">Change Name</a> on Customer Groups.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeChangeNameAction" rel="nofollow">Change Name</a> on Product Types.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategoryChangeNameAction" rel="nofollow">Change Name</a> on Tax Categories.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ZoneChangeNameAction" rel="nofollow">Change Name</a> on Zones.</li>
- *  </ul>
+ * ChangeNameChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeNameChangeImpl implements ChangeNameChange, ModelBase {

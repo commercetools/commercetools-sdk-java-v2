@@ -15,23 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountSetKeyAction" rel="nofollow">Set Key</a> on Cart Discounts.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CategorySetKeyAction" rel="nofollow">Set Key</a> on Categories.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetKeyAction" rel="nofollow">Set Key</a> on Customers.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroupSetKeyAction" rel="nofollow">Set Key</a> on Customer Groups.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeSetKeyAction" rel="nofollow">Set Key</a> on Discount Codes.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntrySetKeyAction" rel="nofollow">Set Key</a> on Inventories.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetKeyAction" rel="nofollow">Set Key</a> on Payments.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetKeyAction" rel="nofollow">Set Key</a> on Products.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountSetKeyAction" rel="nofollow">Set Key</a> on Product Discounts.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetKeyAction" rel="nofollow">Set Key</a> on Product Selections.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeSetKeyAction" rel="nofollow">Set Key</a> on Product Types.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewSetKeyAction" rel="nofollow">Set Key</a> on Reviews.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListSetKeyAction" rel="nofollow">Set Key</a> on Shopping Lists.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ZoneSetKeyAction" rel="nofollow">Set Key</a> on Zones.</li>
- *  </ul>
+ * SetKeyChange
  *
  * <hr>
  * Example to create an instance using the builder pattern

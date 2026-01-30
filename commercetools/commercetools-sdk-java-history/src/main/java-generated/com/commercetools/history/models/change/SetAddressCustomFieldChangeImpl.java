@@ -17,12 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetAddressCustomFieldAction" rel="nofollow">Set Address Custom Field</a> on Business Units.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetAddressCustomFieldAction" rel="nofollow">Set Address Custom Field</a> on Customers.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelSetAddressCustomFieldAction" rel="nofollow">Set Address Custom Field</a> on Channels.</li>
- *  </ul>
+ * SetAddressCustomFieldChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetAddressCustomFieldChangeImpl implements SetAddressCustomFieldChange, ModelBase {

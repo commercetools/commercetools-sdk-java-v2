@@ -17,12 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change is triggered when an entity referenced in a discount predicate is modified during the following actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountChangePredicateAction" rel="nofollow">Change Predicate</a> on Product Discounts</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountChangeCartPredicateAction" rel="nofollow">Change Cart Predicate</a> on Cart Discounts</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeSetCartPredicateAction" rel="nofollow">Change Cart Predicate</a> on Discount Codes</li>
- *  </ul>
+ * SetReferencesChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetReferencesChangeImpl implements SetReferencesChange, ModelBase {

@@ -17,11 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CategorySetMetaTitleAction" rel="nofollow">Set Meta Title</a> on Categories.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetMetaTitleAction" rel="nofollow">Set Meta Title</a> on Products.</li>
- *  </ul>
+ * SetMetaTitleChange
  *
  * <hr>
  * Example to create an instance using the builder pattern

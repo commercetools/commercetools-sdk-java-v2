@@ -17,13 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetLocaleAction" rel="nofollow">Set Locale</a> on Customers.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetLocaleAction" rel="nofollow">Set Locale</a> on Orders.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetLocaleAction" rel="nofollow">Set Locale</a> on Staged Orders.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewSetLocaleAction" rel="nofollow">Set Locale</a> on Reviews.</li>
- *  </ul>
+ * SetLocaleChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetLocaleChangeImpl implements SetLocaleChange, ModelBase {

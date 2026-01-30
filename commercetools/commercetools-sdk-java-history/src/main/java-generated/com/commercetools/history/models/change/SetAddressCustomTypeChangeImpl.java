@@ -17,12 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetAddressCustomTypeAction" rel="nofollow">Set Address Custom Type</a> on Business Units.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetAddressCustomTypeAction" rel="nofollow">Set Address Custom Type</a> on Customers.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelSetAddressCustomTypeAction" rel="nofollow">Set Address Custom Type</a> on Channels.</li>
- *  </ul>
+ * SetAddressCustomTypeChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetAddressCustomTypeChangeImpl implements SetAddressCustomTypeChange, ModelBase {

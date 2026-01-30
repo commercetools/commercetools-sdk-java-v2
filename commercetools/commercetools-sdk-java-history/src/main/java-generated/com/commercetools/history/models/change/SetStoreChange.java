@@ -17,11 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetStoreAction" rel="nofollow">Set Store</a> on Orders.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListSetStoreAction" rel="nofollow">Set Store</a> on Shopping Lists.</li>
- *  </ul>
+ * SetStoreChange
  *
  * <hr>
  * Example to create an instance using the builder pattern

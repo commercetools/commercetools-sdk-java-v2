@@ -17,11 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CategoryChangeAssetNameAction" rel="nofollow">Change Asset Name</a> on Categories.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangeAssetNameAction" rel="nofollow">Change Asset Name</a> on Products.</li>
- *  </ul>
+ * ChangeAssetNameChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeAssetNameChangeImpl implements ChangeAssetNameChange, ModelBase {

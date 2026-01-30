@@ -17,11 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeAddLocalizedEnumValueAction" rel="nofollow">Add LocalizableEnumValue to AttributeDefinition</a> on Product Types.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:TypeAddLocalizedEnumValueAction" rel="nofollow">Add LocalizedEnumValue to FieldDefinition</a> on Types.</li>
- *  </ul>
+ * AddLocalizedEnumValueChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueChange, ModelBase {

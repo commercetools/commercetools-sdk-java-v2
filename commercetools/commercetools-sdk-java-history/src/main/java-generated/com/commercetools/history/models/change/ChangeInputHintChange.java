@@ -16,11 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeChangeInputHintAction" rel="nofollow">Change AttributeDefinition InputHint</a> on Product Types.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:TypeChangeInputHintAction" rel="nofollow">Change InputHint</a> on Types.</li>
- *  </ul>
+ * ChangeInputHintChange
  *
  * <hr>
  * Example to create an instance using the builder pattern

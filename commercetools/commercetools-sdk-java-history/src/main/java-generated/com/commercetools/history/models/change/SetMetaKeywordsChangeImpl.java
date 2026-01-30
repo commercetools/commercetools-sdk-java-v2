@@ -17,11 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CategorySetMetaKeywordsAction" rel="nofollow">Set Meta Keywords</a> on Categories.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetMetaKeywordsAction" rel="nofollow">Set Meta Keywords</a> on Products.</li>
- *  </ul>
+ * SetMetaKeywordsChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetMetaKeywordsChangeImpl implements SetMetaKeywordsChange, ModelBase {

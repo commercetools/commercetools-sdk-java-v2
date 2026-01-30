@@ -17,27 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Cart Discounts.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CategorySetCustomFieldAction" rel="nofollow">Set CustomField</a> on Categories.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Channels.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Customers.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroupSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Customer Groups.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Discount Codes.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntrySetCustomFieldAction" rel="nofollow">Set CustomField</a> on Inventories.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Orders.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEditSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Order Edits.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Payments.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Product Selections.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Quotes.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Quote Requests.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Reviews.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Shopping Lists.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Staged Orders.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Staged Quotes.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetCustomFieldAction" rel="nofollow">Set CustomField</a> on Stores.</li>
- *  </ul>
+ * SetCustomFieldChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomFieldChangeImpl implements SetCustomFieldChange, ModelBase {

@@ -15,11 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetAnonymousIdAction" rel="nofollow">Set AnonymousId</a> on Payments.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListSetAnonymousIdAction" rel="nofollow">Set AnonymousId</a> on Shopping Lists.</li>
- *  </ul>
+ * SetAnonymousIdChange
  *
  * <hr>
  * Example to create an instance using the builder pattern

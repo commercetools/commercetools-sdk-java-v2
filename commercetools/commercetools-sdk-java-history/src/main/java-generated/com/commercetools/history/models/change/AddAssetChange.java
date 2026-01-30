@@ -17,11 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CategoryAddAssetAction" rel="nofollow">Add Asset</a> on Categories.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductAddAssetAction" rel="nofollow">Add Asset</a> on Products.</li>
- *  </ul>
+ * AddAssetChange
  *
  * <hr>
  * Example to create an instance using the builder pattern

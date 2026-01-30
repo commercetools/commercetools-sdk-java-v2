@@ -18,12 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change is triggered when an entity referenced in a discount predicate is modified during the following actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountChangePredicateAction" rel="nofollow">Change Predicate</a> on Product Discounts</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountChangeCartPredicateAction" rel="nofollow">Change Cart Predicate</a> on Cart Discounts</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeSetCartPredicateAction" rel="nofollow">Change Cart Predicate</a> on Discount Codes</li>
- *  </ul>
+ * SetReferencesChange
  *
  * <hr>
  * Example to create an instance using the builder pattern

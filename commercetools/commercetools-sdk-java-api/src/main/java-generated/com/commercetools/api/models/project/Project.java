@@ -126,7 +126,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
     public CartsConfiguration getCarts();
 
     /**
-     *  <p>Holds the configuration for the <span>Shopping Lists</span> feature. This field may not be present on Projects created before January 2020.</p>
+     *  <p>Holds the configuration for the <span>Shopping Lists</span> feature.</p>
      * @return shoppingLists
      */
     @Valid
@@ -269,7 +269,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
     public void setCarts(final CartsConfiguration carts);
 
     /**
-     *  <p>Holds the configuration for the <span>Shopping Lists</span> feature. This field may not be present on Projects created before January 2020.</p>
+     *  <p>Holds the configuration for the <span>Shopping Lists</span> feature.</p>
      * @param shoppingLists value to be set
      */
 

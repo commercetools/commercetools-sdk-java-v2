@@ -56,7 +56,6 @@ public class CartsConfigurationImpl implements CartsConfiguration, ModelBase {
      *   <li>If a <a href="https://docs.commercetools.com/apis/ctp:api:type:ChangeSubscription" rel="nofollow">ChangeSubscription</a> for Carts exists, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceDeletedDeliveryPayload" rel="nofollow">ResourceDeletedDeliveryPayload</a> is sent upon deletion of a Cart.</li>
      *   <li>Carts with <a href="https://docs.commercetools.com/apis/ctp:api:type:CartOrigin" rel="nofollow">CartOrigin</a> <code>Quote</code> or <code>RecurringOrder</code> are not affected by this configuration value.</li>
      *   <li>Changing this value doesn't affect the retention of existing Carts. To update an existing Cart's retention use <span><code>setDeleteDaysAfterLastModification</code></span> on the Carts API.</li>
-     *   <li>This field may not be present on Projects created before January 2020.</li>
      *  </ul>
      */
 

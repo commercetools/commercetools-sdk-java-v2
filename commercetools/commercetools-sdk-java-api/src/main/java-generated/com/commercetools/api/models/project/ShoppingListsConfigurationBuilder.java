@@ -3,8 +3,6 @@ package com.commercetools.api.models.project;
 
 import java.util.*;
 
-import javax.annotation.Nullable;
-
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,6 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ShoppingListsConfiguration shoppingListsConfiguration = ShoppingListsConfiguration.builder()
+ *             .deleteDaysAfterLastModification(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -22,7 +21,6 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListsConfigurationBuilder implements Builder<ShoppingListsConfiguration> {
 
-    @Nullable
     private Long deleteDaysAfterLastModification;
 
     /**
@@ -32,7 +30,7 @@ public class ShoppingListsConfigurationBuilder implements Builder<ShoppingListsC
      */
 
     public ShoppingListsConfigurationBuilder deleteDaysAfterLastModification(
-            @Nullable final Long deleteDaysAfterLastModification) {
+            final Long deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         return this;
     }
@@ -42,7 +40,6 @@ public class ShoppingListsConfigurationBuilder implements Builder<ShoppingListsC
      * @return deleteDaysAfterLastModification
      */
 
-    @Nullable
     public Long getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
@@ -52,6 +49,8 @@ public class ShoppingListsConfigurationBuilder implements Builder<ShoppingListsC
      * @return ShoppingListsConfiguration
      */
     public ShoppingListsConfiguration build() {
+        Objects.requireNonNull(deleteDaysAfterLastModification,
+            ShoppingListsConfiguration.class + ": deleteDaysAfterLastModification is missing");
         return new ShoppingListsConfigurationImpl(deleteDaysAfterLastModification);
     }
 

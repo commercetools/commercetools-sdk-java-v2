@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+
 /**
  * CartsConfiguration
  *
@@ -21,6 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartsConfiguration cartsConfiguration = CartsConfiguration.builder()
+ *             .deleteDaysAfterLastModification(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -38,7 +41,7 @@ public interface CartsConfiguration {
      *  </ul>
      * @return deleteDaysAfterLastModification
      */
-
+    @NotNull
     @JsonProperty("deleteDaysAfterLastModification")
     public Long getDeleteDaysAfterLastModification();
 

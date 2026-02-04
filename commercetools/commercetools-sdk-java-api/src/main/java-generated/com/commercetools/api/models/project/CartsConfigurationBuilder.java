@@ -15,6 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartsConfiguration cartsConfiguration = CartsConfiguration.builder()
+ *             .deleteDaysAfterLastModification(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -22,7 +23,6 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartsConfigurationBuilder implements Builder<CartsConfiguration> {
 
-    @Nullable
     private Long deleteDaysAfterLastModification;
 
     @Nullable
@@ -45,8 +45,7 @@ public class CartsConfigurationBuilder implements Builder<CartsConfiguration> {
      * @return Builder
      */
 
-    public CartsConfigurationBuilder deleteDaysAfterLastModification(
-            @Nullable final Long deleteDaysAfterLastModification) {
+    public CartsConfigurationBuilder deleteDaysAfterLastModification(final Long deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         return this;
     }
@@ -97,7 +96,6 @@ public class CartsConfigurationBuilder implements Builder<CartsConfiguration> {
      * @return deleteDaysAfterLastModification
      */
 
-    @Nullable
     public Long getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
@@ -137,6 +135,8 @@ public class CartsConfigurationBuilder implements Builder<CartsConfiguration> {
      * @return CartsConfiguration
      */
     public CartsConfiguration build() {
+        Objects.requireNonNull(deleteDaysAfterLastModification,
+            CartsConfiguration.class + ": deleteDaysAfterLastModification is missing");
         return new CartsConfigurationImpl(deleteDaysAfterLastModification, countryTaxRateFallbackEnabled,
             priceRoundingMode, taxRoundingMode);
     }

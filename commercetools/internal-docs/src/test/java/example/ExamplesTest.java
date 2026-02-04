@@ -391,7 +391,7 @@ public class ExamplesTest {
         String lastId = null;
         while (limitNotReached) {
             GraphQLRequestBuilder<OrderQueryResult> orderBuilder = GraphQL
-                    .query("query getOrders { " + "orders (limit: " + limit + ") {" + "results {id}}}")
+                    .query(String.format("query getOrders { orders (limit: %d) {results {id}}}", limit))
                     .dataMapper(GraphQLData::getOrders);
 
             if (lastId != null) {

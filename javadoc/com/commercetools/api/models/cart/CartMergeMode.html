@@ -82,7 +82,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">CartMergeMode</span><span class="extends-implements">
 extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="interface in io.vrap.rmf.base.client">JsonEnum</a></span></div>
-<div class="block"><p>Determines how to manually merge an anonymous Cart with an existing Customer Cart.</p></div>
+<div class="block"><p>Determines how to manually merge an anonymous Cart with an existing Customer Cart. For more information about merge mode behaviors, merge rules, and tax recalculation, see <span>Merge a Cart</span>.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -185,14 +185,14 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <section class="detail" id="MERGE_WITH_EXISTING_CUSTOMER_CART">
 <h3>MERGE_WITH_EXISTING_CUSTOMER_CART</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="CartMergeMode.html" title="interface in com.commercetools.api.models.cart">CartMergeMode</a></span>&nbsp;<span class="element-name">MERGE_WITH_EXISTING_CUSTOMER_CART</span></div>
-<div class="block"><p>Merges the anonymous Cart with the existing Customer Cart. Line Items from the anonymous Cart are added to the Customer Cart.</p></div>
+<div class="block"><p>Merges the anonymous Cart with the existing Customer Cart.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="USE_AS_NEW_ACTIVE_CUSTOMER_CART">
 <h3>USE_AS_NEW_ACTIVE_CUSTOMER_CART</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="CartMergeMode.html" title="interface in com.commercetools.api.models.cart">CartMergeMode</a></span>&nbsp;<span class="element-name">USE_AS_NEW_ACTIVE_CUSTOMER_CART</span></div>
-<div class="block"><p>Uses the anonymous Cart as the new active Customer Cart, replacing the existing one.</p></div>
+<div class="block"><p>Uses the anonymous Cart as the new active Customer Cart, replacing the existing one. No items from the previous active Cart are merged.</p></div>
 </section>
 </li>
 </ul>

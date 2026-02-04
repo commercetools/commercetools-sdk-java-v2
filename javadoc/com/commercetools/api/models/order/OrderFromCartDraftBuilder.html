@@ -182,7 +182,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPurchaseOrderNumber()" class="member-name-link">getPurchaseOrderNumber</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">User-defined identifier for a purchase Order.</div>
+<div class="block">User-defined identifier for a purchase order.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ShipmentState.html" title="interface in com.commercetools.api.models.order">ShipmentState</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShipmentState()" class="member-name-link">getShipmentState</a>()</code></div>
@@ -232,7 +232,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderFromCartDraftBuilder.html" title="class in com.commercetools.api.models.order">OrderFromCartDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#purchaseOrderNumber(java.lang.String)" class="member-name-link">purchaseOrderNumber</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;purchaseOrderNumber)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">User-defined identifier for a purchase Order.</div>
+<div class="block">User-defined identifier for a purchase order.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderFromCartDraftBuilder.html" title="class in com.commercetools.api.models.order">OrderFromCartDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shipmentState(com.commercetools.api.models.order.ShipmentState)" class="member-name-link">shipmentState</a><wbr>(<a href="ShipmentState.html" title="interface in com.commercetools.api.models.order">ShipmentState</a>&nbsp;shipmentState)</code></div>
@@ -391,8 +391,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>purchaseOrderNumber</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFromCartDraftBuilder.html" title="class in com.commercetools.api.models.order">OrderFromCartDraftBuilder</a></span>&nbsp;<span class="element-name">purchaseOrderNumber</span><wbr><span class="parameters">(@Nullable
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;purchaseOrderNumber)</span></div>
-<div class="block"><p>User-defined identifier for a purchase Order.</p>
-  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> and can be used with <span>Quotes</span> to track the purchase Order during the <span>quote and order flow</span>.</p></div>
+<div class="block"><p>User-defined identifier for a purchase order.</p>
+  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> or Merchant to track the purchase order during the <span>quote and order flow</span>.</p>
+  <p>If not provided, the <code>purchaseOrderNumber</code> from the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> is used.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>purchaseOrderNumber</code> - value to be set</dd>
@@ -590,8 +591,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getPurchaseOrderNumber</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getPurchaseOrderNumber</span>()</div>
-<div class="block"><p>User-defined identifier for a purchase Order.</p>
-  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> and can be used with <span>Quotes</span> to track the purchase Order during the <span>quote and order flow</span>.</p></div>
+<div class="block"><p>User-defined identifier for a purchase order.</p>
+  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> or Merchant to track the purchase order during the <span>quote and order flow</span>.</p>
+  <p>If not provided, the <code>purchaseOrderNumber</code> from the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> is used.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>purchaseOrderNumber</dd>

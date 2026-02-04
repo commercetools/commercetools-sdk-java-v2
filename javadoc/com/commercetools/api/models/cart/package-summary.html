@@ -362,11 +362,33 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="CartFreezeCartAction.html" title="interface in com.commercetools.api.models.cart">CartFreezeCartAction</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
-<div class="block">Changes the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartState" rel="nofollow">CartState</a> from <code>Active</code> to <code>Frozen</code>.</div>
+<div class="block">Freezes the Cart based on the provided <a href="https://docs.commercetools.com/apis/ctp:api:type:FreezeStrategy" rel="nofollow">FreezeStrategy</a>.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="CartFreezeCartActionBuilder.html" title="class in com.commercetools.api.models.cart">CartFreezeCartActionBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
 <div class="block">CartFreezeCartActionBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="CartLock.html" title="interface in com.commercetools.api.models.cart">CartLock</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="block">Indicates that the Cart is <span>locked</span> to prevent changes.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="CartLockBuilder.html" title="class in com.commercetools.api.models.cart">CartLockBuilder</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">CartLockBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="CartLockCartAction.html" title="interface in com.commercetools.api.models.cart">CartLockCartAction</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="block"><span>Locks</span> a Cart, preventing all updates from API Clients without an elevated <span>OAuth 2.0 Scope</span>.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="CartLockCartActionBuilder.html" title="class in com.commercetools.api.models.cart">CartLockCartActionBuilder</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">CartLockCartActionBuilder
  
  Example to create an instance using the builder pattern
  </div>
@@ -971,6 +993,17 @@ loadScripts(document, 'script');</script>
  Example to create an instance using the builder pattern
  </div>
 </div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="CartSetPurchaseOrderNumberAction.html" title="interface in com.commercetools.api.models.cart">CartSetPurchaseOrderNumberAction</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">Updates the <code>purchaseOrderNumber</code> field and produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartPurchaseOrderNumberSetMessage" rel="nofollow">CartPurchaseOrderNumberSet</a> Message.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="CartSetPurchaseOrderNumberActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetPurchaseOrderNumberActionBuilder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">CartSetPurchaseOrderNumberActionBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="CartSetShippingAddressAction.html" title="interface in com.commercetools.api.models.cart">CartSetShippingAddressAction</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
 <div class="block">Setting the shipping address also sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> of Line Items and calculates the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedPrice" rel="nofollow">TaxedPrice</a>.</div>
@@ -1097,6 +1130,17 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="CartUnfreezeCartActionBuilder.html" title="class in com.commercetools.api.models.cart">CartUnfreezeCartActionBuilder</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
 <div class="block">CartUnfreezeCartActionBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="CartUnlockCartAction.html" title="interface in com.commercetools.api.models.cart">CartUnlockCartAction</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">Unlocks a Cart, removing all update restrictions that are in place while a Cart is <span>locked</span>.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="CartUnlockCartActionBuilder.html" title="class in com.commercetools.api.models.cart">CartUnlockCartActionBuilder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">CartUnlockCartActionBuilder
  
  Example to create an instance using the builder pattern
  </div>
@@ -1412,6 +1456,14 @@ loadScripts(document, 'script');</script>
  
  Example to create an instance using the builder pattern
  </div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="FreezeStrategy.html" title="interface in com.commercetools.api.models.cart">FreezeStrategy</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">Indicates how a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> freeze behaves.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab3"><a href="FreezeStrategy.FreezeStrategyEnum.html" title="enum in com.commercetools.api.models.cart">FreezeStrategy.FreezeStrategyEnum</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab3">
+<div class="block">possible values of FreezeStrategy</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="InventoryMode.html" title="interface in com.commercetools.api.models.cart">InventoryMode</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">

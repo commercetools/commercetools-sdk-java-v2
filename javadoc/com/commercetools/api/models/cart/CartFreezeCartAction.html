@@ -78,8 +78,14 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">CartFreezeCartAction</span><span class="extends-implements">
 extends <a href="CartUpdateAction.html" title="interface in com.commercetools.api.models.cart">CartUpdateAction</a></span></div>
-<div class="block"><p>Changes the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartState" rel="nofollow">CartState</a> from <code>Active</code> to <code>Frozen</code>. Results in a <a href="https://docs.commercetools.com/apis/ctp:api:type:FrozenCarts" rel="nofollow">Frozen Cart</a>. Fails with <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error when the Cart is empty.</p>
-  <p>Freezing a Cart produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartFrozenMessage" rel="nofollow">CartFrozen</a> Message.</p>
+<div class="block"><p>Freezes the Cart based on the provided <a href="https://docs.commercetools.com/apis/ctp:api:type:FreezeStrategy" rel="nofollow">FreezeStrategy</a>.</p>
+  <p>The following behavior occurs:</p>
+  <ul>
+   <li>Changes the Cart State from <code>Active</code> to <code>Frozen</code>.</li>
+   <li>Sets the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:FreezeStrategy" rel="nofollow">FreezeStrategy</a> on the Cart's <code>freezeStrategy</code> field.</li>
+   <li>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartFrozenMessage" rel="nofollow">CartFrozen</a> Message.</li>
+  </ul>
+  <p>If the Cart is empty, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -138,15 +144,25 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of CartFreezeCartAction</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CartFreezeCartAction.html" title="interface in com.commercetools.api.models.cart">CartFreezeCartAction</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
-<div class="block">factory method</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="FreezeStrategy.html" title="interface in com.commercetools.api.models.cart">FreezeStrategy</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStrategy()" class="member-name-link">getStrategy</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Strategy that determines the freezing behavior.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CartFreezeCartAction.html" title="interface in com.commercetools.api.models.cart">CartFreezeCartAction</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.api.models.cart.CartFreezeCartAction)" class="member-name-link">of</a><wbr>(<a href="CartFreezeCartAction.html" title="interface in com.commercetools.api.models.cart">CartFreezeCartAction</a>&nbsp;template)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">factory method</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CartFreezeCartAction.html" title="interface in com.commercetools.api.models.cart">CartFreezeCartAction</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.api.models.cart.CartFreezeCartAction)" class="member-name-link">of</a><wbr>(<a href="CartFreezeCartAction.html" title="interface in com.commercetools.api.models.cart">CartFreezeCartAction</a>&nbsp;template)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a shallow copy CartFreezeCartAction</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setStrategy(com.commercetools.api.models.cart.FreezeStrategy)" class="member-name-link">setStrategy</a><wbr>(<a href="FreezeStrategy.html" title="interface in com.commercetools.api.models.cart">FreezeStrategy</a>&nbsp;strategy)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Strategy that determines the freezing behavior.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartFreezeCartAction.html" title="interface in com.commercetools.api.models.cart">CartFreezeCartAction</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -201,6 +217,28 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="getStrategy()">
+<h3>getStrategy</h3>
+<div class="member-signature"><span class="return-type"><a href="FreezeStrategy.html" title="interface in com.commercetools.api.models.cart">FreezeStrategy</a></span>&nbsp;<span class="element-name">getStrategy</span>()</div>
+<div class="block"><p>Strategy that determines the freezing behavior.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>strategy</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setStrategy(com.commercetools.api.models.cart.FreezeStrategy)">
+<h3>setStrategy</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setStrategy</span><wbr><span class="parameters">(<a href="FreezeStrategy.html" title="interface in com.commercetools.api.models.cart">FreezeStrategy</a>&nbsp;strategy)</span></div>
+<div class="block"><p>Strategy that determines the freezing behavior.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>strategy</code> - value to be set</dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>

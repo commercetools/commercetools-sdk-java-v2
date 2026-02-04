@@ -1,4 +1,74 @@
 
+# 19.7.1 (2026-02-04)
+
+## What's Changed
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `CartDiscountSetRecurringOrderScopeAction`
+- added type `CartLock`
+- added type `FreezeStrategy`
+- added type `CartLockCartAction`
+- added type `CartSetPurchaseOrderNumberAction`
+- added type `CartUnlockCartAction`
+- added type `CartPurchaseOrderNumberSetMessage`
+- added type `CartPurchaseOrderNumberSetMessagePayload`
+- added type `AnyOrder`
+- added type `AnyOrderDraft`
+- added type `ApplicableRecurrencePolicies`
+- added type `ApplicableRecurrencePoliciesDraft`
+- added type `NonRecurringOrdersOnly`
+- added type `NonRecurringOrdersOnlyDraft`
+- added type `RecurringOrderScope`
+- added type `RecurringOrderScopeDraft`
+- added type `RecurringOrdersOnly`
+- added type `RecurringOrdersOnlyDraft`
+</details>
+
+
+<details>
+<summary>Required Property(s)</summary>
+
+- :warning: changed property `deleteDaysAfterLastModification` of type `CartsConfiguration` to be required
+- :warning: changed property `deleteDaysAfterLastModification` of type `ShoppingListsConfiguration` to be required
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `recurringOrderScope` to type `CartDiscount`
+- added property `recurringOrderScope` to type `CartDiscountDraft`
+- added property `freezeStrategy` to type `Cart`
+- added property `lock` to type `Cart`
+- added property `purchaseOrderNumber` to type `Cart`
+- added property `purchaseOrderNumber` to type `CartDraft`
+- added property `strategy` to type `CartFreezeCartAction`
+</details>
+
+
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1011
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1012
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1013
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1014
+* Devx 714 how to query all with graph ql in java sdk by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1015
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1017
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1018
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1019
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1020
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1021
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1022
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1023
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1024
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1025
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1028
+* DEVX-714: updating test example to fix javadoc parser by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1027
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.7.0...19.7.1
+
 # 19.7.0 (2026-01-08)
 
 ## What's Changed

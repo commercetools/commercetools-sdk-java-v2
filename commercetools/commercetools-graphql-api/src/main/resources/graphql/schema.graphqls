@@ -682,6 +682,26 @@ enum AnonymousCartSignInMode {
   UseAsNewActiveCustomerCart
 }
 
+"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+type AnyOrder implements RecurringOrderScope {
+  type: RecurringOrderScopeType!
+}
+
+input AnyOrderInput {
+  dummy: String
+}
+
+"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+type ApplicableRecurrencePolicies implements RecurringOrderScope {
+  recurrencePolicies: [RecurrencePolicy!]!
+  type: RecurringOrderScopeType!
+  recurrencePoliciesRef: [Reference!]!
+}
+
+input ApplicableRecurrencePoliciesInput {
+  recurrencePolicies: [ResourceIdentifierInput!]!
+}
+
 type Applied implements OrderEditResult {
   excerptBeforeEdit: OrderExcerpt!
   excerptAfterEdit: OrderExcerpt!
@@ -1835,6 +1855,7 @@ type Cart implements Versioned & ReferenceExpandable {
   shippingCustomFields: CustomFieldsType
   discountTypeCombination: DiscountTypeCombination
   cartState: CartState!
+  freezeStrategy: FreezeStrategy
   key: String
   lock: CartLock
   custom: CustomFieldsType
@@ -1903,6 +1924,7 @@ type CartDiscount implements Versioned & ReferenceExpandable {
   lastModifiedAt: DateTime!
   createdBy: Initiator
   lastModifiedBy: Initiator
+  recurringOrderScope: RecurringOrderScope!
 }
 
 type CartDiscountCreated implements MessagePayload {
@@ -1930,6 +1952,7 @@ input CartDiscountDraft {
   key: String
   stores: [ResourceIdentifierInput!]
   discountGroup: ResourceIdentifierInput
+  recurringOrderScope: RecurringOrderScopeInput
 }
 
 type CartDiscountLimitWithCurrent implements LimitWithCurrent {
@@ -2035,6 +2058,7 @@ input CartDiscountUpdateAction {
   setValidFromAndUntil: SetCartDiscountValidFromAndUntil
   setValidUntil: SetCartDiscountValidUntil
   setDiscountGroup: SetCartDiscountDiscountGroup
+  setRecurringOrderScope: SetCartDiscountRecurringOrderScope
 }
 
 interface CartDiscountValue {
@@ -4978,8 +5002,21 @@ input FixedPriceDiscountValueInput {
   money: [CartDiscountValueBaseMoneyInput!]!
 }
 
+enum FreezeStrategy {
+  """
+  More lenient version of a Cart freeze (See [Freeze a Cart](https://docs.commercetools.com/api/carts-orders-overview#freeze-a-cart) for details).
+  """
+  SoftFreeze
+
+  """
+  Stricter version of a Cart freeze (See [Freeze a Cart](https://docs.commercetools.com/api/carts-orders-overview#freeze-a-cart) for details).
+  """
+  HardFreeze
+}
+
 input FreezeCart {
   dummy: String
+  strategy: FreezeStrategy
 }
 
 interface Geometry {
@@ -7361,6 +7398,15 @@ input MyTransactionDraft {
 type NestedAttributeDefinitionType implements AttributeDefinitionType {
   typeRef: Reference!
   name: String!
+}
+
+"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+type NonRecurringOrdersOnly implements RecurringOrderScope {
+  type: RecurringOrderScopeType!
+}
+
+input NonRecurringOrdersOnlyInput {
+  dummy: String
 }
 
 type NotProcessed implements OrderEditResult {
@@ -11223,6 +11269,25 @@ type RecurringOrderScheduleSet implements MessagePayload {
   type: String!
 }
 
+"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+interface RecurringOrderScope {
+  type: RecurringOrderScopeType!
+}
+
+input RecurringOrderScopeInput {
+  AnyOrder: AnyOrderInput
+  RecurringOrdersOnly: RecurringOrdersOnlyInput
+  NonRecurringOrdersOnly: NonRecurringOrdersOnlyInput
+  ApplicableRecurrencePolicies: ApplicableRecurrencePoliciesInput
+}
+
+enum RecurringOrderScopeType {
+  AnyOrder
+  NonRecurringOrdersOnly
+  RecurringOrdersOnly
+  ApplicableRecurrencePolicies
+}
+
 type RecurringOrderStartsAtSet implements MessagePayload {
   startsAt: DateTime!
   oldStartsAt: DateTime!
@@ -11269,6 +11334,15 @@ input RecurringOrderUpdateAction {
   setSchedule: SetRecurringOrderSchedule
   setStartsAt: SetRecurringOrderStartsAt
   transitionState: TransitionRecurringOrderState
+}
+
+"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+type RecurringOrdersOnly implements RecurringOrderScope {
+  type: RecurringOrderScopeType!
+}
+
+input RecurringOrdersOnlyInput {
+  dummy: String
 }
 
 type Reference {
@@ -12168,6 +12242,10 @@ enum SearchFieldType {
 
 "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 input SearchFilterExpressionInput {
+  and: [SearchQueryInput!]
+  or: [SearchQueryInput!]
+  not: [SearchQueryInput!]
+  filter: [SearchQueryInput!]
   range: SearchQueryRangeExpressionInput
   fullText: SearchFullTextExpressionInput
   fullTextPrefix: SearchFullTextPrefixInput
@@ -12175,6 +12253,7 @@ input SearchFilterExpressionInput {
   prefix: SearchAnyValueExpressionInput
   wildcard: SearchAnyValueExpressionInput
   exact: SearchAnyValueExpressionInput
+  fuzzy: SearchFuzzyExpressionInput
 }
 
 "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
@@ -12613,6 +12692,10 @@ input SetCartDiscountDiscountGroup {
 
 input SetCartDiscountKey {
   key: String
+}
+
+input SetCartDiscountRecurringOrderScope {
+  recurringOrderScope: RecurringOrderScopeInput!
 }
 
 input SetCartDiscountStores {

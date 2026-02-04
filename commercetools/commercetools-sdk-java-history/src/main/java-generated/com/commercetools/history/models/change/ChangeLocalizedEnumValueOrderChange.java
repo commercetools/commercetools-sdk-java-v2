@@ -18,11 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeChangeLocalizedEnumValueOrderAction" rel="nofollow">Change the order of LocalizedEnumValues</a> on Product Types.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:TypeChangeLocalizedEnumValueOrderAction" rel="nofollow">Change the order of LocalizedEnumValues</a> on Types.</li>
- *  </ul>
+ * ChangeLocalizedEnumValueOrderChange
  *
  * <hr>
  * Example to create an instance using the builder pattern

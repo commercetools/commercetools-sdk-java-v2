@@ -28,6 +28,7 @@ import com.commercetools.api.models.common.AddressDraft;
 import com.commercetools.api.models.common.LocalizedStringBuilder;
 import com.commercetools.api.models.customer.*;
 import com.commercetools.api.models.customer_group.*;
+import com.commercetools.api.models.graph_ql.GraphQLVariablesMap;
 import com.commercetools.api.models.product.AttributesAccessor;
 import com.commercetools.api.models.product.ProductProjection;
 import com.commercetools.api.models.product.ProductVariant;
@@ -390,22 +391,36 @@ public class ExamplesTest {
         int limit = 10, total_length = 0;
         String lastId = null;
         while (limitNotReached) {
-            GraphQLRequestBuilder<OrderQueryResult> orderBuilder = GraphQL
-                    .query(String.format("query getOrders { orders (limit: %d) {results {id}}}", limit))
-                    .dataMapper(GraphQLData::getOrders);
+            GraphQLRequestBuilder<OrderQueryResult> orderBuilder = GraphQL.query("""
+                    query Orders($where: String, $limit: Int!) {
+                      orders(where: $where, sort: "id asc", limit: $limit) {
+                        results {
+                          id
+                          version
+                        }
+                      }
+                    }""").dataMapper(GraphQLData::getOrders);
 
+            var variables = GraphQLVariablesMap.builder().addValue("limit", limit);
             if (lastId != null) {
-                String whereQuery = "id > " + lastId;
-                orderBuilder.variables(builder -> builder.addValue("where", whereQuery));
+                String whereQuery = "id > \"%s\"".formatted(lastId);
+                variables.addValue("where", whereQuery);
             }
+            orderBuilder.variables(variables.build());
 
             var result = projectRoot.graphql().query(orderBuilder.build()).executeBlocking();
             var orders = result.getBody().getData().getResults();
+
+            orders.forEach(order -> {
+                Assertions.assertThat(order.getId()).isNotNull();
+                Assertions.assertThat(order.getVersion()).isNotNull();
+            });
+
             var length = orders.size();
             total_length += length;
             lastId = result.getBody().getData().getResults().get(length - 1).getId();
 
-            limitNotReached = total_length < limit;
+            limitNotReached = length == limit;
         }
     }
 

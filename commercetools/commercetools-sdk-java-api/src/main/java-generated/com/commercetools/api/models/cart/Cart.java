@@ -253,6 +253,14 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public CartState getCartState();
 
     /**
+     *  <p>Determines freezing behavior when <code>cartState</code> is <code>Frozen</code>.</p>
+     * @return freezeStrategy
+     */
+
+    @JsonProperty("freezeStrategy")
+    public FreezeStrategy getFreezeStrategy();
+
+    /**
      *  <p>Billing address associated with the Cart.</p>
      * @return billingAddress
      */
@@ -641,6 +649,13 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setCartState(final CartState cartState);
 
     /**
+     *  <p>Determines freezing behavior when <code>cartState</code> is <code>Frozen</code>.</p>
+     * @param freezeStrategy value to be set
+     */
+
+    public void setFreezeStrategy(final FreezeStrategy freezeStrategy);
+
+    /**
      *  <p>Billing address associated with the Cart.</p>
      * @param billingAddress value to be set
      */
@@ -902,6 +917,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
         instance.setInventoryMode(template.getInventoryMode());
         instance.setCartState(template.getCartState());
+        instance.setFreezeStrategy(template.getFreezeStrategy());
         instance.setBillingAddress(template.getBillingAddress());
         instance.setShippingAddress(template.getShippingAddress());
         instance.setShippingMode(template.getShippingMode());
@@ -978,6 +994,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
         instance.setInventoryMode(template.getInventoryMode());
         instance.setCartState(template.getCartState());
+        instance.setFreezeStrategy(template.getFreezeStrategy());
         instance.setBillingAddress(com.commercetools.api.models.common.Address.deepCopy(template.getBillingAddress()));
         instance.setShippingAddress(
             com.commercetools.api.models.common.Address.deepCopy(template.getShippingAddress()));

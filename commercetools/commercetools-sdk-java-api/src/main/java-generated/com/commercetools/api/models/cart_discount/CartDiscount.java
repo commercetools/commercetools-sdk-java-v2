@@ -15,6 +15,7 @@ import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.discount_group.DiscountGroupReference;
+import com.commercetools.api.models.recurring_order.RecurringOrderScope;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
@@ -46,6 +47,7 @@ import jakarta.validation.constraints.NotNull;
  *             .requiresDiscountCode(true)
  *             .plusReferences(referencesBuilder -> referencesBuilder)
  *             .stackingMode(StackingMode.STACKING)
+ *             .recurringOrderScope(recurringOrderScopeBuilder -> recurringOrderScopeBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -245,6 +247,16 @@ public interface CartDiscount
     public DiscountGroupReference getDiscountGroup();
 
     /**
+     *  <p>Scope of the Cart Discount for Recurring Orders.</p>
+     *  <p>The default is <a href="https://docs.commercetools.com/apis/ctp:api:type:NonRecurringOrdersOnly" rel="nofollow">NonRecurringOrdersOnly</a>.</p>
+     * @return recurringOrderScope
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("recurringOrderScope")
+    public RecurringOrderScope getRecurringOrderScope();
+
+    /**
      *  <p>Unique identifier of the CartDiscount.</p>
      * @param id value to be set
      */
@@ -424,6 +436,14 @@ public interface CartDiscount
     public void setDiscountGroup(final DiscountGroupReference discountGroup);
 
     /**
+     *  <p>Scope of the Cart Discount for Recurring Orders.</p>
+     *  <p>The default is <a href="https://docs.commercetools.com/apis/ctp:api:type:NonRecurringOrdersOnly" rel="nofollow">NonRecurringOrdersOnly</a>.</p>
+     * @param recurringOrderScope value to be set
+     */
+
+    public void setRecurringOrderScope(final RecurringOrderScope recurringOrderScope);
+
+    /**
      * factory method
      * @return instance of CartDiscount
      */
@@ -460,6 +480,7 @@ public interface CartDiscount
         instance.setStackingMode(template.getStackingMode());
         instance.setCustom(template.getCustom());
         instance.setDiscountGroup(template.getDiscountGroup());
+        instance.setRecurringOrderScope(template.getRecurringOrderScope());
         return instance;
     }
 
@@ -510,6 +531,8 @@ public interface CartDiscount
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         instance.setDiscountGroup(
             com.commercetools.api.models.discount_group.DiscountGroupReference.deepCopy(template.getDiscountGroup()));
+        instance.setRecurringOrderScope(com.commercetools.api.models.recurring_order.RecurringOrderScope
+                .deepCopy(template.getRecurringOrderScope()));
         return instance;
     }
 

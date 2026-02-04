@@ -83,7 +83,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Indicates the type of change. For creation, update, or deletion, the value is <code>"ResourceCreated"</code>, <code>"ResourceUpdated"</code>, or <code>"ResourceDeleted"</code> respectively.</p>
+     *  <p>Indicates the change type. For creation, update, or deletion, the value is <code>"ResourceCreated"</code>, <code>"ResourceUpdated"</code>, or <code>"ResourceDeleted"</code> respectively.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -409,7 +409,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Indicates the type of change. For creation, update, or deletion, the value is <code>"ResourceCreated"</code>, <code>"ResourceUpdated"</code>, or <code>"ResourceDeleted"</code> respectively.</p>
+     *  <p>Indicates the change type. For creation, update, or deletion, the value is <code>"ResourceCreated"</code>, <code>"ResourceUpdated"</code>, or <code>"ResourceDeleted"</code> respectively.</p>
      * @return type
      */
 

@@ -43,7 +43,7 @@ public interface Change {
     public String getType();
 
     /**
-     *  <p><span>Type of change</span> on a resource that is similar to the update action it relates to, where possible. It is not a unique identifier for the data structure, for example, the <code>setDescription</code> change can occur with a localized and non-localized representation.</p>
+     *  <p>Change type on a resource that is similar to the update action it relates to, where possible. It is not a unique identifier for the data structure, for example, the <code>setDescription</code> change can occur with a localized and non-localized representation.</p>
      *  <p><a href="https://docs.commercetools.com/apis/ctp:history:type:Record" rel="nofollow">Records</a> can be filtered by this value using the <code>changes</code> query parameter.</p>
      * @return change
      */
@@ -52,7 +52,7 @@ public interface Change {
     public String getChange();
 
     /**
-     *  <p><span>Type of change</span> on a resource that is similar to the update action it relates to, where possible. It is not a unique identifier for the data structure, for example, the <code>setDescription</code> change can occur with a localized and non-localized representation.</p>
+     *  <p>Change type on a resource that is similar to the update action it relates to, where possible. It is not a unique identifier for the data structure, for example, the <code>setDescription</code> change can occur with a localized and non-localized representation.</p>
      *  <p><a href="https://docs.commercetools.com/apis/ctp:history:type:Record" rel="nofollow">Records</a> can be filtered by this value using the <code>changes</code> query parameter.</p>
      * @param change value to be set
      */

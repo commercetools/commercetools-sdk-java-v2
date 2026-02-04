@@ -15,11 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountChangeSortOrderAction" rel="nofollow">Change Sort Order</a> on Cart Discounts.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountChangeSortOrderAction" rel="nofollow">Change Sort Order</a> on Product Discounts.</li>
- *  </ul>
+ * ChangeSortOrderChange
  *
  * <hr>
  * Example to create an instance using the builder pattern

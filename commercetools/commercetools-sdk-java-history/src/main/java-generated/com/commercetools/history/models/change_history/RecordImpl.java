@@ -100,7 +100,7 @@ public class RecordImpl implements Record, ModelBase {
     }
 
     /**
-     *  <p>Indicates the type of change. For creation, update, or deletion, the value is <code>"ResourceCreated"</code>, <code>"ResourceUpdated"</code>, or <code>"ResourceDeleted"</code> respectively.</p>
+     *  <p>Indicates the change type. For creation, update, or deletion, the value is <code>"ResourceCreated"</code>, <code>"ResourceUpdated"</code>, or <code>"ResourceDeleted"</code> respectively.</p>
      */
 
     public String getType() {

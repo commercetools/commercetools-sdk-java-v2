@@ -132,6 +132,14 @@ public class CartDiscountUpdateActionQueryBuilderDsl {
             CartDiscountUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<CartDiscountUpdateActionQueryBuilderDsl> asSetRecurringOrderScope(
+            Function<com.commercetools.api.predicates.query.cart_discount.CartDiscountSetRecurringOrderScopeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart_discount.CartDiscountSetRecurringOrderScopeActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.cart_discount.CartDiscountSetRecurringOrderScopeActionQueryBuilderDsl
+                    .of()),
+            CartDiscountUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<CartDiscountUpdateActionQueryBuilderDsl> asSetStores(
             Function<com.commercetools.api.predicates.query.cart_discount.CartDiscountSetStoresActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart_discount.CartDiscountSetStoresActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

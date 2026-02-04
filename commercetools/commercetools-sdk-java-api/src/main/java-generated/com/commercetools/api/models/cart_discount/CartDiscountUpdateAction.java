@@ -182,6 +182,14 @@ public interface CartDiscountUpdateAction
     }
 
     /**
+     * builder for setRecurringOrderScope subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.cart_discount.CartDiscountSetRecurringOrderScopeActionBuilder setRecurringOrderScopeBuilder() {
+        return com.commercetools.api.models.cart_discount.CartDiscountSetRecurringOrderScopeActionBuilder.of();
+    }
+
+    /**
      * builder for setStores subtype
      * @return builder
      */

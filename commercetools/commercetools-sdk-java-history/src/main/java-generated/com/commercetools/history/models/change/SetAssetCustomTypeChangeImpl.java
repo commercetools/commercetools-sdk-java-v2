@@ -17,11 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CategorySetAssetCustomTypeAction" rel="nofollow">Set Asset Custom Type</a> on Categories.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetAssetCustomTypeAction" rel="nofollow">Set Asset Custom Type</a> on Products.</li>
- *  </ul>
+ * SetAssetCustomTypeChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetAssetCustomTypeChangeImpl implements SetAssetCustomTypeChange, ModelBase {

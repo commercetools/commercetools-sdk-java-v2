@@ -3,20 +3,36 @@
 <details>
 <summary>Added Type(s)</summary>
 
+- added type `CartDiscountSetRecurringOrderScopeAction`
 - added type `CartLock`
+- added type `FreezeStrategy`
 - added type `CartLockCartAction`
 - added type `CartSetPurchaseOrderNumberAction`
 - added type `CartUnlockCartAction`
 - added type `CartPurchaseOrderNumberSetMessage`
 - added type `CartPurchaseOrderNumberSetMessagePayload`
+- added type `AnyOrder`
+- added type `AnyOrderDraft`
+- added type `ApplicableRecurrencePolicies`
+- added type `ApplicableRecurrencePoliciesDraft`
+- added type `NonRecurringOrdersOnly`
+- added type `NonRecurringOrdersOnlyDraft`
+- added type `RecurringOrderScope`
+- added type `RecurringOrderScopeDraft`
+- added type `RecurringOrdersOnly`
+- added type `RecurringOrdersOnlyDraft`
 </details>
 
 
 <details>
 <summary>Added Property(s)</summary>
 
+- added property `recurringOrderScope` to type `CartDiscount`
+- added property `recurringOrderScope` to type `CartDiscountDraft`
+- added property `freezeStrategy` to type `Cart`
 - added property `lock` to type `Cart`
 - added property `purchaseOrderNumber` to type `Cart`
 - added property `purchaseOrderNumber` to type `CartDraft`
+- added property `strategy` to type `CartFreezeCartAction`
 </details>
 

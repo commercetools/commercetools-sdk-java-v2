@@ -15,13 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetLocaleAction" rel="nofollow">Set Locale</a> on Customers.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetLocaleAction" rel="nofollow">Set Locale</a> on Orders.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetLocaleAction" rel="nofollow">Set Locale</a> on Staged Orders.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewSetLocaleAction" rel="nofollow">Set Locale</a> on Reviews.</li>
- *  </ul>
+ * SetLocaleChange
  *
  * <hr>
  * Example to create an instance using the builder pattern

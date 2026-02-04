@@ -17,11 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetTitleAction" rel="nofollow">Set Title</a> on Customers.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewSetTitleAction" rel="nofollow">Set Title</a> on Reviews.</li>
- *  </ul>
+ * SetTitleChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetTitleChangeImpl implements SetTitleChange, ModelBase {

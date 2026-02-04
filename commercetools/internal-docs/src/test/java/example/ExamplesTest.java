@@ -391,15 +391,11 @@ public class ExamplesTest {
         int limit = 10, total_length = 0;
         String lastId = null;
         while (limitNotReached) {
-            GraphQLRequestBuilder<OrderQueryResult> orderBuilder = GraphQL.query("""
-                    query Orders($where: String, $limit: Int!) {
-                      orders(where: $where, sort: "id asc", limit: $limit) {
-                        results {
-                          id
-                          version
-                        }
-                      }
-                    }""").dataMapper(GraphQLData::getOrders);
+            GraphQLRequestBuilder<OrderQueryResult> orderBuilder = GraphQL
+                    .query("query Orders($where: String, $limit: Int!) {\n"
+                            + "orders(where: $where, sort: \"id asc\", limit: $limit) {\n" + "results {\n" + "id\n"
+                            + "version\n" + "}\n" + "}\n" + "}")
+                    .dataMapper(GraphQLData::getOrders);
 
             var variables = GraphQLVariablesMap.builder().addValue("limit", limit);
             if (lastId != null) {

@@ -31,7 +31,7 @@ spotless {
 
 ext {
     versions = [
-        commercetools: "19.7.0"
+        commercetools: "19.7.1"
     ]
 }
 

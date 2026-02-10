@@ -5,6 +5,7 @@ import static java.util.Arrays.asList;
 import static java.util.Collections.singletonList;
 import static java.util.stream.Collectors.toList;
 
+import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -67,6 +68,7 @@ import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.javamoney.moneta.CurrencyUnitBuilder;
 import org.javamoney.moneta.FastMoney;
+import org.junit.jupiter.api.Test;
 
 // the scope of this class is to give the possibility to the JAvaDoc to get the related examples
 public class HelperMethodsTest {
@@ -966,8 +968,9 @@ public class HelperMethodsTest {
         final DeliveryDraft deliveryDraft = delivery.toDraft();
     }
 
+    @Test
     public void deliveryToDraftBuilder() {
-        final Delivery delivery = DeliveryBuilder.of().id("delivery-id").build();
+        final Delivery delivery = DeliveryBuilder.of().id("delivery-id").createdAt(ZonedDateTime.now()).items(List.of()).parcels(List.of()).build();
 
         final DeliveryDraftBuilder deliveryDraftBuilder = delivery.toDraftBuilder();
     }

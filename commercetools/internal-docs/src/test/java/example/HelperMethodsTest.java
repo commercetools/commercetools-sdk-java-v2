@@ -68,6 +68,7 @@ import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.javamoney.moneta.CurrencyUnitBuilder;
 import org.javamoney.moneta.FastMoney;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 // the scope of this class is to give the possibility to the JAvaDoc to get the related examples
@@ -973,6 +974,9 @@ public class HelperMethodsTest {
         final Delivery delivery = DeliveryBuilder.of().id("delivery-id").createdAt(ZonedDateTime.now()).items(List.of()).parcels(List.of()).build();
 
         final DeliveryDraftBuilder deliveryDraftBuilder = delivery.toDraftBuilder();
+        Assertions.assertNotNull(deliveryDraftBuilder);
+        Assertions.assertNull(deliveryDraftBuilder.getAddress());
+        Assertions.assertNull(deliveryDraftBuilder.getCustom());
     }
 
     public void orderSetDeliveryAddressUnset() {

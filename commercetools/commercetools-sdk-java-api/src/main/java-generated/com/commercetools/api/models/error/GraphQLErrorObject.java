@@ -270,6 +270,14 @@ public interface GraphQLErrorObject {
     }
 
     /**
+     * builder for exactLockConflict subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLExactLockConflictErrorBuilder exactLockConflictBuilder() {
+        return com.commercetools.api.models.error.GraphQLExactLockConflictErrorBuilder.of();
+    }
+
+    /**
      * builder for expiredCustomerEmailToken subtype
      * @return builder
      */
@@ -723,6 +731,14 @@ public interface GraphQLErrorObject {
      */
     public static com.commercetools.api.models.error.GraphQLSyntaxErrorErrorBuilder syntaxErrorBuilder() {
         return com.commercetools.api.models.error.GraphQLSyntaxErrorErrorBuilder.of();
+    }
+
+    /**
+     * builder for validityLockConflict subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLValidityLockConflictErrorBuilder validityLockConflictBuilder() {
+        return com.commercetools.api.models.error.GraphQLValidityLockConflictErrorBuilder.of();
     }
 
     /**

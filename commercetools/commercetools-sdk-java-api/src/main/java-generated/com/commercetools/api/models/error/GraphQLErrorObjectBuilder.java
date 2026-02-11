@@ -107,6 +107,10 @@ public class GraphQLErrorObjectBuilder {
         return com.commercetools.api.models.error.GraphQLEnumValuesMustMatchErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.GraphQLExactLockConflictErrorBuilder exactLockConflictBuilder() {
+        return com.commercetools.api.models.error.GraphQLExactLockConflictErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.GraphQLExpiredCustomerEmailTokenErrorBuilder expiredCustomerEmailTokenBuilder() {
         return com.commercetools.api.models.error.GraphQLExpiredCustomerEmailTokenErrorBuilder.of();
     }
@@ -333,6 +337,10 @@ public class GraphQLErrorObjectBuilder {
 
     public com.commercetools.api.models.error.GraphQLSyntaxErrorErrorBuilder syntaxErrorBuilder() {
         return com.commercetools.api.models.error.GraphQLSyntaxErrorErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.GraphQLValidityLockConflictErrorBuilder validityLockConflictBuilder() {
+        return com.commercetools.api.models.error.GraphQLValidityLockConflictErrorBuilder.of();
     }
 
     /**

@@ -66,4 +66,63 @@ public class CategoriesTest {
         var result = tree.findBySlug(Locale.ENGLISH, "women");
         Assertions.assertThat(result).isNotEmpty();
     }
+
+    @Test
+    public void testGetLocalizedStringEntryCategoryMap() {
+        List<Category> allCategoriesAsFlatList = List.of(
+            Category.builder()
+                    .name(LocalizedString.of(Locale.forLanguageTag("en-US"), "Women"))
+                    .slug(LocalizedString.of(Locale.forLanguageTag("en-US"), "women"))
+                    .id("1")
+                    .version(1L)
+                    .createdAt(ZonedDateTime.now())
+                    .lastModifiedAt(ZonedDateTime.now())
+                    .ancestors()
+                    .orderHint("c2")
+                    .build(),
+            Category.builder()
+                    .name(LocalizedString.of(Locale.forLanguageTag("en"), "Men"))
+                    .slug(LocalizedString.of(Locale.forLanguageTag("en"), "men"))
+                    .id("2")
+                    .version(1L)
+                    .createdAt(ZonedDateTime.now())
+                    .lastModifiedAt(ZonedDateTime.now())
+                    .ancestors()
+                    .orderHint("c2")
+                    .build(),
+            Category.builder()
+                    .name(LocalizedString.of(Locale.forLanguageTag("en-us"), "Kids"))
+                    .slug(LocalizedString.of(Locale.forLanguageTag("en-us"), "kids"))
+                    .id("3")
+                    .version(1L)
+                    .createdAt(ZonedDateTime.now())
+                    .lastModifiedAt(ZonedDateTime.now())
+                    .ancestors()
+                    .orderHint("c2")
+                    .build());
+        CategoryTreeFactory factory = CategoryTreeFactory.of();
+
+        var tree = factory.create(allCategoriesAsFlatList);
+        var result = tree.findBySlug(Locale.forLanguageTag("en-US"), "women");
+        Assertions.assertThat(result).isNotEmpty();
+        var enUsResult = tree.findBySlug(Locale.forLanguageTag("en-us"), "women");
+        Assertions.assertThat(enUsResult).isNotEmpty();
+
+        var enResult = tree.findBySlug(Locale.forLanguageTag("en"), "women");
+        Assertions.assertThat(enResult).isEmpty();
+
+        var menResult = tree.findBySlug(Locale.forLanguageTag("en-US"), "men");
+        Assertions.assertThat(menResult).isEmpty();
+        var menEnUsResult = tree.findBySlug(Locale.forLanguageTag("en-us"), "men");
+        Assertions.assertThat(menEnUsResult).isEmpty();
+        var menEnResult = tree.findBySlug(Locale.forLanguageTag("en"), "men");
+        Assertions.assertThat(menEnResult).isNotEmpty();
+
+        var kidsResult = tree.findBySlug(Locale.forLanguageTag("en-US"), "kids");
+        Assertions.assertThat(kidsResult).isNotEmpty();
+        var kidsEnUsResult = tree.findBySlug(Locale.forLanguageTag("en-us"), "kids");
+        Assertions.assertThat(kidsEnUsResult).isNotEmpty();
+        var kidsEnResult = tree.findBySlug(Locale.forLanguageTag("en"), "kids");
+        Assertions.assertThat(kidsEnResult).isEmpty();
+    }
 }

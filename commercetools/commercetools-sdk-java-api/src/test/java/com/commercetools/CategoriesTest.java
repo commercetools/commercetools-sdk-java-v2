@@ -68,10 +68,9 @@ public class CategoriesTest {
     }
 
     @Test
-    public void testGetLocalizedStringEntryCategoryMap()
-    {
+    public void testGetLocalizedStringEntryCategoryMap() {
         List<Category> allCategoriesAsFlatList = List.of(
-                Category.builder()
+            Category.builder()
                     .name(LocalizedString.of(Locale.forLanguageTag("en-US"), "Women"))
                     .slug(LocalizedString.of(Locale.forLanguageTag("en-US"), "women"))
                     .id("1")
@@ -80,27 +79,27 @@ public class CategoriesTest {
                     .lastModifiedAt(ZonedDateTime.now())
                     .ancestors()
                     .orderHint("c2")
-                .build(),
-                Category.builder()
-                        .name(LocalizedString.of(Locale.forLanguageTag("en"), "Men"))
-                        .slug(LocalizedString.of(Locale.forLanguageTag("en"), "men"))
-                        .id("2")
-                        .version(1L)
-                        .createdAt(ZonedDateTime.now())
-                        .lastModifiedAt(ZonedDateTime.now())
-                        .ancestors()
-                        .orderHint("c2")
-                        .build(),
-                Category.builder()
-                        .name(LocalizedString.of(Locale.forLanguageTag("en-us"), "Kids"))
-                        .slug(LocalizedString.of(Locale.forLanguageTag("en-us"), "kids"))
-                        .id("3")
-                        .version(1L)
-                        .createdAt(ZonedDateTime.now())
-                        .lastModifiedAt(ZonedDateTime.now())
-                        .ancestors()
-                        .orderHint("c2")
-                        .build());
+                    .build(),
+            Category.builder()
+                    .name(LocalizedString.of(Locale.forLanguageTag("en"), "Men"))
+                    .slug(LocalizedString.of(Locale.forLanguageTag("en"), "men"))
+                    .id("2")
+                    .version(1L)
+                    .createdAt(ZonedDateTime.now())
+                    .lastModifiedAt(ZonedDateTime.now())
+                    .ancestors()
+                    .orderHint("c2")
+                    .build(),
+            Category.builder()
+                    .name(LocalizedString.of(Locale.forLanguageTag("en-us"), "Kids"))
+                    .slug(LocalizedString.of(Locale.forLanguageTag("en-us"), "kids"))
+                    .id("3")
+                    .version(1L)
+                    .createdAt(ZonedDateTime.now())
+                    .lastModifiedAt(ZonedDateTime.now())
+                    .ancestors()
+                    .orderHint("c2")
+                    .build());
         CategoryTreeFactory factory = CategoryTreeFactory.of();
 
         var tree = factory.create(allCategoriesAsFlatList);

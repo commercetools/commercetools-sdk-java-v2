@@ -197,6 +197,13 @@ public class ErrorObjectQueryBuilderDsl {
             ErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asExactLockConflict(
+            Function<com.commercetools.api.predicates.query.error.ExactLockConflictErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.ExactLockConflictErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.error.ExactLockConflictErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asExpiredCustomerEmailToken(
             Function<com.commercetools.api.predicates.query.error.ExpiredCustomerEmailTokenErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.ExpiredCustomerEmailTokenErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -601,6 +608,13 @@ public class ErrorObjectQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.error.SyntaxErrorErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.SyntaxErrorErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(com.commercetools.api.predicates.query.error.SyntaxErrorErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asValidityLockConflict(
+            Function<com.commercetools.api.predicates.query.error.ValidityLockConflictErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.ValidityLockConflictErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.error.ValidityLockConflictErrorQueryBuilderDsl.of()),
             ErrorObjectQueryBuilderDsl::of);
     }
 }

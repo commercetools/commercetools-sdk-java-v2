@@ -197,6 +197,13 @@ public class GraphQLErrorObjectQueryBuilderDsl {
             GraphQLErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asExactLockConflict(
+            Function<com.commercetools.api.predicates.query.error.GraphQLExactLockConflictErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLExactLockConflictErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.error.GraphQLExactLockConflictErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asExpiredCustomerEmailToken(
             Function<com.commercetools.api.predicates.query.error.GraphQLExpiredCustomerEmailTokenErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLExpiredCustomerEmailTokenErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -614,6 +621,13 @@ public class GraphQLErrorObjectQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.error.GraphQLSyntaxErrorErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLSyntaxErrorErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(com.commercetools.api.predicates.query.error.GraphQLSyntaxErrorErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asValidityLockConflict(
+            Function<com.commercetools.api.predicates.query.error.GraphQLValidityLockConflictErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLValidityLockConflictErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.error.GraphQLValidityLockConflictErrorQueryBuilderDsl.of()),
             GraphQLErrorObjectQueryBuilderDsl::of);
     }
 }

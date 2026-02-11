@@ -107,6 +107,10 @@ public class ErrorObjectBuilder {
         return com.commercetools.api.models.error.EnumValuesMustMatchErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.ExactLockConflictErrorBuilder exactLockConflictBuilder() {
+        return com.commercetools.api.models.error.ExactLockConflictErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.ExpiredCustomerEmailTokenErrorBuilder expiredCustomerEmailTokenBuilder() {
         return com.commercetools.api.models.error.ExpiredCustomerEmailTokenErrorBuilder.of();
     }
@@ -333,6 +337,10 @@ public class ErrorObjectBuilder {
 
     public com.commercetools.api.models.error.SyntaxErrorErrorBuilder syntaxErrorBuilder() {
         return com.commercetools.api.models.error.SyntaxErrorErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.ValidityLockConflictErrorBuilder validityLockConflictBuilder() {
+        return com.commercetools.api.models.error.ValidityLockConflictErrorBuilder.of();
     }
 
     /**

@@ -971,7 +971,12 @@ public class HelperMethodsTest {
 
     @Test
     public void deliveryToDraftBuilder() {
-        final Delivery delivery = DeliveryBuilder.of().id("delivery-id").createdAt(ZonedDateTime.now()).items(List.of()).parcels(List.of()).build();
+        final Delivery delivery = DeliveryBuilder.of()
+                .id("delivery-id")
+                .createdAt(ZonedDateTime.now())
+                .items(List.of())
+                .parcels(List.of())
+                .build();
 
         final DeliveryDraftBuilder deliveryDraftBuilder = delivery.toDraftBuilder();
         Assertions.assertNotNull(deliveryDraftBuilder);

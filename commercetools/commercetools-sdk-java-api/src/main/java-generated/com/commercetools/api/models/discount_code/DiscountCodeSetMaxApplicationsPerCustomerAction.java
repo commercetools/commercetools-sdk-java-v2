@@ -36,7 +36,7 @@ public interface DiscountCodeSetMaxApplicationsPerCustomerAction extends Discoun
 
     /**
      *  <p>Value to set.</p>
-     *  <p>If empty, any existing value will be removed and the DiscountCode can be applied any number of times.</p>
+     *  <p>If empty, any existing value will be removed and the DiscountCode can be applied any number of times. This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @return maxApplicationsPerCustomer
      */
 
@@ -45,7 +45,7 @@ public interface DiscountCodeSetMaxApplicationsPerCustomerAction extends Discoun
 
     /**
      *  <p>Value to set.</p>
-     *  <p>If empty, any existing value will be removed and the DiscountCode can be applied any number of times.</p>
+     *  <p>If empty, any existing value will be removed and the DiscountCode can be applied any number of times. This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @param maxApplicationsPerCustomer value to be set
      */
 

@@ -1,5 +1,5 @@
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.x.x'
+    testImplementation 'org.junit.jupiter:junit-jupiter:6.0.3'
     implementation project(":commercetools:commercetools-sdk-java-api")
     implementation project(":commercetools:commercetools-sdk-java-importapi")
     implementation project(":commercetools:commercetools-sdk-java-history")

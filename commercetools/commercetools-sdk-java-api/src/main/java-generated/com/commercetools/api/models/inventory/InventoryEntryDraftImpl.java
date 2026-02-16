@@ -135,7 +135,7 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields of the InventoryEntry.</p>
+     *  <p>Custom Fields for the InventoryEntry.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {

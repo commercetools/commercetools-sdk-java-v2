@@ -101,7 +101,7 @@ public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft,
     }
 
     /**
-     *  <p>Custom Fields of the ShoppingListLineItem.</p>
+     *  <p>Custom Fields for the ShoppingListLineItem.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {

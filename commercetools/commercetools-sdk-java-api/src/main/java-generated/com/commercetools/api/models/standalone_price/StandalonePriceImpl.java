@@ -243,7 +243,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields for the StandalonePrice.</p>
+     *  <p>Custom Fields of the StandalonePrice.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

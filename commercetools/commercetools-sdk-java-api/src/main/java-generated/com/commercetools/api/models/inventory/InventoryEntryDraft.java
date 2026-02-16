@@ -103,7 +103,7 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
     public ZonedDateTime getExpectedDelivery();
 
     /**
-     *  <p>Custom Fields of the InventoryEntry.</p>
+     *  <p>Custom Fields for the InventoryEntry.</p>
      * @return custom
      */
     @Valid
@@ -168,7 +168,7 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
     public void setExpectedDelivery(final ZonedDateTime expectedDelivery);
 
     /**
-     *  <p>Custom Fields of the InventoryEntry.</p>
+     *  <p>Custom Fields for the InventoryEntry.</p>
      * @param custom value to be set
      */
 

@@ -145,7 +145,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public List<ItemState> getState();
 
     /**
-     *  <p>Custom Fields of the LineItem.</p>
+     *  <p>Custom Fields for the LineItem.</p>
      * @return custom
      */
     @Valid
@@ -246,7 +246,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public void setState(final List<ItemState> state);
 
     /**
-     *  <p>Custom Fields of the LineItem.</p>
+     *  <p>Custom Fields for the LineItem.</p>
      * @param custom value to be set
      */
 

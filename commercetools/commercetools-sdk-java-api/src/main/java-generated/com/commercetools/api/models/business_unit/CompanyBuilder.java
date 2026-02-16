@@ -464,7 +464,7 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
-     *  <p>Custom Fields for the Business Unit.</p>
+     *  <p>Custom Fields of the Business Unit.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -476,7 +476,7 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
-     *  <p>Custom Fields for the Business Unit.</p>
+     *  <p>Custom Fields of the Business Unit.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -488,7 +488,7 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
-     *  <p>Custom Fields for the Business Unit.</p>
+     *  <p>Custom Fields of the Business Unit.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -1184,7 +1184,7 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
-     *  <p>Custom Fields for the Business Unit.</p>
+     *  <p>Custom Fields of the Business Unit.</p>
      * @return custom
      */
 

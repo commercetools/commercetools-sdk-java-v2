@@ -91,7 +91,7 @@ public class MyTransactionDraftImpl implements MyTransactionDraft, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields of the Transaction.</p>
+     *  <p>Custom Fields for the Transaction.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {

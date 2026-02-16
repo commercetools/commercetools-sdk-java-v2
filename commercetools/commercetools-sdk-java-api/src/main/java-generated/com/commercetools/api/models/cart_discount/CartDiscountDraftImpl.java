@@ -211,7 +211,7 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields of the CartDiscount.</p>
+     *  <p>Custom Fields for the CartDiscount.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {

@@ -111,7 +111,7 @@ public interface ScopedPrice {
     public DiscountedPrice getDiscounted();
 
     /**
-     *  <p>Custom Fields for the Price.</p>
+     *  <p>Custom Fields of the Price.</p>
      * @return custom
      */
     @Valid
@@ -183,7 +183,7 @@ public interface ScopedPrice {
     public void setDiscounted(final DiscountedPrice discounted);
 
     /**
-     *  <p>Custom Fields for the Price.</p>
+     *  <p>Custom Fields of the Price.</p>
      * @param custom value to be set
      */
 

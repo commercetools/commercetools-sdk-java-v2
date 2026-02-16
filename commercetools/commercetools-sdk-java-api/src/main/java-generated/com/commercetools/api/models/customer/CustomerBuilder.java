@@ -695,7 +695,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Custom Fields for the Customer.</p>
+     *  <p>Custom Fields of the Customer.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -707,7 +707,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Custom Fields for the Customer.</p>
+     *  <p>Custom Fields of the Customer.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -719,7 +719,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Custom Fields for the Customer.</p>
+     *  <p>Custom Fields of the Customer.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -1130,7 +1130,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Custom Fields for the Customer.</p>
+     *  <p>Custom Fields of the Customer.</p>
      * @return custom
      */
 

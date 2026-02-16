@@ -124,7 +124,7 @@ public interface AssociateRole extends BaseResource, com.commercetools.api.model
     public List<Permission> getPermissions();
 
     /**
-     *  <p>Custom Fields for the AssociateRole.</p>
+     *  <p>Custom Fields of the AssociateRole.</p>
      * @return custom
      */
     @Valid
@@ -210,7 +210,7 @@ public interface AssociateRole extends BaseResource, com.commercetools.api.model
     public void setPermissions(final List<Permission> permissions);
 
     /**
-     *  <p>Custom Fields for the AssociateRole.</p>
+     *  <p>Custom Fields of the AssociateRole.</p>
      * @param custom value to be set
      */
 

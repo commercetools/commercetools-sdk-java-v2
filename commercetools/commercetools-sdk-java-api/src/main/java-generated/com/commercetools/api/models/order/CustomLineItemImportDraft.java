@@ -132,7 +132,7 @@ public interface CustomLineItemImportDraft
     public List<ItemState> getState();
 
     /**
-     *  <p>Custom Fields of the CustomLineItem.</p>
+     *  <p>Custom Fields for the CustomLineItem.</p>
      * @return custom
      */
     @Valid
@@ -222,7 +222,7 @@ public interface CustomLineItemImportDraft
     public void setState(final List<ItemState> state);
 
     /**
-     *  <p>Custom Fields of the CustomLineItem.</p>
+     *  <p>Custom Fields for the CustomLineItem.</p>
      * @param custom value to be set
      */
 

@@ -269,7 +269,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     public List<CustomerGroupAssignment> getCustomerGroupAssignments();
 
     /**
-     *  <p>Custom Fields for the Customer.</p>
+     *  <p>Custom Fields of the Customer.</p>
      * @return custom
      */
     @Valid
@@ -531,7 +531,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     public void setCustomerGroupAssignments(final List<CustomerGroupAssignment> customerGroupAssignments);
 
     /**
-     *  <p>Custom Fields for the Customer.</p>
+     *  <p>Custom Fields of the Customer.</p>
      * @param custom value to be set
      */
 

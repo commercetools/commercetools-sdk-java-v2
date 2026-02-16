@@ -362,7 +362,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields for the Customer.</p>
+     *  <p>Custom Fields of the Customer.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

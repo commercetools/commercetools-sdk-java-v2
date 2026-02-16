@@ -103,7 +103,7 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
     public DiscountedPriceDraft getDiscounted();
 
     /**
-     *  <p>Custom Fields for the Price.</p>
+     *  <p>Custom Fields of the Price.</p>
      * @return custom
      */
     @Valid
@@ -176,7 +176,7 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
     public void setDiscounted(final DiscountedPriceDraft discounted);
 
     /**
-     *  <p>Custom Fields for the Price.</p>
+     *  <p>Custom Fields of the Price.</p>
      * @param custom value to be set
      */
 

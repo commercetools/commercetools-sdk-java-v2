@@ -529,7 +529,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Custom Fields for the Payment.</p>
+     *  <p>Custom Fields of the Payment.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -541,7 +541,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Custom Fields for the Payment.</p>
+     *  <p>Custom Fields of the Payment.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -553,7 +553,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Custom Fields for the Payment.</p>
+     *  <p>Custom Fields of the Payment.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -706,7 +706,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Custom Fields for the Payment.</p>
+     *  <p>Custom Fields of the Payment.</p>
      * @return custom
      */
 

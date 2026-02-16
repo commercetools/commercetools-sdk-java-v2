@@ -110,7 +110,7 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
     }
 
     /**
-     *  <p>Custom Fields of the Transaction.</p>
+     *  <p>Custom Fields for the Transaction.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -122,7 +122,7 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
     }
 
     /**
-     *  <p>Custom Fields of the Transaction.</p>
+     *  <p>Custom Fields for the Transaction.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -134,7 +134,7 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
     }
 
     /**
-     *  <p>Custom Fields of the Transaction.</p>
+     *  <p>Custom Fields for the Transaction.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -195,7 +195,7 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
     }
 
     /**
-     *  <p>Custom Fields of the Transaction.</p>
+     *  <p>Custom Fields for the Transaction.</p>
      * @return custom
      */
 

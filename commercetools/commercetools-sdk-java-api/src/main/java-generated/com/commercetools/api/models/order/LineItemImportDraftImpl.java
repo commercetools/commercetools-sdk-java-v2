@@ -183,7 +183,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields of the LineItem.</p>
+     *  <p>Custom Fields for the LineItem.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {

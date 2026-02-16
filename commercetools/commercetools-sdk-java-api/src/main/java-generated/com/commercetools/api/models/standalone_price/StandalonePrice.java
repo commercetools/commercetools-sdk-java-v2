@@ -186,7 +186,7 @@ public interface StandalonePrice
     public DiscountedPrice getDiscounted();
 
     /**
-     *  <p>Custom Fields for the StandalonePrice.</p>
+     *  <p>Custom Fields of the StandalonePrice.</p>
      * @return custom
      */
     @Valid
@@ -341,7 +341,7 @@ public interface StandalonePrice
     public void setDiscounted(final DiscountedPrice discounted);
 
     /**
-     *  <p>Custom Fields for the StandalonePrice.</p>
+     *  <p>Custom Fields of the StandalonePrice.</p>
      * @param custom value to be set
      */
 

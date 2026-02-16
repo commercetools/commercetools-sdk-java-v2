@@ -168,7 +168,7 @@ public interface Payment extends BaseResource, PaymentMixin, com.commercetools.a
     public List<CustomFields> getInterfaceInteractions();
 
     /**
-     *  <p>Custom Fields for the Payment.</p>
+     *  <p>Custom Fields of the Payment.</p>
      * @return custom
      */
     @Valid
@@ -298,7 +298,7 @@ public interface Payment extends BaseResource, PaymentMixin, com.commercetools.a
     public void setInterfaceInteractions(final List<CustomFields> interfaceInteractions);
 
     /**
-     *  <p>Custom Fields for the Payment.</p>
+     *  <p>Custom Fields of the Payment.</p>
      * @param custom value to be set
      */
 

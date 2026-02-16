@@ -485,7 +485,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Custom Fields for the StandalonePrice.</p>
+     *  <p>Custom Fields of the StandalonePrice.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -497,7 +497,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Custom Fields for the StandalonePrice.</p>
+     *  <p>Custom Fields of the StandalonePrice.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -509,7 +509,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Custom Fields for the StandalonePrice.</p>
+     *  <p>Custom Fields of the StandalonePrice.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -763,7 +763,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Custom Fields for the StandalonePrice.</p>
+     *  <p>Custom Fields of the StandalonePrice.</p>
      * @return custom
      */
 

@@ -157,7 +157,7 @@ public class AssociateRoleImpl implements AssociateRole, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields for the AssociateRole.</p>
+     *  <p>Custom Fields of the AssociateRole.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

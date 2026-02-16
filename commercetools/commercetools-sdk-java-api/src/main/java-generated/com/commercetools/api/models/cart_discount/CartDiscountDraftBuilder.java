@@ -409,7 +409,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     *  <p>Custom Fields of the CartDiscount.</p>
+     *  <p>Custom Fields for the CartDiscount.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -421,7 +421,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     *  <p>Custom Fields of the CartDiscount.</p>
+     *  <p>Custom Fields for the CartDiscount.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -433,7 +433,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     *  <p>Custom Fields of the CartDiscount.</p>
+     *  <p>Custom Fields for the CartDiscount.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -646,7 +646,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     *  <p>Custom Fields of the CartDiscount.</p>
+     *  <p>Custom Fields for the CartDiscount.</p>
      * @return custom
      */
 

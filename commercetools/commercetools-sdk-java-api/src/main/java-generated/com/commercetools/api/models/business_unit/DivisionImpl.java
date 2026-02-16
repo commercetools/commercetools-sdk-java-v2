@@ -255,7 +255,7 @@ public class DivisionImpl implements Division, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields for the Business Unit.</p>
+     *  <p>Custom Fields of the Business Unit.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

@@ -182,7 +182,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     public LocalizedString getMetaKeywords();
 
     /**
-     *  <p>Custom Fields for the Category.</p>
+     *  <p>Custom Fields of the Category.</p>
      * @return custom
      */
     @Valid
@@ -326,7 +326,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     public void setMetaKeywords(final LocalizedString metaKeywords);
 
     /**
-     *  <p>Custom Fields for the Category.</p>
+     *  <p>Custom Fields of the Category.</p>
      * @param custom value to be set
      */
 

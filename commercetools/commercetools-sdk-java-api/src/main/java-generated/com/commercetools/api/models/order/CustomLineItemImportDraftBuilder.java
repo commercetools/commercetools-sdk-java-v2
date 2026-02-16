@@ -379,7 +379,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     *  <p>Custom Fields of the CustomLineItem.</p>
+     *  <p>Custom Fields for the CustomLineItem.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -391,7 +391,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     *  <p>Custom Fields of the CustomLineItem.</p>
+     *  <p>Custom Fields for the CustomLineItem.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -403,7 +403,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     *  <p>Custom Fields of the CustomLineItem.</p>
+     *  <p>Custom Fields for the CustomLineItem.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -515,7 +515,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     *  <p>Custom Fields of the CustomLineItem.</p>
+     *  <p>Custom Fields for the CustomLineItem.</p>
      * @return custom
      */
 

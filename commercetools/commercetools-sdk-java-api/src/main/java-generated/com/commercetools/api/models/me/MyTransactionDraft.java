@@ -72,7 +72,7 @@ public interface MyTransactionDraft extends com.commercetools.api.models.Customi
     public String getInteractionId();
 
     /**
-     *  <p>Custom Fields of the Transaction.</p>
+     *  <p>Custom Fields for the Transaction.</p>
      * @return custom
      */
     @Valid
@@ -116,7 +116,7 @@ public interface MyTransactionDraft extends com.commercetools.api.models.Customi
     public void setInteractionId(final String interactionId);
 
     /**
-     *  <p>Custom Fields of the Transaction.</p>
+     *  <p>Custom Fields for the Transaction.</p>
      * @param custom value to be set
      */
 

@@ -75,7 +75,7 @@ public interface ShoppingListLineItemDraft
     public ZonedDateTime getAddedAt();
 
     /**
-     *  <p>Custom Fields of the ShoppingListLineItem.</p>
+     *  <p>Custom Fields for the ShoppingListLineItem.</p>
      * @return custom
      */
     @Valid
@@ -126,7 +126,7 @@ public interface ShoppingListLineItemDraft
     public void setAddedAt(final ZonedDateTime addedAt);
 
     /**
-     *  <p>Custom Fields of the ShoppingListLineItem.</p>
+     *  <p>Custom Fields for the ShoppingListLineItem.</p>
      * @param custom value to be set
      */
 

@@ -171,7 +171,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     public String getContactEmail();
 
     /**
-     *  <p>Custom Fields for the Business Unit.</p>
+     *  <p>Custom Fields of the Business Unit.</p>
      * @return custom
      */
     @Valid
@@ -390,7 +390,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     public void setContactEmail(final String contactEmail);
 
     /**
-     *  <p>Custom Fields for the Business Unit.</p>
+     *  <p>Custom Fields of the Business Unit.</p>
      * @param custom value to be set
      */
 

@@ -79,7 +79,7 @@ public interface TransactionDraft extends com.commercetools.api.models.Customiza
     public TransactionState getState();
 
     /**
-     *  <p>Custom Fields of the Transaction.</p>
+     *  <p>Custom Fields for the Transaction.</p>
      * @return custom
      */
     @Valid
@@ -130,7 +130,7 @@ public interface TransactionDraft extends com.commercetools.api.models.Customiza
     public void setState(final TransactionState state);
 
     /**
-     *  <p>Custom Fields of the Transaction.</p>
+     *  <p>Custom Fields for the Transaction.</p>
      * @param custom value to be set
      */
 

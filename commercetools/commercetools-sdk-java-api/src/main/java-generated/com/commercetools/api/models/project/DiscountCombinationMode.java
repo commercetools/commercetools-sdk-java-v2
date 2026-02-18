@@ -11,16 +11,16 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Defines how Product Discounts and Cart Discounts are combined for every Line Item in a Cart.</p>
+ *  <p>Defines how Product Discounts and Cart Discounts are combined for Line Items in every Cart of the Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface DiscountCombinationMode extends JsonEnum {
 
     /**
-    <p>Either Product Discounts or Cart Discounts are chosen based on best deal for the customer. Only one type applies per Line Item in a Cart.</p> */
+    <p>Either Product Discounts or Cart Discounts are chosen for each Line Item in the Cart based on the best deal for the Customer. Only one discount type applies per Line Item in the Cart.</p> */
     DiscountCombinationMode BEST_DEAL = DiscountCombinationModeEnum.BEST_DEAL;
     /**
-    <p>Product Discounts and Cart Discounts are both applied to the Line Item in a Cart, potentially increasing the total discount.</p> */
+    <p>Product Discounts and Cart Discounts are both applied to each Line Item in the Cart, potentially increasing the total discount.</p> */
     DiscountCombinationMode STACKING = DiscountCombinationModeEnum.STACKING;
 
     /**

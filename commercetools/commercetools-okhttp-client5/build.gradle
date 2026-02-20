@@ -11,7 +11,7 @@ jmh {
 
 dependencies {
     api project(":rmf:rmf-java-base")
-    api "com.squareup.okhttp3:okhttp:5.3.2" version {
+    api "com.squareup.okhttp3:okhttp:4.9.2" version {
         strictly '[5.0,5.99999]'
         prefer "5.3.2"
     }

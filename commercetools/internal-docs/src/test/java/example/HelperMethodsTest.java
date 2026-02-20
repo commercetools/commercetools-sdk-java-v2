@@ -957,10 +957,17 @@ public class HelperMethodsTest {
         final ParcelDraft parcelDraft = parcel.toDraft();
     }
 
+    @Test
     public void parcelToDraftBuilder() {
-        final Parcel parcel = ParcelBuilder.of().id("parcel-id").build();
+        final Parcel parcel = ParcelBuilder.of()
+            .id("parcel-id")
+            .createdAt(ZonedDateTime.now())
+            .build();
 
         final ParcelDraftBuilder parcelDraftBuilder = parcel.toDraftBuilder();
+
+        Assertions.assertNotNull(parcelDraftBuilder);
+        Assertions.assertNull(parcelDraftBuilder.getCustom());
     }
 
     public void deliveryToDraft() {

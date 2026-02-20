@@ -174,7 +174,7 @@ public class RecurringOrderImpl implements RecurringOrder, ModelBase {
     }
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the original <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that generated this RecurringOrder.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the original <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that generated this RecurringOrder. This field is automatically populated when the RecurringOrder is created via the <span>Create Order from Cart</span> endpoint and the Cart contains Line Items with defined <code>recurrenceInfo</code>. When the RecurringOrder is created directly via the <span>Create RecurringOrder</span> endpoint, this field remains empty.</p>
      */
 
     public com.commercetools.api.models.order.OrderReference getOriginOrder() {

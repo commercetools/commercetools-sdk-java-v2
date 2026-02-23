@@ -959,10 +959,7 @@ public class HelperMethodsTest {
 
     @Test
     public void parcelToDraftBuilder() {
-        final Parcel parcel = ParcelBuilder.of()
-            .id("parcel-id")
-            .createdAt(ZonedDateTime.now())
-            .build();
+        final Parcel parcel = ParcelBuilder.of().id("parcel-id").createdAt(ZonedDateTime.now()).build();
 
         final ParcelDraftBuilder parcelDraftBuilder = parcel.toDraftBuilder();
 

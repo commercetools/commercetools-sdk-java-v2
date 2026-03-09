@@ -40,7 +40,7 @@ public class LocalizedUrlImpl implements LocalizedUrl, ModelBase {
     }
 
     /**
-     *  <p>URL for the specific <span>locale</span>.</p>
+     *  <p>URL for the specific <a href="https://docs.commercetools.com/apis/ctp:checkout:type:Locale" rel="nofollow">Locale</a>.</p>
      */
 
     public Map<String, String> values() {

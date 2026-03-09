@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>JSON object where the keys are of type <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>, and the values are the strings used for the corresponding language.</p>
+ *  <p>JSON object where the keys are of type <a href="https://docs.commercetools.com/apis/ctp:checkout:type:Locale" rel="nofollow">Locale</a>, and the values are the strings used for the corresponding language.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

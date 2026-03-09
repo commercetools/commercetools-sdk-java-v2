@@ -24,7 +24,7 @@ public class LocalizedUrlBuilder implements Builder<LocalizedUrl> {
     private Map<String, String> values = new HashMap<>();
 
     /**
-     *  <p>URL for the specific <span>locale</span>.</p>
+     *  <p>URL for the specific <a href="https://docs.commercetools.com/apis/ctp:checkout:type:Locale" rel="nofollow">Locale</a>.</p>
      * @param values properties to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class LocalizedUrlBuilder implements Builder<LocalizedUrl> {
     }
 
     /**
-     *  <p>URL for the specific <span>locale</span>.</p>
+     *  <p>URL for the specific <a href="https://docs.commercetools.com/apis/ctp:checkout:type:Locale" rel="nofollow">Locale</a>.</p>
      * @param key property name
      * @param value property value
      * @return Builder
@@ -50,7 +50,7 @@ public class LocalizedUrlBuilder implements Builder<LocalizedUrl> {
     }
 
     /**
-     *  <p>URL for the specific <span>locale</span>.</p>
+     *  <p>URL for the specific <a href="https://docs.commercetools.com/apis/ctp:checkout:type:Locale" rel="nofollow">Locale</a>.</p>
      * @return pattern properties
      */
 

@@ -32,7 +32,7 @@ import jakarta.validation.constraints.NotNull;
 public interface LocalizedUrl {
 
     /**
-     *  <p>URL for the specific <span>locale</span>.</p>
+     *  <p>URL for the specific <a href="https://docs.commercetools.com/apis/ctp:checkout:type:Locale" rel="nofollow">Locale</a>.</p>
      * @return map of the pattern property values
      */
     @NotNull
@@ -40,7 +40,7 @@ public interface LocalizedUrl {
     public Map<String, String> values();
 
     /**
-     *  <p>URL for the specific <span>locale</span>.</p>
+     *  <p>URL for the specific <a href="https://docs.commercetools.com/apis/ctp:checkout:type:Locale" rel="nofollow">Locale</a>.</p>
      * @param key property name
      * @param value property value
      */

@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Creates an Import Container in the Project.</p>
- *  <p>Generates the <span>ImportContainerCreated</span> Event.</p>
+ *  <p>Generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:ImportContainerCreatedEvent" rel="nofollow">ImportContainerCreated</a> Event.</p>
  *
  * <hr>
  * <div class=code-example>

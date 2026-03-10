@@ -20,23 +20,26 @@ public interface ProcessingState extends JsonEnum {
     <p>The initial state assigned if the request payload (JSON structure and fields) meets Import API specifications. The resource import is in progress.</p> */
     ProcessingState PROCESSING = ProcessingStateEnum.PROCESSING;
     /**
-    <p>Either the request payload is missing the data as per Import API specifications, or even though the references were resolved, the data does not meet validation constraints. Generates the <span>ImportValidationFailed</span> Event.</p> */
+    <p>Either the request payload is missing the data as per Import API specifications, or even though the references were resolved, the data does not meet validation constraints. Generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:ImportValidationFailedEvent" rel="nofollow">ImportValidationFailed</a> Event.</p> */
     ProcessingState VALIDATION_FAILED = ProcessingStateEnum.VALIDATION_FAILED;
     /**
-    <p>The import request contains <a href="https://docs.commercetools.com/apis/ctp:api:type:KeyReference" rel="nofollow">KeyReferences</a> to resources that do not exist in your Composable Commerce Project. Generates the <span>ImportUnresolved</span> Event.</p> */
+    <p>The import request contains <a href="https://docs.commercetools.com/apis/ctp:api:type:KeyReference" rel="nofollow">KeyReferences</a> to resources that do not exist in your Composable Commerce Project. Generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:ImportUnresolvedEvent" rel="nofollow">ImportUnresolved</a> Event.</p> */
     ProcessingState UNRESOLVED = ProcessingStateEnum.UNRESOLVED;
     /**
-    <p>Products must have at least one Product Variant, also known as the Master Variant. If you import a Product without a Master Variant, the import request will have this status until another import request includes Master Variant data for the Product. Generates the <span>ImportWaitForMasterVariant</span> Event.</p> */
+    <p>Products must have at least one Product Variant, also known as the Master Variant. If you import a Product without a Master Variant, the import request will have this status until another import request includes Master Variant data for the Product. Generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:ImportWaitForMasterVariantEvent" rel="nofollow">ImportWaitForMasterVariant</a> Event.</p> */
     ProcessingState WAIT_FOR_MASTER_VARIANT = ProcessingStateEnum.WAIT_FOR_MASTER_VARIANT;
     /**
     <p>The resource was successfully imported.</p> */
     ProcessingState IMPORTED = ProcessingStateEnum.IMPORTED;
     /**
-    <p>The resource could not be imported. References were resolved, but the system could not import the data due to an internal server error and the retry limit was reached. Generates the <span>ImportOperationRejected</span> Event.</p> */
+    <p>The resource could not be imported. References were resolved, but the system could not import the data due to an internal server error and the retry limit was reached. Generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:ImportOperationRejectedEvent" rel="nofollow">ImportOperationRejected</a> Event.</p> */
     ProcessingState REJECTED = ProcessingStateEnum.REJECTED;
     /**
     <p>The import request was canceled and the resource was not imported.</p> */
     ProcessingState CANCELED = ProcessingStateEnum.CANCELED;
+    /**
+    <p>The resource was partially imported. Some actions succeeded but others failed. The ImportOperation includes error details for the failed parts.</p> */
+    ProcessingState PARTIALLY_IMPORTED = ProcessingStateEnum.PARTIALLY_IMPORTED;
 
     /**
      * possible values of ProcessingState
@@ -75,7 +78,12 @@ public interface ProcessingState extends JsonEnum {
         /**
          * canceled
          */
-        CANCELED("canceled");
+        CANCELED("canceled"),
+
+        /**
+         * partiallyImported
+         */
+        PARTIALLY_IMPORTED("partiallyImported");
         private final String jsonName;
 
         private ProcessingStateEnum(final String jsonName) {

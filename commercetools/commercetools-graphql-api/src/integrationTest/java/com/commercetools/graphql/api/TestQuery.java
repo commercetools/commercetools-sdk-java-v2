@@ -4,7 +4,6 @@ package com.commercetools.graphql.api;
 import java.util.Collections;
 
 import com.commercetools.api.client.ProjectApiRoot;
-import com.commercetools.api.models.product_search.ProductSearchRequest;
 import com.commercetools.graphql.CommercetoolsTestUtils;
 import com.commercetools.graphql.api.types.*;
 
@@ -98,16 +97,14 @@ public class TestQuery {
         final ProjectApiRoot projectRoot = CommercetoolsTestUtils.getProjectApiRoot();
 
         SearchQueryInput input = SearchQueryInput.newBuilder()
-                .range(
-                        SearchQueryRangeExpressionInput.newBuilder()
-                                ._float(
-                                        SearchNumberRangeExpressionInput.newBuilder()
-                                                .field("variants.attributes.weight")
-                                                .fieldType(SearchFieldType.number)
-                                                .gte(1.2d)
-                                                .lte(3d)
-                                                .build())
+                .range(SearchQueryRangeExpressionInput.newBuilder()
+                        ._float(SearchNumberRangeExpressionInput.newBuilder()
+                                .field("variants.attributes.weight")
+                                .fieldType(SearchFieldType.number)
+                                .gte(1.2d)
+                                .lte(3d)
                                 .build())
+                        .build())
                 .build();
         final GraphQLRequest<ProductPagedSearchResponse> productQuery = GraphQL
                 .productsSearch(query -> query.query(input))

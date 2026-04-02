@@ -9,14 +9,14 @@
     "node": ">=14.15",
     "npm": ">=5"
   },
-  "packageManager": "yarn@4.9.2",
   "dependencies": {
     "husky": "9.1.7",
     "lint-staged": "16.1.2"
   },
   "scripts": {
-    "postinstall": "husky install",
+    "postinstall": "husky",
     "format": "./gradlew spotlessApply",
     "prepare": "husky"
-  }
+  },
+  "packageManager": "yarn@4.13.0"
 }

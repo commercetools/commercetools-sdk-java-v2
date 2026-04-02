@@ -5,7 +5,7 @@ import java.util.Collections;
 
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.graphql.CommercetoolsTestUtils;
-import com.commercetools.graphql.api.types.ProductQueryResult;
+import com.commercetools.graphql.api.types.*;
 
 import io.vrap.rmf.base.client.ApiHttpResponse;
 
@@ -90,5 +90,28 @@ public class TestQuery {
 
         final ProductQueryResult data = response.getBody().getData();
         Assertions.assertThat(data.getResults()).isNotNull();
+    }
+
+    @Test
+    public void graphQLSearch() {
+        final ProjectApiRoot projectRoot = CommercetoolsTestUtils.getProjectApiRoot();
+
+        SearchQueryInput input = SearchQueryInput.newBuilder()
+                .range(SearchQueryRangeExpressionInput.newBuilder()
+                        ._float(SearchNumberRangeExpressionInput.newBuilder()
+                                .field("variants.attributes.weight")
+                                .fieldType(SearchFieldType.number)
+                                .gte(1.2d)
+                                .lte(3d)
+                                .build())
+                        .build())
+                .build();
+        final GraphQLRequest<ProductPagedSearchResponse> productQuery = GraphQL
+                .productsSearch(query -> query.query(input))
+                .projection(root -> root.results().id());
+
+        final ApiHttpResponse<com.commercetools.api.models.graph_ql.GraphQLResponse> response = projectRoot.graphql()
+                .post(productQuery)
+                .executeBlocking();
     }
 }

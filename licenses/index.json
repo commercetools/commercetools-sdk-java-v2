@@ -383,7 +383,7 @@
         },
         {
             "moduleName": "com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core",
-            "moduleVersion": "8.1.0",
+            "moduleVersion": "8.3.0",
             "moduleUrls": [
                 "https://github.com/Netflix/dgs-codegen"
             ],

@@ -360,6 +360,7 @@ tasks.register('runMainMethodThreadLeakTest', JavaExec) {
     classpath = sourceSets.test.runtimeClasspath
     mainClass = "com.commercetools.MainMethodThreadLeakTest"
     timeout = Duration.ofSeconds(20)
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(21) }
 }
 tasks.register('runMainMethodMemoryLeakTest', JavaExec) {
     group = "Execution"
@@ -367,6 +368,7 @@ tasks.register('runMainMethodMemoryLeakTest', JavaExec) {
     classpath = sourceSets.test.runtimeClasspath
     mainClass = "com.commercetools.MainMethodMemoryLeakTest"
     maxHeapSize("128m")
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(21) }
 }
 
 

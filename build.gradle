@@ -24,6 +24,12 @@ plugins {
     id "srcinfo"
 }
 
+/*
+dependencies {
+    runtimeOnly 'org.springframework.boot:spring-boot-properties-migrator'
+}*/
+
+
 import java.text.SimpleDateFormat
 
 apply plugin: 'versioning'

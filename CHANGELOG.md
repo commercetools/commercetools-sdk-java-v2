@@ -1,4 +1,150 @@
 
+# 19.9.0 (2026-04-07)
+
+## What's Changed
+
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `ExactLockConflictError`
+- added type `ValidityLockConflictError`
+- added type `GraphQLExactLockConflictError`
+- added type `GraphQLValidityLockConflictError`
+</details>
+
+**Import changes**
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `partiallyImported` to type `ProcessingState`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `partiallyImported` to type `OperationStates`
+</details>
+
+**Checkout changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `CountryCode`
+- added type `CurrencyCode`
+- added type `Locale`
+</details>
+
+* style fix by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1043
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1044
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1045
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1046
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1047
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1048
+* chore(deps): update actions/checkout action to v6 by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1007
+* fix(deps): update dependency org.junit.jupiter:junit-jupiter to v6 by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/999
+* chore(deps): update gradle/actions action to v5 by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/998
+* chore(deps): update actions/setup-java action to v5 by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/975
+* chore(deps): lock file maintenance by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/960
+* chore(deps): update actions/create-github-app-token digest to 29824e6 by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/964
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1049
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1050
+* update dgs-codegen plugin by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1054
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1051
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.7.3...19.9.0
+
+# 19.7.3 (2026-02-23)
+
+## What's Changed
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `ExactLockConflictError`
+- added type `ValidityLockConflictError`
+- added type `GraphQLExactLockConflictError`
+- added type `GraphQLValidityLockConflictError`
+</details>
+
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1036
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1037
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1038
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1039
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1040
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1041
+* Fix NPE in ParcelMixin.toDraftBuilder by @ZanochkynYehor in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1042
+
+## New Contributors
+* @ZanochkynYehor made their first contribution in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1042
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.7.2...19.7.3
+
+# 19.7.2 (2026-02-11)
+
+## What's Changed
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `CartDiscountSetRecurringOrderScopeAction`
+- added type `CartLock`
+- added type `FreezeStrategy`
+- added type `CartLockCartAction`
+- added type `CartSetPurchaseOrderNumberAction`
+- added type `CartUnlockCartAction`
+- added type `CartPurchaseOrderNumberSetMessage`
+- added type `CartPurchaseOrderNumberSetMessagePayload`
+- added type `AnyOrder`
+- added type `AnyOrderDraft`
+- added type `ApplicableRecurrencePolicies`
+- added type `ApplicableRecurrencePoliciesDraft`
+- added type `NonRecurringOrdersOnly`
+- added type `NonRecurringOrdersOnlyDraft`
+- added type `RecurringOrderScope`
+- added type `RecurringOrderScopeDraft`
+- added type `RecurringOrdersOnly`
+- added type `RecurringOrdersOnlyDraft`
+</details>
+
+
+<details>
+<summary>Required Property(s)</summary>
+
+- :warning: changed property `deleteDaysAfterLastModification` of type `CartsConfiguration` to be required
+- :warning: changed property `deleteDaysAfterLastModification` of type `ShoppingListsConfiguration` to be required
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `recurringOrderScope` to type `CartDiscount`
+- added property `recurringOrderScope` to type `CartDiscountDraft`
+- added property `freezeStrategy` to type `Cart`
+- added property `lock` to type `Cart`
+- added property `purchaseOrderNumber` to type `Cart`
+- added property `purchaseOrderNumber` to type `CartDraft`
+- added property `strategy` to type `CartFreezeCartAction`
+</details>
+
+
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1029
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1030
+* update language level for graphql task by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1032
+* DEVX-741-Support-null-in-address-in-Delivery by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1034
+* fix NPE in category tree factory by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1035
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.7.1...19.7.2
+
 # 19.7.1 (2026-02-04)
 
 ## What's Changed

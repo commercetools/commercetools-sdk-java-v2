@@ -82,7 +82,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">DiscountCombinationMode</span><span class="extends-implements">
 extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="interface in io.vrap.rmf.base.client">JsonEnum</a></span></div>
-<div class="block"><p>Defines how Product Discounts and Cart Discounts are combined for every Cart in a Project.</p></div>
+<div class="block"><p>Defines how Product Discounts and Cart Discounts are combined for Line Items in every Cart of the Project.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -115,12 +115,12 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <div class="col-first even-row-color"><code>static final <a href="DiscountCombinationMode.html" title="interface in com.commercetools.api.models.project">DiscountCombinationMode</a></code></div>
 <div class="col-second even-row-color"><code><a href="#BEST_DEAL" class="member-name-link">BEST_DEAL</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">Either Product Discounts or Cart Discounts are chosen based on best deal for the customer.</div>
+<div class="block">Either Product Discounts or Cart Discounts are chosen for each Line Item in the Cart based on the best deal for the Customer.</div>
 </div>
 <div class="col-first odd-row-color"><code>static final <a href="DiscountCombinationMode.html" title="interface in com.commercetools.api.models.project">DiscountCombinationMode</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#STACKING" class="member-name-link">STACKING</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">Product Discounts and Cart Discounts are both applied to the Cart, potentially increasing the total discount.</div>
+<div class="block">Product Discounts and Cart Discounts are both applied to each Line Item in the Cart, potentially increasing the total discount.</div>
 </div>
 </div>
 </section>
@@ -185,14 +185,14 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <section class="detail" id="BEST_DEAL">
 <h3>BEST_DEAL</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="DiscountCombinationMode.html" title="interface in com.commercetools.api.models.project">DiscountCombinationMode</a></span>&nbsp;<span class="element-name">BEST_DEAL</span></div>
-<div class="block"><p>Either Product Discounts or Cart Discounts are chosen based on best deal for the customer. Only one type applies per Cart.</p></div>
+<div class="block"><p>Either Product Discounts or Cart Discounts are chosen for each Line Item in the Cart based on the best deal for the Customer. Only one discount type applies per Line Item in the Cart.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="STACKING">
 <h3>STACKING</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="DiscountCombinationMode.html" title="interface in com.commercetools.api.models.project">DiscountCombinationMode</a></span>&nbsp;<span class="element-name">STACKING</span></div>
-<div class="block"><p>Product Discounts and Cart Discounts are both applied to the Cart, potentially increasing the total discount.</p></div>
+<div class="block"><p>Product Discounts and Cart Discounts are both applied to each Line Item in the Cart, potentially increasing the total discount.</p></div>
 </section>
 </li>
 </ul>

@@ -189,7 +189,8 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="DiscountedLineItemPrice.html" title="interface in com.commercetools.api.models.cart">DiscountedLineItemPrice</a></span>&nbsp;<span class="element-name">getDiscountedPrice</span>()</div>
-<div class="block"><p>Discounted price of the Line Item or Custom Line Item.</p></div>
+<div class="block"><p>Discounted price of the Line Item or Custom Line Item.</p>
+  <p>When multiple <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> apply to the same Line Item, the discounts are applied sequentially in the order determined by their <code>sortOrder</code> values (higher values are applied first). The <a href="https://docs.commercetools.com/apis/ctp:api:type:RoundingMode" rel="nofollow">price rounding mode</a> specified by the Cart's <code>priceRoundingMode</code> field is applied after each individual discount is calculated, not after all discounts have been applied cumulatively. This means that rounding occurs at each step of the discount calculation process.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>discountedPrice</dd>
@@ -211,7 +212,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setDiscountedPrice(com.commercetools.api.models.cart.DiscountedLineItemPrice)">
 <h3>setDiscountedPrice</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setDiscountedPrice</span><wbr><span class="parameters">(<a href="DiscountedLineItemPrice.html" title="interface in com.commercetools.api.models.cart">DiscountedLineItemPrice</a>&nbsp;discountedPrice)</span></div>
-<div class="block"><p>Discounted price of the Line Item or Custom Line Item.</p></div>
+<div class="block"><p>Discounted price of the Line Item or Custom Line Item.</p>
+  <p>When multiple <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> apply to the same Line Item, the discounts are applied sequentially in the order determined by their <code>sortOrder</code> values (higher values are applied first). The <a href="https://docs.commercetools.com/apis/ctp:api:type:RoundingMode" rel="nofollow">price rounding mode</a> specified by the Cart's <code>priceRoundingMode</code> field is applied after each individual discount is calculated, not after all discounts have been applied cumulatively. This means that rounding occurs at each step of the discount calculation process.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>discountedPrice</code> - value to be set</dd>

@@ -1002,9 +1002,12 @@ final MonetaryAmount subTotal = cart.calculateSubTotalPrice();
 final ParcelDraft parcelDraft = parcel.toDraft();
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/HelperMethodsTest.java" target="_blank">test code</a>.</pre></div>
  <p><a href="../../api/models/order/ParcelMixin.html#toDraftBuilder()"><code>ParcelMixin.toDraftBuilder()</code></a>
- <div id="example-HelperMethodsTest-parcelToDraftBuilder--%s" class=code-example><pre><code class='java'>final Parcel parcel = ParcelBuilder.of().id("parcel-id").build();
+ <div id="example-HelperMethodsTest-parcelToDraftBuilder--%s" class=code-example><pre><code class='java'>final Parcel parcel = ParcelBuilder.of().id("parcel-id").createdAt(ZonedDateTime.now()).build();
 
 final ParcelDraftBuilder parcelDraftBuilder = parcel.toDraftBuilder();
+
+Assertions.assertNotNull(parcelDraftBuilder);
+Assertions.assertNull(parcelDraftBuilder.getCustom());
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/HelperMethodsTest.java" target="_blank">test code</a>.</pre></div>
  <p><a href="../../api/models/order/DeliveryMixin.html#toDraft()"><code>DeliveryMixin.toDraft()</code></a></p>
  <div id="example-HelperMethodsTest-deliveryToDraft--%s" class=code-example><pre><code class='java'>final Delivery delivery = DeliveryBuilder.of().id("delivery-id").build();
@@ -1012,9 +1015,17 @@ final ParcelDraftBuilder parcelDraftBuilder = parcel.toDraftBuilder();
 final DeliveryDraft deliveryDraft = delivery.toDraft();
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/HelperMethodsTest.java" target="_blank">test code</a>.</pre></div>
  <p><a href="../../api/models/order/DeliveryMixin.html#toDraftBuilder()"><code>DeliveryMixin.toDraftBuilder()</code></a>
- <div id="example-HelperMethodsTest-deliveryToDraftBuilder--%s" class=code-example><pre><code class='java'>final Delivery delivery = DeliveryBuilder.of().id("delivery-id").build();
+ <div id="example-HelperMethodsTest-deliveryToDraftBuilder--%s" class=code-example><pre><code class='java'>final Delivery delivery = DeliveryBuilder.of()
+        .id("delivery-id")
+        .createdAt(ZonedDateTime.now())
+        .items(List.of())
+        .parcels(List.of())
+        .build();
 
 final DeliveryDraftBuilder deliveryDraftBuilder = delivery.toDraftBuilder();
+Assertions.assertNotNull(deliveryDraftBuilder);
+Assertions.assertNull(deliveryDraftBuilder.getAddress());
+Assertions.assertNull(deliveryDraftBuilder.getCustom());
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/HelperMethodsTest.java" target="_blank">test code</a>.</pre></div>
  <p><a href="../../api/models/order/OrderSetDeliveryAddressAction.html#ofUnset(java.lang.String)"><code>OrderSetDeliveryAddressAction.ofUnset(String)</code></a></p>
  <div id="example-HelperMethodsTest-orderSetDeliveryAddressUnset--%s" class=code-example><pre><code class='java'>final String deliveryId = "test-deliveryId-" + UUID.randomUUID().toString();

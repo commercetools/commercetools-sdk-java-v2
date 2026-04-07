@@ -617,7 +617,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="originOrder(java.util.function.Function)">
 <h3>originOrder</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RecurringOrderBuilder.html" title="class in com.commercetools.api.models.recurring_order">RecurringOrderBuilder</a></span>&nbsp;<span class="element-name">originOrder</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/OrderReferenceBuilder.html" title="class in com.commercetools.api.models.order">OrderReferenceBuilder</a>,<wbr><a href="../order/OrderReferenceBuilder.html" title="class in com.commercetools.api.models.order">OrderReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the original <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that generated this RecurringOrder.</p></div>
+<div class="block"><p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the original <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that generated this RecurringOrder. This field is automatically populated when the RecurringOrder is created via the <span>Create Order from Cart</span> endpoint and the Cart contains Line Items with defined <code>recurrenceInfo</code>. When the RecurringOrder is created directly via the <span>Create RecurringOrder</span> endpoint, this field remains empty.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the originOrder value</dd>
@@ -630,7 +630,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withOriginOrder(java.util.function.Function)">
 <h3>withOriginOrder</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RecurringOrderBuilder.html" title="class in com.commercetools.api.models.recurring_order">RecurringOrderBuilder</a></span>&nbsp;<span class="element-name">withOriginOrder</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/OrderReferenceBuilder.html" title="class in com.commercetools.api.models.order">OrderReferenceBuilder</a>,<wbr><a href="../order/OrderReference.html" title="interface in com.commercetools.api.models.order">OrderReference</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the original <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that generated this RecurringOrder.</p></div>
+<div class="block"><p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the original <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that generated this RecurringOrder. This field is automatically populated when the RecurringOrder is created via the <span>Create Order from Cart</span> endpoint and the Cart contains Line Items with defined <code>recurrenceInfo</code>. When the RecurringOrder is created directly via the <span>Create RecurringOrder</span> endpoint, this field remains empty.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the originOrder value</dd>
@@ -643,7 +643,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="originOrder(com.commercetools.api.models.order.OrderReference)">
 <h3>originOrder</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RecurringOrderBuilder.html" title="class in com.commercetools.api.models.recurring_order">RecurringOrderBuilder</a></span>&nbsp;<span class="element-name">originOrder</span><wbr><span class="parameters">(<a href="../order/OrderReference.html" title="interface in com.commercetools.api.models.order">OrderReference</a>&nbsp;originOrder)</span></div>
-<div class="block"><p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the original <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that generated this RecurringOrder.</p></div>
+<div class="block"><p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the original <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that generated this RecurringOrder. This field is automatically populated when the RecurringOrder is created via the <span>Create Order from Cart</span> endpoint and the Cart contains Line Items with defined <code>recurrenceInfo</code>. When the RecurringOrder is created directly via the <span>Create RecurringOrder</span> endpoint, this field remains empty.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>originOrder</code> - value to be set</dd>
@@ -1152,7 +1152,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getOriginOrder()">
 <h3>getOriginOrder</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../order/OrderReference.html" title="interface in com.commercetools.api.models.order">OrderReference</a></span>&nbsp;<span class="element-name">getOriginOrder</span>()</div>
-<div class="block"><p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the original <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that generated this RecurringOrder.</p></div>
+<div class="block"><p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the original <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that generated this RecurringOrder. This field is automatically populated when the RecurringOrder is created via the <span>Create Order from Cart</span> endpoint and the Cart contains Line Items with defined <code>recurrenceInfo</code>. When the RecurringOrder is created directly via the <span>Create RecurringOrder</span> endpoint, this field remains empty.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>originOrder</dd>

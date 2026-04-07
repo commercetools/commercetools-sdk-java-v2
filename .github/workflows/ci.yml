@@ -141,6 +141,20 @@ jobs:
             CTP_CLIENT_SECRET: ${{ secrets.CTP_CLIENT_SECRET }}
             CTP_PROJECT_KEY: ${{ secrets.CTP_PROJECT_KEY }}
 
+      -  name: Setup Java 21 for Spring examples
+         uses: actions/setup-java@c5195efecf7bdfc987ee8bae7a71cb8b11521c00 # v4
+         with:
+            distribution: 'temurin'
+            java-version: '21'
+      -   name: Test Spring examples
+          run: |
+            cd examples/spring && ./gradlew test
+            cd ../spring-datadog && ./gradlew test
+            cd ../spring-datadog-statsd && ./gradlew test
+            cd ../spring-dynatrace-oneagent && ./gradlew test
+            cd ../spring-newrelic && ./gradlew test
+            cd ../spring-otel && ./gradlew test
+
       - name: Collect code coverage
         run: ./gradlew codeCoverageReport
 

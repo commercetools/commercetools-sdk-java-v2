@@ -1,6 +1,6 @@
 plugins {
-    id 'org.springframework.boot' version '3.4.0'
-    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'org.springframework.boot' version '4.0.5'
+    id 'io.spring.dependency-management' version '1.1.7'
     id 'java'
     id "com.diffplug.spotless" version "6.10.0"
 }
@@ -28,7 +28,11 @@ spotless {
         endWithNewline()
     }
 }
-
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
 ext {
     versions = [
         commercetools: "19.9.0"
@@ -38,12 +42,12 @@ ext {
 dependencies {
     implementation "com.commercetools.sdk:commercetools-sdk-java-api:${versions.commercetools}"
     implementation "com.commercetools.sdk:commercetools-okhttp-client3:${versions.commercetools}"
-    implementation 'javax.inject:javax.inject:1'
+    implementation 'jakarta.inject:jakarta.inject-api:2.0.1'
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
     implementation 'org.springframework.session:spring-session-core'
-    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6:3.1.2.RELEASE'
+    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'

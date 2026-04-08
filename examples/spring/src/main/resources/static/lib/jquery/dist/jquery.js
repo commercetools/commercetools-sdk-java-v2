@@ -5063,7 +5063,7 @@ jQuery.event = {
 					( !handler || handler.guid === handleObj.guid ) &&
 					( !tmp || tmp.test( handleObj.namespace ) ) &&
 					( !selector || selector === handleObj.selector ||
-						selector === "**" && handleObj.selector ) ) {
+						selector === "/**" && handleObj.selector ) ) {
 					handlers.splice( j, 1 );
 
 					if ( handleObj.selector ) {
@@ -10555,8 +10555,8 @@ jQuery.fn.extend( {
 
 		// ( namespace ) or ( selector, types [, fn] )
 		return arguments.length === 1 ?
-			this.off( selector, "**" ) :
-			this.off( types, selector || "**", fn );
+			this.off( selector, "/**" ) :
+			this.off( types, selector || "/**", fn );
 	},
 
 	hover: function( fnOver, fnOut ) {

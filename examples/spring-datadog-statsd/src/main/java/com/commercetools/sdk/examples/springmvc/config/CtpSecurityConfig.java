@@ -17,7 +17,7 @@ public class CtpSecurityConfig {
         http
                 .anonymous(anonymous -> anonymous.authorities("ROLE_ANON"))
                 .authorizeHttpRequests((requests) -> requests
-                        .requestMatchers("**").permitAll()
+                        .requestMatchers("/**").permitAll()
                         .requestMatchers("/resources/**").permitAll()
                         .anyRequest().permitAll()
                 );

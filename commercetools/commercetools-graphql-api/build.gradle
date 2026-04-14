@@ -36,7 +36,7 @@ dependencies {
     api jackson_core.databind
     api jackson_core.core
     api jackson_core.datatype
-    api 'com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core:8.1.0'
+    api 'com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core:8.3.0'
 
 }
 

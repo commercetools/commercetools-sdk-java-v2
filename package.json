@@ -11,12 +11,12 @@
   },
   "dependencies": {
     "husky": "9.1.7",
-    "lint-staged": "16.1.2"
+    "lint-staged": "16.4.0"
   },
   "scripts": {
     "postinstall": "husky",
     "format": "./gradlew spotlessApply",
     "prepare": "husky"
   },
-  "packageManager": "yarn@4.13.0"
+  "packageManager": "yarn@4.14.1"
 }

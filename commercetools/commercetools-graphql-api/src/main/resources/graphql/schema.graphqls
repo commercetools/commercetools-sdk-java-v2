@@ -453,19 +453,13 @@ type Query {
   and associated to a Price
   """
   recurrencePolicies(where: String, sort: [String!], limit: Int, offset: Int): RecurrencePolicyQueryResult!
-    """
-  BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-  """
-  paymentMethod(
+    paymentMethod(
     """Queries with specified ID"""
     id: String
     """Queries with specified key"""
     key: String
   ): PaymentMethod
-    """
-  BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-  """
-  paymentMethods(where: String, sort: [String!], limit: Int, offset: Int): PaymentMethodQueryResult!
+    paymentMethods(where: String, sort: [String!], limit: Int, offset: Int): PaymentMethodQueryResult!
     productSelectionAssignments(where: String, sort: [String!], limit: Int, offset: Int): ProductAssignmentQueryResult!
 }
 
@@ -3020,6 +3014,10 @@ type Extension implements Versioned & ReferenceExpandable {
     """
   BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
   """
+  additionalContext: ExtensionAdditionalContext
+    """
+  BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
+  """
   expansionPaths: [String!]!
     id: String!
     version: Long!
@@ -3027,6 +3025,10 @@ type Extension implements Versioned & ReferenceExpandable {
     lastModifiedAt: DateTime!
     createdBy: Initiator
     lastModifiedBy: Initiator
+}
+
+type ExtensionAdditionalContext {
+    includeOldResource: Boolean!
 }
 
 type ExtensionLimitsProjection {
@@ -5069,14 +5071,8 @@ type Mutation {
     """Queries with specified key"""
     key: String
   ): RecurrencePolicy
-    """
-  BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-  """
-  createPaymentMethod(draft: PaymentMethodDraft!): PaymentMethod
-    """
-  BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-  """
-  updatePaymentMethod(
+    createPaymentMethod(draft: PaymentMethodDraft!): PaymentMethod
+    updatePaymentMethod(
     version: Long!
     actions: [PaymentMethodUpdateAction!]!
     """Queries with specified ID"""
@@ -5084,10 +5080,7 @@ type Mutation {
     """Queries with specified key"""
     key: String
   ): PaymentMethod
-    """
-  BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-  """
-  deletePaymentMethod(
+    deletePaymentMethod(
     version: Long!
     personalDataErasure: Boolean = false
     """Queries with specified ID"""
@@ -5659,9 +5652,6 @@ type PaymentInterfaceIdSet implements MessagePayload {
     type: String!
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 type PaymentMethod implements Versioned & ReferenceExpandable {
     key: String
     name(
@@ -5909,9 +5899,6 @@ type PaymentMethodQueryResult {
     results: [PaymentMethod!]!
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 type PaymentMethodToken {
     value: String!
 }
@@ -11306,9 +11293,9 @@ input AddProductVariant {
 input AddProductVariantTailoring {
     id: Int
     sku: String
-    images: [ImageInput!] = []
     attributes: [ProductAttributeInput!] = []
-    assets: [AssetDraftInput!] = []
+    images: [ImageInput!]
+    assets: [AssetDraftInput!]
     staged: Boolean = true
 }
 
@@ -13225,6 +13212,13 @@ input ExistsFilterInput {
     path: String!
 }
 
+"""
+BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
+"""
+input ExtensionAdditionalContextInput {
+    includeOldResource: Boolean
+}
+
 input ExtensionDestinationInput {
     HTTP: HttpDestinationInput
     AWSLambda: AWSLambdaDestinationInput
@@ -13239,12 +13233,20 @@ input ExtensionDraft {
     """
   BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
   """
+  additionalContext: ExtensionAdditionalContextInput
+    """
+  BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
+  """
   expansionPaths: [String!]
 }
 
 input ExtensionUpdateAction {
     changeDestination: ChangeExtensionDestination
     changeTriggers: ChangeExtensionTriggers
+    """
+  BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
+  """
+  setAdditionalContext: SetExtensionAdditionalContext
     """
   BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
   """
@@ -14072,9 +14074,6 @@ input PaymentDraft {
     interfaceInteractions: [CustomFieldsDraft!]
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 input PaymentMethodDraft {
     key: String
     name: [LocalizedStringItemInputType!]
@@ -14107,16 +14106,10 @@ input PaymentMethodInfoInput {
   custom: CustomFieldsDraft
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 input PaymentMethodTokenDraft {
     value: String!
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 input PaymentMethodUpdateAction {
     setCustomField: SetPaymentMethodCustomField
     setCustomType: SetPaymentMethodCustomType
@@ -14533,9 +14526,9 @@ input ProductVariantSelectionDraft {
 input ProductVariantTailoringInput {
     id: Int
     sku: String
-    images: [ImageInput!] = []
     attributes: [ProductAttributeInput!] = []
-    assets: [AssetDraftInput!] = []
+    images: [ImageInput!]
+    assets: [AssetDraftInput!]
 }
 
 input ProjectSettingsUpdateAction {
@@ -15922,6 +15915,13 @@ input SetDiscountGroupName {
 
 input SetDiscountGroupSortOrder {
     sortOrder: String!
+}
+
+"""
+BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
+"""
+input SetExtensionAdditionalContext {
+    additionalContext: ExtensionAdditionalContextInput!
 }
 
 """

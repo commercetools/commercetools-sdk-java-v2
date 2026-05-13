@@ -66,8 +66,10 @@ public class ConcurrentModificationMiddlewareImpl implements ConcurrentModificat
                 .onRetry(this::logEventFailure)
                 .handle(ConcurrentModificationException.class)
                 .abortIf((result, exception) -> {
-                    if (exception instanceof ConcurrentModificationException && ((ConcurrentModificationException) exception).getRequest() != null) {
-                        return ((ConcurrentModificationException) exception).getRequest().getMethod() == ApiHttpMethod.DELETE;
+                    if (exception instanceof ConcurrentModificationException
+                            && ((ConcurrentModificationException) exception).getRequest() != null) {
+                        return ((ConcurrentModificationException) exception).getRequest()
+                                .getMethod() == ApiHttpMethod.DELETE;
                     }
                     return false;
                 })

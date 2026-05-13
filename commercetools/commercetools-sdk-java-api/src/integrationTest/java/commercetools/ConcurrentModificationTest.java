@@ -248,10 +248,10 @@ public class ConcurrentModificationTest {
 
         ProjectApiRoot projectApiRoot = ApiRootBuilder.of()
                 .defaultClient(ClientCredentials.of()
-                                .withClientId(CommercetoolsTestUtils.getClientId())
-                                .withClientSecret(CommercetoolsTestUtils.getClientSecret())
-                                .build(),
-                        ServiceRegion.GCP_EUROPE_WEST1)
+                        .withClientId(CommercetoolsTestUtils.getClientId())
+                        .withClientSecret(CommercetoolsTestUtils.getClientSecret())
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
                 .addConcurrentModificationMiddleware(3)
                 .build(projectKey);
 

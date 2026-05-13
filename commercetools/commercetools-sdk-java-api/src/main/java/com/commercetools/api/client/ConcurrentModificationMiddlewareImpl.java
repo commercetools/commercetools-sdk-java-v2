@@ -65,6 +65,12 @@ public class ConcurrentModificationMiddlewareImpl implements ConcurrentModificat
                 .withMaxRetries(maxRetries)
                 .onRetry(this::logEventFailure)
                 .handle(ConcurrentModificationException.class)
+                .abortIf((result, exception) -> {
+                    if (exception instanceof ConcurrentModificationException && ((ConcurrentModificationException) exception).getRequest() != null) {
+                        return ((ConcurrentModificationException) exception).getRequest().getMethod() == ApiHttpMethod.DELETE;
+                    }
+                    return false;
+                })
                 .build();
         this.executor = Failsafe.with(retryPolicy);
     }

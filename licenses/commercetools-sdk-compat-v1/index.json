@@ -72,7 +72,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-annotations",
-            "moduleVersion": "2.19.1",
+            "moduleVersion": "2.21",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -85,7 +85,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-core",
-            "moduleVersion": "2.19.1",
+            "moduleVersion": "2.21.3",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-core"
             ],
@@ -98,7 +98,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-databind",
-            "moduleVersion": "2.19.1",
+            "moduleVersion": "2.21.3",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -111,7 +111,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor",
-            "moduleVersion": "2.19.1",
+            "moduleVersion": "2.21.3",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-dataformats-binary"
             ],
@@ -124,7 +124,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
-            "moduleVersion": "2.19.1",
+            "moduleVersion": "2.21.3",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310"
             ],
@@ -137,7 +137,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.module:jackson-module-parameter-names",
-            "moduleVersion": "2.19.1",
+            "moduleVersion": "2.21.3",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-module-parameter-names"
             ],
@@ -243,7 +243,7 @@
         },
         {
             "moduleName": "io.netty:netty-buffer",
-            "moduleVersion": "4.2.2.Final",
+            "moduleVersion": "4.2.13.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -256,7 +256,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec",
-            "moduleVersion": "4.2.2.Final",
+            "moduleVersion": "4.2.13.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -269,7 +269,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-base",
-            "moduleVersion": "4.2.2.Final",
+            "moduleVersion": "4.2.13.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -282,7 +282,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-compression",
-            "moduleVersion": "4.2.2.Final",
+            "moduleVersion": "4.2.13.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -308,7 +308,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-marshalling",
-            "moduleVersion": "4.2.2.Final",
+            "moduleVersion": "4.2.13.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -321,7 +321,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-protobuf",
-            "moduleVersion": "4.2.2.Final",
+            "moduleVersion": "4.2.13.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -334,7 +334,7 @@
         },
         {
             "moduleName": "io.netty:netty-common",
-            "moduleVersion": "4.2.2.Final",
+            "moduleVersion": "4.2.13.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -360,7 +360,7 @@
         },
         {
             "moduleName": "io.netty:netty-resolver",
-            "moduleVersion": "4.2.2.Final",
+            "moduleVersion": "4.2.13.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -373,7 +373,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport",
-            "moduleVersion": "4.2.2.Final",
+            "moduleVersion": "4.2.13.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -488,7 +488,7 @@
         },
         {
             "moduleName": "org.apache.commons:commons-lang3",
-            "moduleVersion": "3.18.0",
+            "moduleVersion": "3.20.0",
             "moduleUrls": [
                 "https://commons.apache.org/proper/commons-lang/"
             ],
@@ -501,7 +501,7 @@
         },
         {
             "moduleName": "org.apache.commons:commons-text",
-            "moduleVersion": "1.13.1",
+            "moduleVersion": "1.15.0",
             "moduleUrls": [
                 "https://commons.apache.org/proper/commons-text"
             ],
@@ -765,7 +765,7 @@
         },
         {
             "moduleName": "org.slf4j:slf4j-api",
-            "moduleVersion": "2.0.17",
+            "moduleVersion": "2.0.18",
             "moduleUrls": [
                 "http://www.slf4j.org"
             ],

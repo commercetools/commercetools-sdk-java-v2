@@ -17,23 +17,23 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * Reference
+ *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelReference" rel="nofollow">ChannelReference</a>. A referenced resource can be embedded through <span>Reference Expansion</span>. The expanded reference is the value of an additional <code>obj</code> field then.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReferenceImpl implements Reference, ModelBase {
 
-    private String id;
-
     private com.commercetools.history.models.common.ReferenceTypeId typeId;
+
+    private String id;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    ReferenceImpl(@JsonProperty("id") final String id,
-            @JsonProperty("typeId") final com.commercetools.history.models.common.ReferenceTypeId typeId) {
-        this.id = id;
+    ReferenceImpl(@JsonProperty("typeId") final com.commercetools.history.models.common.ReferenceTypeId typeId,
+            @JsonProperty("id") final String id) {
         this.typeId = typeId;
+        this.id = id;
     }
 
     /**
@@ -43,27 +43,23 @@ public class ReferenceImpl implements Reference, ModelBase {
     }
 
     /**
-     *
-     */
-
-    public String getId() {
-        return this.id;
-    }
-
-    /**
-     *
+     *  <p>Type of referenced resource.</p>
      */
 
     public com.commercetools.history.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }
 
-    public void setId(final String id) {
-        this.id = id;
+    /**
+     *  <p>Unique ID of the referenced resource.</p>
+     */
+
+    public String getId() {
+        return this.id;
     }
 
-    public void setTypeId(final com.commercetools.history.models.common.ReferenceTypeId typeId) {
-        this.typeId = typeId;
+    public void setId(final String id) {
+        this.id = id;
     }
 
     @Override
@@ -76,22 +72,22 @@ public class ReferenceImpl implements Reference, ModelBase {
 
         ReferenceImpl that = (ReferenceImpl) o;
 
-        return new EqualsBuilder().append(id, that.id)
-                .append(typeId, that.typeId)
+        return new EqualsBuilder().append(typeId, that.typeId)
                 .append(id, that.id)
                 .append(typeId, that.typeId)
+                .append(id, that.id)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(typeId).toHashCode();
+        return new HashCodeBuilder(17, 37).append(typeId).append(id).toHashCode();
     }
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
-                .append("typeId", typeId)
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("typeId", typeId)
+                .append("id", id)
                 .build();
     }
 

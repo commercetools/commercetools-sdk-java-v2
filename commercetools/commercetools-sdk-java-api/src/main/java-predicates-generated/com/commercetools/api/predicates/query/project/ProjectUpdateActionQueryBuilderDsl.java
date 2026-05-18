@@ -139,6 +139,13 @@ public class ProjectUpdateActionQueryBuilderDsl {
             ProjectUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> asSetDiscountsConfiguration(
+            Function<com.commercetools.api.predicates.query.project.ProjectSetDiscountsConfigurationActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.ProjectSetDiscountsConfigurationActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.project.ProjectSetDiscountsConfigurationActionQueryBuilderDsl.of()),
+            ProjectUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> asSetExternalOAuth(
             Function<com.commercetools.api.predicates.query.project.ProjectSetExternalOAuthActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.ProjectSetExternalOAuthActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

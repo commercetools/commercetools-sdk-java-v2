@@ -11,7 +11,7 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>This mode determines how absolute Discounts are applied on Line Items or Custom Line Items.</p>
+ *  <p>This mode determines how Discounts are distributed among items in a Cart.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface DiscountApplicationMode extends JsonEnum {

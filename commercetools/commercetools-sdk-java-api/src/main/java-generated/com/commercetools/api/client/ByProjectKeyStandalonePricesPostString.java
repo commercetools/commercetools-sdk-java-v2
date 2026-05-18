@@ -25,6 +25,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *  <ul>
  *   <li>If the Standalone Price has the same price scope as an existing Standalone Price, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateStandalonePriceScopeError" rel="nofollow">DuplicateStandalonePriceScope</a> error is returned.</li>
  *   <li>If the Standalone Price has overlapping validity periods within the same price scope, a <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingStandalonePriceValidityError" rel="nofollow">OverlappingStandalonePriceValidity</a> error is returned. A Price without validity period does not conflict with a Price defined for a time period.</li>
+ *   <li>If a modification is already in progress for the exact combination of SKU and price scope fields, an <a href="https://docs.commercetools.com/apis/ctp:api:type:ExactLockConflictError" rel="nofollow">ExactLockConflict</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:ValidityLockConflictError" rel="nofollow">ValidityLockConflict</a> error is returned.</li>
  *  </ul>
  *
  * <hr>

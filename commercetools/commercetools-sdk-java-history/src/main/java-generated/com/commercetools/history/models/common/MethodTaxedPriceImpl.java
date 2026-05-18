@@ -1,0 +1,103 @@
+
+package com.commercetools.history.models.common;
+
+import java.time.*;
+import java.util.*;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.ModelBase;
+import io.vrap.rmf.base.client.utils.Generated;
+
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
+/**
+ * MethodTaxedPrice
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+public class MethodTaxedPriceImpl implements MethodTaxedPrice, ModelBase {
+
+    private String shippingMethodKey;
+
+    private com.commercetools.history.models.common.TaxedItemPrice taxedPrice;
+
+    /**
+     * create instance with all properties
+     */
+    @JsonCreator
+    MethodTaxedPriceImpl(@JsonProperty("shippingMethodKey") final String shippingMethodKey,
+            @JsonProperty("taxedPrice") final com.commercetools.history.models.common.TaxedItemPrice taxedPrice) {
+        this.shippingMethodKey = shippingMethodKey;
+        this.taxedPrice = taxedPrice;
+    }
+
+    /**
+     * create empty instance
+     */
+    public MethodTaxedPriceImpl() {
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">Shipping Method</a> in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     */
+
+    public String getShippingMethodKey() {
+        return this.shippingMethodKey;
+    }
+
+    /**
+     *  <p>Total taxed price based on the quantity of the Line Item or Custom Line Item assigned to the Shipping Method identified by <code>shippingMethodKey</code>.</p>
+     */
+
+    public com.commercetools.history.models.common.TaxedItemPrice getTaxedPrice() {
+        return this.taxedPrice;
+    }
+
+    public void setShippingMethodKey(final String shippingMethodKey) {
+        this.shippingMethodKey = shippingMethodKey;
+    }
+
+    public void setTaxedPrice(final com.commercetools.history.models.common.TaxedItemPrice taxedPrice) {
+        this.taxedPrice = taxedPrice;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        MethodTaxedPriceImpl that = (MethodTaxedPriceImpl) o;
+
+        return new EqualsBuilder().append(shippingMethodKey, that.shippingMethodKey)
+                .append(taxedPrice, that.taxedPrice)
+                .append(shippingMethodKey, that.shippingMethodKey)
+                .append(taxedPrice, that.taxedPrice)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(shippingMethodKey).append(taxedPrice).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE)
+                .append("shippingMethodKey", shippingMethodKey)
+                .append("taxedPrice", taxedPrice)
+                .build();
+    }
+
+    @Override
+    public MethodTaxedPrice copyDeep() {
+        return MethodTaxedPrice.deepCopy(this);
+    }
+}

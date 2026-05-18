@@ -27,9 +27,9 @@ public class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTaxedPri
 
     private String change;
 
-    private com.commercetools.history.models.common.TaxedItemPrice previousValue;
+    private com.commercetools.history.models.common.TaxedPrice previousValue;
 
-    private com.commercetools.history.models.common.TaxedItemPrice nextValue;
+    private com.commercetools.history.models.common.TaxedPrice nextValue;
 
     private com.commercetools.history.models.common.TaxMode taxMode;
 
@@ -51,8 +51,8 @@ public class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTaxedPri
      */
 
     public SetOrderTaxedPriceChangeBuilder previousValue(
-            Function<com.commercetools.history.models.common.TaxedItemPriceBuilder, com.commercetools.history.models.common.TaxedItemPriceBuilder> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.TaxedItemPriceBuilder.of()).build();
+            Function<com.commercetools.history.models.common.TaxedPriceBuilder, com.commercetools.history.models.common.TaxedPriceBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.TaxedPriceBuilder.of()).build();
         return this;
     }
 
@@ -63,8 +63,8 @@ public class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTaxedPri
      */
 
     public SetOrderTaxedPriceChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.TaxedItemPriceBuilder, com.commercetools.history.models.common.TaxedItemPrice> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.TaxedItemPriceBuilder.of());
+            Function<com.commercetools.history.models.common.TaxedPriceBuilder, com.commercetools.history.models.common.TaxedPrice> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.TaxedPriceBuilder.of());
         return this;
     }
 
@@ -75,7 +75,7 @@ public class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTaxedPri
      */
 
     public SetOrderTaxedPriceChangeBuilder previousValue(
-            final com.commercetools.history.models.common.TaxedItemPrice previousValue) {
+            final com.commercetools.history.models.common.TaxedPrice previousValue) {
         this.previousValue = previousValue;
         return this;
     }
@@ -87,8 +87,8 @@ public class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTaxedPri
      */
 
     public SetOrderTaxedPriceChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.TaxedItemPriceBuilder, com.commercetools.history.models.common.TaxedItemPriceBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.TaxedItemPriceBuilder.of()).build();
+            Function<com.commercetools.history.models.common.TaxedPriceBuilder, com.commercetools.history.models.common.TaxedPriceBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.TaxedPriceBuilder.of()).build();
         return this;
     }
 
@@ -99,8 +99,8 @@ public class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTaxedPri
      */
 
     public SetOrderTaxedPriceChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.TaxedItemPriceBuilder, com.commercetools.history.models.common.TaxedItemPrice> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.TaxedItemPriceBuilder.of());
+            Function<com.commercetools.history.models.common.TaxedPriceBuilder, com.commercetools.history.models.common.TaxedPrice> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.TaxedPriceBuilder.of());
         return this;
     }
 
@@ -111,13 +111,13 @@ public class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTaxedPri
      */
 
     public SetOrderTaxedPriceChangeBuilder nextValue(
-            final com.commercetools.history.models.common.TaxedItemPrice nextValue) {
+            final com.commercetools.history.models.common.TaxedPrice nextValue) {
         this.nextValue = nextValue;
         return this;
     }
 
     /**
-     * set the value to the taxMode
+     *  <p>Indicates how taxes are set on the Cart.</p>
      * @param taxMode value to be set
      * @return Builder
      */
@@ -141,7 +141,7 @@ public class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTaxedPri
      * @return previousValue
      */
 
-    public com.commercetools.history.models.common.TaxedItemPrice getPreviousValue() {
+    public com.commercetools.history.models.common.TaxedPrice getPreviousValue() {
         return this.previousValue;
     }
 
@@ -150,12 +150,12 @@ public class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTaxedPri
      * @return nextValue
      */
 
-    public com.commercetools.history.models.common.TaxedItemPrice getNextValue() {
+    public com.commercetools.history.models.common.TaxedPrice getNextValue() {
         return this.nextValue;
     }
 
     /**
-     * value of taxMode}
+     *  <p>Indicates how taxes are set on the Cart.</p>
      * @return taxMode
      */
 

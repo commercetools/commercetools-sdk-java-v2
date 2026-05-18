@@ -21,6 +21,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Retrieves a Recurrence Policy with the provided <code>key</code>.</p>
+ *  <p>The <code>view_recurring_orders:{projectKey}</code> scope is deprecated for use on this endpoint. Update your clients to use the <code>view_recurrence_policies:{projectKey}</code> scope instead. For more information, see the <span>Deprecations and removals</span> list.</p>
  *
  * <hr>
  * <div class=code-example>

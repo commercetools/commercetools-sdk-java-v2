@@ -22,12 +22,13 @@ public class ChangeEnumValueOrderChangeTest {
                 new Object[] { "previousValue",
                         ChangeEnumValueOrderChange.builder()
                                 .previousValue(Collections.singletonList(
-                                    new com.commercetools.history.models.change_value.EnumValueImpl())) },
+                                    new com.commercetools.history.models.common.CustomFieldEnumValueImpl())) },
                 new Object[] { "nextValue",
                         ChangeEnumValueOrderChange.builder()
                                 .nextValue(Collections.singletonList(
-                                    new com.commercetools.history.models.change_value.EnumValueImpl())) },
-                new Object[] { "fieldName", ChangeEnumValueOrderChange.builder().fieldName("fieldName") } };
+                                    new com.commercetools.history.models.common.CustomFieldEnumValueImpl())) },
+                new Object[] { "fieldName", ChangeEnumValueOrderChange.builder().fieldName("fieldName") },
+                new Object[] { "attributeName", ChangeEnumValueOrderChange.builder().attributeName("attributeName") } };
     }
 
     @Test
@@ -41,20 +42,20 @@ public class ChangeEnumValueOrderChangeTest {
     public void previousValue() {
         ChangeEnumValueOrderChange value = ChangeEnumValueOrderChange.of();
         value.setPreviousValue(
-            Collections.singletonList(new com.commercetools.history.models.change_value.EnumValueImpl()));
+            Collections.singletonList(new com.commercetools.history.models.common.CustomFieldEnumValueImpl()));
         Assertions.assertThat(value.getPreviousValue())
                 .isEqualTo(
-                    Collections.singletonList(new com.commercetools.history.models.change_value.EnumValueImpl()));
+                    Collections.singletonList(new com.commercetools.history.models.common.CustomFieldEnumValueImpl()));
     }
 
     @Test
     public void nextValue() {
         ChangeEnumValueOrderChange value = ChangeEnumValueOrderChange.of();
         value.setNextValue(
-            Collections.singletonList(new com.commercetools.history.models.change_value.EnumValueImpl()));
+            Collections.singletonList(new com.commercetools.history.models.common.CustomFieldEnumValueImpl()));
         Assertions.assertThat(value.getNextValue())
                 .isEqualTo(
-                    Collections.singletonList(new com.commercetools.history.models.change_value.EnumValueImpl()));
+                    Collections.singletonList(new com.commercetools.history.models.common.CustomFieldEnumValueImpl()));
     }
 
     @Test
@@ -62,5 +63,12 @@ public class ChangeEnumValueOrderChangeTest {
         ChangeEnumValueOrderChange value = ChangeEnumValueOrderChange.of();
         value.setFieldName("fieldName");
         Assertions.assertThat(value.getFieldName()).isEqualTo("fieldName");
+    }
+
+    @Test
+    public void attributeName() {
+        ChangeEnumValueOrderChange value = ChangeEnumValueOrderChange.of();
+        value.setAttributeName("attributeName");
+        Assertions.assertThat(value.getAttributeName()).isEqualTo("attributeName");
     }
 }

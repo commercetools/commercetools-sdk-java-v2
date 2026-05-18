@@ -20,7 +20,13 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Gets the current or staged representation of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> found by Key. When used with an API Client that has the <code>view_published_products:{projectKey}</code> scope, this endpoint only returns published (current) Product Projections.</p>
+ *  <p>Retrieves the <span>projected</span> representation of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> by its Key.</p>
+ *  <p>By default, this endpoint returns the <code>current</code> representation of Products where the <code>published</code> flag is <code>true</code>. If a Product is unpublished (<code>published=false</code>), the endpoint returns a <span>Not Found</span> error.</p>
+ *  <p>Required access scopes:</p>
+ *  <ul>
+ *   <li><p>To retrieve the current representation of published Products (published data), the <code>view_published_products:{projectKey}</code> scope is required.</p></li>
+ *   <li><p>To retrieve the staged representation of Products (draft data) or access unpublished Products, the API Client must have the <code>view_products:{projectKey}</code> scope.</p></li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>
@@ -42,6 +48,7 @@ public class ByProjectKeyProductProjectionsKeyByKeyGet extends
         com.commercetools.api.client.PriceselectingTrait<ByProjectKeyProductProjectionsKeyByKeyGet>,
         com.commercetools.api.client.LocaleprojectingTrait<ByProjectKeyProductProjectionsKeyByKeyGet>,
         com.commercetools.api.client.StoreprojectingtailoringTrait<ByProjectKeyProductProjectionsKeyByKeyGet>,
+        com.commercetools.api.client.AttributefilteringTrait<ByProjectKeyProductProjectionsKeyByKeyGet>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductProjectionsKeyByKeyGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductProjectionsKeyByKeyGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductProjectionsKeyByKeyGet> {
@@ -132,6 +139,10 @@ public class ByProjectKeyProductProjectionsKeyByKeyGet extends
 
     public List<String> getStoreProjection() {
         return this.getQueryParam("storeProjection");
+    }
+
+    public List<String> getFilterAttributes() {
+        return this.getQueryParam("filter[attributes]");
     }
 
     public List<String> getExpand() {
@@ -897,6 +908,91 @@ public class ByProjectKeyProductProjectionsKeyByKeyGet extends
             final Collection<TValue> storeProjection) {
         return copy().addQueryParams(storeProjection.stream()
                 .map(s -> new ParamEntry<>("storeProjection", s.toString()))
+                .collect(Collectors.toList()));
+    }
+
+    /**
+     * set filterAttributes with the specified value
+     * @param filterAttributes value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyProductProjectionsKeyByKeyGet withFilterAttributes(final TValue filterAttributes) {
+        return copy().withQueryParam("filter[attributes]", filterAttributes);
+    }
+
+    /**
+     * add additional filterAttributes query parameter
+     * @param filterAttributes value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyProductProjectionsKeyByKeyGet addFilterAttributes(final TValue filterAttributes) {
+        return copy().addQueryParam("filter[attributes]", filterAttributes);
+    }
+
+    /**
+     * set filterAttributes with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyProductProjectionsKeyByKeyGet withFilterAttributes(final Supplier<String> supplier) {
+        return copy().withQueryParam("filter[attributes]", supplier.get());
+    }
+
+    /**
+     * add additional filterAttributes query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyProductProjectionsKeyByKeyGet addFilterAttributes(final Supplier<String> supplier) {
+        return copy().addQueryParam("filter[attributes]", supplier.get());
+    }
+
+    /**
+     * set filterAttributes with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyProductProjectionsKeyByKeyGet withFilterAttributes(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("filter[attributes]", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional filterAttributes query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyProductProjectionsKeyByKeyGet addFilterAttributes(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("filter[attributes]", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set filterAttributes with the specified values
+     * @param filterAttributes values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyProductProjectionsKeyByKeyGet withFilterAttributes(
+            final Collection<TValue> filterAttributes) {
+        return copy().withoutQueryParam("filter[attributes]")
+                .addQueryParams(filterAttributes.stream()
+                        .map(s -> new ParamEntry<>("filter[attributes]", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional filterAttributes query parameters
+     * @param filterAttributes values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyProductProjectionsKeyByKeyGet addFilterAttributes(
+            final Collection<TValue> filterAttributes) {
+        return copy().addQueryParams(filterAttributes.stream()
+                .map(s -> new ParamEntry<>("filter[attributes]", s.toString()))
                 .collect(Collectors.toList()));
     }
 

@@ -19,7 +19,7 @@ public class ResourceIdentifierTest {
         return new Object[][] { new Object[] { "id", ResourceIdentifier.builder().id("id") },
                 new Object[] { "key", ResourceIdentifier.builder().key("key") },
                 new Object[] { "typeId", ResourceIdentifier.builder()
-                        .typeId(com.commercetools.history.models.common.ReferenceTypeId.findEnum("associate-role")) } };
+                        .typeId(com.commercetools.history.models.common.ReferenceTypeId.findEnum("approval-flow")) } };
     }
 
     @Test
@@ -39,8 +39,8 @@ public class ResourceIdentifierTest {
     @Test
     public void typeId() {
         ResourceIdentifier value = ResourceIdentifier.of();
-        value.setTypeId(com.commercetools.history.models.common.ReferenceTypeId.findEnum("associate-role"));
+        value.setTypeId(com.commercetools.history.models.common.ReferenceTypeId.findEnum("approval-flow"));
         Assertions.assertThat(value.getTypeId())
-                .isEqualTo(com.commercetools.history.models.common.ReferenceTypeId.findEnum("associate-role"));
+                .isEqualTo(com.commercetools.history.models.common.ReferenceTypeId.findEnum("approval-flow"));
     }
 }

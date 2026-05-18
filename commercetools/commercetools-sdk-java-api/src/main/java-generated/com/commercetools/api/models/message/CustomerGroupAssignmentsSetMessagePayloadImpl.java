@@ -27,13 +27,17 @@ public class CustomerGroupAssignmentsSetMessagePayloadImpl
 
     private java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments;
 
+    private java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> oldCustomerGroupAssignments;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     CustomerGroupAssignmentsSetMessagePayloadImpl(
-            @JsonProperty("customerGroupAssignments") final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments) {
+            @JsonProperty("customerGroupAssignments") final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments,
+            @JsonProperty("oldCustomerGroupAssignments") final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> oldCustomerGroupAssignments) {
         this.customerGroupAssignments = customerGroupAssignments;
+        this.oldCustomerGroupAssignments = oldCustomerGroupAssignments;
         this.type = CUSTOMER_GROUP_ASSIGNMENTS_SET;
     }
 
@@ -60,6 +64,14 @@ public class CustomerGroupAssignmentsSetMessagePayloadImpl
         return this.customerGroupAssignments;
     }
 
+    /**
+     *  <p>Customer Groups assigned to the Customer before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> getOldCustomerGroupAssignments() {
+        return this.oldCustomerGroupAssignments;
+    }
+
     public void setCustomerGroupAssignments(
             final com.commercetools.api.models.customer.CustomerGroupAssignment... customerGroupAssignments) {
         this.customerGroupAssignments = new ArrayList<>(Arrays.asList(customerGroupAssignments));
@@ -68,6 +80,16 @@ public class CustomerGroupAssignmentsSetMessagePayloadImpl
     public void setCustomerGroupAssignments(
             final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments) {
         this.customerGroupAssignments = customerGroupAssignments;
+    }
+
+    public void setOldCustomerGroupAssignments(
+            final com.commercetools.api.models.customer.CustomerGroupAssignment... oldCustomerGroupAssignments) {
+        this.oldCustomerGroupAssignments = new ArrayList<>(Arrays.asList(oldCustomerGroupAssignments));
+    }
+
+    public void setOldCustomerGroupAssignments(
+            final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> oldCustomerGroupAssignments) {
+        this.oldCustomerGroupAssignments = oldCustomerGroupAssignments;
     }
 
     @Override
@@ -82,20 +104,26 @@ public class CustomerGroupAssignmentsSetMessagePayloadImpl
 
         return new EqualsBuilder().append(type, that.type)
                 .append(customerGroupAssignments, that.customerGroupAssignments)
+                .append(oldCustomerGroupAssignments, that.oldCustomerGroupAssignments)
                 .append(type, that.type)
                 .append(customerGroupAssignments, that.customerGroupAssignments)
+                .append(oldCustomerGroupAssignments, that.oldCustomerGroupAssignments)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(customerGroupAssignments).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(customerGroupAssignments)
+                .append(oldCustomerGroupAssignments)
+                .toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
                 .append("customerGroupAssignments", customerGroupAssignments)
+                .append("oldCustomerGroupAssignments", oldCustomerGroupAssignments)
                 .build();
     }
 

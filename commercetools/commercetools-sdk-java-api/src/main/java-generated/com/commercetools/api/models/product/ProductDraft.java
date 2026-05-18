@@ -71,7 +71,6 @@ public interface ProductDraft
     /**
      *  <p>User-defined unique identifier for the Product.</p>
      *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Products with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
-     *  <p>To update a Product using the Import API or Merchant Center, the Product <code>key</code> must match the pattern <code>^[A-Za-z0-9_-]{2,256}$</code>.</p>
      * @return key
      */
 
@@ -167,7 +166,7 @@ public interface ProductDraft
     public StateResourceIdentifier getState();
 
     /**
-     *  <p>If <code>true</code>, the Product is published immediately to the current projection.</p>
+     *  <p>If <code>true</code>, the platform sets the <code>published</code> flag on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> to <code>true</code>. This makes the current representation retrievable in <span>Product Projection</span> endpoints and indexes it for <span>Product Search</span>. You can also set this flag later using the <span>Publish</span> update action.</p>
      * @return publish
      */
 
@@ -214,7 +213,6 @@ public interface ProductDraft
     /**
      *  <p>User-defined unique identifier for the Product.</p>
      *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Products with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
-     *  <p>To update a Product using the Import API or Merchant Center, the Product <code>key</code> must match the pattern <code>^[A-Za-z0-9_-]{2,256}$</code>.</p>
      * @param key value to be set
      */
 
@@ -314,7 +312,7 @@ public interface ProductDraft
     public void setState(final StateResourceIdentifier state);
 
     /**
-     *  <p>If <code>true</code>, the Product is published immediately to the current projection.</p>
+     *  <p>If <code>true</code>, the platform sets the <code>published</code> flag on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> to <code>true</code>. This makes the current representation retrievable in <span>Product Projection</span> endpoints and indexes it for <span>Product Search</span>. You can also set this flag later using the <span>Publish</span> update action.</p>
      * @param publish value to be set
      */
 

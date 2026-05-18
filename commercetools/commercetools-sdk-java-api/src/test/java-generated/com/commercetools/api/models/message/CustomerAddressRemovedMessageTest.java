@@ -1,6 +1,8 @@
 
 package com.commercetools.api.models.message;
 
+import java.util.Collections;
+
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -16,8 +18,14 @@ public class CustomerAddressRemovedMessageTest {
     }
 
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { "address", CustomerAddressRemovedMessage.builder()
-                .address(new com.commercetools.api.models.common.AddressImpl()) } };
+        return new Object[][] {
+                new Object[] { "address",
+                        CustomerAddressRemovedMessage.builder()
+                                .address(new com.commercetools.api.models.common.AddressImpl()) },
+                new Object[] { "addressRoles",
+                        CustomerAddressRemovedMessage.builder()
+                                .addressRoles(Collections.singletonList(
+                                    com.commercetools.api.models.common.AddressRole.findEnum("Shipping"))) } };
     }
 
     @Test
@@ -25,5 +33,15 @@ public class CustomerAddressRemovedMessageTest {
         CustomerAddressRemovedMessage value = CustomerAddressRemovedMessage.of();
         value.setAddress(new com.commercetools.api.models.common.AddressImpl());
         Assertions.assertThat(value.getAddress()).isEqualTo(new com.commercetools.api.models.common.AddressImpl());
+    }
+
+    @Test
+    public void addressRoles() {
+        CustomerAddressRemovedMessage value = CustomerAddressRemovedMessage.of();
+        value.setAddressRoles(
+            Collections.singletonList(com.commercetools.api.models.common.AddressRole.findEnum("Shipping")));
+        Assertions.assertThat(value.getAddressRoles())
+                .isEqualTo(
+                    Collections.singletonList(com.commercetools.api.models.common.AddressRole.findEnum("Shipping")));
     }
 }

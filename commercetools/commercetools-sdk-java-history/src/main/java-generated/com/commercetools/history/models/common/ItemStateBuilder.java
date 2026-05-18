@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ItemState itemState = ItemState.builder()
- *             .quantity(1)
+ *             .quantity(0.3)
  *             .state(stateBuilder -> stateBuilder)
  *             .build()
  * </code></pre>
@@ -23,71 +23,71 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ItemStateBuilder implements Builder<ItemState> {
 
-    private Integer quantity;
+    private Long quantity;
 
-    private com.commercetools.history.models.common.Reference state;
+    private com.commercetools.history.models.common.StateReference state;
 
     /**
-     * set the value to the quantity
+     *  <p>Number of Line Items or Custom Line Items in this State.</p>
      * @param quantity value to be set
      * @return Builder
      */
 
-    public ItemStateBuilder quantity(final Integer quantity) {
+    public ItemStateBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
 
     /**
-     * set the value to the state using the builder function
+     *  <p>State of the Line Items or Custom Line Items in a custom workflow.</p>
      * @param builder function to build the state value
      * @return Builder
      */
 
     public ItemStateBuilder state(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.state = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
+            Function<com.commercetools.history.models.common.StateReferenceBuilder, com.commercetools.history.models.common.StateReferenceBuilder> builder) {
+        this.state = builder.apply(com.commercetools.history.models.common.StateReferenceBuilder.of()).build();
         return this;
     }
 
     /**
-     * set the value to the state using the builder function
+     *  <p>State of the Line Items or Custom Line Items in a custom workflow.</p>
      * @param builder function to build the state value
      * @return Builder
      */
 
     public ItemStateBuilder withState(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        this.state = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
+            Function<com.commercetools.history.models.common.StateReferenceBuilder, com.commercetools.history.models.common.StateReference> builder) {
+        this.state = builder.apply(com.commercetools.history.models.common.StateReferenceBuilder.of());
         return this;
     }
 
     /**
-     * set the value to the state
+     *  <p>State of the Line Items or Custom Line Items in a custom workflow.</p>
      * @param state value to be set
      * @return Builder
      */
 
-    public ItemStateBuilder state(final com.commercetools.history.models.common.Reference state) {
+    public ItemStateBuilder state(final com.commercetools.history.models.common.StateReference state) {
         this.state = state;
         return this;
     }
 
     /**
-     * value of quantity}
+     *  <p>Number of Line Items or Custom Line Items in this State.</p>
      * @return quantity
      */
 
-    public Integer getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
     /**
-     * value of state}
+     *  <p>State of the Line Items or Custom Line Items in a custom workflow.</p>
      * @return state
      */
 
-    public com.commercetools.history.models.common.Reference getState() {
+    public com.commercetools.history.models.common.StateReference getState() {
         return this.state;
     }
 

@@ -26,6 +26,14 @@ public class SetCountriesChangeTest {
                 new Object[] { "nextValue",
                         SetCountriesChange.builder()
                                 .nextValue(Collections.singletonList(
+                                    new com.commercetools.history.models.common.StoreCountryImpl())) },
+                new Object[] { "addedItems",
+                        SetCountriesChange.builder()
+                                .addedItems(Collections.singletonList(
+                                    new com.commercetools.history.models.common.StoreCountryImpl())) },
+                new Object[] { "removedItems",
+                        SetCountriesChange.builder()
+                                .removedItems(Collections.singletonList(
                                     new com.commercetools.history.models.common.StoreCountryImpl())) } };
     }
 
@@ -50,6 +58,23 @@ public class SetCountriesChangeTest {
         SetCountriesChange value = SetCountriesChange.of();
         value.setNextValue(Collections.singletonList(new com.commercetools.history.models.common.StoreCountryImpl()));
         Assertions.assertThat(value.getNextValue())
+                .isEqualTo(Collections.singletonList(new com.commercetools.history.models.common.StoreCountryImpl()));
+    }
+
+    @Test
+    public void addedItems() {
+        SetCountriesChange value = SetCountriesChange.of();
+        value.setAddedItems(Collections.singletonList(new com.commercetools.history.models.common.StoreCountryImpl()));
+        Assertions.assertThat(value.getAddedItems())
+                .isEqualTo(Collections.singletonList(new com.commercetools.history.models.common.StoreCountryImpl()));
+    }
+
+    @Test
+    public void removedItems() {
+        SetCountriesChange value = SetCountriesChange.of();
+        value.setRemovedItems(
+            Collections.singletonList(new com.commercetools.history.models.common.StoreCountryImpl()));
+        Assertions.assertThat(value.getRemovedItems())
                 .isEqualTo(Collections.singletonList(new com.commercetools.history.models.common.StoreCountryImpl()));
     }
 }

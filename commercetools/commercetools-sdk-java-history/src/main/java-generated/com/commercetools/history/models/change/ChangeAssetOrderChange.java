@@ -18,11 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CategoryChangeAssetOrderAction" rel="nofollow">Change Asset Order</a> on Categories.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangeAssetOrderAction" rel="nofollow">Change Asset Order</a> on Products.</li>
- *  </ul>
+ * ChangeAssetOrderChange
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,6 +28,8 @@ import jakarta.validation.constraints.NotNull;
  *             .change("{change}")
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .catalogData("{catalogData}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -81,6 +79,27 @@ public interface ChangeAssetOrderChange extends Change {
     public List<LocalizedString> getNextValue();
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+    @NotNull
+    @JsonProperty("catalogData")
+    public String getCatalogData();
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+    @NotNull
+    @JsonProperty("variant")
+    public String getVariant();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -118,6 +137,25 @@ public interface ChangeAssetOrderChange extends Change {
     public void setNextValue(final List<LocalizedString> nextValue);
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     */
+
+    public void setCatalogData(final String catalogData);
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     */
+
+    public void setVariant(final String variant);
+
+    /**
      * factory method
      * @return instance of ChangeAssetOrderChange
      */
@@ -135,6 +173,8 @@ public interface ChangeAssetOrderChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setCatalogData(template.getCatalogData());
+        instance.setVariant(template.getVariant());
         return instance;
     }
 
@@ -162,6 +202,8 @@ public interface ChangeAssetOrderChange extends Change {
                         .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setCatalogData(template.getCatalogData());
+        instance.setVariant(template.getVariant());
         return instance;
     }
 

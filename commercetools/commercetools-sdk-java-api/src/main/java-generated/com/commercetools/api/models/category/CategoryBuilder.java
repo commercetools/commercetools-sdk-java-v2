@@ -553,7 +553,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Custom Fields for the Category.</p>
+     *  <p>Custom Fields of the Category.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -565,7 +565,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Custom Fields for the Category.</p>
+     *  <p>Custom Fields of the Category.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -577,7 +577,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Custom Fields for the Category.</p>
+     *  <p>Custom Fields of the Category.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -837,7 +837,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Custom Fields for the Category.</p>
+     *  <p>Custom Fields of the Category.</p>
      * @return custom
      */
 

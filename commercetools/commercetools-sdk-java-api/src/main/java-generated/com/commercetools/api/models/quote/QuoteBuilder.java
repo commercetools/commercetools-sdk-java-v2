@@ -1197,7 +1197,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>The Purchase Order Number is typically set by the <span>Buyer</span> on a <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> to track the purchase order during the <span>quote and order flow</span>.</p>
+     *  <p>The purchase order number is typically set by the <span>Buyer</span> on a <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> to track the purchase order during the <span>quote and order flow</span>.</p>
      * @param purchaseOrderNumber value to be set
      * @return Builder
      */
@@ -1583,7 +1583,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>The Purchase Order Number is typically set by the <span>Buyer</span> on a <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> to track the purchase order during the <span>quote and order flow</span>.</p>
+     *  <p>The purchase order number is typically set by the <span>Buyer</span> on a <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> to track the purchase order during the <span>quote and order flow</span>.</p>
      * @return purchaseOrderNumber
      */
 

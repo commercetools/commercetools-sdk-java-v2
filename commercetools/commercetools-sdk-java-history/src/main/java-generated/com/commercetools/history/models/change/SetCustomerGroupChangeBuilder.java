@@ -43,30 +43,6 @@ public class SetCustomerGroupChangeBuilder implements Builder<SetCustomerGroupCh
 
     /**
      *  <p>Value before the change.</p>
-     * @param builder function to build the previousValue value
-     * @return Builder
-     */
-
-    public SetCustomerGroupChangeBuilder previousValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Value before the change.</p>
-     * @param builder function to build the previousValue value
-     * @return Builder
-     */
-
-    public SetCustomerGroupChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -78,26 +54,14 @@ public class SetCustomerGroupChangeBuilder implements Builder<SetCustomerGroupCh
     }
 
     /**
-     *  <p>Value after the change.</p>
-     * @param builder function to build the nextValue value
+     *  <p>Value before the change.</p>
+     * @param builder function to build the previousValue value
      * @return Builder
      */
 
-    public SetCustomerGroupChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Value after the change.</p>
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public SetCustomerGroupChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
+    public SetCustomerGroupChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 
@@ -109,6 +73,18 @@ public class SetCustomerGroupChangeBuilder implements Builder<SetCustomerGroupCh
 
     public SetCustomerGroupChangeBuilder nextValue(final com.commercetools.history.models.common.Reference nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetCustomerGroupChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 

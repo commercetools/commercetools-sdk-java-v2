@@ -19,7 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Creates a Product Variant when included in the <code>masterVariant</code> and <code>variants</code> fields of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDraft" rel="nofollow">ProductDraft</a>.</p>
+ * ProductVariantDraft
  *
  * <hr>
  * Example to create an instance using the builder pattern

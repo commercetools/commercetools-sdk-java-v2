@@ -17,14 +17,16 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * Delivery
+ *  <p>Contains information on how items are shipped to Customers, for example, a delivery note.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DeliveryImpl implements Delivery, ModelBase {
 
     private String id;
 
-    private String createdAt;
+    private String key;
+
+    private java.time.ZonedDateTime createdAt;
 
     private java.util.List<com.commercetools.history.models.common.DeliveryItem> items;
 
@@ -38,12 +40,14 @@ public class DeliveryImpl implements Delivery, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    DeliveryImpl(@JsonProperty("id") final String id, @JsonProperty("createdAt") final String createdAt,
+    DeliveryImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key,
+            @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
             @JsonProperty("items") final java.util.List<com.commercetools.history.models.common.DeliveryItem> items,
             @JsonProperty("parcels") final java.util.List<com.commercetools.history.models.common.Parcel> parcels,
             @JsonProperty("address") final com.commercetools.history.models.common.Address address,
             @JsonProperty("custom") final com.commercetools.history.models.common.CustomFields custom) {
         this.id = id;
+        this.key = key;
         this.createdAt = createdAt;
         this.items = items;
         this.parcels = parcels;
@@ -58,7 +62,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
 
     public String getId() {
@@ -66,15 +70,23 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier of the Delivery.</p>
      */
 
-    public String getCreatedAt() {
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
+     *  <p>Date and time (UTC) the Delivery was created.</p>
+     */
+
+    public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
     /**
-     *
+     *  <p>Line Items or Custom Line Items that are delivered.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.DeliveryItem> getItems() {
@@ -82,7 +94,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     *
+     *  <p>Information regarding the appearance, content, and shipment of a Parcel.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.Parcel> getParcels() {
@@ -90,7 +102,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     *
+     *  <p>Address to which Parcels are delivered.</p>
      */
 
     public com.commercetools.history.models.common.Address getAddress() {
@@ -98,7 +110,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     *  <p>Custom Fields of the Delivery.</p>
      */
 
     public com.commercetools.history.models.common.CustomFields getCustom() {
@@ -109,7 +121,11 @@ public class DeliveryImpl implements Delivery, ModelBase {
         this.id = id;
     }
 
-    public void setCreatedAt(final String createdAt) {
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
+    public void setCreatedAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
     }
 
@@ -148,12 +164,14 @@ public class DeliveryImpl implements Delivery, ModelBase {
         DeliveryImpl that = (DeliveryImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
+                .append(key, that.key)
                 .append(createdAt, that.createdAt)
                 .append(items, that.items)
                 .append(parcels, that.parcels)
                 .append(address, that.address)
                 .append(custom, that.custom)
                 .append(id, that.id)
+                .append(key, that.key)
                 .append(createdAt, that.createdAt)
                 .append(items, that.items)
                 .append(parcels, that.parcels)
@@ -165,6 +183,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(id)
+                .append(key)
                 .append(createdAt)
                 .append(items)
                 .append(parcels)
@@ -176,6 +195,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("key", key)
                 .append("createdAt", createdAt)
                 .append("items", items)
                 .append("parcels", parcels)

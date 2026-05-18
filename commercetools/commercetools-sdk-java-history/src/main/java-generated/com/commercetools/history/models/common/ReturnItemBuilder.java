@@ -2,6 +2,9 @@
 package com.commercetools.history.models.common;
 
 import java.util.*;
+import java.util.function.Function;
+
+import javax.annotation.Nullable;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -14,13 +17,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ReturnItem returnItem = ReturnItem.builder()
  *             .id("{id}")
- *             .quantity(1)
+ *             .quantity(0.3)
  *             .type("{type}")
- *             .comment("{comment}")
  *             .shipmentState(ReturnShipmentState.ADVISED)
  *             .paymentState(ReturnPaymentState.NON_REFUNDABLE)
- *             .lastModifiedAt("{lastModifiedAt}")
- *             .createdAt("{createdAt}")
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .build()
  * </code></pre>
  * </div>
@@ -30,22 +32,29 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
 
     private String id;
 
-    private Integer quantity;
+    @Nullable
+    private String key;
+
+    private Long quantity;
 
     private String type;
 
+    @Nullable
     private String comment;
 
     private com.commercetools.history.models.common.ReturnShipmentState shipmentState;
 
     private com.commercetools.history.models.common.ReturnPaymentState paymentState;
 
-    private String lastModifiedAt;
+    @Nullable
+    private com.commercetools.history.models.common.CustomFields custom;
 
-    private String createdAt;
+    private java.time.ZonedDateTime lastModifiedAt;
+
+    private java.time.ZonedDateTime createdAt;
 
     /**
-     * set the value to the id
+     *  <p>Unique identifier of the Return Item.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -56,12 +65,23 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
     }
 
     /**
-     * set the value to the quantity
+     *  <p>User-defined unique identifier of the Return Item.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public ReturnItemBuilder key(@Nullable final String key) {
+        this.key = key;
+        return this;
+    }
+
+    /**
+     *  <p>Number of Line Items or Custom Line Items returned.</p>
      * @param quantity value to be set
      * @return Builder
      */
 
-    public ReturnItemBuilder quantity(final Integer quantity) {
+    public ReturnItemBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
@@ -78,18 +98,18 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
     }
 
     /**
-     * set the value to the comment
+     *  <p>User-defined description for the return.</p>
      * @param comment value to be set
      * @return Builder
      */
 
-    public ReturnItemBuilder comment(final String comment) {
+    public ReturnItemBuilder comment(@Nullable final String comment) {
         this.comment = comment;
         return this;
     }
 
     /**
-     * set the value to the shipmentState
+     *  <p>Shipment status of the Return Item.</p>
      * @param shipmentState value to be set
      * @return Builder
      */
@@ -101,7 +121,11 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
     }
 
     /**
-     * set the value to the paymentState
+     *  <p>Payment status of the Return Item:</p>
+     *  <ul>
+     *   <li><code>NonRefundable</code>, for items in the <code>Advised</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnShipmentState" rel="nofollow">ReturnShipmentState</a></li>
+     *   <li><code>Initial</code>, for items in the <code>Returned</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnShipmentState" rel="nofollow">ReturnShipmentState</a></li>
+     *  </ul>
      * @param paymentState value to be set
      * @return Builder
      */
@@ -113,29 +137,64 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
     }
 
     /**
-     * set the value to the lastModifiedAt
+     *  <p>Custom Fields of the Return Item.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public ReturnItemBuilder custom(
+            Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields of the Return Item.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public ReturnItemBuilder withCustom(
+            Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields of the Return Item.</p>
+     * @param custom value to be set
+     * @return Builder
+     */
+
+    public ReturnItemBuilder custom(@Nullable final com.commercetools.history.models.common.CustomFields custom) {
+        this.custom = custom;
+        return this;
+    }
+
+    /**
+     *  <p>Date and time (UTC) the Return Item was last updated.</p>
      * @param lastModifiedAt value to be set
      * @return Builder
      */
 
-    public ReturnItemBuilder lastModifiedAt(final String lastModifiedAt) {
+    public ReturnItemBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
 
     /**
-     * set the value to the createdAt
+     *  <p>Date and time (UTC) the Return Item was initially created.</p>
      * @param createdAt value to be set
      * @return Builder
      */
 
-    public ReturnItemBuilder createdAt(final String createdAt) {
+    public ReturnItemBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
     /**
-     * value of id}
+     *  <p>Unique identifier of the Return Item.</p>
      * @return id
      */
 
@@ -144,11 +203,21 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
     }
 
     /**
-     * value of quantity}
+     *  <p>User-defined unique identifier of the Return Item.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
+     *  <p>Number of Line Items or Custom Line Items returned.</p>
      * @return quantity
      */
 
-    public Integer getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
@@ -162,16 +231,17 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
     }
 
     /**
-     * value of comment}
+     *  <p>User-defined description for the return.</p>
      * @return comment
      */
 
+    @Nullable
     public String getComment() {
         return this.comment;
     }
 
     /**
-     * value of shipmentState}
+     *  <p>Shipment status of the Return Item.</p>
      * @return shipmentState
      */
 
@@ -180,7 +250,11 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
     }
 
     /**
-     * value of paymentState}
+     *  <p>Payment status of the Return Item:</p>
+     *  <ul>
+     *   <li><code>NonRefundable</code>, for items in the <code>Advised</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnShipmentState" rel="nofollow">ReturnShipmentState</a></li>
+     *   <li><code>Initial</code>, for items in the <code>Returned</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnShipmentState" rel="nofollow">ReturnShipmentState</a></li>
+     *  </ul>
      * @return paymentState
      */
 
@@ -189,20 +263,30 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
     }
 
     /**
-     * value of lastModifiedAt}
+     *  <p>Custom Fields of the Return Item.</p>
+     * @return custom
+     */
+
+    @Nullable
+    public com.commercetools.history.models.common.CustomFields getCustom() {
+        return this.custom;
+    }
+
+    /**
+     *  <p>Date and time (UTC) the Return Item was last updated.</p>
      * @return lastModifiedAt
      */
 
-    public String getLastModifiedAt() {
+    public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
     /**
-     * value of createdAt}
+     *  <p>Date and time (UTC) the Return Item was initially created.</p>
      * @return createdAt
      */
 
-    public String getCreatedAt() {
+    public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
@@ -214,12 +298,12 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
         Objects.requireNonNull(id, ReturnItem.class + ": id is missing");
         Objects.requireNonNull(quantity, ReturnItem.class + ": quantity is missing");
         Objects.requireNonNull(type, ReturnItem.class + ": type is missing");
-        Objects.requireNonNull(comment, ReturnItem.class + ": comment is missing");
         Objects.requireNonNull(shipmentState, ReturnItem.class + ": shipmentState is missing");
         Objects.requireNonNull(paymentState, ReturnItem.class + ": paymentState is missing");
         Objects.requireNonNull(lastModifiedAt, ReturnItem.class + ": lastModifiedAt is missing");
         Objects.requireNonNull(createdAt, ReturnItem.class + ": createdAt is missing");
-        return new ReturnItemImpl(id, quantity, type, comment, shipmentState, paymentState, lastModifiedAt, createdAt);
+        return new ReturnItemImpl(id, key, quantity, type, comment, shipmentState, paymentState, custom, lastModifiedAt,
+            createdAt);
     }
 
     /**
@@ -227,7 +311,8 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
      * @return ReturnItem
      */
     public ReturnItem buildUnchecked() {
-        return new ReturnItemImpl(id, quantity, type, comment, shipmentState, paymentState, lastModifiedAt, createdAt);
+        return new ReturnItemImpl(id, key, quantity, type, comment, shipmentState, paymentState, custom, lastModifiedAt,
+            createdAt);
     }
 
     /**
@@ -246,11 +331,13 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
     public static ReturnItemBuilder of(final ReturnItem template) {
         ReturnItemBuilder builder = new ReturnItemBuilder();
         builder.id = template.getId();
+        builder.key = template.getKey();
         builder.quantity = template.getQuantity();
         builder.type = template.getType();
         builder.comment = template.getComment();
         builder.shipmentState = template.getShipmentState();
         builder.paymentState = template.getPaymentState();
+        builder.custom = template.getCustom();
         builder.lastModifiedAt = template.getLastModifiedAt();
         builder.createdAt = template.getCreatedAt();
         return builder;

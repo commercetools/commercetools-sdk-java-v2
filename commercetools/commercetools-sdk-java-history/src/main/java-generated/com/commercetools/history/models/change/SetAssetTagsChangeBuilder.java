@@ -18,6 +18,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .asset(assetBuilder -> assetBuilder)
+ *             .catalogData("{catalogData}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -32,6 +34,10 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
     private java.util.List<String> nextValue;
 
     private com.commercetools.history.models.change_value.AssetChangeValue asset;
+
+    private String catalogData;
+
+    private String variant;
 
     /**
      * set the value to the change
@@ -152,6 +158,33 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
     }
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     * @return Builder
+     */
+
+    public SetAssetTagsChangeBuilder catalogData(final String catalogData) {
+        this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     * @return Builder
+     */
+
+    public SetAssetTagsChangeBuilder variant(final String variant) {
+        this.variant = variant;
+        return this;
+    }
+
+    /**
      * value of change}
      * @return change
      */
@@ -188,6 +221,29 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
     }
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
+    /**
      * builds SetAssetTagsChange with checking for non-null required values
      * @return SetAssetTagsChange
      */
@@ -196,7 +252,9 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
         Objects.requireNonNull(previousValue, SetAssetTagsChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetAssetTagsChange.class + ": nextValue is missing");
         Objects.requireNonNull(asset, SetAssetTagsChange.class + ": asset is missing");
-        return new SetAssetTagsChangeImpl(change, previousValue, nextValue, asset);
+        Objects.requireNonNull(catalogData, SetAssetTagsChange.class + ": catalogData is missing");
+        Objects.requireNonNull(variant, SetAssetTagsChange.class + ": variant is missing");
+        return new SetAssetTagsChangeImpl(change, previousValue, nextValue, asset, catalogData, variant);
     }
 
     /**
@@ -204,7 +262,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
      * @return SetAssetTagsChange
      */
     public SetAssetTagsChange buildUnchecked() {
-        return new SetAssetTagsChangeImpl(change, previousValue, nextValue, asset);
+        return new SetAssetTagsChangeImpl(change, previousValue, nextValue, asset, catalogData, variant);
     }
 
     /**
@@ -226,6 +284,8 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
         builder.asset = template.getAsset();
+        builder.catalogData = template.getCatalogData();
+        builder.variant = template.getVariant();
         return builder;
     }
 

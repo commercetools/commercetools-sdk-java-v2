@@ -418,7 +418,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
-     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the <span>Buyer</span>.</p>
+     *  <p>Identifier for a purchase order, usually in a B2B context. The purchase order number is typically entered by the <span>Buyer</span>.</p>
      */
 
     public String getPurchaseOrderNumber() {

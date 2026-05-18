@@ -63,7 +63,7 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
     }
 
     /**
-     *  <p>Object containing the Custom Fields for the <span>customized resource or data type</span>.</p>
+     *  <p>Object containing the Custom Fields of the <span>customized resource or data type</span>.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
     }
 
     /**
-     *  <p>Object containing the Custom Fields for the <span>customized resource or data type</span>.</p>
+     *  <p>Object containing the Custom Fields of the <span>customized resource or data type</span>.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -87,7 +87,7 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
     }
 
     /**
-     *  <p>Object containing the Custom Fields for the <span>customized resource or data type</span>.</p>
+     *  <p>Object containing the Custom Fields of the <span>customized resource or data type</span>.</p>
      * @param fields value to be set
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
     }
 
     /**
-     *  <p>Object containing the Custom Fields for the <span>customized resource or data type</span>.</p>
+     *  <p>Object containing the Custom Fields of the <span>customized resource or data type</span>.</p>
      * @return fields
      */
 

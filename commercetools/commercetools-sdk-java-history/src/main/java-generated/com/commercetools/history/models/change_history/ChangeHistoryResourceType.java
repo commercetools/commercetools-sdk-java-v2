@@ -74,11 +74,17 @@ public interface ChangeHistoryResourceType extends JsonEnum {
     <p>for <span>Review</span></p> */
     ChangeHistoryResourceType REVIEW = ChangeHistoryResourceTypeEnum.REVIEW;
     /**
+    <p>for <span>ShippingMethod</span></p> */
+    ChangeHistoryResourceType SHIPPING_METHOD = ChangeHistoryResourceTypeEnum.SHIPPING_METHOD;
+    /**
     <p>for <span>ShoppingList</span></p> */
     ChangeHistoryResourceType SHOPPING_LIST = ChangeHistoryResourceTypeEnum.SHOPPING_LIST;
     /**
     <p>for <span>StagedQuote</span></p> */
     ChangeHistoryResourceType STAGED_QUOTE = ChangeHistoryResourceTypeEnum.STAGED_QUOTE;
+    /**
+    <p>for <span>StandalonePrice</span></p> */
+    ChangeHistoryResourceType STANDALONE_PRICE = ChangeHistoryResourceTypeEnum.STANDALONE_PRICE;
     /**
     <p>for <span>State</span></p> */
     ChangeHistoryResourceType STATE = ChangeHistoryResourceTypeEnum.STATE;
@@ -195,6 +201,11 @@ public interface ChangeHistoryResourceType extends JsonEnum {
         REVIEW("review"),
 
         /**
+         * shipping-method
+         */
+        SHIPPING_METHOD("shipping-method"),
+
+        /**
          * shopping-list
          */
         SHOPPING_LIST("shopping-list"),
@@ -203,6 +214,11 @@ public interface ChangeHistoryResourceType extends JsonEnum {
          * staged-quote
          */
         STAGED_QUOTE("staged-quote"),
+
+        /**
+         * standalone-price
+         */
+        STANDALONE_PRICE("standalone-price"),
 
         /**
          * state

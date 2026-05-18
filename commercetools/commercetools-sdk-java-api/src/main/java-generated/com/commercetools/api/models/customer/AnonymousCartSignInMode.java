@@ -11,16 +11,16 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AnonymousCartSignInMode
+ *  <p>Determines how an anonymous Cart is handled when a Customer signs in. For more information, see <span>Cart merge during sign-in and sign-up</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface AnonymousCartSignInMode extends JsonEnum {
 
     /**
-    <p>If set, the content of an anonymous <span>Cart is merged during sign-in</span> with the Customer's most recently modified active Cart.</p> */
+    <p>The content of an anonymous <span>Cart is merged during sign-in</span> with the Customer's most recently modified active Cart.</p> */
     AnonymousCartSignInMode MERGE_WITH_EXISTING_CUSTOMER_CART = AnonymousCartSignInModeEnum.MERGE_WITH_EXISTING_CUSTOMER_CART;
     /**
-    <p>If set, an anonymous Cart is used as the new active Customer Cart, and no <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a> are merged.</p> */
+    <p>Uses the anonymous Cart as the new active Customer Cart, replacing the existing one. No items from the previous active Cart are merged.</p> */
     AnonymousCartSignInMode USE_AS_NEW_ACTIVE_CUSTOMER_CART = AnonymousCartSignInModeEnum.USE_AS_NEW_ACTIVE_CUSTOMER_CART;
 
     /**

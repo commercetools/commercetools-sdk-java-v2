@@ -69,8 +69,9 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     public String getOrderNumber();
 
     /**
-     *  <p>User-defined identifier for a purchase Order.</p>
-     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> and can be used with <span>Quotes</span> to track the purchase Order during the <span>quote and order flow</span>.</p>
+     *  <p>User-defined identifier for a purchase order.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> or Merchant to track the purchase order during the <span>quote and order flow</span>.</p>
+     *  <p>If not provided, the <code>purchaseOrderNumber</code> from the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> is used.</p>
      * @return purchaseOrderNumber
      */
 
@@ -151,8 +152,9 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     public void setOrderNumber(final String orderNumber);
 
     /**
-     *  <p>User-defined identifier for a purchase Order.</p>
-     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> and can be used with <span>Quotes</span> to track the purchase Order during the <span>quote and order flow</span>.</p>
+     *  <p>User-defined identifier for a purchase order.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> or Merchant to track the purchase order during the <span>quote and order flow</span>.</p>
+     *  <p>If not provided, the <code>purchaseOrderNumber</code> from the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> is used.</p>
      * @param purchaseOrderNumber value to be set
      */
 

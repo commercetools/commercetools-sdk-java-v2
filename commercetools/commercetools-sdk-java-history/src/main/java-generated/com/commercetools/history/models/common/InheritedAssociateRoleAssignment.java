@@ -34,36 +34,36 @@ import jakarta.validation.constraints.NotNull;
 public interface InheritedAssociateRoleAssignment {
 
     /**
-     *
+     *  <p>Inherited role the Associate holds within a Business Unit.</p>
      * @return associateRole
      */
     @NotNull
     @Valid
     @JsonProperty("associateRole")
-    public KeyReference getAssociateRole();
+    public AssociateRoleKeyReference getAssociateRole();
 
     /**
-     *
+     *  <p>Reference to the parent Business Unit where the assignment is defined explicitly.</p>
      * @return source
      */
     @NotNull
     @Valid
     @JsonProperty("source")
-    public KeyReference getSource();
+    public BusinessUnitKeyReference getSource();
 
     /**
-     * set associateRole
+     *  <p>Inherited role the Associate holds within a Business Unit.</p>
      * @param associateRole value to be set
      */
 
-    public void setAssociateRole(final KeyReference associateRole);
+    public void setAssociateRole(final AssociateRoleKeyReference associateRole);
 
     /**
-     * set source
+     *  <p>Reference to the parent Business Unit where the assignment is defined explicitly.</p>
      * @param source value to be set
      */
 
-    public void setSource(final KeyReference source);
+    public void setSource(final BusinessUnitKeyReference source);
 
     /**
      * factory method
@@ -99,8 +99,9 @@ public interface InheritedAssociateRoleAssignment {
         }
         InheritedAssociateRoleAssignmentImpl instance = new InheritedAssociateRoleAssignmentImpl();
         instance.setAssociateRole(
-            com.commercetools.history.models.common.KeyReference.deepCopy(template.getAssociateRole()));
-        instance.setSource(com.commercetools.history.models.common.KeyReference.deepCopy(template.getSource()));
+            com.commercetools.history.models.common.AssociateRoleKeyReference.deepCopy(template.getAssociateRole()));
+        instance.setSource(
+            com.commercetools.history.models.common.BusinessUnitKeyReference.deepCopy(template.getSource()));
         return instance;
     }
 

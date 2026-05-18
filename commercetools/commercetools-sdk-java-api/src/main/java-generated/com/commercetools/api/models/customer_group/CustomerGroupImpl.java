@@ -133,7 +133,7 @@ public class CustomerGroupImpl implements CustomerGroup, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields for the CustomerGroup.</p>
+     *  <p>Custom Fields of the CustomerGroup.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

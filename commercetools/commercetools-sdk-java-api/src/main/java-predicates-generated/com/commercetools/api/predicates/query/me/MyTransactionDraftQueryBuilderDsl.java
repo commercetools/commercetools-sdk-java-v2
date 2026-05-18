@@ -49,4 +49,10 @@ public class MyTransactionDraftQueryBuilderDsl {
             MyTransactionDraftQueryBuilderDsl::of);
     }
 
+    public StringComparisonPredicateBuilder<MyTransactionDraftQueryBuilderDsl> interfaceId() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("interfaceId")),
+            p -> new CombinationQueryPredicate<>(p, MyTransactionDraftQueryBuilderDsl::of));
+    }
+
 }

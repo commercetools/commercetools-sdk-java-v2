@@ -26,6 +26,14 @@ public class SetProductSelectionsChangeTest {
                 new Object[] { "nextValue",
                         SetProductSelectionsChange.builder()
                                 .nextValue(Collections.singletonList(
+                                    new com.commercetools.history.models.common.ProductSelectionSettingImpl())) },
+                new Object[] { "addedItems",
+                        SetProductSelectionsChange.builder()
+                                .addedItems(Collections.singletonList(
+                                    new com.commercetools.history.models.common.ProductSelectionSettingImpl())) },
+                new Object[] { "removedItems",
+                        SetProductSelectionsChange.builder()
+                                .removedItems(Collections.singletonList(
                                     new com.commercetools.history.models.common.ProductSelectionSettingImpl())) } };
     }
 
@@ -52,6 +60,26 @@ public class SetProductSelectionsChangeTest {
         value.setNextValue(
             Collections.singletonList(new com.commercetools.history.models.common.ProductSelectionSettingImpl()));
         Assertions.assertThat(value.getNextValue())
+                .isEqualTo(Collections
+                        .singletonList(new com.commercetools.history.models.common.ProductSelectionSettingImpl()));
+    }
+
+    @Test
+    public void addedItems() {
+        SetProductSelectionsChange value = SetProductSelectionsChange.of();
+        value.setAddedItems(
+            Collections.singletonList(new com.commercetools.history.models.common.ProductSelectionSettingImpl()));
+        Assertions.assertThat(value.getAddedItems())
+                .isEqualTo(Collections
+                        .singletonList(new com.commercetools.history.models.common.ProductSelectionSettingImpl()));
+    }
+
+    @Test
+    public void removedItems() {
+        SetProductSelectionsChange value = SetProductSelectionsChange.of();
+        value.setRemovedItems(
+            Collections.singletonList(new com.commercetools.history.models.common.ProductSelectionSettingImpl()));
+        Assertions.assertThat(value.getRemovedItems())
                 .isEqualTo(Collections
                         .singletonList(new com.commercetools.history.models.common.ProductSelectionSettingImpl()));
     }

@@ -25,8 +25,6 @@ import jakarta.validation.constraints.NotNull;
  * <pre><code class='java'>
  *     ShippingRate shippingRate = ShippingRate.builder()
  *             .price(priceBuilder -> priceBuilder)
- *             .freeAbove(freeAboveBuilder -> freeAboveBuilder)
- *             .isMatching(true)
  *             .plusTiers(tiersBuilder -> tiersBuilder)
  *             .build()
  * </code></pre>
@@ -37,33 +35,32 @@ import jakarta.validation.constraints.NotNull;
 public interface ShippingRate {
 
     /**
-     *
+     *  <p>Currency amount of the ShippingRate.</p>
      * @return price
      */
     @NotNull
     @Valid
     @JsonProperty("price")
-    public Money getPrice();
+    public CentPrecisionMoney getPrice();
 
     /**
-     *
+     *  <p><span>Free shipping</span> is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      * @return freeAbove
      */
-    @NotNull
     @Valid
     @JsonProperty("freeAbove")
-    public Money getFreeAbove();
+    public CentPrecisionMoney getFreeAbove();
 
     /**
-     *  <p>Only appears in response to requests for ShippingMethods by Cart or location to mark this shipping rate as one that matches the Cart or location.</p>
+     *  <p><code>true</code> if the ShippingRate matches given <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Location" rel="nofollow">Location</a>. Only appears in response to requests for <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-cart:GET" rel="nofollow">Get ShippingMethods for a Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-location:GET" rel="nofollow">Get ShippingMethods for a Location</a>.</p>
      * @return isMatching
      */
-    @NotNull
+
     @JsonProperty("isMatching")
     public Boolean getIsMatching();
 
     /**
-     *
+     *  <p>Price tiers for the ShippingRate.</p>
      * @return tiers
      */
     @NotNull
@@ -72,28 +69,28 @@ public interface ShippingRate {
     public List<ShippingRatePriceTier> getTiers();
 
     /**
-     * set price
+     *  <p>Currency amount of the ShippingRate.</p>
      * @param price value to be set
      */
 
-    public void setPrice(final Money price);
+    public void setPrice(final CentPrecisionMoney price);
 
     /**
-     * set freeAbove
+     *  <p><span>Free shipping</span> is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      * @param freeAbove value to be set
      */
 
-    public void setFreeAbove(final Money freeAbove);
+    public void setFreeAbove(final CentPrecisionMoney freeAbove);
 
     /**
-     *  <p>Only appears in response to requests for ShippingMethods by Cart or location to mark this shipping rate as one that matches the Cart or location.</p>
+     *  <p><code>true</code> if the ShippingRate matches given <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Location" rel="nofollow">Location</a>. Only appears in response to requests for <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-cart:GET" rel="nofollow">Get ShippingMethods for a Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-location:GET" rel="nofollow">Get ShippingMethods for a Location</a>.</p>
      * @param isMatching value to be set
      */
 
     public void setIsMatching(final Boolean isMatching);
 
     /**
-     * set tiers
+     *  <p>Price tiers for the ShippingRate.</p>
      * @param tiers values to be set
      */
 
@@ -101,7 +98,7 @@ public interface ShippingRate {
     public void setTiers(final ShippingRatePriceTier... tiers);
 
     /**
-     * set tiers
+     *  <p>Price tiers for the ShippingRate.</p>
      * @param tiers values to be set
      */
 
@@ -142,8 +139,9 @@ public interface ShippingRate {
             return null;
         }
         ShippingRateImpl instance = new ShippingRateImpl();
-        instance.setPrice(com.commercetools.history.models.common.Money.deepCopy(template.getPrice()));
-        instance.setFreeAbove(com.commercetools.history.models.common.Money.deepCopy(template.getFreeAbove()));
+        instance.setPrice(com.commercetools.history.models.common.CentPrecisionMoney.deepCopy(template.getPrice()));
+        instance.setFreeAbove(
+            com.commercetools.history.models.common.CentPrecisionMoney.deepCopy(template.getFreeAbove()));
         instance.setIsMatching(template.getIsMatching());
         instance.setTiers(Optional.ofNullable(template.getTiers())
                 .map(t -> t.stream()

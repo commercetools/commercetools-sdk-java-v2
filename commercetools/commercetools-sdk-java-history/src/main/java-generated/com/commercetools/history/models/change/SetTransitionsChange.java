@@ -28,6 +28,8 @@ import jakarta.validation.constraints.NotNull;
  *             .change("{change}")
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .plusAddedItems(addedItemsBuilder -> addedItemsBuilder)
+ *             .plusRemovedItems(removedItemsBuilder -> removedItemsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -77,6 +79,24 @@ public interface SetTransitionsChange extends Change {
     public List<Reference> getNextValue();
 
     /**
+     *  <p>Elements added to the array.</p>
+     * @return addedItems
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("addedItems")
+    public List<Reference> getAddedItems();
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @return removedItems
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("removedItems")
+    public List<Reference> getRemovedItems();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -114,6 +134,36 @@ public interface SetTransitionsChange extends Change {
     public void setNextValue(final List<Reference> nextValue);
 
     /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems values to be set
+     */
+
+    @JsonIgnore
+    public void setAddedItems(final Reference... addedItems);
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems values to be set
+     */
+
+    public void setAddedItems(final List<Reference> addedItems);
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems values to be set
+     */
+
+    @JsonIgnore
+    public void setRemovedItems(final Reference... removedItems);
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems values to be set
+     */
+
+    public void setRemovedItems(final List<Reference> removedItems);
+
+    /**
      * factory method
      * @return instance of SetTransitionsChange
      */
@@ -131,6 +181,8 @@ public interface SetTransitionsChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setAddedItems(template.getAddedItems());
+        instance.setRemovedItems(template.getRemovedItems());
         return instance;
     }
 
@@ -154,6 +206,16 @@ public interface SetTransitionsChange extends Change {
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.Reference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setAddedItems(Optional.ofNullable(template.getAddedItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.Reference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setRemovedItems(Optional.ofNullable(template.getRemovedItems())
                 .map(t -> t.stream()
                         .map(com.commercetools.history.models.common.Reference::deepCopy)
                         .collect(Collectors.toList()))

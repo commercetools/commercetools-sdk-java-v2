@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Resource identifier to an <span>Application</span>. Either <code>id</code> or <code>key</code> is required. If both are set, an <span>InvalidJsonInput</span> error is returned.</p>
+ *  <p>Resource identifier to an <a href="https://docs.commercetools.com/apis/ctp:checkout:type:Application" rel="nofollow">Application</a>. Either <code>id</code> or <code>key</code> is required. If both are set, an <span>InvalidJsonInput</span> error is returned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ApplicationResourceIdentifierImpl implements ApplicationResourceIdentifier, ModelBase {
@@ -47,7 +47,7 @@ public class ApplicationResourceIdentifierImpl implements ApplicationResourceIde
     }
 
     /**
-     *  <p>Type of referenced resource. If given, it must match the expected <span>ReferenceTypeId</span> of the referenced resource.</p>
+     *  <p>Type of referenced resource. If given, it must match the expected <a href="https://docs.commercetools.com/apis/ctp:checkout:type:ReferenceTypeId" rel="nofollow">ReferenceTypeId</a> of the referenced resource.</p>
      */
 
     public com.commercetools.checkout.models.common.ReferenceTypeId getTypeId() {

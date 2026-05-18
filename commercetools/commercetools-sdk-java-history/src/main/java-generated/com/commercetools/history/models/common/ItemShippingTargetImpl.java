@@ -17,23 +17,28 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * ItemShippingTarget
+ *  <p>Determines the address (as a reference to an address in <code>itemShippingAddresses</code>) and the quantity shipped to the address.</p>
+ *  <p>If multiple shipping addresses are present for a Line Item or Custom Line Item, sub-quantities must be specified. An array of addresses and sub-quantities is stored per Line Item or Custom Line Item.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ItemShippingTargetImpl implements ItemShippingTarget, ModelBase {
 
     private String addressKey;
 
-    private Integer quantity;
+    private Long quantity;
+
+    private String shippingMethodKey;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     ItemShippingTargetImpl(@JsonProperty("addressKey") final String addressKey,
-            @JsonProperty("quantity") final Integer quantity) {
+            @JsonProperty("quantity") final Long quantity,
+            @JsonProperty("shippingMethodKey") final String shippingMethodKey) {
         this.addressKey = addressKey;
         this.quantity = quantity;
+        this.shippingMethodKey = shippingMethodKey;
     }
 
     /**
@@ -43,7 +48,7 @@ public class ItemShippingTargetImpl implements ItemShippingTarget, ModelBase {
     }
 
     /**
-     *  <p>The key of the address in the cart's <code>itemShippingAddresses</code></p>
+     *  <p>Key of the address in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> <code>itemShippingAddresses</code>. Duplicate address keys are not allowed.</p>
      */
 
     public String getAddressKey() {
@@ -51,19 +56,33 @@ public class ItemShippingTargetImpl implements ItemShippingTarget, ModelBase {
     }
 
     /**
-     *  <p>The quantity of items that should go to the address with the specified <code>addressKey</code>. Only positive values are allowed. Using <code>0</code> as quantity is also possible in a draft object, but the element will not be present in the resulting ItemShippingDetails.</p>
+     *  <p>Quantity of Line Items or Custom Line Items shipped to the address with the specified <code>addressKey</code>.</p>
+     *  <p>If a quantity is updated to <code>0</code> when defining <a href="https://docs.commercetools.com/apis/ctp:api:type:ItemShippingDetailsDraft" rel="nofollow">ItemShippingDetailsDraft</a>, the <code>targets</code> are removed from a Line Item or Custom Line Item in the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ItemShippingDetails" rel="nofollow">ItemShippingDetails</a>.</p>
      */
 
-    public Integer getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     *  <p>It connects Line Item or Custom Line Item quantities with individual Shipping Methods.</p>
+     */
+
+    public String getShippingMethodKey() {
+        return this.shippingMethodKey;
     }
 
     public void setAddressKey(final String addressKey) {
         this.addressKey = addressKey;
     }
 
-    public void setQuantity(final Integer quantity) {
+    public void setQuantity(final Long quantity) {
         this.quantity = quantity;
+    }
+
+    public void setShippingMethodKey(final String shippingMethodKey) {
+        this.shippingMethodKey = shippingMethodKey;
     }
 
     @Override
@@ -78,20 +97,23 @@ public class ItemShippingTargetImpl implements ItemShippingTarget, ModelBase {
 
         return new EqualsBuilder().append(addressKey, that.addressKey)
                 .append(quantity, that.quantity)
+                .append(shippingMethodKey, that.shippingMethodKey)
                 .append(addressKey, that.addressKey)
                 .append(quantity, that.quantity)
+                .append(shippingMethodKey, that.shippingMethodKey)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(addressKey).append(quantity).toHashCode();
+        return new HashCodeBuilder(17, 37).append(addressKey).append(quantity).append(shippingMethodKey).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("addressKey", addressKey)
                 .append("quantity", quantity)
+                .append("shippingMethodKey", shippingMethodKey)
                 .build();
     }
 

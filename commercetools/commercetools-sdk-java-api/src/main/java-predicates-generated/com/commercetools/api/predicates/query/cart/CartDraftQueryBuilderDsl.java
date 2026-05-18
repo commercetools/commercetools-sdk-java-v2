@@ -264,4 +264,10 @@ public class CartDraftQueryBuilderDsl {
             CartDraftQueryBuilderDsl::of);
     }
 
+    public StringComparisonPredicateBuilder<CartDraftQueryBuilderDsl> purchaseOrderNumber() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("purchaseOrderNumber")),
+            p -> new CombinationQueryPredicate<>(p, CartDraftQueryBuilderDsl::of));
+    }
+
 }

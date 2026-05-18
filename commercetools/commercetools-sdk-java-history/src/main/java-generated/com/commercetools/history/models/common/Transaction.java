@@ -2,6 +2,7 @@
 package com.commercetools.history.models.common;
 
 import java.time.*;
+import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
@@ -16,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * Transaction
+ *  <p>Represents a financial transaction typically created as a result of a notification from the payment service.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,10 +25,8 @@ import jakarta.validation.constraints.NotNull;
  * <pre><code class='java'>
  *     Transaction transaction = Transaction.builder()
  *             .id("{id}")
- *             .timestamp("{timestamp}")
  *             .type(TransactionType.AUTHORIZATION)
  *             .amount(amountBuilder -> amountBuilder)
- *             .interactionId("{interactionId}")
  *             .state(TransactionState.INITIAL)
  *             .build()
  * </code></pre>
@@ -46,15 +45,15 @@ public interface Transaction {
     public String getId();
 
     /**
-     *  <p>Time at which the transaction took place.</p>
+     *  <p>Date and time (UTC) the Transaction took place.</p>
      * @return timestamp
      */
-    @NotNull
+
     @JsonProperty("timestamp")
-    public String getTimestamp();
+    public ZonedDateTime getTimestamp();
 
     /**
-     *
+     *  <p>Type of the Transaction. For example, <code>Authorization</code>.</p>
      * @return type
      */
     @NotNull
@@ -62,29 +61,37 @@ public interface Transaction {
     public TransactionType getType();
 
     /**
-     *
+     *  <p>Money value of the Transaction.</p>
      * @return amount
      */
     @NotNull
     @Valid
     @JsonProperty("amount")
-    public Money getAmount();
+    public CentPrecisionMoney getAmount();
 
     /**
-     *  <p>Identifier used by the interface that manages the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
+     *  <p>Identifier used by the interface that manages the Transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction can be found with this ID.</p>
      * @return interactionId
      */
-    @NotNull
+
     @JsonProperty("interactionId")
     public String getInteractionId();
 
     /**
-     *
+     *  <p>State of the Transaction.</p>
      * @return state
      */
     @NotNull
     @JsonProperty("state")
     public TransactionState getState();
+
+    /**
+     *  <p>Custom Fields defined for the Transaction.</p>
+     * @return custom
+     */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFields getCustom();
 
     /**
      *  <p>Unique identifier of the Transaction.</p>
@@ -94,39 +101,46 @@ public interface Transaction {
     public void setId(final String id);
 
     /**
-     *  <p>Time at which the transaction took place.</p>
+     *  <p>Date and time (UTC) the Transaction took place.</p>
      * @param timestamp value to be set
      */
 
-    public void setTimestamp(final String timestamp);
+    public void setTimestamp(final ZonedDateTime timestamp);
 
     /**
-     * set type
+     *  <p>Type of the Transaction. For example, <code>Authorization</code>.</p>
      * @param type value to be set
      */
 
     public void setType(final TransactionType type);
 
     /**
-     * set amount
+     *  <p>Money value of the Transaction.</p>
      * @param amount value to be set
      */
 
-    public void setAmount(final Money amount);
+    public void setAmount(final CentPrecisionMoney amount);
 
     /**
-     *  <p>Identifier used by the interface that manages the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
+     *  <p>Identifier used by the interface that manages the Transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction can be found with this ID.</p>
      * @param interactionId value to be set
      */
 
     public void setInteractionId(final String interactionId);
 
     /**
-     * set state
+     *  <p>State of the Transaction.</p>
      * @param state value to be set
      */
 
     public void setState(final TransactionState state);
+
+    /**
+     *  <p>Custom Fields defined for the Transaction.</p>
+     * @param custom value to be set
+     */
+
+    public void setCustom(final CustomFields custom);
 
     /**
      * factory method
@@ -149,6 +163,7 @@ public interface Transaction {
         instance.setAmount(template.getAmount());
         instance.setInteractionId(template.getInteractionId());
         instance.setState(template.getState());
+        instance.setCustom(template.getCustom());
         return instance;
     }
 
@@ -168,9 +183,10 @@ public interface Transaction {
         instance.setId(template.getId());
         instance.setTimestamp(template.getTimestamp());
         instance.setType(template.getType());
-        instance.setAmount(com.commercetools.history.models.common.Money.deepCopy(template.getAmount()));
+        instance.setAmount(com.commercetools.history.models.common.CentPrecisionMoney.deepCopy(template.getAmount()));
         instance.setInteractionId(template.getInteractionId());
         instance.setState(template.getState());
+        instance.setCustom(com.commercetools.history.models.common.CustomFields.deepCopy(template.getCustom()));
         return instance;
     }
 

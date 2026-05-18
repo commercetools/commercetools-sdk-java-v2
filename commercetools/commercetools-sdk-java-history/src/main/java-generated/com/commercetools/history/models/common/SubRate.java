@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * SubRate
+ *  <p>It is used to calculate the <span>taxPortions</span> field in a Cart or Order.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -23,7 +23,7 @@ import jakarta.validation.constraints.NotNull;
  * <pre><code class='java'>
  *     SubRate subRate = SubRate.builder()
  *             .name("{name}")
- *             .amount(1)
+ *             .amount(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface SubRate {
 
     /**
-     *
+     *  <p>Name of the SubRate.</p>
      * @return name
      */
     @NotNull
@@ -46,10 +46,10 @@ public interface SubRate {
      */
     @NotNull
     @JsonProperty("amount")
-    public Integer getAmount();
+    public Double getAmount();
 
     /**
-     * set name
+     *  <p>Name of the SubRate.</p>
      * @param name value to be set
      */
 
@@ -60,7 +60,7 @@ public interface SubRate {
      * @param amount value to be set
      */
 
-    public void setAmount(final Integer amount);
+    public void setAmount(final Double amount);
 
     /**
      * factory method

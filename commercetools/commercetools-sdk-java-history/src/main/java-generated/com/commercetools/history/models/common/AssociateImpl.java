@@ -24,7 +24,9 @@ public class AssociateImpl implements Associate, ModelBase {
 
     private java.util.List<com.commercetools.history.models.common.AssociateRoleAssignment> associateRoleAssignments;
 
-    private com.commercetools.history.models.common.Reference customer;
+    private java.util.List<com.commercetools.history.models.common.AssociateRoleDeprecated> roles;
+
+    private com.commercetools.history.models.common.CustomerReference customer;
 
     /**
      * create instance with all properties
@@ -32,8 +34,10 @@ public class AssociateImpl implements Associate, ModelBase {
     @JsonCreator
     AssociateImpl(
             @JsonProperty("associateRoleAssignments") final java.util.List<com.commercetools.history.models.common.AssociateRoleAssignment> associateRoleAssignments,
-            @JsonProperty("customer") final com.commercetools.history.models.common.Reference customer) {
+            @JsonProperty("roles") final java.util.List<com.commercetools.history.models.common.AssociateRoleDeprecated> roles,
+            @JsonProperty("customer") final com.commercetools.history.models.common.CustomerReference customer) {
         this.associateRoleAssignments = associateRoleAssignments;
+        this.roles = roles;
         this.customer = customer;
     }
 
@@ -44,7 +48,7 @@ public class AssociateImpl implements Associate, ModelBase {
     }
 
     /**
-     *
+     *  <p>Roles assigned to the Associate within a Business Unit.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.AssociateRoleAssignment> getAssociateRoleAssignments() {
@@ -52,10 +56,18 @@ public class AssociateImpl implements Associate, ModelBase {
     }
 
     /**
-     *
+     *  <p>Deprecated type. Use <code>associateRoleAssignments</code> instead.</p>
      */
 
-    public com.commercetools.history.models.common.Reference getCustomer() {
+    public java.util.List<com.commercetools.history.models.common.AssociateRoleDeprecated> getRoles() {
+        return this.roles;
+    }
+
+    /**
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</p>
+     */
+
+    public com.commercetools.history.models.common.CustomerReference getCustomer() {
         return this.customer;
     }
 
@@ -69,7 +81,15 @@ public class AssociateImpl implements Associate, ModelBase {
         this.associateRoleAssignments = associateRoleAssignments;
     }
 
-    public void setCustomer(final com.commercetools.history.models.common.Reference customer) {
+    public void setRoles(final com.commercetools.history.models.common.AssociateRoleDeprecated... roles) {
+        this.roles = new ArrayList<>(Arrays.asList(roles));
+    }
+
+    public void setRoles(final java.util.List<com.commercetools.history.models.common.AssociateRoleDeprecated> roles) {
+        this.roles = roles;
+    }
+
+    public void setCustomer(final com.commercetools.history.models.common.CustomerReference customer) {
         this.customer = customer;
     }
 
@@ -84,21 +104,24 @@ public class AssociateImpl implements Associate, ModelBase {
         AssociateImpl that = (AssociateImpl) o;
 
         return new EqualsBuilder().append(associateRoleAssignments, that.associateRoleAssignments)
+                .append(roles, that.roles)
                 .append(customer, that.customer)
                 .append(associateRoleAssignments, that.associateRoleAssignments)
+                .append(roles, that.roles)
                 .append(customer, that.customer)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(associateRoleAssignments).append(customer).toHashCode();
+        return new HashCodeBuilder(17, 37).append(associateRoleAssignments).append(roles).append(customer).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE)
                 .append("associateRoleAssignments", associateRoleAssignments)
+                .append("roles", roles)
                 .append("customer", customer)
                 .build();
     }

@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * LocalizedString
+ *  <p>JSON object where the keys are of type <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>, and the values are the strings used for the corresponding language.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LocalizedStringImpl implements LocalizedString, ModelBase {
@@ -40,7 +40,7 @@ public class LocalizedStringImpl implements LocalizedString, ModelBase {
     }
 
     /**
-     *
+     *  <p>String used for the specified language.</p>
      */
 
     public Map<String, String> values() {

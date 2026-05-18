@@ -2,8 +2,10 @@
 package com.commercetools.history.models.common;
 
 import java.time.*;
+import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
@@ -16,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * Price
+ *  <p>The representation for prices embedded in <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and in <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> when the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPriceModeEnum" rel="nofollow">ProductPriceMode</a> is <code>Embedded</code>. For the <code>Standalone</code> ProductPriceMode refer to <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +36,7 @@ import jakarta.validation.constraints.NotNull;
 public interface Price {
 
     /**
-     *
+     *  <p>Unique identifier of this Price.</p>
      * @return id
      */
     @NotNull
@@ -42,27 +44,188 @@ public interface Price {
     public String getId();
 
     /**
-     *
+     *  <p>User-defined identifier of the Price. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
+     *  <p>Money value of this Price.</p>
      * @return value
      */
     @NotNull
     @Valid
     @JsonProperty("value")
-    public Money getValue();
+    public TypedMoney getValue();
 
     /**
-     * set id
+     *  <p>Country for which this Price is valid.</p>
+     * @return country
+     */
+
+    @JsonProperty("country")
+    public String getCountry();
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which this Price is valid.</p>
+     * @return customerGroup
+     */
+    @Valid
+    @JsonProperty("customerGroup")
+    public CustomerGroupReference getCustomerGroup();
+
+    /**
+     *  <p><code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which this Price is valid.</p>
+     * @return channel
+     */
+    @Valid
+    @JsonProperty("channel")
+    public ChannelReference getChannel();
+
+    /**
+     *  <p>Date and time from which this Price is valid.</p>
+     * @return validFrom
+     */
+
+    @JsonProperty("validFrom")
+    public ZonedDateTime getValidFrom();
+
+    /**
+     *  <p>Date and time until this Price is valid. Prices that are no longer valid are not automatically removed, but they can be <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemovePriceAction" rel="nofollow">removed</a> if necessary.</p>
+     * @return validUntil
+     */
+
+    @JsonProperty("validUntil")
+    public ZonedDateTime getValidUntil();
+
+    /**
+     *  <p>Is set if a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> has been applied. If set, the API uses the DiscountedPrice value for the <span>Line Item price selection</span>. When a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueRelative" rel="nofollow">relative discount</a> has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with <span>half-down rounding</span>.</p>
+     * @return discounted
+     */
+    @Valid
+    @JsonProperty("discounted")
+    public DiscountedPrice getDiscounted();
+
+    /**
+     *  <p>Present if different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities have been specified.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
+     * @return tiers
+     */
+    @Valid
+    @JsonProperty("tiers")
+    public List<PriceTier> getTiers();
+
+    /**
+     *  <p>Custom Fields defined for the Price.</p>
+     * @return custom
+     */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFields getCustom();
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">Recurrence Policy</a> for which this Price is valid.</p>
+     * @return recurrencePolicy
+     */
+    @Valid
+    @JsonProperty("recurrencePolicy")
+    public RecurrencePolicyReference getRecurrencePolicy();
+
+    /**
+     *  <p>Unique identifier of this Price.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     * set value
+     *  <p>User-defined identifier of the Price. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
+
+    /**
+     *  <p>Money value of this Price.</p>
      * @param value value to be set
      */
 
-    public void setValue(final Money value);
+    public void setValue(final TypedMoney value);
+
+    /**
+     *  <p>Country for which this Price is valid.</p>
+     * @param country value to be set
+     */
+
+    public void setCountry(final String country);
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which this Price is valid.</p>
+     * @param customerGroup value to be set
+     */
+
+    public void setCustomerGroup(final CustomerGroupReference customerGroup);
+
+    /**
+     *  <p><code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which this Price is valid.</p>
+     * @param channel value to be set
+     */
+
+    public void setChannel(final ChannelReference channel);
+
+    /**
+     *  <p>Date and time from which this Price is valid.</p>
+     * @param validFrom value to be set
+     */
+
+    public void setValidFrom(final ZonedDateTime validFrom);
+
+    /**
+     *  <p>Date and time until this Price is valid. Prices that are no longer valid are not automatically removed, but they can be <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemovePriceAction" rel="nofollow">removed</a> if necessary.</p>
+     * @param validUntil value to be set
+     */
+
+    public void setValidUntil(final ZonedDateTime validUntil);
+
+    /**
+     *  <p>Is set if a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> has been applied. If set, the API uses the DiscountedPrice value for the <span>Line Item price selection</span>. When a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueRelative" rel="nofollow">relative discount</a> has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with <span>half-down rounding</span>.</p>
+     * @param discounted value to be set
+     */
+
+    public void setDiscounted(final DiscountedPrice discounted);
+
+    /**
+     *  <p>Present if different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities have been specified.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
+     * @param tiers values to be set
+     */
+
+    @JsonIgnore
+    public void setTiers(final PriceTier... tiers);
+
+    /**
+     *  <p>Present if different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities have been specified.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
+     * @param tiers values to be set
+     */
+
+    public void setTiers(final List<PriceTier> tiers);
+
+    /**
+     *  <p>Custom Fields defined for the Price.</p>
+     * @param custom value to be set
+     */
+
+    public void setCustom(final CustomFields custom);
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">Recurrence Policy</a> for which this Price is valid.</p>
+     * @param recurrencePolicy value to be set
+     */
+
+    public void setRecurrencePolicy(final RecurrencePolicyReference recurrencePolicy);
 
     /**
      * factory method
@@ -80,7 +243,17 @@ public interface Price {
     public static Price of(final Price template) {
         PriceImpl instance = new PriceImpl();
         instance.setId(template.getId());
+        instance.setKey(template.getKey());
         instance.setValue(template.getValue());
+        instance.setCountry(template.getCountry());
+        instance.setCustomerGroup(template.getCustomerGroup());
+        instance.setChannel(template.getChannel());
+        instance.setValidFrom(template.getValidFrom());
+        instance.setValidUntil(template.getValidUntil());
+        instance.setDiscounted(template.getDiscounted());
+        instance.setTiers(template.getTiers());
+        instance.setCustom(template.getCustom());
+        instance.setRecurrencePolicy(template.getRecurrencePolicy());
         return instance;
     }
 
@@ -98,7 +271,24 @@ public interface Price {
         }
         PriceImpl instance = new PriceImpl();
         instance.setId(template.getId());
-        instance.setValue(com.commercetools.history.models.common.Money.deepCopy(template.getValue()));
+        instance.setKey(template.getKey());
+        instance.setValue(com.commercetools.history.models.common.TypedMoney.deepCopy(template.getValue()));
+        instance.setCountry(template.getCountry());
+        instance.setCustomerGroup(
+            com.commercetools.history.models.common.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
+        instance.setChannel(com.commercetools.history.models.common.ChannelReference.deepCopy(template.getChannel()));
+        instance.setValidFrom(template.getValidFrom());
+        instance.setValidUntil(template.getValidUntil());
+        instance.setDiscounted(
+            com.commercetools.history.models.common.DiscountedPrice.deepCopy(template.getDiscounted()));
+        instance.setTiers(Optional.ofNullable(template.getTiers())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.PriceTier::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setCustom(com.commercetools.history.models.common.CustomFields.deepCopy(template.getCustom()));
+        instance.setRecurrencePolicy(
+            com.commercetools.history.models.common.RecurrencePolicyReference.deepCopy(template.getRecurrencePolicy()));
         return instance;
     }
 

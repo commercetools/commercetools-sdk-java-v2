@@ -92,7 +92,9 @@ public class CartDraftTest {
                 new Object[] { "deleteDaysAfterLastModification",
                         CartDraft.builder().deleteDaysAfterLastModification(3L) },
                 new Object[] { "custom",
-                        CartDraft.builder().custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
+                        CartDraft.builder().custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
+                new Object[] { "purchaseOrderNumber",
+                        CartDraft.builder().purchaseOrderNumber("purchaseOrderNumber") } };
     }
 
     @Test
@@ -328,5 +330,12 @@ public class CartDraftTest {
         value.setCustom(new com.commercetools.api.models.type.CustomFieldsDraftImpl());
         Assertions.assertThat(value.getCustom())
                 .isEqualTo(new com.commercetools.api.models.type.CustomFieldsDraftImpl());
+    }
+
+    @Test
+    public void purchaseOrderNumber() {
+        CartDraft value = CartDraft.of();
+        value.setPurchaseOrderNumber("purchaseOrderNumber");
+        Assertions.assertThat(value.getPurchaseOrderNumber()).isEqualTo("purchaseOrderNumber");
     }
 }

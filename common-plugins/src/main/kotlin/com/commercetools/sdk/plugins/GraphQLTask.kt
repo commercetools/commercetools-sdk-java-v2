@@ -6,6 +6,7 @@ import shadow.javaparser.ast.body.ClassOrInterfaceDeclaration
 import shadow.javaparser.ast.body.ConstructorDeclaration
 import shadow.javaparser.ast.body.MethodDeclaration
 import shadow.javaparser.ast.body.TypeDeclaration
+import shadow.javaparser.ParserConfiguration
 import com.squareup.javapoet.*
 import org.gradle.api.DefaultTask
 import org.gradle.api.plugins.JavaPluginExtension
@@ -41,6 +42,7 @@ open class GraphQLTask: DefaultTask() {
 
     @TaskAction
     fun generate() {
+        StaticJavaParser.getParserConfiguration().setLanguageLevel(ParserConfiguration.LanguageLevel.JAVA_17);
         val javaExtension = project.extensions.getByType(JavaPluginExtension::class.java)
 
         val mainSourceSet = javaExtension.sourceSets.getByName(SourceSet.MAIN_SOURCE_SET_NAME)

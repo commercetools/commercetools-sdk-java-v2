@@ -16,6 +16,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .change("{change}")
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .plusAddedItems(addedItemsBuilder -> addedItemsBuilder)
+ *             .plusRemovedItems(removedItemsBuilder -> removedItemsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -28,6 +30,10 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
     private java.util.List<String> previousValue;
 
     private java.util.List<String> nextValue;
+
+    private java.util.List<String> addedItems;
+
+    private java.util.List<String> removedItems;
 
     /**
      * set the value to the change
@@ -113,6 +119,78 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
     }
 
     /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems value to be set
+     * @return Builder
+     */
+
+    public ChangeGroupsChangeBuilder addedItems(final String... addedItems) {
+        this.addedItems = new ArrayList<>(Arrays.asList(addedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems value to be set
+     * @return Builder
+     */
+
+    public ChangeGroupsChangeBuilder addedItems(final java.util.List<String> addedItems) {
+        this.addedItems = addedItems;
+        return this;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems value to be set
+     * @return Builder
+     */
+
+    public ChangeGroupsChangeBuilder plusAddedItems(final String... addedItems) {
+        if (this.addedItems == null) {
+            this.addedItems = new ArrayList<>();
+        }
+        this.addedItems.addAll(Arrays.asList(addedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems value to be set
+     * @return Builder
+     */
+
+    public ChangeGroupsChangeBuilder removedItems(final String... removedItems) {
+        this.removedItems = new ArrayList<>(Arrays.asList(removedItems));
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems value to be set
+     * @return Builder
+     */
+
+    public ChangeGroupsChangeBuilder removedItems(final java.util.List<String> removedItems) {
+        this.removedItems = removedItems;
+        return this;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems value to be set
+     * @return Builder
+     */
+
+    public ChangeGroupsChangeBuilder plusRemovedItems(final String... removedItems) {
+        if (this.removedItems == null) {
+            this.removedItems = new ArrayList<>();
+        }
+        this.removedItems.addAll(Arrays.asList(removedItems));
+        return this;
+    }
+
+    /**
      * value of change}
      * @return change
      */
@@ -140,6 +218,24 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
     }
 
     /**
+     *  <p>Elements added to the array.</p>
+     * @return addedItems
+     */
+
+    public java.util.List<String> getAddedItems() {
+        return this.addedItems;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @return removedItems
+     */
+
+    public java.util.List<String> getRemovedItems() {
+        return this.removedItems;
+    }
+
+    /**
      * builds ChangeGroupsChange with checking for non-null required values
      * @return ChangeGroupsChange
      */
@@ -147,7 +243,9 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
         Objects.requireNonNull(change, ChangeGroupsChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, ChangeGroupsChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, ChangeGroupsChange.class + ": nextValue is missing");
-        return new ChangeGroupsChangeImpl(change, previousValue, nextValue);
+        Objects.requireNonNull(addedItems, ChangeGroupsChange.class + ": addedItems is missing");
+        Objects.requireNonNull(removedItems, ChangeGroupsChange.class + ": removedItems is missing");
+        return new ChangeGroupsChangeImpl(change, previousValue, nextValue, addedItems, removedItems);
     }
 
     /**
@@ -155,7 +253,7 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
      * @return ChangeGroupsChange
      */
     public ChangeGroupsChange buildUnchecked() {
-        return new ChangeGroupsChangeImpl(change, previousValue, nextValue);
+        return new ChangeGroupsChangeImpl(change, previousValue, nextValue, addedItems, removedItems);
     }
 
     /**
@@ -176,6 +274,8 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
         builder.change = template.getChange();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.addedItems = template.getAddedItems();
+        builder.removedItems = template.getRemovedItems();
         return builder;
     }
 

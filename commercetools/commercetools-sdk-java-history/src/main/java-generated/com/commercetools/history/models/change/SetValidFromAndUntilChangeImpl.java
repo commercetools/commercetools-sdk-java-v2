@@ -17,12 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountSetValidFromAndUntilAction" rel="nofollow">Set Valid From and Until</a> on Cart Discounts.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeSetValidFromAndUntilAction" rel="nofollow">Set Valid From and Until</a> on Discount Codes.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountSetValidFromAndUntilAction" rel="nofollow">Set Valid From and Until</a> on Product Discounts.</li>
- *  </ul>
+ * SetValidFromAndUntilChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetValidFromAndUntilChangeImpl implements SetValidFromAndUntilChange, ModelBase {

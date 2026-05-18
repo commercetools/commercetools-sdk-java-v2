@@ -17,23 +17,62 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * Price
+ *  <p>The representation for prices embedded in <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and in <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> when the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPriceModeEnum" rel="nofollow">ProductPriceMode</a> is <code>Embedded</code>. For the <code>Standalone</code> ProductPriceMode refer to <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PriceImpl implements Price, ModelBase {
 
     private String id;
 
-    private com.commercetools.history.models.common.Money value;
+    private String key;
+
+    private com.commercetools.history.models.common.TypedMoney value;
+
+    private String country;
+
+    private com.commercetools.history.models.common.CustomerGroupReference customerGroup;
+
+    private com.commercetools.history.models.common.ChannelReference channel;
+
+    private java.time.ZonedDateTime validFrom;
+
+    private java.time.ZonedDateTime validUntil;
+
+    private com.commercetools.history.models.common.DiscountedPrice discounted;
+
+    private java.util.List<com.commercetools.history.models.common.PriceTier> tiers;
+
+    private com.commercetools.history.models.common.CustomFields custom;
+
+    private com.commercetools.history.models.common.RecurrencePolicyReference recurrencePolicy;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    PriceImpl(@JsonProperty("id") final String id,
-            @JsonProperty("value") final com.commercetools.history.models.common.Money value) {
+    PriceImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key,
+            @JsonProperty("value") final com.commercetools.history.models.common.TypedMoney value,
+            @JsonProperty("country") final String country,
+            @JsonProperty("customerGroup") final com.commercetools.history.models.common.CustomerGroupReference customerGroup,
+            @JsonProperty("channel") final com.commercetools.history.models.common.ChannelReference channel,
+            @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom,
+            @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil,
+            @JsonProperty("discounted") final com.commercetools.history.models.common.DiscountedPrice discounted,
+            @JsonProperty("tiers") final java.util.List<com.commercetools.history.models.common.PriceTier> tiers,
+            @JsonProperty("custom") final com.commercetools.history.models.common.CustomFields custom,
+            @JsonProperty("recurrencePolicy") final com.commercetools.history.models.common.RecurrencePolicyReference recurrencePolicy) {
         this.id = id;
+        this.key = key;
         this.value = value;
+        this.country = country;
+        this.customerGroup = customerGroup;
+        this.channel = channel;
+        this.validFrom = validFrom;
+        this.validUntil = validUntil;
+        this.discounted = discounted;
+        this.tiers = tiers;
+        this.custom = custom;
+        this.recurrencePolicy = recurrencePolicy;
     }
 
     /**
@@ -43,7 +82,7 @@ public class PriceImpl implements Price, ModelBase {
     }
 
     /**
-     *
+     *  <p>Unique identifier of this Price.</p>
      */
 
     public String getId() {
@@ -51,19 +90,145 @@ public class PriceImpl implements Price, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined identifier of the Price. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      */
 
-    public com.commercetools.history.models.common.Money getValue() {
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
+     *  <p>Money value of this Price.</p>
+     */
+
+    public com.commercetools.history.models.common.TypedMoney getValue() {
         return this.value;
+    }
+
+    /**
+     *  <p>Country for which this Price is valid.</p>
+     */
+
+    public String getCountry() {
+        return this.country;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which this Price is valid.</p>
+     */
+
+    public com.commercetools.history.models.common.CustomerGroupReference getCustomerGroup() {
+        return this.customerGroup;
+    }
+
+    /**
+     *  <p><code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which this Price is valid.</p>
+     */
+
+    public com.commercetools.history.models.common.ChannelReference getChannel() {
+        return this.channel;
+    }
+
+    /**
+     *  <p>Date and time from which this Price is valid.</p>
+     */
+
+    public java.time.ZonedDateTime getValidFrom() {
+        return this.validFrom;
+    }
+
+    /**
+     *  <p>Date and time until this Price is valid. Prices that are no longer valid are not automatically removed, but they can be <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemovePriceAction" rel="nofollow">removed</a> if necessary.</p>
+     */
+
+    public java.time.ZonedDateTime getValidUntil() {
+        return this.validUntil;
+    }
+
+    /**
+     *  <p>Is set if a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> has been applied. If set, the API uses the DiscountedPrice value for the <span>Line Item price selection</span>. When a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueRelative" rel="nofollow">relative discount</a> has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with <span>half-down rounding</span>.</p>
+     */
+
+    public com.commercetools.history.models.common.DiscountedPrice getDiscounted() {
+        return this.discounted;
+    }
+
+    /**
+     *  <p>Present if different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities have been specified.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
+     */
+
+    public java.util.List<com.commercetools.history.models.common.PriceTier> getTiers() {
+        return this.tiers;
+    }
+
+    /**
+     *  <p>Custom Fields defined for the Price.</p>
+     */
+
+    public com.commercetools.history.models.common.CustomFields getCustom() {
+        return this.custom;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">Recurrence Policy</a> for which this Price is valid.</p>
+     */
+
+    public com.commercetools.history.models.common.RecurrencePolicyReference getRecurrencePolicy() {
+        return this.recurrencePolicy;
     }
 
     public void setId(final String id) {
         this.id = id;
     }
 
-    public void setValue(final com.commercetools.history.models.common.Money value) {
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
+    public void setValue(final com.commercetools.history.models.common.TypedMoney value) {
         this.value = value;
+    }
+
+    public void setCountry(final String country) {
+        this.country = country;
+    }
+
+    public void setCustomerGroup(final com.commercetools.history.models.common.CustomerGroupReference customerGroup) {
+        this.customerGroup = customerGroup;
+    }
+
+    public void setChannel(final com.commercetools.history.models.common.ChannelReference channel) {
+        this.channel = channel;
+    }
+
+    public void setValidFrom(final java.time.ZonedDateTime validFrom) {
+        this.validFrom = validFrom;
+    }
+
+    public void setValidUntil(final java.time.ZonedDateTime validUntil) {
+        this.validUntil = validUntil;
+    }
+
+    public void setDiscounted(final com.commercetools.history.models.common.DiscountedPrice discounted) {
+        this.discounted = discounted;
+    }
+
+    public void setTiers(final com.commercetools.history.models.common.PriceTier... tiers) {
+        this.tiers = new ArrayList<>(Arrays.asList(tiers));
+    }
+
+    public void setTiers(final java.util.List<com.commercetools.history.models.common.PriceTier> tiers) {
+        this.tiers = tiers;
+    }
+
+    public void setCustom(final com.commercetools.history.models.common.CustomFields custom) {
+        this.custom = custom;
+    }
+
+    public void setRecurrencePolicy(
+            final com.commercetools.history.models.common.RecurrencePolicyReference recurrencePolicy) {
+        this.recurrencePolicy = recurrencePolicy;
     }
 
     @Override
@@ -77,21 +242,63 @@ public class PriceImpl implements Price, ModelBase {
         PriceImpl that = (PriceImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
+                .append(key, that.key)
                 .append(value, that.value)
+                .append(country, that.country)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(discounted, that.discounted)
+                .append(tiers, that.tiers)
+                .append(custom, that.custom)
+                .append(recurrencePolicy, that.recurrencePolicy)
                 .append(id, that.id)
+                .append(key, that.key)
                 .append(value, that.value)
+                .append(country, that.country)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(discounted, that.discounted)
+                .append(tiers, that.tiers)
+                .append(custom, that.custom)
+                .append(recurrencePolicy, that.recurrencePolicy)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(value).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(key)
+                .append(value)
+                .append(country)
+                .append(customerGroup)
+                .append(channel)
+                .append(validFrom)
+                .append(validUntil)
+                .append(discounted)
+                .append(tiers)
+                .append(custom)
+                .append(recurrencePolicy)
+                .toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("key", key)
                 .append("value", value)
+                .append("country", country)
+                .append("customerGroup", customerGroup)
+                .append("channel", channel)
+                .append("validFrom", validFrom)
+                .append("validUntil", validUntil)
+                .append("discounted", discounted)
+                .append("tiers", tiers)
+                .append("custom", custom)
+                .append("recurrencePolicy", recurrencePolicy)
                 .build();
     }
 

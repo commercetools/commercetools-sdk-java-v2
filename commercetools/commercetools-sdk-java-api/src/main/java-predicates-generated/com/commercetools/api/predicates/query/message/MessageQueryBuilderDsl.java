@@ -408,6 +408,30 @@ public class MessageQueryBuilderDsl {
             MessageQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asBusinessUnitCustomerGroupAssignmentAdded(
+            Function<com.commercetools.api.predicates.query.message.BusinessUnitCustomerGroupAssignmentAddedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.BusinessUnitCustomerGroupAssignmentAddedMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.BusinessUnitCustomerGroupAssignmentAddedMessageQueryBuilderDsl
+                    .of()),
+            MessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asBusinessUnitCustomerGroupAssignmentRemoved(
+            Function<com.commercetools.api.predicates.query.message.BusinessUnitCustomerGroupAssignmentRemovedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.BusinessUnitCustomerGroupAssignmentRemovedMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.BusinessUnitCustomerGroupAssignmentRemovedMessageQueryBuilderDsl
+                    .of()),
+            MessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asBusinessUnitCustomerGroupAssignmentsSet(
+            Function<com.commercetools.api.predicates.query.message.BusinessUnitCustomerGroupAssignmentsSetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.BusinessUnitCustomerGroupAssignmentsSetMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.BusinessUnitCustomerGroupAssignmentsSetMessageQueryBuilderDsl
+                    .of()),
+            MessageQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MessageQueryBuilderDsl> asBusinessUnitDefaultBillingAddressSet(
             Function<com.commercetools.api.predicates.query.message.BusinessUnitDefaultBillingAddressSetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.BusinessUnitDefaultBillingAddressSetMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(
@@ -550,6 +574,28 @@ public class MessageQueryBuilderDsl {
             MessageQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asCartFrozen(
+            Function<com.commercetools.api.predicates.query.message.CartFrozenMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CartFrozenMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.message.CartFrozenMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asCartPurchaseOrderNumberSet(
+            Function<com.commercetools.api.predicates.query.message.CartPurchaseOrderNumberSetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CartPurchaseOrderNumberSetMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.message.CartPurchaseOrderNumberSetMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asCartUnfrozen(
+            Function<com.commercetools.api.predicates.query.message.CartUnfrozenMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CartUnfrozenMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.message.CartUnfrozenMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MessageQueryBuilderDsl> asCategoryCreated(
             Function<com.commercetools.api.predicates.query.message.CategoryCreatedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CategoryCreatedMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -620,6 +666,21 @@ public class MessageQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.message.CustomerAddressRemovedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CustomerAddressRemovedMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(com.commercetools.api.predicates.query.message.CustomerAddressRemovedMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asCustomerBillingAddressAdded(
+            Function<com.commercetools.api.predicates.query.message.CustomerBillingAddressAddedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CustomerBillingAddressAddedMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.message.CustomerBillingAddressAddedMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asCustomerBillingAddressRemoved(
+            Function<com.commercetools.api.predicates.query.message.CustomerBillingAddressRemovedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CustomerBillingAddressRemovedMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.CustomerBillingAddressRemovedMessageQueryBuilderDsl.of()),
             MessageQueryBuilderDsl::of);
     }
 
@@ -727,6 +788,13 @@ public class MessageQueryBuilderDsl {
             MessageQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asCustomerExternalIdSet(
+            Function<com.commercetools.api.predicates.query.message.CustomerExternalIdSetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CustomerExternalIdSetMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.message.CustomerExternalIdSetMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MessageQueryBuilderDsl> asCustomerFirstNameSet(
             Function<com.commercetools.api.predicates.query.message.CustomerFirstNameSetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CustomerFirstNameSetMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -819,6 +887,21 @@ public class MessageQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.message.CustomerPasswordUpdatedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CustomerPasswordUpdatedMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(com.commercetools.api.predicates.query.message.CustomerPasswordUpdatedMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asCustomerShippingAddressAdded(
+            Function<com.commercetools.api.predicates.query.message.CustomerShippingAddressAddedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CustomerShippingAddressAddedMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.message.CustomerShippingAddressAddedMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asCustomerShippingAddressRemoved(
+            Function<com.commercetools.api.predicates.query.message.CustomerShippingAddressRemovedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CustomerShippingAddressRemovedMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.CustomerShippingAddressRemovedMessageQueryBuilderDsl.of()),
             MessageQueryBuilderDsl::of);
     }
 
@@ -927,6 +1010,13 @@ public class MessageQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.message.OrderPaymentAddedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.OrderPaymentAddedMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(com.commercetools.api.predicates.query.message.OrderPaymentAddedMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asOrderPaymentRemoved(
+            Function<com.commercetools.api.predicates.query.message.OrderPaymentRemovedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.OrderPaymentRemovedMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.message.OrderPaymentRemovedMessageQueryBuilderDsl.of()),
             MessageQueryBuilderDsl::of);
     }
 
@@ -1148,6 +1238,13 @@ public class MessageQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.message.PaymentTransactionAddedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentTransactionAddedMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(com.commercetools.api.predicates.query.message.PaymentTransactionAddedMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asPaymentTransactionInterfaceIdSet(
+            Function<com.commercetools.api.predicates.query.message.PaymentTransactionInterfaceIdSetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentTransactionInterfaceIdSetMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.PaymentTransactionInterfaceIdSetMessageQueryBuilderDsl.of()),
             MessageQueryBuilderDsl::of);
     }
 
@@ -1608,6 +1705,13 @@ public class MessageQueryBuilderDsl {
         return new CombinationQueryPredicate<>(
             fn.apply(
                 com.commercetools.api.predicates.query.message.RecurringOrderExpiresAtSetMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asRecurringOrderFailed(
+            Function<com.commercetools.api.predicates.query.message.RecurringOrderFailedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.RecurringOrderFailedMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.message.RecurringOrderFailedMessageQueryBuilderDsl.of()),
             MessageQueryBuilderDsl::of);
     }
 

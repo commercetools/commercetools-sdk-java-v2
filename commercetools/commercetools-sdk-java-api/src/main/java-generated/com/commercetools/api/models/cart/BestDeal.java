@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Indicates the best deal logic applies to a Cart or Order and indicates the discount type that offers the best deal.</p>
+ *  <p>Indicates if a Product Discount or Cart Discount offers the best deal for a Cart or Order.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

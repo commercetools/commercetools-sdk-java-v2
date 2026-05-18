@@ -4,6 +4,8 @@ package com.commercetools.history.models.common;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,8 +17,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ReturnInfo returnInfo = ReturnInfo.builder()
  *             .plusItems(itemsBuilder -> itemsBuilder)
- *             .returnTrackingId("{returnTrackingId}")
- *             .returnDate("{returnDate}")
  *             .build()
  * </code></pre>
  * </div>
@@ -26,12 +26,14 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
 
     private java.util.List<com.commercetools.history.models.common.ReturnItem> items;
 
+    @Nullable
     private String returnTrackingId;
 
-    private String returnDate;
+    @Nullable
+    private java.time.ZonedDateTime returnDate;
 
     /**
-     * set values to the items
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -42,7 +44,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     * set value to the items
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -53,7 +55,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     * add values to the items
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -67,7 +69,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -82,7 +84,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -95,7 +97,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -106,7 +108,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -117,29 +119,29 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
+     *  <p>User-defined identifier to track the return.</p>
      * @param returnTrackingId value to be set
      * @return Builder
      */
 
-    public ReturnInfoBuilder returnTrackingId(final String returnTrackingId) {
+    public ReturnInfoBuilder returnTrackingId(@Nullable final String returnTrackingId) {
         this.returnTrackingId = returnTrackingId;
         return this;
     }
 
     /**
-     * set the value to the returnDate
+     *  <p>Date and time (UTC) the return is initiated.</p>
      * @param returnDate value to be set
      * @return Builder
      */
 
-    public ReturnInfoBuilder returnDate(final String returnDate) {
+    public ReturnInfoBuilder returnDate(@Nullable final java.time.ZonedDateTime returnDate) {
         this.returnDate = returnDate;
         return this;
     }
 
     /**
-     * value of items}
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @return items
      */
 
@@ -148,20 +150,22 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
+     *  <p>User-defined identifier to track the return.</p>
      * @return returnTrackingId
      */
 
+    @Nullable
     public String getReturnTrackingId() {
         return this.returnTrackingId;
     }
 
     /**
-     * value of returnDate}
+     *  <p>Date and time (UTC) the return is initiated.</p>
      * @return returnDate
      */
 
-    public String getReturnDate() {
+    @Nullable
+    public java.time.ZonedDateTime getReturnDate() {
         return this.returnDate;
     }
 
@@ -171,8 +175,6 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
      */
     public ReturnInfo build() {
         Objects.requireNonNull(items, ReturnInfo.class + ": items is missing");
-        Objects.requireNonNull(returnTrackingId, ReturnInfo.class + ": returnTrackingId is missing");
-        Objects.requireNonNull(returnDate, ReturnInfo.class + ": returnDate is missing");
         return new ReturnInfoImpl(items, returnTrackingId, returnDate);
     }
 

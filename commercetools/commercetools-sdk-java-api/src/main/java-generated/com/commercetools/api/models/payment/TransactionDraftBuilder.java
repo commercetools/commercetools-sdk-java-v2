@@ -41,6 +41,9 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    @Nullable
+    private String interfaceId;
+
     /**
      *  <p>Date and time (UTC) the Transaction took place.</p>
      * @param timestamp value to be set
@@ -121,7 +124,7 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     }
 
     /**
-     *  <p>Custom Fields of the Transaction.</p>
+     *  <p>Custom Fields for the Transaction.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -133,7 +136,7 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     }
 
     /**
-     *  <p>Custom Fields of the Transaction.</p>
+     *  <p>Custom Fields for the Transaction.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -145,13 +148,24 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     }
 
     /**
-     *  <p>Custom Fields of the Transaction.</p>
+     *  <p>Custom Fields for the Transaction.</p>
      * @param custom value to be set
      * @return Builder
      */
 
     public TransactionDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
+        return this;
+    }
+
+    /**
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP) in the current transaction.</p>
+     * @param interfaceId value to be set
+     * @return Builder
+     */
+
+    public TransactionDraftBuilder interfaceId(@Nullable final String interfaceId) {
+        this.interfaceId = interfaceId;
         return this;
     }
 
@@ -204,7 +218,7 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     }
 
     /**
-     *  <p>Custom Fields of the Transaction.</p>
+     *  <p>Custom Fields for the Transaction.</p>
      * @return custom
      */
 
@@ -214,13 +228,23 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     }
 
     /**
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP) in the current transaction.</p>
+     * @return interfaceId
+     */
+
+    @Nullable
+    public String getInterfaceId() {
+        return this.interfaceId;
+    }
+
+    /**
      * builds TransactionDraft with checking for non-null required values
      * @return TransactionDraft
      */
     public TransactionDraft build() {
         Objects.requireNonNull(type, TransactionDraft.class + ": type is missing");
         Objects.requireNonNull(amount, TransactionDraft.class + ": amount is missing");
-        return new TransactionDraftImpl(timestamp, type, amount, interactionId, state, custom);
+        return new TransactionDraftImpl(timestamp, type, amount, interactionId, state, custom, interfaceId);
     }
 
     /**
@@ -228,7 +252,7 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
      * @return TransactionDraft
      */
     public TransactionDraft buildUnchecked() {
-        return new TransactionDraftImpl(timestamp, type, amount, interactionId, state, custom);
+        return new TransactionDraftImpl(timestamp, type, amount, interactionId, state, custom, interfaceId);
     }
 
     /**
@@ -252,6 +276,7 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
         builder.interactionId = template.getInteractionId();
         builder.state = template.getState();
         builder.custom = template.getCustom();
+        builder.interfaceId = template.getInterfaceId();
         return builder;
     }
 

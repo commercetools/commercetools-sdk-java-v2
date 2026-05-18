@@ -166,7 +166,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *  <p>Custom Fields of the InventoryEntry.</p>
+     *  <p>Custom Fields for the InventoryEntry.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -178,7 +178,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *  <p>Custom Fields of the InventoryEntry.</p>
+     *  <p>Custom Fields for the InventoryEntry.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -190,7 +190,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *  <p>Custom Fields of the InventoryEntry.</p>
+     *  <p>Custom Fields for the InventoryEntry.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -281,7 +281,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *  <p>Custom Fields of the InventoryEntry.</p>
+     *  <p>Custom Fields for the InventoryEntry.</p>
      * @return custom
      */
 

@@ -14,7 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Publishes product data from the Product's staged projection to its current projection. Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishedMessage" rel="nofollow">ProductPublished</a> Message.</p>
+ *  <p>Copies the product data from the Product's staged representation to its current representation and sets the <code>published</code> flag on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> to <code>true</code>. This makes the current representation retrievable in <span>Product Projection</span> endpoints and indexes it for <span>Product Search</span>.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishedMessage" rel="nofollow">ProductPublished</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

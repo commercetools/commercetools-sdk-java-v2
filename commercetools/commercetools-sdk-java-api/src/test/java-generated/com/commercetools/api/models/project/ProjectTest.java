@@ -41,7 +41,9 @@ public class ProjectTest {
                 new Object[] { "searchIndexing", Project.builder()
                         .searchIndexing(new com.commercetools.api.models.project.SearchIndexingConfigurationImpl()) },
                 new Object[] { "businessUnits", Project.builder()
-                        .businessUnits(new com.commercetools.api.models.project.BusinessUnitConfigurationImpl()) } };
+                        .businessUnits(new com.commercetools.api.models.project.BusinessUnitConfigurationImpl()) },
+                new Object[] { "discounts", Project.builder()
+                        .discounts(new com.commercetools.api.models.project.DiscountsConfigurationImpl()) } };
     }
 
     @Test
@@ -154,5 +156,13 @@ public class ProjectTest {
         value.setBusinessUnits(new com.commercetools.api.models.project.BusinessUnitConfigurationImpl());
         Assertions.assertThat(value.getBusinessUnits())
                 .isEqualTo(new com.commercetools.api.models.project.BusinessUnitConfigurationImpl());
+    }
+
+    @Test
+    public void discounts() {
+        Project value = Project.of();
+        value.setDiscounts(new com.commercetools.api.models.project.DiscountsConfigurationImpl());
+        Assertions.assertThat(value.getDiscounts())
+                .isEqualTo(new com.commercetools.api.models.project.DiscountsConfigurationImpl());
     }
 }

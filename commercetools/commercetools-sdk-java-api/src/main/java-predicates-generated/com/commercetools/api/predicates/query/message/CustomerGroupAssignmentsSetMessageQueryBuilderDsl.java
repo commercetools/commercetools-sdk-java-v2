@@ -107,4 +107,20 @@ public class CustomerGroupAssignmentsSetMessageQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CustomerGroupAssignmentsSetMessageQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<CustomerGroupAssignmentsSetMessageQueryBuilderDsl> oldCustomerGroupAssignments(
+            Function<com.commercetools.api.predicates.query.customer.CustomerGroupAssignmentQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.customer.CustomerGroupAssignmentQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("oldCustomerGroupAssignments"))
+                    .inner(fn.apply(
+                        com.commercetools.api.predicates.query.customer.CustomerGroupAssignmentQueryBuilderDsl.of())),
+            CustomerGroupAssignmentsSetMessageQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<CustomerGroupAssignmentsSetMessageQueryBuilderDsl> oldCustomerGroupAssignments() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("oldCustomerGroupAssignments")),
+            p -> new CombinationQueryPredicate<>(p, CustomerGroupAssignmentsSetMessageQueryBuilderDsl::of));
+    }
+
 }

@@ -36,7 +36,15 @@ import jakarta.validation.constraints.NotNull;
 public interface TransactionItem {
 
     /**
-     *  <p>Reference to the <span>Payment</span> associated with the Transaction Item.</p>
+     *  <p>Money value of the Transaction Item.</p>
+     * @return amount
+     */
+    @Valid
+    @JsonProperty("amount")
+    public Amount getAmount();
+
+    /**
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> associated with the Transaction Item.</p>
      * @return payment
      */
     @Valid
@@ -44,7 +52,7 @@ public interface TransactionItem {
     public PaymentReference getPayment();
 
     /**
-     *  <p>Reference to the <span>Payment Integration</span> to use to execute the payment.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntegration" rel="nofollow">Payment Integration</a> to use to execute the payment.</p>
      * @return paymentIntegration
      */
     @NotNull
@@ -54,32 +62,24 @@ public interface TransactionItem {
 
     /**
      *  <p>Money value of the Transaction Item.</p>
-     * @return amount
+     * @param amount value to be set
      */
-    @Valid
-    @JsonProperty("amount")
-    public Amount getAmount();
+
+    public void setAmount(final Amount amount);
 
     /**
-     *  <p>Reference to the <span>Payment</span> associated with the Transaction Item.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> associated with the Transaction Item.</p>
      * @param payment value to be set
      */
 
     public void setPayment(final PaymentReference payment);
 
     /**
-     *  <p>Reference to the <span>Payment Integration</span> to use to execute the payment.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntegration" rel="nofollow">Payment Integration</a> to use to execute the payment.</p>
      * @param paymentIntegration value to be set
      */
 
     public void setPaymentIntegration(final PaymentIntegrationReference paymentIntegration);
-
-    /**
-     *  <p>Money value of the Transaction Item.</p>
-     * @param amount value to be set
-     */
-
-    public void setAmount(final Amount amount);
 
     /**
      * factory method
@@ -96,9 +96,9 @@ public interface TransactionItem {
      */
     public static TransactionItem of(final TransactionItem template) {
         TransactionItemImpl instance = new TransactionItemImpl();
+        instance.setAmount(template.getAmount());
         instance.setPayment(template.getPayment());
         instance.setPaymentIntegration(template.getPaymentIntegration());
-        instance.setAmount(template.getAmount());
         return instance;
     }
 
@@ -115,10 +115,10 @@ public interface TransactionItem {
             return null;
         }
         TransactionItemImpl instance = new TransactionItemImpl();
+        instance.setAmount(com.commercetools.checkout.models.common.Amount.deepCopy(template.getAmount()));
         instance.setPayment(com.commercetools.checkout.models.payment.PaymentReference.deepCopy(template.getPayment()));
         instance.setPaymentIntegration(com.commercetools.checkout.models.payment_integration.PaymentIntegrationReference
                 .deepCopy(template.getPaymentIntegration()));
-        instance.setAmount(com.commercetools.checkout.models.common.Amount.deepCopy(template.getAmount()));
         return instance;
     }
 

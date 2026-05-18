@@ -38,6 +38,8 @@ public class SetOrderLineItemCustomTypeChangeImpl implements SetOrderLineItemCus
 
     private String variant;
 
+    private String lineItemId;
+
     /**
      * create instance with all properties
      */
@@ -46,12 +48,13 @@ public class SetOrderLineItemCustomTypeChangeImpl implements SetOrderLineItemCus
             @JsonProperty("previousValue") final com.commercetools.history.models.common.CustomFields previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.CustomFields nextValue,
             @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem,
-            @JsonProperty("variant") final String variant) {
+            @JsonProperty("variant") final String variant, @JsonProperty("lineItemId") final String lineItemId) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.lineItem = lineItem;
         this.variant = variant;
+        this.lineItemId = lineItemId;
         this.type = SET_ORDER_LINE_ITEM_CUSTOM_TYPE_CHANGE;
     }
 
@@ -103,11 +106,20 @@ public class SetOrderLineItemCustomTypeChangeImpl implements SetOrderLineItemCus
     }
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      */
 
     public String getVariant() {
         return this.variant;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
+     */
+
+    public String getLineItemId() {
+        return this.lineItemId;
     }
 
     public void setChange(final String change) {
@@ -130,6 +142,10 @@ public class SetOrderLineItemCustomTypeChangeImpl implements SetOrderLineItemCus
         this.variant = variant;
     }
 
+    public void setLineItemId(final String lineItemId) {
+        this.lineItemId = lineItemId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -146,12 +162,14 @@ public class SetOrderLineItemCustomTypeChangeImpl implements SetOrderLineItemCus
                 .append(nextValue, that.nextValue)
                 .append(lineItem, that.lineItem)
                 .append(variant, that.variant)
+                .append(lineItemId, that.lineItemId)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(lineItem, that.lineItem)
                 .append(variant, that.variant)
+                .append(lineItemId, that.lineItemId)
                 .isEquals();
     }
 
@@ -163,6 +181,7 @@ public class SetOrderLineItemCustomTypeChangeImpl implements SetOrderLineItemCus
                 .append(nextValue)
                 .append(lineItem)
                 .append(variant)
+                .append(lineItemId)
                 .toHashCode();
     }
 
@@ -174,6 +193,7 @@ public class SetOrderLineItemCustomTypeChangeImpl implements SetOrderLineItemCus
                 .append("nextValue", nextValue)
                 .append("lineItem", lineItem)
                 .append("variant", variant)
+                .append("lineItemId", lineItemId)
                 .build();
     }
 

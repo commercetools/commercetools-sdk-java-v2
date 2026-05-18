@@ -1,0 +1,211 @@
+
+package com.commercetools.history.models.common;
+
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.annotation.Nullable;
+
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+
+/**
+ * Shipping
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Shipping shipping = Shipping.builder()
+ *             .shippingKey("{shippingKey}")
+ *             .shippingInfo(shippingInfoBuilder -> shippingInfoBuilder)
+ *             .shippingAddress(shippingAddressBuilder -> shippingAddressBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@JsonDeserialize(as = ShippingImpl.class)
+public interface Shipping {
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @return shippingKey
+     */
+    @NotNull
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
+    /**
+     *  <p>Automatically set when the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>.</p>
+     * @return shippingInfo
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("shippingInfo")
+    public ShippingInfo getShippingInfo();
+
+    /**
+     *  <p>Determines the shipping rates and Tax Rates of associated Line Items.</p>
+     * @return shippingAddress
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("shippingAddress")
+    public Address getShippingAddress();
+
+    /**
+     *  <p>Used as an input to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>:</p>
+     *  <ul>
+     *   <li>If <code>CartClassification</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ClassificationShippingRateInput" rel="nofollow">ClassificationShippingRateInput</a>.</li>
+     *   <li>If <code>CartScore</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ScoreShippingRateInput" rel="nofollow">ScoreShippingRateInput</a>.</li>
+     *   <li>If <code>CartValue</code>, it cannot be used.</li>
+     *  </ul>
+     * @return shippingRateInput
+     */
+    @Valid
+    @JsonProperty("shippingRateInput")
+    public ShippingRateInput getShippingRateInput();
+
+    /**
+     *  <p>Custom Fields of Shipping with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @return shippingCustomFields
+     */
+    @Valid
+    @JsonProperty("shippingCustomFields")
+    public CustomFields getShippingCustomFields();
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @param shippingKey value to be set
+     */
+
+    public void setShippingKey(final String shippingKey);
+
+    /**
+     *  <p>Automatically set when the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>.</p>
+     * @param shippingInfo value to be set
+     */
+
+    public void setShippingInfo(final ShippingInfo shippingInfo);
+
+    /**
+     *  <p>Determines the shipping rates and Tax Rates of associated Line Items.</p>
+     * @param shippingAddress value to be set
+     */
+
+    public void setShippingAddress(final Address shippingAddress);
+
+    /**
+     *  <p>Used as an input to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>:</p>
+     *  <ul>
+     *   <li>If <code>CartClassification</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ClassificationShippingRateInput" rel="nofollow">ClassificationShippingRateInput</a>.</li>
+     *   <li>If <code>CartScore</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ScoreShippingRateInput" rel="nofollow">ScoreShippingRateInput</a>.</li>
+     *   <li>If <code>CartValue</code>, it cannot be used.</li>
+     *  </ul>
+     * @param shippingRateInput value to be set
+     */
+
+    public void setShippingRateInput(final ShippingRateInput shippingRateInput);
+
+    /**
+     *  <p>Custom Fields of Shipping with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @param shippingCustomFields value to be set
+     */
+
+    public void setShippingCustomFields(final CustomFields shippingCustomFields);
+
+    /**
+     * factory method
+     * @return instance of Shipping
+     */
+    public static Shipping of() {
+        return new ShippingImpl();
+    }
+
+    /**
+     * factory method to create a shallow copy Shipping
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    public static Shipping of(final Shipping template) {
+        ShippingImpl instance = new ShippingImpl();
+        instance.setShippingKey(template.getShippingKey());
+        instance.setShippingInfo(template.getShippingInfo());
+        instance.setShippingAddress(template.getShippingAddress());
+        instance.setShippingRateInput(template.getShippingRateInput());
+        instance.setShippingCustomFields(template.getShippingCustomFields());
+        return instance;
+    }
+
+    public Shipping copyDeep();
+
+    /**
+     * factory method to create a deep copy of Shipping
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Shipping deepCopy(@Nullable final Shipping template) {
+        if (template == null) {
+            return null;
+        }
+        ShippingImpl instance = new ShippingImpl();
+        instance.setShippingKey(template.getShippingKey());
+        instance.setShippingInfo(
+            com.commercetools.history.models.common.ShippingInfo.deepCopy(template.getShippingInfo()));
+        instance.setShippingAddress(
+            com.commercetools.history.models.common.Address.deepCopy(template.getShippingAddress()));
+        instance.setShippingRateInput(
+            com.commercetools.history.models.common.ShippingRateInput.deepCopy(template.getShippingRateInput()));
+        instance.setShippingCustomFields(
+            com.commercetools.history.models.common.CustomFields.deepCopy(template.getShippingCustomFields()));
+        return instance;
+    }
+
+    /**
+     * builder factory method for Shipping
+     * @return builder
+     */
+    public static ShippingBuilder builder() {
+        return ShippingBuilder.of();
+    }
+
+    /**
+     * create builder for Shipping instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
+    public static ShippingBuilder builder(final Shipping template) {
+        return ShippingBuilder.of(template);
+    }
+
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
+    default <T> T withShipping(Function<Shipping, T> helper) {
+        return helper.apply(this);
+    }
+
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
+    public static com.fasterxml.jackson.core.type.TypeReference<Shipping> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Shipping>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Shipping>";
+            }
+        };
+    }
+}

@@ -15,11 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CategorySetExternalIdAction" rel="nofollow">Set External ID</a> on Categories.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetExternalIdAction" rel="nofollow">Set External ID</a> on Customers.</li>
- *  </ul>
+ * SetExternalIdChange
  *
  * <hr>
  * Example to create an instance using the builder pattern

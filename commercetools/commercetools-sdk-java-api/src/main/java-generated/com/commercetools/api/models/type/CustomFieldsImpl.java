@@ -51,7 +51,7 @@ public class CustomFieldsImpl implements CustomFields, ModelBase {
     }
 
     /**
-     *  <p>Object containing the Custom Fields for the <span>customized resource or data type</span>.</p>
+     *  <p>Object containing the Custom Fields of the <span>customized resource or data type</span>.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

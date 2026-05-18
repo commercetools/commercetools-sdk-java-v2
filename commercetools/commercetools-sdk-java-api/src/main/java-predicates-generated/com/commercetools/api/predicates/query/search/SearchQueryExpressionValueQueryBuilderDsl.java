@@ -80,6 +80,13 @@ public class SearchQueryExpressionValueQueryBuilderDsl {
             SearchQueryExpressionValueQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<SearchQueryExpressionValueQueryBuilderDsl> asSearchFuzzyValue(
+            Function<com.commercetools.api.predicates.query.search.SearchFuzzyValueQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.search.SearchFuzzyValueQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.search.SearchFuzzyValueQueryBuilderDsl.of()),
+            SearchQueryExpressionValueQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<SearchQueryExpressionValueQueryBuilderDsl> asSearchLongRangeValue(
             Function<com.commercetools.api.predicates.query.search.SearchLongRangeValueQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.search.SearchLongRangeValueQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

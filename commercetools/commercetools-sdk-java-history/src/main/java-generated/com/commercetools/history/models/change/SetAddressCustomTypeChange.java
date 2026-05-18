@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetAddressCustomTypeAction" rel="nofollow">Set Address Custom Type</a> update action.</p>
+ * SetAddressCustomTypeChange
  *
  * <hr>
  * Example to create an instance using the builder pattern

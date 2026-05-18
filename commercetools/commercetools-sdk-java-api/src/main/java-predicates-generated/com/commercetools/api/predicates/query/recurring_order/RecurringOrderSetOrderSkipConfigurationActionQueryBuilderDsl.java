@@ -19,10 +19,10 @@ public class RecurringOrderSetOrderSkipConfigurationActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, RecurringOrderSetOrderSkipConfigurationActionQueryBuilderDsl::of));
     }
 
-    public CombinationQueryPredicate<RecurringOrderSetOrderSkipConfigurationActionQueryBuilderDsl> skipConfiguration(
+    public CombinationQueryPredicate<RecurringOrderSetOrderSkipConfigurationActionQueryBuilderDsl> skipConfigurationInputDraft(
             Function<com.commercetools.api.predicates.query.recurring_order.SkipConfigurationDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.recurring_order.SkipConfigurationDraftQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("skipConfiguration"))
+                .parent(ConstantQueryPredicate.of().constant("skipConfigurationInputDraft"))
                 .inner(fn.apply(
                     com.commercetools.api.predicates.query.recurring_order.SkipConfigurationDraftQueryBuilderDsl.of())),
             RecurringOrderSetOrderSkipConfigurationActionQueryBuilderDsl::of);

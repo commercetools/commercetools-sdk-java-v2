@@ -11,6 +11,7 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifier;
+import com.commercetools.api.models.recurring_order.RecurringOrderScopeDraft;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
@@ -156,7 +157,7 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
     public StackingMode getStackingMode();
 
     /**
-     *  <p>Custom Fields of the CartDiscount.</p>
+     *  <p>Custom Fields for the CartDiscount.</p>
      * @return custom
      */
     @Valid
@@ -170,6 +171,15 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
     @Valid
     @JsonProperty("discountGroup")
     public DiscountGroupResourceIdentifier getDiscountGroup();
+
+    /**
+     *  <p>Scope of the Cart Discount for Recurring Orders.</p>
+     *  <p>If not set, the default is <a href="https://docs.commercetools.com/apis/ctp:api:type:NonRecurringOrdersOnlyDraft" rel="nofollow">NonRecurringOrdersOnlyDraft</a>.</p>
+     * @return recurringOrderScope
+     */
+    @Valid
+    @JsonProperty("recurringOrderScope")
+    public RecurringOrderScopeDraft getRecurringOrderScope();
 
     /**
      *  <p>Name of the CartDiscount.</p>
@@ -284,7 +294,7 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
     public void setStackingMode(final StackingMode stackingMode);
 
     /**
-     *  <p>Custom Fields of the CartDiscount.</p>
+     *  <p>Custom Fields for the CartDiscount.</p>
      * @param custom value to be set
      */
 
@@ -296,6 +306,14 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
      */
 
     public void setDiscountGroup(final DiscountGroupResourceIdentifier discountGroup);
+
+    /**
+     *  <p>Scope of the Cart Discount for Recurring Orders.</p>
+     *  <p>If not set, the default is <a href="https://docs.commercetools.com/apis/ctp:api:type:NonRecurringOrdersOnlyDraft" rel="nofollow">NonRecurringOrdersOnlyDraft</a>.</p>
+     * @param recurringOrderScope value to be set
+     */
+
+    public void setRecurringOrderScope(final RecurringOrderScopeDraft recurringOrderScope);
 
     /**
      * factory method
@@ -327,6 +345,7 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
         instance.setStackingMode(template.getStackingMode());
         instance.setCustom(template.getCustom());
         instance.setDiscountGroup(template.getDiscountGroup());
+        instance.setRecurringOrderScope(template.getRecurringOrderScope());
         return instance;
     }
 
@@ -366,6 +385,8 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         instance.setDiscountGroup(com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifier
                 .deepCopy(template.getDiscountGroup()));
+        instance.setRecurringOrderScope(com.commercetools.api.models.recurring_order.RecurringOrderScopeDraft
+                .deepCopy(template.getRecurringOrderScope()));
         return instance;
     }
 

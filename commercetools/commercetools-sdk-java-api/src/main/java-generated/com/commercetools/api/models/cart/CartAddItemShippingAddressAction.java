@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Adds an address to a Cart when shipping to multiple addresses is desired.</p>
+ *  <p>Adds an address to the <code>itemShippingAddresses</code> of a Cart. Use this action when shipping is defined per item. For example, when shipping items to multiple addresses or when using different Shipping Methods, even if all items share the same address.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

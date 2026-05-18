@@ -30,6 +30,8 @@ public class TransitionCustomLineItemStateChangeTest {
                                 .nextValue(Collections
                                         .singletonList(new com.commercetools.history.models.common.ItemStateImpl())) },
                 new Object[] { "lineItemId", TransitionCustomLineItemStateChange.builder().lineItemId("lineItemId") },
+                new Object[] { "customLineItemId",
+                        TransitionCustomLineItemStateChange.builder().customLineItemId("customLineItemId") },
                 new Object[] { "stateId", TransitionCustomLineItemStateChange.builder().stateId("stateId") } };
     }
 
@@ -61,6 +63,13 @@ public class TransitionCustomLineItemStateChangeTest {
         TransitionCustomLineItemStateChange value = TransitionCustomLineItemStateChange.of();
         value.setLineItemId("lineItemId");
         Assertions.assertThat(value.getLineItemId()).isEqualTo("lineItemId");
+    }
+
+    @Test
+    public void customLineItemId() {
+        TransitionCustomLineItemStateChange value = TransitionCustomLineItemStateChange.of();
+        value.setCustomLineItemId("customLineItemId");
+        Assertions.assertThat(value.getCustomLineItemId()).isEqualTo("customLineItemId");
     }
 
     @Test

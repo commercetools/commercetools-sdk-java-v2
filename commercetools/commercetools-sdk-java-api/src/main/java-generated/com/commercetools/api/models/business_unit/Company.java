@@ -32,6 +32,8 @@ import jakarta.validation.constraints.NotNull;
  *             .storeMode(BusinessUnitStoreMode.EXPLICIT)
  *             .name("{name}")
  *             .plusAddresses(addressesBuilder -> addressesBuilder)
+ *             .plusShippingAddressIds(shippingAddressIdsBuilder -> shippingAddressIdsBuilder)
+ *             .plusBillingAddressIds(billingAddressIdsBuilder -> billingAddressIdsBuilder)
  *             .associateMode(BusinessUnitAssociateMode.EXPLICIT)
  *             .plusAssociates(associatesBuilder -> associatesBuilder)
  *             .topLevelUnit(topLevelUnitBuilder -> topLevelUnitBuilder)
@@ -124,6 +126,7 @@ public interface Company extends BusinessUnit {
         instance.setName(template.getName());
         instance.setContactEmail(template.getContactEmail());
         instance.setCustom(template.getCustom());
+        instance.setCustomerGroupAssignments(template.getCustomerGroupAssignments());
         instance.setAddresses(template.getAddresses());
         instance.setShippingAddressIds(template.getShippingAddressIds());
         instance.setDefaultShippingAddressId(template.getDefaultShippingAddressId());
@@ -174,6 +177,11 @@ public interface Company extends BusinessUnit {
         instance.setName(template.getName());
         instance.setContactEmail(template.getContactEmail());
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setCustomerGroupAssignments(Optional.ofNullable(template.getCustomerGroupAssignments())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.customer.CustomerGroupAssignment::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setAddresses(Optional.ofNullable(template.getAddresses())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.common.Address::deepCopy)

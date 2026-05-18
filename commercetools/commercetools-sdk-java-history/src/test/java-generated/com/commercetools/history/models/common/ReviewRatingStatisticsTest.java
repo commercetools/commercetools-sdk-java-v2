@@ -16,9 +16,10 @@ public class ReviewRatingStatisticsTest {
     }
 
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { "averageRating", ReviewRatingStatistics.builder().averageRating(6) },
-                new Object[] { "highestRating", ReviewRatingStatistics.builder().highestRating(4) },
-                new Object[] { "lowestRating", ReviewRatingStatistics.builder().lowestRating(8) },
+        return new Object[][] {
+                new Object[] { "averageRating", ReviewRatingStatistics.builder().averageRating(0.99762577) },
+                new Object[] { "highestRating", ReviewRatingStatistics.builder().highestRating(0.8229182) },
+                new Object[] { "lowestRating", ReviewRatingStatistics.builder().lowestRating(0.9610451) },
                 new Object[] { "count", ReviewRatingStatistics.builder().count(2) },
                 new Object[] { "ratingsDistribution",
                         ReviewRatingStatistics.builder().ratingsDistribution("ratingsDistribution") } };
@@ -27,22 +28,22 @@ public class ReviewRatingStatisticsTest {
     @Test
     public void averageRating() {
         ReviewRatingStatistics value = ReviewRatingStatistics.of();
-        value.setAverageRating(6);
-        Assertions.assertThat(value.getAverageRating()).isEqualTo(6);
+        value.setAverageRating(0.99762577);
+        Assertions.assertThat(value.getAverageRating()).isEqualTo(0.99762577);
     }
 
     @Test
     public void highestRating() {
         ReviewRatingStatistics value = ReviewRatingStatistics.of();
-        value.setHighestRating(4);
-        Assertions.assertThat(value.getHighestRating()).isEqualTo(4);
+        value.setHighestRating(0.8229182);
+        Assertions.assertThat(value.getHighestRating()).isEqualTo(0.8229182);
     }
 
     @Test
     public void lowestRating() {
         ReviewRatingStatistics value = ReviewRatingStatistics.of();
-        value.setLowestRating(8);
-        Assertions.assertThat(value.getLowestRating()).isEqualTo(8);
+        value.setLowestRating(0.9610451);
+        Assertions.assertThat(value.getLowestRating()).isEqualTo(0.9610451);
     }
 
     @Test

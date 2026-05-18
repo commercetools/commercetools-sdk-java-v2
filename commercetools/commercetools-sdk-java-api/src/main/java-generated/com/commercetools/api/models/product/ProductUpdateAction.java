@@ -149,14 +149,6 @@ public interface ProductUpdateAction extends com.commercetools.api.models.Resour
     }
 
     /**
-     * builder for legacySetSku subtype
-     * @return builder
-     */
-    public static com.commercetools.api.models.product.ProductLegacySetSkuActionBuilder legacySetSkuBuilder() {
-        return com.commercetools.api.models.product.ProductLegacySetSkuActionBuilder.of();
-    }
-
-    /**
      * builder for moveImageToPosition subtype
      * @return builder
      */

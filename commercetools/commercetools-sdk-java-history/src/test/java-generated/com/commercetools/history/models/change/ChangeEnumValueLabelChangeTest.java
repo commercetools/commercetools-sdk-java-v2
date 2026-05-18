@@ -20,7 +20,8 @@ public class ChangeEnumValueLabelChangeTest {
                 new Object[] { "previousValue", ChangeEnumValueLabelChange.builder().previousValue("previousValue") },
                 new Object[] { "nextValue", ChangeEnumValueLabelChange.builder().nextValue("nextValue") },
                 new Object[] { "fieldName", ChangeEnumValueLabelChange.builder().fieldName("fieldName") },
-                new Object[] { "valueKey", ChangeEnumValueLabelChange.builder().valueKey("valueKey") } };
+                new Object[] { "valueKey", ChangeEnumValueLabelChange.builder().valueKey("valueKey") },
+                new Object[] { "attributeName", ChangeEnumValueLabelChange.builder().attributeName("attributeName") } };
     }
 
     @Test
@@ -56,5 +57,12 @@ public class ChangeEnumValueLabelChangeTest {
         ChangeEnumValueLabelChange value = ChangeEnumValueLabelChange.of();
         value.setValueKey("valueKey");
         Assertions.assertThat(value.getValueKey()).isEqualTo("valueKey");
+    }
+
+    @Test
+    public void attributeName() {
+        ChangeEnumValueLabelChange value = ChangeEnumValueLabelChange.of();
+        value.setAttributeName("attributeName");
+        Assertions.assertThat(value.getAttributeName()).isEqualTo("attributeName");
     }
 }

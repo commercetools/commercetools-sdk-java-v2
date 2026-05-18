@@ -257,7 +257,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     *  <p>Custom Fields for the Price.</p>
+     *  <p>Custom Fields of the Price.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -269,7 +269,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     *  <p>Custom Fields for the Price.</p>
+     *  <p>Custom Fields of the Price.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -281,7 +281,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     *  <p>Custom Fields for the Price.</p>
+     *  <p>Custom Fields of the Price.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -380,7 +380,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     *  <p>Custom Fields for the Price.</p>
+     *  <p>Custom Fields of the Price.</p>
      * @return custom
      */
 

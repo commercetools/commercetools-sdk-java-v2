@@ -18,6 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .catalogData("{catalogData}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -32,6 +33,8 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
     private com.commercetools.history.models.common.Image nextValue;
 
     private String catalogData;
+
+    private String variant;
 
     /**
      * set the value to the change
@@ -115,6 +118,7 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -125,6 +129,18 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
 
     public SetImageLabelChangeBuilder catalogData(final String catalogData) {
         this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     * @return Builder
+     */
+
+    public SetImageLabelChangeBuilder variant(final String variant) {
+        this.variant = variant;
         return this;
     }
 
@@ -156,6 +172,7 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -168,6 +185,16 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
     }
 
     /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
+    /**
      * builds SetImageLabelChange with checking for non-null required values
      * @return SetImageLabelChange
      */
@@ -176,7 +203,8 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
         Objects.requireNonNull(previousValue, SetImageLabelChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetImageLabelChange.class + ": nextValue is missing");
         Objects.requireNonNull(catalogData, SetImageLabelChange.class + ": catalogData is missing");
-        return new SetImageLabelChangeImpl(change, previousValue, nextValue, catalogData);
+        Objects.requireNonNull(variant, SetImageLabelChange.class + ": variant is missing");
+        return new SetImageLabelChangeImpl(change, previousValue, nextValue, catalogData, variant);
     }
 
     /**
@@ -184,7 +212,7 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
      * @return SetImageLabelChange
      */
     public SetImageLabelChange buildUnchecked() {
-        return new SetImageLabelChangeImpl(change, previousValue, nextValue, catalogData);
+        return new SetImageLabelChangeImpl(change, previousValue, nextValue, catalogData, variant);
     }
 
     /**
@@ -206,6 +234,7 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
         builder.catalogData = template.getCatalogData();
+        builder.variant = template.getVariant();
         return builder;
     }
 

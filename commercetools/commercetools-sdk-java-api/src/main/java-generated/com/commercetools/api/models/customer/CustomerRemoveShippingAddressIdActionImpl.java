@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Removes a shipping address from <code>shippingAddressesIds</code>. If the shipping address is the default shipping address, the <code>defaultShippingAddressId</code> is unset. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+ *  <p>Removes a shipping address from <code>shippingAddressIds</code>. If the shipping address is the default shipping address, the <code>defaultShippingAddressId</code> is unset. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerRemoveShippingAddressIdActionImpl implements CustomerRemoveShippingAddressIdAction, ModelBase {
@@ -55,7 +55,7 @@ public class CustomerRemoveShippingAddressIdActionImpl implements CustomerRemove
     }
 
     /**
-     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>shippingAddressesIds</code>.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>shippingAddressIds</code>.</p>
      */
 
     public String getAddressId() {
@@ -63,7 +63,7 @@ public class CustomerRemoveShippingAddressIdActionImpl implements CustomerRemove
     }
 
     /**
-     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>shippingAddressesIds</code>.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove from <code>shippingAddressIds</code>.</p>
      */
 
     public String getAddressKey() {

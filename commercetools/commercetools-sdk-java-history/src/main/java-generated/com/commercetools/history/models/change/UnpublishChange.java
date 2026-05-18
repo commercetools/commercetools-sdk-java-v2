@@ -15,7 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductUnpublishAction" rel="nofollow">Unpublish</a> update action.</p>
+ *  <p>Change triggered when <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> <code>published</code> transitions from <code>true</code> to <code>false</code>.</p>
+ *  <p>For better traceability of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductUnpublishAction" rel="nofollow">Unpublish</a> update action, use the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductUnpublishedMessage" rel="nofollow">ProductUnpublished</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

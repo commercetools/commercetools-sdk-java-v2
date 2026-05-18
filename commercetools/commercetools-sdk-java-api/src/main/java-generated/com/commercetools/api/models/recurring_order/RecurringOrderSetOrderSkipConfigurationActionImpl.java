@@ -25,7 +25,7 @@ public class RecurringOrderSetOrderSkipConfigurationActionImpl
 
     private String action;
 
-    private com.commercetools.api.models.recurring_order.SkipConfigurationDraft skipConfiguration;
+    private com.commercetools.api.models.recurring_order.SkipConfigurationDraft skipConfigurationInputDraft;
 
     private java.time.ZonedDateTime updatedExpiresAt;
 
@@ -34,9 +34,9 @@ public class RecurringOrderSetOrderSkipConfigurationActionImpl
      */
     @JsonCreator
     RecurringOrderSetOrderSkipConfigurationActionImpl(
-            @JsonProperty("skipConfiguration") final com.commercetools.api.models.recurring_order.SkipConfigurationDraft skipConfiguration,
+            @JsonProperty("skipConfigurationInputDraft") final com.commercetools.api.models.recurring_order.SkipConfigurationDraft skipConfigurationInputDraft,
             @JsonProperty("updatedExpiresAt") final java.time.ZonedDateTime updatedExpiresAt) {
-        this.skipConfiguration = skipConfiguration;
+        this.skipConfigurationInputDraft = skipConfigurationInputDraft;
         this.updatedExpiresAt = updatedExpiresAt;
         this.action = SET_ORDER_SKIP_CONFIGURATION;
     }
@@ -57,11 +57,11 @@ public class RecurringOrderSetOrderSkipConfigurationActionImpl
     }
 
     /**
-     *  <p>Configuration for skipping the next orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
+     *  <p>Configuration for skipping future orders of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      */
 
-    public com.commercetools.api.models.recurring_order.SkipConfigurationDraft getSkipConfiguration() {
-        return this.skipConfiguration;
+    public com.commercetools.api.models.recurring_order.SkipConfigurationDraft getSkipConfigurationInputDraft() {
+        return this.skipConfigurationInputDraft;
     }
 
     /**
@@ -72,9 +72,9 @@ public class RecurringOrderSetOrderSkipConfigurationActionImpl
         return this.updatedExpiresAt;
     }
 
-    public void setSkipConfiguration(
-            final com.commercetools.api.models.recurring_order.SkipConfigurationDraft skipConfiguration) {
-        this.skipConfiguration = skipConfiguration;
+    public void setSkipConfigurationInputDraft(
+            final com.commercetools.api.models.recurring_order.SkipConfigurationDraft skipConfigurationInputDraft) {
+        this.skipConfigurationInputDraft = skipConfigurationInputDraft;
     }
 
     public void setUpdatedExpiresAt(final java.time.ZonedDateTime updatedExpiresAt) {
@@ -92,10 +92,10 @@ public class RecurringOrderSetOrderSkipConfigurationActionImpl
         RecurringOrderSetOrderSkipConfigurationActionImpl that = (RecurringOrderSetOrderSkipConfigurationActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
-                .append(skipConfiguration, that.skipConfiguration)
+                .append(skipConfigurationInputDraft, that.skipConfigurationInputDraft)
                 .append(updatedExpiresAt, that.updatedExpiresAt)
                 .append(action, that.action)
-                .append(skipConfiguration, that.skipConfiguration)
+                .append(skipConfigurationInputDraft, that.skipConfigurationInputDraft)
                 .append(updatedExpiresAt, that.updatedExpiresAt)
                 .isEquals();
     }
@@ -103,7 +103,7 @@ public class RecurringOrderSetOrderSkipConfigurationActionImpl
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action)
-                .append(skipConfiguration)
+                .append(skipConfigurationInputDraft)
                 .append(updatedExpiresAt)
                 .toHashCode();
     }
@@ -111,7 +111,7 @@ public class RecurringOrderSetOrderSkipConfigurationActionImpl
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
-                .append("skipConfiguration", skipConfiguration)
+                .append("skipConfigurationInputDraft", skipConfigurationInputDraft)
                 .append("updatedExpiresAt", updatedExpiresAt)
                 .build();
     }

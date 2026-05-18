@@ -103,6 +103,9 @@ public class CartBuilder implements Builder<Cart> {
     private com.commercetools.api.models.cart.CartState cartState;
 
     @Nullable
+    private com.commercetools.api.models.cart.FreezeStrategy freezeStrategy;
+
+    @Nullable
     private com.commercetools.api.models.common.Address billingAddress;
 
     @Nullable
@@ -150,7 +153,13 @@ public class CartBuilder implements Builder<Cart> {
     private com.commercetools.api.models.cart.DiscountTypeCombination discountTypeCombination;
 
     @Nullable
+    private com.commercetools.api.models.cart.CartLock lock;
+
+    @Nullable
     private Integer deleteDaysAfterLastModification;
+
+    @Nullable
+    private String purchaseOrderNumber;
 
     @Nullable
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
@@ -768,6 +777,17 @@ public class CartBuilder implements Builder<Cart> {
 
     public CartBuilder cartState(final com.commercetools.api.models.cart.CartState cartState) {
         this.cartState = cartState;
+        return this;
+    }
+
+    /**
+     *  <p>Determines freezing behavior when <code>cartState</code> is <code>Frozen</code>.</p>
+     * @param freezeStrategy value to be set
+     * @return Builder
+     */
+
+    public CartBuilder freezeStrategy(@Nullable final com.commercetools.api.models.cart.FreezeStrategy freezeStrategy) {
+        this.freezeStrategy = freezeStrategy;
         return this;
     }
 
@@ -1547,6 +1567,41 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
+     *  <p>Indicates whether the Cart has been <span>locked</span>, preventing edits.</p>
+     * @param builder function to build the lock value
+     * @return Builder
+     */
+
+    public CartBuilder lock(
+            Function<com.commercetools.api.models.cart.CartLockBuilder, com.commercetools.api.models.cart.CartLockBuilder> builder) {
+        this.lock = builder.apply(com.commercetools.api.models.cart.CartLockBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Indicates whether the Cart has been <span>locked</span>, preventing edits.</p>
+     * @param builder function to build the lock value
+     * @return Builder
+     */
+
+    public CartBuilder withLock(
+            Function<com.commercetools.api.models.cart.CartLockBuilder, com.commercetools.api.models.cart.CartLock> builder) {
+        this.lock = builder.apply(com.commercetools.api.models.cart.CartLockBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Indicates whether the Cart has been <span>locked</span>, preventing edits.</p>
+     * @param lock value to be set
+     * @return Builder
+     */
+
+    public CartBuilder lock(@Nullable final com.commercetools.api.models.cart.CartLock lock) {
+        this.lock = lock;
+        return this;
+    }
+
+    /**
      *  <p>Number of days after the last modification before a Cart is deleted. Configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a>.</p>
      * @param deleteDaysAfterLastModification value to be set
      * @return Builder
@@ -1554,6 +1609,18 @@ public class CartBuilder implements Builder<Cart> {
 
     public CartBuilder deleteDaysAfterLastModification(@Nullable final Integer deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined identifier of a purchase order.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> or Merchant to track the purchase order during the <span>quote and order flow</span>.</p>
+     * @param purchaseOrderNumber value to be set
+     * @return Builder
+     */
+
+    public CartBuilder purchaseOrderNumber(@Nullable final String purchaseOrderNumber) {
+        this.purchaseOrderNumber = purchaseOrderNumber;
         return this;
     }
 
@@ -1862,6 +1929,16 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
+     *  <p>Determines freezing behavior when <code>cartState</code> is <code>Frozen</code>.</p>
+     * @return freezeStrategy
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.FreezeStrategy getFreezeStrategy() {
+        return this.freezeStrategy;
+    }
+
+    /**
      *  <p>Billing address associated with the Cart.</p>
      * @return billingAddress
      */
@@ -2041,6 +2118,16 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
+     *  <p>Indicates whether the Cart has been <span>locked</span>, preventing edits.</p>
+     * @return lock
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.CartLock getLock() {
+        return this.lock;
+    }
+
+    /**
      *  <p>Number of days after the last modification before a Cart is deleted. Configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a>.</p>
      * @return deleteDaysAfterLastModification
      */
@@ -2048,6 +2135,17 @@ public class CartBuilder implements Builder<Cart> {
     @Nullable
     public Integer getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
+    }
+
+    /**
+     *  <p>User-defined identifier of a purchase order.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> or Merchant to track the purchase order during the <span>quote and order flow</span>.</p>
+     * @return purchaseOrderNumber
+     */
+
+    @Nullable
+    public String getPurchaseOrderNumber() {
+        return this.purchaseOrderNumber;
     }
 
     /**
@@ -2098,10 +2196,10 @@ public class CartBuilder implements Builder<Cart> {
         return new CartImpl(id, version, createdAt, lastModifiedAt, key, customerId, customerEmail, customerGroup,
             anonymousId, businessUnit, store, lineItems, customLineItems, totalLineItemQuantity, totalPrice, taxedPrice,
             taxedShippingPrice, discountOnTotalPrice, taxMode, priceRoundingMode, taxRoundingMode, taxCalculationMode,
-            inventoryMode, cartState, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo,
-            shippingRateInput, shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts,
-            refusedGifts, paymentInfo, country, locale, origin, custom, discountTypeCombination,
-            deleteDaysAfterLastModification, lastModifiedBy, createdBy);
+            inventoryMode, cartState, freezeStrategy, billingAddress, shippingAddress, shippingMode, shippingKey,
+            shippingInfo, shippingRateInput, shippingCustomFields, shipping, itemShippingAddresses, discountCodes,
+            directDiscounts, refusedGifts, paymentInfo, country, locale, origin, custom, discountTypeCombination, lock,
+            deleteDaysAfterLastModification, purchaseOrderNumber, lastModifiedBy, createdBy);
     }
 
     /**
@@ -2112,10 +2210,10 @@ public class CartBuilder implements Builder<Cart> {
         return new CartImpl(id, version, createdAt, lastModifiedAt, key, customerId, customerEmail, customerGroup,
             anonymousId, businessUnit, store, lineItems, customLineItems, totalLineItemQuantity, totalPrice, taxedPrice,
             taxedShippingPrice, discountOnTotalPrice, taxMode, priceRoundingMode, taxRoundingMode, taxCalculationMode,
-            inventoryMode, cartState, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo,
-            shippingRateInput, shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts,
-            refusedGifts, paymentInfo, country, locale, origin, custom, discountTypeCombination,
-            deleteDaysAfterLastModification, lastModifiedBy, createdBy);
+            inventoryMode, cartState, freezeStrategy, billingAddress, shippingAddress, shippingMode, shippingKey,
+            shippingInfo, shippingRateInput, shippingCustomFields, shipping, itemShippingAddresses, discountCodes,
+            directDiscounts, refusedGifts, paymentInfo, country, locale, origin, custom, discountTypeCombination, lock,
+            deleteDaysAfterLastModification, purchaseOrderNumber, lastModifiedBy, createdBy);
     }
 
     /**
@@ -2157,6 +2255,7 @@ public class CartBuilder implements Builder<Cart> {
         builder.taxCalculationMode = template.getTaxCalculationMode();
         builder.inventoryMode = template.getInventoryMode();
         builder.cartState = template.getCartState();
+        builder.freezeStrategy = template.getFreezeStrategy();
         builder.billingAddress = template.getBillingAddress();
         builder.shippingAddress = template.getShippingAddress();
         builder.shippingMode = template.getShippingMode();
@@ -2175,7 +2274,9 @@ public class CartBuilder implements Builder<Cart> {
         builder.origin = template.getOrigin();
         builder.custom = template.getCustom();
         builder.discountTypeCombination = template.getDiscountTypeCombination();
+        builder.lock = template.getLock();
         builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
+        builder.purchaseOrderNumber = template.getPurchaseOrderNumber();
         builder.lastModifiedBy = template.getLastModifiedBy();
         builder.createdBy = template.getCreatedBy();
         return builder;

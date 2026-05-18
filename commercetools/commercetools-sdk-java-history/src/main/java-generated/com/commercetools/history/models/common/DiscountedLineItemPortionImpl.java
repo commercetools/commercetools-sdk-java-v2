@@ -24,7 +24,7 @@ public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion,
 
     private com.commercetools.history.models.common.Reference discount;
 
-    private com.commercetools.history.models.common.Money discountedAmount;
+    private com.commercetools.history.models.common.TypedMoney discountedAmount;
 
     /**
      * create instance with all properties
@@ -32,7 +32,7 @@ public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion,
     @JsonCreator
     DiscountedLineItemPortionImpl(
             @JsonProperty("discount") final com.commercetools.history.models.common.Reference discount,
-            @JsonProperty("discountedAmount") final com.commercetools.history.models.common.Money discountedAmount) {
+            @JsonProperty("discountedAmount") final com.commercetools.history.models.common.TypedMoney discountedAmount) {
         this.discount = discount;
         this.discountedAmount = discountedAmount;
     }
@@ -44,7 +44,7 @@ public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion,
     }
 
     /**
-     *
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> of the applicable discount on the Line Item.</p>
      */
 
     public com.commercetools.history.models.common.Reference getDiscount() {
@@ -52,10 +52,10 @@ public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion,
     }
 
     /**
-     *
+     *  <p>Money value of the applicable discount.</p>
      */
 
-    public com.commercetools.history.models.common.Money getDiscountedAmount() {
+    public com.commercetools.history.models.common.TypedMoney getDiscountedAmount() {
         return this.discountedAmount;
     }
 
@@ -63,7 +63,7 @@ public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion,
         this.discount = discount;
     }
 
-    public void setDiscountedAmount(final com.commercetools.history.models.common.Money discountedAmount) {
+    public void setDiscountedAmount(final com.commercetools.history.models.common.TypedMoney discountedAmount) {
         this.discountedAmount = discountedAmount;
     }
 

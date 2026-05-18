@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creates an Import Request for Prices.</p>
+ *  <p>Creates an Import Request for Embedded Prices.</p>
  *
  * <hr>
  * <div class=code-example>

@@ -97,4 +97,10 @@ public class CustomerEmailChangedMessageQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CustomerEmailChangedMessageQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<CustomerEmailChangedMessageQueryBuilderDsl> oldEmail() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("oldEmail")),
+            p -> new CombinationQueryPredicate<>(p, CustomerEmailChangedMessageQueryBuilderDsl::of));
+    }
+
 }

@@ -15,11 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategorySetDescriptionAction" rel="nofollow">Set Description</a> on Tax Categories.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ZoneSetDescriptionAction" rel="nofollow">Set Description</a> on Zones.</li>
- *  </ul>
+ * SetDescriptionChange
  *
  * <hr>
  * Example to create an instance using the builder pattern

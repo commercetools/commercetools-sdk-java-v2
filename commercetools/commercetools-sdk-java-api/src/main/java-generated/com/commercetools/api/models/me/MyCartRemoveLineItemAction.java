@@ -56,7 +56,7 @@ public interface MyCartRemoveLineItemAction extends MyCartUpdateAction {
     public String getLineItemKey();
 
     /**
-     *  <p>Amount to subtract from the LineItem's <code>quantity</code>. If absent, the LineItem is removed from the Cart.</p>
+     *  <p>Amount to subtract from the LineItem quantity. If omitted, the LineItem is removed from the Cart.</p>
      * @return quantity
      */
 
@@ -103,7 +103,7 @@ public interface MyCartRemoveLineItemAction extends MyCartUpdateAction {
     public void setLineItemKey(final String lineItemKey);
 
     /**
-     *  <p>Amount to subtract from the LineItem's <code>quantity</code>. If absent, the LineItem is removed from the Cart.</p>
+     *  <p>Amount to subtract from the LineItem quantity. If omitted, the LineItem is removed from the Cart.</p>
      * @param quantity value to be set
      */
 

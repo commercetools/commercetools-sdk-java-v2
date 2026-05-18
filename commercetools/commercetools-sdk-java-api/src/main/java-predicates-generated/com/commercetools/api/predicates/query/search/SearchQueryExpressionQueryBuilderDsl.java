@@ -55,6 +55,13 @@ public class SearchQueryExpressionQueryBuilderDsl {
             SearchQueryExpressionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<SearchQueryExpressionQueryBuilderDsl> asSearchFuzzyExpression(
+            Function<com.commercetools.api.predicates.query.search.SearchFuzzyExpressionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.search.SearchFuzzyExpressionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.search.SearchFuzzyExpressionQueryBuilderDsl.of()),
+            SearchQueryExpressionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<SearchQueryExpressionQueryBuilderDsl> asSearchLongRangeExpression(
             Function<com.commercetools.api.predicates.query.search.SearchLongRangeExpressionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.search.SearchLongRangeExpressionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

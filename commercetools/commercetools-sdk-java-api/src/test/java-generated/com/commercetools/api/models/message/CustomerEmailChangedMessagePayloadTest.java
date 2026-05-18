@@ -17,7 +17,8 @@ public class CustomerEmailChangedMessagePayloadTest {
     }
 
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { "email", CustomerEmailChangedMessagePayload.builder().email("email") } };
+        return new Object[][] { new Object[] { "email", CustomerEmailChangedMessagePayload.builder().email("email") },
+                new Object[] { "oldEmail", CustomerEmailChangedMessagePayload.builder().oldEmail("oldEmail") } };
     }
 
     @Test
@@ -25,5 +26,12 @@ public class CustomerEmailChangedMessagePayloadTest {
         CustomerEmailChangedMessagePayload value = CustomerEmailChangedMessagePayload.of();
         value.setEmail("email");
         Assertions.assertThat(value.getEmail()).isEqualTo("email");
+    }
+
+    @Test
+    public void oldEmail() {
+        CustomerEmailChangedMessagePayload value = CustomerEmailChangedMessagePayload.of();
+        value.setOldEmail("oldEmail");
+        Assertions.assertThat(value.getOldEmail()).isEqualTo("oldEmail");
     }
 }

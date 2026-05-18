@@ -34,6 +34,8 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
 
     private String lineItemId;
 
+    private String variant;
+
     /**
      * create instance with all properties
      */
@@ -42,12 +44,13 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
             @JsonProperty("previousValue") final com.commercetools.history.models.common.TaxedItemPrice previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.TaxedItemPrice nextValue,
             @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem,
-            @JsonProperty("lineItemId") final String lineItemId) {
+            @JsonProperty("lineItemId") final String lineItemId, @JsonProperty("variant") final String variant) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.lineItem = lineItem;
         this.lineItemId = lineItemId;
+        this.variant = variant;
         this.type = SET_LINE_ITEM_TAXED_PRICE_CHANGE;
     }
 
@@ -106,6 +109,15 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
         return this.lineItemId;
     }
 
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
@@ -126,6 +138,10 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
         this.lineItemId = lineItemId;
     }
 
+    public void setVariant(final String variant) {
+        this.variant = variant;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -142,12 +158,14 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
                 .append(nextValue, that.nextValue)
                 .append(lineItem, that.lineItem)
                 .append(lineItemId, that.lineItemId)
+                .append(variant, that.variant)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(lineItem, that.lineItem)
                 .append(lineItemId, that.lineItemId)
+                .append(variant, that.variant)
                 .isEquals();
     }
 
@@ -159,6 +177,7 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
                 .append(nextValue)
                 .append(lineItem)
                 .append(lineItemId)
+                .append(variant)
                 .toHashCode();
     }
 
@@ -170,6 +189,7 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
                 .append("nextValue", nextValue)
                 .append("lineItem", lineItem)
                 .append("lineItemId", lineItemId)
+                .append("variant", variant)
                 .build();
     }
 

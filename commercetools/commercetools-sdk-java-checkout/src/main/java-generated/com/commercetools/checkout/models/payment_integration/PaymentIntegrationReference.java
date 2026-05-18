@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Reference to a <span>Payment Integration</span>.</p>
+ *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntegration" rel="nofollow">Payment Integration</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

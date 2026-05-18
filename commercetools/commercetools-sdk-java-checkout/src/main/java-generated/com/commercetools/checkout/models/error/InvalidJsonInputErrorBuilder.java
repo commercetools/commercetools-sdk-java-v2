@@ -3,6 +3,8 @@ package com.commercetools.checkout.models.error;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -14,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     InvalidJsonInputError invalidJsonInputError = InvalidJsonInputError.builder()
  *             .message("{message}")
- *             .detailedErrorMessage("{detailedErrorMessage}")
  *             .build()
  * </code></pre>
  * </div>
@@ -24,6 +25,7 @@ public class InvalidJsonInputErrorBuilder implements Builder<InvalidJsonInputErr
 
     private String message;
 
+    @Nullable
     private String detailedErrorMessage;
 
     /**
@@ -43,7 +45,7 @@ public class InvalidJsonInputErrorBuilder implements Builder<InvalidJsonInputErr
      * @return Builder
      */
 
-    public InvalidJsonInputErrorBuilder detailedErrorMessage(final String detailedErrorMessage) {
+    public InvalidJsonInputErrorBuilder detailedErrorMessage(@Nullable final String detailedErrorMessage) {
         this.detailedErrorMessage = detailedErrorMessage;
         return this;
     }
@@ -62,6 +64,7 @@ public class InvalidJsonInputErrorBuilder implements Builder<InvalidJsonInputErr
      * @return detailedErrorMessage
      */
 
+    @Nullable
     public String getDetailedErrorMessage() {
         return this.detailedErrorMessage;
     }
@@ -72,7 +75,6 @@ public class InvalidJsonInputErrorBuilder implements Builder<InvalidJsonInputErr
      */
     public InvalidJsonInputError build() {
         Objects.requireNonNull(message, InvalidJsonInputError.class + ": message is missing");
-        Objects.requireNonNull(detailedErrorMessage, InvalidJsonInputError.class + ": detailedErrorMessage is missing");
         return new InvalidJsonInputErrorImpl(message, detailedErrorMessage);
     }
 

@@ -27,7 +27,8 @@ public class MoveImageToPositionChangeTest {
                         MoveImageToPositionChange.builder()
                                 .nextValue(Collections
                                         .singletonList(new com.commercetools.history.models.common.ImageImpl())) },
-                new Object[] { "catalogData", MoveImageToPositionChange.builder().catalogData("catalogData") } };
+                new Object[] { "catalogData", MoveImageToPositionChange.builder().catalogData("catalogData") },
+                new Object[] { "variant", MoveImageToPositionChange.builder().variant("variant") } };
     }
 
     @Test
@@ -58,5 +59,12 @@ public class MoveImageToPositionChangeTest {
         MoveImageToPositionChange value = MoveImageToPositionChange.of();
         value.setCatalogData("catalogData");
         Assertions.assertThat(value.getCatalogData()).isEqualTo("catalogData");
+    }
+
+    @Test
+    public void variant() {
+        MoveImageToPositionChange value = MoveImageToPositionChange.of();
+        value.setVariant("variant");
+        Assertions.assertThat(value.getVariant()).isEqualTo("variant");
     }
 }

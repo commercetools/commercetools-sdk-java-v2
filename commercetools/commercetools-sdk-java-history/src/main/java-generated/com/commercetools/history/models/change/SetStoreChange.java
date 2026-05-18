@@ -7,7 +7,7 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.history.models.common.Reference;
+import com.commercetools.history.models.common.KeyReference;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -17,11 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetStoreAction" rel="nofollow">Set Store</a> on Orders.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListSetStoreAction" rel="nofollow">Set Store</a> on Shopping Lists.</li>
- *  </ul>
+ * SetStoreChange
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -68,7 +64,7 @@ public interface SetStoreChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("previousValue")
-    public Reference getPreviousValue();
+    public KeyReference getPreviousValue();
 
     /**
      *  <p>Value after the change.</p>
@@ -77,7 +73,7 @@ public interface SetStoreChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("nextValue")
-    public Reference getNextValue();
+    public KeyReference getNextValue();
 
     /**
      * set change
@@ -91,14 +87,14 @@ public interface SetStoreChange extends Change {
      * @param previousValue value to be set
      */
 
-    public void setPreviousValue(final Reference previousValue);
+    public void setPreviousValue(final KeyReference previousValue);
 
     /**
      *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
-    public void setNextValue(final Reference nextValue);
+    public void setNextValue(final KeyReference nextValue);
 
     /**
      * factory method
@@ -136,8 +132,8 @@ public interface SetStoreChange extends Change {
         SetStoreChangeImpl instance = new SetStoreChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(
-            com.commercetools.history.models.common.Reference.deepCopy(template.getPreviousValue()));
-        instance.setNextValue(com.commercetools.history.models.common.Reference.deepCopy(template.getNextValue()));
+            com.commercetools.history.models.common.KeyReference.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.KeyReference.deepCopy(template.getNextValue()));
         return instance;
     }
 

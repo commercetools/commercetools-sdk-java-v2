@@ -17,23 +17,23 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * KeyReference
+ *  <p>A KeyReference represents a loose reference to another resource in the same Project identified by the resource's <code>key</code> field. If available, the <code>key</code> is immutable and mandatory. KeyReferences do not support <span>Reference Expansion</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class KeyReferenceImpl implements KeyReference, ModelBase {
 
-    private String key;
-
     private com.commercetools.history.models.common.ReferenceTypeId typeId;
+
+    private String key;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    KeyReferenceImpl(@JsonProperty("key") final String key,
-            @JsonProperty("typeId") final com.commercetools.history.models.common.ReferenceTypeId typeId) {
-        this.key = key;
+    KeyReferenceImpl(@JsonProperty("typeId") final com.commercetools.history.models.common.ReferenceTypeId typeId,
+            @JsonProperty("key") final String key) {
         this.typeId = typeId;
+        this.key = key;
     }
 
     /**
@@ -43,27 +43,23 @@ public class KeyReferenceImpl implements KeyReference, ModelBase {
     }
 
     /**
-     *
-     */
-
-    public String getKey() {
-        return this.key;
-    }
-
-    /**
-     *
+     *  <p>Type of referenced resource.</p>
      */
 
     public com.commercetools.history.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }
 
-    public void setKey(final String key) {
-        this.key = key;
+    /**
+     *  <p>User-defined unique and immutable key of the referenced resource.</p>
+     */
+
+    public String getKey() {
+        return this.key;
     }
 
-    public void setTypeId(final com.commercetools.history.models.common.ReferenceTypeId typeId) {
-        this.typeId = typeId;
+    public void setKey(final String key) {
+        this.key = key;
     }
 
     @Override
@@ -76,22 +72,22 @@ public class KeyReferenceImpl implements KeyReference, ModelBase {
 
         KeyReferenceImpl that = (KeyReferenceImpl) o;
 
-        return new EqualsBuilder().append(key, that.key)
-                .append(typeId, that.typeId)
+        return new EqualsBuilder().append(typeId, that.typeId)
                 .append(key, that.key)
                 .append(typeId, that.typeId)
+                .append(key, that.key)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key).append(typeId).toHashCode();
+        return new HashCodeBuilder(17, 37).append(typeId).append(key).toHashCode();
     }
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
-                .append("typeId", typeId)
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("typeId", typeId)
+                .append("key", key)
                 .build();
     }
 

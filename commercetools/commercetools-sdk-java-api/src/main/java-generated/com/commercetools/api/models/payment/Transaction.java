@@ -96,6 +96,14 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
     public CustomFields getCustom();
 
     /**
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP) in the current transaction.</p>
+     * @return interfaceId
+     */
+
+    @JsonProperty("interfaceId")
+    public String getInterfaceId();
+
+    /**
      *  <p>Unique identifier of the Transaction.</p>
      * @param id value to be set
      */
@@ -145,6 +153,13 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
     public void setCustom(final CustomFields custom);
 
     /**
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP) in the current transaction.</p>
+     * @param interfaceId value to be set
+     */
+
+    public void setInterfaceId(final String interfaceId);
+
+    /**
      * factory method
      * @return instance of Transaction
      */
@@ -166,6 +181,7 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
         instance.setInteractionId(template.getInteractionId());
         instance.setState(template.getState());
         instance.setCustom(template.getCustom());
+        instance.setInterfaceId(template.getInterfaceId());
         return instance;
     }
 
@@ -189,6 +205,7 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
         instance.setInteractionId(template.getInteractionId());
         instance.setState(template.getState());
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setInterfaceId(template.getInterfaceId());
         return instance;
     }
 

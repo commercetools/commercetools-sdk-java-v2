@@ -26,6 +26,14 @@ public class SetReservationsChangeTest {
                 new Object[] { "nextValue",
                         SetReservationsChange.builder()
                                 .nextValue(Collections.singletonList(
+                                    new com.commercetools.history.models.common.ReservationImpl())) },
+                new Object[] { "addedItems",
+                        SetReservationsChange.builder()
+                                .addedItems(Collections.singletonList(
+                                    new com.commercetools.history.models.common.ReservationImpl())) },
+                new Object[] { "removedItems",
+                        SetReservationsChange.builder()
+                                .removedItems(Collections.singletonList(
                                     new com.commercetools.history.models.common.ReservationImpl())) } };
     }
 
@@ -50,6 +58,22 @@ public class SetReservationsChangeTest {
         SetReservationsChange value = SetReservationsChange.of();
         value.setNextValue(Collections.singletonList(new com.commercetools.history.models.common.ReservationImpl()));
         Assertions.assertThat(value.getNextValue())
+                .isEqualTo(Collections.singletonList(new com.commercetools.history.models.common.ReservationImpl()));
+    }
+
+    @Test
+    public void addedItems() {
+        SetReservationsChange value = SetReservationsChange.of();
+        value.setAddedItems(Collections.singletonList(new com.commercetools.history.models.common.ReservationImpl()));
+        Assertions.assertThat(value.getAddedItems())
+                .isEqualTo(Collections.singletonList(new com.commercetools.history.models.common.ReservationImpl()));
+    }
+
+    @Test
+    public void removedItems() {
+        SetReservationsChange value = SetReservationsChange.of();
+        value.setRemovedItems(Collections.singletonList(new com.commercetools.history.models.common.ReservationImpl()));
+        Assertions.assertThat(value.getRemovedItems())
                 .isEqualTo(Collections.singletonList(new com.commercetools.history.models.common.ReservationImpl()));
     }
 }

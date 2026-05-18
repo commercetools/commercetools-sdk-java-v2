@@ -4,6 +4,8 @@ package com.commercetools.history.models.common;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,8 +17,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ShippingRate shippingRate = ShippingRate.builder()
  *             .price(priceBuilder -> priceBuilder)
- *             .freeAbove(freeAboveBuilder -> freeAboveBuilder)
- *             .isMatching(true)
  *             .plusTiers(tiersBuilder -> tiersBuilder)
  *             .build()
  * </code></pre>
@@ -25,97 +25,100 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingRateBuilder implements Builder<ShippingRate> {
 
-    private com.commercetools.history.models.common.Money price;
+    private com.commercetools.history.models.common.CentPrecisionMoney price;
 
-    private com.commercetools.history.models.common.Money freeAbove;
+    @Nullable
+    private com.commercetools.history.models.common.CentPrecisionMoney freeAbove;
 
+    @Nullable
     private Boolean isMatching;
 
     private java.util.List<com.commercetools.history.models.common.ShippingRatePriceTier> tiers;
 
     /**
-     * set the value to the price using the builder function
+     *  <p>Currency amount of the ShippingRate.</p>
      * @param builder function to build the price value
      * @return Builder
      */
 
     public ShippingRateBuilder price(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
-        this.price = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
+            Function<com.commercetools.history.models.common.CentPrecisionMoneyBuilder, com.commercetools.history.models.common.CentPrecisionMoneyBuilder> builder) {
+        this.price = builder.apply(com.commercetools.history.models.common.CentPrecisionMoneyBuilder.of()).build();
         return this;
     }
 
     /**
-     * set the value to the price using the builder function
+     *  <p>Currency amount of the ShippingRate.</p>
      * @param builder function to build the price value
      * @return Builder
      */
 
     public ShippingRateBuilder withPrice(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
-        this.price = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
+            Function<com.commercetools.history.models.common.CentPrecisionMoneyBuilder, com.commercetools.history.models.common.CentPrecisionMoney> builder) {
+        this.price = builder.apply(com.commercetools.history.models.common.CentPrecisionMoneyBuilder.of());
         return this;
     }
 
     /**
-     * set the value to the price
+     *  <p>Currency amount of the ShippingRate.</p>
      * @param price value to be set
      * @return Builder
      */
 
-    public ShippingRateBuilder price(final com.commercetools.history.models.common.Money price) {
+    public ShippingRateBuilder price(final com.commercetools.history.models.common.CentPrecisionMoney price) {
         this.price = price;
         return this;
     }
 
     /**
-     * set the value to the freeAbove using the builder function
+     *  <p><span>Free shipping</span> is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      * @param builder function to build the freeAbove value
      * @return Builder
      */
 
     public ShippingRateBuilder freeAbove(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
-        this.freeAbove = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
+            Function<com.commercetools.history.models.common.CentPrecisionMoneyBuilder, com.commercetools.history.models.common.CentPrecisionMoneyBuilder> builder) {
+        this.freeAbove = builder.apply(com.commercetools.history.models.common.CentPrecisionMoneyBuilder.of()).build();
         return this;
     }
 
     /**
-     * set the value to the freeAbove using the builder function
+     *  <p><span>Free shipping</span> is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      * @param builder function to build the freeAbove value
      * @return Builder
      */
 
     public ShippingRateBuilder withFreeAbove(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
-        this.freeAbove = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
+            Function<com.commercetools.history.models.common.CentPrecisionMoneyBuilder, com.commercetools.history.models.common.CentPrecisionMoney> builder) {
+        this.freeAbove = builder.apply(com.commercetools.history.models.common.CentPrecisionMoneyBuilder.of());
         return this;
     }
 
     /**
-     * set the value to the freeAbove
+     *  <p><span>Free shipping</span> is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      * @param freeAbove value to be set
      * @return Builder
      */
 
-    public ShippingRateBuilder freeAbove(final com.commercetools.history.models.common.Money freeAbove) {
+    public ShippingRateBuilder freeAbove(
+            @Nullable final com.commercetools.history.models.common.CentPrecisionMoney freeAbove) {
         this.freeAbove = freeAbove;
         return this;
     }
 
     /**
-     *  <p>Only appears in response to requests for ShippingMethods by Cart or location to mark this shipping rate as one that matches the Cart or location.</p>
+     *  <p><code>true</code> if the ShippingRate matches given <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Location" rel="nofollow">Location</a>. Only appears in response to requests for <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-cart:GET" rel="nofollow">Get ShippingMethods for a Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-location:GET" rel="nofollow">Get ShippingMethods for a Location</a>.</p>
      * @param isMatching value to be set
      * @return Builder
      */
 
-    public ShippingRateBuilder isMatching(final Boolean isMatching) {
+    public ShippingRateBuilder isMatching(@Nullable final Boolean isMatching) {
         this.isMatching = isMatching;
         return this;
     }
 
     /**
-     * set values to the tiers
+     *  <p>Price tiers for the ShippingRate.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -126,7 +129,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     * set value to the tiers
+     *  <p>Price tiers for the ShippingRate.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -138,7 +141,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     * add values to the tiers
+     *  <p>Price tiers for the ShippingRate.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -152,7 +155,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     * add the value to the tiers using the builder function
+     *  <p>Price tiers for the ShippingRate.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -168,7 +171,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     * set the value to the tiers using the builder function
+     *  <p>Price tiers for the ShippingRate.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -182,7 +185,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     * add the value to the tiers using the builder function
+     *  <p>Price tiers for the ShippingRate.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -193,7 +196,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     * set the value to the tiers using the builder function
+     *  <p>Price tiers for the ShippingRate.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -204,34 +207,36 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     * value of price}
+     *  <p>Currency amount of the ShippingRate.</p>
      * @return price
      */
 
-    public com.commercetools.history.models.common.Money getPrice() {
+    public com.commercetools.history.models.common.CentPrecisionMoney getPrice() {
         return this.price;
     }
 
     /**
-     * value of freeAbove}
+     *  <p><span>Free shipping</span> is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      * @return freeAbove
      */
 
-    public com.commercetools.history.models.common.Money getFreeAbove() {
+    @Nullable
+    public com.commercetools.history.models.common.CentPrecisionMoney getFreeAbove() {
         return this.freeAbove;
     }
 
     /**
-     *  <p>Only appears in response to requests for ShippingMethods by Cart or location to mark this shipping rate as one that matches the Cart or location.</p>
+     *  <p><code>true</code> if the ShippingRate matches given <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Location" rel="nofollow">Location</a>. Only appears in response to requests for <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-cart:GET" rel="nofollow">Get ShippingMethods for a Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-location:GET" rel="nofollow">Get ShippingMethods for a Location</a>.</p>
      * @return isMatching
      */
 
+    @Nullable
     public Boolean getIsMatching() {
         return this.isMatching;
     }
 
     /**
-     * value of tiers}
+     *  <p>Price tiers for the ShippingRate.</p>
      * @return tiers
      */
 
@@ -245,8 +250,6 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
      */
     public ShippingRate build() {
         Objects.requireNonNull(price, ShippingRate.class + ": price is missing");
-        Objects.requireNonNull(freeAbove, ShippingRate.class + ": freeAbove is missing");
-        Objects.requireNonNull(isMatching, ShippingRate.class + ": isMatching is missing");
         Objects.requireNonNull(tiers, ShippingRate.class + ": tiers is missing");
         return new ShippingRateImpl(price, freeAbove, isMatching, tiers);
     }

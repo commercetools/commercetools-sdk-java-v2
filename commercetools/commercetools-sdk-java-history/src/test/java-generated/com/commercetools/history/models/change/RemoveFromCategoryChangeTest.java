@@ -27,8 +27,10 @@ public class RemoveFromCategoryChangeTest {
                         RemoveFromCategoryChange.builder()
                                 .nextValue(Collections
                                         .singletonList(new com.commercetools.history.models.common.ReferenceImpl())) },
-                new Object[] { "category", RemoveFromCategoryChange.builder()
-                        .category(new com.commercetools.history.models.common.ReferenceImpl()) } };
+                new Object[] { "category",
+                        RemoveFromCategoryChange.builder()
+                                .category(new com.commercetools.history.models.common.ReferenceImpl()) },
+                new Object[] { "catalogData", RemoveFromCategoryChange.builder().catalogData("catalogData") } };
     }
 
     @Test
@@ -60,5 +62,12 @@ public class RemoveFromCategoryChangeTest {
         value.setCategory(new com.commercetools.history.models.common.ReferenceImpl());
         Assertions.assertThat(value.getCategory())
                 .isEqualTo(new com.commercetools.history.models.common.ReferenceImpl());
+    }
+
+    @Test
+    public void catalogData() {
+        RemoveFromCategoryChange value = RemoveFromCategoryChange.of();
+        value.setCatalogData("catalogData");
+        Assertions.assertThat(value.getCatalogData()).isEqualTo("catalogData");
     }
 }

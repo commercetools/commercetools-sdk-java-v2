@@ -17,17 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountSetDescriptionAction" rel="nofollow">Set Description</a> on Cart Discounts.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CategorySetDescriptionAction" rel="nofollow">Set Description</a> on Categories.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeSetDescriptionAction" rel="nofollow">Set Description</a> on Discount Codes.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetDescriptionAction" rel="nofollow">Set Description</a> on Products.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountSetDescriptionAction" rel="nofollow">Set Description</a> on Product Discounts.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListSetDescriptionAction" rel="nofollow">Set Description</a> on Shopping Lists.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StateSetDescriptionAction" rel="nofollow">Set Description</a> on States.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:TypeSetDescriptionAction" rel="nofollow">Set Description</a> on Types.</li>
- *  </ul>
+ * SetLocalizedDescriptionChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetLocalizedDescriptionChangeImpl implements SetLocalizedDescriptionChange, ModelBase {

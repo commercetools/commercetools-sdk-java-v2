@@ -3,8 +3,6 @@ package com.commercetools.api.models.project;
 
 import java.util.*;
 
-import javax.annotation.Nullable;
-
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,6 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ShoppingListsConfiguration shoppingListsConfiguration = ShoppingListsConfiguration.builder()
+ *             .deleteDaysAfterLastModification(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -22,27 +21,25 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListsConfigurationBuilder implements Builder<ShoppingListsConfiguration> {
 
-    @Nullable
     private Long deleteDaysAfterLastModification;
 
     /**
-     *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListDraft" rel="nofollow">ShoppingListDraft</a>. This field may not be present on Projects created before January 2020.</p>
+     *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListDraft" rel="nofollow">ShoppingListDraft</a>.</p>
      * @param deleteDaysAfterLastModification value to be set
      * @return Builder
      */
 
     public ShoppingListsConfigurationBuilder deleteDaysAfterLastModification(
-            @Nullable final Long deleteDaysAfterLastModification) {
+            final Long deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         return this;
     }
 
     /**
-     *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListDraft" rel="nofollow">ShoppingListDraft</a>. This field may not be present on Projects created before January 2020.</p>
+     *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListDraft" rel="nofollow">ShoppingListDraft</a>.</p>
      * @return deleteDaysAfterLastModification
      */
 
-    @Nullable
     public Long getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
@@ -52,6 +49,8 @@ public class ShoppingListsConfigurationBuilder implements Builder<ShoppingListsC
      * @return ShoppingListsConfiguration
      */
     public ShoppingListsConfiguration build() {
+        Objects.requireNonNull(deleteDaysAfterLastModification,
+            ShoppingListsConfiguration.class + ": deleteDaysAfterLastModification is missing");
         return new ShoppingListsConfigurationImpl(deleteDaysAfterLastModification);
     }
 

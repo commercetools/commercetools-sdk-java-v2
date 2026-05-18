@@ -173,7 +173,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
     }
 
     /**
-     *  <p>Date and time (UTC) the Return Item was intitially created.</p>
+     *  <p>Date and time (UTC) the Return Item was initially created.</p>
      * @param createdAt value to be set
      * @return Builder
      */
@@ -274,7 +274,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
     }
 
     /**
-     *  <p>Date and time (UTC) the Return Item was intitially created.</p>
+     *  <p>Date and time (UTC) the Return Item was initially created.</p>
      * @return createdAt
      */
 

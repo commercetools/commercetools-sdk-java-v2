@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Returned when a <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">Money</a> operation overflows the 64-bit integer range. See <span>Money usage</span> for more information.</p>
+ *  <p>Returned when a money operation overflows the 64-bit integer range.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLMoneyOverflowErrorImpl implements GraphQLMoneyOverflowError, ModelBase {

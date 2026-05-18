@@ -253,6 +253,14 @@ public interface PaymentUpdateAction extends com.commercetools.api.models.Resour
     }
 
     /**
+     * builder for setTransactionInterfaceId subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.payment.PaymentSetTransactionInterfaceIdActionBuilder setTransactionInterfaceIdBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetTransactionInterfaceIdActionBuilder.of();
+    }
+
+    /**
      * builder for transitionState subtype
      * @return builder
      */

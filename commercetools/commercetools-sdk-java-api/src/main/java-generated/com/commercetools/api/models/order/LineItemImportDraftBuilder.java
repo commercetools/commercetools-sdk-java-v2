@@ -451,7 +451,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>Custom Fields of the LineItem.</p>
+     *  <p>Custom Fields for the LineItem.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -463,7 +463,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>Custom Fields of the LineItem.</p>
+     *  <p>Custom Fields for the LineItem.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -475,7 +475,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>Custom Fields of the LineItem.</p>
+     *  <p>Custom Fields for the LineItem.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -604,7 +604,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>Custom Fields of the LineItem.</p>
+     *  <p>Custom Fields for the LineItem.</p>
      * @return custom
      */
 

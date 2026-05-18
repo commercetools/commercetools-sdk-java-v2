@@ -44,7 +44,7 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
-    private com.commercetools.api.models.payment.PaymentReference payment;
+    private com.commercetools.api.models.payment.PaymentReference paymentRef;
 
     /**
      * create instance with all properties
@@ -59,7 +59,7 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("payment") final com.commercetools.api.models.payment.PaymentReference payment) {
+            @JsonProperty("paymentRef") final com.commercetools.api.models.payment.PaymentReference paymentRef) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -70,7 +70,7 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
         this.resource = resource;
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-        this.payment = payment;
+        this.paymentRef = paymentRef;
         this.type = ORDER_PAYMENT_ADDED;
     }
 
@@ -173,8 +173,8 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      */
 
-    public com.commercetools.api.models.payment.PaymentReference getPayment() {
-        return this.payment;
+    public com.commercetools.api.models.payment.PaymentReference getPaymentRef() {
+        return this.paymentRef;
     }
 
     public void setId(final String id) {
@@ -218,8 +218,8 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
     }
 
-    public void setPayment(final com.commercetools.api.models.payment.PaymentReference payment) {
-        this.payment = payment;
+    public void setPaymentRef(final com.commercetools.api.models.payment.PaymentReference paymentRef) {
+        this.paymentRef = paymentRef;
     }
 
     @Override
@@ -243,7 +243,7 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
-                .append(payment, that.payment)
+                .append(paymentRef, that.paymentRef)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -255,7 +255,7 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
-                .append(payment, that.payment)
+                .append(paymentRef, that.paymentRef)
                 .isEquals();
     }
 
@@ -272,7 +272,7 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
                 .append(resourceVersion)
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
-                .append(payment)
+                .append(paymentRef)
                 .toHashCode();
     }
 
@@ -289,7 +289,7 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
                 .append("resourceVersion", resourceVersion)
                 .append("type", type)
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
-                .append("payment", payment)
+                .append("paymentRef", paymentRef)
                 .build();
     }
 

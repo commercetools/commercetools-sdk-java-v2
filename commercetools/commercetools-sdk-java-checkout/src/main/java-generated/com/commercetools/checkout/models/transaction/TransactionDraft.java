@@ -46,7 +46,7 @@ public interface TransactionDraft extends io.vrap.rmf.base.client.Draft<Transact
     public String getKey();
 
     /**
-     *  <p><span>Application</span> for which the payment is executed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:checkout:type:Application" rel="nofollow">Application</a> for which the payment is executed.</p>
      * @return application
      */
     @NotNull
@@ -64,7 +64,7 @@ public interface TransactionDraft extends io.vrap.rmf.base.client.Draft<Transact
     public List<TransactionItemDraft> getTransactionItems();
 
     /**
-     *  <p><span>Cart</span> for which the payment must be executed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> for which the payment must be executed.</p>
      * @return cart
      */
     @NotNull
@@ -80,7 +80,7 @@ public interface TransactionDraft extends io.vrap.rmf.base.client.Draft<Transact
     public void setKey(final String key);
 
     /**
-     *  <p><span>Application</span> for which the payment is executed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:checkout:type:Application" rel="nofollow">Application</a> for which the payment is executed.</p>
      * @param application value to be set
      */
 
@@ -102,7 +102,7 @@ public interface TransactionDraft extends io.vrap.rmf.base.client.Draft<Transact
     public void setTransactionItems(final List<TransactionItemDraft> transactionItems);
 
     /**
-     *  <p><span>Cart</span> for which the payment must be executed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> for which the payment must be executed.</p>
      * @param cart value to be set
      */
 

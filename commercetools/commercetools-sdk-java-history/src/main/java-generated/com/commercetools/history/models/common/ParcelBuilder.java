@@ -4,6 +4,8 @@ package com.commercetools.history.models.common;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     Parcel parcel = Parcel.builder()
  *             .id("{id}")
- *             .createdAt("{createdAt}")
- *             .measurements(measurementsBuilder -> measurementsBuilder)
- *             .trackingData(trackingDataBuilder -> trackingDataBuilder)
- *             .plusItems(itemsBuilder -> itemsBuilder)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .build()
  * </code></pre>
  * </div>
@@ -28,16 +27,25 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     private String id;
 
-    private String createdAt;
+    @Nullable
+    private String key;
 
+    private java.time.ZonedDateTime createdAt;
+
+    @Nullable
     private com.commercetools.history.models.common.ParcelMeasurements measurements;
 
+    @Nullable
     private com.commercetools.history.models.common.TrackingData trackingData;
 
+    @Nullable
     private java.util.List<com.commercetools.history.models.common.DeliveryItem> items;
 
+    @Nullable
+    private com.commercetools.history.models.common.CustomFields custom;
+
     /**
-     * set the value to the id
+     *  <p>Unique identifier of the Parcel.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -48,18 +56,29 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     * set the value to the createdAt
+     *  <p>User-defined unique identifier of the Parcel.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public ParcelBuilder key(@Nullable final String key) {
+        this.key = key;
+        return this;
+    }
+
+    /**
+     *  <p>Date and time (UTC) the Parcel was created.</p>
      * @param createdAt value to be set
      * @return Builder
      */
 
-    public ParcelBuilder createdAt(final String createdAt) {
+    public ParcelBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
     /**
-     * set the value to the measurements using the builder function
+     *  <p>Information about the dimensions of the Parcel.</p>
      * @param builder function to build the measurements value
      * @return Builder
      */
@@ -72,7 +91,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     * set the value to the measurements using the builder function
+     *  <p>Information about the dimensions of the Parcel.</p>
      * @param builder function to build the measurements value
      * @return Builder
      */
@@ -84,18 +103,19 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     * set the value to the measurements
+     *  <p>Information about the dimensions of the Parcel.</p>
      * @param measurements value to be set
      * @return Builder
      */
 
-    public ParcelBuilder measurements(final com.commercetools.history.models.common.ParcelMeasurements measurements) {
+    public ParcelBuilder measurements(
+            @Nullable final com.commercetools.history.models.common.ParcelMeasurements measurements) {
         this.measurements = measurements;
         return this;
     }
 
     /**
-     * set the value to the trackingData using the builder function
+     *  <p>Shipment tracking information of the Parcel.</p>
      * @param builder function to build the trackingData value
      * @return Builder
      */
@@ -107,7 +127,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     * set the value to the trackingData using the builder function
+     *  <p>Shipment tracking information of the Parcel.</p>
      * @param builder function to build the trackingData value
      * @return Builder
      */
@@ -119,45 +139,47 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     * set the value to the trackingData
+     *  <p>Shipment tracking information of the Parcel.</p>
      * @param trackingData value to be set
      * @return Builder
      */
 
-    public ParcelBuilder trackingData(final com.commercetools.history.models.common.TrackingData trackingData) {
+    public ParcelBuilder trackingData(
+            @Nullable final com.commercetools.history.models.common.TrackingData trackingData) {
         this.trackingData = trackingData;
         return this;
     }
 
     /**
-     * set values to the items
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param items value to be set
      * @return Builder
      */
 
-    public ParcelBuilder items(final com.commercetools.history.models.common.DeliveryItem... items) {
+    public ParcelBuilder items(@Nullable final com.commercetools.history.models.common.DeliveryItem... items) {
         this.items = new ArrayList<>(Arrays.asList(items));
         return this;
     }
 
     /**
-     * set value to the items
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param items value to be set
      * @return Builder
      */
 
-    public ParcelBuilder items(final java.util.List<com.commercetools.history.models.common.DeliveryItem> items) {
+    public ParcelBuilder items(
+            @Nullable final java.util.List<com.commercetools.history.models.common.DeliveryItem> items) {
         this.items = items;
         return this;
     }
 
     /**
-     * add values to the items
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param items value to be set
      * @return Builder
      */
 
-    public ParcelBuilder plusItems(final com.commercetools.history.models.common.DeliveryItem... items) {
+    public ParcelBuilder plusItems(@Nullable final com.commercetools.history.models.common.DeliveryItem... items) {
         if (this.items == null) {
             this.items = new ArrayList<>();
         }
@@ -166,7 +188,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -181,7 +203,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -194,7 +216,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -205,7 +227,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -216,7 +238,42 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     * value of id}
+     *  <p>Custom Fields of the Parcel.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public ParcelBuilder custom(
+            Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields of the Parcel.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public ParcelBuilder withCustom(
+            Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields of the Parcel.</p>
+     * @param custom value to be set
+     * @return Builder
+     */
+
+    public ParcelBuilder custom(@Nullable final com.commercetools.history.models.common.CustomFields custom) {
+        this.custom = custom;
+        return this;
+    }
+
+    /**
+     *  <p>Unique identifier of the Parcel.</p>
      * @return id
      */
 
@@ -225,39 +282,62 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     * value of createdAt}
+     *  <p>User-defined unique identifier of the Parcel.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
+     *  <p>Date and time (UTC) the Parcel was created.</p>
      * @return createdAt
      */
 
-    public String getCreatedAt() {
+    public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
     /**
-     * value of measurements}
+     *  <p>Information about the dimensions of the Parcel.</p>
      * @return measurements
      */
 
+    @Nullable
     public com.commercetools.history.models.common.ParcelMeasurements getMeasurements() {
         return this.measurements;
     }
 
     /**
-     * value of trackingData}
+     *  <p>Shipment tracking information of the Parcel.</p>
      * @return trackingData
      */
 
+    @Nullable
     public com.commercetools.history.models.common.TrackingData getTrackingData() {
         return this.trackingData;
     }
 
     /**
-     * value of items}
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @return items
      */
 
+    @Nullable
     public java.util.List<com.commercetools.history.models.common.DeliveryItem> getItems() {
         return this.items;
+    }
+
+    /**
+     *  <p>Custom Fields of the Parcel.</p>
+     * @return custom
+     */
+
+    @Nullable
+    public com.commercetools.history.models.common.CustomFields getCustom() {
+        return this.custom;
     }
 
     /**
@@ -267,10 +347,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     public Parcel build() {
         Objects.requireNonNull(id, Parcel.class + ": id is missing");
         Objects.requireNonNull(createdAt, Parcel.class + ": createdAt is missing");
-        Objects.requireNonNull(measurements, Parcel.class + ": measurements is missing");
-        Objects.requireNonNull(trackingData, Parcel.class + ": trackingData is missing");
-        Objects.requireNonNull(items, Parcel.class + ": items is missing");
-        return new ParcelImpl(id, createdAt, measurements, trackingData, items);
+        return new ParcelImpl(id, key, createdAt, measurements, trackingData, items, custom);
     }
 
     /**
@@ -278,7 +355,7 @@ public class ParcelBuilder implements Builder<Parcel> {
      * @return Parcel
      */
     public Parcel buildUnchecked() {
-        return new ParcelImpl(id, createdAt, measurements, trackingData, items);
+        return new ParcelImpl(id, key, createdAt, measurements, trackingData, items, custom);
     }
 
     /**
@@ -297,10 +374,12 @@ public class ParcelBuilder implements Builder<Parcel> {
     public static ParcelBuilder of(final Parcel template) {
         ParcelBuilder builder = new ParcelBuilder();
         builder.id = template.getId();
+        builder.key = template.getKey();
         builder.createdAt = template.getCreatedAt();
         builder.measurements = template.getMeasurements();
         builder.trackingData = template.getTrackingData();
         builder.items = template.getItems();
+        builder.custom = template.getCustom();
         return builder;
     }
 

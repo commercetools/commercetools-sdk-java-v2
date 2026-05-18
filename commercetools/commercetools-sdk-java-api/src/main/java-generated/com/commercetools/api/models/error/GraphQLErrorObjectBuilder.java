@@ -107,6 +107,10 @@ public class GraphQLErrorObjectBuilder {
         return com.commercetools.api.models.error.GraphQLEnumValuesMustMatchErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.GraphQLExactLockConflictErrorBuilder exactLockConflictBuilder() {
+        return com.commercetools.api.models.error.GraphQLExactLockConflictErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.GraphQLExpiredCustomerEmailTokenErrorBuilder expiredCustomerEmailTokenBuilder() {
         return com.commercetools.api.models.error.GraphQLExpiredCustomerEmailTokenErrorBuilder.of();
     }
@@ -275,6 +279,10 @@ public class GraphQLErrorObjectBuilder {
         return com.commercetools.api.models.error.GraphQLQueryTimedOutErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.GraphQLRecurringOrderFailureErrorBuilder recurringOrderFailureBuilder() {
+        return com.commercetools.api.models.error.GraphQLRecurringOrderFailureErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.GraphQLReferenceExistsErrorBuilder referenceExistsBuilder() {
         return com.commercetools.api.models.error.GraphQLReferenceExistsErrorBuilder.of();
     }
@@ -329,6 +337,10 @@ public class GraphQLErrorObjectBuilder {
 
     public com.commercetools.api.models.error.GraphQLSyntaxErrorErrorBuilder syntaxErrorBuilder() {
         return com.commercetools.api.models.error.GraphQLSyntaxErrorErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.GraphQLValidityLockConflictErrorBuilder validityLockConflictBuilder() {
+        return com.commercetools.api.models.error.GraphQLValidityLockConflictErrorBuilder.of();
     }
 
     /**

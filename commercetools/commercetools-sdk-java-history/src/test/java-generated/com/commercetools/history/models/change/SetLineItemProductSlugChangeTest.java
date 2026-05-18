@@ -26,7 +26,8 @@ public class SetLineItemProductSlugChangeTest {
                 new Object[] { "lineItem",
                         SetLineItemProductSlugChange.builder()
                                 .lineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { "variant", SetLineItemProductSlugChange.builder().variant("variant") } };
+                new Object[] { "variant", SetLineItemProductSlugChange.builder().variant("variant") },
+                new Object[] { "lineItemId", SetLineItemProductSlugChange.builder().lineItemId("lineItemId") } };
     }
 
     @Test
@@ -65,5 +66,12 @@ public class SetLineItemProductSlugChangeTest {
         SetLineItemProductSlugChange value = SetLineItemProductSlugChange.of();
         value.setVariant("variant");
         Assertions.assertThat(value.getVariant()).isEqualTo("variant");
+    }
+
+    @Test
+    public void lineItemId() {
+        SetLineItemProductSlugChange value = SetLineItemProductSlugChange.of();
+        value.setLineItemId("lineItemId");
+        Assertions.assertThat(value.getLineItemId()).isEqualTo("lineItemId");
     }
 }

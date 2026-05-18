@@ -23,7 +23,12 @@ public class SetProductPriceCustomFieldChangeTest {
                 new Object[] { "nextValue",
                         SetProductPriceCustomFieldChange.builder()
                                 .nextValue(new com.commercetools.history.models.common.CustomFieldsImpl()) },
-                new Object[] { "catalogData", SetProductPriceCustomFieldChange.builder().catalogData("catalogData") } };
+                new Object[] { "catalogData", SetProductPriceCustomFieldChange.builder().catalogData("catalogData") },
+                new Object[] { "variant", SetProductPriceCustomFieldChange.builder().variant("variant") },
+                new Object[] { "priceId", SetProductPriceCustomFieldChange.builder().priceId("priceId") },
+                new Object[] { "customTypeId",
+                        SetProductPriceCustomFieldChange.builder().customTypeId("customTypeId") },
+                new Object[] { "name", SetProductPriceCustomFieldChange.builder().name("name") } };
     }
 
     @Test
@@ -54,5 +59,33 @@ public class SetProductPriceCustomFieldChangeTest {
         SetProductPriceCustomFieldChange value = SetProductPriceCustomFieldChange.of();
         value.setCatalogData("catalogData");
         Assertions.assertThat(value.getCatalogData()).isEqualTo("catalogData");
+    }
+
+    @Test
+    public void variant() {
+        SetProductPriceCustomFieldChange value = SetProductPriceCustomFieldChange.of();
+        value.setVariant("variant");
+        Assertions.assertThat(value.getVariant()).isEqualTo("variant");
+    }
+
+    @Test
+    public void priceId() {
+        SetProductPriceCustomFieldChange value = SetProductPriceCustomFieldChange.of();
+        value.setPriceId("priceId");
+        Assertions.assertThat(value.getPriceId()).isEqualTo("priceId");
+    }
+
+    @Test
+    public void customTypeId() {
+        SetProductPriceCustomFieldChange value = SetProductPriceCustomFieldChange.of();
+        value.setCustomTypeId("customTypeId");
+        Assertions.assertThat(value.getCustomTypeId()).isEqualTo("customTypeId");
+    }
+
+    @Test
+    public void name() {
+        SetProductPriceCustomFieldChange value = SetProductPriceCustomFieldChange.of();
+        value.setName("name");
+        Assertions.assertThat(value.getName()).isEqualTo("name");
     }
 }

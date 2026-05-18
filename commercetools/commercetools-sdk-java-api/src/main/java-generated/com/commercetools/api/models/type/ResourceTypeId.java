@@ -83,6 +83,12 @@ public interface ResourceTypeId extends JsonEnum {
     <p><a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentAddInterfaceInteractionAction" rel="nofollow">InterfaceInteraction</a> on <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a></p> */
     ResourceTypeId PAYMENT_INTERFACE_INTERACTION = ResourceTypeIdEnum.PAYMENT_INTERFACE_INTERACTION;
     /**
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethod" rel="nofollow">PaymentMethod</a></p> */
+    ResourceTypeId PAYMENT_METHOD = ResourceTypeIdEnum.PAYMENT_METHOD;
+    /**
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfo" rel="nofollow">PaymentMethodInfo</a> on <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a></p> */
+    ResourceTypeId PAYMENT_METHOD_INFO = ResourceTypeIdEnum.PAYMENT_METHOD_INFO;
+    /**
     <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Price</a> on <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a></p> */
     ResourceTypeId PRODUCT_PRICE = ResourceTypeIdEnum.PRODUCT_PRICE;
     /**
@@ -235,6 +241,16 @@ public interface ResourceTypeId extends JsonEnum {
          * payment-interface-interaction
          */
         PAYMENT_INTERFACE_INTERACTION("payment-interface-interaction"),
+
+        /**
+         * payment-method
+         */
+        PAYMENT_METHOD("payment-method"),
+
+        /**
+         * payment-method-info
+         */
+        PAYMENT_METHOD_INFO("payment-method-info"),
 
         /**
          * product-price

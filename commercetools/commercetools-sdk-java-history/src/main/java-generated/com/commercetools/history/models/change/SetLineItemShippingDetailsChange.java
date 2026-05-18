@@ -8,6 +8,7 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.ItemShippingDetails;
+import com.commercetools.history.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -32,6 +33,8 @@ import jakarta.validation.constraints.NotNull;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .lineItemId("{lineItemId}")
+ *             .lineItem(lineItemBuilder -> lineItemBuilder)
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -89,6 +92,24 @@ public interface SetLineItemShippingDetailsChange extends Change {
     public String getLineItemId();
 
     /**
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
+     * @return lineItem
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("lineItem")
+    public LocalizedString getLineItem();
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+    @NotNull
+    @JsonProperty("variant")
+    public String getVariant();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -117,6 +138,21 @@ public interface SetLineItemShippingDetailsChange extends Change {
     public void setLineItemId(final String lineItemId);
 
     /**
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
+     * @param lineItem value to be set
+     */
+
+    public void setLineItem(final LocalizedString lineItem);
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     */
+
+    public void setVariant(final String variant);
+
+    /**
      * factory method
      * @return instance of SetLineItemShippingDetailsChange
      */
@@ -135,6 +171,8 @@ public interface SetLineItemShippingDetailsChange extends Change {
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItem(template.getLineItem());
+        instance.setVariant(template.getVariant());
         return instance;
     }
 
@@ -157,6 +195,8 @@ public interface SetLineItemShippingDetailsChange extends Change {
         instance.setNextValue(
             com.commercetools.history.models.common.ItemShippingDetails.deepCopy(template.getNextValue()));
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
+        instance.setVariant(template.getVariant());
         return instance;
     }
 

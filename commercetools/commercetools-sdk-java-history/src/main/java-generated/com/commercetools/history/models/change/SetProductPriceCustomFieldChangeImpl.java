@@ -32,6 +32,14 @@ public class SetProductPriceCustomFieldChangeImpl implements SetProductPriceCust
 
     private String catalogData;
 
+    private String variant;
+
+    private String priceId;
+
+    private String customTypeId;
+
+    private String name;
+
     /**
      * create instance with all properties
      */
@@ -39,11 +47,17 @@ public class SetProductPriceCustomFieldChangeImpl implements SetProductPriceCust
     SetProductPriceCustomFieldChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.CustomFields previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.CustomFields nextValue,
-            @JsonProperty("catalogData") final String catalogData) {
+            @JsonProperty("catalogData") final String catalogData, @JsonProperty("variant") final String variant,
+            @JsonProperty("priceId") final String priceId, @JsonProperty("customTypeId") final String customTypeId,
+            @JsonProperty("name") final String name) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.catalogData = catalogData;
+        this.variant = variant;
+        this.priceId = priceId;
+        this.customTypeId = customTypeId;
+        this.name = name;
         this.type = SET_PRODUCT_PRICE_CUSTOM_FIELD_CHANGE;
     }
 
@@ -87,6 +101,7 @@ public class SetProductPriceCustomFieldChangeImpl implements SetProductPriceCust
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -95,6 +110,39 @@ public class SetProductPriceCustomFieldChangeImpl implements SetProductPriceCust
 
     public String getCatalogData() {
         return this.catalogData;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
+    /**
+     *  <p><code>id</code> of the Embedded <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</p>
+     */
+
+    public String getPriceId() {
+        return this.priceId;
+    }
+
+    /**
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
+     */
+
+    public String getCustomTypeId() {
+        return this.customTypeId;
+    }
+
+    /**
+     *  <p>Name of the <span>Custom Field</span>.</p>
+     */
+
+    public String getName() {
+        return this.name;
     }
 
     public void setChange(final String change) {
@@ -113,6 +161,22 @@ public class SetProductPriceCustomFieldChangeImpl implements SetProductPriceCust
         this.catalogData = catalogData;
     }
 
+    public void setVariant(final String variant) {
+        this.variant = variant;
+    }
+
+    public void setPriceId(final String priceId) {
+        this.priceId = priceId;
+    }
+
+    public void setCustomTypeId(final String customTypeId) {
+        this.customTypeId = customTypeId;
+    }
+
+    public void setName(final String name) {
+        this.name = name;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -128,11 +192,19 @@ public class SetProductPriceCustomFieldChangeImpl implements SetProductPriceCust
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(catalogData, that.catalogData)
+                .append(variant, that.variant)
+                .append(priceId, that.priceId)
+                .append(customTypeId, that.customTypeId)
+                .append(name, that.name)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(catalogData, that.catalogData)
+                .append(variant, that.variant)
+                .append(priceId, that.priceId)
+                .append(customTypeId, that.customTypeId)
+                .append(name, that.name)
                 .isEquals();
     }
 
@@ -143,6 +215,10 @@ public class SetProductPriceCustomFieldChangeImpl implements SetProductPriceCust
                 .append(previousValue)
                 .append(nextValue)
                 .append(catalogData)
+                .append(variant)
+                .append(priceId)
+                .append(customTypeId)
+                .append(name)
                 .toHashCode();
     }
 
@@ -153,6 +229,10 @@ public class SetProductPriceCustomFieldChangeImpl implements SetProductPriceCust
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
                 .append("catalogData", catalogData)
+                .append("variant", variant)
+                .append("priceId", priceId)
+                .append("customTypeId", customTypeId)
+                .append("name", name)
                 .build();
     }
 

@@ -25,7 +25,8 @@ public class CartDiscountChangeValueActionBuilder implements Builder<CartDiscoun
     private com.commercetools.api.models.cart_discount.CartDiscountValueDraft value;
 
     /**
-     *  <p>New value to set. When trying to set a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueGiftLineItemDraft" rel="nofollow">CartDiscountValueGiftLineItemDraft</a> an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p>
+     *  <p>New value to set.</p>
+     *  <p>When trying to set a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueGiftLineItemDraft" rel="nofollow">CartDiscountValueGiftLineItemDraft</a> an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -37,7 +38,8 @@ public class CartDiscountChangeValueActionBuilder implements Builder<CartDiscoun
     }
 
     /**
-     *  <p>New value to set. When trying to set a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueGiftLineItemDraft" rel="nofollow">CartDiscountValueGiftLineItemDraft</a> an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p>
+     *  <p>New value to set.</p>
+     *  <p>When trying to set a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueGiftLineItemDraft" rel="nofollow">CartDiscountValueGiftLineItemDraft</a> an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -50,7 +52,8 @@ public class CartDiscountChangeValueActionBuilder implements Builder<CartDiscoun
     }
 
     /**
-     *  <p>New value to set. When trying to set a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueGiftLineItemDraft" rel="nofollow">CartDiscountValueGiftLineItemDraft</a> an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p>
+     *  <p>New value to set.</p>
+     *  <p>When trying to set a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueGiftLineItemDraft" rel="nofollow">CartDiscountValueGiftLineItemDraft</a> an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p>
      * @return value
      */
 

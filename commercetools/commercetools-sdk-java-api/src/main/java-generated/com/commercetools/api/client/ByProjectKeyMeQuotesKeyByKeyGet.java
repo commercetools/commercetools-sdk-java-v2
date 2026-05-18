@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>Retrieves a Quote with the provided <code>key</code> for the authenticated Customer.</p>
  *
  * <hr>
  * <div class=code-example>

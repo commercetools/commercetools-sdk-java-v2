@@ -22,15 +22,20 @@ import jakarta.validation.constraints.NotNull;
  * <div class=code-example>
  * <pre><code class='java'>
  *     GeoLocation geoLocation = GeoLocation.builder()
- *             .type("{type}")
  *             .plusCoordinates(coordinatesBuilder -> coordinatesBuilder)
  *             .build()
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Point")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GeoLocationImpl.class)
-public interface GeoLocation {
+public interface GeoLocation extends GeoJson {
+
+    /**
+     * discriminator value for GeoLocation
+     */
+    String POINT = "Point";
 
     /**
      *
@@ -47,13 +52,6 @@ public interface GeoLocation {
     @NotNull
     @JsonProperty("coordinates")
     public List<Integer> getCoordinates();
-
-    /**
-     * set type
-     * @param type value to be set
-     */
-
-    public void setType(final String type);
 
     /**
      * set coordinates
@@ -85,7 +83,6 @@ public interface GeoLocation {
      */
     public static GeoLocation of(final GeoLocation template) {
         GeoLocationImpl instance = new GeoLocationImpl();
-        instance.setType(template.getType());
         instance.setCoordinates(template.getCoordinates());
         return instance;
     }
@@ -103,7 +100,6 @@ public interface GeoLocation {
             return null;
         }
         GeoLocationImpl instance = new GeoLocationImpl();
-        instance.setType(template.getType());
         instance.setCoordinates(Optional.ofNullable(template.getCoordinates()).map(ArrayList::new).orElse(null));
         return instance;
     }

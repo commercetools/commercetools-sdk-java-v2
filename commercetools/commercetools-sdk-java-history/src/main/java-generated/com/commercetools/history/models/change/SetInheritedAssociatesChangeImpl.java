@@ -1,0 +1,200 @@
+
+package com.commercetools.history.models.change;
+
+import java.time.*;
+import java.util.*;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.ModelBase;
+import io.vrap.rmf.base.client.utils.Generated;
+
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
+/**
+ *  <p>This change is initiated by background processes after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> update action is performed (if <span>Associates are inherited</span>).</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+public class SetInheritedAssociatesChangeImpl implements SetInheritedAssociatesChange, ModelBase {
+
+    private String type;
+
+    private String change;
+
+    private java.util.List<com.commercetools.history.models.common.InheritedAssociate> addedItems;
+
+    private java.util.List<com.commercetools.history.models.common.InheritedAssociate> removedItems;
+
+    private java.util.List<com.commercetools.history.models.common.InheritedAssociate> previousValue;
+
+    private java.util.List<com.commercetools.history.models.common.InheritedAssociate> nextValue;
+
+    /**
+     * create instance with all properties
+     */
+    @JsonCreator
+    SetInheritedAssociatesChangeImpl(@JsonProperty("change") final String change,
+            @JsonProperty("addedItems") final java.util.List<com.commercetools.history.models.common.InheritedAssociate> addedItems,
+            @JsonProperty("removedItems") final java.util.List<com.commercetools.history.models.common.InheritedAssociate> removedItems,
+            @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.InheritedAssociate> previousValue,
+            @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.InheritedAssociate> nextValue) {
+        this.change = change;
+        this.addedItems = addedItems;
+        this.removedItems = removedItems;
+        this.previousValue = previousValue;
+        this.nextValue = nextValue;
+        this.type = SET_INHERITED_ASSOCIATES_CHANGE;
+    }
+
+    /**
+     * create empty instance
+     */
+    public SetInheritedAssociatesChangeImpl() {
+        this.type = SET_INHERITED_ASSOCIATES_CHANGE;
+    }
+
+    /**
+     *
+     */
+
+    public String getType() {
+        return this.type;
+    }
+
+    /**
+     *
+     */
+
+    public String getChange() {
+        return this.change;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     */
+
+    public java.util.List<com.commercetools.history.models.common.InheritedAssociate> getAddedItems() {
+        return this.addedItems;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     */
+
+    public java.util.List<com.commercetools.history.models.common.InheritedAssociate> getRemovedItems() {
+        return this.removedItems;
+    }
+
+    /**
+     *  <p>Value before the change.</p>
+     */
+
+    public java.util.List<com.commercetools.history.models.common.InheritedAssociate> getPreviousValue() {
+        return this.previousValue;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     */
+
+    public java.util.List<com.commercetools.history.models.common.InheritedAssociate> getNextValue() {
+        return this.nextValue;
+    }
+
+    public void setChange(final String change) {
+        this.change = change;
+    }
+
+    public void setAddedItems(final com.commercetools.history.models.common.InheritedAssociate... addedItems) {
+        this.addedItems = new ArrayList<>(Arrays.asList(addedItems));
+    }
+
+    public void setAddedItems(
+            final java.util.List<com.commercetools.history.models.common.InheritedAssociate> addedItems) {
+        this.addedItems = addedItems;
+    }
+
+    public void setRemovedItems(final com.commercetools.history.models.common.InheritedAssociate... removedItems) {
+        this.removedItems = new ArrayList<>(Arrays.asList(removedItems));
+    }
+
+    public void setRemovedItems(
+            final java.util.List<com.commercetools.history.models.common.InheritedAssociate> removedItems) {
+        this.removedItems = removedItems;
+    }
+
+    public void setPreviousValue(final com.commercetools.history.models.common.InheritedAssociate... previousValue) {
+        this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
+    }
+
+    public void setPreviousValue(
+            final java.util.List<com.commercetools.history.models.common.InheritedAssociate> previousValue) {
+        this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final com.commercetools.history.models.common.InheritedAssociate... nextValue) {
+        this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
+    }
+
+    public void setNextValue(
+            final java.util.List<com.commercetools.history.models.common.InheritedAssociate> nextValue) {
+        this.nextValue = nextValue;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        SetInheritedAssociatesChangeImpl that = (SetInheritedAssociatesChangeImpl) o;
+
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(addedItems, that.addedItems)
+                .append(removedItems, that.removedItems)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(addedItems, that.addedItems)
+                .append(removedItems, that.removedItems)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(change)
+                .append(addedItems)
+                .append(removedItems)
+                .append(previousValue)
+                .append(nextValue)
+                .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("change", change)
+                .append("addedItems", addedItems)
+                .append("removedItems", removedItems)
+                .append("previousValue", previousValue)
+                .append("nextValue", nextValue)
+                .build();
+    }
+
+    @Override
+    public SetInheritedAssociatesChange copyDeep() {
+        return SetInheritedAssociatesChange.deepCopy(this);
+    }
+}

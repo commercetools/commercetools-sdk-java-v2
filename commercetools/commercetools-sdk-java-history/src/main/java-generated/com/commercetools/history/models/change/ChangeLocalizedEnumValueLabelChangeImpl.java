@@ -17,11 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeChangeLocalizedEnumValueLabelAction" rel="nofollow">Change the label of a LocalizedEnumValue</a> on Product Types.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:TypeChangeLocalizedEnumValueLabelAction" rel="nofollow">Change LocalizedEnumValue Label</a> on Types.</li>
- *  </ul>
+ * ChangeLocalizedEnumValueLabelChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeLocalizedEnumValueLabelChangeImpl implements ChangeLocalizedEnumValueLabelChange, ModelBase {

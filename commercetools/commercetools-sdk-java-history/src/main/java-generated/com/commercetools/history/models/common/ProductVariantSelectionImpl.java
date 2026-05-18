@@ -17,24 +17,20 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * ProductVariantSelection
+ *  <p>Polymorphic base type for Product Variant Selections. The actual type is determined by the <code>type</code> field.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantSelectionImpl implements ProductVariantSelection, ModelBase {
 
     private com.commercetools.history.models.common.ProductVariantSelectionTypeEnum type;
 
-    private java.util.List<String> skus;
-
     /**
      * create instance with all properties
      */
     @JsonCreator
     ProductVariantSelectionImpl(
-            @JsonProperty("type") final com.commercetools.history.models.common.ProductVariantSelectionTypeEnum type,
-            @JsonProperty("skus") final java.util.List<String> skus) {
+            @JsonProperty("type") final com.commercetools.history.models.common.ProductVariantSelectionTypeEnum type) {
         this.type = type;
-        this.skus = skus;
     }
 
     /**
@@ -44,31 +40,15 @@ public class ProductVariantSelectionImpl implements ProductVariantSelection, Mod
     }
 
     /**
-     *
+     *  <p>Determines whether the SKUs are to be included in, or excluded from, the Product Selection.</p>
      */
 
     public com.commercetools.history.models.common.ProductVariantSelectionTypeEnum getType() {
         return this.type;
     }
 
-    /**
-     *
-     */
-
-    public java.util.List<String> getSkus() {
-        return this.skus;
-    }
-
     public void setType(final com.commercetools.history.models.common.ProductVariantSelectionTypeEnum type) {
         this.type = type;
-    }
-
-    public void setSkus(final String... skus) {
-        this.skus = new ArrayList<>(Arrays.asList(skus));
-    }
-
-    public void setSkus(final java.util.List<String> skus) {
-        this.skus = skus;
     }
 
     @Override
@@ -81,23 +61,17 @@ public class ProductVariantSelectionImpl implements ProductVariantSelection, Mod
 
         ProductVariantSelectionImpl that = (ProductVariantSelectionImpl) o;
 
-        return new EqualsBuilder().append(type, that.type)
-                .append(skus, that.skus)
-                .append(type, that.type)
-                .append(skus, that.skus)
-                .isEquals();
+        return new EqualsBuilder().append(type, that.type).append(type, that.type).isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(skus).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).toHashCode();
     }
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
-                .append("skus", skus)
-                .build();
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
     @Override

@@ -22,17 +22,17 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InheritedAssociateRoleAssignmentImpl implements InheritedAssociateRoleAssignment, ModelBase {
 
-    private com.commercetools.history.models.common.KeyReference associateRole;
+    private com.commercetools.history.models.common.AssociateRoleKeyReference associateRole;
 
-    private com.commercetools.history.models.common.KeyReference source;
+    private com.commercetools.history.models.common.BusinessUnitKeyReference source;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     InheritedAssociateRoleAssignmentImpl(
-            @JsonProperty("associateRole") final com.commercetools.history.models.common.KeyReference associateRole,
-            @JsonProperty("source") final com.commercetools.history.models.common.KeyReference source) {
+            @JsonProperty("associateRole") final com.commercetools.history.models.common.AssociateRoleKeyReference associateRole,
+            @JsonProperty("source") final com.commercetools.history.models.common.BusinessUnitKeyReference source) {
         this.associateRole = associateRole;
         this.source = source;
     }
@@ -44,26 +44,27 @@ public class InheritedAssociateRoleAssignmentImpl implements InheritedAssociateR
     }
 
     /**
-     *
+     *  <p>Inherited role the Associate holds within a Business Unit.</p>
      */
 
-    public com.commercetools.history.models.common.KeyReference getAssociateRole() {
+    public com.commercetools.history.models.common.AssociateRoleKeyReference getAssociateRole() {
         return this.associateRole;
     }
 
     /**
-     *
+     *  <p>Reference to the parent Business Unit where the assignment is defined explicitly.</p>
      */
 
-    public com.commercetools.history.models.common.KeyReference getSource() {
+    public com.commercetools.history.models.common.BusinessUnitKeyReference getSource() {
         return this.source;
     }
 
-    public void setAssociateRole(final com.commercetools.history.models.common.KeyReference associateRole) {
+    public void setAssociateRole(
+            final com.commercetools.history.models.common.AssociateRoleKeyReference associateRole) {
         this.associateRole = associateRole;
     }
 
-    public void setSource(final com.commercetools.history.models.common.KeyReference source) {
+    public void setSource(final com.commercetools.history.models.common.BusinessUnitKeyReference source) {
         this.source = source;
     }
 

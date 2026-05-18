@@ -19,6 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .lineItem(lineItemBuilder -> lineItemBuilder)
  *             .variant("{variant}")
+ *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -35,6 +36,8 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
     private com.commercetools.history.models.common.LocalizedString lineItem;
 
     private String variant;
+
+    private String lineItemId;
 
     /**
      * set the value to the change
@@ -156,13 +159,25 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
     }
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      * @param variant value to be set
      * @return Builder
      */
 
     public SetOrderLineItemCustomTypeChangeBuilder variant(final String variant) {
         this.variant = variant;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
+     * @param lineItemId value to be set
+     * @return Builder
+     */
+
+    public SetOrderLineItemCustomTypeChangeBuilder lineItemId(final String lineItemId) {
+        this.lineItemId = lineItemId;
         return this;
     }
 
@@ -203,12 +218,22 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
     }
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      * @return variant
      */
 
     public String getVariant() {
         return this.variant;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
+     * @return lineItemId
+     */
+
+    public String getLineItemId() {
+        return this.lineItemId;
     }
 
     /**
@@ -221,7 +246,9 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
         Objects.requireNonNull(nextValue, SetOrderLineItemCustomTypeChange.class + ": nextValue is missing");
         Objects.requireNonNull(lineItem, SetOrderLineItemCustomTypeChange.class + ": lineItem is missing");
         Objects.requireNonNull(variant, SetOrderLineItemCustomTypeChange.class + ": variant is missing");
-        return new SetOrderLineItemCustomTypeChangeImpl(change, previousValue, nextValue, lineItem, variant);
+        Objects.requireNonNull(lineItemId, SetOrderLineItemCustomTypeChange.class + ": lineItemId is missing");
+        return new SetOrderLineItemCustomTypeChangeImpl(change, previousValue, nextValue, lineItem, variant,
+            lineItemId);
     }
 
     /**
@@ -229,7 +256,8 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
      * @return SetOrderLineItemCustomTypeChange
      */
     public SetOrderLineItemCustomTypeChange buildUnchecked() {
-        return new SetOrderLineItemCustomTypeChangeImpl(change, previousValue, nextValue, lineItem, variant);
+        return new SetOrderLineItemCustomTypeChangeImpl(change, previousValue, nextValue, lineItem, variant,
+            lineItemId);
     }
 
     /**
@@ -252,6 +280,7 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
         builder.nextValue = template.getNextValue();
         builder.lineItem = template.getLineItem();
         builder.variant = template.getVariant();
+        builder.lineItemId = template.getLineItemId();
         return builder;
     }
 

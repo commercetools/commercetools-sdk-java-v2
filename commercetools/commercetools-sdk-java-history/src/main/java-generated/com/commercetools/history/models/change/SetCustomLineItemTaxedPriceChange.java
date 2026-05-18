@@ -8,7 +8,7 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.LocalizedString;
-import com.commercetools.history.models.common.Money;
+import com.commercetools.history.models.common.TaxedItemPrice;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -67,7 +67,7 @@ public interface SetCustomLineItemTaxedPriceChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("previousValue")
-    public Money getPreviousValue();
+    public TaxedItemPrice getPreviousValue();
 
     /**
      *  <p>Value after the change.</p>
@@ -76,7 +76,7 @@ public interface SetCustomLineItemTaxedPriceChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("nextValue")
-    public Money getNextValue();
+    public TaxedItemPrice getNextValue();
 
     /**
      *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
@@ -107,14 +107,14 @@ public interface SetCustomLineItemTaxedPriceChange extends Change {
      * @param previousValue value to be set
      */
 
-    public void setPreviousValue(final Money previousValue);
+    public void setPreviousValue(final TaxedItemPrice previousValue);
 
     /**
      *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
-    public void setNextValue(final Money nextValue);
+    public void setNextValue(final TaxedItemPrice nextValue);
 
     /**
      *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
@@ -168,8 +168,9 @@ public interface SetCustomLineItemTaxedPriceChange extends Change {
         }
         SetCustomLineItemTaxedPriceChangeImpl instance = new SetCustomLineItemTaxedPriceChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPreviousValue(com.commercetools.history.models.common.Money.deepCopy(template.getPreviousValue()));
-        instance.setNextValue(com.commercetools.history.models.common.Money.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.TaxedItemPrice.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.TaxedItemPrice.deepCopy(template.getNextValue()));
         instance.setCustomLineItem(
             com.commercetools.history.models.common.LocalizedString.deepCopy(template.getCustomLineItem()));
         instance.setCustomLineItemId(template.getCustomLineItemId());

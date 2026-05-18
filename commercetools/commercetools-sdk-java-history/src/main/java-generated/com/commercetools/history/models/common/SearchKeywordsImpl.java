@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * SearchKeywords
+ *  <p>Search keywords are JSON objects primarily used by <span>Search Term Suggestions</span>, but are also considered for a <span>full text search</span> in the Product Projection Search API. The keys are of type <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>, and the values are an array of <a href="https://docs.commercetools.com/apis/ctp:api:type:SearchKeyword" rel="nofollow">SearchKeyword</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SearchKeywordsImpl implements SearchKeywords, ModelBase {
@@ -41,7 +41,7 @@ public class SearchKeywordsImpl implements SearchKeywords, ModelBase {
     }
 
     /**
-     *
+     *  <p>Key-value pair where the keys are of type <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a> and the values are an array of <a href="https://docs.commercetools.com/apis/ctp:api:type:SearchKeyword" rel="nofollow">SearchKeyword</a>.</p>
      */
 
     public Map<String, java.util.List<com.commercetools.history.models.common.SearchKeyword>> values() {

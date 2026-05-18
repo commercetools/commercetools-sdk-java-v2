@@ -32,6 +32,7 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
 
     private Boolean markMatchingVariants;
 
+    @Deprecated
     private com.commercetools.api.models.product_search.ProductSearchProjectionParams productProjectionParameters;
 
     private java.util.List<com.commercetools.api.models.product_search.ProductSearchFacetExpression> facets;
@@ -106,9 +107,9 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
     }
 
     /**
-     *  <p>Controls data integration <span>with Product Projection parameters</span>. If not set, the result does not include the Product Projection.</p>
+     *  <p>Controls deprecated data integration <span>with Product Projection parameters</span>. If not set, the result does not include the Product Projection.</p>
      */
-
+    @Deprecated
     public com.commercetools.api.models.product_search.ProductSearchProjectionParams getProductProjectionParameters() {
         return this.productProjectionParameters;
     }
@@ -153,6 +154,7 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
         this.markMatchingVariants = markMatchingVariants;
     }
 
+    @Deprecated
     public void setProductProjectionParameters(
             final com.commercetools.api.models.product_search.ProductSearchProjectionParams productProjectionParameters) {
         this.productProjectionParameters = productProjectionParameters;

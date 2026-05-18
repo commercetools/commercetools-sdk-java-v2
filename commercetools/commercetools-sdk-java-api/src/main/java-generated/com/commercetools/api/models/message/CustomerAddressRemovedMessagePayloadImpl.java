@@ -26,13 +26,17 @@ public class CustomerAddressRemovedMessagePayloadImpl implements CustomerAddress
 
     private com.commercetools.api.models.common.Address address;
 
+    private java.util.List<com.commercetools.api.models.common.AddressRole> addressRoles;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     CustomerAddressRemovedMessagePayloadImpl(
-            @JsonProperty("address") final com.commercetools.api.models.common.Address address) {
+            @JsonProperty("address") final com.commercetools.api.models.common.Address address,
+            @JsonProperty("addressRoles") final java.util.List<com.commercetools.api.models.common.AddressRole> addressRoles) {
         this.address = address;
+        this.addressRoles = addressRoles;
         this.type = CUSTOMER_ADDRESS_REMOVED;
     }
 
@@ -59,8 +63,24 @@ public class CustomerAddressRemovedMessagePayloadImpl implements CustomerAddress
         return this.address;
     }
 
+    /**
+     *  <p>Indicates if the address was used for shipping or billing purposes.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.common.AddressRole> getAddressRoles() {
+        return this.addressRoles;
+    }
+
     public void setAddress(final com.commercetools.api.models.common.Address address) {
         this.address = address;
+    }
+
+    public void setAddressRoles(final com.commercetools.api.models.common.AddressRole... addressRoles) {
+        this.addressRoles = new ArrayList<>(Arrays.asList(addressRoles));
+    }
+
+    public void setAddressRoles(final java.util.List<com.commercetools.api.models.common.AddressRole> addressRoles) {
+        this.addressRoles = addressRoles;
     }
 
     @Override
@@ -75,20 +95,23 @@ public class CustomerAddressRemovedMessagePayloadImpl implements CustomerAddress
 
         return new EqualsBuilder().append(type, that.type)
                 .append(address, that.address)
+                .append(addressRoles, that.addressRoles)
                 .append(type, that.type)
                 .append(address, that.address)
+                .append(addressRoles, that.addressRoles)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(address).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(address).append(addressRoles).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
                 .append("address", address)
+                .append("addressRoles", addressRoles)
                 .build();
     }
 

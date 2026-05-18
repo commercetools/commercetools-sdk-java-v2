@@ -273,7 +273,7 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
     }
 
     /**
-     *  <p>Current (published) data of the ProductTailoring.</p>
+     *  <p>Current data of the ProductTailoring returned in the <span>Product Projection</span> response when the ProductTailoring is published.</p>
      * @param builder function to build the current value
      * @return Builder
      */
@@ -286,7 +286,7 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
     }
 
     /**
-     *  <p>Current (published) data of the ProductTailoring.</p>
+     *  <p>Current data of the ProductTailoring returned in the <span>Product Projection</span> response when the ProductTailoring is published.</p>
      * @param builder function to build the current value
      * @return Builder
      */
@@ -298,7 +298,7 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
     }
 
     /**
-     *  <p>Current (published) data of the ProductTailoring.</p>
+     *  <p>Current data of the ProductTailoring returned in the <span>Product Projection</span> response when the ProductTailoring is published.</p>
      * @param current value to be set
      * @return Builder
      */
@@ -310,7 +310,7 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
     }
 
     /**
-     *  <p>Staged (unpublished) data of the ProductTailoring.</p>
+     *  <p>Staged data of the ProductTailoring. This data is not returned in the Product Projection response by default.</p>
      * @param builder function to build the staged value
      * @return Builder
      */
@@ -323,7 +323,7 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
     }
 
     /**
-     *  <p>Staged (unpublished) data of the ProductTailoring.</p>
+     *  <p>Staged data of the ProductTailoring. This data is not returned in the Product Projection response by default.</p>
      * @param builder function to build the staged value
      * @return Builder
      */
@@ -335,7 +335,7 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
     }
 
     /**
-     *  <p>Staged (unpublished) data of the ProductTailoring.</p>
+     *  <p>Staged data of the ProductTailoring. This data is not returned in the Product Projection response by default.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -518,7 +518,7 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
     }
 
     /**
-     *  <p>Current (published) data of the ProductTailoring.</p>
+     *  <p>Current data of the ProductTailoring returned in the <span>Product Projection</span> response when the ProductTailoring is published.</p>
      * @return current
      */
 
@@ -527,7 +527,7 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
     }
 
     /**
-     *  <p>Staged (unpublished) data of the ProductTailoring.</p>
+     *  <p>Staged data of the ProductTailoring. This data is not returned in the Product Projection response by default.</p>
      * @return staged
      */
 

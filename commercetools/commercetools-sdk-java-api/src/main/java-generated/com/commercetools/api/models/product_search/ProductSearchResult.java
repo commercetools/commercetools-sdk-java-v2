@@ -50,10 +50,11 @@ public interface ProductSearchResult {
     public ProductSearchMatchingVariants getMatchingVariants();
 
     /**
-     *  <p>Projected data of the Product with <code>id</code>. Only present if data integration <span>with Product Projection parameters</span> is requested.</p>
+     *  <p>Projected data of the Product with <code>id</code>. Only present if deprecated data integration <span>with Product Projection parameters</span> is requested.</p>
      * @return productProjection
      */
     @Valid
+    @Deprecated
     @JsonProperty("productProjection")
     public ProductProjection getProductProjection();
 
@@ -72,10 +73,10 @@ public interface ProductSearchResult {
     public void setMatchingVariants(final ProductSearchMatchingVariants matchingVariants);
 
     /**
-     *  <p>Projected data of the Product with <code>id</code>. Only present if data integration <span>with Product Projection parameters</span> is requested.</p>
+     *  <p>Projected data of the Product with <code>id</code>. Only present if deprecated data integration <span>with Product Projection parameters</span> is requested.</p>
      * @param productProjection value to be set
      */
-
+    @Deprecated
     public void setProductProjection(final ProductProjection productProjection);
 
     /**

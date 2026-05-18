@@ -44,6 +44,9 @@ public class TransactionBuilder implements Builder<Transaction> {
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
+    @Nullable
+    private String interfaceId;
+
     /**
      *  <p>Unique identifier of the Transaction.</p>
      * @param id value to be set
@@ -170,6 +173,17 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP) in the current transaction.</p>
+     * @param interfaceId value to be set
+     * @return Builder
+     */
+
+    public TransactionBuilder interfaceId(@Nullable final String interfaceId) {
+        this.interfaceId = interfaceId;
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Transaction.</p>
      * @return id
      */
@@ -236,6 +250,16 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP) in the current transaction.</p>
+     * @return interfaceId
+     */
+
+    @Nullable
+    public String getInterfaceId() {
+        return this.interfaceId;
+    }
+
+    /**
      * builds Transaction with checking for non-null required values
      * @return Transaction
      */
@@ -244,7 +268,7 @@ public class TransactionBuilder implements Builder<Transaction> {
         Objects.requireNonNull(type, Transaction.class + ": type is missing");
         Objects.requireNonNull(amount, Transaction.class + ": amount is missing");
         Objects.requireNonNull(state, Transaction.class + ": state is missing");
-        return new TransactionImpl(id, timestamp, type, amount, interactionId, state, custom);
+        return new TransactionImpl(id, timestamp, type, amount, interactionId, state, custom, interfaceId);
     }
 
     /**
@@ -252,7 +276,7 @@ public class TransactionBuilder implements Builder<Transaction> {
      * @return Transaction
      */
     public Transaction buildUnchecked() {
-        return new TransactionImpl(id, timestamp, type, amount, interactionId, state, custom);
+        return new TransactionImpl(id, timestamp, type, amount, interactionId, state, custom, interfaceId);
     }
 
     /**
@@ -277,6 +301,7 @@ public class TransactionBuilder implements Builder<Transaction> {
         builder.interactionId = template.getInteractionId();
         builder.state = template.getState();
         builder.custom = template.getCustom();
+        builder.interfaceId = template.getInterfaceId();
         return builder;
     }
 

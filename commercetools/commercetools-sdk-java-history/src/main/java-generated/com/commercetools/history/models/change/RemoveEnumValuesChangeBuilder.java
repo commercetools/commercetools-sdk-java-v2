@@ -26,7 +26,7 @@ public class RemoveEnumValuesChangeBuilder implements Builder<RemoveEnumValuesCh
 
     private String change;
 
-    private com.commercetools.history.models.change_value.EnumValue previousValue;
+    private com.commercetools.history.models.common.AttributePlainEnumValue previousValue;
 
     private String attributeName;
 
@@ -48,8 +48,9 @@ public class RemoveEnumValuesChangeBuilder implements Builder<RemoveEnumValuesCh
      */
 
     public RemoveEnumValuesChangeBuilder previousValue(
-            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValueBuilder> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()).build();
+            Function<com.commercetools.history.models.common.AttributePlainEnumValueBuilder, com.commercetools.history.models.common.AttributePlainEnumValueBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.AttributePlainEnumValueBuilder.of())
+                .build();
         return this;
     }
 
@@ -60,8 +61,8 @@ public class RemoveEnumValuesChangeBuilder implements Builder<RemoveEnumValuesCh
      */
 
     public RemoveEnumValuesChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValue> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of());
+            Function<com.commercetools.history.models.common.AttributePlainEnumValueBuilder, com.commercetools.history.models.common.AttributePlainEnumValue> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.AttributePlainEnumValueBuilder.of());
         return this;
     }
 
@@ -72,7 +73,7 @@ public class RemoveEnumValuesChangeBuilder implements Builder<RemoveEnumValuesCh
      */
 
     public RemoveEnumValuesChangeBuilder previousValue(
-            final com.commercetools.history.models.change_value.EnumValue previousValue) {
+            final com.commercetools.history.models.common.AttributePlainEnumValue previousValue) {
         this.previousValue = previousValue;
         return this;
     }
@@ -102,7 +103,7 @@ public class RemoveEnumValuesChangeBuilder implements Builder<RemoveEnumValuesCh
      * @return previousValue
      */
 
-    public com.commercetools.history.models.change_value.EnumValue getPreviousValue() {
+    public com.commercetools.history.models.common.AttributePlainEnumValue getPreviousValue() {
         return this.previousValue;
     }
 

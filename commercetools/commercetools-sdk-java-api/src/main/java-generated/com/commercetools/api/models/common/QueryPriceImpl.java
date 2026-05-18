@@ -139,7 +139,7 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields for the Price.</p>
+     *  <p>Custom Fields of the Price.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

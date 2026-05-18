@@ -26,6 +26,14 @@ public class SetPermissionsChangeTest {
                 new Object[] { "nextValue",
                         SetPermissionsChange.builder()
                                 .nextValue(Collections.singletonList(
+                                    com.commercetools.history.models.common.Permission.findEnum("AddChildUnits"))) },
+                new Object[] { "addedItems",
+                        SetPermissionsChange.builder()
+                                .addedItems(Collections.singletonList(
+                                    com.commercetools.history.models.common.Permission.findEnum("AddChildUnits"))) },
+                new Object[] { "removedItems",
+                        SetPermissionsChange.builder()
+                                .removedItems(Collections.singletonList(
                                     com.commercetools.history.models.common.Permission.findEnum("AddChildUnits"))) } };
     }
 
@@ -52,6 +60,26 @@ public class SetPermissionsChangeTest {
         value.setNextValue(
             Collections.singletonList(com.commercetools.history.models.common.Permission.findEnum("AddChildUnits")));
         Assertions.assertThat(value.getNextValue())
+                .isEqualTo(Collections
+                        .singletonList(com.commercetools.history.models.common.Permission.findEnum("AddChildUnits")));
+    }
+
+    @Test
+    public void addedItems() {
+        SetPermissionsChange value = SetPermissionsChange.of();
+        value.setAddedItems(
+            Collections.singletonList(com.commercetools.history.models.common.Permission.findEnum("AddChildUnits")));
+        Assertions.assertThat(value.getAddedItems())
+                .isEqualTo(Collections
+                        .singletonList(com.commercetools.history.models.common.Permission.findEnum("AddChildUnits")));
+    }
+
+    @Test
+    public void removedItems() {
+        SetPermissionsChange value = SetPermissionsChange.of();
+        value.setRemovedItems(
+            Collections.singletonList(com.commercetools.history.models.common.Permission.findEnum("AddChildUnits")));
+        Assertions.assertThat(value.getRemovedItems())
                 .isEqualTo(Collections
                         .singletonList(com.commercetools.history.models.common.Permission.findEnum("AddChildUnits")));
     }

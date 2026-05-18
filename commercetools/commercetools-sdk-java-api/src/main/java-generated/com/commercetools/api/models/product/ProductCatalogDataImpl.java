@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Contains the <code>current</code> and <code>staged</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductData" rel="nofollow">ProductData</a>.</p>
+ * ProductCatalogData
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductCatalogDataImpl implements ProductCatalogData, ModelBase {
@@ -51,7 +51,7 @@ public class ProductCatalogDataImpl implements ProductCatalogData, ModelBase {
     }
 
     /**
-     *  <p><code>true</code> if the Product is published.</p>
+     *  <p>If <code>true</code>, the <code>current</code> representation of the Product is retrievable in the <span>Product Projection</span> endpoints and indexed for <span>Product Search</span>.</p>
      */
 
     public Boolean getPublished() {

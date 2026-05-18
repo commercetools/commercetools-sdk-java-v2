@@ -18,6 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .lineItemId("{lineItemId}")
+ *             .customLineItemId("{customLineItemId}")
  *             .stateId("{stateId}")
  *             .build()
  * </code></pre>
@@ -33,6 +34,8 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
     private java.util.List<com.commercetools.history.models.common.ItemState> nextValue;
 
     private String lineItemId;
+
+    private String customLineItemId;
 
     private String stateId;
 
@@ -226,13 +229,24 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
     }
 
     /**
-     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
 
     public TransitionCustomLineItemStateChangeBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
+     * @param customLineItemId value to be set
+     * @return Builder
+     */
+
+    public TransitionCustomLineItemStateChangeBuilder customLineItemId(final String customLineItemId) {
+        this.customLineItemId = customLineItemId;
         return this;
     }
 
@@ -275,12 +289,21 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
     }
 
     /**
-     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
      * @return lineItemId
      */
 
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
+     * @return customLineItemId
+     */
+
+    public String getCustomLineItemId() {
+        return this.customLineItemId;
     }
 
     /**
@@ -301,8 +324,11 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
         Objects.requireNonNull(previousValue, TransitionCustomLineItemStateChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, TransitionCustomLineItemStateChange.class + ": nextValue is missing");
         Objects.requireNonNull(lineItemId, TransitionCustomLineItemStateChange.class + ": lineItemId is missing");
+        Objects.requireNonNull(customLineItemId,
+            TransitionCustomLineItemStateChange.class + ": customLineItemId is missing");
         Objects.requireNonNull(stateId, TransitionCustomLineItemStateChange.class + ": stateId is missing");
-        return new TransitionCustomLineItemStateChangeImpl(change, previousValue, nextValue, lineItemId, stateId);
+        return new TransitionCustomLineItemStateChangeImpl(change, previousValue, nextValue, lineItemId,
+            customLineItemId, stateId);
     }
 
     /**
@@ -310,7 +336,8 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
      * @return TransitionCustomLineItemStateChange
      */
     public TransitionCustomLineItemStateChange buildUnchecked() {
-        return new TransitionCustomLineItemStateChangeImpl(change, previousValue, nextValue, lineItemId, stateId);
+        return new TransitionCustomLineItemStateChangeImpl(change, previousValue, nextValue, lineItemId,
+            customLineItemId, stateId);
     }
 
     /**
@@ -332,6 +359,7 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
         builder.lineItemId = template.getLineItemId();
+        builder.customLineItemId = template.getCustomLineItemId();
         builder.stateId = template.getStateId();
         return builder;
     }

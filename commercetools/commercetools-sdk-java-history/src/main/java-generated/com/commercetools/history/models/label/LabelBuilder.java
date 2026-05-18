@@ -55,8 +55,16 @@ public class LabelBuilder {
         return com.commercetools.history.models.label.ReviewLabelBuilder.of();
     }
 
+    public com.commercetools.history.models.label.ShippingMethodLabelBuilder shippingMethodLabelBuilder() {
+        return com.commercetools.history.models.label.ShippingMethodLabelBuilder.of();
+    }
+
     public com.commercetools.history.models.label.StagedQuoteLabelBuilder stagedQuoteLabelBuilder() {
         return com.commercetools.history.models.label.StagedQuoteLabelBuilder.of();
+    }
+
+    public com.commercetools.history.models.label.StandalonePriceLabelBuilder standalonePriceLabelBuilder() {
+        return com.commercetools.history.models.label.StandalonePriceLabelBuilder.of();
     }
 
     public com.commercetools.history.models.label.StringLabelBuilder stringLabelBuilder() {

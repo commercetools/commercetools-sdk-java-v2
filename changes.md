@@ -1,19 +1,36 @@
 **Api changes**
 
 <details>
-<summary>Required Property(s)</summary>
+<summary>Added Type(s)</summary>
 
-- changed property `variantSelection` of type `ProductSelectionProductAddedMessage` to be optional
-- changed property `variantExclusion` of type `ProductSelectionProductExcludedMessage` to be optional
-- changed property `oldVariantExclusion` of type `ProductSelectionVariantExclusionChangedMessage` to be optional
-- changed property `newVariantExclusion` of type `ProductSelectionVariantExclusionChangedMessage` to be optional
-- changed property `oldVariantSelection` of type `ProductSelectionVariantSelectionChangedMessage` to be optional
-- changed property `newVariantSelection` of type `ProductSelectionVariantSelectionChangedMessage` to be optional
-- changed property `variantSelection` of type `ProductSelectionProductAddedMessagePayload` to be optional
-- changed property `variantExclusion` of type `ProductSelectionProductExcludedMessagePayload` to be optional
-- changed property `oldVariantExclusion` of type `ProductSelectionVariantExclusionChangedMessagePayload` to be optional
-- changed property `newVariantExclusion` of type `ProductSelectionVariantExclusionChangedMessagePayload` to be optional
-- changed property `oldVariantSelection` of type `ProductSelectionVariantSelectionChangedMessagePayload` to be optional
-- changed property `newVariantSelection` of type `ProductSelectionVariantSelectionChangedMessagePayload` to be optional
+- added type `ExactLockConflictError`
+- added type `ValidityLockConflictError`
+- added type `GraphQLExactLockConflictError`
+- added type `GraphQLValidityLockConflictError`
+</details>
+
+**Import changes**
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `partiallyImported` to type `ProcessingState`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `partiallyImported` to type `OperationStates`
+</details>
+
+**Checkout changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `CountryCode`
+- added type `CurrencyCode`
+- added type `Locale`
 </details>
 

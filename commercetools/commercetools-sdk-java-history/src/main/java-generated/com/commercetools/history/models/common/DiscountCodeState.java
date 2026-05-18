@@ -11,12 +11,16 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * DiscountCodeState
+ *  <p>Indicates the state of a Discount Code in a Cart.</p>
+ *  <p>If an Order is created from a Cart with a state other than <code>MatchesCart</code> or <code>ApplicationStoppedByGroupBestDeal</code>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeNonApplicableError" rel="nofollow">DiscountCodeNonApplicable</a> error is returned.</p>
+ *  <p>For Orders created from a Cart with a <code>ApplicationStoppedByGroupBestDeal</code> state, the discount code is not applied.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface DiscountCodeState extends JsonEnum {
 
     DiscountCodeState NOT_ACTIVE = DiscountCodeStateEnum.NOT_ACTIVE;
+
+    DiscountCodeState NOT_VALID = DiscountCodeStateEnum.NOT_VALID;
 
     DiscountCodeState DOES_NOT_MATCH_CART = DiscountCodeStateEnum.DOES_NOT_MATCH_CART;
 
@@ -28,8 +32,6 @@ public interface DiscountCodeState extends JsonEnum {
 
     DiscountCodeState APPLICATION_STOPPED_BY_GROUP_BEST_DEAL = DiscountCodeStateEnum.APPLICATION_STOPPED_BY_GROUP_BEST_DEAL;
 
-    DiscountCodeState NOT_VALID = DiscountCodeStateEnum.NOT_VALID;
-
     /**
      * possible values of DiscountCodeState
      */
@@ -38,6 +40,11 @@ public interface DiscountCodeState extends JsonEnum {
          * NotActive
          */
         NOT_ACTIVE("NotActive"),
+
+        /**
+         * NotValid
+         */
+        NOT_VALID("NotValid"),
 
         /**
          * DoesNotMatchCart
@@ -62,12 +69,7 @@ public interface DiscountCodeState extends JsonEnum {
         /**
          * ApplicationStoppedByGroupBestDeal
          */
-        APPLICATION_STOPPED_BY_GROUP_BEST_DEAL("ApplicationStoppedByGroupBestDeal"),
-
-        /**
-         * NotValid
-         */
-        NOT_VALID("NotValid");
+        APPLICATION_STOPPED_BY_GROUP_BEST_DEAL("ApplicationStoppedByGroupBestDeal");
         private final String jsonName;
 
         private DiscountCodeStateEnum(final String jsonName) {

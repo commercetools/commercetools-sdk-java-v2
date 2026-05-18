@@ -17,11 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeChangeLocalizedEnumValueOrderAction" rel="nofollow">Change the order of LocalizedEnumValues</a> on Product Types.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:TypeChangeLocalizedEnumValueOrderAction" rel="nofollow">Change the order of LocalizedEnumValues</a> on Types.</li>
- *  </ul>
+ * ChangeLocalizedEnumValueOrderChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeLocalizedEnumValueOrderChangeImpl implements ChangeLocalizedEnumValueOrderChange, ModelBase {
@@ -30,9 +26,9 @@ public class ChangeLocalizedEnumValueOrderChangeImpl implements ChangeLocalizedE
 
     private String change;
 
-    private java.util.List<com.commercetools.history.models.change_value.LocalizedEnumValue> previousValue;
+    private java.util.List<com.commercetools.history.models.common.AttributeLocalizedEnumValue> previousValue;
 
-    private java.util.List<com.commercetools.history.models.change_value.LocalizedEnumValue> nextValue;
+    private java.util.List<com.commercetools.history.models.common.AttributeLocalizedEnumValue> nextValue;
 
     private String fieldName;
 
@@ -43,8 +39,8 @@ public class ChangeLocalizedEnumValueOrderChangeImpl implements ChangeLocalizedE
      */
     @JsonCreator
     ChangeLocalizedEnumValueOrderChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.change_value.LocalizedEnumValue> previousValue,
-            @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.change_value.LocalizedEnumValue> nextValue,
+            @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.AttributeLocalizedEnumValue> previousValue,
+            @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.AttributeLocalizedEnumValue> nextValue,
             @JsonProperty("fieldName") final String fieldName,
             @JsonProperty("attributeName") final String attributeName) {
         this.change = change;
@@ -82,7 +78,7 @@ public class ChangeLocalizedEnumValueOrderChangeImpl implements ChangeLocalizedE
      *  <p>Value before the change.</p>
      */
 
-    public java.util.List<com.commercetools.history.models.change_value.LocalizedEnumValue> getPreviousValue() {
+    public java.util.List<com.commercetools.history.models.common.AttributeLocalizedEnumValue> getPreviousValue() {
         return this.previousValue;
     }
 
@@ -90,7 +86,7 @@ public class ChangeLocalizedEnumValueOrderChangeImpl implements ChangeLocalizedE
      *  <p>Value after the change.</p>
      */
 
-    public java.util.List<com.commercetools.history.models.change_value.LocalizedEnumValue> getNextValue() {
+    public java.util.List<com.commercetools.history.models.common.AttributeLocalizedEnumValue> getNextValue() {
         return this.nextValue;
     }
 
@@ -115,21 +111,21 @@ public class ChangeLocalizedEnumValueOrderChangeImpl implements ChangeLocalizedE
     }
 
     public void setPreviousValue(
-            final com.commercetools.history.models.change_value.LocalizedEnumValue... previousValue) {
+            final com.commercetools.history.models.common.AttributeLocalizedEnumValue... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
     }
 
     public void setPreviousValue(
-            final java.util.List<com.commercetools.history.models.change_value.LocalizedEnumValue> previousValue) {
+            final java.util.List<com.commercetools.history.models.common.AttributeLocalizedEnumValue> previousValue) {
         this.previousValue = previousValue;
     }
 
-    public void setNextValue(final com.commercetools.history.models.change_value.LocalizedEnumValue... nextValue) {
+    public void setNextValue(final com.commercetools.history.models.common.AttributeLocalizedEnumValue... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
     }
 
     public void setNextValue(
-            final java.util.List<com.commercetools.history.models.change_value.LocalizedEnumValue> nextValue) {
+            final java.util.List<com.commercetools.history.models.common.AttributeLocalizedEnumValue> nextValue) {
         this.nextValue = nextValue;
     }
 

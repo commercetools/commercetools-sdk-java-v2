@@ -47,7 +47,7 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     }
 
     /**
-     *  <p><span>Application</span> for which the payment is executed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:checkout:type:Application" rel="nofollow">Application</a> for which the payment is executed.</p>
      * @param builder function to build the application value
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     }
 
     /**
-     *  <p><span>Application</span> for which the payment is executed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:checkout:type:Application" rel="nofollow">Application</a> for which the payment is executed.</p>
      * @param builder function to build the application value
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     }
 
     /**
-     *  <p><span>Application</span> for which the payment is executed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:checkout:type:Application" rel="nofollow">Application</a> for which the payment is executed.</p>
      * @param application value to be set
      * @return Builder
      */
@@ -179,7 +179,7 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     }
 
     /**
-     *  <p><span>Cart</span> for which the payment must be executed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> for which the payment must be executed.</p>
      * @param builder function to build the cart value
      * @return Builder
      */
@@ -191,7 +191,7 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     }
 
     /**
-     *  <p><span>Cart</span> for which the payment must be executed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> for which the payment must be executed.</p>
      * @param builder function to build the cart value
      * @return Builder
      */
@@ -203,7 +203,7 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     }
 
     /**
-     *  <p><span>Cart</span> for which the payment must be executed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> for which the payment must be executed.</p>
      * @param cart value to be set
      * @return Builder
      */
@@ -224,7 +224,7 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     }
 
     /**
-     *  <p><span>Application</span> for which the payment is executed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:checkout:type:Application" rel="nofollow">Application</a> for which the payment is executed.</p>
      * @return application
      */
 
@@ -242,7 +242,7 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     }
 
     /**
-     *  <p><span>Cart</span> for which the payment must be executed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> for which the payment must be executed.</p>
      * @return cart
      */
 

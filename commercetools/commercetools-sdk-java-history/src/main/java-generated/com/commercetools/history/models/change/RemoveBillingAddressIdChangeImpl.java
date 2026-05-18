@@ -87,7 +87,7 @@ public class RemoveBillingAddressIdChangeImpl implements RemoveBillingAddressIdC
     }
 
     /**
-     *  <p>Address removed from <code>billingAddressesIds</code>.</p>
+     *  <p>Address removed from <code>billingAddressIds</code>.</p>
      */
 
     public com.commercetools.history.models.common.Address getAddress() {

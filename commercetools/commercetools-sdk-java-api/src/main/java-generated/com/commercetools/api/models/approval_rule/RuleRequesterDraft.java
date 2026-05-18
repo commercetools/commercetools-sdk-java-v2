@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface RuleRequesterDraft extends io.vrap.rmf.base.client.Draft<RuleRequesterDraft> {
 
     /**
-     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a> that an <a href="https://docs.commercetools.com/apis/ctp:api:type" rel="nofollow">Associate</a> must hold for the Approval Rule to apply to the Orders they create.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a> that an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> must hold for the Approval Rule to apply to the Orders they create.</p>
      * @return associateRole
      */
     @NotNull
@@ -43,7 +43,7 @@ public interface RuleRequesterDraft extends io.vrap.rmf.base.client.Draft<RuleRe
     public AssociateRoleResourceIdentifier getAssociateRole();
 
     /**
-     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a> that an <a href="https://docs.commercetools.com/apis/ctp:api:type" rel="nofollow">Associate</a> must hold for the Approval Rule to apply to the Orders they create.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a> that an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> must hold for the Approval Rule to apply to the Orders they create.</p>
      * @param associateRole value to be set
      */
 

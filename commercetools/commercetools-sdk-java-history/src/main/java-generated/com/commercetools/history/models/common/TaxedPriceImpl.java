@@ -22,18 +22,26 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxedPriceImpl implements TaxedPrice, ModelBase {
 
-    private com.commercetools.history.models.common.Money totalNet;
+    private com.commercetools.history.models.common.CentPrecisionMoney totalNet;
 
-    private com.commercetools.history.models.common.Money totalGross;
+    private com.commercetools.history.models.common.CentPrecisionMoney totalGross;
+
+    private java.util.List<com.commercetools.history.models.common.TaxPortion> taxPortions;
+
+    private com.commercetools.history.models.common.CentPrecisionMoney totalTax;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    TaxedPriceImpl(@JsonProperty("totalNet") final com.commercetools.history.models.common.Money totalNet,
-            @JsonProperty("totalGross") final com.commercetools.history.models.common.Money totalGross) {
+    TaxedPriceImpl(@JsonProperty("totalNet") final com.commercetools.history.models.common.CentPrecisionMoney totalNet,
+            @JsonProperty("totalGross") final com.commercetools.history.models.common.CentPrecisionMoney totalGross,
+            @JsonProperty("taxPortions") final java.util.List<com.commercetools.history.models.common.TaxPortion> taxPortions,
+            @JsonProperty("totalTax") final com.commercetools.history.models.common.CentPrecisionMoney totalTax) {
         this.totalNet = totalNet;
         this.totalGross = totalGross;
+        this.taxPortions = taxPortions;
+        this.totalTax = totalTax;
     }
 
     /**
@@ -43,27 +51,57 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
     }
 
     /**
-     *  <p>Total net price of the Order.</p>
+     *  <p>Total net price of the Cart or Order.</p>
      */
 
-    public com.commercetools.history.models.common.Money getTotalNet() {
+    public com.commercetools.history.models.common.CentPrecisionMoney getTotalNet() {
         return this.totalNet;
     }
 
     /**
-     *  <p>Total gross price of the Order.</p>
+     *  <p>Total gross price of the Cart or Order.</p>
      */
 
-    public com.commercetools.history.models.common.Money getTotalGross() {
+    public com.commercetools.history.models.common.CentPrecisionMoney getTotalGross() {
         return this.totalGross;
     }
 
-    public void setTotalNet(final com.commercetools.history.models.common.Money totalNet) {
+    /**
+     *  <p>Taxable portions added to the total net price.</p>
+     *  <p>Calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>.</p>
+     */
+
+    public java.util.List<com.commercetools.history.models.common.TaxPortion> getTaxPortions() {
+        return this.taxPortions;
+    }
+
+    /**
+     *  <p>Total tax applicable for the Cart or Order.</p>
+     *  <p>Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
+     */
+
+    public com.commercetools.history.models.common.CentPrecisionMoney getTotalTax() {
+        return this.totalTax;
+    }
+
+    public void setTotalNet(final com.commercetools.history.models.common.CentPrecisionMoney totalNet) {
         this.totalNet = totalNet;
     }
 
-    public void setTotalGross(final com.commercetools.history.models.common.Money totalGross) {
+    public void setTotalGross(final com.commercetools.history.models.common.CentPrecisionMoney totalGross) {
         this.totalGross = totalGross;
+    }
+
+    public void setTaxPortions(final com.commercetools.history.models.common.TaxPortion... taxPortions) {
+        this.taxPortions = new ArrayList<>(Arrays.asList(taxPortions));
+    }
+
+    public void setTaxPortions(final java.util.List<com.commercetools.history.models.common.TaxPortion> taxPortions) {
+        this.taxPortions = taxPortions;
+    }
+
+    public void setTotalTax(final com.commercetools.history.models.common.CentPrecisionMoney totalTax) {
+        this.totalTax = totalTax;
     }
 
     @Override
@@ -78,20 +116,30 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
 
         return new EqualsBuilder().append(totalNet, that.totalNet)
                 .append(totalGross, that.totalGross)
+                .append(taxPortions, that.taxPortions)
+                .append(totalTax, that.totalTax)
                 .append(totalNet, that.totalNet)
                 .append(totalGross, that.totalGross)
+                .append(taxPortions, that.taxPortions)
+                .append(totalTax, that.totalTax)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(totalNet).append(totalGross).toHashCode();
+        return new HashCodeBuilder(17, 37).append(totalNet)
+                .append(totalGross)
+                .append(taxPortions)
+                .append(totalTax)
+                .toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("totalNet", totalNet)
                 .append("totalGross", totalGross)
+                .append("taxPortions", taxPortions)
+                .append("totalTax", totalTax)
                 .build();
     }
 

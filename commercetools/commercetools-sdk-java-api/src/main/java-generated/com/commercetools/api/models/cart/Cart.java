@@ -253,6 +253,14 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public CartState getCartState();
 
     /**
+     *  <p>Determines freezing behavior when <code>cartState</code> is <code>Frozen</code>.</p>
+     * @return freezeStrategy
+     */
+
+    @JsonProperty("freezeStrategy")
+    public FreezeStrategy getFreezeStrategy();
+
+    /**
      *  <p>Billing address associated with the Cart.</p>
      * @return billingAddress
      */
@@ -408,12 +416,29 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public DiscountTypeCombination getDiscountTypeCombination();
 
     /**
+     *  <p>Indicates whether the Cart has been <span>locked</span>, preventing edits.</p>
+     * @return lock
+     */
+    @Valid
+    @JsonProperty("lock")
+    public CartLock getLock();
+
+    /**
      *  <p>Number of days after the last modification before a Cart is deleted. Configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a>.</p>
      * @return deleteDaysAfterLastModification
      */
 
     @JsonProperty("deleteDaysAfterLastModification")
     public Integer getDeleteDaysAfterLastModification();
+
+    /**
+     *  <p>User-defined identifier of a purchase order.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> or Merchant to track the purchase order during the <span>quote and order flow</span>.</p>
+     * @return purchaseOrderNumber
+     */
+
+    @JsonProperty("purchaseOrderNumber")
+    public String getPurchaseOrderNumber();
 
     /**
      *  <p>Date and time (UTC) the Cart was initially created.</p>
@@ -624,6 +649,13 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setCartState(final CartState cartState);
 
     /**
+     *  <p>Determines freezing behavior when <code>cartState</code> is <code>Frozen</code>.</p>
+     * @param freezeStrategy value to be set
+     */
+
+    public void setFreezeStrategy(final FreezeStrategy freezeStrategy);
+
+    /**
      *  <p>Billing address associated with the Cart.</p>
      * @param billingAddress value to be set
      */
@@ -797,11 +829,26 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setDiscountTypeCombination(final DiscountTypeCombination discountTypeCombination);
 
     /**
+     *  <p>Indicates whether the Cart has been <span>locked</span>, preventing edits.</p>
+     * @param lock value to be set
+     */
+
+    public void setLock(final CartLock lock);
+
+    /**
      *  <p>Number of days after the last modification before a Cart is deleted. Configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a>.</p>
      * @param deleteDaysAfterLastModification value to be set
      */
 
     public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification);
+
+    /**
+     *  <p>User-defined identifier of a purchase order.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> or Merchant to track the purchase order during the <span>quote and order flow</span>.</p>
+     * @param purchaseOrderNumber value to be set
+     */
+
+    public void setPurchaseOrderNumber(final String purchaseOrderNumber);
 
     /**
      *  <p>Date and time (UTC) the Cart was initially created.</p>
@@ -870,6 +917,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
         instance.setInventoryMode(template.getInventoryMode());
         instance.setCartState(template.getCartState());
+        instance.setFreezeStrategy(template.getFreezeStrategy());
         instance.setBillingAddress(template.getBillingAddress());
         instance.setShippingAddress(template.getShippingAddress());
         instance.setShippingMode(template.getShippingMode());
@@ -888,7 +936,9 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
         instance.setOrigin(template.getOrigin());
         instance.setCustom(template.getCustom());
         instance.setDiscountTypeCombination(template.getDiscountTypeCombination());
+        instance.setLock(template.getLock());
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
+        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setLastModifiedBy(template.getLastModifiedBy());
         instance.setCreatedBy(template.getCreatedBy());
         return instance;
@@ -944,6 +994,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
         instance.setInventoryMode(template.getInventoryMode());
         instance.setCartState(template.getCartState());
+        instance.setFreezeStrategy(template.getFreezeStrategy());
         instance.setBillingAddress(com.commercetools.api.models.common.Address.deepCopy(template.getBillingAddress()));
         instance.setShippingAddress(
             com.commercetools.api.models.common.Address.deepCopy(template.getShippingAddress()));
@@ -986,7 +1037,9 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         instance.setDiscountTypeCombination(
             com.commercetools.api.models.cart.DiscountTypeCombination.deepCopy(template.getDiscountTypeCombination()));
+        instance.setLock(com.commercetools.api.models.cart.CartLock.deepCopy(template.getLock()));
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
+        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setLastModifiedBy(
             com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));

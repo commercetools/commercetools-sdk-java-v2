@@ -4,6 +4,8 @@ package com.commercetools.history.models.common;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,7 +18,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     Image image = Image.builder()
  *             .url("{url}")
  *             .dimensions(dimensionsBuilder -> dimensionsBuilder)
- *             .label("{label}")
  *             .build()
  * </code></pre>
  * </div>
@@ -28,10 +29,11 @@ public class ImageBuilder implements Builder<Image> {
 
     private com.commercetools.history.models.common.ImageDimensions dimensions;
 
+    @Nullable
     private String label;
 
     /**
-     * set the value to the url
+     *  <p>URL of the image in its original size that must be unique within a single <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param url value to be set
      * @return Builder
      */
@@ -42,7 +44,7 @@ public class ImageBuilder implements Builder<Image> {
     }
 
     /**
-     * set the value to the dimensions using the builder function
+     *  <p>Dimensions of the original image.</p>
      * @param builder function to build the dimensions value
      * @return Builder
      */
@@ -54,7 +56,7 @@ public class ImageBuilder implements Builder<Image> {
     }
 
     /**
-     * set the value to the dimensions using the builder function
+     *  <p>Dimensions of the original image.</p>
      * @param builder function to build the dimensions value
      * @return Builder
      */
@@ -66,7 +68,7 @@ public class ImageBuilder implements Builder<Image> {
     }
 
     /**
-     * set the value to the dimensions
+     *  <p>Dimensions of the original image.</p>
      * @param dimensions value to be set
      * @return Builder
      */
@@ -77,18 +79,18 @@ public class ImageBuilder implements Builder<Image> {
     }
 
     /**
-     * set the value to the label
+     *  <p>Custom label for the image.</p>
      * @param label value to be set
      * @return Builder
      */
 
-    public ImageBuilder label(final String label) {
+    public ImageBuilder label(@Nullable final String label) {
         this.label = label;
         return this;
     }
 
     /**
-     * value of url}
+     *  <p>URL of the image in its original size that must be unique within a single <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return url
      */
 
@@ -97,7 +99,7 @@ public class ImageBuilder implements Builder<Image> {
     }
 
     /**
-     * value of dimensions}
+     *  <p>Dimensions of the original image.</p>
      * @return dimensions
      */
 
@@ -106,10 +108,11 @@ public class ImageBuilder implements Builder<Image> {
     }
 
     /**
-     * value of label}
+     *  <p>Custom label for the image.</p>
      * @return label
      */
 
+    @Nullable
     public String getLabel() {
         return this.label;
     }
@@ -121,7 +124,6 @@ public class ImageBuilder implements Builder<Image> {
     public Image build() {
         Objects.requireNonNull(url, Image.class + ": url is missing");
         Objects.requireNonNull(dimensions, Image.class + ": dimensions is missing");
-        Objects.requireNonNull(label, Image.class + ": label is missing");
         return new ImageImpl(url, dimensions, label);
     }
 

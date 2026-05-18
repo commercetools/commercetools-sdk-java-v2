@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * CustomerSetExternalIdAction
+ *  <p>This action generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerExternalIdSetMessage" rel="nofollow">CustomerExternalIdSet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetExternalIdActionImpl implements CustomerSetExternalIdAction, ModelBase {

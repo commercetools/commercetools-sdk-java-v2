@@ -22,9 +22,8 @@ import jakarta.validation.constraints.NotNull;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ProductVariantChannelAvailability productVariantChannelAvailability = ProductVariantChannelAvailability.builder()
- *             .isOnStock(true)
- *             .restockableInDays(1)
- *             .availableQuantity(1)
+ *             .id("{id}")
+ *             .version(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -34,49 +33,79 @@ import jakarta.validation.constraints.NotNull;
 public interface ProductVariantChannelAvailability {
 
     /**
-     *
+     *  <p>Indicates whether a Product Variant is in stock in a specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @return isOnStock
      */
-    @NotNull
+
     @JsonProperty("isOnStock")
     public Boolean getIsOnStock();
 
     /**
-     *
+     *  <p>Number of days to restock a Product Variant once it is out of stock in a specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @return restockableInDays
      */
-    @NotNull
+
     @JsonProperty("restockableInDays")
-    public Integer getRestockableInDays();
+    public Long getRestockableInDays();
 
     /**
-     *
+     *  <p>Number of items of this Product Variant that are in stock in a specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @return availableQuantity
      */
-    @NotNull
+
     @JsonProperty("availableQuantity")
-    public Integer getAvailableQuantity();
+    public Long getAvailableQuantity();
 
     /**
-     * set isOnStock
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
+     * @return id
+     */
+    @NotNull
+    @JsonProperty("id")
+    public String getId();
+
+    /**
+     *  <p>Current version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
+     * @return version
+     */
+    @NotNull
+    @JsonProperty("version")
+    public Long getVersion();
+
+    /**
+     *  <p>Indicates whether a Product Variant is in stock in a specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @param isOnStock value to be set
      */
 
     public void setIsOnStock(final Boolean isOnStock);
 
     /**
-     * set restockableInDays
+     *  <p>Number of days to restock a Product Variant once it is out of stock in a specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @param restockableInDays value to be set
      */
 
-    public void setRestockableInDays(final Integer restockableInDays);
+    public void setRestockableInDays(final Long restockableInDays);
 
     /**
-     * set availableQuantity
+     *  <p>Number of items of this Product Variant that are in stock in a specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @param availableQuantity value to be set
      */
 
-    public void setAvailableQuantity(final Integer availableQuantity);
+    public void setAvailableQuantity(final Long availableQuantity);
+
+    /**
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
+     * @param id value to be set
+     */
+
+    public void setId(final String id);
+
+    /**
+     *  <p>Current version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
+     * @param version value to be set
+     */
+
+    public void setVersion(final Long version);
 
     /**
      * factory method
@@ -96,6 +125,8 @@ public interface ProductVariantChannelAvailability {
         instance.setIsOnStock(template.getIsOnStock());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setAvailableQuantity(template.getAvailableQuantity());
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
         return instance;
     }
 
@@ -116,6 +147,8 @@ public interface ProductVariantChannelAvailability {
         instance.setIsOnStock(template.getIsOnStock());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setAvailableQuantity(template.getAvailableQuantity());
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
         return instance;
     }
 

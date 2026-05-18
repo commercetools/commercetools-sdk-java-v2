@@ -210,7 +210,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields for the Payment.</p>
+     *  <p>Custom Fields of the Payment.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

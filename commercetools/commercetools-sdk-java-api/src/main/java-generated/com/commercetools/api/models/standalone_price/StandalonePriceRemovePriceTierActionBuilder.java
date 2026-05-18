@@ -13,7 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StandalonePriceRemovePriceTierAction standalonePriceRemovePriceTierAction = StandalonePriceRemovePriceTierAction.builder()
- *             .tierMinimumQuantity(0.3)
+ *             .minimumQuantity(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -21,26 +21,26 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceRemovePriceTierActionBuilder implements Builder<StandalonePriceRemovePriceTierAction> {
 
-    private Long tierMinimumQuantity;
+    private Long minimumQuantity;
 
     /**
      *  <p>The <code>minimumQuantity</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">PriceTier</a> to be removed from the <code>tiers</code> field of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
-     * @param tierMinimumQuantity value to be set
+     * @param minimumQuantity value to be set
      * @return Builder
      */
 
-    public StandalonePriceRemovePriceTierActionBuilder tierMinimumQuantity(final Long tierMinimumQuantity) {
-        this.tierMinimumQuantity = tierMinimumQuantity;
+    public StandalonePriceRemovePriceTierActionBuilder minimumQuantity(final Long minimumQuantity) {
+        this.minimumQuantity = minimumQuantity;
         return this;
     }
 
     /**
      *  <p>The <code>minimumQuantity</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">PriceTier</a> to be removed from the <code>tiers</code> field of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
-     * @return tierMinimumQuantity
+     * @return minimumQuantity
      */
 
-    public Long getTierMinimumQuantity() {
-        return this.tierMinimumQuantity;
+    public Long getMinimumQuantity() {
+        return this.minimumQuantity;
     }
 
     /**
@@ -48,9 +48,9 @@ public class StandalonePriceRemovePriceTierActionBuilder implements Builder<Stan
      * @return StandalonePriceRemovePriceTierAction
      */
     public StandalonePriceRemovePriceTierAction build() {
-        Objects.requireNonNull(tierMinimumQuantity,
-            StandalonePriceRemovePriceTierAction.class + ": tierMinimumQuantity is missing");
-        return new StandalonePriceRemovePriceTierActionImpl(tierMinimumQuantity);
+        Objects.requireNonNull(minimumQuantity,
+            StandalonePriceRemovePriceTierAction.class + ": minimumQuantity is missing");
+        return new StandalonePriceRemovePriceTierActionImpl(minimumQuantity);
     }
 
     /**
@@ -58,7 +58,7 @@ public class StandalonePriceRemovePriceTierActionBuilder implements Builder<Stan
      * @return StandalonePriceRemovePriceTierAction
      */
     public StandalonePriceRemovePriceTierAction buildUnchecked() {
-        return new StandalonePriceRemovePriceTierActionImpl(tierMinimumQuantity);
+        return new StandalonePriceRemovePriceTierActionImpl(minimumQuantity);
     }
 
     /**
@@ -76,7 +76,7 @@ public class StandalonePriceRemovePriceTierActionBuilder implements Builder<Stan
      */
     public static StandalonePriceRemovePriceTierActionBuilder of(final StandalonePriceRemovePriceTierAction template) {
         StandalonePriceRemovePriceTierActionBuilder builder = new StandalonePriceRemovePriceTierActionBuilder();
-        builder.tierMinimumQuantity = template.getTierMinimumQuantity();
+        builder.minimumQuantity = template.getMinimumQuantity();
         return builder;
     }
 

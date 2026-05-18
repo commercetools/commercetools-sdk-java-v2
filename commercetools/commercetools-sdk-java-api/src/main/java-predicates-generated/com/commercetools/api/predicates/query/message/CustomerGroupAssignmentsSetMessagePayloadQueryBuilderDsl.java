@@ -35,4 +35,20 @@ public class CustomerGroupAssignmentsSetMessagePayloadQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CustomerGroupAssignmentsSetMessagePayloadQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<CustomerGroupAssignmentsSetMessagePayloadQueryBuilderDsl> oldCustomerGroupAssignments(
+            Function<com.commercetools.api.predicates.query.customer.CustomerGroupAssignmentQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.customer.CustomerGroupAssignmentQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("oldCustomerGroupAssignments"))
+                    .inner(fn.apply(
+                        com.commercetools.api.predicates.query.customer.CustomerGroupAssignmentQueryBuilderDsl.of())),
+            CustomerGroupAssignmentsSetMessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<CustomerGroupAssignmentsSetMessagePayloadQueryBuilderDsl> oldCustomerGroupAssignments() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("oldCustomerGroupAssignments")),
+            p -> new CombinationQueryPredicate<>(p, CustomerGroupAssignmentsSetMessagePayloadQueryBuilderDsl::of));
+    }
+
 }

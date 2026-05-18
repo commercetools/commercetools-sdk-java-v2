@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     RecurringOrderCreatedMessagePayload recurringOrderCreatedMessagePayload = RecurringOrderCreatedMessagePayload.builder()
- *             .order(orderBuilder -> orderBuilder)
+ *             .recurringOrder(recurringOrderBuilder -> recurringOrderBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -22,51 +22,52 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RecurringOrderCreatedMessagePayloadBuilder implements Builder<RecurringOrderCreatedMessagePayload> {
 
-    private com.commercetools.api.models.recurring_order.RecurringOrder order;
+    private com.commercetools.api.models.recurring_order.RecurringOrder recurringOrder;
 
     /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was created.</p>
-     * @param builder function to build the order value
+     * @param builder function to build the recurringOrder value
      * @return Builder
      */
 
-    public RecurringOrderCreatedMessagePayloadBuilder order(
+    public RecurringOrderCreatedMessagePayloadBuilder recurringOrder(
             Function<com.commercetools.api.models.recurring_order.RecurringOrderBuilder, com.commercetools.api.models.recurring_order.RecurringOrderBuilder> builder) {
-        this.order = builder.apply(com.commercetools.api.models.recurring_order.RecurringOrderBuilder.of()).build();
+        this.recurringOrder = builder.apply(com.commercetools.api.models.recurring_order.RecurringOrderBuilder.of())
+                .build();
         return this;
     }
 
     /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was created.</p>
-     * @param builder function to build the order value
+     * @param builder function to build the recurringOrder value
      * @return Builder
      */
 
-    public RecurringOrderCreatedMessagePayloadBuilder withOrder(
+    public RecurringOrderCreatedMessagePayloadBuilder withRecurringOrder(
             Function<com.commercetools.api.models.recurring_order.RecurringOrderBuilder, com.commercetools.api.models.recurring_order.RecurringOrder> builder) {
-        this.order = builder.apply(com.commercetools.api.models.recurring_order.RecurringOrderBuilder.of());
+        this.recurringOrder = builder.apply(com.commercetools.api.models.recurring_order.RecurringOrderBuilder.of());
         return this;
     }
 
     /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was created.</p>
-     * @param order value to be set
+     * @param recurringOrder value to be set
      * @return Builder
      */
 
-    public RecurringOrderCreatedMessagePayloadBuilder order(
-            final com.commercetools.api.models.recurring_order.RecurringOrder order) {
-        this.order = order;
+    public RecurringOrderCreatedMessagePayloadBuilder recurringOrder(
+            final com.commercetools.api.models.recurring_order.RecurringOrder recurringOrder) {
+        this.recurringOrder = recurringOrder;
         return this;
     }
 
     /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was created.</p>
-     * @return order
+     * @return recurringOrder
      */
 
-    public com.commercetools.api.models.recurring_order.RecurringOrder getOrder() {
-        return this.order;
+    public com.commercetools.api.models.recurring_order.RecurringOrder getRecurringOrder() {
+        return this.recurringOrder;
     }
 
     /**
@@ -74,8 +75,9 @@ public class RecurringOrderCreatedMessagePayloadBuilder implements Builder<Recur
      * @return RecurringOrderCreatedMessagePayload
      */
     public RecurringOrderCreatedMessagePayload build() {
-        Objects.requireNonNull(order, RecurringOrderCreatedMessagePayload.class + ": order is missing");
-        return new RecurringOrderCreatedMessagePayloadImpl(order);
+        Objects.requireNonNull(recurringOrder,
+            RecurringOrderCreatedMessagePayload.class + ": recurringOrder is missing");
+        return new RecurringOrderCreatedMessagePayloadImpl(recurringOrder);
     }
 
     /**
@@ -83,7 +85,7 @@ public class RecurringOrderCreatedMessagePayloadBuilder implements Builder<Recur
      * @return RecurringOrderCreatedMessagePayload
      */
     public RecurringOrderCreatedMessagePayload buildUnchecked() {
-        return new RecurringOrderCreatedMessagePayloadImpl(order);
+        return new RecurringOrderCreatedMessagePayloadImpl(recurringOrder);
     }
 
     /**
@@ -101,7 +103,7 @@ public class RecurringOrderCreatedMessagePayloadBuilder implements Builder<Recur
      */
     public static RecurringOrderCreatedMessagePayloadBuilder of(final RecurringOrderCreatedMessagePayload template) {
         RecurringOrderCreatedMessagePayloadBuilder builder = new RecurringOrderCreatedMessagePayloadBuilder();
-        builder.order = template.getOrder();
+        builder.recurringOrder = template.getRecurringOrder();
         return builder;
     }
 

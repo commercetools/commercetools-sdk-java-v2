@@ -21,6 +21,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>For performance reasons, it is highly advisable to query for Custom Objects in a container by using the <code>container</code> field in the <code>where</code> predicate.</p>
+ *  <p>This endpoint is deprecated and replaced by the <span>Query CustomObjects in Container</span> endpoint.</p>
  *
  * <hr>
  * <div class=code-example>

@@ -23,6 +23,8 @@ import jakarta.validation.constraints.NotNull;
  * <pre><code class='java'>
  *     ResourceNotFoundError resourceNotFoundError = ResourceNotFoundError.builder()
  *             .message("{message}")
+ *             .resourceIdentifier("{resourceIdentifier}")
+ *             .resourceId("{resourceId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -46,7 +48,7 @@ public interface ResourceNotFoundError extends ErrorObject {
     public String getCode();
 
     /**
-     *  <p><code>"The Resource with ID $resourceId was not found."</code></p>
+     *  <p><code>"The Resource with $resourceIdentifier $resourceId was not found."</code></p>
      * @return message
      */
     @NotNull
@@ -54,11 +56,41 @@ public interface ResourceNotFoundError extends ErrorObject {
     public String getMessage();
 
     /**
-     *  <p><code>"The Resource with ID $resourceId was not found."</code></p>
+     *  <p>The identifier type used (e.g., <code>id</code>, <code>key</code>).</p>
+     * @return resourceIdentifier
+     */
+    @NotNull
+    @JsonProperty("resourceIdentifier")
+    public String getResourceIdentifier();
+
+    /**
+     *  <p>The actual identifier value.</p>
+     * @return resourceId
+     */
+    @NotNull
+    @JsonProperty("resourceId")
+    public String getResourceId();
+
+    /**
+     *  <p><code>"The Resource with $resourceIdentifier $resourceId was not found."</code></p>
      * @param message value to be set
      */
 
     public void setMessage(final String message);
+
+    /**
+     *  <p>The identifier type used (e.g., <code>id</code>, <code>key</code>).</p>
+     * @param resourceIdentifier value to be set
+     */
+
+    public void setResourceIdentifier(final String resourceIdentifier);
+
+    /**
+     *  <p>The actual identifier value.</p>
+     * @param resourceId value to be set
+     */
+
+    public void setResourceId(final String resourceId);
 
     /**
      * factory method
@@ -76,6 +108,8 @@ public interface ResourceNotFoundError extends ErrorObject {
     public static ResourceNotFoundError of(final ResourceNotFoundError template) {
         ResourceNotFoundErrorImpl instance = new ResourceNotFoundErrorImpl();
         instance.setMessage(template.getMessage());
+        instance.setResourceIdentifier(template.getResourceIdentifier());
+        instance.setResourceId(template.getResourceId());
         return instance;
     }
 
@@ -93,6 +127,8 @@ public interface ResourceNotFoundError extends ErrorObject {
         }
         ResourceNotFoundErrorImpl instance = new ResourceNotFoundErrorImpl();
         instance.setMessage(template.getMessage());
+        instance.setResourceIdentifier(template.getResourceIdentifier());
+        instance.setResourceId(template.getResourceId());
         return instance;
     }
 

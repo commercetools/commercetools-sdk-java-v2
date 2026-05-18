@@ -18,6 +18,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .lineItem(lineItemBuilder -> lineItemBuilder)
+ *             .lineItemId("{lineItemId}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -32,6 +34,10 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
     private com.commercetools.history.models.common.Money nextValue;
 
     private com.commercetools.history.models.common.LocalizedString lineItem;
+
+    private String lineItemId;
+
+    private String variant;
 
     /**
      * set the value to the change
@@ -152,6 +158,29 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
     }
 
     /**
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
+     * @param lineItemId value to be set
+     * @return Builder
+     */
+
+    public SetLineItemTotalPriceChangeBuilder lineItemId(final String lineItemId) {
+        this.lineItemId = lineItemId;
+        return this;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     * @return Builder
+     */
+
+    public SetLineItemTotalPriceChangeBuilder variant(final String variant) {
+        this.variant = variant;
+        return this;
+    }
+
+    /**
      * value of change}
      * @return change
      */
@@ -188,6 +217,25 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
     }
 
     /**
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
+     * @return lineItemId
+     */
+
+    public String getLineItemId() {
+        return this.lineItemId;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
+    /**
      * builds SetLineItemTotalPriceChange with checking for non-null required values
      * @return SetLineItemTotalPriceChange
      */
@@ -196,7 +244,9 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
         Objects.requireNonNull(previousValue, SetLineItemTotalPriceChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetLineItemTotalPriceChange.class + ": nextValue is missing");
         Objects.requireNonNull(lineItem, SetLineItemTotalPriceChange.class + ": lineItem is missing");
-        return new SetLineItemTotalPriceChangeImpl(change, previousValue, nextValue, lineItem);
+        Objects.requireNonNull(lineItemId, SetLineItemTotalPriceChange.class + ": lineItemId is missing");
+        Objects.requireNonNull(variant, SetLineItemTotalPriceChange.class + ": variant is missing");
+        return new SetLineItemTotalPriceChangeImpl(change, previousValue, nextValue, lineItem, lineItemId, variant);
     }
 
     /**
@@ -204,7 +254,7 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
      * @return SetLineItemTotalPriceChange
      */
     public SetLineItemTotalPriceChange buildUnchecked() {
-        return new SetLineItemTotalPriceChangeImpl(change, previousValue, nextValue, lineItem);
+        return new SetLineItemTotalPriceChangeImpl(change, previousValue, nextValue, lineItem, lineItemId, variant);
     }
 
     /**
@@ -226,6 +276,8 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
         builder.lineItem = template.getLineItem();
+        builder.lineItemId = template.getLineItemId();
+        builder.variant = template.getVariant();
         return builder;
     }
 

@@ -100,7 +100,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     *  <p>Custom Fields of the ShoppingListLineItem.</p>
+     *  <p>Custom Fields for the ShoppingListLineItem.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -112,7 +112,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     *  <p>Custom Fields of the ShoppingListLineItem.</p>
+     *  <p>Custom Fields for the ShoppingListLineItem.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -124,7 +124,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     *  <p>Custom Fields of the ShoppingListLineItem.</p>
+     *  <p>Custom Fields for the ShoppingListLineItem.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -197,7 +197,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     *  <p>Custom Fields of the ShoppingListLineItem.</p>
+     *  <p>Custom Fields for the ShoppingListLineItem.</p>
      * @return custom
      */
 

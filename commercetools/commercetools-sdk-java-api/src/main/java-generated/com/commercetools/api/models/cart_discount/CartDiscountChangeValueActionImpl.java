@@ -52,7 +52,8 @@ public class CartDiscountChangeValueActionImpl implements CartDiscountChangeValu
     }
 
     /**
-     *  <p>New value to set. When trying to set a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueGiftLineItemDraft" rel="nofollow">CartDiscountValueGiftLineItemDraft</a> an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p>
+     *  <p>New value to set.</p>
+     *  <p>When trying to set a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueGiftLineItemDraft" rel="nofollow">CartDiscountValueGiftLineItemDraft</a> an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p>
      */
 
     public com.commercetools.api.models.cart_discount.CartDiscountValueDraft getValue() {

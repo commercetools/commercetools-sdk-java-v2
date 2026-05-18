@@ -30,6 +30,8 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
 
     private Boolean isRequired;
 
+    private com.commercetools.history.models.common.AttributeLevelEnum level;
+
     private com.commercetools.history.models.common.AttributeConstraintEnum attributeConstraint;
 
     private com.commercetools.history.models.common.LocalizedString inputTip;
@@ -46,6 +48,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
             @JsonProperty("name") final String name,
             @JsonProperty("label") final com.commercetools.history.models.common.LocalizedString label,
             @JsonProperty("isRequired") final Boolean isRequired,
+            @JsonProperty("level") final com.commercetools.history.models.common.AttributeLevelEnum level,
             @JsonProperty("attributeConstraint") final com.commercetools.history.models.common.AttributeConstraintEnum attributeConstraint,
             @JsonProperty("inputTip") final com.commercetools.history.models.common.LocalizedString inputTip,
             @JsonProperty("inputHint") final com.commercetools.history.models.common.TextInputHint inputHint,
@@ -54,6 +57,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
         this.name = name;
         this.label = label;
         this.isRequired = isRequired;
+        this.level = level;
         this.attributeConstraint = attributeConstraint;
         this.inputTip = inputTip;
         this.inputHint = inputHint;
@@ -67,7 +71,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     *
+     *  <p>Describes the Type of the Attribute.</p>
      */
 
     public com.commercetools.history.models.common.AttributeType getType() {
@@ -75,7 +79,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     *  <p>The unique name of the attribute used in the API. The name must be between two and 256 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). When using the same <code>name</code> for an attribute in two or more product types all fields of the AttributeDefinition of this attribute need to be the same across the product types, otherwise an AttributeDefinitionAlreadyExists error code will be returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
+     *  <p>User-defined name of the Attribute that is unique within the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      */
 
     public String getName() {
@@ -83,7 +87,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     *
+     *  <p>Human-readable label for the Attribute.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getLabel() {
@@ -91,7 +95,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     *  <p>Whether the attribute is required to have a value.</p>
+     *  <p>If <code>true</code>, the Attribute must have a value on a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      */
 
     public Boolean getIsRequired() {
@@ -99,7 +103,15 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     *
+     *  <p>Specifies whether the Attribute is defined at the Product or Variant level.</p>
+     */
+
+    public com.commercetools.history.models.common.AttributeLevelEnum getLevel() {
+        return this.level;
+    }
+
+    /**
+     *  <p>Specifies how Attributes are validated across all variants of a Product.</p>
      */
 
     public com.commercetools.history.models.common.AttributeConstraintEnum getAttributeConstraint() {
@@ -107,7 +119,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     *
+     *  <p>Provides additional Attribute information to aid content managers configure Product details.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getInputTip() {
@@ -115,7 +127,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     *
+     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeTextType" rel="nofollow">AttributeTextType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizableTextType" rel="nofollow">AttributeLocalizableTextType</a>).</p>
      */
 
     public com.commercetools.history.models.common.TextInputHint getInputHint() {
@@ -123,7 +135,8 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     *  <p>Whether the attribute's values should generally be enabled in product search. This determines whether the value is stored in products for matching terms in the context of full-text search queries and can be used in facets &amp; filters as part of product search queries. The exact features that are enabled/disabled with this flag depend on the concrete attribute type and are described there. The max size of a searchable field is <strong>restricted to 10922 characters</strong>. This constraint is enforced at both product creation and product update. If the length of the input exceeds the maximum size an InvalidField error is returned.</p>
+     *  <p>If <code>true</code>, the Attribute's values are available in the <span>Product Search</span> or the <span>Product Projection Search</span> API for use in full-text search queries, filters, and facets. However, if an Attribute's <code>level</code> is set as <code>Product</code>, then Product Projection Search does <strong>not support</strong> the Attribute.</p>
+     *  <p>The exact features that are available with this flag depend on the specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeType" rel="nofollow">AttributeType</a>. The maximum size of a searchable field is <strong>restricted</strong> by the <span>Field content size limit</span>. This constraint is enforced at both <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/products:POST" rel="nofollow">Product creation</a> and <span>Product update</span>. If the length of the input exceeds the maximum size, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      */
 
     public Boolean getIsSearchable() {
@@ -144,6 +157,10 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
 
     public void setIsRequired(final Boolean isRequired) {
         this.isRequired = isRequired;
+    }
+
+    public void setLevel(final com.commercetools.history.models.common.AttributeLevelEnum level) {
+        this.level = level;
     }
 
     public void setAttributeConstraint(
@@ -177,6 +194,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
                 .append(name, that.name)
                 .append(label, that.label)
                 .append(isRequired, that.isRequired)
+                .append(level, that.level)
                 .append(attributeConstraint, that.attributeConstraint)
                 .append(inputTip, that.inputTip)
                 .append(inputHint, that.inputHint)
@@ -185,6 +203,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
                 .append(name, that.name)
                 .append(label, that.label)
                 .append(isRequired, that.isRequired)
+                .append(level, that.level)
                 .append(attributeConstraint, that.attributeConstraint)
                 .append(inputTip, that.inputTip)
                 .append(inputHint, that.inputHint)
@@ -198,6 +217,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
                 .append(name)
                 .append(label)
                 .append(isRequired)
+                .append(level)
                 .append(attributeConstraint)
                 .append(inputTip)
                 .append(inputHint)
@@ -211,6 +231,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
                 .append("name", name)
                 .append("label", label)
                 .append("isRequired", isRequired)
+                .append("level", level)
                 .append("attributeConstraint", attributeConstraint)
                 .append("inputTip", inputTip)
                 .append("inputHint", inputHint)

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * FieldDefinition
+ *  <p>Defines a <span>Custom Field</span> and its meta-information. This FieldDefinition is similar to an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> of <span>Product Types</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class FieldDefinitionImpl implements FieldDefinition, ModelBase {
@@ -28,7 +28,9 @@ public class FieldDefinitionImpl implements FieldDefinition, ModelBase {
 
     private com.commercetools.history.models.common.LocalizedString label;
 
-    private com.commercetools.history.models.common.TextInputHint inputHint;
+    private Boolean required;
+
+    private com.commercetools.history.models.common.TypeTextInputHint inputHint;
 
     /**
      * create instance with all properties
@@ -37,10 +39,12 @@ public class FieldDefinitionImpl implements FieldDefinition, ModelBase {
     FieldDefinitionImpl(@JsonProperty("type") final com.commercetools.history.models.common.FieldType type,
             @JsonProperty("name") final String name,
             @JsonProperty("label") final com.commercetools.history.models.common.LocalizedString label,
-            @JsonProperty("inputHint") final com.commercetools.history.models.common.TextInputHint inputHint) {
+            @JsonProperty("required") final Boolean required,
+            @JsonProperty("inputHint") final com.commercetools.history.models.common.TypeTextInputHint inputHint) {
         this.type = type;
         this.name = name;
         this.label = label;
+        this.required = required;
         this.inputHint = inputHint;
     }
 
@@ -51,7 +55,7 @@ public class FieldDefinitionImpl implements FieldDefinition, ModelBase {
     }
 
     /**
-     *
+     *  <p>Data type of the Custom Field to define.</p>
      */
 
     public com.commercetools.history.models.common.FieldType getType() {
@@ -59,7 +63,7 @@ public class FieldDefinitionImpl implements FieldDefinition, ModelBase {
     }
 
     /**
-     *  <p>The name of the field. The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). The name must be unique for a given resource type ID. In case there is a field with the same name in another type it has to have the same FieldType also.</p>
+     *  <p>Name of the Custom Field to define. Must be unique for a given <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>. In case there is a FieldDefinition with the same <code>name</code> in another <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>, both FieldDefinitions must have the same <code>type</code>.</p>
      */
 
     public String getName() {
@@ -67,7 +71,7 @@ public class FieldDefinitionImpl implements FieldDefinition, ModelBase {
     }
 
     /**
-     *
+     *  <p>A human-readable label for the field.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getLabel() {
@@ -75,10 +79,18 @@ public class FieldDefinitionImpl implements FieldDefinition, ModelBase {
     }
 
     /**
-     *
+     *  <p>Defines whether the field is required to have a value.</p>
      */
 
-    public com.commercetools.history.models.common.TextInputHint getInputHint() {
+    public Boolean getRequired() {
+        return this.required;
+    }
+
+    /**
+     *  <p>Defines the visual representation of the field in user interfaces like the Merchant Center. It is only relevant for string-based <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldTypes</a> like <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldStringType" rel="nofollow">CustomFieldStringType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedStringType" rel="nofollow">CustomFieldLocalizedStringType</a>.</p>
+     */
+
+    public com.commercetools.history.models.common.TypeTextInputHint getInputHint() {
         return this.inputHint;
     }
 
@@ -94,7 +106,11 @@ public class FieldDefinitionImpl implements FieldDefinition, ModelBase {
         this.label = label;
     }
 
-    public void setInputHint(final com.commercetools.history.models.common.TextInputHint inputHint) {
+    public void setRequired(final Boolean required) {
+        this.required = required;
+    }
+
+    public void setInputHint(final com.commercetools.history.models.common.TypeTextInputHint inputHint) {
         this.inputHint = inputHint;
     }
 
@@ -111,17 +127,24 @@ public class FieldDefinitionImpl implements FieldDefinition, ModelBase {
         return new EqualsBuilder().append(type, that.type)
                 .append(name, that.name)
                 .append(label, that.label)
+                .append(required, that.required)
                 .append(inputHint, that.inputHint)
                 .append(type, that.type)
                 .append(name, that.name)
                 .append(label, that.label)
+                .append(required, that.required)
                 .append(inputHint, that.inputHint)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(name).append(label).append(inputHint).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(name)
+                .append(label)
+                .append(required)
+                .append(inputHint)
+                .toHashCode();
     }
 
     @Override
@@ -129,6 +152,7 @@ public class FieldDefinitionImpl implements FieldDefinition, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
                 .append("name", name)
                 .append("label", label)
+                .append("required", required)
                 .append("inputHint", inputHint)
                 .build();
     }

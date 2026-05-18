@@ -537,7 +537,7 @@ public class StoreBuilder implements Builder<Store> {
      *   <li>Leave empty if all Products in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> should be available in this Store.</li>
      *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a> are provided, all the Products are available in this Store.</li>
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is available in this Store.</li>
-     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
+     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availability in this Store.</li>
      *  </ul>
      * @param productSelections value to be set
      * @return Builder
@@ -555,7 +555,7 @@ public class StoreBuilder implements Builder<Store> {
      *   <li>Leave empty if all Products in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> should be available in this Store.</li>
      *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a> are provided, all the Products are available in this Store.</li>
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is available in this Store.</li>
-     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
+     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availability in this Store.</li>
      *  </ul>
      * @param productSelections value to be set
      * @return Builder
@@ -573,7 +573,7 @@ public class StoreBuilder implements Builder<Store> {
      *   <li>Leave empty if all Products in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> should be available in this Store.</li>
      *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a> are provided, all the Products are available in this Store.</li>
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is available in this Store.</li>
-     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
+     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availability in this Store.</li>
      *  </ul>
      * @param productSelections value to be set
      * @return Builder
@@ -594,7 +594,7 @@ public class StoreBuilder implements Builder<Store> {
      *   <li>Leave empty if all Products in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> should be available in this Store.</li>
      *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a> are provided, all the Products are available in this Store.</li>
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is available in this Store.</li>
-     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
+     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availability in this Store.</li>
      *  </ul>
      * @param builder function to build the productSelections value
      * @return Builder
@@ -616,7 +616,7 @@ public class StoreBuilder implements Builder<Store> {
      *   <li>Leave empty if all Products in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> should be available in this Store.</li>
      *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a> are provided, all the Products are available in this Store.</li>
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is available in this Store.</li>
-     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
+     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availability in this Store.</li>
      *  </ul>
      * @param builder function to build the productSelections value
      * @return Builder
@@ -636,7 +636,7 @@ public class StoreBuilder implements Builder<Store> {
      *   <li>Leave empty if all Products in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> should be available in this Store.</li>
      *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a> are provided, all the Products are available in this Store.</li>
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is available in this Store.</li>
-     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
+     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availability in this Store.</li>
      *  </ul>
      * @param builder function to build the productSelections value
      * @return Builder
@@ -654,7 +654,7 @@ public class StoreBuilder implements Builder<Store> {
      *   <li>Leave empty if all Products in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> should be available in this Store.</li>
      *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a> are provided, all the Products are available in this Store.</li>
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is available in this Store.</li>
-     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
+     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availability in this Store.</li>
      *  </ul>
      * @param builder function to build the productSelections value
      * @return Builder
@@ -817,7 +817,7 @@ public class StoreBuilder implements Builder<Store> {
      *   <li>Leave empty if all Products in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> should be available in this Store.</li>
      *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a> are provided, all the Products are available in this Store.</li>
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is available in this Store.</li>
-     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
+     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availability in this Store.</li>
      *  </ul>
      * @return productSelections
      */

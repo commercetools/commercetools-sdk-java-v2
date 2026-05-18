@@ -32,6 +32,8 @@ public class RemoveImageChangeImpl implements RemoveImageChange, ModelBase {
 
     private String catalogData;
 
+    private String variant;
+
     /**
      * create instance with all properties
      */
@@ -39,11 +41,12 @@ public class RemoveImageChangeImpl implements RemoveImageChange, ModelBase {
     RemoveImageChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.Image> previousValue,
             @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.Image> nextValue,
-            @JsonProperty("catalogData") final String catalogData) {
+            @JsonProperty("catalogData") final String catalogData, @JsonProperty("variant") final String variant) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.catalogData = catalogData;
+        this.variant = variant;
         this.type = REMOVE_IMAGE_CHANGE;
     }
 
@@ -87,6 +90,7 @@ public class RemoveImageChangeImpl implements RemoveImageChange, ModelBase {
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -95,6 +99,15 @@ public class RemoveImageChangeImpl implements RemoveImageChange, ModelBase {
 
     public String getCatalogData() {
         return this.catalogData;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     */
+
+    public String getVariant() {
+        return this.variant;
     }
 
     public void setChange(final String change) {
@@ -121,6 +134,10 @@ public class RemoveImageChangeImpl implements RemoveImageChange, ModelBase {
         this.catalogData = catalogData;
     }
 
+    public void setVariant(final String variant) {
+        this.variant = variant;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -136,11 +153,13 @@ public class RemoveImageChangeImpl implements RemoveImageChange, ModelBase {
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(catalogData, that.catalogData)
+                .append(variant, that.variant)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(catalogData, that.catalogData)
+                .append(variant, that.variant)
                 .isEquals();
     }
 
@@ -151,6 +170,7 @@ public class RemoveImageChangeImpl implements RemoveImageChange, ModelBase {
                 .append(previousValue)
                 .append(nextValue)
                 .append(catalogData)
+                .append(variant)
                 .toHashCode();
     }
 
@@ -161,6 +181,7 @@ public class RemoveImageChangeImpl implements RemoveImageChange, ModelBase {
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
                 .append("catalogData", catalogData)
+                .append("variant", variant)
                 .build();
     }
 

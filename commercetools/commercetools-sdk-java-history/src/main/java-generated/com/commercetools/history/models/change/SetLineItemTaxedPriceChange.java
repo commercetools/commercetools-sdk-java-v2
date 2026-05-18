@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .lineItem(lineItemBuilder -> lineItemBuilder)
  *             .lineItemId("{lineItemId}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -96,6 +97,15 @@ public interface SetLineItemTaxedPriceChange extends Change {
     public String getLineItemId();
 
     /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+    @NotNull
+    @JsonProperty("variant")
+    public String getVariant();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -131,6 +141,14 @@ public interface SetLineItemTaxedPriceChange extends Change {
     public void setLineItemId(final String lineItemId);
 
     /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     */
+
+    public void setVariant(final String variant);
+
+    /**
      * factory method
      * @return instance of SetLineItemTaxedPriceChange
      */
@@ -150,6 +168,7 @@ public interface SetLineItemTaxedPriceChange extends Change {
         instance.setNextValue(template.getNextValue());
         instance.setLineItem(template.getLineItem());
         instance.setLineItemId(template.getLineItemId());
+        instance.setVariant(template.getVariant());
         return instance;
     }
 
@@ -172,6 +191,7 @@ public interface SetLineItemTaxedPriceChange extends Change {
         instance.setNextValue(com.commercetools.history.models.common.TaxedItemPrice.deepCopy(template.getNextValue()));
         instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
         instance.setLineItemId(template.getLineItemId());
+        instance.setVariant(template.getVariant());
         return instance;
     }
 

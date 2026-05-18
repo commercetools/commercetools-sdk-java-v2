@@ -46,30 +46,6 @@ public class ChangeProductSelectionActiveChangeBuilder implements Builder<Change
 
     /**
      *  <p>Reference to the Product Selection which was changed.</p>
-     * @param builder function to build the productSelection value
-     * @return Builder
-     */
-
-    public ChangeProductSelectionActiveChangeBuilder productSelection(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.productSelection = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Reference to the Product Selection which was changed.</p>
-     * @param builder function to build the productSelection value
-     * @return Builder
-     */
-
-    public ChangeProductSelectionActiveChangeBuilder withProductSelection(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        this.productSelection = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>Reference to the Product Selection which was changed.</p>
      * @param productSelection value to be set
      * @return Builder
      */
@@ -77,6 +53,18 @@ public class ChangeProductSelectionActiveChangeBuilder implements Builder<Change
     public ChangeProductSelectionActiveChangeBuilder productSelection(
             final com.commercetools.history.models.common.Reference productSelection) {
         this.productSelection = productSelection;
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Product Selection which was changed.</p>
+     * @param builder function to build the productSelection value
+     * @return Builder
+     */
+
+    public ChangeProductSelectionActiveChangeBuilder productSelection(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
+        this.productSelection = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 

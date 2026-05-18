@@ -24,11 +24,11 @@ public class ChangeLocalizedEnumValueOrderChangeTest {
                 new Object[] { "previousValue",
                         ChangeLocalizedEnumValueOrderChange.builder()
                                 .previousValue(Collections.singletonList(
-                                    new com.commercetools.history.models.change_value.LocalizedEnumValueImpl())) },
+                                    new com.commercetools.history.models.common.AttributeLocalizedEnumValueImpl())) },
                 new Object[] { "nextValue",
                         ChangeLocalizedEnumValueOrderChange.builder()
                                 .nextValue(Collections.singletonList(
-                                    new com.commercetools.history.models.change_value.LocalizedEnumValueImpl())) },
+                                    new com.commercetools.history.models.common.AttributeLocalizedEnumValueImpl())) },
                 new Object[] { "fieldName", ChangeLocalizedEnumValueOrderChange.builder().fieldName("fieldName") },
                 new Object[] { "attributeName",
                         ChangeLocalizedEnumValueOrderChange.builder().attributeName("attributeName") } };
@@ -45,20 +45,20 @@ public class ChangeLocalizedEnumValueOrderChangeTest {
     public void previousValue() {
         ChangeLocalizedEnumValueOrderChange value = ChangeLocalizedEnumValueOrderChange.of();
         value.setPreviousValue(
-            Collections.singletonList(new com.commercetools.history.models.change_value.LocalizedEnumValueImpl()));
+            Collections.singletonList(new com.commercetools.history.models.common.AttributeLocalizedEnumValueImpl()));
         Assertions.assertThat(value.getPreviousValue())
                 .isEqualTo(Collections
-                        .singletonList(new com.commercetools.history.models.change_value.LocalizedEnumValueImpl()));
+                        .singletonList(new com.commercetools.history.models.common.AttributeLocalizedEnumValueImpl()));
     }
 
     @Test
     public void nextValue() {
         ChangeLocalizedEnumValueOrderChange value = ChangeLocalizedEnumValueOrderChange.of();
         value.setNextValue(
-            Collections.singletonList(new com.commercetools.history.models.change_value.LocalizedEnumValueImpl()));
+            Collections.singletonList(new com.commercetools.history.models.common.AttributeLocalizedEnumValueImpl()));
         Assertions.assertThat(value.getNextValue())
                 .isEqualTo(Collections
-                        .singletonList(new com.commercetools.history.models.change_value.LocalizedEnumValueImpl()));
+                        .singletonList(new com.commercetools.history.models.common.AttributeLocalizedEnumValueImpl()));
     }
 
     @Test

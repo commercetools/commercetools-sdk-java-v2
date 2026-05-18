@@ -18,6 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue("{nextValue}")
  *             .fieldName("{fieldName}")
  *             .valueKey("{valueKey}")
+ *             .attributeName("{attributeName}")
  *             .build()
  * </code></pre>
  * </div>
@@ -34,6 +35,8 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
     private String fieldName;
 
     private String valueKey;
+
+    private String attributeName;
 
     /**
      * set the value to the change
@@ -91,6 +94,17 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
+     * @param attributeName value to be set
+     * @return Builder
+     */
+
+    public ChangeEnumValueLabelChangeBuilder attributeName(final String attributeName) {
+        this.attributeName = attributeName;
+        return this;
+    }
+
+    /**
      * value of change}
      * @return change
      */
@@ -136,6 +150,15 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
+     * @return attributeName
+     */
+
+    public String getAttributeName() {
+        return this.attributeName;
+    }
+
+    /**
      * builds ChangeEnumValueLabelChange with checking for non-null required values
      * @return ChangeEnumValueLabelChange
      */
@@ -145,7 +168,8 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
         Objects.requireNonNull(nextValue, ChangeEnumValueLabelChange.class + ": nextValue is missing");
         Objects.requireNonNull(fieldName, ChangeEnumValueLabelChange.class + ": fieldName is missing");
         Objects.requireNonNull(valueKey, ChangeEnumValueLabelChange.class + ": valueKey is missing");
-        return new ChangeEnumValueLabelChangeImpl(change, previousValue, nextValue, fieldName, valueKey);
+        Objects.requireNonNull(attributeName, ChangeEnumValueLabelChange.class + ": attributeName is missing");
+        return new ChangeEnumValueLabelChangeImpl(change, previousValue, nextValue, fieldName, valueKey, attributeName);
     }
 
     /**
@@ -153,7 +177,7 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
      * @return ChangeEnumValueLabelChange
      */
     public ChangeEnumValueLabelChange buildUnchecked() {
-        return new ChangeEnumValueLabelChangeImpl(change, previousValue, nextValue, fieldName, valueKey);
+        return new ChangeEnumValueLabelChangeImpl(change, previousValue, nextValue, fieldName, valueKey, attributeName);
     }
 
     /**
@@ -176,6 +200,7 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
         builder.nextValue = template.getNextValue();
         builder.fieldName = template.getFieldName();
         builder.valueKey = template.getValueKey();
+        builder.attributeName = template.getAttributeName();
         return builder;
     }
 

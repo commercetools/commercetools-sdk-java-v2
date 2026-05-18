@@ -34,7 +34,7 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
     private Boolean hasStagedChanges;
 
     /**
-     *  <p><code>true</code> if the Product is published.</p>
+     *  <p>If <code>true</code>, the <code>current</code> representation of the Product is retrievable in the <span>Product Projection</span> endpoints and indexed for <span>Product Search</span>.</p>
      * @param published value to be set
      * @return Builder
      */
@@ -126,7 +126,7 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
     }
 
     /**
-     *  <p><code>true</code> if the Product is published.</p>
+     *  <p>If <code>true</code>, the <code>current</code> representation of the Product is retrievable in the <span>Product Projection</span> endpoints and indexed for <span>Product Search</span>.</p>
      * @return published
      */
 

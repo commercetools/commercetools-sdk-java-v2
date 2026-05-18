@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface DiscountedLineItemPortion {
 
     /**
-     *
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> of the applicable discount on the Line Item.</p>
      * @return discount
      */
     @NotNull
@@ -43,27 +43,27 @@ public interface DiscountedLineItemPortion {
     public Reference getDiscount();
 
     /**
-     *
+     *  <p>Money value of the applicable discount.</p>
      * @return discountedAmount
      */
     @NotNull
     @Valid
     @JsonProperty("discountedAmount")
-    public Money getDiscountedAmount();
+    public TypedMoney getDiscountedAmount();
 
     /**
-     * set discount
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> of the applicable discount on the Line Item.</p>
      * @param discount value to be set
      */
 
     public void setDiscount(final Reference discount);
 
     /**
-     * set discountedAmount
+     *  <p>Money value of the applicable discount.</p>
      * @param discountedAmount value to be set
      */
 
-    public void setDiscountedAmount(final Money discountedAmount);
+    public void setDiscountedAmount(final TypedMoney discountedAmount);
 
     /**
      * factory method
@@ -100,7 +100,7 @@ public interface DiscountedLineItemPortion {
         DiscountedLineItemPortionImpl instance = new DiscountedLineItemPortionImpl();
         instance.setDiscount(com.commercetools.history.models.common.Reference.deepCopy(template.getDiscount()));
         instance.setDiscountedAmount(
-            com.commercetools.history.models.common.Money.deepCopy(template.getDiscountedAmount()));
+            com.commercetools.history.models.common.TypedMoney.deepCopy(template.getDiscountedAmount()));
         return instance;
     }
 

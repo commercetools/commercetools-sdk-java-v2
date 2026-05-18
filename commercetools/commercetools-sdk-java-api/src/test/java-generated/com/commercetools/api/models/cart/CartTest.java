@@ -62,6 +62,8 @@ public class CartTest {
                                 .inventoryMode(com.commercetools.api.models.cart.InventoryMode.findEnum("None")) },
                 new Object[] { "cartState",
                         Cart.builder().cartState(com.commercetools.api.models.cart.CartState.findEnum("Active")) },
+                new Object[] { "freezeStrategy", Cart.builder()
+                        .freezeStrategy(com.commercetools.api.models.cart.FreezeStrategy.findEnum("SoftFreeze")) },
                 new Object[] { "billingAddress",
                         Cart.builder().billingAddress(new com.commercetools.api.models.common.AddressImpl()) },
                 new Object[] { "shippingAddress",
@@ -105,7 +107,9 @@ public class CartTest {
                         Cart.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
                 new Object[] { "discountTypeCombination", Cart.builder()
                         .discountTypeCombination(new com.commercetools.api.models.cart.DiscountTypeCombinationImpl()) },
+                new Object[] { "lock", Cart.builder().lock(new com.commercetools.api.models.cart.CartLockImpl()) },
                 new Object[] { "deleteDaysAfterLastModification", Cart.builder().deleteDaysAfterLastModification(3) },
+                new Object[] { "purchaseOrderNumber", Cart.builder().purchaseOrderNumber("purchaseOrderNumber") },
                 new Object[] { "createdAt", Cart.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
                 new Object[] { "lastModifiedAt",
                         Cart.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
@@ -284,6 +288,14 @@ public class CartTest {
     }
 
     @Test
+    public void freezeStrategy() {
+        Cart value = Cart.of();
+        value.setFreezeStrategy(com.commercetools.api.models.cart.FreezeStrategy.findEnum("SoftFreeze"));
+        Assertions.assertThat(value.getFreezeStrategy())
+                .isEqualTo(com.commercetools.api.models.cart.FreezeStrategy.findEnum("SoftFreeze"));
+    }
+
+    @Test
     public void billingAddress() {
         Cart value = Cart.of();
         value.setBillingAddress(new com.commercetools.api.models.common.AddressImpl());
@@ -427,10 +439,24 @@ public class CartTest {
     }
 
     @Test
+    public void lock() {
+        Cart value = Cart.of();
+        value.setLock(new com.commercetools.api.models.cart.CartLockImpl());
+        Assertions.assertThat(value.getLock()).isEqualTo(new com.commercetools.api.models.cart.CartLockImpl());
+    }
+
+    @Test
     public void deleteDaysAfterLastModification() {
         Cart value = Cart.of();
         value.setDeleteDaysAfterLastModification(3);
         Assertions.assertThat(value.getDeleteDaysAfterLastModification()).isEqualTo(3);
+    }
+
+    @Test
+    public void purchaseOrderNumber() {
+        Cart value = Cart.of();
+        value.setPurchaseOrderNumber("purchaseOrderNumber");
+        Assertions.assertThat(value.getPurchaseOrderNumber()).isEqualTo("purchaseOrderNumber");
     }
 
     @Test

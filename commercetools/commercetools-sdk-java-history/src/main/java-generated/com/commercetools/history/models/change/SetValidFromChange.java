@@ -15,12 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountSetValidFromAction" rel="nofollow">Set Valid From</a> on Cart Discounts.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeSetValidFromAction" rel="nofollow">Set Valid From</a> on Discount Codes.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountSetValidFromAction" rel="nofollow">Set Valid From</a> on Product Discounts.</li>
- *  </ul>
+ * SetValidFromChange
  *
  * <hr>
  * Example to create an instance using the builder pattern

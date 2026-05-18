@@ -179,6 +179,18 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.BusinessUnitCustomTypeSetMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentAddedMessageBuilder businessUnitCustomerGroupAssignmentAddedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentRemovedMessageBuilder businessUnitCustomerGroupAssignmentRemovedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentsSetMessageBuilder businessUnitCustomerGroupAssignmentsSetBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentsSetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.BusinessUnitDefaultBillingAddressSetMessageBuilder businessUnitDefaultBillingAddressSetBuilder() {
         return com.commercetools.api.models.message.BusinessUnitDefaultBillingAddressSetMessageBuilder.of();
     }
@@ -255,6 +267,18 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.CartDiscountStoresSetMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.CartFrozenMessageBuilder cartFrozenBuilder() {
+        return com.commercetools.api.models.message.CartFrozenMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CartPurchaseOrderNumberSetMessageBuilder cartPurchaseOrderNumberSetBuilder() {
+        return com.commercetools.api.models.message.CartPurchaseOrderNumberSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CartUnfrozenMessageBuilder cartUnfrozenBuilder() {
+        return com.commercetools.api.models.message.CartUnfrozenMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.CategoryCreatedMessageBuilder categoryCreatedBuilder() {
         return com.commercetools.api.models.message.CategoryCreatedMessageBuilder.of();
     }
@@ -297,6 +321,14 @@ public class MessageBuilder {
 
     public com.commercetools.api.models.message.CustomerAddressRemovedMessageBuilder customerAddressRemovedBuilder() {
         return com.commercetools.api.models.message.CustomerAddressRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerBillingAddressAddedMessageBuilder customerBillingAddressAddedBuilder() {
+        return com.commercetools.api.models.message.CustomerBillingAddressAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerBillingAddressRemovedMessageBuilder customerBillingAddressRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerBillingAddressRemovedMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.CustomerCompanyNameSetMessageBuilder customerCompanyNameSetBuilder() {
@@ -355,6 +387,10 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.CustomerEmailVerifiedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.CustomerExternalIdSetMessageBuilder customerExternalIdSetBuilder() {
+        return com.commercetools.api.models.message.CustomerExternalIdSetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.CustomerFirstNameSetMessageBuilder customerFirstNameSetBuilder() {
         return com.commercetools.api.models.message.CustomerFirstNameSetMessageBuilder.of();
     }
@@ -405,6 +441,14 @@ public class MessageBuilder {
 
     public com.commercetools.api.models.message.CustomerPasswordUpdatedMessageBuilder customerPasswordUpdatedBuilder() {
         return com.commercetools.api.models.message.CustomerPasswordUpdatedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerShippingAddressAddedMessageBuilder customerShippingAddressAddedBuilder() {
+        return com.commercetools.api.models.message.CustomerShippingAddressAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerShippingAddressRemovedMessageBuilder customerShippingAddressRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerShippingAddressRemovedMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.CustomerStoresSetMessageBuilder customerStoresSetBuilder() {
@@ -607,6 +651,10 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.OrderPaymentAddedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.OrderPaymentRemovedMessageBuilder orderPaymentRemovedBuilder() {
+        return com.commercetools.api.models.message.OrderPaymentRemovedMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.OrderPaymentStateChangedMessageBuilder orderPaymentStateChangedBuilder() {
         return com.commercetools.api.models.message.OrderPaymentStateChangedMessageBuilder.of();
     }
@@ -785,6 +833,10 @@ public class MessageBuilder {
 
     public com.commercetools.api.models.message.PaymentTransactionAddedMessageBuilder paymentTransactionAddedBuilder() {
         return com.commercetools.api.models.message.PaymentTransactionAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.PaymentTransactionInterfaceIdSetMessageBuilder paymentTransactionInterfaceIdSetBuilder() {
+        return com.commercetools.api.models.message.PaymentTransactionInterfaceIdSetMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.PaymentTransactionStateChangedMessageBuilder paymentTransactionStateChangedBuilder() {
@@ -1037,6 +1089,10 @@ public class MessageBuilder {
 
     public com.commercetools.api.models.message.RecurringOrderExpiresAtSetMessageBuilder recurringOrderExpiresAtSetBuilder() {
         return com.commercetools.api.models.message.RecurringOrderExpiresAtSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.RecurringOrderFailedMessageBuilder recurringOrderFailedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderFailedMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.RecurringOrderKeySetMessageBuilder recurringOrderKeySetBuilder() {

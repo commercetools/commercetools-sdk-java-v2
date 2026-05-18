@@ -315,7 +315,7 @@
         },
         {
             "moduleName": "io.projectreactor.netty:reactor-netty-core",
-            "moduleVersion": "1.2.7",
+            "moduleVersion": "1.2.8",
             "moduleUrls": [
                 "https://github.com/reactor/reactor-netty"
             ],
@@ -328,7 +328,7 @@
         },
         {
             "moduleName": "io.projectreactor.netty:reactor-netty-http",
-            "moduleVersion": "1.2.7",
+            "moduleVersion": "1.2.8",
             "moduleUrls": [
                 "https://github.com/reactor/reactor-netty"
             ],
@@ -341,7 +341,7 @@
         },
         {
             "moduleName": "io.projectreactor:reactor-core",
-            "moduleVersion": "3.7.7",
+            "moduleVersion": "3.7.8",
             "moduleUrls": [
                 "https://github.com/reactor/reactor-core"
             ],

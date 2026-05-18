@@ -15,6 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     BusinessUnitAddressRemovedMessagePayload businessUnitAddressRemovedMessagePayload = BusinessUnitAddressRemovedMessagePayload.builder()
  *             .address(addressBuilder -> addressBuilder)
+ *             .plusAddressRoles(addressRolesBuilder -> addressRolesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -24,6 +25,8 @@ public class BusinessUnitAddressRemovedMessagePayloadBuilder
         implements Builder<BusinessUnitAddressRemovedMessagePayload> {
 
     private com.commercetools.api.models.common.Address address;
+
+    private java.util.List<com.commercetools.api.models.common.AddressRole> addressRoles;
 
     /**
      *  <p>The address that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
@@ -62,6 +65,45 @@ public class BusinessUnitAddressRemovedMessagePayloadBuilder
     }
 
     /**
+     *  <p>Indicates if the address was used for shipping or billing purposes.</p>
+     * @param addressRoles value to be set
+     * @return Builder
+     */
+
+    public BusinessUnitAddressRemovedMessagePayloadBuilder addressRoles(
+            final com.commercetools.api.models.common.AddressRole... addressRoles) {
+        this.addressRoles = new ArrayList<>(Arrays.asList(addressRoles));
+        return this;
+    }
+
+    /**
+     *  <p>Indicates if the address was used for shipping or billing purposes.</p>
+     * @param addressRoles value to be set
+     * @return Builder
+     */
+
+    public BusinessUnitAddressRemovedMessagePayloadBuilder addressRoles(
+            final java.util.List<com.commercetools.api.models.common.AddressRole> addressRoles) {
+        this.addressRoles = addressRoles;
+        return this;
+    }
+
+    /**
+     *  <p>Indicates if the address was used for shipping or billing purposes.</p>
+     * @param addressRoles value to be set
+     * @return Builder
+     */
+
+    public BusinessUnitAddressRemovedMessagePayloadBuilder plusAddressRoles(
+            final com.commercetools.api.models.common.AddressRole... addressRoles) {
+        if (this.addressRoles == null) {
+            this.addressRoles = new ArrayList<>();
+        }
+        this.addressRoles.addAll(Arrays.asList(addressRoles));
+        return this;
+    }
+
+    /**
      *  <p>The address that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return address
      */
@@ -71,12 +113,23 @@ public class BusinessUnitAddressRemovedMessagePayloadBuilder
     }
 
     /**
+     *  <p>Indicates if the address was used for shipping or billing purposes.</p>
+     * @return addressRoles
+     */
+
+    public java.util.List<com.commercetools.api.models.common.AddressRole> getAddressRoles() {
+        return this.addressRoles;
+    }
+
+    /**
      * builds BusinessUnitAddressRemovedMessagePayload with checking for non-null required values
      * @return BusinessUnitAddressRemovedMessagePayload
      */
     public BusinessUnitAddressRemovedMessagePayload build() {
         Objects.requireNonNull(address, BusinessUnitAddressRemovedMessagePayload.class + ": address is missing");
-        return new BusinessUnitAddressRemovedMessagePayloadImpl(address);
+        Objects.requireNonNull(addressRoles,
+            BusinessUnitAddressRemovedMessagePayload.class + ": addressRoles is missing");
+        return new BusinessUnitAddressRemovedMessagePayloadImpl(address, addressRoles);
     }
 
     /**
@@ -84,7 +137,7 @@ public class BusinessUnitAddressRemovedMessagePayloadBuilder
      * @return BusinessUnitAddressRemovedMessagePayload
      */
     public BusinessUnitAddressRemovedMessagePayload buildUnchecked() {
-        return new BusinessUnitAddressRemovedMessagePayloadImpl(address);
+        return new BusinessUnitAddressRemovedMessagePayloadImpl(address, addressRoles);
     }
 
     /**
@@ -104,6 +157,7 @@ public class BusinessUnitAddressRemovedMessagePayloadBuilder
             final BusinessUnitAddressRemovedMessagePayload template) {
         BusinessUnitAddressRemovedMessagePayloadBuilder builder = new BusinessUnitAddressRemovedMessagePayloadBuilder();
         builder.address = template.getAddress();
+        builder.addressRoles = template.getAddressRoles();
         return builder;
     }
 

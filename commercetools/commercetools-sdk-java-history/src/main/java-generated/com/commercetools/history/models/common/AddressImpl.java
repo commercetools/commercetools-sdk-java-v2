@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * Address
+ *  <p>Address type returned by read methods. Optionally, the <code>custom</code> field can be present in addition to the fields of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BaseAddress" rel="nofollow">BaseAddress</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddressImpl implements Address, ModelBase {
@@ -25,6 +25,8 @@ public class AddressImpl implements Address, ModelBase {
     private String id;
 
     private String key;
+
+    private String country;
 
     private String title;
 
@@ -48,8 +50,6 @@ public class AddressImpl implements Address, ModelBase {
 
     private String state;
 
-    private String country;
-
     private String company;
 
     private String department;
@@ -72,27 +72,31 @@ public class AddressImpl implements Address, ModelBase {
 
     private String externalId;
 
+    private com.commercetools.history.models.common.CustomFields custom;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     AddressImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key,
-            @JsonProperty("title") final String title, @JsonProperty("salutation") final String salutation,
-            @JsonProperty("firstName") final String firstName, @JsonProperty("lastName") final String lastName,
-            @JsonProperty("streetName") final String streetName,
+            @JsonProperty("country") final String country, @JsonProperty("title") final String title,
+            @JsonProperty("salutation") final String salutation, @JsonProperty("firstName") final String firstName,
+            @JsonProperty("lastName") final String lastName, @JsonProperty("streetName") final String streetName,
             @JsonProperty("streetNumber") final String streetNumber,
             @JsonProperty("additionalStreetInfo") final String additionalStreetInfo,
             @JsonProperty("postalCode") final String postalCode, @JsonProperty("city") final String city,
             @JsonProperty("region") final String region, @JsonProperty("state") final String state,
-            @JsonProperty("country") final String country, @JsonProperty("company") final String company,
-            @JsonProperty("department") final String department, @JsonProperty("building") final String building,
-            @JsonProperty("apartment") final String apartment, @JsonProperty("pOBox") final String pOBox,
-            @JsonProperty("phone") final String phone, @JsonProperty("mobile") final String mobile,
-            @JsonProperty("email") final String email, @JsonProperty("fax") final String fax,
+            @JsonProperty("company") final String company, @JsonProperty("department") final String department,
+            @JsonProperty("building") final String building, @JsonProperty("apartment") final String apartment,
+            @JsonProperty("pOBox") final String pOBox, @JsonProperty("phone") final String phone,
+            @JsonProperty("mobile") final String mobile, @JsonProperty("email") final String email,
+            @JsonProperty("fax") final String fax,
             @JsonProperty("additionalAddressInfo") final String additionalAddressInfo,
-            @JsonProperty("externalId") final String externalId) {
+            @JsonProperty("externalId") final String externalId,
+            @JsonProperty("custom") final com.commercetools.history.models.common.CustomFields custom) {
         this.id = id;
         this.key = key;
+        this.country = country;
         this.title = title;
         this.salutation = salutation;
         this.firstName = firstName;
@@ -104,7 +108,6 @@ public class AddressImpl implements Address, ModelBase {
         this.city = city;
         this.region = region;
         this.state = state;
-        this.country = country;
         this.company = company;
         this.department = department;
         this.building = building;
@@ -116,6 +119,7 @@ public class AddressImpl implements Address, ModelBase {
         this.fax = fax;
         this.additionalAddressInfo = additionalAddressInfo;
         this.externalId = externalId;
+        this.custom = custom;
     }
 
     /**
@@ -125,7 +129,8 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *  <p>Unique ID of the Address.</p>
+     *  <p>Unique identifier of the Address.</p>
+     *  <p>It is not recommended to set it manually since the API overwrites this ID when creating an Address for a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>. Use <code>key</code> instead and omit this field from the request to let the API generate the ID for the Address.</p>
      */
 
     public String getId() {
@@ -133,7 +138,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined identifier of the Address that must be unique when multiple addresses are referenced in <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnits</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customers</a>, and <code>itemShippingAddresses</code> (LineItem-specific addresses) of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a>.</p>
      */
 
     public String getKey() {
@@ -141,95 +146,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
-     */
-
-    public String getTitle() {
-        return this.title;
-    }
-
-    /**
-     *
-     */
-
-    public String getSalutation() {
-        return this.salutation;
-    }
-
-    /**
-     *
-     */
-
-    public String getFirstName() {
-        return this.firstName;
-    }
-
-    /**
-     *
-     */
-
-    public String getLastName() {
-        return this.lastName;
-    }
-
-    /**
-     *
-     */
-
-    public String getStreetName() {
-        return this.streetName;
-    }
-
-    /**
-     *
-     */
-
-    public String getStreetNumber() {
-        return this.streetNumber;
-    }
-
-    /**
-     *
-     */
-
-    public String getAdditionalStreetInfo() {
-        return this.additionalStreetInfo;
-    }
-
-    /**
-     *
-     */
-
-    public String getPostalCode() {
-        return this.postalCode;
-    }
-
-    /**
-     *
-     */
-
-    public String getCity() {
-        return this.city;
-    }
-
-    /**
-     *
-     */
-
-    public String getRegion() {
-        return this.region;
-    }
-
-    /**
-     *
-     */
-
-    public String getState() {
-        return this.state;
-    }
-
-    /**
-     *  <p>Two-digit country code as per <span>ISO 3166-1 alpha-2</span>.</p>
+     *  <p>Name of the country.</p>
      */
 
     public String getCountry() {
@@ -237,7 +154,95 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Title of the contact, for example 'Dr.'</p>
+     */
+
+    public String getTitle() {
+        return this.title;
+    }
+
+    /**
+     *  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>
+     */
+
+    public String getSalutation() {
+        return this.salutation;
+    }
+
+    /**
+     *  <p>Given name (first name) of the contact.</p>
+     */
+
+    public String getFirstName() {
+        return this.firstName;
+    }
+
+    /**
+     *  <p>Family name (last name) of the contact.</p>
+     */
+
+    public String getLastName() {
+        return this.lastName;
+    }
+
+    /**
+     *  <p>Name of the street.</p>
+     */
+
+    public String getStreetName() {
+        return this.streetName;
+    }
+
+    /**
+     *  <p>Street number.</p>
+     */
+
+    public String getStreetNumber() {
+        return this.streetNumber;
+    }
+
+    /**
+     *  <p>Further information on the street address.</p>
+     */
+
+    public String getAdditionalStreetInfo() {
+        return this.additionalStreetInfo;
+    }
+
+    /**
+     *  <p>Postal code.</p>
+     */
+
+    public String getPostalCode() {
+        return this.postalCode;
+    }
+
+    /**
+     *  <p>Name of the city.</p>
+     */
+
+    public String getCity() {
+        return this.city;
+    }
+
+    /**
+     *  <p>Name of the region.</p>
+     */
+
+    public String getRegion() {
+        return this.region;
+    }
+
+    /**
+     *  <p>Name of the state, for example, Colorado.</p>
+     */
+
+    public String getState() {
+        return this.state;
+    }
+
+    /**
+     *  <p>Name of the company.</p>
      */
 
     public String getCompany() {
@@ -245,7 +250,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the department.</p>
      */
 
     public String getDepartment() {
@@ -253,7 +258,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Number or name of the building.</p>
      */
 
     public String getBuilding() {
@@ -261,7 +266,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Number or name of the apartment.</p>
      */
 
     public String getApartment() {
@@ -269,7 +274,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Post office box number.</p>
      */
 
     public String getPOBox() {
@@ -277,7 +282,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Phone number of the contact.</p>
      */
 
     public String getPhone() {
@@ -285,7 +290,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Mobile phone number of the contact.</p>
      */
 
     public String getMobile() {
@@ -293,7 +298,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Email address of the contact.</p>
      */
 
     public String getEmail() {
@@ -301,7 +306,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Fax number of the contact.</p>
      */
 
     public String getFax() {
@@ -309,7 +314,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>Further information on the Address.</p>
      */
 
     public String getAdditionalAddressInfo() {
@@ -317,11 +322,19 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *
+     *  <p>ID for the contact used in an external system.</p>
      */
 
     public String getExternalId() {
         return this.externalId;
+    }
+
+    /**
+     *  <p>Custom Fields defined for the Address.</p>
+     */
+
+    public com.commercetools.history.models.common.CustomFields getCustom() {
+        return this.custom;
     }
 
     public void setId(final String id) {
@@ -330,6 +343,10 @@ public class AddressImpl implements Address, ModelBase {
 
     public void setKey(final String key) {
         this.key = key;
+    }
+
+    public void setCountry(final String country) {
+        this.country = country;
     }
 
     public void setTitle(final String title) {
@@ -376,10 +393,6 @@ public class AddressImpl implements Address, ModelBase {
         this.state = state;
     }
 
-    public void setCountry(final String country) {
-        this.country = country;
-    }
-
     public void setCompany(final String company) {
         this.company = company;
     }
@@ -424,6 +437,10 @@ public class AddressImpl implements Address, ModelBase {
         this.externalId = externalId;
     }
 
+    public void setCustom(final com.commercetools.history.models.common.CustomFields custom) {
+        this.custom = custom;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -436,6 +453,7 @@ public class AddressImpl implements Address, ModelBase {
 
         return new EqualsBuilder().append(id, that.id)
                 .append(key, that.key)
+                .append(country, that.country)
                 .append(title, that.title)
                 .append(salutation, that.salutation)
                 .append(firstName, that.firstName)
@@ -447,7 +465,6 @@ public class AddressImpl implements Address, ModelBase {
                 .append(city, that.city)
                 .append(region, that.region)
                 .append(state, that.state)
-                .append(country, that.country)
                 .append(company, that.company)
                 .append(department, that.department)
                 .append(building, that.building)
@@ -459,8 +476,10 @@ public class AddressImpl implements Address, ModelBase {
                 .append(fax, that.fax)
                 .append(additionalAddressInfo, that.additionalAddressInfo)
                 .append(externalId, that.externalId)
+                .append(custom, that.custom)
                 .append(id, that.id)
                 .append(key, that.key)
+                .append(country, that.country)
                 .append(title, that.title)
                 .append(salutation, that.salutation)
                 .append(firstName, that.firstName)
@@ -472,7 +491,6 @@ public class AddressImpl implements Address, ModelBase {
                 .append(city, that.city)
                 .append(region, that.region)
                 .append(state, that.state)
-                .append(country, that.country)
                 .append(company, that.company)
                 .append(department, that.department)
                 .append(building, that.building)
@@ -484,6 +502,7 @@ public class AddressImpl implements Address, ModelBase {
                 .append(fax, that.fax)
                 .append(additionalAddressInfo, that.additionalAddressInfo)
                 .append(externalId, that.externalId)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -491,6 +510,7 @@ public class AddressImpl implements Address, ModelBase {
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(id)
                 .append(key)
+                .append(country)
                 .append(title)
                 .append(salutation)
                 .append(firstName)
@@ -502,7 +522,6 @@ public class AddressImpl implements Address, ModelBase {
                 .append(city)
                 .append(region)
                 .append(state)
-                .append(country)
                 .append(company)
                 .append(department)
                 .append(building)
@@ -514,6 +533,7 @@ public class AddressImpl implements Address, ModelBase {
                 .append(fax)
                 .append(additionalAddressInfo)
                 .append(externalId)
+                .append(custom)
                 .toHashCode();
     }
 
@@ -521,6 +541,7 @@ public class AddressImpl implements Address, ModelBase {
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
                 .append("key", key)
+                .append("country", country)
                 .append("title", title)
                 .append("salutation", salutation)
                 .append("firstName", firstName)
@@ -532,7 +553,6 @@ public class AddressImpl implements Address, ModelBase {
                 .append("city", city)
                 .append("region", region)
                 .append("state", state)
-                .append("country", country)
                 .append("company", company)
                 .append("department", department)
                 .append("building", building)
@@ -544,6 +564,7 @@ public class AddressImpl implements Address, ModelBase {
                 .append("fax", fax)
                 .append("additionalAddressInfo", additionalAddressInfo)
                 .append("externalId", externalId)
+                .append("custom", custom)
                 .build();
     }
 

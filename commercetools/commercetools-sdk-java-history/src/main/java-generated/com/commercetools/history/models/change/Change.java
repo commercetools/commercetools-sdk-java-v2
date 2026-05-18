@@ -43,7 +43,7 @@ public interface Change {
     public String getType();
 
     /**
-     *  <p><span>Type of change</span> on a resource that is similar to the update action it relates to, where possible. It is not a unique identifier for the data structure, for example, the <code>setDescription</code> change can occur with a localized and non-localized representation.</p>
+     *  <p>Change type on a resource that is similar to the update action it relates to, where possible. It is not a unique identifier for the data structure, for example, the <code>setDescription</code> change can occur with a localized and non-localized representation.</p>
      *  <p><a href="https://docs.commercetools.com/apis/ctp:history:type:Record" rel="nofollow">Records</a> can be filtered by this value using the <code>changes</code> query parameter.</p>
      * @return change
      */
@@ -52,7 +52,7 @@ public interface Change {
     public String getChange();
 
     /**
-     *  <p><span>Type of change</span> on a resource that is similar to the update action it relates to, where possible. It is not a unique identifier for the data structure, for example, the <code>setDescription</code> change can occur with a localized and non-localized representation.</p>
+     *  <p>Change type on a resource that is similar to the update action it relates to, where possible. It is not a unique identifier for the data structure, for example, the <code>setDescription</code> change can occur with a localized and non-localized representation.</p>
      *  <p><a href="https://docs.commercetools.com/apis/ctp:history:type:Record" rel="nofollow">Records</a> can be filtered by this value using the <code>changes</code> query parameter.</p>
      * @param change value to be set
      */
@@ -297,6 +297,14 @@ public interface Change {
     }
 
     /**
+     * builder for addShippingChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.AddShippingChangeBuilder addShippingChangeBuilder() {
+        return com.commercetools.history.models.change.AddShippingChangeBuilder.of();
+    }
+
+    /**
      * builder for addShoppingListLineItemChange subtype
      * @return builder
      */
@@ -377,6 +385,14 @@ public interface Change {
     }
 
     /**
+     * builder for changeApprovalRuleModeChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ChangeApprovalRuleModeChangeBuilder changeApprovalRuleModeChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeApprovalRuleModeChangeBuilder.of();
+    }
+
+    /**
      * builder for changeAssetNameChange subtype
      * @return builder
      */
@@ -449,6 +465,14 @@ public interface Change {
     }
 
     /**
+     * builder for changeCustomLineItemPriceRoundingModeChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ChangeCustomLineItemPriceRoundingModeChangeBuilder changeCustomLineItemPriceRoundingModeChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeCustomLineItemPriceRoundingModeChangeBuilder.of();
+    }
+
+    /**
      * builder for changeCustomLineItemQuantityChange subtype
      * @return builder
      */
@@ -457,11 +481,27 @@ public interface Change {
     }
 
     /**
+     * builder for changeCustomerChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ChangeCustomerChangeBuilder changeCustomerChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeCustomerChangeBuilder.of();
+    }
+
+    /**
      * builder for changeDescriptionChange subtype
      * @return builder
      */
     public static com.commercetools.history.models.change.ChangeDescriptionChangeBuilder changeDescriptionChangeBuilder() {
         return com.commercetools.history.models.change.ChangeDescriptionChangeBuilder.of();
+    }
+
+    /**
+     * builder for changeDiscountTypeCombinationChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ChangeDiscountTypeCombinationChangeBuilder changeDiscountTypeCombinationChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeDiscountTypeCombinationChangeBuilder.of();
     }
 
     /**
@@ -502,6 +542,14 @@ public interface Change {
      */
     public static com.commercetools.history.models.change.ChangeGroupsChangeBuilder changeGroupsChangeBuilder() {
         return com.commercetools.history.models.change.ChangeGroupsChangeBuilder.of();
+    }
+
+    /**
+     * builder for changeIncludedInStatisticsChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ChangeIncludedInStatisticsChangeBuilder changeIncludedInStatisticsChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeIncludedInStatisticsChangeBuilder.of();
     }
 
     /**
@@ -558,6 +606,38 @@ public interface Change {
      */
     public static com.commercetools.history.models.change.ChangeLabelChangeBuilder changeLabelChangeBuilder() {
         return com.commercetools.history.models.change.ChangeLabelChangeBuilder.of();
+    }
+
+    /**
+     * builder for changeLastVariantIdChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ChangeLastVariantIdChangeBuilder changeLastVariantIdChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeLastVariantIdChangeBuilder.of();
+    }
+
+    /**
+     * builder for changeLineItemNameChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ChangeLineItemNameChangeBuilder changeLineItemNameChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeLineItemNameChangeBuilder.of();
+    }
+
+    /**
+     * builder for changeLineItemPriceRoundingModeChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ChangeLineItemPriceRoundingModeChangeBuilder changeLineItemPriceRoundingModeChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeLineItemPriceRoundingModeChangeBuilder.of();
+    }
+
+    /**
+     * builder for changeLineItemPublishedChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ChangeLineItemPublishedChangeBuilder changeLineItemPublishedChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeLineItemPublishedChangeBuilder.of();
     }
 
     /**
@@ -686,6 +766,14 @@ public interface Change {
      */
     public static com.commercetools.history.models.change.ChangePriceChangeBuilder changePriceChangeBuilder() {
         return com.commercetools.history.models.change.ChangePriceChangeBuilder.of();
+    }
+
+    /**
+     * builder for changePriceRoundingModeChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ChangePriceRoundingModeChangeBuilder changePriceRoundingModeChangeBuilder() {
+        return com.commercetools.history.models.change.ChangePriceRoundingModeChangeBuilder.of();
     }
 
     /**
@@ -865,6 +953,14 @@ public interface Change {
     }
 
     /**
+     * builder for changeTopLevelUnitChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ChangeTopLevelUnitChangeBuilder changeTopLevelUnitChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeTopLevelUnitChangeBuilder.of();
+    }
+
+    /**
      * builder for changeTransactionInteractionIdChange subtype
      * @return builder
      */
@@ -894,6 +990,14 @@ public interface Change {
      */
     public static com.commercetools.history.models.change.ChangeValueChangeBuilder changeValueChangeBuilder() {
         return com.commercetools.history.models.change.ChangeValueChangeBuilder.of();
+    }
+
+    /**
+     * builder for excludeProductChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ExcludeProductChangeBuilder excludeProductChangeBuilder() {
+        return com.commercetools.history.models.change.ExcludeProductChangeBuilder.of();
     }
 
     /**
@@ -1113,6 +1217,14 @@ public interface Change {
     }
 
     /**
+     * builder for removeShippingChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.RemoveShippingChangeBuilder removeShippingChangeBuilder() {
+        return com.commercetools.history.models.change.RemoveShippingChangeBuilder.of();
+    }
+
+    /**
      * builder for removeShoppingListLineItemChange subtype
      * @return builder
      */
@@ -1153,11 +1265,35 @@ public interface Change {
     }
 
     /**
+     * builder for replaceTaxRateChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ReplaceTaxRateChangeBuilder replaceTaxRateChangeBuilder() {
+        return com.commercetools.history.models.change.ReplaceTaxRateChangeBuilder.of();
+    }
+
+    /**
      * builder for requestQuoteRenegotiationChange subtype
      * @return builder
      */
     public static com.commercetools.history.models.change.RequestQuoteRenegotiationChangeBuilder requestQuoteRenegotiationChangeBuilder() {
         return com.commercetools.history.models.change.RequestQuoteRenegotiationChangeBuilder.of();
+    }
+
+    /**
+     * builder for revertStagedChangesChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.RevertStagedChangesChangeBuilder revertStagedChangesChangeBuilder() {
+        return com.commercetools.history.models.change.RevertStagedChangesChangeBuilder.of();
+    }
+
+    /**
+     * builder for revertStagedVariantChangesChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.RevertStagedVariantChangesChangeBuilder revertStagedVariantChangesChangeBuilder() {
+        return com.commercetools.history.models.change.RevertStagedVariantChangesChangeBuilder.of();
     }
 
     /**
@@ -1182,6 +1318,14 @@ public interface Change {
      */
     public static com.commercetools.history.models.change.SetAddressCustomTypeChangeBuilder setAddressCustomTypeChangeBuilder() {
         return com.commercetools.history.models.change.SetAddressCustomTypeChangeBuilder.of();
+    }
+
+    /**
+     * builder for setAncestorsChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetAncestorsChangeBuilder setAncestorsChangeBuilder() {
+        return com.commercetools.history.models.change.SetAncestorsChangeBuilder.of();
     }
 
     /**
@@ -1249,6 +1393,14 @@ public interface Change {
     }
 
     /**
+     * builder for setAssociatesChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetAssociatesChangeBuilder setAssociatesChangeBuilder() {
+        return com.commercetools.history.models.change.SetAssociatesChangeBuilder.of();
+    }
+
+    /**
      * builder for setAttributeChange subtype
      * @return builder
      */
@@ -1278,6 +1430,30 @@ public interface Change {
      */
     public static com.commercetools.history.models.change.SetBillingAddressChangeBuilder setBillingAddressChangeBuilder() {
         return com.commercetools.history.models.change.SetBillingAddressChangeBuilder.of();
+    }
+
+    /**
+     * builder for setBillingAddressCustomFieldChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetBillingAddressCustomFieldChangeBuilder setBillingAddressCustomFieldChangeBuilder() {
+        return com.commercetools.history.models.change.SetBillingAddressCustomFieldChangeBuilder.of();
+    }
+
+    /**
+     * builder for setBillingAddressCustomTypeChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetBillingAddressCustomTypeChangeBuilder setBillingAddressCustomTypeChangeBuilder() {
+        return com.commercetools.history.models.change.SetBillingAddressCustomTypeChangeBuilder.of();
+    }
+
+    /**
+     * builder for setBusinessUnitChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetBusinessUnitChangeBuilder setBusinessUnitChangeBuilder() {
+        return com.commercetools.history.models.change.SetBusinessUnitChangeBuilder.of();
     }
 
     /**
@@ -1358,6 +1534,22 @@ public interface Change {
      */
     public static com.commercetools.history.models.change.SetCustomLineItemCustomTypeChangeBuilder setCustomLineItemCustomTypeChangeBuilder() {
         return com.commercetools.history.models.change.SetCustomLineItemCustomTypeChangeBuilder.of();
+    }
+
+    /**
+     * builder for setCustomLineItemDiscountedPriceChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetCustomLineItemDiscountedPriceChangeBuilder setCustomLineItemDiscountedPriceChangeBuilder() {
+        return com.commercetools.history.models.change.SetCustomLineItemDiscountedPriceChangeBuilder.of();
+    }
+
+    /**
+     * builder for setCustomLineItemDiscountedPricePerQuantityChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetCustomLineItemDiscountedPricePerQuantityChangeBuilder setCustomLineItemDiscountedPricePerQuantityChangeBuilder() {
+        return com.commercetools.history.models.change.SetCustomLineItemDiscountedPricePerQuantityChangeBuilder.of();
     }
 
     /**
@@ -1449,6 +1641,14 @@ public interface Change {
     }
 
     /**
+     * builder for setCustomerGroupAssignmentsChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetCustomerGroupAssignmentsChangeBuilder setCustomerGroupAssignmentsChangeBuilder() {
+        return com.commercetools.history.models.change.SetCustomerGroupAssignmentsChangeBuilder.of();
+    }
+
+    /**
      * builder for setCustomerGroupChange subtype
      * @return builder
      */
@@ -1513,6 +1713,38 @@ public interface Change {
     }
 
     /**
+     * builder for setDeliveryAddressCustomFieldChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetDeliveryAddressCustomFieldChangeBuilder setDeliveryAddressCustomFieldChangeBuilder() {
+        return com.commercetools.history.models.change.SetDeliveryAddressCustomFieldChangeBuilder.of();
+    }
+
+    /**
+     * builder for setDeliveryAddressCustomTypeChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetDeliveryAddressCustomTypeChangeBuilder setDeliveryAddressCustomTypeChangeBuilder() {
+        return com.commercetools.history.models.change.SetDeliveryAddressCustomTypeChangeBuilder.of();
+    }
+
+    /**
+     * builder for setDeliveryCustomFieldChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetDeliveryCustomFieldChangeBuilder setDeliveryCustomFieldChangeBuilder() {
+        return com.commercetools.history.models.change.SetDeliveryCustomFieldChangeBuilder.of();
+    }
+
+    /**
+     * builder for setDeliveryCustomTypeChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetDeliveryCustomTypeChangeBuilder setDeliveryCustomTypeChangeBuilder() {
+        return com.commercetools.history.models.change.SetDeliveryCustomTypeChangeBuilder.of();
+    }
+
+    /**
      * builder for setDeliveryItemsChange subtype
      * @return builder
      */
@@ -1526,6 +1758,22 @@ public interface Change {
      */
     public static com.commercetools.history.models.change.SetDescriptionChangeBuilder setDescriptionChangeBuilder() {
         return com.commercetools.history.models.change.SetDescriptionChangeBuilder.of();
+    }
+
+    /**
+     * builder for setDirectDiscountsChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetDirectDiscountsChangeBuilder setDirectDiscountsChangeBuilder() {
+        return com.commercetools.history.models.change.SetDirectDiscountsChangeBuilder.of();
+    }
+
+    /**
+     * builder for setDiscountOnTotalPriceChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetDiscountOnTotalPriceChangeBuilder setDiscountOnTotalPriceChangeBuilder() {
+        return com.commercetools.history.models.change.SetDiscountOnTotalPriceChangeBuilder.of();
     }
 
     /**
@@ -1585,6 +1833,22 @@ public interface Change {
     }
 
     /**
+     * builder for setInheritedAssociatesChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetInheritedAssociatesChangeBuilder setInheritedAssociatesChangeBuilder() {
+        return com.commercetools.history.models.change.SetInheritedAssociatesChangeBuilder.of();
+    }
+
+    /**
+     * builder for setInheritedStoresChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetInheritedStoresChangeBuilder setInheritedStoresChangeBuilder() {
+        return com.commercetools.history.models.change.SetInheritedStoresChangeBuilder.of();
+    }
+
+    /**
      * builder for setInputTipChange subtype
      * @return builder
      */
@@ -1606,6 +1870,22 @@ public interface Change {
      */
     public static com.commercetools.history.models.change.SetIsValidChangeBuilder setIsValidChangeBuilder() {
         return com.commercetools.history.models.change.SetIsValidChangeBuilder.of();
+    }
+
+    /**
+     * builder for setItemShippingAddressCustomFieldChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetItemShippingAddressCustomFieldChangeBuilder setItemShippingAddressCustomFieldChangeBuilder() {
+        return com.commercetools.history.models.change.SetItemShippingAddressCustomFieldChangeBuilder.of();
+    }
+
+    /**
+     * builder for setItemShippingAddressCustomTypeChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetItemShippingAddressCustomTypeChangeBuilder setItemShippingAddressCustomTypeChangeBuilder() {
+        return com.commercetools.history.models.change.SetItemShippingAddressCustomTypeChangeBuilder.of();
     }
 
     /**
@@ -1769,6 +2049,14 @@ public interface Change {
     }
 
     /**
+     * builder for setMaxCartQuantityChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetMaxCartQuantityChangeBuilder setMaxCartQuantityChangeBuilder() {
+        return com.commercetools.history.models.change.SetMaxCartQuantityChangeBuilder.of();
+    }
+
+    /**
      * builder for setMetaDescriptionChange subtype
      * @return builder
      */
@@ -1822,6 +2110,14 @@ public interface Change {
      */
     public static com.commercetools.history.models.change.SetMiddleNameChangeBuilder setMiddleNameChangeBuilder() {
         return com.commercetools.history.models.change.SetMiddleNameChangeBuilder.of();
+    }
+
+    /**
+     * builder for setMinCartQuantityChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetMinCartQuantityChangeBuilder setMinCartQuantityChangeBuilder() {
+        return com.commercetools.history.models.change.SetMinCartQuantityChangeBuilder.of();
     }
 
     /**
@@ -1881,6 +2177,22 @@ public interface Change {
     }
 
     /**
+     * builder for setParcelCustomFieldChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetParcelCustomFieldChangeBuilder setParcelCustomFieldChangeBuilder() {
+        return com.commercetools.history.models.change.SetParcelCustomFieldChangeBuilder.of();
+    }
+
+    /**
+     * builder for setParcelCustomTypeChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetParcelCustomTypeChangeBuilder setParcelCustomTypeChangeBuilder() {
+        return com.commercetools.history.models.change.SetParcelCustomTypeChangeBuilder.of();
+    }
+
+    /**
      * builder for setParcelItemsChange subtype
      * @return builder
      */
@@ -1905,6 +2217,14 @@ public interface Change {
     }
 
     /**
+     * builder for setPasswordChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetPasswordChangeBuilder setPasswordChangeBuilder() {
+        return com.commercetools.history.models.change.SetPasswordChangeBuilder.of();
+    }
+
+    /**
      * builder for setPermissionsChange subtype
      * @return builder
      */
@@ -1913,11 +2233,35 @@ public interface Change {
     }
 
     /**
+     * builder for setPriceKeyChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetPriceKeyChangeBuilder setPriceKeyChangeBuilder() {
+        return com.commercetools.history.models.change.SetPriceKeyChangeBuilder.of();
+    }
+
+    /**
+     * builder for setPriceModeChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetPriceModeChangeBuilder setPriceModeChangeBuilder() {
+        return com.commercetools.history.models.change.SetPriceModeChangeBuilder.of();
+    }
+
+    /**
      * builder for setPricesChange subtype
      * @return builder
      */
     public static com.commercetools.history.models.change.SetPricesChangeBuilder setPricesChangeBuilder() {
         return com.commercetools.history.models.change.SetPricesChangeBuilder.of();
+    }
+
+    /**
+     * builder for setProductAttributeChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetProductAttributeChangeBuilder setProductAttributeChangeBuilder() {
+        return com.commercetools.history.models.change.SetProductAttributeChangeBuilder.of();
     }
 
     /**
@@ -1985,6 +2329,14 @@ public interface Change {
     }
 
     /**
+     * builder for setReferencesChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetReferencesChangeBuilder setReferencesChangeBuilder() {
+        return com.commercetools.history.models.change.SetReferencesChangeBuilder.of();
+    }
+
+    /**
      * builder for setReservationsChange subtype
      * @return builder
      */
@@ -1998,6 +2350,46 @@ public interface Change {
      */
     public static com.commercetools.history.models.change.SetRestockableInDaysChangeBuilder setRestockableInDaysChangeBuilder() {
         return com.commercetools.history.models.change.SetRestockableInDaysChangeBuilder.of();
+    }
+
+    /**
+     * builder for setReturnInfoChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetReturnInfoChangeBuilder setReturnInfoChangeBuilder() {
+        return com.commercetools.history.models.change.SetReturnInfoChangeBuilder.of();
+    }
+
+    /**
+     * builder for setReturnItemCustomLineItemCustomFieldChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetReturnItemCustomLineItemCustomFieldChangeBuilder setReturnItemCustomLineItemCustomFieldChangeBuilder() {
+        return com.commercetools.history.models.change.SetReturnItemCustomLineItemCustomFieldChangeBuilder.of();
+    }
+
+    /**
+     * builder for setReturnItemCustomLineItemCustomTypeChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetReturnItemCustomLineItemCustomTypeChangeBuilder setReturnItemCustomLineItemCustomTypeChangeBuilder() {
+        return com.commercetools.history.models.change.SetReturnItemCustomLineItemCustomTypeChangeBuilder.of();
+    }
+
+    /**
+     * builder for setReturnItemLineItemCustomFieldChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetReturnItemLineItemCustomFieldChangeBuilder setReturnItemLineItemCustomFieldChangeBuilder() {
+        return com.commercetools.history.models.change.SetReturnItemLineItemCustomFieldChangeBuilder.of();
+    }
+
+    /**
+     * builder for setReturnItemLineItemCustomTypeChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetReturnItemLineItemCustomTypeChangeBuilder setReturnItemLineItemCustomTypeChangeBuilder() {
+        return com.commercetools.history.models.change.SetReturnItemLineItemCustomTypeChangeBuilder.of();
     }
 
     /**
@@ -2049,6 +2441,46 @@ public interface Change {
     }
 
     /**
+     * builder for setShippingAddressCustomFieldChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetShippingAddressCustomFieldChangeBuilder setShippingAddressCustomFieldChangeBuilder() {
+        return com.commercetools.history.models.change.SetShippingAddressCustomFieldChangeBuilder.of();
+    }
+
+    /**
+     * builder for setShippingAddressCustomTypeChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetShippingAddressCustomTypeChangeBuilder setShippingAddressCustomTypeChangeBuilder() {
+        return com.commercetools.history.models.change.SetShippingAddressCustomTypeChangeBuilder.of();
+    }
+
+    /**
+     * builder for setShippingCustomFieldChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetShippingCustomFieldChangeBuilder setShippingCustomFieldChangeBuilder() {
+        return com.commercetools.history.models.change.SetShippingCustomFieldChangeBuilder.of();
+    }
+
+    /**
+     * builder for setShippingCustomTypeChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetShippingCustomTypeChangeBuilder setShippingCustomTypeChangeBuilder() {
+        return com.commercetools.history.models.change.SetShippingCustomTypeChangeBuilder.of();
+    }
+
+    /**
+     * builder for setShippingInfoDiscountedPriceChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetShippingInfoDiscountedPriceChangeBuilder setShippingInfoDiscountedPriceChangeBuilder() {
+        return com.commercetools.history.models.change.SetShippingInfoDiscountedPriceChangeBuilder.of();
+    }
+
+    /**
      * builder for setShippingInfoPriceChange subtype
      * @return builder
      */
@@ -2078,6 +2510,14 @@ public interface Change {
      */
     public static com.commercetools.history.models.change.SetShippingMethodTaxAmountChangeBuilder setShippingMethodTaxAmountChangeBuilder() {
         return com.commercetools.history.models.change.SetShippingMethodTaxAmountChangeBuilder.of();
+    }
+
+    /**
+     * builder for setShippingMethodTaxCategoryChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetShippingMethodTaxCategoryChangeBuilder setShippingMethodTaxCategoryChangeBuilder() {
+        return com.commercetools.history.models.change.SetShippingMethodTaxCategoryChangeBuilder.of();
     }
 
     /**
@@ -2217,6 +2657,14 @@ public interface Change {
     }
 
     /**
+     * builder for setTaxedShippingPriceChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetTaxedShippingPriceChangeBuilder setTaxedShippingPriceChangeBuilder() {
+        return com.commercetools.history.models.change.SetTaxedShippingPriceChangeBuilder.of();
+    }
+
+    /**
      * builder for setTextChange subtype
      * @return builder
      */
@@ -2257,11 +2705,35 @@ public interface Change {
     }
 
     /**
+     * builder for setTransactionCustomFieldChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetTransactionCustomFieldChangeBuilder setTransactionCustomFieldChangeBuilder() {
+        return com.commercetools.history.models.change.SetTransactionCustomFieldChangeBuilder.of();
+    }
+
+    /**
+     * builder for setTransactionCustomTypeChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetTransactionCustomTypeChangeBuilder setTransactionCustomTypeChangeBuilder() {
+        return com.commercetools.history.models.change.SetTransactionCustomTypeChangeBuilder.of();
+    }
+
+    /**
      * builder for setTransitionsChange subtype
      * @return builder
      */
     public static com.commercetools.history.models.change.SetTransitionsChangeBuilder setTransitionsChangeBuilder() {
         return com.commercetools.history.models.change.SetTransitionsChangeBuilder.of();
+    }
+
+    /**
+     * builder for setUnitTypeChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetUnitTypeChangeBuilder setUnitTypeChangeBuilder() {
+        return com.commercetools.history.models.change.SetUnitTypeChangeBuilder.of();
     }
 
     /**
@@ -2313,6 +2785,14 @@ public interface Change {
     }
 
     /**
+     * builder for setVariantExclusionChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetVariantExclusionChangeBuilder setVariantExclusionChangeBuilder() {
+        return com.commercetools.history.models.change.SetVariantExclusionChangeBuilder.of();
+    }
+
+    /**
      * builder for setVariantSelectionChange subtype
      * @return builder
      */
@@ -2326,6 +2806,198 @@ public interface Change {
      */
     public static com.commercetools.history.models.change.SetVatIdChangeBuilder setVatIdChangeBuilder() {
         return com.commercetools.history.models.change.SetVatIdChangeBuilder.of();
+    }
+
+    /**
+     * builder for shippingMethodAddShippingRateChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ShippingMethodAddShippingRateChangeBuilder shippingMethodAddShippingRateChangeBuilder() {
+        return com.commercetools.history.models.change.ShippingMethodAddShippingRateChangeBuilder.of();
+    }
+
+    /**
+     * builder for shippingMethodAddZoneChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ShippingMethodAddZoneChangeBuilder shippingMethodAddZoneChangeBuilder() {
+        return com.commercetools.history.models.change.ShippingMethodAddZoneChangeBuilder.of();
+    }
+
+    /**
+     * builder for shippingMethodChangeActiveChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ShippingMethodChangeActiveChangeBuilder shippingMethodChangeActiveChangeBuilder() {
+        return com.commercetools.history.models.change.ShippingMethodChangeActiveChangeBuilder.of();
+    }
+
+    /**
+     * builder for shippingMethodChangeIsDefaultChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ShippingMethodChangeIsDefaultChangeBuilder shippingMethodChangeIsDefaultChangeBuilder() {
+        return com.commercetools.history.models.change.ShippingMethodChangeIsDefaultChangeBuilder.of();
+    }
+
+    /**
+     * builder for shippingMethodChangeNameChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ShippingMethodChangeNameChangeBuilder shippingMethodChangeNameChangeBuilder() {
+        return com.commercetools.history.models.change.ShippingMethodChangeNameChangeBuilder.of();
+    }
+
+    /**
+     * builder for shippingMethodChangeTaxCategoryChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ShippingMethodChangeTaxCategoryChangeBuilder shippingMethodChangeTaxCategoryChangeBuilder() {
+        return com.commercetools.history.models.change.ShippingMethodChangeTaxCategoryChangeBuilder.of();
+    }
+
+    /**
+     * builder for shippingMethodRemoveShippingRateChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ShippingMethodRemoveShippingRateChangeBuilder shippingMethodRemoveShippingRateChangeBuilder() {
+        return com.commercetools.history.models.change.ShippingMethodRemoveShippingRateChangeBuilder.of();
+    }
+
+    /**
+     * builder for shippingMethodRemoveZoneChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ShippingMethodRemoveZoneChangeBuilder shippingMethodRemoveZoneChangeBuilder() {
+        return com.commercetools.history.models.change.ShippingMethodRemoveZoneChangeBuilder.of();
+    }
+
+    /**
+     * builder for shippingMethodSetCustomFieldChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ShippingMethodSetCustomFieldChangeBuilder shippingMethodSetCustomFieldChangeBuilder() {
+        return com.commercetools.history.models.change.ShippingMethodSetCustomFieldChangeBuilder.of();
+    }
+
+    /**
+     * builder for shippingMethodSetCustomTypeChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ShippingMethodSetCustomTypeChangeBuilder shippingMethodSetCustomTypeChangeBuilder() {
+        return com.commercetools.history.models.change.ShippingMethodSetCustomTypeChangeBuilder.of();
+    }
+
+    /**
+     * builder for shippingMethodSetKeyChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ShippingMethodSetKeyChangeBuilder shippingMethodSetKeyChangeBuilder() {
+        return com.commercetools.history.models.change.ShippingMethodSetKeyChangeBuilder.of();
+    }
+
+    /**
+     * builder for shippingMethodSetLocalizedDescriptionChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ShippingMethodSetLocalizedDescriptionChangeBuilder shippingMethodSetLocalizedDescriptionChangeBuilder() {
+        return com.commercetools.history.models.change.ShippingMethodSetLocalizedDescriptionChangeBuilder.of();
+    }
+
+    /**
+     * builder for shippingMethodSetLocalizedNameChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ShippingMethodSetLocalizedNameChangeBuilder shippingMethodSetLocalizedNameChangeBuilder() {
+        return com.commercetools.history.models.change.ShippingMethodSetLocalizedNameChangeBuilder.of();
+    }
+
+    /**
+     * builder for shippingMethodSetPredicateChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ShippingMethodSetPredicateChangeBuilder shippingMethodSetPredicateChangeBuilder() {
+        return com.commercetools.history.models.change.ShippingMethodSetPredicateChangeBuilder.of();
+    }
+
+    /**
+     * builder for standalonePriceChangeActiveChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.StandalonePriceChangeActiveChangeBuilder standalonePriceChangeActiveChangeBuilder() {
+        return com.commercetools.history.models.change.StandalonePriceChangeActiveChangeBuilder.of();
+    }
+
+    /**
+     * builder for standalonePriceChangeValueChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.StandalonePriceChangeValueChangeBuilder standalonePriceChangeValueChangeBuilder() {
+        return com.commercetools.history.models.change.StandalonePriceChangeValueChangeBuilder.of();
+    }
+
+    /**
+     * builder for standalonePriceSetCustomFieldChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.StandalonePriceSetCustomFieldChangeBuilder standalonePriceSetCustomFieldChangeBuilder() {
+        return com.commercetools.history.models.change.StandalonePriceSetCustomFieldChangeBuilder.of();
+    }
+
+    /**
+     * builder for standalonePriceSetCustomTypeChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.StandalonePriceSetCustomTypeChangeBuilder standalonePriceSetCustomTypeChangeBuilder() {
+        return com.commercetools.history.models.change.StandalonePriceSetCustomTypeChangeBuilder.of();
+    }
+
+    /**
+     * builder for standalonePriceSetDiscountedPriceChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.StandalonePriceSetDiscountedPriceChangeBuilder standalonePriceSetDiscountedPriceChangeBuilder() {
+        return com.commercetools.history.models.change.StandalonePriceSetDiscountedPriceChangeBuilder.of();
+    }
+
+    /**
+     * builder for standalonePriceSetKeyChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.StandalonePriceSetKeyChangeBuilder standalonePriceSetKeyChangeBuilder() {
+        return com.commercetools.history.models.change.StandalonePriceSetKeyChangeBuilder.of();
+    }
+
+    /**
+     * builder for standalonePriceSetPriceTiersChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.StandalonePriceSetPriceTiersChangeBuilder standalonePriceSetPriceTiersChangeBuilder() {
+        return com.commercetools.history.models.change.StandalonePriceSetPriceTiersChangeBuilder.of();
+    }
+
+    /**
+     * builder for standalonePriceSetValidFromAndUntilChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.StandalonePriceSetValidFromAndUntilChangeBuilder standalonePriceSetValidFromAndUntilChangeBuilder() {
+        return com.commercetools.history.models.change.StandalonePriceSetValidFromAndUntilChangeBuilder.of();
+    }
+
+    /**
+     * builder for standalonePriceSetValidFromChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.StandalonePriceSetValidFromChangeBuilder standalonePriceSetValidFromChangeBuilder() {
+        return com.commercetools.history.models.change.StandalonePriceSetValidFromChangeBuilder.of();
+    }
+
+    /**
+     * builder for standalonePriceSetValidUntilChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.StandalonePriceSetValidUntilChangeBuilder standalonePriceSetValidUntilChangeBuilder() {
+        return com.commercetools.history.models.change.StandalonePriceSetValidUntilChangeBuilder.of();
     }
 
     /**
@@ -2366,6 +3038,14 @@ public interface Change {
      */
     public static com.commercetools.history.models.change.UnpublishChangeBuilder unpublishChangeBuilder() {
         return com.commercetools.history.models.change.UnpublishChangeBuilder.of();
+    }
+
+    /**
+     * builder for updateItemShippingAddressChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.UpdateItemShippingAddressChangeBuilder updateItemShippingAddressChangeBuilder() {
+        return com.commercetools.history.models.change.UpdateItemShippingAddressChangeBuilder.of();
     }
 
     /**

@@ -22,7 +22,8 @@ public class OperationStatesTest {
                 new Object[] { "waitForMasterVariant", OperationStates.builder().waitForMasterVariant(8L) },
                 new Object[] { "imported", OperationStates.builder().imported(1L) },
                 new Object[] { "rejected", OperationStates.builder().rejected(3L) },
-                new Object[] { "canceled", OperationStates.builder().canceled(5L) } };
+                new Object[] { "canceled", OperationStates.builder().canceled(5L) },
+                new Object[] { "partiallyImported", OperationStates.builder().partiallyImported(7L) } };
     }
 
     @Test
@@ -72,5 +73,12 @@ public class OperationStatesTest {
         OperationStates value = OperationStates.of();
         value.setCanceled(5L);
         Assertions.assertThat(value.getCanceled()).isEqualTo(5L);
+    }
+
+    @Test
+    public void partiallyImported() {
+        OperationStates value = OperationStates.of();
+        value.setPartiallyImported(7L);
+        Assertions.assertThat(value.getPartiallyImported()).isEqualTo(7L);
     }
 }

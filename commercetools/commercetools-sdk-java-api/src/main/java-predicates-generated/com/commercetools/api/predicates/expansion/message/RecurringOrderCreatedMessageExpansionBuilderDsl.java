@@ -44,8 +44,8 @@ public class RecurringOrderCreatedMessageExpansionBuilderDsl implements Expansio
                 .of(appendOne(path, "resource"));
     }
 
-    public com.commercetools.api.predicates.expansion.recurring_order.RecurringOrderExpansionBuilderDsl order() {
+    public com.commercetools.api.predicates.expansion.recurring_order.RecurringOrderExpansionBuilderDsl recurringOrder() {
         return com.commercetools.api.predicates.expansion.recurring_order.RecurringOrderExpansionBuilderDsl
-                .of(appendOne(path, "order"));
+                .of(appendOne(path, "recurringOrder"));
     }
 }

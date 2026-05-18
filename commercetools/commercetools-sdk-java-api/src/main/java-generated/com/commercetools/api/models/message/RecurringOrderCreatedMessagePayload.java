@@ -24,7 +24,7 @@ import jakarta.validation.constraints.NotNull;
  * <div class=code-example>
  * <pre><code class='java'>
  *     RecurringOrderCreatedMessagePayload recurringOrderCreatedMessagePayload = RecurringOrderCreatedMessagePayload.builder()
- *             .order(orderBuilder -> orderBuilder)
+ *             .recurringOrder(recurringOrderBuilder -> recurringOrderBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -41,19 +41,19 @@ public interface RecurringOrderCreatedMessagePayload extends MessagePayload {
 
     /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was created.</p>
-     * @return order
+     * @return recurringOrder
      */
     @NotNull
     @Valid
-    @JsonProperty("order")
-    public RecurringOrder getOrder();
+    @JsonProperty("recurringOrder")
+    public RecurringOrder getRecurringOrder();
 
     /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was created.</p>
-     * @param order value to be set
+     * @param recurringOrder value to be set
      */
 
-    public void setOrder(final RecurringOrder order);
+    public void setRecurringOrder(final RecurringOrder recurringOrder);
 
     /**
      * factory method
@@ -70,7 +70,7 @@ public interface RecurringOrderCreatedMessagePayload extends MessagePayload {
      */
     public static RecurringOrderCreatedMessagePayload of(final RecurringOrderCreatedMessagePayload template) {
         RecurringOrderCreatedMessagePayloadImpl instance = new RecurringOrderCreatedMessagePayloadImpl();
-        instance.setOrder(template.getOrder());
+        instance.setRecurringOrder(template.getRecurringOrder());
         return instance;
     }
 
@@ -88,7 +88,8 @@ public interface RecurringOrderCreatedMessagePayload extends MessagePayload {
             return null;
         }
         RecurringOrderCreatedMessagePayloadImpl instance = new RecurringOrderCreatedMessagePayloadImpl();
-        instance.setOrder(com.commercetools.api.models.recurring_order.RecurringOrder.deepCopy(template.getOrder()));
+        instance.setRecurringOrder(
+            com.commercetools.api.models.recurring_order.RecurringOrder.deepCopy(template.getRecurringOrder()));
         return instance;
     }
 

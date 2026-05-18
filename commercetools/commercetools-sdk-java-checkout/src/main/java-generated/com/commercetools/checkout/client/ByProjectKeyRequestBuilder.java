@@ -23,4 +23,12 @@ public class ByProjectKeyRequestBuilder {
         return new ByProjectKeyTransactionsRequestBuilder(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyPaymentIntegrationsRequestBuilder paymentIntegrations() {
+        return new ByProjectKeyPaymentIntegrationsRequestBuilder(apiHttpClient, projectKey);
+    }
+
+    public ByProjectKeyApplicationsRequestBuilder applications() {
+        return new ByProjectKeyApplicationsRequestBuilder(apiHttpClient, projectKey);
+    }
+
 }

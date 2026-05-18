@@ -26,14 +26,14 @@ public class AddInterfaceInteractionChangeImpl implements AddInterfaceInteractio
 
     private String change;
 
-    private com.commercetools.history.models.change_value.CustomFieldExpandedValue nextValue;
+    private com.commercetools.history.models.common.CustomFields nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     AddInterfaceInteractionChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("nextValue") final com.commercetools.history.models.change_value.CustomFieldExpandedValue nextValue) {
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.CustomFields nextValue) {
         this.change = change;
         this.nextValue = nextValue;
         this.type = ADD_INTERFACE_INTERACTION_CHANGE;
@@ -66,7 +66,7 @@ public class AddInterfaceInteractionChangeImpl implements AddInterfaceInteractio
      *  <p>Value after the change.</p>
      */
 
-    public com.commercetools.history.models.change_value.CustomFieldExpandedValue getNextValue() {
+    public com.commercetools.history.models.common.CustomFields getNextValue() {
         return this.nextValue;
     }
 
@@ -74,7 +74,7 @@ public class AddInterfaceInteractionChangeImpl implements AddInterfaceInteractio
         this.change = change;
     }
 
-    public void setNextValue(final com.commercetools.history.models.change_value.CustomFieldExpandedValue nextValue) {
+    public void setNextValue(final com.commercetools.history.models.common.CustomFields nextValue) {
         this.nextValue = nextValue;
     }
 

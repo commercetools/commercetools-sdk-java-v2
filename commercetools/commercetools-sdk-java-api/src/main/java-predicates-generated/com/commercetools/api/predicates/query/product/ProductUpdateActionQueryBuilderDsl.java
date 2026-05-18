@@ -97,13 +97,6 @@ public class ProductUpdateActionQueryBuilderDsl {
             ProductUpdateActionQueryBuilderDsl::of);
     }
 
-    public CombinationQueryPredicate<ProductUpdateActionQueryBuilderDsl> asLegacySetSku(
-            Function<com.commercetools.api.predicates.query.product.ProductLegacySetSkuActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.ProductLegacySetSkuActionQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            fn.apply(com.commercetools.api.predicates.query.product.ProductLegacySetSkuActionQueryBuilderDsl.of()),
-            ProductUpdateActionQueryBuilderDsl::of);
-    }
-
     public CombinationQueryPredicate<ProductUpdateActionQueryBuilderDsl> asMoveImageToPosition(
             Function<com.commercetools.api.predicates.query.product.ProductMoveImageToPositionActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.ProductMoveImageToPositionActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

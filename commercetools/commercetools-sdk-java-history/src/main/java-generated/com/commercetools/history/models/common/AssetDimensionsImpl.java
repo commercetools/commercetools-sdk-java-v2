@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * AssetDimensions
+ *  <p>Dimensions of the Asset source specified by the number of pixels.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssetDimensionsImpl implements AssetDimensions, ModelBase {
@@ -42,7 +42,7 @@ public class AssetDimensionsImpl implements AssetDimensions, ModelBase {
     }
 
     /**
-     *
+     *  <p>Width of the Asset source.</p>
      */
 
     public Integer getW() {
@@ -50,7 +50,7 @@ public class AssetDimensionsImpl implements AssetDimensions, ModelBase {
     }
 
     /**
-     *
+     *  <p>Height of the Asset source.</p>
      */
 
     public Integer getH() {

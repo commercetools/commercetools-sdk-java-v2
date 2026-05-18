@@ -19,7 +19,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Contains all the data of a Product and its Product Variants.</p>
+ * ProductData
  *
  * <hr>
  * Example to create an instance using the builder pattern

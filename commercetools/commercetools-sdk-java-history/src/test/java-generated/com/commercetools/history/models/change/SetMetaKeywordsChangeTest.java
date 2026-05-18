@@ -20,8 +20,10 @@ public class SetMetaKeywordsChangeTest {
                 new Object[] { "previousValue",
                         SetMetaKeywordsChange.builder()
                                 .previousValue(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { "nextValue", SetMetaKeywordsChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.LocalizedStringImpl()) } };
+                new Object[] { "nextValue",
+                        SetMetaKeywordsChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "catalogData", SetMetaKeywordsChange.builder().catalogData("catalogData") } };
     }
 
     @Test
@@ -45,5 +47,12 @@ public class SetMetaKeywordsChangeTest {
         value.setNextValue(new com.commercetools.history.models.common.LocalizedStringImpl());
         Assertions.assertThat(value.getNextValue())
                 .isEqualTo(new com.commercetools.history.models.common.LocalizedStringImpl());
+    }
+
+    @Test
+    public void catalogData() {
+        SetMetaKeywordsChange value = SetMetaKeywordsChange.of();
+        value.setCatalogData("catalogData");
+        Assertions.assertThat(value.getCatalogData()).isEqualTo("catalogData");
     }
 }

@@ -66,7 +66,7 @@ public interface Record {
     public Integer getPreviousVersion();
 
     /**
-     *  <p>Indicates the type of change. For creation, update, or deletion, the value is <code>"ResourceCreated"</code>, <code>"ResourceUpdated"</code>, or <code>"ResourceDeleted"</code> respectively.</p>
+     *  <p>Indicates the change type. For creation, update, or deletion, the value is <code>"ResourceCreated"</code>, <code>"ResourceUpdated"</code>, or <code>"ResourceDeleted"</code> respectively.</p>
      * @return type
      */
     @NotNull
@@ -169,7 +169,7 @@ public interface Record {
     public void setPreviousVersion(final Integer previousVersion);
 
     /**
-     *  <p>Indicates the type of change. For creation, update, or deletion, the value is <code>"ResourceCreated"</code>, <code>"ResourceUpdated"</code>, or <code>"ResourceDeleted"</code> respectively.</p>
+     *  <p>Indicates the change type. For creation, update, or deletion, the value is <code>"ResourceCreated"</code>, <code>"ResourceUpdated"</code>, or <code>"ResourceDeleted"</code> respectively.</p>
      * @param type value to be set
      */
 

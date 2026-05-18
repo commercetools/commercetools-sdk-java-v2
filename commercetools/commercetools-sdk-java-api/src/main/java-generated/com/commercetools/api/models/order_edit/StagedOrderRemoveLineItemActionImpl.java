@@ -86,7 +86,7 @@ public class StagedOrderRemoveLineItemActionImpl implements StagedOrderRemoveLin
     }
 
     /**
-     *  <p>New value to set. If absent or <code>0</code>, the Line Item is removed from the Cart.</p>
+     *  <p>Amount to subtract from the LineItem quantity. If omitted, the LineItem is removed from the Order.</p>
      */
 
     public Long getQuantity() {

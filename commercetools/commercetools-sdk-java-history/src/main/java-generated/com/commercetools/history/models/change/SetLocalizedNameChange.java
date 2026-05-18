@@ -17,12 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeSetNameAction" rel="nofollow">Set Name</a> on Discount Codes.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StateSetNameAction" rel="nofollow">Set State Name</a> on States.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetNameAction" rel="nofollow">Set Name</a> on Stores.</li>
- *  </ul>
+ * SetLocalizedNameChange
  *
  * <hr>
  * Example to create an instance using the builder pattern

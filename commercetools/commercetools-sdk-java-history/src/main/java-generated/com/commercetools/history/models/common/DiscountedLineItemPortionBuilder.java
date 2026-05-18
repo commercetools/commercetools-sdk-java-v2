@@ -25,34 +25,10 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
 
     private com.commercetools.history.models.common.Reference discount;
 
-    private com.commercetools.history.models.common.Money discountedAmount;
+    private com.commercetools.history.models.common.TypedMoney discountedAmount;
 
     /**
-     * set the value to the discount using the builder function
-     * @param builder function to build the discount value
-     * @return Builder
-     */
-
-    public DiscountedLineItemPortionBuilder discount(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.discount = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     * set the value to the discount using the builder function
-     * @param builder function to build the discount value
-     * @return Builder
-     */
-
-    public DiscountedLineItemPortionBuilder withDiscount(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        this.discount = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
-        return this;
-    }
-
-    /**
-     * set the value to the discount
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> of the applicable discount on the Line Item.</p>
      * @param discount value to be set
      * @return Builder
      */
@@ -63,43 +39,43 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     }
 
     /**
-     * set the value to the discountedAmount using the builder function
-     * @param builder function to build the discountedAmount value
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> of the applicable discount on the Line Item.</p>
+     * @param builder function to build the discount value
      * @return Builder
      */
 
-    public DiscountedLineItemPortionBuilder discountedAmount(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
-        this.discountedAmount = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
+    public DiscountedLineItemPortionBuilder discount(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
+        this.discount = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 
     /**
-     * set the value to the discountedAmount using the builder function
-     * @param builder function to build the discountedAmount value
-     * @return Builder
-     */
-
-    public DiscountedLineItemPortionBuilder withDiscountedAmount(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
-        this.discountedAmount = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
-        return this;
-    }
-
-    /**
-     * set the value to the discountedAmount
+     *  <p>Money value of the applicable discount.</p>
      * @param discountedAmount value to be set
      * @return Builder
      */
 
     public DiscountedLineItemPortionBuilder discountedAmount(
-            final com.commercetools.history.models.common.Money discountedAmount) {
+            final com.commercetools.history.models.common.TypedMoney discountedAmount) {
         this.discountedAmount = discountedAmount;
         return this;
     }
 
     /**
-     * value of discount}
+     *  <p>Money value of the applicable discount.</p>
+     * @param builder function to build the discountedAmount value
+     * @return Builder
+     */
+
+    public DiscountedLineItemPortionBuilder discountedAmount(
+            Function<com.commercetools.history.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.history.models.common.TypedMoney>> builder) {
+        this.discountedAmount = builder.apply(com.commercetools.history.models.common.TypedMoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> of the applicable discount on the Line Item.</p>
      * @return discount
      */
 
@@ -108,11 +84,11 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     }
 
     /**
-     * value of discountedAmount}
+     *  <p>Money value of the applicable discount.</p>
      * @return discountedAmount
      */
 
-    public com.commercetools.history.models.common.Money getDiscountedAmount() {
+    public com.commercetools.history.models.common.TypedMoney getDiscountedAmount() {
         return this.discountedAmount;
     }
 

@@ -18,15 +18,8 @@ public class GeoLocationTest {
     }
 
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { "type", GeoLocation.builder().type("type") },
+        return new Object[][] {
                 new Object[] { "coordinates", GeoLocation.builder().coordinates(Collections.singletonList(9)) } };
-    }
-
-    @Test
-    public void type() {
-        GeoLocation value = GeoLocation.of();
-        value.setType("type");
-        Assertions.assertThat(value.getType()).isEqualTo("type");
     }
 
     @Test

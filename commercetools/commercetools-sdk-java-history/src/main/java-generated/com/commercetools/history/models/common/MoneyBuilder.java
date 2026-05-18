@@ -13,10 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     Money money = Money.builder()
+ *             .centAmount(0.3)
  *             .currencyCode("{currencyCode}")
- *             .centAmount(1)
- *             .fractionDigits(1)
- *             .type(MoneyType.CENT_PRECISION)
  *             .build()
  * </code></pre>
  * </div>
@@ -24,13 +22,24 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MoneyBuilder implements Builder<Money> {
 
+    private Long centAmount;
+
     private String currencyCode;
 
-    private Integer centAmount;
+    /**
+     *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
+     *  <ul>
+     *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+     *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
+     *  </ul>
+     * @param centAmount value to be set
+     * @return Builder
+     */
 
-    private Integer fractionDigits;
-
-    private com.commercetools.history.models.common.MoneyType type;
+    public MoneyBuilder centAmount(final Long centAmount) {
+        this.centAmount = centAmount;
+        return this;
+    }
 
     /**
      *  <p>Currency code compliant to <span>ISO 4217</span>.</p>
@@ -44,36 +53,16 @@ public class MoneyBuilder implements Builder<Money> {
     }
 
     /**
-     * set the value to the centAmount
-     * @param centAmount value to be set
-     * @return Builder
+     *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
+     *  <ul>
+     *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+     *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
+     *  </ul>
+     * @return centAmount
      */
 
-    public MoneyBuilder centAmount(final Integer centAmount) {
-        this.centAmount = centAmount;
-        return this;
-    }
-
-    /**
-     * set the value to the fractionDigits
-     * @param fractionDigits value to be set
-     * @return Builder
-     */
-
-    public MoneyBuilder fractionDigits(final Integer fractionDigits) {
-        this.fractionDigits = fractionDigits;
-        return this;
-    }
-
-    /**
-     * set the value to the type
-     * @param type value to be set
-     * @return Builder
-     */
-
-    public MoneyBuilder type(final com.commercetools.history.models.common.MoneyType type) {
-        this.type = type;
-        return this;
+    public Long getCentAmount() {
+        return this.centAmount;
     }
 
     /**
@@ -86,42 +75,13 @@ public class MoneyBuilder implements Builder<Money> {
     }
 
     /**
-     * value of centAmount}
-     * @return centAmount
-     */
-
-    public Integer getCentAmount() {
-        return this.centAmount;
-    }
-
-    /**
-     * value of fractionDigits}
-     * @return fractionDigits
-     */
-
-    public Integer getFractionDigits() {
-        return this.fractionDigits;
-    }
-
-    /**
-     * value of type}
-     * @return type
-     */
-
-    public com.commercetools.history.models.common.MoneyType getType() {
-        return this.type;
-    }
-
-    /**
      * builds Money with checking for non-null required values
      * @return Money
      */
     public Money build() {
-        Objects.requireNonNull(currencyCode, Money.class + ": currencyCode is missing");
         Objects.requireNonNull(centAmount, Money.class + ": centAmount is missing");
-        Objects.requireNonNull(fractionDigits, Money.class + ": fractionDigits is missing");
-        Objects.requireNonNull(type, Money.class + ": type is missing");
-        return new MoneyImpl(currencyCode, centAmount, fractionDigits, type);
+        Objects.requireNonNull(currencyCode, Money.class + ": currencyCode is missing");
+        return new MoneyImpl(centAmount, currencyCode);
     }
 
     /**
@@ -129,7 +89,7 @@ public class MoneyBuilder implements Builder<Money> {
      * @return Money
      */
     public Money buildUnchecked() {
-        return new MoneyImpl(currencyCode, centAmount, fractionDigits, type);
+        return new MoneyImpl(centAmount, currencyCode);
     }
 
     /**
@@ -147,10 +107,8 @@ public class MoneyBuilder implements Builder<Money> {
      */
     public static MoneyBuilder of(final Money template) {
         MoneyBuilder builder = new MoneyBuilder();
-        builder.currencyCode = template.getCurrencyCode();
         builder.centAmount = template.getCentAmount();
-        builder.fractionDigits = template.getFractionDigits();
-        builder.type = template.getType();
+        builder.currencyCode = template.getCurrencyCode();
         return builder;
     }
 

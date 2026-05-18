@@ -70,6 +70,8 @@ public class CartImpl implements Cart, ModelBase {
 
     private com.commercetools.api.models.cart.CartState cartState;
 
+    private com.commercetools.api.models.cart.FreezeStrategy freezeStrategy;
+
     private com.commercetools.api.models.common.Address billingAddress;
 
     private com.commercetools.api.models.common.Address shippingAddress;
@@ -106,7 +108,11 @@ public class CartImpl implements Cart, ModelBase {
 
     private com.commercetools.api.models.cart.DiscountTypeCombination discountTypeCombination;
 
+    private com.commercetools.api.models.cart.CartLock lock;
+
     private Integer deleteDaysAfterLastModification;
+
+    private String purchaseOrderNumber;
 
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
 
@@ -138,6 +144,7 @@ public class CartImpl implements Cart, ModelBase {
             @JsonProperty("taxCalculationMode") final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode,
             @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
             @JsonProperty("cartState") final com.commercetools.api.models.cart.CartState cartState,
+            @JsonProperty("freezeStrategy") final com.commercetools.api.models.cart.FreezeStrategy freezeStrategy,
             @JsonProperty("billingAddress") final com.commercetools.api.models.common.Address billingAddress,
             @JsonProperty("shippingAddress") final com.commercetools.api.models.common.Address shippingAddress,
             @JsonProperty("shippingMode") final com.commercetools.api.models.cart.ShippingMode shippingMode,
@@ -155,7 +162,9 @@ public class CartImpl implements Cart, ModelBase {
             @JsonProperty("origin") final com.commercetools.api.models.cart.CartOrigin origin,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("discountTypeCombination") final com.commercetools.api.models.cart.DiscountTypeCombination discountTypeCombination,
+            @JsonProperty("lock") final com.commercetools.api.models.cart.CartLock lock,
             @JsonProperty("deleteDaysAfterLastModification") final Integer deleteDaysAfterLastModification,
+            @JsonProperty("purchaseOrderNumber") final String purchaseOrderNumber,
             @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
             @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.id = id;
@@ -182,6 +191,7 @@ public class CartImpl implements Cart, ModelBase {
         this.taxCalculationMode = taxCalculationMode;
         this.inventoryMode = inventoryMode;
         this.cartState = cartState;
+        this.freezeStrategy = freezeStrategy;
         this.billingAddress = billingAddress;
         this.shippingAddress = shippingAddress;
         this.shippingMode = shippingMode;
@@ -200,7 +210,9 @@ public class CartImpl implements Cart, ModelBase {
         this.origin = origin;
         this.custom = custom;
         this.discountTypeCombination = discountTypeCombination;
+        this.lock = lock;
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
+        this.purchaseOrderNumber = purchaseOrderNumber;
         this.lastModifiedBy = lastModifiedBy;
         this.createdBy = createdBy;
     }
@@ -410,6 +422,14 @@ public class CartImpl implements Cart, ModelBase {
     }
 
     /**
+     *  <p>Determines freezing behavior when <code>cartState</code> is <code>Frozen</code>.</p>
+     */
+
+    public com.commercetools.api.models.cart.FreezeStrategy getFreezeStrategy() {
+        return this.freezeStrategy;
+    }
+
+    /**
      *  <p>Billing address associated with the Cart.</p>
      */
 
@@ -560,11 +580,28 @@ public class CartImpl implements Cart, ModelBase {
     }
 
     /**
+     *  <p>Indicates whether the Cart has been <span>locked</span>, preventing edits.</p>
+     */
+
+    public com.commercetools.api.models.cart.CartLock getLock() {
+        return this.lock;
+    }
+
+    /**
      *  <p>Number of days after the last modification before a Cart is deleted. Configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a>.</p>
      */
 
     public Integer getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
+    }
+
+    /**
+     *  <p>User-defined identifier of a purchase order.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> or Merchant to track the purchase order during the <span>quote and order flow</span>.</p>
+     */
+
+    public String getPurchaseOrderNumber() {
+        return this.purchaseOrderNumber;
     }
 
     /**
@@ -691,6 +728,10 @@ public class CartImpl implements Cart, ModelBase {
         this.cartState = cartState;
     }
 
+    public void setFreezeStrategy(final com.commercetools.api.models.cart.FreezeStrategy freezeStrategy) {
+        this.freezeStrategy = freezeStrategy;
+    }
+
     public void setBillingAddress(final com.commercetools.api.models.common.Address billingAddress) {
         this.billingAddress = billingAddress;
     }
@@ -789,8 +830,16 @@ public class CartImpl implements Cart, ModelBase {
         this.discountTypeCombination = discountTypeCombination;
     }
 
+    public void setLock(final com.commercetools.api.models.cart.CartLock lock) {
+        this.lock = lock;
+    }
+
     public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
+    }
+
+    public void setPurchaseOrderNumber(final String purchaseOrderNumber) {
+        this.purchaseOrderNumber = purchaseOrderNumber;
     }
 
     public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
@@ -835,6 +884,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(taxCalculationMode, that.taxCalculationMode)
                 .append(inventoryMode, that.inventoryMode)
                 .append(cartState, that.cartState)
+                .append(freezeStrategy, that.freezeStrategy)
                 .append(billingAddress, that.billingAddress)
                 .append(shippingAddress, that.shippingAddress)
                 .append(shippingMode, that.shippingMode)
@@ -853,7 +903,9 @@ public class CartImpl implements Cart, ModelBase {
                 .append(origin, that.origin)
                 .append(custom, that.custom)
                 .append(discountTypeCombination, that.discountTypeCombination)
+                .append(lock, that.lock)
                 .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .append(purchaseOrderNumber, that.purchaseOrderNumber)
                 .append(lastModifiedBy, that.lastModifiedBy)
                 .append(createdBy, that.createdBy)
                 .append(id, that.id)
@@ -880,6 +932,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(taxCalculationMode, that.taxCalculationMode)
                 .append(inventoryMode, that.inventoryMode)
                 .append(cartState, that.cartState)
+                .append(freezeStrategy, that.freezeStrategy)
                 .append(billingAddress, that.billingAddress)
                 .append(shippingAddress, that.shippingAddress)
                 .append(shippingMode, that.shippingMode)
@@ -898,7 +951,9 @@ public class CartImpl implements Cart, ModelBase {
                 .append(origin, that.origin)
                 .append(custom, that.custom)
                 .append(discountTypeCombination, that.discountTypeCombination)
+                .append(lock, that.lock)
                 .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .append(purchaseOrderNumber, that.purchaseOrderNumber)
                 .append(lastModifiedBy, that.lastModifiedBy)
                 .append(createdBy, that.createdBy)
                 .isEquals();
@@ -930,6 +985,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(taxCalculationMode)
                 .append(inventoryMode)
                 .append(cartState)
+                .append(freezeStrategy)
                 .append(billingAddress)
                 .append(shippingAddress)
                 .append(shippingMode)
@@ -948,7 +1004,9 @@ public class CartImpl implements Cart, ModelBase {
                 .append(origin)
                 .append(custom)
                 .append(discountTypeCombination)
+                .append(lock)
                 .append(deleteDaysAfterLastModification)
+                .append(purchaseOrderNumber)
                 .append(lastModifiedBy)
                 .append(createdBy)
                 .toHashCode();
@@ -980,6 +1038,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append("taxCalculationMode", taxCalculationMode)
                 .append("inventoryMode", inventoryMode)
                 .append("cartState", cartState)
+                .append("freezeStrategy", freezeStrategy)
                 .append("billingAddress", billingAddress)
                 .append("shippingAddress", shippingAddress)
                 .append("shippingMode", shippingMode)
@@ -998,7 +1057,9 @@ public class CartImpl implements Cart, ModelBase {
                 .append("origin", origin)
                 .append("custom", custom)
                 .append("discountTypeCombination", discountTypeCombination)
+                .append("lock", lock)
                 .append("deleteDaysAfterLastModification", deleteDaysAfterLastModification)
+                .append("purchaseOrderNumber", purchaseOrderNumber)
                 .append("lastModifiedBy", lastModifiedBy)
                 .append("createdBy", createdBy)
                 .build();

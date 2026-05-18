@@ -40,30 +40,6 @@ public class RemoveProductChangeBuilder implements Builder<RemoveProductChange> 
 
     /**
      *  <p>Value before the change.</p>
-     * @param builder function to build the previousValue value
-     * @return Builder
-     */
-
-    public RemoveProductChangeBuilder previousValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Value before the change.</p>
-     * @param builder function to build the previousValue value
-     * @return Builder
-     */
-
-    public RemoveProductChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -71,6 +47,18 @@ public class RemoveProductChangeBuilder implements Builder<RemoveProductChange> 
     public RemoveProductChangeBuilder previousValue(
             final com.commercetools.history.models.common.Reference previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    /**
+     *  <p>Value before the change.</p>
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public RemoveProductChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, Builder<? extends com.commercetools.history.models.common.Reference>> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 

@@ -16,7 +16,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * FieldDefinition
+ *  <p>Defines a <span>Custom Field</span> and its meta-information. This FieldDefinition is similar to an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> of <span>Product Types</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,7 +26,7 @@ import jakarta.validation.constraints.NotNull;
  *             .type(typeBuilder -> typeBuilder)
  *             .name("{name}")
  *             .label(labelBuilder -> labelBuilder)
- *             .inputHint(TextInputHint.SINGLE_LINE)
+ *             .required(true)
  *             .build()
  * </code></pre>
  * </div>
@@ -36,7 +36,7 @@ import jakarta.validation.constraints.NotNull;
 public interface FieldDefinition {
 
     /**
-     *
+     *  <p>Data type of the Custom Field to define.</p>
      * @return type
      */
     @NotNull
@@ -45,7 +45,7 @@ public interface FieldDefinition {
     public FieldType getType();
 
     /**
-     *  <p>The name of the field. The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). The name must be unique for a given resource type ID. In case there is a field with the same name in another type it has to have the same FieldType also.</p>
+     *  <p>Name of the Custom Field to define. Must be unique for a given <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>. In case there is a FieldDefinition with the same <code>name</code> in another <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>, both FieldDefinitions must have the same <code>type</code>.</p>
      * @return name
      */
     @NotNull
@@ -53,7 +53,7 @@ public interface FieldDefinition {
     public String getName();
 
     /**
-     *
+     *  <p>A human-readable label for the field.</p>
      * @return label
      */
     @NotNull
@@ -62,40 +62,55 @@ public interface FieldDefinition {
     public LocalizedString getLabel();
 
     /**
-     *
-     * @return inputHint
+     *  <p>Defines whether the field is required to have a value.</p>
+     * @return required
      */
     @NotNull
-    @JsonProperty("inputHint")
-    public TextInputHint getInputHint();
+    @JsonProperty("required")
+    public Boolean getRequired();
 
     /**
-     * set type
+     *  <p>Defines the visual representation of the field in user interfaces like the Merchant Center. It is only relevant for string-based <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldTypes</a> like <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldStringType" rel="nofollow">CustomFieldStringType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedStringType" rel="nofollow">CustomFieldLocalizedStringType</a>.</p>
+     * @return inputHint
+     */
+
+    @JsonProperty("inputHint")
+    public TypeTextInputHint getInputHint();
+
+    /**
+     *  <p>Data type of the Custom Field to define.</p>
      * @param type value to be set
      */
 
     public void setType(final FieldType type);
 
     /**
-     *  <p>The name of the field. The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). The name must be unique for a given resource type ID. In case there is a field with the same name in another type it has to have the same FieldType also.</p>
+     *  <p>Name of the Custom Field to define. Must be unique for a given <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>. In case there is a FieldDefinition with the same <code>name</code> in another <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>, both FieldDefinitions must have the same <code>type</code>.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     * set label
+     *  <p>A human-readable label for the field.</p>
      * @param label value to be set
      */
 
     public void setLabel(final LocalizedString label);
 
     /**
-     * set inputHint
+     *  <p>Defines whether the field is required to have a value.</p>
+     * @param required value to be set
+     */
+
+    public void setRequired(final Boolean required);
+
+    /**
+     *  <p>Defines the visual representation of the field in user interfaces like the Merchant Center. It is only relevant for string-based <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldTypes</a> like <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldStringType" rel="nofollow">CustomFieldStringType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedStringType" rel="nofollow">CustomFieldLocalizedStringType</a>.</p>
      * @param inputHint value to be set
      */
 
-    public void setInputHint(final TextInputHint inputHint);
+    public void setInputHint(final TypeTextInputHint inputHint);
 
     /**
      * factory method
@@ -115,6 +130,7 @@ public interface FieldDefinition {
         instance.setType(template.getType());
         instance.setName(template.getName());
         instance.setLabel(template.getLabel());
+        instance.setRequired(template.getRequired());
         instance.setInputHint(template.getInputHint());
         return instance;
     }
@@ -135,6 +151,7 @@ public interface FieldDefinition {
         instance.setType(com.commercetools.history.models.common.FieldType.deepCopy(template.getType()));
         instance.setName(template.getName());
         instance.setLabel(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLabel()));
+        instance.setRequired(template.getRequired());
         instance.setInputHint(template.getInputHint());
         return instance;
     }

@@ -11,7 +11,7 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * QuoteState
+ *  <p>Predefined states tracking the status of the Quote.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface QuoteState extends JsonEnum {
@@ -22,9 +22,9 @@ public interface QuoteState extends JsonEnum {
 
     QuoteState DECLINED_FOR_RENEGOTIATION = QuoteStateEnum.DECLINED_FOR_RENEGOTIATION;
 
-    QuoteState ACCEPTED = QuoteStateEnum.ACCEPTED;
+    QuoteState RENEGOTIATION_ADDRESSED = QuoteStateEnum.RENEGOTIATION_ADDRESSED;
 
-    QuoteState FAILED = QuoteStateEnum.FAILED;
+    QuoteState ACCEPTED = QuoteStateEnum.ACCEPTED;
 
     QuoteState WITHDRAWN = QuoteStateEnum.WITHDRAWN;
 
@@ -48,14 +48,14 @@ public interface QuoteState extends JsonEnum {
         DECLINED_FOR_RENEGOTIATION("DeclinedForRenegotiation"),
 
         /**
+         * RenegotiationAddressed
+         */
+        RENEGOTIATION_ADDRESSED("RenegotiationAddressed"),
+
+        /**
          * Accepted
          */
         ACCEPTED("Accepted"),
-
-        /**
-         * Failed
-         */
-        FAILED("Failed"),
 
         /**
          * Withdrawn

@@ -244,7 +244,7 @@ public class AssociateRoleBuilder implements Builder<AssociateRole> {
     }
 
     /**
-     *  <p>Custom Fields for the AssociateRole.</p>
+     *  <p>Custom Fields of the AssociateRole.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -256,7 +256,7 @@ public class AssociateRoleBuilder implements Builder<AssociateRole> {
     }
 
     /**
-     *  <p>Custom Fields for the AssociateRole.</p>
+     *  <p>Custom Fields of the AssociateRole.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -268,7 +268,7 @@ public class AssociateRoleBuilder implements Builder<AssociateRole> {
     }
 
     /**
-     *  <p>Custom Fields for the AssociateRole.</p>
+     *  <p>Custom Fields of the AssociateRole.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -372,7 +372,7 @@ public class AssociateRoleBuilder implements Builder<AssociateRole> {
     }
 
     /**
-     *  <p>Custom Fields for the AssociateRole.</p>
+     *  <p>Custom Fields of the AssociateRole.</p>
      * @return custom
      */
 

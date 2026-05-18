@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * StagedOrderAddPaymentAction
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderPaymentAddedMessage" rel="nofollow">Order Payment Added</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderAddPaymentActionImpl implements StagedOrderAddPaymentAction, ModelBase {

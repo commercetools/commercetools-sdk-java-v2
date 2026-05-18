@@ -17,6 +17,7 @@ import jakarta.validation.Valid;
 
 /**
  *  <p>To set the Cart's Shipping Method the Cart must have the <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a> and a <code>shippingAddress</code>.</p>
+ *  <p>This update is not allowed when the Cart is <span>frozen</span> with the <code>HardFreeze</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:FreezeStrategy" rel="nofollow">FreezeStrategy</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

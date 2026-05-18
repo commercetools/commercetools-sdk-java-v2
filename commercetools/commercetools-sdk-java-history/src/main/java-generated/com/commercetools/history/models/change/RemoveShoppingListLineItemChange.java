@@ -7,7 +7,7 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.history.models.common.LineItem;
+import com.commercetools.history.models.common.ShoppingListLineItem;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -64,7 +64,7 @@ public interface RemoveShoppingListLineItemChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("previousValue")
-    public LineItem getPreviousValue();
+    public ShoppingListLineItem getPreviousValue();
 
     /**
      *  <p>Value after the change.</p>
@@ -73,7 +73,7 @@ public interface RemoveShoppingListLineItemChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("nextValue")
-    public LineItem getNextValue();
+    public ShoppingListLineItem getNextValue();
 
     /**
      * set change
@@ -87,14 +87,14 @@ public interface RemoveShoppingListLineItemChange extends Change {
      * @param previousValue value to be set
      */
 
-    public void setPreviousValue(final LineItem previousValue);
+    public void setPreviousValue(final ShoppingListLineItem previousValue);
 
     /**
      *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
-    public void setNextValue(final LineItem nextValue);
+    public void setNextValue(final ShoppingListLineItem nextValue);
 
     /**
      * factory method
@@ -132,8 +132,9 @@ public interface RemoveShoppingListLineItemChange extends Change {
         RemoveShoppingListLineItemChangeImpl instance = new RemoveShoppingListLineItemChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(
-            com.commercetools.history.models.common.LineItem.deepCopy(template.getPreviousValue()));
-        instance.setNextValue(com.commercetools.history.models.common.LineItem.deepCopy(template.getNextValue()));
+            com.commercetools.history.models.common.ShoppingListLineItem.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(
+            com.commercetools.history.models.common.ShoppingListLineItem.deepCopy(template.getNextValue()));
         return instance;
     }
 

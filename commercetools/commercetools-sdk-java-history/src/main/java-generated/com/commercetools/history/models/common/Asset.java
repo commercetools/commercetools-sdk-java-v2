@@ -4,6 +4,7 @@ package com.commercetools.history.models.common;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
@@ -24,10 +25,8 @@ import jakarta.validation.constraints.NotNull;
  * <pre><code class='java'>
  *     Asset asset = Asset.builder()
  *             .id("{id}")
+ *             .plusSources(sourcesBuilder -> sourcesBuilder)
  *             .name(nameBuilder -> nameBuilder)
- *             .description(descriptionBuilder -> descriptionBuilder)
- *             .custom(customBuilder -> customBuilder)
- *             .key("{key}")
  *             .build()
  * </code></pre>
  * </div>
@@ -37,7 +36,7 @@ import jakarta.validation.constraints.NotNull;
 public interface Asset {
 
     /**
-     *
+     *  <p>Unique identifier of the Asset. Not required when importing Assets using the <span>Import API</span>.</p>
      * @return id
      */
     @NotNull
@@ -46,6 +45,15 @@ public interface Asset {
 
     /**
      *
+     * @return sources
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("sources")
+    public List<AssetSource> getSources();
+
+    /**
+     *  <p>Name of the Asset.</p>
      * @return name
      */
     @NotNull
@@ -54,61 +62,97 @@ public interface Asset {
     public LocalizedString getName();
 
     /**
-     *
+     *  <p>Description of the Asset.</p>
      * @return description
      */
-    @NotNull
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     *
+     *  <p>Keywords for categorizing and organizing Assets.</p>
+     * @return tags
+     */
+
+    @JsonProperty("tags")
+    public List<String> getTags();
+
+    /**
+     *  <p>Custom Fields defined for the Asset.</p>
      * @return custom
      */
-    @NotNull
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
 
     /**
-     *
+     *  <p>User-defined identifier of the Asset. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return key
      */
-    @NotNull
+
     @JsonProperty("key")
     public String getKey();
 
     /**
-     * set id
+     *  <p>Unique identifier of the Asset. Not required when importing Assets using the <span>Import API</span>.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     * set name
+     * set sources
+     * @param sources values to be set
+     */
+
+    @JsonIgnore
+    public void setSources(final AssetSource... sources);
+
+    /**
+     * set sources
+     * @param sources values to be set
+     */
+
+    public void setSources(final List<AssetSource> sources);
+
+    /**
+     *  <p>Name of the Asset.</p>
      * @param name value to be set
      */
 
     public void setName(final LocalizedString name);
 
     /**
-     * set description
+     *  <p>Description of the Asset.</p>
      * @param description value to be set
      */
 
     public void setDescription(final LocalizedString description);
 
     /**
-     * set custom
+     *  <p>Keywords for categorizing and organizing Assets.</p>
+     * @param tags values to be set
+     */
+
+    @JsonIgnore
+    public void setTags(final String... tags);
+
+    /**
+     *  <p>Keywords for categorizing and organizing Assets.</p>
+     * @param tags values to be set
+     */
+
+    public void setTags(final List<String> tags);
+
+    /**
+     *  <p>Custom Fields defined for the Asset.</p>
      * @param custom value to be set
      */
 
     public void setCustom(final CustomFields custom);
 
     /**
-     * set key
+     *  <p>User-defined identifier of the Asset. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param key value to be set
      */
 
@@ -130,8 +174,10 @@ public interface Asset {
     public static Asset of(final Asset template) {
         AssetImpl instance = new AssetImpl();
         instance.setId(template.getId());
+        instance.setSources(template.getSources());
         instance.setName(template.getName());
         instance.setDescription(template.getDescription());
+        instance.setTags(template.getTags());
         instance.setCustom(template.getCustom());
         instance.setKey(template.getKey());
         return instance;
@@ -151,9 +197,15 @@ public interface Asset {
         }
         AssetImpl instance = new AssetImpl();
         instance.setId(template.getId());
+        instance.setSources(Optional.ofNullable(template.getSources())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.AssetSource::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setName(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setDescription(
             com.commercetools.history.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setTags(Optional.ofNullable(template.getTags()).map(ArrayList::new).orElse(null));
         instance.setCustom(com.commercetools.history.models.common.CustomFields.deepCopy(template.getCustom()));
         instance.setKey(template.getKey());
         return instance;

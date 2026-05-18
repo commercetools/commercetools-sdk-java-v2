@@ -113,6 +113,9 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    @Nullable
+    private String purchaseOrderNumber;
+
     /**
      *  <p>Currency the Cart uses.</p>
      * @param currency value to be set
@@ -1114,6 +1117,18 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
+     *  <p>User-defined identifier of a purchase order.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> or Merchant to track the purchase order during the <span>quote and order flow</span>.</p>
+     * @param purchaseOrderNumber value to be set
+     * @return Builder
+     */
+
+    public CartDraftBuilder purchaseOrderNumber(@Nullable final String purchaseOrderNumber) {
+        this.purchaseOrderNumber = purchaseOrderNumber;
+        return this;
+    }
+
+    /**
      *  <p>Currency the Cart uses.</p>
      * @return currency
      */
@@ -1424,6 +1439,17 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
+     *  <p>User-defined identifier of a purchase order.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> or Merchant to track the purchase order during the <span>quote and order flow</span>.</p>
+     * @return purchaseOrderNumber
+     */
+
+    @Nullable
+    public String getPurchaseOrderNumber() {
+        return this.purchaseOrderNumber;
+    }
+
+    /**
      * builds CartDraft with checking for non-null required values
      * @return CartDraft
      */
@@ -1433,7 +1459,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
             store, lineItems, customLineItems, taxMode, externalTaxRateForShippingMethod, priceRoundingMode,
             taxRoundingMode, taxCalculationMode, inventoryMode, billingAddress, shippingAddress, shippingMethod,
             shippingRateInput, shippingMode, customShipping, shipping, itemShippingAddresses, discountCodes, country,
-            locale, origin, deleteDaysAfterLastModification, custom);
+            locale, origin, deleteDaysAfterLastModification, custom, purchaseOrderNumber);
     }
 
     /**
@@ -1445,7 +1471,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
             store, lineItems, customLineItems, taxMode, externalTaxRateForShippingMethod, priceRoundingMode,
             taxRoundingMode, taxCalculationMode, inventoryMode, billingAddress, shippingAddress, shippingMethod,
             shippingRateInput, shippingMode, customShipping, shipping, itemShippingAddresses, discountCodes, country,
-            locale, origin, deleteDaysAfterLastModification, custom);
+            locale, origin, deleteDaysAfterLastModification, custom, purchaseOrderNumber);
     }
 
     /**
@@ -1493,6 +1519,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
         builder.origin = template.getOrigin();
         builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
         builder.custom = template.getCustom();
+        builder.purchaseOrderNumber = template.getPurchaseOrderNumber();
         return builder;
     }
 

@@ -190,6 +190,12 @@ public class CartQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CartQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<CartQueryBuilderDsl> freezeStrategy() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("freezeStrategy")),
+            p -> new CombinationQueryPredicate<>(p, CartQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<CartQueryBuilderDsl> billingAddress(
             Function<com.commercetools.api.predicates.query.common.AddressQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.AddressQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -367,9 +373,24 @@ public class CartQueryBuilderDsl {
             CartQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<CartQueryBuilderDsl> lock(
+            Function<com.commercetools.api.predicates.query.cart.CartLockQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.CartLockQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("lock"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.cart.CartLockQueryBuilderDsl.of())),
+            CartQueryBuilderDsl::of);
+    }
+
     public LongComparisonPredicateBuilder<CartQueryBuilderDsl> deleteDaysAfterLastModification() {
         return new LongComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("deleteDaysAfterLastModification")),
+            p -> new CombinationQueryPredicate<>(p, CartQueryBuilderDsl::of));
+    }
+
+    public StringComparisonPredicateBuilder<CartQueryBuilderDsl> purchaseOrderNumber() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("purchaseOrderNumber")),
             p -> new CombinationQueryPredicate<>(p, CartQueryBuilderDsl::of));
     }
 

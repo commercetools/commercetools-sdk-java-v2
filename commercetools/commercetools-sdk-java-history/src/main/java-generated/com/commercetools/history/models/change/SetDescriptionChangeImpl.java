@@ -17,11 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategorySetDescriptionAction" rel="nofollow">Set Description</a> on Tax Categories.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ZoneSetDescriptionAction" rel="nofollow">Set Description</a> on Zones.</li>
- *  </ul>
+ * SetDescriptionChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetDescriptionChangeImpl implements SetDescriptionChange, ModelBase {

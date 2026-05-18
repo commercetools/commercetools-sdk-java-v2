@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Adds an address to an Order when shipping to multiple addresses is desired.</p>
+ *  <p>Adds an address to the <code>itemShippingAddresses</code> of an Order. Use this action when shipping is defined per item. For example, when shipping items to multiple addresses or when using different Shipping Methods, even if all items share the same address.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderAddItemShippingAddressActionImpl implements StagedOrderAddItemShippingAddressAction, ModelBase {

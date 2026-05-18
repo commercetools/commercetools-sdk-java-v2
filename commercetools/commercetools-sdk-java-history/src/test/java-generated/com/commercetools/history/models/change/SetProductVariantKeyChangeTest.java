@@ -19,7 +19,8 @@ public class SetProductVariantKeyChangeTest {
         return new Object[][] { new Object[] { "change", SetProductVariantKeyChange.builder().change("change") },
                 new Object[] { "previousValue", SetProductVariantKeyChange.builder().previousValue("previousValue") },
                 new Object[] { "nextValue", SetProductVariantKeyChange.builder().nextValue("nextValue") },
-                new Object[] { "catalogData", SetProductVariantKeyChange.builder().catalogData("catalogData") } };
+                new Object[] { "catalogData", SetProductVariantKeyChange.builder().catalogData("catalogData") },
+                new Object[] { "variant", SetProductVariantKeyChange.builder().variant("variant") } };
     }
 
     @Test
@@ -48,5 +49,12 @@ public class SetProductVariantKeyChangeTest {
         SetProductVariantKeyChange value = SetProductVariantKeyChange.of();
         value.setCatalogData("catalogData");
         Assertions.assertThat(value.getCatalogData()).isEqualTo("catalogData");
+    }
+
+    @Test
+    public void variant() {
+        SetProductVariantKeyChange value = SetProductVariantKeyChange.of();
+        value.setVariant("variant");
+        Assertions.assertThat(value.getVariant()).isEqualTo("variant");
     }
 }

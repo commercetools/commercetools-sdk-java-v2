@@ -7,7 +7,7 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.history.models.common.TextInputHint;
+import com.commercetools.history.models.common.TypeTextInputHint;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -16,11 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeChangeInputHintAction" rel="nofollow">Change AttributeDefinition InputHint</a> on Product Types.</li>
- *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:TypeChangeInputHintAction" rel="nofollow">Change InputHint</a> on Types.</li>
- *  </ul>
+ * ChangeInputHintChange
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,8 +24,8 @@ import jakarta.validation.constraints.NotNull;
  * <pre><code class='java'>
  *     ChangeInputHintChange changeInputHintChange = ChangeInputHintChange.builder()
  *             .change("{change}")
- *             .previousValue(TextInputHint.SINGLE_LINE)
- *             .nextValue(TextInputHint.SINGLE_LINE)
+ *             .previousValue(TypeTextInputHint.SINGLE_LINE)
+ *             .nextValue(TypeTextInputHint.SINGLE_LINE)
  *             .fieldName("{fieldName}")
  *             .attributeName("{attributeName}")
  *             .build()
@@ -68,7 +64,7 @@ public interface ChangeInputHintChange extends Change {
      */
     @NotNull
     @JsonProperty("previousValue")
-    public TextInputHint getPreviousValue();
+    public TypeTextInputHint getPreviousValue();
 
     /**
      *  <p>Value after the change.</p>
@@ -76,7 +72,7 @@ public interface ChangeInputHintChange extends Change {
      */
     @NotNull
     @JsonProperty("nextValue")
-    public TextInputHint getNextValue();
+    public TypeTextInputHint getNextValue();
 
     /**
      *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>; only present on changes to Types.</p>
@@ -106,14 +102,14 @@ public interface ChangeInputHintChange extends Change {
      * @param previousValue value to be set
      */
 
-    public void setPreviousValue(final TextInputHint previousValue);
+    public void setPreviousValue(final TypeTextInputHint previousValue);
 
     /**
      *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
-    public void setNextValue(final TextInputHint nextValue);
+    public void setNextValue(final TypeTextInputHint nextValue);
 
     /**
      *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>; only present on changes to Types.</p>

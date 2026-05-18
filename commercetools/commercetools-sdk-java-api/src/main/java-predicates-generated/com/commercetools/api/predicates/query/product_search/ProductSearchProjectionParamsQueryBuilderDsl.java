@@ -3,6 +3,7 @@ package com.commercetools.api.predicates.query.product_search;
 
 import com.commercetools.api.predicates.query.*;
 
+@Deprecated
 public class ProductSearchProjectionParamsQueryBuilderDsl {
     public ProductSearchProjectionParamsQueryBuilderDsl() {
     }

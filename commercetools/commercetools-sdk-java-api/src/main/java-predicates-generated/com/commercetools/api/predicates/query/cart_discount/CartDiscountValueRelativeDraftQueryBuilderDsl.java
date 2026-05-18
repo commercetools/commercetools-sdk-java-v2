@@ -23,4 +23,10 @@ public class CartDiscountValueRelativeDraftQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CartDiscountValueRelativeDraftQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<CartDiscountValueRelativeDraftQueryBuilderDsl> applicationMode() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("applicationMode")),
+            p -> new CombinationQueryPredicate<>(p, CartDiscountValueRelativeDraftQueryBuilderDsl::of));
+    }
+
 }

@@ -12,8 +12,6 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-import jakarta.validation.constraints.NotNull;
-
 /**
  * ParcelMeasurements
  *
@@ -22,10 +20,6 @@ import jakarta.validation.constraints.NotNull;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ParcelMeasurements parcelMeasurements = ParcelMeasurements.builder()
- *             .heightInMillimeter(1)
- *             .lengthInMillimeter(1)
- *             .widthInMillimeter(1)
- *             .weightInGram(1)
  *             .build()
  * </code></pre>
  * </div>
@@ -35,60 +29,60 @@ import jakarta.validation.constraints.NotNull;
 public interface ParcelMeasurements {
 
     /**
-     *
+     *  <p>Height of the Parcel.</p>
      * @return heightInMillimeter
      */
-    @NotNull
+
     @JsonProperty("heightInMillimeter")
     public Integer getHeightInMillimeter();
 
     /**
-     *
+     *  <p>Length of the Parcel.</p>
      * @return lengthInMillimeter
      */
-    @NotNull
+
     @JsonProperty("lengthInMillimeter")
     public Integer getLengthInMillimeter();
 
     /**
-     *
+     *  <p>Width of the Parcel.</p>
      * @return widthInMillimeter
      */
-    @NotNull
+
     @JsonProperty("widthInMillimeter")
     public Integer getWidthInMillimeter();
 
     /**
-     *
+     *  <p>Weight of the Parcel.</p>
      * @return weightInGram
      */
-    @NotNull
+
     @JsonProperty("weightInGram")
     public Integer getWeightInGram();
 
     /**
-     * set heightInMillimeter
+     *  <p>Height of the Parcel.</p>
      * @param heightInMillimeter value to be set
      */
 
     public void setHeightInMillimeter(final Integer heightInMillimeter);
 
     /**
-     * set lengthInMillimeter
+     *  <p>Length of the Parcel.</p>
      * @param lengthInMillimeter value to be set
      */
 
     public void setLengthInMillimeter(final Integer lengthInMillimeter);
 
     /**
-     * set widthInMillimeter
+     *  <p>Width of the Parcel.</p>
      * @param widthInMillimeter value to be set
      */
 
     public void setWidthInMillimeter(final Integer widthInMillimeter);
 
     /**
-     * set weightInGram
+     *  <p>Weight of the Parcel.</p>
      * @param weightInGram value to be set
      */
 

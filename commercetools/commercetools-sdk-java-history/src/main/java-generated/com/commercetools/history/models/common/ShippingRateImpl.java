@@ -22,9 +22,9 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingRateImpl implements ShippingRate, ModelBase {
 
-    private com.commercetools.history.models.common.Money price;
+    private com.commercetools.history.models.common.CentPrecisionMoney price;
 
-    private com.commercetools.history.models.common.Money freeAbove;
+    private com.commercetools.history.models.common.CentPrecisionMoney freeAbove;
 
     private Boolean isMatching;
 
@@ -34,8 +34,8 @@ public class ShippingRateImpl implements ShippingRate, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    ShippingRateImpl(@JsonProperty("price") final com.commercetools.history.models.common.Money price,
-            @JsonProperty("freeAbove") final com.commercetools.history.models.common.Money freeAbove,
+    ShippingRateImpl(@JsonProperty("price") final com.commercetools.history.models.common.CentPrecisionMoney price,
+            @JsonProperty("freeAbove") final com.commercetools.history.models.common.CentPrecisionMoney freeAbove,
             @JsonProperty("isMatching") final Boolean isMatching,
             @JsonProperty("tiers") final java.util.List<com.commercetools.history.models.common.ShippingRatePriceTier> tiers) {
         this.price = price;
@@ -51,23 +51,23 @@ public class ShippingRateImpl implements ShippingRate, ModelBase {
     }
 
     /**
-     *
+     *  <p>Currency amount of the ShippingRate.</p>
      */
 
-    public com.commercetools.history.models.common.Money getPrice() {
+    public com.commercetools.history.models.common.CentPrecisionMoney getPrice() {
         return this.price;
     }
 
     /**
-     *
+     *  <p><span>Free shipping</span> is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      */
 
-    public com.commercetools.history.models.common.Money getFreeAbove() {
+    public com.commercetools.history.models.common.CentPrecisionMoney getFreeAbove() {
         return this.freeAbove;
     }
 
     /**
-     *  <p>Only appears in response to requests for ShippingMethods by Cart or location to mark this shipping rate as one that matches the Cart or location.</p>
+     *  <p><code>true</code> if the ShippingRate matches given <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Location" rel="nofollow">Location</a>. Only appears in response to requests for <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-cart:GET" rel="nofollow">Get ShippingMethods for a Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-location:GET" rel="nofollow">Get ShippingMethods for a Location</a>.</p>
      */
 
     public Boolean getIsMatching() {
@@ -75,18 +75,18 @@ public class ShippingRateImpl implements ShippingRate, ModelBase {
     }
 
     /**
-     *
+     *  <p>Price tiers for the ShippingRate.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.ShippingRatePriceTier> getTiers() {
         return this.tiers;
     }
 
-    public void setPrice(final com.commercetools.history.models.common.Money price) {
+    public void setPrice(final com.commercetools.history.models.common.CentPrecisionMoney price) {
         this.price = price;
     }
 
-    public void setFreeAbove(final com.commercetools.history.models.common.Money freeAbove) {
+    public void setFreeAbove(final com.commercetools.history.models.common.CentPrecisionMoney freeAbove) {
         this.freeAbove = freeAbove;
     }
 

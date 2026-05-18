@@ -110,7 +110,8 @@ public class QuoteRequestDraftImpl implements QuoteRequestDraft, ModelBase {
     }
 
     /**
-     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the <span>Buyer</span>.</p>
+     *  <p>Identifier for a purchase order, usually in a B2B context. The purchase order number is typically entered by the <span>Buyer</span>.</p>
+     *  <p>If not provided, the <code>purchaseOrderNumber</code> from the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> is used.</p>
      */
 
     public String getPurchaseOrderNumber() {

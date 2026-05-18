@@ -22,7 +22,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssociateRoleAssignmentImpl implements AssociateRoleAssignment, ModelBase {
 
-    private com.commercetools.history.models.common.KeyReference associateRole;
+    private com.commercetools.history.models.common.AssociateRoleKeyReference associateRole;
 
     private com.commercetools.history.models.common.AssociateRoleInheritanceMode inheritance;
 
@@ -31,7 +31,7 @@ public class AssociateRoleAssignmentImpl implements AssociateRoleAssignment, Mod
      */
     @JsonCreator
     AssociateRoleAssignmentImpl(
-            @JsonProperty("associateRole") final com.commercetools.history.models.common.KeyReference associateRole,
+            @JsonProperty("associateRole") final com.commercetools.history.models.common.AssociateRoleKeyReference associateRole,
             @JsonProperty("inheritance") final com.commercetools.history.models.common.AssociateRoleInheritanceMode inheritance) {
         this.associateRole = associateRole;
         this.inheritance = inheritance;
@@ -44,22 +44,23 @@ public class AssociateRoleAssignmentImpl implements AssociateRoleAssignment, Mod
     }
 
     /**
-     *
+     *  <p>Role the Associate holds within a Business Unit.</p>
      */
 
-    public com.commercetools.history.models.common.KeyReference getAssociateRole() {
+    public com.commercetools.history.models.common.AssociateRoleKeyReference getAssociateRole() {
         return this.associateRole;
     }
 
     /**
-     *  <p>Determines whether an <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRoleAssignment" rel="nofollow">AssociateRoleAssignment</a> can be inherited by child Business Units.</p>
+     *  <p>Determines whether the AssociateRoleAssignment can be inherited by child Business Units.</p>
      */
 
     public com.commercetools.history.models.common.AssociateRoleInheritanceMode getInheritance() {
         return this.inheritance;
     }
 
-    public void setAssociateRole(final com.commercetools.history.models.common.KeyReference associateRole) {
+    public void setAssociateRole(
+            final com.commercetools.history.models.common.AssociateRoleKeyReference associateRole) {
         this.associateRole = associateRole;
     }
 

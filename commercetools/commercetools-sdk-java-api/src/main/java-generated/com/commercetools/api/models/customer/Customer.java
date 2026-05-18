@@ -39,7 +39,10 @@ import jakarta.validation.constraints.NotNull;
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .email("{email}")
  *             .plusAddresses(addressesBuilder -> addressesBuilder)
+ *             .plusShippingAddressIds(shippingAddressIdsBuilder -> shippingAddressIdsBuilder)
+ *             .plusBillingAddressIds(billingAddressIdsBuilder -> billingAddressIdsBuilder)
  *             .isEmailVerified(true)
+ *             .plusCustomerGroupAssignments(customerGroupAssignmentsBuilder -> customerGroupAssignmentsBuilder)
  *             .plusStores(storesBuilder -> storesBuilder)
  *             .authenticationMode(AuthenticationMode.PASSWORD)
  *             .build()
@@ -219,7 +222,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
      *  <p>IDs of addresses in <code>addresses</code> used as shipping addresses.</p>
      * @return shippingAddressIds
      */
-
+    @NotNull
     @JsonProperty("shippingAddressIds")
     public List<String> getShippingAddressIds();
 
@@ -235,7 +238,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
      *  <p>IDs of addresses in <code>addresses</code> used as billing addresses.</p>
      * @return billingAddressIds
      */
-
+    @NotNull
     @JsonProperty("billingAddressIds")
     public List<String> getBillingAddressIds();
 
@@ -260,12 +263,13 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
      *  <p>Used for <span>Line Item price selection</span>.</p>
      * @return customerGroupAssignments
      */
+    @NotNull
     @Valid
     @JsonProperty("customerGroupAssignments")
     public List<CustomerGroupAssignment> getCustomerGroupAssignments();
 
     /**
-     *  <p>Custom Fields for the Customer.</p>
+     *  <p>Custom Fields of the Customer.</p>
      * @return custom
      */
     @Valid
@@ -527,7 +531,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     public void setCustomerGroupAssignments(final List<CustomerGroupAssignment> customerGroupAssignments);
 
     /**
-     *  <p>Custom Fields for the Customer.</p>
+     *  <p>Custom Fields of the Customer.</p>
      * @param custom value to be set
      */
 

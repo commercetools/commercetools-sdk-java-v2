@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .messages(messagesBuilder -> messagesBuilder)
  *             .carts(cartsBuilder -> cartsBuilder)
+ *             .discounts(discountsBuilder -> discountsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -67,6 +68,8 @@ public class ProjectBuilder implements Builder<Project> {
 
     @Nullable
     private com.commercetools.api.models.project.BusinessUnitConfiguration businessUnits;
+
+    private com.commercetools.api.models.project.DiscountsConfiguration discounts;
 
     /**
      *  <p>Current version of the Project.</p>
@@ -302,7 +305,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the <span>Shopping Lists</span> feature. This field may not be present on Projects created before January 2020.</p>
+     *  <p>Holds the configuration for the <span>Shopping Lists</span> feature.</p>
      * @param builder function to build the shoppingLists value
      * @return Builder
      */
@@ -315,7 +318,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the <span>Shopping Lists</span> feature. This field may not be present on Projects created before January 2020.</p>
+     *  <p>Holds the configuration for the <span>Shopping Lists</span> feature.</p>
      * @param builder function to build the shoppingLists value
      * @return Builder
      */
@@ -327,7 +330,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the <span>Shopping Lists</span> feature. This field may not be present on Projects created before January 2020.</p>
+     *  <p>Holds the configuration for the <span>Shopping Lists</span> feature.</p>
      * @param shoppingLists value to be set
      * @return Builder
      */
@@ -477,6 +480,41 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
+     *  <p>Holds configuration specific to discounts, including how Product and Cart Discounts are combined in every Cart of the Project.</p>
+     * @param builder function to build the discounts value
+     * @return Builder
+     */
+
+    public ProjectBuilder discounts(
+            Function<com.commercetools.api.models.project.DiscountsConfigurationBuilder, com.commercetools.api.models.project.DiscountsConfigurationBuilder> builder) {
+        this.discounts = builder.apply(com.commercetools.api.models.project.DiscountsConfigurationBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Holds configuration specific to discounts, including how Product and Cart Discounts are combined in every Cart of the Project.</p>
+     * @param builder function to build the discounts value
+     * @return Builder
+     */
+
+    public ProjectBuilder withDiscounts(
+            Function<com.commercetools.api.models.project.DiscountsConfigurationBuilder, com.commercetools.api.models.project.DiscountsConfiguration> builder) {
+        this.discounts = builder.apply(com.commercetools.api.models.project.DiscountsConfigurationBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Holds configuration specific to discounts, including how Product and Cart Discounts are combined in every Cart of the Project.</p>
+     * @param discounts value to be set
+     * @return Builder
+     */
+
+    public ProjectBuilder discounts(final com.commercetools.api.models.project.DiscountsConfiguration discounts) {
+        this.discounts = discounts;
+        return this;
+    }
+
+    /**
      *  <p>Current version of the Project.</p>
      * @return version
      */
@@ -568,7 +606,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the <span>Shopping Lists</span> feature. This field may not be present on Projects created before January 2020.</p>
+     *  <p>Holds the configuration for the <span>Shopping Lists</span> feature.</p>
      * @return shoppingLists
      */
 
@@ -618,6 +656,15 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
+     *  <p>Holds configuration specific to discounts, including how Product and Cart Discounts are combined in every Cart of the Project.</p>
+     * @return discounts
+     */
+
+    public com.commercetools.api.models.project.DiscountsConfiguration getDiscounts() {
+        return this.discounts;
+    }
+
+    /**
      * builds Project with checking for non-null required values
      * @return Project
      */
@@ -631,8 +678,9 @@ public class ProjectBuilder implements Builder<Project> {
         Objects.requireNonNull(createdAt, Project.class + ": createdAt is missing");
         Objects.requireNonNull(messages, Project.class + ": messages is missing");
         Objects.requireNonNull(carts, Project.class + ": carts is missing");
+        Objects.requireNonNull(discounts, Project.class + ": discounts is missing");
         return new ProjectImpl(version, key, name, countries, currencies, languages, createdAt, trialUntil, messages,
-            carts, shoppingLists, shippingRateInputType, externalOAuth, searchIndexing, businessUnits);
+            carts, shoppingLists, shippingRateInputType, externalOAuth, searchIndexing, businessUnits, discounts);
     }
 
     /**
@@ -641,7 +689,7 @@ public class ProjectBuilder implements Builder<Project> {
      */
     public Project buildUnchecked() {
         return new ProjectImpl(version, key, name, countries, currencies, languages, createdAt, trialUntil, messages,
-            carts, shoppingLists, shippingRateInputType, externalOAuth, searchIndexing, businessUnits);
+            carts, shoppingLists, shippingRateInputType, externalOAuth, searchIndexing, businessUnits, discounts);
     }
 
     /**
@@ -674,6 +722,7 @@ public class ProjectBuilder implements Builder<Project> {
         builder.externalOAuth = template.getExternalOAuth();
         builder.searchIndexing = template.getSearchIndexing();
         builder.businessUnits = template.getBusinessUnits();
+        builder.discounts = template.getDiscounts();
         return builder;
     }
 

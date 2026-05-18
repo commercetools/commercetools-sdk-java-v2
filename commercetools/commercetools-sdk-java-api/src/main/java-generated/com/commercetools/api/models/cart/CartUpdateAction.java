@@ -223,6 +223,14 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
     }
 
     /**
+     * builder for lockCart subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.cart.CartLockCartActionBuilder lockCartBuilder() {
+        return com.commercetools.api.models.cart.CartLockCartActionBuilder.of();
+    }
+
+    /**
      * builder for recalculate subtype
      * @return builder
      */
@@ -567,6 +575,14 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
     }
 
     /**
+     * builder for setPurchaseOrderNumber subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.cart.CartSetPurchaseOrderNumberActionBuilder setPurchaseOrderNumberBuilder() {
+        return com.commercetools.api.models.cart.CartSetPurchaseOrderNumberActionBuilder.of();
+    }
+
+    /**
      * builder for setShippingAddress subtype
      * @return builder
      */
@@ -644,6 +660,14 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
      */
     public static com.commercetools.api.models.cart.CartUnfreezeCartActionBuilder unfreezeCartBuilder() {
         return com.commercetools.api.models.cart.CartUnfreezeCartActionBuilder.of();
+    }
+
+    /**
+     * builder for unlockCart subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.cart.CartUnlockCartActionBuilder unlockCartBuilder() {
+        return com.commercetools.api.models.cart.CartUnlockCartActionBuilder.of();
     }
 
     /**

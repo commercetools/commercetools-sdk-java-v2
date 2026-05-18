@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetAddressCustomTypeAction" rel="nofollow">Set Address Custom Type</a> update action.</p>
+ * SetAddressCustomTypeChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetAddressCustomTypeChangeImpl implements SetAddressCustomTypeChange, ModelBase {

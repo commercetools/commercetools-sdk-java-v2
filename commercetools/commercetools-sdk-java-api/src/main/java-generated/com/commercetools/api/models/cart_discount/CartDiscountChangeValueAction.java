@@ -39,7 +39,8 @@ public interface CartDiscountChangeValueAction extends CartDiscountUpdateAction 
     String CHANGE_VALUE = "changeValue";
 
     /**
-     *  <p>New value to set. When trying to set a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueGiftLineItemDraft" rel="nofollow">CartDiscountValueGiftLineItemDraft</a> an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p>
+     *  <p>New value to set.</p>
+     *  <p>When trying to set a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueGiftLineItemDraft" rel="nofollow">CartDiscountValueGiftLineItemDraft</a> an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p>
      * @return value
      */
     @NotNull
@@ -48,7 +49,8 @@ public interface CartDiscountChangeValueAction extends CartDiscountUpdateAction 
     public CartDiscountValueDraft getValue();
 
     /**
-     *  <p>New value to set. When trying to set a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueGiftLineItemDraft" rel="nofollow">CartDiscountValueGiftLineItemDraft</a> an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p>
+     *  <p>New value to set.</p>
+     *  <p>When trying to set a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueGiftLineItemDraft" rel="nofollow">CartDiscountValueGiftLineItemDraft</a> an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p>
      * @param value value to be set
      */
 

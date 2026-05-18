@@ -17,6 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .change("{change}")
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .fieldName("{fieldName}")
+ *             .attributeName("{attributeName}")
  *             .build()
  * </code></pre>
  * </div>
@@ -26,9 +27,11 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
 
     private String change;
 
-    private com.commercetools.history.models.change_value.EnumValue nextValue;
+    private com.commercetools.history.models.common.CustomFieldEnumValue nextValue;
 
     private String fieldName;
+
+    private String attributeName;
 
     /**
      * set the value to the change
@@ -48,8 +51,9 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
      */
 
     public AddEnumValueChangeBuilder nextValue(
-            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValueBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()).build();
+            Function<com.commercetools.history.models.common.CustomFieldEnumValueBuilder, com.commercetools.history.models.common.CustomFieldEnumValueBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.CustomFieldEnumValueBuilder.of())
+                .build();
         return this;
     }
 
@@ -60,8 +64,8 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
      */
 
     public AddEnumValueChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValue> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of());
+            Function<com.commercetools.history.models.common.CustomFieldEnumValueBuilder, com.commercetools.history.models.common.CustomFieldEnumValue> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.CustomFieldEnumValueBuilder.of());
         return this;
     }
 
@@ -72,7 +76,7 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
      */
 
     public AddEnumValueChangeBuilder nextValue(
-            final com.commercetools.history.models.change_value.EnumValue nextValue) {
+            final com.commercetools.history.models.common.CustomFieldEnumValue nextValue) {
         this.nextValue = nextValue;
         return this;
     }
@@ -85,6 +89,17 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
 
     public AddEnumValueChangeBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
+        return this;
+    }
+
+    /**
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
+     * @param attributeName value to be set
+     * @return Builder
+     */
+
+    public AddEnumValueChangeBuilder attributeName(final String attributeName) {
+        this.attributeName = attributeName;
         return this;
     }
 
@@ -102,7 +117,7 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
      * @return nextValue
      */
 
-    public com.commercetools.history.models.change_value.EnumValue getNextValue() {
+    public com.commercetools.history.models.common.CustomFieldEnumValue getNextValue() {
         return this.nextValue;
     }
 
@@ -116,6 +131,15 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
     }
 
     /**
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
+     * @return attributeName
+     */
+
+    public String getAttributeName() {
+        return this.attributeName;
+    }
+
+    /**
      * builds AddEnumValueChange with checking for non-null required values
      * @return AddEnumValueChange
      */
@@ -123,7 +147,8 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
         Objects.requireNonNull(change, AddEnumValueChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, AddEnumValueChange.class + ": nextValue is missing");
         Objects.requireNonNull(fieldName, AddEnumValueChange.class + ": fieldName is missing");
-        return new AddEnumValueChangeImpl(change, nextValue, fieldName);
+        Objects.requireNonNull(attributeName, AddEnumValueChange.class + ": attributeName is missing");
+        return new AddEnumValueChangeImpl(change, nextValue, fieldName, attributeName);
     }
 
     /**
@@ -131,7 +156,7 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
      * @return AddEnumValueChange
      */
     public AddEnumValueChange buildUnchecked() {
-        return new AddEnumValueChangeImpl(change, nextValue, fieldName);
+        return new AddEnumValueChangeImpl(change, nextValue, fieldName, attributeName);
     }
 
     /**
@@ -152,6 +177,7 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
         builder.change = template.getChange();
         builder.nextValue = template.getNextValue();
         builder.fieldName = template.getFieldName();
+        builder.attributeName = template.getAttributeName();
         return builder;
     }
 

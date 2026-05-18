@@ -15,6 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartsConfiguration cartsConfiguration = CartsConfiguration.builder()
+ *             .deleteDaysAfterLastModification(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -22,7 +23,6 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartsConfigurationBuilder implements Builder<CartsConfiguration> {
 
-    @Nullable
     private Long deleteDaysAfterLastModification;
 
     @Nullable
@@ -35,14 +35,17 @@ public class CartsConfigurationBuilder implements Builder<CartsConfiguration> {
     private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
 
     /**
-     *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDraft" rel="nofollow">CartDraft</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MyCartDraft" rel="nofollow">MyCartDraft</a>. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:ChangeSubscription" rel="nofollow">ChangeSubscription</a> for Carts exists, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceDeletedDeliveryPayload" rel="nofollow">ResourceDeletedDeliveryPayload</a> is sent upon deletion of a Cart.</p>
-     *  <p>This field may not be present on Projects created before January 2020.</p>
+     *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDraft" rel="nofollow">CartDraft</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MyCartDraft" rel="nofollow">MyCartDraft</a>.</p>
+     *  <ul>
+     *   <li>If a <a href="https://docs.commercetools.com/apis/ctp:api:type:ChangeSubscription" rel="nofollow">ChangeSubscription</a> for Carts exists, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceDeletedDeliveryPayload" rel="nofollow">ResourceDeletedDeliveryPayload</a> is sent upon deletion of a Cart.</li>
+     *   <li>Carts with <a href="https://docs.commercetools.com/apis/ctp:api:type:CartOrigin" rel="nofollow">CartOrigin</a> <code>Quote</code> or <code>RecurringOrder</code> are not affected by this configuration value.</li>
+     *   <li>Changing this value doesn't affect the retention of existing Carts. To update an existing Cart's retention use <span><code>setDeleteDaysAfterLastModification</code></span> on the Carts API.</li>
+     *  </ul>
      * @param deleteDaysAfterLastModification value to be set
      * @return Builder
      */
 
-    public CartsConfigurationBuilder deleteDaysAfterLastModification(
-            @Nullable final Long deleteDaysAfterLastModification) {
+    public CartsConfigurationBuilder deleteDaysAfterLastModification(final Long deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         return this;
     }
@@ -84,12 +87,15 @@ public class CartsConfigurationBuilder implements Builder<CartsConfiguration> {
     }
 
     /**
-     *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDraft" rel="nofollow">CartDraft</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MyCartDraft" rel="nofollow">MyCartDraft</a>. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:ChangeSubscription" rel="nofollow">ChangeSubscription</a> for Carts exists, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceDeletedDeliveryPayload" rel="nofollow">ResourceDeletedDeliveryPayload</a> is sent upon deletion of a Cart.</p>
-     *  <p>This field may not be present on Projects created before January 2020.</p>
+     *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDraft" rel="nofollow">CartDraft</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MyCartDraft" rel="nofollow">MyCartDraft</a>.</p>
+     *  <ul>
+     *   <li>If a <a href="https://docs.commercetools.com/apis/ctp:api:type:ChangeSubscription" rel="nofollow">ChangeSubscription</a> for Carts exists, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceDeletedDeliveryPayload" rel="nofollow">ResourceDeletedDeliveryPayload</a> is sent upon deletion of a Cart.</li>
+     *   <li>Carts with <a href="https://docs.commercetools.com/apis/ctp:api:type:CartOrigin" rel="nofollow">CartOrigin</a> <code>Quote</code> or <code>RecurringOrder</code> are not affected by this configuration value.</li>
+     *   <li>Changing this value doesn't affect the retention of existing Carts. To update an existing Cart's retention use <span><code>setDeleteDaysAfterLastModification</code></span> on the Carts API.</li>
+     *  </ul>
      * @return deleteDaysAfterLastModification
      */
 
-    @Nullable
     public Long getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
@@ -129,6 +135,8 @@ public class CartsConfigurationBuilder implements Builder<CartsConfiguration> {
      * @return CartsConfiguration
      */
     public CartsConfiguration build() {
+        Objects.requireNonNull(deleteDaysAfterLastModification,
+            CartsConfiguration.class + ": deleteDaysAfterLastModification is missing");
         return new CartsConfigurationImpl(deleteDaysAfterLastModification, countryTaxRateFallbackEnabled,
             priceRoundingMode, taxRoundingMode);
     }

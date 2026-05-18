@@ -32,7 +32,7 @@ public class CustomFieldDateTypeImpl implements CustomFieldDateType, ModelBase {
     }
 
     /**
-     *
+     *  <p>Discriminator that determines the type of the field.</p>
      */
 
     public String getName() {

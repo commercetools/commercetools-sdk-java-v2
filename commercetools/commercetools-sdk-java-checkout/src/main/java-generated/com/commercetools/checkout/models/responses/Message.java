@@ -160,10 +160,10 @@ public interface Message {
     }
 
     /**
-     * builder for cartWithExisitingPayment subtype
+     * builder for cartWithExistingPayment subtype
      * @return builder
      */
-    public static com.commercetools.checkout.models.responses.CartWithExistingPaymentBuilder cartWithExisitingPaymentBuilder() {
+    public static com.commercetools.checkout.models.responses.CartWithExistingPaymentBuilder cartWithExistingPaymentBuilder() {
         return com.commercetools.checkout.models.responses.CartWithExistingPaymentBuilder.of();
     }
 
@@ -237,6 +237,70 @@ public interface Message {
      */
     public static com.commercetools.checkout.models.responses.ExpiredSessionBuilder expiredSessionBuilder() {
         return com.commercetools.checkout.models.responses.ExpiredSessionBuilder.of();
+    }
+
+    /**
+     * builder for expressContainerNotFound subtype
+     * @return builder
+     */
+    public static com.commercetools.checkout.models.responses.ExpressContainerNotFoundBuilder expressContainerNotFoundBuilder() {
+        return com.commercetools.checkout.models.responses.ExpressContainerNotFoundBuilder.of();
+    }
+
+    /**
+     * builder for expressMultipleContainersFound subtype
+     * @return builder
+     */
+    public static com.commercetools.checkout.models.responses.ExpressMultipleContainersFoundBuilder expressMultipleContainersFoundBuilder() {
+        return com.commercetools.checkout.models.responses.ExpressMultipleContainersFoundBuilder.of();
+    }
+
+    /**
+     * builder for expressPaymentCancelled subtype
+     * @return builder
+     */
+    public static com.commercetools.checkout.models.responses.ExpressPaymentCancelledBuilder expressPaymentCancelledBuilder() {
+        return com.commercetools.checkout.models.responses.ExpressPaymentCancelledBuilder.of();
+    }
+
+    /**
+     * builder for expressPaymentCompleted subtype
+     * @return builder
+     */
+    public static com.commercetools.checkout.models.responses.ExpressPaymentCompletedBuilder expressPaymentCompletedBuilder() {
+        return com.commercetools.checkout.models.responses.ExpressPaymentCompletedBuilder.of();
+    }
+
+    /**
+     * builder for expressPaymentFailed subtype
+     * @return builder
+     */
+    public static com.commercetools.checkout.models.responses.ExpressPaymentFailedBuilder expressPaymentFailedBuilder() {
+        return com.commercetools.checkout.models.responses.ExpressPaymentFailedBuilder.of();
+    }
+
+    /**
+     * builder for expressPaymentIntegrationNotAvailable subtype
+     * @return builder
+     */
+    public static com.commercetools.checkout.models.responses.ExpressPaymentIntegrationNotAvailableBuilder expressPaymentIntegrationNotAvailableBuilder() {
+        return com.commercetools.checkout.models.responses.ExpressPaymentIntegrationNotAvailableBuilder.of();
+    }
+
+    /**
+     * builder for expressPaymentInterrupted subtype
+     * @return builder
+     */
+    public static com.commercetools.checkout.models.responses.ExpressPaymentInterruptedBuilder expressPaymentInterruptedBuilder() {
+        return com.commercetools.checkout.models.responses.ExpressPaymentInterruptedBuilder.of();
+    }
+
+    /**
+     * builder for expressPaymentStarted subtype
+     * @return builder
+     */
+    public static com.commercetools.checkout.models.responses.ExpressPaymentStartedBuilder expressPaymentStartedBuilder() {
+        return com.commercetools.checkout.models.responses.ExpressPaymentStartedBuilder.of();
     }
 
     /**
@@ -349,6 +413,14 @@ public interface Message {
      */
     public static com.commercetools.checkout.models.responses.MultipleVendorButtonContainersBuilder multipleVendorButtonContainersBuilder() {
         return com.commercetools.checkout.models.responses.MultipleVendorButtonContainersBuilder.of();
+    }
+
+    /**
+     * builder for noExpressPaymentIntegrations subtype
+     * @return builder
+     */
+    public static com.commercetools.checkout.models.responses.NoExpressPaymentIntegrationsBuilder noExpressPaymentIntegrationsBuilder() {
+        return com.commercetools.checkout.models.responses.NoExpressPaymentIntegrationsBuilder.of();
     }
 
     /**

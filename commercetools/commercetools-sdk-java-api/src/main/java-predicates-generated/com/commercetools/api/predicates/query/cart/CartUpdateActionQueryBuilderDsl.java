@@ -164,6 +164,13 @@ public class CartUpdateActionQueryBuilderDsl {
             CartUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> asLockCart(
+            Function<com.commercetools.api.predicates.query.cart.CartLockCartActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.CartLockCartActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.cart.CartLockCartActionQueryBuilderDsl.of()),
+            CartUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> asRecalculate(
             Function<com.commercetools.api.predicates.query.cart.CartRecalculateActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.CartRecalculateActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -478,6 +485,13 @@ public class CartUpdateActionQueryBuilderDsl {
             CartUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> asSetPurchaseOrderNumber(
+            Function<com.commercetools.api.predicates.query.cart.CartSetPurchaseOrderNumberActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.CartSetPurchaseOrderNumberActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.cart.CartSetPurchaseOrderNumberActionQueryBuilderDsl.of()),
+            CartUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> asSetShippingAddress(
             Function<com.commercetools.api.predicates.query.cart.CartSetShippingAddressActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.CartSetShippingAddressActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -548,6 +562,13 @@ public class CartUpdateActionQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.cart.CartUnfreezeCartActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.CartUnfreezeCartActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(com.commercetools.api.predicates.query.cart.CartUnfreezeCartActionQueryBuilderDsl.of()),
+            CartUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> asUnlockCart(
+            Function<com.commercetools.api.predicates.query.cart.CartUnlockCartActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.CartUnlockCartActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.cart.CartUnlockCartActionQueryBuilderDsl.of()),
             CartUpdateActionQueryBuilderDsl::of);
     }
 

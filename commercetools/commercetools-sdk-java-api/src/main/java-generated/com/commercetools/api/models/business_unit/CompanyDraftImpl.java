@@ -54,6 +54,8 @@ public class CompanyDraftImpl implements CompanyDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    private java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> customerGroupAssignments;
+
     /**
      * create instance with all properties
      */
@@ -71,7 +73,8 @@ public class CompanyDraftImpl implements CompanyDraft, ModelBase {
             @JsonProperty("defaultShippingAddress") final Integer defaultShippingAddress,
             @JsonProperty("billingAddresses") final java.util.List<Integer> billingAddresses,
             @JsonProperty("defaultBillingAddress") final Integer defaultBillingAddress,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+            @JsonProperty("customerGroupAssignments") final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> customerGroupAssignments) {
         this.key = key;
         this.status = status;
         this.stores = stores;
@@ -87,6 +90,7 @@ public class CompanyDraftImpl implements CompanyDraft, ModelBase {
         this.billingAddresses = billingAddresses;
         this.defaultBillingAddress = defaultBillingAddress;
         this.custom = custom;
+        this.customerGroupAssignments = customerGroupAssignments;
         this.unitType = BusinessUnitType.findEnum("Company");
     }
 
@@ -227,6 +231,15 @@ public class CompanyDraftImpl implements CompanyDraft, ModelBase {
         return this.custom;
     }
 
+    /**
+     *  <p>Customer Groups to assign the Business Unit to.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> getCustomerGroupAssignments() {
+        return this.customerGroupAssignments;
+    }
+
     public void setKey(final String key) {
         this.key = key;
     }
@@ -310,6 +323,16 @@ public class CompanyDraftImpl implements CompanyDraft, ModelBase {
         this.custom = custom;
     }
 
+    public void setCustomerGroupAssignments(
+            final com.commercetools.api.models.customer.CustomerGroupAssignmentDraft... customerGroupAssignments) {
+        this.customerGroupAssignments = new ArrayList<>(Arrays.asList(customerGroupAssignments));
+    }
+
+    public void setCustomerGroupAssignments(
+            final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> customerGroupAssignments) {
+        this.customerGroupAssignments = customerGroupAssignments;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -336,6 +359,7 @@ public class CompanyDraftImpl implements CompanyDraft, ModelBase {
                 .append(billingAddresses, that.billingAddresses)
                 .append(defaultBillingAddress, that.defaultBillingAddress)
                 .append(custom, that.custom)
+                .append(customerGroupAssignments, that.customerGroupAssignments)
                 .append(key, that.key)
                 .append(status, that.status)
                 .append(stores, that.stores)
@@ -352,6 +376,7 @@ public class CompanyDraftImpl implements CompanyDraft, ModelBase {
                 .append(billingAddresses, that.billingAddresses)
                 .append(defaultBillingAddress, that.defaultBillingAddress)
                 .append(custom, that.custom)
+                .append(customerGroupAssignments, that.customerGroupAssignments)
                 .isEquals();
     }
 
@@ -373,6 +398,7 @@ public class CompanyDraftImpl implements CompanyDraft, ModelBase {
                 .append(billingAddresses)
                 .append(defaultBillingAddress)
                 .append(custom)
+                .append(customerGroupAssignments)
                 .toHashCode();
     }
 
@@ -394,6 +420,7 @@ public class CompanyDraftImpl implements CompanyDraft, ModelBase {
                 .append("billingAddresses", billingAddresses)
                 .append("defaultBillingAddress", defaultBillingAddress)
                 .append("custom", custom)
+                .append("customerGroupAssignments", customerGroupAssignments)
                 .build();
     }
 

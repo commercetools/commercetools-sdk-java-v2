@@ -137,6 +137,15 @@ public class ByProjectKeyProductProjectionsKeyByKeyTest {
                                 .productProjections()
                                 .withKey("test_key")
                                 .get()
+                                .withFilterAttributes("filter[attributes]")
+                                .createHttpRequest(),
+                        "get",
+                        "test_projectKey/product-projections/key=test_key?filter[attributes]=filter%5Battributes%5D", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .productProjections()
+                                .withKey("test_key")
+                                .get()
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "get", "test_projectKey/product-projections/key=test_key?expand=expand", },
@@ -199,6 +208,11 @@ public class ByProjectKeyProductProjectionsKeyByKeyTest {
                         .withKey("test_key")
                         .get()
                         .withStoreProjection("storeProjection"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productProjections()
+                        .withKey("test_key")
+                        .get()
+                        .withFilterAttributes("filter[attributes]"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productProjections()
                         .withKey("test_key")

@@ -17,6 +17,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .change("{change}")
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .catalogData("{catalogData}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -29,6 +31,10 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
     private java.util.List<com.commercetools.history.models.common.LocalizedString> previousValue;
 
     private java.util.List<com.commercetools.history.models.common.LocalizedString> nextValue;
+
+    private String catalogData;
+
+    private String variant;
 
     /**
      * set the value to the change
@@ -222,6 +228,33 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
     }
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     * @return Builder
+     */
+
+    public ChangeAssetOrderChangeBuilder catalogData(final String catalogData) {
+        this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     * @return Builder
+     */
+
+    public ChangeAssetOrderChangeBuilder variant(final String variant) {
+        this.variant = variant;
+        return this;
+    }
+
+    /**
      * value of change}
      * @return change
      */
@@ -249,6 +282,29 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
     }
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
+    /**
      * builds ChangeAssetOrderChange with checking for non-null required values
      * @return ChangeAssetOrderChange
      */
@@ -256,7 +312,9 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
         Objects.requireNonNull(change, ChangeAssetOrderChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, ChangeAssetOrderChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, ChangeAssetOrderChange.class + ": nextValue is missing");
-        return new ChangeAssetOrderChangeImpl(change, previousValue, nextValue);
+        Objects.requireNonNull(catalogData, ChangeAssetOrderChange.class + ": catalogData is missing");
+        Objects.requireNonNull(variant, ChangeAssetOrderChange.class + ": variant is missing");
+        return new ChangeAssetOrderChangeImpl(change, previousValue, nextValue, catalogData, variant);
     }
 
     /**
@@ -264,7 +322,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
      * @return ChangeAssetOrderChange
      */
     public ChangeAssetOrderChange buildUnchecked() {
-        return new ChangeAssetOrderChangeImpl(change, previousValue, nextValue);
+        return new ChangeAssetOrderChangeImpl(change, previousValue, nextValue, catalogData, variant);
     }
 
     /**
@@ -285,6 +343,8 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
         builder.change = template.getChange();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.catalogData = template.getCatalogData();
+        builder.variant = template.getVariant();
         return builder;
     }
 

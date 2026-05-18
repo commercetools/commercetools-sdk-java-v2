@@ -128,4 +128,14 @@ public class ProjectQueryBuilderDsl {
             ProjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ProjectQueryBuilderDsl> discounts(
+            Function<com.commercetools.api.predicates.query.project.DiscountsConfigurationQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.DiscountsConfigurationQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("discounts"))
+                    .inner(fn.apply(
+                        com.commercetools.api.predicates.query.project.DiscountsConfigurationQueryBuilderDsl.of())),
+            ProjectQueryBuilderDsl::of);
+    }
+
 }

@@ -28,6 +28,10 @@ import jakarta.validation.constraints.NotNull;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .catalogData("{catalogData}")
+ *             .variant("{variant}")
+ *             .priceId("{priceId}")
+ *             .customTypeId("{customTypeId}")
+ *             .name("{name}")
  *             .build()
  * </code></pre>
  * </div>
@@ -77,6 +81,7 @@ public interface SetProductPriceCustomFieldChange extends Change {
     public CustomFields getNextValue();
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -86,6 +91,39 @@ public interface SetProductPriceCustomFieldChange extends Change {
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+    @NotNull
+    @JsonProperty("variant")
+    public String getVariant();
+
+    /**
+     *  <p><code>id</code> of the Embedded <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</p>
+     * @return priceId
+     */
+    @NotNull
+    @JsonProperty("priceId")
+    public String getPriceId();
+
+    /**
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
+     * @return customTypeId
+     */
+    @NotNull
+    @JsonProperty("customTypeId")
+    public String getCustomTypeId();
+
+    /**
+     *  <p>Name of the <span>Custom Field</span>.</p>
+     * @return name
+     */
+    @NotNull
+    @JsonProperty("name")
+    public String getName();
 
     /**
      * set change
@@ -109,6 +147,7 @@ public interface SetProductPriceCustomFieldChange extends Change {
     public void setNextValue(final CustomFields nextValue);
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
      *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
@@ -117,6 +156,35 @@ public interface SetProductPriceCustomFieldChange extends Change {
      */
 
     public void setCatalogData(final String catalogData);
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     */
+
+    public void setVariant(final String variant);
+
+    /**
+     *  <p><code>id</code> of the Embedded <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</p>
+     * @param priceId value to be set
+     */
+
+    public void setPriceId(final String priceId);
+
+    /**
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
+     * @param customTypeId value to be set
+     */
+
+    public void setCustomTypeId(final String customTypeId);
+
+    /**
+     *  <p>Name of the <span>Custom Field</span>.</p>
+     * @param name value to be set
+     */
+
+    public void setName(final String name);
 
     /**
      * factory method
@@ -137,6 +205,10 @@ public interface SetProductPriceCustomFieldChange extends Change {
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
         instance.setCatalogData(template.getCatalogData());
+        instance.setVariant(template.getVariant());
+        instance.setPriceId(template.getPriceId());
+        instance.setCustomTypeId(template.getCustomTypeId());
+        instance.setName(template.getName());
         return instance;
     }
 
@@ -158,6 +230,10 @@ public interface SetProductPriceCustomFieldChange extends Change {
             com.commercetools.history.models.common.CustomFields.deepCopy(template.getPreviousValue()));
         instance.setNextValue(com.commercetools.history.models.common.CustomFields.deepCopy(template.getNextValue()));
         instance.setCatalogData(template.getCatalogData());
+        instance.setVariant(template.getVariant());
+        instance.setPriceId(template.getPriceId());
+        instance.setCustomTypeId(template.getCustomTypeId());
+        instance.setName(template.getName());
         return instance;
     }
 

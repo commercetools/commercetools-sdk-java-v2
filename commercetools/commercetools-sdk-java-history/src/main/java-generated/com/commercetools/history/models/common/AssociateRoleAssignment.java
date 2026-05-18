@@ -34,16 +34,16 @@ import jakarta.validation.constraints.NotNull;
 public interface AssociateRoleAssignment {
 
     /**
-     *
+     *  <p>Role the Associate holds within a Business Unit.</p>
      * @return associateRole
      */
     @NotNull
     @Valid
     @JsonProperty("associateRole")
-    public KeyReference getAssociateRole();
+    public AssociateRoleKeyReference getAssociateRole();
 
     /**
-     *  <p>Determines whether an <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRoleAssignment" rel="nofollow">AssociateRoleAssignment</a> can be inherited by child Business Units.</p>
+     *  <p>Determines whether the AssociateRoleAssignment can be inherited by child Business Units.</p>
      * @return inheritance
      */
     @NotNull
@@ -51,14 +51,14 @@ public interface AssociateRoleAssignment {
     public AssociateRoleInheritanceMode getInheritance();
 
     /**
-     * set associateRole
+     *  <p>Role the Associate holds within a Business Unit.</p>
      * @param associateRole value to be set
      */
 
-    public void setAssociateRole(final KeyReference associateRole);
+    public void setAssociateRole(final AssociateRoleKeyReference associateRole);
 
     /**
-     *  <p>Determines whether an <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRoleAssignment" rel="nofollow">AssociateRoleAssignment</a> can be inherited by child Business Units.</p>
+     *  <p>Determines whether the AssociateRoleAssignment can be inherited by child Business Units.</p>
      * @param inheritance value to be set
      */
 
@@ -98,7 +98,7 @@ public interface AssociateRoleAssignment {
         }
         AssociateRoleAssignmentImpl instance = new AssociateRoleAssignmentImpl();
         instance.setAssociateRole(
-            com.commercetools.history.models.common.KeyReference.deepCopy(template.getAssociateRole()));
+            com.commercetools.history.models.common.AssociateRoleKeyReference.deepCopy(template.getAssociateRole()));
         instance.setInheritance(template.getInheritance());
         return instance;
     }

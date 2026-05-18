@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  *             .imported(1)
  *             .rejected(1)
  *             .canceled(1)
+ *             .partiallyImported(1)
  *             .build()
  * </code></pre>
  * </div>
@@ -94,6 +95,14 @@ public interface OperationStates {
     public Long getCanceled();
 
     /**
+     *  <p>The number of ImportOperations in the <code>partiallyImported</code> state.</p>
+     * @return partiallyImported
+     */
+    @NotNull
+    @JsonProperty("partiallyImported")
+    public Long getPartiallyImported();
+
+    /**
      *  <p>The number of ImportOperations in the <code>processing</code> state.</p>
      * @param processing value to be set
      */
@@ -143,6 +152,13 @@ public interface OperationStates {
     public void setCanceled(final Long canceled);
 
     /**
+     *  <p>The number of ImportOperations in the <code>partiallyImported</code> state.</p>
+     * @param partiallyImported value to be set
+     */
+
+    public void setPartiallyImported(final Long partiallyImported);
+
+    /**
      * factory method
      * @return instance of OperationStates
      */
@@ -164,6 +180,7 @@ public interface OperationStates {
         instance.setImported(template.getImported());
         instance.setRejected(template.getRejected());
         instance.setCanceled(template.getCanceled());
+        instance.setPartiallyImported(template.getPartiallyImported());
         return instance;
     }
 
@@ -187,6 +204,7 @@ public interface OperationStates {
         instance.setImported(template.getImported());
         instance.setRejected(template.getRejected());
         instance.setCanceled(template.getCanceled());
+        instance.setPartiallyImported(template.getPartiallyImported());
         return instance;
     }
 

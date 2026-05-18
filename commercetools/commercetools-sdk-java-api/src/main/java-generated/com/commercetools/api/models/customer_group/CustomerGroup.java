@@ -110,7 +110,7 @@ public interface CustomerGroup
     public String getName();
 
     /**
-     *  <p>Custom Fields for the CustomerGroup.</p>
+     *  <p>Custom Fields of the CustomerGroup.</p>
      * @return custom
      */
     @Valid
@@ -174,7 +174,7 @@ public interface CustomerGroup
     public void setName(final String name);
 
     /**
-     *  <p>Custom Fields for the CustomerGroup.</p>
+     *  <p>Custom Fields of the CustomerGroup.</p>
      * @param custom value to be set
      */
 

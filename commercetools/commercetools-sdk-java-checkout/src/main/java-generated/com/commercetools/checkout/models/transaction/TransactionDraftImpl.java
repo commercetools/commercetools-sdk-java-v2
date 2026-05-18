@@ -59,7 +59,7 @@ public class TransactionDraftImpl implements TransactionDraft, ModelBase {
     }
 
     /**
-     *  <p><span>Application</span> for which the payment is executed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:checkout:type:Application" rel="nofollow">Application</a> for which the payment is executed.</p>
      */
 
     public com.commercetools.checkout.models.application.ApplicationResourceIdentifier getApplication() {
@@ -75,7 +75,7 @@ public class TransactionDraftImpl implements TransactionDraft, ModelBase {
     }
 
     /**
-     *  <p><span>Cart</span> for which the payment must be executed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> for which the payment must be executed.</p>
      */
 
     public com.commercetools.checkout.models.cart.CartResourceIdentifier getCart() {

@@ -237,7 +237,7 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields for the Category.</p>
+     *  <p>Custom Fields of the Category.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

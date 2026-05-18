@@ -88,7 +88,8 @@ public interface SetLineItemDistributionChannelChange extends Change {
     public LocalizedString getLineItem();
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      * @return variant
      */
     @NotNull
@@ -124,7 +125,8 @@ public interface SetLineItemDistributionChannelChange extends Change {
     public void setLineItem(final LocalizedString lineItem);
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      * @param variant value to be set
      */
 

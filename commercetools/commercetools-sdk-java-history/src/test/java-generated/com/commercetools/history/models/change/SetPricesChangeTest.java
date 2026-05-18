@@ -28,7 +28,14 @@ public class SetPricesChangeTest {
                                 .nextValue(Collections
                                         .singletonList(new com.commercetools.history.models.common.PriceImpl())) },
                 new Object[] { "catalogData", SetPricesChange.builder().catalogData("catalogData") },
-                new Object[] { "variant", SetPricesChange.builder().variant("variant") } };
+                new Object[] { "variant", SetPricesChange.builder().variant("variant") },
+                new Object[] { "addedItems",
+                        SetPricesChange.builder()
+                                .addedItems(Collections
+                                        .singletonList(new com.commercetools.history.models.common.PriceImpl())) },
+                new Object[] { "removedItems", SetPricesChange.builder()
+                        .removedItems(
+                            Collections.singletonList(new com.commercetools.history.models.common.PriceImpl())) } };
     }
 
     @Test
@@ -66,5 +73,21 @@ public class SetPricesChangeTest {
         SetPricesChange value = SetPricesChange.of();
         value.setVariant("variant");
         Assertions.assertThat(value.getVariant()).isEqualTo("variant");
+    }
+
+    @Test
+    public void addedItems() {
+        SetPricesChange value = SetPricesChange.of();
+        value.setAddedItems(Collections.singletonList(new com.commercetools.history.models.common.PriceImpl()));
+        Assertions.assertThat(value.getAddedItems())
+                .isEqualTo(Collections.singletonList(new com.commercetools.history.models.common.PriceImpl()));
+    }
+
+    @Test
+    public void removedItems() {
+        SetPricesChange value = SetPricesChange.of();
+        value.setRemovedItems(Collections.singletonList(new com.commercetools.history.models.common.PriceImpl()));
+        Assertions.assertThat(value.getRemovedItems())
+                .isEqualTo(Collections.singletonList(new com.commercetools.history.models.common.PriceImpl()));
     }
 }

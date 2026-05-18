@@ -7,7 +7,7 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.history.models.change_value.CustomFieldExpandedValue;
+import com.commercetools.history.models.common.CustomFields;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -63,7 +63,7 @@ public interface AddInterfaceInteractionChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("nextValue")
-    public CustomFieldExpandedValue getNextValue();
+    public CustomFields getNextValue();
 
     /**
      * set change
@@ -77,7 +77,7 @@ public interface AddInterfaceInteractionChange extends Change {
      * @param nextValue value to be set
      */
 
-    public void setNextValue(final CustomFieldExpandedValue nextValue);
+    public void setNextValue(final CustomFields nextValue);
 
     /**
      * factory method
@@ -113,8 +113,7 @@ public interface AddInterfaceInteractionChange extends Change {
         }
         AddInterfaceInteractionChangeImpl instance = new AddInterfaceInteractionChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(
-            com.commercetools.history.models.change_value.CustomFieldExpandedValue.deepCopy(template.getNextValue()));
+        instance.setNextValue(com.commercetools.history.models.common.CustomFields.deepCopy(template.getNextValue()));
         return instance;
     }
 

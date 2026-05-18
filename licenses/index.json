@@ -383,7 +383,7 @@
         },
         {
             "moduleName": "com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core",
-            "moduleVersion": "8.1.0",
+            "moduleVersion": "8.3.0",
             "moduleUrls": [
                 "https://github.com/Netflix/dgs-codegen"
             ],
@@ -452,8 +452,29 @@
             ]
         },
         {
+            "moduleName": "com.squareup.okhttp3:okhttp",
+            "moduleVersion": "5.3.2"
+        },
+        {
+            "moduleName": "com.squareup.okhttp3:okhttp-jvm",
+            "moduleVersion": "5.3.2",
+            "moduleUrls": [
+                "https://square.github.io/okhttp/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
             "moduleName": "com.squareup.okio:okio",
             "moduleVersion": "3.14.0"
+        },
+        {
+            "moduleName": "com.squareup.okio:okio",
+            "moduleVersion": "3.16.4"
         },
         {
             "moduleName": "com.squareup.okio:okio",
@@ -462,6 +483,19 @@
         {
             "moduleName": "com.squareup.okio:okio-jvm",
             "moduleVersion": "3.14.0",
+            "moduleUrls": [
+                "https://github.com/square/okio/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "com.squareup.okio:okio-jvm",
+            "moduleVersion": "3.16.4",
             "moduleUrls": [
                 "https://github.com/square/okio/"
             ],
@@ -1060,7 +1094,7 @@
         },
         {
             "moduleName": "io.projectreactor.netty:reactor-netty-core",
-            "moduleVersion": "1.2.7",
+            "moduleVersion": "1.2.8",
             "moduleUrls": [
                 "https://github.com/reactor/reactor-netty"
             ],
@@ -1073,7 +1107,7 @@
         },
         {
             "moduleName": "io.projectreactor.netty:reactor-netty-http",
-            "moduleVersion": "1.2.7",
+            "moduleVersion": "1.2.8",
             "moduleUrls": [
                 "https://github.com/reactor/reactor-netty"
             ],
@@ -1086,7 +1120,7 @@
         },
         {
             "moduleName": "io.projectreactor:reactor-core",
-            "moduleVersion": "3.7.7",
+            "moduleVersion": "3.7.8",
             "moduleUrls": [
                 "https://github.com/reactor/reactor-core"
             ],
@@ -2019,6 +2053,19 @@
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib",
             "moduleVersion": "2.1.21",
+            "moduleUrls": [
+                "https://kotlinlang.org/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "org.jetbrains.kotlin:kotlin-stdlib",
+            "moduleVersion": "2.2.21",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],

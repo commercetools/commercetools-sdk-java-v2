@@ -37,7 +37,7 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     private Integer version;
 
-    private com.commercetools.checkout.models.application.ApplicationResourceIdentifier application;
+    private com.commercetools.checkout.models.application.ApplicationReference application;
 
     private java.util.List<com.commercetools.checkout.models.transaction.TransactionItem> transactionItems;
 
@@ -87,40 +87,39 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *  <p><span>Application</span> for which the payment must be executed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:checkout:type:Application" rel="nofollow">Application</a> for which the payment must be executed.</p>
      * @param builder function to build the application value
      * @return Builder
      */
 
     public TransactionBuilder application(
-            Function<com.commercetools.checkout.models.application.ApplicationResourceIdentifierBuilder, com.commercetools.checkout.models.application.ApplicationResourceIdentifierBuilder> builder) {
-        this.application = builder
-                .apply(com.commercetools.checkout.models.application.ApplicationResourceIdentifierBuilder.of())
+            Function<com.commercetools.checkout.models.application.ApplicationReferenceBuilder, com.commercetools.checkout.models.application.ApplicationReferenceBuilder> builder) {
+        this.application = builder.apply(com.commercetools.checkout.models.application.ApplicationReferenceBuilder.of())
                 .build();
         return this;
     }
 
     /**
-     *  <p><span>Application</span> for which the payment must be executed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:checkout:type:Application" rel="nofollow">Application</a> for which the payment must be executed.</p>
      * @param builder function to build the application value
      * @return Builder
      */
 
     public TransactionBuilder withApplication(
-            Function<com.commercetools.checkout.models.application.ApplicationResourceIdentifierBuilder, com.commercetools.checkout.models.application.ApplicationResourceIdentifier> builder) {
+            Function<com.commercetools.checkout.models.application.ApplicationReferenceBuilder, com.commercetools.checkout.models.application.ApplicationReference> builder) {
         this.application = builder
-                .apply(com.commercetools.checkout.models.application.ApplicationResourceIdentifierBuilder.of());
+                .apply(com.commercetools.checkout.models.application.ApplicationReferenceBuilder.of());
         return this;
     }
 
     /**
-     *  <p><span>Application</span> for which the payment must be executed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:checkout:type:Application" rel="nofollow">Application</a> for which the payment must be executed.</p>
      * @param application value to be set
      * @return Builder
      */
 
     public TransactionBuilder application(
-            final com.commercetools.checkout.models.application.ApplicationResourceIdentifier application) {
+            final com.commercetools.checkout.models.application.ApplicationReference application) {
         this.application = application;
         return this;
     }
@@ -378,11 +377,11 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *  <p><span>Application</span> for which the payment must be executed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:checkout:type:Application" rel="nofollow">Application</a> for which the payment must be executed.</p>
      * @return application
      */
 
-    public com.commercetools.checkout.models.application.ApplicationResourceIdentifier getApplication() {
+    public com.commercetools.checkout.models.application.ApplicationReference getApplication() {
         return this.application;
     }
 

@@ -26,14 +26,14 @@ public class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsChange,
 
     private String change;
 
-    private com.commercetools.history.models.common.Delivery previousValue;
+    private com.commercetools.history.models.change_value.DeliveryChangeValue previousValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     RemoveDeliveryItemsChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.Delivery previousValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.change_value.DeliveryChangeValue previousValue) {
         this.change = change;
         this.previousValue = previousValue;
         this.type = REMOVE_DELIVERY_ITEMS_CHANGE;
@@ -66,7 +66,7 @@ public class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsChange,
      *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.common.Delivery getPreviousValue() {
+    public com.commercetools.history.models.change_value.DeliveryChangeValue getPreviousValue() {
         return this.previousValue;
     }
 
@@ -74,7 +74,8 @@ public class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsChange,
         this.change = change;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.Delivery previousValue) {
+    public void setPreviousValue(
+            final com.commercetools.history.models.change_value.DeliveryChangeValue previousValue) {
         this.previousValue = previousValue;
     }
 

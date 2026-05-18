@@ -20,9 +20,11 @@ public class ShippingRateTest {
     public static Object[][] objectBuilder() {
         return new Object[][] {
                 new Object[] { "price",
-                        ShippingRate.builder().price(new com.commercetools.history.models.common.MoneyImpl()) },
+                        ShippingRate.builder()
+                                .price(new com.commercetools.history.models.common.CentPrecisionMoneyImpl()) },
                 new Object[] { "freeAbove",
-                        ShippingRate.builder().freeAbove(new com.commercetools.history.models.common.MoneyImpl()) },
+                        ShippingRate.builder()
+                                .freeAbove(new com.commercetools.history.models.common.CentPrecisionMoneyImpl()) },
                 new Object[] { "isMatching", ShippingRate.builder().isMatching(true) },
                 new Object[] { "tiers",
                         ShippingRate.builder()
@@ -33,15 +35,17 @@ public class ShippingRateTest {
     @Test
     public void price() {
         ShippingRate value = ShippingRate.of();
-        value.setPrice(new com.commercetools.history.models.common.MoneyImpl());
-        Assertions.assertThat(value.getPrice()).isEqualTo(new com.commercetools.history.models.common.MoneyImpl());
+        value.setPrice(new com.commercetools.history.models.common.CentPrecisionMoneyImpl());
+        Assertions.assertThat(value.getPrice())
+                .isEqualTo(new com.commercetools.history.models.common.CentPrecisionMoneyImpl());
     }
 
     @Test
     public void freeAbove() {
         ShippingRate value = ShippingRate.of();
-        value.setFreeAbove(new com.commercetools.history.models.common.MoneyImpl());
-        Assertions.assertThat(value.getFreeAbove()).isEqualTo(new com.commercetools.history.models.common.MoneyImpl());
+        value.setFreeAbove(new com.commercetools.history.models.common.CentPrecisionMoneyImpl());
+        Assertions.assertThat(value.getFreeAbove())
+                .isEqualTo(new com.commercetools.history.models.common.CentPrecisionMoneyImpl());
     }
 
     @Test

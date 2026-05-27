@@ -59,7 +59,7 @@ public class CentPrecisionMoneyDraftImpl implements CentPrecisionMoneyDraft, Mod
     }
 
     /**
-     *  <p>Currency code compliant to <span>ISO 4217</span>.</p>
+     *  <p>A currency code compliant with <span>ISO 4217</span> or a <a href="https://docs.commercetools.com/apis/ctp:api:type:NonStandardCurrency" rel="nofollow">non-standard currency</a>.</p>
      */
 
     public String getCurrencyCode() {

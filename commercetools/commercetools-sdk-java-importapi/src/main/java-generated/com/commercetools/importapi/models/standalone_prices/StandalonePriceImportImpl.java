@@ -44,6 +44,8 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
 
     private com.commercetools.importapi.models.customfields.Custom custom;
 
+    private Boolean active;
+
     /**
      * create instance with all properties
      */
@@ -57,7 +59,8 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
             @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil,
             @JsonProperty("tiers") final java.util.List<com.commercetools.importapi.models.common.PriceTier> tiers,
             @JsonProperty("discounted") final com.commercetools.importapi.models.common.DiscountedPrice discounted,
-            @JsonProperty("custom") final com.commercetools.importapi.models.customfields.Custom custom) {
+            @JsonProperty("custom") final com.commercetools.importapi.models.customfields.Custom custom,
+            @JsonProperty("active") final Boolean active) {
         this.key = key;
         this.sku = sku;
         this.value = value;
@@ -69,6 +72,7 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
         this.tiers = tiers;
         this.discounted = discounted;
         this.custom = custom;
+        this.active = active;
     }
 
     /**
@@ -102,7 +106,7 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
     }
 
     /**
-     *  <p>Maps to <code>StandalonePrice.country</code>. This value cannot be updated. Attempting to update this value will result in an <span>InvalidFieldsUpdate</span> error.</p>
+     *  <p>Maps to <code>StandalonePrice.country</code>. This value cannot be updated. Attempting to update this value will result in an <a href="https://docs.commercetools.com/apis/ctp:import:type:InvalidFieldsUpdateError" rel="nofollow">InvalidFieldsUpdate</a> error.</p>
      */
 
     public String getCountry() {
@@ -111,7 +115,7 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
 
     /**
      *  <p>Maps to <code>StandalonePrice.customerGroup</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
-     *  <p>This value cannot be updated. Attempting to update this value will result in an <span>InvalidFieldsUpdate</span> error.</p>
+     *  <p>This value cannot be updated. Attempting to update this value will result in an <a href="https://docs.commercetools.com/apis/ctp:import:type:InvalidFieldsUpdateError" rel="nofollow">InvalidFieldsUpdate</a> error.</p>
      */
 
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
@@ -120,7 +124,7 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
 
     /**
      *  <p>Maps to <code>StandalonePrice.channel</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
-     *  <p>This value cannot be updated. Attempting to update this value will result in an <span>InvalidFieldsUpdate</span> error.</p>
+     *  <p>This value cannot be updated. Attempting to update this value will result in an <a href="https://docs.commercetools.com/apis/ctp:import:type:InvalidFieldsUpdateError" rel="nofollow">InvalidFieldsUpdate</a> error.</p>
      */
 
     public com.commercetools.importapi.models.common.ChannelKeyReference getChannel() {
@@ -165,6 +169,15 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
 
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
         return this.custom;
+    }
+
+    /**
+     *  <p>Maps to <code>StandalonePrice.active</code>.</p>
+     *  <p>To exclude the StandalonePrice from <span>Product price selection</span>, set to <code>false</code>.</p>
+     */
+
+    public Boolean getActive() {
+        return this.active;
     }
 
     public void setKey(final String key) {
@@ -216,6 +229,10 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
         this.custom = custom;
     }
 
+    public void setActive(final Boolean active) {
+        this.active = active;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -237,6 +254,7 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
                 .append(tiers, that.tiers)
                 .append(discounted, that.discounted)
                 .append(custom, that.custom)
+                .append(active, that.active)
                 .append(key, that.key)
                 .append(sku, that.sku)
                 .append(value, that.value)
@@ -248,6 +266,7 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
                 .append(tiers, that.tiers)
                 .append(discounted, that.discounted)
                 .append(custom, that.custom)
+                .append(active, that.active)
                 .isEquals();
     }
 
@@ -264,6 +283,7 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
                 .append(tiers)
                 .append(discounted)
                 .append(custom)
+                .append(active)
                 .toHashCode();
     }
 
@@ -280,6 +300,7 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
                 .append("tiers", tiers)
                 .append("discounted", discounted)
                 .append("custom", custom)
+                .append("active", active)
                 .build();
     }
 

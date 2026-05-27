@@ -93,6 +93,9 @@ public class LineItemBuilder implements Builder<LineItem> {
     private com.commercetools.api.models.cart.ItemShippingDetails shippingDetails;
 
     @Nullable
+    private com.commercetools.api.models.reservation.ReservationReference reservation;
+
+    @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
     @Nullable
@@ -965,6 +968,43 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
+     *  <p>Reference to the successful <a href="https://docs.commercetools.com/apis/ctp:api:type:Reservation" rel="nofollow">Reservation</a> associated with this Line Item. This field is only populated when using the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> mode.</p>
+     * @param builder function to build the reservation value
+     * @return Builder
+     */
+
+    public LineItemBuilder reservation(
+            Function<com.commercetools.api.models.reservation.ReservationReferenceBuilder, com.commercetools.api.models.reservation.ReservationReferenceBuilder> builder) {
+        this.reservation = builder.apply(com.commercetools.api.models.reservation.ReservationReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the successful <a href="https://docs.commercetools.com/apis/ctp:api:type:Reservation" rel="nofollow">Reservation</a> associated with this Line Item. This field is only populated when using the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> mode.</p>
+     * @param builder function to build the reservation value
+     * @return Builder
+     */
+
+    public LineItemBuilder withReservation(
+            Function<com.commercetools.api.models.reservation.ReservationReferenceBuilder, com.commercetools.api.models.reservation.ReservationReference> builder) {
+        this.reservation = builder.apply(com.commercetools.api.models.reservation.ReservationReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the successful <a href="https://docs.commercetools.com/apis/ctp:api:type:Reservation" rel="nofollow">Reservation</a> associated with this Line Item. This field is only populated when using the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> mode.</p>
+     * @param reservation value to be set
+     * @return Builder
+     */
+
+    public LineItemBuilder reservation(
+            @Nullable final com.commercetools.api.models.reservation.ReservationReference reservation) {
+        this.reservation = reservation;
+        return this;
+    }
+
+    /**
      *  <p>Custom Fields of the Line Item.</p>
      * @param builder function to build the custom value
      * @return Builder
@@ -1288,6 +1328,16 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
+     *  <p>Reference to the successful <a href="https://docs.commercetools.com/apis/ctp:api:type:Reservation" rel="nofollow">Reservation</a> associated with this Line Item. This field is only populated when using the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> mode.</p>
+     * @return reservation
+     */
+
+    @Nullable
+    public com.commercetools.api.models.reservation.ReservationReference getReservation() {
+        return this.reservation;
+    }
+
+    /**
      *  <p>Custom Fields of the Line Item.</p>
      * @return custom
      */
@@ -1349,7 +1399,7 @@ public class LineItemBuilder implements Builder<LineItem> {
         return new LineItemImpl(id, key, productId, productKey, name, productSlug, productType, variant, price,
             quantity, totalPrice, discountedPricePerQuantity, taxedPrice, taxedPricePortions, state, taxRate,
             perMethodTaxRate, supplyChannel, distributionChannel, priceMode, lineItemMode, inventoryMode,
-            shippingDetails, custom, addedAt, lastModifiedAt, recurrenceInfo);
+            shippingDetails, reservation, custom, addedAt, lastModifiedAt, recurrenceInfo);
     }
 
     /**
@@ -1360,7 +1410,7 @@ public class LineItemBuilder implements Builder<LineItem> {
         return new LineItemImpl(id, key, productId, productKey, name, productSlug, productType, variant, price,
             quantity, totalPrice, discountedPricePerQuantity, taxedPrice, taxedPricePortions, state, taxRate,
             perMethodTaxRate, supplyChannel, distributionChannel, priceMode, lineItemMode, inventoryMode,
-            shippingDetails, custom, addedAt, lastModifiedAt, recurrenceInfo);
+            shippingDetails, reservation, custom, addedAt, lastModifiedAt, recurrenceInfo);
     }
 
     /**
@@ -1401,6 +1451,7 @@ public class LineItemBuilder implements Builder<LineItem> {
         builder.lineItemMode = template.getLineItemMode();
         builder.inventoryMode = template.getInventoryMode();
         builder.shippingDetails = template.getShippingDetails();
+        builder.reservation = template.getReservation();
         builder.custom = template.getCustom();
         builder.addedAt = template.getAddedAt();
         builder.lastModifiedAt = template.getLastModifiedAt();

@@ -48,7 +48,7 @@ public class InventoryEntryReferenceImpl implements InventoryEntryReference, Mod
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     *
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {

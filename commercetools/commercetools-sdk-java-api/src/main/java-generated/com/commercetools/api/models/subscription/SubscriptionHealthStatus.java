@@ -29,7 +29,7 @@ public interface SubscriptionHealthStatus extends JsonEnum {
     <p>Does not deliver notifications temporarily due to reasons other than a configuration error. For example, the Destination has a temporary outage.</p> */
     SubscriptionHealthStatus TEMPORARY_ERROR = SubscriptionHealthStatusEnum.TEMPORARY_ERROR;
     /**
-    <p>Does not deliver notifications with the current configuration and the delivery of the notifications is no longer attempted. Undelivered notifications are not retained and will not be delivered. The <code>status</code> will not automatically change to <a href="https://docs.commercetools.com/apis/ctp:api:type:SubscriptionHealthStatus" rel="nofollow">Healthy</a>. To return your subscriptions to a <a href="https://docs.commercetools.com/apis/ctp:api:type:SubscriptionHealthStatus" rel="nofollow">Healthy</a> status, contact the <span>Composable Commerce support team</span>.</p> */
+    <p>Does not deliver notifications with the current configuration and the delivery of the notifications is no longer attempted. Undelivered notifications are not retained and will not be delivered. The <code>status</code> will not automatically change to <a href="https://docs.commercetools.com/apis/ctp:api:type:SubscriptionHealthStatus" rel="nofollow">Healthy</a>. To return your subscriptions to a <a href="https://docs.commercetools.com/apis/ctp:api:type:SubscriptionHealthStatus" rel="nofollow">Healthy</a> status, contact the <span>commercetools support team</span>.</p> */
     SubscriptionHealthStatus MANUALLY_SUSPENDED = SubscriptionHealthStatusEnum.MANUALLY_SUSPENDED;
 
     /**

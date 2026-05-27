@@ -30,16 +30,20 @@ public class ChangeLocalizedNameChangeImpl implements ChangeLocalizedNameChange,
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
+    private String catalogData;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     ChangeLocalizedNameChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.LocalizedString previousValue,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.LocalizedString nextValue) {
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.LocalizedString nextValue,
+            @JsonProperty("catalogData") final String catalogData) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
+        this.catalogData = catalogData;
         this.type = CHANGE_LOCALIZED_NAME_CHANGE;
     }
 
@@ -82,6 +86,19 @@ public class ChangeLocalizedNameChangeImpl implements ChangeLocalizedNameChange,
         return this.nextValue;
     }
 
+    /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     *  <p>This field is only present if the change is related to the Product entity.</p>
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
@@ -92,6 +109,10 @@ public class ChangeLocalizedNameChangeImpl implements ChangeLocalizedNameChange,
 
     public void setNextValue(final com.commercetools.history.models.common.LocalizedString nextValue) {
         this.nextValue = nextValue;
+    }
+
+    public void setCatalogData(final String catalogData) {
+        this.catalogData = catalogData;
     }
 
     @Override
@@ -108,10 +129,12 @@ public class ChangeLocalizedNameChangeImpl implements ChangeLocalizedNameChange,
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(catalogData, that.catalogData)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(catalogData, that.catalogData)
                 .isEquals();
     }
 
@@ -121,6 +144,7 @@ public class ChangeLocalizedNameChangeImpl implements ChangeLocalizedNameChange,
                 .append(change)
                 .append(previousValue)
                 .append(nextValue)
+                .append(catalogData)
                 .toHashCode();
     }
 
@@ -130,6 +154,7 @@ public class ChangeLocalizedNameChangeImpl implements ChangeLocalizedNameChange,
                 .append("change", change)
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
+                .append("catalogData", catalogData)
                 .build();
     }
 

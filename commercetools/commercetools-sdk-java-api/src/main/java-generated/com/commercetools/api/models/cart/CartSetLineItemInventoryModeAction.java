@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CartSetLineItemInventoryModeAction
+ *  <p>Sets the inventory mode for a specific Line Item in the Cart. When changing a Line Item's inventory mode to <code>ReserveOnCart</code>, a reservation is automatically created if sufficient stock is available. When changing from <code>ReserveOnCart</code> to another mode, the reservation is released.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

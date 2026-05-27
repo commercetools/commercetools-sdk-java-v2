@@ -73,7 +73,7 @@ public class ProductSelectionAssignmentImpl implements ProductSelectionAssignmen
 
     /**
      *  <p>Defines which particular Variants of the Product are included in the Product Selection. If undefined all Variants of the referenced Product are included.</p>
-     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. The list of SKUs will be updated automatically on any published change of those performed on the respective Product itself. Staged changes do not affect this field.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
@@ -82,7 +82,7 @@ public class ProductSelectionAssignmentImpl implements ProductSelectionAssignmen
 
     /**
      *  <p>Defines which particular Variants of the Product are excluded from the Product Selection. If undefined all Variants of the referenced Product are excluded.</p>
-     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. The list of SKUs will be updated automatically on any published change of those performed on the respective Product itself. Staged changes do not affect this field.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {

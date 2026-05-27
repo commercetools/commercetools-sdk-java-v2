@@ -8,6 +8,7 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -37,6 +38,14 @@ public interface CustomerEmailTokenReference extends Reference {
      * discriminator value for CustomerEmailTokenReference
      */
     String CUSTOMER_EMAIL_TOKEN = "customer-email-token";
+
+    /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
 
     /**
      *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerToken" rel="nofollow">CustomerToken</a>.</p>

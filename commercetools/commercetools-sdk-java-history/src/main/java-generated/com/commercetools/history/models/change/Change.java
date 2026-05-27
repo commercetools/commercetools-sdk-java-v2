@@ -2721,6 +2721,14 @@ public interface Change {
     }
 
     /**
+     * builder for setTransactionInterfaceIdChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetTransactionInterfaceIdChangeBuilder setTransactionInterfaceIdChangeBuilder() {
+        return com.commercetools.history.models.change.SetTransactionInterfaceIdChangeBuilder.of();
+    }
+
+    /**
      * builder for setTransitionsChange subtype
      * @return builder
      */

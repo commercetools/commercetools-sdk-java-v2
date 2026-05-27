@@ -271,6 +271,10 @@ public class CartUpdateActionBuilder {
         return com.commercetools.api.models.cart.CartSetPurchaseOrderNumberActionBuilder.of();
     }
 
+    public com.commercetools.api.models.cart.CartSetReservationExpirationInMinutesActionBuilder setReservationExpirationInMinutesBuilder() {
+        return com.commercetools.api.models.cart.CartSetReservationExpirationInMinutesActionBuilder.of();
+    }
+
     public com.commercetools.api.models.cart.CartSetShippingAddressActionBuilder setShippingAddressBuilder() {
         return com.commercetools.api.models.cart.CartSetShippingAddressActionBuilder.of();
     }

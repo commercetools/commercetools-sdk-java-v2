@@ -26,10 +26,6 @@ public class PaymentIntegrationUpdateActionBuilder {
                 .of();
     }
 
-    public com.commercetools.checkout.models.payment_integration.SetConnectorDeploymentUpdateActionBuilder setConnectorDeploymentBuilder() {
-        return com.commercetools.checkout.models.payment_integration.SetConnectorDeploymentUpdateActionBuilder.of();
-    }
-
     public com.commercetools.checkout.models.payment_integration.SetDisplayInfoDescriptionUpdateActionBuilder setDisplayInfoDescriptionBuilder() {
         return com.commercetools.checkout.models.payment_integration.SetDisplayInfoDescriptionUpdateActionBuilder.of();
     }

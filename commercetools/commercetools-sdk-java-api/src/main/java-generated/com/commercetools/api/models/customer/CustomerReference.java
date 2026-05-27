@@ -8,6 +8,7 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -39,6 +40,14 @@ public interface CustomerReference extends Reference, com.commercetools.api.mode
      * discriminator value for CustomerReference
      */
     String CUSTOMER = "customer";
+
+    /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
 
     /**
      *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with <a href="https://docs.commercetools.com/apis/ctp:api:type:Expansion" rel="nofollow">Reference Expansion</a> for Customers.</p>

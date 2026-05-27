@@ -123,6 +123,11 @@ public class ProjectApiRoot implements Closeable, ProjectScopedApiRoot {
     }
 
     @Override
+    public ByProjectKeyProductTailoringsRequestBuilder productTailorings() {
+        return with().productTailorings();
+    }
+
+    @Override
     public void close() {
         if (apiHttpClient == null) {
             return;

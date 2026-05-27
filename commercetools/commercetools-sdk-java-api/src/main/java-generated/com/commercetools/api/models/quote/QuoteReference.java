@@ -8,12 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 
 /**
  *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a>.</p>
@@ -38,6 +40,14 @@ public interface QuoteReference extends Reference, com.commercetools.api.models.
      * discriminator value for QuoteReference
      */
     String QUOTE = "quote";
+
+    /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
 
     /**
      *  <p>Contains the representation of the expanded Quote. Only present in responses to requests with <span>Reference Expansion</span> for Quote.</p>

@@ -39,7 +39,7 @@ public interface DiscountCodeSetCustomTypeAction extends DiscountCodeUpdateActio
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
-     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the DiscountCode with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the DiscountCode.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the DiscountCode with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the DiscountCode.</p>
      * @return type
      */
     @Valid
@@ -47,7 +47,8 @@ public interface DiscountCodeSetCustomTypeAction extends DiscountCodeUpdateActio
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the <span>Custom Fields</span> fields for the DiscountCode.</p>
+     *  <p>Object containing the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the DiscountCode.</p>
+     *  <p>Required if at least one Custom Field is defined as required in the <code>fieldDefinitions</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @return fields
      */
     @Valid
@@ -55,14 +56,15 @@ public interface DiscountCodeSetCustomTypeAction extends DiscountCodeUpdateActio
     public FieldContainer getFields();
 
     /**
-     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the DiscountCode with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the DiscountCode.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the DiscountCode with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the DiscountCode.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the <span>Custom Fields</span> fields for the DiscountCode.</p>
+     *  <p>Object containing the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the DiscountCode.</p>
+     *  <p>Required if at least one Custom Field is defined as required in the <code>fieldDefinitions</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param fields value to be set
      */
 

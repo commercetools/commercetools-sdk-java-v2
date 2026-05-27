@@ -492,6 +492,14 @@ public class CartUpdateActionQueryBuilderDsl {
             CartUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> asSetReservationExpirationInMinutes(
+            Function<com.commercetools.api.predicates.query.cart.CartSetReservationExpirationInMinutesActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.CartSetReservationExpirationInMinutesActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.cart.CartSetReservationExpirationInMinutesActionQueryBuilderDsl
+                    .of()),
+            CartUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> asSetShippingAddress(
             Function<com.commercetools.api.predicates.query.cart.CartSetShippingAddressActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.CartSetShippingAddressActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

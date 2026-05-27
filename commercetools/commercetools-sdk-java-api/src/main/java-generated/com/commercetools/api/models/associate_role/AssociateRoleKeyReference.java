@@ -8,6 +8,7 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.KeyReference;
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -37,6 +38,14 @@ public interface AssociateRoleKeyReference extends KeyReference {
      * discriminator value for AssociateRoleKeyReference
      */
     String ASSOCIATE_ROLE = "associate-role";
+
+    /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
 
     /**
      *  <p>Unique and immutable key of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a>.</p>

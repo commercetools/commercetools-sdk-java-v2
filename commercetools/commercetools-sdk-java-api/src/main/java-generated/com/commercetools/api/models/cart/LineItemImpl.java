@@ -68,6 +68,8 @@ public class LineItemImpl implements LineItem, ModelBase {
 
     private com.commercetools.api.models.cart.ItemShippingDetails shippingDetails;
 
+    private com.commercetools.api.models.reservation.ReservationReference reservation;
+
     private com.commercetools.api.models.type.CustomFields custom;
 
     private java.time.ZonedDateTime addedAt;
@@ -101,6 +103,7 @@ public class LineItemImpl implements LineItem, ModelBase {
             @JsonProperty("lineItemMode") final com.commercetools.api.models.cart.LineItemMode lineItemMode,
             @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetails shippingDetails,
+            @JsonProperty("reservation") final com.commercetools.api.models.reservation.ReservationReference reservation,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
             @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
@@ -128,6 +131,7 @@ public class LineItemImpl implements LineItem, ModelBase {
         this.lineItemMode = lineItemMode;
         this.inventoryMode = inventoryMode;
         this.shippingDetails = shippingDetails;
+        this.reservation = reservation;
         this.custom = custom;
         this.addedAt = addedAt;
         this.lastModifiedAt = lastModifiedAt;
@@ -336,6 +340,14 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
+     *  <p>Reference to the successful <a href="https://docs.commercetools.com/apis/ctp:api:type:Reservation" rel="nofollow">Reservation</a> associated with this Line Item. This field is only populated when using the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> mode.</p>
+     */
+
+    public com.commercetools.api.models.reservation.ReservationReference getReservation() {
+        return this.reservation;
+    }
+
+    /**
      *  <p>Custom Fields of the Line Item.</p>
      */
 
@@ -480,6 +492,10 @@ public class LineItemImpl implements LineItem, ModelBase {
         this.shippingDetails = shippingDetails;
     }
 
+    public void setReservation(final com.commercetools.api.models.reservation.ReservationReference reservation) {
+        this.reservation = reservation;
+    }
+
     public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
     }
@@ -530,6 +546,7 @@ public class LineItemImpl implements LineItem, ModelBase {
                 .append(lineItemMode, that.lineItemMode)
                 .append(inventoryMode, that.inventoryMode)
                 .append(shippingDetails, that.shippingDetails)
+                .append(reservation, that.reservation)
                 .append(custom, that.custom)
                 .append(addedAt, that.addedAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
@@ -557,6 +574,7 @@ public class LineItemImpl implements LineItem, ModelBase {
                 .append(lineItemMode, that.lineItemMode)
                 .append(inventoryMode, that.inventoryMode)
                 .append(shippingDetails, that.shippingDetails)
+                .append(reservation, that.reservation)
                 .append(custom, that.custom)
                 .append(addedAt, that.addedAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
@@ -589,6 +607,7 @@ public class LineItemImpl implements LineItem, ModelBase {
                 .append(lineItemMode)
                 .append(inventoryMode)
                 .append(shippingDetails)
+                .append(reservation)
                 .append(custom)
                 .append(addedAt)
                 .append(lastModifiedAt)
@@ -621,6 +640,7 @@ public class LineItemImpl implements LineItem, ModelBase {
                 .append("lineItemMode", lineItemMode)
                 .append("inventoryMode", inventoryMode)
                 .append("shippingDetails", shippingDetails)
+                .append("reservation", reservation)
                 .append("custom", custom)
                 .append("addedAt", addedAt)
                 .append("lastModifiedAt", lastModifiedAt)

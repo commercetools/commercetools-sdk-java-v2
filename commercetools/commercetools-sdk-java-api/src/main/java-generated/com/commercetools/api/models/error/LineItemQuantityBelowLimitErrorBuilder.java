@@ -1,0 +1,197 @@
+
+package com.commercetools.api.models.error;
+
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import io.vrap.rmf.base.client.Builder;
+import io.vrap.rmf.base.client.utils.Generated;
+
+/**
+ * LineItemQuantityBelowLimitErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     LineItemQuantityBelowLimitError lineItemQuantityBelowLimitError = LineItemQuantityBelowLimitError.builder()
+ *             .message("{message}")
+ *             .quantity(1)
+ *             .minCartQuantity(1)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+public class LineItemQuantityBelowLimitErrorBuilder implements Builder<LineItemQuantityBelowLimitError> {
+
+    private String message;
+
+    private Map<String, java.lang.Object> values = new HashMap<>();
+
+    private Integer quantity;
+
+    private Integer minCartQuantity;
+
+    @Nullable
+    private String lineItem;
+
+    /**
+     *  <p><code>"Quantity '$quantity' less than minimum '$minCartQuantity'."</code></p>
+     * @param message value to be set
+     * @return Builder
+     */
+
+    public LineItemQuantityBelowLimitErrorBuilder message(final String message) {
+        this.message = message;
+        return this;
+    }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @param values properties to be set
+     * @return Builder
+     */
+
+    public LineItemQuantityBelowLimitErrorBuilder values(final Map<String, java.lang.Object> values) {
+        this.values = values;
+        return this;
+    }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @param key property name
+     * @param value property value
+     * @return Builder
+     */
+
+    public LineItemQuantityBelowLimitErrorBuilder addValue(final String key, final java.lang.Object value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
+        return this;
+    }
+
+    /**
+     *  <p>The quantity that was requested.</p>
+     * @param quantity value to be set
+     * @return Builder
+     */
+
+    public LineItemQuantityBelowLimitErrorBuilder quantity(final Integer quantity) {
+        this.quantity = quantity;
+        return this;
+    }
+
+    /**
+     *  <p>The minimum quantity required for this Line Item.</p>
+     * @param minCartQuantity value to be set
+     * @return Builder
+     */
+
+    public LineItemQuantityBelowLimitErrorBuilder minCartQuantity(final Integer minCartQuantity) {
+        this.minCartQuantity = minCartQuantity;
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Line Item that caused the error.</p>
+     * @param lineItem value to be set
+     * @return Builder
+     */
+
+    public LineItemQuantityBelowLimitErrorBuilder lineItem(@Nullable final String lineItem) {
+        this.lineItem = lineItem;
+        return this;
+    }
+
+    /**
+     *  <p><code>"Quantity '$quantity' less than minimum '$minCartQuantity'."</code></p>
+     * @return message
+     */
+
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
+
+    public Map<String, java.lang.Object> getValues() {
+        return this.values;
+    }
+
+    /**
+     *  <p>The quantity that was requested.</p>
+     * @return quantity
+     */
+
+    public Integer getQuantity() {
+        return this.quantity;
+    }
+
+    /**
+     *  <p>The minimum quantity required for this Line Item.</p>
+     * @return minCartQuantity
+     */
+
+    public Integer getMinCartQuantity() {
+        return this.minCartQuantity;
+    }
+
+    /**
+     *  <p>Reference to the Line Item that caused the error.</p>
+     * @return lineItem
+     */
+
+    @Nullable
+    public String getLineItem() {
+        return this.lineItem;
+    }
+
+    /**
+     * builds LineItemQuantityBelowLimitError with checking for non-null required values
+     * @return LineItemQuantityBelowLimitError
+     */
+    public LineItemQuantityBelowLimitError build() {
+        Objects.requireNonNull(message, LineItemQuantityBelowLimitError.class + ": message is missing");
+        Objects.requireNonNull(quantity, LineItemQuantityBelowLimitError.class + ": quantity is missing");
+        Objects.requireNonNull(minCartQuantity, LineItemQuantityBelowLimitError.class + ": minCartQuantity is missing");
+        return new LineItemQuantityBelowLimitErrorImpl(message, values, quantity, minCartQuantity, lineItem);
+    }
+
+    /**
+     * builds LineItemQuantityBelowLimitError without checking for non-null required values
+     * @return LineItemQuantityBelowLimitError
+     */
+    public LineItemQuantityBelowLimitError buildUnchecked() {
+        return new LineItemQuantityBelowLimitErrorImpl(message, values, quantity, minCartQuantity, lineItem);
+    }
+
+    /**
+     * factory method for an instance of LineItemQuantityBelowLimitErrorBuilder
+     * @return builder
+     */
+    public static LineItemQuantityBelowLimitErrorBuilder of() {
+        return new LineItemQuantityBelowLimitErrorBuilder();
+    }
+
+    /**
+     * create builder for LineItemQuantityBelowLimitError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
+    public static LineItemQuantityBelowLimitErrorBuilder of(final LineItemQuantityBelowLimitError template) {
+        LineItemQuantityBelowLimitErrorBuilder builder = new LineItemQuantityBelowLimitErrorBuilder();
+        builder.message = template.getMessage();
+        builder.values = template.values();
+        builder.quantity = template.getQuantity();
+        builder.minCartQuantity = template.getMinCartQuantity();
+        builder.lineItem = template.getLineItem();
+        return builder;
+    }
+
+}

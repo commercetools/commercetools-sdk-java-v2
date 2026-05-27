@@ -111,7 +111,8 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>If the Product is <span>projected by Store</span>, this field only contains Embedded Prices that are valid for that Store.</p>
+     *  <p>Cannot contain two Embedded Prices with the same scopes (currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Price> getPrices() {
@@ -127,7 +128,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *  <p>Only available when <span>price selection</span> is used. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
+     *  <p>Only present when <span>price selection</span> is applied. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
      */
 
     public com.commercetools.api.models.common.Price getPrice() {
@@ -159,7 +160,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearch" rel="nofollow">Product Projection Search</a> request.</p>
+     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a <span>Product Projection Search</span> request.</p>
      */
 
     public Boolean getIsMatchingVariant() {
@@ -167,7 +168,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *  <p>Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearch" rel="nofollow">Product Projection Search</a> request with <span>Product price selection</span>. Can be used to sort, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">filter</a>, and facet.</p>
+     *  <p>Only available in response to a <span>Product Projection Search</span> request with <span>Product price selection</span>. Can be used to sort, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">filter</a>, and facet.</p>
      */
 
     public com.commercetools.api.models.common.ScopedPrice getScopedPrice() {
@@ -175,7 +176,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *  <p>Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">Product Projection Search</a> request with <span>Product price selection</span>.</p>
+     *  <p>Only available in response to a <span>Product Projection Search</span> request with <span>Product price selection</span>.</p>
      */
 
     public Boolean getScopedPriceDiscounted() {

@@ -535,8 +535,24 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.InventoryEntryDeletedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.InventoryEntryOutOfStockMessageBuilder inventoryEntryOutOfStockBuilder() {
+        return com.commercetools.api.models.message.InventoryEntryOutOfStockMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.InventoryEntryQuantitySetMessageBuilder inventoryEntryQuantitySetBuilder() {
         return com.commercetools.api.models.message.InventoryEntryQuantitySetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.InventoryEntryReorderPointMessageBuilder inventoryEntryReorderPointBuilder() {
+        return com.commercetools.api.models.message.InventoryEntryReorderPointMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.InventoryEntryReservationExpirationInMinutesSetMessageBuilder inventoryEntryReservationExpirationInMinutesSetBuilder() {
+        return com.commercetools.api.models.message.InventoryEntryReservationExpirationInMinutesSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.InventoryEntrySafetyStockMessageBuilder inventoryEntrySafetyStockBuilder() {
+        return com.commercetools.api.models.message.InventoryEntrySafetyStockMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.LineItemStateTransitionMessageBuilder lineItemStateTransitionBuilder() {

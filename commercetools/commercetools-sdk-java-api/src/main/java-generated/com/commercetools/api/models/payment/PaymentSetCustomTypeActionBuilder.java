@@ -30,7 +30,7 @@ public class PaymentSetCustomTypeActionBuilder implements Builder<PaymentSetCust
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Payment with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Payment.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Payment with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the Payment.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class PaymentSetCustomTypeActionBuilder implements Builder<PaymentSetCust
     }
 
     /**
-     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Payment with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Payment.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Payment with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the Payment.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class PaymentSetCustomTypeActionBuilder implements Builder<PaymentSetCust
     }
 
     /**
-     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Payment with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Payment.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Payment with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the Payment.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -66,7 +66,8 @@ public class PaymentSetCustomTypeActionBuilder implements Builder<PaymentSetCust
     }
 
     /**
-     *  <p>Sets the <span>Custom Fields</span> fields for the Payment.</p>
+     *  <p>Object containing the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the Payment.</p>
+     *  <p>Required if at least one Custom Field is defined as required in the <code>fieldDefinitions</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -78,7 +79,8 @@ public class PaymentSetCustomTypeActionBuilder implements Builder<PaymentSetCust
     }
 
     /**
-     *  <p>Sets the <span>Custom Fields</span> fields for the Payment.</p>
+     *  <p>Object containing the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the Payment.</p>
+     *  <p>Required if at least one Custom Field is defined as required in the <code>fieldDefinitions</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -90,7 +92,8 @@ public class PaymentSetCustomTypeActionBuilder implements Builder<PaymentSetCust
     }
 
     /**
-     *  <p>Sets the <span>Custom Fields</span> fields for the Payment.</p>
+     *  <p>Object containing the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the Payment.</p>
+     *  <p>Required if at least one Custom Field is defined as required in the <code>fieldDefinitions</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param fields value to be set
      * @return Builder
      */
@@ -102,7 +105,7 @@ public class PaymentSetCustomTypeActionBuilder implements Builder<PaymentSetCust
     }
 
     /**
-     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Payment with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Payment.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Payment with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the Payment.</p>
      * @return type
      */
 
@@ -112,7 +115,8 @@ public class PaymentSetCustomTypeActionBuilder implements Builder<PaymentSetCust
     }
 
     /**
-     *  <p>Sets the <span>Custom Fields</span> fields for the Payment.</p>
+     *  <p>Object containing the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the Payment.</p>
+     *  <p>Required if at least one Custom Field is defined as required in the <code>fieldDefinitions</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @return fields
      */
 

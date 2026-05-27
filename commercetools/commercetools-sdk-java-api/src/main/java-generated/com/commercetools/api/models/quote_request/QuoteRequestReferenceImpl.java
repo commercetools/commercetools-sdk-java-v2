@@ -48,7 +48,7 @@ public class QuoteRequestReferenceImpl implements QuoteRequestReference, ModelBa
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     *
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {

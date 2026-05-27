@@ -116,7 +116,11 @@ public class CartTest {
                 new Object[] { "lastModifiedBy",
                         Cart.builder().lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
                 new Object[] { "createdBy",
-                        Cart.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) } };
+                        Cart.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
+                new Object[] { "warnings",
+                        Cart.builder()
+                                .warnings(Collections.singletonList(
+                                    new com.commercetools.api.models.warning.WarningObjectImpl())) } };
     }
 
     @Test
@@ -486,5 +490,13 @@ public class CartTest {
         Cart value = Cart.of();
         value.setCreatedBy(new com.commercetools.api.models.common.CreatedByImpl());
         Assertions.assertThat(value.getCreatedBy()).isEqualTo(new com.commercetools.api.models.common.CreatedByImpl());
+    }
+
+    @Test
+    public void warnings() {
+        Cart value = Cart.of();
+        value.setWarnings(Collections.singletonList(new com.commercetools.api.models.warning.WarningObjectImpl()));
+        Assertions.assertThat(value.getWarnings())
+                .isEqualTo(Collections.singletonList(new com.commercetools.api.models.warning.WarningObjectImpl()));
     }
 }

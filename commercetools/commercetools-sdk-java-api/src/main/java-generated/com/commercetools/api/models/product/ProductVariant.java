@@ -63,7 +63,8 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public String getKey();
 
     /**
-     *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>If the Product is <span>projected by Store</span>, this field only contains Embedded Prices that are valid for that Store.</p>
+     *  <p>Cannot contain two Embedded Prices with the same scopes (currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @return prices
      */
     @Valid
@@ -79,7 +80,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public List<Attribute> getAttributes();
 
     /**
-     *  <p>Only available when <span>price selection</span> is used. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
+     *  <p>Only present when <span>price selection</span> is applied. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
      * @return price
      */
     @Valid
@@ -111,7 +112,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public ProductVariantAvailability getAvailability();
 
     /**
-     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearch" rel="nofollow">Product Projection Search</a> request.</p>
+     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a <span>Product Projection Search</span> request.</p>
      * @return isMatchingVariant
      */
 
@@ -119,7 +120,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public Boolean getIsMatchingVariant();
 
     /**
-     *  <p>Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearch" rel="nofollow">Product Projection Search</a> request with <span>Product price selection</span>. Can be used to sort, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">filter</a>, and facet.</p>
+     *  <p>Only available in response to a <span>Product Projection Search</span> request with <span>Product price selection</span>. Can be used to sort, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">filter</a>, and facet.</p>
      * @return scopedPrice
      */
     @Valid
@@ -127,7 +128,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public ScopedPrice getScopedPrice();
 
     /**
-     *  <p>Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">Product Projection Search</a> request with <span>Product price selection</span>.</p>
+     *  <p>Only available in response to a <span>Product Projection Search</span> request with <span>Product price selection</span>.</p>
      * @return scopedPriceDiscounted
      */
 
@@ -165,7 +166,8 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public void setKey(final String key);
 
     /**
-     *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>If the Product is <span>projected by Store</span>, this field only contains Embedded Prices that are valid for that Store.</p>
+     *  <p>Cannot contain two Embedded Prices with the same scopes (currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param prices values to be set
      */
 
@@ -173,7 +175,8 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public void setPrices(final Price... prices);
 
     /**
-     *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>If the Product is <span>projected by Store</span>, this field only contains Embedded Prices that are valid for that Store.</p>
+     *  <p>Cannot contain two Embedded Prices with the same scopes (currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param prices values to be set
      */
 
@@ -195,7 +198,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public void setAttributes(final List<Attribute> attributes);
 
     /**
-     *  <p>Only available when <span>price selection</span> is used. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
+     *  <p>Only present when <span>price selection</span> is applied. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
      * @param price value to be set
      */
 
@@ -239,21 +242,21 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public void setAvailability(final ProductVariantAvailability availability);
 
     /**
-     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearch" rel="nofollow">Product Projection Search</a> request.</p>
+     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a <span>Product Projection Search</span> request.</p>
      * @param isMatchingVariant value to be set
      */
 
     public void setIsMatchingVariant(final Boolean isMatchingVariant);
 
     /**
-     *  <p>Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearch" rel="nofollow">Product Projection Search</a> request with <span>Product price selection</span>. Can be used to sort, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">filter</a>, and facet.</p>
+     *  <p>Only available in response to a <span>Product Projection Search</span> request with <span>Product price selection</span>. Can be used to sort, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">filter</a>, and facet.</p>
      * @param scopedPrice value to be set
      */
 
     public void setScopedPrice(final ScopedPrice scopedPrice);
 
     /**
-     *  <p>Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">Product Projection Search</a> request with <span>Product price selection</span>.</p>
+     *  <p>Only available in response to a <span>Product Projection Search</span> request with <span>Product price selection</span>.</p>
      * @param scopedPriceDiscounted value to be set
      */
 

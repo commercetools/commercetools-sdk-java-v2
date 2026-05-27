@@ -58,7 +58,7 @@ public interface ProductSelectionAssignment {
 
     /**
      *  <p>Defines which particular Variants of the Product are included in the Product Selection. If undefined all Variants of the referenced Product are included.</p>
-     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. The list of SKUs will be updated automatically on any published change of those performed on the respective Product itself. Staged changes do not affect this field.</p>
      * @return variantSelection
      */
     @Valid
@@ -67,7 +67,7 @@ public interface ProductSelectionAssignment {
 
     /**
      *  <p>Defines which particular Variants of the Product are excluded from the Product Selection. If undefined all Variants of the referenced Product are excluded.</p>
-     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. The list of SKUs will be updated automatically on any published change of those performed on the respective Product itself. Staged changes do not affect this field.</p>
      * @return variantExclusion
      */
     @Valid
@@ -90,7 +90,7 @@ public interface ProductSelectionAssignment {
 
     /**
      *  <p>Defines which particular Variants of the Product are included in the Product Selection. If undefined all Variants of the referenced Product are included.</p>
-     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. The list of SKUs will be updated automatically on any published change of those performed on the respective Product itself. Staged changes do not affect this field.</p>
      * @param variantSelection value to be set
      */
 
@@ -98,7 +98,7 @@ public interface ProductSelectionAssignment {
 
     /**
      *  <p>Defines which particular Variants of the Product are excluded from the Product Selection. If undefined all Variants of the referenced Product are excluded.</p>
-     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. The list of SKUs will be updated automatically on any published change of those performed on the respective Product itself. Staged changes do not affect this field.</p>
      * @param variantExclusion value to be set
      */
 

@@ -28,6 +28,10 @@ public class InventoryEntryDraftTest {
                 new Object[] { "restockableInDays", InventoryEntryDraft.builder().restockableInDays(4L) },
                 new Object[] { "expectedDelivery",
                         InventoryEntryDraft.builder().expectedDelivery(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "reservationExpirationInMinutes",
+                        InventoryEntryDraft.builder().reservationExpirationInMinutes(4) },
+                new Object[] { "stockLevels", InventoryEntryDraft.builder()
+                        .stockLevels(new com.commercetools.api.models.inventory.InventoryEntryStockLevelsImpl()) },
                 new Object[] { "custom", InventoryEntryDraft.builder()
                         .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
@@ -87,6 +91,21 @@ public class InventoryEntryDraftTest {
         InventoryEntryDraft value = InventoryEntryDraft.of();
         value.setExpectedDelivery(ZonedDateTime.parse("2023-06-01T12:00Z"));
         Assertions.assertThat(value.getExpectedDelivery()).isEqualTo(ZonedDateTime.parse("2023-06-01T12:00Z"));
+    }
+
+    @Test
+    public void reservationExpirationInMinutes() {
+        InventoryEntryDraft value = InventoryEntryDraft.of();
+        value.setReservationExpirationInMinutes(4);
+        Assertions.assertThat(value.getReservationExpirationInMinutes()).isEqualTo(4);
+    }
+
+    @Test
+    public void stockLevels() {
+        InventoryEntryDraft value = InventoryEntryDraft.of();
+        value.setStockLevels(new com.commercetools.api.models.inventory.InventoryEntryStockLevelsImpl());
+        Assertions.assertThat(value.getStockLevels())
+                .isEqualTo(new com.commercetools.api.models.inventory.InventoryEntryStockLevelsImpl());
     }
 
     @Test

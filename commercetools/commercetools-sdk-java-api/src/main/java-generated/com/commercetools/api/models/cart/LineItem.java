@@ -17,6 +17,7 @@ import com.commercetools.api.models.order.ItemState;
 import com.commercetools.api.models.product.ProductVariant;
 import com.commercetools.api.models.product_type.ProductTypeReference;
 import com.commercetools.api.models.recurring_order.LineItemRecurrenceInfo;
+import com.commercetools.api.models.reservation.ReservationReference;
 import com.commercetools.api.models.tax_category.TaxRate;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
@@ -262,6 +263,14 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
     public ItemShippingDetails getShippingDetails();
 
     /**
+     *  <p>Reference to the successful <a href="https://docs.commercetools.com/apis/ctp:api:type:Reservation" rel="nofollow">Reservation</a> associated with this Line Item. This field is only populated when using the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> mode.</p>
+     * @return reservation
+     */
+    @Valid
+    @JsonProperty("reservation")
+    public ReservationReference getReservation();
+
+    /**
      *  <p>Custom Fields of the Line Item.</p>
      * @return custom
      */
@@ -499,6 +508,13 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
     public void setShippingDetails(final ItemShippingDetails shippingDetails);
 
     /**
+     *  <p>Reference to the successful <a href="https://docs.commercetools.com/apis/ctp:api:type:Reservation" rel="nofollow">Reservation</a> associated with this Line Item. This field is only populated when using the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> mode.</p>
+     * @param reservation value to be set
+     */
+
+    public void setReservation(final ReservationReference reservation);
+
+    /**
      *  <p>Custom Fields of the Line Item.</p>
      * @param custom value to be set
      */
@@ -564,6 +580,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
         instance.setLineItemMode(template.getLineItemMode());
         instance.setInventoryMode(template.getInventoryMode());
         instance.setShippingDetails(template.getShippingDetails());
+        instance.setReservation(template.getReservation());
         instance.setCustom(template.getCustom());
         instance.setAddedAt(template.getAddedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
@@ -629,6 +646,8 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
         instance.setInventoryMode(template.getInventoryMode());
         instance.setShippingDetails(
             com.commercetools.api.models.cart.ItemShippingDetails.deepCopy(template.getShippingDetails()));
+        instance.setReservation(
+            com.commercetools.api.models.reservation.ReservationReference.deepCopy(template.getReservation()));
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         instance.setAddedAt(template.getAddedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());

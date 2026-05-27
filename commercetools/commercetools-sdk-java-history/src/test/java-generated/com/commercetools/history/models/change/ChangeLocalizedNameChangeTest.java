@@ -20,8 +20,10 @@ public class ChangeLocalizedNameChangeTest {
                 new Object[] { "previousValue",
                         ChangeLocalizedNameChange.builder()
                                 .previousValue(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { "nextValue", ChangeLocalizedNameChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.LocalizedStringImpl()) } };
+                new Object[] { "nextValue",
+                        ChangeLocalizedNameChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "catalogData", ChangeLocalizedNameChange.builder().catalogData("catalogData") } };
     }
 
     @Test
@@ -45,5 +47,12 @@ public class ChangeLocalizedNameChangeTest {
         value.setNextValue(new com.commercetools.history.models.common.LocalizedStringImpl());
         Assertions.assertThat(value.getNextValue())
                 .isEqualTo(new com.commercetools.history.models.common.LocalizedStringImpl());
+    }
+
+    @Test
+    public void catalogData() {
+        ChangeLocalizedNameChange value = ChangeLocalizedNameChange.of();
+        value.setCatalogData("catalogData");
+        Assertions.assertThat(value.getCatalogData()).isEqualTo("catalogData");
     }
 }

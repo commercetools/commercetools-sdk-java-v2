@@ -26,14 +26,18 @@ public class ExtensionInputImpl implements ExtensionInput, ModelBase {
 
     private com.commercetools.api.models.common.Reference resource;
 
+    private com.commercetools.api.models.common.Reference oldResource;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     ExtensionInputImpl(@JsonProperty("action") final com.commercetools.api.models.extension.ExtensionAction action,
-            @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource) {
+            @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
+            @JsonProperty("oldResource") final com.commercetools.api.models.common.Reference oldResource) {
         this.action = action;
         this.resource = resource;
+        this.oldResource = oldResource;
     }
 
     /**
@@ -58,12 +62,24 @@ public class ExtensionInputImpl implements ExtensionInput, ModelBase {
         return this.resource;
     }
 
+    /**
+     *  <p>Expanded reference to the resource as it was before the update. Only included when <a href="https://docs.commercetools.com/apis/ctp:api:type:ExtensionAdditionalContext" rel="nofollow"><code>additionalContext.includeOldResource</code></a> is <code>true</code> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Extension" rel="nofollow">Extension</a> and the <code>action</code> is <code>Update</code>.</p>
+     */
+
+    public com.commercetools.api.models.common.Reference getOldResource() {
+        return this.oldResource;
+    }
+
     public void setAction(final com.commercetools.api.models.extension.ExtensionAction action) {
         this.action = action;
     }
 
     public void setResource(final com.commercetools.api.models.common.Reference resource) {
         this.resource = resource;
+    }
+
+    public void setOldResource(final com.commercetools.api.models.common.Reference oldResource) {
+        this.oldResource = oldResource;
     }
 
     @Override
@@ -78,20 +94,23 @@ public class ExtensionInputImpl implements ExtensionInput, ModelBase {
 
         return new EqualsBuilder().append(action, that.action)
                 .append(resource, that.resource)
+                .append(oldResource, that.oldResource)
                 .append(action, that.action)
                 .append(resource, that.resource)
+                .append(oldResource, that.oldResource)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(resource).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(resource).append(oldResource).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
                 .append("resource", resource)
+                .append("oldResource", oldResource)
                 .build();
     }
 

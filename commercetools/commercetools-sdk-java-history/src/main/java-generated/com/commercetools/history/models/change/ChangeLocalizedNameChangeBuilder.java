@@ -17,6 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .change("{change}")
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .catalogData("{catalogData}")
  *             .build()
  * </code></pre>
  * </div>
@@ -29,6 +30,8 @@ public class ChangeLocalizedNameChangeBuilder implements Builder<ChangeLocalized
     private com.commercetools.history.models.common.LocalizedString previousValue;
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
+
+    private String catalogData;
 
     /**
      * set the value to the change
@@ -114,6 +117,22 @@ public class ChangeLocalizedNameChangeBuilder implements Builder<ChangeLocalized
     }
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     *  <p>This field is only present if the change is related to the Product entity.</p>
+     * @param catalogData value to be set
+     * @return Builder
+     */
+
+    public ChangeLocalizedNameChangeBuilder catalogData(final String catalogData) {
+        this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
      * value of change}
      * @return change
      */
@@ -141,6 +160,20 @@ public class ChangeLocalizedNameChangeBuilder implements Builder<ChangeLocalized
     }
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     *  <p>This field is only present if the change is related to the Product entity.</p>
+     * @return catalogData
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
      * builds ChangeLocalizedNameChange with checking for non-null required values
      * @return ChangeLocalizedNameChange
      */
@@ -148,7 +181,8 @@ public class ChangeLocalizedNameChangeBuilder implements Builder<ChangeLocalized
         Objects.requireNonNull(change, ChangeLocalizedNameChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, ChangeLocalizedNameChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, ChangeLocalizedNameChange.class + ": nextValue is missing");
-        return new ChangeLocalizedNameChangeImpl(change, previousValue, nextValue);
+        Objects.requireNonNull(catalogData, ChangeLocalizedNameChange.class + ": catalogData is missing");
+        return new ChangeLocalizedNameChangeImpl(change, previousValue, nextValue, catalogData);
     }
 
     /**
@@ -156,7 +190,7 @@ public class ChangeLocalizedNameChangeBuilder implements Builder<ChangeLocalized
      * @return ChangeLocalizedNameChange
      */
     public ChangeLocalizedNameChange buildUnchecked() {
-        return new ChangeLocalizedNameChangeImpl(change, previousValue, nextValue);
+        return new ChangeLocalizedNameChangeImpl(change, previousValue, nextValue, catalogData);
     }
 
     /**
@@ -177,6 +211,7 @@ public class ChangeLocalizedNameChangeBuilder implements Builder<ChangeLocalized
         builder.change = template.getChange();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.catalogData = template.getCatalogData();
         return builder;
     }
 

@@ -24,7 +24,7 @@ public interface CartOrigin extends JsonEnum {
     <p>Cart was created by a merchant on behalf of a Customer.</p> */
     CartOrigin MERCHANT = CartOriginEnum.MERCHANT;
     /**
-    <p>Cart was created as part of a Quote.</p> */
+    <p>Cart is the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">quotationCart</a> that was automatically created by the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/staged-quotes:POST" rel="nofollow">Create StagedQuote</a> endpoint during the quoting process.</p> */
     CartOrigin QUOTE = CartOriginEnum.QUOTE;
     /**
     <p>Cart was created as part of a Recurring Order.</p> */

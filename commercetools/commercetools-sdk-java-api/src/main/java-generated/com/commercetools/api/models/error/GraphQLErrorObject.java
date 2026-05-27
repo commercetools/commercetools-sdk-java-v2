@@ -126,6 +126,14 @@ public interface GraphQLErrorObject {
     }
 
     /**
+     * builder for circularDependency subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLCircularDependencyErrorBuilder circularDependencyBuilder() {
+        return com.commercetools.api.models.error.GraphQLCircularDependencyErrorBuilder.of();
+    }
+
+    /**
      * builder for concurrentModification subtype
      * @return builder
      */
@@ -302,6 +310,30 @@ public interface GraphQLErrorObject {
     }
 
     /**
+     * builder for extensionChainTooDeep subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLExtensionChainTooDeepErrorBuilder extensionChainTooDeepBuilder() {
+        return com.commercetools.api.models.error.GraphQLExtensionChainTooDeepErrorBuilder.of();
+    }
+
+    /**
+     * builder for extensionChainTooWide subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLExtensionChainTooWideErrorBuilder extensionChainTooWideBuilder() {
+        return com.commercetools.api.models.error.GraphQLExtensionChainTooWideErrorBuilder.of();
+    }
+
+    /**
+     * builder for extensionDependencyExists subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLExtensionDependencyExistsErrorBuilder extensionDependencyExistsBuilder() {
+        return com.commercetools.api.models.error.GraphQLExtensionDependencyExistsErrorBuilder.of();
+    }
+
+    /**
      * builder for extensionNoResponse subtype
      * @return builder
      */
@@ -446,6 +478,22 @@ public interface GraphQLErrorObject {
     }
 
     /**
+     * builder for lineItemQuantityAboveLimit subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLLineItemQuantityAboveLimitErrorBuilder lineItemQuantityAboveLimitBuilder() {
+        return com.commercetools.api.models.error.GraphQLLineItemQuantityAboveLimitErrorBuilder.of();
+    }
+
+    /**
+     * builder for lineItemQuantityBelowLimit subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLLineItemQuantityBelowLimitErrorBuilder lineItemQuantityBelowLimitBuilder() {
+        return com.commercetools.api.models.error.GraphQLLineItemQuantityBelowLimitErrorBuilder.of();
+    }
+
+    /**
      * builder for lockedField subtype
      * @return builder
      */
@@ -491,6 +539,14 @@ public interface GraphQLErrorObject {
      */
     public static com.commercetools.api.models.error.GraphQLMaxStoreReferencesReachedErrorBuilder maxStoreReferencesReachedBuilder() {
         return com.commercetools.api.models.error.GraphQLMaxStoreReferencesReachedErrorBuilder.of();
+    }
+
+    /**
+     * builder for missingDependency subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLMissingDependencyErrorBuilder missingDependencyBuilder() {
+        return com.commercetools.api.models.error.GraphQLMissingDependencyErrorBuilder.of();
     }
 
     /**

@@ -7,6 +7,7 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.common.ResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -34,6 +35,14 @@ public interface RecurrencePolicyResourceIdentifier extends ResourceIdentifier {
      * discriminator value for RecurrencePolicyResourceIdentifier
      */
     String RECURRENCE_POLICY = "recurrence-policy";
+
+    /**
+     *
+     * @return typeId
+     */
+
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
 
     /**
      *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a>. Required if <code>key</code> is absent.</p>

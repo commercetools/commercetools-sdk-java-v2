@@ -71,6 +71,10 @@ public class ByProjectKeyRequestBuilder {
         return new ByProjectKeyProductSelectionsRequestBuilder(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyProductTailoringsRequestBuilder productTailorings() {
+        return new ByProjectKeyProductTailoringsRequestBuilder(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyOrdersRequestBuilder orders() {
         return new ByProjectKeyOrdersRequestBuilder(apiHttpClient, projectKey);
     }

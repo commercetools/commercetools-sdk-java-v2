@@ -79,6 +79,14 @@ public interface InventoryImport extends ImportResource {
     public ZonedDateTime getExpectedDelivery();
 
     /**
+     *  <p>Maps to <code>InventoryEntry.reservationExpirationInMinutes</code></p>
+     * @return reservationExpirationInMinutes
+     */
+
+    @JsonProperty("reservationExpirationInMinutes")
+    public Integer getReservationExpirationInMinutes();
+
+    /**
      *  <p>Maps to <code>InventoryEntry.supplyChannel</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @return supplyChannel
      */
@@ -130,6 +138,13 @@ public interface InventoryImport extends ImportResource {
     public void setExpectedDelivery(final ZonedDateTime expectedDelivery);
 
     /**
+     *  <p>Maps to <code>InventoryEntry.reservationExpirationInMinutes</code></p>
+     * @param reservationExpirationInMinutes value to be set
+     */
+
+    public void setReservationExpirationInMinutes(final Integer reservationExpirationInMinutes);
+
+    /**
      *  <p>Maps to <code>InventoryEntry.supplyChannel</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param supplyChannel value to be set
      */
@@ -163,6 +178,7 @@ public interface InventoryImport extends ImportResource {
         instance.setQuantityOnStock(template.getQuantityOnStock());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setExpectedDelivery(template.getExpectedDelivery());
+        instance.setReservationExpirationInMinutes(template.getReservationExpirationInMinutes());
         instance.setSupplyChannel(template.getSupplyChannel());
         instance.setCustom(template.getCustom());
         return instance;
@@ -186,6 +202,7 @@ public interface InventoryImport extends ImportResource {
         instance.setQuantityOnStock(template.getQuantityOnStock());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setExpectedDelivery(template.getExpectedDelivery());
+        instance.setReservationExpirationInMinutes(template.getReservationExpirationInMinutes());
         instance.setSupplyChannel(
             com.commercetools.importapi.models.common.ChannelKeyReference.deepCopy(template.getSupplyChannel()));
         instance.setCustom(com.commercetools.importapi.models.customfields.Custom.deepCopy(template.getCustom()));

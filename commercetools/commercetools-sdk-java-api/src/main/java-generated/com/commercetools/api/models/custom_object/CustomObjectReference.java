@@ -8,6 +8,7 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -39,6 +40,14 @@ public interface CustomObjectReference extends Reference, com.commercetools.api.
      * discriminator value for CustomObjectReference
      */
     String KEY_VALUE_DOCUMENT = "key-value-document";
+
+    /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
 
     /**
      *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with <span>Reference Expansion</span> for CustomObjects.</p>

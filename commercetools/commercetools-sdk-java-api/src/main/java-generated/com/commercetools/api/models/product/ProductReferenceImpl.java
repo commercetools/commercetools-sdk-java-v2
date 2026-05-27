@@ -48,7 +48,7 @@ public class ProductReferenceImpl implements ProductReference, ModelBase {
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     *
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {

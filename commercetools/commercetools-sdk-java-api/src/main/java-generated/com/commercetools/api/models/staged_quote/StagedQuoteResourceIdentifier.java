@@ -7,6 +7,7 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.common.ResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -35,6 +36,14 @@ public interface StagedQuoteResourceIdentifier
      * discriminator value for StagedQuoteResourceIdentifier
      */
     String STAGED_QUOTE = "staged-quote";
+
+    /**
+     *
+     * @return typeId
+     */
+
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
 
     /**
      * factory method

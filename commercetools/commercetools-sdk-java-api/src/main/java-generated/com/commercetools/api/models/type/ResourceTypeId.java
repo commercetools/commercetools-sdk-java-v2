@@ -101,6 +101,9 @@ public interface ResourceTypeId extends JsonEnum {
     <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a>. When a <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a> is created, the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">CustomFields</a> will be copied from the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> and when a <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> is created, the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">CustomFields</a> will be copied from the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a>. For this reason, the Types for Quotes are also valid for QuoteRequests and StagedQuotes, and hence all have the same identifier: <code>quote</code>.</p> */
     ResourceTypeId QUOTE = ResourceTypeIdEnum.QUOTE;
     /**
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reservation" rel="nofollow">Reservation</a></p> */
+    ResourceTypeId RESERVATION = ResourceTypeIdEnum.RESERVATION;
+    /**
     <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a></p> */
     ResourceTypeId REVIEW = ResourceTypeIdEnum.REVIEW;
     /**
@@ -271,6 +274,11 @@ public interface ResourceTypeId extends JsonEnum {
          * quote
          */
         QUOTE("quote"),
+
+        /**
+         * reservation
+         */
+        RESERVATION("reservation"),
 
         /**
          * review

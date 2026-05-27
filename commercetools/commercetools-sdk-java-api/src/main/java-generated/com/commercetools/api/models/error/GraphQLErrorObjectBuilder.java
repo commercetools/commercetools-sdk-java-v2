@@ -35,6 +35,10 @@ public class GraphQLErrorObjectBuilder {
         return com.commercetools.api.models.error.GraphQLBadGatewayErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.GraphQLCircularDependencyErrorBuilder circularDependencyBuilder() {
+        return com.commercetools.api.models.error.GraphQLCircularDependencyErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.GraphQLConcurrentModificationErrorBuilder concurrentModificationBuilder() {
         return com.commercetools.api.models.error.GraphQLConcurrentModificationErrorBuilder.of();
     }
@@ -123,6 +127,18 @@ public class GraphQLErrorObjectBuilder {
         return com.commercetools.api.models.error.GraphQLExtensionBadResponseErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.GraphQLExtensionChainTooDeepErrorBuilder extensionChainTooDeepBuilder() {
+        return com.commercetools.api.models.error.GraphQLExtensionChainTooDeepErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.GraphQLExtensionChainTooWideErrorBuilder extensionChainTooWideBuilder() {
+        return com.commercetools.api.models.error.GraphQLExtensionChainTooWideErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.GraphQLExtensionDependencyExistsErrorBuilder extensionDependencyExistsBuilder() {
+        return com.commercetools.api.models.error.GraphQLExtensionDependencyExistsErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.GraphQLExtensionNoResponseErrorBuilder extensionNoResponseBuilder() {
         return com.commercetools.api.models.error.GraphQLExtensionNoResponseErrorBuilder.of();
     }
@@ -195,6 +211,14 @@ public class GraphQLErrorObjectBuilder {
         return com.commercetools.api.models.error.GraphQLLanguageUsedInStoresErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.GraphQLLineItemQuantityAboveLimitErrorBuilder lineItemQuantityAboveLimitBuilder() {
+        return com.commercetools.api.models.error.GraphQLLineItemQuantityAboveLimitErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.GraphQLLineItemQuantityBelowLimitErrorBuilder lineItemQuantityBelowLimitBuilder() {
+        return com.commercetools.api.models.error.GraphQLLineItemQuantityBelowLimitErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.GraphQLLockedFieldErrorBuilder lockedFieldBuilder() {
         return com.commercetools.api.models.error.GraphQLLockedFieldErrorBuilder.of();
     }
@@ -217,6 +241,10 @@ public class GraphQLErrorObjectBuilder {
 
     public com.commercetools.api.models.error.GraphQLMaxStoreReferencesReachedErrorBuilder maxStoreReferencesReachedBuilder() {
         return com.commercetools.api.models.error.GraphQLMaxStoreReferencesReachedErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.GraphQLMissingDependencyErrorBuilder missingDependencyBuilder() {
+        return com.commercetools.api.models.error.GraphQLMissingDependencyErrorBuilder.of();
     }
 
     public com.commercetools.api.models.error.GraphQLMissingRoleOnChannelErrorBuilder missingRoleOnChannelBuilder() {

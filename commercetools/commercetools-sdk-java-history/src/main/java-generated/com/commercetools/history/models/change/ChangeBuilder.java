@@ -1331,6 +1331,10 @@ public class ChangeBuilder {
         return com.commercetools.history.models.change.SetTransactionCustomTypeChangeBuilder.of();
     }
 
+    public com.commercetools.history.models.change.SetTransactionInterfaceIdChangeBuilder setTransactionInterfaceIdChangeBuilder() {
+        return com.commercetools.history.models.change.SetTransactionInterfaceIdChangeBuilder.of();
+    }
+
     public com.commercetools.history.models.change.SetTransitionsChangeBuilder setTransitionsChangeBuilder() {
         return com.commercetools.history.models.change.SetTransitionsChangeBuilder.of();
     }

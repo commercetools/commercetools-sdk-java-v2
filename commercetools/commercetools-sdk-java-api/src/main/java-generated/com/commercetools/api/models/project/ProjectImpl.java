@@ -52,6 +52,8 @@ public class ProjectImpl implements Project, ModelBase {
 
     private com.commercetools.api.models.project.BusinessUnitConfiguration businessUnits;
 
+    private com.commercetools.api.models.project.InventoryConfiguration inventory;
+
     private com.commercetools.api.models.project.DiscountsConfiguration discounts;
 
     /**
@@ -71,6 +73,7 @@ public class ProjectImpl implements Project, ModelBase {
             @JsonProperty("externalOAuth") final com.commercetools.api.models.project.ExternalOAuth externalOAuth,
             @JsonProperty("searchIndexing") final com.commercetools.api.models.project.SearchIndexingConfiguration searchIndexing,
             @JsonProperty("businessUnits") final com.commercetools.api.models.project.BusinessUnitConfiguration businessUnits,
+            @JsonProperty("inventory") final com.commercetools.api.models.project.InventoryConfiguration inventory,
             @JsonProperty("discounts") final com.commercetools.api.models.project.DiscountsConfiguration discounts) {
         this.version = version;
         this.key = key;
@@ -87,6 +90,7 @@ public class ProjectImpl implements Project, ModelBase {
         this.externalOAuth = externalOAuth;
         this.searchIndexing = searchIndexing;
         this.businessUnits = businessUnits;
+        this.inventory = inventory;
         this.discounts = discounts;
     }
 
@@ -217,6 +221,14 @@ public class ProjectImpl implements Project, ModelBase {
     }
 
     /**
+     *  <p>Holds configuration specific to inventory.</p>
+     */
+
+    public com.commercetools.api.models.project.InventoryConfiguration getInventory() {
+        return this.inventory;
+    }
+
+    /**
      *  <p>Holds configuration specific to discounts, including how Product and Cart Discounts are combined in every Cart of the Project.</p>
      */
 
@@ -298,6 +310,10 @@ public class ProjectImpl implements Project, ModelBase {
         this.businessUnits = businessUnits;
     }
 
+    public void setInventory(final com.commercetools.api.models.project.InventoryConfiguration inventory) {
+        this.inventory = inventory;
+    }
+
     public void setDiscounts(final com.commercetools.api.models.project.DiscountsConfiguration discounts) {
         this.discounts = discounts;
     }
@@ -327,6 +343,7 @@ public class ProjectImpl implements Project, ModelBase {
                 .append(externalOAuth, that.externalOAuth)
                 .append(searchIndexing, that.searchIndexing)
                 .append(businessUnits, that.businessUnits)
+                .append(inventory, that.inventory)
                 .append(discounts, that.discounts)
                 .append(version, that.version)
                 .append(key, that.key)
@@ -343,6 +360,7 @@ public class ProjectImpl implements Project, ModelBase {
                 .append(externalOAuth, that.externalOAuth)
                 .append(searchIndexing, that.searchIndexing)
                 .append(businessUnits, that.businessUnits)
+                .append(inventory, that.inventory)
                 .append(discounts, that.discounts)
                 .isEquals();
     }
@@ -364,6 +382,7 @@ public class ProjectImpl implements Project, ModelBase {
                 .append(externalOAuth)
                 .append(searchIndexing)
                 .append(businessUnits)
+                .append(inventory)
                 .append(discounts)
                 .toHashCode();
     }
@@ -385,6 +404,7 @@ public class ProjectImpl implements Project, ModelBase {
                 .append("externalOAuth", externalOAuth)
                 .append("searchIndexing", searchIndexing)
                 .append("businessUnits", businessUnits)
+                .append("inventory", inventory)
                 .append("discounts", discounts)
                 .build();
     }

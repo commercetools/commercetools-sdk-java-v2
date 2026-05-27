@@ -50,6 +50,9 @@ public interface ImportResourceType extends JsonEnum {
     <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductSelectionImport" rel="nofollow">Product Selection import</a> resource type.</p> */
     ImportResourceType PRODUCT_SELECTION = ImportResourceTypeEnum.PRODUCT_SELECTION;
     /**
+    <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductTailoringImport" rel="nofollow">Product Tailoring import</a> resource type.</p> */
+    ImportResourceType PRODUCT_TAILORING = ImportResourceTypeEnum.PRODUCT_TAILORING;
+    /**
     <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductTypeImport" rel="nofollow">Product Type import</a> resource type.</p> */
     ImportResourceType PRODUCT_TYPE = ImportResourceTypeEnum.PRODUCT_TYPE;
     /**
@@ -123,6 +126,11 @@ public interface ImportResourceType extends JsonEnum {
          * product-selection
          */
         PRODUCT_SELECTION("product-selection"),
+
+        /**
+         * product-tailoring
+         */
+        PRODUCT_TAILORING("product-tailoring"),
 
         /**
          * product-type

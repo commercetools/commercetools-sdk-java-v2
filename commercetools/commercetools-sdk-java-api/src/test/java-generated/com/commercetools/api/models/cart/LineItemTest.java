@@ -74,6 +74,9 @@ public class LineItemTest {
                 new Object[] { "shippingDetails",
                         LineItem.builder()
                                 .shippingDetails(new com.commercetools.api.models.cart.ItemShippingDetailsImpl()) },
+                new Object[] { "reservation",
+                        LineItem.builder()
+                                .reservation(new com.commercetools.api.models.reservation.ReservationReferenceImpl()) },
                 new Object[] { "custom",
                         LineItem.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
                 new Object[] { "addedAt", LineItem.builder().addedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
@@ -263,6 +266,14 @@ public class LineItemTest {
         value.setShippingDetails(new com.commercetools.api.models.cart.ItemShippingDetailsImpl());
         Assertions.assertThat(value.getShippingDetails())
                 .isEqualTo(new com.commercetools.api.models.cart.ItemShippingDetailsImpl());
+    }
+
+    @Test
+    public void reservation() {
+        LineItem value = LineItem.of();
+        value.setReservation(new com.commercetools.api.models.reservation.ReservationReferenceImpl());
+        Assertions.assertThat(value.getReservation())
+                .isEqualTo(new com.commercetools.api.models.reservation.ReservationReferenceImpl());
     }
 
     @Test

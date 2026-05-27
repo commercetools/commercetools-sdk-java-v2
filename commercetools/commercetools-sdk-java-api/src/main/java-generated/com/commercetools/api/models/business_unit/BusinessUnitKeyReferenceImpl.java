@@ -44,7 +44,7 @@ public class BusinessUnitKeyReferenceImpl implements BusinessUnitKeyReference, M
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     *
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {

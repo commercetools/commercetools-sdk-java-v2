@@ -253,6 +253,13 @@ public class BaseResourceQueryBuilderDsl {
             BaseResourceQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> asReservation(
+            Function<com.commercetools.api.predicates.query.reservation.ReservationQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.reservation.ReservationQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.reservation.ReservationQueryBuilderDsl.of()),
+            BaseResourceQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> asReview(
             Function<com.commercetools.api.predicates.query.review.ReviewQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.review.ReviewQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

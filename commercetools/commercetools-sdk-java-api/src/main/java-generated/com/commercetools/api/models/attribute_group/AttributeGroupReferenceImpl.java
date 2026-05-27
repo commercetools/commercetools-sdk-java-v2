@@ -48,7 +48,7 @@ public class AttributeGroupReferenceImpl implements AttributeGroupReference, Mod
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     *
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {

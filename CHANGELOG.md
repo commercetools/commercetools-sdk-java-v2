@@ -1,4 +1,61 @@
 
+# 19.10.0 (2026-05-18)
+
+## What's Changed
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1059
+* DEVX-786 don't retry delete requests on concurrent modification by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1062
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1060
+* Update all dependencies by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/934
+
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `ExactLockConflictError`
+- added type `ValidityLockConflictError`
+- added type `GraphQLExactLockConflictError`
+- added type `GraphQLValidityLockConflictError`
+</details>
+
+**Import changes**
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `partiallyImported` to type `ProcessingState`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `partiallyImported` to type `OperationStates`
+</details>
+
+**Checkout changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `CountryCode`
+- added type `CurrencyCode`
+- added type `Locale`
+</details>
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.9.1...19.10.0
+
+# 19.9.1 (2026-04-14)
+
+## What's Changed
+* bump dgs-codegen runtime by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1058
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1056
+* DEVX-772-Spring-Boot-update-to-version-4-in-Java-SDK by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1055
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.9.0...19.9.1
+
 # 19.9.0 (2026-04-07)
 
 ## What's Changed

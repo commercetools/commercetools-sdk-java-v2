@@ -39,4 +39,6 @@ public interface ProjectScopedApiRoot {
     ByProjectKeyProductSelectionsRequestBuilder productSelections();
 
     ByProjectKeyBusinessUnitsRequestBuilder businessUnits();
+
+    ByProjectKeyProductTailoringsRequestBuilder productTailorings();
 }

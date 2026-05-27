@@ -288,7 +288,7 @@ public final class CompletableFutureUtils {
         final List<CompletableFuture<T>> futureList = list.stream()
                 .map(CompletionStage::toCompletableFuture)
                 .collect(toList());
-        final CompletableFuture[] futuresAsArray = futureList.toArray(new CompletableFuture[futureList.size()]);
+        final CompletableFuture[] futuresAsArray = futureList.toArray(new CompletableFuture[0]);
         return CompletableFuture.allOf(futuresAsArray)
                 .thenApplyAsync(x -> futureList.stream().map(CompletableFuture::join).collect(Collectors.toList()));
     }

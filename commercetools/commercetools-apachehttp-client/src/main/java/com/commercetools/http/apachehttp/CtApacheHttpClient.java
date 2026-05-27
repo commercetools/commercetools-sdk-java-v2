@@ -188,12 +188,9 @@ public class CtApacheHttpClient extends HttpClientBase {
         if (httpRequest.getBody() != null) {
             //default media type is JSON, if other media type is set as a header, use it
             ContentType mediaType = ContentType.APPLICATION_JSON.withCharset(StandardCharsets.UTF_8);
-            if (httpRequest.getHeaders()
-                    .getHeaders()
-                    .stream()
-                    .anyMatch(s -> s.getKey().equalsIgnoreCase(ApiHttpHeaders.CONTENT_TYPE))) {
-                mediaType = ContentType
-                        .parse(Objects.requireNonNull(httpRequest.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE)));
+            final String contentTypeValue = httpRequest.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE);
+            if (contentTypeValue != null) {
+                mediaType = ContentType.parse(contentTypeValue);
             }
 
             builder.setEntity(httpRequest.getBody(), mediaType);
@@ -210,14 +207,12 @@ public class CtApacheHttpClient extends HttpClientBase {
     }
 
     private static ApiHttpResponse<byte[]> toResponse(final SimpleHttpResponse response) {
-        final Map<String, List<Header>> apacheHeaders = Arrays.stream(response.getHeaders())
-                .collect(Collectors.groupingBy(Header::getName));
-
-        final ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders(apacheHeaders.entrySet()
-                .stream()
-                .flatMap(
-                    e -> e.getValue().stream().map(value -> ApiHttpHeaders.headerEntry(e.getKey(), value.getValue())))
-                .collect(Collectors.toList()));
+        final Header[] responseHeaders = response.getHeaders();
+        final List<Map.Entry<String, String>> headerList = new ArrayList<>(responseHeaders.length);
+        for (Header header : responseHeaders) {
+            headerList.add(ApiHttpHeaders.headerEntry(header.getName(), header.getValue()));
+        }
+        final ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders(headerList);
 
         final byte[] bodyNullable = Optional.ofNullable(response.getBody()).map((SimpleBody entity) -> {
             try {

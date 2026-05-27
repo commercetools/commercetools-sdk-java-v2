@@ -161,12 +161,9 @@ public class CtAsyncHttpClient extends HttpClientBase implements VrapHttpClient,
         Optional.ofNullable(request.getBody()).ifPresent(body -> {
             builder.setBody(body);
             AsciiString mediaType = HttpHeaderValues.APPLICATION_JSON;
-            if (request.getHeaders()
-                    .getHeaders()
-                    .stream()
-                    .anyMatch(s -> s.getKey().equalsIgnoreCase(ApiHttpHeaders.CONTENT_TYPE))) {
-                mediaType = AsciiString
-                        .of(Objects.requireNonNull(request.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE)));
+            final String contentTypeValue = request.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE);
+            if (contentTypeValue != null) {
+                mediaType = AsciiString.of(contentTypeValue);
             }
             builder.setHeader(ApiHttpHeaders.CONTENT_TYPE, mediaType);
         });

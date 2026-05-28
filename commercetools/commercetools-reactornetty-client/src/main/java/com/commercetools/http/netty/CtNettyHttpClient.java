@@ -144,12 +144,9 @@ public class CtNettyHttpClient extends HttpClientBase {
             });
 
             AsciiString mediaType = HttpHeaderValues.APPLICATION_JSON;
-            if (httpRequest.getHeaders()
-                    .getHeaders()
-                    .stream()
-                    .anyMatch(s -> s.getKey().equalsIgnoreCase(ApiHttpHeaders.CONTENT_TYPE))) {
-                mediaType = AsciiString
-                        .of(Objects.requireNonNull(httpRequest.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE)));
+            final String contentTypeValue = httpRequest.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE);
+            if (contentTypeValue != null) {
+                mediaType = AsciiString.of(contentTypeValue);
             }
             nettyRequest.requestHeaders().set(ApiHttpHeaders.CONTENT_TYPE, mediaType);
 

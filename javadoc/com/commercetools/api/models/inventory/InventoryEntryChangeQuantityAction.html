@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">InventoryEntryChangeQuantityAction</span><span class="extends-implements">
 extends <a href="InventoryEntryUpdateAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryUpdateAction</a></span></div>
-<div class="block"><p>Updates <code>availableQuantity</code> based on the new <code>quantityOnStock</code> and amount of active reservations.</p>
+<div class="block"><p>Sets the <code>quantityOnStock</code> to an absolute value. This changes the <code>availableQuantity</code>, based on the number of active reservations. To make an incremental change instead, use the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntryAddQuantityAction" rel="nofollow">InventoryEntryAddQuantityAction</a> update action.</p>
 
  <hr>
  Example to create an instance using the builder pattern

@@ -372,6 +372,14 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/error/MaxCartDiscountsReachedErrorBuilder.html#%3Cinit%3E()" class="member-name-link">MaxCartDiscountsReachedErrorBuilder()</a> - Constructor for class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/MaxCartDiscountsReachedErrorBuilder.html" title="class in com.commercetools.api.models.error">MaxCartDiscountsReachedErrorBuilder</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/error/GraphQLLineItemQuantityAboveLimitErrorBuilder.html#maxCartQuantity(java.lang.Integer)" class="member-name-link">maxCartQuantity(Integer)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLLineItemQuantityAboveLimitErrorBuilder.html" title="class in com.commercetools.api.models.error">GraphQLLineItemQuantityAboveLimitErrorBuilder</a></dt>
+<dd>
+<div class="block">The maximum quantity allowed for this Line Item.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/error/LineItemQuantityAboveLimitErrorBuilder.html#maxCartQuantity(java.lang.Integer)" class="member-name-link">maxCartQuantity(Integer)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/LineItemQuantityAboveLimitErrorBuilder.html" title="class in com.commercetools.api.models.error">LineItemQuantityAboveLimitErrorBuilder</a></dt>
+<dd>
+<div class="block">The maximum quantity allowed for this Line Item.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/inventory/InventoryEntryBuilder.html#maxCartQuantity(java.lang.Integer)" class="member-name-link">maxCartQuantity(Integer)</a> - Method in class com.commercetools.api.models.inventory.<a href="../com/commercetools/api/models/inventory/InventoryEntryBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryBuilder</a></dt>
 <dd>
 <div class="block">Maximum quantity that can be added to a Cart.</div>
@@ -725,6 +733,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Plain text description of the error.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/error/CircularDependencyErrorBuilder.html#message(java.lang.String)" class="member-name-link">message(String)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/CircularDependencyErrorBuilder.html" title="class in com.commercetools.api.models.error">CircularDependencyErrorBuilder</a></dt>
+<dd>
+<div class="block"><code>"Circular dependency detected: [ext-1, ext-2, ext-1]"</code></div>
+</dd>
 <dt><a href="../com/commercetools/api/models/error/ConcurrentModificationErrorBuilder.html#message(java.lang.String)" class="member-name-link">message(String)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/ConcurrentModificationErrorBuilder.html" title="class in com.commercetools.api.models.error">ConcurrentModificationErrorBuilder</a></dt>
 <dd>
 <div class="block"><code>"Object $resourceId has a different version than expected.</code></div>
@@ -817,6 +829,18 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Description of the invalid Extension response.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/error/ExtensionChainTooDeepErrorBuilder.html#message(java.lang.String)" class="member-name-link">message(String)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/ExtensionChainTooDeepErrorBuilder.html" title="class in com.commercetools.api.models.error">ExtensionChainTooDeepErrorBuilder</a></dt>
+<dd>
+<div class="block"><code>"The dependency chain depth 4 exceeds the maximum allowed depth of 3"</code></div>
+</dd>
+<dt><a href="../com/commercetools/api/models/error/ExtensionChainTooWideErrorBuilder.html#message(java.lang.String)" class="member-name-link">message(String)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/ExtensionChainTooWideErrorBuilder.html" title="class in com.commercetools.api.models.error">ExtensionChainTooWideErrorBuilder</a></dt>
+<dd>
+<div class="block"><code>"Extension chain breadth exceeds the maximum allowed breadth of 5"</code></div>
+</dd>
+<dt><a href="../com/commercetools/api/models/error/ExtensionDependencyExistsErrorBuilder.html#message(java.lang.String)" class="member-name-link">message(String)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/ExtensionDependencyExistsErrorBuilder.html" title="class in com.commercetools.api.models.error">ExtensionDependencyExistsErrorBuilder</a></dt>
+<dd>
+<div class="block"><code>"The extension cannot be deleted because it is a prerequisite for: [ext-2, ext-3]."</code></div>
+</dd>
 <dt><a href="../com/commercetools/api/models/error/ExtensionErrorBuilder.html#message(java.lang.String)" class="member-name-link">message(String)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/ExtensionErrorBuilder.html" title="class in com.commercetools.api.models.error">ExtensionErrorBuilder</a></dt>
 <dd>
 <div class="block">Plain text description of the error.</div>
@@ -893,6 +917,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block"><code>"Language(s) in use by a store cannot be deleted.</code></div>
 </dd>
+<dt><a href="../com/commercetools/api/models/error/LineItemQuantityAboveLimitErrorBuilder.html#message(java.lang.String)" class="member-name-link">message(String)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/LineItemQuantityAboveLimitErrorBuilder.html" title="class in com.commercetools.api.models.error">LineItemQuantityAboveLimitErrorBuilder</a></dt>
+<dd>
+<div class="block"><code>"Quantity '$quantity' greater than maximum '$maxCartQuantity'."</code></div>
+</dd>
+<dt><a href="../com/commercetools/api/models/error/LineItemQuantityBelowLimitErrorBuilder.html#message(java.lang.String)" class="member-name-link">message(String)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/LineItemQuantityBelowLimitErrorBuilder.html" title="class in com.commercetools.api.models.error">LineItemQuantityBelowLimitErrorBuilder</a></dt>
+<dd>
+<div class="block"><code>"Quantity '$quantity' less than minimum '$minCartQuantity'."</code></div>
+</dd>
 <dt><a href="../com/commercetools/api/models/error/LockedFieldErrorBuilder.html#message(java.lang.String)" class="member-name-link">message(String)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/LockedFieldErrorBuilder.html" title="class in com.commercetools.api.models.error">LockedFieldErrorBuilder</a></dt>
 <dd>
 <div class="block"><code>"'$field' is locked by another request.</code></div>
@@ -916,6 +948,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/error/MaxStoreReferencesReachedErrorBuilder.html#message(java.lang.String)" class="member-name-link">message(String)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/MaxStoreReferencesReachedErrorBuilder.html" title="class in com.commercetools.api.models.error">MaxStoreReferencesReachedErrorBuilder</a></dt>
 <dd>
 <div class="block"><code>"Maximum number of store discounts on a single cart discount reached $max".</code></div>
+</dd>
+<dt><a href="../com/commercetools/api/models/error/MissingDependencyErrorBuilder.html#message(java.lang.String)" class="member-name-link">message(String)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/MissingDependencyErrorBuilder.html" title="class in com.commercetools.api.models.error">MissingDependencyErrorBuilder</a></dt>
+<dd>
+<div class="block"><code>"The extensions '[ext-1, ext-2]' referenced in 'dependencies' do not exist."</code></div>
 </dd>
 <dt><a href="../com/commercetools/api/models/error/MissingRoleOnChannelErrorBuilder.html#message(java.lang.String)" class="member-name-link">message(String)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/MissingRoleOnChannelErrorBuilder.html" title="class in com.commercetools.api.models.error">MissingRoleOnChannelErrorBuilder</a></dt>
 <dd>
@@ -1048,6 +1084,18 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/product_search/ProductSearchErrorResponseBuilder.html#message(java.lang.String)" class="member-name-link">message(String)</a> - Method in class com.commercetools.api.models.product_search.<a href="../com/commercetools/api/models/product_search/ProductSearchErrorResponseBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchErrorResponseBuilder</a></dt>
 <dd>
 <div class="block">Describes the error.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/warning/CannotChangeReservationExpiryWarningBuilder.html#message(java.lang.String)" class="member-name-link">message(String)</a> - Method in class com.commercetools.api.models.warning.<a href="../com/commercetools/api/models/warning/CannotChangeReservationExpiryWarningBuilder.html" title="class in com.commercetools.api.models.warning">CannotChangeReservationExpiryWarningBuilder</a></dt>
+<dd>
+<div class="block"><code>"The reservation expiration for line item $lineItemId cannot be changed."</code></div>
+</dd>
+<dt><a href="../com/commercetools/api/models/warning/CannotCreateReservationWarningBuilder.html#message(java.lang.String)" class="member-name-link">message(String)</a> - Method in class com.commercetools.api.models.warning.<a href="../com/commercetools/api/models/warning/CannotCreateReservationWarningBuilder.html" title="class in com.commercetools.api.models.warning">CannotCreateReservationWarningBuilder</a></dt>
+<dd>
+<div class="block"><code>"Failed to create a reservation for product $productId (SKU: $sku, Supply Channel: $supplyChannel) with quantity $quantity."</code></div>
+</dd>
+<dt><a href="../com/commercetools/api/models/warning/CannotUpdateReservationWarningBuilder.html#message(java.lang.String)" class="member-name-link">message(String)</a> - Method in class com.commercetools.api.models.warning.<a href="../com/commercetools/api/models/warning/CannotUpdateReservationWarningBuilder.html" title="class in com.commercetools.api.models.warning">CannotUpdateReservationWarningBuilder</a></dt>
+<dd>
+<div class="block"><code>"Failed to update the reservation for line item $lineItemId (Product ID: $productId, SKU: $sku, Supply Channel: $supplyChannel) to a quantity of $requestedQuantity.</code></div>
 </dd>
 <dt><a href="../com/commercetools/api/models/warning/ImageProcessingOngoingWarningBuilder.html#message(java.lang.String)" class="member-name-link">message(String)</a> - Method in class com.commercetools.api.models.warning.<a href="../com/commercetools/api/models/warning/ImageProcessingOngoingWarningBuilder.html" title="class in com.commercetools.api.models.warning">ImageProcessingOngoingWarningBuilder</a></dt>
 <dd>
@@ -1470,6 +1518,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Maps to <code>Category.metaDescription</code>.</div>
 </dd>
+<dt><a href="../com/commercetools/importapi/models/product_tailoring/ProductTailoringImportBuilder.html#metaDescription(com.commercetools.importapi.models.common.LocalizedString)" class="member-name-link">metaDescription(LocalizedString)</a> - Method in class com.commercetools.importapi.models.product_tailoring.<a href="../com/commercetools/importapi/models/product_tailoring/ProductTailoringImportBuilder.html" title="class in com.commercetools.importapi.models.product_tailoring">ProductTailoringImportBuilder</a></dt>
+<dd>
+<div class="block">Maps to <code>ProductTailoring.metaDescription</code>.</div>
+</dd>
 <dt><a href="../com/commercetools/importapi/models/productdrafts/ProductDraftImportBuilder.html#metaDescription(com.commercetools.importapi.models.common.LocalizedString)" class="member-name-link">metaDescription(LocalizedString)</a> - Method in class com.commercetools.importapi.models.productdrafts.<a href="../com/commercetools/importapi/models/productdrafts/ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></dt>
 <dd>
 <div class="block">Maps to <code>ProductData.metaDescription</code>.</div>
@@ -1537,6 +1589,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/importapi/models/categories/CategoryImportBuilder.html#metaDescription(java.util.function.Function)" class="member-name-link">metaDescription(Function&lt;LocalizedStringBuilder, LocalizedStringBuilder&gt;)</a> - Method in class com.commercetools.importapi.models.categories.<a href="../com/commercetools/importapi/models/categories/CategoryImportBuilder.html" title="class in com.commercetools.importapi.models.categories">CategoryImportBuilder</a></dt>
 <dd>
 <div class="block">Maps to <code>Category.metaDescription</code>.</div>
+</dd>
+<dt><a href="../com/commercetools/importapi/models/product_tailoring/ProductTailoringImportBuilder.html#metaDescription(java.util.function.Function)" class="member-name-link">metaDescription(Function&lt;LocalizedStringBuilder, LocalizedStringBuilder&gt;)</a> - Method in class com.commercetools.importapi.models.product_tailoring.<a href="../com/commercetools/importapi/models/product_tailoring/ProductTailoringImportBuilder.html" title="class in com.commercetools.importapi.models.product_tailoring">ProductTailoringImportBuilder</a></dt>
+<dd>
+<div class="block">Maps to <code>ProductTailoring.metaDescription</code>.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/productdrafts/ProductDraftImportBuilder.html#metaDescription(java.util.function.Function)" class="member-name-link">metaDescription(Function&lt;LocalizedStringBuilder, LocalizedStringBuilder&gt;)</a> - Method in class com.commercetools.importapi.models.productdrafts.<a href="../com/commercetools/importapi/models/productdrafts/ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></dt>
 <dd>
@@ -1606,6 +1662,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Maps to <code>Category.metaKeywords</code>.</div>
 </dd>
+<dt><a href="../com/commercetools/importapi/models/product_tailoring/ProductTailoringImportBuilder.html#metaKeywords(com.commercetools.importapi.models.common.LocalizedString)" class="member-name-link">metaKeywords(LocalizedString)</a> - Method in class com.commercetools.importapi.models.product_tailoring.<a href="../com/commercetools/importapi/models/product_tailoring/ProductTailoringImportBuilder.html" title="class in com.commercetools.importapi.models.product_tailoring">ProductTailoringImportBuilder</a></dt>
+<dd>
+<div class="block">Maps to <code>ProductTailoring.metaKeywords</code>.</div>
+</dd>
 <dt><a href="../com/commercetools/importapi/models/productdrafts/ProductDraftImportBuilder.html#metaKeywords(com.commercetools.importapi.models.common.LocalizedString)" class="member-name-link">metaKeywords(LocalizedString)</a> - Method in class com.commercetools.importapi.models.productdrafts.<a href="../com/commercetools/importapi/models/productdrafts/ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></dt>
 <dd>
 <div class="block">Maps to <code>ProductData.metaKeywords</code>.</div>
@@ -1673,6 +1733,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/importapi/models/categories/CategoryImportBuilder.html#metaKeywords(java.util.function.Function)" class="member-name-link">metaKeywords(Function&lt;LocalizedStringBuilder, LocalizedStringBuilder&gt;)</a> - Method in class com.commercetools.importapi.models.categories.<a href="../com/commercetools/importapi/models/categories/CategoryImportBuilder.html" title="class in com.commercetools.importapi.models.categories">CategoryImportBuilder</a></dt>
 <dd>
 <div class="block">Maps to <code>Category.metaKeywords</code>.</div>
+</dd>
+<dt><a href="../com/commercetools/importapi/models/product_tailoring/ProductTailoringImportBuilder.html#metaKeywords(java.util.function.Function)" class="member-name-link">metaKeywords(Function&lt;LocalizedStringBuilder, LocalizedStringBuilder&gt;)</a> - Method in class com.commercetools.importapi.models.product_tailoring.<a href="../com/commercetools/importapi/models/product_tailoring/ProductTailoringImportBuilder.html" title="class in com.commercetools.importapi.models.product_tailoring">ProductTailoringImportBuilder</a></dt>
+<dd>
+<div class="block">Maps to <code>ProductTailoring.metaKeywords</code>.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/productdrafts/ProductDraftImportBuilder.html#metaKeywords(java.util.function.Function)" class="member-name-link">metaKeywords(Function&lt;LocalizedStringBuilder, LocalizedStringBuilder&gt;)</a> - Method in class com.commercetools.importapi.models.productdrafts.<a href="../com/commercetools/importapi/models/productdrafts/ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></dt>
 <dd>
@@ -1742,6 +1806,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Maps to <code>Category.metaTitle</code>.</div>
 </dd>
+<dt><a href="../com/commercetools/importapi/models/product_tailoring/ProductTailoringImportBuilder.html#metaTitle(com.commercetools.importapi.models.common.LocalizedString)" class="member-name-link">metaTitle(LocalizedString)</a> - Method in class com.commercetools.importapi.models.product_tailoring.<a href="../com/commercetools/importapi/models/product_tailoring/ProductTailoringImportBuilder.html" title="class in com.commercetools.importapi.models.product_tailoring">ProductTailoringImportBuilder</a></dt>
+<dd>
+<div class="block">Maps to <code>ProductTailoring.metaTitle</code>.</div>
+</dd>
 <dt><a href="../com/commercetools/importapi/models/productdrafts/ProductDraftImportBuilder.html#metaTitle(com.commercetools.importapi.models.common.LocalizedString)" class="member-name-link">metaTitle(LocalizedString)</a> - Method in class com.commercetools.importapi.models.productdrafts.<a href="../com/commercetools/importapi/models/productdrafts/ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></dt>
 <dd>
 <div class="block">Maps to <code>ProductData.metaTitle</code>.</div>
@@ -1809,6 +1877,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/importapi/models/categories/CategoryImportBuilder.html#metaTitle(java.util.function.Function)" class="member-name-link">metaTitle(Function&lt;LocalizedStringBuilder, LocalizedStringBuilder&gt;)</a> - Method in class com.commercetools.importapi.models.categories.<a href="../com/commercetools/importapi/models/categories/CategoryImportBuilder.html" title="class in com.commercetools.importapi.models.categories">CategoryImportBuilder</a></dt>
 <dd>
 <div class="block">Maps to <code>Category.metaTitle</code>.</div>
+</dd>
+<dt><a href="../com/commercetools/importapi/models/product_tailoring/ProductTailoringImportBuilder.html#metaTitle(java.util.function.Function)" class="member-name-link">metaTitle(Function&lt;LocalizedStringBuilder, LocalizedStringBuilder&gt;)</a> - Method in class com.commercetools.importapi.models.product_tailoring.<a href="../com/commercetools/importapi/models/product_tailoring/ProductTailoringImportBuilder.html" title="class in com.commercetools.importapi.models.product_tailoring">ProductTailoringImportBuilder</a></dt>
+<dd>
+<div class="block">Maps to <code>ProductTailoring.metaTitle</code>.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/productdrafts/ProductDraftImportBuilder.html#metaTitle(java.util.function.Function)" class="member-name-link">metaTitle(Function&lt;LocalizedStringBuilder, LocalizedStringBuilder&gt;)</a> - Method in class com.commercetools.importapi.models.productdrafts.<a href="../com/commercetools/importapi/models/productdrafts/ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></dt>
 <dd>
@@ -2019,6 +2091,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Use the minimum of all available values.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/error/GraphQLLineItemQuantityBelowLimitErrorBuilder.html#minCartQuantity(java.lang.Integer)" class="member-name-link">minCartQuantity(Integer)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLLineItemQuantityBelowLimitErrorBuilder.html" title="class in com.commercetools.api.models.error">GraphQLLineItemQuantityBelowLimitErrorBuilder</a></dt>
+<dd>
+<div class="block">The minimum quantity required for this Line Item.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/error/LineItemQuantityBelowLimitErrorBuilder.html#minCartQuantity(java.lang.Integer)" class="member-name-link">minCartQuantity(Integer)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/LineItemQuantityBelowLimitErrorBuilder.html" title="class in com.commercetools.api.models.error">LineItemQuantityBelowLimitErrorBuilder</a></dt>
+<dd>
+<div class="block">The minimum quantity required for this Line Item.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/inventory/InventoryEntryBuilder.html#minCartQuantity(java.lang.Integer)" class="member-name-link">minCartQuantity(Integer)</a> - Method in class com.commercetools.api.models.inventory.<a href="../com/commercetools/api/models/inventory/InventoryEntryBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryBuilder</a></dt>
 <dd>
 <div class="block">Minimum quantity that can be added to a Cart.</div>
@@ -2087,6 +2167,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Default value to use if the specified field is not present on some Products.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/error/GraphQLMissingDependencyError.html#MISSING_DEPENDENCY" class="member-name-link">MISSING_DEPENDENCY</a> - Static variable in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLMissingDependencyError.html" title="interface in com.commercetools.api.models.error">GraphQLMissingDependencyError</a></dt>
+<dd>
+<div class="block">discriminator value for GraphQLMissingDependencyError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/error/MissingDependencyError.html#MISSING_DEPENDENCY" class="member-name-link">MISSING_DEPENDENCY</a> - Static variable in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/MissingDependencyError.html" title="interface in com.commercetools.api.models.error">MissingDependencyError</a></dt>
+<dd>
+<div class="block">discriminator value for MissingDependencyError</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/error/GraphQLMissingRoleOnChannelError.html#MISSING_ROLE_ON_CHANNEL" class="member-name-link">MISSING_ROLE_ON_CHANNEL</a> - Static variable in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLMissingRoleOnChannelError.html" title="interface in com.commercetools.api.models.error">GraphQLMissingRoleOnChannelError</a></dt>
 <dd>
 <div class="block">discriminator value for GraphQLMissingRoleOnChannelError</div>
@@ -2103,6 +2191,31 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">discriminator value for MissingTaxRateForCountryError</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/error/ErrorObject.html#missingDependencyBuilder()" class="member-name-link">missingDependencyBuilder()</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/ErrorObject.html" title="interface in com.commercetools.api.models.error">ErrorObject</a></dt>
+<dd>
+<div class="block">builder for missingDependency subtype</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/error/ErrorObjectBuilder.html#missingDependencyBuilder()" class="member-name-link">missingDependencyBuilder()</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/ErrorObjectBuilder.html" title="class in com.commercetools.api.models.error">ErrorObjectBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/error/GraphQLErrorObject.html#missingDependencyBuilder()" class="member-name-link">missingDependencyBuilder()</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLErrorObject.html" title="interface in com.commercetools.api.models.error">GraphQLErrorObject</a></dt>
+<dd>
+<div class="block">builder for missingDependency subtype</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/error/GraphQLErrorObjectBuilder.html#missingDependencyBuilder()" class="member-name-link">missingDependencyBuilder()</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLErrorObjectBuilder.html" title="class in com.commercetools.api.models.error">GraphQLErrorObjectBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/error/MissingDependencyError.html" class="type-name-link" title="interface in com.commercetools.api.models.error">MissingDependencyError</a> - Interface in <a href="../com/commercetools/api/models/error/package-summary.html">com.commercetools.api.models.error</a></dt>
+<dd>
+<div class="block">Returned when a referenced Extension does not exist or is not applicable to the same trigger.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/error/MissingDependencyErrorBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.error">MissingDependencyErrorBuilder</a> - Class in <a href="../com/commercetools/api/models/error/package-summary.html">com.commercetools.api.models.error</a></dt>
+<dd>
+<div class="block">MissingDependencyErrorBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</dd>
+<dt><a href="../com/commercetools/api/models/error/MissingDependencyErrorBuilder.html#%3Cinit%3E()" class="member-name-link">MissingDependencyErrorBuilder()</a> - Constructor for class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/MissingDependencyErrorBuilder.html" title="class in com.commercetools.api.models.error">MissingDependencyErrorBuilder</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/error/GraphQLMissingRoleOnChannelErrorBuilder.html#missingRole(com.commercetools.api.models.channel.ChannelRoleEnum)" class="member-name-link">missingRole(ChannelRoleEnum)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLMissingRoleOnChannelErrorBuilder.html" title="class in com.commercetools.api.models.error">GraphQLMissingRoleOnChannelErrorBuilder</a></dt>
 <dd>
 <div class="block">
@@ -3211,7 +3324,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/me/MyCartAddLineItemAction.html" class="type-name-link" title="interface in com.commercetools.api.models.me">MyCartAddLineItemAction</a> - Interface in <a href="../com/commercetools/api/models/me/package-summary.html">com.commercetools.api.models.me</a></dt>
 <dd>
-<div class="block">If the Cart contains a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> for a Product Variant with the same <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemMode" rel="nofollow">LineItemMode</a>, <span>Custom Fields</span>, supply and distribution channel, then only the quantity of the existing Line Item is increased.</div>
+<div class="block">If the Cart contains a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> for a Product Variant with the same <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemMode" rel="nofollow">LineItemMode</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>, supply and distribution channel, then only the quantity of the existing Line Item is increased.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/me/MyCartAddLineItemActionBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.me">MyCartAddLineItemActionBuilder</a> - Class in <a href="../com/commercetools/api/models/me/package-summary.html">com.commercetools.api.models.me</a></dt>
 <dd>

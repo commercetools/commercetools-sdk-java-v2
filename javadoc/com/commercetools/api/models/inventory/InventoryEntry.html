@@ -187,15 +187,25 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Overall amount of stock (<code>availableQuantity</code> + reserved).</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRestockableInDays()" class="member-name-link">getRestockableInDays</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReservationExpirationInMinutes()" class="member-name-link">getReservationExpirationInMinutes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Expiration time of <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> reservations associated with this InventoryEntry.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRestockableInDays()" class="member-name-link">getRestockableInDays</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">How often the InventoryEntry is restocked (in days).</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSku()" class="member-name-link">getSku</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSku()" class="member-name-link">getSku</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> <code>sku</code> of the InventoryEntry.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="InventoryEntryStockLevels.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryStockLevels</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStockLevels()" class="member-name-link">getStockLevels</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Configuration of stock levels for the InventoryEntry.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSupplyChannel()" class="member-name-link">getSupplyChannel</a>()</code></div>
@@ -281,14 +291,24 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="block">Overall amount of stock (<code>availableQuantity</code> + reserved).</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setRestockableInDays(java.lang.Long)" class="member-name-link">setRestockableInDays</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;restockableInDays)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setReservationExpirationInMinutes(java.lang.Integer)" class="member-name-link">setReservationExpirationInMinutes</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;reservationExpirationInMinutes)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">How often the InventoryEntry is restocked (in days).</div>
+<div class="block">Expiration time of <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> reservations associated with this InventoryEntry.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setSku(java.lang.String)" class="member-name-link">setSku</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setRestockableInDays(java.lang.Long)" class="member-name-link">setRestockableInDays</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;restockableInDays)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">How often the InventoryEntry is restocked (in days).</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setSku(java.lang.String)" class="member-name-link">setSku</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> <code>sku</code> of the InventoryEntry.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setStockLevels(com.commercetools.api.models.inventory.InventoryEntryStockLevels)" class="member-name-link">setStockLevels</a><wbr>(<a href="InventoryEntryStockLevels.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryStockLevels</a>&nbsp;stockLevels)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Configuration of stock levels for the InventoryEntry.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setSupplyChannel(com.commercetools.api.models.channel.ChannelReference)" class="member-name-link">setSupplyChannel</a><wbr>(<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;supplyChannel)</code></div>
@@ -468,7 +488,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <h3>getQuantityOnStock</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getQuantityOnStock</span>()</div>
-<div class="block"><p>Overall amount of stock (<code>availableQuantity</code> + reserved).</p></div>
+<div class="block"><p>Overall amount of stock (<code>availableQuantity</code> + reserved). This value is eventually consistent with the internal SKU availability used for reservation logic, with a delay of up to 10 seconds. See <span>Inventory checks and consistency</span> for more information.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>quantityOnStock</dd>
@@ -480,7 +500,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <h3>getAvailableQuantity</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getAvailableQuantity</span>()</div>
-<div class="block"><p>Available amount of stock (<code>quantityOnStock</code> - reserved).</p></div>
+<div class="block"><p>Available amount of stock (<code>quantityOnStock</code> - reserved). This value is eventually consistent with the internal SKU availability used for reservation logic, with a delay of up to 10 seconds. See <span>Inventory checks and consistency</span> for more information.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>availableQuantity</dd>
@@ -528,6 +548,33 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>expectedDelivery</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getReservationExpirationInMinutes()">
+<h3>getReservationExpirationInMinutes</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getReservationExpirationInMinutes</span>()</div>
+<div class="block"><p>Expiration time of <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> reservations associated with this InventoryEntry.</p>
+  <ul>
+   <li>A Reservation is <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> if it was created for a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> that is using the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> inventory mode.</li>
+   <li>If this field is empty, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>-level reservation expiration time applies.</li>
+  </ul></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>reservationExpirationInMinutes</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getStockLevels()">
+<h3>getStockLevels</h3>
+<div class="member-signature"><span class="annotations">@Valid
+</span><span class="return-type">@Valid <a href="InventoryEntryStockLevels.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryStockLevels</a></span>&nbsp;<span class="element-name">getStockLevels</span>()</div>
+<div class="block"><p>Configuration of stock levels for the InventoryEntry. Corresponding <span>Messages</span> are triggered when the <code>quantityOnStock</code> reaches the configured levels.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>stockLevels</dd>
 </dl>
 </section>
 </li>
@@ -656,7 +703,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <section class="detail" id="setQuantityOnStock(java.lang.Long)">
 <h3>setQuantityOnStock</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setQuantityOnStock</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantityOnStock)</span></div>
-<div class="block"><p>Overall amount of stock (<code>availableQuantity</code> + reserved).</p></div>
+<div class="block"><p>Overall amount of stock (<code>availableQuantity</code> + reserved). This value is eventually consistent with the internal SKU availability used for reservation logic, with a delay of up to 10 seconds. See <span>Inventory checks and consistency</span> for more information.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>quantityOnStock</code> - value to be set</dd>
@@ -667,7 +714,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <section class="detail" id="setAvailableQuantity(java.lang.Long)">
 <h3>setAvailableQuantity</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setAvailableQuantity</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;availableQuantity)</span></div>
-<div class="block"><p>Available amount of stock (<code>quantityOnStock</code> - reserved).</p></div>
+<div class="block"><p>Available amount of stock (<code>quantityOnStock</code> - reserved). This value is eventually consistent with the internal SKU availability used for reservation logic, with a delay of up to 10 seconds. See <span>Inventory checks and consistency</span> for more information.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>availableQuantity</code> - value to be set</dd>
@@ -715,6 +762,32 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>expectedDelivery</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setReservationExpirationInMinutes(java.lang.Integer)">
+<h3>setReservationExpirationInMinutes</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setReservationExpirationInMinutes</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;reservationExpirationInMinutes)</span></div>
+<div class="block"><p>Expiration time of <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> reservations associated with this InventoryEntry.</p>
+  <ul>
+   <li>A Reservation is <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> if it was created for a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> that is using the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> inventory mode.</li>
+   <li>If this field is empty, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>-level reservation expiration time applies.</li>
+  </ul></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>reservationExpirationInMinutes</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setStockLevels(com.commercetools.api.models.inventory.InventoryEntryStockLevels)">
+<h3>setStockLevels</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setStockLevels</span><wbr><span class="parameters">(<a href="InventoryEntryStockLevels.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryStockLevels</a>&nbsp;stockLevels)</span></div>
+<div class="block"><p>Configuration of stock levels for the InventoryEntry. Corresponding <span>Messages</span> are triggered when the <code>quantityOnStock</code> reaches the configured levels.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>stockLevels</code> - value to be set</dd>
 </dl>
 </section>
 </li>

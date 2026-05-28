@@ -236,7 +236,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <section class="detail" id="WAIT_FOR_MASTER_VARIANT">
 <h3>WAIT_FOR_MASTER_VARIANT</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></span>&nbsp;<span class="element-name">WAIT_FOR_MASTER_VARIANT</span></div>
-<div class="block"><p>Products must have at least one Product Variant, also known as the Master Variant. If you import a Product without a Master Variant, the import request will have this status until another import request includes Master Variant data for the Product. Generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:ImportWaitForMasterVariantEvent" rel="nofollow">ImportWaitForMasterVariant</a> Event.</p></div>
+<div class="block"><p>Products must have at least one Product Variant, also known as the Master Variant. If you import a Product without a Master Variant and the referenced Product Type has required Variant Attributes, the import request has this status until another import request includes Master Variant data for the Product. Products without required Variant Attributes are imported without entering this state. Generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:ImportWaitForMasterVariantEvent" rel="nofollow">ImportWaitForMasterVariant</a> Event.</p></div>
 </section>
 </li>
 <li>

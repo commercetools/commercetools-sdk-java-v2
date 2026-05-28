@@ -77,7 +77,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
-<dd><code><a href="ExtensionChangeDestinationAction.html" title="interface in com.commercetools.api.models.extension">ExtensionChangeDestinationAction</a></code>, <code><a href="ExtensionChangeTriggersAction.html" title="interface in com.commercetools.api.models.extension">ExtensionChangeTriggersAction</a></code>, <code><a href="ExtensionSetKeyAction.html" title="interface in com.commercetools.api.models.extension">ExtensionSetKeyAction</a></code>, <code><a href="ExtensionSetTimeoutInMsAction.html" title="interface in com.commercetools.api.models.extension">ExtensionSetTimeoutInMsAction</a></code></dd>
+<dd><code><a href="ExtensionChangeDestinationAction.html" title="interface in com.commercetools.api.models.extension">ExtensionChangeDestinationAction</a></code>, <code><a href="ExtensionChangeTriggersAction.html" title="interface in com.commercetools.api.models.extension">ExtensionChangeTriggersAction</a></code>, <code><a href="ExtensionSetAdditionalContextAction.html" title="interface in com.commercetools.api.models.extension">ExtensionSetAdditionalContextAction</a></code>, <code><a href="ExtensionSetDependenciesAction.html" title="interface in com.commercetools.api.models.extension">ExtensionSetDependenciesAction</a></code>, <code><a href="ExtensionSetExpansionPathsAction.html" title="interface in com.commercetools.api.models.extension">ExtensionSetExpansionPathsAction</a></code>, <code><a href="ExtensionSetKeyAction.html" title="interface in com.commercetools.api.models.extension">ExtensionSetKeyAction</a></code>, <code><a href="ExtensionSetTimeoutInMsAction.html" title="interface in com.commercetools.api.models.extension">ExtensionSetTimeoutInMsAction</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ExtensionUpdateAction</span><span class="extends-implements">
@@ -128,24 +128,39 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAction()" class="member-name-link">getAction</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ExtensionSetKeyActionBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionSetKeyActionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#setKeyBuilder()" class="member-name-link">setKeyBuilder</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ExtensionSetAdditionalContextActionBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionSetAdditionalContextActionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#setAdditionalContextBuilder()" class="member-name-link">setAdditionalContextBuilder</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for setAdditionalContext subtype</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ExtensionSetDependenciesActionBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionSetDependenciesActionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#setDependenciesBuilder()" class="member-name-link">setDependenciesBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for setDependencies subtype</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ExtensionSetExpansionPathsActionBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionSetExpansionPathsActionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#setExpansionPathsBuilder()" class="member-name-link">setExpansionPathsBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for setExpansionPaths subtype</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ExtensionSetKeyActionBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionSetKeyActionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#setKeyBuilder()" class="member-name-link">setKeyBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">builder for setKey subtype</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ExtensionSetTimeoutInMsActionBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionSetTimeoutInMsActionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#setTimeoutInMsBuilder()" class="member-name-link">setTimeoutInMsBuilder</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ExtensionSetTimeoutInMsActionBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionSetTimeoutInMsActionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#setTimeoutInMsBuilder()" class="member-name-link">setTimeoutInMsBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">builder for setTimeoutInMs subtype</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ExtensionUpdateAction.html" title="interface in com.commercetools.api.models.extension">ExtensionUpdateAction</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ExtensionUpdateAction.html" title="interface in com.commercetools.api.models.extension">ExtensionUpdateAction</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withExtensionUpdateAction(java.util.function.Function)" class="member-name-link">withExtensionUpdateAction</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionUpdateAction.html" title="interface in com.commercetools.api.models.extension">ExtensionUpdateAction</a>,<wbr>T&gt;&nbsp;helper)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withExtensionUpdateAction(java.util.function.Function)" class="member-name-link">withExtensionUpdateAction</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionUpdateAction.html" title="interface in com.commercetools.api.models.extension">ExtensionUpdateAction</a>,<wbr>T&gt;&nbsp;helper)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">accessor map function</div>
 </div>
 </div>
@@ -215,6 +230,39 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <h3>changeTriggersBuilder</h3>
 <div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExtensionChangeTriggersActionBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionChangeTriggersActionBuilder</a></span>&nbsp;<span class="element-name">changeTriggersBuilder</span>()</div>
 <div class="block">builder for changeTriggers subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setAdditionalContextBuilder()">
+<h3>setAdditionalContextBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExtensionSetAdditionalContextActionBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionSetAdditionalContextActionBuilder</a></span>&nbsp;<span class="element-name">setAdditionalContextBuilder</span>()</div>
+<div class="block">builder for setAdditionalContext subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setDependenciesBuilder()">
+<h3>setDependenciesBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExtensionSetDependenciesActionBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionSetDependenciesActionBuilder</a></span>&nbsp;<span class="element-name">setDependenciesBuilder</span>()</div>
+<div class="block">builder for setDependencies subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setExpansionPathsBuilder()">
+<h3>setExpansionPathsBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExtensionSetExpansionPathsActionBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionSetExpansionPathsActionBuilder</a></span>&nbsp;<span class="element-name">setExpansionPathsBuilder</span>()</div>
+<div class="block">builder for setExpansionPaths subtype</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>builder</dd>

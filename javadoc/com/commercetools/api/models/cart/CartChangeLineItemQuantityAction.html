@@ -82,6 +82,11 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
   <p>To change the Line Item quantity and shipping details together, use this update action in combination with the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetLineItemShippingDetailsAction" rel="nofollow">Set LineItem ShippingDetails</a> update action in a single Cart update command.</p>
   <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> price is set as described in <span>Line Item price selection</span>.</p>
   <p>This action is subject to <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> min/max restrictions when applicable. For more information, see <span>Quantity limits</span>.</p>
+  <p>If using <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">InventoryMode</a> <code>ReserveOnCart</code>:</p>
+  <ul>
+   <li>If the requested quantity cannot be reserved, the Line Item quantity does not change and a <a href="https://docs.commercetools.com/apis/ctp:api:type:CannotUpdateReservationWarning" rel="nofollow">CannotUpdateReservationWarning</a> is returned in the Cart response.</li>
+   <li>Changing the quantity of a reserved Line Item also updates the reservation expiration time. To synchronize the expiration across the rest of the Line Items in the Cart, you must call the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetReservationExpirationInMinutesAction" rel="nofollow">Set Cart Reservation Expiration in Minutes</a> update action after any Line Item changes.</li>
+  </ul>
 
  <hr>
  Example to create an instance using the builder pattern

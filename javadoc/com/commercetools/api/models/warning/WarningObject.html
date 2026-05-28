@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
-<dd><code><a href="ImageProcessingOngoingWarning.html" title="interface in com.commercetools.api.models.warning">ImageProcessingOngoingWarning</a></code></dd>
+<dd><code><a href="CannotChangeReservationExpiryWarning.html" title="interface in com.commercetools.api.models.warning">CannotChangeReservationExpiryWarning</a></code>, <code><a href="CannotCreateReservationWarning.html" title="interface in com.commercetools.api.models.warning">CannotCreateReservationWarning</a></code>, <code><a href="CannotUpdateReservationWarning.html" title="interface in com.commercetools.api.models.warning">CannotUpdateReservationWarning</a></code>, <code><a href="ImageProcessingOngoingWarning.html" title="interface in com.commercetools.api.models.warning">ImageProcessingOngoingWarning</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">WarningObject</span></div>
@@ -83,8 +83,9 @@ loadScripts(document, 'script');</script>
  Example to create a subtype instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-     WarningObject warningObject = WarningObject.imageProcessingOngoingBuilder()
+     WarningObject warningObject = WarningObject.cannotChangeReservationExpiryBuilder()
              message("{message}")
+             lineItemId("{lineItemId}")
              .build()
  </code></pre>
  </div></div>
@@ -102,42 +103,57 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="WarningObject.html" title="interface in com.commercetools.api.models.warning">WarningObject</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#copyDeep()" class="member-name-link">copyDeep</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="WarningObject.html" title="interface in com.commercetools.api.models.warning">WarningObject</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#deepCopy(com.commercetools.api.models.warning.WarningObject)" class="member-name-link">deepCopy</a><wbr>(<a href="WarningObject.html" title="interface in com.commercetools.api.models.warning">WarningObject</a>&nbsp;template)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CannotChangeReservationExpiryWarningBuilder.html" title="class in com.commercetools.api.models.warning">CannotChangeReservationExpiryWarningBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#cannotChangeReservationExpiryBuilder()" class="member-name-link">cannotChangeReservationExpiryBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for cannotChangeReservationExpiry subtype</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CannotCreateReservationWarningBuilder.html" title="class in com.commercetools.api.models.warning">CannotCreateReservationWarningBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#cannotCreateReservationBuilder()" class="member-name-link">cannotCreateReservationBuilder</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for cannotCreateReservation subtype</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CannotUpdateReservationWarningBuilder.html" title="class in com.commercetools.api.models.warning">CannotUpdateReservationWarningBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#cannotUpdateReservationBuilder()" class="member-name-link">cannotUpdateReservationBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for cannotUpdateReservation subtype</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="WarningObject.html" title="interface in com.commercetools.api.models.warning">WarningObject</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#copyDeep()" class="member-name-link">copyDeep</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="WarningObject.html" title="interface in com.commercetools.api.models.warning">WarningObject</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#deepCopy(com.commercetools.api.models.warning.WarningObject)" class="member-name-link">deepCopy</a><wbr>(<a href="WarningObject.html" title="interface in com.commercetools.api.models.warning">WarningObject</a>&nbsp;template)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of WarningObject</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCode()" class="member-name-link">getCode</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCode()" class="member-name-link">getCode</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Identifier for the type of warning.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMessage()" class="member-name-link">getMessage</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMessage()" class="member-name-link">getMessage</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Contains information about the returned response.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ImageProcessingOngoingWarningBuilder.html" title="class in com.commercetools.api.models.warning">ImageProcessingOngoingWarningBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#imageProcessingOngoingBuilder()" class="member-name-link">imageProcessingOngoingBuilder</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ImageProcessingOngoingWarningBuilder.html" title="class in com.commercetools.api.models.warning">ImageProcessingOngoingWarningBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#imageProcessingOngoingBuilder()" class="member-name-link">imageProcessingOngoingBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">builder for imageProcessingOngoing subtype</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setMessage(java.lang.String)" class="member-name-link">setMessage</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setMessage(java.lang.String)" class="member-name-link">setMessage</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Contains information about the returned response.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="WarningObject.html" title="interface in com.commercetools.api.models.warning">WarningObject</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="WarningObject.html" title="interface in com.commercetools.api.models.warning">WarningObject</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withWarningObject(java.util.function.Function)" class="member-name-link">withWarningObject</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="WarningObject.html" title="interface in com.commercetools.api.models.warning">WarningObject</a>,<wbr>T&gt;&nbsp;helper)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withWarningObject(java.util.function.Function)" class="member-name-link">withWarningObject</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="WarningObject.html" title="interface in com.commercetools.api.models.warning">WarningObject</a>,<wbr>T&gt;&nbsp;helper)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">accessor map function</div>
 </div>
 </div>
@@ -207,6 +223,39 @@ loadScripts(document, 'script');</script>
 <dd><code>template</code> - instance to be copied</dd>
 <dt>Returns:</dt>
 <dd>copy instance</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="cannotChangeReservationExpiryBuilder()">
+<h3>cannotChangeReservationExpiryBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CannotChangeReservationExpiryWarningBuilder.html" title="class in com.commercetools.api.models.warning">CannotChangeReservationExpiryWarningBuilder</a></span>&nbsp;<span class="element-name">cannotChangeReservationExpiryBuilder</span>()</div>
+<div class="block">builder for cannotChangeReservationExpiry subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="cannotCreateReservationBuilder()">
+<h3>cannotCreateReservationBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CannotCreateReservationWarningBuilder.html" title="class in com.commercetools.api.models.warning">CannotCreateReservationWarningBuilder</a></span>&nbsp;<span class="element-name">cannotCreateReservationBuilder</span>()</div>
+<div class="block">builder for cannotCreateReservation subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="cannotUpdateReservationBuilder()">
+<h3>cannotUpdateReservationBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CannotUpdateReservationWarningBuilder.html" title="class in com.commercetools.api.models.warning">CannotUpdateReservationWarningBuilder</a></span>&nbsp;<span class="element-name">cannotUpdateReservationBuilder</span>()</div>
+<div class="block">builder for cannotUpdateReservation subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
 </dl>
 </section>
 </li>

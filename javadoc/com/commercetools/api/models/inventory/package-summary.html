@@ -93,7 +93,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="InventoryEntryAddQuantityAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryAddQuantityAction</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
-<div class="block">Updates <code>availableQuantity</code> based on the new <code>quantityOnStock</code> and amount of active reservations.</div>
+<div class="block">Incrementally updates the <code>quantityOnStock</code> by the specified amount.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="InventoryEntryAddQuantityActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryAddQuantityActionBuilder</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
@@ -111,7 +111,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="InventoryEntryChangeQuantityAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryChangeQuantityAction</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
-<div class="block">Updates <code>availableQuantity</code> based on the new <code>quantityOnStock</code> and amount of active reservations.</div>
+<div class="block">Sets the <code>quantityOnStock</code> to an absolute value.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="InventoryEntryChangeQuantityActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryChangeQuantityActionBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
@@ -150,7 +150,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="InventoryEntryRemoveQuantityAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryRemoveQuantityAction</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
-<div class="block">Updates <code>availableQuantity</code> based on the new <code>quantityOnStock</code> and amount of active reservations.</div>
+<div class="block">Removes a specific quantity from <code>quantityOnStock</code>.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="InventoryEntryRemoveQuantityActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryRemoveQuantityActionBuilder</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
@@ -241,6 +241,28 @@ loadScripts(document, 'script');</script>
  Example to create an instance using the builder pattern
  </div>
 </div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="InventoryEntrySetReorderPointAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntrySetReorderPointAction</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">Sets the reorder point level for a specific InventoryEntry.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="InventoryEntrySetReorderPointActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntrySetReorderPointActionBuilder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">InventoryEntrySetReorderPointActionBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="InventoryEntrySetReservationExpirationInMinutesAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntrySetReservationExpirationInMinutesAction</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">Sets the default reservation expiration time for the Inventory Entry.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="InventoryEntrySetReservationExpirationInMinutesActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntrySetReservationExpirationInMinutesActionBuilder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">InventoryEntrySetReservationExpirationInMinutesActionBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="InventoryEntrySetRestockableInDaysAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntrySetRestockableInDaysAction</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
 <div class="block">InventoryEntrySetRestockableInDaysAction
@@ -256,6 +278,17 @@ loadScripts(document, 'script');</script>
  Example to create an instance using the builder pattern
  </div>
 </div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="InventoryEntrySetSafetyStockAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntrySetSafetyStockAction</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">Sets the safety stock level for a specific InventoryEntry.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="InventoryEntrySetSafetyStockActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntrySetSafetyStockActionBuilder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">InventoryEntrySetSafetyStockActionBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="InventoryEntrySetSupplyChannelAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntrySetSupplyChannelAction</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
 <div class="block">If an entry with the same <code>sku</code> and <code>supplyChannel</code> already exists, an <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</div>
@@ -263,6 +296,17 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="InventoryEntrySetSupplyChannelActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntrySetSupplyChannelActionBuilder</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
 <div class="block">InventoryEntrySetSupplyChannelActionBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="InventoryEntryStockLevels.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryStockLevels</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">Stock level thresholds for an <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> that trigger Messages when stock levels reach certain points.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="InventoryEntryStockLevelsBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryStockLevelsBuilder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">InventoryEntryStockLevelsBuilder
  
  Example to create an instance using the builder pattern
  </div>

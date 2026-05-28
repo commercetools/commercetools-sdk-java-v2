@@ -121,34 +121,84 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addTriggers(java.util.function.Function)" class="member-name-link">addTriggers</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionTriggerBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionTriggerBuilder</a>,<wbr><a href="ExtensionTrigger.html" title="interface in com.commercetools.api.models.extension">ExtensionTrigger</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addDependencies(java.util.function.Function)" class="member-name-link">addDependencies</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionResourceIdentifierBuilder</a>,<wbr><a href="ExtensionResourceIdentifier.html" title="interface in com.commercetools.api.models.extension">ExtensionResourceIdentifier</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Describes what triggers the Extension.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtensionDraft.html" title="interface in com.commercetools.api.models.extension">ExtensionDraft</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">builds ExtensionDraft with checking for non-null required values</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtensionDraft.html" title="interface in com.commercetools.api.models.extension">ExtensionDraft</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#buildUnchecked()" class="member-name-link">buildUnchecked</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">builds ExtensionDraft without checking for non-null required values</div>
+<div class="block">Extensions that must complete before this Extension is called, identified by <code>id</code> or <code>key</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#destination(com.commercetools.api.models.extension.ExtensionDestination)" class="member-name-link">destination</a><wbr>(<a href="ExtensionDestination.html" title="interface in com.commercetools.api.models.extension">ExtensionDestination</a>&nbsp;destination)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#additionalContext(com.commercetools.api.models.extension.ExtensionAdditionalContextDraft)" class="member-name-link">additionalContext</a><wbr>(<a href="ExtensionAdditionalContextDraft.html" title="interface in com.commercetools.api.models.extension">ExtensionAdditionalContextDraft</a>&nbsp;additionalContext)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Configures additional information included in the payload sent to the API Extension.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#additionalContext(java.util.function.Function)" class="member-name-link">additionalContext</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionAdditionalContextDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionAdditionalContextDraftBuilder</a>,<wbr><a href="ExtensionAdditionalContextDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionAdditionalContextDraftBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Configures additional information included in the payload sent to the API Extension.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addTriggers(java.util.function.Function)" class="member-name-link">addTriggers</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionTriggerBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionTriggerBuilder</a>,<wbr><a href="ExtensionTrigger.html" title="interface in com.commercetools.api.models.extension">ExtensionTrigger</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Describes what triggers the Extension.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtensionDraft.html" title="interface in com.commercetools.api.models.extension">ExtensionDraft</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">builds ExtensionDraft with checking for non-null required values</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtensionDraft.html" title="interface in com.commercetools.api.models.extension">ExtensionDraft</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#buildUnchecked()" class="member-name-link">buildUnchecked</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">builds ExtensionDraft without checking for non-null required values</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#dependencies(com.commercetools.api.models.extension.ExtensionResourceIdentifier...)" class="member-name-link">dependencies</a><wbr>(<a href="ExtensionResourceIdentifier.html" title="interface in com.commercetools.api.models.extension">ExtensionResourceIdentifier</a>...&nbsp;dependencies)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Extensions that must complete before this Extension is called, identified by <code>id</code> or <code>key</code>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#dependencies(java.util.List)" class="member-name-link">dependencies</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ExtensionResourceIdentifier.html" title="interface in com.commercetools.api.models.extension">ExtensionResourceIdentifier</a>&gt;&nbsp;dependencies)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Extensions that must complete before this Extension is called, identified by <code>id</code> or <code>key</code>.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#destination(com.commercetools.api.models.extension.ExtensionDestination)" class="member-name-link">destination</a><wbr>(<a href="ExtensionDestination.html" title="interface in com.commercetools.api.models.extension">ExtensionDestination</a>&nbsp;destination)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Defines where the Extension can be reached.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#destination(java.util.function.Function)" class="member-name-link">destination</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionDestinationBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDestinationBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="ExtensionDestination.html" title="interface in com.commercetools.api.models.extension">ExtensionDestination</a>&gt;&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Defines where the Extension can be reached.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#destination(java.util.function.Function)" class="member-name-link">destination</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionDestinationBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDestinationBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="ExtensionDestination.html" title="interface in com.commercetools.api.models.extension">ExtensionDestination</a>&gt;&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#expansionPaths(java.lang.String...)" class="member-name-link">expansionPaths</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;expansionPaths)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><span>Expansion paths</span> used for reference expansion of the payload.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#expansionPaths(java.util.List)" class="member-name-link">expansionPaths</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;expansionPaths)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><span>Expansion paths</span> used for reference expansion of the payload.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtensionAdditionalContextDraft.html" title="interface in com.commercetools.api.models.extension">ExtensionAdditionalContextDraft</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAdditionalContext()" class="member-name-link">getAdditionalContext</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Configures additional information included in the payload sent to the API Extension.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ExtensionResourceIdentifier.html" title="interface in com.commercetools.api.models.extension">ExtensionResourceIdentifier</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDependencies()" class="member-name-link">getDependencies</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Extensions that must complete before this Extension is called, identified by <code>id</code> or <code>key</code>.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtensionDestination.html" title="interface in com.commercetools.api.models.extension">ExtensionDestination</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDestination()" class="member-name-link">getDestination</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Defines where the Extension can be reached.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtensionDestination.html" title="interface in com.commercetools.api.models.extension">ExtensionDestination</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDestination()" class="member-name-link">getDestination</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getExpansionPaths()" class="member-name-link">getExpansionPaths</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines where the Extension can be reached.</div>
+<div class="block"><span>Expansion paths</span> used for reference expansion of the payload.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getKey()" class="member-name-link">getKey</a>()</code></div>
@@ -181,14 +231,34 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">create builder for ExtensionDraft instance</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusTriggers(com.commercetools.api.models.extension.ExtensionTrigger...)" class="member-name-link">plusTriggers</a><wbr>(<a href="ExtensionTrigger.html" title="interface in com.commercetools.api.models.extension">ExtensionTrigger</a>...&nbsp;triggers)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusDependencies(com.commercetools.api.models.extension.ExtensionResourceIdentifier...)" class="member-name-link">plusDependencies</a><wbr>(<a href="ExtensionResourceIdentifier.html" title="interface in com.commercetools.api.models.extension">ExtensionResourceIdentifier</a>...&nbsp;dependencies)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Extensions that must complete before this Extension is called, identified by <code>id</code> or <code>key</code>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusDependencies(java.util.function.Function)" class="member-name-link">plusDependencies</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionResourceIdentifierBuilder</a>,<wbr><a href="ExtensionResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionResourceIdentifierBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Extensions that must complete before this Extension is called, identified by <code>id</code> or <code>key</code>.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusExpansionPaths(java.lang.String...)" class="member-name-link">plusExpansionPaths</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;expansionPaths)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><span>Expansion paths</span> used for reference expansion of the payload.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusTriggers(com.commercetools.api.models.extension.ExtensionTrigger...)" class="member-name-link">plusTriggers</a><wbr>(<a href="ExtensionTrigger.html" title="interface in com.commercetools.api.models.extension">ExtensionTrigger</a>...&nbsp;triggers)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Describes what triggers the Extension.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusTriggers(java.util.function.Function)" class="member-name-link">plusTriggers</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionTriggerBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionTriggerBuilder</a>,<wbr><a href="ExtensionTriggerBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionTriggerBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Describes what triggers the Extension.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusTriggers(java.util.function.Function)" class="member-name-link">plusTriggers</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionTriggerBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionTriggerBuilder</a>,<wbr><a href="ExtensionTriggerBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionTriggerBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDependencies(java.util.function.Function)" class="member-name-link">setDependencies</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionResourceIdentifierBuilder</a>,<wbr><a href="ExtensionResourceIdentifier.html" title="interface in com.commercetools.api.models.extension">ExtensionResourceIdentifier</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Describes what triggers the Extension.</div>
+<div class="block">Extensions that must complete before this Extension is called, identified by <code>id</code> or <code>key</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTriggers(java.util.function.Function)" class="member-name-link">setTriggers</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionTriggerBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionTriggerBuilder</a>,<wbr><a href="ExtensionTrigger.html" title="interface in com.commercetools.api.models.extension">ExtensionTrigger</a>&gt;&nbsp;builder)</code></div>
@@ -209,6 +279,16 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#triggers(java.util.List)" class="member-name-link">triggers</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ExtensionTrigger.html" title="interface in com.commercetools.api.models.extension">ExtensionTrigger</a>&gt;&nbsp;triggers)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Describes what triggers the Extension.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withAdditionalContext(java.util.function.Function)" class="member-name-link">withAdditionalContext</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionAdditionalContextDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionAdditionalContextDraftBuilder</a>,<wbr><a href="ExtensionAdditionalContextDraft.html" title="interface in com.commercetools.api.models.extension">ExtensionAdditionalContextDraft</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Configures additional information included in the payload sent to the API Extension.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withDependencies(java.util.function.Function)" class="member-name-link">withDependencies</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionResourceIdentifierBuilder</a>,<wbr><a href="ExtensionResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionResourceIdentifierBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Extensions that must complete before this Extension is called, identified by <code>id</code> or <code>key</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTriggers(java.util.function.Function)" class="member-name-link">withTriggers</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionTriggerBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionTriggerBuilder</a>,<wbr><a href="ExtensionTriggerBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionTriggerBuilder</a>&gt;&nbsp;builder)</code></div>
@@ -383,10 +463,189 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></span>&nbsp;<span class="element-name">timeoutInMs</span><wbr><span class="parameters">(@Nullable
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;timeoutInMs)</span></div>
 <div class="block"><p>Maximum time (in milliseconds) the Extension can respond within. If no timeout is provided, the default value is used for all <a href="https://docs.commercetools.com/apis/ctp:api:type:ExtensionResourceTypeId" rel="nofollow">types of Extensions</a>. We recommend keeping the timeout as low as possible to avoid performance issues.</p>
-  <p>The limit of 10000 ms (10 seconds) can be increased per Project after we review the performance impact. Please contact the <span>Composable Commerce support team</span> and provide the Region, Project key, and use case.</p></div>
+  <p>The limit of 10000 ms (10 seconds) can be increased per Project after we review the performance impact. Please contact the <span>commercetools support team</span> and provide the Region, Project key, and use case.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>timeoutInMs</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="dependencies(com.commercetools.api.models.extension.ExtensionResourceIdentifier...)">
+<h3>dependencies</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></span>&nbsp;<span class="element-name">dependencies</span><wbr><span class="parameters">(@Nullable
+ <a href="ExtensionResourceIdentifier.html" title="interface in com.commercetools.api.models.extension">ExtensionResourceIdentifier</a>...&nbsp;dependencies)</span></div>
+<div class="block"><p>Extensions that must complete before this Extension is called, identified by <code>id</code> or <code>key</code>. Maximum 5 entries. If omitted, the Extension has no dependencies and may run concurrently with other independent Extensions.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>dependencies</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="dependencies(java.util.List)">
+<h3>dependencies</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></span>&nbsp;<span class="element-name">dependencies</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ExtensionResourceIdentifier.html" title="interface in com.commercetools.api.models.extension">ExtensionResourceIdentifier</a>&gt;&nbsp;dependencies)</span></div>
+<div class="block"><p>Extensions that must complete before this Extension is called, identified by <code>id</code> or <code>key</code>. Maximum 5 entries. If omitted, the Extension has no dependencies and may run concurrently with other independent Extensions.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>dependencies</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="plusDependencies(com.commercetools.api.models.extension.ExtensionResourceIdentifier...)">
+<h3>plusDependencies</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></span>&nbsp;<span class="element-name">plusDependencies</span><wbr><span class="parameters">(@Nullable
+ <a href="ExtensionResourceIdentifier.html" title="interface in com.commercetools.api.models.extension">ExtensionResourceIdentifier</a>...&nbsp;dependencies)</span></div>
+<div class="block"><p>Extensions that must complete before this Extension is called, identified by <code>id</code> or <code>key</code>. Maximum 5 entries. If omitted, the Extension has no dependencies and may run concurrently with other independent Extensions.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>dependencies</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="plusDependencies(java.util.function.Function)">
+<h3>plusDependencies</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></span>&nbsp;<span class="element-name">plusDependencies</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionResourceIdentifierBuilder</a>,<wbr><a href="ExtensionResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionResourceIdentifierBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Extensions that must complete before this Extension is called, identified by <code>id</code> or <code>key</code>. Maximum 5 entries. If omitted, the Extension has no dependencies and may run concurrently with other independent Extensions.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the dependencies value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="withDependencies(java.util.function.Function)">
+<h3>withDependencies</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></span>&nbsp;<span class="element-name">withDependencies</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionResourceIdentifierBuilder</a>,<wbr><a href="ExtensionResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionResourceIdentifierBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Extensions that must complete before this Extension is called, identified by <code>id</code> or <code>key</code>. Maximum 5 entries. If omitted, the Extension has no dependencies and may run concurrently with other independent Extensions.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the dependencies value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addDependencies(java.util.function.Function)">
+<h3>addDependencies</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></span>&nbsp;<span class="element-name">addDependencies</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionResourceIdentifierBuilder</a>,<wbr><a href="ExtensionResourceIdentifier.html" title="interface in com.commercetools.api.models.extension">ExtensionResourceIdentifier</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Extensions that must complete before this Extension is called, identified by <code>id</code> or <code>key</code>. Maximum 5 entries. If omitted, the Extension has no dependencies and may run concurrently with other independent Extensions.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the dependencies value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setDependencies(java.util.function.Function)">
+<h3>setDependencies</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></span>&nbsp;<span class="element-name">setDependencies</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionResourceIdentifierBuilder</a>,<wbr><a href="ExtensionResourceIdentifier.html" title="interface in com.commercetools.api.models.extension">ExtensionResourceIdentifier</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Extensions that must complete before this Extension is called, identified by <code>id</code> or <code>key</code>. Maximum 5 entries. If omitted, the Extension has no dependencies and may run concurrently with other independent Extensions.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the dependencies value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="expansionPaths(java.lang.String...)">
+<h3>expansionPaths</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></span>&nbsp;<span class="element-name">expansionPaths</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;expansionPaths)</span></div>
+<div class="block"><p><span>Expansion paths</span> used for reference expansion of the payload.</p>
+  <p>Be aware of the <span>limits</span> of this feature and its <span>performance impact</span>.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>expansionPaths</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="expansionPaths(java.util.List)">
+<h3>expansionPaths</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></span>&nbsp;<span class="element-name">expansionPaths</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;expansionPaths)</span></div>
+<div class="block"><p><span>Expansion paths</span> used for reference expansion of the payload.</p>
+  <p>Be aware of the <span>limits</span> of this feature and its <span>performance impact</span>.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>expansionPaths</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="plusExpansionPaths(java.lang.String...)">
+<h3>plusExpansionPaths</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></span>&nbsp;<span class="element-name">plusExpansionPaths</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;expansionPaths)</span></div>
+<div class="block"><p><span>Expansion paths</span> used for reference expansion of the payload.</p>
+  <p>Be aware of the <span>limits</span> of this feature and its <span>performance impact</span>.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>expansionPaths</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="additionalContext(java.util.function.Function)">
+<h3>additionalContext</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></span>&nbsp;<span class="element-name">additionalContext</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionAdditionalContextDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionAdditionalContextDraftBuilder</a>,<wbr><a href="ExtensionAdditionalContextDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionAdditionalContextDraftBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Configures additional information included in the payload sent to the API Extension.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the additionalContext value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="withAdditionalContext(java.util.function.Function)">
+<h3>withAdditionalContext</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></span>&nbsp;<span class="element-name">withAdditionalContext</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionAdditionalContextDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionAdditionalContextDraftBuilder</a>,<wbr><a href="ExtensionAdditionalContextDraft.html" title="interface in com.commercetools.api.models.extension">ExtensionAdditionalContextDraft</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Configures additional information included in the payload sent to the API Extension.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the additionalContext value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="additionalContext(com.commercetools.api.models.extension.ExtensionAdditionalContextDraft)">
+<h3>additionalContext</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></span>&nbsp;<span class="element-name">additionalContext</span><wbr><span class="parameters">(@Nullable
+ <a href="ExtensionAdditionalContextDraft.html" title="interface in com.commercetools.api.models.extension">ExtensionAdditionalContextDraft</a>&nbsp;additionalContext)</span></div>
+<div class="block"><p>Configures additional information included in the payload sent to the API Extension.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>additionalContext</code> - value to be set</dd>
 <dt>Returns:</dt>
 <dd>Builder</dd>
 </dl>
@@ -432,10 +691,47 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getTimeoutInMs</span>()</div>
 <div class="block"><p>Maximum time (in milliseconds) the Extension can respond within. If no timeout is provided, the default value is used for all <a href="https://docs.commercetools.com/apis/ctp:api:type:ExtensionResourceTypeId" rel="nofollow">types of Extensions</a>. We recommend keeping the timeout as low as possible to avoid performance issues.</p>
-  <p>The limit of 10000 ms (10 seconds) can be increased per Project after we review the performance impact. Please contact the <span>Composable Commerce support team</span> and provide the Region, Project key, and use case.</p></div>
+  <p>The limit of 10000 ms (10 seconds) can be increased per Project after we review the performance impact. Please contact the <span>commercetools support team</span> and provide the Region, Project key, and use case.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>timeoutInMs</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDependencies()">
+<h3>getDependencies</h3>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ExtensionResourceIdentifier.html" title="interface in com.commercetools.api.models.extension">ExtensionResourceIdentifier</a>&gt;</span>&nbsp;<span class="element-name">getDependencies</span>()</div>
+<div class="block"><p>Extensions that must complete before this Extension is called, identified by <code>id</code> or <code>key</code>. Maximum 5 entries. If omitted, the Extension has no dependencies and may run concurrently with other independent Extensions.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>dependencies</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getExpansionPaths()">
+<h3>getExpansionPaths</h3>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getExpansionPaths</span>()</div>
+<div class="block"><p><span>Expansion paths</span> used for reference expansion of the payload.</p>
+  <p>Be aware of the <span>limits</span> of this feature and its <span>performance impact</span>.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>expansionPaths</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getAdditionalContext()">
+<h3>getAdditionalContext</h3>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionAdditionalContextDraft.html" title="interface in com.commercetools.api.models.extension">ExtensionAdditionalContextDraft</a></span>&nbsp;<span class="element-name">getAdditionalContext</span>()</div>
+<div class="block"><p>Configures additional information included in the payload sent to the API Extension.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>additionalContext</dd>
 </dl>
 </section>
 </li>

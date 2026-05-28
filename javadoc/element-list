@@ -44,6 +44,7 @@ com.commercetools.api.models.quote
 com.commercetools.api.models.quote_request
 com.commercetools.api.models.recurrence_policy
 com.commercetools.api.models.recurring_order
+com.commercetools.api.models.reservation
 com.commercetools.api.models.review
 com.commercetools.api.models.search
 com.commercetools.api.models.shipping_method
@@ -92,6 +93,7 @@ com.commercetools.api.predicates.expansion.quote
 com.commercetools.api.predicates.expansion.quote_request
 com.commercetools.api.predicates.expansion.recurrence_policy
 com.commercetools.api.predicates.expansion.recurring_order
+com.commercetools.api.predicates.expansion.reservation
 com.commercetools.api.predicates.expansion.review
 com.commercetools.api.predicates.expansion.shipping_method
 com.commercetools.api.predicates.expansion.shopping_list
@@ -146,6 +148,7 @@ com.commercetools.importapi.models.order_patches
 com.commercetools.importapi.models.orders
 com.commercetools.importapi.models.prices
 com.commercetools.importapi.models.product_selections
+com.commercetools.importapi.models.product_tailoring
 com.commercetools.importapi.models.productdrafts
 com.commercetools.importapi.models.products
 com.commercetools.importapi.models.producttypes

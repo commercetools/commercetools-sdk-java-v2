@@ -78,7 +78,8 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">InventoryEntryRemoveQuantityAction</span><span class="extends-implements">
 extends <a href="InventoryEntryUpdateAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryUpdateAction</a></span></div>
-<div class="block"><p>Updates <code>availableQuantity</code> based on the new <code>quantityOnStock</code> and amount of active reservations.</p>
+<div class="block"><p>Removes a specific quantity from <code>quantityOnStock</code>. This changes the <code>availableQuantity</code>, based on the number of active reservations. You can update <code>quantityOnStock</code> to values below zero.</p>
+  <p>Carts with existing <code>ReserveOnCart</code> reservations will not be invalidated by this update action and can still be ordered.</p>
 
  <hr>
  Example to create an instance using the builder pattern

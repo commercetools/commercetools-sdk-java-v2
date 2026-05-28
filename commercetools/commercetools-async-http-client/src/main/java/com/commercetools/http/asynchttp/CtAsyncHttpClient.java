@@ -1,7 +1,6 @@
 
 package com.commercetools.http.asynchttp;
 
-import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;

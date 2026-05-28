@@ -9,7 +9,6 @@ import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.function.Supplier;
-import java.util.stream.Collectors;
 import java.util.zip.GZIPInputStream;
 
 import io.vrap.rmf.base.client.*;

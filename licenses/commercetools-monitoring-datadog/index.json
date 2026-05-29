@@ -32,7 +32,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-annotations",
-            "moduleVersion": "2.19.1",
+            "moduleVersion": "2.21",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -45,7 +45,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-core",
-            "moduleVersion": "2.19.1",
+            "moduleVersion": "2.13.4",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-core"
             ],
@@ -58,9 +58,9 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-databind",
-            "moduleVersion": "2.19.1",
+            "moduleVersion": "2.13.4.2",
             "moduleUrls": [
-                "https://github.com/FasterXML/jackson"
+                "http://github.com/FasterXML/jackson"
             ],
             "moduleLicenses": [
                 {
@@ -71,7 +71,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
-            "moduleVersion": "2.19.1",
+            "moduleVersion": "2.13.4",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310"
             ],
@@ -84,7 +84,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.module:jackson-module-jakarta-xmlbind-annotations",
-            "moduleVersion": "2.19.1",
+            "moduleVersion": "2.13.4",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-base"
             ],
@@ -1074,6 +1074,32 @@
                 {
                     "moduleLicense": "MIT License",
                     "moduleLicenseUrl": "https://opensource.org/licenses/MIT"
+                }
+            ]
+        },
+        {
+            "moduleName": "tools.jackson.core:jackson-core",
+            "moduleVersion": "3.1.0",
+            "moduleUrls": [
+                "https://github.com/FasterXML/jackson-core"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "tools.jackson.core:jackson-databind",
+            "moduleVersion": "3.1.0",
+            "moduleUrls": [
+                "https://github.com/FasterXML/jackson"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
                 }
             ]
         }

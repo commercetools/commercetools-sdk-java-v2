@@ -13,10 +13,10 @@ dependencies {
     implementation project(":commercetools:commercetools-monitoring-datadog")
     testImplementation project(path: ':commercetools:commercetools-graphql-api', configuration: 'integrationTestArtifacts')
     testImplementation 'com.commercetools.sdk.jvm.core:commercetools-models:2.16.0'
+    testImplementation 'com.commercetools.sdk.jvm.core:commercetools-java-client:2.16.0'
     testImplementation project(":commercetools:commercetools-javanet-client")
 
     testImplementation commons.io version commons.io_version
-    testImplementation 'com.commercetools.sdk.jvm.core:commercetools-java-client:2.16.0'
 
 }
 

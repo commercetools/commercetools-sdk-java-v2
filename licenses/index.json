@@ -556,7 +556,7 @@
         },
         {
             "moduleName": "com.typesafe.netty:netty-reactive-streams",
-            "moduleVersion": "2.0.4",
+            "moduleVersion": "2.0.17",
             "moduleUrls": [
                 "http://typesafe.com/"
             ],
@@ -739,7 +739,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-http",
-            "moduleVersion": "4.2.2.Final",
+            "moduleVersion": "4.2.13.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -899,19 +899,6 @@
             ]
         },
         {
-            "moduleName": "io.netty:netty-handler",
-            "moduleVersion": "4.2.2.Final",
-            "moduleUrls": [
-                "https://netty.io/"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
             "moduleName": "io.netty:netty-handler-proxy",
             "moduleVersion": "4.2.12.Final",
             "moduleUrls": [
@@ -926,7 +913,7 @@
         },
         {
             "moduleName": "io.netty:netty-handler-proxy",
-            "moduleVersion": "4.2.2.Final",
+            "moduleVersion": "4.2.13.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -1030,7 +1017,33 @@
         },
         {
             "moduleName": "io.netty:netty-transport-classes-epoll",
+            "moduleVersion": "4.1.133.Final",
+            "moduleUrls": [
+                "https://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.netty:netty-transport-classes-epoll",
             "moduleVersion": "4.2.12.Final",
+            "moduleUrls": [
+                "https://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.netty:netty-transport-classes-kqueue",
+            "moduleVersion": "4.1.133.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -1056,7 +1069,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport-native-epoll",
-            "moduleVersion": "4.1.60.Final",
+            "moduleVersion": "4.1.133.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -1082,7 +1095,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport-native-kqueue",
-            "moduleVersion": "4.1.60.Final",
+            "moduleVersion": "4.1.133.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -1120,10 +1133,10 @@
             ]
         },
         {
-            "moduleName": "io.netty:netty-transport-native-unix-common",
-            "moduleVersion": "4.2.2.Final",
+            "moduleName": "io.opentelemetry:opentelemetry-api",
+            "moduleVersion": "1.62.0",
             "moduleUrls": [
-                "https://netty.io/"
+                "https://github.com/open-telemetry/opentelemetry-java"
             ],
             "moduleLicenses": [
                 {
@@ -1133,8 +1146,8 @@
             ]
         },
         {
-            "moduleName": "io.opentelemetry:opentelemetry-api",
-            "moduleVersion": "1.51.0",
+            "moduleName": "io.opentelemetry:opentelemetry-common",
+            "moduleVersion": "1.62.0",
             "moduleUrls": [
                 "https://github.com/open-telemetry/opentelemetry-java"
             ],
@@ -1147,7 +1160,7 @@
         },
         {
             "moduleName": "io.opentelemetry:opentelemetry-context",
-            "moduleVersion": "1.51.0",
+            "moduleVersion": "1.62.0",
             "moduleUrls": [
                 "https://github.com/open-telemetry/opentelemetry-java"
             ],
@@ -1464,7 +1477,7 @@
         },
         {
             "moduleName": "org.asynchttpclient:async-http-client",
-            "moduleVersion": "2.12.4",
+            "moduleVersion": "2.15.0",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -1484,7 +1497,7 @@
         },
         {
             "moduleName": "org.asynchttpclient:async-http-client-netty-utils",
-            "moduleVersion": "2.12.4",
+            "moduleVersion": "2.15.0",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",

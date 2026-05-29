@@ -6,7 +6,7 @@ dependencies {
     api "io.netty:netty-codec:4.2.13.Final"
     api "io.netty:netty-codec-http:4.2.2.Final"
     api "io.netty:netty-codec-socks:4.2.13.Final"
-    api "io.netty:netty-handler-proxy:4.2.2.Final"
+    api "io.netty:netty-handler-proxy:4.2.13.Final"
     api "io.netty:netty-handler:4.2.13.Final"
     implementation javax.validation
 }

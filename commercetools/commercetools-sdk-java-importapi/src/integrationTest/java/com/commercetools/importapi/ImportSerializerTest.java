@@ -7,9 +7,7 @@ import com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuild
 import com.commercetools.importapi.models.importrequests.ProductVariantPatchRequestBuilder;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
-
 import io.vrap.rmf.base.client.ResponseSerializer;
-import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;

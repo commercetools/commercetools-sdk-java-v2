@@ -32,9 +32,9 @@ ext {
     jackson_core = [
             version: '2.19.0',
             annotations: 'com.fasterxml.jackson.core:jackson-annotations:2.21',
-            databind: 'com.fasterxml.jackson.core:jackson-databind:2.21.3',
-            core: 'com.fasterxml.jackson.core:jackson-core:2.21.1',
-            datatype: 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.21.3',
+            databind: 'com.fasterxml.jackson.core:jackson-databind:2.21.4',
+            core: 'com.fasterxml.jackson.core:jackson-core:2.21.4',
+            datatype: 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.21.4',
     ]
 
     google = [
@@ -56,7 +56,7 @@ ext {
     ]
 
     junit = [
-            junit: 'org.junit.jupiter:junit-jupiter:6.0.3',
+            junit: 'org.junit.jupiter:junit-jupiter:6.1.0',
             jsonassert: 'org.skyscreamer:jsonassert:1.5.3',
             assertj: 'org.assertj:assertj-core:3.27.7'
     ]

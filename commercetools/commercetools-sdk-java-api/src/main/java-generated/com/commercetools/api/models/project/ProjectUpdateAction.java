@@ -205,6 +205,22 @@ public interface ProjectUpdateAction extends com.commercetools.api.models.Resour
     }
 
     /**
+     * builder for setReleaseExpiredReservations subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.project.ProjectSetReleaseExpiredReservationsActionBuilder setReleaseExpiredReservationsBuilder() {
+        return com.commercetools.api.models.project.ProjectSetReleaseExpiredReservationsActionBuilder.of();
+    }
+
+    /**
+     * builder for setReservationExpirationInMinutes subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.project.ProjectSetReservationExpirationInMinutesActionBuilder setReservationExpirationInMinutesBuilder() {
+        return com.commercetools.api.models.project.ProjectSetReservationExpirationInMinutesActionBuilder.of();
+    }
+
+    /**
      * builder for setShippingRateInputType subtype
      * @return builder
      */

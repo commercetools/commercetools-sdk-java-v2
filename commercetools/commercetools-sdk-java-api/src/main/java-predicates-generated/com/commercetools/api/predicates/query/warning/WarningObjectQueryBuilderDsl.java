@@ -25,6 +25,27 @@ public class WarningObjectQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, WarningObjectQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<WarningObjectQueryBuilderDsl> asCannotChangeReservationExpiry(
+            Function<com.commercetools.api.predicates.query.warning.CannotChangeReservationExpiryWarningQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.warning.CannotChangeReservationExpiryWarningQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.warning.CannotChangeReservationExpiryWarningQueryBuilderDsl.of()),
+            WarningObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<WarningObjectQueryBuilderDsl> asCannotCreateReservation(
+            Function<com.commercetools.api.predicates.query.warning.CannotCreateReservationWarningQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.warning.CannotCreateReservationWarningQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.warning.CannotCreateReservationWarningQueryBuilderDsl.of()),
+            WarningObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<WarningObjectQueryBuilderDsl> asCannotUpdateReservation(
+            Function<com.commercetools.api.predicates.query.warning.CannotUpdateReservationWarningQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.warning.CannotUpdateReservationWarningQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.warning.CannotUpdateReservationWarningQueryBuilderDsl.of()),
+            WarningObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<WarningObjectQueryBuilderDsl> asImageProcessingOngoing(
             Function<com.commercetools.api.predicates.query.warning.ImageProcessingOngoingWarningQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.warning.ImageProcessingOngoingWarningQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

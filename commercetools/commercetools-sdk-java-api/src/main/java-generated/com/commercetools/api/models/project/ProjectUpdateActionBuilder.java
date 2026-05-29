@@ -83,6 +83,14 @@ public class ProjectUpdateActionBuilder {
         return com.commercetools.api.models.project.ProjectSetExternalOAuthActionBuilder.of();
     }
 
+    public com.commercetools.api.models.project.ProjectSetReleaseExpiredReservationsActionBuilder setReleaseExpiredReservationsBuilder() {
+        return com.commercetools.api.models.project.ProjectSetReleaseExpiredReservationsActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.project.ProjectSetReservationExpirationInMinutesActionBuilder setReservationExpirationInMinutesBuilder() {
+        return com.commercetools.api.models.project.ProjectSetReservationExpirationInMinutesActionBuilder.of();
+    }
+
     public com.commercetools.api.models.project.ProjectSetShippingRateInputTypeActionBuilder setShippingRateInputTypeBuilder() {
         return com.commercetools.api.models.project.ProjectSetShippingRateInputTypeActionBuilder.of();
     }

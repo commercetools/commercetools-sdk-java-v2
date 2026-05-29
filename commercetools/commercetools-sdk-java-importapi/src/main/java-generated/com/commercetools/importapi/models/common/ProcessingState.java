@@ -26,7 +26,7 @@ public interface ProcessingState extends JsonEnum {
     <p>The import request contains <a href="https://docs.commercetools.com/apis/ctp:api:type:KeyReference" rel="nofollow">KeyReferences</a> to resources that do not exist in your Composable Commerce Project. Generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:ImportUnresolvedEvent" rel="nofollow">ImportUnresolved</a> Event.</p> */
     ProcessingState UNRESOLVED = ProcessingStateEnum.UNRESOLVED;
     /**
-    <p>Products must have at least one Product Variant, also known as the Master Variant. If you import a Product without a Master Variant, the import request will have this status until another import request includes Master Variant data for the Product. Generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:ImportWaitForMasterVariantEvent" rel="nofollow">ImportWaitForMasterVariant</a> Event.</p> */
+    <p>Products must have at least one Product Variant, also known as the Master Variant. If you import a Product without a Master Variant and the referenced Product Type has required Variant Attributes, the import request has this status until another import request includes Master Variant data for the Product. Products without required Variant Attributes are imported without entering this state. Generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:ImportWaitForMasterVariantEvent" rel="nofollow">ImportWaitForMasterVariant</a> Event.</p> */
     ProcessingState WAIT_FOR_MASTER_VARIANT = ProcessingStateEnum.WAIT_FOR_MASTER_VARIANT;
     /**
     <p>The resource was successfully imported.</p> */

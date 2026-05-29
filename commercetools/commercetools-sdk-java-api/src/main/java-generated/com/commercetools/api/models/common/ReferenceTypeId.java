@@ -116,6 +116,9 @@ public interface ReferenceTypeId extends JsonEnum {
     <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a>.</p> */
     ReferenceTypeId RECURRING_ORDER = ReferenceTypeIdEnum.RECURRING_ORDER;
     /**
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Reservation" rel="nofollow">Reservation</a>.</p> */
+    ReferenceTypeId RESERVATION = ReferenceTypeIdEnum.RESERVATION;
+    /**
     <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a>.</p> */
     ReferenceTypeId REVIEW = ReferenceTypeIdEnum.REVIEW;
     /**
@@ -317,6 +320,11 @@ public interface ReferenceTypeId extends JsonEnum {
          * recurring-order
          */
         RECURRING_ORDER("recurring-order"),
+
+        /**
+         * reservation
+         */
+        RESERVATION("reservation"),
 
         /**
          * review

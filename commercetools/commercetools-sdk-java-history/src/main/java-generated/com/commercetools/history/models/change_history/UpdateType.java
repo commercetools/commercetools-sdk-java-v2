@@ -574,6 +574,8 @@ public interface UpdateType extends JsonEnum {
 
     UpdateType SET_RESTOCKABLE_IN_DAYS = UpdateTypeEnum.SET_RESTOCKABLE_IN_DAYS;
 
+    UpdateType SET_RESERVATION_EXPIRATION_IN_MINUTES = UpdateTypeEnum.SET_RESERVATION_EXPIRATION_IN_MINUTES;
+
     UpdateType SET_RETURN_INFO = UpdateTypeEnum.SET_RETURN_INFO;
 
     UpdateType SET_RETURN_ITEM_CUSTOM_FIELD = UpdateTypeEnum.SET_RETURN_ITEM_CUSTOM_FIELD;
@@ -2092,6 +2094,11 @@ public interface UpdateType extends JsonEnum {
          * setRestockableInDays
          */
         SET_RESTOCKABLE_IN_DAYS("setRestockableInDays"),
+
+        /**
+         * setReservationExpirationInMinutes
+         */
+        SET_RESERVATION_EXPIRATION_IN_MINUTES("setReservationExpirationInMinutes"),
 
         /**
          * setReturnInfo

@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Updates <code>availableQuantity</code> based on the new <code>quantityOnStock</code> and amount of active reservations.</p>
+ *  <p>Sets the <code>quantityOnStock</code> to an absolute value. This changes the <code>availableQuantity</code>, based on the number of active reservations. To make an incremental change instead, use the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntryAddQuantityAction" rel="nofollow">InventoryEntryAddQuantityAction</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

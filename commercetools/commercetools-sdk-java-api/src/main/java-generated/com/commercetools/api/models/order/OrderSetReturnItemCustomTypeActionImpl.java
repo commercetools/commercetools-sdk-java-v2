@@ -79,7 +79,7 @@ public class OrderSetReturnItemCustomTypeActionImpl implements OrderSetReturnIte
     }
 
     /**
-     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Return Item with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Return Item.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Return Item with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the Return Item.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -87,7 +87,8 @@ public class OrderSetReturnItemCustomTypeActionImpl implements OrderSetReturnIte
     }
 
     /**
-     *  <p>Sets the <span>Custom Fields</span> fields for the Return Item.</p>
+     *  <p>Object containing the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the Return Item.</p>
+     *  <p>Required if at least one Custom Field is defined as required in the <code>fieldDefinitions</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

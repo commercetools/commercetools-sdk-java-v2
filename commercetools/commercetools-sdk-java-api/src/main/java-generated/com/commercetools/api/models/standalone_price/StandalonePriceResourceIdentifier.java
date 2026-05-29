@@ -7,6 +7,7 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.common.ResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -34,6 +35,14 @@ public interface StandalonePriceResourceIdentifier extends ResourceIdentifier {
      * discriminator value for StandalonePriceResourceIdentifier
      */
     String STANDALONE_PRICE = "standalone-price";
+
+    /**
+     *
+     * @return typeId
+     */
+
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
 
     /**
      * factory method

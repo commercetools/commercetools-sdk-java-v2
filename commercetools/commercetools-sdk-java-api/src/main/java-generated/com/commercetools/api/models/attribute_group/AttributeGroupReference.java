@@ -8,6 +8,7 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -39,6 +40,14 @@ public interface AttributeGroupReference extends Reference, com.commercetools.ap
      * discriminator value for AttributeGroupReference
      */
     String ATTRIBUTE_GROUP = "attribute-group";
+
+    /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
 
     /**
      *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with <span>Reference Expansion</span> for AttributeGroup.</p>

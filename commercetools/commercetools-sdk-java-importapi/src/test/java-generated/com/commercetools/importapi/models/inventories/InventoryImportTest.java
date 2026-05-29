@@ -24,6 +24,8 @@ public class InventoryImportTest {
                 new Object[] { "restockableInDays", InventoryImport.builder().restockableInDays(4L) },
                 new Object[] { "expectedDelivery",
                         InventoryImport.builder().expectedDelivery(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "reservationExpirationInMinutes",
+                        InventoryImport.builder().reservationExpirationInMinutes(4) },
                 new Object[] { "supplyChannel", InventoryImport.builder()
                         .supplyChannel(new com.commercetools.importapi.models.common.ChannelKeyReferenceImpl()) },
                 new Object[] { "custom", InventoryImport.builder()
@@ -63,6 +65,13 @@ public class InventoryImportTest {
         InventoryImport value = InventoryImport.of();
         value.setExpectedDelivery(ZonedDateTime.parse("2023-06-01T12:00Z"));
         Assertions.assertThat(value.getExpectedDelivery()).isEqualTo(ZonedDateTime.parse("2023-06-01T12:00Z"));
+    }
+
+    @Test
+    public void reservationExpirationInMinutes() {
+        InventoryImport value = InventoryImport.of();
+        value.setReservationExpirationInMinutes(4);
+        Assertions.assertThat(value.getReservationExpirationInMinutes()).isEqualTo(4);
     }
 
     @Test

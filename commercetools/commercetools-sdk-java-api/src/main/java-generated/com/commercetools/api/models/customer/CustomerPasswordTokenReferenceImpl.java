@@ -44,7 +44,7 @@ public class CustomerPasswordTokenReferenceImpl implements CustomerPasswordToken
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     *
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {

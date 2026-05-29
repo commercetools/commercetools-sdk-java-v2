@@ -153,6 +153,22 @@ public class ProjectUpdateActionQueryBuilderDsl {
             ProjectUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> asSetReleaseExpiredReservations(
+            Function<com.commercetools.api.predicates.query.project.ProjectSetReleaseExpiredReservationsActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.ProjectSetReleaseExpiredReservationsActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.project.ProjectSetReleaseExpiredReservationsActionQueryBuilderDsl
+                    .of()),
+            ProjectUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> asSetReservationExpirationInMinutes(
+            Function<com.commercetools.api.predicates.query.project.ProjectSetReservationExpirationInMinutesActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.ProjectSetReservationExpirationInMinutesActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.project.ProjectSetReservationExpirationInMinutesActionQueryBuilderDsl
+                    .of()),
+            ProjectUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> asSetShippingRateInputType(
             Function<com.commercetools.api.predicates.query.project.ProjectSetShippingRateInputTypeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.ProjectSetShippingRateInputTypeActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

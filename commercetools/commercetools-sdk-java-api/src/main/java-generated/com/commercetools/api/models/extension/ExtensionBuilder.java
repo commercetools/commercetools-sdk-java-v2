@@ -53,6 +53,15 @@ public class ExtensionBuilder implements Builder<Extension> {
     @Nullable
     private Integer timeoutInMs;
 
+    @Nullable
+    private java.util.List<com.commercetools.api.models.extension.ExtensionReference> dependencies;
+
+    @Nullable
+    private java.util.List<String> expansionPaths;
+
+    @Nullable
+    private com.commercetools.api.models.extension.ExtensionAdditionalContext additionalContext;
+
     /**
      *  <p>Unique identifier of the Extension.</p>
      * @param id value to be set
@@ -292,13 +301,182 @@ public class ExtensionBuilder implements Builder<Extension> {
 
     /**
      *  <p>Maximum time (in milliseconds) that the Extension can respond within. If no timeout is provided, the default value is used for all <a href="https://docs.commercetools.com/apis/ctp:api:type:ExtensionResourceTypeId" rel="nofollow">types of Extensions</a>.</p>
-     *  <p>The limit of 10000 ms (10 seconds) can be increased per Project after we review the performance impact. Please contact the <span>Composable Commerce support team</span> and provide the Region, Project key, and use case.</p>
+     *  <p>The limit of 10000 ms (10 seconds) can be increased per Project after we review the performance impact. Please contact the <span>commercetools support team</span> and provide the Region, Project key, and use case.</p>
      * @param timeoutInMs value to be set
      * @return Builder
      */
 
     public ExtensionBuilder timeoutInMs(@Nullable final Integer timeoutInMs) {
         this.timeoutInMs = timeoutInMs;
+        return this;
+    }
+
+    /**
+     *  <p>References to other Extensions that must complete before this Extension is called. The Extension receives the resource state after all transitive ancestors' update actions have been applied. Maximum 5 entries.</p>
+     * @param dependencies value to be set
+     * @return Builder
+     */
+
+    public ExtensionBuilder dependencies(
+            @Nullable final com.commercetools.api.models.extension.ExtensionReference... dependencies) {
+        this.dependencies = new ArrayList<>(Arrays.asList(dependencies));
+        return this;
+    }
+
+    /**
+     *  <p>References to other Extensions that must complete before this Extension is called. The Extension receives the resource state after all transitive ancestors' update actions have been applied. Maximum 5 entries.</p>
+     * @param dependencies value to be set
+     * @return Builder
+     */
+
+    public ExtensionBuilder dependencies(
+            @Nullable final java.util.List<com.commercetools.api.models.extension.ExtensionReference> dependencies) {
+        this.dependencies = dependencies;
+        return this;
+    }
+
+    /**
+     *  <p>References to other Extensions that must complete before this Extension is called. The Extension receives the resource state after all transitive ancestors' update actions have been applied. Maximum 5 entries.</p>
+     * @param dependencies value to be set
+     * @return Builder
+     */
+
+    public ExtensionBuilder plusDependencies(
+            @Nullable final com.commercetools.api.models.extension.ExtensionReference... dependencies) {
+        if (this.dependencies == null) {
+            this.dependencies = new ArrayList<>();
+        }
+        this.dependencies.addAll(Arrays.asList(dependencies));
+        return this;
+    }
+
+    /**
+     *  <p>References to other Extensions that must complete before this Extension is called. The Extension receives the resource state after all transitive ancestors' update actions have been applied. Maximum 5 entries.</p>
+     * @param builder function to build the dependencies value
+     * @return Builder
+     */
+
+    public ExtensionBuilder plusDependencies(
+            Function<com.commercetools.api.models.extension.ExtensionReferenceBuilder, com.commercetools.api.models.extension.ExtensionReferenceBuilder> builder) {
+        if (this.dependencies == null) {
+            this.dependencies = new ArrayList<>();
+        }
+        this.dependencies
+                .add(builder.apply(com.commercetools.api.models.extension.ExtensionReferenceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>References to other Extensions that must complete before this Extension is called. The Extension receives the resource state after all transitive ancestors' update actions have been applied. Maximum 5 entries.</p>
+     * @param builder function to build the dependencies value
+     * @return Builder
+     */
+
+    public ExtensionBuilder withDependencies(
+            Function<com.commercetools.api.models.extension.ExtensionReferenceBuilder, com.commercetools.api.models.extension.ExtensionReferenceBuilder> builder) {
+        this.dependencies = new ArrayList<>();
+        this.dependencies
+                .add(builder.apply(com.commercetools.api.models.extension.ExtensionReferenceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>References to other Extensions that must complete before this Extension is called. The Extension receives the resource state after all transitive ancestors' update actions have been applied. Maximum 5 entries.</p>
+     * @param builder function to build the dependencies value
+     * @return Builder
+     */
+
+    public ExtensionBuilder addDependencies(
+            Function<com.commercetools.api.models.extension.ExtensionReferenceBuilder, com.commercetools.api.models.extension.ExtensionReference> builder) {
+        return plusDependencies(builder.apply(com.commercetools.api.models.extension.ExtensionReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>References to other Extensions that must complete before this Extension is called. The Extension receives the resource state after all transitive ancestors' update actions have been applied. Maximum 5 entries.</p>
+     * @param builder function to build the dependencies value
+     * @return Builder
+     */
+
+    public ExtensionBuilder setDependencies(
+            Function<com.commercetools.api.models.extension.ExtensionReferenceBuilder, com.commercetools.api.models.extension.ExtensionReference> builder) {
+        return dependencies(builder.apply(com.commercetools.api.models.extension.ExtensionReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p><span>Expansion paths</span> used for reference expansion of the payload.</p>
+     *  <p>Be aware of the <span>limits</span> of this feature and its <span>performance impact</span>.</p>
+     * @param expansionPaths value to be set
+     * @return Builder
+     */
+
+    public ExtensionBuilder expansionPaths(@Nullable final String... expansionPaths) {
+        this.expansionPaths = new ArrayList<>(Arrays.asList(expansionPaths));
+        return this;
+    }
+
+    /**
+     *  <p><span>Expansion paths</span> used for reference expansion of the payload.</p>
+     *  <p>Be aware of the <span>limits</span> of this feature and its <span>performance impact</span>.</p>
+     * @param expansionPaths value to be set
+     * @return Builder
+     */
+
+    public ExtensionBuilder expansionPaths(@Nullable final java.util.List<String> expansionPaths) {
+        this.expansionPaths = expansionPaths;
+        return this;
+    }
+
+    /**
+     *  <p><span>Expansion paths</span> used for reference expansion of the payload.</p>
+     *  <p>Be aware of the <span>limits</span> of this feature and its <span>performance impact</span>.</p>
+     * @param expansionPaths value to be set
+     * @return Builder
+     */
+
+    public ExtensionBuilder plusExpansionPaths(@Nullable final String... expansionPaths) {
+        if (this.expansionPaths == null) {
+            this.expansionPaths = new ArrayList<>();
+        }
+        this.expansionPaths.addAll(Arrays.asList(expansionPaths));
+        return this;
+    }
+
+    /**
+     *  <p>Configures additional information included in the payload sent to the API Extension.</p>
+     * @param builder function to build the additionalContext value
+     * @return Builder
+     */
+
+    public ExtensionBuilder additionalContext(
+            Function<com.commercetools.api.models.extension.ExtensionAdditionalContextBuilder, com.commercetools.api.models.extension.ExtensionAdditionalContextBuilder> builder) {
+        this.additionalContext = builder
+                .apply(com.commercetools.api.models.extension.ExtensionAdditionalContextBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Configures additional information included in the payload sent to the API Extension.</p>
+     * @param builder function to build the additionalContext value
+     * @return Builder
+     */
+
+    public ExtensionBuilder withAdditionalContext(
+            Function<com.commercetools.api.models.extension.ExtensionAdditionalContextBuilder, com.commercetools.api.models.extension.ExtensionAdditionalContext> builder) {
+        this.additionalContext = builder
+                .apply(com.commercetools.api.models.extension.ExtensionAdditionalContextBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Configures additional information included in the payload sent to the API Extension.</p>
+     * @param additionalContext value to be set
+     * @return Builder
+     */
+
+    public ExtensionBuilder additionalContext(
+            @Nullable final com.commercetools.api.models.extension.ExtensionAdditionalContext additionalContext) {
+        this.additionalContext = additionalContext;
         return this;
     }
 
@@ -388,13 +566,44 @@ public class ExtensionBuilder implements Builder<Extension> {
 
     /**
      *  <p>Maximum time (in milliseconds) that the Extension can respond within. If no timeout is provided, the default value is used for all <a href="https://docs.commercetools.com/apis/ctp:api:type:ExtensionResourceTypeId" rel="nofollow">types of Extensions</a>.</p>
-     *  <p>The limit of 10000 ms (10 seconds) can be increased per Project after we review the performance impact. Please contact the <span>Composable Commerce support team</span> and provide the Region, Project key, and use case.</p>
+     *  <p>The limit of 10000 ms (10 seconds) can be increased per Project after we review the performance impact. Please contact the <span>commercetools support team</span> and provide the Region, Project key, and use case.</p>
      * @return timeoutInMs
      */
 
     @Nullable
     public Integer getTimeoutInMs() {
         return this.timeoutInMs;
+    }
+
+    /**
+     *  <p>References to other Extensions that must complete before this Extension is called. The Extension receives the resource state after all transitive ancestors' update actions have been applied. Maximum 5 entries.</p>
+     * @return dependencies
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.extension.ExtensionReference> getDependencies() {
+        return this.dependencies;
+    }
+
+    /**
+     *  <p><span>Expansion paths</span> used for reference expansion of the payload.</p>
+     *  <p>Be aware of the <span>limits</span> of this feature and its <span>performance impact</span>.</p>
+     * @return expansionPaths
+     */
+
+    @Nullable
+    public java.util.List<String> getExpansionPaths() {
+        return this.expansionPaths;
+    }
+
+    /**
+     *  <p>Configures additional information included in the payload sent to the API Extension.</p>
+     * @return additionalContext
+     */
+
+    @Nullable
+    public com.commercetools.api.models.extension.ExtensionAdditionalContext getAdditionalContext() {
+        return this.additionalContext;
     }
 
     /**
@@ -409,7 +618,7 @@ public class ExtensionBuilder implements Builder<Extension> {
         Objects.requireNonNull(destination, Extension.class + ": destination is missing");
         Objects.requireNonNull(triggers, Extension.class + ": triggers is missing");
         return new ExtensionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, destination,
-            triggers, timeoutInMs);
+            triggers, timeoutInMs, dependencies, expansionPaths, additionalContext);
     }
 
     /**
@@ -418,7 +627,7 @@ public class ExtensionBuilder implements Builder<Extension> {
      */
     public Extension buildUnchecked() {
         return new ExtensionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, destination,
-            triggers, timeoutInMs);
+            triggers, timeoutInMs, dependencies, expansionPaths, additionalContext);
     }
 
     /**
@@ -446,6 +655,9 @@ public class ExtensionBuilder implements Builder<Extension> {
         builder.destination = template.getDestination();
         builder.triggers = template.getTriggers();
         builder.timeoutInMs = template.getTimeoutInMs();
+        builder.dependencies = template.getDependencies();
+        builder.expansionPaths = template.getExpansionPaths();
+        builder.additionalContext = template.getAdditionalContext();
         return builder;
     }
 

@@ -536,8 +536,25 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.InventoryEntryDeletedMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.InventoryEntryOutOfStockMessagePayloadBuilder inventoryEntryOutOfStockBuilder() {
+        return com.commercetools.api.models.message.InventoryEntryOutOfStockMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.InventoryEntryQuantitySetMessagePayloadBuilder inventoryEntryQuantitySetBuilder() {
         return com.commercetools.api.models.message.InventoryEntryQuantitySetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.InventoryEntryReorderPointMessagePayloadBuilder inventoryEntryReorderPointBuilder() {
+        return com.commercetools.api.models.message.InventoryEntryReorderPointMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.InventoryEntryReservationExpirationInMinutesSetMessagePayloadBuilder inventoryEntryReservationExpirationInMinutesSetBuilder() {
+        return com.commercetools.api.models.message.InventoryEntryReservationExpirationInMinutesSetMessagePayloadBuilder
+                .of();
+    }
+
+    public com.commercetools.api.models.message.InventoryEntrySafetyStockMessagePayloadBuilder inventoryEntrySafetyStockBuilder() {
+        return com.commercetools.api.models.message.InventoryEntrySafetyStockMessagePayloadBuilder.of();
     }
 
     public com.commercetools.api.models.message.LineItemStateTransitionMessagePayloadBuilder lineItemStateTransitionBuilder() {

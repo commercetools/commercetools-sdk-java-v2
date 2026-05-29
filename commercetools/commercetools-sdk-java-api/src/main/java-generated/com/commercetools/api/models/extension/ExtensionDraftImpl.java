@@ -30,6 +30,12 @@ public class ExtensionDraftImpl implements ExtensionDraft, ModelBase {
 
     private Integer timeoutInMs;
 
+    private java.util.List<com.commercetools.api.models.extension.ExtensionResourceIdentifier> dependencies;
+
+    private java.util.List<String> expansionPaths;
+
+    private com.commercetools.api.models.extension.ExtensionAdditionalContextDraft additionalContext;
+
     /**
      * create instance with all properties
      */
@@ -37,11 +43,17 @@ public class ExtensionDraftImpl implements ExtensionDraft, ModelBase {
     ExtensionDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("destination") final com.commercetools.api.models.extension.ExtensionDestination destination,
             @JsonProperty("triggers") final java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers,
-            @JsonProperty("timeoutInMs") final Integer timeoutInMs) {
+            @JsonProperty("timeoutInMs") final Integer timeoutInMs,
+            @JsonProperty("dependencies") final java.util.List<com.commercetools.api.models.extension.ExtensionResourceIdentifier> dependencies,
+            @JsonProperty("expansionPaths") final java.util.List<String> expansionPaths,
+            @JsonProperty("additionalContext") final com.commercetools.api.models.extension.ExtensionAdditionalContextDraft additionalContext) {
         this.key = key;
         this.destination = destination;
         this.triggers = triggers;
         this.timeoutInMs = timeoutInMs;
+        this.dependencies = dependencies;
+        this.expansionPaths = expansionPaths;
+        this.additionalContext = additionalContext;
     }
 
     /**
@@ -76,11 +88,36 @@ public class ExtensionDraftImpl implements ExtensionDraft, ModelBase {
 
     /**
      *  <p>Maximum time (in milliseconds) the Extension can respond within. If no timeout is provided, the default value is used for all <a href="https://docs.commercetools.com/apis/ctp:api:type:ExtensionResourceTypeId" rel="nofollow">types of Extensions</a>. We recommend keeping the timeout as low as possible to avoid performance issues.</p>
-     *  <p>The limit of 10000 ms (10 seconds) can be increased per Project after we review the performance impact. Please contact the <span>Composable Commerce support team</span> and provide the Region, Project key, and use case.</p>
+     *  <p>The limit of 10000 ms (10 seconds) can be increased per Project after we review the performance impact. Please contact the <span>commercetools support team</span> and provide the Region, Project key, and use case.</p>
      */
 
     public Integer getTimeoutInMs() {
         return this.timeoutInMs;
+    }
+
+    /**
+     *  <p>Extensions that must complete before this Extension is called, identified by <code>id</code> or <code>key</code>. Maximum 5 entries. If omitted, the Extension has no dependencies and may run concurrently with other independent Extensions.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.extension.ExtensionResourceIdentifier> getDependencies() {
+        return this.dependencies;
+    }
+
+    /**
+     *  <p><span>Expansion paths</span> used for reference expansion of the payload.</p>
+     *  <p>Be aware of the <span>limits</span> of this feature and its <span>performance impact</span>.</p>
+     */
+
+    public java.util.List<String> getExpansionPaths() {
+        return this.expansionPaths;
+    }
+
+    /**
+     *  <p>Configures additional information included in the payload sent to the API Extension.</p>
+     */
+
+    public com.commercetools.api.models.extension.ExtensionAdditionalContextDraft getAdditionalContext() {
+        return this.additionalContext;
     }
 
     public void setKey(final String key) {
@@ -103,6 +140,29 @@ public class ExtensionDraftImpl implements ExtensionDraft, ModelBase {
         this.timeoutInMs = timeoutInMs;
     }
 
+    public void setDependencies(
+            final com.commercetools.api.models.extension.ExtensionResourceIdentifier... dependencies) {
+        this.dependencies = new ArrayList<>(Arrays.asList(dependencies));
+    }
+
+    public void setDependencies(
+            final java.util.List<com.commercetools.api.models.extension.ExtensionResourceIdentifier> dependencies) {
+        this.dependencies = dependencies;
+    }
+
+    public void setExpansionPaths(final String... expansionPaths) {
+        this.expansionPaths = new ArrayList<>(Arrays.asList(expansionPaths));
+    }
+
+    public void setExpansionPaths(final java.util.List<String> expansionPaths) {
+        this.expansionPaths = expansionPaths;
+    }
+
+    public void setAdditionalContext(
+            final com.commercetools.api.models.extension.ExtensionAdditionalContextDraft additionalContext) {
+        this.additionalContext = additionalContext;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -117,10 +177,16 @@ public class ExtensionDraftImpl implements ExtensionDraft, ModelBase {
                 .append(destination, that.destination)
                 .append(triggers, that.triggers)
                 .append(timeoutInMs, that.timeoutInMs)
+                .append(dependencies, that.dependencies)
+                .append(expansionPaths, that.expansionPaths)
+                .append(additionalContext, that.additionalContext)
                 .append(key, that.key)
                 .append(destination, that.destination)
                 .append(triggers, that.triggers)
                 .append(timeoutInMs, that.timeoutInMs)
+                .append(dependencies, that.dependencies)
+                .append(expansionPaths, that.expansionPaths)
+                .append(additionalContext, that.additionalContext)
                 .isEquals();
     }
 
@@ -130,6 +196,9 @@ public class ExtensionDraftImpl implements ExtensionDraft, ModelBase {
                 .append(destination)
                 .append(triggers)
                 .append(timeoutInMs)
+                .append(dependencies)
+                .append(expansionPaths)
+                .append(additionalContext)
                 .toHashCode();
     }
 
@@ -139,6 +208,9 @@ public class ExtensionDraftImpl implements ExtensionDraft, ModelBase {
                 .append("destination", destination)
                 .append("triggers", triggers)
                 .append("timeoutInMs", timeoutInMs)
+                .append("dependencies", dependencies)
+                .append("expansionPaths", expansionPaths)
+                .append("additionalContext", additionalContext)
                 .build();
     }
 

@@ -34,6 +34,7 @@ import jakarta.validation.constraints.NotNull;
  *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .messages(messagesBuilder -> messagesBuilder)
  *             .carts(cartsBuilder -> cartsBuilder)
+ *             .inventory(inventoryBuilder -> inventoryBuilder)
  *             .discounts(discountsBuilder -> discountsBuilder)
  *             .build()
  * </code></pre>
@@ -164,6 +165,15 @@ public interface Project extends com.commercetools.api.models.WithKey {
     @Valid
     @JsonProperty("businessUnits")
     public BusinessUnitConfiguration getBusinessUnits();
+
+    /**
+     *  <p>Holds configuration specific to inventory.</p>
+     * @return inventory
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("inventory")
+    public InventoryConfiguration getInventory();
 
     /**
      *  <p>Holds configuration specific to discounts, including how Product and Cart Discounts are combined in every Cart of the Project.</p>
@@ -304,6 +314,13 @@ public interface Project extends com.commercetools.api.models.WithKey {
     public void setBusinessUnits(final BusinessUnitConfiguration businessUnits);
 
     /**
+     *  <p>Holds configuration specific to inventory.</p>
+     * @param inventory value to be set
+     */
+
+    public void setInventory(final InventoryConfiguration inventory);
+
+    /**
      *  <p>Holds configuration specific to discounts, including how Product and Cart Discounts are combined in every Cart of the Project.</p>
      * @param discounts value to be set
      */
@@ -340,6 +357,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
         instance.setExternalOAuth(template.getExternalOAuth());
         instance.setSearchIndexing(template.getSearchIndexing());
         instance.setBusinessUnits(template.getBusinessUnits());
+        instance.setInventory(template.getInventory());
         instance.setDiscounts(template.getDiscounts());
         return instance;
     }
@@ -378,6 +396,8 @@ public interface Project extends com.commercetools.api.models.WithKey {
             com.commercetools.api.models.project.SearchIndexingConfiguration.deepCopy(template.getSearchIndexing()));
         instance.setBusinessUnits(
             com.commercetools.api.models.project.BusinessUnitConfiguration.deepCopy(template.getBusinessUnits()));
+        instance.setInventory(
+            com.commercetools.api.models.project.InventoryConfiguration.deepCopy(template.getInventory()));
         instance.setDiscounts(
             com.commercetools.api.models.project.DiscountsConfiguration.deepCopy(template.getDiscounts()));
         return instance;

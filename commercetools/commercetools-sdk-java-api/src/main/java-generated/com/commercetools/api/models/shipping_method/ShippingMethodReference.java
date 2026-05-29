@@ -8,6 +8,7 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -39,6 +40,14 @@ public interface ShippingMethodReference extends Reference, com.commercetools.ap
      * discriminator value for ShippingMethodReference
      */
     String SHIPPING_METHOD = "shipping-method";
+
+    /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
 
     /**
      *  <p>Contains the representation of the expanded ShippingMethod. Only present in responses to requests with <span>Reference Expansion</span> for ShippingMethods.</p>

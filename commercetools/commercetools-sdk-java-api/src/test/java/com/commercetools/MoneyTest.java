@@ -13,7 +13,7 @@ import com.commercetools.api.models.cart.*;
 import com.commercetools.api.models.common.*;
 import com.commercetools.api.models.tax_category.TaxRate;
 import com.commercetools.api.models.tax_category.TaxRateBuilder;
-import com.fasterxml.jackson.databind.JsonNode;
+import tools.jackson.databind.JsonNode;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
@@ -244,10 +244,10 @@ public class MoneyTest {
         JsonNode cartNode = JsonUtils.toJsonNode(cart);
 
         Assertions.assertThat(cartNode.get("totalPrice")).hasSize(4);
-        Assertions.assertThat(cartNode.get("totalPrice").get("type").asText()).isEqualTo("centPrecision");
+        Assertions.assertThat(cartNode.get("totalPrice").get("type").asString()).isEqualTo("centPrecision");
         Assertions.assertThat(cartNode.get("totalPrice").get("centAmount").asInt()).isEqualTo(100);
         Assertions.assertThat(cartNode.get("totalPrice").get("fractionDigits").asInt()).isEqualTo(2);
-        Assertions.assertThat(cartNode.get("totalPrice").get("currencyCode").asText()).isEqualTo("EUR");
+        Assertions.assertThat(cartNode.get("totalPrice").get("currencyCode").asString()).isEqualTo("EUR");
     }
 
     @Test
@@ -261,11 +261,11 @@ public class MoneyTest {
         JsonNode cartNode = JsonUtils.toJsonNode(cart);
 
         Assertions.assertThat(cartNode.get("customLineItems").get(0).get("money")).hasSize(3);
-        Assertions.assertThat(cartNode.get("customLineItems").get(0).get("money").get("type").asText())
+        Assertions.assertThat(cartNode.get("customLineItems").get(0).get("money").get("type").asString())
                 .isEqualTo("centPrecision");
         Assertions.assertThat(cartNode.get("customLineItems").get(0).get("money").get("centAmount").asInt())
                 .isEqualTo(100);
-        Assertions.assertThat(cartNode.get("customLineItems").get(0).get("money").get("currencyCode").asText())
+        Assertions.assertThat(cartNode.get("customLineItems").get(0).get("money").get("currencyCode").asString())
                 .isEqualTo("EUR");
 
         CartDraft highCart = CartDraft.builder()
@@ -280,13 +280,13 @@ public class MoneyTest {
 
         JsonNode highCartNode = JsonUtils.toJsonNode(highCart);
         Assertions.assertThat(highCartNode.get("customLineItems").get(0).get("money")).hasSize(4);
-        Assertions.assertThat(highCartNode.get("customLineItems").get(0).get("money").get("type").asText())
+        Assertions.assertThat(highCartNode.get("customLineItems").get(0).get("money").get("type").asString())
                 .isEqualTo("highPrecision");
         Assertions.assertThat(highCartNode.get("customLineItems").get(0).get("money").get("preciseAmount").asInt())
                 .isEqualTo(1000);
         Assertions.assertThat(highCartNode.get("customLineItems").get(0).get("money").get("fractionDigits").asInt())
                 .isEqualTo(3);
-        Assertions.assertThat(highCartNode.get("customLineItems").get(0).get("money").get("currencyCode").asText())
+        Assertions.assertThat(highCartNode.get("customLineItems").get(0).get("money").get("currencyCode").asString())
                 .isEqualTo("EUR");
     }
 

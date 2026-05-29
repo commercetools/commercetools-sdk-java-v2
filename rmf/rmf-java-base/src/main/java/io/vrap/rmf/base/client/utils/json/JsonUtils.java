@@ -8,14 +8,13 @@ import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.*;
-import com.fasterxml.jackson.databind.json.JsonMapper;
-import com.fasterxml.jackson.databind.module.SimpleModule;
-import com.fasterxml.jackson.databind.node.ArrayNode;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.*;
+import tools.jackson.databind.json.JsonMapper;
+import tools.jackson.databind.module.SimpleModule;
+import tools.jackson.databind.node.ArrayNode;
+import tools.jackson.databind.node.ObjectNode;
+import tools.jackson.core.JacksonException;
 
 import io.vrap.rmf.base.client.utils.json.modules.ModuleOptions;
 import io.vrap.rmf.base.client.utils.json.modules.SubTypeModule;
@@ -54,17 +53,14 @@ public class JsonUtils {
         final List<SimpleModule> moduleList = new ArrayList<>();
         suppliers.iterator().forEachRemaining(moduleSupplier -> moduleList.add(moduleSupplier.getModule(options)));
 
-        return JsonMapper.builder()
-                .addModule(new JavaTimeModule()) //provides serialization and deserialization for LocalDate and LocalTime (JSR310 Jackson module)
+        return JsonMapper.builder() //provides serialization and deserialization for LocalDate and LocalTime (JSR310 Jackson module)
                 .addModule(new ZonedDateTimeSerializationModule()) //custom serializer for LocalDate, LocalTime and ZonedDateTime
                 .addModule(new ZonedDateTimeDeserializationModule()) //custom deserializer for ZonedDateTime
                 .addModule(new LocalDateDeserializationModule()) //custom deserializer for LocalDate
                 .addModule(new SubTypeModule("com.commercetools"))
                 .addModules(loader)
                 .addModules(moduleList)
-                .serializationInclusion(JsonInclude.Include.NON_NULL) //ignore null fields
-                .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
-                .configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false)
+                .changeDefaultPropertyInclusion(incl -> incl.withContentInclusion(JsonInclude.Include.NON_NULL).withValueInclusion(JsonInclude.Include.NON_NULL))
                 .configure(DeserializationFeature.USE_LONG_FOR_INTS, true)
                 .configure(MapperFeature.REQUIRE_TYPE_ID_FOR_SUBTYPES, false)
                 .build();
@@ -74,9 +70,9 @@ public class JsonUtils {
      * serializes the given object to JSON as a byte array
      * @param value object to be serialized
      * @return json byte array
-     * @throws JsonProcessingException serialization errors
+     * @throws JacksonException serialization errors
      */
-    public static byte[] toJsonByteArray(final Object value) throws JsonProcessingException {
+    public static byte[] toJsonByteArray(final Object value) throws JacksonException {
         return getConfiguredObjectMapper().writeValueAsBytes(value);
     }
 
@@ -84,9 +80,9 @@ public class JsonUtils {
      * serializes the given object to JSON as a byte array
      * @param value object to be serialized
      * @return json string
-     * @throws JsonProcessingException serialization errors
+     * @throws JacksonException serialization errors
      */
-    public static String toJsonString(final Object value) throws JsonProcessingException {
+    public static String toJsonString(final Object value) throws JacksonException {
         return getConfiguredObjectMapper().writeValueAsString(value);
     }
 
@@ -240,10 +236,10 @@ public class JsonUtils {
     private static JsonNode secure(final JsonNode node) {
         if (node.isObject()) {
             ObjectNode objectNode = (ObjectNode) node;
-            Iterator<Map.Entry<String, JsonNode>> fields = node.fields();
+            Iterator<Map.Entry<String, JsonNode>> fields = node.properties().iterator();
             while (fields.hasNext()) {
                 Map.Entry<String, JsonNode> field = fields.next();
-                if (field.getValue().isTextual() && (field.getKey().toLowerCase().contains("pass")
+                if (field.getValue().isString() && (field.getKey().toLowerCase().contains("pass")
                         || field.getKey().toLowerCase().contains("access_token")
                         || field.getKey().toLowerCase().contains("refresh_token"))) {
                     objectNode.put(field.getKey(), "**removed from output**");
@@ -256,7 +252,7 @@ public class JsonUtils {
         }
         else if (node.isArray()) {
             ArrayNode arrayNode = (ArrayNode) node;
-            Iterator<JsonNode> elements = arrayNode.elements();
+            Iterator<JsonNode> elements = arrayNode.values().iterator();
             while (elements.hasNext()) {
                 secure(elements.next());
             }
@@ -275,7 +271,7 @@ public class JsonUtils {
      */
     public static String prettyPrint(final String json) {
         return executing(() -> {
-            final ObjectMapper jsonParser = new ObjectMapper();
+            final ObjectMapper jsonParser = new tools.jackson.databind.json.JsonMapper();
             final JsonNode jsonTree = jsonParser.readValue(json, JsonNode.class);
             secure(jsonTree);
             final ObjectWriter writer = jsonParser.writerWithDefaultPrettyPrinter();

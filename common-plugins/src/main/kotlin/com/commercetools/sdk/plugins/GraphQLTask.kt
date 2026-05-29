@@ -66,7 +66,7 @@ open class GraphQLTask: DefaultTask() {
 
         val graphQLData = TypeSpec.interfaceBuilder("GraphQLData")
                 .addModifiers(Modifier.PUBLIC)
-                .addAnnotation(AnnotationSpec.builder(ClassName.get("com.fasterxml.jackson.databind.annotation", "JsonDeserialize"))
+                .addAnnotation(AnnotationSpec.builder(ClassName.get("tools.jackson.databind.annotation", "JsonDeserialize"))
                         .addMember("as", "GraphQLDataImpl.class")
                         .build())
                 .addMethod(MethodSpec.methodBuilder("get")

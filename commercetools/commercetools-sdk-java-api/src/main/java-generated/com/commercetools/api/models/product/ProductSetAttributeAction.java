@@ -8,7 +8,7 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -202,7 +202,7 @@ public interface ProductSetAttributeAction extends ProductUpdateAction {
     }
 
     public static ProductSetAttributeAction ofVariantId(final Long variantId, final String name,
-            final com.fasterxml.jackson.databind.JsonNode value, final Boolean staged) {
+            final tools.jackson.databind.JsonNode value, final Boolean staged) {
         return ProductSetAttributeActionBuilder.of()
                 .variantId(variantId)
                 .name(name)
@@ -212,7 +212,7 @@ public interface ProductSetAttributeAction extends ProductUpdateAction {
     }
 
     public static ProductSetAttributeAction ofSku(final String sku, final String name,
-            final com.fasterxml.jackson.databind.JsonNode value, final Boolean staged) {
+            final tools.jackson.databind.JsonNode value, final Boolean staged) {
         return ProductSetAttributeActionBuilder.of().sku(sku).name(name).value(value).staged(staged).build();
     }
 
@@ -242,8 +242,8 @@ public interface ProductSetAttributeAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetAttributeAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetAttributeAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductSetAttributeAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSetAttributeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSetAttributeAction>";

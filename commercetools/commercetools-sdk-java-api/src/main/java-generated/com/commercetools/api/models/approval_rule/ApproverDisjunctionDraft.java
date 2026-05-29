@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -128,8 +128,8 @@ public interface ApproverDisjunctionDraft extends io.vrap.rmf.base.client.Draft<
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ApproverDisjunctionDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ApproverDisjunctionDraft>() {
+    public static tools.jackson.core.type.TypeReference<ApproverDisjunctionDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ApproverDisjunctionDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ApproverDisjunctionDraft>";

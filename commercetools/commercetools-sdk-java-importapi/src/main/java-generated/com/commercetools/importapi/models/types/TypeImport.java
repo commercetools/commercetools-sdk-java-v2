@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
 import com.commercetools.importapi.models.common.ImportResource;
 import com.commercetools.importapi.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -210,8 +210,8 @@ public interface TypeImport extends ImportResource {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TypeImport> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TypeImport>() {
+    public static tools.jackson.core.type.TypeReference<TypeImport> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TypeImport>() {
             @Override
             public String toString() {
                 return "TypeReference<TypeImport>";

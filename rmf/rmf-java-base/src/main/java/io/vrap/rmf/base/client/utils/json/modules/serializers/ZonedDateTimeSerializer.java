@@ -1,15 +1,14 @@
 
 package io.vrap.rmf.base.client.utils.json.modules.serializers;
 
-import java.io.IOException;
 import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
 
-import com.fasterxml.jackson.core.JsonGenerator;
-import com.fasterxml.jackson.databind.SerializerProvider;
-import com.fasterxml.jackson.databind.ser.std.StdScalarSerializer;
+import tools.jackson.core.JsonGenerator;
+import tools.jackson.databind.ser.std.StdScalarSerializer;
+import tools.jackson.databind.SerializationContext;
 
 /**
  * serializes a {@link ZonedDateTime} to {@link DateTimeFormatter#ISO_DATE} format
@@ -24,8 +23,7 @@ public final class ZonedDateTimeSerializer extends StdScalarSerializer<ZonedDate
     }
 
     @Override
-    public void serialize(final ZonedDateTime value, final JsonGenerator gen, final SerializerProvider arg2)
-            throws IOException {
+    public void serialize(final ZonedDateTime value, final JsonGenerator gen, final SerializationContext arg2) {
         gen.writeString(FORMATTER.format(value.withZoneSameInstant(ZoneOffset.UTC)));
     }
 }

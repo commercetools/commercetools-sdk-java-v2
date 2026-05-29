@@ -14,7 +14,7 @@ import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -328,8 +328,8 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Type> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Type>() {
+    public static tools.jackson.core.type.TypeReference<Type> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Type>() {
             @Override
             public String toString() {
                 return "TypeReference<Type>";

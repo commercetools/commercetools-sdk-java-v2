@@ -14,7 +14,7 @@ import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -411,8 +411,8 @@ public interface CartAddLineItemAction
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartAddLineItemAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartAddLineItemAction>() {
+    public static tools.jackson.core.type.TypeReference<CartAddLineItemAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartAddLineItemAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartAddLineItemAction>";

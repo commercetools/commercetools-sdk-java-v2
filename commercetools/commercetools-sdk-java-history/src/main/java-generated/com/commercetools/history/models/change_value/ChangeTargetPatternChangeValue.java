@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
 import com.commercetools.history.models.cart_discount.PatternComponent;
 import com.commercetools.history.models.common.SelectionMode;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -212,8 +212,8 @@ public interface ChangeTargetPatternChangeValue extends ChangeTargetChangeValue 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChangeTargetPatternChangeValue> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChangeTargetPatternChangeValue>() {
+    public static tools.jackson.core.type.TypeReference<ChangeTargetPatternChangeValue> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChangeTargetPatternChangeValue>() {
             @Override
             public String toString() {
                 return "TypeReference<ChangeTargetPatternChangeValue>";

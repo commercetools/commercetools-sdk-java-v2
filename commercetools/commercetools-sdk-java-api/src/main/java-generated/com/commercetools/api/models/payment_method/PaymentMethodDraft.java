@@ -12,7 +12,7 @@ import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.customer.CustomerResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -294,8 +294,8 @@ public interface PaymentMethodDraft extends io.vrap.rmf.base.client.Draft<Paymen
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentMethodDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentMethodDraft>() {
+    public static tools.jackson.core.type.TypeReference<PaymentMethodDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentMethodDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentMethodDraft>";

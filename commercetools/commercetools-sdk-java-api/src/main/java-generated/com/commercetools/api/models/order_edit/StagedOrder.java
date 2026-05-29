@@ -10,7 +10,7 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.order.Order;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -263,8 +263,8 @@ public interface StagedOrder extends Order {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrder> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrder>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrder> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrder>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrder>";

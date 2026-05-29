@@ -14,7 +14,7 @@ import com.commercetools.api.models.shopping_list.TextLineItemDraft;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -249,8 +249,8 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyShoppingListDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyShoppingListDraft>() {
+    public static tools.jackson.core.type.TypeReference<MyShoppingListDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyShoppingListDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<MyShoppingListDraft>";

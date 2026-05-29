@@ -11,7 +11,7 @@ import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.payment.PaymentMethodInfoDraft;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -171,8 +171,8 @@ public interface MyPaymentDraft extends MyPaymentDraftMixin,
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyPaymentDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyPaymentDraft>() {
+    public static tools.jackson.core.type.TypeReference<MyPaymentDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyPaymentDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<MyPaymentDraft>";

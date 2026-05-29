@@ -8,7 +8,7 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -156,8 +156,8 @@ public interface HighPrecisionMoney extends TypedMoney {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<HighPrecisionMoney> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<HighPrecisionMoney>() {
+    public static tools.jackson.core.type.TypeReference<HighPrecisionMoney> typeReference() {
+        return new tools.jackson.core.type.TypeReference<HighPrecisionMoney>() {
             @Override
             public String toString() {
                 return "TypeReference<HighPrecisionMoney>";

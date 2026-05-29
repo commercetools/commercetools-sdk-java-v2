@@ -9,7 +9,7 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Reference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -139,8 +139,8 @@ public interface TaxCategoryReference extends Reference, com.commercetools.api.m
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TaxCategoryReference> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TaxCategoryReference>() {
+    public static tools.jackson.core.type.TypeReference<TaxCategoryReference> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TaxCategoryReference>() {
             @Override
             public String toString() {
                 return "TypeReference<TaxCategoryReference>";

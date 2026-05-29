@@ -9,7 +9,7 @@ import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.graph_ql.GraphQLRequest;
 import com.commercetools.api.models.graph_ql.GraphQLResponse;
 import com.commercetools.api.models.product.Product;
-import com.fasterxml.jackson.databind.JsonNode;
+import tools.jackson.databind.JsonNode;
 
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;

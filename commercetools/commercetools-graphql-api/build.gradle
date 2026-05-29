@@ -35,7 +35,7 @@ dependencies {
     api graphql.java
     api jackson_core.databind
     api jackson_core.core
-    api jackson_core.datatype
+//    api jackson_core.datatype
     api 'com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core:8.1.0'
 
 }
@@ -55,7 +55,7 @@ generateJava {
             "Country": "String",
             "Locale": "String",
             "Long": "Long",
-            "Json": "com.fasterxml.jackson.databind.JsonNode",
+            "Json": "tools.jackson.databind.JsonNode",
             "KeyReferenceInput": "String",
             "Set": "Object",
             "Time": "String",

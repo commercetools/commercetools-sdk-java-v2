@@ -4,8 +4,8 @@ package com.commerctools.importapi;
 import com.commercetools.importapi.models.productvariants.AttributeBuilder;
 import com.commercetools.importapi.models.productvariants.ProductVariantPatch;
 import com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.databind.ObjectMapper;
+import tools.jackson.core.JacksonException;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
@@ -14,7 +14,7 @@ import org.junit.jupiter.api.Test;
 
 public class PatchTest {
     @Test
-    public void testPatchDelete() throws JsonProcessingException {
+    public void testPatchDelete() throws JacksonException {
         final ObjectMapper objectMapper = JsonUtils.createObjectMapper();
 
         final ProductVariantPatch variantPatch = ProductVariantPatchBuilder.of()

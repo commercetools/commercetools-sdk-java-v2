@@ -3,7 +3,7 @@ package com.commercetools.api.json;
 
 import java.util.Map;
 
-import com.fasterxml.jackson.core.type.TypeReference;
+import tools.jackson.core.type.TypeReference;
 
 import io.vrap.rmf.base.client.utils.json.modules.ModuleOptions;
 

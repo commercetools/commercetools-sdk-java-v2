@@ -11,7 +11,7 @@ import com.commercetools.api.models.associate_role.Permission;
 import com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier;
 import com.commercetools.api.models.customer.CustomerResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -202,8 +202,8 @@ public interface GraphQLAssociateMissingPermissionError extends GraphQLErrorObje
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLAssociateMissingPermissionError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLAssociateMissingPermissionError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLAssociateMissingPermissionError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLAssociateMissingPermissionError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLAssociateMissingPermissionError>";

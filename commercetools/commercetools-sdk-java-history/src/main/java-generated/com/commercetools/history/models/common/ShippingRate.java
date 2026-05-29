@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -182,8 +182,8 @@ public interface ShippingRate {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShippingRate> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShippingRate>() {
+    public static tools.jackson.core.type.TypeReference<ShippingRate> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShippingRate>() {
             @Override
             public String toString() {
                 return "TypeReference<ShippingRate>";

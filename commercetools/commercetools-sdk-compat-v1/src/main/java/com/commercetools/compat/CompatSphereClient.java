@@ -9,8 +9,8 @@ import java.util.concurrent.CompletionStage;
 
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.ObjectMapper;
 
 import io.sphere.sdk.client.*;
 import io.sphere.sdk.http.HttpHeaders;

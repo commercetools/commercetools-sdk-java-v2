@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.ZonedDateTime;
 
-import com.fasterxml.jackson.databind.module.SimpleModule;
+import tools.jackson.databind.module.SimpleModule;
 
 import io.vrap.rmf.base.client.utils.json.modules.serializers.LocalDateSerializer;
 import io.vrap.rmf.base.client.utils.json.modules.serializers.LocalTimeSerializer;

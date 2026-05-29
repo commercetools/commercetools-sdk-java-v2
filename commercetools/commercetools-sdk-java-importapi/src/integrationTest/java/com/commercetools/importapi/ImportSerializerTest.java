@@ -6,7 +6,7 @@ import com.commercetools.importapi.defaultconfig.ImportApiRootBuilder;
 import com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder;
 import com.commercetools.importapi.models.importrequests.ProductVariantPatchRequestBuilder;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.databind.ObjectMapper;
 
 import io.vrap.rmf.base.client.ResponseSerializer;
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
@@ -17,7 +17,7 @@ import org.junit.jupiter.api.Test;
 public class ImportSerializerTest {
     @Test
     public void importSerializer() {
-        ObjectMapper mapper = JsonUtils.createObjectMapper().setSerializationInclusion(JsonInclude.Include.ALWAYS);
+        ObjectMapper mapper = JsonUtils.createObjectMapper().setDefaultPropertyInclusion(JsonInclude.Include.ALWAYS);
 
         ProjectApiRoot apiRoot = ImportApiRootBuilder.of()
                 .defaultClient("")

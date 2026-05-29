@@ -4,7 +4,7 @@ package com.commercetools.api.models.product_search;
 import com.commercetools.api.RegisterSimpleModuleMixin;
 import com.commercetools.api.SimpleModuleMixin;
 import com.commercetools.api.json.ProductSearchFacetResultMixin;
-import com.fasterxml.jackson.databind.module.SimpleModule;
+import tools.jackson.databind.module.SimpleModule;
 
 import io.vrap.rmf.base.client.utils.json.modules.ModuleOptions;
 

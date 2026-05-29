@@ -9,7 +9,7 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.shopping_list.ShoppingListLineItem;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -153,8 +153,8 @@ public interface ShoppingListLineItemRemovedMessage extends ShoppingListMessage 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListLineItemRemovedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListLineItemRemovedMessage>() {
+    public static tools.jackson.core.type.TypeReference<ShoppingListLineItemRemovedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShoppingListLineItemRemovedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<ShoppingListLineItemRemovedMessage>";

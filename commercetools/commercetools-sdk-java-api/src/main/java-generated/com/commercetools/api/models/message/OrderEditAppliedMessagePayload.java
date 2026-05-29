@@ -10,7 +10,7 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.order_edit.OrderEdit;
 import com.commercetools.api.models.order_edit.OrderEditApplied;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -142,8 +142,8 @@ public interface OrderEditAppliedMessagePayload extends OrderMessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderEditAppliedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderEditAppliedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<OrderEditAppliedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderEditAppliedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderEditAppliedMessagePayload>";

@@ -12,7 +12,7 @@ import com.commercetools.api.models.associate_role.AssociateRole;
 import com.commercetools.api.models.associate_role.Permission;
 import com.commercetools.api.models.customer.CustomerReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -207,8 +207,8 @@ public interface BusinessUnitAssociateResponse {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAssociateResponse> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAssociateResponse>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitAssociateResponse> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitAssociateResponse>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitAssociateResponse>";

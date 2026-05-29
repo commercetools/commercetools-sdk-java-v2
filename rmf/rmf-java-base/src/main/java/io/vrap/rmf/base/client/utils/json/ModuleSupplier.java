@@ -3,7 +3,7 @@ package io.vrap.rmf.base.client.utils.json;
 
 import java.util.ServiceLoader;
 
-import com.fasterxml.jackson.databind.module.SimpleModule;
+import tools.jackson.databind.module.SimpleModule;
 
 import io.vrap.rmf.base.client.utils.json.modules.ModuleOptions;
 

@@ -13,7 +13,7 @@ import com.commercetools.importapi.models.common.TaxCategoryKeyReference;
 import com.commercetools.importapi.models.common.TypedMoney;
 import com.commercetools.importapi.models.prices.TaxRate;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -341,8 +341,8 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomLineItemDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomLineItemDraft>() {
+    public static tools.jackson.core.type.TypeReference<CustomLineItemDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomLineItemDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomLineItemDraft>";

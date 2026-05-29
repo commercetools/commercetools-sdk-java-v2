@@ -14,7 +14,7 @@ import com.commercetools.importapi.models.common.ImportResource;
 import com.commercetools.importapi.models.common.StoreKeyReference;
 import com.commercetools.importapi.models.customfields.Custom;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -561,8 +561,8 @@ public interface CustomerImport extends ImportResource {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerImport> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerImport>() {
+    public static tools.jackson.core.type.TypeReference<CustomerImport> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerImport>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerImport>";

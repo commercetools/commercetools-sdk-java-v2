@@ -1,25 +1,24 @@
 
 package com.commercetools.importapi.json;
 
-import static com.fasterxml.jackson.databind.node.JsonNodeType.OBJECT;
+import static tools.jackson.databind.node.JsonNodeType.OBJECT;
 
-import java.io.IOException;
 import java.util.*;
 
 import com.commercetools.importapi.models.common.*;
 import com.commercetools.importapi.models.productvariants.*;
-import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.databind.DeserializationContext;
-import com.fasterxml.jackson.databind.JsonDeserializer;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.node.JsonNodeType;
+import tools.jackson.core.JsonParser;
+import tools.jackson.databind.DeserializationContext;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.node.JsonNodeType;
+import tools.jackson.databind.ValueDeserializer;
 
-public class ErrorAttributeDeserializer extends JsonDeserializer<Attribute> {
+public class ErrorAttributeDeserializer extends ValueDeserializer<Attribute> {
     protected ErrorAttributeDeserializer() {
     }
 
     @Override
-    public Attribute deserialize(JsonParser p, DeserializationContext ctxt) throws IOException {
+    public Attribute deserialize(JsonParser p, DeserializationContext ctxt) {
         JsonNode node = p.readValueAsTree();
         JsonNode valueNode = node.get("value");
 
@@ -27,14 +26,14 @@ public class ErrorAttributeDeserializer extends JsonDeserializer<Attribute> {
         switch (valueNodeType) {
             case BOOLEAN:
                 return BooleanAttributeBuilder.of()
-                        .name(node.get("name").asText())
+                        .name(node.get("name").asString())
                         .value(valueNode.asBoolean())
                         .build();
 
             case NUMBER:
-                return NumberAttributeBuilder.of().name(node.get("name").asText()).value(valueNode.asDouble()).build();
+                return NumberAttributeBuilder.of().name(node.get("name").asString()).value(valueNode.asDouble()).build();
             case STRING:
-                return TextAttributeBuilder.of().name(node.get("name").asText()).value(valueNode.asText()).build();
+                return TextAttributeBuilder.of().name(node.get("name").asString()).value(valueNode.asString()).build();
             case OBJECT:
                 return createAttributeFromObject(node);
             case ARRAY:
@@ -43,20 +42,20 @@ public class ErrorAttributeDeserializer extends JsonDeserializer<Attribute> {
                 switch (firstElementNodeType) {
                     case STRING:
                         List<String> stringValues = new ArrayList<>();
-                        valueNode.elements().forEachRemaining(element -> stringValues.add(element.asText()));
-                        return TextSetAttributeBuilder.of().name(node.get("name").asText()).value(stringValues).build();
+                        valueNode.values().iterator().forEachRemaining(element -> stringValues.add(element.asString()));
+                        return TextSetAttributeBuilder.of().name(node.get("name").asString()).value(stringValues).build();
                     case NUMBER:
                         List<Double> numberValues = new ArrayList<>();
-                        valueNode.elements().forEachRemaining(element -> numberValues.add(element.asDouble()));
+                        valueNode.values().iterator().forEachRemaining(element -> numberValues.add(element.asDouble()));
                         return NumberSetAttributeBuilder.of()
-                                .name(node.get("name").asText())
+                                .name(node.get("name").asString())
                                 .value(numberValues)
                                 .build();
                     case BOOLEAN:
                         List<Boolean> booleanValues = new ArrayList<>();
-                        valueNode.elements().forEachRemaining(element -> booleanValues.add(element.asBoolean()));
+                        valueNode.values().iterator().forEachRemaining(element -> booleanValues.add(element.asBoolean()));
                         return BooleanSetAttributeBuilder.of()
-                                .name(node.get("name").asText())
+                                .name(node.get("name").asString())
                                 .value(booleanValues)
                                 .build();
                     case OBJECT:
@@ -64,7 +63,7 @@ public class ErrorAttributeDeserializer extends JsonDeserializer<Attribute> {
                 }
             default:
                 AttributeImpl attribute = new AttributeImpl();
-                attribute.setName(node.get("name").asText());
+                attribute.setName(node.get("name").asString());
                 return attribute;
         }
     }
@@ -82,36 +81,36 @@ public class ErrorAttributeDeserializer extends JsonDeserializer<Attribute> {
             JsonNode label = valueNode.get("label");
             if (label.getNodeType() == OBJECT) {
                 return LocalizableEnumAttributeBuilder.of()
-                        .name(node.get("name").asText())
-                        .value(valueNode.get("key").textValue())
+                        .name(node.get("name").asString())
+                        .value(valueNode.get("key").asString())
                         .build();
             }
             return EnumAttributeBuilder.of()
-                    .name(node.get("name").asText())
-                    .value(valueNode.get("key").textValue())
+                    .name(node.get("name").asString())
+                    .value(valueNode.get("key").asString())
                     .build();
         }
         if (valueNode.has("currencyCode")) {
             return MoneyAttributeBuilder.of()
-                    .name(node.get("name").asText())
+                    .name(node.get("name").asString())
                     .value(typedMoneyBuilder -> typedMoneyBuilder.centPrecisionBuilder()
-                            .currencyCode(valueNode.get("currencyCode").asText())
+                            .currencyCode(valueNode.get("currencyCode").asString())
                             .centAmount(valueNode.get("centAmount").asLong())
                             .fractionDigits(valueNode.get("fractionDigits").asInt()))
                     .build();
         }
         if (valueNode.has("typeId")) {
             return ReferenceAttributeBuilder.of()
-                    .name(node.get("name").asText())
+                    .name(node.get("name").asString())
                     // this is not working because reference contains ID and KeyReference requires ID
                     //                            .value((KeyReference) p.getCodec().treeAsTokens(valueNode).readValueAs(getTypeRef(valueNode.get("typeId").asText())))
                     .value(createKeyReference(valueNode))
                     .build();
         }
-        return LocalizableTextAttributeBuilder.of().name(node.get("name").asText()).value(localizedStringBuilder -> {
-            valueNode.fields()
+        return LocalizableTextAttributeBuilder.of().name(node.get("name").asString()).value(localizedStringBuilder -> {
+            valueNode.properties().iterator()
                     .forEachRemaining(nodeEntry -> localizedStringBuilder.addValue(nodeEntry.getKey(),
-                        nodeEntry.getValue().asText()));
+                        nodeEntry.getValue().asString()));
             return localizedStringBuilder;
         }).build();
     }
@@ -121,58 +120,58 @@ public class ErrorAttributeDeserializer extends JsonDeserializer<Attribute> {
         JsonNode firstElement = valueNode.get(0);
         if (firstElement.has("key") && firstElement.has("label")) {
             List<String> keys = new ArrayList<>();
-            valueNode.iterator().forEachRemaining(jsonNode -> jsonNode.fields().forEachRemaining(nodeEntry -> {
+            valueNode.iterator().forEachRemaining(jsonNode -> jsonNode.properties().iterator().forEachRemaining(nodeEntry -> {
                 String key = nodeEntry.getKey();
                 if (key.equals("key")) {
-                    keys.add(nodeEntry.getValue().asText());
+                    keys.add(nodeEntry.getValue().asString());
                 }
             }));
             JsonNode label = firstElement.get("label");
             if (label.getNodeType() == OBJECT) {
-                return LocalizableEnumSetAttributeBuilder.of().name(node.get("name").asText()).value(keys).build();
+                return LocalizableEnumSetAttributeBuilder.of().name(node.get("name").asString()).value(keys).build();
             }
-            return EnumSetAttributeBuilder.of().name(node.get("name").asText()).value(keys).build();
+            return EnumSetAttributeBuilder.of().name(node.get("name").asString()).value(keys).build();
         }
         if (firstElement.has("typeId")) {
             List<KeyReference> keyReferences = new ArrayList<>();
             valueNode.iterator().forEachRemaining(nodeEntry -> {
                 keyReferences.add(createKeyReference(nodeEntry));
             });
-            return ReferenceSetAttributeBuilder.of().name(node.get("name").asText()).value(keyReferences).build();
+            return ReferenceSetAttributeBuilder.of().name(node.get("name").asString()).value(keyReferences).build();
         }
         if (firstElement.has("currencyCode")) {
             List<TypedMoney> values = new ArrayList<>();
             valueNode.iterator().forEachRemaining(nodeEntry -> {
                 values.add(MoneyBuilder.of()
-                        .currencyCode(nodeEntry.get("currencyCode").asText())
+                        .currencyCode(nodeEntry.get("currencyCode").asString())
                         .centAmount(nodeEntry.get("centAmount").asLong())
                         .fractionDigits(nodeEntry.get("fractionDigits").asInt())
                         .build());
             });
-            return MoneySetAttributeBuilder.of().name(node.get("name").asText()).value(values).build();
+            return MoneySetAttributeBuilder.of().name(node.get("name").asString()).value(values).build();
         }
 
         List<LocalizedString> values = new ArrayList<>();
         valueNode.iterator().forEachRemaining(jsonNode -> {
             LocalizedStringBuilder localizedStringBuilder = LocalizedStringBuilder.of();
-            jsonNode.fields()
+            jsonNode.properties().iterator()
                     .forEachRemaining(nodeEntry -> localizedStringBuilder.addValue(nodeEntry.getKey(),
-                        nodeEntry.getValue().asText()));
+                        nodeEntry.getValue().asString()));
             values.add(localizedStringBuilder.build());
         });
-        return LocalizableTextSetAttributeBuilder.of().name(node.get("name").asText()).value(values).build();
+        return LocalizableTextSetAttributeBuilder.of().name(node.get("name").asString()).value(values).build();
     }
 
     private KeyReference createKeyReference(JsonNode node) {
         return new KeyReference() {
             @Override
             public String getKey() {
-                return node.get("id").asText();
+                return node.get("id").asString();
             }
 
             @Override
             public ReferenceType getTypeId() {
-                return getReferenceType(node.get("typeId").asText());
+                return getReferenceType(node.get("typeId").asString());
             }
 
             @Override

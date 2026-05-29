@@ -10,7 +10,7 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.common.TypedMoney;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -137,8 +137,8 @@ public interface DiscountedTotalPricePortion {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DiscountedTotalPricePortion> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DiscountedTotalPricePortion>() {
+    public static tools.jackson.core.type.TypeReference<DiscountedTotalPricePortion> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DiscountedTotalPricePortion>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountedTotalPricePortion>";

@@ -6,14 +6,14 @@ import java.util.Set;
 
 import com.commercetools.api.RegisterSimpleModuleMixin;
 import com.commercetools.api.SimpleModuleMixin;
-import com.fasterxml.jackson.databind.module.SimpleModule;
+import tools.jackson.databind.module.SimpleModule;
 
 import io.vrap.rmf.base.client.utils.json.modules.ModuleOptions;
 
 import org.reflections.Reflections;
 
 /**
- * Module to configure the default jackson {@link com.fasterxml.jackson.databind.ObjectMapper} e.g. to deserialize attributes and custom fields
+ * Module to configure the default jackson {@link tools.jackson.databind.ObjectMapper} e.g. to deserialize attributes and custom fields
  */
 public class ApiModule extends SimpleModule {
     private static final long serialVersionUID = 0L;

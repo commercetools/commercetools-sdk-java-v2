@@ -11,7 +11,7 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
+import tools.jackson.core.type.TypeReference;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -25,7 +25,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * <hr>
  * <div class=code-example>
  * <pre><code class='java'>{@code
- *   CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> result = apiRoot
+ *   CompletableFuture<ApiHttpResponse<tools.jackson.databind.JsonNode>> result = apiRoot
  *            .withProjectKey("{projectKey}")
  *            .orders()
  *            .edits()
@@ -36,13 +36,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyOrdersEditsHead
-        extends TypeApiMethod<ByProjectKeyOrdersEditsHead, com.fasterxml.jackson.databind.JsonNode>
+        extends TypeApiMethod<ByProjectKeyOrdersEditsHead, tools.jackson.databind.JsonNode>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersEditsHead>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyOrdersEditsHead> {
 
     @Override
-    public TypeReference<com.fasterxml.jackson.databind.JsonNode> resultType() {
-        return new TypeReference<com.fasterxml.jackson.databind.JsonNode>() {
+    public TypeReference<tools.jackson.databind.JsonNode> resultType() {
+        return new TypeReference<tools.jackson.databind.JsonNode>() {
         };
     }
 
@@ -69,15 +69,15 @@ public class ByProjectKeyOrdersEditsHead
     }
 
     @Override
-    public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(final ApiHttpClient client,
+    public ApiHttpResponse<tools.jackson.databind.JsonNode> executeBlocking(final ApiHttpClient client,
             final Duration timeout) {
-        return executeBlocking(client, timeout, com.fasterxml.jackson.databind.JsonNode.class);
+        return executeBlocking(client, timeout, tools.jackson.databind.JsonNode.class);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute(
+    public CompletableFuture<ApiHttpResponse<tools.jackson.databind.JsonNode>> execute(
             final ApiHttpClient client) {
-        return execute(client, com.fasterxml.jackson.databind.JsonNode.class);
+        return execute(client, tools.jackson.databind.JsonNode.class);
     }
 
     public String getProjectKey() {

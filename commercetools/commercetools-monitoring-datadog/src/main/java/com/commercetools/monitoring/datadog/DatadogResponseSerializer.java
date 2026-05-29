@@ -14,9 +14,9 @@ import java.util.stream.Collectors;
 
 import com.datadog.api.client.ApiClient;
 import com.datadog.api.client.v2.api.MetricsApi;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JavaType;
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.JavaType;
+import tools.jackson.core.JacksonException;
 
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.ResponseSerializer;
@@ -83,7 +83,7 @@ public class DatadogResponseSerializer implements ResponseSerializer {
     }
 
     @Override
-    public byte[] toJsonByteArray(Object value) throws JsonProcessingException {
+    public byte[] toJsonByteArray(Object value) throws JacksonException {
         Instant start = Instant.now();
         byte[] result = serializer.toJsonByteArray(value);
         double durationInMillis = Duration.between(start, Instant.now()).toNanos() / 1_000_000.0;

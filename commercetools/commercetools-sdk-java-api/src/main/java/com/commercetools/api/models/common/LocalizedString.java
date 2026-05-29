@@ -17,8 +17,8 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import jakarta.validation.constraints.NotNull;
 

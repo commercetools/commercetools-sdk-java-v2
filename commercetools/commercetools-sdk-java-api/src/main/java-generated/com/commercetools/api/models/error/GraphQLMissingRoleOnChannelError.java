@@ -10,7 +10,7 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.channel.ChannelRoleEnum;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -165,8 +165,8 @@ public interface GraphQLMissingRoleOnChannelError extends GraphQLErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLMissingRoleOnChannelError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLMissingRoleOnChannelError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLMissingRoleOnChannelError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLMissingRoleOnChannelError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLMissingRoleOnChannelError>";

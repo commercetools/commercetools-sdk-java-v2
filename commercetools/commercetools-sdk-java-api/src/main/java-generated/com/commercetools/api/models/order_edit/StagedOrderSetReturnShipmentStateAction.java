@@ -10,7 +10,7 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.order.ReturnShipmentState;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -159,8 +159,8 @@ public interface StagedOrderSetReturnShipmentStateAction extends StagedOrderUpda
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetReturnShipmentStateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetReturnShipmentStateAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderSetReturnShipmentStateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderSetReturnShipmentStateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderSetReturnShipmentStateAction>";

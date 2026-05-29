@@ -13,7 +13,7 @@ import com.commercetools.checkout.models.application.ApplicationReference;
 import com.commercetools.checkout.models.cart.CartReference;
 import com.commercetools.checkout.models.cart.OrderReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -295,8 +295,8 @@ public interface Transaction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Transaction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Transaction>() {
+    public static tools.jackson.core.type.TypeReference<Transaction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Transaction>() {
             @Override
             public String toString() {
                 return "TypeReference<Transaction>";

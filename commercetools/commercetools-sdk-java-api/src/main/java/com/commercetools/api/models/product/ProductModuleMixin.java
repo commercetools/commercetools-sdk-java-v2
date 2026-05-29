@@ -7,8 +7,8 @@ import java.util.Optional;
 import com.commercetools.api.RegisterSimpleModuleMixin;
 import com.commercetools.api.SimpleModuleMixin;
 import com.commercetools.api.json.*;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.module.SimpleModule;
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.module.SimpleModule;
 
 import io.vrap.rmf.base.client.utils.json.modules.ModuleOptions;
 

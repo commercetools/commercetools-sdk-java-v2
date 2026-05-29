@@ -9,7 +9,7 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.quote_request.QuoteRequest;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -152,8 +152,8 @@ public interface QuoteRequestCreatedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<QuoteRequestCreatedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<QuoteRequestCreatedMessage>() {
+    public static tools.jackson.core.type.TypeReference<QuoteRequestCreatedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<QuoteRequestCreatedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<QuoteRequestCreatedMessage>";

@@ -9,7 +9,7 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.staged_quote.StagedQuoteState;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -140,8 +140,8 @@ public interface StagedQuoteStateChangedMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedQuoteStateChangedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedQuoteStateChangedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<StagedQuoteStateChangedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedQuoteStateChangedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedQuoteStateChangedMessagePayload>";

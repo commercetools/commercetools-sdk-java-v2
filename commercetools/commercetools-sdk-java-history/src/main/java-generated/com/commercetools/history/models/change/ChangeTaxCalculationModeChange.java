@@ -9,7 +9,7 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.TaxCalculationMode;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -164,8 +164,8 @@ public interface ChangeTaxCalculationModeChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChangeTaxCalculationModeChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChangeTaxCalculationModeChange>() {
+    public static tools.jackson.core.type.TypeReference<ChangeTaxCalculationModeChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChangeTaxCalculationModeChange>() {
             @Override
             public String toString() {
                 return "TypeReference<ChangeTaxCalculationModeChange>";

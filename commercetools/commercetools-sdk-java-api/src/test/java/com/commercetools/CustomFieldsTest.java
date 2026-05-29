@@ -17,10 +17,10 @@ import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.order.Order;
 import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.type.*;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.ObjectMapper;
+import tools.jackson.core.JacksonException;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
@@ -332,7 +332,7 @@ public class CustomFieldsTest {
     }
 
     @Test
-    public void customFieldTypeByName() throws JsonProcessingException {
+    public void customFieldTypeByName() throws JacksonException {
         ApiModuleOptions options = ApiModuleOptions.of()
                 .withCustomFieldTypes(Maps.newHashMap("test", new TypeReference<String>() {
                 }));
@@ -359,7 +359,7 @@ public class CustomFieldsTest {
     }
 
     @Test
-    public void serializeCustomFields() throws JsonProcessingException {
+    public void serializeCustomFields() throws JacksonException {
         FieldContainer container = FieldContainerBuilder.of()
                 .addValue("int", 13)
                 .addValue("double", 13.0)

@@ -9,7 +9,7 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.CustomLineItem;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -168,8 +168,8 @@ public interface AddCustomLineItemChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AddCustomLineItemChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AddCustomLineItemChange>() {
+    public static tools.jackson.core.type.TypeReference<AddCustomLineItemChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AddCustomLineItemChange>() {
             @Override
             public String toString() {
                 return "TypeReference<AddCustomLineItemChange>";

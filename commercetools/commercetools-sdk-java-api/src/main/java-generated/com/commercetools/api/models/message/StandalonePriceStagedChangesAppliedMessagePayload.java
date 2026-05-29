@@ -9,7 +9,7 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.standalone_price.StagedStandalonePrice;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -127,8 +127,8 @@ public interface StandalonePriceStagedChangesAppliedMessagePayload extends Messa
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceStagedChangesAppliedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceStagedChangesAppliedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<StandalonePriceStagedChangesAppliedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StandalonePriceStagedChangesAppliedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<StandalonePriceStagedChangesAppliedMessagePayload>";

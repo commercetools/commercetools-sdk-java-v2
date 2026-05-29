@@ -9,7 +9,7 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.order.ShipmentState;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -140,8 +140,8 @@ public interface OrderShipmentStateChangedMessagePayload extends OrderMessagePay
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderShipmentStateChangedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderShipmentStateChangedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<OrderShipmentStateChangedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderShipmentStateChangedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderShipmentStateChangedMessagePayload>";

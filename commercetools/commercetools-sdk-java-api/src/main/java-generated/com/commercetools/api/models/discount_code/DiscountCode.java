@@ -17,7 +17,7 @@ import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -515,8 +515,8 @@ public interface DiscountCode
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCode> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCode>() {
+    public static tools.jackson.core.type.TypeReference<DiscountCode> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DiscountCode>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountCode>";

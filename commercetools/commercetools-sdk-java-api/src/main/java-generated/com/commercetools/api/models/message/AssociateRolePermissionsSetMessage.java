@@ -9,7 +9,7 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.associate_role.Permission;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -158,8 +158,8 @@ public interface AssociateRolePermissionsSetMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AssociateRolePermissionsSetMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AssociateRolePermissionsSetMessage>() {
+    public static tools.jackson.core.type.TypeReference<AssociateRolePermissionsSetMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AssociateRolePermissionsSetMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<AssociateRolePermissionsSetMessage>";

@@ -11,7 +11,6 @@ import com.commercetools.api.models.common.LocalizedStringBuilder;
 import com.commercetools.api.models.product.*;
 import com.commercetools.api.models.product_search.*;
 import com.commercetools.api.models.product_type.ProductTypeResourceIdentifierBuilder;
-import com.fasterxml.jackson.core.JsonProcessingException;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
@@ -19,6 +18,7 @@ import org.assertj.core.api.Assertions;
 import org.json.JSONException;
 import org.junit.jupiter.api.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
+import tools.jackson.core.JacksonException;
 
 public class ProductTest {
 
@@ -44,7 +44,7 @@ public class ProductTest {
     }
 
     @Test
-    public void serializeProduct() throws JsonProcessingException {
+    public void serializeProduct() throws JacksonException {
         final ProductProjection productProjection = ProductProjection.builder()
                 .masterVariant(b -> b.sku("foo").id(1L))
                 .plusVariants(b -> b.sku("bar").id(2L))
@@ -75,7 +75,7 @@ public class ProductTest {
             copyString = JsonUtils.toJsonString(copy);
             productString = JsonUtils.toJsonString(product);
         }
-        catch (JsonProcessingException e) {
+        catch (JacksonException e) {
             throw new RuntimeException(e);
         }
 

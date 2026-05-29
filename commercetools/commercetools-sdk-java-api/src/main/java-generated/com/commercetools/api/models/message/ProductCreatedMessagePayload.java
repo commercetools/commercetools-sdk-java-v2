@@ -9,7 +9,7 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.product.ProductProjection;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -123,8 +123,8 @@ public interface ProductCreatedMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductCreatedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductCreatedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<ProductCreatedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductCreatedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductCreatedMessagePayload>";

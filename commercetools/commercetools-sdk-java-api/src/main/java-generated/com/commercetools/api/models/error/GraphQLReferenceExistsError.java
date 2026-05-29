@@ -9,7 +9,7 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -129,8 +129,8 @@ public interface GraphQLReferenceExistsError extends GraphQLErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLReferenceExistsError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLReferenceExistsError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLReferenceExistsError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLReferenceExistsError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLReferenceExistsError>";

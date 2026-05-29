@@ -8,7 +8,7 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -127,8 +127,8 @@ public interface ChannelRemoveRolesAction extends ChannelUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChannelRemoveRolesAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChannelRemoveRolesAction>() {
+    public static tools.jackson.core.type.TypeReference<ChannelRemoveRolesAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChannelRemoveRolesAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ChannelRemoveRolesAction>";

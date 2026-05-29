@@ -11,7 +11,7 @@ import com.commercetools.history.models.common.LocalizedString;
 import com.commercetools.history.models.common.TaxMode;
 import com.commercetools.history.models.common.TaxRate;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -245,8 +245,8 @@ public interface SetLineItemTaxAmountChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetLineItemTaxAmountChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetLineItemTaxAmountChange>() {
+    public static tools.jackson.core.type.TypeReference<SetLineItemTaxAmountChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetLineItemTaxAmountChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetLineItemTaxAmountChange>";

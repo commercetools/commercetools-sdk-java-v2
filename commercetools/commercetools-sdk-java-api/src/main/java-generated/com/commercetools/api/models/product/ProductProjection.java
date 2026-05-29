@@ -17,7 +17,7 @@ import com.commercetools.api.models.review.ReviewRatingStatistics;
 import com.commercetools.api.models.state.StateReference;
 import com.commercetools.api.models.tax_category.TaxCategoryReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -577,8 +577,8 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductProjection> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductProjection>() {
+    public static tools.jackson.core.type.TypeReference<ProductProjection> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductProjection>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductProjection>";

@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 import com.commercetools.history.models.change_history.ChangeHistoryResourceType;
 import com.commercetools.history.models.change_history.PlatformInitiatedChange;
 import com.commercetools.history.models.change_history.Source;
-import com.fasterxml.jackson.core.type.TypeReference;
+import tools.jackson.core.type.TypeReference;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;

@@ -12,7 +12,7 @@ import com.commercetools.api.models.common.AssetDraft;
 import com.commercetools.api.models.common.Image;
 import com.commercetools.api.models.common.PriceDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -250,8 +250,8 @@ public interface ProductVariantDraft
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantDraft>() {
+    public static tools.jackson.core.type.TypeReference<ProductVariantDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductVariantDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductVariantDraft>";

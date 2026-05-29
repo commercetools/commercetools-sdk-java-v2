@@ -1,7 +1,7 @@
 
 package com.commercetools.api;
 
-import com.fasterxml.jackson.databind.module.SimpleModule;
+import tools.jackson.databind.module.SimpleModule;
 
 import io.vrap.rmf.base.client.utils.json.modules.ModuleOptions;
 

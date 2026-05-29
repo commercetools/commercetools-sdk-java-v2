@@ -15,7 +15,7 @@ import com.commercetools.checkout.models.payment_integration.PaymentComponentTyp
 import com.commercetools.checkout.models.payment_integration.PaymentIntegrationStatus;
 import com.commercetools.checkout.models.payment_integration.SortingInfo;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -304,8 +304,8 @@ public interface PaymentIntegrationDraft extends io.vrap.rmf.base.client.Draft<P
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentIntegrationDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentIntegrationDraft>() {
+    public static tools.jackson.core.type.TypeReference<PaymentIntegrationDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentIntegrationDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentIntegrationDraft>";

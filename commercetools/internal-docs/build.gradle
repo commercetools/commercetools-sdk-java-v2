@@ -16,6 +16,7 @@ dependencies {
     testImplementation project(":commercetools:commercetools-javanet-client")
 
     testImplementation commons.io version commons.io_version
+    testImplementation 'com.commercetools.sdk.jvm.core:commercetools-java-client:2.16.0'
 
 }
 

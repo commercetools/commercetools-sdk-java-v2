@@ -556,7 +556,7 @@
         },
         {
             "moduleName": "com.typesafe.netty:netty-reactive-streams",
-            "moduleVersion": "2.0.4",
+            "moduleVersion": "2.0.17",
             "moduleUrls": [
                 "http://typesafe.com/"
             ],
@@ -1030,7 +1030,33 @@
         },
         {
             "moduleName": "io.netty:netty-transport-classes-epoll",
+            "moduleVersion": "4.1.133.Final",
+            "moduleUrls": [
+                "https://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.netty:netty-transport-classes-epoll",
             "moduleVersion": "4.2.12.Final",
+            "moduleUrls": [
+                "https://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.netty:netty-transport-classes-kqueue",
+            "moduleVersion": "4.1.133.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -1056,7 +1082,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport-native-epoll",
-            "moduleVersion": "4.1.60.Final",
+            "moduleVersion": "4.1.133.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -1082,7 +1108,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport-native-kqueue",
-            "moduleVersion": "4.1.60.Final",
+            "moduleVersion": "4.1.133.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -1464,7 +1490,7 @@
         },
         {
             "moduleName": "org.asynchttpclient:async-http-client",
-            "moduleVersion": "2.12.4",
+            "moduleVersion": "2.15.0",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -1484,7 +1510,7 @@
         },
         {
             "moduleName": "org.asynchttpclient:async-http-client-netty-utils",
-            "moduleVersion": "2.12.4",
+            "moduleVersion": "2.15.0",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",

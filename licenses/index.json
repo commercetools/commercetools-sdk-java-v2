@@ -1,76 +1,6 @@
 {
     "dependencies": [
         {
-            "moduleName": "com.commercetools.sdk.jvm.core:commercetools-java-client",
-            "moduleVersion": "2.16.0",
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "com.commercetools.sdk.jvm.core:commercetools-java-client-ahc-2_0",
-            "moduleVersion": "2.16.0",
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "com.commercetools.sdk.jvm.core:commercetools-java-client-core",
-            "moduleVersion": "2.16.0",
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "com.commercetools.sdk.jvm.core:commercetools-models",
-            "moduleVersion": "2.16.0",
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "com.commercetools.sdk.jvm.core:commercetools-sdk-base",
-            "moduleVersion": "2.16.0",
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "com.commercetools.sdk.jvm.core:sdk-http",
-            "moduleVersion": "2.16.0",
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "com.commercetools.sdk.jvm.core:sdk-http-ahc-2_0",
-            "moduleVersion": "2.16.0",
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
             "moduleName": "com.datadoghq:datadog-api-client",
             "moduleVersion": "2.38.0",
             "moduleUrls": [
@@ -128,19 +58,6 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-core",
-            "moduleVersion": "2.13.5",
-            "moduleUrls": [
-                "https://github.com/FasterXML/jackson-core"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "com.fasterxml.jackson.core:jackson-core",
             "moduleVersion": "2.18.3",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-core"
@@ -167,19 +84,6 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-databind",
-            "moduleVersion": "2.13.5",
-            "moduleUrls": [
-                "http://github.com/FasterXML/jackson"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "com.fasterxml.jackson.core:jackson-databind",
             "moduleVersion": "2.18.3",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
@@ -192,47 +96,8 @@
             ]
         },
         {
-            "moduleName": "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor",
-            "moduleVersion": "2.13.5",
-            "moduleUrls": [
-                "http://github.com/FasterXML/jackson-dataformats-binary"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor",
-            "moduleVersion": "2.18.3",
-            "moduleUrls": [
-                "https://github.com/FasterXML/jackson-dataformats-binary"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
             "moduleName": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
             "moduleVersion": "2.13.4",
-            "moduleUrls": [
-                "https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
-            "moduleVersion": "2.13.5",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310"
             ],
@@ -274,32 +139,6 @@
             "moduleVersion": "2.18.3",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-base"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "com.fasterxml.jackson.module:jackson-module-parameter-names",
-            "moduleVersion": "2.13.5",
-            "moduleUrls": [
-                "https://github.com/FasterXML/jackson-modules-java8/jackson-module-parameter-names"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "com.fasterxml.jackson.module:jackson-module-parameter-names",
-            "moduleVersion": "2.18.3",
-            "moduleUrls": [
-                "https://github.com/FasterXML/jackson-modules-java8/jackson-module-parameter-names"
             ],
             "moduleLicenses": [
                 {
@@ -486,19 +325,6 @@
             ]
         },
         {
-            "moduleName": "com.neovisionaries:nv-i18n",
-            "moduleVersion": "1.28",
-            "moduleUrls": [
-                "https://github.com/TakahikoKawasaki/nv-i18n"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
             "moduleName": "com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core",
             "moduleVersion": "8.3.0",
             "moduleUrls": [
@@ -594,10 +420,6 @@
             "moduleVersion": "3.16.4"
         },
         {
-            "moduleName": "com.squareup.okio:okio",
-            "moduleVersion": "3.6.0"
-        },
-        {
             "moduleName": "com.squareup.okio:okio-jvm",
             "moduleVersion": "3.14.0",
             "moduleUrls": [
@@ -613,19 +435,6 @@
         {
             "moduleName": "com.squareup.okio:okio-jvm",
             "moduleVersion": "3.16.4",
-            "moduleUrls": [
-                "https://github.com/square/okio/"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "com.squareup.okio:okio-jvm",
-            "moduleVersion": "3.6.0",
             "moduleUrls": [
                 "https://github.com/square/okio/"
             ],
@@ -675,16 +484,6 @@
                 {
                     "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
                     "moduleLicenseUrl": "https://openjdk.java.net/legal/gplv2+ce.html"
-                }
-            ]
-        },
-        {
-            "moduleName": "com.typesafe.netty:netty-reactive-streams",
-            "moduleVersion": "1.0.8",
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
                 }
             ]
         },
@@ -1107,19 +906,6 @@
         },
         {
             "moduleName": "io.netty:netty-transport-native-epoll",
-            "moduleVersion": "4.0.54.Final",
-            "moduleUrls": [
-                "http://netty.io/"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "io.netty:netty-transport-native-epoll",
             "moduleVersion": "4.1.122.Final",
             "moduleUrls": [
                 "https://netty.io/"
@@ -1372,24 +1158,6 @@
             ]
         },
         {
-            "moduleName": "javax.annotation:javax.annotation-api",
-            "moduleVersion": "1.3.2",
-            "moduleUrls": [
-                "http://jcp.org/en/jsr/detail?id=250",
-                "https://javaee.github.io/glassfish"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "CDDL + GPLv2 with classpath exception",
-                    "moduleLicenseUrl": "https://github.com/javaee/javax.annotation/blob/master/LICENSE"
-                },
-                {
-                    "moduleLicense": "COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0",
-                    "moduleLicenseUrl": "https://oss.oracle.com/licenses/CDDL"
-                }
-            ]
-        },
-        {
             "moduleName": "javax.money:money-api",
             "moduleVersion": "1.1",
             "moduleUrls": [
@@ -1412,33 +1180,6 @@
             "moduleVersion": "3.18.0",
             "moduleUrls": [
                 "https://commons.apache.org/proper/commons-lang/"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "org.apache.commons:commons-text",
-            "moduleVersion": "1.13.1",
-            "moduleUrls": [
-                "https://commons.apache.org/proper/commons-text"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "org.apache.geronimo.specs:geronimo-annotation_1.2_spec",
-            "moduleVersion": "1.0",
-            "moduleUrls": [
-                "http://geronimo.apache.org/maven/${siteId}/${version}",
-                "http://geronimo.apache.org/maven/specs/geronimo-annotation_1.2_spec/1.0"
             ],
             "moduleLicenses": [
                 {
@@ -1505,16 +1246,6 @@
         },
         {
             "moduleName": "org.asynchttpclient:async-http-client",
-            "moduleVersion": "2.0.38",
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "org.asynchttpclient:async-http-client",
             "moduleVersion": "2.12.4",
             "moduleLicenses": [
                 {
@@ -1525,47 +1256,7 @@
         },
         {
             "moduleName": "org.asynchttpclient:async-http-client-netty-utils",
-            "moduleVersion": "2.0.38",
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "org.asynchttpclient:async-http-client-netty-utils",
             "moduleVersion": "2.12.4",
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "org.asynchttpclient:netty-codec-dns",
-            "moduleVersion": "2.0.38",
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "org.asynchttpclient:netty-resolver",
-            "moduleVersion": "2.0.38",
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "org.asynchttpclient:netty-resolver-dns",
-            "moduleVersion": "2.0.38",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -2038,63 +1729,11 @@
             ]
         },
         {
-            "moduleName": "org.javamoney.moneta:moneta-convert",
-            "moduleVersion": "1.4.2",
-            "moduleUrls": [
-                "http://www.javamoney.org"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "org.javamoney.moneta:moneta-convert-ecb",
-            "moduleVersion": "1.4.2",
-            "moduleUrls": [
-                "http://www.javamoney.org"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "org.javamoney.moneta:moneta-convert-imf",
-            "moduleVersion": "1.4.2",
-            "moduleUrls": [
-                "http://www.javamoney.org"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
             "moduleName": "org.javamoney.moneta:moneta-core",
             "moduleVersion": "1.4.5",
             "moduleUrls": [
                 "http://javamoney.org",
                 "http://www.javamoney.org"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "org.javamoney:moneta",
-            "moduleVersion": "1.4.2",
-            "moduleUrls": [
-                "http://javamoney.org"
             ],
             "moduleLicenses": [
                 {
@@ -2131,19 +1770,6 @@
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-reflect",
             "moduleVersion": "2.0.21",
-            "moduleUrls": [
-                "https://kotlinlang.org/"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "org.jetbrains.kotlin:kotlin-stdlib",
-            "moduleVersion": "1.9.10",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],
@@ -2194,34 +1820,8 @@
             ]
         },
         {
-            "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-common",
-            "moduleVersion": "1.9.10",
-            "moduleUrls": [
-                "https://kotlinlang.org/"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk7",
             "moduleVersion": "1.8.21",
-            "moduleUrls": [
-                "https://kotlinlang.org/"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk7",
-            "moduleVersion": "1.9.10",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],
@@ -2248,19 +1848,6 @@
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
             "moduleVersion": "1.8.21",
-            "moduleUrls": [
-                "https://kotlinlang.org/"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
-            "moduleVersion": "1.9.10",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],
@@ -2423,20 +2010,6 @@
                 {
                     "moduleLicense": "BSD Zero Clause License",
                     "moduleLicenseUrl": "https://opensource.org/licenses/0BSD"
-                }
-            ]
-        },
-        {
-            "moduleName": "org.reactivestreams:reactive-streams",
-            "moduleVersion": "1.0.0",
-            "moduleUrls": [
-                "http://reactive-streams.org",
-                "http://www.reactive-streams.org/"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Creative Commons Legal Code",
-                    "moduleLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/legalcode"
                 }
             ]
         },

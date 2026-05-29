@@ -7,8 +7,8 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
 
 import tools.jackson.core.JsonGenerator;
-import tools.jackson.databind.ser.std.StdScalarSerializer;
 import tools.jackson.databind.SerializationContext;
+import tools.jackson.databind.ser.std.StdScalarSerializer;
 
 /**
  * serializes a {@link ZonedDateTime} to {@link DateTimeFormatter#ISO_DATE} format

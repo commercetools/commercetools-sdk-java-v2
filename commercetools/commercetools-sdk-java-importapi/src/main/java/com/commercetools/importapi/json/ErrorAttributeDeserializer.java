@@ -7,11 +7,12 @@ import java.util.*;
 
 import com.commercetools.importapi.models.common.*;
 import com.commercetools.importapi.models.productvariants.*;
+
 import tools.jackson.core.JsonParser;
 import tools.jackson.databind.DeserializationContext;
 import tools.jackson.databind.JsonNode;
-import tools.jackson.databind.node.JsonNodeType;
 import tools.jackson.databind.ValueDeserializer;
+import tools.jackson.databind.node.JsonNodeType;
 
 public class ErrorAttributeDeserializer extends ValueDeserializer<Attribute> {
     protected ErrorAttributeDeserializer() {
@@ -31,7 +32,10 @@ public class ErrorAttributeDeserializer extends ValueDeserializer<Attribute> {
                         .build();
 
             case NUMBER:
-                return NumberAttributeBuilder.of().name(node.get("name").asString()).value(valueNode.asDouble()).build();
+                return NumberAttributeBuilder.of()
+                        .name(node.get("name").asString())
+                        .value(valueNode.asDouble())
+                        .build();
             case STRING:
                 return TextAttributeBuilder.of().name(node.get("name").asString()).value(valueNode.asString()).build();
             case OBJECT:
@@ -43,7 +47,10 @@ public class ErrorAttributeDeserializer extends ValueDeserializer<Attribute> {
                     case STRING:
                         List<String> stringValues = new ArrayList<>();
                         valueNode.values().iterator().forEachRemaining(element -> stringValues.add(element.asString()));
-                        return TextSetAttributeBuilder.of().name(node.get("name").asString()).value(stringValues).build();
+                        return TextSetAttributeBuilder.of()
+                                .name(node.get("name").asString())
+                                .value(stringValues)
+                                .build();
                     case NUMBER:
                         List<Double> numberValues = new ArrayList<>();
                         valueNode.values().iterator().forEachRemaining(element -> numberValues.add(element.asDouble()));
@@ -53,7 +60,9 @@ public class ErrorAttributeDeserializer extends ValueDeserializer<Attribute> {
                                 .build();
                     case BOOLEAN:
                         List<Boolean> booleanValues = new ArrayList<>();
-                        valueNode.values().iterator().forEachRemaining(element -> booleanValues.add(element.asBoolean()));
+                        valueNode.values()
+                                .iterator()
+                                .forEachRemaining(element -> booleanValues.add(element.asBoolean()));
                         return BooleanSetAttributeBuilder.of()
                                 .name(node.get("name").asString())
                                 .value(booleanValues)
@@ -108,7 +117,8 @@ public class ErrorAttributeDeserializer extends ValueDeserializer<Attribute> {
                     .build();
         }
         return LocalizableTextAttributeBuilder.of().name(node.get("name").asString()).value(localizedStringBuilder -> {
-            valueNode.properties().iterator()
+            valueNode.properties()
+                    .iterator()
                     .forEachRemaining(nodeEntry -> localizedStringBuilder.addValue(nodeEntry.getKey(),
                         nodeEntry.getValue().asString()));
             return localizedStringBuilder;
@@ -120,12 +130,13 @@ public class ErrorAttributeDeserializer extends ValueDeserializer<Attribute> {
         JsonNode firstElement = valueNode.get(0);
         if (firstElement.has("key") && firstElement.has("label")) {
             List<String> keys = new ArrayList<>();
-            valueNode.iterator().forEachRemaining(jsonNode -> jsonNode.properties().iterator().forEachRemaining(nodeEntry -> {
-                String key = nodeEntry.getKey();
-                if (key.equals("key")) {
-                    keys.add(nodeEntry.getValue().asString());
-                }
-            }));
+            valueNode.iterator()
+                    .forEachRemaining(jsonNode -> jsonNode.properties().iterator().forEachRemaining(nodeEntry -> {
+                        String key = nodeEntry.getKey();
+                        if (key.equals("key")) {
+                            keys.add(nodeEntry.getValue().asString());
+                        }
+                    }));
             JsonNode label = firstElement.get("label");
             if (label.getNodeType() == OBJECT) {
                 return LocalizableEnumSetAttributeBuilder.of().name(node.get("name").asString()).value(keys).build();
@@ -154,7 +165,8 @@ public class ErrorAttributeDeserializer extends ValueDeserializer<Attribute> {
         List<LocalizedString> values = new ArrayList<>();
         valueNode.iterator().forEachRemaining(jsonNode -> {
             LocalizedStringBuilder localizedStringBuilder = LocalizedStringBuilder.of();
-            jsonNode.properties().iterator()
+            jsonNode.properties()
+                    .iterator()
                     .forEachRemaining(nodeEntry -> localizedStringBuilder.addValue(nodeEntry.getKey(),
                         nodeEntry.getValue().asString()));
             values.add(localizedStringBuilder.build());

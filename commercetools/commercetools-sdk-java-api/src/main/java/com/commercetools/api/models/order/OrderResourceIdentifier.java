@@ -6,6 +6,7 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.ResourceIdentifier;
+
 import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**

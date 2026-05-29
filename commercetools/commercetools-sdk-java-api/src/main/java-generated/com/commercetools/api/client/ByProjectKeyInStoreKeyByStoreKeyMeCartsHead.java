@@ -11,13 +11,13 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import tools.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Checks if a Cart exists for a Store that matches the given Query Predicate, and contains a matching <code>customerId</code> or <code>anonymousId</code>. Returns a <code>200</code> status if any Carts match these conditions, or a <code>404</code> status otherwise.</p>
@@ -81,8 +81,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsHead
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<tools.jackson.databind.JsonNode>> execute(
-            final ApiHttpClient client) {
+    public CompletableFuture<ApiHttpResponse<tools.jackson.databind.JsonNode>> execute(final ApiHttpClient client) {
         return execute(client, tools.jackson.databind.JsonNode.class);
     }
 

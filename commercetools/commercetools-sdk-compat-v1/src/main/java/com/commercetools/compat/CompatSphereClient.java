@@ -9,9 +9,6 @@ import java.util.concurrent.CompletionStage;
 
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
-import tools.jackson.databind.JsonNode;
-import tools.jackson.databind.ObjectMapper;
-import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import io.sphere.sdk.client.*;
 import io.sphere.sdk.http.HttpHeaders;
@@ -21,6 +18,10 @@ import io.sphere.sdk.json.JsonException;
 import io.sphere.sdk.models.SphereException;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
+import io.vrap.rmf.base.client.utils.json.JsonUtils;
+
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.ObjectMapper;
 
 public class CompatSphereClient extends AutoCloseableService implements SphereClient {
     private final ApiHttpClient client;
@@ -129,8 +130,7 @@ public class CompatSphereClient extends AutoCloseableService implements SphereCl
      * @return SphereClient using a SDK v2 ApiHttpClient as HTTP client
      */
     public static CompatSphereClient of(final ProjectApiRoot apiRoot, final ExceptionMode exceptionMode) {
-        return of(apiRoot.getApiHttpClient(), JsonUtils.createObjectMapper(), apiRoot.getProjectKey(),
-            exceptionMode);
+        return of(apiRoot.getApiHttpClient(), JsonUtils.createObjectMapper(), apiRoot.getProjectKey(), exceptionMode);
     }
 
     /**

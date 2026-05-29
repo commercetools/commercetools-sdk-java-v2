@@ -11,13 +11,13 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import tools.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Checks if one or more Orders exist for the provided query predicate for the authenticated Customer or anonymous user. Returns a <code>200</code> status if successful.</p>
@@ -40,8 +40,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyMeOrdersHead
-        extends TypeApiMethod<ByProjectKeyMeOrdersHead, tools.jackson.databind.JsonNode>
+public class ByProjectKeyMeOrdersHead extends TypeApiMethod<ByProjectKeyMeOrdersHead, tools.jackson.databind.JsonNode>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeOrdersHead>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyMeOrdersHead> {
 
@@ -80,8 +79,7 @@ public class ByProjectKeyMeOrdersHead
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<tools.jackson.databind.JsonNode>> execute(
-            final ApiHttpClient client) {
+    public CompletableFuture<ApiHttpResponse<tools.jackson.databind.JsonNode>> execute(final ApiHttpClient client) {
         return execute(client, tools.jackson.databind.JsonNode.class);
     }
 

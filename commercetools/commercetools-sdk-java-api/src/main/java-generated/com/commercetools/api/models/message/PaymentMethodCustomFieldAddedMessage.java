@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated after adding a Custom Field to a Payment Method using the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetCustomFieldAction" rel="nofollow">Set CustomField</a> update action. If a Custom Field already exists with the same name, a <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodCustomFieldChangedMessage" rel="nofollow">PaymentMethodCustomFieldChanged</a> Message is generated instead.</p>

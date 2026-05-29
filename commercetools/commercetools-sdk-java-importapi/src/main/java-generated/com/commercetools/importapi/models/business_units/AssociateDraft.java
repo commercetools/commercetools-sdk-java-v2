@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.common.CustomerKeyReference;
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Draft for an Associate in a Business Unit.</p>

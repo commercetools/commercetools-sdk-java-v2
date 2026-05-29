@@ -11,13 +11,13 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import tools.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>This method appends query parameters to the URL. The maximum allowed URL length is 8192 characters. Exceeding this limit will result in URL truncation, potentially leading to unexpected results. For funnel searches on Product Listing Pages, where users select multiple filters, we recommend the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/product-projections/search:POST" rel="nofollow">POST</a> method which passes the query parameters within the request body, avoiding URL length restrictions.</p>

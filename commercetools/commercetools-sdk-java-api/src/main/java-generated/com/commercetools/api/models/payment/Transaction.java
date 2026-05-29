@@ -11,12 +11,12 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.common.CentPrecisionMoney;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Represents a financial transaction typically created as a result of a notification from the payment service.</p>

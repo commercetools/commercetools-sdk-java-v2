@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItemRemovedMessage" rel="nofollow">Shopping List Line Item Removed</a> Message.</p>

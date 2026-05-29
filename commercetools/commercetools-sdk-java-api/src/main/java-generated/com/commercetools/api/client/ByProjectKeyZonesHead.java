@@ -11,13 +11,13 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import tools.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Checks if one or more Zones exist for the provided query predicate. Returns a <code>200 OK</code> status if any Zones match the query predicate, or a <span>Not Found</span> error otherwise.</p>
@@ -73,8 +73,7 @@ public class ByProjectKeyZonesHead extends TypeApiMethod<ByProjectKeyZonesHead, 
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<tools.jackson.databind.JsonNode>> execute(
-            final ApiHttpClient client) {
+    public CompletableFuture<ApiHttpResponse<tools.jackson.databind.JsonNode>> execute(final ApiHttpClient client) {
         return execute(client, tools.jackson.databind.JsonNode.class);
     }
 

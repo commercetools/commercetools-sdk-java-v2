@@ -9,9 +9,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Updating the <code>validFrom</code> and <code>validUntil</code> values generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceValidFromAndUntilSetMessage" rel="nofollow">StandalonePriceValidFromAndUntilSet</a> Message.</p>

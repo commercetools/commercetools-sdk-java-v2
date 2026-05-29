@@ -9,13 +9,14 @@ import java.time.Instant;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import tools.jackson.core.type.TypeReference;
-import tools.jackson.databind.JavaType;
 import com.timgroup.statsd.StatsDClient;
-import tools.jackson.core.JacksonException;
 
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.ResponseSerializer;
+
+import tools.jackson.core.JacksonException;
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.JavaType;
 
 /**
  * This serializer uses dogstatsd library to submit metrics to datadog.

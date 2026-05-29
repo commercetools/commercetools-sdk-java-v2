@@ -3,6 +3,7 @@ package com.commercetools.api.models.subscription;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
 import tools.jackson.databind.annotation.JsonDeserialize;
 
 @JsonSubTypes({

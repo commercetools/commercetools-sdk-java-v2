@@ -1,12 +1,12 @@
 
 package io.vrap.rmf.base.client;
 
+import io.vrap.rmf.base.client.utils.json.JsonUtils;
+
+import tools.jackson.core.JacksonException;
 import tools.jackson.core.type.TypeReference;
 import tools.jackson.databind.JavaType;
 import tools.jackson.databind.ObjectMapper;
-import tools.jackson.core.JacksonException;
-
-import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 /**
  * Interface to deserialize a response to a specified output type

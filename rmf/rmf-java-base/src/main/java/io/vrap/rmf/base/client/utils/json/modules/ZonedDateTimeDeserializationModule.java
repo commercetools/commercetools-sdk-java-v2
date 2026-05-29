@@ -3,9 +3,9 @@ package io.vrap.rmf.base.client.utils.json.modules;
 
 import java.time.ZonedDateTime;
 
-import tools.jackson.databind.module.SimpleModule;
-
 import io.vrap.rmf.base.client.utils.json.modules.deserializers.ZonedDateTimeDeserializer;
+
+import tools.jackson.databind.module.SimpleModule;
 
 public class ZonedDateTimeDeserializationModule extends SimpleModule {
 

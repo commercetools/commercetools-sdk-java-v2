@@ -5,8 +5,8 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 import tools.jackson.core.JsonGenerator;
-import tools.jackson.databind.ser.std.StdScalarSerializer;
 import tools.jackson.databind.SerializationContext;
+import tools.jackson.databind.ser.std.StdScalarSerializer;
 
 /**
  * serializes a {@link LocalTime} to {@link DateTimeFormatter#ISO_TIME} format

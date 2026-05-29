@@ -11,12 +11,12 @@ import com.commercetools.history.models.common.LocalizedString;
 import com.commercetools.history.models.common.TaxMode;
 import com.commercetools.history.models.common.TaxRate;
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomLineItemTaxRateAction" rel="nofollow">Set CustomLineItem TaxRate</a> update action.</p>

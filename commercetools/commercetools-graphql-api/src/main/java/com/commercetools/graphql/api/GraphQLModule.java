@@ -2,6 +2,7 @@
 package com.commercetools.graphql.api;
 
 import com.commercetools.api.models.graph_ql.GraphQLResponse;
+
 import tools.jackson.databind.module.SimpleModule;
 
 public class GraphQLModule extends SimpleModule {

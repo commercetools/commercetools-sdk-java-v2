@@ -12,13 +12,13 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import tools.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Automatically assigns the Associate to the Business Unit in the default <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a> defined in <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitConfiguration" rel="nofollow">BusinessUnitConfiguration</a>. If there is no default Associate Role configured, this request fails with an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error. When creating a Division, the Associate must have the <code>AddChildUnits</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Permission" rel="nofollow">Permission</a> in the parent unit. If the required <span>Permission</span> is missing, an <span>AssociateMissingPermission</span> error is returned.</p>

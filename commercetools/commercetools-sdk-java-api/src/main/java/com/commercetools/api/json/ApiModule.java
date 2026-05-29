@@ -6,11 +6,12 @@ import java.util.Set;
 
 import com.commercetools.api.RegisterSimpleModuleMixin;
 import com.commercetools.api.SimpleModuleMixin;
-import tools.jackson.databind.module.SimpleModule;
 
 import io.vrap.rmf.base.client.utils.json.modules.ModuleOptions;
 
 import org.reflections.Reflections;
+
+import tools.jackson.databind.module.SimpleModule;
 
 /**
  * Module to configure the default jackson {@link tools.jackson.databind.ObjectMapper} e.g. to deserialize attributes and custom fields

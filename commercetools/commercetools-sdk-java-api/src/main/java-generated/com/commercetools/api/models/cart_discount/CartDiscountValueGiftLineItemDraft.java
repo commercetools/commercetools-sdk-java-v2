@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.product.ProductResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Can only be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountDraft" rel="nofollow">CartDiscountDraft</a> with no <code>target</code> specified. Hence, this type can not be used in the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountChangeValueAction" rel="nofollow">Change Value</a> update action.</p>

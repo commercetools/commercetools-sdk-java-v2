@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Removes a Product image and deletes it from the Content Delivery Network (CDN) if it had been <span>uploaded to our CDN</span>. External images will not be deleted. The API deletes the removed image from the CDN in an <span>eventual consistent</span> way. Either <code>variantId</code> or <code>sku</code> is required.</p>

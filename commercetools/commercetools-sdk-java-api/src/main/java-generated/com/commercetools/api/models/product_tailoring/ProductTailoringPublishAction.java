@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Publishes the <code>staged</code> data of the ProductTailoring to <code>current</code>. Sets <code>hasStagedChanges</code> to <code>false</code>. Generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringPublishedMessage" rel="nofollow">ProductTailoringPublished</a> Message.</p>

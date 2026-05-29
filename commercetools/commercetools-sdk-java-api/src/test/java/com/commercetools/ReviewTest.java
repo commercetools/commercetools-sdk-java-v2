@@ -12,12 +12,13 @@ import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.product.ProductResourceIdentifier;
 import com.commercetools.api.models.review.Review;
 import com.commercetools.api.models.review.ReviewDraft;
-import tools.jackson.core.JacksonException;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import tools.jackson.core.JacksonException;
 
 public class ReviewTest {
 

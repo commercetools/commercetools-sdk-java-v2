@@ -11,12 +11,12 @@ import com.commercetools.checkout.models.common.Amount;
 import com.commercetools.checkout.models.payment.PaymentReference;
 import com.commercetools.checkout.models.payment_integration.PaymentIntegrationReference;
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Payment information related to the <span>Transaction</span>.</p>

@@ -3,9 +3,10 @@ package com.commercetools.importapi.json;
 
 import com.commercetools.importapi.models.productvariants.Attribute;
 import com.commercetools.importapi.models.productvariants.Attributes;
-import tools.jackson.databind.module.SimpleModule;
 
 import io.vrap.rmf.base.client.utils.json.modules.ModuleOptions;
+
+import tools.jackson.databind.module.SimpleModule;
 
 /**
  * Module to configure the default jackson {@link tools.jackson.databind.ObjectMapper} e.g. to deserialize attributes and custom fields

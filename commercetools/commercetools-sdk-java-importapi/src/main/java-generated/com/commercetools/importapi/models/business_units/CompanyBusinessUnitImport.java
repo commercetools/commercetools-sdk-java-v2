@@ -9,9 +9,10 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Represents a <a href="https://docs.commercetools.com/apis/ctp:api:type:Company" rel="nofollow">Company</a>, the top-level of a business.</p>

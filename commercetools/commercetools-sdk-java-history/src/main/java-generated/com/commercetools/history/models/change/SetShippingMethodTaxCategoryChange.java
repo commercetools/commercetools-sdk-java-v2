@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 import com.commercetools.history.models.common.Reference;
 import com.commercetools.history.models.common.TaxMode;
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Change triggered when the Tax Category of a Shipping Method associated with an Order has changed.</p>

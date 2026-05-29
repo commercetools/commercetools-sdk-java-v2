@@ -11,13 +11,13 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import tools.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Checks if one or more BusinessUnits exist for the provided query predicate. Returns a <code>200</code> status if any BusinessUnits match the query predicate, or a <code>404</code> status otherwise.</p>
@@ -36,8 +36,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyAsAssociateByAssociateIdBusinessUnitsHead extends
-        TypeApiMethod<ByProjectKeyAsAssociateByAssociateIdBusinessUnitsHead, tools.jackson.databind.JsonNode>
+public class ByProjectKeyAsAssociateByAssociateIdBusinessUnitsHead
+        extends TypeApiMethod<ByProjectKeyAsAssociateByAssociateIdBusinessUnitsHead, tools.jackson.databind.JsonNode>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyAsAssociateByAssociateIdBusinessUnitsHead>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyAsAssociateByAssociateIdBusinessUnitsHead> {
 
@@ -82,8 +82,7 @@ public class ByProjectKeyAsAssociateByAssociateIdBusinessUnitsHead extends
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<tools.jackson.databind.JsonNode>> execute(
-            final ApiHttpClient client) {
+    public CompletableFuture<ApiHttpResponse<tools.jackson.databind.JsonNode>> execute(final ApiHttpClient client) {
         return execute(client, tools.jackson.databind.JsonNode.class);
     }
 

@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.cart_discount.CartDiscountTarget;
 import com.commercetools.api.models.cart_discount.CartDiscountValueDraft;
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Represents a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a> that can only be associated with a single Cart or Order.</p>

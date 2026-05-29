@@ -11,12 +11,12 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.order.DeliveryItem;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryItemsUpdatedMessage" rel="nofollow">Delivery Items Updated</a> Message.</p>

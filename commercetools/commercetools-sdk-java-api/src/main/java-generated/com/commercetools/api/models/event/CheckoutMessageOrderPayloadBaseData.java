@@ -12,12 +12,12 @@ import com.commercetools.api.models.cart.CartReference;
 import com.commercetools.api.models.error.ErrorObject;
 import com.commercetools.api.models.payment.PaymentReference;
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>The <code>data</code> payload of all related order event messages.</p>

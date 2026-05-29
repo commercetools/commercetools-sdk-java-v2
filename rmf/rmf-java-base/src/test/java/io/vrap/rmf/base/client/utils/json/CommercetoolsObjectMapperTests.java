@@ -5,9 +5,9 @@ import java.io.IOException;
 import java.time.*;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import tools.jackson.core.JacksonException;
-import org.junit.jupiter.api.Test;
 
 public class CommercetoolsObjectMapperTests {
 

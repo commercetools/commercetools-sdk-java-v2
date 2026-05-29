@@ -9,9 +9,10 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.payment_method.PaymentMethodStatus;
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetPaymentMethodStatusAction" rel="nofollow">Set PaymentMethodStatus</a> update action.</p>

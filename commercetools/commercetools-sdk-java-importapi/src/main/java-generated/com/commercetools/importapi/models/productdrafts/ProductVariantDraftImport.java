@@ -12,12 +12,12 @@ import com.commercetools.importapi.models.common.Asset;
 import com.commercetools.importapi.models.common.Image;
 import com.commercetools.importapi.models.productvariants.Attribute;
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>The representation of a Product Variant Draft for the import purpose.</p>

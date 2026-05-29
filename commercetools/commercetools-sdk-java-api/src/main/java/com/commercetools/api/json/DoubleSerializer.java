@@ -2,8 +2,8 @@
 package com.commercetools.api.json;
 
 import tools.jackson.core.JsonGenerator;
-import tools.jackson.databind.ser.std.StdScalarSerializer;
 import tools.jackson.databind.SerializationContext;
+import tools.jackson.databind.ser.std.StdScalarSerializer;
 
 public class DoubleSerializer extends StdScalarSerializer<Double> {
 

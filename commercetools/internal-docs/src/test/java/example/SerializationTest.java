@@ -22,13 +22,14 @@ import com.commercetools.api.models.product.ProductVariant;
 import com.commercetools.api.models.subscription.DeliveryPayload;
 import com.commercetools.api.models.subscription.MessageDeliveryPayload;
 import com.commercetools.api.models.subscription.ResourceCreatedDeliveryPayload;
-import tools.jackson.databind.ObjectMapper;
-import tools.jackson.core.JacksonException;
 
 import io.vrap.rmf.base.client.ResponseSerializer;
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.junit.jupiter.api.Test;
+
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.ObjectMapper;
 
 public class SerializationTest {
     @Test

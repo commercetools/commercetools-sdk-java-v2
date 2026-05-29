@@ -1,10 +1,10 @@
 
 package com.commercetools.api.json;
 
-import java.io.IOException;
 import java.util.List;
 
 import com.commercetools.api.models.product.Attribute;
+
 import tools.jackson.core.JsonGenerator;
 import tools.jackson.databind.SerializationContext;
 import tools.jackson.databind.ValueSerializer;

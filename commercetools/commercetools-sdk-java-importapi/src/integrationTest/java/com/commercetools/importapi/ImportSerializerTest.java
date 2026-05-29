@@ -6,13 +6,14 @@ import com.commercetools.importapi.defaultconfig.ImportApiRootBuilder;
 import com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder;
 import com.commercetools.importapi.models.importrequests.ProductVariantPatchRequestBuilder;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import tools.jackson.databind.ObjectMapper;
 
 import io.vrap.rmf.base.client.ResponseSerializer;
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import tools.jackson.databind.ObjectMapper;
 
 public class ImportSerializerTest {
     @Test

@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:AddressDraft" rel="nofollow">AddressDraft</a> that only differ in the data type for the optional <code>custom</code> field.</p>

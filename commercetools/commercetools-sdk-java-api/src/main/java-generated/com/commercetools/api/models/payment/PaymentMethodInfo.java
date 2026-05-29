@@ -11,11 +11,11 @@ import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.payment_method.PaymentMethodToken;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Represents a snapshot of the PaymentMethod data used for a Payment.</p>

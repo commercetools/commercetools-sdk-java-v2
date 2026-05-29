@@ -193,7 +193,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-http",
-            "moduleVersion": "4.2.2.Final",
+            "moduleVersion": "4.2.13.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -271,7 +271,7 @@
         },
         {
             "moduleName": "io.netty:netty-handler-proxy",
-            "moduleVersion": "4.2.2.Final",
+            "moduleVersion": "4.2.13.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],

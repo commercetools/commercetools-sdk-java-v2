@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.PriceTier;
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceAddPriceTierAction" rel="nofollow">Add Price Tier</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceRemovePriceTierAction" rel="nofollow">Remove Price Tier</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetPriceTiersAction" rel="nofollow">Set Price Tiers</a> update action.</p>

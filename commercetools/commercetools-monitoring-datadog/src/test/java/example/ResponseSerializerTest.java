@@ -17,6 +17,7 @@ import io.vrap.rmf.base.client.ResponseSerializer;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+
 import tools.jackson.core.JacksonException;
 
 public class ResponseSerializerTest {

@@ -7,6 +7,7 @@ import com.commercetools.api.models.product_search.ProductSearchFacetResult;
 import com.commercetools.api.models.product_search.ProductSearchFacetResultBucket;
 import com.commercetools.api.models.product_search.ProductSearchFacetResultBucketEntry;
 import com.commercetools.api.models.product_search.ProductSearchFacetResultCount;
+
 import tools.jackson.core.JsonParser;
 import tools.jackson.core.type.TypeReference;
 import tools.jackson.databind.DeserializationContext;

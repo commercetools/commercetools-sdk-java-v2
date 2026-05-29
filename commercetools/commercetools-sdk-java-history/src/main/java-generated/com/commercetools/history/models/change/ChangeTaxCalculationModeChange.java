@@ -9,11 +9,11 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.TaxCalculationMode;
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderChangeTaxCalculationModeAction" rel="nofollow">Change TaxCalculationMode</a> update action.</p>

@@ -4,13 +4,14 @@ package com.commerctools.importapi;
 import com.commercetools.importapi.models.productvariants.AttributeBuilder;
 import com.commercetools.importapi.models.productvariants.ProductVariantPatch;
 import com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder;
-import tools.jackson.databind.ObjectMapper;
-import tools.jackson.core.JacksonException;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.ObjectMapper;
 
 public class PatchTest {
     @Test

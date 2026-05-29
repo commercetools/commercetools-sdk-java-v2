@@ -9,12 +9,13 @@ import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.graph_ql.GraphQLRequest;
 import com.commercetools.api.models.graph_ql.GraphQLResponse;
 import com.commercetools.api.models.product.Product;
-import tools.jackson.databind.JsonNode;
 
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 import org.assertj.core.api.Assertions;
+
+import tools.jackson.databind.JsonNode;
 
 public class GraphQLTest {
     private ProjectApiRoot createProjectClient() {

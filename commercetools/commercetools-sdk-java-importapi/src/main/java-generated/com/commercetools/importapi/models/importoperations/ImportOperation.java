@@ -13,12 +13,12 @@ import com.commercetools.importapi.models.common.ProcessingState;
 import com.commercetools.importapi.models.common.UnresolvedReferences;
 import com.commercetools.importapi.models.errors.ErrorObject;
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Represents the import status of a resource.</p>

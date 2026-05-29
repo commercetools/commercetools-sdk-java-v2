@@ -8,10 +8,10 @@ import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
+import io.vrap.rmf.base.client.http.HandlerStack;
+
 import tools.jackson.core.type.TypeReference;
 import tools.jackson.databind.JavaType;
-
-import io.vrap.rmf.base.client.http.HandlerStack;
 
 /**
  * Interface for an HTTP client accessing the API and mapping to a known output type

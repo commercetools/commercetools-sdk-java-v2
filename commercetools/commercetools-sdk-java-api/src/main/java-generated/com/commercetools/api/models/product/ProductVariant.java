@@ -13,12 +13,12 @@ import com.commercetools.api.models.common.Image;
 import com.commercetools.api.models.common.Price;
 import com.commercetools.api.models.common.ScopedPrice;
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * ProductVariant

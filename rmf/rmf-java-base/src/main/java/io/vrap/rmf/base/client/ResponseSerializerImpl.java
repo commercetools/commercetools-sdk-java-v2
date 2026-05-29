@@ -1,10 +1,10 @@
 
 package io.vrap.rmf.base.client;
 
+import tools.jackson.core.JacksonException;
 import tools.jackson.core.type.TypeReference;
 import tools.jackson.databind.JavaType;
 import tools.jackson.databind.ObjectMapper;
-import tools.jackson.core.JacksonException;
 
 /**
  * Default implementation of {@link ResponseSerializer} using Jackson {@link ObjectMapper}

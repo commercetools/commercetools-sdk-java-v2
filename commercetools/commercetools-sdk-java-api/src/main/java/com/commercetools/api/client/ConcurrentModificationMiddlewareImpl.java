@@ -7,11 +7,6 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
 import com.commercetools.api.client.error.ConcurrentModificationException;
-import tools.jackson.databind.JsonNode;
-import tools.jackson.databind.ObjectMapper;
-import tools.jackson.databind.json.JsonMapper;
-import tools.jackson.databind.node.LongNode;
-import tools.jackson.databind.node.ObjectNode;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.http.InternalLogger;
@@ -21,11 +16,17 @@ import io.vrap.rmf.base.client.utils.json.JsonUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.MDC;
-import tools.jackson.core.JacksonException;
+
 import dev.failsafe.Failsafe;
 import dev.failsafe.FailsafeExecutor;
 import dev.failsafe.RetryPolicy;
 import dev.failsafe.event.ExecutionAttemptedEvent;
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.ObjectMapper;
+import tools.jackson.databind.json.JsonMapper;
+import tools.jackson.databind.node.LongNode;
+import tools.jackson.databind.node.ObjectNode;
 
 /**
  * Implementation of the {@link ConcurrentModificationMiddleware}. Uses {@link RetryPolicy} to retry upon {@link ConcurrentModificationException}.

@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Reverts the staged version of a Product to the current version. Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRevertedStagedChangesMessage" rel="nofollow">ProductRevertedStagedChanges</a> Message.</p>

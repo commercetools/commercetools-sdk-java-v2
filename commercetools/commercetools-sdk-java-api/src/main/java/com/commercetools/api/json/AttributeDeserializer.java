@@ -16,12 +16,13 @@ import com.commercetools.api.models.product.AttributeBuilder;
 import com.commercetools.api.models.product.AttributeImpl;
 import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
 import com.commercetools.api.models.product_type.AttributePlainEnumValue;
+
 import tools.jackson.core.JsonParser;
 import tools.jackson.core.type.TypeReference;
 import tools.jackson.databind.DeserializationContext;
 import tools.jackson.databind.JsonNode;
-import tools.jackson.databind.node.JsonNodeType;
 import tools.jackson.databind.ValueDeserializer;
+import tools.jackson.databind.node.JsonNodeType;
 
 public class AttributeDeserializer extends ValueDeserializer<AttributeImpl> {
 
@@ -77,7 +78,8 @@ public class AttributeDeserializer extends ValueDeserializer<AttributeImpl> {
                     .value(p.objectReadContext().treeAsTokens(valueNode).readValueAs(attributeTypes.get(name)))
                     .build();
         }
-        return (AttributeImpl) builder.value(p.objectReadContext().treeAsTokens(valueNode).readValueAs(typeRef(valueNode)))
+        return (AttributeImpl) builder
+                .value(p.objectReadContext().treeAsTokens(valueNode).readValueAs(typeRef(valueNode)))
                 .build();
     }
 

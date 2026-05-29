@@ -1,7 +1,6 @@
 
 package com.commercetools.api.json;
 
-import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.ZonedDateTime;
@@ -16,12 +15,13 @@ import com.commercetools.api.models.type.CustomFieldEnumValue;
 import com.commercetools.api.models.type.CustomFieldLocalizedEnumValue;
 import com.commercetools.api.models.type.FieldContainerBuilder;
 import com.commercetools.api.models.type.FieldContainerImpl;
+
 import tools.jackson.core.JsonParser;
 import tools.jackson.core.type.TypeReference;
 import tools.jackson.databind.DeserializationContext;
 import tools.jackson.databind.JsonNode;
-import tools.jackson.databind.node.JsonNodeType;
 import tools.jackson.databind.ValueDeserializer;
+import tools.jackson.databind.node.JsonNodeType;
 
 public class CustomFieldDeserializer extends ValueDeserializer<FieldContainerImpl> {
 
@@ -68,7 +68,8 @@ public class CustomFieldDeserializer extends ValueDeserializer<FieldContainerImp
 
         FieldContainerBuilder builder = FieldContainerBuilder.of();
 
-        node.properties().iterator()
+        node.properties()
+                .iterator()
                 .forEachRemaining(nodeEntry -> builder.addValue(nodeEntry.getKey(),
                     mapValue(p, nodeEntry.getKey(), nodeEntry.getValue())));
 

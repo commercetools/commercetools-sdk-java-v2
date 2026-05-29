@@ -9,12 +9,12 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:CloudEventsFormat" rel="nofollow">CloudEventsFormat</a> represents event data in a way that conforms to a common specification. The payload can be found inside the <code>data</code> field.</p>

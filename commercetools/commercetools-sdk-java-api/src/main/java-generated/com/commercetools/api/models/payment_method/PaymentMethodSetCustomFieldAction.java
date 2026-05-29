@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Adding a Custom Field to a PaymentMethod generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodCustomFieldAddedMessage" rel="nofollow">PaymentMethodCustomFieldAdded</a> Message, removing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodCustomFieldRemovedMessage" rel="nofollow">PaymentMethodCustomFieldRemoved</a> Message, and updating an existing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodCustomFieldChangedMessage" rel="nofollow">PaymentMethodCustomFieldChanged</a> Message.</p>

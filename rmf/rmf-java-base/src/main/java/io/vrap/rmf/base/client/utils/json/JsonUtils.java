@@ -8,19 +8,20 @@ import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import tools.jackson.core.type.TypeReference;
-import tools.jackson.databind.*;
-import tools.jackson.databind.json.JsonMapper;
-import tools.jackson.databind.module.SimpleModule;
-import tools.jackson.databind.node.ArrayNode;
-import tools.jackson.databind.node.ObjectNode;
-import tools.jackson.core.JacksonException;
 
 import io.vrap.rmf.base.client.utils.json.modules.ModuleOptions;
 import io.vrap.rmf.base.client.utils.json.modules.SubTypeModule;
 import io.vrap.rmf.base.client.utils.json.modules.ZonedDateTimeDeserializationModule;
 import io.vrap.rmf.base.client.utils.json.modules.ZonedDateTimeSerializationModule;
 import io.vrap.rmf.base.client.utils.json.modules.deserializers.LocalDateDeserializationModule;
+
+import tools.jackson.core.JacksonException;
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.*;
+import tools.jackson.databind.json.JsonMapper;
+import tools.jackson.databind.module.SimpleModule;
+import tools.jackson.databind.node.ArrayNode;
+import tools.jackson.databind.node.ObjectNode;
 
 /**
  * Class with methods to customize the JSON serialization/deserialization
@@ -60,7 +61,8 @@ public class JsonUtils {
                 .addModule(new SubTypeModule("com.commercetools"))
                 .addModules(loader)
                 .addModules(moduleList)
-                .changeDefaultPropertyInclusion(incl -> incl.withContentInclusion(JsonInclude.Include.NON_NULL).withValueInclusion(JsonInclude.Include.NON_NULL))
+                .changeDefaultPropertyInclusion(incl -> incl.withContentInclusion(JsonInclude.Include.NON_NULL)
+                        .withValueInclusion(JsonInclude.Include.NON_NULL))
                 .configure(DeserializationFeature.USE_LONG_FOR_INTS, true)
                 .configure(MapperFeature.REQUIRE_TYPE_ID_FOR_SUBTYPES, false)
                 .build();

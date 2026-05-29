@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Requests to <span>cancel the authorization</span> for a Payment. Checkout will cancel the <span>Payment</span> and will request the PSP or gift card management system to proceed with the financial process to cancel the authorization.</p>

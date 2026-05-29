@@ -11,12 +11,12 @@ import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.product_tailoring.ProductVariantTailoring;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringRemoveVariantAction" rel="nofollow">Remove ProductVariant Tailoring</a> update action.</p>

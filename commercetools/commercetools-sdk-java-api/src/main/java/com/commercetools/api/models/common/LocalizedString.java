@@ -17,10 +17,10 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.core.type.TypeReference;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * A localized string is a object where the keys are {@link Locale}s (HTTP API: ISO language tags),

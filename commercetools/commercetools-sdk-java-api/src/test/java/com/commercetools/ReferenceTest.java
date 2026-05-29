@@ -8,12 +8,13 @@ import java.util.List;
 import com.commercetools.api.models.common.GenericReference;
 import com.commercetools.api.models.custom_object.GenericCustomObject;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import tools.jackson.core.type.TypeReference;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import tools.jackson.core.type.TypeReference;
 
 public class ReferenceTest {
     @Test

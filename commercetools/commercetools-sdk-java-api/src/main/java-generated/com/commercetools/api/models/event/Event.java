@@ -11,11 +11,11 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId;
 import com.commercetools.api.models.subscription.EventType;
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Base representation of an Event containing common fields to all <span>Event Types</span>.</p>

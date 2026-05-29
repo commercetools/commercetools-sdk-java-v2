@@ -3,6 +3,7 @@ package com.commercetools.api.json;
 
 import com.commercetools.api.models.type.FieldContainerBuilder;
 import com.commercetools.api.models.type.FieldContainerImpl;
+
 import tools.jackson.core.JsonParser;
 import tools.jackson.databind.DeserializationContext;
 import tools.jackson.databind.JsonNode;
@@ -20,7 +21,9 @@ public class CustomFieldJsonNodeDeserializer extends ValueDeserializer<FieldCont
 
         FieldContainerBuilder builder = FieldContainerBuilder.of();
 
-        node.properties().iterator().forEachRemaining(nodeEntry -> builder.addValue(nodeEntry.getKey(), nodeEntry.getValue()));
+        node.properties()
+                .iterator()
+                .forEachRemaining(nodeEntry -> builder.addValue(nodeEntry.getKey(), nodeEntry.getValue()));
 
         return (FieldContainerImpl) builder.build();
     }

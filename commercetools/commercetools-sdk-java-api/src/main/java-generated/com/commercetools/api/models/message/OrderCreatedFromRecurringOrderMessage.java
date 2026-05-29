@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.order.Order;
 import com.commercetools.api.models.recurring_order.RecurringOrderReference;
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated after an Order is successfully created according to the defined schedule of a Recurring Order.</p>

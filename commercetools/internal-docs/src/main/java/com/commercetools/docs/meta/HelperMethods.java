@@ -12,6 +12,7 @@ import com.commercetools.api.models.cart.TaxedItemPrice;
 import com.commercetools.api.models.common.*;
 import com.commercetools.api.models.product.ByIdVariantIdentifier;
 import com.commercetools.api.models.tax_category.TaxRate;
+
 import tools.jackson.databind.JsonNode;
 
 /**

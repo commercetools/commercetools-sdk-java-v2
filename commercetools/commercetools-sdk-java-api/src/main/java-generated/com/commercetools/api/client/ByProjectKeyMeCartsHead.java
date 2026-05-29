@@ -11,13 +11,13 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import tools.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Checks if a Cart exists that matches a given Query Predicate and contains either a matching <code>customerId</code> or <code>anonymousId</code>. Returns a <code>200</code> status if the Cart exists, or a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error otherwise.</p>
@@ -35,8 +35,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyMeCartsHead
-        extends TypeApiMethod<ByProjectKeyMeCartsHead, tools.jackson.databind.JsonNode>
+public class ByProjectKeyMeCartsHead extends TypeApiMethod<ByProjectKeyMeCartsHead, tools.jackson.databind.JsonNode>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeCartsHead>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyMeCartsHead> {
 
@@ -75,8 +74,7 @@ public class ByProjectKeyMeCartsHead
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<tools.jackson.databind.JsonNode>> execute(
-            final ApiHttpClient client) {
+    public CompletableFuture<ApiHttpResponse<tools.jackson.databind.JsonNode>> execute(final ApiHttpClient client) {
         return execute(client, tools.jackson.databind.JsonNode.class);
     }
 

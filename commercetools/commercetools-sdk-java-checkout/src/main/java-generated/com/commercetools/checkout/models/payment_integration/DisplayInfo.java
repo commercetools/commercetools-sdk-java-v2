@@ -10,11 +10,11 @@ import javax.annotation.Nullable;
 import com.commercetools.checkout.models.common.LocalizedString;
 import com.commercetools.checkout.models.common.LocalizedUrl;
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Display information for the payment integration in the UI.</p>

@@ -5,7 +5,6 @@ import java.time.*;
 import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import tools.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -14,6 +13,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p><span>Locks</span> a Cart, preventing all updates from API Clients without an elevated <span>OAuth 2.0 Scope</span>. This action sets the Cart's <code>lock</code> <span>field</span> which identifies the API Client that locked the Cart and when the lock was applied. This action requires an additional OAuth 2.0 Scope <code>manage_locked_carts</code>.</p>

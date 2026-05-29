@@ -8,11 +8,11 @@ import javax.annotation.Nullable;
 import javax.money.*;
 
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>

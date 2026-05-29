@@ -14,12 +14,13 @@ import java.util.stream.Collectors;
 
 import com.datadog.api.client.ApiClient;
 import com.datadog.api.client.v2.api.MetricsApi;
-import tools.jackson.core.type.TypeReference;
-import tools.jackson.databind.JavaType;
-import tools.jackson.core.JacksonException;
 
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.ResponseSerializer;
+
+import tools.jackson.core.JacksonException;
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.JavaType;
 
 /**
  * This serializer uses API to submit metrics to datadog.

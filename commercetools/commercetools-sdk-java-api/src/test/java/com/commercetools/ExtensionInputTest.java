@@ -12,12 +12,13 @@ import com.commercetools.api.models.error.ErrorObject;
 import com.commercetools.api.models.error.ErrorResponse;
 import com.commercetools.api.models.extension.ExtensionAction;
 import com.commercetools.api.models.extension.ExtensionInput;
-import tools.jackson.core.JacksonException;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import tools.jackson.core.JacksonException;
 
 public class ExtensionInputTest {
     @Test

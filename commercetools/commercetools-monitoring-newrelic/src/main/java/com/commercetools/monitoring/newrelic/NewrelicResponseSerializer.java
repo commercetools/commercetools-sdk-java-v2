@@ -8,13 +8,14 @@ import java.time.Instant;
 import java.util.Collections;
 import java.util.Map;
 
-import tools.jackson.core.type.TypeReference;
-import tools.jackson.databind.JavaType;
 import com.newrelic.api.agent.NewRelic;
-import tools.jackson.core.JacksonException;
 
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.ResponseSerializer;
+
+import tools.jackson.core.JacksonException;
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.JavaType;
 
 /**
  * This serializer uses API to submit metrics to newrelic.

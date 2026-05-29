@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.checkout.models.common.Amount;
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Requests to <span>capture</span> the given amount from the customer. Checkout will request the PSP or gift card management system to proceed with the financial process to capture the amount.</p>

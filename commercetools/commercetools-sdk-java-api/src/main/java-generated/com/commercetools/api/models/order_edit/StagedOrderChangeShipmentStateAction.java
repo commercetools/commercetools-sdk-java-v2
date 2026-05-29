@@ -10,11 +10,11 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.order.ShipmentState;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderShipmentStateChangedMessage" rel="nofollow">Order Shipment State Changed</a> Message.</p>

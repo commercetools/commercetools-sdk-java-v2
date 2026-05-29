@@ -5,8 +5,8 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
 
-import tools.jackson.databind.module.SimpleModule;
 import tools.jackson.databind.ext.javatime.deser.LocalDateDeserializer;
+import tools.jackson.databind.module.SimpleModule;
 
 public class LocalDateDeserializationModule extends SimpleModule {
     private static final long serialVersionUID = 0L;

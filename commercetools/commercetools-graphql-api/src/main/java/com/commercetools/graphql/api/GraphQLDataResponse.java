@@ -11,9 +11,9 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.graph_ql.GraphQLError;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * GraphQLResponse

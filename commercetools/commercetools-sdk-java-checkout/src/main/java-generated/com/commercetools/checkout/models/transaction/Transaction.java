@@ -13,12 +13,12 @@ import com.commercetools.checkout.models.application.ApplicationReference;
 import com.commercetools.checkout.models.cart.CartReference;
 import com.commercetools.checkout.models.cart.OrderReference;
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Information for the request to the <span>Connector</span> to initiate the payment for a specific <span>Cart</span>.</p>

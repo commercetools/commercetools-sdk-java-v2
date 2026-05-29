@@ -10,11 +10,11 @@ import javax.annotation.Nullable;
 import com.commercetools.history.models.change_value.SetCartClassificationShippingRateInputValue;
 import com.commercetools.history.models.change_value.SetCartScoreShippingRateInputValue;
 import com.fasterxml.jackson.annotation.*;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingRateInputAction" rel="nofollow">Set Shipping Rate Input</a> update action.</p>

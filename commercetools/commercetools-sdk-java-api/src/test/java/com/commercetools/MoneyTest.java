@@ -13,7 +13,6 @@ import com.commercetools.api.models.cart.*;
 import com.commercetools.api.models.common.*;
 import com.commercetools.api.models.tax_category.TaxRate;
 import com.commercetools.api.models.tax_category.TaxRateBuilder;
-import tools.jackson.databind.JsonNode;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
@@ -21,6 +20,8 @@ import org.assertj.core.api.Assertions;
 import org.javamoney.moneta.CurrencyUnitBuilder;
 import org.javamoney.moneta.FastMoney;
 import org.junit.jupiter.api.Test;
+
+import tools.jackson.databind.JsonNode;
 
 public class MoneyTest {
     @Test

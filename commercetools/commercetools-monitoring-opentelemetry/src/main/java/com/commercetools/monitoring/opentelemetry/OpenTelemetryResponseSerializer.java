@@ -6,18 +6,17 @@ import java.time.Instant;
 import java.util.Collections;
 import java.util.Map;
 
-import tools.jackson.core.type.TypeReference;
-import tools.jackson.databind.JavaType;
-
 import io.opentelemetry.api.OpenTelemetry;
 import io.opentelemetry.api.common.Attributes;
 import io.opentelemetry.api.common.AttributesBuilder;
 import io.opentelemetry.api.metrics.DoubleHistogram;
 import io.opentelemetry.api.metrics.Meter;
-import tools.jackson.core.JacksonException;
-
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.ResponseSerializer;
+
+import tools.jackson.core.JacksonException;
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.JavaType;
 
 /**
  * <p>The OpenTelemetry ResponseSerializer can be used to report metrics about the De-/Serialization performance.

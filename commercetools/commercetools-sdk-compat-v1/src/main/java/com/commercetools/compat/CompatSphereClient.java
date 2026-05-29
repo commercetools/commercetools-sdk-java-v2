@@ -9,19 +9,18 @@ import java.util.concurrent.CompletionStage;
 
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.sphere.sdk.client.*;
 import io.sphere.sdk.http.HttpHeaders;
 import io.sphere.sdk.http.HttpRequest;
 import io.sphere.sdk.http.HttpResponse;
 import io.sphere.sdk.json.JsonException;
+import io.sphere.sdk.json.SphereJsonUtils;
 import io.sphere.sdk.models.SphereException;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
-import io.vrap.rmf.base.client.utils.json.JsonUtils;
-
-import tools.jackson.databind.JsonNode;
-import tools.jackson.databind.ObjectMapper;
 
 public class CompatSphereClient extends AutoCloseableService implements SphereClient {
     private final ApiHttpClient client;
@@ -66,7 +65,7 @@ public class CompatSphereClient extends AutoCloseableService implements SphereCl
      * @return SphereClient using a SDK v2 ApiHttpClient as HTTP client
      */
     public static CompatSphereClient of(SphereClientConfig clientConfig) {
-        return of(createDefaultClient(clientConfig), JsonUtils.createObjectMapper(), clientConfig.getProjectKey(),
+        return of(createDefaultClient(clientConfig), SphereJsonUtils.newObjectMapper(), clientConfig.getProjectKey(),
             ExceptionMode.SDK_V2);
     }
 
@@ -76,7 +75,7 @@ public class CompatSphereClient extends AutoCloseableService implements SphereCl
      * @return SphereClient using a SDK v2 ApiHttpClient as HTTP client
      */
     public static CompatSphereClient of(final ProjectApiRoot apiRoot) {
-        return of(apiRoot.getApiHttpClient(), JsonUtils.createObjectMapper(), apiRoot.getProjectKey(),
+        return of(apiRoot.getApiHttpClient(), SphereJsonUtils.newObjectMapper(), apiRoot.getProjectKey(),
             ExceptionMode.SDK_V1);
     }
 
@@ -97,7 +96,7 @@ public class CompatSphereClient extends AutoCloseableService implements SphereCl
      * @return SphereClient using a SDK v2 ApiHttpClient as HTTP client
      */
     public static CompatSphereClient of(final ApiHttpClient apiHttpClient, final String projectKey) {
-        return of(apiHttpClient, JsonUtils.createObjectMapper(), projectKey, ExceptionMode.SDK_V1);
+        return of(apiHttpClient, SphereJsonUtils.newObjectMapper(), projectKey, ExceptionMode.SDK_V1);
     }
 
     /**
@@ -119,7 +118,7 @@ public class CompatSphereClient extends AutoCloseableService implements SphereCl
      * @return SphereClient using a SDK v2 ApiHttpClient as HTTP client
      */
     public static CompatSphereClient of(SphereClientConfig clientConfig, final ExceptionMode exceptionMode) {
-        return of(createDefaultClient(clientConfig), JsonUtils.createObjectMapper(), clientConfig.getProjectKey(),
+        return of(createDefaultClient(clientConfig), SphereJsonUtils.newObjectMapper(), clientConfig.getProjectKey(),
             exceptionMode);
     }
 
@@ -130,7 +129,8 @@ public class CompatSphereClient extends AutoCloseableService implements SphereCl
      * @return SphereClient using a SDK v2 ApiHttpClient as HTTP client
      */
     public static CompatSphereClient of(final ProjectApiRoot apiRoot, final ExceptionMode exceptionMode) {
-        return of(apiRoot.getApiHttpClient(), JsonUtils.createObjectMapper(), apiRoot.getProjectKey(), exceptionMode);
+        return of(apiRoot.getApiHttpClient(), SphereJsonUtils.newObjectMapper(), apiRoot.getProjectKey(),
+            exceptionMode);
     }
 
     /**
@@ -154,7 +154,7 @@ public class CompatSphereClient extends AutoCloseableService implements SphereCl
      */
     public static CompatSphereClient of(final ApiHttpClient apiHttpClient, final String projectKey,
             final ExceptionMode exceptionMode) {
-        return of(apiHttpClient, JsonUtils.createObjectMapper(), projectKey, exceptionMode);
+        return of(apiHttpClient, SphereJsonUtils.newObjectMapper(), projectKey, exceptionMode);
     }
 
     /**

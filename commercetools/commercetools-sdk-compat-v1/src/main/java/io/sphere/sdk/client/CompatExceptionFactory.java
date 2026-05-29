@@ -7,12 +7,12 @@ import java.util.Optional;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import io.sphere.sdk.http.HttpResponse;
 import io.sphere.sdk.json.SphereJsonUtils;
 import io.sphere.sdk.models.SphereException;
 import io.sphere.sdk.models.errors.ErrorResponse;
-
-import tools.jackson.databind.ObjectMapper;
 
 public class CompatExceptionFactory {
 

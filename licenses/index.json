@@ -72,7 +72,7 @@
         },
         {
             "moduleName": "com.datadoghq:datadog-api-client",
-            "moduleVersion": "2.54.0",
+            "moduleVersion": "2.55.0",
             "moduleUrls": [
                 "https://github.com/DataDog/datadog-api-client-java"
             ],
@@ -115,7 +115,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-core",
-            "moduleVersion": "2.21.3",
+            "moduleVersion": "2.21.4",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-core"
             ],
@@ -128,7 +128,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-databind",
-            "moduleVersion": "2.21.3",
+            "moduleVersion": "2.21.4",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -141,7 +141,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor",
-            "moduleVersion": "2.21.3",
+            "moduleVersion": "2.21.4",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-dataformats-binary"
             ],
@@ -154,7 +154,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
-            "moduleVersion": "2.21.3",
+            "moduleVersion": "2.21.4",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310"
             ],
@@ -167,7 +167,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.module:jackson-module-jakarta-xmlbind-annotations",
-            "moduleVersion": "2.21.3",
+            "moduleVersion": "2.21.4",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-base"
             ],
@@ -180,7 +180,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.module:jackson-module-parameter-names",
-            "moduleVersion": "2.21.3",
+            "moduleVersion": "2.21.4",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-module-parameter-names"
             ],
@@ -622,7 +622,7 @@
         },
         {
             "moduleName": "io.netty:netty-buffer",
-            "moduleVersion": "4.2.13.Final",
+            "moduleVersion": "4.2.14.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -635,7 +635,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec",
-            "moduleVersion": "4.2.13.Final",
+            "moduleVersion": "4.2.14.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -661,7 +661,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-base",
-            "moduleVersion": "4.2.13.Final",
+            "moduleVersion": "4.2.14.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -700,7 +700,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-compression",
-            "moduleVersion": "4.2.13.Final",
+            "moduleVersion": "4.2.14.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -739,7 +739,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-http",
-            "moduleVersion": "4.2.13.Final",
+            "moduleVersion": "4.2.14.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -779,7 +779,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-marshalling",
-            "moduleVersion": "4.2.13.Final",
+            "moduleVersion": "4.2.14.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -809,7 +809,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-protobuf",
-            "moduleVersion": "4.2.13.Final",
+            "moduleVersion": "4.2.14.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -835,7 +835,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-socks",
-            "moduleVersion": "4.2.13.Final",
+            "moduleVersion": "4.2.14.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -861,7 +861,7 @@
         },
         {
             "moduleName": "io.netty:netty-common",
-            "moduleVersion": "4.2.13.Final",
+            "moduleVersion": "4.2.14.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -887,7 +887,7 @@
         },
         {
             "moduleName": "io.netty:netty-handler",
-            "moduleVersion": "4.2.13.Final",
+            "moduleVersion": "4.2.14.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -913,7 +913,7 @@
         },
         {
             "moduleName": "io.netty:netty-handler-proxy",
-            "moduleVersion": "4.2.13.Final",
+            "moduleVersion": "4.2.14.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -939,7 +939,7 @@
         },
         {
             "moduleName": "io.netty:netty-resolver",
-            "moduleVersion": "4.2.13.Final",
+            "moduleVersion": "4.2.14.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -1004,7 +1004,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport",
-            "moduleVersion": "4.2.13.Final",
+            "moduleVersion": "4.2.14.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -1121,7 +1121,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport-native-unix-common",
-            "moduleVersion": "4.2.13.Final",
+            "moduleVersion": "4.2.14.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],

@@ -130,6 +130,11 @@ jobs:
             CTP_PROJECT_KEY: ${{ secrets.CTP_PROJECT_KEY }}
             SOURCE_TAG: ${{ github.ref_name }}
             CTP_JVM_SDK_LOG_LEVEL: OFF
+      -   name: Debug Jackson classpath
+          run: mvn dependency:tree -f examples/maven-okhttp3/pom.xml | grep -i jackson
+      -   name: Test examples
+          run: |
+              cd examples/maven-okhttp3 && mvn verify --no-transfer-progress
 
       - name: Test examples
         run: |
@@ -146,11 +151,6 @@ jobs:
          with:
             distribution: 'temurin'
             java-version: '21'
-      -   name: Debug Jackson classpath
-          run: mvn dependency:tree -f examples/maven-okhttp3/pom.xml | grep -i jackson
-      -   name: Test examples
-          run: |
-            cd examples/maven-okhttp3 && mvn verify --no-transfer-progress
       -   name: Test Spring examples
           run: |
             cd examples/spring && ./gradlew test

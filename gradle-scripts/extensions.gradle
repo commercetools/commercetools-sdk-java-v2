@@ -31,7 +31,7 @@ ext {
 
     jackson_core = [
             version: '3.1.0',
-            annotations: 'com.fasterxml.jackson.core:jackson-annotations:2.19.1',
+            annotations: 'com.fasterxml.jackson.core:jackson-annotations:2.21',
             databind: 'tools.jackson.core:jackson-databind:3.1.0',
             core: 'tools.jackson.core:jackson-core:3.1.0',
             //datatype: 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:3.1.0',

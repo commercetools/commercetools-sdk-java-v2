@@ -276,7 +276,7 @@ publishing {
                 money.appendNode('version', version)
                 money.appendNode('scope', 'compile')
                 def jacksonAnno = dependenciesNode.appendNode('dependency')
-                jacksonAnno.appendNode('groupId', 'tools.jackson.core')
+                jacksonAnno.appendNode('groupId', 'com.fasterxml.jackson.core')
                 jacksonAnno.appendNode('artifactId', 'jackson-annotations')
                 jacksonAnno.appendNode('version', jackson_core.version)
                 jacksonAnno.appendNode('scope', 'compile')

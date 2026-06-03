@@ -62,39 +62,6 @@ public class ProductUtil {
                     product.getAttributes().stream().map(ProductUtil::mapAttribute).collect(Collectors.toList()));
         return draft.build();
     }
-    /*
-    public CategoryImportImpl toCategoryImportImpl(CategoryImpl categoryReference) {
-        var catImport = new CategoryImportImpl();
-        catImport.setKey(categoryReference.getKey());
-        catImport.setName(getLocalizedStringBuilder(categoryReference.getName()).build());
-        catImport.setSlug(getLocalizedStringBuilder(categoryReference.getSlug()).build());
-        catImport.setDescription(getLocalizedStringBuilder(categoryReference.getDescription()).build());
-        catImport.setParent(extractCategoryKeyReference(categoryReference.getParent()));
-        catImport.setOrderHint(categoryReference.getOrderHint());
-        catImport.setMetaTitle(getLocalizedStringBuilder(categoryReference.getMetaTitle()).build());
-        catImport.setMetaDescription(getLocalizedStringBuilder(categoryReference.getMetaDescription()).build());
-        catImport.setMetaKeywords(getLocalizedStringBuilder(categoryReference.getMetaKeywords()).build());
-        catImport.setAssets(categoryReference.getAssets().stream().map(this::toImportApiAssert).collect(
-                Collectors.toList()));
-        catImport.setCustom(categoryReference.getCustom());
-        return catImport;
-    }
-    public com.commercetools.importapi.models.common.Asset toImportApiAssert(com.commercetools.api.models.common.Asset asset) {
-        Asset.builder().key(asset.getKey()).name(getLocalizedStringBuilder(asset.getName()).build())
-                .sources(toImportApiSources(asset.getSources())).description(getLocalizedStringBuilder(asset.getDescription()).build())
-                .tags(asset.getTags()).custom(toImportApiCustom(asset.getCustom()));
-    }
-
-    public List<AssetSource> toImportApiSources(
-            List<com.commercetools.api.models.common.AssetSource> assetSources) {
-        return assetSources.stream().map(source -> AssetSource.builder().uri(source.getUri()).key(source.getKey()).build()).collect(
-                Collectors.toList());
-    }
-
-    public Custom toImportApiCustom(CustomFields custom) {
-        return Custom.builder().type(TypeKeyReference.builder().key(keyResolverService.resolveKey(custom.getType())).build())
-                .fields(custom.getFields());
-    }*/
 
     private static LocalizedStringBuilder getLocalizedStringBuilder(LocalizedString s) {
         return com.commercetools.importapi.models.common.LocalizedString.builder().values(s.values());
@@ -196,10 +163,6 @@ public class ProductUtil {
                 .stream()
                 .map(c -> CategoryKeyReference.builder().key(keyResolverService.resolveKey(c)).build())
                 .collect(Collectors.toList());
-    }
-
-    private CategoryKeyReference extractCategoryKeyReference(CategoryReference ref) {
-        return CategoryKeyReference.builder().key(keyResolverService.resolveKey(ref)).build();
     }
 
     private static Attribute mapAttribute(com.commercetools.api.models.product.Attribute attribute) {

@@ -144,6 +144,14 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for circularDependency subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.CircularDependencyErrorBuilder circularDependencyBuilder() {
+        return com.commercetools.api.models.error.CircularDependencyErrorBuilder.of();
+    }
+
+    /**
      * builder for concurrentModification subtype
      * @return builder
      */
@@ -320,6 +328,30 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for extensionChainTooDeep subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.ExtensionChainTooDeepErrorBuilder extensionChainTooDeepBuilder() {
+        return com.commercetools.api.models.error.ExtensionChainTooDeepErrorBuilder.of();
+    }
+
+    /**
+     * builder for extensionChainTooWide subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.ExtensionChainTooWideErrorBuilder extensionChainTooWideBuilder() {
+        return com.commercetools.api.models.error.ExtensionChainTooWideErrorBuilder.of();
+    }
+
+    /**
+     * builder for extensionDependencyExists subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.ExtensionDependencyExistsErrorBuilder extensionDependencyExistsBuilder() {
+        return com.commercetools.api.models.error.ExtensionDependencyExistsErrorBuilder.of();
+    }
+
+    /**
      * builder for extensionNoResponse subtype
      * @return builder
      */
@@ -464,6 +496,22 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for lineItemQuantityAboveLimit subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.LineItemQuantityAboveLimitErrorBuilder lineItemQuantityAboveLimitBuilder() {
+        return com.commercetools.api.models.error.LineItemQuantityAboveLimitErrorBuilder.of();
+    }
+
+    /**
+     * builder for lineItemQuantityBelowLimit subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.LineItemQuantityBelowLimitErrorBuilder lineItemQuantityBelowLimitBuilder() {
+        return com.commercetools.api.models.error.LineItemQuantityBelowLimitErrorBuilder.of();
+    }
+
+    /**
      * builder for lockedField subtype
      * @return builder
      */
@@ -509,6 +557,14 @@ public interface ErrorObject {
      */
     public static com.commercetools.api.models.error.MaxStoreReferencesReachedErrorBuilder maxStoreReferencesReachedBuilder() {
         return com.commercetools.api.models.error.MaxStoreReferencesReachedErrorBuilder.of();
+    }
+
+    /**
+     * builder for missingDependency subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.MissingDependencyErrorBuilder missingDependencyBuilder() {
+        return com.commercetools.api.models.error.MissingDependencyErrorBuilder.of();
     }
 
     /**

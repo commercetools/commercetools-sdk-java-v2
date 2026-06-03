@@ -22,6 +22,10 @@ import tools.jackson.databind.annotation.*;
  *  <p>To change the Line Item quantity and shipping details together, use this update action in combination with the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetLineItemShippingDetailsAction" rel="nofollow">Set LineItem ShippingDetails</a> update action in a single Cart update command.</p>
  *  <p>When the action applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> with <code>ExternalTotal</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemPriceMode" rel="nofollow">LineItemPriceMode</a>, it will be changed to <code>ExternalPrice</code> and the existing <code>externalPrice</code> value, i.e. <code>LineItem.price</code>, will be retained. The LineItem total will be calculated by the system instead, so that the <code>externalTotalPrice</code> will be dropped.</p>
  *  <p>This action is subject to <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> min/max restrictions when applicable. For more information, see <span>Quantity limits</span>.</p>
+ *  <p>If using <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">InventoryMode</a> <code>ReserveOnCart</code>:</p>
+ *  <ul>
+ *   <li>If the requested quantity cannot be reserved, the Line Item quantity does not change and a reservation warning is returned in the Cart response.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartChangeLineItemQuantityActionImpl implements MyCartChangeLineItemQuantityAction, ModelBase {

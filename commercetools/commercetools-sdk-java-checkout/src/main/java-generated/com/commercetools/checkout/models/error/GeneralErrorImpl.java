@@ -19,7 +19,7 @@ import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when a server-side problem occurs. In some cases, the requested action may successfully complete after the error is returned. Therefore, it is recommended to verify the status of the requested resource after receiving a 500 error.</p>
- *  <p>If you encounter this error, report it to the <span>Checkout support team</span>.</p>
+ *  <p>If you encounter this error, report it to the <span>commercetools support team</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GeneralErrorImpl implements GeneralError, ModelBase {

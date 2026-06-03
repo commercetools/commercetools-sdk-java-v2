@@ -18,7 +18,8 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Updates <code>availableQuantity</code> based on the new <code>quantityOnStock</code> and amount of active reservations.</p>
+ *  <p>Removes a specific quantity from <code>quantityOnStock</code>. This changes the <code>availableQuantity</code>, based on the number of active reservations. You can update <code>quantityOnStock</code> to values below zero.</p>
+ *  <p>Carts with existing <code>ReserveOnCart</code> reservations will not be invalidated by this update action and can still be ordered.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntryRemoveQuantityActionImpl implements InventoryEntryRemoveQuantityAction, ModelBase {

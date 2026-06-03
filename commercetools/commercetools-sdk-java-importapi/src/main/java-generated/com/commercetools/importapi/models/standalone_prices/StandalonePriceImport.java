@@ -69,7 +69,7 @@ public interface StandalonePriceImport extends ImportResource {
     public TypedMoney getValue();
 
     /**
-     *  <p>Maps to <code>StandalonePrice.country</code>. This value cannot be updated. Attempting to update this value will result in an <span>InvalidFieldsUpdate</span> error.</p>
+     *  <p>Maps to <code>StandalonePrice.country</code>. This value cannot be updated. Attempting to update this value will result in an <a href="https://docs.commercetools.com/apis/ctp:import:type:InvalidFieldsUpdateError" rel="nofollow">InvalidFieldsUpdate</a> error.</p>
      * @return country
      */
 
@@ -78,7 +78,7 @@ public interface StandalonePriceImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>StandalonePrice.customerGroup</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
-     *  <p>This value cannot be updated. Attempting to update this value will result in an <span>InvalidFieldsUpdate</span> error.</p>
+     *  <p>This value cannot be updated. Attempting to update this value will result in an <a href="https://docs.commercetools.com/apis/ctp:import:type:InvalidFieldsUpdateError" rel="nofollow">InvalidFieldsUpdate</a> error.</p>
      * @return customerGroup
      */
     @Valid
@@ -87,7 +87,7 @@ public interface StandalonePriceImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>StandalonePrice.channel</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
-     *  <p>This value cannot be updated. Attempting to update this value will result in an <span>InvalidFieldsUpdate</span> error.</p>
+     *  <p>This value cannot be updated. Attempting to update this value will result in an <a href="https://docs.commercetools.com/apis/ctp:import:type:InvalidFieldsUpdateError" rel="nofollow">InvalidFieldsUpdate</a> error.</p>
      * @return channel
      */
     @Valid
@@ -135,6 +135,15 @@ public interface StandalonePriceImport extends ImportResource {
     public Custom getCustom();
 
     /**
+     *  <p>Maps to <code>StandalonePrice.active</code>.</p>
+     *  <p>To exclude the StandalonePrice from <span>Product price selection</span>, set to <code>false</code>.</p>
+     * @return active
+     */
+
+    @JsonProperty("active")
+    public Boolean getActive();
+
+    /**
      *  <p>User-defined unique identifier for the StandalonePrice. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>) with this <code>key</code> exists, it is updated with the imported data.</p>
      * @param key value to be set
      */
@@ -156,7 +165,7 @@ public interface StandalonePriceImport extends ImportResource {
     public void setValue(final TypedMoney value);
 
     /**
-     *  <p>Maps to <code>StandalonePrice.country</code>. This value cannot be updated. Attempting to update this value will result in an <span>InvalidFieldsUpdate</span> error.</p>
+     *  <p>Maps to <code>StandalonePrice.country</code>. This value cannot be updated. Attempting to update this value will result in an <a href="https://docs.commercetools.com/apis/ctp:import:type:InvalidFieldsUpdateError" rel="nofollow">InvalidFieldsUpdate</a> error.</p>
      * @param country value to be set
      */
 
@@ -164,7 +173,7 @@ public interface StandalonePriceImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>StandalonePrice.customerGroup</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
-     *  <p>This value cannot be updated. Attempting to update this value will result in an <span>InvalidFieldsUpdate</span> error.</p>
+     *  <p>This value cannot be updated. Attempting to update this value will result in an <a href="https://docs.commercetools.com/apis/ctp:import:type:InvalidFieldsUpdateError" rel="nofollow">InvalidFieldsUpdate</a> error.</p>
      * @param customerGroup value to be set
      */
 
@@ -172,7 +181,7 @@ public interface StandalonePriceImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>StandalonePrice.channel</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
-     *  <p>This value cannot be updated. Attempting to update this value will result in an <span>InvalidFieldsUpdate</span> error.</p>
+     *  <p>This value cannot be updated. Attempting to update this value will result in an <a href="https://docs.commercetools.com/apis/ctp:import:type:InvalidFieldsUpdateError" rel="nofollow">InvalidFieldsUpdate</a> error.</p>
      * @param channel value to be set
      */
 
@@ -222,6 +231,14 @@ public interface StandalonePriceImport extends ImportResource {
     public void setCustom(final Custom custom);
 
     /**
+     *  <p>Maps to <code>StandalonePrice.active</code>.</p>
+     *  <p>To exclude the StandalonePrice from <span>Product price selection</span>, set to <code>false</code>.</p>
+     * @param active value to be set
+     */
+
+    public void setActive(final Boolean active);
+
+    /**
      * factory method
      * @return instance of StandalonePriceImport
      */
@@ -247,6 +264,7 @@ public interface StandalonePriceImport extends ImportResource {
         instance.setTiers(template.getTiers());
         instance.setDiscounted(template.getDiscounted());
         instance.setCustom(template.getCustom());
+        instance.setActive(template.getActive());
         return instance;
     }
 
@@ -281,6 +299,7 @@ public interface StandalonePriceImport extends ImportResource {
         instance.setDiscounted(
             com.commercetools.importapi.models.common.DiscountedPrice.deepCopy(template.getDiscounted()));
         instance.setCustom(com.commercetools.importapi.models.customfields.Custom.deepCopy(template.getCustom()));
+        instance.setActive(template.getActive());
         return instance;
     }
 

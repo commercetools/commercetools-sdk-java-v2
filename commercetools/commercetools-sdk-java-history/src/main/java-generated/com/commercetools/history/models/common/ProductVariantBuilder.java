@@ -521,7 +521,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearch" rel="nofollow">Product Projection Search</a> request.</p>
+     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a <span>Product Projection Search</span> request.</p>
      * @param isMatchingVariant value to be set
      * @return Builder
      */
@@ -532,7 +532,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearch" rel="nofollow">Product Projection Search</a> request with <span>Product price selection</span>. Can be used to sort, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">filter</a>, and facet.</p>
+     *  <p>Only available in response to a <span>Product Projection Search</span> request with <span>Product price selection</span>. Can be used to sort, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">filter</a>, and facet.</p>
      * @param builder function to build the scopedPrice value
      * @return Builder
      */
@@ -544,7 +544,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearch" rel="nofollow">Product Projection Search</a> request with <span>Product price selection</span>. Can be used to sort, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">filter</a>, and facet.</p>
+     *  <p>Only available in response to a <span>Product Projection Search</span> request with <span>Product price selection</span>. Can be used to sort, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">filter</a>, and facet.</p>
      * @param builder function to build the scopedPrice value
      * @return Builder
      */
@@ -556,7 +556,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearch" rel="nofollow">Product Projection Search</a> request with <span>Product price selection</span>. Can be used to sort, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">filter</a>, and facet.</p>
+     *  <p>Only available in response to a <span>Product Projection Search</span> request with <span>Product price selection</span>. Can be used to sort, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">filter</a>, and facet.</p>
      * @param scopedPrice value to be set
      * @return Builder
      */
@@ -568,7 +568,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">Product Projection Search</a> request with <span>Product price selection</span>.</p>
+     *  <p>Only available in response to a <span>Product Projection Search</span> request with <span>Product price selection</span>.</p>
      * @param scopedPriceDiscounted value to be set
      * @return Builder
      */
@@ -758,7 +758,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearch" rel="nofollow">Product Projection Search</a> request.</p>
+     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a <span>Product Projection Search</span> request.</p>
      * @return isMatchingVariant
      */
 
@@ -768,7 +768,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearch" rel="nofollow">Product Projection Search</a> request with <span>Product price selection</span>. Can be used to sort, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">filter</a>, and facet.</p>
+     *  <p>Only available in response to a <span>Product Projection Search</span> request with <span>Product price selection</span>. Can be used to sort, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">filter</a>, and facet.</p>
      * @return scopedPrice
      */
 
@@ -778,7 +778,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">Product Projection Search</a> request with <span>Product price selection</span>.</p>
+     *  <p>Only available in response to a <span>Product Projection Search</span> request with <span>Product price selection</span>.</p>
      * @return scopedPriceDiscounted
      */
 

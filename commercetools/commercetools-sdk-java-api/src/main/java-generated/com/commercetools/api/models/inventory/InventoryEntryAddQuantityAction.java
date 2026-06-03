@@ -15,7 +15,8 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
- *  <p>Updates <code>availableQuantity</code> based on the new <code>quantityOnStock</code> and amount of active reservations.</p>
+ *  <p>Incrementally updates the <code>quantityOnStock</code> by the specified amount. This changes the <code>availableQuantity</code>, based on the number of active reservations.</p>
+ *  <p>To set an absolute quantity value instead, use the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntryChangeQuantityAction" rel="nofollow">InventoryEntryChangeQuantityAction</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

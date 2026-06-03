@@ -119,6 +119,8 @@ public class CartImpl implements Cart, ModelBase {
 
     private com.commercetools.api.models.common.CreatedBy createdBy;
 
+    private java.util.List<com.commercetools.api.models.warning.WarningObject> warnings;
+
     /**
      * create instance with all properties
      */
@@ -167,7 +169,8 @@ public class CartImpl implements Cart, ModelBase {
             @JsonProperty("deleteDaysAfterLastModification") final Integer deleteDaysAfterLastModification,
             @JsonProperty("purchaseOrderNumber") final String purchaseOrderNumber,
             @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
-            @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy) {
+            @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy,
+            @JsonProperty("warnings") final java.util.List<com.commercetools.api.models.warning.WarningObject> warnings) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -216,6 +219,7 @@ public class CartImpl implements Cart, ModelBase {
         this.purchaseOrderNumber = purchaseOrderNumber;
         this.lastModifiedBy = lastModifiedBy;
         this.createdBy = createdBy;
+        this.warnings = warnings;
     }
 
     /**
@@ -621,6 +625,14 @@ public class CartImpl implements Cart, ModelBase {
         return this.createdBy;
     }
 
+    /**
+     *  <p>Warnings about the processing of a request.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.warning.WarningObject> getWarnings() {
+        return this.warnings;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -851,6 +863,14 @@ public class CartImpl implements Cart, ModelBase {
         this.createdBy = createdBy;
     }
 
+    public void setWarnings(final com.commercetools.api.models.warning.WarningObject... warnings) {
+        this.warnings = new ArrayList<>(Arrays.asList(warnings));
+    }
+
+    public void setWarnings(final java.util.List<com.commercetools.api.models.warning.WarningObject> warnings) {
+        this.warnings = warnings;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -909,6 +929,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(purchaseOrderNumber, that.purchaseOrderNumber)
                 .append(lastModifiedBy, that.lastModifiedBy)
                 .append(createdBy, that.createdBy)
+                .append(warnings, that.warnings)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -957,6 +978,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(purchaseOrderNumber, that.purchaseOrderNumber)
                 .append(lastModifiedBy, that.lastModifiedBy)
                 .append(createdBy, that.createdBy)
+                .append(warnings, that.warnings)
                 .isEquals();
     }
 
@@ -1010,6 +1032,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(purchaseOrderNumber)
                 .append(lastModifiedBy)
                 .append(createdBy)
+                .append(warnings)
                 .toHashCode();
     }
 
@@ -1063,6 +1086,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append("purchaseOrderNumber", purchaseOrderNumber)
                 .append("lastModifiedBy", lastModifiedBy)
                 .append("createdBy", createdBy)
+                .append("warnings", warnings)
                 .build();
     }
 

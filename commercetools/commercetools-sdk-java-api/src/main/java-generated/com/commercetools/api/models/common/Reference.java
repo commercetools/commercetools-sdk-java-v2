@@ -197,6 +197,14 @@ public interface Reference extends ReferenceMixin {
     }
 
     /**
+     * builder for extension subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.extension.ExtensionReferenceBuilder extensionBuilder() {
+        return com.commercetools.api.models.extension.ExtensionReferenceBuilder.of();
+    }
+
+    /**
      * builder for inventoryEntry subtype
      * @return builder
      */
@@ -306,6 +314,14 @@ public interface Reference extends ReferenceMixin {
      */
     public static com.commercetools.api.models.recurring_order.RecurringOrderReferenceBuilder recurringOrderBuilder() {
         return com.commercetools.api.models.recurring_order.RecurringOrderReferenceBuilder.of();
+    }
+
+    /**
+     * builder for reservation subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.reservation.ReservationReferenceBuilder reservationBuilder() {
+        return com.commercetools.api.models.reservation.ReservationReferenceBuilder.of();
     }
 
     /**

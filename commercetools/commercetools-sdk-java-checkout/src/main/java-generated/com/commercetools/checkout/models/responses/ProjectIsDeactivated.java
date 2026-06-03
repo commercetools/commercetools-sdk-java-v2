@@ -16,7 +16,7 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
- *  <p>Generated when the Checkout <span><code>projectKey</code></span> is deactivated and cannot be initialized. To activate it, contact the <span>Checkout support team</span>.</p>
+ *  <p>Generated when the Checkout <span><code>projectKey</code></span> is deactivated and cannot be initialized. To activate it, contact the <span>commercetools support team</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

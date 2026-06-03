@@ -131,6 +131,13 @@ public class ReferenceQueryBuilderDsl {
             ReferenceQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ReferenceQueryBuilderDsl> asExtension(
+            Function<com.commercetools.api.predicates.query.extension.ExtensionReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.extension.ExtensionReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.extension.ExtensionReferenceQueryBuilderDsl.of()),
+            ReferenceQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ReferenceQueryBuilderDsl> asInventoryEntry(
             Function<com.commercetools.api.predicates.query.inventory.InventoryEntryReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.inventory.InventoryEntryReferenceQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -231,6 +238,13 @@ public class ReferenceQueryBuilderDsl {
         return new CombinationQueryPredicate<>(
             fn.apply(
                 com.commercetools.api.predicates.query.recurring_order.RecurringOrderReferenceQueryBuilderDsl.of()),
+            ReferenceQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ReferenceQueryBuilderDsl> asReservation(
+            Function<com.commercetools.api.predicates.query.reservation.ReservationReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.reservation.ReservationReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.reservation.ReservationReferenceQueryBuilderDsl.of()),
             ReferenceQueryBuilderDsl::of);
     }
 

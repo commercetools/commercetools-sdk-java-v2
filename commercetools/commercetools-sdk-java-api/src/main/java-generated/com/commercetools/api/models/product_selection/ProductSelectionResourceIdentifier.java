@@ -7,6 +7,7 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.common.ResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
 
@@ -36,6 +37,14 @@ public interface ProductSelectionResourceIdentifier
      * discriminator value for ProductSelectionResourceIdentifier
      */
     String PRODUCT_SELECTION = "product-selection";
+
+    /**
+     *
+     * @return typeId
+     */
+
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
 
     /**
      *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">ProductSelection</a>. Required if <code>key</code> is absent.</p>

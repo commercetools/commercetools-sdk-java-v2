@@ -7,6 +7,7 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.common.ResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
 
@@ -35,6 +36,14 @@ public interface StoreResourceIdentifier extends ResourceIdentifier, com.commerc
      * discriminator value for StoreResourceIdentifier
      */
     String STORE = "store";
+
+    /**
+     *
+     * @return typeId
+     */
+
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
 
     /**
      *  <p>Unique ID of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. Required if <code>key</code> is absent.</p>

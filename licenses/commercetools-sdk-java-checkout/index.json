@@ -14,6 +14,45 @@
             ]
         },
         {
+            "moduleName": "com.fasterxml.jackson.core:jackson-core",
+            "moduleVersion": "2.21.3",
+            "moduleUrls": [
+                "https://github.com/FasterXML/jackson-core"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "com.fasterxml.jackson.core:jackson-databind",
+            "moduleVersion": "2.21.3",
+            "moduleUrls": [
+                "https://github.com/FasterXML/jackson"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
+            "moduleVersion": "2.21.3",
+            "moduleUrls": [
+                "https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
             "moduleName": "com.google.code.findbugs:jsr305",
             "moduleVersion": "3.0.2",
             "moduleUrls": [
@@ -77,7 +116,7 @@
         },
         {
             "moduleName": "org.apache.commons:commons-lang3",
-            "moduleVersion": "3.18.0",
+            "moduleVersion": "3.20.0",
             "moduleUrls": [
                 "https://commons.apache.org/proper/commons-lang/"
             ],
@@ -132,7 +171,7 @@
         },
         {
             "moduleName": "org.slf4j:slf4j-api",
-            "moduleVersion": "2.0.17",
+            "moduleVersion": "2.0.18",
             "moduleUrls": [
                 "http://www.slf4j.org"
             ],

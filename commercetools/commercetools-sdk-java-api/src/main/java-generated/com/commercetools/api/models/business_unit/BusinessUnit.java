@@ -54,7 +54,8 @@ import tools.jackson.databind.annotation.JsonDeserialize;
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "unitType", defaultImpl = BusinessUnitImpl.class, visible = true)
 @JsonDeserialize(as = BusinessUnitImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface BusinessUnit extends BaseResource, com.commercetools.api.models.WithKey {
+public interface BusinessUnit extends BaseResource, com.commercetools.api.models.WithKey,
+        com.commercetools.api.models.Customizable<BusinessUnit> {
 
     /**
      *  <p>Unique identifier of the Business Unit.</p>

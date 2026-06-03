@@ -48,7 +48,7 @@ public class TypeResourceIdentifierImpl implements TypeResourceIdentifier, Model
     }
 
     /**
-     *  <p>Type of referenced resource. If given, it must match the expected <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferenceTypeId" rel="nofollow">ReferenceTypeId</a> of the referenced resource.</p>
+     *
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {

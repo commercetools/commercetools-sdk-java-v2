@@ -8,12 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import tools.jackson.databind.annotation.JsonDeserialize;
+import jakarta.validation.constraints.NotNull;
 
 /**
  *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
@@ -37,6 +39,14 @@ public interface StandalonePriceReference extends Reference {
      * discriminator value for StandalonePriceReference
      */
     String STANDALONE_PRICE = "standalone-price";
+
+    /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
 
     /**
      *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with <span>Reference Expansion</span> for StandalonePrice.</p>

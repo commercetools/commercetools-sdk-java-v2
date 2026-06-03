@@ -114,7 +114,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
     }
 
     /**
-     *  <p><span>Custom Fields</span> to be added to the StagedQuote.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> to be added to the StagedQuote.</p>
      *  <ul>
      *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> and added to the StagedQuote.</li>
      *   <li>If empty, the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> are added to the StagedQuote automatically.</li>
@@ -130,7 +130,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
     }
 
     /**
-     *  <p><span>Custom Fields</span> to be added to the StagedQuote.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> to be added to the StagedQuote.</p>
      *  <ul>
      *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> and added to the StagedQuote.</li>
      *   <li>If empty, the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> are added to the StagedQuote automatically.</li>
@@ -146,7 +146,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
     }
 
     /**
-     *  <p><span>Custom Fields</span> to be added to the StagedQuote.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> to be added to the StagedQuote.</p>
      *  <ul>
      *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> and added to the StagedQuote.</li>
      *   <li>If empty, the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> are added to the StagedQuote automatically.</li>
@@ -234,7 +234,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
     }
 
     /**
-     *  <p><span>Custom Fields</span> to be added to the StagedQuote.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> to be added to the StagedQuote.</p>
      *  <ul>
      *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> and added to the StagedQuote.</li>
      *   <li>If empty, the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> are added to the StagedQuote automatically.</li>

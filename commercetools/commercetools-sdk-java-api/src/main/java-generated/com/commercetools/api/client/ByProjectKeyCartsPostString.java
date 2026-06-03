@@ -23,6 +23,11 @@ import tools.jackson.core.type.TypeReference;
 /**
  *  <p>Creates a Cart in the Project.</p>
  *  <p>If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDraft" rel="nofollow">CartDraft</a> has a predicate that does not match, or if the Shipping Method is not active, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+ *  <p>When using <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">InventoryMode</a> <code>ReserveOnCart</code>:</p>
+ *  <ul>
+ *   <li>If only some Line Items can be reserved, the Cart creation succeeds, however, the items that could not be reserved are removed and reservation warnings are returned in the response.</li>
+ *   <li>If none of the Line Items can be reserved, the Cart creation fails with an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</li>
+ *  </ul>
  *  <p>Specific Error Codes:</p>
  *  <ul>
  *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeNonApplicableError" rel="nofollow">DiscountCodeNonApplicable</a></li>

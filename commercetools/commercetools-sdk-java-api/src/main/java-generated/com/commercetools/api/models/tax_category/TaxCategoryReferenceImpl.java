@@ -49,7 +49,7 @@ public class TaxCategoryReferenceImpl implements TaxCategoryReference, ModelBase
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     *
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {

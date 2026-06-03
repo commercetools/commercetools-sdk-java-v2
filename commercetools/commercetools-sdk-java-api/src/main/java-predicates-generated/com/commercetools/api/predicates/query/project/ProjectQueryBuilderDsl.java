@@ -128,6 +128,16 @@ public class ProjectQueryBuilderDsl {
             ProjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ProjectQueryBuilderDsl> inventory(
+            Function<com.commercetools.api.predicates.query.project.InventoryConfigurationQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.InventoryConfigurationQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("inventory"))
+                    .inner(fn.apply(
+                        com.commercetools.api.predicates.query.project.InventoryConfigurationQueryBuilderDsl.of())),
+            ProjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ProjectQueryBuilderDsl> discounts(
             Function<com.commercetools.api.predicates.query.project.DiscountsConfigurationQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.DiscountsConfigurationQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

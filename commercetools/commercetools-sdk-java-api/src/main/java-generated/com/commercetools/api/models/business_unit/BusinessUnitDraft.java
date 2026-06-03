@@ -37,7 +37,8 @@ import tools.jackson.databind.annotation.JsonDeserialize;
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "unitType", defaultImpl = BusinessUnitDraftImpl.class, visible = true)
 @JsonDeserialize(as = BusinessUnitDraftImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey {
+public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey,
+        com.commercetools.api.models.CustomizableDraft<BusinessUnitDraft> {
 
     /**
      *  <p>User-defined unique and immutable identifier for the Business Unit.</p>

@@ -69,11 +69,9 @@ public class CtJavaNetHttpClient extends HttpClientBase {
 
         if (httpRequest.getBody() != null) {
             String mediaType = APPLICATION_JSON;
-            if (httpRequest.getHeaders()
-                    .getHeaders()
-                    .stream()
-                    .anyMatch(s -> s.getKey().equalsIgnoreCase(ApiHttpHeaders.CONTENT_TYPE))) {
-                mediaType = httpRequest.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE);
+            final String contentTypeValue = httpRequest.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE);
+            if (contentTypeValue != null) {
+                mediaType = contentTypeValue;
             }
             builder.setHeader(ApiHttpHeaders.CONTENT_TYPE, mediaType);
 

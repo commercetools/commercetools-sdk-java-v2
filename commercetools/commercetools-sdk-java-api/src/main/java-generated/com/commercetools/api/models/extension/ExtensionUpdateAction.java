@@ -78,6 +78,30 @@ public interface ExtensionUpdateAction
     }
 
     /**
+     * builder for setAdditionalContext subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.extension.ExtensionSetAdditionalContextActionBuilder setAdditionalContextBuilder() {
+        return com.commercetools.api.models.extension.ExtensionSetAdditionalContextActionBuilder.of();
+    }
+
+    /**
+     * builder for setDependencies subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.extension.ExtensionSetDependenciesActionBuilder setDependenciesBuilder() {
+        return com.commercetools.api.models.extension.ExtensionSetDependenciesActionBuilder.of();
+    }
+
+    /**
+     * builder for setExpansionPaths subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.extension.ExtensionSetExpansionPathsActionBuilder setExpansionPathsBuilder() {
+        return com.commercetools.api.models.extension.ExtensionSetExpansionPathsActionBuilder.of();
+    }
+
+    /**
      * builder for setKey subtype
      * @return builder
      */

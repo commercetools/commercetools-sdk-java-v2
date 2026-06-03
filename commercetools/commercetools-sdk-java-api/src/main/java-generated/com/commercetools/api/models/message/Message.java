@@ -1286,11 +1286,43 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for inventoryEntryOutOfStock subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.InventoryEntryOutOfStockMessageBuilder inventoryEntryOutOfStockBuilder() {
+        return com.commercetools.api.models.message.InventoryEntryOutOfStockMessageBuilder.of();
+    }
+
+    /**
      * builder for inventoryEntryQuantitySet subtype
      * @return builder
      */
     public static com.commercetools.api.models.message.InventoryEntryQuantitySetMessageBuilder inventoryEntryQuantitySetBuilder() {
         return com.commercetools.api.models.message.InventoryEntryQuantitySetMessageBuilder.of();
+    }
+
+    /**
+     * builder for inventoryEntryReorderPoint subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.InventoryEntryReorderPointMessageBuilder inventoryEntryReorderPointBuilder() {
+        return com.commercetools.api.models.message.InventoryEntryReorderPointMessageBuilder.of();
+    }
+
+    /**
+     * builder for inventoryEntryReservationExpirationInMinutesSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.InventoryEntryReservationExpirationInMinutesSetMessageBuilder inventoryEntryReservationExpirationInMinutesSetBuilder() {
+        return com.commercetools.api.models.message.InventoryEntryReservationExpirationInMinutesSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for inventoryEntrySafetyStock subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.InventoryEntrySafetyStockMessageBuilder inventoryEntrySafetyStockBuilder() {
+        return com.commercetools.api.models.message.InventoryEntrySafetyStockMessageBuilder.of();
     }
 
     /**

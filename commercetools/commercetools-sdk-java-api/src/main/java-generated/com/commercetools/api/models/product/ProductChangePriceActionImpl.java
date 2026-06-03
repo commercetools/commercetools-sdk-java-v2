@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- * ProductChangePriceAction
+ *  <p>This action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPriceChangedMessage" rel="nofollow">ProductPriceChanged</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductChangePriceActionImpl implements ProductChangePriceAction, ModelBase {

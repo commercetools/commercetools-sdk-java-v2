@@ -107,7 +107,7 @@ public interface ProductVariant {
     public ProductVariantAvailability getAvailability();
 
     /**
-     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearch" rel="nofollow">Product Projection Search</a> request.</p>
+     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a <span>Product Projection Search</span> request.</p>
      * @return isMatchingVariant
      */
 
@@ -115,7 +115,7 @@ public interface ProductVariant {
     public Boolean getIsMatchingVariant();
 
     /**
-     *  <p>Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearch" rel="nofollow">Product Projection Search</a> request with <span>Product price selection</span>. Can be used to sort, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">filter</a>, and facet.</p>
+     *  <p>Only available in response to a <span>Product Projection Search</span> request with <span>Product price selection</span>. Can be used to sort, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">filter</a>, and facet.</p>
      * @return scopedPrice
      */
     @Valid
@@ -123,7 +123,7 @@ public interface ProductVariant {
     public ScopedPrice getScopedPrice();
 
     /**
-     *  <p>Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">Product Projection Search</a> request with <span>Product price selection</span>.</p>
+     *  <p>Only available in response to a <span>Product Projection Search</span> request with <span>Product price selection</span>.</p>
      * @return scopedPriceDiscounted
      */
 
@@ -235,21 +235,21 @@ public interface ProductVariant {
     public void setAvailability(final ProductVariantAvailability availability);
 
     /**
-     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearch" rel="nofollow">Product Projection Search</a> request.</p>
+     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a <span>Product Projection Search</span> request.</p>
      * @param isMatchingVariant value to be set
      */
 
     public void setIsMatchingVariant(final Boolean isMatchingVariant);
 
     /**
-     *  <p>Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearch" rel="nofollow">Product Projection Search</a> request with <span>Product price selection</span>. Can be used to sort, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">filter</a>, and facet.</p>
+     *  <p>Only available in response to a <span>Product Projection Search</span> request with <span>Product price selection</span>. Can be used to sort, <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">filter</a>, and facet.</p>
      * @param scopedPrice value to be set
      */
 
     public void setScopedPrice(final ScopedPrice scopedPrice);
 
     /**
-     *  <p>Only available in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">Product Projection Search</a> request with <span>Product price selection</span>.</p>
+     *  <p>Only available in response to a <span>Product Projection Search</span> request with <span>Product price selection</span>.</p>
      * @param scopedPriceDiscounted value to be set
      */
 

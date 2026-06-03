@@ -16,7 +16,7 @@ import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Returned when a server-side problem occurs. In some cases, the requested action may successfully complete after the error is returned. Therefore, it is recommended to verify the status of the requested resource after receiving a 500 error.</p>
- *  <p>If you encounter this error, report it to the <span>Checkout support team</span>.</p>
+ *  <p>If you encounter this error, report it to the <span>commercetools support team</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

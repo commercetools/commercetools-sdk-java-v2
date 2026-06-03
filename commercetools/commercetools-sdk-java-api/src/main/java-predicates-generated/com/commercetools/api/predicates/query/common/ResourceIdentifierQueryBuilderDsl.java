@@ -107,6 +107,13 @@ public class ResourceIdentifierQueryBuilderDsl {
             ResourceIdentifierQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl> asExtension(
+            Function<com.commercetools.api.predicates.query.extension.ExtensionResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.extension.ExtensionResourceIdentifierQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.extension.ExtensionResourceIdentifierQueryBuilderDsl.of()),
+            ResourceIdentifierQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl> asInventoryEntry(
             Function<com.commercetools.api.predicates.query.inventory.InventoryEntryResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.inventory.InventoryEntryResourceIdentifierQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

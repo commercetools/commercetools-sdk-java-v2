@@ -31,8 +31,8 @@ public abstract class BaseAuthTokenSupplier extends AutoCloseableService impleme
     @Override
     public CompletableFuture<AuthenticationToken> getToken() {
         return vrapHttpClient.execute(apiHttpRequest).whenComplete((response, throwable) -> {
-            logger.info(() -> String.format("%s %s %s", apiHttpRequest.getMethod().name(), apiHttpRequest.getUri(),
-                response.getStatusCode()));
+            logger.info(() -> apiHttpRequest.getMethod().name() + " " + apiHttpRequest.getUri() + " "
+                    + response.getStatusCode());
             if (throwable != null) {
                 logger.error(() -> response, throwable);
             }
@@ -43,14 +43,14 @@ public abstract class BaseAuthTokenSupplier extends AutoCloseableService impleme
             if (apiHttpResponse.getStatusCode() < 200 || apiHttpResponse.getStatusCode() > 299) {
                 if (apiHttpResponse.getStatusCode() == 405) {
                     throw new CompletionException(new AuthException(apiHttpResponse.getStatusCode(),
-                        new String(apiHttpResponse.getBody()), apiHttpRequest.getHeaders(),
+                        new String(apiHttpResponse.getBody(), StandardCharsets.UTF_8), apiHttpRequest.getHeaders(),
                         apiHttpResponse.getMessage()
                                 + " : auth token URI may be incorrect e.g. https://auth.europe-west1.gcp.commercetools.com/oauth/token",
                         apiHttpResponse));
                 }
-                throw new CompletionException(
-                    new AuthException(apiHttpResponse.getStatusCode(), new String(apiHttpResponse.getBody()),
-                        apiHttpRequest.getHeaders(), apiHttpResponse.getMessage(), apiHttpResponse));
+                throw new CompletionException(new AuthException(apiHttpResponse.getStatusCode(),
+                    new String(apiHttpResponse.getBody(), StandardCharsets.UTF_8), apiHttpRequest.getHeaders(),
+                    apiHttpResponse.getMessage(), apiHttpResponse));
             }
             return apiHttpResponse;
         })

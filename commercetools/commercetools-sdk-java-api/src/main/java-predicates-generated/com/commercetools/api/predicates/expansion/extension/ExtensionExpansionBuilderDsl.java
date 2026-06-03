@@ -38,4 +38,15 @@ public class ExtensionExpansionBuilderDsl implements ExpansionDsl {
         return com.commercetools.api.predicates.expansion.common.CreatedByExpansionBuilderDsl
                 .of(appendOne(path, "createdBy"));
     }
+
+    public com.commercetools.api.predicates.expansion.extension.ExtensionReferenceExpansionBuilderDsl dependencies() {
+        return com.commercetools.api.predicates.expansion.extension.ExtensionReferenceExpansionBuilderDsl
+                .of(appendOne(path, "dependencies[*]"));
+    }
+
+    public com.commercetools.api.predicates.expansion.extension.ExtensionReferenceExpansionBuilderDsl dependencies(
+            long index) {
+        return com.commercetools.api.predicates.expansion.extension.ExtensionReferenceExpansionBuilderDsl
+                .of(appendOne(path, "dependencies[" + index + "]"));
+    }
 }

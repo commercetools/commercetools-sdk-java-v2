@@ -41,6 +41,7 @@ public interface ShippingMethodRemoveZoneAction extends ShippingMethodUpdateActi
 
     /**
      *  <p>Value to remove from <code>zoneRates</code>.</p>
+     *  <p>Removes the entire <a href="https://docs.commercetools.com/apis/ctp:api:type:ZoneRate" rel="nofollow">ZoneRate</a> entry for the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> from the <code>zoneRates</code> array. This action deletes both the Zone reference and all <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> associated with that Zone.</p>
      * @return zone
      */
     @NotNull
@@ -50,6 +51,7 @@ public interface ShippingMethodRemoveZoneAction extends ShippingMethodUpdateActi
 
     /**
      *  <p>Value to remove from <code>zoneRates</code>.</p>
+     *  <p>Removes the entire <a href="https://docs.commercetools.com/apis/ctp:api:type:ZoneRate" rel="nofollow">ZoneRate</a> entry for the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> from the <code>zoneRates</code> array. This action deletes both the Zone reference and all <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> associated with that Zone.</p>
      * @param zone value to be set
      */
 

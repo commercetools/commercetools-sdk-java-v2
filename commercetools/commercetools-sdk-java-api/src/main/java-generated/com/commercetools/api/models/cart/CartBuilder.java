@@ -167,6 +167,9 @@ public class CartBuilder implements Builder<Cart> {
     @Nullable
     private com.commercetools.api.models.common.CreatedBy createdBy;
 
+    @Nullable
+    private java.util.List<com.commercetools.api.models.warning.WarningObject> warnings;
+
     /**
      *  <p>Unique identifier of the Cart.</p>
      * @param id value to be set
@@ -1696,6 +1699,71 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
+     *  <p>Warnings about the processing of a request.</p>
+     * @param warnings value to be set
+     * @return Builder
+     */
+
+    public CartBuilder warnings(@Nullable final com.commercetools.api.models.warning.WarningObject... warnings) {
+        this.warnings = new ArrayList<>(Arrays.asList(warnings));
+        return this;
+    }
+
+    /**
+     *  <p>Warnings about the processing of a request.</p>
+     * @param warnings value to be set
+     * @return Builder
+     */
+
+    public CartBuilder warnings(
+            @Nullable final java.util.List<com.commercetools.api.models.warning.WarningObject> warnings) {
+        this.warnings = warnings;
+        return this;
+    }
+
+    /**
+     *  <p>Warnings about the processing of a request.</p>
+     * @param warnings value to be set
+     * @return Builder
+     */
+
+    public CartBuilder plusWarnings(@Nullable final com.commercetools.api.models.warning.WarningObject... warnings) {
+        if (this.warnings == null) {
+            this.warnings = new ArrayList<>();
+        }
+        this.warnings.addAll(Arrays.asList(warnings));
+        return this;
+    }
+
+    /**
+     *  <p>Warnings about the processing of a request.</p>
+     * @param builder function to build the warnings value
+     * @return Builder
+     */
+
+    public CartBuilder plusWarnings(
+            Function<com.commercetools.api.models.warning.WarningObjectBuilder, Builder<? extends com.commercetools.api.models.warning.WarningObject>> builder) {
+        if (this.warnings == null) {
+            this.warnings = new ArrayList<>();
+        }
+        this.warnings.add(builder.apply(com.commercetools.api.models.warning.WarningObjectBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Warnings about the processing of a request.</p>
+     * @param builder function to build the warnings value
+     * @return Builder
+     */
+
+    public CartBuilder withWarnings(
+            Function<com.commercetools.api.models.warning.WarningObjectBuilder, Builder<? extends com.commercetools.api.models.warning.WarningObject>> builder) {
+        this.warnings = new ArrayList<>();
+        this.warnings.add(builder.apply(com.commercetools.api.models.warning.WarningObjectBuilder.of()).build());
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Cart.</p>
      * @return id
      */
@@ -2169,6 +2237,16 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
+     *  <p>Warnings about the processing of a request.</p>
+     * @return warnings
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.warning.WarningObject> getWarnings() {
+        return this.warnings;
+    }
+
+    /**
      * builds Cart with checking for non-null required values
      * @return Cart
      */
@@ -2199,7 +2277,7 @@ public class CartBuilder implements Builder<Cart> {
             inventoryMode, cartState, freezeStrategy, billingAddress, shippingAddress, shippingMode, shippingKey,
             shippingInfo, shippingRateInput, shippingCustomFields, shipping, itemShippingAddresses, discountCodes,
             directDiscounts, refusedGifts, paymentInfo, country, locale, origin, custom, discountTypeCombination, lock,
-            deleteDaysAfterLastModification, purchaseOrderNumber, lastModifiedBy, createdBy);
+            deleteDaysAfterLastModification, purchaseOrderNumber, lastModifiedBy, createdBy, warnings);
     }
 
     /**
@@ -2213,7 +2291,7 @@ public class CartBuilder implements Builder<Cart> {
             inventoryMode, cartState, freezeStrategy, billingAddress, shippingAddress, shippingMode, shippingKey,
             shippingInfo, shippingRateInput, shippingCustomFields, shipping, itemShippingAddresses, discountCodes,
             directDiscounts, refusedGifts, paymentInfo, country, locale, origin, custom, discountTypeCombination, lock,
-            deleteDaysAfterLastModification, purchaseOrderNumber, lastModifiedBy, createdBy);
+            deleteDaysAfterLastModification, purchaseOrderNumber, lastModifiedBy, createdBy, warnings);
     }
 
     /**
@@ -2279,6 +2357,7 @@ public class CartBuilder implements Builder<Cart> {
         builder.purchaseOrderNumber = template.getPurchaseOrderNumber();
         builder.lastModifiedBy = template.getLastModifiedBy();
         builder.createdBy = template.getCreatedBy();
+        builder.warnings = template.getWarnings();
         return builder;
     }
 

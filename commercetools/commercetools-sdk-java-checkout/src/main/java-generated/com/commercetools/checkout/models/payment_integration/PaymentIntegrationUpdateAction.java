@@ -87,14 +87,6 @@ public interface PaymentIntegrationUpdateAction {
     }
 
     /**
-     * builder for setConnectorDeployment subtype
-     * @return builder
-     */
-    public static com.commercetools.checkout.models.payment_integration.SetConnectorDeploymentUpdateActionBuilder setConnectorDeploymentBuilder() {
-        return com.commercetools.checkout.models.payment_integration.SetConnectorDeploymentUpdateActionBuilder.of();
-    }
-
-    /**
      * builder for setDisplayInfoDescription subtype
      * @return builder
      */

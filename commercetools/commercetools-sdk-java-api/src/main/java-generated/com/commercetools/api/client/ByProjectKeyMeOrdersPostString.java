@@ -22,7 +22,8 @@ import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Creates an Order from a Cart for the Customer or anonymous user. The <code>customerId</code> or <code>anonymousId</code> field on the Order is automatically set based on the <span>customer:{id}</span> or <span>anonymous_id:{id}</span> scope.</p>
- *  <p>The Cart must have a shipping address and an active Shipping Method set. When creating <span>B2B Orders</span>, the Customer must have the <code>CreateMyOrdersFromMyCarts</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Permission" rel="nofollow">Permission</a>.</p>
+ *  <p>The Cart must have a shipping address set.</p>
+ *  <p>When creating <span>B2B Orders</span>, the Customer must have the <code>CreateMyOrdersFromMyCarts</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Permission" rel="nofollow">Permission</a>.</p>
  *  <p>If the Cart's <code>customerId</code> does not match the <span>customer:{id}</span> scope, or the <code>anonymousId</code> does not match the <span>anonymous_id:{id}</span> scope, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error is returned.</p>
  *  <p>Creating an Order produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderCreatedMessage" rel="nofollow">OrderCreated</a> Message.</p>
  *  <p>If a server-side problem occurs, indicated by a 500 Internal Server Error HTTP response, the Order creation may still successfully complete after the error is returned. If you receive this error, you should verify the status of the Order by querying a unique identifier supplied during the creation request, such as the Order number.</p>

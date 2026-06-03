@@ -49,7 +49,7 @@ public class BusinessUnitReferenceImpl implements BusinessUnitReference, ModelBa
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     *
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {

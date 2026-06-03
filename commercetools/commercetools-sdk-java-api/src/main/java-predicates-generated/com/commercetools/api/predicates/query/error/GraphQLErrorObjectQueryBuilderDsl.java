@@ -65,6 +65,13 @@ public class GraphQLErrorObjectQueryBuilderDsl {
             GraphQLErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asCircularDependency(
+            Function<com.commercetools.api.predicates.query.error.GraphQLCircularDependencyErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLCircularDependencyErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.error.GraphQLCircularDependencyErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asConcurrentModification(
             Function<com.commercetools.api.predicates.query.error.GraphQLConcurrentModificationErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLConcurrentModificationErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -226,6 +233,30 @@ public class GraphQLErrorObjectQueryBuilderDsl {
             GraphQLErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asExtensionChainTooDeep(
+            Function<com.commercetools.api.predicates.query.error.GraphQLExtensionChainTooDeepErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLExtensionChainTooDeepErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.error.GraphQLExtensionChainTooDeepErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asExtensionChainTooWide(
+            Function<com.commercetools.api.predicates.query.error.GraphQLExtensionChainTooWideErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLExtensionChainTooWideErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.error.GraphQLExtensionChainTooWideErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asExtensionDependencyExists(
+            Function<com.commercetools.api.predicates.query.error.GraphQLExtensionDependencyExistsErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLExtensionDependencyExistsErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.error.GraphQLExtensionDependencyExistsErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asExtensionNoResponse(
             Function<com.commercetools.api.predicates.query.error.GraphQLExtensionNoResponseErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLExtensionNoResponseErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -354,6 +385,20 @@ public class GraphQLErrorObjectQueryBuilderDsl {
             GraphQLErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asLineItemQuantityAboveLimit(
+            Function<com.commercetools.api.predicates.query.error.GraphQLLineItemQuantityAboveLimitErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLLineItemQuantityAboveLimitErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.error.GraphQLLineItemQuantityAboveLimitErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asLineItemQuantityBelowLimit(
+            Function<com.commercetools.api.predicates.query.error.GraphQLLineItemQuantityBelowLimitErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLLineItemQuantityBelowLimitErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.error.GraphQLLineItemQuantityBelowLimitErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asLockedField(
             Function<com.commercetools.api.predicates.query.error.GraphQLLockedFieldErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLLockedFieldErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -398,6 +443,13 @@ public class GraphQLErrorObjectQueryBuilderDsl {
         return new CombinationQueryPredicate<>(
             fn.apply(
                 com.commercetools.api.predicates.query.error.GraphQLMaxStoreReferencesReachedErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asMissingDependency(
+            Function<com.commercetools.api.predicates.query.error.GraphQLMissingDependencyErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLMissingDependencyErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.error.GraphQLMissingDependencyErrorQueryBuilderDsl.of()),
             GraphQLErrorObjectQueryBuilderDsl::of);
     }
 

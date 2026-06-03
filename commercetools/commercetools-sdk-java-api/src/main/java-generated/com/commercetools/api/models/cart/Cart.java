@@ -20,6 +20,7 @@ import com.commercetools.api.models.customer_group.CustomerGroupReference;
 import com.commercetools.api.models.order.PaymentInfo;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFields;
+import com.commercetools.api.models.warning.WarningObject;
 import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -473,6 +474,14 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public CreatedBy getCreatedBy();
 
     /**
+     *  <p>Warnings about the processing of a request.</p>
+     * @return warnings
+     */
+    @Valid
+    @JsonProperty("warnings")
+    public List<WarningObject> getWarnings();
+
+    /**
      *  <p>Unique identifier of the Cart.</p>
      * @param id value to be set
      */
@@ -879,6 +888,21 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setCreatedBy(final CreatedBy createdBy);
 
     /**
+     *  <p>Warnings about the processing of a request.</p>
+     * @param warnings values to be set
+     */
+
+    @JsonIgnore
+    public void setWarnings(final WarningObject... warnings);
+
+    /**
+     *  <p>Warnings about the processing of a request.</p>
+     * @param warnings values to be set
+     */
+
+    public void setWarnings(final List<WarningObject> warnings);
+
+    /**
      * factory method
      * @return instance of Cart
      */
@@ -941,6 +965,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
         instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setLastModifiedBy(template.getLastModifiedBy());
         instance.setCreatedBy(template.getCreatedBy());
+        instance.setWarnings(template.getWarnings());
         return instance;
     }
 
@@ -1043,6 +1068,11 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
         instance.setLastModifiedBy(
             com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setWarnings(Optional.ofNullable(template.getWarnings())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.warning.WarningObject::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

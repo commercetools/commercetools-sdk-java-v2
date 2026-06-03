@@ -55,7 +55,7 @@ public interface MyShoppingListSetTextLineItemCustomTypeAction extends MyShoppin
     public String getTextLineItemKey();
 
     /**
-     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the TextLineItem with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the TextLineItem.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the TextLineItem with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the TextLineItem.</p>
      * @return type
      */
     @Valid
@@ -63,7 +63,8 @@ public interface MyShoppingListSetTextLineItemCustomTypeAction extends MyShoppin
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the <span>Custom Fields</span> fields for the TextLineItem.</p>
+     *  <p>Object containing the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the TextLineItem.</p>
+     *  <p>Required if at least one Custom Field is defined as required in the <code>fieldDefinitions</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @return fields
      */
     @Valid
@@ -85,14 +86,15 @@ public interface MyShoppingListSetTextLineItemCustomTypeAction extends MyShoppin
     public void setTextLineItemKey(final String textLineItemKey);
 
     /**
-     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the TextLineItem with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the TextLineItem.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the TextLineItem with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the TextLineItem.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the <span>Custom Fields</span> fields for the TextLineItem.</p>
+     *  <p>Object containing the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the TextLineItem.</p>
+     *  <p>Required if at least one Custom Field is defined as required in the <code>fieldDefinitions</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param fields value to be set
      */
 

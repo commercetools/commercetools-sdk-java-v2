@@ -53,6 +53,10 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
 
     private java.time.ZonedDateTime expectedDelivery;
 
+    private Integer reservationExpirationInMinutes;
+
+    private com.commercetools.api.models.inventory.InventoryEntryStockLevels stockLevels;
+
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
@@ -72,6 +76,8 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
             @JsonProperty("maxCartQuantity") final Integer maxCartQuantity,
             @JsonProperty("restockableInDays") final Long restockableInDays,
             @JsonProperty("expectedDelivery") final java.time.ZonedDateTime expectedDelivery,
+            @JsonProperty("reservationExpirationInMinutes") final Integer reservationExpirationInMinutes,
+            @JsonProperty("stockLevels") final com.commercetools.api.models.inventory.InventoryEntryStockLevels stockLevels,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
         this.id = id;
         this.version = version;
@@ -88,6 +94,8 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
         this.maxCartQuantity = maxCartQuantity;
         this.restockableInDays = restockableInDays;
         this.expectedDelivery = expectedDelivery;
+        this.reservationExpirationInMinutes = reservationExpirationInMinutes;
+        this.stockLevels = stockLevels;
         this.custom = custom;
     }
 
@@ -170,7 +178,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     *  <p>Overall amount of stock (<code>availableQuantity</code> + reserved).</p>
+     *  <p>Overall amount of stock (<code>availableQuantity</code> + reserved). This value is eventually consistent with the internal SKU availability used for reservation logic, with a delay of up to 10 seconds. See <span>Inventory checks and consistency</span> for more information.</p>
      */
 
     public Long getQuantityOnStock() {
@@ -178,7 +186,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     *  <p>Available amount of stock (<code>quantityOnStock</code> - reserved).</p>
+     *  <p>Available amount of stock (<code>quantityOnStock</code> - reserved). This value is eventually consistent with the internal SKU availability used for reservation logic, with a delay of up to 10 seconds. See <span>Inventory checks and consistency</span> for more information.</p>
      */
 
     public Long getAvailableQuantity() {
@@ -215,6 +223,26 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
 
     public java.time.ZonedDateTime getExpectedDelivery() {
         return this.expectedDelivery;
+    }
+
+    /**
+     *  <p>Expiration time of <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> reservations associated with this InventoryEntry.</p>
+     *  <ul>
+     *   <li>A Reservation is <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> if it was created for a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> that is using the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> inventory mode.</li>
+     *   <li>If this field is empty, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>-level reservation expiration time applies.</li>
+     *  </ul>
+     */
+
+    public Integer getReservationExpirationInMinutes() {
+        return this.reservationExpirationInMinutes;
+    }
+
+    /**
+     *  <p>Configuration of stock levels for the InventoryEntry. Corresponding <span>Messages</span> are triggered when the <code>quantityOnStock</code> reaches the configured levels.</p>
+     */
+
+    public com.commercetools.api.models.inventory.InventoryEntryStockLevels getStockLevels() {
+        return this.stockLevels;
     }
 
     /**
@@ -285,6 +313,14 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
         this.expectedDelivery = expectedDelivery;
     }
 
+    public void setReservationExpirationInMinutes(final Integer reservationExpirationInMinutes) {
+        this.reservationExpirationInMinutes = reservationExpirationInMinutes;
+    }
+
+    public void setStockLevels(final com.commercetools.api.models.inventory.InventoryEntryStockLevels stockLevels) {
+        this.stockLevels = stockLevels;
+    }
+
     public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
     }
@@ -314,6 +350,8 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
                 .append(maxCartQuantity, that.maxCartQuantity)
                 .append(restockableInDays, that.restockableInDays)
                 .append(expectedDelivery, that.expectedDelivery)
+                .append(reservationExpirationInMinutes, that.reservationExpirationInMinutes)
+                .append(stockLevels, that.stockLevels)
                 .append(custom, that.custom)
                 .append(id, that.id)
                 .append(version, that.version)
@@ -330,6 +368,8 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
                 .append(maxCartQuantity, that.maxCartQuantity)
                 .append(restockableInDays, that.restockableInDays)
                 .append(expectedDelivery, that.expectedDelivery)
+                .append(reservationExpirationInMinutes, that.reservationExpirationInMinutes)
+                .append(stockLevels, that.stockLevels)
                 .append(custom, that.custom)
                 .isEquals();
     }
@@ -351,6 +391,8 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
                 .append(maxCartQuantity)
                 .append(restockableInDays)
                 .append(expectedDelivery)
+                .append(reservationExpirationInMinutes)
+                .append(stockLevels)
                 .append(custom)
                 .toHashCode();
     }
@@ -372,6 +414,8 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
                 .append("maxCartQuantity", maxCartQuantity)
                 .append("restockableInDays", restockableInDays)
                 .append("expectedDelivery", expectedDelivery)
+                .append("reservationExpirationInMinutes", reservationExpirationInMinutes)
+                .append("stockLevels", stockLevels)
                 .append("custom", custom)
                 .build();
     }

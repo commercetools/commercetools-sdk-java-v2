@@ -21,7 +21,9 @@ public class ExtensionInputTest {
                         ExtensionInput.builder()
                                 .action(com.commercetools.api.models.extension.ExtensionAction.findEnum("Create")) },
                 new Object[] { "resource",
-                        ExtensionInput.builder().resource(new com.commercetools.api.models.common.ReferenceImpl()) } };
+                        ExtensionInput.builder().resource(new com.commercetools.api.models.common.ReferenceImpl()) },
+                new Object[] { "oldResource", ExtensionInput.builder()
+                        .oldResource(new com.commercetools.api.models.common.ReferenceImpl()) } };
     }
 
     @Test
@@ -37,5 +39,13 @@ public class ExtensionInputTest {
         ExtensionInput value = ExtensionInput.of();
         value.setResource(new com.commercetools.api.models.common.ReferenceImpl());
         Assertions.assertThat(value.getResource()).isEqualTo(new com.commercetools.api.models.common.ReferenceImpl());
+    }
+
+    @Test
+    public void oldResource() {
+        ExtensionInput value = ExtensionInput.of();
+        value.setOldResource(new com.commercetools.api.models.common.ReferenceImpl());
+        Assertions.assertThat(value.getOldResource())
+                .isEqualTo(new com.commercetools.api.models.common.ReferenceImpl());
     }
 }

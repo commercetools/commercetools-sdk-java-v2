@@ -21,8 +21,9 @@ import tools.jackson.databind.annotation.JsonDeserialize;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     WarningObject warningObject = WarningObject.imageProcessingOngoingBuilder()
+ *     WarningObject warningObject = WarningObject.cannotChangeReservationExpiryBuilder()
  *             message("{message}")
+ *             lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -74,6 +75,30 @@ public interface WarningObject {
         WarningObjectImpl instance = new WarningObjectImpl();
         instance.setMessage(template.getMessage());
         return instance;
+    }
+
+    /**
+     * builder for cannotChangeReservationExpiry subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.warning.CannotChangeReservationExpiryWarningBuilder cannotChangeReservationExpiryBuilder() {
+        return com.commercetools.api.models.warning.CannotChangeReservationExpiryWarningBuilder.of();
+    }
+
+    /**
+     * builder for cannotCreateReservation subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.warning.CannotCreateReservationWarningBuilder cannotCreateReservationBuilder() {
+        return com.commercetools.api.models.warning.CannotCreateReservationWarningBuilder.of();
+    }
+
+    /**
+     * builder for cannotUpdateReservation subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.warning.CannotUpdateReservationWarningBuilder cannotUpdateReservationBuilder() {
+        return com.commercetools.api.models.warning.CannotUpdateReservationWarningBuilder.of();
     }
 
     /**

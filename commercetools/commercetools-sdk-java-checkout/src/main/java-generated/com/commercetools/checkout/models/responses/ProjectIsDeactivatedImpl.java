@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated when the Checkout <span><code>projectKey</code></span> is deactivated and cannot be initialized. To activate it, contact the <span>Checkout support team</span>.</p>
+ *  <p>Generated when the Checkout <span><code>projectKey</code></span> is deactivated and cannot be initialized. To activate it, contact the <span>commercetools support team</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectIsDeactivatedImpl implements ProjectIsDeactivated, ModelBase {

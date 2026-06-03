@@ -52,6 +52,14 @@ public interface ExtensionInput {
     public Reference getResource();
 
     /**
+     *  <p>Expanded reference to the resource as it was before the update. Only included when <a href="https://docs.commercetools.com/apis/ctp:api:type:ExtensionAdditionalContext" rel="nofollow"><code>additionalContext.includeOldResource</code></a> is <code>true</code> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Extension" rel="nofollow">Extension</a> and the <code>action</code> is <code>Update</code>.</p>
+     * @return oldResource
+     */
+    @Valid
+    @JsonProperty("oldResource")
+    public Reference getOldResource();
+
+    /**
      *  <p><code>Create</code> or <code>Update</code> request.</p>
      * @param action value to be set
      */
@@ -64,6 +72,13 @@ public interface ExtensionInput {
      */
 
     public void setResource(final Reference resource);
+
+    /**
+     *  <p>Expanded reference to the resource as it was before the update. Only included when <a href="https://docs.commercetools.com/apis/ctp:api:type:ExtensionAdditionalContext" rel="nofollow"><code>additionalContext.includeOldResource</code></a> is <code>true</code> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Extension" rel="nofollow">Extension</a> and the <code>action</code> is <code>Update</code>.</p>
+     * @param oldResource value to be set
+     */
+
+    public void setOldResource(final Reference oldResource);
 
     /**
      * factory method
@@ -82,6 +97,7 @@ public interface ExtensionInput {
         ExtensionInputImpl instance = new ExtensionInputImpl();
         instance.setAction(template.getAction());
         instance.setResource(template.getResource());
+        instance.setOldResource(template.getOldResource());
         return instance;
     }
 
@@ -100,6 +116,7 @@ public interface ExtensionInput {
         ExtensionInputImpl instance = new ExtensionInputImpl();
         instance.setAction(template.getAction());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
+        instance.setOldResource(com.commercetools.api.models.common.Reference.deepCopy(template.getOldResource()));
         return instance;
     }
 

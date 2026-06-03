@@ -583,6 +583,14 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
     }
 
     /**
+     * builder for setReservationExpirationInMinutes subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.cart.CartSetReservationExpirationInMinutesActionBuilder setReservationExpirationInMinutesBuilder() {
+        return com.commercetools.api.models.cart.CartSetReservationExpirationInMinutesActionBuilder.of();
+    }
+
+    /**
      * builder for setShippingAddress subtype
      * @return builder
      */

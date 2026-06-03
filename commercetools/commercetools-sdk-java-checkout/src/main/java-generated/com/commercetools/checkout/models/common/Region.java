@@ -20,8 +20,14 @@ public interface Region extends JsonEnum {
     <p>for Europe (Google Cloud, Belgium)</p> */
     Region EUROPE_WEST1_GCP = RegionEnum.EUROPE_WEST1_GCP;
     /**
+    <p>for Europe (AWS, Frankfurt)</p> */
+    Region EU_CENTRAL_1_AWS = RegionEnum.EU_CENTRAL_1_AWS;
+    /**
     <p>for North America (Google Cloud, Iowa)</p> */
     Region US_CENTRAL1_GCP = RegionEnum.US_CENTRAL1_GCP;
+    /**
+    <p>for North America (AWS, Ohio)</p> */
+    Region US_EAST_2_AWS = RegionEnum.US_EAST_2_AWS;
     /**
     <p>for Australia (Google Cloud, Sydney)</p> */
     Region AUSTRALIA_SOUTHEAST1_GCP = RegionEnum.AUSTRALIA_SOUTHEAST1_GCP;
@@ -36,9 +42,19 @@ public interface Region extends JsonEnum {
         EUROPE_WEST1_GCP("europe-west1.gcp"),
 
         /**
+         * eu-central-1.aws
+         */
+        EU_CENTRAL_1_AWS("eu-central-1.aws"),
+
+        /**
          * us-central1.gcp
          */
         US_CENTRAL1_GCP("us-central1.gcp"),
+
+        /**
+         * us-east-2.aws
+         */
+        US_EAST_2_AWS("us-east-2.aws"),
 
         /**
          * australia-southeast1.gcp

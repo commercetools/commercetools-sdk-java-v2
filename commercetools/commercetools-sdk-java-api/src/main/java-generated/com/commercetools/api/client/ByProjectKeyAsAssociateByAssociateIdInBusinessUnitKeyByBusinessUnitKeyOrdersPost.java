@@ -21,7 +21,7 @@ import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Creates an Order from a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> in a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
- *  <p>The Cart must have a shipping address and an active Shipping Method set.</p>
+ *  <p>The Cart must have a shipping address set.</p>
  *  <p>If the Cart does not reference the same BusinessUnit as the <code>businessUnitKey</code> path parameter, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> is returned.</p>
  *  <p>Specific Error Codes:</p>
  *  <ul>

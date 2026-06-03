@@ -14,6 +14,19 @@
             ]
         },
         {
+            "moduleName": "tools.jackson.datatype:jackson-datatype-jsr310",
+            "moduleVersion": "3.1.0",
+            "moduleUrls": [
+                "https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
             "moduleName": "com.google.code.findbugs:jsr305",
             "moduleVersion": "3.0.2",
             "moduleUrls": [
@@ -51,11 +64,11 @@
         },
         {
             "moduleName": "com.squareup.okio:okio",
-            "moduleVersion": "3.14.0"
+            "moduleVersion": "3.17.0"
         },
         {
             "moduleName": "com.squareup.okio:okio-jvm",
-            "moduleVersion": "3.14.0",
+            "moduleVersion": "3.17.0",
             "moduleUrls": [
                 "https://github.com/square/okio/"
             ],
@@ -104,7 +117,7 @@
         },
         {
             "moduleName": "org.apache.commons:commons-lang3",
-            "moduleVersion": "3.18.0",
+            "moduleVersion": "3.20.0",
             "moduleUrls": [
                 "https://commons.apache.org/proper/commons-lang/"
             ],
@@ -185,7 +198,7 @@
         },
         {
             "moduleName": "org.slf4j:slf4j-api",
-            "moduleVersion": "2.0.17",
+            "moduleVersion": "2.0.18",
             "moduleUrls": [
                 "http://www.slf4j.org"
             ],

@@ -307,7 +307,8 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *  <p>Indicates whether the Prices of the Product Projection are <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">embedded</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">standalone</a>. <span>Projecting Prices</span> only works with <code>Embedded</code>, there is currently no support for <code>Standalone</code>.</p>
+     *  <p>Indicates whether the Prices of the Product Projection are <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">embedded</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">standalone</a>.</p>
+     *  <p>When <span>projecting Prices by Store</span>, the API supports only Embedded Prices (<code>Embedded</code>).</p>
      */
 
     public com.commercetools.api.models.product.ProductPriceModeEnum getPriceMode() {

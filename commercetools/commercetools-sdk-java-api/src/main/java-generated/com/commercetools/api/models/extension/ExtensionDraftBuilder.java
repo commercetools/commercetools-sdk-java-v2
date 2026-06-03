@@ -35,6 +35,15 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
     @Nullable
     private Integer timeoutInMs;
 
+    @Nullable
+    private java.util.List<com.commercetools.api.models.extension.ExtensionResourceIdentifier> dependencies;
+
+    @Nullable
+    private java.util.List<String> expansionPaths;
+
+    @Nullable
+    private com.commercetools.api.models.extension.ExtensionAdditionalContextDraft additionalContext;
+
     /**
      *  <p>User-defined unique identifier for the Extension.</p>
      * @param key value to be set
@@ -161,13 +170,184 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
 
     /**
      *  <p>Maximum time (in milliseconds) the Extension can respond within. If no timeout is provided, the default value is used for all <a href="https://docs.commercetools.com/apis/ctp:api:type:ExtensionResourceTypeId" rel="nofollow">types of Extensions</a>. We recommend keeping the timeout as low as possible to avoid performance issues.</p>
-     *  <p>The limit of 10000 ms (10 seconds) can be increased per Project after we review the performance impact. Please contact the <span>Composable Commerce support team</span> and provide the Region, Project key, and use case.</p>
+     *  <p>The limit of 10000 ms (10 seconds) can be increased per Project after we review the performance impact. Please contact the <span>commercetools support team</span> and provide the Region, Project key, and use case.</p>
      * @param timeoutInMs value to be set
      * @return Builder
      */
 
     public ExtensionDraftBuilder timeoutInMs(@Nullable final Integer timeoutInMs) {
         this.timeoutInMs = timeoutInMs;
+        return this;
+    }
+
+    /**
+     *  <p>Extensions that must complete before this Extension is called, identified by <code>id</code> or <code>key</code>. Maximum 5 entries. If omitted, the Extension has no dependencies and may run concurrently with other independent Extensions.</p>
+     * @param dependencies value to be set
+     * @return Builder
+     */
+
+    public ExtensionDraftBuilder dependencies(
+            @Nullable final com.commercetools.api.models.extension.ExtensionResourceIdentifier... dependencies) {
+        this.dependencies = new ArrayList<>(Arrays.asList(dependencies));
+        return this;
+    }
+
+    /**
+     *  <p>Extensions that must complete before this Extension is called, identified by <code>id</code> or <code>key</code>. Maximum 5 entries. If omitted, the Extension has no dependencies and may run concurrently with other independent Extensions.</p>
+     * @param dependencies value to be set
+     * @return Builder
+     */
+
+    public ExtensionDraftBuilder dependencies(
+            @Nullable final java.util.List<com.commercetools.api.models.extension.ExtensionResourceIdentifier> dependencies) {
+        this.dependencies = dependencies;
+        return this;
+    }
+
+    /**
+     *  <p>Extensions that must complete before this Extension is called, identified by <code>id</code> or <code>key</code>. Maximum 5 entries. If omitted, the Extension has no dependencies and may run concurrently with other independent Extensions.</p>
+     * @param dependencies value to be set
+     * @return Builder
+     */
+
+    public ExtensionDraftBuilder plusDependencies(
+            @Nullable final com.commercetools.api.models.extension.ExtensionResourceIdentifier... dependencies) {
+        if (this.dependencies == null) {
+            this.dependencies = new ArrayList<>();
+        }
+        this.dependencies.addAll(Arrays.asList(dependencies));
+        return this;
+    }
+
+    /**
+     *  <p>Extensions that must complete before this Extension is called, identified by <code>id</code> or <code>key</code>. Maximum 5 entries. If omitted, the Extension has no dependencies and may run concurrently with other independent Extensions.</p>
+     * @param builder function to build the dependencies value
+     * @return Builder
+     */
+
+    public ExtensionDraftBuilder plusDependencies(
+            Function<com.commercetools.api.models.extension.ExtensionResourceIdentifierBuilder, com.commercetools.api.models.extension.ExtensionResourceIdentifierBuilder> builder) {
+        if (this.dependencies == null) {
+            this.dependencies = new ArrayList<>();
+        }
+        this.dependencies.add(
+            builder.apply(com.commercetools.api.models.extension.ExtensionResourceIdentifierBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Extensions that must complete before this Extension is called, identified by <code>id</code> or <code>key</code>. Maximum 5 entries. If omitted, the Extension has no dependencies and may run concurrently with other independent Extensions.</p>
+     * @param builder function to build the dependencies value
+     * @return Builder
+     */
+
+    public ExtensionDraftBuilder withDependencies(
+            Function<com.commercetools.api.models.extension.ExtensionResourceIdentifierBuilder, com.commercetools.api.models.extension.ExtensionResourceIdentifierBuilder> builder) {
+        this.dependencies = new ArrayList<>();
+        this.dependencies.add(
+            builder.apply(com.commercetools.api.models.extension.ExtensionResourceIdentifierBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Extensions that must complete before this Extension is called, identified by <code>id</code> or <code>key</code>. Maximum 5 entries. If omitted, the Extension has no dependencies and may run concurrently with other independent Extensions.</p>
+     * @param builder function to build the dependencies value
+     * @return Builder
+     */
+
+    public ExtensionDraftBuilder addDependencies(
+            Function<com.commercetools.api.models.extension.ExtensionResourceIdentifierBuilder, com.commercetools.api.models.extension.ExtensionResourceIdentifier> builder) {
+        return plusDependencies(
+            builder.apply(com.commercetools.api.models.extension.ExtensionResourceIdentifierBuilder.of()));
+    }
+
+    /**
+     *  <p>Extensions that must complete before this Extension is called, identified by <code>id</code> or <code>key</code>. Maximum 5 entries. If omitted, the Extension has no dependencies and may run concurrently with other independent Extensions.</p>
+     * @param builder function to build the dependencies value
+     * @return Builder
+     */
+
+    public ExtensionDraftBuilder setDependencies(
+            Function<com.commercetools.api.models.extension.ExtensionResourceIdentifierBuilder, com.commercetools.api.models.extension.ExtensionResourceIdentifier> builder) {
+        return dependencies(
+            builder.apply(com.commercetools.api.models.extension.ExtensionResourceIdentifierBuilder.of()));
+    }
+
+    /**
+     *  <p><span>Expansion paths</span> used for reference expansion of the payload.</p>
+     *  <p>Be aware of the <span>limits</span> of this feature and its <span>performance impact</span>.</p>
+     * @param expansionPaths value to be set
+     * @return Builder
+     */
+
+    public ExtensionDraftBuilder expansionPaths(@Nullable final String... expansionPaths) {
+        this.expansionPaths = new ArrayList<>(Arrays.asList(expansionPaths));
+        return this;
+    }
+
+    /**
+     *  <p><span>Expansion paths</span> used for reference expansion of the payload.</p>
+     *  <p>Be aware of the <span>limits</span> of this feature and its <span>performance impact</span>.</p>
+     * @param expansionPaths value to be set
+     * @return Builder
+     */
+
+    public ExtensionDraftBuilder expansionPaths(@Nullable final java.util.List<String> expansionPaths) {
+        this.expansionPaths = expansionPaths;
+        return this;
+    }
+
+    /**
+     *  <p><span>Expansion paths</span> used for reference expansion of the payload.</p>
+     *  <p>Be aware of the <span>limits</span> of this feature and its <span>performance impact</span>.</p>
+     * @param expansionPaths value to be set
+     * @return Builder
+     */
+
+    public ExtensionDraftBuilder plusExpansionPaths(@Nullable final String... expansionPaths) {
+        if (this.expansionPaths == null) {
+            this.expansionPaths = new ArrayList<>();
+        }
+        this.expansionPaths.addAll(Arrays.asList(expansionPaths));
+        return this;
+    }
+
+    /**
+     *  <p>Configures additional information included in the payload sent to the API Extension.</p>
+     * @param builder function to build the additionalContext value
+     * @return Builder
+     */
+
+    public ExtensionDraftBuilder additionalContext(
+            Function<com.commercetools.api.models.extension.ExtensionAdditionalContextDraftBuilder, com.commercetools.api.models.extension.ExtensionAdditionalContextDraftBuilder> builder) {
+        this.additionalContext = builder
+                .apply(com.commercetools.api.models.extension.ExtensionAdditionalContextDraftBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Configures additional information included in the payload sent to the API Extension.</p>
+     * @param builder function to build the additionalContext value
+     * @return Builder
+     */
+
+    public ExtensionDraftBuilder withAdditionalContext(
+            Function<com.commercetools.api.models.extension.ExtensionAdditionalContextDraftBuilder, com.commercetools.api.models.extension.ExtensionAdditionalContextDraft> builder) {
+        this.additionalContext = builder
+                .apply(com.commercetools.api.models.extension.ExtensionAdditionalContextDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Configures additional information included in the payload sent to the API Extension.</p>
+     * @param additionalContext value to be set
+     * @return Builder
+     */
+
+    public ExtensionDraftBuilder additionalContext(
+            @Nullable final com.commercetools.api.models.extension.ExtensionAdditionalContextDraft additionalContext) {
+        this.additionalContext = additionalContext;
         return this;
     }
 
@@ -201,7 +381,7 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
 
     /**
      *  <p>Maximum time (in milliseconds) the Extension can respond within. If no timeout is provided, the default value is used for all <a href="https://docs.commercetools.com/apis/ctp:api:type:ExtensionResourceTypeId" rel="nofollow">types of Extensions</a>. We recommend keeping the timeout as low as possible to avoid performance issues.</p>
-     *  <p>The limit of 10000 ms (10 seconds) can be increased per Project after we review the performance impact. Please contact the <span>Composable Commerce support team</span> and provide the Region, Project key, and use case.</p>
+     *  <p>The limit of 10000 ms (10 seconds) can be increased per Project after we review the performance impact. Please contact the <span>commercetools support team</span> and provide the Region, Project key, and use case.</p>
      * @return timeoutInMs
      */
 
@@ -211,13 +391,45 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
     }
 
     /**
+     *  <p>Extensions that must complete before this Extension is called, identified by <code>id</code> or <code>key</code>. Maximum 5 entries. If omitted, the Extension has no dependencies and may run concurrently with other independent Extensions.</p>
+     * @return dependencies
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.extension.ExtensionResourceIdentifier> getDependencies() {
+        return this.dependencies;
+    }
+
+    /**
+     *  <p><span>Expansion paths</span> used for reference expansion of the payload.</p>
+     *  <p>Be aware of the <span>limits</span> of this feature and its <span>performance impact</span>.</p>
+     * @return expansionPaths
+     */
+
+    @Nullable
+    public java.util.List<String> getExpansionPaths() {
+        return this.expansionPaths;
+    }
+
+    /**
+     *  <p>Configures additional information included in the payload sent to the API Extension.</p>
+     * @return additionalContext
+     */
+
+    @Nullable
+    public com.commercetools.api.models.extension.ExtensionAdditionalContextDraft getAdditionalContext() {
+        return this.additionalContext;
+    }
+
+    /**
      * builds ExtensionDraft with checking for non-null required values
      * @return ExtensionDraft
      */
     public ExtensionDraft build() {
         Objects.requireNonNull(destination, ExtensionDraft.class + ": destination is missing");
         Objects.requireNonNull(triggers, ExtensionDraft.class + ": triggers is missing");
-        return new ExtensionDraftImpl(key, destination, triggers, timeoutInMs);
+        return new ExtensionDraftImpl(key, destination, triggers, timeoutInMs, dependencies, expansionPaths,
+            additionalContext);
     }
 
     /**
@@ -225,7 +437,8 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
      * @return ExtensionDraft
      */
     public ExtensionDraft buildUnchecked() {
-        return new ExtensionDraftImpl(key, destination, triggers, timeoutInMs);
+        return new ExtensionDraftImpl(key, destination, triggers, timeoutInMs, dependencies, expansionPaths,
+            additionalContext);
     }
 
     /**
@@ -247,6 +460,9 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
         builder.destination = template.getDestination();
         builder.triggers = template.getTriggers();
         builder.timeoutInMs = template.getTimeoutInMs();
+        builder.dependencies = template.getDependencies();
+        builder.expansionPaths = template.getExpansionPaths();
+        builder.additionalContext = template.getAdditionalContext();
         return builder;
     }
 

@@ -17,7 +17,7 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
- * ProductChangePriceAction
+ *  <p>This action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPriceChangedMessage" rel="nofollow">ProductPriceChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

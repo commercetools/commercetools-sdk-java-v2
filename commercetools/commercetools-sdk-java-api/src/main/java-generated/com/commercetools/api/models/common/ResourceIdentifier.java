@@ -180,6 +180,14 @@ public interface ResourceIdentifier extends com.commercetools.api.models.WithKey
     }
 
     /**
+     * builder for extension subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.extension.ExtensionResourceIdentifierBuilder extensionBuilder() {
+        return com.commercetools.api.models.extension.ExtensionResourceIdentifierBuilder.of();
+    }
+
+    /**
      * builder for inventoryEntry subtype
      * @return builder
      */

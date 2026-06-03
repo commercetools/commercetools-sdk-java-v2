@@ -1148,9 +1148,9 @@ types:
           return AttributeGroupSetKeyAction.of();
       }
   BusinessUnit:
-    (java-extends): 'com.commercetools.api.models.WithKey'
+    (java-extends): 'com.commercetools.api.models.WithKey, com.commercetools.api.models.Customizable<BusinessUnit>'
   BusinessUnitDraft:
-    (java-extends): 'com.commercetools.api.models.WithKey'
+    (java-extends): 'com.commercetools.api.models.WithKey, com.commercetools.api.models.CustomizableDraft<BusinessUnitDraft>'
   BusinessUnitPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<BusinessUnit>'
   BusinessUnitReference:

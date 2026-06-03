@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- * CartSetLineItemInventoryModeAction
+ *  <p>Sets the inventory mode for a specific Line Item in the Cart. When changing a Line Item's inventory mode to <code>ReserveOnCart</code>, a reservation is automatically created if sufficient stock is available. When changing from <code>ReserveOnCart</code> to another mode, the reservation is released.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetLineItemInventoryModeActionImpl implements CartSetLineItemInventoryModeAction, ModelBase {

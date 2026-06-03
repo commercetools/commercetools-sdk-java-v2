@@ -8,6 +8,7 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -39,6 +40,14 @@ public interface CategoryReference extends Reference, com.commercetools.api.mode
      * discriminator value for CategoryReference
      */
     String CATEGORY = "category";
+
+    /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
 
     /**
      *  <p>Contains the representation of the expanded Category. Only present in responses to requests with <span>Reference Expansion</span> for Categories.</p>

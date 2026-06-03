@@ -57,7 +57,7 @@ public class MyPaymentSetMethodInfoCustomTypeActionImpl implements MyPaymentSetM
     }
 
     /**
-     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>paymentMethodInfo</code> with <span>Custom Fields</span>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>paymentMethodInfo</code> with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -65,7 +65,8 @@ public class MyPaymentSetMethodInfoCustomTypeActionImpl implements MyPaymentSetM
     }
 
     /**
-     *  <p>Sets the <span>Custom Fields</span> fields for the <code>paymentMethodInfo</code>.</p>
+     *  <p>Object containing the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the <code>paymentMethodInfo</code>.</p>
+     *  <p>Required if at least one Custom Field is defined as required in the <code>fieldDefinitions</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

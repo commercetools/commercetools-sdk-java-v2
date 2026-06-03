@@ -150,6 +150,14 @@ public interface ImportRequest {
     }
 
     /**
+     * builder for productTailoring subtype
+     * @return builder
+     */
+    public static com.commercetools.importapi.models.importrequests.ProductTailoringImportRequestBuilder productTailoringBuilder() {
+        return com.commercetools.importapi.models.importrequests.ProductTailoringImportRequestBuilder.of();
+    }
+
+    /**
      * builder for productType subtype
      * @return builder
      */

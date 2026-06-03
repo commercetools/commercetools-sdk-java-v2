@@ -65,7 +65,8 @@ public class ApprovalFlowSetCustomTypeActionImpl implements ApprovalFlowSetCusto
     }
 
     /**
-     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the ApprovalFlow.</p>
+     *  <p>Object containing the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the ApprovalFlow.</p>
+     *  <p>Required if at least one Custom Field is defined as required in the <code>fieldDefinitions</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

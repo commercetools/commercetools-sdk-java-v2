@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Sets the default reservation expiration time for the Inventory Entry. This action does not affect existing reservations. To change the expiration date and time of existing reservations, see the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetReservationExpirationInMinutesAction" rel="nofollow">Set Reservation Expiration In Minutes</a> update action on the Carts API.</p>
@@ -121,8 +122,8 @@ public interface InventoryEntrySetReservationExpirationInMinutesAction extends I
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntrySetReservationExpirationInMinutesAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntrySetReservationExpirationInMinutesAction>() {
+    public static tools.jackson.core.type.TypeReference<InventoryEntrySetReservationExpirationInMinutesAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<InventoryEntrySetReservationExpirationInMinutesAction>() {
             @Override
             public String toString() {
                 return "TypeReference<InventoryEntrySetReservationExpirationInMinutesAction>";

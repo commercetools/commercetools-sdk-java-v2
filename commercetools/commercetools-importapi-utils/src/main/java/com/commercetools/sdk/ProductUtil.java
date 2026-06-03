@@ -8,7 +8,6 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 import com.commercetools.api.models.cart.CartReferenceImpl;
-import com.commercetools.api.models.category.CategoryReference;
 import com.commercetools.api.models.category.CategoryReferenceImpl;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.Money;

@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>JSON object where the keys are of type <a href="https://docs.commercetools.com/apis/ctp:checkout:type:Locale" rel="nofollow">Locale</a>, and the values are the strings used for the corresponding language.</p>

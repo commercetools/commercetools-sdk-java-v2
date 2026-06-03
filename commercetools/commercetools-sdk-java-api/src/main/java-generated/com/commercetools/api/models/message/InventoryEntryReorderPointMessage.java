@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.channel.ChannelReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Generated after <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> <code>quantityOnStock</code> reaches the configured reorder point level. For more information, see <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntryStockLevels" rel="nofollow">InventoryEntryStockLevels</a>.</p>
@@ -187,8 +187,8 @@ public interface InventoryEntryReorderPointMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntryReorderPointMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntryReorderPointMessage>() {
+    public static tools.jackson.core.type.TypeReference<InventoryEntryReorderPointMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<InventoryEntryReorderPointMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<InventoryEntryReorderPointMessage>";

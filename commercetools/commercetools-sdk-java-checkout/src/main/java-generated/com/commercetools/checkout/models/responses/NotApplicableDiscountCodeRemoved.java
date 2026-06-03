@@ -13,7 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Generated when using the <code>paymentFlow</code> <span>method</span> and Checkout removes a <span>Discount Code</span> from the Cart because it does not apply to the Cart. Checkout removes the Discount Code to avoid an order creation error when converting the Cart to an Order.</p>

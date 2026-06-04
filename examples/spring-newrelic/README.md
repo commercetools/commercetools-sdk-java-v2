@@ -4,6 +4,8 @@ Example to show how Java SDK can be used in a Spring Boot application with NewRe
 
 ## Requirements
 
+- Java 21 or higher
+- Gradle 8.14 or higher
 - A Composable Commerce Project with a configured [API Client](https://docs.commercetools.com/tutorials/getting-started#creating-an-api-client).
   Necessary scopes: `view_published_products`, `manage_orders`
 - Your Project must have existing products containing variants with SKUs, and at least one customer, the storefront search endpoint must be active.

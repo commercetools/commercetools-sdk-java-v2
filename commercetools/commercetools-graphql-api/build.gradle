@@ -56,6 +56,7 @@ generateJava {
             "Locale": "String",
             "Long": "Long",
             "Json": "tools.jackson.databind.JsonNode",
+            "JsonPrimitive": "tools.jackson.databind.node.ValueNode",
             "KeyReferenceInput": "String",
             "Set": "Object",
             "Time": "String",

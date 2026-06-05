@@ -28,7 +28,6 @@ public interface InventoryMode extends JsonEnum {
     <p>However, an Order can be created if the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> <code>restockableInDays</code> is set (including <code>0</code>).</p> */
     InventoryMode RESERVE_ON_ORDER = InventoryModeEnum.RESERVE_ON_ORDER;
     /**
-    <p>This feature is in <span>Beta</span>.</p>
     <p>When Line Items are added to a Cart, they are automatically reserved. The reservation can be released by <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRemoveLineItemAction" rel="nofollow">removing</a> the Line Item from the Cart or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetLineItemInventoryModeAction" rel="nofollow">changing</a> their inventory mode to something other than <code>ReserveOnCart</code>. Reservations expire after the time specified in the Project's <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryConfiguration" rel="nofollow"><code>reservationExpirationInMinutes</code></a> setting.</p>
     <p>To use this inventory mode, you must set the reservation expiration time on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> using the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectSetReservationExpirationInMinutesAction" rel="nofollow">Set Reservation Expiration In Minutes</a> update action.</p> */
     InventoryMode RESERVE_ON_CART = InventoryModeEnum.RESERVE_ON_CART;

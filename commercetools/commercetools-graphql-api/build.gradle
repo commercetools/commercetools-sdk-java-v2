@@ -56,6 +56,7 @@ generateJava {
             "Locale": "String",
             "Long": "Long",
             "Json": "com.fasterxml.jackson.databind.JsonNode",
+            "JsonPrimitive": "com.fasterxml.jackson.databind.node.ValueNode",
             "KeyReferenceInput": "String",
             "Set": "Object",
             "Time": "String",

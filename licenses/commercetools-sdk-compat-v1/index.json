@@ -779,32 +779,6 @@
                     "moduleLicenseUrl": "https://opensource.org/licenses/MIT"
                 }
             ]
-        },
-        {
-            "moduleName": "tools.jackson.core:jackson-core",
-            "moduleVersion": "3.1.0",
-            "moduleUrls": [
-                "https://github.com/FasterXML/jackson-core"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "tools.jackson.core:jackson-databind",
-            "moduleVersion": "3.1.0",
-            "moduleUrls": [
-                "https://github.com/FasterXML/jackson"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
         }
     ]
 }

@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Difference between the previous and next version of a resource represented by <code>previousValue</code> (omitted, for example, on creations) and <code>nextValue</code> of the associated change. A Change can also contain extra fields that provide further information.</p>
@@ -3086,8 +3086,8 @@ public interface Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<Change> typeReference() {
-        return new tools.jackson.core.type.TypeReference<Change>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<Change> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Change>() {
             @Override
             public String toString() {
                 return "TypeReference<Change>";

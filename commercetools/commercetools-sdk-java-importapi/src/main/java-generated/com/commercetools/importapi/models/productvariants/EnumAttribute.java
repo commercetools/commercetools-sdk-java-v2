@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>This type represents an attribute whose value is an enum. The attribute value refers to the key of the enum value.</p>
@@ -121,8 +121,8 @@ public interface EnumAttribute extends Attribute {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<EnumAttribute> typeReference() {
-        return new tools.jackson.core.type.TypeReference<EnumAttribute>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<EnumAttribute> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<EnumAttribute>() {
             @Override
             public String toString() {
                 return "TypeReference<EnumAttribute>";

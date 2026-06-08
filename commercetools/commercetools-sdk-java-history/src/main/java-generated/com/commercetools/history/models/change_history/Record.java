@@ -13,12 +13,12 @@ import com.commercetools.history.models.common.KeyReference;
 import com.commercetools.history.models.common.ResourceIdentifier;
 import com.commercetools.history.models.label.Label;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Captures the differences between the previous and next version of a resource.</p>
@@ -357,8 +357,8 @@ public interface Record {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<Record> typeReference() {
-        return new tools.jackson.core.type.TypeReference<Record>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<Record> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Record>() {
             @Override
             public String toString() {
                 return "TypeReference<Record>";

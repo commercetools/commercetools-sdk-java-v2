@@ -11,12 +11,12 @@ import javax.annotation.Nullable;
 import com.commercetools.importapi.models.prices.PriceImport;
 import com.commercetools.importapi.models.productvariants.Attribute;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * VariantValues
@@ -178,8 +178,8 @@ public interface VariantValues {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<VariantValues> typeReference() {
-        return new tools.jackson.core.type.TypeReference<VariantValues>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<VariantValues> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<VariantValues>() {
             @Override
             public String toString() {
                 return "TypeReference<VariantValues>";

@@ -8,12 +8,12 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Values of a SetType Custom Field are sets of values of the specified <code>elementType</code> (without duplicate elements).</p>
@@ -121,8 +121,8 @@ public interface CustomFieldSetType extends FieldType {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<CustomFieldSetType> typeReference() {
-        return new tools.jackson.core.type.TypeReference<CustomFieldSetType>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomFieldSetType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomFieldSetType>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomFieldSetType>";

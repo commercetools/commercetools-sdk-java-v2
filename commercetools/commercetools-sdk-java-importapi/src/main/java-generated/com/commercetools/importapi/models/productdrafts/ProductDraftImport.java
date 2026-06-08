@@ -18,12 +18,12 @@ import com.commercetools.importapi.models.common.TaxCategoryKeyReference;
 import com.commercetools.importapi.models.products.SearchKeywords;
 import com.commercetools.importapi.models.productvariants.Attribute;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>The representation of a Product Draft for the import purpose.</p>
@@ -446,8 +446,8 @@ public interface ProductDraftImport extends ImportResource {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<ProductDraftImport> typeReference() {
-        return new tools.jackson.core.type.TypeReference<ProductDraftImport>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductDraftImport> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductDraftImport>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductDraftImport>";

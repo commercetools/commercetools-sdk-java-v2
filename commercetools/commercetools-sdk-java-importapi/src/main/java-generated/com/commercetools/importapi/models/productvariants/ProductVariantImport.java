@@ -13,12 +13,12 @@ import com.commercetools.importapi.models.common.Image;
 import com.commercetools.importapi.models.common.ImportResource;
 import com.commercetools.importapi.models.common.ProductKeyReference;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Represents the data used to import a ProductVariant. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in the Project.</p>
@@ -290,8 +290,8 @@ public interface ProductVariantImport extends ImportResource {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<ProductVariantImport> typeReference() {
-        return new tools.jackson.core.type.TypeReference<ProductVariantImport>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantImport> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantImport>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductVariantImport>";

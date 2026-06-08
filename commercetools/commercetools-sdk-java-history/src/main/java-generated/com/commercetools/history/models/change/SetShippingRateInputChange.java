@@ -10,11 +10,11 @@ import javax.annotation.Nullable;
 import com.commercetools.history.models.change_value.SetCartClassificationShippingRateInputValue;
 import com.commercetools.history.models.change_value.SetCartScoreShippingRateInputValue;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingRateInputAction" rel="nofollow">Set Shipping Rate Input</a> update action.</p>
@@ -191,8 +191,8 @@ public interface SetShippingRateInputChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<SetShippingRateInputChange> typeReference() {
-        return new tools.jackson.core.type.TypeReference<SetShippingRateInputChange>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<SetShippingRateInputChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetShippingRateInputChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetShippingRateInputChange>";

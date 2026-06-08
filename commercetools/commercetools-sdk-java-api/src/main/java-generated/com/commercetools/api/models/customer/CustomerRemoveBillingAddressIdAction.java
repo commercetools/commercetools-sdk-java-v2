@@ -8,10 +8,9 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
-
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Removes a billing address from <code>billingAddressIds</code>. If the billing address is the default billing address, the <code>defaultBillingAddressId</code> is unset. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
@@ -136,8 +135,8 @@ public interface CustomerRemoveBillingAddressIdAction extends CustomerUpdateActi
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<CustomerRemoveBillingAddressIdAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<CustomerRemoveBillingAddressIdAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerRemoveBillingAddressIdAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerRemoveBillingAddressIdAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerRemoveBillingAddressIdAction>";

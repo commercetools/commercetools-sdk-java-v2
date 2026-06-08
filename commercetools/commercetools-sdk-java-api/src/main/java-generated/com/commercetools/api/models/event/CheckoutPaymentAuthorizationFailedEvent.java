@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated when an attempt to authorize a payment fails in Checkout. This failure could result from insufficient funds, incorrect payment details, expired cards, or risk related rejections.</p>
@@ -153,8 +153,8 @@ public interface CheckoutPaymentAuthorizationFailedEvent extends Event {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<CheckoutPaymentAuthorizationFailedEvent> typeReference() {
-        return new tools.jackson.core.type.TypeReference<CheckoutPaymentAuthorizationFailedEvent>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<CheckoutPaymentAuthorizationFailedEvent> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CheckoutPaymentAuthorizationFailedEvent>() {
             @Override
             public String toString() {
                 return "TypeReference<CheckoutPaymentAuthorizationFailedEvent>";

@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Adding or updating a Custom Type on an Address of a Business Unit generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAddressCustomTypeSetMessage" rel="nofollow">BusinessUnitAddressCustomTypeSet</a> Message, and removing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAddressCustomTypeRemovedMessage" rel="nofollow">BusinessUnitAddressCustomTypeRemoved</a> Message.</p>
@@ -161,8 +161,8 @@ public interface BusinessUnitSetAddressCustomTypeAction extends BusinessUnitUpda
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<BusinessUnitSetAddressCustomTypeAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<BusinessUnitSetAddressCustomTypeAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitSetAddressCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitSetAddressCustomTypeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitSetAddressCustomTypeAction>";

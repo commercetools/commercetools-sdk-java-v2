@@ -8,10 +8,9 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
-
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Cart Discounts are applied to recurring and non-recurring Orders.</p>
@@ -100,8 +99,8 @@ public interface AnyOrder extends RecurringOrderScope {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<AnyOrder> typeReference() {
-        return new tools.jackson.core.type.TypeReference<AnyOrder>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<AnyOrder> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AnyOrder>() {
             @Override
             public String toString() {
                 return "TypeReference<AnyOrder>";

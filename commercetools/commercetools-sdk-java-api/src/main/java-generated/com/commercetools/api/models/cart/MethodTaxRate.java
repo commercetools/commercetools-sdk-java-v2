@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.tax_category.TaxRate;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * MethodTaxRate
@@ -132,8 +132,8 @@ public interface MethodTaxRate {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<MethodTaxRate> typeReference() {
-        return new tools.jackson.core.type.TypeReference<MethodTaxRate>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<MethodTaxRate> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MethodTaxRate>() {
             @Override
             public String toString() {
                 return "TypeReference<MethodTaxRate>";

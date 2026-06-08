@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.inventories.InventoryImport;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>The request body to <a href="https://docs.commercetools.com/apis/ctp:import:endpoint:/{projectKey}/inventories/import-containers/{importContainerKey}:POST" rel="nofollow">import Inventories</a>. Contains data for <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntries</a> to be created or updated in a commercetools Project.</p>
@@ -135,8 +135,8 @@ public interface InventoryImportRequest extends ImportRequest {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<InventoryImportRequest> typeReference() {
-        return new tools.jackson.core.type.TypeReference<InventoryImportRequest>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<InventoryImportRequest> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InventoryImportRequest>() {
             @Override
             public String toString() {
                 return "TypeReference<InventoryImportRequest>";

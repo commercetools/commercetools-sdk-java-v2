@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.product.ProductResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Updates the Product Variant Exclusion of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionAssignment" rel="nofollow">Product Selection Assignment</a>. A <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantExclusion" rel="nofollow">ProductVariantExclusion</a> can only be set if the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> has already been excluded from the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a> with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</p>
@@ -146,8 +146,8 @@ public interface ProductSelectionSetVariantExclusionAction extends ProductSelect
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<ProductSelectionSetVariantExclusionAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<ProductSelectionSetVariantExclusionAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionSetVariantExclusionAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionSetVariantExclusionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSelectionSetVariantExclusionAction>";

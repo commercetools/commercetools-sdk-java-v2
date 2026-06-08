@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Returned when an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeEnumType" rel="nofollow">AttributeEnumType</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumType" rel="nofollow">AttributeLocalizedEnumType</a> contains duplicate keys.</p>
@@ -155,8 +155,8 @@ public interface DuplicateEnumValuesError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<DuplicateEnumValuesError> typeReference() {
-        return new tools.jackson.core.type.TypeReference<DuplicateEnumValuesError>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<DuplicateEnumValuesError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DuplicateEnumValuesError>() {
             @Override
             public String toString() {
                 return "TypeReference<DuplicateEnumValuesError>";

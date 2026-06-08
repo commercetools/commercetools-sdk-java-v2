@@ -8,12 +8,12 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>An Image uploaded to commercetools Composable Commerce is stored in a Content Delivery Network and it's available in several pre-defined sizes. If you already have an image stored on an external service, you can save the URL when creating a new product or adding a variant, or you can add it later.</p>
@@ -151,8 +151,8 @@ public interface Image {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<Image> typeReference() {
-        return new tools.jackson.core.type.TypeReference<Image>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<Image> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Image>() {
             @Override
             public String toString() {
                 return "TypeReference<Image>";

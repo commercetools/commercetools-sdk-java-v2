@@ -8,10 +8,9 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
-
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Sets the <code>published</code> flag on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> to <code>false</code>. This makes the <span>current</span> representation of a Product unavailable in <span>Product Projection</span> endpoints by default, and excludes it from <span>Product Search</span>. To retrieve unpublished Products on Product Projection endpoints, set parameter <code>staged=true</code>.</p>
@@ -106,8 +105,8 @@ public interface ProductUnpublishAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<ProductUnpublishAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<ProductUnpublishAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductUnpublishAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductUnpublishAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductUnpublishAction>";

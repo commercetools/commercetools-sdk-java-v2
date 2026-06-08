@@ -10,11 +10,11 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.cart.ExternalTaxRateDraft;
 import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>To set the Cart's Shipping Method the Cart must have the <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a> and a <code>shippingAddress</code>.</p>
@@ -141,8 +141,8 @@ public interface MyCartSetShippingMethodAction extends MyCartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<MyCartSetShippingMethodAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<MyCartSetShippingMethodAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCartSetShippingMethodAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCartSetShippingMethodAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyCartSetShippingMethodAction>";

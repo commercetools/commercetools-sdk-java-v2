@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.checkout.models.common.Amount;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Requests to <span>refund</span> the given amount to the customer. Checkout will request the PSP or gift card management system to proceed with the financial process to refund the amount.</p>
@@ -156,8 +156,8 @@ public interface PaymentIntentRefundAction extends PaymentIntentAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<PaymentIntentRefundAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<PaymentIntentRefundAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentIntentRefundAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentIntentRefundAction>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentIntentRefundAction>";

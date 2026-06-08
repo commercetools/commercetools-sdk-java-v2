@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.zone.ZoneResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * ShippingMethodAddZoneAction
@@ -124,8 +124,8 @@ public interface ShippingMethodAddZoneAction extends ShippingMethodUpdateAction 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<ShippingMethodAddZoneAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<ShippingMethodAddZoneAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodAddZoneAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodAddZoneAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ShippingMethodAddZoneAction>";

@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.cart.DiscountCodeState;
 import com.commercetools.api.models.discount_code.DiscountCodeReference;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated after the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeState" rel="nofollow">DiscountCodeState</a> changes due to a <span>recalculation</span>.</p>
@@ -188,8 +188,8 @@ public interface OrderDiscountCodeStateSetMessage extends OrderMessage {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<OrderDiscountCodeStateSetMessage> typeReference() {
-        return new tools.jackson.core.type.TypeReference<OrderDiscountCodeStateSetMessage>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderDiscountCodeStateSetMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderDiscountCodeStateSetMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderDiscountCodeStateSetMessage>";

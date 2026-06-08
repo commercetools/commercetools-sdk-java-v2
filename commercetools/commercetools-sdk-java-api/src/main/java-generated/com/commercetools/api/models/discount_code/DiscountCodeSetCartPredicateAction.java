@@ -8,10 +8,9 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
-
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * DiscountCodeSetCartPredicateAction
@@ -118,8 +117,8 @@ public interface DiscountCodeSetCartPredicateAction extends DiscountCodeUpdateAc
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<DiscountCodeSetCartPredicateAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<DiscountCodeSetCartPredicateAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetCartPredicateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetCartPredicateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountCodeSetCartPredicateAction>";

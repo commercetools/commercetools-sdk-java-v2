@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when the resources involved in the request are not in a valid state for the operation.</p>
@@ -128,8 +128,8 @@ public interface InvalidOperationError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<InvalidOperationError> typeReference() {
-        return new tools.jackson.core.type.TypeReference<InvalidOperationError>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<InvalidOperationError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InvalidOperationError>() {
             @Override
             public String toString() {
                 return "TypeReference<InvalidOperationError>";

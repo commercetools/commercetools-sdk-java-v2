@@ -8,10 +8,9 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
-
-import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Draft type to create a <a href="https://docs.commercetools.com/apis/ctp:checkout:type:Reference" rel="nofollow">Reference</a> to a resource. Provide either the <code>id</code> or (wherever supported) the <code>key</code> of the resource to reference, but depending on the API endpoint the response returns a Reference.</p>
@@ -145,8 +144,8 @@ public interface ResourceIdentifier {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<ResourceIdentifier> typeReference() {
-        return new tools.jackson.core.type.TypeReference<ResourceIdentifier>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<ResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ResourceIdentifier>() {
             @Override
             public String toString() {
                 return "TypeReference<ResourceIdentifier>";

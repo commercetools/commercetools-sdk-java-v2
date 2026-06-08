@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.common.TypedMoneyDraft;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * DiscountedLineItemPortionDraft
@@ -137,8 +137,8 @@ public interface DiscountedLineItemPortionDraft extends io.vrap.rmf.base.client.
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<DiscountedLineItemPortionDraft> typeReference() {
-        return new tools.jackson.core.type.TypeReference<DiscountedLineItemPortionDraft>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<DiscountedLineItemPortionDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DiscountedLineItemPortionDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountedLineItemPortionDraft>";

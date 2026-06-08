@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Defines the new state for the Recurring Order—for possible values, see <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderActive" rel="nofollow">RecurringOrderActive</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderPaused" rel="nofollow">RecurringOrderPaused</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderExpired" rel="nofollow">RecurringOrderExpired</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderCanceled" rel="nofollow">RecurringOrderCanceled</a>.</p>
@@ -105,8 +105,8 @@ public interface RecurringOrderStateDraft {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<RecurringOrderStateDraft> typeReference() {
-        return new tools.jackson.core.type.TypeReference<RecurringOrderStateDraft>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<RecurringOrderStateDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<RecurringOrderStateDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<RecurringOrderStateDraft>";

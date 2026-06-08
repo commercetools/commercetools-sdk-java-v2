@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>A given field is not supported. This error occurs, for example, if the field <code>variants</code>, which is not supported by <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductImport" rel="nofollow">Product Import</a>, is sent to the Product Import endpoint.</p>
@@ -181,8 +181,8 @@ public interface InvalidFieldError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<InvalidFieldError> typeReference() {
-        return new tools.jackson.core.type.TypeReference<InvalidFieldError>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<InvalidFieldError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InvalidFieldError>() {
             @Override
             public String toString() {
                 return "TypeReference<InvalidFieldError>";

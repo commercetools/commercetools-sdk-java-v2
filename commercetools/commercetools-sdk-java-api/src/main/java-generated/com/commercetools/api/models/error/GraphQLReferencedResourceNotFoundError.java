@@ -9,11 +9,11 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Returned when a resource referenced by a <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> or a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> could not be found.</p>
@@ -167,8 +167,8 @@ public interface GraphQLReferencedResourceNotFoundError extends GraphQLErrorObje
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<GraphQLReferencedResourceNotFoundError> typeReference() {
-        return new tools.jackson.core.type.TypeReference<GraphQLReferencedResourceNotFoundError>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLReferencedResourceNotFoundError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLReferencedResourceNotFoundError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLReferencedResourceNotFoundError>";

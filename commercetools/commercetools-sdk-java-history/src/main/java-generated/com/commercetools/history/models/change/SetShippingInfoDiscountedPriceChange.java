@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.DiscountedLineItemPrice;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Change triggered when a shipping price is modified due to a discount.</p>
@@ -171,8 +171,8 @@ public interface SetShippingInfoDiscountedPriceChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<SetShippingInfoDiscountedPriceChange> typeReference() {
-        return new tools.jackson.core.type.TypeReference<SetShippingInfoDiscountedPriceChange>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<SetShippingInfoDiscountedPriceChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetShippingInfoDiscountedPriceChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetShippingInfoDiscountedPriceChange>";

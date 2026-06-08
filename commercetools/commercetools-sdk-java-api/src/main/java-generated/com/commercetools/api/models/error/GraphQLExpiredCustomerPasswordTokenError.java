@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Returned when the provided password token of the Customer has expired.</p>
@@ -119,8 +119,8 @@ public interface GraphQLExpiredCustomerPasswordTokenError extends GraphQLErrorOb
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<GraphQLExpiredCustomerPasswordTokenError> typeReference() {
-        return new tools.jackson.core.type.TypeReference<GraphQLExpiredCustomerPasswordTokenError>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLExpiredCustomerPasswordTokenError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLExpiredCustomerPasswordTokenError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLExpiredCustomerPasswordTokenError>";

@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>These objects represent information about which <span>API Client</span> created or modified a resource. For more information, see <span>Client Logging</span>.</p>
@@ -182,8 +182,8 @@ public interface ClientLogging {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<ClientLogging> typeReference() {
-        return new tools.jackson.core.type.TypeReference<ClientLogging>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<ClientLogging> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ClientLogging>() {
             @Override
             public String toString() {
                 return "TypeReference<ClientLogging>";

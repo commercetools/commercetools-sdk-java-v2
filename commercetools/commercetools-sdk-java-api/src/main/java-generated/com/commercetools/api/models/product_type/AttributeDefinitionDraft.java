@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Specify the Attribute to be created with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeDraft" rel="nofollow">ProductTypeDraft</a>.</p>
@@ -262,8 +262,8 @@ public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<AttributeDefinitionDraft> typeReference() {
-        return new tools.jackson.core.type.TypeReference<AttributeDefinitionDraft>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<AttributeDefinitionDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AttributeDefinitionDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<AttributeDefinitionDraft>";

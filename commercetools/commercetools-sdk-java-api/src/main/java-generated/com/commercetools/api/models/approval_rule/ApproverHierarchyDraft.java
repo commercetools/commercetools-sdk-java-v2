@@ -9,12 +9,12 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Describes the sequence in which <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associates</a> can approve an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
@@ -128,8 +128,8 @@ public interface ApproverHierarchyDraft extends io.vrap.rmf.base.client.Draft<Ap
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<ApproverHierarchyDraft> typeReference() {
-        return new tools.jackson.core.type.TypeReference<ApproverHierarchyDraft>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<ApproverHierarchyDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ApproverHierarchyDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ApproverHierarchyDraft>";

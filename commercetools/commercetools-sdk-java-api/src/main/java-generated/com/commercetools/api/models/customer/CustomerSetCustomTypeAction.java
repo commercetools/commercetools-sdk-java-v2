@@ -10,11 +10,11 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Adding or updating a Custom Type on a Customer generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerCustomTypeSetMessage" rel="nofollow">CustomerCustomTypeSet</a> Message, removing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerCustomTypeRemovedMessage" rel="nofollow">CustomerCustomTypeRemoved</a> Message.</p>
@@ -139,8 +139,8 @@ public interface CustomerSetCustomTypeAction extends CustomerUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<CustomerSetCustomTypeAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<CustomerSetCustomTypeAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerSetCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerSetCustomTypeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerSetCustomTypeAction>";

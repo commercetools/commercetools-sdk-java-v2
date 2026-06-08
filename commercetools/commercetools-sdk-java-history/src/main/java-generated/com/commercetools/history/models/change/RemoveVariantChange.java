@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.Variant;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemoveVariantAction" rel="nofollow">Remove ProductVariant</a> update action.</p>
@@ -194,8 +194,8 @@ public interface RemoveVariantChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<RemoveVariantChange> typeReference() {
-        return new tools.jackson.core.type.TypeReference<RemoveVariantChange>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<RemoveVariantChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<RemoveVariantChange>() {
             @Override
             public String toString() {
                 return "TypeReference<RemoveVariantChange>";

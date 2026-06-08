@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Returned when a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> references a country that is not included in the countries configured for the Store.</p>
@@ -182,8 +182,8 @@ public interface CountryNotConfiguredInStoreError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<CountryNotConfiguredInStoreError> typeReference() {
-        return new tools.jackson.core.type.TypeReference<CountryNotConfiguredInStoreError>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<CountryNotConfiguredInStoreError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CountryNotConfiguredInStoreError>() {
             @Override
             public String toString() {
                 return "TypeReference<CountryNotConfiguredInStoreError>";

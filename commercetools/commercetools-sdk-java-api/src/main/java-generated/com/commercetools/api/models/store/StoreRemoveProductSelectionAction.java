@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>This action has no effect if the given Product Selection is not in the Store.</p>
@@ -124,8 +124,8 @@ public interface StoreRemoveProductSelectionAction extends StoreUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<StoreRemoveProductSelectionAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<StoreRemoveProductSelectionAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<StoreRemoveProductSelectionAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StoreRemoveProductSelectionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StoreRemoveProductSelectionAction>";

@@ -16,12 +16,12 @@ import com.commercetools.importapi.models.common.PriceTier;
 import com.commercetools.importapi.models.common.TypedMoney;
 import com.commercetools.importapi.models.customfields.Custom;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>The representation of a Price Draft for the import purpose.</p>
@@ -292,8 +292,8 @@ public interface PriceDraftImport {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<PriceDraftImport> typeReference() {
-        return new tools.jackson.core.type.TypeReference<PriceDraftImport>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<PriceDraftImport> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PriceDraftImport>() {
             @Override
             public String toString() {
                 return "TypeReference<PriceDraftImport>";

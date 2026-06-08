@@ -8,10 +8,9 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
-
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Removing the address from a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAddressRemovedMessage" rel="nofollow">BusinessUnitAddressRemoved</a> Message.</p>
@@ -135,8 +134,8 @@ public interface MyBusinessUnitRemoveAddressAction extends MyBusinessUnitUpdateA
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<MyBusinessUnitRemoveAddressAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<MyBusinessUnitRemoveAddressAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<MyBusinessUnitRemoveAddressAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyBusinessUnitRemoveAddressAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyBusinessUnitRemoveAddressAction>";

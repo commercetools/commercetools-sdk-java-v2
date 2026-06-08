@@ -11,11 +11,11 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.common.Asset;
 import com.commercetools.api.models.common.Image;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Either <code>id</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that exists.</p>
@@ -231,8 +231,8 @@ public interface ProductVariantTailoringDraft extends io.vrap.rmf.base.client.Dr
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<ProductVariantTailoringDraft> typeReference() {
-        return new tools.jackson.core.type.TypeReference<ProductVariantTailoringDraft>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantTailoringDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantTailoringDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductVariantTailoringDraft>";

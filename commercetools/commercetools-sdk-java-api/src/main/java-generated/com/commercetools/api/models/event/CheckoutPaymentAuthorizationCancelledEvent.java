@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated when a payment authorization is successfully cancelled in Checkout. This event indicates that the payment is cancelled before it is charged.</p>
@@ -154,8 +154,8 @@ public interface CheckoutPaymentAuthorizationCancelledEvent extends Event {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<CheckoutPaymentAuthorizationCancelledEvent> typeReference() {
-        return new tools.jackson.core.type.TypeReference<CheckoutPaymentAuthorizationCancelledEvent>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<CheckoutPaymentAuthorizationCancelledEvent> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CheckoutPaymentAuthorizationCancelledEvent>() {
             @Override
             public String toString() {
                 return "TypeReference<CheckoutPaymentAuthorizationCancelledEvent>";

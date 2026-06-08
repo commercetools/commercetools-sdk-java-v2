@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>A KeyReference represents a loose reference to another resource in the same Project identified by the resource's <code>key</code> field. If available, the <code>key</code> is immutable and mandatory. KeyReferences do not support <span>Reference Expansion</span>.</p>
@@ -114,8 +114,8 @@ public interface KeyReference {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<KeyReference> typeReference() {
-        return new tools.jackson.core.type.TypeReference<KeyReference>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<KeyReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<KeyReference>() {
             @Override
             public String toString() {
                 return "TypeReference<KeyReference>";

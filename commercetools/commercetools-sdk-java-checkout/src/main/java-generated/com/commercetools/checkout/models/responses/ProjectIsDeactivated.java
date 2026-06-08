@@ -8,12 +8,12 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Generated when the Checkout <span><code>projectKey</code></span> is deactivated and cannot be initialized. To activate it, contact the <span>commercetools support team</span>.</p>
@@ -183,8 +183,8 @@ public interface ProjectIsDeactivated extends ResponseMessage {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<ProjectIsDeactivated> typeReference() {
-        return new tools.jackson.core.type.TypeReference<ProjectIsDeactivated>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<ProjectIsDeactivated> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProjectIsDeactivated>() {
             @Override
             public String toString() {
                 return "TypeReference<ProjectIsDeactivated>";

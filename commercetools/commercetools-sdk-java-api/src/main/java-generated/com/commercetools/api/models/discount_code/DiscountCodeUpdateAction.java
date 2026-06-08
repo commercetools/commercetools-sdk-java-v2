@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * DiscountCodeUpdateAction
@@ -187,8 +187,8 @@ public interface DiscountCodeUpdateAction
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<DiscountCodeUpdateAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<DiscountCodeUpdateAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeUpdateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountCodeUpdateAction>";

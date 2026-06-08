@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Money;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Represents the portions that sum up to the <code>totalGross</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedPrice" rel="nofollow">TaxedPrice</a>.</p>
@@ -152,8 +152,8 @@ public interface TaxPortionDraft extends io.vrap.rmf.base.client.Draft<TaxPortio
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<TaxPortionDraft> typeReference() {
-        return new tools.jackson.core.type.TypeReference<TaxPortionDraft>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<TaxPortionDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TaxPortionDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<TaxPortionDraft>";

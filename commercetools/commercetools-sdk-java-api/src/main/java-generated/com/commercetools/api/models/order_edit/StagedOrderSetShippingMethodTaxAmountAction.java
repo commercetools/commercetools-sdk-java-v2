@@ -10,11 +10,11 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.cart.ExternalTaxAmountDraft;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>A Shipping Method tax amount can be set if the Cart has the <code>ExternalAmount</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
@@ -142,8 +142,8 @@ public interface StagedOrderSetShippingMethodTaxAmountAction extends StagedOrder
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<StagedOrderSetShippingMethodTaxAmountAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<StagedOrderSetShippingMethodTaxAmountAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingMethodTaxAmountAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingMethodTaxAmountAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderSetShippingMethodTaxAmountAction>";

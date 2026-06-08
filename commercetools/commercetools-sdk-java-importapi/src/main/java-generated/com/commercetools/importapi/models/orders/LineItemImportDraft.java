@@ -14,12 +14,12 @@ import com.commercetools.importapi.models.common.ProductKeyReference;
 import com.commercetools.importapi.models.customfields.Custom;
 import com.commercetools.importapi.models.prices.TaxRate;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Represents an individual Line Item in an Order. A line item is a snapshot of a product at the time it was added to the order.</p>
@@ -314,8 +314,8 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<LineItemImportDraft> typeReference() {
-        return new tools.jackson.core.type.TypeReference<LineItemImportDraft>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<LineItemImportDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<LineItemImportDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<LineItemImportDraft>";

@@ -11,13 +11,13 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
-
-import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Checks if one or more Quotes exist for the provided query predicate for the authenticated Customer. Returns a <code>200 OK</code> status if any Quotes match the query predicate, or a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error otherwise.</p>
@@ -25,7 +25,7 @@ import tools.jackson.core.type.TypeReference;
  * <hr>
  * <div class=code-example>
  * <pre><code class='java'>{@code
- *   CompletableFuture<ApiHttpResponse<tools.jackson.databind.JsonNode>> result = apiRoot
+ *   CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> result = apiRoot
  *            .withProjectKey("{projectKey}")
  *            .me()
  *            .quotes()
@@ -35,13 +35,14 @@ import tools.jackson.core.type.TypeReference;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyMeQuotesHead extends TypeApiMethod<ByProjectKeyMeQuotesHead, tools.jackson.databind.JsonNode>
+public class ByProjectKeyMeQuotesHead
+        extends TypeApiMethod<ByProjectKeyMeQuotesHead, com.fasterxml.jackson.databind.JsonNode>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeQuotesHead>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyMeQuotesHead> {
 
     @Override
-    public TypeReference<tools.jackson.databind.JsonNode> resultType() {
-        return new TypeReference<tools.jackson.databind.JsonNode>() {
+    public TypeReference<com.fasterxml.jackson.databind.JsonNode> resultType() {
+        return new TypeReference<com.fasterxml.jackson.databind.JsonNode>() {
         };
     }
 
@@ -68,14 +69,15 @@ public class ByProjectKeyMeQuotesHead extends TypeApiMethod<ByProjectKeyMeQuotes
     }
 
     @Override
-    public ApiHttpResponse<tools.jackson.databind.JsonNode> executeBlocking(final ApiHttpClient client,
+    public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(final ApiHttpClient client,
             final Duration timeout) {
-        return executeBlocking(client, timeout, tools.jackson.databind.JsonNode.class);
+        return executeBlocking(client, timeout, com.fasterxml.jackson.databind.JsonNode.class);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<tools.jackson.databind.JsonNode>> execute(final ApiHttpClient client) {
-        return execute(client, tools.jackson.databind.JsonNode.class);
+    public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute(
+            final ApiHttpClient client) {
+        return execute(client, com.fasterxml.jackson.databind.JsonNode.class);
     }
 
     public String getProjectKey() {

@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.message.MessagePayload;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>The data is not persisted but is dynamically pulled by dry-running the update actions from <code>stagedActions</code> on the current version of the related <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>, not from the Order version at the time the OrderEdit was created. Therefore, it cannot be queried.</p>
@@ -154,8 +154,8 @@ public interface OrderEditPreviewSuccess extends OrderEditResult {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<OrderEditPreviewSuccess> typeReference() {
-        return new tools.jackson.core.type.TypeReference<OrderEditPreviewSuccess>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderEditPreviewSuccess> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderEditPreviewSuccess>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderEditPreviewSuccess>";

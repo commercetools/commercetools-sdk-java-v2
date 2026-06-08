@@ -9,11 +9,11 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Address type returned by read methods. Optionally, the <code>custom</code> field can be present in addition to the fields of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BaseAddress" rel="nofollow">BaseAddress</a>.</p>
@@ -179,8 +179,8 @@ public interface Address extends BaseAddress, com.commercetools.api.models.Custo
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<Address> typeReference() {
-        return new tools.jackson.core.type.TypeReference<Address>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<Address> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Address>() {
             @Override
             public String toString() {
                 return "TypeReference<Address>";

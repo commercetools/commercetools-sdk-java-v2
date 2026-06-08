@@ -11,13 +11,13 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
-
-import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>For performance reasons, it is highly advisable to query for Custom Objects in a container by using the <code>container</code> field in the <code>where</code> predicate.</p>

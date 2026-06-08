@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>The pattern component it used to define a set of units based on some criteria. The criteria depends on the type of component used.</p>
@@ -90,8 +90,8 @@ public interface PatternComponent {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<PatternComponent> typeReference() {
-        return new tools.jackson.core.type.TypeReference<PatternComponent>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<PatternComponent> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PatternComponent>() {
             @Override
             public String toString() {
                 return "TypeReference<PatternComponent>";

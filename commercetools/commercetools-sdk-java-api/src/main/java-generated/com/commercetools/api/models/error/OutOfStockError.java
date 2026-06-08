@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Returned when some of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Items</a> are out of stock at the time of placing an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
@@ -187,8 +187,8 @@ public interface OutOfStockError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<OutOfStockError> typeReference() {
-        return new tools.jackson.core.type.TypeReference<OutOfStockError>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<OutOfStockError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OutOfStockError>() {
             @Override
             public String toString() {
                 return "TypeReference<OutOfStockError>";

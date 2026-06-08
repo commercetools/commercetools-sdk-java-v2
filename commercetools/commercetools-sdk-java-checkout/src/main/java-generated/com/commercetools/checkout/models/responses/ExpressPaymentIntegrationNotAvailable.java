@@ -8,12 +8,12 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Generated when a requested Express Payments integration is not available. This can happen when using <code>mountMethod()</code> with a payment method that is not configured or not available for the current session.</p>
@@ -185,8 +185,8 @@ public interface ExpressPaymentIntegrationNotAvailable extends ResponseMessage {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<ExpressPaymentIntegrationNotAvailable> typeReference() {
-        return new tools.jackson.core.type.TypeReference<ExpressPaymentIntegrationNotAvailable>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<ExpressPaymentIntegrationNotAvailable> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ExpressPaymentIntegrationNotAvailable>() {
             @Override
             public String toString() {
                 return "TypeReference<ExpressPaymentIntegrationNotAvailable>";

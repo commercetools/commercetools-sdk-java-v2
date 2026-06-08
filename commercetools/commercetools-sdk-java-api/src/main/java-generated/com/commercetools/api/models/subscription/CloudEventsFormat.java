@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>The CloudEventsFormat can be used with any <a href="https://docs.commercetools.com/apis/ctp:api:type:Destination" rel="nofollow">Destination</a>, and the payload is delivered in the <code>JSON Event Format</code>. <a href="https://docs.commercetools.com/apis/ctp:api:type:AzureEventGridDestination" rel="nofollow">AzureEventGridDestination</a> offers native support to filter and route CloudEvents.</p>
@@ -119,8 +119,8 @@ public interface CloudEventsFormat extends DeliveryFormat {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<CloudEventsFormat> typeReference() {
-        return new tools.jackson.core.type.TypeReference<CloudEventsFormat>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<CloudEventsFormat> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CloudEventsFormat>() {
             @Override
             public String toString() {
                 return "TypeReference<CloudEventsFormat>";

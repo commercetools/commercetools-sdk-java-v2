@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * TypeChangeFieldDefinitionOrderAction
@@ -129,8 +129,8 @@ public interface TypeChangeFieldDefinitionOrderAction extends TypeUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<TypeChangeFieldDefinitionOrderAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<TypeChangeFieldDefinitionOrderAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<TypeChangeFieldDefinitionOrderAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypeChangeFieldDefinitionOrderAction>() {
             @Override
             public String toString() {
                 return "TypeReference<TypeChangeFieldDefinitionOrderAction>";

@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Returned when a previous conflicting operation is still pending and needs to finish before the request can succeed.</p>
@@ -112,8 +112,8 @@ public interface GraphQLPendingOperationError extends GraphQLErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<GraphQLPendingOperationError> typeReference() {
-        return new tools.jackson.core.type.TypeReference<GraphQLPendingOperationError>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLPendingOperationError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLPendingOperationError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLPendingOperationError>";

@@ -10,11 +10,11 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>This action sets, overwrites, or removes any existing Custom Type and Custom Fields for the Order's <code>shippingMethod</code> or <code>shipping</code>.</p>
@@ -156,8 +156,8 @@ public interface OrderSetShippingCustomTypeAction extends OrderUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<OrderSetShippingCustomTypeAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<OrderSetShippingCustomTypeAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderSetShippingCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderSetShippingCustomTypeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderSetShippingCustomTypeAction>";

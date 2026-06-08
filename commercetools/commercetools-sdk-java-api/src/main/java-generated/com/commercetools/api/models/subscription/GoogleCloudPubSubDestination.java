@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Destination for <span>Google Cloud Pub/Sub</span> that can be used for <span>Pull subscriptions</span> as well as for <span>Push subscriptions</span>. The <code>topic</code> must give the <code>pubsub.topics.publish</code> permission to the service account <code>subscriptions@commercetools-platform.iam.gserviceaccount.com</code>. If used with the <span>CloudEventsFormat</span>, the notification conforms to the <span>PubSub Protocol Binding</span> of the <span>Structured Content Mode</span>.</p>
@@ -137,8 +137,8 @@ public interface GoogleCloudPubSubDestination extends Destination {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<GoogleCloudPubSubDestination> typeReference() {
-        return new tools.jackson.core.type.TypeReference<GoogleCloudPubSubDestination>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<GoogleCloudPubSubDestination> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<GoogleCloudPubSubDestination>() {
             @Override
             public String toString() {
                 return "TypeReference<GoogleCloudPubSubDestination>";

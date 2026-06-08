@@ -13,12 +13,12 @@ import com.commercetools.api.models.customer.CustomerGroupAssignmentDraft;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generic draft type to model those fields all Business Units have in common. The additional fields required for creating a <a href="https://docs.commercetools.com/apis/ctp:api:type:Company" rel="nofollow">Company</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Division" rel="nofollow">Division</a> are represented on <a href="https://docs.commercetools.com/apis/ctp:api:type:CompanyDraft" rel="nofollow">CompanyDraft</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:DivisionDraft" rel="nofollow">DivisionDraft</a>.</p>
@@ -429,8 +429,8 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey,
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<BusinessUnitDraft> typeReference() {
-        return new tools.jackson.core.type.TypeReference<BusinessUnitDraft>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitDraft>";

@@ -12,12 +12,12 @@ import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
 import com.commercetools.api.models.recurrence_policy.RecurrencePolicyReference;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Returned when a modification is already in progress for the exact combination of SKU and price scope fields for a Standalone Price. Retry the same request after 300 ms.</p>
@@ -263,8 +263,8 @@ public interface GraphQLExactLockConflictError extends GraphQLErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<GraphQLExactLockConflictError> typeReference() {
-        return new tools.jackson.core.type.TypeReference<GraphQLExactLockConflictError>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLExactLockConflictError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLExactLockConflictError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLExactLockConflictError>";

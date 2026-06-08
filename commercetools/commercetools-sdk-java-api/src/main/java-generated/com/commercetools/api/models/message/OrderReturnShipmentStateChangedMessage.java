@@ -9,11 +9,11 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.order.ReturnShipmentState;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetReturnShipmentStateAction" rel="nofollow">Set ReturnShipmentState</a> update action on <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">Order Edits</a>.</p>
@@ -170,8 +170,8 @@ public interface OrderReturnShipmentStateChangedMessage extends OrderMessage {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<OrderReturnShipmentStateChangedMessage> typeReference() {
-        return new tools.jackson.core.type.TypeReference<OrderReturnShipmentStateChangedMessage>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderReturnShipmentStateChangedMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderReturnShipmentStateChangedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderReturnShipmentStateChangedMessage>";

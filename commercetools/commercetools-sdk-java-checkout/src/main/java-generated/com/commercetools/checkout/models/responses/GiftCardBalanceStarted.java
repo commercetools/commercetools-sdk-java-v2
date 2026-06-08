@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Generated when the customer enters the gift card's code for the payment, and Checkout initiates the retrieving of the gift card's balance.</p>
@@ -163,8 +163,8 @@ public interface GiftCardBalanceStarted extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<GiftCardBalanceStarted> typeReference() {
-        return new tools.jackson.core.type.TypeReference<GiftCardBalanceStarted>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<GiftCardBalanceStarted> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<GiftCardBalanceStarted>() {
             @Override
             public String toString() {
                 return "TypeReference<GiftCardBalanceStarted>";

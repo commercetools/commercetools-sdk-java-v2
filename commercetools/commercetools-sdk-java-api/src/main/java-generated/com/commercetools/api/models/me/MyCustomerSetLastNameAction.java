@@ -8,10 +8,9 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
-
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Setting the last name of the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerLastNameSetMessage" rel="nofollow">CustomerLastNameSet</a> Message.</p>
@@ -117,8 +116,8 @@ public interface MyCustomerSetLastNameAction extends MyCustomerUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<MyCustomerSetLastNameAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<MyCustomerSetLastNameAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerSetLastNameAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerSetLastNameAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyCustomerSetLastNameAction>";

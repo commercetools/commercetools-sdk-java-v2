@@ -12,13 +12,13 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
-
-import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>A failed response can return a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceScopeError" rel="nofollow">DuplicatePriceScope</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateVariantValuesError" rel="nofollow">DuplicateVariantValues</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateAttributeValueError" rel="nofollow">DuplicateAttributeValue</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateAttributeValuesError" rel="nofollow">DuplicateAttributeValues</a> error.</p>

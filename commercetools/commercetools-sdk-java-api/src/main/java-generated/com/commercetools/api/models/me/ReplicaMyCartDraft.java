@@ -10,11 +10,11 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.cart.CartReference;
 import com.commercetools.api.models.order.OrderReference;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * ReplicaMyCartDraft
@@ -128,8 +128,8 @@ public interface ReplicaMyCartDraft extends io.vrap.rmf.base.client.Draft<Replic
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<ReplicaMyCartDraft> typeReference() {
-        return new tools.jackson.core.type.TypeReference<ReplicaMyCartDraft>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<ReplicaMyCartDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReplicaMyCartDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ReplicaMyCartDraft>";

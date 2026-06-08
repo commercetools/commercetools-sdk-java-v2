@@ -11,12 +11,12 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.state.StateResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemStateTransitionMessage" rel="nofollow">Line Item State Transition</a> Message.</p>
@@ -216,8 +216,8 @@ public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpd
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<StagedOrderTransitionLineItemStateAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<StagedOrderTransitionLineItemStateAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderTransitionLineItemStateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderTransitionLineItemStateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderTransitionLineItemStateAction>";

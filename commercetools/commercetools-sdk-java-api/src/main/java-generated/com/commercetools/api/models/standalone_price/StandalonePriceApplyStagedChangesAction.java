@@ -8,10 +8,9 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
-
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Applies all staged changes to the StandalonePrice by overwriting all current values with the values in the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedStandalonePrice" rel="nofollow">StagedStandalonePrice</a>. After successfully applied, the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedStandalonePrice" rel="nofollow">StagedStandalonePrice</a> will be removed from the StandalonePrice. An <code>applyStagedChanges</code> update action on a StandalonePrice that does not contain any staged changes will return a <code>400 Bad Request</code> error. Applying staged changes successfully will produce the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceStagedChangesAppliedMessage" rel="nofollow">StandalonePriceStagedChangesApplied</a> Message.</p>
@@ -103,8 +102,8 @@ public interface StandalonePriceApplyStagedChangesAction extends StandalonePrice
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<StandalonePriceApplyStagedChangesAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<StandalonePriceApplyStagedChangesAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceApplyStagedChangesAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceApplyStagedChangesAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StandalonePriceApplyStagedChangesAction>";

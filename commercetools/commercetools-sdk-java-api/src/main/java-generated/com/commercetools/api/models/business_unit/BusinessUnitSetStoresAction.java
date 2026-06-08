@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Sets the Stores of the Business Unit. Can only be set if the Business Unit <code>storeMode</code> is <code>Explicit</code>. <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> created after the Set Stores update must use the new Stores of the Business Unit and, if set, their <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selections</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channels</a>. Orders created before the Set Stores update action remain unchanged. Setting the Stores on a Business Unit generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitStoresSetMessage" rel="nofollow">BusinessUnitStoresSet</a> Message.</p>
@@ -135,8 +135,8 @@ public interface BusinessUnitSetStoresAction extends BusinessUnitUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<BusinessUnitSetStoresAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<BusinessUnitSetStoresAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitSetStoresAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitSetStoresAction>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitSetStoresAction>";

@@ -9,10 +9,9 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
-
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * DiscountCodeSetValidUntilAction
@@ -118,8 +117,8 @@ public interface DiscountCodeSetValidUntilAction extends DiscountCodeUpdateActio
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<DiscountCodeSetValidUntilAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<DiscountCodeSetValidUntilAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetValidUntilAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetValidUntilAction>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountCodeSetValidUntilAction>";

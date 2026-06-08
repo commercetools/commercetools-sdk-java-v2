@@ -10,11 +10,11 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>This action updates the <code>shippingAddress</code> on the Order, but it does not change the shipping address on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> from which the Order is created. Also, it does not recalculate the Cart as taxes may not fit to the shipping address anymore.</p>
@@ -123,8 +123,8 @@ public interface StagedOrderSetShippingAddressAction extends StagedOrderUpdateAc
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<StagedOrderSetShippingAddressAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<StagedOrderSetShippingAddressAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingAddressAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingAddressAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderSetShippingAddressAction>";

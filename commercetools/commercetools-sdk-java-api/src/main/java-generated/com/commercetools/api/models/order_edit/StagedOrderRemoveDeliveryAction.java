@@ -9,10 +9,9 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
-
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryRemovedMessage" rel="nofollow">DeliveryRemoved</a> Message.</p>
@@ -139,8 +138,8 @@ public interface StagedOrderRemoveDeliveryAction extends StagedOrderUpdateAction
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<StagedOrderRemoveDeliveryAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<StagedOrderRemoveDeliveryAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderRemoveDeliveryAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderRemoveDeliveryAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderRemoveDeliveryAction>";

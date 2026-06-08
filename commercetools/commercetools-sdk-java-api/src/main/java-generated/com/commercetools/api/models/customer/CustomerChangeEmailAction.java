@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Changes the <code>email</code> of the Customer and sets the <code>isEmailVerified</code> property to <code>false</code>. This update action generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerEmailChangedMessage" rel="nofollow">CustomerEmailChanged</a> Message.</p>
@@ -119,8 +119,8 @@ public interface CustomerChangeEmailAction extends CustomerUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<CustomerChangeEmailAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<CustomerChangeEmailAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerChangeEmailAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerChangeEmailAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerChangeEmailAction>";

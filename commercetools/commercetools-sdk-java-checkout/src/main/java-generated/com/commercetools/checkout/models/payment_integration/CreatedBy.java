@@ -9,11 +9,11 @@ import javax.annotation.Nullable;
 
 import com.commercetools.checkout.models.common.Reference;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
-import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Information regarding IDs and references that created the Payment Integration.</p>
@@ -164,8 +164,8 @@ public interface CreatedBy {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<CreatedBy> typeReference() {
-        return new tools.jackson.core.type.TypeReference<CreatedBy>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<CreatedBy> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CreatedBy>() {
             @Override
             public String toString() {
                 return "TypeReference<CreatedBy>";

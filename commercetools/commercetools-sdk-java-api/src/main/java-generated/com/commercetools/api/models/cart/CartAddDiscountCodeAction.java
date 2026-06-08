@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Adds a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> to the Cart to activate the related <span>Cart Discounts</span>. If the related Cart Discounts are inactive or invalid, or belong to a different Store than the Cart, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeNonApplicableError" rel="nofollow">DiscountCodeNonApplicableError</a> is returned.</p>
@@ -122,8 +122,8 @@ public interface CartAddDiscountCodeAction extends CartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<CartAddDiscountCodeAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<CartAddDiscountCodeAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<CartAddDiscountCodeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartAddDiscountCodeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartAddDiscountCodeAction>";

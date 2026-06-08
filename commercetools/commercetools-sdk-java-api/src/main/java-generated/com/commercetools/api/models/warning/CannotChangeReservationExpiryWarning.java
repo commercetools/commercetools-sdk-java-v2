@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Contained in responses to a <span>Cart</span> update operation. Indicates that a <code>ReserveOnCart</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Reservation" rel="nofollow">Reservation</a> was found for a Line Item but its expiration date and time cannot be changed using the <span>Set Reservation Expiration In Minutes</span> update action.</p>
@@ -147,8 +147,8 @@ public interface CannotChangeReservationExpiryWarning extends WarningObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<CannotChangeReservationExpiryWarning> typeReference() {
-        return new tools.jackson.core.type.TypeReference<CannotChangeReservationExpiryWarning>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<CannotChangeReservationExpiryWarning> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CannotChangeReservationExpiryWarning>() {
             @Override
             public String toString() {
                 return "TypeReference<CannotChangeReservationExpiryWarning>";

@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.product.ProductResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Can only be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountDraft" rel="nofollow">CartDiscountDraft</a> with no <code>target</code> specified. Hence, this type can not be used in the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountChangeValueAction" rel="nofollow">Change Value</a> update action.</p>
@@ -182,8 +182,8 @@ public interface CartDiscountValueGiftLineItemDraft
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<CartDiscountValueGiftLineItemDraft> typeReference() {
-        return new tools.jackson.core.type.TypeReference<CartDiscountValueGiftLineItemDraft>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountValueGiftLineItemDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountValueGiftLineItemDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<CartDiscountValueGiftLineItemDraft>";

@@ -9,11 +9,11 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.payment_method.PaymentMethodToken;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoTokenAction" rel="nofollow">Set MethodInfo Token</a> update action.</p>
@@ -166,8 +166,8 @@ public interface PaymentMethodInfoTokenSetMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<PaymentMethodInfoTokenSetMessage> typeReference() {
-        return new tools.jackson.core.type.TypeReference<PaymentMethodInfoTokenSetMessage>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentMethodInfoTokenSetMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentMethodInfoTokenSetMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentMethodInfoTokenSetMessage>";

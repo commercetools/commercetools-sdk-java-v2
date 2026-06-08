@@ -11,13 +11,13 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
-
-import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Checks if a Cart exists that matches a given Query Predicate and contains either a matching <code>customerId</code> or <code>anonymousId</code>. Returns a <code>200</code> status if the Cart exists, or a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error otherwise.</p>
@@ -25,7 +25,7 @@ import tools.jackson.core.type.TypeReference;
  * <hr>
  * <div class=code-example>
  * <pre><code class='java'>{@code
- *   CompletableFuture<ApiHttpResponse<tools.jackson.databind.JsonNode>> result = apiRoot
+ *   CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> result = apiRoot
  *            .withProjectKey("{projectKey}")
  *            .me()
  *            .carts()
@@ -35,13 +35,14 @@ import tools.jackson.core.type.TypeReference;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyMeCartsHead extends TypeApiMethod<ByProjectKeyMeCartsHead, tools.jackson.databind.JsonNode>
+public class ByProjectKeyMeCartsHead
+        extends TypeApiMethod<ByProjectKeyMeCartsHead, com.fasterxml.jackson.databind.JsonNode>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeCartsHead>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyMeCartsHead> {
 
     @Override
-    public TypeReference<tools.jackson.databind.JsonNode> resultType() {
-        return new TypeReference<tools.jackson.databind.JsonNode>() {
+    public TypeReference<com.fasterxml.jackson.databind.JsonNode> resultType() {
+        return new TypeReference<com.fasterxml.jackson.databind.JsonNode>() {
         };
     }
 
@@ -68,14 +69,15 @@ public class ByProjectKeyMeCartsHead extends TypeApiMethod<ByProjectKeyMeCartsHe
     }
 
     @Override
-    public ApiHttpResponse<tools.jackson.databind.JsonNode> executeBlocking(final ApiHttpClient client,
+    public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(final ApiHttpClient client,
             final Duration timeout) {
-        return executeBlocking(client, timeout, tools.jackson.databind.JsonNode.class);
+        return executeBlocking(client, timeout, com.fasterxml.jackson.databind.JsonNode.class);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<tools.jackson.databind.JsonNode>> execute(final ApiHttpClient client) {
-        return execute(client, tools.jackson.databind.JsonNode.class);
+    public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute(
+            final ApiHttpClient client) {
+        return execute(client, com.fasterxml.jackson.databind.JsonNode.class);
     }
 
     public String getProjectKey() {

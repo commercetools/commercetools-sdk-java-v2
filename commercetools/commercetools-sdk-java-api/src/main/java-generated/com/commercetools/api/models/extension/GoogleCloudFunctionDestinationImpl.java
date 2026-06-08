@@ -6,6 +6,7 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -14,8 +15,6 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
-
-import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>For GoogleCloudFunction destinations, you need to grant permissions to the <code>extensions@commercetools-platform.iam.gserviceaccount.com</code> service account to invoke your function. If your function's version is 1st gen, grant the service account the IAM role <code>Cloud Functions Invoker</code>. For version 2nd gen, assign the IAM role <code>Cloud Run Invoker</code> using the Cloud Run console.</p>

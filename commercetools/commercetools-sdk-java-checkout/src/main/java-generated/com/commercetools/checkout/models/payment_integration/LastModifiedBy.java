@@ -9,11 +9,11 @@ import javax.annotation.Nullable;
 
 import com.commercetools.checkout.models.common.Reference;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
-import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Information regarding IDs and references that last modified the Payment Integration.</p>
@@ -232,8 +232,8 @@ public interface LastModifiedBy {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<LastModifiedBy> typeReference() {
-        return new tools.jackson.core.type.TypeReference<LastModifiedBy>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<LastModifiedBy> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<LastModifiedBy>() {
             @Override
             public String toString() {
                 return "TypeReference<LastModifiedBy>";

@@ -9,11 +9,11 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.associate_role.Permission;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRoleRemovePermissionAction" rel="nofollow">Remove Permissions</a> update action.</p>
@@ -151,8 +151,8 @@ public interface AssociateRolePermissionRemovedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<AssociateRolePermissionRemovedMessage> typeReference() {
-        return new tools.jackson.core.type.TypeReference<AssociateRolePermissionRemovedMessage>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<AssociateRolePermissionRemovedMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AssociateRolePermissionRemovedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<AssociateRolePermissionRemovedMessage>";

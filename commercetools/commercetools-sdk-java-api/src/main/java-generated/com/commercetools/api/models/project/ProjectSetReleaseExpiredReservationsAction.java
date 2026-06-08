@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>If set to <code>true</code>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Reservation" rel="nofollow">Reservations</a> are marked as <code>Expired</code> once their <code>reservationExpirationInMinutes</code> is reached. The reserved inventory is then made available. If set to <code>false</code>, tracking Line Items with expired reservations becomes your responsibility.</p>
@@ -123,8 +123,8 @@ public interface ProjectSetReleaseExpiredReservationsAction extends ProjectUpdat
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<ProjectSetReleaseExpiredReservationsAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<ProjectSetReleaseExpiredReservationsAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<ProjectSetReleaseExpiredReservationsAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProjectSetReleaseExpiredReservationsAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProjectSetReleaseExpiredReservationsAction>";

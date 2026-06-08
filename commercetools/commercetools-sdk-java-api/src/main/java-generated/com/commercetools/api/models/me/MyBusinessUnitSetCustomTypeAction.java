@@ -10,11 +10,11 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Adding or updating a Custom Type on a Business Unit generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitCustomTypeSetMessage" rel="nofollow">BusinessUnitCustomTypeSet</a> Message, removing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitCustomTypeRemovedMessage" rel="nofollow">BusinessUnitCustomTypeRemoved</a> Message.</p>
@@ -140,8 +140,8 @@ public interface MyBusinessUnitSetCustomTypeAction extends MyBusinessUnitUpdateA
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<MyBusinessUnitSetCustomTypeAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<MyBusinessUnitSetCustomTypeAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<MyBusinessUnitSetCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyBusinessUnitSetCustomTypeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyBusinessUnitSetCustomTypeAction>";

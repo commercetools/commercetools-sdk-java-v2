@@ -8,13 +8,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
-
-import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Changing the password of the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerPasswordUpdatedMessage" rel="nofollow">CustomerPasswordUpdated</a> Message with <code>reset=false</code>. Returns a <code>200</code> status if successful.</p>

@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Money;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Discounts the Product Price by a fixed amount, defined by the <code>money</code> field.</p>
@@ -143,8 +143,8 @@ public interface ProductDiscountValueAbsoluteDraft
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<ProductDiscountValueAbsoluteDraft> typeReference() {
-        return new tools.jackson.core.type.TypeReference<ProductDiscountValueAbsoluteDraft>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValueAbsoluteDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValueAbsoluteDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductDiscountValueAbsoluteDraft>";

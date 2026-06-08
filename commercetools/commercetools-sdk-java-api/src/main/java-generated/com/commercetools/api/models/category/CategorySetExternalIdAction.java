@@ -8,10 +8,9 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
-
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>This update action sets a new ID that can be used as an additional identifier for external systems like customer relationship management (CRM) or enterprise resource planning (ERP).</p>
@@ -117,8 +116,8 @@ public interface CategorySetExternalIdAction extends CategoryUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<CategorySetExternalIdAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<CategorySetExternalIdAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<CategorySetExternalIdAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategorySetExternalIdAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CategorySetExternalIdAction>";

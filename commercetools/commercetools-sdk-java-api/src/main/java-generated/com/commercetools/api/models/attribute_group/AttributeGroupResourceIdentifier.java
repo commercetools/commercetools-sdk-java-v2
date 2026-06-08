@@ -10,10 +10,9 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.common.ResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
-
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeGroup" rel="nofollow">AttributeGroup</a>. Either <code>id</code> or <code>key</code> is required. If both are set, an <span>InvalidJsonInput</span> error is returned.</p>
@@ -145,8 +144,8 @@ public interface AttributeGroupResourceIdentifier
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<AttributeGroupResourceIdentifier> typeReference() {
-        return new tools.jackson.core.type.TypeReference<AttributeGroupResourceIdentifier>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<AttributeGroupResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AttributeGroupResourceIdentifier>() {
             @Override
             public String toString() {
                 return "TypeReference<AttributeGroupResourceIdentifier>";

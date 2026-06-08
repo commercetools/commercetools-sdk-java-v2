@@ -9,11 +9,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.*;
 
 /**
  * BaseResource
@@ -132,8 +132,8 @@ public interface BaseResource {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<BaseResource> typeReference() {
-        return new tools.jackson.core.type.TypeReference<BaseResource>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<BaseResource> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<BaseResource>() {
             @Override
             public String toString() {
                 return "TypeReference<BaseResource>";

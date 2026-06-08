@@ -8,10 +8,9 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
-
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Adding a billing address to a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitBillingAddressAddedMessage" rel="nofollow">BusinessUnitBillingAddressAdded</a> Message.</p>
@@ -137,8 +136,8 @@ public interface MyBusinessUnitAddBillingAddressIdAction extends MyBusinessUnitU
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<MyBusinessUnitAddBillingAddressIdAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<MyBusinessUnitAddBillingAddressIdAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<MyBusinessUnitAddBillingAddressIdAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyBusinessUnitAddBillingAddressIdAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyBusinessUnitAddBillingAddressIdAction>";

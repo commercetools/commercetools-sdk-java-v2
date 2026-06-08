@@ -8,10 +8,9 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
-
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * ProductTypeSetKeyAction
@@ -121,8 +120,8 @@ public interface ProductTypeSetKeyAction extends ProductTypeUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<ProductTypeSetKeyAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<ProductTypeSetKeyAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeSetKeyAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeSetKeyAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTypeSetKeyAction>";

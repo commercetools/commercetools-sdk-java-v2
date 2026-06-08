@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Changes the <code>inputHint</code> of <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldStringType" rel="nofollow">CustomFieldStringType</a> <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedStringType" rel="nofollow">CustomFieldLocalizedStringType</a> <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldSetType" rel="nofollow">CustomFieldSetType</a> <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a> of these string-based FieldTypes.</p>
@@ -137,8 +137,8 @@ public interface TypeChangeInputHintAction extends TypeUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<TypeChangeInputHintAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<TypeChangeInputHintAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<TypeChangeInputHintAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypeChangeInputHintAction>() {
             @Override
             public String toString() {
                 return "TypeReference<TypeChangeInputHintAction>";

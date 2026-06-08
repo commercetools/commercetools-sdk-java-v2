@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when an invalid JSON input has been sent. Either the JSON is syntactically incorrect or does not conform to the expected shape, for example, it is missing a required field.</p>
@@ -145,8 +145,8 @@ public interface InvalidJsonInputError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<InvalidJsonInputError> typeReference() {
-        return new tools.jackson.core.type.TypeReference<InvalidJsonInputError>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<InvalidJsonInputError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InvalidJsonInputError>() {
             @Override
             public String toString() {
                 return "TypeReference<InvalidJsonInputError>";

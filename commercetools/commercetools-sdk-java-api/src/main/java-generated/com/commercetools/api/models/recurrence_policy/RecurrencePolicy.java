@@ -13,12 +13,12 @@ import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * RecurrencePolicy
@@ -281,8 +281,8 @@ public interface RecurrencePolicy extends BaseResource {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<RecurrencePolicy> typeReference() {
-        return new tools.jackson.core.type.TypeReference<RecurrencePolicy>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<RecurrencePolicy> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<RecurrencePolicy>() {
             @Override
             public String toString() {
                 return "TypeReference<RecurrencePolicy>";

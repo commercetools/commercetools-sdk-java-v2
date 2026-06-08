@@ -8,10 +8,9 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
-
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Sets the default shipping address from <code>addresses</code>. The action adds the <code>id</code> of the specified address to the <code>shippingAddressIds</code> if not contained already. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
@@ -138,8 +137,8 @@ public interface CustomerSetDefaultShippingAddressAction extends CustomerUpdateA
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<CustomerSetDefaultShippingAddressAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<CustomerSetDefaultShippingAddressAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerSetDefaultShippingAddressAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerSetDefaultShippingAddressAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerSetDefaultShippingAddressAction>";

@@ -17,12 +17,12 @@ import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.review.ReviewRatingStatistics;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * Channel
@@ -366,8 +366,8 @@ public interface Channel extends BaseResource, ChannelMixin, com.commercetools.a
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<Channel> typeReference() {
-        return new tools.jackson.core.type.TypeReference<Channel>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<Channel> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Channel>() {
             @Override
             public String toString() {
                 return "TypeReference<Channel>";

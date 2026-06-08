@@ -9,12 +9,12 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelItemsUpdatedMessage" rel="nofollow">ParcelItemsUpdated</a> Message.</p>
@@ -172,8 +172,8 @@ public interface OrderSetParcelItemsAction extends OrderUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<OrderSetParcelItemsAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<OrderSetParcelItemsAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderSetParcelItemsAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderSetParcelItemsAction>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderSetParcelItemsAction>";

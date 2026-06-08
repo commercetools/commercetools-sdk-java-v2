@@ -8,10 +8,9 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
-
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>This action generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoInterfaceAccountSetMessage" rel="nofollow">PaymentMethodInfoInterfaceAccountSet</a> Message.</p>
@@ -121,8 +120,8 @@ public interface PaymentSetMethodInfoInterfaceAccountAction extends PaymentUpdat
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<PaymentSetMethodInfoInterfaceAccountAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<PaymentSetMethodInfoInterfaceAccountAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentSetMethodInfoInterfaceAccountAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentSetMethodInfoInterfaceAccountAction>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentSetMethodInfoInterfaceAccountAction>";

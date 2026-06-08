@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Contained in responses to a <span>Cart</span> operation. Indicates that the reservation for a Line Item could not be updated to the requested quantity. The existing reserved amount remains unchanged.</p>
@@ -233,8 +233,8 @@ public interface CannotUpdateReservationWarning extends WarningObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<CannotUpdateReservationWarning> typeReference() {
-        return new tools.jackson.core.type.TypeReference<CannotUpdateReservationWarning>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<CannotUpdateReservationWarning> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CannotUpdateReservationWarning>() {
             @Override
             public String toString() {
                 return "TypeReference<CannotUpdateReservationWarning>";

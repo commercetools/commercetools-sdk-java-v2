@@ -8,12 +8,12 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Specifies a Price tier that applies when the minimum quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> of a ProductVariant with the related Price is reached in a Cart.</p>
@@ -139,8 +139,8 @@ public interface PriceTierDraft extends io.vrap.rmf.base.client.Draft<PriceTierD
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<PriceTierDraft> typeReference() {
-        return new tools.jackson.core.type.TypeReference<PriceTierDraft>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<PriceTierDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PriceTierDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<PriceTierDraft>";

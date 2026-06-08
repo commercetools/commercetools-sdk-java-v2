@@ -10,11 +10,11 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>This update action can only be used if a Customer is not assigned to a Cart. If a Customer is already assigned, the Cart uses the Customer Group of the assigned Customer.</p>
@@ -123,8 +123,8 @@ public interface StagedOrderSetCustomerGroupAction extends StagedOrderUpdateActi
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<StagedOrderSetCustomerGroupAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<StagedOrderSetCustomerGroupAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomerGroupAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomerGroupAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderSetCustomerGroupAction>";

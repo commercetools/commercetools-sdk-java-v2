@@ -12,12 +12,12 @@ import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
 import com.commercetools.api.models.standalone_price.StandalonePriceReference;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Returned when a given Price validity period conflicts with an existing one. Every Standalone Price associated with the same SKU and with the same combination of currency, country, Customer Group, and Channel, must have non-overlapping validity periods (<code>validFrom</code> and <code>validUntil</code>).</p>
@@ -315,8 +315,8 @@ public interface OverlappingStandalonePriceValidityError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<OverlappingStandalonePriceValidityError> typeReference() {
-        return new tools.jackson.core.type.TypeReference<OverlappingStandalonePriceValidityError>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<OverlappingStandalonePriceValidityError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OverlappingStandalonePriceValidityError>() {
             @Override
             public String toString() {
                 return "TypeReference<OverlappingStandalonePriceValidityError>";

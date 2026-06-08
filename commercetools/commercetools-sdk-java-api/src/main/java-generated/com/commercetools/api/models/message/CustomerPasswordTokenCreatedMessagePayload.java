@@ -9,11 +9,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers/password-token:POST" rel="nofollow">Create password reset token for Customer</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/customers/password-token:POST" rel="nofollow">Create password reset token for Customer in Store</a> request. The <code>resource</code> property of the Message is a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerPasswordTokenReference" rel="nofollow">CustomerPasswordTokenReference</a>.</p>
@@ -177,8 +177,8 @@ public interface CustomerPasswordTokenCreatedMessagePayload extends MessagePaylo
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<CustomerPasswordTokenCreatedMessagePayload> typeReference() {
-        return new tools.jackson.core.type.TypeReference<CustomerPasswordTokenCreatedMessagePayload>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerPasswordTokenCreatedMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerPasswordTokenCreatedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerPasswordTokenCreatedMessagePayload>";

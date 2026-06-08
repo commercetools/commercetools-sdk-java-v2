@@ -6,6 +6,7 @@ import java.util.*;
 
 import com.commercetools.api.models.shipping_method.ShippingRateTierType;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -14,8 +15,6 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
-
-import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> maps to an abstract <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> categorization expressed by integers (such as shipping scores or weight ranges).</p>

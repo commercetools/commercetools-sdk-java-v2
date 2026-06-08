@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Sets the type of a PaymentIntegration.</p>
@@ -119,8 +119,8 @@ public interface SetTypeUpdateAction extends PaymentIntegrationUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<SetTypeUpdateAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<SetTypeUpdateAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<SetTypeUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetTypeUpdateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<SetTypeUpdateAction>";

@@ -8,10 +8,9 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
-
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Unlocks a Cart, removing all update restrictions that are in place while a Cart is <span>locked</span>. This action requires an additional OAuth 2.0 Scope <code>manage_locked_carts</code>.</p>
@@ -100,8 +99,8 @@ public interface CartUnlockCartAction extends CartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<CartUnlockCartAction> typeReference() {
-        return new tools.jackson.core.type.TypeReference<CartUnlockCartAction>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<CartUnlockCartAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartUnlockCartAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartUnlockCartAction>";

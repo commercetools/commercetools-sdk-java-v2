@@ -9,12 +9,12 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Base representation of an error response containing common fields to all errors.</p>
@@ -169,8 +169,8 @@ public interface ErrorResponse {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<ErrorResponse> typeReference() {
-        return new tools.jackson.core.type.TypeReference<ErrorResponse>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<ErrorResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ErrorResponse>() {
             @Override
             public String toString() {
                 return "TypeReference<ErrorResponse>";

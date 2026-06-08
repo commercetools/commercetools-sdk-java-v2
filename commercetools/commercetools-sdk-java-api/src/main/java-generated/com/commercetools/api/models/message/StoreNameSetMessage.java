@@ -10,11 +10,11 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
-import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetNameAction" rel="nofollow">Set Name</a> update action.</p>
@@ -178,8 +178,8 @@ public interface StoreNameSetMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static tools.jackson.core.type.TypeReference<StoreNameSetMessage> typeReference() {
-        return new tools.jackson.core.type.TypeReference<StoreNameSetMessage>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<StoreNameSetMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StoreNameSetMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<StoreNameSetMessage>";

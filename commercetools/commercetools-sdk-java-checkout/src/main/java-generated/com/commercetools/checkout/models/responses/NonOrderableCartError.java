@@ -8,12 +8,12 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Generated when the Order could not be created due to inconsistencies in the <span>Cart</span>.</p>
@@ -183,8 +183,8 @@ public interface NonOrderableCartError extends ResponseMessage {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<NonOrderableCartError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<NonOrderableCartError>() {
+    public static tools.jackson.core.type.TypeReference<NonOrderableCartError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<NonOrderableCartError>() {
             @Override
             public String toString() {
                 return "TypeReference<NonOrderableCartError>";

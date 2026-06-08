@@ -11,12 +11,12 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>TextLineItems are Line Items that use text values instead of references to Products.</p>
@@ -224,8 +224,8 @@ public interface TextLineItem extends com.commercetools.api.models.Customizable<
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TextLineItem> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TextLineItem>() {
+    public static tools.jackson.core.type.TypeReference<TextLineItem> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TextLineItem>() {
             @Override
             public String toString() {
                 return "TypeReference<TextLineItem>";

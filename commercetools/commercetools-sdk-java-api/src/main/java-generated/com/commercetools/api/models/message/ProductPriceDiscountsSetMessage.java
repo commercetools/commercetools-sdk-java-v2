@@ -9,12 +9,12 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated after a Price is updated due to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">Product Discount</a>.</p>
@@ -163,8 +163,8 @@ public interface ProductPriceDiscountsSetMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductPriceDiscountsSetMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductPriceDiscountsSetMessage>() {
+    public static tools.jackson.core.type.TypeReference<ProductPriceDiscountsSetMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductPriceDiscountsSetMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductPriceDiscountsSetMessage>";

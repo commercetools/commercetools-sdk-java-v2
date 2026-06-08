@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Discounts the product price by a percentage, defined by the <code>permyriad</code> field.</p>
@@ -119,8 +119,8 @@ public interface ProductDiscountValueRelative extends ProductDiscountValue {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValueRelative> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValueRelative>() {
+    public static tools.jackson.core.type.TypeReference<ProductDiscountValueRelative> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductDiscountValueRelative>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductDiscountValueRelative>";

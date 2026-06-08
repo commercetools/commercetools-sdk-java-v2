@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.order.Order;
 import com.commercetools.api.models.recurring_order.RecurringOrderReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated after an Order is successfully created according to the defined schedule of a Recurring Order.</p>
@@ -147,8 +147,8 @@ public interface OrderCreatedFromRecurringOrderMessagePayload extends OrderMessa
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderCreatedFromRecurringOrderMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderCreatedFromRecurringOrderMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<OrderCreatedFromRecurringOrderMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderCreatedFromRecurringOrderMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderCreatedFromRecurringOrderMessagePayload>";

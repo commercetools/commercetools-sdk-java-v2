@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>This update action does not set any Cart field in particular, but it triggers several <span>Cart updates</span> to bring prices and discounts to the latest state. Those can become stale over time when no Cart updates have been performed for a while and prices on related Products have changed in the meanwhile.</p>
@@ -123,8 +124,8 @@ public interface CartRecalculateAction extends CartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartRecalculateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartRecalculateAction>() {
+    public static tools.jackson.core.type.TypeReference<CartRecalculateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartRecalculateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartRecalculateAction>";

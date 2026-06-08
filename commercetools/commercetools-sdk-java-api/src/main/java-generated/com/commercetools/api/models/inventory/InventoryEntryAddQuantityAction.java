@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Incrementally updates the <code>quantityOnStock</code> by the specified amount. This changes the <code>availableQuantity</code>, based on the number of active reservations.</p>
@@ -120,8 +120,8 @@ public interface InventoryEntryAddQuantityAction extends InventoryEntryUpdateAct
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntryAddQuantityAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntryAddQuantityAction>() {
+    public static tools.jackson.core.type.TypeReference<InventoryEntryAddQuantityAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<InventoryEntryAddQuantityAction>() {
             @Override
             public String toString() {
                 return "TypeReference<InventoryEntryAddQuantityAction>";

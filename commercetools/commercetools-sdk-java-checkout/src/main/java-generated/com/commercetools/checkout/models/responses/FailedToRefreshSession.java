@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Generated when the <span>Checkout Session</span> fails to refresh.</p>
@@ -163,8 +163,8 @@ public interface FailedToRefreshSession extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<FailedToRefreshSession> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<FailedToRefreshSession>() {
+    public static tools.jackson.core.type.TypeReference<FailedToRefreshSession> typeReference() {
+        return new tools.jackson.core.type.TypeReference<FailedToRefreshSession>() {
             @Override
             public String toString() {
                 return "TypeReference<FailedToRefreshSession>";

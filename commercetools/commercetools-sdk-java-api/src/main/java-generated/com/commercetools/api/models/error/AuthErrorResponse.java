@@ -9,12 +9,12 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Represents errors related to authentication and authorization in a format conforming to the <span>OAuth 2.0 specification</span>.</p>
@@ -169,8 +169,8 @@ public interface AuthErrorResponse extends ErrorResponse {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AuthErrorResponse> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AuthErrorResponse>() {
+    public static tools.jackson.core.type.TypeReference<AuthErrorResponse> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AuthErrorResponse>() {
             @Override
             public String toString() {
                 return "TypeReference<AuthErrorResponse>";

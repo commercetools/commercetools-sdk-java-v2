@@ -9,11 +9,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>To set the start date and time, the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> must not have been started yet. Setting the start date and time generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderStartsAtSetMessage" rel="nofollow">RecurringOrderStartsAtSet</a> Message.</p>
@@ -120,8 +120,8 @@ public interface RecurringOrderSetStartsAtAction extends RecurringOrderUpdateAct
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RecurringOrderSetStartsAtAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RecurringOrderSetStartsAtAction>() {
+    public static tools.jackson.core.type.TypeReference<RecurringOrderSetStartsAtAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RecurringOrderSetStartsAtAction>() {
             @Override
             public String toString() {
                 return "TypeReference<RecurringOrderSetStartsAtAction>";

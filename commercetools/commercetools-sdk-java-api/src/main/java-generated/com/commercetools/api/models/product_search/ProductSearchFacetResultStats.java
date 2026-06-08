@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Result of a <span>stats facet</span>. The data type of <code>min</code> <code>max</code>, <code>mean</code>, and <code>sum</code> matches the data type of the <code>field</code> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchFacetStatsExpression" rel="nofollow">facet expression</a>.</p>
@@ -188,8 +188,8 @@ public interface ProductSearchFacetResultStats extends ProductSearchFacetResult 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSearchFacetResultStats> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSearchFacetResultStats>() {
+    public static tools.jackson.core.type.TypeReference<ProductSearchFacetResultStats> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSearchFacetResultStats>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSearchFacetResultStats>";

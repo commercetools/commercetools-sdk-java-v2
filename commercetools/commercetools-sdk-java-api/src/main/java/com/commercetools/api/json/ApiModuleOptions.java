@@ -3,9 +3,9 @@ package com.commercetools.api.json;
 
 import java.util.Map;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.utils.json.modules.ModuleOptions;
+
+import tools.jackson.core.type.TypeReference;
 
 public class ApiModuleOptions implements ModuleOptions {
     public static final String DESERIALIZE_DATE_ATTRIBUTE_AS_STRING = "commercetools.deserializeDateAttributeAsString";

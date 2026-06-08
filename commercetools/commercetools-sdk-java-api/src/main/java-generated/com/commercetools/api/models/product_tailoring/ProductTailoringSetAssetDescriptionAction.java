@@ -9,11 +9,11 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Either <code>variantId</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that exists. The <a href="https://docs.commercetools.com/apis/ctp:api:type:Asset" rel="nofollow">Asset</a> to update must be specified using either <code>assetId</code> or <code>assetKey</code>.</p>
@@ -209,8 +209,8 @@ public interface ProductTailoringSetAssetDescriptionAction extends ProductTailor
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductTailoringSetAssetDescriptionAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductTailoringSetAssetDescriptionAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductTailoringSetAssetDescriptionAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductTailoringSetAssetDescriptionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTailoringSetAssetDescriptionAction>";

@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Either <code>variantId</code> or <code>sku</code> is required.</p>
@@ -188,8 +188,8 @@ public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductMoveImageToPositionAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductMoveImageToPositionAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductMoveImageToPositionAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductMoveImageToPositionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductMoveImageToPositionAction>";

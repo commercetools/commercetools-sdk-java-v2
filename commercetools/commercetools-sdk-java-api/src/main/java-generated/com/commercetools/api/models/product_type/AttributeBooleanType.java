@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Attribute type for boolean values. Valid values for the Attribute are <code>true</code> and <code>false</code>.</p>
@@ -99,8 +100,8 @@ public interface AttributeBooleanType extends AttributeType {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AttributeBooleanType> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AttributeBooleanType>() {
+    public static tools.jackson.core.type.TypeReference<AttributeBooleanType> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AttributeBooleanType>() {
             @Override
             public String toString() {
                 return "TypeReference<AttributeBooleanType>";

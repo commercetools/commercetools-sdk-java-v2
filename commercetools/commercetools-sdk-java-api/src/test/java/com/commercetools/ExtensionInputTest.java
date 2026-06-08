@@ -12,16 +12,17 @@ import com.commercetools.api.models.error.ErrorObject;
 import com.commercetools.api.models.error.ErrorResponse;
 import com.commercetools.api.models.extension.ExtensionAction;
 import com.commercetools.api.models.extension.ExtensionInput;
-import com.fasterxml.jackson.core.JsonProcessingException;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import tools.jackson.core.JacksonException;
+
 public class ExtensionInputTest {
     @Test
-    public void deserialize() throws JsonProcessingException {
+    public void deserialize() throws JacksonException {
         ExtensionInput input = JsonUtils.fromJsonString(stringFromResource("extension-input.json"),
             ExtensionInput.class);
 

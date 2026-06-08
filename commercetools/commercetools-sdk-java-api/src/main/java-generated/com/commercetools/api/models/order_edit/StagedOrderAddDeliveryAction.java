@@ -14,11 +14,11 @@ import com.commercetools.api.models.order.ParcelDraft;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> can only be added to an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> if its <code>shippingInfo</code> (for <code>shippingMode</code> = <code>Single</code>), or its <code>shipping</code> (for <code>shippingMode</code> = <code>Multiple</code>) exists.</p>
@@ -239,8 +239,8 @@ public interface StagedOrderAddDeliveryAction
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddDeliveryAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddDeliveryAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderAddDeliveryAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderAddDeliveryAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderAddDeliveryAction>";

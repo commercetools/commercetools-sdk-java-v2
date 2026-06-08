@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p><code>ContainerAndKey</code> is specific to <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomObject" rel="nofollow">Custom Objects</a>. Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>

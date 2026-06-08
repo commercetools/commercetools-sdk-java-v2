@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Returned when the Tax Category of at least one of the <code>lineItems</code>, <code>customLineItems</code>, or <code>shippingInfo</code> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> is missing the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> matching <code>country</code> and <code>state</code> given in the <code>shippingAddress</code> of that Cart.</p>
@@ -193,8 +193,8 @@ public interface MissingTaxRateForCountryError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MissingTaxRateForCountryError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MissingTaxRateForCountryError>() {
+    public static tools.jackson.core.type.TypeReference<MissingTaxRateForCountryError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MissingTaxRateForCountryError>() {
             @Override
             public String toString() {
                 return "TypeReference<MissingTaxRateForCountryError>";

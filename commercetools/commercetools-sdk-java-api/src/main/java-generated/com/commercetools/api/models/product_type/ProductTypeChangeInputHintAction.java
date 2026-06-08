@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Updates the <code>inputHint</code> of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
@@ -137,8 +137,8 @@ public interface ProductTypeChangeInputHintAction extends ProductTypeUpdateActio
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangeInputHintAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangeInputHintAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductTypeChangeInputHintAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductTypeChangeInputHintAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTypeChangeInputHintAction>";

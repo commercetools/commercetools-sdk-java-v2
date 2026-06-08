@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p><span>AWS SQS</span> is a pull-queue on AWS. The queue must be a <span>Standard</span> queue type with a <code>MaximumMessageSize</code> of <code>256 KB</code>.</p>
@@ -191,8 +191,8 @@ public interface SqsDestination extends Destination {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SqsDestination> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SqsDestination>() {
+    public static tools.jackson.core.type.TypeReference<SqsDestination> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SqsDestination>() {
             @Override
             public String toString() {
                 return "TypeReference<SqsDestination>";

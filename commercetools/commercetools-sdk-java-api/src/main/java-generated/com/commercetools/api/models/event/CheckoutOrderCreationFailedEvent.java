@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated when an order creation attempt fails in Checkout. This event includes information about why the order could not be created.</p>
@@ -150,8 +150,8 @@ public interface CheckoutOrderCreationFailedEvent extends Event {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CheckoutOrderCreationFailedEvent> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CheckoutOrderCreationFailedEvent>() {
+    public static tools.jackson.core.type.TypeReference<CheckoutOrderCreationFailedEvent> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CheckoutOrderCreationFailedEvent>() {
             @Override
             public String toString() {
                 return "TypeReference<CheckoutOrderCreationFailedEvent>";

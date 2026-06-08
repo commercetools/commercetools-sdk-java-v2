@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated after a successful <span>Delete StandalonePrice</span> request.</p>
@@ -148,8 +148,8 @@ public interface StandalonePriceDeletedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceDeletedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceDeletedMessage>() {
+    public static tools.jackson.core.type.TypeReference<StandalonePriceDeletedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StandalonePriceDeletedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<StandalonePriceDeletedMessage>";

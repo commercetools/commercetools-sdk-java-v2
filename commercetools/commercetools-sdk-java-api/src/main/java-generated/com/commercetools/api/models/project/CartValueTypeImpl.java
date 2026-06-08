@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.commercetools.api.models.shipping_method.ShippingRateTierType;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> maps to the value of the Cart and is used to select a tier. The value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> is the sum of all Line Item totals and Custom Line Item totals (via the <code>totalPrice</code> field) after any Product Discounts and Cart Discounts have been applied. If chosen, it is not possible to set a value for the <code>shippingRateInput</code> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>

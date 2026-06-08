@@ -7,7 +7,6 @@ import java.util.*;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,6 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when a Product is already assigned to a <span>Product Selection</span>, but the Product Selection has either a different <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantSelection" rel="nofollow">Product Variant Selection</a> or a different <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantExclusion" rel="nofollow">Product Variant Exclusion</a>.</p>

@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.channel.ChannelReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntryAddQuantityAction" rel="nofollow">Add Quantity</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntryRemoveQuantityAction" rel="nofollow">Remove Quantity</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntryChangeQuantityAction" rel="nofollow">Change Quantity</a> update action. Inventory changes as a result of <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders:POST" rel="nofollow">Order creation</a> do not trigger this message.</p>
@@ -213,8 +213,8 @@ public interface InventoryEntryQuantitySetMessagePayload extends MessagePayload 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntryQuantitySetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntryQuantitySetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<InventoryEntryQuantitySetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<InventoryEntryQuantitySetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<InventoryEntryQuantitySetMessagePayload>";

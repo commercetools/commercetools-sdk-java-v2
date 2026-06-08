@@ -12,11 +12,11 @@ import com.commercetools.api.models.common.Image;
 import com.commercetools.api.models.common.PriceDraft;
 import com.commercetools.api.models.product.Attribute;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Contains the Product Variant to be used in the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemImportDraft" rel="nofollow">LineItemImportDraft</a>.</p>
@@ -220,8 +220,8 @@ public interface ProductVariantImportDraft extends io.vrap.rmf.base.client.Draft
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantImportDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantImportDraft>() {
+    public static tools.jackson.core.type.TypeReference<ProductVariantImportDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductVariantImportDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductVariantImportDraft>";

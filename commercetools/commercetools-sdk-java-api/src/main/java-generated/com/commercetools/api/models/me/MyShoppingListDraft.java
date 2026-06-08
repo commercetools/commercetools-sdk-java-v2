@@ -14,12 +14,12 @@ import com.commercetools.api.models.shopping_list.TextLineItemDraft;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:MyShoppingListDraft" rel="nofollow">MyShoppingListDraft</a> is the object submitted as payload to the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/shopping-lists:POST" rel="nofollow">Create MyShoppingList request</a>. The <code>customer</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a> is automatically set with a <span>password flow token</span>. The <code>anonymousId</code> is automatically set with a <span>token for an anonymous session</span>. The <code>key</code> and <code>slug</code> fields can not be set.</p>
@@ -249,8 +249,8 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyShoppingListDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyShoppingListDraft>() {
+    public static tools.jackson.core.type.TypeReference<MyShoppingListDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyShoppingListDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<MyShoppingListDraft>";

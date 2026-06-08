@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.common.DiscountedPrice;
 import com.commercetools.api.models.common.TypedMoney;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Staged changes on a Standalone Price. To update the <code>value</code> property of a Staged Standalone Price, use the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceChangeValueAction" rel="nofollow">Change Value</a> update action. To apply all staged changes to the Standalone Price, use the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceApplyStagedChangesAction" rel="nofollow">Apply Staged Changes</a> update action.</p>
@@ -134,8 +134,8 @@ public interface StagedStandalonePrice {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedStandalonePrice> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedStandalonePrice>() {
+    public static tools.jackson.core.type.TypeReference<StagedStandalonePrice> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedStandalonePrice>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedStandalonePrice>";

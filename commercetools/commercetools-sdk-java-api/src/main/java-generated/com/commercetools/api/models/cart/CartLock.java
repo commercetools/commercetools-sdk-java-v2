@@ -9,11 +9,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Indicates that the Cart is <span>locked</span> to prevent changes. Provides metadata about when the lock was created and which <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> initiated it.</p>
@@ -132,8 +132,8 @@ public interface CartLock {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartLock> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartLock>() {
+    public static tools.jackson.core.type.TypeReference<CartLock> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartLock>() {
             @Override
             public String toString() {
                 return "TypeReference<CartLock>";

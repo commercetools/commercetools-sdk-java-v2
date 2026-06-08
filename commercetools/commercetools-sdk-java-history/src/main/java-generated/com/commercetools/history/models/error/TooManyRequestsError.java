@@ -9,11 +9,11 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.change_history.ErrorObject;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Returned when the <span>Query Records</span> request exceeds the rate limit.</p>
@@ -139,8 +139,8 @@ public interface TooManyRequestsError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TooManyRequestsError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TooManyRequestsError>() {
+    public static tools.jackson.core.type.TypeReference<TooManyRequestsError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TooManyRequestsError>() {
             @Override
             public String toString() {
                 return "TypeReference<TooManyRequestsError>";

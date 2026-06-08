@@ -10,11 +10,11 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>To add a Parcel, at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> must exist.</p>
@@ -240,8 +240,8 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderAddParcelToDeliveryAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderAddParcelToDeliveryAction>() {
+    public static tools.jackson.core.type.TypeReference<OrderAddParcelToDeliveryAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderAddParcelToDeliveryAction>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderAddParcelToDeliveryAction>";

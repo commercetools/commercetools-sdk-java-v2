@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Returned when the Cart contains a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> that is not allowed for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>. In this case, the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethodState" rel="nofollow">ShippingMethodState</a> value is <code>DoesNotMatchCart</code>.</p>
@@ -122,8 +122,8 @@ public interface GraphQLShippingMethodDoesNotMatchCartError extends GraphQLError
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLShippingMethodDoesNotMatchCartError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLShippingMethodDoesNotMatchCartError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLShippingMethodDoesNotMatchCartError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLShippingMethodDoesNotMatchCartError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLShippingMethodDoesNotMatchCartError>";

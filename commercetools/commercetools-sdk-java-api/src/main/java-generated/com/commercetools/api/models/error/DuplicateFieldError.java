@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Returned when a field value conflicts with an existing value causing a duplicate.</p>
@@ -164,8 +164,8 @@ public interface DuplicateFieldError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DuplicateFieldError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DuplicateFieldError>() {
+    public static tools.jackson.core.type.TypeReference<DuplicateFieldError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DuplicateFieldError>() {
             @Override
             public String toString() {
                 return "TypeReference<DuplicateFieldError>";

@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Adding a Custom Field to a PaymentMethod generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodCustomFieldAddedMessage" rel="nofollow">PaymentMethodCustomFieldAdded</a> Message, removing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodCustomFieldRemovedMessage" rel="nofollow">PaymentMethodCustomFieldRemoved</a> Message, and updating an existing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodCustomFieldChangedMessage" rel="nofollow">PaymentMethodCustomFieldChanged</a> Message.</p>
@@ -137,8 +137,8 @@ public interface PaymentMethodSetCustomFieldAction extends PaymentMethodUpdateAc
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentMethodSetCustomFieldAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentMethodSetCustomFieldAction>() {
+    public static tools.jackson.core.type.TypeReference<PaymentMethodSetCustomFieldAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentMethodSetCustomFieldAction>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentMethodSetCustomFieldAction>";

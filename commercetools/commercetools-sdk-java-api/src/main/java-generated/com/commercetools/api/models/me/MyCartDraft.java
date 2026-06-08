@@ -17,12 +17,12 @@ import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdenti
 import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>The <code>customerId</code> is determined by a <span>password flow token</span> and automatically set on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>. The <code>anonymousId</code> is determined by a <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">token for an anonymous session</a> and automatically set on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
@@ -443,8 +443,8 @@ public interface MyCartDraft extends com.commercetools.api.models.CustomizableDr
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyCartDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyCartDraft>() {
+    public static tools.jackson.core.type.TypeReference<MyCartDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyCartDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<MyCartDraft>";

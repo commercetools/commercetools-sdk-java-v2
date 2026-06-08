@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.error.GraphQLErrorObject;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Contains an error message, the location of the code that caused the error, and other information to help you correct the error.</p>
@@ -192,8 +192,8 @@ public interface GraphQLError {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLError>";

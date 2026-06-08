@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.cart.CustomLineItem;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderAddCustomLineItemAction" rel="nofollow">Add CustomLineItem</a> update action.</p>
@@ -126,8 +126,8 @@ public interface OrderCustomLineItemAddedMessagePayload extends OrderMessagePayl
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderCustomLineItemAddedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderCustomLineItemAddedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<OrderCustomLineItemAddedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderCustomLineItemAddedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderCustomLineItemAddedMessagePayload>";

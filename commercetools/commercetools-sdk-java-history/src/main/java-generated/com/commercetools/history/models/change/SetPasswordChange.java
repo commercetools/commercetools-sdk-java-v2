@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Change triggered by the <span>Change password of Customer</span> or <span>Change password of Customer in Store</span> request.</p>
@@ -127,8 +127,8 @@ public interface SetPasswordChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetPasswordChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetPasswordChange>() {
+    public static tools.jackson.core.type.TypeReference<SetPasswordChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetPasswordChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetPasswordChange>";

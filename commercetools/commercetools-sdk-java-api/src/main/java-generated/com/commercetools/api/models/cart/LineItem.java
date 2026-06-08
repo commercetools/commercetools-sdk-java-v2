@@ -21,12 +21,12 @@ import com.commercetools.api.models.reservation.ReservationReference;
 import com.commercetools.api.models.tax_category.TaxRate;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>The representation of a <span>Line Item</span> in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or in an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
@@ -687,8 +687,8 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<LineItem> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<LineItem>() {
+    public static tools.jackson.core.type.TypeReference<LineItem> typeReference() {
+        return new tools.jackson.core.type.TypeReference<LineItem>() {
             @Override
             public String toString() {
                 return "TypeReference<LineItem>";

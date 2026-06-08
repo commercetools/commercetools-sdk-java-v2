@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.product_selections.ProductSelectionImport;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>The request body to <a href="https://docs.commercetools.com/apis/ctp:import:endpoint:/{projectKey}/product-selections/import-containers/{importContainerKey}:POST" rel="nofollow">import Product Selections</a>. Contains data for <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selections</a> to be created or updated in a Project.</p>
@@ -135,8 +135,8 @@ public interface ProductSelectionImportRequest extends ImportRequest {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionImportRequest> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionImportRequest>() {
+    public static tools.jackson.core.type.TypeReference<ProductSelectionImportRequest> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSelectionImportRequest>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSelectionImportRequest>";

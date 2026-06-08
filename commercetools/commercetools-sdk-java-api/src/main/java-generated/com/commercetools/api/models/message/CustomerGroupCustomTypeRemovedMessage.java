@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated after removing a Custom Type from a Customer Group using the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroupSetCustomTypeAction" rel="nofollow">Set Custom Type</a> update action with empty parameters.</p>
@@ -147,8 +148,8 @@ public interface CustomerGroupCustomTypeRemovedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroupCustomTypeRemovedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroupCustomTypeRemovedMessage>() {
+    public static tools.jackson.core.type.TypeReference<CustomerGroupCustomTypeRemovedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerGroupCustomTypeRemovedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerGroupCustomTypeRemovedMessage>";

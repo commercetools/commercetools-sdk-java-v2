@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.PriceDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Adds the given Price to the <code>prices</code> array of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>. Either <code>variantId</code> or <code>sku</code> is required.</p>
@@ -173,8 +173,8 @@ public interface ProductAddPriceAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductAddPriceAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductAddPriceAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductAddPriceAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductAddPriceAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductAddPriceAction>";

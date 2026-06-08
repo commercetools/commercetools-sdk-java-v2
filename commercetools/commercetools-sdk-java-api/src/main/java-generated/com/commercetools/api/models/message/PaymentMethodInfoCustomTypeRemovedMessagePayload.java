@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated after removing Custom Fields from a PaymentMethodInfo using the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoCustomTypeAction" rel="nofollow">Set MethodInfo Custom Type</a> update action on Payments and the <a href="https://docs.commercetools.com/apis/ctp:api:type:MyPaymentSetMethodInfoCustomTypeAction" rel="nofollow">Set MethodInfo Custom Type</a> update action on My Payments.</p>
@@ -120,8 +121,8 @@ public interface PaymentMethodInfoCustomTypeRemovedMessagePayload extends Messag
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentMethodInfoCustomTypeRemovedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentMethodInfoCustomTypeRemovedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<PaymentMethodInfoCustomTypeRemovedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentMethodInfoCustomTypeRemovedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentMethodInfoCustomTypeRemovedMessagePayload>";

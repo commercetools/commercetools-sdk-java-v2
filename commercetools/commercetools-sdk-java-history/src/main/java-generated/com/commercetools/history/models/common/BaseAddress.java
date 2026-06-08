@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:AddressDraft" rel="nofollow">AddressDraft</a> that only differ in the data type for the optional <code>custom</code> field.</p>
@@ -527,8 +527,8 @@ public interface BaseAddress {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BaseAddress> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BaseAddress>() {
+    public static tools.jackson.core.type.TypeReference<BaseAddress> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BaseAddress>() {
             @Override
             public String toString() {
                 return "TypeReference<BaseAddress>";

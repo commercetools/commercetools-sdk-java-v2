@@ -16,12 +16,12 @@ import com.commercetools.api.models.common.PriceDraft;
 import com.commercetools.api.models.tax_category.TaxRate;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Represents a snapshot of a Product Variant at the time it was imported with the Order. The Product Variant can be specified by providing a <code>productId</code> and <code>variant.id</code>, or by providing a <code>variant.sku</code>.</p>
@@ -351,8 +351,8 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<LineItemImportDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<LineItemImportDraft>() {
+    public static tools.jackson.core.type.TypeReference<LineItemImportDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<LineItemImportDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<LineItemImportDraft>";

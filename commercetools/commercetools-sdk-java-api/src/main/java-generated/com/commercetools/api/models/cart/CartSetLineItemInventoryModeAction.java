@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Sets the inventory mode for a specific Line Item in the Cart. When changing a Line Item's inventory mode to <code>ReserveOnCart</code>, a reservation is automatically created if sufficient stock is available. When changing from <code>ReserveOnCart</code> to another mode, the reservation is released.</p>
@@ -151,8 +152,8 @@ public interface CartSetLineItemInventoryModeAction extends CartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartSetLineItemInventoryModeAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartSetLineItemInventoryModeAction>() {
+    public static tools.jackson.core.type.TypeReference<CartSetLineItemInventoryModeAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartSetLineItemInventoryModeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartSetLineItemInventoryModeAction>";

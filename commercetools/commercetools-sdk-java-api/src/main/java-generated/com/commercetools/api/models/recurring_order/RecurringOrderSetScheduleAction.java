@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>To set the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicySchedule" rel="nofollow">schedule</a>, the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> must be active, with no active <a href="https://docs.commercetools.com/apis/ctp:api:type:SkipConfiguration" rel="nofollow">Skip Configuration</a> and with available prices for all Cart items for the new schedule. Setting the schedule generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderScheduleSetMessage" rel="nofollow">RecurringOrderScheduleSet</a> Message.</p>
@@ -123,8 +123,8 @@ public interface RecurringOrderSetScheduleAction extends RecurringOrderUpdateAct
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RecurringOrderSetScheduleAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RecurringOrderSetScheduleAction>() {
+    public static tools.jackson.core.type.TypeReference<RecurringOrderSetScheduleAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RecurringOrderSetScheduleAction>() {
             @Override
             public String toString() {
                 return "TypeReference<RecurringOrderSetScheduleAction>";

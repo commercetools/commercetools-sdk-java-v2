@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Changes the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartState" rel="nofollow">CartState</a> from <code>Frozen</code> to <code>Active</code>. Reactivates a <a href="https://docs.commercetools.com/apis/ctp:api:type:FrozenCarts" rel="nofollow">Frozen Cart</a>. This action updates all prices in the Cart according to latest Prices on related Product Variants and Shipping Methods and by applying all discounts currently being active and applicable for the Cart.</p>
@@ -100,8 +101,8 @@ public interface CartUnfreezeCartAction extends CartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartUnfreezeCartAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartUnfreezeCartAction>() {
+    public static tools.jackson.core.type.TypeReference<CartUnfreezeCartAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartUnfreezeCartAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartUnfreezeCartAction>";

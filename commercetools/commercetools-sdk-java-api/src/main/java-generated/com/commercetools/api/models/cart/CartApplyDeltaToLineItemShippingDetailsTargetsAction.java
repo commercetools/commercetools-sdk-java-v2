@@ -9,12 +9,12 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>To override the shipping details, see <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetLineItemShippingDetailsAction" rel="nofollow">Set LineItem ShippingDetails</a>.</p>
@@ -172,8 +172,8 @@ public interface CartApplyDeltaToLineItemShippingDetailsTargetsAction extends Ca
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartApplyDeltaToLineItemShippingDetailsTargetsAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartApplyDeltaToLineItemShippingDetailsTargetsAction>() {
+    public static tools.jackson.core.type.TypeReference<CartApplyDeltaToLineItemShippingDetailsTargetsAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartApplyDeltaToLineItemShippingDetailsTargetsAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartApplyDeltaToLineItemShippingDetailsTargetsAction>";

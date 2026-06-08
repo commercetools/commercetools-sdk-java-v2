@@ -14,12 +14,12 @@ import com.commercetools.api.models.shipping_method.ShippingRateDraft;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * CustomShippingDraft
@@ -287,8 +287,8 @@ public interface CustomShippingDraft
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomShippingDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomShippingDraft>() {
+    public static tools.jackson.core.type.TypeReference<CustomShippingDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomShippingDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomShippingDraft>";

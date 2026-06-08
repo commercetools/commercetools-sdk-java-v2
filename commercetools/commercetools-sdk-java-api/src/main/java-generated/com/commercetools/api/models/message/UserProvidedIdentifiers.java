@@ -9,11 +9,11 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>User-provided identifiers present on the resource for which the Message is created. The value of the identifier stored in the Message corresponds to the one that was set on the resource at the version shown in <code>resourceVersion</code>.</p>
@@ -216,8 +216,8 @@ public interface UserProvidedIdentifiers {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<UserProvidedIdentifiers> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<UserProvidedIdentifiers>() {
+    public static tools.jackson.core.type.TypeReference<UserProvidedIdentifiers> typeReference() {
+        return new tools.jackson.core.type.TypeReference<UserProvidedIdentifiers>() {
             @Override
             public String toString() {
                 return "TypeReference<UserProvidedIdentifiers>";

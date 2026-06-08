@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.business_unit.Associate;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * ApprovalFlowApproval
@@ -135,8 +135,8 @@ public interface ApprovalFlowApproval {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ApprovalFlowApproval> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ApprovalFlowApproval>() {
+    public static tools.jackson.core.type.TypeReference<ApprovalFlowApproval> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ApprovalFlowApproval>() {
             @Override
             public String toString() {
                 return "TypeReference<ApprovalFlowApproval>";

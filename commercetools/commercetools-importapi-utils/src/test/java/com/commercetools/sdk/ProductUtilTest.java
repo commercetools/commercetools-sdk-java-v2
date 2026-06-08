@@ -7,15 +7,17 @@ import static org.junit.jupiter.api.Assertions.*;
 import com.commercetools.api.models.product.ProductProjection;
 import com.commercetools.api.models.product.ProductProjectionImpl;
 import com.commercetools.importapi.models.productvariants.*;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.junit.jupiter.api.Test;
 
+import tools.jackson.databind.ObjectMapper;
+import tools.jackson.databind.json.JsonMapper;
+
 public class ProductUtilTest {
     String productProjectionExample = "src/test/resources/product-projection.example.json";
-    private final ObjectMapper objectMapper = new ObjectMapper();
+    private final ObjectMapper objectMapper = new JsonMapper();
     ProductUtil util = new ProductUtil();
 
     @Test

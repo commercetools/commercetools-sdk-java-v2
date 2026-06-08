@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>The requested scope is invalid, unknown, malformed, or exceeds the scope granted by the resource owner.</p>
@@ -102,8 +103,8 @@ public interface InvalidScopeError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<InvalidScopeError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<InvalidScopeError>() {
+    public static tools.jackson.core.type.TypeReference<InvalidScopeError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<InvalidScopeError>() {
             @Override
             public String toString() {
                 return "TypeReference<InvalidScopeError>";

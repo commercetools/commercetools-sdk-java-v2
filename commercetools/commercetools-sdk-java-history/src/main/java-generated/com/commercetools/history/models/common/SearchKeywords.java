@@ -8,12 +8,12 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Search keywords are JSON objects primarily used by <span>Search Term Suggestions</span>, but are also considered for a <span>full text search</span> in the Product Projection Search API. The keys are of type <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>, and the values are an array of <a href="https://docs.commercetools.com/apis/ctp:api:type:SearchKeyword" rel="nofollow">SearchKeyword</a>.</p>
@@ -117,8 +117,8 @@ public interface SearchKeywords {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SearchKeywords> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SearchKeywords>() {
+    public static tools.jackson.core.type.TypeReference<SearchKeywords> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SearchKeywords>() {
             @Override
             public String toString() {
                 return "TypeReference<SearchKeywords>";

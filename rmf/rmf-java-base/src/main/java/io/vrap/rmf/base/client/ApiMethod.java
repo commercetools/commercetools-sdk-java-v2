@@ -15,11 +15,11 @@ import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JavaType;
-
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.JavaType;
 
 public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extends Base
         implements RequestCommand<TResult>, ClientRequestCommand<TResult>, CreateHttpRequestCommand {

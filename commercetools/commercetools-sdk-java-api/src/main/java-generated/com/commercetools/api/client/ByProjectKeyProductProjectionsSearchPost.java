@@ -12,13 +12,13 @@ import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>For implementing funnel search on Product Listing Pages where users select multiple filters, use this POST method. To avoid URL length restrictions, this method passes the same query parameters as defined in the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/product-projections/search:GET" rel="nofollow">GET</a> method, within the request body in URL-encoded format.</p>

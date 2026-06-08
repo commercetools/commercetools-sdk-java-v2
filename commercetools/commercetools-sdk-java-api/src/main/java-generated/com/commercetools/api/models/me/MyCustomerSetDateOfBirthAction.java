@@ -9,9 +9,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Setting the date of birth of the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerDateOfBirthSetMessage" rel="nofollow">CustomerDateOfBirthSet</a> Message.</p>
@@ -117,8 +118,8 @@ public interface MyCustomerSetDateOfBirthAction extends MyCustomerUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerSetDateOfBirthAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerSetDateOfBirthAction>() {
+    public static tools.jackson.core.type.TypeReference<MyCustomerSetDateOfBirthAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyCustomerSetDateOfBirthAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyCustomerSetDateOfBirthAction>";

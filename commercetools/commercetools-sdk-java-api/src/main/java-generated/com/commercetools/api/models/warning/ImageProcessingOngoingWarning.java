@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Contained in responses to an <span>Upload Product image</span> or an <span>Upload Product Tailoring image</span> request with response status code <code>202 Accepted</code>. Indicates that the API is still creating the remaining sizes of the uploaded image. They will be available on the Content Delivery Network (CDN) soon.</p>
@@ -127,8 +127,8 @@ public interface ImageProcessingOngoingWarning extends WarningObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ImageProcessingOngoingWarning> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ImageProcessingOngoingWarning>() {
+    public static tools.jackson.core.type.TypeReference<ImageProcessingOngoingWarning> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ImageProcessingOngoingWarning>() {
             @Override
             public String toString() {
                 return "TypeReference<ImageProcessingOngoingWarning>";

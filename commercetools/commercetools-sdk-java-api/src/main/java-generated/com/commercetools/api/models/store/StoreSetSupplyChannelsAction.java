@@ -10,11 +10,11 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Setting a supply channel produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSupplyChannelsChangedMessage" rel="nofollow">StoreSupplyChannelsChanged</a> Message.</p>
@@ -133,8 +133,8 @@ public interface StoreSetSupplyChannelsAction extends StoreUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StoreSetSupplyChannelsAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StoreSetSupplyChannelsAction>() {
+    public static tools.jackson.core.type.TypeReference<StoreSetSupplyChannelsAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StoreSetSupplyChannelsAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StoreSetSupplyChannelsAction>";

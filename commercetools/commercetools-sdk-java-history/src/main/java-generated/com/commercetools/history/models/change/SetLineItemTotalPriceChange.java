@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 import com.commercetools.history.models.common.LocalizedString;
 import com.commercetools.history.models.common.Money;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetLineItemTotalPriceAction" rel="nofollow">Set LineItemTotalPrice</a> update action.</p>
@@ -225,8 +225,8 @@ public interface SetLineItemTotalPriceChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetLineItemTotalPriceChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetLineItemTotalPriceChange>() {
+    public static tools.jackson.core.type.TypeReference<SetLineItemTotalPriceChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetLineItemTotalPriceChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetLineItemTotalPriceChange>";

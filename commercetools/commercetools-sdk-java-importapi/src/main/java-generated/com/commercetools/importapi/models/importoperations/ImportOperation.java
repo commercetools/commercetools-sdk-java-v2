@@ -13,12 +13,12 @@ import com.commercetools.importapi.models.common.ProcessingState;
 import com.commercetools.importapi.models.common.UnresolvedReferences;
 import com.commercetools.importapi.models.errors.ErrorObject;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Represents the import status of a resource.</p>
@@ -320,8 +320,8 @@ public interface ImportOperation {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ImportOperation> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ImportOperation>() {
+    public static tools.jackson.core.type.TypeReference<ImportOperation> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ImportOperation>() {
             @Override
             public String toString() {
                 return "TypeReference<ImportOperation>";

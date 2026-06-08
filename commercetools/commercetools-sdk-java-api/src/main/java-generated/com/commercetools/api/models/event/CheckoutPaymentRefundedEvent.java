@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated when a payment is successfully refunded in Checkout. This event confirms that the refund has been processed and sent to your customer.</p>
@@ -150,8 +150,8 @@ public interface CheckoutPaymentRefundedEvent extends Event {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CheckoutPaymentRefundedEvent> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CheckoutPaymentRefundedEvent>() {
+    public static tools.jackson.core.type.TypeReference<CheckoutPaymentRefundedEvent> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CheckoutPaymentRefundedEvent>() {
             @Override
             public String toString() {
                 return "TypeReference<CheckoutPaymentRefundedEvent>";

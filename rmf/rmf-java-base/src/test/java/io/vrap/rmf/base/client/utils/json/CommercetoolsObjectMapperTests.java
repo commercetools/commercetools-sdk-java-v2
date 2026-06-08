@@ -4,10 +4,10 @@ package io.vrap.rmf.base.client.utils.json;
 import java.io.IOException;
 import java.time.*;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import tools.jackson.core.JacksonException;
 
 public class CommercetoolsObjectMapperTests {
 
@@ -23,32 +23,32 @@ public class CommercetoolsObjectMapperTests {
     private final ZoneId zoneId = ZoneId.ofOffset("UTC", ZoneOffset.ofHours(1));
 
     @Test
-    public void serializeZonedDateTime() throws JsonProcessingException {
+    public void serializeZonedDateTime() throws JacksonException {
         ZonedDateTime zonedDateTime = ZonedDateTime.of(TEST_LOCAL_DATE, TEST_LOCAL_TIME, zoneId);
         String serializedZonedDateTime = JsonUtils.toJsonString(zonedDateTime);
         Assertions.assertEquals(serializedZonedDateTime, "\"2010-11-12T09:11:12.000Z\"");
     }
 
     @Test
-    public void serializeLocalDate() throws JsonProcessingException {
+    public void serializeLocalDate() throws JacksonException {
         String serializedLocalDate = JsonUtils.toJsonString(TEST_LOCAL_DATE);
         Assertions.assertEquals(serializedLocalDate, "\"2010-11-12\"");
     }
 
     @Test
-    public void serializeLocalDateExceeding() throws JsonProcessingException {
+    public void serializeLocalDateExceeding() throws JacksonException {
         String serializedLocalDate = JsonUtils.toJsonString(LocalDate.of(20010, TEST_MONTH, TEST_DAY));
         Assertions.assertEquals("\"+20010-11-12\"", serializedLocalDate);
     }
 
     @Test
-    public void serializeLocalDateExceedingNegative() throws JsonProcessingException {
+    public void serializeLocalDateExceedingNegative() throws JacksonException {
         String serializedLocalDate = JsonUtils.toJsonString(LocalDate.of(-20010, TEST_MONTH, TEST_DAY));
         Assertions.assertEquals("\"-20010-11-12\"", serializedLocalDate);
     }
 
     @Test
-    public void serializeLocalTime() throws JsonProcessingException {
+    public void serializeLocalTime() throws JacksonException {
         String serializedLocalTime = JsonUtils.toJsonString(TEST_LOCAL_TIME);
         Assertions.assertEquals(serializedLocalTime, "\"10:11:12\"");
     }

@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Money;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Can be used if the Cart has the <code>ExternalAmount</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>. This update action adds the <code>taxedPrice</code> field to the Cart. It sets the <code>totalGross</code> amount, and Composable Commerce calculates the <code>totalNet</code> and <code>totalTax</code> values based on the provided <code>externalTotalGross</code>. You must use this update action after any price-affecting change occurs within the Cart.</p>
@@ -153,8 +153,8 @@ public interface CartSetCartTotalTaxAction extends CartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartSetCartTotalTaxAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartSetCartTotalTaxAction>() {
+    public static tools.jackson.core.type.TypeReference<CartSetCartTotalTaxAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartSetCartTotalTaxAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartSetCartTotalTaxAction>";

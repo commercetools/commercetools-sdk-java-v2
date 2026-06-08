@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Adding a Custom Field to a Business Unit generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitCustomFieldAddedMessage" rel="nofollow">BusinessUnitCustomFieldAdded</a> Message, removing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitCustomFieldRemovedMessage" rel="nofollow">BusinessUnitCustomFieldRemoved</a> Message, and updating an existing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitCustomFieldChangedMessage" rel="nofollow">BusinessUnitCustomFieldChanged</a> Message.</p>
@@ -137,8 +137,8 @@ public interface MyBusinessUnitSetCustomFieldAction extends MyBusinessUnitUpdate
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyBusinessUnitSetCustomFieldAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyBusinessUnitSetCustomFieldAction>() {
+    public static tools.jackson.core.type.TypeReference<MyBusinessUnitSetCustomFieldAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyBusinessUnitSetCustomFieldAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyBusinessUnitSetCustomFieldAction>";

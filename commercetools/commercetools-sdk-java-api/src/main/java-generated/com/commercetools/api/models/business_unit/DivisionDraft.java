@@ -9,12 +9,12 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Draft type to model divisions that are part of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Company" rel="nofollow">Company</a> or a higher-order <a href="https://docs.commercetools.com/apis/ctp:api:type:Division" rel="nofollow">Division</a>. Contains the fields and values of the generic <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitDraft" rel="nofollow">BusinessUnitDraft</a> that are used specifically for creating a Division.</p>
@@ -220,8 +220,8 @@ public interface DivisionDraft extends BusinessUnitDraft, io.vrap.rmf.base.clien
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DivisionDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DivisionDraft>() {
+    public static tools.jackson.core.type.TypeReference<DivisionDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DivisionDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<DivisionDraft>";

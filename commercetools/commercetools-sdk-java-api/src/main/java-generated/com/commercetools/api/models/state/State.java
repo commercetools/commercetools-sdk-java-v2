@@ -14,12 +14,12 @@ import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * State
@@ -388,8 +388,8 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<State> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<State>() {
+    public static tools.jackson.core.type.TypeReference<State> typeReference() {
+        return new tools.jackson.core.type.TypeReference<State>() {
             @Override
             public String toString() {
                 return "TypeReference<State>";

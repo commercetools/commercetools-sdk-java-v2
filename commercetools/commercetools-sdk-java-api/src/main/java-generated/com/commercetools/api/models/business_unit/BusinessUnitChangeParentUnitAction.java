@@ -8,12 +8,12 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>This action generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitParentChangedMessage" rel="nofollow">BusinessUnitParentChanged</a> Message.</p>
@@ -125,8 +125,8 @@ public interface BusinessUnitChangeParentUnitAction extends BusinessUnitUpdateAc
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitChangeParentUnitAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitChangeParentUnitAction>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitChangeParentUnitAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitChangeParentUnitAction>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitChangeParentUnitAction>";

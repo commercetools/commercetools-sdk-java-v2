@@ -16,12 +16,12 @@ import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.warning.WarningObject;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>A single ProductTailoring representation contains the <em>current</em> and the <em>staged</em> representation of its product information tailored per Store.</p>
@@ -371,8 +371,8 @@ public interface ProductTailoring extends BaseResource {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductTailoring> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductTailoring>() {
+    public static tools.jackson.core.type.TypeReference<ProductTailoring> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductTailoring>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTailoring>";

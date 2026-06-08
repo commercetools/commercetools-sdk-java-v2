@@ -10,11 +10,11 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> the Order is assigned to. It should be used to migrate Orders to a new Store. No validations are performed (such as that the Customer is allowed to create Orders in the Store).</p>
@@ -123,8 +123,8 @@ public interface StagedOrderSetStoreAction extends StagedOrderUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetStoreAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetStoreAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderSetStoreAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderSetStoreAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderSetStoreAction>";

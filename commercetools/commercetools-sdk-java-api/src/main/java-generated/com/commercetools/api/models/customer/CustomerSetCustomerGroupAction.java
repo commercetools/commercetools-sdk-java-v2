@@ -9,11 +9,11 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Setting the Customer Group of the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroupSetMessage" rel="nofollow">CustomerGroupSet</a> Message.</p>
@@ -121,8 +121,8 @@ public interface CustomerSetCustomerGroupAction extends CustomerUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerSetCustomerGroupAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerSetCustomerGroupAction>() {
+    public static tools.jackson.core.type.TypeReference<CustomerSetCustomerGroupAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerSetCustomerGroupAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerSetCustomerGroupAction>";

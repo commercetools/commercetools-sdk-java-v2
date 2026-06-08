@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Discount is applied to the shipping costs of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
@@ -99,8 +100,8 @@ public interface CartDiscountShippingCostTarget extends CartDiscountTarget {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountShippingCostTarget> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountShippingCostTarget>() {
+    public static tools.jackson.core.type.TypeReference<CartDiscountShippingCostTarget> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartDiscountShippingCostTarget>() {
             @Override
             public String toString() {
                 return "TypeReference<CartDiscountShippingCostTarget>";

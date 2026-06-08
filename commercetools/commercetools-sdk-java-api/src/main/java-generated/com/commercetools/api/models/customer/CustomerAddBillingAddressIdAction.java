@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Adds an Address from the <code>addresses</code> array to <code>billingAddressIds</code>. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
@@ -134,8 +135,8 @@ public interface CustomerAddBillingAddressIdAction extends CustomerUpdateAction 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerAddBillingAddressIdAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerAddBillingAddressIdAction>() {
+    public static tools.jackson.core.type.TypeReference<CustomerAddBillingAddressIdAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerAddBillingAddressIdAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerAddBillingAddressIdAction>";

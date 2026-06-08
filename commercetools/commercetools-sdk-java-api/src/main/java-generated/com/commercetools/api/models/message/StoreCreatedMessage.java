@@ -14,12 +14,12 @@ import com.commercetools.api.models.store.ProductSelectionSetting;
 import com.commercetools.api.models.store_country.StoreCountry;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/stores:POST" rel="nofollow">Create Store</a> request.</p>
@@ -318,8 +318,8 @@ public interface StoreCreatedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StoreCreatedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StoreCreatedMessage>() {
+    public static tools.jackson.core.type.TypeReference<StoreCreatedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StoreCreatedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<StoreCreatedMessage>";

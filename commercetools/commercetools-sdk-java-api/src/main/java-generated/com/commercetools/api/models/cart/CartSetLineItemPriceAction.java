@@ -9,11 +9,11 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Money;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>price</code> and changes the <code>priceMode</code> to <code>ExternalPrice</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemPriceMode" rel="nofollow">LineItemPriceMode</a>.</p>
@@ -155,8 +155,8 @@ public interface CartSetLineItemPriceAction extends CartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartSetLineItemPriceAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartSetLineItemPriceAction>() {
+    public static tools.jackson.core.type.TypeReference<CartSetLineItemPriceAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartSetLineItemPriceAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartSetLineItemPriceAction>";

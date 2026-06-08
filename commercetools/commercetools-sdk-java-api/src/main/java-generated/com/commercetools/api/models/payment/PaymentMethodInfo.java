@@ -11,11 +11,11 @@ import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.payment_method.PaymentMethodToken;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Represents a snapshot of the PaymentMethod data used for a Payment.</p>
@@ -200,8 +200,8 @@ public interface PaymentMethodInfo extends PaymentMethodInfoMixin {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentMethodInfo> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentMethodInfo>() {
+    public static tools.jackson.core.type.TypeReference<PaymentMethodInfo> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentMethodInfo>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentMethodInfo>";

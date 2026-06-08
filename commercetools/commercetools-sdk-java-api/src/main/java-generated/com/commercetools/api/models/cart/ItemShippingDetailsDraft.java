@@ -9,12 +9,12 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
@@ -131,8 +131,8 @@ public interface ItemShippingDetailsDraft extends io.vrap.rmf.base.client.Draft<
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ItemShippingDetailsDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ItemShippingDetailsDraft>() {
+    public static tools.jackson.core.type.TypeReference<ItemShippingDetailsDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ItemShippingDetailsDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ItemShippingDetailsDraft>";

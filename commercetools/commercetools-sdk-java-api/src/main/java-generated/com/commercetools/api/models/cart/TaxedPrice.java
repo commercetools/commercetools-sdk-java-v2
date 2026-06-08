@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.CentPrecisionMoney;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * TaxedPrice
@@ -190,8 +190,8 @@ public interface TaxedPrice {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TaxedPrice> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TaxedPrice>() {
+    public static tools.jackson.core.type.TypeReference<TaxedPrice> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TaxedPrice>() {
             @Override
             public String toString() {
                 return "TypeReference<TaxedPrice>";

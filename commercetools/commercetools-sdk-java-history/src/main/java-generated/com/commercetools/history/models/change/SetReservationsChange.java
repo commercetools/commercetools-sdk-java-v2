@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.Reservation;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>This change is initiated by background processes after the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntryAddQuantityAction" rel="nofollow">Add Quantity</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntryRemoveQuantityAction" rel="nofollow">Remove Quantity</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntryChangeQuantityAction" rel="nofollow">Change Quantity</a> update action is performed.</p>
@@ -254,8 +254,8 @@ public interface SetReservationsChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetReservationsChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetReservationsChange>() {
+    public static tools.jackson.core.type.TypeReference<SetReservationsChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetReservationsChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetReservationsChange>";

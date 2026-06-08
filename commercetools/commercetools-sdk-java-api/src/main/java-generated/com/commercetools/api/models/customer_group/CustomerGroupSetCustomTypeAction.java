@@ -10,11 +10,11 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>This action sets or removes the custom type for an existing CustomerGroup. If present, this action overwrites any existing <span>custom</span> type and fields.</p>
@@ -139,8 +139,8 @@ public interface CustomerGroupSetCustomTypeAction extends CustomerGroupUpdateAct
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroupSetCustomTypeAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroupSetCustomTypeAction>() {
+    public static tools.jackson.core.type.TypeReference<CustomerGroupSetCustomTypeAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerGroupSetCustomTypeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerGroupSetCustomTypeAction>";

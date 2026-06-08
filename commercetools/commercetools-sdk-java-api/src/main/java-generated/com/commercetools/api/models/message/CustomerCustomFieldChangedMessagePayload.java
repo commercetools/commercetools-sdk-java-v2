@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated after changing an existing Custom Field on a Customer using the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
@@ -156,8 +156,8 @@ public interface CustomerCustomFieldChangedMessagePayload extends MessagePayload
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerCustomFieldChangedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerCustomFieldChangedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<CustomerCustomFieldChangedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerCustomFieldChangedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerCustomFieldChangedMessagePayload>";

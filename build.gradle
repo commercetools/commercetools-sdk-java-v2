@@ -108,7 +108,7 @@ subprojects { project ->
 
     java {
         toolchain {
-            languageVersion = JavaLanguageVersion.of(11)
+            languageVersion = JavaLanguageVersion.of(17)
         }
     }
     tasks.withType(JavaCompile).configureEach {
@@ -136,6 +136,7 @@ subprojects { project ->
         javaLauncher = javaToolchains.launcherFor {
             languageVersion = JavaLanguageVersion.of(17)
         }
+        jvmArgs '-Djdk.tracePinnedThreads=full'
     }
 }
 
@@ -173,7 +174,8 @@ generateLicenseReport {
 }
 
 def excludeProjects = [
-        'internal-docs'
+        'internal-docs',
+        'commercetools-sdk-compat-v1'
 ]
 subprojects { project ->
     if (project.file("build.gradle").exists() && !excludeProjects.contains(project.name)) {
@@ -223,7 +225,7 @@ def documentationProjects= [
         ":commercetools:commercetools-okhttp-client3",
         ":commercetools:commercetools-okhttp-client4",
         ":commercetools:commercetools-reactornetty-client",
-        ":commercetools:commercetools-sdk-compat-v1",
+        //":commercetools:commercetools-sdk-compat-v1",
         ":commercetools:commercetools-sdk-java-api",
         ":commercetools:commercetools-sdk-java-history",
         ":commercetools:commercetools-sdk-java-importapi",

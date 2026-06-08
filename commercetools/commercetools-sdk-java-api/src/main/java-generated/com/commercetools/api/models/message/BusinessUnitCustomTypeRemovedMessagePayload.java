@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated after removing a Custom Type from a Business Unit using the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetCustomTypeAction" rel="nofollow">Set Custom Type</a> update action.</p>
@@ -120,8 +121,8 @@ public interface BusinessUnitCustomTypeRemovedMessagePayload extends MessagePayl
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitCustomTypeRemovedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitCustomTypeRemovedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitCustomTypeRemovedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitCustomTypeRemovedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitCustomTypeRemovedMessagePayload>";

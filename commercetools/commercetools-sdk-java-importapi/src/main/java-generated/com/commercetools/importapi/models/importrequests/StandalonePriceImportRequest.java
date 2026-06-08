@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.standalone_prices.StandalonePriceImport;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>The request body to <a href="https://docs.commercetools.com/apis/ctp:import:endpoint:/{projectKey}/standalone-prices/import-containers/{importContainerKey}:POST" rel="nofollow">import Standalone Prices</a>. Contains data for <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Prices</a> to be created or updated in a Project.</p>
@@ -135,8 +135,8 @@ public interface StandalonePriceImportRequest extends ImportRequest {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceImportRequest> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceImportRequest>() {
+    public static tools.jackson.core.type.TypeReference<StandalonePriceImportRequest> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StandalonePriceImportRequest>() {
             @Override
             public String toString() {
                 return "TypeReference<StandalonePriceImportRequest>";

@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>For GoogleCloudFunction destinations, you need to grant permissions to the <code>extensions@commercetools-platform.iam.gserviceaccount.com</code> service account to invoke your function. If your function's version is 1st gen, grant the service account the IAM role <code>Cloud Functions Invoker</code>. For version 2nd gen, assign the IAM role <code>Cloud Run Invoker</code> using the Cloud Run console.</p>
@@ -119,8 +119,8 @@ public interface GoogleCloudFunctionDestination extends ExtensionDestination {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GoogleCloudFunctionDestination> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GoogleCloudFunctionDestination>() {
+    public static tools.jackson.core.type.TypeReference<GoogleCloudFunctionDestination> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GoogleCloudFunctionDestination>() {
             @Override
             public String toString() {
                 return "TypeReference<GoogleCloudFunctionDestination>";

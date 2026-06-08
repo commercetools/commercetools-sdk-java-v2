@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.type.CustomFieldLocalizedEnumValue;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> maps to an abstract Cart categorization expressed by strings (for example, <code>Light</code>, <code>Medium</code>, or <code>Heavy</code>). Only keys defined in the <code>values</code> array can be used to create a tier or to set a value of the <code>shippingRateInput</code> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>. Keys must be unique.</p>
@@ -135,8 +135,8 @@ public interface CartClassificationType extends ShippingRateInputType {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartClassificationType> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartClassificationType>() {
+    public static tools.jackson.core.type.TypeReference<CartClassificationType> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartClassificationType>() {
             @Override
             public String toString() {
                 return "TypeReference<CartClassificationType>";

@@ -11,13 +11,13 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Retrieves the most recently modified <a href="https://docs.commercetools.com/apis/ctp:api:type:CartState" rel="nofollow">active Cart</a> of a Customer with <a href="https://docs.commercetools.com/apis/ctp:api:type:CartOrigin" rel="nofollow">CartOrigin</a> <code>Customer</code>. If no active Cart exists, this method returns a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error.</p>

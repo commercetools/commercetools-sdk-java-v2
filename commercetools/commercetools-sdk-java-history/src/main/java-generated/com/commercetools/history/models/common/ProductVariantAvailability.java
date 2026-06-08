@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> information of the Product Variant. If there is a supply <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for the InventoryEntry, then <code>channels</code> is returned. If not, then <code>isOnStock</code>, <code>restockableInDays</code>, and <code>availableQuantity</code> are returned.</p>
@@ -198,8 +198,8 @@ public interface ProductVariantAvailability {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantAvailability> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantAvailability>() {
+    public static tools.jackson.core.type.TypeReference<ProductVariantAvailability> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductVariantAvailability>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductVariantAvailability>";

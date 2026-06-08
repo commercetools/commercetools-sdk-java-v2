@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated when an <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">Import Operation</a> has the <code>rejected</code> <a href="https://docs.commercetools.com/apis/ctp:import:type:ProcessingState" rel="nofollow">ProcessingState</a>.</p>
@@ -150,8 +150,8 @@ public interface ImportOperationRejectedEvent extends Event {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ImportOperationRejectedEvent> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ImportOperationRejectedEvent>() {
+    public static tools.jackson.core.type.TypeReference<ImportOperationRejectedEvent> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ImportOperationRejectedEvent>() {
             @Override
             public String toString() {
                 return "TypeReference<ImportOperationRejectedEvent>";

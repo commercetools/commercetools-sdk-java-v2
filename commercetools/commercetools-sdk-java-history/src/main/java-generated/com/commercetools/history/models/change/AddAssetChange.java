@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.Asset;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * AddAssetChange
@@ -213,8 +213,8 @@ public interface AddAssetChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AddAssetChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AddAssetChange>() {
+    public static tools.jackson.core.type.TypeReference<AddAssetChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AddAssetChange>() {
             @Override
             public String toString() {
                 return "TypeReference<AddAssetChange>";

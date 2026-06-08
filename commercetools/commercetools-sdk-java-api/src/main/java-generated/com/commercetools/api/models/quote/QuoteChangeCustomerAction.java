@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.customer.CustomerResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Changes the owner of a Quote to a different Customer. Customer Group is not updated. This update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteCustomerChangedMessage" rel="nofollow">Quote Customer Changed</a> Message.</p>
@@ -123,8 +123,8 @@ public interface QuoteChangeCustomerAction extends QuoteUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<QuoteChangeCustomerAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<QuoteChangeCustomerAction>() {
+    public static tools.jackson.core.type.TypeReference<QuoteChangeCustomerAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<QuoteChangeCustomerAction>() {
             @Override
             public String toString() {
                 return "TypeReference<QuoteChangeCustomerAction>";

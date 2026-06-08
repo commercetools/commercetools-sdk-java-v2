@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.order_edit.OrderEditPreviewFailure;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Returned when a preview to find an appropriate Shipping Method for an OrderEdit could not be generated.</p>
@@ -152,8 +152,8 @@ public interface EditPreviewFailedError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<EditPreviewFailedError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<EditPreviewFailedError>() {
+    public static tools.jackson.core.type.TypeReference<EditPreviewFailedError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<EditPreviewFailedError>() {
             @Override
             public String toString() {
                 return "TypeReference<EditPreviewFailedError>";

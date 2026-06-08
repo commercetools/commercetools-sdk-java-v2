@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated after adding a Custom Field to an Address of a Customer using the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetAddressCustomFieldAction" rel="nofollow">Set CustomField in Address</a> update action. If a Custom Field already exists with the same name, a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddressCustomFieldChangedMessage" rel="nofollow">CustomerAddressCustomFieldChanged</a> Message is generated instead.</p>
@@ -185,8 +185,8 @@ public interface CustomerAddressCustomFieldAddedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerAddressCustomFieldAddedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerAddressCustomFieldAddedMessage>() {
+    public static tools.jackson.core.type.TypeReference<CustomerAddressCustomFieldAddedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerAddressCustomFieldAddedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerAddressCustomFieldAddedMessage>";

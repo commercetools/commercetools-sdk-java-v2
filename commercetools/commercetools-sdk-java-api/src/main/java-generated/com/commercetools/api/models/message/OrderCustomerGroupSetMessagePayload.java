@@ -9,11 +9,11 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomerGroupAction" rel="nofollow">Set Customer Group</a> update action.</p>
@@ -140,8 +140,8 @@ public interface OrderCustomerGroupSetMessagePayload extends OrderMessagePayload
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderCustomerGroupSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderCustomerGroupSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<OrderCustomerGroupSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderCustomerGroupSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderCustomerGroupSetMessagePayload>";

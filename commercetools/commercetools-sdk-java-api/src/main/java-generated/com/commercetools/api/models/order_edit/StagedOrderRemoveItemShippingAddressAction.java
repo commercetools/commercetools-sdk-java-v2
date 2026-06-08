@@ -9,11 +9,11 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>An address can only be removed if it is not referenced in any <a href="https://docs.commercetools.com/apis/ctp:api:type:ItemShippingTarget" rel="nofollow">ItemShippingTarget</a> of the Cart.</p>
@@ -124,8 +124,8 @@ public interface StagedOrderRemoveItemShippingAddressAction extends StagedOrderU
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderRemoveItemShippingAddressAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderRemoveItemShippingAddressAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderRemoveItemShippingAddressAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderRemoveItemShippingAddressAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderRemoveItemShippingAddressAction>";

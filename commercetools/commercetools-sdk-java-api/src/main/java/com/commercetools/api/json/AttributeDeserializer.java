@@ -1,7 +1,6 @@
 
 package com.commercetools.api.json;
 
-import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.ZonedDateTime;
@@ -17,14 +16,15 @@ import com.commercetools.api.models.product.AttributeBuilder;
 import com.commercetools.api.models.product.AttributeImpl;
 import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
 import com.commercetools.api.models.product_type.AttributePlainEnumValue;
-import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.DeserializationContext;
-import com.fasterxml.jackson.databind.JsonDeserializer;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.node.JsonNodeType;
 
-public class AttributeDeserializer extends JsonDeserializer<AttributeImpl> {
+import tools.jackson.core.JsonParser;
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.DeserializationContext;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.ValueDeserializer;
+import tools.jackson.databind.node.JsonNodeType;
+
+public class AttributeDeserializer extends ValueDeserializer<AttributeImpl> {
 
     private static Pattern p = Pattern.compile("^[0-9]");
     private static Pattern dateTime = Pattern.compile(
@@ -64,21 +64,22 @@ public class AttributeDeserializer extends JsonDeserializer<AttributeImpl> {
     }
 
     @Override
-    public AttributeImpl deserialize(JsonParser p, DeserializationContext ctx) throws IOException {
+    public AttributeImpl deserialize(JsonParser p, DeserializationContext ctx) {
 
         JsonNode node = p.readValueAsTree();
         JsonNode valueNode = node.get("value");
 
-        String name = node.get("name").asText();
+        String name = node.get("name").asString();
         AttributeBuilder builder = Attribute.builder();
         builder.name(name);
 
         if (attributeTypes != null && attributeTypes.containsKey(name)) {
             return (AttributeImpl) builder
-                    .value(p.getCodec().treeAsTokens(valueNode).readValueAs(attributeTypes.get(name)))
+                    .value(p.objectReadContext().treeAsTokens(valueNode).readValueAs(attributeTypes.get(name)))
                     .build();
         }
-        return (AttributeImpl) builder.value(p.getCodec().treeAsTokens(valueNode).readValueAs(typeRef(valueNode)))
+        return (AttributeImpl) builder
+                .value(p.objectReadContext().treeAsTokens(valueNode).readValueAs(typeRef(valueNode)))
                 .build();
     }
 
@@ -97,7 +98,7 @@ public class AttributeDeserializer extends JsonDeserializer<AttributeImpl> {
                 };
             case STRING:
                 if (deserializeAsDate) {
-                    String val = valueNode.asText();
+                    String val = valueNode.asString();
                     if (p.matcher(val).find()) {
                         if (dateTime.matcher(val).find()) {
                             return new TypeReference<ZonedDateTime>() {
@@ -225,7 +226,7 @@ public class AttributeDeserializer extends JsonDeserializer<AttributeImpl> {
                 return ElemType.NUMBER;
             case STRING:
                 if (deserializeAsDate) {
-                    String val = valueNode.asText();
+                    String val = valueNode.asString();
                     if (p.matcher(val).find()) {
                         if (dateTime.matcher(val).find()) {
                             return ElemType.DATETIME;

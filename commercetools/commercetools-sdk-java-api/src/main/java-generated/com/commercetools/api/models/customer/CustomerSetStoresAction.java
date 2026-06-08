@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Sets the Stores the Customer account is associated with. If no Stores are specified, the Customer becomes a <span>global Customer</span>.</p>
@@ -136,8 +136,8 @@ public interface CustomerSetStoresAction extends CustomerUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerSetStoresAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerSetStoresAction>() {
+    public static tools.jackson.core.type.TypeReference<CustomerSetStoresAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerSetStoresAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerSetStoresAction>";

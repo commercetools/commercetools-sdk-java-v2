@@ -9,12 +9,12 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * BusinessUnitPagedSearchResponse
@@ -182,8 +182,8 @@ public interface BusinessUnitPagedSearchResponse {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitPagedSearchResponse> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitPagedSearchResponse>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitPagedSearchResponse> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitPagedSearchResponse>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitPagedSearchResponse>";

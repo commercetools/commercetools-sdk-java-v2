@@ -9,12 +9,12 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>The state of the <span>Transaction</span> and the related errors in case of a failed Transaction.</p>
@@ -144,8 +144,8 @@ public interface TransactionStatus {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TransactionStatus> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TransactionStatus>() {
+    public static tools.jackson.core.type.TypeReference<TransactionStatus> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TransactionStatus>() {
             @Override
             public String toString() {
                 return "TypeReference<TransactionStatus>";

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:MyShoppingListDraft" rel="nofollow">MyShoppingListDraft</a> is the object submitted as payload to the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/shopping-lists:POST" rel="nofollow">Create MyShoppingList request</a>. The <code>customer</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a> is automatically set with a <span>password flow token</span>. The <code>anonymousId</code> is automatically set with a <span>token for an anonymous session</span>. The <code>key</code> and <code>slug</code> fields can not be set.</p>

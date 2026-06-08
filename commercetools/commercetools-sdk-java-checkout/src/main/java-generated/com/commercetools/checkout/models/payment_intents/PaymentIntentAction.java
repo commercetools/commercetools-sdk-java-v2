@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Depending on the action specified, Checkout requests the <span>payment service provider</span> (PSP) or gift card management system to capture, refund, or cancel the authorization for the given Payment.</p>
@@ -105,8 +105,8 @@ public interface PaymentIntentAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentIntentAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentIntentAction>() {
+    public static tools.jackson.core.type.TypeReference<PaymentIntentAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentIntentAction>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentIntentAction>";

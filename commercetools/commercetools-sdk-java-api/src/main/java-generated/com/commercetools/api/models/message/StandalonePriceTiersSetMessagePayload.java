@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.PriceTier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetPriceTiersAction" rel="nofollow">Set Price Tier</a> update action</p>
@@ -168,8 +168,8 @@ public interface StandalonePriceTiersSetMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceTiersSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceTiersSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<StandalonePriceTiersSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StandalonePriceTiersSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<StandalonePriceTiersSetMessagePayload>";

@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.LineItem;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">Remove Parcel From Delivery</a> update action.</p>
@@ -168,8 +168,8 @@ public interface RemoveOrderLineItemChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RemoveOrderLineItemChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RemoveOrderLineItemChange>() {
+    public static tools.jackson.core.type.TypeReference<RemoveOrderLineItemChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RemoveOrderLineItemChange>() {
             @Override
             public String toString() {
                 return "TypeReference<RemoveOrderLineItemChange>";

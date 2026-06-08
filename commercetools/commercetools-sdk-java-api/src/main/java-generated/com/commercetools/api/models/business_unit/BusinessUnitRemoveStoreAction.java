@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Removes a Store from the Business Unit. Newly created <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> can no longer reference the removed Store for the Business Unit. We recommend cleaning up unordered Carts that still have the Store assigned after calling this update action since those cannot be converted to Orders. Orders created before the Store was removed remain unchanged. Generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitStoreRemovedMessage" rel="nofollow">BusinessUnitStoreRemoved</a> Message. Only applicable when <code>storeMode</code> is <code>Explicit</code>.</p>
@@ -122,8 +122,8 @@ public interface BusinessUnitRemoveStoreAction extends BusinessUnitUpdateAction 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitRemoveStoreAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitRemoveStoreAction>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitRemoveStoreAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitRemoveStoreAction>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitRemoveStoreAction>";

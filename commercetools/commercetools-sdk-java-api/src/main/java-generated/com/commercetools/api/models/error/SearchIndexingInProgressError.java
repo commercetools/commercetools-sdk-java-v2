@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Returned when the indexing of Product information is still in progress for Projects that have indexing activated.</p>
@@ -129,8 +129,8 @@ public interface SearchIndexingInProgressError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SearchIndexingInProgressError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SearchIndexingInProgressError>() {
+    public static tools.jackson.core.type.TypeReference<SearchIndexingInProgressError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SearchIndexingInProgressError>() {
             @Override
             public String toString() {
                 return "TypeReference<SearchIndexingInProgressError>";

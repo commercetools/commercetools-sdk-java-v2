@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a>.</p>
@@ -133,8 +133,8 @@ public interface StagedQuoteReference extends Reference, com.commercetools.api.m
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedQuoteReference> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedQuoteReference>() {
+    public static tools.jackson.core.type.TypeReference<StagedQuoteReference> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedQuoteReference>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedQuoteReference>";

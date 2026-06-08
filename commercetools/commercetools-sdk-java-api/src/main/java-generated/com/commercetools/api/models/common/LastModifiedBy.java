@@ -9,11 +9,11 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.customer.CustomerReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>IDs and references that last modified the resource. This is present on resources created or updated after 1 February 2019 except for <span>events not tracked</span>.</p>
@@ -199,8 +199,8 @@ public interface LastModifiedBy extends ClientLogging {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<LastModifiedBy> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<LastModifiedBy>() {
+    public static tools.jackson.core.type.TypeReference<LastModifiedBy> typeReference() {
+        return new tools.jackson.core.type.TypeReference<LastModifiedBy>() {
             @Override
             public String toString() {
                 return "TypeReference<LastModifiedBy>";

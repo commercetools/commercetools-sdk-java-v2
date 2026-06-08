@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>The tokenizer defines the tokens that are used for <span>search term suggestions</span>.</p>
@@ -90,8 +90,8 @@ public interface SuggestTokenizer {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SuggestTokenizer> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SuggestTokenizer>() {
+    public static tools.jackson.core.type.TypeReference<SuggestTokenizer> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SuggestTokenizer>() {
             @Override
             public String toString() {
                 return "TypeReference<SuggestTokenizer>";

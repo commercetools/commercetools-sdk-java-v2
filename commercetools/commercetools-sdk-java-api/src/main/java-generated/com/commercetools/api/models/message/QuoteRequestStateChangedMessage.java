@@ -9,11 +9,11 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.quote_request.QuoteRequestState;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestChangeQuoteRequestStateAction" rel="nofollow">Change Quote Request State</a> update action.</p>
@@ -167,8 +167,8 @@ public interface QuoteRequestStateChangedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<QuoteRequestStateChangedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<QuoteRequestStateChangedMessage>() {
+    public static tools.jackson.core.type.TypeReference<QuoteRequestStateChangedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<QuoteRequestStateChangedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<QuoteRequestStateChangedMessage>";

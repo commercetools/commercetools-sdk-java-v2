@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>A localized string is a JSON object where the keys are of <span>IETF language tag</span>, and the values the corresponding strings used for that language.</p>
@@ -120,8 +120,8 @@ public interface LocalizedString {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<LocalizedString> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<LocalizedString>() {
+    public static tools.jackson.core.type.TypeReference<LocalizedString> typeReference() {
+        return new tools.jackson.core.type.TypeReference<LocalizedString>() {
             @Override
             public String toString() {
                 return "TypeReference<LocalizedString>";

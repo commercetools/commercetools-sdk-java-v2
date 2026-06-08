@@ -9,7 +9,6 @@ import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.monitoring.datadog.DatadogResponseSerializer;
 import com.datadog.api.client.ApiException;
 import com.datadog.api.client.v2.api.MetricsApi;
-import com.fasterxml.jackson.core.JsonProcessingException;
 
 import io.vrap.rmf.base.client.ApiHttpHeaders;
 import io.vrap.rmf.base.client.ApiHttpResponse;
@@ -19,10 +18,12 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
+import tools.jackson.core.JacksonException;
+
 public class ResponseSerializerTest {
 
     @Test
-    public void testSerialize() throws ApiException, JsonProcessingException {
+    public void testSerialize() throws ApiException, JacksonException {
         MetricsApi metricsApi = Mockito.mock(MetricsApi.class);
         Mockito.when(metricsApi.submitMetrics(Mockito.any())).thenReturn(null);
         DatadogResponseSerializer serializer = new DatadogResponseSerializer(ResponseSerializer.of(), metricsApi);
@@ -40,7 +41,7 @@ public class ResponseSerializerTest {
     }
 
     @Test
-    public void testSerializeWithAttributes() throws ApiException, JsonProcessingException {
+    public void testSerializeWithAttributes() throws ApiException, JacksonException {
         MetricsApi metricsApi = Mockito.mock(MetricsApi.class);
         Mockito.when(metricsApi.submitMetrics(Mockito.any())).thenReturn(null);
         Map<String, String> tags = new HashMap<>();
@@ -66,7 +67,7 @@ public class ResponseSerializerTest {
     }
 
     @Test
-    public void testDeserialize() throws ApiException, JsonProcessingException {
+    public void testDeserialize() throws ApiException, JacksonException {
         MetricsApi metricsApi = Mockito.mock(MetricsApi.class);
         Mockito.when(metricsApi.submitMetrics(Mockito.any())).thenReturn(null);
         DatadogResponseSerializer serializer = new DatadogResponseSerializer(ResponseSerializer.of(), metricsApi);
@@ -86,7 +87,7 @@ public class ResponseSerializerTest {
     }
 
     @Test
-    public void testDeserializeWithAttributes() throws ApiException, JsonProcessingException {
+    public void testDeserializeWithAttributes() throws ApiException, JacksonException {
         MetricsApi metricsApi = Mockito.mock(MetricsApi.class);
         Mockito.when(metricsApi.submitMetrics(Mockito.any())).thenReturn(null);
         Map<String, String> tags = new HashMap<>();

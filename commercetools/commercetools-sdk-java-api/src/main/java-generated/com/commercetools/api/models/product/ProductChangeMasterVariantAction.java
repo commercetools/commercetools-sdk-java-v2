@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Assigns the specified Product Variant to the <code>masterVariant</code> and removes the same from <code>variants</code> at the same time. The current Master Variant becomes part of the <code>variants</code> array. Either <code>variantId</code> or <code>sku</code> is required.</p>
@@ -150,8 +151,8 @@ public interface ProductChangeMasterVariantAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductChangeMasterVariantAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductChangeMasterVariantAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductChangeMasterVariantAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductChangeMasterVariantAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductChangeMasterVariantAction>";

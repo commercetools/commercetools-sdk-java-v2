@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.common.BusinessUnitKeyReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Represents a <a href="https://docs.commercetools.com/apis/ctp:api:type:Division" rel="nofollow">Division</a>, a sub-unit of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Company" rel="nofollow">Company</a> or another Division.</p>
@@ -215,8 +215,8 @@ public interface DivisionBusinessUnitImport extends BusinessUnitImport {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DivisionBusinessUnitImport> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DivisionBusinessUnitImport>() {
+    public static tools.jackson.core.type.TypeReference<DivisionBusinessUnitImport> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DivisionBusinessUnitImport>() {
             @Override
             public String toString() {
                 return "TypeReference<DivisionBusinessUnitImport>";

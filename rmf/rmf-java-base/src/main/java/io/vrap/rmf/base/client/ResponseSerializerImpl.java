@@ -1,12 +1,10 @@
 
 package io.vrap.rmf.base.client;
 
-import java.io.IOException;
-
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JavaType;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.core.JacksonException;
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.JavaType;
+import tools.jackson.databind.ObjectMapper;
 
 /**
  * Default implementation of {@link ResponseSerializer} using Jackson {@link ObjectMapper}
@@ -28,7 +26,7 @@ class ResponseSerializerImpl implements ResponseSerializer {
             return new ApiHttpResponse<>(response.getStatusCode(), response.getHeaders(), newBody,
                 response.getMessage(), response.getContextMap());
         }
-        catch (IOException e) {
+        catch (JacksonException e) {
             throw new DeserializationException(e.getMessage(), e);
         }
     }
@@ -42,7 +40,7 @@ class ResponseSerializerImpl implements ResponseSerializer {
             return new ApiHttpResponse<>(response.getStatusCode(), response.getHeaders(), newBody,
                 response.getMessage(), response.getContextMap());
         }
-        catch (IOException e) {
+        catch (JacksonException e) {
             throw new DeserializationException(e.getMessage(), e);
         }
     }
@@ -57,12 +55,12 @@ class ResponseSerializerImpl implements ResponseSerializer {
             return new ApiHttpResponse<>(response.getStatusCode(), response.getHeaders(), newBody,
                 response.getMessage(), response.getContextMap());
         }
-        catch (IOException e) {
+        catch (JacksonException e) {
             throw new DeserializationException(e.getMessage(), e);
         }
     }
 
-    public byte[] toJsonByteArray(final Object value) throws JsonProcessingException {
+    public byte[] toJsonByteArray(final Object value) throws JacksonException {
         return mapper.writeValueAsBytes(value);
     }
 }

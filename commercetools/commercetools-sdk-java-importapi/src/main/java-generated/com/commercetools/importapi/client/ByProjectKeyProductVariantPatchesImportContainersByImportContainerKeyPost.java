@@ -7,13 +7,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Creates an Import Request for updating Product Variants. Returns an <a href="https://docs.commercetools.com/apis/ctp:import:type:InvalidFieldError" rel="nofollow">InvalidField</a> error if the <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantPatchRequest" rel="nofollow">ProductVariantPatchRequest</a> contains patches with and without the <code>product</code> field set.</p>

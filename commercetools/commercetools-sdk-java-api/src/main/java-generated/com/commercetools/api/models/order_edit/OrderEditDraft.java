@@ -12,12 +12,12 @@ import com.commercetools.api.models.order.OrderReference;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * OrderEditDraft
@@ -219,8 +219,8 @@ public interface OrderEditDraft extends com.commercetools.api.models.Customizabl
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderEditDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderEditDraft>() {
+    public static tools.jackson.core.type.TypeReference<OrderEditDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderEditDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderEditDraft>";

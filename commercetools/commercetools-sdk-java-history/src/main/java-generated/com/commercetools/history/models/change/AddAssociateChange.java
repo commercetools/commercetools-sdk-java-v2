@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.Associate;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>This Change is no longer triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAddAssociateAction" rel="nofollow">Add Associate</a> update action. It has been deprecated and replaced by the <a href="https://docs.commercetools.com/apis/ctp:history:type:SetAssociatesChange" rel="nofollow">SetAssociatesChange</a>.</p>
@@ -149,8 +149,8 @@ public interface AddAssociateChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AddAssociateChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AddAssociateChange>() {
+    public static tools.jackson.core.type.TypeReference<AddAssociateChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AddAssociateChange>() {
             @Override
             public String toString() {
                 return "TypeReference<AddAssociateChange>";

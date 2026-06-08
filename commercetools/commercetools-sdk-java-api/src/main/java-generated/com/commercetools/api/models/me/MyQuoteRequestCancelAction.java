@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Transitions the <code>quoteRequestState</code> of the Quote Request to <code>Cancelled</code>. Can only be used when the Quote Request is in state <code>Submitted</code>.</p>
@@ -99,8 +100,8 @@ public interface MyQuoteRequestCancelAction extends MyQuoteRequestUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyQuoteRequestCancelAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyQuoteRequestCancelAction>() {
+    public static tools.jackson.core.type.TypeReference<MyQuoteRequestCancelAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyQuoteRequestCancelAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyQuoteRequestCancelAction>";

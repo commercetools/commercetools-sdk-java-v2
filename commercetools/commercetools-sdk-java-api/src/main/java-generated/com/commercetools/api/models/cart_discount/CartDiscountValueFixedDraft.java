@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Money;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedLineItemPrice" rel="nofollow">DiscountedLineItemPrice</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountLineItemsTarget" rel="nofollow">CartDiscountLineItemsTarget</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemsTarget</a> to the value specified in the <code>money</code> field, if it is lower than the current Line Item price for the same currency. If the Line Item price is already discounted to a price equal to or lower than the respective price in the <code>money</code> field, this Discount is not applied.</p>
@@ -158,8 +158,8 @@ public interface CartDiscountValueFixedDraft
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountValueFixedDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountValueFixedDraft>() {
+    public static tools.jackson.core.type.TypeReference<CartDiscountValueFixedDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartDiscountValueFixedDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<CartDiscountValueFixedDraft>";

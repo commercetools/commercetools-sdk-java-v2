@@ -13,12 +13,12 @@ import com.commercetools.api.models.cart.MethodTaxedPrice;
 import com.commercetools.api.models.cart.TaxedItemPrice;
 import com.commercetools.api.models.common.CentPrecisionMoney;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated after a successful recalculation of a Discount on a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
@@ -271,8 +271,8 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderLineItemDiscountSetMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderLineItemDiscountSetMessage>() {
+    public static tools.jackson.core.type.TypeReference<OrderLineItemDiscountSetMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderLineItemDiscountSetMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderLineItemDiscountSetMessage>";

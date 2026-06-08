@@ -9,11 +9,11 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * ProductTailoringSetMetaDescriptionAction
@@ -140,8 +140,8 @@ public interface ProductTailoringSetMetaDescriptionAction extends ProductTailori
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductTailoringSetMetaDescriptionAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductTailoringSetMetaDescriptionAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductTailoringSetMetaDescriptionAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductTailoringSetMetaDescriptionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTailoringSetMetaDescriptionAction>";

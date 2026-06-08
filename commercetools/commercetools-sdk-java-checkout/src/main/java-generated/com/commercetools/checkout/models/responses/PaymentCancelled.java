@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.checkout.models.payment.PaymentReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Generated when the customer cancels the payment (for example, by closing the browser's window).</p>
@@ -184,8 +184,8 @@ public interface PaymentCancelled extends ResponseMessage {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentCancelled> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentCancelled>() {
+    public static tools.jackson.core.type.TypeReference<PaymentCancelled> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentCancelled>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentCancelled>";

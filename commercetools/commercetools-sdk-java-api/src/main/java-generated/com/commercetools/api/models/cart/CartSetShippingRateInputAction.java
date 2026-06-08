@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Input used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>. If no matching tier can be found, or the input is not set, the default price for the shipping rate is used.</p>
@@ -133,8 +133,8 @@ public interface CartSetShippingRateInputAction extends CartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartSetShippingRateInputAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartSetShippingRateInputAction>() {
+    public static tools.jackson.core.type.TypeReference<CartSetShippingRateInputAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartSetShippingRateInputAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartSetShippingRateInputAction>";

@@ -9,11 +9,11 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.cart.TaxMode;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <ul>
@@ -123,8 +123,8 @@ public interface MyCartChangeTaxModeAction extends MyCartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyCartChangeTaxModeAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyCartChangeTaxModeAction>() {
+    public static tools.jackson.core.type.TypeReference<MyCartChangeTaxModeAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyCartChangeTaxModeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyCartChangeTaxModeAction>";

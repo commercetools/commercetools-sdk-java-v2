@@ -9,9 +9,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Setting the expiration date and time generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderExpiresAtSetMessage" rel="nofollow">RecurringOrderExpiresAtSet</a> Message.</p>
@@ -119,8 +120,8 @@ public interface RecurringOrderSetExpiresAtAction extends RecurringOrderUpdateAc
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RecurringOrderSetExpiresAtAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RecurringOrderSetExpiresAtAction>() {
+    public static tools.jackson.core.type.TypeReference<RecurringOrderSetExpiresAtAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RecurringOrderSetExpiresAtAction>() {
             @Override
             public String toString() {
                 return "TypeReference<RecurringOrderSetExpiresAtAction>";

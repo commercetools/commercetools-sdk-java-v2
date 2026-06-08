@@ -11,12 +11,12 @@ import com.commercetools.api.models.associate_role.Permission;
 import com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier;
 import com.commercetools.api.models.customer.CustomerResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Returned when an <span>Associate</span> is missing a <span>Permission</span> on a <span>B2B resource</span>.</p>
@@ -225,8 +225,8 @@ public interface AssociateMissingPermissionError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AssociateMissingPermissionError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AssociateMissingPermissionError>() {
+    public static tools.jackson.core.type.TypeReference<AssociateMissingPermissionError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AssociateMissingPermissionError>() {
             @Override
             public String toString() {
                 return "TypeReference<AssociateMissingPermissionError>";

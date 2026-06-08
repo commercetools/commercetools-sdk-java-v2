@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Defines a <span>Custom Field</span> and its meta-information. This FieldDefinition is similar to an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> of <span>Product Types</span>.</p>
@@ -188,8 +188,8 @@ public interface FieldDefinition {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<FieldDefinition> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<FieldDefinition>() {
+    public static tools.jackson.core.type.TypeReference<FieldDefinition> typeReference() {
+        return new tools.jackson.core.type.TypeReference<FieldDefinition>() {
             @Override
             public String toString() {
                 return "TypeReference<FieldDefinition>";

@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when attempting to create or update a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> with a Line Item whose quantity exceeds the <code>maxCartQuantity</code> limit defined in the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> for that Line Item's SKU.</p>
@@ -167,8 +167,8 @@ public interface GraphQLLineItemQuantityAboveLimitError extends GraphQLErrorObje
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLLineItemQuantityAboveLimitError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLLineItemQuantityAboveLimitError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLLineItemQuantityAboveLimitError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLLineItemQuantityAboveLimitError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLLineItemQuantityAboveLimitError>";

@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.discount_group.DiscountGroup;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/discount-groups:POST" rel="nofollow">Create DiscountGroup</a> request.</p>
@@ -124,8 +124,8 @@ public interface DiscountGroupCreatedMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DiscountGroupCreatedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DiscountGroupCreatedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<DiscountGroupCreatedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DiscountGroupCreatedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountGroupCreatedMessagePayload>";

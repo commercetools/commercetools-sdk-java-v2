@@ -1,17 +1,12 @@
 
 package com.commercetools.api.client;
 
-import java.io.IOException;
 import java.time.temporal.ChronoUnit;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
 import com.commercetools.api.client.error.ConcurrentModificationException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.LongNode;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.http.InternalLogger;
@@ -26,6 +21,12 @@ import dev.failsafe.Failsafe;
 import dev.failsafe.FailsafeExecutor;
 import dev.failsafe.RetryPolicy;
 import dev.failsafe.event.ExecutionAttemptedEvent;
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.ObjectMapper;
+import tools.jackson.databind.json.JsonMapper;
+import tools.jackson.databind.node.LongNode;
+import tools.jackson.databind.node.ObjectNode;
 
 /**
  * Implementation of the {@link ConcurrentModificationMiddleware}. Uses {@link RetryPolicy} to retry upon {@link ConcurrentModificationException}.
@@ -45,15 +46,15 @@ public class ConcurrentModificationMiddlewareImpl implements ConcurrentModificat
     private final FailsafeExecutor<ApiHttpResponse<byte[]>> executor;
 
     public ConcurrentModificationMiddlewareImpl() {
-        this(1, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, new ObjectMapper());
+        this(1, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, new JsonMapper());
     }
 
     public ConcurrentModificationMiddlewareImpl(final int maxRetries) {
-        this(maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, new ObjectMapper());
+        this(maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, new JsonMapper());
     }
 
     public ConcurrentModificationMiddlewareImpl(final int maxRetries, final long delay, final long maxDelay) {
-        this(maxRetries, delay, maxDelay, new ObjectMapper());
+        this(maxRetries, delay, maxDelay, new JsonMapper());
     }
 
     public ConcurrentModificationMiddlewareImpl(final int maxRetries, final long delay, final long maxDelay,
@@ -92,7 +93,7 @@ public class ConcurrentModificationMiddlewareImpl implements ConcurrentModificat
                             return next.apply(request.withBody(jsonNode.toString()));
                         }
                     }
-                    catch (IOException ignored) {
+                    catch (JacksonException ignored) {
                     }
                 }
             }

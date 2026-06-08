@@ -12,12 +12,13 @@ import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.product.ProductResourceIdentifier;
 import com.commercetools.api.models.review.Review;
 import com.commercetools.api.models.review.ReviewDraft;
-import com.fasterxml.jackson.core.JsonProcessingException;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import tools.jackson.core.JacksonException;
 
 public class ReviewTest {
 
@@ -114,7 +115,7 @@ public class ReviewTest {
     }
 
     @Test
-    public void serializeDraft() throws JsonProcessingException {
+    public void serializeDraft() throws JacksonException {
         ReviewDraft draft = ReviewDraft.of();
         draft.setTarget(ProductResourceIdentifier.of());
         String s = JsonUtils.toJsonString(draft);
@@ -122,7 +123,7 @@ public class ReviewTest {
     }
 
     @Test
-    public void serialize() throws JsonProcessingException {
+    public void serialize() throws JacksonException {
         Review review = Review.of();
         review.setTarget(ProductReference.of());
         String s = JsonUtils.toJsonString(review);

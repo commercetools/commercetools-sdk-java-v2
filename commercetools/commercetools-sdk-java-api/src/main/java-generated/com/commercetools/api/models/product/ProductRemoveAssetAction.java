@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Either <code>variantId</code> or <code>sku</code> is required. The Asset to remove must be specified using either <code>assetId</code> or <code>assetKey</code>.</p>
@@ -184,8 +185,8 @@ public interface ProductRemoveAssetAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductRemoveAssetAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductRemoveAssetAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductRemoveAssetAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductRemoveAssetAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductRemoveAssetAction>";

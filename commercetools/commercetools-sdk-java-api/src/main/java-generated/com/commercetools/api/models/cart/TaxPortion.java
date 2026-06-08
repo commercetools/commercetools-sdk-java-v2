@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.CentPrecisionMoney;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>The tax portions are calculated from the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRates</a>. If a Tax Rate has <a href="https://docs.commercetools.com/apis/ctp:api:type:SubRate" rel="nofollow">SubRates</a>, they are used and can be identified by name. Tax portions from Line Items with the same <code>rate</code> and <code>name</code> are accumulated to the same tax portion.</p>
@@ -151,8 +151,8 @@ public interface TaxPortion {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TaxPortion> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TaxPortion>() {
+    public static tools.jackson.core.type.TypeReference<TaxPortion> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TaxPortion>() {
             @Override
             public String toString() {
                 return "TypeReference<TaxPortion>";

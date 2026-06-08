@@ -17,10 +17,6 @@ import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.order.Order;
 import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.type.*;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
@@ -28,6 +24,11 @@ import org.assertj.core.api.Assertions;
 import org.assertj.core.util.Lists;
 import org.assertj.core.util.Maps;
 import org.junit.jupiter.api.Test;
+
+import tools.jackson.core.JacksonException;
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.ObjectMapper;
 
 public class CustomFieldsTest {
 
@@ -332,7 +333,7 @@ public class CustomFieldsTest {
     }
 
     @Test
-    public void customFieldTypeByName() throws JsonProcessingException {
+    public void customFieldTypeByName() throws JacksonException {
         ApiModuleOptions options = ApiModuleOptions.of()
                 .withCustomFieldTypes(Maps.newHashMap("test", new TypeReference<String>() {
                 }));
@@ -359,7 +360,7 @@ public class CustomFieldsTest {
     }
 
     @Test
-    public void serializeCustomFields() throws JsonProcessingException {
+    public void serializeCustomFields() throws JacksonException {
         FieldContainer container = FieldContainerBuilder.of()
                 .addValue("int", 13)
                 .addValue("double", 13.0)

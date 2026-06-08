@@ -12,13 +12,13 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>To create a new Product, send a representation that is going to become the initial <em>staged</em> and <em>current</em> representation of the new Product in the catalog. If <span>Product price selection query parameters</span> are provided, selected Prices will be added to the response. Produces the <span>ProductCreated</span> Message.</p>

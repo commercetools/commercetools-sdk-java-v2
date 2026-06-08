@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>Returned when the <code>type</code> is different for an AttributeDefinition using the same <code>name</code> in multiple Product Types.</p>
@@ -170,8 +170,8 @@ public interface GraphQLAttributeDefinitionTypeConflictError extends GraphQLErro
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLAttributeDefinitionTypeConflictError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLAttributeDefinitionTypeConflictError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLAttributeDefinitionTypeConflictError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLAttributeDefinitionTypeConflictError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLAttributeDefinitionTypeConflictError>";

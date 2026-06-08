@@ -17,12 +17,12 @@ import com.commercetools.api.models.tax_category.TaxCategoryReference;
 import com.commercetools.api.models.tax_category.TaxRate;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /**
  *  <p>A generic item that can be added to the Cart but is not bound to a Product that can be used for discounts (negative money), vouchers, complex cart rules, additional services, or fees. You control the lifecycle of this item.</p>
@@ -490,8 +490,8 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomLineItem> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomLineItem>() {
+    public static tools.jackson.core.type.TypeReference<CustomLineItem> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomLineItem>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomLineItem>";

@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountriesChangedMessage" rel="nofollow">StoreCountriesChanged</a> Message. It has no effect if a given country is not present in a Store.</p>

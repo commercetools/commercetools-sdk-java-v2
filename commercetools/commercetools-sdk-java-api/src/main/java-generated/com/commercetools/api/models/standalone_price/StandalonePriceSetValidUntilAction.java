@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Updating the <code>validUntil</code> value generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceValidUntilSetMessage" rel="nofollow">StandalonePriceValidUntilSet</a> Message.</p>

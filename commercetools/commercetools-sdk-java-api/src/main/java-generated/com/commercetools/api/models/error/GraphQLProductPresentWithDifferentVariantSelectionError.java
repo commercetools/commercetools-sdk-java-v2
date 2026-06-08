@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when a Product is already assigned to a <span>Product Selection</span>, but the Product Selection has either a different <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantSelection" rel="nofollow">Product Variant Selection</a> or a different <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantExclusion" rel="nofollow">Product Variant Exclusion</a>.</p>

@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Sets the inventory limits for a specific InventoryEntry. This action allows you to define minimum and maximum quantities that can be added to a Cart. For more information, see <span>Quantity limits</span>.</p>

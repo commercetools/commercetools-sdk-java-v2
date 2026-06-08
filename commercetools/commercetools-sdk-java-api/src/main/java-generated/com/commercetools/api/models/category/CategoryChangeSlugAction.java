@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Changing the slug produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CategorySlugChangedMessage" rel="nofollow">CategorySlugChanged</a> Message.</p>

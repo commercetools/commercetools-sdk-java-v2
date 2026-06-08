@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Destination for <span>Google Cloud Pub/Sub</span> that can be used for <span>Pull subscriptions</span> as well as for <span>Push subscriptions</span>. The <code>topic</code> must give the <code>pubsub.topics.publish</code> permission to the service account <code>subscriptions@commercetools-platform.iam.gserviceaccount.com</code>. If used with the <span>CloudEventsFormat</span>, the notification conforms to the <span>PubSub Protocol Binding</span> of the <span>Structured Content Mode</span>.</p>

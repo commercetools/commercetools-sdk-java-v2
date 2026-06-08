@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This error occurs when your <span>API Client</span> does not have the <span>OAuth scope</span> required for the endpoint. Use an API Client with the required permissions for this endpoint instead.</p>

@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Draft type to create a <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> or a <a href="https://docs.commercetools.com/apis/ctp:api:type:KeyReference" rel="nofollow">KeyReference</a> to a resource. Provide either the <code>id</code> or (wherever supported) the <code>key</code> of the resource to reference, but depending on the API endpoint the response returns either a Reference or a KeyReference. For example, the field <code>parent</code> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:CategoryDraft" rel="nofollow">CategoryDraft</a> takes a ResourceIdentifier for its value while the value of the corresponding field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> is a Reference.</p>

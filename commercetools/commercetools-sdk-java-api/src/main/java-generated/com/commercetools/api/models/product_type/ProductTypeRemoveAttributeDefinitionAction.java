@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Removes an AttributeDefinition and also deletes all corresponding Attributes on all <span>Products</span> with this ProductType. The removal of the Attributes is <span>eventually consistent</span>.</p>

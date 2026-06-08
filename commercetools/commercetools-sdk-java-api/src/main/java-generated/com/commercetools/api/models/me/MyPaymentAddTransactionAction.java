@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Adding a Transaction to a Payment generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentTransactionAddedMessage" rel="nofollow">PaymentTransactionAdded</a> Message. Once a Transaction is added to the Payment, it can no longer be updated or deleted using the My Payments API.</p>

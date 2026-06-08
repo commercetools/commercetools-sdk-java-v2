@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Adding or updating a Custom Type on an Address of a Customer generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddressCustomTypeSetMessage" rel="nofollow">CustomerAddressCustomTypeSet</a> Message, and removing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddressCustomTypeRemovedMessage" rel="nofollow">CustomerAddressCustomTypeRemoved</a> Message.</p>

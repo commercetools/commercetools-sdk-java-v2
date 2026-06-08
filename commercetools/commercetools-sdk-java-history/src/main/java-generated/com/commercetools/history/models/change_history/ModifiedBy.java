@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Information about the user or API Client who performed the change. This is a variant of <a href="https://docs.commercetools.com/apis/ctp:api:type:LastModifiedBy" rel="nofollow">LastModifiedBy</a>.</p>

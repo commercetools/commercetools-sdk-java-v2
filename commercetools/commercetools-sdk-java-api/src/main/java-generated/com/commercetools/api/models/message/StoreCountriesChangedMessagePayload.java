@@ -14,7 +14,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreAddCountryAction" rel="nofollow">Add Country</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreRemoveCountryAction" rel="nofollow">Remove Country</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetCountriesAction" rel="nofollow">Set Countries</a> update action.</p>

@@ -19,7 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>The draft representation for prices to be embedded into <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantDraft" rel="nofollow">ProductVariantDrafts</a> when the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPriceModeEnum" rel="nofollow">ProductPriceMode</a> is <code>Embedded</code>. For the <code>Standalone</code> ProductPriceMode use <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceDraft" rel="nofollow">StandalonePriceDraft</a>.</p>

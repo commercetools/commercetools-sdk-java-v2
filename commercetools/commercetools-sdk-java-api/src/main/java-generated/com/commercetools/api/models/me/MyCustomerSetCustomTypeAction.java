@@ -14,7 +14,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Adding or updating a Custom Type on a Customer generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerCustomTypeSetMessage" rel="nofollow">CustomerCustomTypeSet</a> Message, removing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerCustomTypeRemovedMessage" rel="nofollow">CustomerCustomTypeRemoved</a> Message.</p>

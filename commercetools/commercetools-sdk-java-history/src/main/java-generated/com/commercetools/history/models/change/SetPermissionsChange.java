@@ -13,7 +13,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRoleSetPermissionsAction" rel="nofollow">Set Permissions</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRoleAddPermissionAction" rel="nofollow">Add Permission</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRoleRemovePermissionAction" rel="nofollow">Remove Permission</a> update actions.</p>

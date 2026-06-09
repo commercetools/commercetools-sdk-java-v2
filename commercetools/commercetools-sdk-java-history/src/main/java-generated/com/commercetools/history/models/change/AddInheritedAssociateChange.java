@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This change is initiated by background processes after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAddAssociateAction" rel="nofollow">Add Associate</a> update action is performed (if <span>Associates are inherited</span>).</p>

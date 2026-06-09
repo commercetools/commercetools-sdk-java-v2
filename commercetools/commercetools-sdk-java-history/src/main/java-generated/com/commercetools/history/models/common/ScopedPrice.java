@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Scoped Price is contained in a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> which is returned in response to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjectionSearchFilterScopedPrice" rel="nofollow">Product Projection Search</a> request when <span>Scoped Price Search</span> is used.</p>

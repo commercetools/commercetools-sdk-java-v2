@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>The request body to <a href="https://docs.commercetools.com/apis/ctp:import:endpoint:/{projectKey}/order-patches/import-containers/{importContainerKey}:POST" rel="nofollow">import OrderPatches</a>. The data to be imported are represented by <a href="https://docs.commercetools.com/apis/ctp:import:type:OrderPatchImport" rel="nofollow">OrderPatchImport</a>.</p>

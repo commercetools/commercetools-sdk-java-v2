@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Adding a Payment interaction generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentInteractionAddedMessage" rel="nofollow">PaymentInteractionAdded</a> Message.</p>

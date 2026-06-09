@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>The same rules for <code>name</code> and <code>value</code> apply as for <a href="https://docs.commercetools.com/apis/ctp:api:type:Attribute" rel="nofollow">Attribute</a> in Product Variants.</p>

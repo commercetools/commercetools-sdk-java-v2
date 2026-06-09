@@ -22,7 +22,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>The <code>customerId</code> is determined by a <span>password flow token</span> and automatically set on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>. The <code>anonymousId</code> is determined by a <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">token for an anonymous session</a> and automatically set on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>

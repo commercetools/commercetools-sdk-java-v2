@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Only Business Units of type <code>Division</code> can be have a store mode of <code>FromParent</code>. Changing the <code>storeMode</code> to <code>FromParent</code> empties the <code>stores</code> array on the BusinessUnit. This update action generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitStoreModeChangedMessage" rel="nofollow">BusinessUnitStoreModeChanged</a> Message.</p>

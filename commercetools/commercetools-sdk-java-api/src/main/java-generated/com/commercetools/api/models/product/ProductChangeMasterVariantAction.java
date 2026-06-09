@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Assigns the specified Product Variant to the <code>masterVariant</code> and removes the same from <code>variants</code> at the same time. The current Master Variant becomes part of the <code>variants</code> array. Either <code>variantId</code> or <code>sku</code> is required.</p>

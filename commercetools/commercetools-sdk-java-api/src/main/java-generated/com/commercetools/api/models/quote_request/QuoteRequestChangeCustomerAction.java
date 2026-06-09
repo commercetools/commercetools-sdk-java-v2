@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Changes the owner of a Quote Request to a different Customer. Customer Group is not updated. This update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestCustomerChangedMessage" rel="nofollow">Quote Request Customer Changed</a> Message.</p>

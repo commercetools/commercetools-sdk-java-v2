@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Sets the default billing address from <code>addresses</code>. The action adds the <code>id</code> of the specified Address to the <code>billingAddressIds</code> if not contained already. Either <code>addressId</code> or <code>addressKey</code> is required.</p>

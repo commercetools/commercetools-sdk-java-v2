@@ -18,7 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Generic draft type to model those fields all Business Units have in common. The additional fields required for creating a <a href="https://docs.commercetools.com/apis/ctp:api:type:Company" rel="nofollow">Company</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Division" rel="nofollow">Division</a> are represented on <a href="https://docs.commercetools.com/apis/ctp:api:type:CompanyDraft" rel="nofollow">CompanyDraft</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:DivisionDraft" rel="nofollow">DivisionDraft</a>.</p>

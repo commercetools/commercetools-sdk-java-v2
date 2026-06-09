@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when update actions could not be applied to the resource (for example, because a referenced resource does not exist). This would result in a <span>400 Bad Request</span> response if the same update action was sent from a regular client.</p>

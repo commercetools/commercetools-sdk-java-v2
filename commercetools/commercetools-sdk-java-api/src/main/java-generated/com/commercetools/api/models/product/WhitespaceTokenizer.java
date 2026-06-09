@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Creates tokens by splitting the <code>text</code> field in <a href="https://docs.commercetools.com/apis/ctp:api:type:SearchKeyword" rel="nofollow">SearchKeyword</a> by whitespaces.</p>

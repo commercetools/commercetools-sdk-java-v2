@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p><span>Azure Service Bus</span> can be used as a pull-queue with <span>Queues</span>, or to fan-out notifications with <span>Topics and Subscriptions</span>. To set up a Subscription with Azure Service Bus, first create a queue/topic in the <span>Azure Portal</span> with a Shared Access Policy including the <code>Send</code> permission.</p>

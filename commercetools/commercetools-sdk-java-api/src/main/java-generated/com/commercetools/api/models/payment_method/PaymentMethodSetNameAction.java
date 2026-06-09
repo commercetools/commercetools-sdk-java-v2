@@ -13,7 +13,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This update action generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodNameSetMessage" rel="nofollow">PaymentMethodNameSet</a> Message.</p>

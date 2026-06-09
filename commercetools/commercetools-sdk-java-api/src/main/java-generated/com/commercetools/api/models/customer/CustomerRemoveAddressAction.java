@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Removing an address from the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddressRemovedMessage" rel="nofollow">CustomerAddressRemoved</a> Message.</p>

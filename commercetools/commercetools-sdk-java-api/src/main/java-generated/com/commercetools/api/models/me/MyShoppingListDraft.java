@@ -19,7 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:MyShoppingListDraft" rel="nofollow">MyShoppingListDraft</a> is the object submitted as payload to the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/shopping-lists:POST" rel="nofollow">Create MyShoppingList request</a>. The <code>customer</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a> is automatically set with a <span>password flow token</span>. The <code>anonymousId</code> is automatically set with a <span>token for an anonymous session</span>. The <code>key</code> and <code>slug</code> fields can not be set.</p>

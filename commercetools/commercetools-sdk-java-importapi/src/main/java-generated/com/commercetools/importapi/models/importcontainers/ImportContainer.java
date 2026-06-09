@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Contains the resources to be imported. Unless <code>resourceType</code> is specified, the ImportContainer can import all of the supported <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">ImportResourceTypes</a>.</p>

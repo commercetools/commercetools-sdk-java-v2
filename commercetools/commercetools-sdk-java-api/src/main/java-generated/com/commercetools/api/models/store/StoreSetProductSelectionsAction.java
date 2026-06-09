@@ -13,7 +13,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Instead of adding or removing <span>Product Selections</span> individually, you can also change all the Store's Product Selections in one go using this update action. The Store will only contain the Product Selections specified in the request.</p>

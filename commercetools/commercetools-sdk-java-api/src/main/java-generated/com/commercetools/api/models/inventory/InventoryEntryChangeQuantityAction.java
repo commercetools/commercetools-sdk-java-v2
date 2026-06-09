@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Sets the <code>quantityOnStock</code> to an absolute value. This changes the <code>availableQuantity</code>, based on the number of active reservations. To make an incremental change instead, use the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntryAddQuantityAction" rel="nofollow">InventoryEntryAddQuantityAction</a> update action.</p>

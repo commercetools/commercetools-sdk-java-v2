@@ -21,7 +21,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>A single ProductTailoring representation contains the <em>current</em> and the <em>staged</em> representation of its product information tailored per Store.</p>

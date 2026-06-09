@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p><span>Azure Event Grid</span> can be used to push notifications to Azure Functions, HTTP endpoints (webhooks), and several other Azure tools. Event Grid can only be used with the <a href="https://docs.commercetools.com/apis/ctp:api:type:CloudEventsFormat" rel="nofollow">CloudEventsFormat</a>. To set up a Subscription with Azure Event Grid, first create a topic in the <span>Azure Portal</span>. To allow Composable Commerce to push notifications to your topic, provide an <span>access key</span>.</p>

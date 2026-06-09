@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Assigns multiple Customer Groups to a Customer. This action generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroupAssignmentsSetMessage" rel="nofollow">CustomerGroupAssignmentsSetMessage</a> Message.</p>

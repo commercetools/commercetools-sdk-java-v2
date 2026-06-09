@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Transition to a new State. This update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewStateTransitionMessage" rel="nofollow">Review State Transition</a> Message.</p>

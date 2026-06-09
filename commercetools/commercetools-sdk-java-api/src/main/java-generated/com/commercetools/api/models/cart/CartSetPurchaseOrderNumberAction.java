@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Updates the <code>purchaseOrderNumber</code> field and produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartPurchaseOrderNumberSetMessage" rel="nofollow">CartPurchaseOrderNumberSet</a> Message.</p>

@@ -13,7 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Changes the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValue" rel="nofollow">CartDiscountValue</a> for <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueRelative" rel="nofollow">relative</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueAbsolute" rel="nofollow">absolute</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueFixed" rel="nofollow">fixed price</a> CartDiscounts. Changing to <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueGiftLineItem" rel="nofollow">Gift Line Item</a> is not supported.</p>

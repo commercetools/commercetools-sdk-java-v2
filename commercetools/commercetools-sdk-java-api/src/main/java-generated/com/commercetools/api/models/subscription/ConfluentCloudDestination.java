@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This destination can be used to push notifications to <span>Confluent Cloud</span>. To set up a Subscription of this type, first, create a topic in Confluent Cloud. Then, to allow Composable Commerce to push notifications to your topic, generate <span>API keys</span> for your topic, and create the Subscription destination using the generated credentials.</p>

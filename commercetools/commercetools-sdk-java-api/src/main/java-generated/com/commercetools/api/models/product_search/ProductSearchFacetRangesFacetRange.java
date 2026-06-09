@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Values for <code>from</code> and <code>to</code> must be a number or <a href="https://docs.commercetools.com/apis/ctp:api:type:DateTime" rel="nofollow">DateTime</a>.</p>

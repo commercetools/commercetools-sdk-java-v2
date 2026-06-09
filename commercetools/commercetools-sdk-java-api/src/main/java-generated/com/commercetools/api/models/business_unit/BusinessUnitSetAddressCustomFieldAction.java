@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Adding a Custom Field to an Address of a Business Unit generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAddressCustomFieldAddedMessage" rel="nofollow">BusinessUnitAddressCustomFieldAdded</a> Message, removing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAddressCustomFieldRemovedMessage" rel="nofollow">BusinessUnitAddressCustomFieldRemoved</a> Message, and updating an existing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAddressCustomFieldChangedMessage" rel="nofollow">BusinessUnitAddressCustomFieldChanged</a> Message.</p>

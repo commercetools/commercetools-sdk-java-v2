@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Transitions the <code>quoteRequestState</code> of the Quote Request to <code>Cancelled</code>. Can only be used when the Quote Request is in state <code>Submitted</code>.</p>

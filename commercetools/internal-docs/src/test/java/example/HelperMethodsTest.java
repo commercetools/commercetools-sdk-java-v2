@@ -89,6 +89,22 @@ public class HelperMethodsTest {
                 .getBody();
     }
 
+    public void businessUnitEraseById() {
+        final BusinessUnit updatedBusinessUnit = projectApiRoot.businessUnits()
+                .withId(businessUnit.getId())
+                .delete()
+                .executeBlocking()
+                .getBody();
+    }
+
+    public void businessUnitEraseByKey() {
+        final BusinessUnit updatedBusinessUnit = projectApiRoot.businessUnits()
+                .withKey(businessUnit.getKey())
+                .delete()
+                .executeBlocking()
+                .getBody();
+    }
+
     public void businessUnitSetAddressCustomFieldUnset() {
         final BusinessUnit updatedBusinessUnit = projectApiRoot.businessUnits()
                 .withId(businessUnit.getId())

@@ -19,7 +19,7 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Returned when an <span>Associate</span> is missing a <span>Permission</span> on a <span>B2B resource</span>.</p>
+ *  <p>Returned when an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> is missing a <a href="https://docs.commercetools.com/apis/ctp:api:type:Permission" rel="nofollow">Permission</a> on a <span>B2B resource</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

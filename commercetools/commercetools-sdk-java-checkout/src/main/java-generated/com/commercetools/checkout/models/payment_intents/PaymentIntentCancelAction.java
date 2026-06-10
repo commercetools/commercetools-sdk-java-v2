@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Requests to <span>cancel the authorization</span> for a Payment. Checkout will cancel the <span>Payment</span> and will request the PSP or gift card management system to proceed with the financial process to cancel the authorization.</p>
+ *  <p>Requests to <span>cancel the authorization</span> for a Payment. Checkout will cancel the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> and will request the PSP or gift card management system to proceed with the financial process to cancel the authorization.</p>
  *  <p>You cannot request to cancel the authorization for a Payment that has already been <span>captured</span>.</p>
  *
  * <hr>
@@ -37,7 +37,7 @@ public interface PaymentIntentCancelAction extends PaymentIntentAction {
     String CANCEL_PAYMENT = "cancelPayment";
 
     /**
-     *  <p>A merchant-defined identifier associated with the <span>Payment</span> to track and reconcile the <a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntentAction" rel="nofollow">Payment Intent Action</a> on the merchant's side. For example, an invoice number.</p>
+     *  <p>A merchant-defined identifier associated with the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> to track and reconcile the <a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntentAction" rel="nofollow">Payment Intent Action</a> on the merchant's side. For example, an invoice number.</p>
      * @return merchantReference
      */
 
@@ -45,7 +45,7 @@ public interface PaymentIntentCancelAction extends PaymentIntentAction {
     public String getMerchantReference();
 
     /**
-     *  <p>A merchant-defined identifier associated with the <span>Payment</span> to track and reconcile the <a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntentAction" rel="nofollow">Payment Intent Action</a> on the merchant's side. For example, an invoice number.</p>
+     *  <p>A merchant-defined identifier associated with the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> to track and reconcile the <a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntentAction" rel="nofollow">Payment Intent Action</a> on the merchant's side. For example, an invoice number.</p>
      * @param merchantReference value to be set
      */
 

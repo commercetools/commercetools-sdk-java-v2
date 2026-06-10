@@ -72,7 +72,7 @@ public class CheckoutMessagePaymentsPayloadBaseDataImpl implements CheckoutMessa
     }
 
     /**
-     *  <p><code>id</code> of the <span>Transaction</span>.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>.</p>
      */
 
     public String getTransactionId() {

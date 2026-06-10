@@ -86,7 +86,7 @@ public class CheckoutMessagePaymentsPayloadBaseDataBuilder implements Builder<Ch
     }
 
     /**
-     *  <p><code>id</code> of the <span>Transaction</span>.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>.</p>
      * @param transactionId value to be set
      * @return Builder
      */
@@ -187,7 +187,7 @@ public class CheckoutMessagePaymentsPayloadBaseDataBuilder implements Builder<Ch
     }
 
     /**
-     *  <p><code>id</code> of the <span>Transaction</span>.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>.</p>
      * @return transactionId
      */
 

@@ -52,7 +52,7 @@ public class PaymentIntentRefundActionImpl implements PaymentIntentRefundAction,
     }
 
     /**
-     *  <p>Action to execute for the given <span>Payment</span>.</p>
+     *  <p>Action to execute for the given <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p>
      */
 
     public com.commercetools.checkout.models.payment_intents.PaymentIntentOperation getAction() {
@@ -76,7 +76,7 @@ public class PaymentIntentRefundActionImpl implements PaymentIntentRefundAction,
     }
 
     /**
-     *  <p>A merchant-defined identifier associated with the <span>Payment</span> to track and reconcile the <a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntentAction" rel="nofollow">Payment Intent Action</a> on the merchant's side. For example, an invoice number.</p>
+     *  <p>A merchant-defined identifier associated with the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> to track and reconcile the <a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntentAction" rel="nofollow">Payment Intent Action</a> on the merchant's side. For example, an invoice number.</p>
      */
 
     public String getMerchantReference() {

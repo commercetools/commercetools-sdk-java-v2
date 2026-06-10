@@ -55,7 +55,7 @@ public interface CheckoutMessagePaymentsPayloadBaseData {
     public PaymentReference getPayment();
 
     /**
-     *  <p><code>id</code> of the <span>Transaction</span>.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>.</p>
      * @return transactionId
      */
     @NotNull
@@ -93,7 +93,7 @@ public interface CheckoutMessagePaymentsPayloadBaseData {
     public void setPayment(final PaymentReference payment);
 
     /**
-     *  <p><code>id</code> of the <span>Transaction</span>.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>.</p>
      * @param transactionId value to be set
      */
 

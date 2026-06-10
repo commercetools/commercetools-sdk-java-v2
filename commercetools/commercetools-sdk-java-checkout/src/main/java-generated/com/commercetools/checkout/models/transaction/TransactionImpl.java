@@ -115,7 +115,7 @@ public class TransactionImpl implements Transaction, ModelBase {
     }
 
     /**
-     *  <p>Reference to the <span>Cart</span> for which the payment must be executed.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> for which the payment must be executed.</p>
      */
 
     public com.commercetools.checkout.models.cart.CartReference getCart() {
@@ -131,7 +131,7 @@ public class TransactionImpl implements Transaction, ModelBase {
     }
 
     /**
-     *  <p>Reference to the <span>Order</span> created from the Cart when the Transaction is completed.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> created from the Cart when the Transaction is completed.</p>
      */
 
     public com.commercetools.checkout.models.cart.OrderReference getOrder() {

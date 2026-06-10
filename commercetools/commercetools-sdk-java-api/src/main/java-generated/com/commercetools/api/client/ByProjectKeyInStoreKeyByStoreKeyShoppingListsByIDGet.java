@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import tools.jackson.core.type.TypeReference;
 
 /**
- *  <p>Retrieves a ShoppingList with the provided <code>id</code> in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. If a ShoppingList exists in a Project but does <em>not</em> have the <code>store</code> field, or the <code>store</code> field references a different Store, the <span>ResourceNotFound</span> error is returned.</p>
+ *  <p>Retrieves a ShoppingList with the provided <code>id</code> in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. If a ShoppingList exists in a Project but does <em>not</em> have the <code>store</code> field, or the <code>store</code> field references a different Store, the <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error is returned.</p>
  *
  * <hr>
  * <div class=code-example>

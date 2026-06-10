@@ -19,7 +19,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>JSON object where the keys are supply <span>Channel</span> <code>id</code>, and the values are <span>ProductVariantChannelAvailability</span>.</p>
+ *  <p>JSON object where the keys are supply <span>Channel</span> <code>id</code>, and the values are <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantChannelAvailability" rel="nofollow">ProductVariantChannelAvailability</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantChannelAvailabilityMapImpl implements ProductVariantChannelAvailabilityMap, ModelBase {

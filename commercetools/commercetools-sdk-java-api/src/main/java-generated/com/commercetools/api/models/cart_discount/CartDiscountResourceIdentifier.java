@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a>. Either <code>id</code> or <code>key</code> is required. If both are set, an <span>InvalidJsonInput</span> error is returned.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a>. Either <code>id</code> or <code>key</code> is required. If both are set, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidJsonInputError" rel="nofollow">InvalidJsonInput</a> error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

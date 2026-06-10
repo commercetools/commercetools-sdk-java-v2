@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface PaymentIntentOperation extends JsonEnum {
 
     /**
-    <p><a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntentCaptureAction" rel="nofollow">Captures</a> the given <span>Payment</span> amount.</p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntentCaptureAction" rel="nofollow">Captures</a> the given <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> amount.</p> */
     PaymentIntentOperation CAPTURE_PAYMENT = PaymentIntentOperationEnum.CAPTURE_PAYMENT;
     /**
     <p><a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntentRefundAction" rel="nofollow">Refunds</a> the given Payment amount.</p> */

@@ -86,7 +86,7 @@ public interface Transaction {
     public List<TransactionItem> getTransactionItems();
 
     /**
-     *  <p>Reference to the <span>Cart</span> for which the payment must be executed.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> for which the payment must be executed.</p>
      * @return cart
      */
     @Valid
@@ -103,7 +103,7 @@ public interface Transaction {
     public TransactionStatus getTransactionStatus();
 
     /**
-     *  <p>Reference to the <span>Order</span> created from the Cart when the Transaction is completed.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> created from the Cart when the Transaction is completed.</p>
      * @return order
      */
     @Valid
@@ -170,7 +170,7 @@ public interface Transaction {
     public void setTransactionItems(final List<TransactionItem> transactionItems);
 
     /**
-     *  <p>Reference to the <span>Cart</span> for which the payment must be executed.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> for which the payment must be executed.</p>
      * @param cart value to be set
      */
 
@@ -184,7 +184,7 @@ public interface Transaction {
     public void setTransactionStatus(final TransactionStatus transactionStatus);
 
     /**
-     *  <p>Reference to the <span>Order</span> created from the Cart when the Transaction is completed.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> created from the Cart when the Transaction is completed.</p>
      * @param order value to be set
      */
 

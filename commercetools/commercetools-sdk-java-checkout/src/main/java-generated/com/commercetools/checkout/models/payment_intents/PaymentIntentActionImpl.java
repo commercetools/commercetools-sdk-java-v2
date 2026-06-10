@@ -41,7 +41,7 @@ public class PaymentIntentActionImpl implements PaymentIntentAction, ModelBase {
     }
 
     /**
-     *  <p>Action to execute for the given <span>Payment</span>.</p>
+     *  <p>Action to execute for the given <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p>
      */
 
     public com.commercetools.checkout.models.payment_intents.PaymentIntentOperation getAction() {

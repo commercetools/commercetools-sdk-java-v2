@@ -21,7 +21,7 @@ import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Creates an OrderEdit in the Project. You can either create multiple Order Edits for an Order and apply them sequentially to an Order, or create multiple Order Edits parallelly (as alternatives to each other) and apply one of them to the Order.</p>
- *  <p>You can only create an Order Edit if the <span>InventoryMode</span> of the Order and its <span>LineItems</span> is <code>None</code>.</p>
+ *  <p>You can only create an Order Edit if the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">InventoryMode</a> of the Order and its <span>LineItems</span> is <code>None</code>.</p>
  *
  * <hr>
  * <div class=code-example>

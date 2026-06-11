@@ -3,10 +3,7 @@ package com.commercetools.api.json;
 
 import java.util.List;
 
-import com.commercetools.api.models.product_search.ProductSearchFacetResult;
-import com.commercetools.api.models.product_search.ProductSearchFacetResultBucket;
-import com.commercetools.api.models.product_search.ProductSearchFacetResultBucketEntry;
-import com.commercetools.api.models.product_search.ProductSearchFacetResultCount;
+import com.commercetools.api.models.product_search.*;
 
 import tools.jackson.core.JsonParser;
 import tools.jackson.core.type.TypeReference;
@@ -34,6 +31,16 @@ public class ProductSearchFacetResultDeserializer extends ValueDeserializer<Prod
             return ProductSearchFacetResultCount.builder()
                     .name(node.get("name").asString())
                     .value(node.get("value").asLong())
+                    .build();
+        }
+        else if (node.has("count") || node.has("min")) {
+            return ProductSearchFacetResultStats.builder()
+                    .name(node.get("name").asString())
+                    .count(node.get("count").asLong())
+                    .max(node.get("max").asDouble())
+                    .min(node.get("min").asDouble())
+                    .mean(node.get("mean").asDouble())
+                    .sum(node.get("sum").asDouble())
                     .build();
         }
         return ProductSearchFacetResult.builder().name(node.get("name").asString()).build();

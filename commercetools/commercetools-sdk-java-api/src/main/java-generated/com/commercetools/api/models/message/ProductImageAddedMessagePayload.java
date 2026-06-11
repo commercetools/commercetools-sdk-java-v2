@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductAddExternalImageAction" rel="nofollow">Add External Image</a> update action or after the successful <span>upload of an image</span>.</p>

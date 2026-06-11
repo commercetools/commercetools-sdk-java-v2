@@ -13,7 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Defines a <span>Custom Field</span> and its meta-information. This FieldDefinition is similar to an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> of <span>Product Types</span>.</p>

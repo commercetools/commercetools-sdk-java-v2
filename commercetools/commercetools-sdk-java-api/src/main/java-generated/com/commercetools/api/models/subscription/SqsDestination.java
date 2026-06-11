@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p><span>AWS SQS</span> is a pull-queue on AWS. The queue must be a <span>Standard</span> queue type with a <code>MaximumMessageSize</code> of <code>256 KB</code>.</p>

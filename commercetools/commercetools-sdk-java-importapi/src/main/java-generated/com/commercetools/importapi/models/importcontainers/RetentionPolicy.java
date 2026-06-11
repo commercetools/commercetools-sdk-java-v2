@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>The retention policy of the ImportContainer. If not set, the ImportContainer does not expire.</p>

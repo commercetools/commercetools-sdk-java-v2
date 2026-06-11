@@ -13,10 +13,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>A Price tier is selected instead of the default Price when a certain quantity of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> is <span>added to a Cart</span> and ordered. _For If no Price tier is found for the Order quantity, the base Price is used. A Price tier is applied for the entire quantity of a Product Variant put as <span>LineItem</span> in a Cart as soon as the minimum quantity for the Price tier is reached. The Price tier is applied per Line Item of the Product Variant. If, for example, the same Product Variant appears in the same Cart as several Line Items, (what can be achieved by different values of a Custom Field on the Line Items) for each Line Item the minimum quantity must be reached to get the Price tier.</p>
+ *  <p>A Price tier is selected instead of the default Price when a certain quantity of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> is <span>added to a Cart</span> and ordered. _For If no Price tier is found for the Order quantity, the base Price is used. A Price tier is applied for the entire quantity of a Product Variant put as <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> in a Cart as soon as the minimum quantity for the Price tier is reached. The Price tier is applied per Line Item of the Product Variant. If, for example, the same Product Variant appears in the same Cart as several Line Items, (what can be achieved by different values of a Custom Field on the Line Items) for each Line Item the minimum quantity must be reached to get the Price tier.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

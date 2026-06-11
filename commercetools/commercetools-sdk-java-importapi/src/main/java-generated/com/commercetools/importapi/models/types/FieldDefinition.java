@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Defines a <span>Custom Field</span> and its meta-information. Maps to <code>Type.FieldDefinition</code>.</p>

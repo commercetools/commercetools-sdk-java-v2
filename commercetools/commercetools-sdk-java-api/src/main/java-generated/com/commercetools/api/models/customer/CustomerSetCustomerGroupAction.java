@@ -13,7 +13,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Setting the Customer Group of the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroupSetMessage" rel="nofollow">CustomerGroupSet</a> Message.</p>

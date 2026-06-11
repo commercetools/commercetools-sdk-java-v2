@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p><code>ContainerAndKey</code> is specific to <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomObject" rel="nofollow">Custom Objects</a>. Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>

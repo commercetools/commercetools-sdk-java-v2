@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Updates the Product Variant Selection of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionAssignment" rel="nofollow">Product Selection Assignment</a>. A <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantSelection" rel="nofollow">ProductVariantSelection</a> can only be set if the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> has already been included in the Product Selection with <code>Individual</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</p>

@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Setting the country can lead to changes in the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> prices.</p>

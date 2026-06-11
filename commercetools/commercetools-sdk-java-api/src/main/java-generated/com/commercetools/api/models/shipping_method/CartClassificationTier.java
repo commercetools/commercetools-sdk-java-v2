@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> maps to an abstract Cart categorization expressed by strings (for example, <code>Light</code>, <code>Medium</code>, or <code>Heavy</code>).</p>
@@ -41,7 +41,7 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
     String CART_CLASSIFICATION = "CartClassification";
 
     /**
-     *  <p><code>key</code> selected from the <code>values</code> of the <span>CartClassificationType</span> configured in the Project.</p>
+     *  <p><code>key</code> selected from the <code>values</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartClassificationType" rel="nofollow">CartClassificationType</a> configured in the Project.</p>
      * @return value
      */
     @NotNull
@@ -66,7 +66,7 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
     public Boolean getIsMatching();
 
     /**
-     *  <p><code>key</code> selected from the <code>values</code> of the <span>CartClassificationType</span> configured in the Project.</p>
+     *  <p><code>key</code> selected from the <code>values</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartClassificationType" rel="nofollow">CartClassificationType</a> configured in the Project.</p>
      * @param value value to be set
      */
 

@@ -13,7 +13,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:StateSetRolesAction" rel="nofollow">Set State roles</a> update action.</p>

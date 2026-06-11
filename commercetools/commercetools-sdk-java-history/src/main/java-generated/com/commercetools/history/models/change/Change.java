@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Difference between the previous and next version of a resource represented by <code>previousValue</code> (omitted, for example, on creations) and <code>nextValue</code> of the associated change. A Change can also contain extra fields that provide further information.</p>

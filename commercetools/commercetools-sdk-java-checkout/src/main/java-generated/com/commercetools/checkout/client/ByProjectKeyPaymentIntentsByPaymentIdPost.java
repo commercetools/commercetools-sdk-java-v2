@@ -26,7 +26,7 @@ import tools.jackson.core.type.TypeReference;
  * <hr>
  * <div class=code-example>
  * <pre><code class='java'>{@code
- *   CompletableFuture<ApiHttpResponse<java.lang.Object>> result = apiRoot
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.checkout.models.payment_intents.PaymentIntentResponse>> result = apiRoot
  *            .withProjectKey("{projectKey}")
  *            .paymentIntents()
  *            .withPaymentId("{paymentId}")
@@ -37,13 +37,13 @@ import tools.jackson.core.type.TypeReference;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyPaymentIntentsByPaymentIdPost extends
-        TypeBodyApiMethod<ByProjectKeyPaymentIntentsByPaymentIdPost, java.lang.Object, com.commercetools.checkout.models.payment_intents.PaymentIntent>
+        TypeBodyApiMethod<ByProjectKeyPaymentIntentsByPaymentIdPost, com.commercetools.checkout.models.payment_intents.PaymentIntentResponse, com.commercetools.checkout.models.payment_intents.PaymentIntent>
         implements
         com.commercetools.checkout.client.Secured_by_manage_paymentsTrait<ByProjectKeyPaymentIntentsByPaymentIdPost> {
 
     @Override
-    public TypeReference<java.lang.Object> resultType() {
-        return new TypeReference<java.lang.Object>() {
+    public TypeReference<com.commercetools.checkout.models.payment_intents.PaymentIntentResponse> resultType() {
+        return new TypeReference<com.commercetools.checkout.models.payment_intents.PaymentIntentResponse>() {
         };
     }
 
@@ -82,13 +82,16 @@ public class ByProjectKeyPaymentIntentsByPaymentIdPost extends
     }
 
     @Override
-    public ApiHttpResponse<java.lang.Object> executeBlocking(final ApiHttpClient client, final Duration timeout) {
-        return executeBlocking(client, timeout, java.lang.Object.class);
+    public ApiHttpResponse<com.commercetools.checkout.models.payment_intents.PaymentIntentResponse> executeBlocking(
+            final ApiHttpClient client, final Duration timeout) {
+        return executeBlocking(client, timeout,
+            com.commercetools.checkout.models.payment_intents.PaymentIntentResponse.class);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<java.lang.Object>> execute(final ApiHttpClient client) {
-        return execute(client, java.lang.Object.class);
+    public CompletableFuture<ApiHttpResponse<com.commercetools.checkout.models.payment_intents.PaymentIntentResponse>> execute(
+            final ApiHttpClient client) {
+        return execute(client, com.commercetools.checkout.models.payment_intents.PaymentIntentResponse.class);
     }
 
     public String getProjectKey() {

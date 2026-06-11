@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when a Product is not assigned to the Product Selection. The error is returned as a failed response either to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantSelectionAction" rel="nofollow">Set Variant Selection</a> or to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantExclusionAction" rel="nofollow">Set Variant Exclusion</a> update action.</p>

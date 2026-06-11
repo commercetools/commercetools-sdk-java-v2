@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>A given field is not supported. This error occurs, for example, if the field <code>variants</code>, which is not supported by <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductImport" rel="nofollow">Product Import</a>, is sent to the Product Import endpoint.</p>

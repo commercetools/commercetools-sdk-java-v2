@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Discounts the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountTarget" rel="nofollow">CartDiscountTarget</a> relative to its price.</p>

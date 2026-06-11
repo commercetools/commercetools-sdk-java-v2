@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Updates the Business Unit on the Cart. The Cart must have an existing Business Unit assigned already.</p>
@@ -40,7 +40,7 @@ public interface MyCartSetBusinessUnitAction extends MyCartUpdateAction {
     String SET_BUSINESS_UNIT = "setBusinessUnit";
 
     /**
-     *  <p>New Business Unit to assign to the Cart, which must have access to the <span>Store</span> that is set on the Cart. Additionally, the authenticated user must be an <span>Associate</span> in the <span>Business Unit</span>.</p>
+     *  <p>New Business Unit to assign to the Cart, which must have access to the <span>Store</span> that is set on the Cart. Additionally, the authenticated user must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> in the <span>Business Unit</span>.</p>
      * @return businessUnit
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface MyCartSetBusinessUnitAction extends MyCartUpdateAction {
     public BusinessUnitResourceIdentifier getBusinessUnit();
 
     /**
-     *  <p>New Business Unit to assign to the Cart, which must have access to the <span>Store</span> that is set on the Cart. Additionally, the authenticated user must be an <span>Associate</span> in the <span>Business Unit</span>.</p>
+     *  <p>New Business Unit to assign to the Cart, which must have access to the <span>Store</span> that is set on the Cart. Additionally, the authenticated user must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> in the <span>Business Unit</span>.</p>
      * @param businessUnit value to be set
      */
 

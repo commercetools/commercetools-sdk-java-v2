@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Generated when an attempt to authorize a payment fails in Checkout. This failure could result from insufficient funds, incorrect payment details, expired cards, or risk related rejections.</p>

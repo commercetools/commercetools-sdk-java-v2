@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>If the Payment has no current <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>, <code>initial</code> must be <code>true</code> for the new State. If the existing State has transitions set, the new State must be a valid transition. If the existing State has no transitions set, no validations are performed when transitioning to the new State.</p>

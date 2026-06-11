@@ -14,7 +14,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This action sets, overwrites, or removes any existing Custom Type and Custom Fields for the Order's <code>shippingMethod</code> or <code>shipping</code>.</p>

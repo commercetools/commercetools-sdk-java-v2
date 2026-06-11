@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Business Unit type to model divisions that are part of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Company" rel="nofollow">Company</a> or a higher-order Division. Contains specific fields and values that differentiate a Division from the generic <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>

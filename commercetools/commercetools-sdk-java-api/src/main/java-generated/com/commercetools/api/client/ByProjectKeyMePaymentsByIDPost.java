@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import tools.jackson.core.type.TypeReference;
 
 /**
- *  <p>Updates a <span>Payment</span> for the authenticated Customer or anonymous user using one or more <span>update actions</span>. You can only update a Payment if it has no <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transactions</a>.</p>
+ *  <p>Updates a Payment for the authenticated Customer or anonymous user using one or more <span>update actions</span>. You can only update a Payment if it has no <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transactions</a>.</p>
  *
  * <hr>
  * <div class=code-example>

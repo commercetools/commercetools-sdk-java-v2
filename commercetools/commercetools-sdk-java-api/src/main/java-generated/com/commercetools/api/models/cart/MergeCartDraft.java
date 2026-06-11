@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Used for merging an anonymous Cart with a Customer Cart with the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/carts/customer-id={customerId}/merge:POST" rel="nofollow">Merge Cart</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/carts/customer-id={customerId}/merge:POST" rel="nofollow">Merge Cart in Store</a> endpoints. Either <code>anonymousCart</code> or <code>anonymousId</code> is required.</p>

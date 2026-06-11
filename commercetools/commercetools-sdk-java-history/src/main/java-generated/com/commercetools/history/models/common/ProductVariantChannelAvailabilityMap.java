@@ -13,10 +13,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>JSON object where the keys are supply <span>Channel</span> <code>id</code>, and the values are <span>ProductVariantChannelAvailability</span>.</p>
+ *  <p>JSON object where the keys are supply <span>Channel</span> <code>id</code>, and the values are <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantChannelAvailability" rel="nofollow">ProductVariantChannelAvailability</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

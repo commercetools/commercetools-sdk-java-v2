@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when an <span>external OAuth Introspection endpoint</span> does not return a response within the <span>time limit</span>, or the response isn't compliant with <span>RFC 7662</span> (for example, an HTTP status code like <code>500</code>).</p>

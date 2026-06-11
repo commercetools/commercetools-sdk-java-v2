@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Removes a specific quantity from <code>quantityOnStock</code>. This changes the <code>availableQuantity</code>, based on the number of active reservations. You can update <code>quantityOnStock</code> to values below zero.</p>

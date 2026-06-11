@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Requests to <span>reverse</span> a <span>Payment</span>. Checkout reverses the Payment, and then requests the PSP or gift card management system to proceed with the relevant process to reverse the Payment.</p>
+ *  <p>Requests to <span>reverse</span> a <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>. Checkout reverses the Payment, and then requests the PSP or gift card management system to proceed with the relevant process to reverse the Payment.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentIntentReverseActionImpl implements PaymentIntentReverseAction, ModelBase {
@@ -44,7 +44,7 @@ public class PaymentIntentReverseActionImpl implements PaymentIntentReverseActio
     }
 
     /**
-     *  <p>Action to execute for the given <span>Payment</span>.</p>
+     *  <p>Action to execute for the given <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p>
      */
 
     public com.commercetools.checkout.models.payment_intents.PaymentIntentOperation getAction() {
@@ -52,7 +52,7 @@ public class PaymentIntentReverseActionImpl implements PaymentIntentReverseActio
     }
 
     /**
-     *  <p>A merchant-defined identifier associated with the <span>Payment</span> to track and reconcile the <a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntentAction" rel="nofollow">Payment Intent Action</a> on the merchant's side. For example, an invoice number.</p>
+     *  <p>A merchant-defined identifier associated with the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> to track and reconcile the <a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntentAction" rel="nofollow">Payment Intent Action</a> on the merchant's side. For example, an invoice number.</p>
      */
 
     public String getMerchantReference() {

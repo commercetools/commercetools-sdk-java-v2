@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Changing the <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">TransactionState</a> generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentTransactionStateChangedMessage" rel="nofollow">PaymentTransactionStateChanged</a> Message.</p>

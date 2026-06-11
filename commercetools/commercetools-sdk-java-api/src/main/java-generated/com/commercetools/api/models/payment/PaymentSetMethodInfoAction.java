@@ -15,7 +15,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This action lets you update multiple fields of a PaymentMethodInfo in one operation. Only fields with explicitly provided values will be updated.</p>

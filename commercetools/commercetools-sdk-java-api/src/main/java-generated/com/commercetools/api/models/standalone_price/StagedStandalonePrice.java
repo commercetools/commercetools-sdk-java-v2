@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Staged changes on a Standalone Price. To update the <code>value</code> property of a Staged Standalone Price, use the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceChangeValueAction" rel="nofollow">Change Value</a> update action. To apply all staged changes to the Standalone Price, use the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceApplyStagedChangesAction" rel="nofollow">Apply Staged Changes</a> update action.</p>

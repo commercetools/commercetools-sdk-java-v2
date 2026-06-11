@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Change triggered by <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetLanguagesAction" rel="nofollow">Set Languages</a> update action.</p>

@@ -14,7 +14,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This update action can only be used if a Customer is not assigned to a Cart. If a Customer is already assigned, the Cart uses the Customer Group of the assigned Customer.</p>

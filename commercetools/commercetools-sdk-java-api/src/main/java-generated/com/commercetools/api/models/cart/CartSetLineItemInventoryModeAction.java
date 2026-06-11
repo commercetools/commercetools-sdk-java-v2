@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Sets the inventory mode for a specific Line Item in the Cart. When changing a Line Item's inventory mode to <code>ReserveOnCart</code>, a reservation is automatically created if sufficient stock is available. When changing from <code>ReserveOnCart</code> to another mode, the reservation is released.</p>

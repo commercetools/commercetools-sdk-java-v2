@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShippingMethodUpdate
@@ -44,7 +44,7 @@ public interface ShippingMethodUpdate extends
     public Long getVersion();
 
     /**
-     *  <p>Update actions to be performed on the <span>ShippingMethod</span>.</p>
+     *  <p>Update actions to be performed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a>.</p>
      * @return actions
      */
     @NotNull
@@ -60,7 +60,7 @@ public interface ShippingMethodUpdate extends
     public void setVersion(final Long version);
 
     /**
-     *  <p>Update actions to be performed on the <span>ShippingMethod</span>.</p>
+     *  <p>Update actions to be performed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a>.</p>
      * @param actions values to be set
      */
 
@@ -68,7 +68,7 @@ public interface ShippingMethodUpdate extends
     public void setActions(final ShippingMethodUpdateAction... actions);
 
     /**
-     *  <p>Update actions to be performed on the <span>ShippingMethod</span>.</p>
+     *  <p>Update actions to be performed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a>.</p>
      * @param actions values to be set
      */
 

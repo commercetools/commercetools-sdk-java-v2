@@ -16,7 +16,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>When creating a new Review, at least one of <code>title</code>, <code>text</code> or <code>rating</code> should be set.</p>

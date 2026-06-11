@@ -32,7 +32,7 @@ import tools.jackson.databind.annotation.*;
 public interface PaymentIntentAction {
 
     /**
-     *  <p>Action to execute for the given <span>Payment</span>.</p>
+     *  <p>Action to execute for the given <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p>
      * @return action
      */
     @NotNull

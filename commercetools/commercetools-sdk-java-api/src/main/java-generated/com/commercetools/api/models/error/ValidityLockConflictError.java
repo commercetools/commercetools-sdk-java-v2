@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when a modification is already in progress for the combination of SKU and price scope fields (but potentially different validity period) for a Standalone Price. Retry the same request after 300 ms.</p>

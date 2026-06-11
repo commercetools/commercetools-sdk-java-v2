@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Cannot be used in <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemDraft" rel="nofollow">LineItemDraft</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItemDraft" rel="nofollow">CustomLineItemDraft</a>.</p>

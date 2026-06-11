@@ -13,7 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This action generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitTypeSetMessage" rel="nofollow">BusinessUnitTypeSet</a> Message.</p>

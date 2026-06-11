@@ -16,7 +16,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Contains the Product Variant to be used in the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemImportDraft" rel="nofollow">LineItemImportDraft</a>.</p>

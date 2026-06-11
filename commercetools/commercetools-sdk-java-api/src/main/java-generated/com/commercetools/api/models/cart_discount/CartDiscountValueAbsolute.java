@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Discounts the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountTarget" rel="nofollow">CartDiscountTarget</a> by an absolute amount (not allowed for <a href="https://docs.commercetools.com/apis/ctp:api:type:MultiBuyLineItemsTarget" rel="nofollow">MultiBuyLineItemsTarget</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MultiBuyCustomLineItemsTarget" rel="nofollow">MultiBuyCustomLineItemsTarget</a>).</p>

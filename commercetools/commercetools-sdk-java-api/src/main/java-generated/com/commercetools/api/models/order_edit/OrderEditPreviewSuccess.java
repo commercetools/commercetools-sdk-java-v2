@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>The data is not persisted but is dynamically pulled by dry-running the update actions from <code>stagedActions</code> on the current version of the related <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>, not from the Order version at the time the OrderEdit was created. Therefore, it cannot be queried.</p>

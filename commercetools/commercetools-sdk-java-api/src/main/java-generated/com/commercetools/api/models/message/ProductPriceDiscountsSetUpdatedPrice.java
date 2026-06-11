@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Details about an <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Price</a> that was updated due to a Discount. Specific to <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPriceDiscountsSetMessage" rel="nofollow">Product Price Discounts Set</a> Message.</p>

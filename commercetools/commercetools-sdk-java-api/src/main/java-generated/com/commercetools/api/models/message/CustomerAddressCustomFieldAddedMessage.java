@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Generated after adding a Custom Field to an Address of a Customer using the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetAddressCustomFieldAction" rel="nofollow">Set CustomField in Address</a> update action. If a Custom Field already exists with the same name, a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddressCustomFieldChangedMessage" rel="nofollow">CustomerAddressCustomFieldChanged</a> Message is generated instead.</p>

@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This Change is no longer triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreRemoveProductSelectionAction" rel="nofollow">Remove Product Selection</a> update action. It has been deprecated and replaced by the <a href="https://docs.commercetools.com/apis/ctp:history:type:SetProductSelectionsChange" rel="nofollow">SetProductSelectionsChange</a>.</p>

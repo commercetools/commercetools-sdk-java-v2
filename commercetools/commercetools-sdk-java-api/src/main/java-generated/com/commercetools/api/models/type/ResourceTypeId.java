@@ -68,7 +68,7 @@ public interface ResourceTypeId extends JsonEnum {
     <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a></p> */
     ResourceTypeId ORDER_EDIT = ResourceTypeIdEnum.ORDER_EDIT;
     /**
-    <p><span>Delivery</span></p> */
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a></p> */
     ResourceTypeId ORDER_DELIVERY = ResourceTypeIdEnum.ORDER_DELIVERY;
     /**
     <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a></p> */

@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Adds an Address from the <code>addresses</code> array to <code>billingAddressIds</code>. Either <code>addressId</code> or <code>addressKey</code> is required.</p>

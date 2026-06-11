@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Changes the <code>email</code> of the Customer and sets the <code>isEmailVerified</code> property to <code>false</code>. This update action generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerEmailChangedMessage" rel="nofollow">CustomerEmailChanged</a> Message.</p>

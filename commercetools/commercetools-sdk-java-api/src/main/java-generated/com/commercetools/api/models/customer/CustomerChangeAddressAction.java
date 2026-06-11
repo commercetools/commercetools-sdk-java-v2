@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Changing an address of the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddressChangedMessage" rel="nofollow">CustomerAddressChanged</a> Message.</p>

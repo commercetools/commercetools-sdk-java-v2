@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Requests to <span>reverse</span> a <span>Payment</span>. Checkout reverses the Payment, and then requests the PSP or gift card management system to proceed with the relevant process to reverse the Payment.</p>
+ *  <p>Requests to <span>reverse</span> a <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>. Checkout reverses the Payment, and then requests the PSP or gift card management system to proceed with the relevant process to reverse the Payment.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,7 +36,7 @@ public interface PaymentIntentReverseAction extends PaymentIntentAction {
     String REVERSE_PAYMENT = "reversePayment";
 
     /**
-     *  <p>A merchant-defined identifier associated with the <span>Payment</span> to track and reconcile the <a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntentAction" rel="nofollow">Payment Intent Action</a> on the merchant's side. For example, an invoice number.</p>
+     *  <p>A merchant-defined identifier associated with the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> to track and reconcile the <a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntentAction" rel="nofollow">Payment Intent Action</a> on the merchant's side. For example, an invoice number.</p>
      * @return merchantReference
      */
 
@@ -44,7 +44,7 @@ public interface PaymentIntentReverseAction extends PaymentIntentAction {
     public String getMerchantReference();
 
     /**
-     *  <p>A merchant-defined identifier associated with the <span>Payment</span> to track and reconcile the <a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntentAction" rel="nofollow">Payment Intent Action</a> on the merchant's side. For example, an invoice number.</p>
+     *  <p>A merchant-defined identifier associated with the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> to track and reconcile the <a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntentAction" rel="nofollow">Payment Intent Action</a> on the merchant's side. For example, an invoice number.</p>
      * @param merchantReference value to be set
      */
 

@@ -13,7 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when the predicate defined in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ExtensionTrigger" rel="nofollow">ExtensionTrigger</a> could not be evaluated due to a missing field.</p>

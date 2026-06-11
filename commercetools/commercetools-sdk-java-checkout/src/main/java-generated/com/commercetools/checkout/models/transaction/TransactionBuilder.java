@@ -218,7 +218,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *  <p>Reference to the <span>Cart</span> for which the payment must be executed.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> for which the payment must be executed.</p>
      * @param builder function to build the cart value
      * @return Builder
      */
@@ -230,7 +230,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *  <p>Reference to the <span>Cart</span> for which the payment must be executed.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> for which the payment must be executed.</p>
      * @param builder function to build the cart value
      * @return Builder
      */
@@ -242,7 +242,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *  <p>Reference to the <span>Cart</span> for which the payment must be executed.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> for which the payment must be executed.</p>
      * @param cart value to be set
      * @return Builder
      */
@@ -292,7 +292,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *  <p>Reference to the <span>Order</span> created from the Cart when the Transaction is completed.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> created from the Cart when the Transaction is completed.</p>
      * @param builder function to build the order value
      * @return Builder
      */
@@ -304,7 +304,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *  <p>Reference to the <span>Order</span> created from the Cart when the Transaction is completed.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> created from the Cart when the Transaction is completed.</p>
      * @param builder function to build the order value
      * @return Builder
      */
@@ -316,7 +316,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *  <p>Reference to the <span>Order</span> created from the Cart when the Transaction is completed.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> created from the Cart when the Transaction is completed.</p>
      * @param order value to be set
      * @return Builder
      */
@@ -395,7 +395,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *  <p>Reference to the <span>Cart</span> for which the payment must be executed.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> for which the payment must be executed.</p>
      * @return cart
      */
 
@@ -414,7 +414,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *  <p>Reference to the <span>Order</span> created from the Cart when the Transaction is completed.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> created from the Cart when the Transaction is completed.</p>
      * @return order
      */
 

@@ -13,7 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Changes the <code>label</code> of an <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldEnumValue" rel="nofollow">EnumValue</a> of an <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldEnumType" rel="nofollow">EnumType</a> FieldDefinition.</p>

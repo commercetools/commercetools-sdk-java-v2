@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Generated after successfully <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/edits/{id}/apply:POST" rel="nofollow">applying an OrderEdit</a>.</p>

@@ -84,6 +84,14 @@ public class ByProjectKeyBusinessUnitsByIDTest {
                         .withId("test_ID")
                         .post(com.commercetools.api.models.business_unit.BusinessUnitUpdate.of())
                         .createHttpRequest(), "post", "test_projectKey/business-units/test_ID", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .businessUnits()
+                                .withId("test_ID")
+                                .delete()
+                                .withDataErasure(true)
+                                .createHttpRequest(),
+                        "delete", "test_projectKey/business-units/test_ID?dataErasure=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .businessUnits()
                         .withId("test_ID")
@@ -123,6 +131,11 @@ public class ByProjectKeyBusinessUnitsByIDTest {
                         .businessUnits()
                         .withId("test_ID")
                         .post(com.commercetools.api.models.business_unit.BusinessUnitUpdate.of()), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .businessUnits()
+                        .withId("test_ID")
+                        .delete()
+                        .withDataErasure(true), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .businessUnits()
                         .withId("test_ID")

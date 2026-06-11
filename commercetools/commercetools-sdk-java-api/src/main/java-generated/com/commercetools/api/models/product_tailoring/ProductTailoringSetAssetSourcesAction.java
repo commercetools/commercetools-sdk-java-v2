@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Either <code>variantId</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that exists. The <a href="https://docs.commercetools.com/apis/ctp:api:type:Asset" rel="nofollow">Asset</a> to update must be specified using either <code>assetId</code> or <code>assetKey</code>.</p>

@@ -19,7 +19,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Resource identifier to a <a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntegration" rel="nofollow">Payment Integration</a>. Either <code>id</code> or <code>key</code> is required. If both are set, an <span>InvalidJsonInput</span> error is returned.</p>
+ *  <p>Resource identifier to a <a href="https://docs.commercetools.com/apis/ctp:checkout:type:PaymentIntegration" rel="nofollow">Payment Integration</a>. Either <code>id</code> or <code>key</code> is required. If both are set, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidJsonInputError" rel="nofollow">InvalidJsonInput</a> error is returned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentIntegrationResourceIdentifierImpl implements PaymentIntegrationResourceIdentifier, ModelBase {

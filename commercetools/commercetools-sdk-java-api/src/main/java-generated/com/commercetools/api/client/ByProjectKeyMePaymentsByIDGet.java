@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import tools.jackson.core.type.TypeReference;
 
 /**
- *  <p>Retrieves a <span>Payment</span> with the provided <code>id</code> for the authenticated Customer or anonymous user.</p>
+ *  <p>Retrieves a Payment with the provided <code>id</code> for the authenticated Customer or anonymous user.</p>
  *
  * <hr>
  * <div class=code-example>

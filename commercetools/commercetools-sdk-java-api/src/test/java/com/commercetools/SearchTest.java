@@ -10,10 +10,10 @@ import com.commercetools.api.client.ByProjectKeyProductProjectionsSearchPost;
 import com.commercetools.api.client.ByProjectKeyRequestBuilder;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.models.product.*;
-
 import com.commercetools.api.models.product_search.ProductPagedSearchResponse;
 import com.commercetools.api.models.product_search.ProductSearchFacetResult;
 import com.commercetools.api.models.product_search.ProductSearchFacetResultStats;
+
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.ApiHttpHeaders;
 import io.vrap.rmf.base.client.ApiHttpRequest;
@@ -176,8 +176,8 @@ public class SearchTest {
         Assertions.assertThat(statsFacet.getMean()).isEqualTo(15000.5);
         Assertions.assertThat(statsFacet.getSum()).isEqualTo(1500050.);
 
-        response = JsonUtils.fromJsonString(
-            stringFromResource("search_stats_facet_response_1.json"), ProductPagedSearchResponse.class);
+        response = JsonUtils.fromJsonString(stringFromResource("search_stats_facet_response_1.json"),
+            ProductPagedSearchResponse.class);
 
         facet = response.getFacets().get(0);
         Assertions.assertThat(facet).isInstanceOf(ProductSearchFacetResultStats.class);

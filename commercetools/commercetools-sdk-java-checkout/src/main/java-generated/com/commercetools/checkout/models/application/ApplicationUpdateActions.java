@@ -17,7 +17,7 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Update actions for Applications.</p>
+ * ApplicationUpdateActions
  *
  * <hr>
  * Example to create an instance using the builder pattern

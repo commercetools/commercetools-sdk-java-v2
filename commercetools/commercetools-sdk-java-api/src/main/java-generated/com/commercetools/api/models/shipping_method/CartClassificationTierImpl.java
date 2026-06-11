@@ -60,7 +60,7 @@ public class CartClassificationTierImpl implements CartClassificationTier, Model
     }
 
     /**
-     *  <p><code>key</code> selected from the <code>values</code> of the <span>CartClassificationType</span> configured in the Project.</p>
+     *  <p><code>key</code> selected from the <code>values</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartClassificationType" rel="nofollow">CartClassificationType</a> configured in the Project.</p>
      */
 
     public String getValue() {

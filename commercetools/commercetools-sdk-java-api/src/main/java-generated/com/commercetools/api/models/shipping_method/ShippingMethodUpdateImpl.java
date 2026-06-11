@@ -52,7 +52,7 @@ public class ShippingMethodUpdateImpl implements ShippingMethodUpdate, ModelBase
     }
 
     /**
-     *  <p>Update actions to be performed on the <span>ShippingMethod</span>.</p>
+     *  <p>Update actions to be performed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction> getActions() {

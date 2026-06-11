@@ -33,7 +33,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
     private Boolean isMatching;
 
     /**
-     *  <p><code>key</code> selected from the <code>values</code> of the <span>CartClassificationType</span> configured in the Project.</p>
+     *  <p><code>key</code> selected from the <code>values</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartClassificationType" rel="nofollow">CartClassificationType</a> configured in the Project.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
     }
 
     /**
-     *  <p><code>key</code> selected from the <code>values</code> of the <span>CartClassificationType</span> configured in the Project.</p>
+     *  <p><code>key</code> selected from the <code>values</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartClassificationType" rel="nofollow">CartClassificationType</a> configured in the Project.</p>
      * @return value
      */
 

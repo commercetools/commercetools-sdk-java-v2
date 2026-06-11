@@ -40,6 +40,7 @@ import tools.jackson.core.type.TypeReference;
 public class ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete extends
         TypeApiMethod<ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete, com.commercetools.api.models.business_unit.BusinessUnit>
         implements
+        com.commercetools.api.client.DataerasureTrait<ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete>,
         com.commercetools.api.client.VersionedTrait<ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete>,
@@ -107,6 +108,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete extends
         return this.key;
     }
 
+    public List<String> getDataErasure() {
+        return this.getQueryParam("dataErasure");
+    }
+
     public List<String> getVersion() {
         return this.getQueryParam("version");
     }
@@ -125,6 +130,94 @@ public class ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete extends
 
     public void setKey(final String key) {
         this.key = key;
+    }
+
+    /**
+     * set dataErasure with the specified value
+     * @param dataErasure value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete withDataErasure(
+            final TValue dataErasure) {
+        return copy().withQueryParam("dataErasure", dataErasure);
+    }
+
+    /**
+     * add additional dataErasure query parameter
+     * @param dataErasure value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete addDataErasure(
+            final TValue dataErasure) {
+        return copy().addQueryParam("dataErasure", dataErasure);
+    }
+
+    /**
+     * set dataErasure with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete withDataErasure(
+            final Supplier<Boolean> supplier) {
+        return copy().withQueryParam("dataErasure", supplier.get());
+    }
+
+    /**
+     * add additional dataErasure query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete addDataErasure(
+            final Supplier<Boolean> supplier) {
+        return copy().addQueryParam("dataErasure", supplier.get());
+    }
+
+    /**
+     * set dataErasure with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete withDataErasure(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("dataErasure", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional dataErasure query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete addDataErasure(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("dataErasure", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set dataErasure with the specified values
+     * @param dataErasure values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete withDataErasure(
+            final Collection<TValue> dataErasure) {
+        return copy().withoutQueryParam("dataErasure")
+                .addQueryParams(dataErasure.stream()
+                        .map(s -> new ParamEntry<>("dataErasure", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional dataErasure query parameters
+     * @param dataErasure values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete addDataErasure(
+            final Collection<TValue> dataErasure) {
+        return copy().addQueryParams(
+            dataErasure.stream().map(s -> new ParamEntry<>("dataErasure", s.toString())).collect(Collectors.toList()));
     }
 
     /**

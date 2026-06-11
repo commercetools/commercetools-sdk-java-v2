@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import tools.jackson.core.type.TypeReference;
 
 /**
- *  <p>Retrieves the active ShippingMethods that can ship to the provided <span>Location</span>.</p>
+ *  <p>Retrieves the active ShippingMethods that can ship to the provided <a href="https://docs.commercetools.com/apis/ctp:api:type:Location" rel="nofollow">Location</a>.</p>
  *  <p>The following applies:</p>
  *  <ul>
  *   <li>ShippingMethods that have a <code>predicate</code> defined are automatically disqualified.</li>

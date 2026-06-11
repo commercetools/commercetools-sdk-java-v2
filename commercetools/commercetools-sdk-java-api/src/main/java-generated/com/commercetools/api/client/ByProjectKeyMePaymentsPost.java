@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import tools.jackson.core.type.TypeReference;
 
 /**
- *  <p>Creates a <span>Payment</span> for the authenticated Customer or anonymous user. Creating a Payment produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentCreatedMessage" rel="nofollow">PaymentCreated</a> Message.</p>
+ *  <p>Creates a Payment for the authenticated Customer or anonymous user. Creating a Payment produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentCreatedMessage" rel="nofollow">PaymentCreated</a> Message.</p>
  *
  * <hr>
  * <div class=code-example>

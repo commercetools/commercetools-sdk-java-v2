@@ -63,7 +63,7 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
     public Long getStagedQuoteVersion();
 
     /**
-     *  <p>If <code>true</code>, the <code>stagedQuoteState</code> of the referenced <span>StagedQuote</span> will be set to <code>Sent</code>.</p>
+     *  <p>If <code>true</code>, the <code>stagedQuoteState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a> will be set to <code>Sent</code>.</p>
      * @return stagedQuoteStateToSent
      */
 
@@ -81,8 +81,8 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
     /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> to be added to the Quote.</p>
      *  <ul>
-     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced <span>StagedQuote</span> and added to the Quote.</li>
-     *   <li>If empty, the Custom Fields on the referenced <span>StagedQuote</span> are added to the Quote automatically.</li>
+     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a> and added to the Quote.</li>
+     *   <li>If empty, the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a> are added to the Quote automatically.</li>
      *  </ul>
      * @return custom
      */
@@ -112,7 +112,7 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
     public void setStagedQuoteVersion(final Long stagedQuoteVersion);
 
     /**
-     *  <p>If <code>true</code>, the <code>stagedQuoteState</code> of the referenced <span>StagedQuote</span> will be set to <code>Sent</code>.</p>
+     *  <p>If <code>true</code>, the <code>stagedQuoteState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a> will be set to <code>Sent</code>.</p>
      * @param stagedQuoteStateToSent value to be set
      */
 
@@ -128,8 +128,8 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
     /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> to be added to the Quote.</p>
      *  <ul>
-     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced <span>StagedQuote</span> and added to the Quote.</li>
-     *   <li>If empty, the Custom Fields on the referenced <span>StagedQuote</span> are added to the Quote automatically.</li>
+     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a> and added to the Quote.</li>
+     *   <li>If empty, the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a> are added to the Quote automatically.</li>
      *  </ul>
      * @param custom value to be set
      */

@@ -41,7 +41,7 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
     String CART_CLASSIFICATION = "CartClassification";
 
     /**
-     *  <p><code>key</code> selected from the <code>values</code> of the <span>CartClassificationType</span> configured in the Project.</p>
+     *  <p><code>key</code> selected from the <code>values</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartClassificationType" rel="nofollow">CartClassificationType</a> configured in the Project.</p>
      * @return value
      */
     @NotNull
@@ -66,7 +66,7 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
     public Boolean getIsMatching();
 
     /**
-     *  <p><code>key</code> selected from the <code>values</code> of the <span>CartClassificationType</span> configured in the Project.</p>
+     *  <p><code>key</code> selected from the <code>values</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartClassificationType" rel="nofollow">CartClassificationType</a> configured in the Project.</p>
      * @param value value to be set
      */
 

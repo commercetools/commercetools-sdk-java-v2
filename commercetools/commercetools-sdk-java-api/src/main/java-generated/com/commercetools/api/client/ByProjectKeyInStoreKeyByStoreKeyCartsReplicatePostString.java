@@ -25,7 +25,7 @@ import tools.jackson.core.type.TypeReference;
  *   <li>Line items and Custom Line Items are reset to their initial <span>state</span>.</li>
  *   <li>It contains no payments or delivery information.</li>
  *   <li>It contains up-to-date Tax Rates, Prices, and Line Item product data.</li>
- *   <li>The <span>CartState</span> is <code>Active</code>.</li>
+ *   <li>The <a href="https://docs.commercetools.com/apis/ctp:api:type:CartState" rel="nofollow">CartState</a> is <code>Active</code>.</li>
  *   <li>If using the <code>customerGroup</code> field (for a single Customer Group) and the referenced Customer switched to another Customer Group, the new Cart is automatically updated to reflect the new group and corresponding prices.</li>
  *   <li>If using the <code>customerGroupAssignments</code> field (for multiple Customer Groups), the Cart no longer keeps a direct reference to a Customer Group. If a Customer’s group assignments change, the Cart and its Line Item prices are not updated automatically. Prices are only updated when the Cart is changed via a <span>direct update action</span>.</li>
  *  </ul>

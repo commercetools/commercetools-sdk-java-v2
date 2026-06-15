@@ -10,6 +10,9 @@ import com.commercetools.api.client.ByProjectKeyProductProjectionsSearchPost;
 import com.commercetools.api.client.ByProjectKeyRequestBuilder;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.models.product.*;
+import com.commercetools.api.models.product_search.ProductPagedSearchResponse;
+import com.commercetools.api.models.product_search.ProductSearchFacetResult;
+import com.commercetools.api.models.product_search.ProductSearchFacetResultStats;
 
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.ApiHttpHeaders;
@@ -155,5 +158,36 @@ public class SearchTest {
         Assertions.assertThat(prices).isInstanceOf(TermFacetResult.class);
         Assertions.assertThat(((TermFacetResult) prices).getTerms().size()).isEqualTo(3);
         Assertions.assertThat(((TermFacetResult) prices).getTerms().get(0).getTerm()).isEqualTo("S");
+    }
+
+    @Test
+    public void testStatsFacetResultsDeserialization() {
+        ProductPagedSearchResponse response = JsonUtils.fromJsonString(
+            stringFromResource("search_stats_facet_response.json"), ProductPagedSearchResponse.class);
+
+        ProductSearchFacetResult facet = response.getFacets().get(0);
+        Assertions.assertThat(facet).isInstanceOf(ProductSearchFacetResultStats.class);
+
+        ProductSearchFacetResultStats statsFacet = (ProductSearchFacetResultStats) facet;
+        Assertions.assertThat(statsFacet.getName()).isEqualTo("price");
+        Assertions.assertThat(statsFacet.getCount()).isEqualTo(42L);
+        Assertions.assertThat(statsFacet.getMin()).isEqualTo(1000.);
+        Assertions.assertThat(statsFacet.getMax()).isEqualTo(50000.);
+        Assertions.assertThat(statsFacet.getMean()).isEqualTo(15000.5);
+        Assertions.assertThat(statsFacet.getSum()).isEqualTo(1500050.);
+
+        response = JsonUtils.fromJsonString(stringFromResource("search_stats_facet_response_1.json"),
+            ProductPagedSearchResponse.class);
+
+        facet = response.getFacets().get(0);
+        Assertions.assertThat(facet).isInstanceOf(ProductSearchFacetResultStats.class);
+
+        statsFacet = (ProductSearchFacetResultStats) facet;
+        Assertions.assertThat(statsFacet.getName()).isEqualTo("price");
+        Assertions.assertThat(statsFacet.getCount()).isEqualTo(859016);
+        Assertions.assertThat(statsFacet.getMin()).isEqualTo(199.0);
+        Assertions.assertThat(statsFacet.getMax()).isEqualTo(3599900.0);
+        Assertions.assertThat(statsFacet.getMean()).isEqualTo(233019.64729760564);
+        Assertions.assertThat(statsFacet.getSum()).isEqualTo(2.00167605343E11);
     }
 }

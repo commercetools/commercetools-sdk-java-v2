@@ -17,7 +17,7 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>PaymentIntegrationUpdateActions</p>
+ * PaymentIntegrationUpdateActions
  *
  * <hr>
  * Example to create an instance using the builder pattern

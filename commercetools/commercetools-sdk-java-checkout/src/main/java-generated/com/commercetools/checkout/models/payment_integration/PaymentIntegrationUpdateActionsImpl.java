@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>PaymentIntegrationUpdateActions</p>
+ * PaymentIntegrationUpdateActions
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentIntegrationUpdateActionsImpl implements PaymentIntegrationUpdateActions, ModelBase {

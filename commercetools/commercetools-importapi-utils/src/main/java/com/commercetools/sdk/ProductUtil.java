@@ -20,9 +20,12 @@ import com.commercetools.importapi.models.common.*;
 import com.commercetools.importapi.models.productdrafts.PriceDraftImport;
 import com.commercetools.importapi.models.productdrafts.ProductDraftImport;
 import com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport;
+import com.commercetools.importapi.models.products.ProductImport;
 import com.commercetools.importapi.models.productvariants.Attribute;
 
 import io.vrap.rmf.base.client.Builder;
+
+import static com.commercetools.sdk.CommonImportUtil.*;
 
 public class ProductUtil {
     private final KeyResolverService keyResolverService;
@@ -41,12 +44,12 @@ public class ProductUtil {
                 .name(l -> getLocalizedStringBuilder(product.getName()))
                 .slug(l -> getLocalizedStringBuilder(product.getSlug()))
                 .description(Optional.ofNullable(product.getDescription())
-                        .map(ProductUtil::getLocalizedStringBuilder)
+                        .map(CommonImportUtil::getLocalizedStringBuilder)
                         .map(LocalizedStringBuilder::build)
                         .orElse(null))
                 .categories(extractCategoryKeyReference(product))
                 .metaTitle(Optional.ofNullable(product.getMetaTitle())
-                        .map(ProductUtil::getLocalizedStringBuilder)
+                        .map(CommonImportUtil::getLocalizedStringBuilder)
                         .map(LocalizedStringBuilder::build)
                         .orElse(null))
                 .metaDescription(
@@ -62,8 +65,8 @@ public class ProductUtil {
         return draft.build();
     }
 
-    private static LocalizedStringBuilder getLocalizedStringBuilder(LocalizedString s) {
-        return com.commercetools.importapi.models.common.LocalizedString.builder().values(s.values());
+    public ProductImport toProductImport(ProductProjection product) {
+
     }
 
     private com.commercetools.importapi.models.common.ProductPriceModeEnum mapPriceModeToImportApi(
@@ -127,32 +130,6 @@ public class ProductUtil {
                 .map(p -> PriceDraftImport.builder()
                         .key(p.getKey())
                         .value(v -> importApiTypedMoney(p.getValue(), v))
-                        .build())
-                .collect(Collectors.toList());
-    }
-
-    private static Builder<? extends TypedMoney> importApiTypedMoney(com.commercetools.api.models.common.TypedMoney p,
-            TypedMoneyBuilder v) {
-        return (p instanceof HighPrecisionMoney)
-                ? v.highPrecisionBuilder()
-                        .centAmount(p.getCentAmount())
-                        .currencyCode(p.getCurrencyCode())
-                        .preciseAmount(((com.commercetools.api.models.common.HighPrecisionMoney) p).getPreciseAmount())
-                : v.centPrecisionBuilder()
-                        .centAmount(p.getCentAmount())
-                        .currencyCode(p.getCurrencyCode())
-                        .fractionDigits(p.getFractionDigits());
-    }
-
-    private static List<com.commercetools.importapi.models.common.Asset> importAssets(
-            List<com.commercetools.api.models.common.Asset> assets) {
-        if (assets == null) {
-            return null;
-        }
-        return assets.stream()
-                .map(a -> com.commercetools.importapi.models.common.Asset.builder()
-                        .key(a.getKey())
-                        .name(getLocalizedStringBuilder(a.getName()).build())
                         .build())
                 .collect(Collectors.toList());
     }

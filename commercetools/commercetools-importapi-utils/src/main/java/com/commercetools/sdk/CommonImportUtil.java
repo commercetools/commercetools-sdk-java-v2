@@ -1,12 +1,5 @@
-package com.commercetools.sdk;
 
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.type.CustomFields;
-import com.commercetools.api.models.type.FieldContainer;
-import com.commercetools.api.models.type.TypeReference;
-import com.commercetools.importapi.models.common.*;
-import com.commercetools.importapi.models.customfields.CustomField;
-import io.vrap.rmf.base.client.Builder;
+package com.commercetools.sdk;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -15,14 +8,22 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.type.CustomFields;
+import com.commercetools.api.models.type.FieldContainer;
+import com.commercetools.api.models.type.TypeReference;
+import com.commercetools.importapi.models.common.*;
+import com.commercetools.importapi.models.customfields.CustomField;
+
+import io.vrap.rmf.base.client.Builder;
+
 public class CommonImportUtil {
 
     public static LocalizedStringBuilder getLocalizedStringBuilder(LocalizedString s) {
         return com.commercetools.importapi.models.common.LocalizedString.builder().values(s.values());
     }
 
-    public static List<Asset> importAssets(
-            List<com.commercetools.api.models.common.Asset> assets) {
+    public static List<Asset> importAssets(List<com.commercetools.api.models.common.Asset> assets) {
         if (assets == null) {
             return null;
         }
@@ -38,13 +39,13 @@ public class CommonImportUtil {
             TypedMoneyBuilder v) {
         return (p instanceof HighPrecisionMoney)
                 ? v.highPrecisionBuilder()
-                .centAmount(p.getCentAmount())
-                .currencyCode(p.getCurrencyCode())
-                .preciseAmount(((com.commercetools.api.models.common.HighPrecisionMoney) p).getPreciseAmount())
+                        .centAmount(p.getCentAmount())
+                        .currencyCode(p.getCurrencyCode())
+                        .preciseAmount(((com.commercetools.api.models.common.HighPrecisionMoney) p).getPreciseAmount())
                 : v.centPrecisionBuilder()
-                .centAmount(p.getCentAmount())
-                .currencyCode(p.getCurrencyCode())
-                .fractionDigits(p.getFractionDigits());
+                        .centAmount(p.getCentAmount())
+                        .currencyCode(p.getCurrencyCode())
+                        .fractionDigits(p.getFractionDigits());
     }
 
     public static com.commercetools.importapi.models.customfields.Custom getImportApiCustom(CustomFields customFields) {
@@ -61,15 +62,12 @@ public class CommonImportUtil {
                 .build();
     }
 
-    static Map<String, CustomField> mapCustomField(
-            Map<String, Object> customFieldsValues) {
-        if (customFieldsValues == null) return null;
+    static Map<String, CustomField> mapCustomField(Map<String, Object> customFieldsValues) {
+        if (customFieldsValues == null)
+            return null;
         return customFieldsValues.entrySet()
                 .stream()
-                .collect(Collectors.toMap(
-                        Map.Entry::getKey,
-                        e -> mapCustomField(e.getValue())
-                ));
+                .collect(Collectors.toMap(Map.Entry::getKey, e -> mapCustomField(e.getValue())));
     }
 
     static CustomField mapCustomField(Object value) {
@@ -104,16 +102,13 @@ public class CommonImportUtil {
         }
         if (value instanceof Money) {
             return CustomField.moneyBuilder()
-                    .value(v -> importApiTypedMoney(
-                            (com.commercetools.api.models.common.TypedMoney) value, v))
+                    .value(v -> importApiTypedMoney((com.commercetools.api.models.common.TypedMoney) value, v))
                     .build();
         }
         throw new IllegalArgumentException("Unsupported custom field type: " + value.getClass());
     }
 
     private static com.commercetools.importapi.models.common.TypeKeyReference getTypeReference(TypeReference typeRef) {
-        return TypeKeyReference.builder()
-                .key(typeRef.getId())
-                .build();
+        return TypeKeyReference.builder().key(typeRef.getId()).build();
     }
 }

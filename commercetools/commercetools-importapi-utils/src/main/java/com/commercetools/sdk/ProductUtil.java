@@ -66,7 +66,29 @@ public class ProductUtil {
     }
 
     public ProductImport toProductImport(ProductProjection product) {
-
+        var productImport = ProductImport.builder()
+                .key(product.getKey())
+                .productType(p -> p.key(keyResolverService.resolveKey(product.getProductType())))
+                .name(l -> getLocalizedStringBuilder(product.getName()))
+                .slug(l -> getLocalizedStringBuilder(product.getSlug()))
+                .description(Optional.ofNullable(product.getDescription())
+                        .map(CommonImportUtil::getLocalizedStringBuilder)
+                        .map(LocalizedStringBuilder::build)
+                        .orElse(null))
+                .categories(extractCategoryKeyReference(product))
+                .metaTitle(Optional.ofNullable(product.getMetaTitle())
+                        .map(CommonImportUtil::getLocalizedStringBuilder)
+                        .map(LocalizedStringBuilder::build)
+                        .orElse(null))
+                .metaDescription(
+                        (com.commercetools.importapi.models.common.LocalizedString) product.getMetaDescription())
+                .metaKeywords((com.commercetools.importapi.models.common.LocalizedString) product.getMetaKeywords())
+                .taxCategory(getTaxCategoryKeyReference(product))
+                .state(getStateKeyReference(product))
+                .priceMode(mapPriceModeToImportApi(product))
+                .attributes(
+                        product.getAttributes().stream().map(ProductUtil::mapAttribute).collect(Collectors.toList()));
+        return productImport.build();
     }
 
     private com.commercetools.importapi.models.common.ProductPriceModeEnum mapPriceModeToImportApi(

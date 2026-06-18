@@ -1,6 +1,8 @@
 
 package com.commercetools.sdk;
 
+import static com.commercetools.sdk.CommonImportUtil.*;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.ZonedDateTime;
@@ -22,10 +24,6 @@ import com.commercetools.importapi.models.productdrafts.ProductDraftImport;
 import com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport;
 import com.commercetools.importapi.models.products.ProductImport;
 import com.commercetools.importapi.models.productvariants.Attribute;
-
-import io.vrap.rmf.base.client.Builder;
-
-import static com.commercetools.sdk.CommonImportUtil.*;
 
 public class ProductUtil {
     private final KeyResolverService keyResolverService;
@@ -81,13 +79,13 @@ public class ProductUtil {
                         .map(LocalizedStringBuilder::build)
                         .orElse(null))
                 .metaDescription(
-                        (com.commercetools.importapi.models.common.LocalizedString) product.getMetaDescription())
+                    (com.commercetools.importapi.models.common.LocalizedString) product.getMetaDescription())
                 .metaKeywords((com.commercetools.importapi.models.common.LocalizedString) product.getMetaKeywords())
                 .taxCategory(getTaxCategoryKeyReference(product))
                 .state(getStateKeyReference(product))
                 .priceMode(mapPriceModeToImportApi(product))
                 .attributes(
-                        product.getAttributes().stream().map(ProductUtil::mapAttribute).collect(Collectors.toList()));
+                    product.getAttributes().stream().map(ProductUtil::mapAttribute).collect(Collectors.toList()));
         return productImport.build();
     }
 

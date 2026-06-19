@@ -25,6 +25,7 @@ import com.commercetools.importapi.models.productdrafts.ProductDraftImport;
 import com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport;
 import com.commercetools.importapi.models.products.ProductImport;
 import com.commercetools.importapi.models.productvariants.Attribute;
+
 import org.jetbrains.annotations.NotNull;
 
 public class ProductUtil {
@@ -385,8 +386,6 @@ public class ProductUtil {
 
     public static ProductDiscountKeyReference toProductDiscountKeyReference(
             @NotNull ProductDiscountReference discount) {
-        return ProductDiscountKeyReference.builder()
-                .key(discount.getId())
-                .build();
+        return ProductDiscountKeyReference.builder().key(discount.getId()).build();
     }
 }

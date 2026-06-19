@@ -1,4 +1,11 @@
+
 package com.commercetools.sdk;
+
+import static com.commercetools.sdk.CommonImportUtil.getImportApiCustom;
+import static com.commercetools.sdk.CommonImportUtil.importApiTypedMoney;
+import static com.commercetools.sdk.ProductUtil.toProductDiscountKeyReference;
+
+import java.util.List;
 
 import com.commercetools.api.models.channel.ChannelReference;
 import com.commercetools.api.models.standalone_price.StandalonePrice;
@@ -6,12 +13,6 @@ import com.commercetools.importapi.models.common.ChannelKeyReference;
 import com.commercetools.importapi.models.common.DiscountedPrice;
 import com.commercetools.importapi.models.common.PriceTier;
 import com.commercetools.importapi.models.standalone_prices.StandalonePriceImport;
-
-import java.util.List;
-
-import static com.commercetools.sdk.CommonImportUtil.getImportApiCustom;
-import static com.commercetools.sdk.CommonImportUtil.importApiTypedMoney;
-import static com.commercetools.sdk.ProductUtil.toProductDiscountKeyReference;
 
 public class StandalonePriceUtil {
     public static StandalonePriceImport toStandalonePriceImport(StandalonePrice price) {
@@ -33,7 +34,8 @@ public class StandalonePriceUtil {
 
     private static DiscountedPrice toImportApiDiscountedPrice(
             com.commercetools.api.models.common.DiscountedPrice discounted) {
-        return DiscountedPrice.builder().value(v -> importApiTypedMoney(discounted.getValue(), v))
+        return DiscountedPrice.builder()
+                .value(v -> importApiTypedMoney(discounted.getValue(), v))
                 .discount(toProductDiscountKeyReference(discounted.getDiscount()))
                 .build();
     }

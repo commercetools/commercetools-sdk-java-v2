@@ -33,7 +33,8 @@ public class StandalonePriceUtil {
                 .sku(price.getSku()) // required field
                 .value(v -> importApiTypedMoney(price.getValue(), v)) // required field
                 .country(price.getCountry())
-                .customerGroup((new CustomerUtil(keyResolverService)).toCustomerGroupKeyReference(price.getCustomerGroup()))
+                .customerGroup(
+                    (new CustomerUtil(keyResolverService)).toCustomerGroupKeyReference(price.getCustomerGroup()))
                 .channel(toImportApiChannelKeyReference(price.getChannel()))
                 .validFrom(price.getValidFrom())
                 .validUntil(price.getValidUntil())

@@ -139,11 +139,10 @@ public class ProductUtil {
     }
 
     public static @NotNull List<Image> toImportImages(List<com.commercetools.api.models.common.Image> images) {
-        return images
-                .stream()
+        return images.stream()
                 .map(i -> Image.builder()
                         .dimensions(
-                                d -> AssetDimensions.builder().w(i.getDimensions().getW()).h(i.getDimensions().getH()))
+                            d -> AssetDimensions.builder().w(i.getDimensions().getW()).h(i.getDimensions().getH()))
                         .url(i.getUrl())
                         .label(i.getLabel())
                         .build())

@@ -46,6 +46,9 @@ public class StandalonePriceUtil {
 
     private static DiscountedPrice toImportApiDiscountedPrice(
             com.commercetools.api.models.common.DiscountedPrice discounted) {
+        if (discounted == null) {
+            return null;
+        }
         return DiscountedPrice.builder()
                 .value(v -> importApiTypedMoney(discounted.getValue(), v))
                 .discount(toProductDiscountKeyReference(discounted.getDiscount()))

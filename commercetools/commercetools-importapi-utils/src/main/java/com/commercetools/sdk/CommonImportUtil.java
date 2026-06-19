@@ -4,17 +4,21 @@ package com.commercetools.sdk;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.ZonedDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
+import com.commercetools.api.models.product_type.AttributePlainEnumValue;
 import com.commercetools.api.models.type.CustomFields;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeReference;
 import com.commercetools.importapi.models.common.*;
 import com.commercetools.importapi.models.customfields.CustomField;
 
+import com.commercetools.importapi.models.productvariants.Attribute;
 import io.vrap.rmf.base.client.Builder;
 
 public class CommonImportUtil {
@@ -58,6 +62,9 @@ public class CommonImportUtil {
     }
 
     public com.commercetools.importapi.models.customfields.Custom getImportApiCustom(CustomFields customFields) {
+        if (customFields == null) {
+            return null;
+        }
         return com.commercetools.importapi.models.customfields.Custom.builder()
                 .type(getTypeReference(customFields.getType()))
                 .fields(getImportApiFields(customFields.getFields()))
@@ -113,6 +120,67 @@ public class CommonImportUtil {
             return CustomField.moneyBuilder()
                     .value(v -> importApiTypedMoney((com.commercetools.api.models.common.TypedMoney) value, v))
                     .build();
+        }
+        if (value instanceof ArrayList) {
+            var list = (ArrayList<?>) value;
+            if (list.isEmpty()) {
+                return CustomField.localizedStringSetBuilder().value().build();
+            }
+            if (list.get(0) instanceof LocalDate) {
+                return CustomField.dateSetBuilder().value((ArrayList<LocalDate>) list).build();
+            }
+            if (list.get(0) instanceof ZonedDateTime) {
+                return CustomField.dateTimeSetBuilder()
+                        .value((ArrayList<ZonedDateTime>) list)
+                        .build();
+            }
+            if (list.get(0) instanceof LocalTime) {
+                return CustomField.timeSetBuilder().value((ArrayList<LocalTime>) list).build();
+            }
+            if (list.get(0) instanceof String) {
+                return CustomField.stringSetBuilder().value((ArrayList<String>) list).build();
+            }
+            if (list.get(0) instanceof Integer) {
+                return CustomField.numberSetBuilder().value((ArrayList<Double>) list).build();
+            }
+            if (list.get(0) instanceof Long) {
+                return CustomField.numberSetBuilder().value((ArrayList<Double>) list).build();
+            }
+            if (list.get(0) instanceof Boolean) {
+                return CustomField.booleanSetBuilder().value((ArrayList<Boolean>) list).build();
+            }
+            if (list.get(0) instanceof Double) {
+                return CustomField.numberSetBuilder().value((ArrayList<Double>) list).build();
+            }
+            if (list.get(0) instanceof LocalizedString) {
+                return CustomField.localizedStringSetBuilder()
+                        .value(list.stream()
+                                .map(v -> getLocalizedStringBuilder(((LocalizedString) v)).build())
+                                .collect(Collectors.toList()))
+                        .build();
+            }
+            if (list.get(0) instanceof AttributePlainEnumValue) {
+                return CustomField.enumSetBuilder()
+                        .value(((ArrayList<AttributePlainEnumValue>) list).stream()
+                                .map(AttributePlainEnumValue::getKey)
+                                .collect(Collectors.toList()))
+                        .build();
+            }
+            if (list.get(0) instanceof AttributeLocalizedEnumValue) {
+                return CustomField.enumSetBuilder()
+                        .value(((ArrayList<AttributeLocalizedEnumValue>) list).stream()
+                                .map(AttributeLocalizedEnumValue::getKey)
+                                .collect(Collectors.toList()))
+                        .build();
+            }
+            if (list.get(0) instanceof com.commercetools.api.models.common.Money) {
+                return CustomField.moneySetBuilder()
+                        .value(list.stream()
+                                .map(v -> importApiTypedMoney((com.commercetools.api.models.common.TypedMoney) v,
+                                        new TypedMoneyBuilder()).build())
+                                .collect(Collectors.toList()))
+                        .build();
+            }
         }
         throw new IllegalArgumentException("Unsupported custom field type: " + value.getClass());
     }

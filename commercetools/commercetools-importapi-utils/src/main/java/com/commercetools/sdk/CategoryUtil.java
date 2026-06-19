@@ -34,9 +34,9 @@ public class CategoryUtil {
                         .map(CommonImportUtil::getLocalizedStringBuilder)
                         .map(LocalizedStringBuilder::build)
                         .orElse(null))
-                .parent(CategoryKeyReference(category.getParent()))
+                .parent(categoryKeyReference(category.getParent()))
                 .orderHint(category.getOrderHint())
-                .externalId(category.getId())
+                .externalId(category.getExternalId())
                 .metaTitle(Optional.ofNullable(category.getMetaTitle())
                         .map(CommonImportUtil::getLocalizedStringBuilder)
                         .map(LocalizedStringBuilder::build)
@@ -54,7 +54,7 @@ public class CategoryUtil {
                 .build();
     }
 
-    private CategoryKeyReference CategoryKeyReference(CategoryReference categoryReference) {
+    private CategoryKeyReference categoryKeyReference(CategoryReference categoryReference) {
         if (categoryReference == null) {
             return null;
         }

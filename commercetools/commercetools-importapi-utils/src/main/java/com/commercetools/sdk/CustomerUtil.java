@@ -36,7 +36,7 @@ public class CustomerUtil {
                 .customerNumber(customer.getCustomerNumber())
                 .email(customer.getEmail()) // required field
                 .password(customer.getPassword())
-                .stores(toImportApiStoreKeyReferences(customer.getStores())) // required field
+                .stores(toImportApiStoreKeyReferences(customer.getStores()))
                 .firstName(customer.getFirstName())
                 .lastName(customer.getLastName())
                 .middleName(customer.getMiddleName())
@@ -47,14 +47,14 @@ public class CustomerUtil {
                 .companyName(customer.getCompanyName())
                 .vatId(customer.getVatId())
                 .isEmailVerified(customer.getIsEmailVerified())
-                .customerGroup(toCustomerGroupKeyReference(customer.getCustomerGroup())) // required field
-                .addresses(mapToCustomerAddresses(customer.getAddresses())) // required field
-                .defaultBillingAddress(getAddressesId(customer.getDefaultBillingAddress()))
+                .customerGroup(toCustomerGroupKeyReference(customer.getCustomerGroup()))
+                .addresses(mapToCustomerAddresses(customer.getAddresses()))
+                .defaultBillingAddress(getAddressesId(customer.getAddresses(), customer.getDefaultBillingAddressId()))
                 .billingAddresses(getAddressesIds(customer.getBillingAddresses()))
                 .shippingAddresses(getAddressesIds(customer.getShippingAddresses()))
-                .defaultShippingAddress(getAddressesId(customer.findDefaultShippingAddress().orElse(null)))
+                .defaultShippingAddress(getAddressesId(customer.getAddresses(), customer.getDefaultShippingAddressId()))
                 .locale(customer.getLocale())
-                .custom(util.getImportApiCustom(customer.getCustom())) // required field
+                .custom(util.getImportApiCustom(customer.getCustom()))
                 .authenticationMode(toImportApiAuthenticationMode(customer.getAuthenticationMode()))
                 .build();
     }
@@ -68,7 +68,8 @@ public class CustomerUtil {
             return null;
     }
 
-    public CustomerGroupKeyReference toCustomerGroupKeyReference(@NotNull CustomerGroupReference customerGroup) {
+    public CustomerGroupKeyReference toCustomerGroupKeyReference(CustomerGroupReference customerGroup) {
+        if (customerGroup == null) return null;
         return CustomerGroupKeyReference.builder().key(keyResolverService.resolveKey(customerGroup)).build();
     }
 
@@ -78,14 +79,15 @@ public class CustomerUtil {
     }
 
     private List<Integer> getAddressesIds(List<Address> shippingAddresses) {
-        return shippingAddresses.stream().map(CustomerUtil::getAddressesId).toList();
+        return shippingAddresses.stream().map(a -> getAddressesId(shippingAddresses, a.getId())).toList();
     }
 
-    private static Integer getAddressesId(Address shippingAddress) {
-        if (shippingAddress == null) {
-            return null;
+    private Integer getAddressesId(List<Address> addresses, String addressId) {
+        if (addressId == null) return null;
+        for (int i = 0; i < addresses.size(); i++) {
+            if (addressId.equals(addresses.get(i).getId())) return i;
         }
-        return parseInt(shippingAddress.getId());
+        return null;
     }
 
     private List<CustomerAddress> mapToCustomerAddresses(List<Address> shippingAddresses) {

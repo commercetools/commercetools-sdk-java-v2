@@ -11,8 +11,7 @@ import com.commercetools.api.models.product.ProductVariant;
 import com.commercetools.importapi.models.productvariants.ProductVariantImport;
 
 public class ProductVariantUtil {
-    public ProductVariantImport toProductVariantImport(ProductProjection product, ProductVariant variant,
-            String productKey) {
+    public ProductVariantImport toProductVariantImport(ProductProjection product, ProductVariant variant) {
         return ProductVariantImport.builder()
                 .key(variant.getKey()) // required field
                 .sku(variant.getSku())
@@ -21,7 +20,7 @@ public class ProductVariantUtil {
                     variant.getAttributes().stream().map(ProductUtil::mapAttribute).collect(Collectors.toList()))
                 .images(toImportImages(variant.getImages()))
                 .assets(importAssets(variant.getAssets()))
-                .product(p -> p.key(productKey)) // required field
+                .product(p -> p.key(product.getKey())) // required field
                 .build();
     }
 }

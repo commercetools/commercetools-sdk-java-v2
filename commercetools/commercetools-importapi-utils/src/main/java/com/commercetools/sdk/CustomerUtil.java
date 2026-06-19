@@ -1,8 +1,6 @@
 
 package com.commercetools.sdk;
 
-import static java.lang.Integer.parseInt;
-
 import java.util.List;
 
 import com.commercetools.api.models.common.Address;
@@ -69,7 +67,8 @@ public class CustomerUtil {
     }
 
     public CustomerGroupKeyReference toCustomerGroupKeyReference(CustomerGroupReference customerGroup) {
-        if (customerGroup == null) return null;
+        if (customerGroup == null)
+            return null;
         return CustomerGroupKeyReference.builder().key(keyResolverService.resolveKey(customerGroup)).build();
     }
 
@@ -83,9 +82,11 @@ public class CustomerUtil {
     }
 
     private Integer getAddressesId(List<Address> addresses, String addressId) {
-        if (addressId == null) return null;
+        if (addressId == null)
+            return null;
         for (int i = 0; i < addresses.size(); i++) {
-            if (addressId.equals(addresses.get(i).getId())) return i;
+            if (addressId.equals(addresses.get(i).getId()))
+                return i;
         }
         return null;
     }

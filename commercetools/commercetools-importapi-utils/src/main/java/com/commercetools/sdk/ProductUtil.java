@@ -129,21 +129,24 @@ public class ProductUtil {
         return ProductVariantDraftImport.builder()
                 .key(variant.getKey())
                 .sku(variant.getSku())
-                .images(variant.getImages()
-                        .stream()
-                        .map(i -> com.commercetools.importapi.models.common.Image.builder()
-                                .dimensions(d -> com.commercetools.importapi.models.common.AssetDimensions.builder()
-                                        .w(i.getDimensions().getW())
-                                        .h(i.getDimensions().getH()))
-                                .url(i.getUrl())
-                                .label(i.getLabel())
-                                .build())
-                        .collect(Collectors.toList()))
+                .images(toImportImages(variant.getImages()))
                 .prices(mapPricesToImportApi(variant))
                 .attributes(
                     variant.getAttributes().stream().map(ProductUtil::mapAttribute).collect(Collectors.toList()))
                 .assets(importAssets(variant.getAssets()))
                 .build();
+    }
+
+    public static @NotNull List<Image> toImportImages(List<com.commercetools.api.models.common.Image> images) {
+        return images
+                .stream()
+                .map(i -> Image.builder()
+                        .dimensions(
+                                d -> AssetDimensions.builder().w(i.getDimensions().getW()).h(i.getDimensions().getH()))
+                        .url(i.getUrl())
+                        .label(i.getLabel())
+                        .build())
+                .collect(Collectors.toList());
     }
 
     private static List<PriceDraftImport> mapPricesToImportApi(ProductVariant variant) {
@@ -163,7 +166,7 @@ public class ProductUtil {
                 .collect(Collectors.toList());
     }
 
-    private static Attribute mapAttribute(com.commercetools.api.models.product.Attribute attribute) {
+    public static Attribute mapAttribute(com.commercetools.api.models.product.Attribute attribute) {
         Object value = attribute.getValue();
 
         if (value instanceof String) {

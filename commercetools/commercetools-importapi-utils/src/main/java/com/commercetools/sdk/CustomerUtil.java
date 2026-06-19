@@ -1,7 +1,6 @@
 
 package com.commercetools.sdk;
 
-import static com.commercetools.sdk.CommonImportUtil.getImportApiCustom;
 import static java.lang.Integer.parseInt;
 
 import java.util.List;
@@ -18,6 +17,19 @@ import com.commercetools.importapi.models.customers.CustomerImport;
 import org.jetbrains.annotations.NotNull;
 
 public class CustomerUtil {
+    private final KeyResolverService keyResolverService;
+    private final CommonImportUtil util;
+
+    public CustomerUtil() {
+        keyResolverService = new ExpandObjResolverService();
+        util = new CommonImportUtil(keyResolverService);
+    }
+
+    public CustomerUtil(final KeyResolverService resolverService) {
+        keyResolverService = resolverService;
+        util = new CommonImportUtil(keyResolverService);
+    }
+
     public CustomerImport toCustomerImport(Customer customer) {
         return CustomerImport.builder()
                 .key(customer.getKey()) // required field
@@ -42,7 +54,7 @@ public class CustomerUtil {
                 .shippingAddresses(getAddressesIds(customer.getShippingAddresses()))
                 .defaultShippingAddress(getAddressesId(customer.findDefaultShippingAddress().orElse(null)))
                 .locale(customer.getLocale())
-                .custom(getImportApiCustom(customer.getCustom())) // required field
+                .custom(util.getImportApiCustom(customer.getCustom())) // required field
                 .authenticationMode(toImportApiAuthenticationMode(customer.getAuthenticationMode()))
                 .build();
     }
@@ -56,8 +68,8 @@ public class CustomerUtil {
             return null;
     }
 
-    public static CustomerGroupKeyReference toCustomerGroupKeyReference(@NotNull CustomerGroupReference customerGroup) {
-        return CustomerGroupKeyReference.builder().key(customerGroup.getId()).build();
+    public CustomerGroupKeyReference toCustomerGroupKeyReference(@NotNull CustomerGroupReference customerGroup) {
+        return CustomerGroupKeyReference.builder().key(keyResolverService.resolveKey(customerGroup)).build();
     }
 
     private List<StoreKeyReference> toImportApiStoreKeyReferences(
@@ -106,7 +118,7 @@ public class CustomerUtil {
                 .fax(address.getFax())
                 .additionalAddressInfo(address.getAdditionalAddressInfo())
                 .externalId(address.getExternalId())
-                .custom(getImportApiCustom(address.getCustom())) // required field
+                .custom(util.getImportApiCustom(address.getCustom())) // required field
                 .build();
     }
 }

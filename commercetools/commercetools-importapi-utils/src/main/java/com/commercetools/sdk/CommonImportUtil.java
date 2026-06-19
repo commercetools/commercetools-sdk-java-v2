@@ -19,6 +19,15 @@ import io.vrap.rmf.base.client.Builder;
 
 public class CommonImportUtil {
 
+    private final KeyResolverService keyResolverService;
+    public CommonImportUtil() {
+        keyResolverService = new ExpandObjResolverService();
+    }
+
+    public CommonImportUtil(final KeyResolverService resolverService) {
+        keyResolverService = resolverService;
+    }
+
     public static LocalizedStringBuilder getLocalizedStringBuilder(LocalizedString s) {
         return com.commercetools.importapi.models.common.LocalizedString.builder().values(s.values());
     }
@@ -48,7 +57,7 @@ public class CommonImportUtil {
                         .fractionDigits(p.getFractionDigits());
     }
 
-    public static com.commercetools.importapi.models.customfields.Custom getImportApiCustom(CustomFields customFields) {
+    public com.commercetools.importapi.models.customfields.Custom getImportApiCustom(CustomFields customFields) {
         return com.commercetools.importapi.models.customfields.Custom.builder()
                 .type(getTypeReference(customFields.getType()))
                 .fields(getImportApiFields(customFields.getFields()))
@@ -108,7 +117,7 @@ public class CommonImportUtil {
         throw new IllegalArgumentException("Unsupported custom field type: " + value.getClass());
     }
 
-    private static com.commercetools.importapi.models.common.TypeKeyReference getTypeReference(TypeReference typeRef) {
-        return TypeKeyReference.builder().key(typeRef.getId()).build();
+    private com.commercetools.importapi.models.common.TypeKeyReference getTypeReference(TypeReference typeRef) {
+        return TypeKeyReference.builder().key(keyResolverService.resolveKey(typeRef)).build();
     }
 }

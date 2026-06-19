@@ -13,6 +13,18 @@ import com.commercetools.importapi.models.common.LocalizedStringBuilder;
 
 public class CategoryUtil {
 
+    private final KeyResolverService keyResolverService;
+    private final CommonImportUtil util;
+    public CategoryUtil() {
+        keyResolverService = new ExpandObjResolverService();
+        util = new CommonImportUtil(keyResolverService);
+    }
+
+    public CategoryUtil(final KeyResolverService resolverService) {
+        keyResolverService = resolverService;
+        util = new CommonImportUtil(keyResolverService);
+    }
+
     public CategoryImport toCategoryImport(Category category) {
         return CategoryImport.builder()
                 .key(category.getKey()) // required field
@@ -38,7 +50,7 @@ public class CategoryUtil {
                         .map(LocalizedStringBuilder::build)
                         .orElse(null))
                 .assets(importAssets(category.getAssets()))
-                .custom(getImportApiCustom(category.getCustom()))
+                .custom(util.getImportApiCustom(category.getCustom()))
                 .build();
     }
 
@@ -46,6 +58,6 @@ public class CategoryUtil {
         if (categoryReference == null) {
             return null;
         }
-        return CategoryKeyReference.builder().key(categoryReference.getId()).build();
+        return CategoryKeyReference.builder().key(keyResolverService.resolveKey(categoryReference)).build();
     }
 }

@@ -1,7 +1,6 @@
 
 package com.commercetools.sdk;
 
-import static com.commercetools.sdk.CommonImportUtil.getImportApiCustom;
 import static com.commercetools.sdk.CommonImportUtil.importApiTypedMoney;
 import static com.commercetools.sdk.ProductUtil.toProductDiscountKeyReference;
 
@@ -15,19 +14,32 @@ import com.commercetools.importapi.models.common.PriceTier;
 import com.commercetools.importapi.models.standalone_prices.StandalonePriceImport;
 
 public class StandalonePriceUtil {
-    public static StandalonePriceImport toStandalonePriceImport(StandalonePrice price) {
+    private final KeyResolverService keyResolverService;
+    private final CommonImportUtil util;
+
+    public StandalonePriceUtil() {
+        keyResolverService = new ExpandObjResolverService();
+        util = new CommonImportUtil(keyResolverService);
+    }
+
+    public StandalonePriceUtil(final KeyResolverService resolverService) {
+        keyResolverService = resolverService;
+        util = new CommonImportUtil(keyResolverService);
+    }
+
+    public StandalonePriceImport toStandalonePriceImport(StandalonePrice price) {
         return StandalonePriceImport.builder()
                 .key(price.getKey()) // required field
                 .sku(price.getSku()) // required field
                 .value(v -> importApiTypedMoney(price.getValue(), v)) // required field
                 .country(price.getCountry())
-                .customerGroup(CustomerUtil.toCustomerGroupKeyReference(price.getCustomerGroup()))
+                .customerGroup((new CustomerUtil(keyResolverService)).toCustomerGroupKeyReference(price.getCustomerGroup()))
                 .channel(toImportApiChannelKeyReference(price.getChannel()))
                 .validFrom(price.getValidFrom())
                 .validUntil(price.getValidUntil())
                 .tiers(toImportApiPriceTiers(price.getTiers()))
                 .discounted(toImportApiDiscountedPrice(price.getDiscounted()))
-                .custom(getImportApiCustom(price.getCustom()))
+                .custom(util.getImportApiCustom(price.getCustom()))
                 .active(price.getActive())
                 .build();
     }
@@ -54,10 +66,10 @@ public class StandalonePriceUtil {
                 .build();
     }
 
-    private static ChannelKeyReference toImportApiChannelKeyReference(ChannelReference channel) {
+    private ChannelKeyReference toImportApiChannelKeyReference(ChannelReference channel) {
         if (channel == null) {
             return null;
         }
-        return ChannelKeyReference.builder().key(channel.getId()).build();
+        return ChannelKeyReference.builder().key(keyResolverService.resolveKey(channel)).build();
     }
 }

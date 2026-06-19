@@ -17,6 +17,7 @@ import com.commercetools.api.models.product.ProductPriceModeEnum;
 import com.commercetools.api.models.product.ProductProjection;
 import com.commercetools.api.models.product.ProductReferenceImpl;
 import com.commercetools.api.models.product.ProductVariant;
+import com.commercetools.api.models.product_discount.ProductDiscountReference;
 import com.commercetools.api.models.product_type.*;
 import com.commercetools.importapi.models.common.*;
 import com.commercetools.importapi.models.productdrafts.PriceDraftImport;
@@ -24,6 +25,7 @@ import com.commercetools.importapi.models.productdrafts.ProductDraftImport;
 import com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport;
 import com.commercetools.importapi.models.products.ProductImport;
 import com.commercetools.importapi.models.productvariants.Attribute;
+import org.jetbrains.annotations.NotNull;
 
 public class ProductUtil {
     private final KeyResolverService keyResolverService;
@@ -376,5 +378,12 @@ public class ProductUtil {
         }
         /* TODO: AttributeNestedType is not supported yet */
         throw new IllegalArgumentException("Unsupported type: " + value.getClass());
+    }
+
+    public static ProductDiscountKeyReference toProductDiscountKeyReference(
+            @NotNull ProductDiscountReference discount) {
+        return ProductDiscountKeyReference.builder()
+                .key(discount.getId())
+                .build();
     }
 }

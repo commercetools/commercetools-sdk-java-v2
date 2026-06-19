@@ -56,7 +56,7 @@ public class CustomerUtil {
             return null;
     }
 
-    private CustomerGroupKeyReference toCustomerGroupKeyReference(@NotNull CustomerGroupReference customerGroup) {
+    public static CustomerGroupKeyReference toCustomerGroupKeyReference(@NotNull CustomerGroupReference customerGroup) {
         return CustomerGroupKeyReference.builder().key(customerGroup.getId()).build();
     }
 

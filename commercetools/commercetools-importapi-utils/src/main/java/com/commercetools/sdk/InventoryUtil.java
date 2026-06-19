@@ -1,7 +1,6 @@
 
 package com.commercetools.sdk;
 
-
 import com.commercetools.api.models.channel.ChannelReference;
 import com.commercetools.api.models.inventory.InventoryEntry;
 import com.commercetools.importapi.models.common.ChannelKeyReference;

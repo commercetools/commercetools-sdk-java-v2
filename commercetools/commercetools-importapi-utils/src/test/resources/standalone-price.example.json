@@ -1,0 +1,64 @@
+{
+    "id": "price-id-001",
+    "version": 1,
+    "key": "price-key",
+    "sku": "sku-001",
+    "value": {
+        "type": "centPrecision",
+        "currencyCode": "EUR",
+        "centAmount": 1000,
+        "fractionDigits": 2
+    },
+    "country": "DE",
+    "customerGroup": {
+        "typeId": "customer-group",
+        "id": "cg-id-001",
+        "obj": {
+            "id": "cg-id-001",
+            "version": 1,
+            "key": "cg-key",
+            "name": "VIP",
+            "createdAt": "1970-01-01T00:00:00.001Z",
+            "lastModifiedAt": "1970-01-01T00:00:00.001Z"
+        }
+    },
+    "channel": {
+        "typeId": "channel",
+        "id": "channel-id-001",
+        "obj": {
+            "id": "channel-id-001",
+            "version": 1,
+            "key": "channel-key",
+            "roles": [],
+            "createdAt": "1970-01-01T00:00:00.001Z",
+            "lastModifiedAt": "1970-01-01T00:00:00.001Z"
+        }
+    },
+    "discounted": {
+        "value": {
+            "type": "centPrecision",
+            "currencyCode": "EUR",
+            "centAmount": 800,
+            "fractionDigits": 2
+        },
+        "discount": {
+            "typeId": "product-discount",
+            "id": "discount-id-001",
+            "obj": {
+                "id": "discount-id-001",
+                "version": 1,
+                "key": "discount-key",
+                "name": { "en": "10% off" },
+                "isActive": true,
+                "value": { "type": "relative", "permyriad": 1000 },
+                "predicate": "1=1",
+                "sortOrder": "0.5",
+                "createdAt": "1970-01-01T00:00:00.001Z",
+                "lastModifiedAt": "1970-01-01T00:00:00.001Z"
+            }
+        }
+    },
+    "active": true,
+    "createdAt": "1970-01-01T00:00:00.001Z",
+    "lastModifiedAt": "1970-01-01T00:00:00.001Z"
+}

@@ -18,7 +18,6 @@ import com.commercetools.api.models.type.TypeReference;
 import com.commercetools.importapi.models.common.*;
 import com.commercetools.importapi.models.customfields.CustomField;
 
-import com.commercetools.importapi.models.productvariants.Attribute;
 import io.vrap.rmf.base.client.Builder;
 
 public class CommonImportUtil {
@@ -130,9 +129,7 @@ public class CommonImportUtil {
                 return CustomField.dateSetBuilder().value((ArrayList<LocalDate>) list).build();
             }
             if (list.get(0) instanceof ZonedDateTime) {
-                return CustomField.dateTimeSetBuilder()
-                        .value((ArrayList<ZonedDateTime>) list)
-                        .build();
+                return CustomField.dateTimeSetBuilder().value((ArrayList<ZonedDateTime>) list).build();
             }
             if (list.get(0) instanceof LocalTime) {
                 return CustomField.timeSetBuilder().value((ArrayList<LocalTime>) list).build();
@@ -177,7 +174,7 @@ public class CommonImportUtil {
                 return CustomField.moneySetBuilder()
                         .value(list.stream()
                                 .map(v -> importApiTypedMoney((com.commercetools.api.models.common.TypedMoney) v,
-                                        new TypedMoneyBuilder()).build())
+                                    new TypedMoneyBuilder()).build())
                                 .collect(Collectors.toList()))
                         .build();
             }

@@ -11,8 +11,7 @@ import com.commercetools.importapi.models.common.StoreKeyReference;
 import com.commercetools.importapi.models.customers.AuthenticationMode;
 import com.commercetools.importapi.models.customers.CustomerAddress;
 import com.commercetools.importapi.models.customers.CustomerImport;
-
-import org.jetbrains.annotations.NotNull;
+import jakarta.validation.constraints.NotNull;
 
 public class CustomerUtil {
     private final KeyResolverService keyResolverService;

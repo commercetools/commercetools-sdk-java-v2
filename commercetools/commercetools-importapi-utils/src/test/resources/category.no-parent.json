@@ -1,0 +1,14 @@
+{
+    "id": "cat-id-001",
+    "version": 1,
+    "key": "category-key",
+    "name": { "en": "My Category" },
+    "slug": { "en": "my-category" },
+    "description": { "en": "A description" },
+    "orderHint": "0.5",
+    "externalId": "ext-001",
+    "ancestors": [],
+    "assets": [],
+    "createdAt": "1970-01-01T00:00:00.001Z",
+    "lastModifiedAt": "1970-01-01T00:00:00.001Z"
+}

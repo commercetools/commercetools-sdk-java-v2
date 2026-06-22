@@ -79,7 +79,10 @@ public class CustomerUtil {
     }
 
     private List<Integer> getAddressesIds(List<Address> addresses, List<Address> shippingAddresses) {
-        return shippingAddresses.stream().map(a -> getAddressesId(addresses, a.getId())).filter(Objects::nonNull).toList();
+        return shippingAddresses.stream()
+                .map(a -> getAddressesId(addresses, a.getId()))
+                .filter(Objects::nonNull)
+                .toList();
     }
 
     private Integer getAddressesId(List<Address> addresses, String addressId) {

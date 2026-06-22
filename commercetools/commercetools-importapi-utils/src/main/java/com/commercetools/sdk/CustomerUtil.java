@@ -2,6 +2,7 @@
 package com.commercetools.sdk;
 
 import java.util.List;
+import java.util.Objects;
 
 import com.commercetools.api.models.common.Address;
 import com.commercetools.api.models.customer.Customer;
@@ -47,8 +48,8 @@ public class CustomerUtil {
                 .customerGroup(toCustomerGroupKeyReference(customer.getCustomerGroup()))
                 .addresses(mapToCustomerAddresses(customer.getAddresses()))
                 .defaultBillingAddress(getAddressesId(customer.getAddresses(), customer.getDefaultBillingAddressId()))
-                .billingAddresses(getAddressesIds(customer.getBillingAddresses()))
-                .shippingAddresses(getAddressesIds(customer.getShippingAddresses()))
+                .billingAddresses(getAddressesIds(customer.getAddresses(), customer.getBillingAddresses()))
+                .shippingAddresses(getAddressesIds(customer.getAddresses(), customer.getShippingAddresses()))
                 .defaultShippingAddress(getAddressesId(customer.getAddresses(), customer.getDefaultShippingAddressId()))
                 .locale(customer.getLocale())
                 .custom(util.getImportApiCustom(customer.getCustom()))
@@ -76,8 +77,8 @@ public class CustomerUtil {
         return stores.stream().map(x -> StoreKeyReference.builder().key(x.getKey()).build()).toList();
     }
 
-    private List<Integer> getAddressesIds(List<Address> shippingAddresses) {
-        return shippingAddresses.stream().map(a -> getAddressesId(shippingAddresses, a.getId())).toList();
+    private List<Integer> getAddressesIds(List<Address> addresses, List<Address> shippingAddresses) {
+        return shippingAddresses.stream().map(a -> getAddressesId(addresses, a.getId())).filter(Objects::nonNull).toList();
     }
 
     private Integer getAddressesId(List<Address> addresses, String addressId) {

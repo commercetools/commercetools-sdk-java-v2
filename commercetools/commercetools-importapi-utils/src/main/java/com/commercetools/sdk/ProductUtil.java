@@ -26,7 +26,7 @@ import com.commercetools.importapi.models.productdrafts.ProductVariantDraftImpor
 import com.commercetools.importapi.models.products.ProductImport;
 import com.commercetools.importapi.models.productvariants.Attribute;
 
-import org.jetbrains.annotations.NotNull;
+import jakarta.validation.constraints.NotNull;
 
 public class ProductUtil {
     private final KeyResolverService keyResolverService;

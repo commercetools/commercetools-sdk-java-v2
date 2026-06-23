@@ -4,7 +4,6 @@ package com.commercetools.sdk;
 import com.commercetools.sdk.CommonImportUtil;
 import static com.commercetools.sdk.ProductUtil.toImportImages;
 
-import java.util.Arrays;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -18,15 +17,16 @@ public class ProductVariantUtil {
     public ProductVariantImport toProductVariantImport(ProductProjection product, ProductVariant variant) {
         return toProductVariantImport(product, variant, false);
     }
-    public ProductVariantImport toProductVariantImport(ProductProjection product, ProductVariant variant, Boolean staged) {
+
+    public ProductVariantImport toProductVariantImport(ProductProjection product, ProductVariant variant,
+            Boolean staged) {
         return ProductVariantImport.builder()
                 .key(variant.getKey()) // required field
                 .sku(variant.getSku())
                 .isMasterVariant(variant.getId().equals(product.getMasterVariant().getId())) // required field
-                .attributes(
-                        Optional.ofNullable(variant.getAttributes())
-                                .map(attrs -> attrs.stream().map(ProductUtil::mapAttribute).collect(Collectors.toList()))
-                                .orElse(null))
+                .attributes(Optional.ofNullable(variant.getAttributes())
+                        .map(attrs -> attrs.stream().map(ProductUtil::mapAttribute).collect(Collectors.toList()))
+                        .orElse(null))
                 .images(toImportImages(variant.getImages()))
                 .assets(util.importAssets(variant.getAssets()))
                 .staged(staged)

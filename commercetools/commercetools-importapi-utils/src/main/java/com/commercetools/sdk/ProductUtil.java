@@ -30,12 +30,15 @@ import jakarta.validation.constraints.NotNull;
 
 public class ProductUtil {
     private final KeyResolverService keyResolverService;
+    private final CommonImportUtil util;
     public ProductUtil() {
         keyResolverService = new ExpandObjResolverService();
+        util = new CommonImportUtil(keyResolverService);
     }
 
     public ProductUtil(final KeyResolverService resolverService) {
         keyResolverService = resolverService;
+        util = new CommonImportUtil(keyResolverService);
     }
 
     public ProductDraftImport toProductDraftImport(ProductProjection product) {
@@ -122,11 +125,11 @@ public class ProductUtil {
     private List<ProductVariantDraftImport> extractProductVariantDraftImport(ProductProjection product) {
         return product.getVariants()
                 .stream()
-                .map(ProductUtil::extractProductVariantDraftImport)
+                .map(this::extractProductVariantDraftImport)
                 .collect(Collectors.toList());
     }
 
-    private static ProductVariantDraftImport extractProductVariantDraftImport(ProductVariant variant) {
+    private ProductVariantDraftImport extractProductVariantDraftImport(ProductVariant variant) {
         return ProductVariantDraftImport.builder()
                 .key(variant.getKey())
                 .sku(variant.getSku())
@@ -134,7 +137,7 @@ public class ProductUtil {
                 .prices(mapPricesToImportApi(variant))
                 .attributes(
                     variant.getAttributes().stream().map(ProductUtil::mapAttribute).collect(Collectors.toList()))
-                .assets(importAssets(variant.getAssets()))
+                .assets(util.importAssets(variant.getAssets()))
                 .build();
     }
 

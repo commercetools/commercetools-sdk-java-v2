@@ -49,7 +49,7 @@ public class CategoryUtil {
                         .map(CommonImportUtil::getLocalizedStringBuilder)
                         .map(LocalizedStringBuilder::build)
                         .orElse(null))
-                .assets(importAssets(category.getAssets()))
+                .assets(util.importAssets(category.getAssets()))
                 .custom(util.getImportApiCustom(category.getCustom()))
                 .build();
     }

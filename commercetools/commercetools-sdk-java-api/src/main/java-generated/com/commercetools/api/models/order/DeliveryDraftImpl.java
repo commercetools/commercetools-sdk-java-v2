@@ -56,7 +56,7 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Delivery.</p>
+     *  <p>User-defined identifier of the Delivery. Must be unique among Deliveries in the Order.</p>
      */
 
     public String getKey() {

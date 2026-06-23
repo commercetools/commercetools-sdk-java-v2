@@ -65,7 +65,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
     }
 
     /**
-     *  <p>User-defined unique identifier of the CustomLineItemReturnItem.</p>
+     *  <p>User-defined identifier of the CustomLineItemReturnItem. Must be unique among Return Items in the Order.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -204,7 +204,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
     }
 
     /**
-     *  <p>User-defined unique identifier of the CustomLineItemReturnItem.</p>
+     *  <p>User-defined identifier of the CustomLineItemReturnItem. Must be unique among Return Items in the Order.</p>
      * @return key
      */
 

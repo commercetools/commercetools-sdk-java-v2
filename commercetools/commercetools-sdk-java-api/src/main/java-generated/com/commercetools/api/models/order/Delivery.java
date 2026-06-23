@@ -48,7 +48,7 @@ public interface Delivery extends DeliveryMixin, com.commercetools.api.models.Cu
     public String getId();
 
     /**
-     *  <p>User-defined unique identifier of the Delivery.</p>
+     *  <p>User-defined identifier of the Delivery. Unique among Deliveries in the Order.</p>
      * @return key
      */
 
@@ -105,7 +105,7 @@ public interface Delivery extends DeliveryMixin, com.commercetools.api.models.Cu
     public void setId(final String id);
 
     /**
-     *  <p>User-defined unique identifier of the Delivery.</p>
+     *  <p>User-defined identifier of the Delivery. Unique among Deliveries in the Order.</p>
      * @param key value to be set
      */
 

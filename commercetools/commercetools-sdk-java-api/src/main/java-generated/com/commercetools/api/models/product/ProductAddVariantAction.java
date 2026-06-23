@@ -41,7 +41,7 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
     String ADD_VARIANT = "addVariant";
 
     /**
-     *  <p>Value to set. Must be unique.</p>
+     *  <p>Value to set. Must be unique across all ProductVariants in a Project.</p>
      * @return sku
      */
 
@@ -49,7 +49,7 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
     public String getSku();
 
     /**
-     *  <p>Value to set. Must be unique.</p>
+     *  <p>Value to set. Must be unique among ProductVariants in the same Product.</p>
      * @return key
      */
 
@@ -97,14 +97,14 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
     public List<AssetDraft> getAssets();
 
     /**
-     *  <p>Value to set. Must be unique.</p>
+     *  <p>Value to set. Must be unique across all ProductVariants in a Project.</p>
      * @param sku value to be set
      */
 
     public void setSku(final String sku);
 
     /**
-     *  <p>Value to set. Must be unique.</p>
+     *  <p>Value to set. Must be unique among ProductVariants in the same Product.</p>
      * @param key value to be set
      */
 

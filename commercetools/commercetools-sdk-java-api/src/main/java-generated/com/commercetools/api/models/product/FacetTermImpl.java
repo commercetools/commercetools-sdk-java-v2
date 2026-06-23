@@ -47,7 +47,7 @@ public class FacetTermImpl implements FacetTerm, ModelBase {
     }
 
     /**
-     *  <p>Value for the field specified in the <span>term facet expression</span> for which at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> could be found.</p>
+     *  <p>Value for the field specified in the <span>term facet expression</span> for which at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> could be found. For <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeNumberType" rel="nofollow">AttributeNumberType</a> Attributes, numeric values are returned as decimals, for example <code>1.0</code> instead of <code>1</code>.</p>
      */
 
     public java.lang.Object getTerm() {

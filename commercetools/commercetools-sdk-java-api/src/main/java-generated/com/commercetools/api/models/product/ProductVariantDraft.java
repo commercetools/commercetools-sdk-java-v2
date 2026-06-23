@@ -36,7 +36,7 @@ public interface ProductVariantDraft
         extends com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<ProductVariantDraft> {
 
     /**
-     *  <p>User-defined unique SKU of the Product Variant.</p>
+     *  <p>User-defined SKU of the Product Variant. Must be unique across all ProductVariants in a Project.</p>
      * @return sku
      */
 
@@ -44,7 +44,7 @@ public interface ProductVariantDraft
     public String getSku();
 
     /**
-     *  <p>User-defined unique identifier for the ProductVariant.</p>
+     *  <p>User-defined identifier for the ProductVariant. Must be unique among ProductVariants in the same Product.</p>
      * @return key
      */
 
@@ -84,14 +84,14 @@ public interface ProductVariantDraft
     public List<AssetDraft> getAssets();
 
     /**
-     *  <p>User-defined unique SKU of the Product Variant.</p>
+     *  <p>User-defined SKU of the Product Variant. Must be unique across all ProductVariants in a Project.</p>
      * @param sku value to be set
      */
 
     public void setSku(final String sku);
 
     /**
-     *  <p>User-defined unique identifier for the ProductVariant.</p>
+     *  <p>User-defined identifier for the ProductVariant. Must be unique among ProductVariants in the same Product.</p>
      * @param key value to be set
      */
 

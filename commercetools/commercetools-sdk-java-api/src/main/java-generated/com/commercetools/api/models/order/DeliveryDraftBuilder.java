@@ -39,7 +39,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *  <p>User-defined unique identifier of the Delivery.</p>
+     *  <p>User-defined identifier of the Delivery. Must be unique among Deliveries in the Order.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -294,7 +294,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Delivery.</p>
+     *  <p>User-defined identifier of the Delivery. Must be unique among Deliveries in the Order.</p>
      * @return key
      */
 

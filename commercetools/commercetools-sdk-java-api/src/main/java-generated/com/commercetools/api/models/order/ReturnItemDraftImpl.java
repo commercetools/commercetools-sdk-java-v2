@@ -63,7 +63,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Return Item.</p>
+     *  <p>User-defined identifier of the Return Item. Must be unique among Return Items in the Order.</p>
      */
 
     public String getKey() {

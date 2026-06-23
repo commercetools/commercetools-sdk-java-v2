@@ -65,7 +65,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the LineItemReturnItem.</p>
+     *  <p>User-defined identifier of the LineItemReturnItem. Must be unique among Return Items in the Order.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -203,7 +203,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the LineItemReturnItem.</p>
+     *  <p>User-defined identifier of the LineItemReturnItem. Must be unique among Return Items in the Order.</p>
      * @return key
      */
 

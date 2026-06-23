@@ -36,7 +36,7 @@ public interface ReturnItemDraft extends com.commercetools.api.models.Customizab
         io.vrap.rmf.base.client.Draft<ReturnItemDraft> {
 
     /**
-     *  <p>User-defined unique identifier of the Return Item.</p>
+     *  <p>User-defined identifier of the Return Item. Must be unique among Return Items in the Order.</p>
      * @return key
      */
 
@@ -94,7 +94,7 @@ public interface ReturnItemDraft extends com.commercetools.api.models.Customizab
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>User-defined unique identifier of the Return Item.</p>
+     *  <p>User-defined identifier of the Return Item. Must be unique among Return Items in the Order.</p>
      * @param key value to be set
      */
 

@@ -45,7 +45,7 @@ public interface MyCartAddLineItemAction
     String ADD_LINE_ITEM = "addLineItem";
 
     /**
-     *  <p>User-defined unique identifier of the LineItem.</p>
+     *  <p>User-defined identifier of the LineItem. Must be unique among LineItems in the Cart.</p>
      * @return key
      */
 
@@ -138,7 +138,7 @@ public interface MyCartAddLineItemAction
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>User-defined unique identifier of the LineItem.</p>
+     *  <p>User-defined identifier of the LineItem. Must be unique among LineItems in the Cart.</p>
      * @param key value to be set
      */
 

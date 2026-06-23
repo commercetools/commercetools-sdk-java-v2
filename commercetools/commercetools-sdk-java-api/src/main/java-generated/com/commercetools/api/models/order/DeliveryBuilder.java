@@ -56,7 +56,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Delivery.</p>
+     *  <p>User-defined identifier of the Delivery. Unique among Deliveries in the Order.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -329,7 +329,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Delivery.</p>
+     *  <p>User-defined identifier of the Delivery. Unique among Deliveries in the Order.</p>
      * @return key
      */
 

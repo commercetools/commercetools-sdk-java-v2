@@ -110,7 +110,7 @@ public class TaxRateDraftImpl implements TaxRateDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the TaxRate.</p>
+     *  <p>User-defined identifier of the TaxRate. Must be unique within the TaxCategory containing it.</p>
      */
 
     public String getKey() {

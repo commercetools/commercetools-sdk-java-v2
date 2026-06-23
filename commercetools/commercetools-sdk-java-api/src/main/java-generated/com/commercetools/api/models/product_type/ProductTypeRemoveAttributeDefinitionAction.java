@@ -16,6 +16,7 @@ import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Removes an AttributeDefinition and also deletes all corresponding Attributes on all <span>Products</span> with this ProductType. The removal of the Attributes is <span>eventually consistent</span>.</p>
+ *  <p>Do not remove an AttributeDefinition and add a new AttributeDefinition with the same <code>name</code> in the same update request. Because the removal is eventually consistent, wait until it is complete before sending another update request for the ProductType.</p>
  *  <p>The <code>CombinationUnique</code> constraint is not checked when an Attribute is removed, and uniqueness violations may occur when you remove an Attribute with a <code>CombinationUnique</code> constraint.</p>
  *
  * <hr>

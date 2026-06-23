@@ -126,7 +126,7 @@ public interface ProductDraft
     public LocalizedString getMetaKeywords();
 
     /**
-     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided also.</p>
+     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided or if the referenced Product Type contains any Variant-level <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> with <code>isRequired</code> set to <code>true</code>.</p>
      * @return masterVariant
      */
     @Valid
@@ -269,7 +269,7 @@ public interface ProductDraft
     public void setMetaKeywords(final LocalizedString metaKeywords);
 
     /**
-     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided also.</p>
+     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided or if the referenced Product Type contains any Variant-level <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> with <code>isRequired</code> set to <code>true</code>.</p>
      * @param masterVariant value to be set
      */
 

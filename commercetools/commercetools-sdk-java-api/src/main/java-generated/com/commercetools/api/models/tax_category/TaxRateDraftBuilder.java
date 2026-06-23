@@ -188,7 +188,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the TaxRate.</p>
+     *  <p>User-defined identifier of the TaxRate. Must be unique within the TaxCategory containing it.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -256,7 +256,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the TaxRate.</p>
+     *  <p>User-defined identifier of the TaxRate. Must be unique within the TaxCategory containing it.</p>
      * @return key
      */
 

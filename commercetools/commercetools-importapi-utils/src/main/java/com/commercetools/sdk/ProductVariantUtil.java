@@ -1,7 +1,6 @@
 
 package com.commercetools.sdk;
 
-import com.commercetools.sdk.CommonImportUtil;
 import static com.commercetools.sdk.ProductUtil.toImportImages;
 
 import java.util.Optional;

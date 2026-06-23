@@ -47,35 +47,30 @@ public class CommonImportUtil {
                         .sources(getImportSources(a.getSources())) // required field
                         .description(Optional.ofNullable(a.getDescription())
                                 .map(CommonImportUtil::getLocalizedStringBuilder)
-                                .map(LocalizedStringBuilder::build).orElse(null))
+                                .map(LocalizedStringBuilder::build)
+                                .orElse(null))
                         .tags(a.getTags())
                         .custom(getImportApiCustom(a.getCustom()))
                         .build())
                 .collect(Collectors.toList());
     }
 
-    private List<AssetSource> getImportSources(
-            List<com.commercetools.api.models.common.AssetSource> sources) {
+    private List<AssetSource> getImportSources(List<com.commercetools.api.models.common.AssetSource> sources) {
         return sources.stream()
-                .map(s ->
-                        AssetSource.builder()
-                                .key(s.getKey())
-                                .uri(s.getUri())
-                                .dimensions(toImportAssetDimntions(s.getDimensions()))
-                                .contentType(s.getContentType())
-                                .build())
+                .map(s -> AssetSource.builder()
+                        .key(s.getKey())
+                        .uri(s.getUri())
+                        .dimensions(toImportAssetDimntions(s.getDimensions()))
+                        .contentType(s.getContentType())
+                        .build())
                 .collect(Collectors.toList());
     }
 
-    private AssetDimensions toImportAssetDimntions(
-            com.commercetools.api.models.common.AssetDimensions dimensions) {
+    private AssetDimensions toImportAssetDimntions(com.commercetools.api.models.common.AssetDimensions dimensions) {
         if (dimensions == null) {
             return null;
         }
-        return AssetDimensions.builder()
-                .w(dimensions.getW())
-                .h(dimensions.getH())
-                .build();
+        return AssetDimensions.builder().w(dimensions.getW()).h(dimensions.getH()).build();
     }
 
     public static Builder<? extends TypedMoney> importApiTypedMoney(com.commercetools.api.models.common.TypedMoney p,

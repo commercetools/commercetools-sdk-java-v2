@@ -1,11 +1,5 @@
-package com.commercetools.sdk;
 
-import com.commercetools.importapi.models.common.AssetSource;
-import com.commercetools.importapi.models.customfields.*;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+package com.commercetools.sdk;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -13,11 +7,19 @@ import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.Map;
 
+import com.commercetools.importapi.models.customfields.*;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 public class CommonUtilTest {
     CommonImportUtil util;
-    @BeforeEach void setup() {
+    @BeforeEach
+    void setup() {
         util = new CommonImportUtil();
     }
+
     @Test
     void shouldMapStringField() {
         CustomField result = CommonImportUtil.mapCustomField("hello");
@@ -78,8 +80,7 @@ public class CommonUtilTest {
 
     @Test
     void shouldThrowForUnsupportedType() {
-        Assertions.assertThrows(IllegalArgumentException.class,
-                () -> CommonImportUtil.mapCustomField(new Object()));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> CommonImportUtil.mapCustomField(new Object()));
     }
 
     // mapCustomField(Map) — null and non-null
@@ -114,11 +115,11 @@ public class CommonUtilTest {
     void shouldMapAssets() {
         var asset = com.commercetools.api.models.common.Asset.builder()
                 .key("asset-key")
-                .name(com.commercetools.api.models.common.LocalizedString.builder()
-                        .addValue("en", "My Asset").build())
+                .name(com.commercetools.api.models.common.LocalizedString.builder().addValue("en", "My Asset").build())
                 .sources(List.of())
                 .id("asset-id")
-                .sources(List.of(com.commercetools.api.models.common.AssetSource.builder().key("key").uri("url").build()))
+                .sources(
+                    List.of(com.commercetools.api.models.common.AssetSource.builder().key("key").uri("url").build()))
                 .build();
         var result = util.importAssets(List.of(asset));
         Assertions.assertEquals(1, result.size());

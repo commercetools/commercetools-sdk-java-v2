@@ -123,10 +123,7 @@ public class ProductUtil {
     }
 
     private List<ProductVariantDraftImport> extractProductVariantDraftImport(ProductProjection product) {
-        return product.getVariants()
-                .stream()
-                .map(this::extractProductVariantDraftImport)
-                .collect(Collectors.toList());
+        return product.getVariants().stream().map(this::extractProductVariantDraftImport).collect(Collectors.toList());
     }
 
     private ProductVariantDraftImport extractProductVariantDraftImport(ProductVariant variant) {

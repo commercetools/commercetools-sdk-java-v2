@@ -139,6 +139,7 @@ public class ProductUtil {
     }
 
     public static @NotNull List<Image> toImportImages(List<com.commercetools.api.models.common.Image> images) {
+        if (images == null) return null;
         return images.stream()
                 .map(i -> Image.builder()
                         .dimensions(

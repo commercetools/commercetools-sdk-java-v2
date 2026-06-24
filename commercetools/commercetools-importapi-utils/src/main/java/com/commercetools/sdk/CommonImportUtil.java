@@ -74,11 +74,11 @@ public class CommonImportUtil {
 
     public static Builder<? extends TypedMoney> importApiTypedMoney(com.commercetools.api.models.common.TypedMoney p,
             TypedMoneyBuilder v) {
-        return (p instanceof HighPrecisionMoney)
+        return (p instanceof HighPrecisionMoney highPrecisionMoney)
                 ? v.highPrecisionBuilder()
-                        .centAmount(p.getCentAmount())
-                        .currencyCode(p.getCurrencyCode())
-                        .preciseAmount(((com.commercetools.api.models.common.HighPrecisionMoney) p).getPreciseAmount())
+                        .centAmount(highPrecisionMoney.getCentAmount())
+                        .currencyCode(highPrecisionMoney.getCurrencyCode())
+                        .preciseAmount(highPrecisionMoney.getPreciseAmount())
                 : v.centPrecisionBuilder()
                         .centAmount(p.getCentAmount())
                         .currencyCode(p.getCurrencyCode())

@@ -258,7 +258,7 @@ tasks.register('alljavadoc', Javadoc) {
         splitIndex = true
         noTree = true
         title = "commercetools Java SDK"
-        links 'https://docs.oracle.com/en/java/javase/11/docs/api/', "https://fasterxml.github.io/jackson-databind/javadoc/2.14/", 'https://commercetools.github.io/commercetools-jvm-sdk/apidocs/', 'https://newrelic.github.io/java-agent-api/javadoc/'
+        links 'https://docs.oracle.com/en/java/javase/17/docs/api/', "https://javadoc.io/doc/tools.jackson.core/jackson-databind/3.1.0/", 'https://commercetools.github.io/commercetools-jvm-sdk/apidocs/', 'https://newrelic.github.io/java-agent-api/javadoc/'
         overview = "src/main/javadoc/overview.html"
         bottom = """
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
@@ -288,7 +288,7 @@ tasks.register('alljavadoc', Javadoc) {
                 ],
                 "Monitoring"   : ["com.commercetools.monitoring.*"]
         ]
-        addStringOption('source', '11')
+        addStringOption('source', '17')
     }
 
     doLast {
@@ -318,7 +318,7 @@ tasks.register('internaldocs', Javadoc) {
         splitIndex = true
         noTree = true
         title = "commercetools Java SDK"
-        links 'https://docs.oracle.com/en/java/javase/11/docs/api/', "https://fasterxml.github.io/jackson-databind/javadoc/2.14/", 'https://commercetools.github.io/commercetools-jvm-sdk/apidocs/', 'https://newrelic.github.io/java-agent-api/javadoc/'
+        links 'https://docs.oracle.com/en/java/javase/17/docs/api/', "https://javadoc.io/doc/tools.jackson.core/jackson-databind/3.1.0/", 'https://commercetools.github.io/commercetools-jvm-sdk/apidocs/', 'https://newrelic.github.io/java-agent-api/javadoc/'
         overview = "src/main/javadoc/overview.html"
         bottom = """
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
@@ -348,7 +348,7 @@ tasks.register('internaldocs', Javadoc) {
                 ],
                 "Monitoring"   : ["com.commercetools.monitoring.*"]
         ]
-        addStringOption('source', '11')
+        addStringOption('source', '17')
     }
 
     doLast {

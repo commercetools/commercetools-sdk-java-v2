@@ -22,7 +22,12 @@ import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Creates a Cart in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
- *  <p>If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDraft" rel="nofollow">CartDraft</a> has a predicate that does not match, or if the Shipping Method is not active, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+ *  <p>An <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned in one of the following cases:</p>
+ *  <ol>
+ *   <li>If the referenced Shipping Method has a predicate that does not match the Cart.</li>
+ *   <li>If the referenced Shipping Method is not active.</li>
+ *   <li>If the referenced Shipping Method is associated with a Store that is different from the Cart's Store.</li>
+ *  </ol>
  *  <p>Specific Error Codes:</p>
  *  <ul>
  *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeNonApplicableError" rel="nofollow">DiscountCodeNonApplicable</a></li>

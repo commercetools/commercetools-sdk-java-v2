@@ -9,6 +9,23 @@
 - added query parameter `dataErasure` to method `delete /{projectKey}/in-store/key={storeKey}/business-units/{ID}`
 </details>
 
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `stores` to type `ShippingMethod`
+- added property `stores` to type `ShippingMethodDraft`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `ShippingMethodAddStoreAction`
+- added type `ShippingMethodRemoveStoreAction`
+- added type `ShippingMethodSetStoresAction`
+</details>
+
 **Checkout changes**
 
 <details>

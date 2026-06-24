@@ -47,8 +47,13 @@ public class ShippingMethodTest {
                                     new com.commercetools.api.models.shipping_method.ZoneRateImpl())) },
                 new Object[] { "active", ShippingMethod.builder().active(true) },
                 new Object[] { "isDefault", ShippingMethod.builder().isDefault(true) },
-                new Object[] { "predicate", ShippingMethod.builder().predicate("predicate") }, new Object[] { "custom",
-                        ShippingMethod.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) } };
+                new Object[] { "predicate", ShippingMethod.builder().predicate("predicate") },
+                new Object[] { "custom",
+                        ShippingMethod.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
+                new Object[] { "stores",
+                        ShippingMethod.builder()
+                                .stores(Collections.singletonList(
+                                    new com.commercetools.api.models.store.StoreKeyReferenceImpl())) } };
     }
 
     @Test
@@ -173,5 +178,13 @@ public class ShippingMethodTest {
         ShippingMethod value = ShippingMethod.of();
         value.setCustom(new com.commercetools.api.models.type.CustomFieldsImpl());
         Assertions.assertThat(value.getCustom()).isEqualTo(new com.commercetools.api.models.type.CustomFieldsImpl());
+    }
+
+    @Test
+    public void stores() {
+        ShippingMethod value = ShippingMethod.of();
+        value.setStores(Collections.singletonList(new com.commercetools.api.models.store.StoreKeyReferenceImpl()));
+        Assertions.assertThat(value.getStores())
+                .isEqualTo(Collections.singletonList(new com.commercetools.api.models.store.StoreKeyReferenceImpl()));
     }
 }

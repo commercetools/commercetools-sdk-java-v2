@@ -22,7 +22,13 @@ import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Creates a Cart in the Project.</p>
- *  <p>If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDraft" rel="nofollow">CartDraft</a> has a predicate that does not match, or if the Shipping Method is not active, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+ *  <p>An <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned in one of the following cases:</p>
+ *  <ol>
+ *   <li>If the referenced Shipping Method has a predicate that does not match the Cart.</li>
+ *   <li>If the referenced Shipping Method is not active.</li>
+ *   <li>If the referenced Shipping Method is associated with a Store that is different from the Cart's Store.</li>
+ *   <li>If the referenced Shipping Method is associated with a Store and the Cart is not associated with any Store.</li>
+ *  </ol>
  *  <p>When using <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">InventoryMode</a> <code>ReserveOnCart</code>:</p>
  *  <ul>
  *   <li>If only some Line Items can be reserved, the Cart creation succeeds, however, the items that could not be reserved are removed and reservation warnings are returned in the response.</li>

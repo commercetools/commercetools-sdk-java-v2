@@ -113,112 +113,105 @@ public class CommonImportUtil {
     }
 
     static CustomField mapCustomField(Object value) {
-        if (value instanceof String) {
-            return CustomField.stringBuilder().value((String) value).build();
+        if (value instanceof String strValue) {
+            return CustomField.stringBuilder().value(strValue).build();
         }
-        if (value instanceof Boolean) {
-            return CustomField.booleanBuilder().value((Boolean) value).build();
+        if (value instanceof Boolean bValue) {
+            return CustomField.booleanBuilder().value(bValue).build();
         }
-        if (value instanceof Double) {
-            return CustomField.numberBuilder().value((Double) value).build();
+        if (value instanceof Double dValue) {
+            return CustomField.numberBuilder().value(dValue).build();
         }
-        if (value instanceof Integer) {
-            return CustomField.numberBuilder().value(((Integer) value).doubleValue()).build();
+        if (value instanceof Integer intValue) {
+            return CustomField.numberBuilder().value((intValue).doubleValue()).build();
         }
-        if (value instanceof Long) {
-            return CustomField.numberBuilder().value(((Long) value).doubleValue()).build();
+        if (value instanceof Long lValue) {
+            return CustomField.numberBuilder().value((lValue).doubleValue()).build();
         }
-        if (value instanceof LocalizedString) {
+        if (value instanceof LocalizedString str) {
             return CustomField.localizedStringBuilder()
-                    .value(getLocalizedStringBuilder((LocalizedString) value).build())
+                    .value(getLocalizedStringBuilder(str).build())
                     .build();
         }
-        if (value instanceof LocalDate) {
-            return CustomField.dateBuilder().value((LocalDate) value).build();
+        if (value instanceof LocalDate localDateValue) {
+            return CustomField.dateBuilder().value(localDateValue).build();
         }
-        if (value instanceof ZonedDateTime) {
-            return CustomField.dateTimeBuilder().value((ZonedDateTime) value).build();
+        if (value instanceof ZonedDateTime zonedDateTimeValue) {
+            return CustomField.dateTimeBuilder().value(zonedDateTimeValue).build();
         }
-        if (value instanceof LocalTime) {
-            return CustomField.timeBuilder().value((LocalTime) value).build();
+        if (value instanceof LocalTime localTimeValue) {
+            return CustomField.timeBuilder().value(localTimeValue).build();
         }
-        if (value instanceof Money) {
+        if (value instanceof Money moneyValue) {
             return CustomField.moneyBuilder()
-                    .value(v -> importApiTypedMoney((com.commercetools.api.models.common.TypedMoney) value, v))
+                    .value(v -> importApiTypedMoney((com.commercetools.api.models.common.TypedMoney) moneyValue, v))
                     .build();
         }
-        if (value instanceof Array) {
-            var list = new ArrayList<>(List.of(value));
+        if (value instanceof List list) {
             if (list.isEmpty()) {
                 return CustomField.localizedStringSetBuilder().value().build();
             }
             if (list.get(0) instanceof LocalDate) {
-                return CustomField.dateSetBuilder().value(list.stream()
+                return CustomField.dateSetBuilder().value((List<LocalDate>) list.stream()
                         .map(obj -> (LocalDate) obj)
-                        .collect(Collectors.toCollection(ArrayList::new))).build();
+                        .toList()).build();
             }
             if (list.get(0) instanceof ZonedDateTime) {
-                return CustomField.dateTimeSetBuilder().value(list.stream()
+                return CustomField.dateTimeSetBuilder().value((List<ZonedDateTime>) list.stream()
                         .map(obj -> (ZonedDateTime) obj)
-                        .collect(Collectors.toCollection(ArrayList::new))).build();
+                        .toList()).build();
             }
             if (list.get(0) instanceof LocalTime) {
-                return CustomField.timeSetBuilder().value(list.stream()
-                        .map(obj -> (LocalTime) obj)
-                        .collect(Collectors.toCollection(ArrayList::new))).build();
+                return CustomField.timeSetBuilder().value((List<LocalTime>)list.stream()
+                        .map(obj -> (LocalTime) obj).toList()).build();
             }
             if (list.get(0) instanceof String) {
-                return CustomField.stringSetBuilder().value(list.stream()
-                        .map(obj -> (String) obj)
-                        .collect(Collectors.toCollection(ArrayList::new))).build();
+                return CustomField.stringSetBuilder().value((List<String>)list.stream()
+                        .map(obj -> (String) obj).toList()).build();
             }
             if (list.get(0) instanceof Integer) {
-                return CustomField.numberSetBuilder().value(list.stream()
-                        .map(obj -> (Double) obj)
-                        .collect(Collectors.toCollection(ArrayList::new))).build();
+                return CustomField.numberSetBuilder().value((List<Double>)list.stream()
+                        .map(obj -> (Double) obj).toList()).build();
             }
             if (list.get(0) instanceof Long) {
-                return CustomField.numberSetBuilder().value(list.stream()
-                        .map(obj -> (Double) obj)
-                        .collect(Collectors.toCollection(ArrayList::new))).build();
+                return CustomField.numberSetBuilder().value((List<Double>)list.stream()
+                        .map(obj -> (Double) obj).toList()).build();
             }
             if (list.get(0) instanceof Boolean) {
-                return CustomField.booleanSetBuilder().value(list.stream()
-                        .map(obj -> (Boolean) obj)
-                        .collect(Collectors.toCollection(ArrayList::new))).build();
+                return CustomField.booleanSetBuilder().value((List<Boolean>)list.stream()
+                        .map(obj -> (Boolean) obj).toList()).build();
             }
             if (list.get(0) instanceof Double) {
-                return CustomField.numberSetBuilder().value(list.stream()
-                        .map(obj -> (Double) obj)
-                        .collect(Collectors.toCollection(ArrayList::new))).build();
+                return CustomField.numberSetBuilder().value((List<Double>)list.stream()
+                        .map(obj -> (Double) obj).toList()).build();
             }
             if (list.get(0) instanceof LocalizedString) {
                 return CustomField.localizedStringSetBuilder()
-                        .value(list.stream()
+                        .value((List<com.commercetools.importapi.models.common.LocalizedString>)list.stream()
                                 .map(v -> getLocalizedStringBuilder(((LocalizedString) v)).build())
-                                .collect(Collectors.toList()))
+                                .toList())
                         .build();
             }
             if (list.get(0) instanceof AttributePlainEnumValue) {
                 return CustomField.enumSetBuilder()
-                        .value(list.stream()
+                        .value((List<String>)list.stream()
                                 .map(x -> ((AttributePlainEnumValue)x).getKey())
-                                .collect(Collectors.toList()))
+                                .toList())
                         .build();
             }
             if (list.get(0) instanceof AttributeLocalizedEnumValue) {
                 return CustomField.enumSetBuilder()
-                        .value(list.stream()
+                        .value((List<String>)list.stream()
                                 .map(x -> ((AttributeLocalizedEnumValue)x).getKey())
-                                .collect(Collectors.toList()))
+                                .toList())
                         .build();
             }
             if (list.get(0) instanceof com.commercetools.api.models.common.Money) {
                 return CustomField.moneySetBuilder()
-                        .value(list.stream()
+                        .value((List<TypedMoney>)list.stream()
                                 .map(v -> importApiTypedMoney((com.commercetools.api.models.common.TypedMoney) v,
                                     new TypedMoneyBuilder()).build())
-                                .collect(Collectors.toList()))
+                                .toList())
                         .build();
             }
         }

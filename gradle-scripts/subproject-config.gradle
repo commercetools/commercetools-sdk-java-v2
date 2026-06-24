@@ -36,7 +36,7 @@ javadoc {
         maxMemory = '2g'
         addBooleanOption('-allow-script-in-comments', true)
         addStringOption('Xdoclint:missing,accessibility,reference', '-quiet')
-        addStringOption('source', '11')
+        addStringOption('source', '17')
         encoding = 'utf-8'
         taglets = ['com.commercetools.taglets.CodeTaglet', 'com.commercetools.taglets.ToCTaglet', 'com.commercetools.taglets.FileIncludeTaglet', 'org.jdrupes.taglets.plantUml.StartUml', 'org.jdrupes.taglets.plantUml.EndUml', 'org.jdrupes.taglets.plantUml.PlantUml']
         bottom = """

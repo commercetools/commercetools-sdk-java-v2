@@ -148,33 +148,49 @@ public class CommonImportUtil {
                     .build();
         }
         if (value instanceof Array) {
-            var list = (ArrayList<?>) value;
+            var list = new ArrayList<>(List.of(value));
             if (list.isEmpty()) {
                 return CustomField.localizedStringSetBuilder().value().build();
             }
             if (list.get(0) instanceof LocalDate) {
-                return CustomField.dateSetBuilder().value((ArrayList<LocalDate>) list).build();
+                return CustomField.dateSetBuilder().value(list.stream()
+                        .map(obj -> (LocalDate) obj)
+                        .collect(Collectors.toCollection(ArrayList::new))).build();
             }
             if (list.get(0) instanceof ZonedDateTime) {
-                return CustomField.dateTimeSetBuilder().value((ArrayList<ZonedDateTime>) list).build();
+                return CustomField.dateTimeSetBuilder().value(list.stream()
+                        .map(obj -> (ZonedDateTime) obj)
+                        .collect(Collectors.toCollection(ArrayList::new))).build();
             }
             if (list.get(0) instanceof LocalTime) {
-                return CustomField.timeSetBuilder().value((ArrayList<LocalTime>) list).build();
+                return CustomField.timeSetBuilder().value(list.stream()
+                        .map(obj -> (LocalTime) obj)
+                        .collect(Collectors.toCollection(ArrayList::new))).build();
             }
             if (list.get(0) instanceof String) {
-                return CustomField.stringSetBuilder().value((ArrayList<String>) list).build();
+                return CustomField.stringSetBuilder().value(list.stream()
+                        .map(obj -> (String) obj)
+                        .collect(Collectors.toCollection(ArrayList::new))).build();
             }
             if (list.get(0) instanceof Integer) {
-                return CustomField.numberSetBuilder().value((ArrayList<Double>) list).build();
+                return CustomField.numberSetBuilder().value(list.stream()
+                        .map(obj -> (Double) obj)
+                        .collect(Collectors.toCollection(ArrayList::new))).build();
             }
             if (list.get(0) instanceof Long) {
-                return CustomField.numberSetBuilder().value((ArrayList<Double>) list).build();
+                return CustomField.numberSetBuilder().value(list.stream()
+                        .map(obj -> (Double) obj)
+                        .collect(Collectors.toCollection(ArrayList::new))).build();
             }
             if (list.get(0) instanceof Boolean) {
-                return CustomField.booleanSetBuilder().value((ArrayList<Boolean>) list).build();
+                return CustomField.booleanSetBuilder().value(list.stream()
+                        .map(obj -> (Boolean) obj)
+                        .collect(Collectors.toCollection(ArrayList::new))).build();
             }
             if (list.get(0) instanceof Double) {
-                return CustomField.numberSetBuilder().value((ArrayList<Double>) list).build();
+                return CustomField.numberSetBuilder().value(list.stream()
+                        .map(obj -> (Double) obj)
+                        .collect(Collectors.toCollection(ArrayList::new))).build();
             }
             if (list.get(0) instanceof LocalizedString) {
                 return CustomField.localizedStringSetBuilder()
@@ -185,15 +201,15 @@ public class CommonImportUtil {
             }
             if (list.get(0) instanceof AttributePlainEnumValue) {
                 return CustomField.enumSetBuilder()
-                        .value(((ArrayList<AttributePlainEnumValue>) list).stream()
-                                .map(AttributePlainEnumValue::getKey)
+                        .value(list.stream()
+                                .map(x -> ((AttributePlainEnumValue)x).getKey())
                                 .collect(Collectors.toList()))
                         .build();
             }
             if (list.get(0) instanceof AttributeLocalizedEnumValue) {
                 return CustomField.enumSetBuilder()
-                        .value(((ArrayList<AttributeLocalizedEnumValue>) list).stream()
-                                .map(AttributeLocalizedEnumValue::getKey)
+                        .value(list.stream()
+                                .map(x -> ((AttributeLocalizedEnumValue)x).getKey())
                                 .collect(Collectors.toList()))
                         .build();
             }

@@ -1,6 +1,7 @@
 
 package com.commercetools.sdk;
 
+import java.lang.reflect.Array;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.ZonedDateTime;
@@ -146,7 +147,7 @@ public class CommonImportUtil {
                     .value(v -> importApiTypedMoney((com.commercetools.api.models.common.TypedMoney) value, v))
                     .build();
         }
-        if (value instanceof ArrayList) {
+        if (value instanceof Array) {
             var list = (ArrayList<?>) value;
             if (list.isEmpty()) {
                 return CustomField.localizedStringSetBuilder().value().build();

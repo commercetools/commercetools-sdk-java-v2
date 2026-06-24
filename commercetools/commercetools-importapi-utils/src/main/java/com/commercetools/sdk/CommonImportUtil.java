@@ -138,7 +138,7 @@ public class CommonImportUtil {
         if (value instanceof LocalTime localTimeValue) {
             return CustomField.timeBuilder().value(localTimeValue).build();
         }
-        if (value instanceof Money moneyValue) {
+        if (value instanceof com.commercetools.api.models.common.TypedMoney moneyValue) {
             return CustomField.moneyBuilder()
                     .value(v -> importApiTypedMoney((com.commercetools.api.models.common.TypedMoney) moneyValue, v))
                     .build();
@@ -205,7 +205,7 @@ public class CommonImportUtil {
                             (List<String>) list.stream().map(x -> ((AttributeLocalizedEnumValue) x).getKey()).toList())
                         .build();
             }
-            if (list.get(0) instanceof com.commercetools.api.models.common.Money) {
+            if (list.get(0) instanceof com.commercetools.api.models.common.TypedMoney) {
                 return CustomField.moneySetBuilder()
                         .value((List<TypedMoney>) list.stream()
                                 .map(v -> importApiTypedMoney((com.commercetools.api.models.common.TypedMoney) v,

@@ -48,8 +48,8 @@ public interface ProductTypeChangeAttributeNameAction extends ProductTypeUpdateA
     public String getAttributeName();
 
     /**
-     *  <p>New user-defined name of the Attribute that is unique to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
-     *  <p>When using the same <code>name</code> for an Attribute in two or more ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes. If not, an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionAlreadyExistsError" rel="nofollow">AttributeDefinitionAlreadyExists</a> error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
+     *  <p>New user-defined name of the Attribute that must be unique within the ProductType.</p>
+     *  <p>To use the same <code>name</code> in multiple ProductTypes, each AttributeDefinition must have the same <code>type</code>; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionTypeConflictError" rel="nofollow">AttributeDefinitionTypeConflict</a> error is returned. For <code>enum</code> or <code>lenum</code> Types and sets of these AttributeTypes, the enum values can be different for each ProductType.</p>
      * @return newAttributeName
      */
     @NotNull
@@ -64,8 +64,8 @@ public interface ProductTypeChangeAttributeNameAction extends ProductTypeUpdateA
     public void setAttributeName(final String attributeName);
 
     /**
-     *  <p>New user-defined name of the Attribute that is unique to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
-     *  <p>When using the same <code>name</code> for an Attribute in two or more ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes. If not, an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionAlreadyExistsError" rel="nofollow">AttributeDefinitionAlreadyExists</a> error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
+     *  <p>New user-defined name of the Attribute that must be unique within the ProductType.</p>
+     *  <p>To use the same <code>name</code> in multiple ProductTypes, each AttributeDefinition must have the same <code>type</code>; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionTypeConflictError" rel="nofollow">AttributeDefinitionTypeConflict</a> error is returned. For <code>enum</code> or <code>lenum</code> Types and sets of these AttributeTypes, the enum values can be different for each ProductType.</p>
      * @param newAttributeName value to be set
      */
 

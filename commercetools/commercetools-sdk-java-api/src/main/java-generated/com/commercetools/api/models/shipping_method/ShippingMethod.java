@@ -13,6 +13,7 @@ import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.tax_category.TaxCategoryReference;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
@@ -40,6 +41,7 @@ import tools.jackson.databind.annotation.*;
  *             .plusZoneRates(zoneRatesBuilder -> zoneRatesBuilder)
  *             .active(true)
  *             .isDefault(true)
+ *             .plusStores(storesBuilder -> storesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -192,6 +194,18 @@ public interface ShippingMethod
     public CustomFields getCustom();
 
     /**
+     *  <ul>
+     *   <li>If a value exists, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If empty, the Shipping Method applies to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
+     *  </ul>
+     * @return stores
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("stores")
+    public List<StoreKeyReference> getStores();
+
+    /**
      *  <p>Unique identifier of the ShippingMethod.</p>
      * @param id value to be set
      */
@@ -320,6 +334,27 @@ public interface ShippingMethod
     public void setCustom(final CustomFields custom);
 
     /**
+     *  <ul>
+     *   <li>If a value exists, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If empty, the Shipping Method applies to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
+     *  </ul>
+     * @param stores values to be set
+     */
+
+    @JsonIgnore
+    public void setStores(final StoreKeyReference... stores);
+
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If empty, the Shipping Method applies to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
+     *  </ul>
+     * @param stores values to be set
+     */
+
+    public void setStores(final List<StoreKeyReference> stores);
+
+    /**
      * factory method
      * @return instance of ShippingMethod
      */
@@ -351,6 +386,7 @@ public interface ShippingMethod
         instance.setIsDefault(template.getIsDefault());
         instance.setPredicate(template.getPredicate());
         instance.setCustom(template.getCustom());
+        instance.setStores(template.getStores());
         return instance;
     }
 
@@ -392,6 +428,11 @@ public interface ShippingMethod
         instance.setIsDefault(template.getIsDefault());
         instance.setPredicate(template.getPredicate());
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setStores(Optional.ofNullable(template.getStores())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store.StoreKeyReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

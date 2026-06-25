@@ -139,4 +139,17 @@ public class ShippingMethodQueryBuilderDsl {
             ShippingMethodQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ShippingMethodQueryBuilderDsl> stores(
+            Function<com.commercetools.api.predicates.query.store.StoreKeyReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.store.StoreKeyReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("stores"))
+                .inner(fn.apply(com.commercetools.api.predicates.query.store.StoreKeyReferenceQueryBuilderDsl.of())),
+            ShippingMethodQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<ShippingMethodQueryBuilderDsl> stores() {
+        return new CollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("stores")),
+            p -> new CombinationQueryPredicate<>(p, ShippingMethodQueryBuilderDsl::of));
+    }
+
 }

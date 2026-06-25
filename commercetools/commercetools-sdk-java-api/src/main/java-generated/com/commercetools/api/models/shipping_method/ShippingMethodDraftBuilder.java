@@ -57,6 +57,9 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    @Nullable
+    private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
+
     /**
      *  <p>User-defined unique identifier for the ShippingMethod.</p>
      * @param key value to be set
@@ -363,6 +366,123 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
+     *  <ul>
+     *   <li>If defined and not empty, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If not defined or empty, the Shipping Method applies to all Carts, irrespective of a Store.</li>
+     *  </ul>
+     *  <p>If the number of referenced Stores exceeds the <span>Stores per Shipping Method limit</span>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     * @param stores value to be set
+     * @return Builder
+     */
+
+    public ShippingMethodDraftBuilder stores(
+            @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
+        this.stores = new ArrayList<>(Arrays.asList(stores));
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If defined and not empty, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If not defined or empty, the Shipping Method applies to all Carts, irrespective of a Store.</li>
+     *  </ul>
+     *  <p>If the number of referenced Stores exceeds the <span>Stores per Shipping Method limit</span>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     * @param stores value to be set
+     * @return Builder
+     */
+
+    public ShippingMethodDraftBuilder stores(
+            @Nullable final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
+        this.stores = stores;
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If defined and not empty, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If not defined or empty, the Shipping Method applies to all Carts, irrespective of a Store.</li>
+     *  </ul>
+     *  <p>If the number of referenced Stores exceeds the <span>Stores per Shipping Method limit</span>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     * @param stores value to be set
+     * @return Builder
+     */
+
+    public ShippingMethodDraftBuilder plusStores(
+            @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.addAll(Arrays.asList(stores));
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If defined and not empty, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If not defined or empty, the Shipping Method applies to all Carts, irrespective of a Store.</li>
+     *  </ul>
+     *  <p>If the number of referenced Stores exceeds the <span>Stores per Shipping Method limit</span>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public ShippingMethodDraftBuilder plusStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If defined and not empty, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If not defined or empty, the Shipping Method applies to all Carts, irrespective of a Store.</li>
+     *  </ul>
+     *  <p>If the number of referenced Stores exceeds the <span>Stores per Shipping Method limit</span>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public ShippingMethodDraftBuilder withStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
+        this.stores = new ArrayList<>();
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If defined and not empty, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If not defined or empty, the Shipping Method applies to all Carts, irrespective of a Store.</li>
+     *  </ul>
+     *  <p>If the number of referenced Stores exceeds the <span>Stores per Shipping Method limit</span>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public ShippingMethodDraftBuilder addStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+        return plusStores(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()));
+    }
+
+    /**
+     *  <ul>
+     *   <li>If defined and not empty, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If not defined or empty, the Shipping Method applies to all Carts, irrespective of a Store.</li>
+     *  </ul>
+     *  <p>If the number of referenced Stores exceeds the <span>Stores per Shipping Method limit</span>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public ShippingMethodDraftBuilder setStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+        return stores(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()));
+    }
+
+    /**
      *  <p>User-defined unique identifier for the ShippingMethod.</p>
      * @return key
      */
@@ -469,6 +589,20 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
+     *  <ul>
+     *   <li>If defined and not empty, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If not defined or empty, the Shipping Method applies to all Carts, irrespective of a Store.</li>
+     *  </ul>
+     *  <p>If the number of referenced Stores exceeds the <span>Stores per Shipping Method limit</span>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     * @return stores
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores() {
+        return this.stores;
+    }
+
+    /**
      * builds ShippingMethodDraft with checking for non-null required values
      * @return ShippingMethodDraft
      */
@@ -478,7 +612,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
         Objects.requireNonNull(zoneRates, ShippingMethodDraft.class + ": zoneRates is missing");
         Objects.requireNonNull(isDefault, ShippingMethodDraft.class + ": isDefault is missing");
         return new ShippingMethodDraftImpl(key, name, localizedName, description, localizedDescription, taxCategory,
-            zoneRates, active, isDefault, predicate, custom);
+            zoneRates, active, isDefault, predicate, custom, stores);
     }
 
     /**
@@ -487,7 +621,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
      */
     public ShippingMethodDraft buildUnchecked() {
         return new ShippingMethodDraftImpl(key, name, localizedName, description, localizedDescription, taxCategory,
-            zoneRates, active, isDefault, predicate, custom);
+            zoneRates, active, isDefault, predicate, custom, stores);
     }
 
     /**
@@ -516,6 +650,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
         builder.isDefault = template.getIsDefault();
         builder.predicate = template.getPredicate();
         builder.custom = template.getCustom();
+        builder.stores = template.getStores();
         return builder;
     }
 

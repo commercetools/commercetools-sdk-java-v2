@@ -44,7 +44,7 @@ public interface CustomLineItemReturnItem extends ReturnItem {
     String CUSTOM_LINE_ITEM_RETURN_ITEM = "CustomLineItemReturnItem";
 
     /**
-     *  <p>User-defined unique identifier of the CustomLineItemReturnItem.</p>
+     *  <p>User-defined identifier of the CustomLineItemReturnItem. Must be unique among Return Items in the Order.</p>
      * @return key
      */
 
@@ -68,7 +68,7 @@ public interface CustomLineItemReturnItem extends ReturnItem {
     public Long getQuantity();
 
     /**
-     *  <p>User-defined unique identifier of the CustomLineItemReturnItem.</p>
+     *  <p>User-defined identifier of the CustomLineItemReturnItem. Must be unique among Return Items in the Order.</p>
      * @param key value to be set
      */
 

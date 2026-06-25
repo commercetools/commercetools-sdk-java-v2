@@ -86,7 +86,7 @@ public class LineItemReturnItemImpl implements LineItemReturnItem, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the LineItemReturnItem.</p>
+     *  <p>User-defined identifier of the LineItemReturnItem. Must be unique among Return Items in the Order.</p>
      */
 
     public String getKey() {

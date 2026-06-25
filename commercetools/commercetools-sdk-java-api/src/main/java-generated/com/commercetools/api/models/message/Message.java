@@ -758,6 +758,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for cartLocked subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartLockedMessageBuilder cartLockedBuilder() {
+        return com.commercetools.api.models.message.CartLockedMessageBuilder.of();
+    }
+
+    /**
      * builder for cartPurchaseOrderNumberSet subtype
      * @return builder
      */
@@ -771,6 +779,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.CartUnfrozenMessageBuilder cartUnfrozenBuilder() {
         return com.commercetools.api.models.message.CartUnfrozenMessageBuilder.of();
+    }
+
+    /**
+     * builder for cartUnlocked subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartUnlockedMessageBuilder cartUnlockedBuilder() {
+        return com.commercetools.api.models.message.CartUnlockedMessageBuilder.of();
     }
 
     /**

@@ -18,8 +18,8 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Represents a RFC 7662 compliant <span>OAuth 2.0 Token Introspection</span> endpoint. For more information, see <span>Requesting an access token using an external OAuth 2.0 server</span>.</p>
- *  <p>You can only configure <strong>one</strong> external OAuth 2.0 endpoint per Project. To authenticate using multiple external services (such as social network logins), use a middle layer authentication service.</p>
+ *  <p>Represents an RFC 7662-compliant <span>OAuth 2.0 Token Introspection</span> endpoint. For more information, see <span>Requesting an access token using an external OAuth 2.0 server</span>.</p>
+ *  <p>You can only configure <strong>one</strong> external OAuth 2.0 endpoint per Project. To authenticate using multiple external services (such as social network logins), use a middle layer authentication service that delegates to those services and exposes a single RFC 7662-compliant OAuth 2.0 Token Introspection endpoint to the commercetools APIs. This middle layer is a custom service that you build and host. It receives the token introspection request from the APIs, routes the token validation to the appropriate external service, and returns the introspection response in the expected format.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExternalOAuthImpl implements ExternalOAuth, ModelBase {

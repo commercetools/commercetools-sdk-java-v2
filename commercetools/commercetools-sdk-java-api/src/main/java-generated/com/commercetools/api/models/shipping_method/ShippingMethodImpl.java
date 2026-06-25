@@ -58,6 +58,8 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
 
     private com.commercetools.api.models.type.CustomFields custom;
 
+    private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
+
     /**
      * create instance with all properties
      */
@@ -75,7 +77,8 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
             @JsonProperty("zoneRates") final java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> zoneRates,
             @JsonProperty("active") final Boolean active, @JsonProperty("isDefault") final Boolean isDefault,
             @JsonProperty("predicate") final String predicate,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
+            @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -93,6 +96,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
         this.isDefault = isDefault;
         this.predicate = predicate;
         this.custom = custom;
+        this.stores = stores;
     }
 
     /**
@@ -238,6 +242,17 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
         return this.custom;
     }
 
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If empty, the Shipping Method applies to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
+     *  </ul>
+     */
+
+    public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
+        return this.stores;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -312,6 +327,14 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
         this.custom = custom;
     }
 
+    public void setStores(final com.commercetools.api.models.store.StoreKeyReference... stores) {
+        this.stores = new ArrayList<>(Arrays.asList(stores));
+    }
+
+    public void setStores(final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
+        this.stores = stores;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -339,6 +362,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
                 .append(isDefault, that.isDefault)
                 .append(predicate, that.predicate)
                 .append(custom, that.custom)
+                .append(stores, that.stores)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -356,6 +380,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
                 .append(isDefault, that.isDefault)
                 .append(predicate, that.predicate)
                 .append(custom, that.custom)
+                .append(stores, that.stores)
                 .isEquals();
     }
 
@@ -378,6 +403,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
                 .append(isDefault)
                 .append(predicate)
                 .append(custom)
+                .append(stores)
                 .toHashCode();
     }
 
@@ -400,6 +426,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
                 .append("isDefault", isDefault)
                 .append("predicate", predicate)
                 .append("custom", custom)
+                .append("stores", stores)
                 .build();
     }
 

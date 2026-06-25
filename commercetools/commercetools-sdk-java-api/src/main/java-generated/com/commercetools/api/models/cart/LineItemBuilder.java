@@ -119,7 +119,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the LineItem.</p>
+     *  <p>User-defined identifier of the LineItem. Unique among LineItems in the Cart or Order.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -1110,7 +1110,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the LineItem.</p>
+     *  <p>User-defined identifier of the LineItem. Unique among LineItems in the Cart or Order.</p>
      * @return key
      */
 

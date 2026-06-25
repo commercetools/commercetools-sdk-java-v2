@@ -114,7 +114,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined identifier of the Custom Line Item. Unique among Custom Line Items in the Cart or Order.</p>
      */
 
     public String getKey() {

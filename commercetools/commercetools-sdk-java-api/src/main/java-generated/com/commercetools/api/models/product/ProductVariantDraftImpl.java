@@ -59,7 +59,7 @@ public class ProductVariantDraftImpl implements ProductVariantDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique SKU of the Product Variant.</p>
+     *  <p>User-defined SKU of the Product Variant. Must be unique across all ProductVariants in a Project.</p>
      */
 
     public String getSku() {
@@ -67,7 +67,7 @@ public class ProductVariantDraftImpl implements ProductVariantDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier for the ProductVariant.</p>
+     *  <p>User-defined identifier for the ProductVariant. Must be unique among ProductVariants in the same Product.</p>
      */
 
     public String getKey() {

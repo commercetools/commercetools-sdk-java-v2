@@ -72,7 +72,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     public LocalizedString getName();
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined identifier of the Custom Line Item. Must be unique among Custom Line Items in the StagedOrder.</p>
      * @return key
      */
 
@@ -162,7 +162,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined identifier of the Custom Line Item. Must be unique among Custom Line Items in the StagedOrder.</p>
      * @param key value to be set
      */
 

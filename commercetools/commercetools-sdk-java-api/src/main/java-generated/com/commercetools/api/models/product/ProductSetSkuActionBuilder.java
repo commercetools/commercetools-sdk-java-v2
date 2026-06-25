@@ -43,7 +43,7 @@ public class ProductSetSkuActionBuilder implements Builder<ProductSetSkuAction> 
     }
 
     /**
-     *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Must be unique across all ProductVariants in a Project. If empty, any existing value will be removed.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class ProductSetSkuActionBuilder implements Builder<ProductSetSkuAction> 
     }
 
     /**
-     *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Must be unique across all ProductVariants in a Project. If empty, any existing value will be removed.</p>
      * @return sku
      */
 

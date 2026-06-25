@@ -73,7 +73,7 @@ public class TaxRateImpl implements TaxRate, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the TaxRate. Present when set using <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRateDraft" rel="nofollow">TaxRateDraft</a>. Not available for external TaxRates created using <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>.</p>
+     *  <p>User-defined identifier of the TaxRate. Unique within the TaxCategory containing it. Present when set using <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRateDraft" rel="nofollow">TaxRateDraft</a>. Not available for external TaxRates created using <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>.</p>
      */
 
     public String getKey() {
@@ -113,7 +113,7 @@ public class TaxRateImpl implements TaxRate, ModelBase {
     }
 
     /**
-     *  <p>State within the country, such as Texas in the United States.</p>
+     *  <p>State within the country, such as Texas in the United States. The value is case-sensitive and must use the same casing as the <code>state</code> value in the Cart <code>shippingAddress</code>.</p>
      */
 
     public String getState() {

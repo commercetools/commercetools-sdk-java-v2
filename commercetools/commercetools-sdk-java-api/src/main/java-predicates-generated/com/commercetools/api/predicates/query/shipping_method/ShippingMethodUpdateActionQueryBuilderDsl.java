@@ -27,6 +27,13 @@ public class ShippingMethodUpdateActionQueryBuilderDsl {
             ShippingMethodUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl> asAddStore(
+            Function<com.commercetools.api.predicates.query.shipping_method.ShippingMethodAddStoreActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.shipping_method.ShippingMethodAddStoreActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.shipping_method.ShippingMethodAddStoreActionQueryBuilderDsl.of()),
+            ShippingMethodUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl> asAddZone(
             Function<com.commercetools.api.predicates.query.shipping_method.ShippingMethodAddZoneActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.shipping_method.ShippingMethodAddZoneActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -71,6 +78,13 @@ public class ShippingMethodUpdateActionQueryBuilderDsl {
         return new CombinationQueryPredicate<>(fn.apply(
             com.commercetools.api.predicates.query.shipping_method.ShippingMethodRemoveShippingRateActionQueryBuilderDsl
                     .of()),
+            ShippingMethodUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl> asRemoveStore(
+            Function<com.commercetools.api.predicates.query.shipping_method.ShippingMethodRemoveStoreActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.shipping_method.ShippingMethodRemoveStoreActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.shipping_method.ShippingMethodRemoveStoreActionQueryBuilderDsl.of()),
             ShippingMethodUpdateActionQueryBuilderDsl::of);
     }
 
@@ -134,6 +148,13 @@ public class ShippingMethodUpdateActionQueryBuilderDsl {
         return new CombinationQueryPredicate<>(fn.apply(
             com.commercetools.api.predicates.query.shipping_method.ShippingMethodSetPredicateActionQueryBuilderDsl
                     .of()),
+            ShippingMethodUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl> asSetStores(
+            Function<com.commercetools.api.predicates.query.shipping_method.ShippingMethodSetStoresActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.shipping_method.ShippingMethodSetStoresActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.shipping_method.ShippingMethodSetStoresActionQueryBuilderDsl.of()),
             ShippingMethodUpdateActionQueryBuilderDsl::of);
     }
 }

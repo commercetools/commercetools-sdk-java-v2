@@ -46,7 +46,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public Long getId();
 
     /**
-     *  <p>User-defined unique SKU of the Product Variant.</p>
+     *  <p>User-defined SKU of the Product Variant. Unique across all ProductVariants in a Project.</p>
      * @return sku
      */
 
@@ -54,7 +54,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public String getSku();
 
     /**
-     *  <p>User-defined unique identifier of the ProductVariant.</p>
+     *  <p>User-defined identifier of the ProductVariant. Unique among ProductVariants in the same Product.</p>
      *  <p>This is different from <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> <code>key</code>.</p>
      * @return key
      */
@@ -151,14 +151,14 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public void setId(final Long id);
 
     /**
-     *  <p>User-defined unique SKU of the Product Variant.</p>
+     *  <p>User-defined SKU of the Product Variant. Unique across all ProductVariants in a Project.</p>
      * @param sku value to be set
      */
 
     public void setSku(final String sku);
 
     /**
-     *  <p>User-defined unique identifier of the ProductVariant.</p>
+     *  <p>User-defined identifier of the ProductVariant. Unique among ProductVariants in the same Product.</p>
      *  <p>This is different from <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> <code>key</code>.</p>
      * @param key value to be set
      */

@@ -72,7 +72,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *  <p>User-defined unique identifier of the LineItem.</p>
+     *  <p>User-defined identifier of the LineItem. Must be unique among LineItems in the Cart.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -550,7 +550,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     *  <p>User-defined unique identifier of the LineItem.</p>
+     *  <p>User-defined identifier of the LineItem. Must be unique among LineItems in the Cart.</p>
      * @return key
      */
 

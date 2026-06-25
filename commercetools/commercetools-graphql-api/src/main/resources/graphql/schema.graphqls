@@ -64,10 +64,7 @@ type Query {
   BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
   """
   mcpServerType(type: McpServerType!, majorVersion: String): McpServerTypeCatalogEntry
-    """
-  BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-  """
-  productsSearch(query: SearchQueryInput, postFilter: SearchQueryInput, sort: [SearchSortingInput!], limit: Int, offset: Int, markMatchingVariants: Boolean, facets: [ProductSearchFacetExpressionInput!]): ProductPagedSearchResponse
+    productsSearch(query: SearchQueryInput, postFilter: SearchQueryInput, sort: [SearchSortingInput!], limit: Int, offset: Int, markMatchingVariants: Boolean, facets: [ProductSearchFacetExpressionInput!]): ProductPagedSearchResponse
     """
   This field can only be used with an access token created with the password flow or with an anonymous session.
   
@@ -1730,9 +1727,6 @@ type Product implements Versioned & ReviewTarget & ReferenceExpandable {
     lastModifiedBy: Initiator
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 type ProductPagedSearchResponse {
     total: Long!
     offset: Int
@@ -1741,33 +1735,21 @@ type ProductPagedSearchResponse {
     facets: [ProductSearchFacetResult!]!
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 type ProductSearchFacetResultBucket implements ProductSearchFacetResult {
     name: String!
     buckets: [ProductSearchFacetResultBucketEntry!]!
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 type ProductSearchFacetResultBucketEntry {
     key: String!
     count: Int!
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 type ProductSearchFacetResultCount implements ProductSearchFacetResult {
     name: String!
     value: Long!
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 type ProductSearchFacetResultStats implements ProductSearchFacetResult {
     name: String!
     min: Json
@@ -1777,9 +1759,6 @@ type ProductSearchFacetResultStats implements ProductSearchFacetResult {
     count: Long!
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 type ProductSearchResult {
     id: String!
     product(localesProjection: [String!], storeProjection: String): Product!
@@ -2807,6 +2786,35 @@ type BusinessUnitTypeSet implements MessagePayload {
     type: String!
 }
 
+type CannotChangeReservationExpiryTypedWarning implements TypedWarning {
+    lineItemId: String!
+    type: String!
+    code: TypedWarningCode!
+    message: String!
+}
+
+type CannotCreateReservationTypedWarning implements TypedWarning {
+    productId: String!
+    sku: String
+    quantity: Long!
+    supplyChannelRef: Reference
+    type: String!
+    code: TypedWarningCode!
+    message: String!
+}
+
+type CannotUpdateReservationTypedWarning implements TypedWarning {
+    lineItemId: String!
+    productId: String!
+    sku: String
+    reservedQuantity: Long!
+    requestedQuantity: Long!
+    supplyChannelRef: Reference
+    type: String!
+    code: TypedWarningCode!
+    message: String!
+}
+
 """
 A shopping cart holds product variants and can be ordered. Each cart either belongs to a registered customer or is an anonymous cart.
 """
@@ -2863,6 +2871,10 @@ type Cart implements Versioned & ReferenceExpandable {
     totalLineItemQuantity: Long
     recurringPaymentConfiguration: RecurringPaymentConfiguration
     freezeStrategy: FreezeStrategy
+    """
+  Warnings from the latest cart mutation. Not persisted and only available in mutation responses.
+  """
+  warnings: [TypedWarning!]!
     id: String!
     version: Long!
     createdAt: DateTime!
@@ -3025,6 +3037,10 @@ type CartLock {
     clientId: String!
 }
 
+type CartLocked implements MessagePayload {
+    type: String!
+}
+
 type CartPurchaseOrderNumberSet implements MessagePayload {
     purchaseOrderNumber: String
     oldPurchaseOrderNumber: String
@@ -3044,6 +3060,10 @@ type CartScoreType implements ShippingRateInputType {
 }
 
 type CartUnfrozen implements MessagePayload {
+    type: String!
+}
+
+type CartUnlocked implements MessagePayload {
     type: String!
 }
 
@@ -3955,6 +3975,12 @@ type DayOfMonthSchedule implements RecurrencePolicySchedule {
     type: String!
 }
 
+type DefaultVariantDeletedTypedWarning implements TypedWarning {
+    type: String!
+    code: TypedWarningCode!
+    message: String!
+}
+
 type Delivery {
     id: String!
     key: String
@@ -4096,6 +4122,8 @@ type DiscountCode implements Versioned & ReferenceExpandable {
   How many times this discount code was applied (only applications that were part of a successful checkout are considered)
   """
   applicationCount: Long!
+    storesRef: [KeyReference!]!
+    stores: [Store!]!
     cartDiscountRefs: [Reference!]!
     id: String!
     version: Long!
@@ -4429,6 +4457,12 @@ type FixedPriceDiscountValue implements CartDiscountValue {
     money: [BaseMoney!]!
 }
 
+type GeneralTypedWarning implements TypedWarning {
+    type: String!
+    code: TypedWarningCode!
+    message: String!
+}
+
 type GiftLineItemValue implements CartDiscountValue {
     type: String!
     variantId: Int!
@@ -4466,6 +4500,12 @@ type Image {
     url: String!
     dimensions: Dimensions!
     label: String
+}
+
+type ImageProcessingOngoingTypedWarning implements TypedWarning {
+    type: String!
+    code: TypedWarningCode!
+    message: String!
 }
 
 type ImageProductSearch {
@@ -8764,6 +8804,8 @@ type ShippingMethod implements Versioned & ReferenceExpandable {
     taxCategoryRef: Reference
     localizedDescriptionAllLocales: [LocalizedString!]
     localizedNameAllLocales: [LocalizedString!]
+    storesRef: [KeyReference!]!
+    stores: [Store!]!
     localizedDescription(
     """
     String is defined for different locales. This argument specifies the desired locale.
@@ -8800,6 +8842,7 @@ type ShippingMethodLimitWithCurrent implements LimitWithCurrent {
 }
 
 type ShippingMethodLimitsProjection {
+    stores: Limit!
     total: ShippingMethodLimitWithCurrent!
 }
 
@@ -9849,9 +9892,6 @@ interface McpServerConfig {
     toolCustomizations: [ToolCustomization!]!
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 interface ProductSearchFacetResult {
     name: String!
 }
@@ -10008,6 +10048,12 @@ interface CustomField {
 
 interface FieldType {
     name: String!
+}
+
+"""A non-fatal warning that occurred during a mutation."""
+interface TypedWarning {
+    code: TypedWarningCode!
+    message: String!
 }
 
 interface ShippingRateInputType {
@@ -10242,8 +10288,8 @@ enum McpServerType {
   CommerceMCP
 }
 enum McpServerAuthenticationMode {
-  Identity
-  BearerToken
+  CommercetoolsIdentity
+  ClientCredentials
 }
 enum McpServerState {
   Enabled
@@ -10566,6 +10612,14 @@ enum BusinessUnitConfigurationStatus {
 enum BusinessUnitSearchStatus {
   Activated
   Deactivated
+}
+enum TypedWarningCode {
+  CannotChangeReservationExpiry
+  CannotCreateReservation
+  CannotUpdateReservation
+  DefaultVariantDeleted
+  General
+  ImageProcessingOngoing
 }
 enum TaxMode {
   """No taxes are added to the cart."""
@@ -11068,9 +11122,6 @@ input SetMcpServerToolOutputFormatting {
     toolOutputFormatting: McpServerToolOutputFormatting
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 input ProductSearchFacetCountExpressionInput {
     name: String!
     scope: ProductSearchFacetScopeEnum = all
@@ -11078,17 +11129,11 @@ input ProductSearchFacetCountExpressionInput {
     level: ProductSearchFacetCountLevelEnum = products
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 input ProductSearchFacetDistinctBucketSortExpressionInput {
     by: ProductSearchFacetDistinctBucketSortBy!
     order: SearchSortOrder
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 input ProductSearchFacetDistinctExpressionInput {
     name: String!
     scope: ProductSearchFacetScopeEnum
@@ -11103,9 +11148,6 @@ input ProductSearchFacetDistinctExpressionInput {
     missing: String
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 input ProductSearchFacetExpressionInput {
     count: ProductSearchFacetCountExpressionInput
     distinct: ProductSearchFacetDistinctExpressionInput
@@ -11113,9 +11155,6 @@ input ProductSearchFacetExpressionInput {
     stats: ProductSearchFacetStatsExpressionInput
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 input ProductSearchFacetRangesExpressionInput {
     name: String!
     scope: ProductSearchFacetScopeEnum
@@ -11127,18 +11166,12 @@ input ProductSearchFacetRangesExpressionInput {
     fieldType: SearchFieldType
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 input ProductSearchFacetRangesFacetRangeInput {
     from: String
     to: String
     key: String
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 input ProductSearchFacetStatsExpressionInput {
     name: String!
     scope: ProductSearchFacetScopeEnum
@@ -11147,9 +11180,6 @@ input ProductSearchFacetStatsExpressionInput {
     fieldType: SearchFieldType
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 input SearchAnyValueExpressionInput {
     field: String!
     boost: Float
@@ -11160,9 +11190,6 @@ input SearchAnyValueExpressionInput {
     caseInsensitive: Boolean
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 input SearchDateRangeExpressionInput {
     field: String!
     boost: Float
@@ -11173,9 +11200,6 @@ input SearchDateRangeExpressionInput {
     lt: Date
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 input SearchDateTimeRangeExpressionInput {
     field: String!
     boost: Float
@@ -11186,9 +11210,6 @@ input SearchDateTimeRangeExpressionInput {
     lt: DateTime
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 input SearchExistsInput {
     field: String!
     boost: Float
@@ -11196,9 +11217,6 @@ input SearchExistsInput {
     language: String
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 input SearchFilterExpressionInput {
     and: [SearchQueryInput!]
     or: [SearchQueryInput!]
@@ -11214,9 +11232,6 @@ input SearchFilterExpressionInput {
     fuzzy: SearchFuzzyExpressionInput
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 input SearchFullTextExpressionInput {
     field: String!
     boost: Float
@@ -11226,9 +11241,6 @@ input SearchFullTextExpressionInput {
     mustMatch: SearchMatchType
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 input SearchFullTextPrefixInput {
     field: String!
     boost: Float
@@ -11238,9 +11250,6 @@ input SearchFullTextPrefixInput {
     mustMatch: SearchMatchType
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 input SearchFuzzyExpressionInput {
     field: String!
     boost: Float
@@ -11251,9 +11260,6 @@ input SearchFuzzyExpressionInput {
     mustMatch: SearchMatchType
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 input SearchLongRangeExpressionInput {
     field: String!
     boost: Float
@@ -11264,9 +11270,6 @@ input SearchLongRangeExpressionInput {
     lt: Long
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 input SearchNumberRangeExpressionInput {
     field: String!
     boost: Float
@@ -11277,9 +11280,6 @@ input SearchNumberRangeExpressionInput {
     lt: Float
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 input SearchQueryInput {
     and: [SearchQueryInput!]
     or: [SearchQueryInput!]
@@ -11295,9 +11295,6 @@ input SearchQueryInput {
     fuzzy: SearchFuzzyExpressionInput
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 input SearchQueryRangeExpressionInput {
     date: SearchDateRangeExpressionInput
     datetime: SearchDateTimeRangeExpressionInput
@@ -11306,9 +11303,6 @@ input SearchQueryRangeExpressionInput {
     float: SearchNumberRangeExpressionInput
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 input SearchSortingInput {
     field: String!
     language: String
@@ -11318,9 +11312,6 @@ input SearchSortingInput {
     filter: SearchFilterExpressionInput
 }
 
-"""
-BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
-"""
 input SearchTimeRangeExpressionInput {
     field: String!
     boost: Float
@@ -11649,6 +11640,10 @@ input AddRecurringPaymentAllocation {
 input AddShippingMethodShippingRate {
     zone: ResourceIdentifierInput!
     shippingRate: ShippingRateDraft!
+}
+
+input AddShippingMethodStore {
+    store: ResourceIdentifierInput!
 }
 
 input AddShippingMethodZone {
@@ -15294,6 +15289,10 @@ input RemoveShippingMethodShippingRate {
     shippingRate: ShippingRateDraft!
 }
 
+input RemoveShippingMethodStore {
+    store: ResourceIdentifierInput!
+}
+
 input RemoveShippingMethodZone {
     zone: ResourceIdentifierInput!
 }
@@ -17413,6 +17412,10 @@ input SetShippingMethodPredicate {
     predicate: String
 }
 
+input SetShippingMethodStores {
+    stores: [ResourceIdentifierInput!]!
+}
+
 input SetShoppingListAnonymousId {
     anonymousId: String
 }
@@ -18025,6 +18028,7 @@ input ShippingMethodDraft {
     predicate: String
     key: String
     custom: CustomFieldsDraft
+    stores: [ResourceIdentifierInput!]
 }
 
 input ShippingMethodTargetDraft {
@@ -18038,12 +18042,14 @@ input ShippingMethodTargetDraftType {
 }
 
 input ShippingMethodUpdateAction {
+    addStore: AddShippingMethodStore
     addShippingRate: AddShippingMethodShippingRate
     addZone: AddShippingMethodZone
     changeActive: ChangeShippingMethodActive
     changeIsDefault: ChangeShippingMethodIsDefault
     changeName: ChangeShippingMethodName
     changeTaxCategory: ChangeShippingMethodTaxCategory
+    removeStore: RemoveShippingMethodStore
     removeShippingRate: RemoveShippingMethodShippingRate
     removeZone: RemoveShippingMethodZone
     setCustomField: SetShippingMethodCustomField
@@ -18054,6 +18060,7 @@ input ShippingMethodUpdateAction {
     setLocalizedDescription: SetShippingMethodLocalizedDescription
     setLocalizedName: SetShippingMethodLocalizedName
     setPredicate: SetShippingMethodPredicate
+    setStores: SetShippingMethodStores
 }
 
 input ShippingRateDraft {

@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusZoneRates(zoneRatesBuilder -> zoneRatesBuilder)
  *             .active(true)
  *             .isDefault(true)
+ *             .plusStores(storesBuilder -> storesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -74,6 +75,8 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
+
+    private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
 
     /**
      *  <p>Unique identifier of the ShippingMethod.</p>
@@ -491,6 +494,114 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
+     *  <ul>
+     *   <li>If a value exists, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If empty, the Shipping Method applies to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
+     *  </ul>
+     * @param stores value to be set
+     * @return Builder
+     */
+
+    public ShippingMethodBuilder stores(final com.commercetools.api.models.store.StoreKeyReference... stores) {
+        this.stores = new ArrayList<>(Arrays.asList(stores));
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If empty, the Shipping Method applies to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
+     *  </ul>
+     * @param stores value to be set
+     * @return Builder
+     */
+
+    public ShippingMethodBuilder stores(
+            final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
+        this.stores = stores;
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If empty, the Shipping Method applies to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
+     *  </ul>
+     * @param stores value to be set
+     * @return Builder
+     */
+
+    public ShippingMethodBuilder plusStores(final com.commercetools.api.models.store.StoreKeyReference... stores) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.addAll(Arrays.asList(stores));
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If empty, the Shipping Method applies to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
+     *  </ul>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public ShippingMethodBuilder plusStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If empty, the Shipping Method applies to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
+     *  </ul>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public ShippingMethodBuilder withStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        this.stores = new ArrayList<>();
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If empty, the Shipping Method applies to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
+     *  </ul>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public ShippingMethodBuilder addStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return plusStores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If empty, the Shipping Method applies to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
+     *  </ul>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public ShippingMethodBuilder setStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return stores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
      *  <p>Unique identifier of the ShippingMethod.</p>
      * @return id
      */
@@ -653,6 +764,18 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
+     *  <ul>
+     *   <li>If a value exists, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If empty, the Shipping Method applies to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
+     *  </ul>
+     * @return stores
+     */
+
+    public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
+        return this.stores;
+    }
+
+    /**
      * builds ShippingMethod with checking for non-null required values
      * @return ShippingMethod
      */
@@ -666,9 +789,10 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
         Objects.requireNonNull(zoneRates, ShippingMethod.class + ": zoneRates is missing");
         Objects.requireNonNull(active, ShippingMethod.class + ": active is missing");
         Objects.requireNonNull(isDefault, ShippingMethod.class + ": isDefault is missing");
+        Objects.requireNonNull(stores, ShippingMethod.class + ": stores is missing");
         return new ShippingMethodImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
             localizedName, description, localizedDescription, taxCategory, zoneRates, active, isDefault, predicate,
-            custom);
+            custom, stores);
     }
 
     /**
@@ -678,7 +802,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     public ShippingMethod buildUnchecked() {
         return new ShippingMethodImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
             localizedName, description, localizedDescription, taxCategory, zoneRates, active, isDefault, predicate,
-            custom);
+            custom, stores);
     }
 
     /**
@@ -713,6 +837,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
         builder.isDefault = template.getIsDefault();
         builder.predicate = template.getPredicate();
         builder.custom = template.getCustom();
+        builder.stores = template.getStores();
         return builder;
     }
 

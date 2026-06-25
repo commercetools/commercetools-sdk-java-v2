@@ -68,7 +68,7 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     public String getCountry();
 
     /**
-     *  <p>State within the country, such as Texas in the United States.</p>
+     *  <p>State within the country, such as Texas in the United States. The value is case-sensitive and must use the same casing as the <code>state</code> value in the Cart <code>shippingAddress</code>.</p>
      * @return state
      */
 
@@ -84,7 +84,7 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     public List<SubRate> getSubRates();
 
     /**
-     *  <p>User-defined unique identifier of the TaxRate.</p>
+     *  <p>User-defined identifier of the TaxRate. Must be unique within the TaxCategory containing it.</p>
      * @return key
      */
 
@@ -120,7 +120,7 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     public void setCountry(final String country);
 
     /**
-     *  <p>State within the country, such as Texas in the United States.</p>
+     *  <p>State within the country, such as Texas in the United States. The value is case-sensitive and must use the same casing as the <code>state</code> value in the Cart <code>shippingAddress</code>.</p>
      * @param state value to be set
      */
 
@@ -142,7 +142,7 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     public void setSubRates(final List<SubRate> subRates);
 
     /**
-     *  <p>User-defined unique identifier of the TaxRate.</p>
+     *  <p>User-defined identifier of the TaxRate. Must be unique within the TaxCategory containing it.</p>
      * @param key value to be set
      */
 

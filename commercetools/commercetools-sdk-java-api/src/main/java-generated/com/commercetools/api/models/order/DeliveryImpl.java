@@ -71,7 +71,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Delivery.</p>
+     *  <p>User-defined identifier of the Delivery. Unique among Deliveries in the Order.</p>
      */
 
     public String getKey() {

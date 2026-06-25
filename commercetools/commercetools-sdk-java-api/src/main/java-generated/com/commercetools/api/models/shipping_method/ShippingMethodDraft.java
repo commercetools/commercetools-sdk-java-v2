@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
@@ -131,6 +132,18 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public CustomFieldsDraft getCustom();
 
     /**
+     *  <ul>
+     *   <li>If defined and not empty, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If not defined or empty, the Shipping Method applies to all Carts, irrespective of a Store.</li>
+     *  </ul>
+     *  <p>If the number of referenced Stores exceeds the <span>Stores per Shipping Method limit</span>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     * @return stores
+     */
+    @Valid
+    @JsonProperty("stores")
+    public List<StoreResourceIdentifier> getStores();
+
+    /**
      *  <p>User-defined unique identifier for the ShippingMethod.</p>
      * @param key value to be set
      */
@@ -216,6 +229,29 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public void setCustom(final CustomFieldsDraft custom);
 
     /**
+     *  <ul>
+     *   <li>If defined and not empty, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If not defined or empty, the Shipping Method applies to all Carts, irrespective of a Store.</li>
+     *  </ul>
+     *  <p>If the number of referenced Stores exceeds the <span>Stores per Shipping Method limit</span>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     * @param stores values to be set
+     */
+
+    @JsonIgnore
+    public void setStores(final StoreResourceIdentifier... stores);
+
+    /**
+     *  <ul>
+     *   <li>If defined and not empty, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If not defined or empty, the Shipping Method applies to all Carts, irrespective of a Store.</li>
+     *  </ul>
+     *  <p>If the number of referenced Stores exceeds the <span>Stores per Shipping Method limit</span>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     * @param stores values to be set
+     */
+
+    public void setStores(final List<StoreResourceIdentifier> stores);
+
+    /**
      * factory method
      * @return instance of ShippingMethodDraft
      */
@@ -241,6 +277,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
         instance.setIsDefault(template.getIsDefault());
         instance.setPredicate(template.getPredicate());
         instance.setCustom(template.getCustom());
+        instance.setStores(template.getStores());
         return instance;
     }
 
@@ -275,6 +312,11 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
         instance.setIsDefault(template.getIsDefault());
         instance.setPredicate(template.getPredicate());
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setStores(Optional.ofNullable(template.getStores())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store.StoreResourceIdentifier::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

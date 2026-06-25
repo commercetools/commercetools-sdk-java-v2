@@ -98,7 +98,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>User-defined unique identifier of the Line Item.</p>
+     *  <p>User-defined identifier of the Line Item. Must be unique among Line Items in the Order.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -496,7 +496,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>User-defined unique identifier of the Line Item.</p>
+     *  <p>User-defined identifier of the Line Item. Must be unique among Line Items in the Order.</p>
      * @return key
      */
 

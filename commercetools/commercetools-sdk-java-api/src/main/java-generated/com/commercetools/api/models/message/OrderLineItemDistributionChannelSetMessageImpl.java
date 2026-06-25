@@ -188,7 +188,7 @@ public class OrderLineItemDistributionChannelSetMessageImpl
     }
 
     /**
-     *  <p>User-defined unique identifier of the LineItem.</p>
+     *  <p>User-defined identifier of the LineItem. Unique among LineItems in the Order.</p>
      */
 
     public String getLineItemKey() {

@@ -85,6 +85,14 @@ public class CommonImportUtil {
                         .fractionDigits(p.getFractionDigits());
     }
 
+    public static Builder<? extends TypedMoney> importApiTypedMoney(com.commercetools.api.models.common.Money money,
+            TypedMoneyBuilder v) {
+        return v.centPrecisionBuilder()
+                .centAmount(money.getCentAmount())
+                .currencyCode(money.getCurrencyCode())
+                .fractionDigits(2);
+    }
+
     public com.commercetools.importapi.models.customfields.Custom getImportApiCustom(CustomFields customFields) {
         if (customFields == null) {
             return null;
@@ -138,9 +146,19 @@ public class CommonImportUtil {
         if (value instanceof LocalTime localTimeValue) {
             return CustomField.timeBuilder().value(localTimeValue).build();
         }
+        if (value instanceof com.commercetools.api.models.common.Money moneyValue) {
+            return CustomField.moneyBuilder()
+                    .value(v -> com.commercetools.importapi.models.common.Money.builder())
+                    .build();
+        }
         if (value instanceof com.commercetools.api.models.common.TypedMoney moneyValue) {
             return CustomField.moneyBuilder()
-                    .value(v -> importApiTypedMoney((com.commercetools.api.models.common.TypedMoney) moneyValue, v))
+                    .value(v -> importApiTypedMoney(moneyValue, v))
+                    .build();
+        }
+        if (value instanceof com.commercetools.api.models.common.Money moneyValue) {
+            return CustomField.moneyBuilder()
+                    .value(v -> importApiTypedMoney(moneyValue, v))
                     .build();
         }
         if (value instanceof List list) {
@@ -206,6 +224,14 @@ public class CommonImportUtil {
                         .build();
             }
             if (list.get(0) instanceof com.commercetools.api.models.common.TypedMoney) {
+                return CustomField.moneySetBuilder()
+                        .value((List<TypedMoney>) list.stream()
+                                .map(v -> importApiTypedMoney((com.commercetools.api.models.common.TypedMoney) v,
+                                    new TypedMoneyBuilder()).build())
+                                .toList())
+                        .build();
+            }
+            if (list.get(0) instanceof com.commercetools.api.models.common.Money) {
                 return CustomField.moneySetBuilder()
                         .value((List<TypedMoney>) list.stream()
                                 .map(v -> importApiTypedMoney((com.commercetools.api.models.common.TypedMoney) v,

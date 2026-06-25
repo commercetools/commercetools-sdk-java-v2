@@ -152,14 +152,10 @@ public class CommonImportUtil {
                     .build();
         }
         if (value instanceof com.commercetools.api.models.common.TypedMoney moneyValue) {
-            return CustomField.moneyBuilder()
-                    .value(v -> importApiTypedMoney(moneyValue, v))
-                    .build();
+            return CustomField.moneyBuilder().value(v -> importApiTypedMoney(moneyValue, v)).build();
         }
         if (value instanceof com.commercetools.api.models.common.Money moneyValue) {
-            return CustomField.moneyBuilder()
-                    .value(v -> importApiTypedMoney(moneyValue, v))
-                    .build();
+            return CustomField.moneyBuilder().value(v -> importApiTypedMoney(moneyValue, v)).build();
         }
         if (value instanceof List list) {
             if (list.isEmpty()) {

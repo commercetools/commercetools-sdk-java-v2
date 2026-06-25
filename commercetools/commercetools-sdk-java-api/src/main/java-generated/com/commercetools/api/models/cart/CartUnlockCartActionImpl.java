@@ -18,6 +18,7 @@ import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Unlocks a Cart, removing all update restrictions that are in place while a Cart is <span>locked</span>. This action requires an additional OAuth 2.0 Scope <code>manage_locked_carts</code>.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartUnlockedMessage" rel="nofollow">CartUnlocked</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartUnlockCartActionImpl implements CartUnlockCartAction, ModelBase {

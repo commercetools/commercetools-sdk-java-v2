@@ -581,6 +581,13 @@ public class MessageQueryBuilderDsl {
             MessageQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asCartLocked(
+            Function<com.commercetools.api.predicates.query.message.CartLockedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CartLockedMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.message.CartLockedMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MessageQueryBuilderDsl> asCartPurchaseOrderNumberSet(
             Function<com.commercetools.api.predicates.query.message.CartPurchaseOrderNumberSetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CartPurchaseOrderNumberSetMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -593,6 +600,13 @@ public class MessageQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.message.CartUnfrozenMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CartUnfrozenMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(com.commercetools.api.predicates.query.message.CartUnfrozenMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asCartUnlocked(
+            Function<com.commercetools.api.predicates.query.message.CartUnlockedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CartUnlockedMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.message.CartUnlockedMessageQueryBuilderDsl.of()),
             MessageQueryBuilderDsl::of);
     }
 

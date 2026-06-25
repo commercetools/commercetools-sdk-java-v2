@@ -18,6 +18,7 @@ import tools.jackson.databind.annotation.*;
 
 /**
  *  <p><span>Locks</span> a Cart, preventing all updates from API Clients without an elevated <span>OAuth 2.0 Scope</span>. This action sets the Cart's <code>lock</code> <span>field</span> which identifies the API Client that locked the Cart and when the lock was applied. This action requires an additional OAuth 2.0 Scope <code>manage_locked_carts</code>.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartLockedMessage" rel="nofollow">CartLocked</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartLockCartActionImpl implements CartLockCartAction, ModelBase {

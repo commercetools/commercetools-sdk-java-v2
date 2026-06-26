@@ -272,6 +272,13 @@ public class ResourceIdentifierQueryBuilderDsl {
             ResourceIdentifierQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl> asVariant(
+            Function<com.commercetools.api.predicates.query.variant.VariantResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.variant.VariantResourceIdentifierQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.variant.VariantResourceIdentifierQueryBuilderDsl.of()),
+            ResourceIdentifierQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl> asZone(
             Function<com.commercetools.api.predicates.query.zone.ZoneResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.zone.ZoneResourceIdentifierQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

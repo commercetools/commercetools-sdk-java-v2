@@ -185,6 +185,14 @@ public interface Project extends com.commercetools.api.models.WithKey {
     public DiscountsConfiguration getDiscounts();
 
     /**
+     *  <p>Determines how Product Variants are managed in the Project. If not set, defaults to <code>Classic</code> behavior.</p>
+     * @return productCatalogModel
+     */
+
+    @JsonProperty("productCatalogModel")
+    public ProductCatalogModel getProductCatalogModel();
+
+    /**
      *  <p>Current version of the Project.</p>
      * @param version value to be set
      */
@@ -328,6 +336,13 @@ public interface Project extends com.commercetools.api.models.WithKey {
     public void setDiscounts(final DiscountsConfiguration discounts);
 
     /**
+     *  <p>Determines how Product Variants are managed in the Project. If not set, defaults to <code>Classic</code> behavior.</p>
+     * @param productCatalogModel value to be set
+     */
+
+    public void setProductCatalogModel(final ProductCatalogModel productCatalogModel);
+
+    /**
      * factory method
      * @return instance of Project
      */
@@ -359,6 +374,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
         instance.setBusinessUnits(template.getBusinessUnits());
         instance.setInventory(template.getInventory());
         instance.setDiscounts(template.getDiscounts());
+        instance.setProductCatalogModel(template.getProductCatalogModel());
         return instance;
     }
 
@@ -400,6 +416,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
             com.commercetools.api.models.project.InventoryConfiguration.deepCopy(template.getInventory()));
         instance.setDiscounts(
             com.commercetools.api.models.project.DiscountsConfiguration.deepCopy(template.getDiscounts()));
+        instance.setProductCatalogModel(template.getProductCatalogModel());
         return instance;
     }
 

@@ -268,6 +268,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
 
     /**
      *  <p>The Master Variant of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
+     *  <p>Omitted when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variant Projections API</span> instead.</p>
      */
 
     public com.commercetools.api.models.product.ProductVariant getMasterVariant() {
@@ -276,6 +277,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variant Projections API</span> instead.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.ProductVariant> getVariants() {

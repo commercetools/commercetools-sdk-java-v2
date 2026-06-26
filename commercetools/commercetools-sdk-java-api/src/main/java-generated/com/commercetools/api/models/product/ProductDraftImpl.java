@@ -191,6 +191,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
 
     /**
      *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided or if the referenced Product Type contains any Variant-level <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> with <code>isRequired</code> set to <code>true</code>.</p>
+     *  <p>Must not be provided when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> to create Variants instead.</p>
      */
 
     public com.commercetools.api.models.product.ProductVariantDraft getMasterVariant() {
@@ -199,6 +200,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
 
     /**
      *  <p>The additional Product Variants for the Product.</p>
+     *  <p>Must not be provided when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> to create Variants instead.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.ProductVariantDraft> getVariants() {

@@ -2616,6 +2616,78 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for variantCreated subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantCreatedMessagePayloadBuilder variantCreatedBuilder() {
+        return com.commercetools.api.models.message.VariantCreatedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for variantDeleted subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantDeletedMessagePayloadBuilder variantDeletedBuilder() {
+        return com.commercetools.api.models.message.VariantDeletedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for variantImageAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantImageAddedMessagePayloadBuilder variantImageAddedBuilder() {
+        return com.commercetools.api.models.message.VariantImageAddedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for variantImagesSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantImagesSetMessagePayloadBuilder variantImagesSetBuilder() {
+        return com.commercetools.api.models.message.VariantImagesSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for variantKeySet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantKeySetMessagePayloadBuilder variantKeySetBuilder() {
+        return com.commercetools.api.models.message.VariantKeySetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for variantPublished subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantPublishedMessagePayloadBuilder variantPublishedBuilder() {
+        return com.commercetools.api.models.message.VariantPublishedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for variantSkuSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantSkuSetMessagePayloadBuilder variantSkuSetBuilder() {
+        return com.commercetools.api.models.message.VariantSkuSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for variantStagedChangesRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantStagedChangesRemovedMessagePayloadBuilder variantStagedChangesRemovedBuilder() {
+        return com.commercetools.api.models.message.VariantStagedChangesRemovedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for variantUnpublished subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantUnpublishedMessagePayloadBuilder variantUnpublishedBuilder() {
+        return com.commercetools.api.models.message.VariantUnpublishedMessagePayloadBuilder.of();
+    }
+
+    /**
      * accessor map function
      * @param <T> mapped type
      * @param helper function to map the object

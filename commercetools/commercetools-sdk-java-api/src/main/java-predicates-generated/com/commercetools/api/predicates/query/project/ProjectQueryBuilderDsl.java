@@ -148,4 +148,10 @@ public class ProjectQueryBuilderDsl {
             ProjectQueryBuilderDsl::of);
     }
 
+    public StringComparisonPredicateBuilder<ProjectQueryBuilderDsl> productCatalogModel() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("productCatalogModel")),
+            p -> new CombinationQueryPredicate<>(p, ProjectQueryBuilderDsl::of));
+    }
+
 }

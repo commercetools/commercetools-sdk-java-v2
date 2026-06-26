@@ -205,6 +205,14 @@ public interface ProjectUpdateAction extends com.commercetools.api.models.Resour
     }
 
     /**
+     * builder for setProductCatalogModel subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.project.ProjectSetProductCatalogModelActionBuilder setProductCatalogModelBuilder() {
+        return com.commercetools.api.models.project.ProjectSetProductCatalogModelActionBuilder.of();
+    }
+
+    /**
      * builder for setReleaseExpiredReservations subtype
      * @return builder
      */

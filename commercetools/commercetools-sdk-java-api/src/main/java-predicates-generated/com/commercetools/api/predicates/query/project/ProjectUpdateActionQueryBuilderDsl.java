@@ -153,6 +153,14 @@ public class ProjectUpdateActionQueryBuilderDsl {
             ProjectUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> asSetProductCatalogModel(
+            Function<com.commercetools.api.predicates.query.project.ProjectSetProductCatalogModelActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.ProjectSetProductCatalogModelActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.project.ProjectSetProductCatalogModelActionQueryBuilderDsl.of()),
+            ProjectUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> asSetReleaseExpiredReservations(
             Function<com.commercetools.api.predicates.query.project.ProjectSetReleaseExpiredReservationsActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.ProjectSetReleaseExpiredReservationsActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

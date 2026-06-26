@@ -144,6 +144,14 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for bulkOperationMaxItemsExceeded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.BulkOperationMaxItemsExceededErrorBuilder bulkOperationMaxItemsExceededBuilder() {
+        return com.commercetools.api.models.error.BulkOperationMaxItemsExceededErrorBuilder.of();
+    }
+
+    /**
      * builder for circularDependency subtype
      * @return builder
      */

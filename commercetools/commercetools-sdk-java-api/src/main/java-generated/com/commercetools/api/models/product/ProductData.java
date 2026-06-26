@@ -10,6 +10,7 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.category.CategoryReference;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.variant.VariantReference;
 import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -110,6 +111,7 @@ public interface ProductData extends ProductDataLike {
 
     /**
      *  <p>The Master Variant of the Product.</p>
+     *  <p>Omitted when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> instead.</p>
      * @return masterVariant
      */
     @NotNull
@@ -119,6 +121,7 @@ public interface ProductData extends ProductDataLike {
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> instead.</p>
      * @return variants
      */
     @NotNull
@@ -143,6 +146,14 @@ public interface ProductData extends ProductDataLike {
     @Valid
     @JsonProperty("attributes")
     public List<Attribute> getAttributes();
+
+    /**
+     *  <p>Reference to the default <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> of the Product. Only available for Projects with <span>productCatalogModel</span> set to <code>Modular</code>. The reference is automatically cleared when the referenced Variant is deleted; in that case, the response of the <span>Delete Variant</span> request includes a <code>DefaultVariantDeleted</code> warning.</p>
+     * @return defaultVariant
+     */
+    @Valid
+    @JsonProperty("defaultVariant")
+    public VariantReference getDefaultVariant();
 
     /**
      *  <p>Name of the Product.</p>
@@ -210,6 +221,7 @@ public interface ProductData extends ProductDataLike {
 
     /**
      *  <p>The Master Variant of the Product.</p>
+     *  <p>Omitted when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> instead.</p>
      * @param masterVariant value to be set
      */
 
@@ -217,6 +229,7 @@ public interface ProductData extends ProductDataLike {
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> instead.</p>
      * @param variants values to be set
      */
 
@@ -225,6 +238,7 @@ public interface ProductData extends ProductDataLike {
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> instead.</p>
      * @param variants values to be set
      */
 
@@ -253,6 +267,13 @@ public interface ProductData extends ProductDataLike {
     public void setAttributes(final List<Attribute> attributes);
 
     /**
+     *  <p>Reference to the default <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> of the Product. Only available for Projects with <span>productCatalogModel</span> set to <code>Modular</code>. The reference is automatically cleared when the referenced Variant is deleted; in that case, the response of the <span>Delete Variant</span> request includes a <code>DefaultVariantDeleted</code> warning.</p>
+     * @param defaultVariant value to be set
+     */
+
+    public void setDefaultVariant(final VariantReference defaultVariant);
+
+    /**
      * factory method
      * @return instance of ProductData
      */
@@ -279,6 +300,7 @@ public interface ProductData extends ProductDataLike {
         instance.setVariants(template.getVariants());
         instance.setSearchKeywords(template.getSearchKeywords());
         instance.setAttributes(template.getAttributes());
+        instance.setDefaultVariant(template.getDefaultVariant());
         return instance;
     }
 
@@ -325,6 +347,8 @@ public interface ProductData extends ProductDataLike {
                         .map(com.commercetools.api.models.product.Attribute::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setDefaultVariant(
+            com.commercetools.api.models.variant.VariantReference.deepCopy(template.getDefaultVariant()));
         return instance;
     }
 

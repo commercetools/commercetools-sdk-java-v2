@@ -127,6 +127,10 @@ public class ProductUpdateActionBuilder {
         return com.commercetools.api.models.product.ProductSetCategoryOrderHintActionBuilder.of();
     }
 
+    public com.commercetools.api.models.product.ProductSetDefaultVariantActionBuilder setDefaultVariantBuilder() {
+        return com.commercetools.api.models.product.ProductSetDefaultVariantActionBuilder.of();
+    }
+
     public com.commercetools.api.models.product.ProductSetDescriptionActionBuilder setDescriptionBuilder() {
         return com.commercetools.api.models.product.ProductSetDescriptionActionBuilder.of();
     }

@@ -74,6 +74,9 @@ public class ProjectBuilder implements Builder<Project> {
 
     private com.commercetools.api.models.project.DiscountsConfiguration discounts;
 
+    @Nullable
+    private com.commercetools.api.models.project.ProductCatalogModel productCatalogModel;
+
     /**
      *  <p>Current version of the Project.</p>
      * @param version value to be set
@@ -553,6 +556,18 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
+     *  <p>Determines how Product Variants are managed in the Project. If not set, defaults to <code>Classic</code> behavior.</p>
+     * @param productCatalogModel value to be set
+     * @return Builder
+     */
+
+    public ProjectBuilder productCatalogModel(
+            @Nullable final com.commercetools.api.models.project.ProductCatalogModel productCatalogModel) {
+        this.productCatalogModel = productCatalogModel;
+        return this;
+    }
+
+    /**
      *  <p>Current version of the Project.</p>
      * @return version
      */
@@ -712,6 +727,16 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
+     *  <p>Determines how Product Variants are managed in the Project. If not set, defaults to <code>Classic</code> behavior.</p>
+     * @return productCatalogModel
+     */
+
+    @Nullable
+    public com.commercetools.api.models.project.ProductCatalogModel getProductCatalogModel() {
+        return this.productCatalogModel;
+    }
+
+    /**
      * builds Project with checking for non-null required values
      * @return Project
      */
@@ -729,7 +754,7 @@ public class ProjectBuilder implements Builder<Project> {
         Objects.requireNonNull(discounts, Project.class + ": discounts is missing");
         return new ProjectImpl(version, key, name, countries, currencies, languages, createdAt, trialUntil, messages,
             carts, shoppingLists, shippingRateInputType, externalOAuth, searchIndexing, businessUnits, inventory,
-            discounts);
+            discounts, productCatalogModel);
     }
 
     /**
@@ -739,7 +764,7 @@ public class ProjectBuilder implements Builder<Project> {
     public Project buildUnchecked() {
         return new ProjectImpl(version, key, name, countries, currencies, languages, createdAt, trialUntil, messages,
             carts, shoppingLists, shippingRateInputType, externalOAuth, searchIndexing, businessUnits, inventory,
-            discounts);
+            discounts, productCatalogModel);
     }
 
     /**
@@ -774,6 +799,7 @@ public class ProjectBuilder implements Builder<Project> {
         builder.businessUnits = template.getBusinessUnits();
         builder.inventory = template.getInventory();
         builder.discounts = template.getDiscounts();
+        builder.productCatalogModel = template.getProductCatalogModel();
         return builder;
     }
 

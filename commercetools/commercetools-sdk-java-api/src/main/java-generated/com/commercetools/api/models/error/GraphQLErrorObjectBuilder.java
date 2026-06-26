@@ -35,6 +35,10 @@ public class GraphQLErrorObjectBuilder {
         return com.commercetools.api.models.error.GraphQLBadGatewayErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.GraphQLBulkOperationMaxItemsExceededErrorBuilder bulkOperationMaxItemsExceededBuilder() {
+        return com.commercetools.api.models.error.GraphQLBulkOperationMaxItemsExceededErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.GraphQLCircularDependencyErrorBuilder circularDependencyBuilder() {
         return com.commercetools.api.models.error.GraphQLCircularDependencyErrorBuilder.of();
     }

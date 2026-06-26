@@ -83,6 +83,10 @@ public class ProjectUpdateActionBuilder {
         return com.commercetools.api.models.project.ProjectSetExternalOAuthActionBuilder.of();
     }
 
+    public com.commercetools.api.models.project.ProjectSetProductCatalogModelActionBuilder setProductCatalogModelBuilder() {
+        return com.commercetools.api.models.project.ProjectSetProductCatalogModelActionBuilder.of();
+    }
+
     public com.commercetools.api.models.project.ProjectSetReleaseExpiredReservationsActionBuilder setReleaseExpiredReservationsBuilder() {
         return com.commercetools.api.models.project.ProjectSetReleaseExpiredReservationsActionBuilder.of();
     }

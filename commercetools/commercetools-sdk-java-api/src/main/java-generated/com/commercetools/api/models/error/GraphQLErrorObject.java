@@ -126,6 +126,14 @@ public interface GraphQLErrorObject {
     }
 
     /**
+     * builder for bulkOperationMaxItemsExceeded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLBulkOperationMaxItemsExceededErrorBuilder bulkOperationMaxItemsExceededBuilder() {
+        return com.commercetools.api.models.error.GraphQLBulkOperationMaxItemsExceededErrorBuilder.of();
+    }
+
+    /**
      * builder for circularDependency subtype
      * @return builder
      */

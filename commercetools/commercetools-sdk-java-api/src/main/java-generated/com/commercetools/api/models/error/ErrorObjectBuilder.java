@@ -35,6 +35,10 @@ public class ErrorObjectBuilder {
         return com.commercetools.api.models.error.BadGatewayErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.BulkOperationMaxItemsExceededErrorBuilder bulkOperationMaxItemsExceededBuilder() {
+        return com.commercetools.api.models.error.BulkOperationMaxItemsExceededErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.CircularDependencyErrorBuilder circularDependencyBuilder() {
         return com.commercetools.api.models.error.CircularDependencyErrorBuilder.of();
     }

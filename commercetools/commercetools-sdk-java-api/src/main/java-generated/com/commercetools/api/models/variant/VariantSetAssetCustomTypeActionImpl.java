@@ -1,0 +1,180 @@
+
+package com.commercetools.api.models.variant;
+
+import java.time.*;
+import java.util.*;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.vrap.rmf.base.client.ModelBase;
+import io.vrap.rmf.base.client.utils.Generated;
+
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
+
+/**
+ *  <p>Sets or removes the Custom Type on an existing Asset of a Variant. The Asset to update must be specified using either <code>assetId</code> or <code>assetKey</code>.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+public class VariantSetAssetCustomTypeActionImpl implements VariantSetAssetCustomTypeAction, ModelBase {
+
+    private String action;
+
+    private Boolean staged;
+
+    private String assetId;
+
+    private String assetKey;
+
+    private com.commercetools.api.models.type.TypeResourceIdentifier type;
+
+    private com.commercetools.api.models.type.FieldContainer fields;
+
+    /**
+     * create instance with all properties
+     */
+    @JsonCreator
+    VariantSetAssetCustomTypeActionImpl(@JsonProperty("staged") final Boolean staged,
+            @JsonProperty("assetId") final String assetId, @JsonProperty("assetKey") final String assetKey,
+            @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
+            @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
+        this.staged = staged;
+        this.assetId = assetId;
+        this.assetKey = assetKey;
+        this.type = type;
+        this.fields = fields;
+        this.action = SET_ASSET_CUSTOM_TYPE;
+    }
+
+    /**
+     * create empty instance
+     */
+    public VariantSetAssetCustomTypeActionImpl() {
+        this.action = SET_ASSET_CUSTOM_TYPE;
+    }
+
+    /**
+     *
+     */
+
+    public String getAction() {
+        return this.action;
+    }
+
+    /**
+     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     */
+
+    public Boolean getStaged() {
+        return this.staged;
+    }
+
+    /**
+     *  <p>The <code>id</code> of the Asset to update.</p>
+     */
+
+    public String getAssetId() {
+        return this.assetId;
+    }
+
+    /**
+     *  <p>The <code>key</code> of the Asset to update.</p>
+     */
+
+    public String getAssetKey() {
+        return this.assetKey;
+    }
+
+    /**
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Asset with <span>Custom Fields</span>. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
+     */
+
+    public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
+        return this.type;
+    }
+
+    /**
+     *  <p>Sets the <span>Custom Fields</span> fields for the Asset.</p>
+     */
+
+    public com.commercetools.api.models.type.FieldContainer getFields() {
+        return this.fields;
+    }
+
+    public void setStaged(final Boolean staged) {
+        this.staged = staged;
+    }
+
+    public void setAssetId(final String assetId) {
+        this.assetId = assetId;
+    }
+
+    public void setAssetKey(final String assetKey) {
+        this.assetKey = assetKey;
+    }
+
+    public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type) {
+        this.type = type;
+    }
+
+    public void setFields(final com.commercetools.api.models.type.FieldContainer fields) {
+        this.fields = fields;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        VariantSetAssetCustomTypeActionImpl that = (VariantSetAssetCustomTypeActionImpl) o;
+
+        return new EqualsBuilder().append(action, that.action)
+                .append(staged, that.staged)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .append(action, that.action)
+                .append(staged, that.staged)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(staged)
+                .append(assetId)
+                .append(assetKey)
+                .append(type)
+                .append(fields)
+                .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("staged", staged)
+                .append("assetId", assetId)
+                .append("assetKey", assetKey)
+                .append("type", type)
+                .append("fields", fields)
+                .build();
+    }
+
+    @Override
+    public VariantSetAssetCustomTypeAction copyDeep() {
+        return VariantSetAssetCustomTypeAction.deepCopy(this);
+    }
+}

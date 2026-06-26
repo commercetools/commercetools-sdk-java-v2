@@ -45,8 +45,13 @@ public class ProjectTest {
                 new Object[] { "inventory",
                         Project.builder()
                                 .inventory(new com.commercetools.api.models.project.InventoryConfigurationImpl()) },
-                new Object[] { "discounts", Project.builder()
-                        .discounts(new com.commercetools.api.models.project.DiscountsConfigurationImpl()) } };
+                new Object[] { "discounts",
+                        Project.builder()
+                                .discounts(new com.commercetools.api.models.project.DiscountsConfigurationImpl()) },
+                new Object[] { "productCatalogModel",
+                        Project.builder()
+                                .productCatalogModel(
+                                    com.commercetools.api.models.project.ProductCatalogModel.findEnum("Classic")) } };
     }
 
     @Test
@@ -175,5 +180,13 @@ public class ProjectTest {
         value.setDiscounts(new com.commercetools.api.models.project.DiscountsConfigurationImpl());
         Assertions.assertThat(value.getDiscounts())
                 .isEqualTo(new com.commercetools.api.models.project.DiscountsConfigurationImpl());
+    }
+
+    @Test
+    public void productCatalogModel() {
+        Project value = Project.of();
+        value.setProductCatalogModel(com.commercetools.api.models.project.ProductCatalogModel.findEnum("Classic"));
+        Assertions.assertThat(value.getProductCatalogModel())
+                .isEqualTo(com.commercetools.api.models.project.ProductCatalogModel.findEnum("Classic"));
     }
 }

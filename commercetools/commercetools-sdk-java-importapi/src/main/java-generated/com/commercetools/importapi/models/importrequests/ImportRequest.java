@@ -198,6 +198,14 @@ public interface ImportRequest {
     }
 
     /**
+     * builder for variant subtype
+     * @return builder
+     */
+    public static com.commercetools.importapi.models.importrequests.VariantImportRequestBuilder variantBuilder() {
+        return com.commercetools.importapi.models.importrequests.VariantImportRequestBuilder.of();
+    }
+
+    /**
      * accessor map function
      * @param <T> mapped type
      * @param helper function to map the object

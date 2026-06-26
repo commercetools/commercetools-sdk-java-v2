@@ -397,6 +397,14 @@ public interface Reference extends ReferenceMixin {
     }
 
     /**
+     * builder for variant subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.variant.VariantReferenceBuilder variantBuilder() {
+        return com.commercetools.api.models.variant.VariantReferenceBuilder.of();
+    }
+
+    /**
      * builder for zone subtype
      * @return builder
      */

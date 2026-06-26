@@ -51,9 +51,12 @@ public class ProductDataTest {
                 new Object[] { "searchKeywords",
                         ProductData.builder()
                                 .searchKeywords(new com.commercetools.api.models.product.SearchKeywordsImpl()) },
-                new Object[] { "attributes", ProductData.builder()
-                        .attributes(
-                            Collections.singletonList(new com.commercetools.api.models.product.AttributeImpl())) } };
+                new Object[] { "attributes",
+                        ProductData.builder()
+                                .attributes(Collections
+                                        .singletonList(new com.commercetools.api.models.product.AttributeImpl())) },
+                new Object[] { "defaultVariant", ProductData.builder()
+                        .defaultVariant(new com.commercetools.api.models.variant.VariantReferenceImpl()) } };
     }
 
     @Test
@@ -150,5 +153,13 @@ public class ProductDataTest {
         value.setAttributes(Collections.singletonList(new com.commercetools.api.models.product.AttributeImpl()));
         Assertions.assertThat(value.getAttributes())
                 .isEqualTo(Collections.singletonList(new com.commercetools.api.models.product.AttributeImpl()));
+    }
+
+    @Test
+    public void defaultVariant() {
+        ProductData value = ProductData.of();
+        value.setDefaultVariant(new com.commercetools.api.models.variant.VariantReferenceImpl());
+        Assertions.assertThat(value.getDefaultVariant())
+                .isEqualTo(new com.commercetools.api.models.variant.VariantReferenceImpl());
     }
 }

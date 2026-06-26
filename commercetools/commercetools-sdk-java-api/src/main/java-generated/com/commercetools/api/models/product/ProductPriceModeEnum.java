@@ -12,6 +12,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>This mode determines the type of Prices used for <span>price selection</span> by Line Items and Products. For more information about the difference between the Prices, see <span>Pricing</span>.</p>
+ *  <p>In Projects with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Classic</code>, you can configure the price mode. In Projects with the <code>Modular</code> catalog model, the price mode is always <code>Standalone</code> and cannot be configured.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ProductPriceModeEnum extends JsonEnum {

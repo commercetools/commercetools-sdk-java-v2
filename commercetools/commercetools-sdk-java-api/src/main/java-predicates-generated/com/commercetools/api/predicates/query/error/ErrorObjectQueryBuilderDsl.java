@@ -69,6 +69,14 @@ public class ErrorObjectQueryBuilderDsl {
             ErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asBulkOperationMaxItemsExceeded(
+            Function<com.commercetools.api.predicates.query.error.BulkOperationMaxItemsExceededErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.BulkOperationMaxItemsExceededErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.error.BulkOperationMaxItemsExceededErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asCircularDependency(
             Function<com.commercetools.api.predicates.query.error.CircularDependencyErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.CircularDependencyErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

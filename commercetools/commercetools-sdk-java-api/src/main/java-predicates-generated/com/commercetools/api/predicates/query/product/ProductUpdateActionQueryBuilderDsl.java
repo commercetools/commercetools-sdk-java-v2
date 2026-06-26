@@ -230,6 +230,13 @@ public class ProductUpdateActionQueryBuilderDsl {
             ProductUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ProductUpdateActionQueryBuilderDsl> asSetDefaultVariant(
+            Function<com.commercetools.api.predicates.query.product.ProductSetDefaultVariantActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.ProductSetDefaultVariantActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.product.ProductSetDefaultVariantActionQueryBuilderDsl.of()),
+            ProductUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ProductUpdateActionQueryBuilderDsl> asSetDescription(
             Function<com.commercetools.api.predicates.query.product.ProductSetDescriptionActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.ProductSetDescriptionActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

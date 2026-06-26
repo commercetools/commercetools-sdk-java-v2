@@ -65,6 +65,13 @@ public class GraphQLErrorObjectQueryBuilderDsl {
             GraphQLErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asBulkOperationMaxItemsExceeded(
+            Function<com.commercetools.api.predicates.query.error.GraphQLBulkOperationMaxItemsExceededErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLBulkOperationMaxItemsExceededErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.error.GraphQLBulkOperationMaxItemsExceededErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asCircularDependency(
             Function<com.commercetools.api.predicates.query.error.GraphQLCircularDependencyErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLCircularDependencyErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

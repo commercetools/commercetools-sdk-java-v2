@@ -151,9 +151,6 @@ public class CommonImportUtil {
                     .value(v -> com.commercetools.importapi.models.common.Money.builder())
                     .build();
         }
-        if (value instanceof com.commercetools.api.models.common.TypedMoney moneyValue) {
-            return CustomField.moneyBuilder().value(v -> importApiTypedMoney(moneyValue, v)).build();
-        }
         if (value instanceof com.commercetools.api.models.common.Money moneyValue) {
             return CustomField.moneyBuilder().value(v -> importApiTypedMoney(moneyValue, v)).build();
         }
@@ -217,14 +214,6 @@ public class CommonImportUtil {
                 return CustomField.enumSetBuilder()
                         .value(
                             (List<String>) list.stream().map(x -> ((AttributeLocalizedEnumValue) x).getKey()).toList())
-                        .build();
-            }
-            if (list.get(0) instanceof com.commercetools.api.models.common.TypedMoney) {
-                return CustomField.moneySetBuilder()
-                        .value((List<TypedMoney>) list.stream()
-                                .map(v -> importApiTypedMoney((com.commercetools.api.models.common.TypedMoney) v,
-                                    new TypedMoneyBuilder()).build())
-                                .toList())
                         .build();
             }
             if (list.get(0) instanceof com.commercetools.api.models.common.Money) {

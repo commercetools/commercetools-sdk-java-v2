@@ -146,20 +146,16 @@ public class CommonImportUtil {
         if (value instanceof LocalTime localTimeValue) {
             return CustomField.timeBuilder().value(localTimeValue).build();
         }
-        if (value instanceof com.commercetools.api.models.common.TypedMoney moneyValue) {
-            return CustomField.moneyBuilder()
-                    .value(v -> importApiTypedMoney(moneyValue, v))
-                    .build();
-        }
         if (value instanceof com.commercetools.api.models.common.Money moneyValue) {
             return CustomField.moneyBuilder()
                     .value(v -> com.commercetools.importapi.models.common.Money.builder())
                     .build();
         }
+        if (value instanceof com.commercetools.api.models.common.TypedMoney moneyValue) {
+            return CustomField.moneyBuilder().value(v -> importApiTypedMoney(moneyValue, v)).build();
+        }
         if (value instanceof com.commercetools.api.models.common.Money moneyValue) {
-            return CustomField.moneyBuilder()
-                    .value(v -> importApiTypedMoney(moneyValue, v))
-                    .build();
+            return CustomField.moneyBuilder().value(v -> importApiTypedMoney(moneyValue, v)).build();
         }
         if (value instanceof List list) {
             if (list.isEmpty()) {

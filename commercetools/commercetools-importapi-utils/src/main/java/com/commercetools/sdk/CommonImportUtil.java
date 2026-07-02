@@ -152,9 +152,7 @@ public class CommonImportUtil {
                     .build();
         }
         if (value instanceof com.commercetools.api.models.common.TypedMoney moneyValue) {
-            return CustomField.moneyBuilder()
-                    .value(v -> importApiTypedMoney(moneyValue, v))
-                    .build();
+            return CustomField.moneyBuilder().value(v -> importApiTypedMoney(moneyValue, v)).build();
         }
         if (value instanceof com.commercetools.api.models.common.Money moneyValue) {
             return CustomField.moneyBuilder()
@@ -235,19 +233,15 @@ public class CommonImportUtil {
                         .build();
             }
             if (list.get(0) instanceof com.commercetools.api.models.common.Money) {
-                return CustomField.moneySetBuilder()
-                        .value((List<TypedMoney>) list.stream()
-                                .map(item -> {
-                                    com.commercetools.api.models.common.TypedMoney typedMoney =
-                                            com.commercetools.api.models.common.CentPrecisionMoney.builder()
-                                                    .centAmount(((com.commercetools.api.models.common.Money) item).getCentAmount())
-                                                    .currencyCode(((com.commercetools.api.models.common.Money) item).getCurrencyCode())
-                                                    .fractionDigits(2)
-                                                    .build();
-                                    return importApiTypedMoney(typedMoney, new TypedMoneyBuilder()).build();
-                                })
-                                .collect(Collectors.toList()))
-                        .build();
+                return CustomField.moneySetBuilder().value((List<TypedMoney>) list.stream().map(item -> {
+                    com.commercetools.api.models.common.TypedMoney typedMoney = com.commercetools.api.models.common.CentPrecisionMoney
+                            .builder()
+                            .centAmount(((com.commercetools.api.models.common.Money) item).getCentAmount())
+                            .currencyCode(((com.commercetools.api.models.common.Money) item).getCurrencyCode())
+                            .fractionDigits(2)
+                            .build();
+                    return importApiTypedMoney(typedMoney, new TypedMoneyBuilder()).build();
+                }).collect(Collectors.toList())).build();
             }
         }
         throw new IllegalArgumentException("Unsupported custom field type: " + value.getClass());

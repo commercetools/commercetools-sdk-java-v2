@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>The retention policy of the ImportContainer. If not set, the ImportContainer does not expire.</p>
+ *  <p>Defines how long an <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainer</a> is kept before it is automatically deleted. When you set <code>retentionPolicy</code> on an <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainerDraft" rel="nofollow">ImportContainerDraft</a>, the <code>timeToLive</code> value controls expiry. When you omit <code>retentionPolicy</code> on create, the Import API applies a <strong>default time to live of 72 hours</strong> (see <code>expiresAt</code> on <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainer</a>).</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RetentionPolicyImpl implements RetentionPolicy, ModelBase {

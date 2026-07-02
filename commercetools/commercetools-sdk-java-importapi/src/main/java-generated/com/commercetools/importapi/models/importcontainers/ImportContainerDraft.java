@@ -17,7 +17,8 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>The representation sent to the server to create an <span>ImportContainer</span>.</p>
+ *  <p>The representation sent to the server to create an <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainer</a>.</p>
+ *  <p>If you <strong>omit</strong> <code>retentionPolicy</code>, the new ImportContainer uses the default <strong>72-hour</strong> time to live. Set a <a href="https://docs.commercetools.com/apis/ctp:import:type:TimeToLiveRetentionPolicy" rel="nofollow">TimeToLiveRetentionPolicy</a> to use a custom duration (within the allowed minimum and maximum).</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -50,7 +51,7 @@ public interface ImportContainerDraft extends io.vrap.rmf.base.client.Draft<Impo
     public ImportResourceType getResourceType();
 
     /**
-     *  <p>Set a retention policy to automatically delete the ImportContainer after a defined period.</p>
+     *  <p>Optional. When set, defines how long the ImportContainer is kept before automatic deletion. When omitted, the ImportContainer receives the default <strong>72-hour</strong> lifetime.</p>
      * @return retentionPolicy
      */
     @Valid
@@ -72,7 +73,7 @@ public interface ImportContainerDraft extends io.vrap.rmf.base.client.Draft<Impo
     public void setResourceType(final ImportResourceType resourceType);
 
     /**
-     *  <p>Set a retention policy to automatically delete the ImportContainer after a defined period.</p>
+     *  <p>Optional. When set, defines how long the ImportContainer is kept before automatic deletion. When omitted, the ImportContainer receives the default <strong>72-hour</strong> lifetime.</p>
      * @param retentionPolicy value to be set
      */
 

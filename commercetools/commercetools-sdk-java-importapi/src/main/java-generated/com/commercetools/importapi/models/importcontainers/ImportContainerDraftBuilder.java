@@ -56,7 +56,7 @@ public class ImportContainerDraftBuilder implements Builder<ImportContainerDraft
     }
 
     /**
-     *  <p>Set a retention policy to automatically delete the ImportContainer after a defined period.</p>
+     *  <p>Optional. When set, defines how long the ImportContainer is kept before automatic deletion. When omitted, the ImportContainer receives the default <strong>72-hour</strong> lifetime.</p>
      * @param retentionPolicy value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class ImportContainerDraftBuilder implements Builder<ImportContainerDraft
     }
 
     /**
-     *  <p>Set a retention policy to automatically delete the ImportContainer after a defined period.</p>
+     *  <p>Optional. When set, defines how long the ImportContainer is kept before automatic deletion. When omitted, the ImportContainer receives the default <strong>72-hour</strong> lifetime.</p>
      * @param builder function to build the retentionPolicy value
      * @return Builder
      */
@@ -101,7 +101,7 @@ public class ImportContainerDraftBuilder implements Builder<ImportContainerDraft
     }
 
     /**
-     *  <p>Set a retention policy to automatically delete the ImportContainer after a defined period.</p>
+     *  <p>Optional. When set, defines how long the ImportContainer is kept before automatic deletion. When omitted, the ImportContainer receives the default <strong>72-hour</strong> lifetime.</p>
      * @return retentionPolicy
      */
 

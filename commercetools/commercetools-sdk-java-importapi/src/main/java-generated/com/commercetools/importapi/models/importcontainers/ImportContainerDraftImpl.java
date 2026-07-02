@@ -18,7 +18,8 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>The representation sent to the server to create an <span>ImportContainer</span>.</p>
+ *  <p>The representation sent to the server to create an <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainer</a>.</p>
+ *  <p>If you <strong>omit</strong> <code>retentionPolicy</code>, the new ImportContainer uses the default <strong>72-hour</strong> time to live. Set a <a href="https://docs.commercetools.com/apis/ctp:import:type:TimeToLiveRetentionPolicy" rel="nofollow">TimeToLiveRetentionPolicy</a> to use a custom duration (within the allowed minimum and maximum).</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportContainerDraftImpl implements ImportContainerDraft, ModelBase {
@@ -64,7 +65,7 @@ public class ImportContainerDraftImpl implements ImportContainerDraft, ModelBase
     }
 
     /**
-     *  <p>Set a retention policy to automatically delete the ImportContainer after a defined period.</p>
+     *  <p>Optional. When set, defines how long the ImportContainer is kept before automatic deletion. When omitted, the ImportContainer receives the default <strong>72-hour</strong> lifetime.</p>
      */
 
     public com.commercetools.importapi.models.importcontainers.RetentionPolicy getRetentionPolicy() {

@@ -103,7 +103,7 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
     }
 
     /**
-     *  <p>The number of items in the Custom Line Item. Can be a negative value.</p>
+     *  <p>Quantity of items in the Custom Line Item. Can be a negative value.</p>
      */
 
     public Long getQuantity() {

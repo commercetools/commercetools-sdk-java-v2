@@ -76,7 +76,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     *  <p>Number of Line Items returned.</p>
+     *  <p>Quantity of Line Items returned.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -213,7 +213,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     *  <p>Number of Line Items returned.</p>
+     *  <p>Quantity of Line Items returned.</p>
      * @return quantity
      */
 

@@ -60,7 +60,7 @@ public interface CustomLineItemReturnItem extends ReturnItem {
     public String getCustomLineItemId();
 
     /**
-     *  <p>Number of Custom Line Items returned.</p>
+     *  <p>Quantity of Custom Line Items returned.</p>
      * @return quantity
      */
     @NotNull
@@ -82,7 +82,7 @@ public interface CustomLineItemReturnItem extends ReturnItem {
     public void setCustomLineItemId(final String customLineItemId);
 
     /**
-     *  <p>Number of Custom Line Items returned.</p>
+     *  <p>Quantity of Custom Line Items returned.</p>
      * @param quantity value to be set
      */
 

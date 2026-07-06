@@ -157,7 +157,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>The number of Product Variants in the LineItem. Can be a negative value.</p>
+     *  <p>Quantity of the Product Variant. Can be a negative value.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -526,7 +526,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>The number of Product Variants in the LineItem. Can be a negative value.</p>
+     *  <p>Quantity of the Product Variant. Can be a negative value.</p>
      * @return quantity
      */
 

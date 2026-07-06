@@ -78,6 +78,7 @@ public class StagedOrderSetReturnShipmentStateActionImpl implements StagedOrderS
 
     /**
      *  <p>New shipment state of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
+     *  <p>This update action can only transition Return Items from the <code>Returned</code> state to <code>BackInStock</code> or <code>Unusable</code>. The initial <code>Advised</code> and <code>Returned</code> states can only be set at creation time on <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItemDraft" rel="nofollow">ReturnItemDraft</a>.</p>
      */
 
     public com.commercetools.api.models.order.ReturnShipmentState getShipmentState() {

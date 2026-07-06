@@ -114,7 +114,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     *  <p>The number of items in the Custom Line Item. Can be a negative value.</p>
+     *  <p>Quantity of items in the Custom Line Item. Can be a negative value.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -443,7 +443,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     *  <p>The number of items in the Custom Line Item. Can be a negative value.</p>
+     *  <p>Quantity of items in the Custom Line Item. Can be a negative value.</p>
      * @return quantity
      */
 

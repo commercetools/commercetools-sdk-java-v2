@@ -110,7 +110,7 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
     }
 
     /**
-     *  <p>Number of Product Variants to add to the Cart.</p>
+     *  <p>Quantity of Product Variants to add to the Cart.</p>
      */
 
     public Long getQuantity() {
@@ -118,7 +118,7 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
     }
 
     /**
-     *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
+     *  <p>Date and time (UTC) the Product Variant was added to the Cart. If not set, it defaults to the current date and time.</p>
      *  <p>Optional for backwards compatibility reasons.</p>
      */
 

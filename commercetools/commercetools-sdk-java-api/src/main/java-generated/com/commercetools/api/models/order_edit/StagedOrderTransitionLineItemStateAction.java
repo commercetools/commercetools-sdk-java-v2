@@ -60,7 +60,7 @@ public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpd
     public String getLineItemKey();
 
     /**
-     *  <p>Number of Line Items that should transition <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
+     *  <p>Quantity of Line Items that should transition <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      * @return quantity
      */
     @NotNull
@@ -108,7 +108,7 @@ public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpd
     public void setLineItemKey(final String lineItemKey);
 
     /**
-     *  <p>Number of Line Items that should transition <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
+     *  <p>Quantity of Line Items that should transition <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      * @param quantity value to be set
      */
 

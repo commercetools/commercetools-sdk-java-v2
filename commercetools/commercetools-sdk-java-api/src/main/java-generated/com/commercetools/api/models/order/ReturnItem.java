@@ -58,7 +58,7 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
     public String getKey();
 
     /**
-     *  <p>Number of Line Items or Custom Line Items returned.</p>
+     *  <p>Quantity of Line Items or Custom Line Items returned.</p>
      * @return quantity
      */
     @NotNull
@@ -140,7 +140,7 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
     public void setKey(final String key);
 
     /**
-     *  <p>Number of Line Items or Custom Line Items returned.</p>
+     *  <p>Quantity of Line Items or Custom Line Items returned.</p>
      * @param quantity value to be set
      */
 

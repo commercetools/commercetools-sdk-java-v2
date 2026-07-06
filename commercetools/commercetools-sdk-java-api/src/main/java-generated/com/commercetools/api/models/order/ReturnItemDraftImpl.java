@@ -71,7 +71,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-     *  <p>Number of Line Items or Custom Line Items to return.</p>
+     *  <p>Quantity of Line Items or Custom Line Items to return.</p>
      */
 
     public Long getQuantity() {

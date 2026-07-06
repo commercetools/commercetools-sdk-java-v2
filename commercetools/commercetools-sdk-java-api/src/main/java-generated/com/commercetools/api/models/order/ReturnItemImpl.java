@@ -90,7 +90,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     *  <p>Number of Line Items or Custom Line Items returned.</p>
+     *  <p>Quantity of Line Items or Custom Line Items returned.</p>
      */
 
     public Long getQuantity() {

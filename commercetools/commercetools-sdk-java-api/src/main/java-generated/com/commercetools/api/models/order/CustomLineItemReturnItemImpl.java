@@ -94,7 +94,7 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
     }
 
     /**
-     *  <p>Number of Custom Line Items returned.</p>
+     *  <p>Quantity of Custom Line Items returned.</p>
      */
 
     public Long getQuantity() {

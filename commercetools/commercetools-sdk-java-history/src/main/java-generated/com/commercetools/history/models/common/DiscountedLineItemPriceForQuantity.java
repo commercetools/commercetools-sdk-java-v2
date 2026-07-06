@@ -34,7 +34,7 @@ import tools.jackson.databind.annotation.*;
 public interface DiscountedLineItemPriceForQuantity {
 
     /**
-     *  <p>Number of Line Items or Custom Line Items in the Cart.</p>
+     *  <p>Quantity of Line Items or Custom Line Items in the Cart.</p>
      * @return quantity
      */
     @NotNull
@@ -51,7 +51,7 @@ public interface DiscountedLineItemPriceForQuantity {
     public DiscountedLineItemPrice getDiscountedPrice();
 
     /**
-     *  <p>Number of Line Items or Custom Line Items in the Cart.</p>
+     *  <p>Quantity of Line Items or Custom Line Items in the Cart.</p>
      * @param quantity value to be set
      */
 

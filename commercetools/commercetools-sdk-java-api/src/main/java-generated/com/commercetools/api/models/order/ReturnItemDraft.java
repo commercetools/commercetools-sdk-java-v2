@@ -44,7 +44,7 @@ public interface ReturnItemDraft extends com.commercetools.api.models.Customizab
     public String getKey();
 
     /**
-     *  <p>Number of Line Items or Custom Line Items to return.</p>
+     *  <p>Quantity of Line Items or Custom Line Items to return.</p>
      * @return quantity
      */
     @NotNull
@@ -101,7 +101,7 @@ public interface ReturnItemDraft extends com.commercetools.api.models.Customizab
     public void setKey(final String key);
 
     /**
-     *  <p>Number of Line Items or Custom Line Items to return.</p>
+     *  <p>Quantity of Line Items or Custom Line Items to return.</p>
      * @param quantity value to be set
      */
 

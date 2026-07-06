@@ -59,7 +59,7 @@ public interface OrderTransitionLineItemStateAction extends OrderUpdateAction {
     public String getLineItemKey();
 
     /**
-     *  <p>Number of Line Items that should transition <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
+     *  <p>Quantity of Line Items that should transition <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      * @return quantity
      */
     @NotNull
@@ -107,7 +107,7 @@ public interface OrderTransitionLineItemStateAction extends OrderUpdateAction {
     public void setLineItemKey(final String lineItemKey);
 
     /**
-     *  <p>Number of Line Items that should transition <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
+     *  <p>Quantity of Line Items that should transition <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      * @param quantity value to be set
      */
 

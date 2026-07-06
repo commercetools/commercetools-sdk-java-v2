@@ -49,7 +49,7 @@ public interface MultiBuyLineItemsTarget extends CartDiscountTarget {
     public String getPredicate();
 
     /**
-     *  <p>Number of Line Items to be present in order to trigger an application of this Discount.</p>
+     *  <p>Quantity of Line Items required to trigger an application of this Discount.</p>
      * @return triggerQuantity
      */
     @NotNull
@@ -57,7 +57,7 @@ public interface MultiBuyLineItemsTarget extends CartDiscountTarget {
     public Integer getTriggerQuantity();
 
     /**
-     *  <p>Number of Line Items that are discounted per application of this Discount. It must be less than or equal to the <code>triggerQuantity</code>.</p>
+     *  <p>Quantity of Line Items discounted per application of this Discount. It must be less than or equal to the <code>triggerQuantity</code>.</p>
      * @return discountedQuantity
      */
     @NotNull
@@ -88,14 +88,14 @@ public interface MultiBuyLineItemsTarget extends CartDiscountTarget {
     public void setPredicate(final String predicate);
 
     /**
-     *  <p>Number of Line Items to be present in order to trigger an application of this Discount.</p>
+     *  <p>Quantity of Line Items required to trigger an application of this Discount.</p>
      * @param triggerQuantity value to be set
      */
 
     public void setTriggerQuantity(final Integer triggerQuantity);
 
     /**
-     *  <p>Number of Line Items that are discounted per application of this Discount. It must be less than or equal to the <code>triggerQuantity</code>.</p>
+     *  <p>Quantity of Line Items discounted per application of this Discount. It must be less than or equal to the <code>triggerQuantity</code>.</p>
      * @param discountedQuantity value to be set
      */
 

@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CartState extends JsonEnum {
 
     /**
-    <p>The default state where a Cart can be updated and ordered. A <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> can have more than one active Cart.</p> */
+    <p>The initial state of the Cart, which allows a Cart to be updated and ordered. A <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> can have more than one active Cart.</p> */
     CartState ACTIVE = CartStateEnum.ACTIVE;
     /**
     <p>An anonymous Cart was merged into a Customer's Cart on <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/login:POST" rel="nofollow">sign-in</a>, and no further operations are allowed on the Cart.</p> */

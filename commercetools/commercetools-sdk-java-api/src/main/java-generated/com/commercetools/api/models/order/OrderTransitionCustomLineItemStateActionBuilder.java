@@ -65,7 +65,7 @@ public class OrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     *  <p>Number of Custom Line Items that should transition <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
+     *  <p>Quantity of Custom Line Items that should transition <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -180,7 +180,7 @@ public class OrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     *  <p>Number of Custom Line Items that should transition <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
+     *  <p>Quantity of Custom Line Items that should transition <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      * @return quantity
      */
 

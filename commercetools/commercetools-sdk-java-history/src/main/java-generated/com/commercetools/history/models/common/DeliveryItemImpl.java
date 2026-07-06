@@ -51,7 +51,7 @@ public class DeliveryItemImpl implements DeliveryItem, ModelBase {
     }
 
     /**
-     *  <p>Number of Line Items or Custom Line Items delivered.</p>
+     *  <p>Quantity of Line Items or Custom Line Items delivered.</p>
      */
 
     public Long getQuantity() {

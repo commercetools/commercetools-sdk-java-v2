@@ -154,7 +154,7 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the LineItem.</p>
+     *  <p>User-defined identifier of the LineItem. Unique among LineItems in the Cart or Order.</p>
      */
 
     public String getKey() {

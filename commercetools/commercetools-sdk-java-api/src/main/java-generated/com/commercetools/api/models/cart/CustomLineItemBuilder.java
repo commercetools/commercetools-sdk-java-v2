@@ -89,7 +89,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined identifier of the Custom Line Item. Unique among Custom Line Items in the Cart or Order.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -824,7 +824,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined identifier of the Custom Line Item. Unique among Custom Line Items in the Cart or Order.</p>
      * @return key
      */
 

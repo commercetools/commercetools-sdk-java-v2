@@ -60,7 +60,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public String getId();
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined identifier of the Custom Line Item. Unique among Custom Line Items in the Cart or Order.</p>
      * @return key
      */
 
@@ -214,7 +214,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public void setId(final String id);
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined identifier of the Custom Line Item. Unique among Custom Line Items in the Cart or Order.</p>
      * @param key value to be set
      */
 

@@ -57,7 +57,7 @@ public interface OrderLineItemRemovedMessagePayload extends OrderMessagePayload 
     public String getLineItemId();
 
     /**
-     *  <p>User-defined unique identifier of the LineItem.</p>
+     *  <p>User-defined identifier of the LineItem. Unique among LineItems in the Order.</p>
      * @return lineItemKey
      */
 
@@ -130,7 +130,7 @@ public interface OrderLineItemRemovedMessagePayload extends OrderMessagePayload 
     public void setLineItemId(final String lineItemId);
 
     /**
-     *  <p>User-defined unique identifier of the LineItem.</p>
+     *  <p>User-defined identifier of the LineItem. Unique among LineItems in the Order.</p>
      * @param lineItemKey value to be set
      */
 

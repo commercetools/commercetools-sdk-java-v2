@@ -583,6 +583,14 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for cartLocked subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartLockedMessagePayloadBuilder cartLockedBuilder() {
+        return com.commercetools.api.models.message.CartLockedMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for cartPurchaseOrderNumberSet subtype
      * @return builder
      */
@@ -596,6 +604,14 @@ public interface MessagePayload extends MessagePayloadMixin {
      */
     public static com.commercetools.api.models.message.CartUnfrozenMessagePayloadBuilder cartUnfrozenBuilder() {
         return com.commercetools.api.models.message.CartUnfrozenMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for cartUnlocked subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartUnlockedMessagePayloadBuilder cartUnlockedBuilder() {
+        return com.commercetools.api.models.message.CartUnlockedMessagePayloadBuilder.of();
     }
 
     /**

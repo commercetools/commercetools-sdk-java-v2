@@ -68,7 +68,7 @@ public interface CartAddCustomLineItemAction
     public LocalizedString getName();
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined identifier of the Custom Line Item. Must be unique among Custom Line Items in the Cart.</p>
      * @return key
      */
 
@@ -159,7 +159,7 @@ public interface CartAddCustomLineItemAction
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined identifier of the Custom Line Item. Must be unique among Custom Line Items in the Cart.</p>
      * @param key value to be set
      */
 

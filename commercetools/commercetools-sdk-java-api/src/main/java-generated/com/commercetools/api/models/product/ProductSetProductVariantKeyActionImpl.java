@@ -79,7 +79,7 @@ public class ProductSetProductVariantKeyActionImpl implements ProductSetProductV
     }
 
     /**
-     *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Must be unique among ProductVariants in the same Product. If empty, any existing value will be removed.</p>
      */
 
     public String getKey() {

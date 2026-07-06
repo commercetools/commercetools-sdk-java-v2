@@ -86,7 +86,7 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
     }
 
     /**
-     *  <p>User-defined unique identifier of the CustomLineItemReturnItem.</p>
+     *  <p>User-defined identifier of the CustomLineItemReturnItem. Must be unique among Return Items in the Order.</p>
      */
 
     public String getKey() {

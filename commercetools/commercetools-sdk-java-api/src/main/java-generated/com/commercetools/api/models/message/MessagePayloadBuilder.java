@@ -272,12 +272,20 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.CartFrozenMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.CartLockedMessagePayloadBuilder cartLockedBuilder() {
+        return com.commercetools.api.models.message.CartLockedMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.CartPurchaseOrderNumberSetMessagePayloadBuilder cartPurchaseOrderNumberSetBuilder() {
         return com.commercetools.api.models.message.CartPurchaseOrderNumberSetMessagePayloadBuilder.of();
     }
 
     public com.commercetools.api.models.message.CartUnfrozenMessagePayloadBuilder cartUnfrozenBuilder() {
         return com.commercetools.api.models.message.CartUnfrozenMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CartUnlockedMessagePayloadBuilder cartUnlockedBuilder() {
+        return com.commercetools.api.models.message.CartUnlockedMessagePayloadBuilder.of();
     }
 
     public com.commercetools.api.models.message.CategoryCreatedMessagePayloadBuilder categoryCreatedBuilder() {

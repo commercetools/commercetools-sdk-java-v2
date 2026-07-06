@@ -71,6 +71,14 @@ public interface ShippingMethodUpdateAction
     }
 
     /**
+     * builder for addStore subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.shipping_method.ShippingMethodAddStoreActionBuilder addStoreBuilder() {
+        return com.commercetools.api.models.shipping_method.ShippingMethodAddStoreActionBuilder.of();
+    }
+
+    /**
      * builder for addZone subtype
      * @return builder
      */
@@ -116,6 +124,14 @@ public interface ShippingMethodUpdateAction
      */
     public static com.commercetools.api.models.shipping_method.ShippingMethodRemoveShippingRateActionBuilder removeShippingRateBuilder() {
         return com.commercetools.api.models.shipping_method.ShippingMethodRemoveShippingRateActionBuilder.of();
+    }
+
+    /**
+     * builder for removeStore subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.shipping_method.ShippingMethodRemoveStoreActionBuilder removeStoreBuilder() {
+        return com.commercetools.api.models.shipping_method.ShippingMethodRemoveStoreActionBuilder.of();
     }
 
     /**
@@ -180,6 +196,14 @@ public interface ShippingMethodUpdateAction
      */
     public static com.commercetools.api.models.shipping_method.ShippingMethodSetPredicateActionBuilder setPredicateBuilder() {
         return com.commercetools.api.models.shipping_method.ShippingMethodSetPredicateActionBuilder.of();
+    }
+
+    /**
+     * builder for setStores subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.shipping_method.ShippingMethodSetStoresActionBuilder setStoresBuilder() {
+        return com.commercetools.api.models.shipping_method.ShippingMethodSetStoresActionBuilder.of();
     }
 
     /**

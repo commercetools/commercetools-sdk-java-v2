@@ -76,8 +76,8 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     }
 
     /**
-     *  <p>User-defined name of the Attribute that is unique to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
-     *  <p>When using the same <code>name</code> for an Attribute in multiple ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes, else an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionAlreadyExistsError" rel="nofollow">AttributeDefinitionAlreadyExists</a> error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> Type and sets thereof.</p>
+     *  <p>User-defined name of the Attribute that must be unique within the ProductType.</p>
+     *  <p>To use the same <code>name</code> in multiple ProductTypes, each AttributeDefinition must have the same <code>type</code>; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionTypeConflictError" rel="nofollow">AttributeDefinitionTypeConflict</a> error is returned. For <code>enum</code> or <code>lenum</code> Types and sets of these AttributeTypes, the enum values can be different for each ProductType.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -206,7 +206,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     }
 
     /**
-     *  <p>Set as <code>true</code> if you want the Attribute's values to be available in the <span>Product Search</span> or the <span>Product Projection Search</span> API and can be used in full-text search queries, filters, and facets. If an Attribute's <code>level</code> is set as <code>Product</code>, then Product Projection Search does <strong>not support</strong> the Attribute.</p>
+     *  <p>Set as <code>true</code> if you want the Attribute's values to be available in the <span>Product Search</span> or the <span>Product Projection Search</span> API and can be used in full-text search queries, filters, and facets. If an Attribute's <code>level</code> is set as <code>Product</code>, then Product Projection Search does <strong>not support</strong> the Attribute. To use the Attribute in search, filters, or facets, set <code>isSearchable</code> to <code>true</code> for all AttributeDefinitions with the same <code>name</code> across different ProductTypes. If the <code>isSearchable</code> values are different, the Attribute isn't available for search, filters, or facets.</p>
      *  <p>Which exact features are available with this flag depends on the specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeType" rel="nofollow">AttributeType</a>. The maximum size of a searchable field is <strong>restricted</strong> by the <span>Field content size limit</span>. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @param isSearchable value to be set
      * @return Builder
@@ -228,8 +228,8 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     }
 
     /**
-     *  <p>User-defined name of the Attribute that is unique to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
-     *  <p>When using the same <code>name</code> for an Attribute in multiple ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes, else an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionAlreadyExistsError" rel="nofollow">AttributeDefinitionAlreadyExists</a> error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> Type and sets thereof.</p>
+     *  <p>User-defined name of the Attribute that must be unique within the ProductType.</p>
+     *  <p>To use the same <code>name</code> in multiple ProductTypes, each AttributeDefinition must have the same <code>type</code>; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionTypeConflictError" rel="nofollow">AttributeDefinitionTypeConflict</a> error is returned. For <code>enum</code> or <code>lenum</code> Types and sets of these AttributeTypes, the enum values can be different for each ProductType.</p>
      * @return name
      */
 
@@ -296,7 +296,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     }
 
     /**
-     *  <p>Set as <code>true</code> if you want the Attribute's values to be available in the <span>Product Search</span> or the <span>Product Projection Search</span> API and can be used in full-text search queries, filters, and facets. If an Attribute's <code>level</code> is set as <code>Product</code>, then Product Projection Search does <strong>not support</strong> the Attribute.</p>
+     *  <p>Set as <code>true</code> if you want the Attribute's values to be available in the <span>Product Search</span> or the <span>Product Projection Search</span> API and can be used in full-text search queries, filters, and facets. If an Attribute's <code>level</code> is set as <code>Product</code>, then Product Projection Search does <strong>not support</strong> the Attribute. To use the Attribute in search, filters, or facets, set <code>isSearchable</code> to <code>true</code> for all AttributeDefinitions with the same <code>name</code> across different ProductTypes. If the <code>isSearchable</code> values are different, the Attribute isn't available for search, filters, or facets.</p>
      *  <p>Which exact features are available with this flag depends on the specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeType" rel="nofollow">AttributeType</a>. The maximum size of a searchable field is <strong>restricted</strong> by the <span>Field content size limit</span>. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @return isSearchable
      */

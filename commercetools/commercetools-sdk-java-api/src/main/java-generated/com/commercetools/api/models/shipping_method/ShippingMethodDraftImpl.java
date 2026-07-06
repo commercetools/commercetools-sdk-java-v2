@@ -46,6 +46,8 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
+
     /**
      * create instance with all properties
      */
@@ -58,7 +60,8 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
             @JsonProperty("zoneRates") final java.util.List<com.commercetools.api.models.shipping_method.ZoneRateDraft> zoneRates,
             @JsonProperty("active") final Boolean active, @JsonProperty("isDefault") final Boolean isDefault,
             @JsonProperty("predicate") final String predicate,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+            @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
         this.key = key;
         this.name = name;
         this.localizedName = localizedName;
@@ -70,6 +73,7 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
         this.isDefault = isDefault;
         this.predicate = predicate;
         this.custom = custom;
+        this.stores = stores;
     }
 
     /**
@@ -166,6 +170,18 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
         return this.custom;
     }
 
+    /**
+     *  <ul>
+     *   <li>If defined and not empty, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If not defined or empty, the Shipping Method applies to all Carts, irrespective of a Store.</li>
+     *  </ul>
+     *  <p>If the number of referenced Stores exceeds the <span>Stores per Shipping Method limit</span>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores() {
+        return this.stores;
+    }
+
     public void setKey(final String key) {
         this.key = key;
     }
@@ -218,6 +234,14 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
         this.custom = custom;
     }
 
+    public void setStores(final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
+        this.stores = new ArrayList<>(Arrays.asList(stores));
+    }
+
+    public void setStores(final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
+        this.stores = stores;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -239,6 +263,7 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
                 .append(isDefault, that.isDefault)
                 .append(predicate, that.predicate)
                 .append(custom, that.custom)
+                .append(stores, that.stores)
                 .append(key, that.key)
                 .append(name, that.name)
                 .append(localizedName, that.localizedName)
@@ -250,6 +275,7 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
                 .append(isDefault, that.isDefault)
                 .append(predicate, that.predicate)
                 .append(custom, that.custom)
+                .append(stores, that.stores)
                 .isEquals();
     }
 
@@ -266,6 +292,7 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
                 .append(isDefault)
                 .append(predicate)
                 .append(custom)
+                .append(stores)
                 .toHashCode();
     }
 
@@ -282,6 +309,7 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
                 .append("isDefault", isDefault)
                 .append("predicate", predicate)
                 .append("custom", custom)
+                .append("stores", stores)
                 .build();
     }
 

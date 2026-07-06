@@ -75,7 +75,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
     }
 
     /**
-     *  <p>Value to set. Must be unique.</p>
+     *  <p>Value to set. Must be unique across all ProductVariants in a Project.</p>
      */
 
     public String getSku() {
@@ -83,7 +83,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
     }
 
     /**
-     *  <p>Value to set. Must be unique.</p>
+     *  <p>Value to set. Must be unique among ProductVariants in the same Product.</p>
      */
 
     public String getKey() {

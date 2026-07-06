@@ -92,7 +92,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined identifier of the Custom Line Item. Must be unique among Custom Line Items in the Order.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -424,7 +424,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined identifier of the Custom Line Item. Must be unique among Custom Line Items in the Order.</p>
      * @return key
      */
 

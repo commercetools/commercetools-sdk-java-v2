@@ -472,7 +472,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided also.</p>
+     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided or if the referenced Product Type contains any Variant-level <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> with <code>isRequired</code> set to <code>true</code>.</p>
      * @param builder function to build the masterVariant value
      * @return Builder
      */
@@ -485,7 +485,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided also.</p>
+     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided or if the referenced Product Type contains any Variant-level <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> with <code>isRequired</code> set to <code>true</code>.</p>
      * @param builder function to build the masterVariant value
      * @return Builder
      */
@@ -497,7 +497,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided also.</p>
+     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided or if the referenced Product Type contains any Variant-level <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> with <code>isRequired</code> set to <code>true</code>.</p>
      * @param masterVariant value to be set
      * @return Builder
      */
@@ -918,7 +918,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided also.</p>
+     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided or if the referenced Product Type contains any Variant-level <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> with <code>isRequired</code> set to <code>true</code>.</p>
      * @return masterVariant
      */
 

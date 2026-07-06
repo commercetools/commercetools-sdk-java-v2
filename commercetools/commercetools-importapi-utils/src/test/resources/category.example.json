@@ -1,0 +1,21 @@
+{
+    "id": "cat-id-001",
+    "version": 1,
+    "key": "category-key",
+    "name": { "en": "My Category" },
+    "slug": { "en": "my-category" },
+    "description": { "en": "A description" },
+    "orderHint": "0.5",
+    "externalId": "ext-001",
+    "parent": {
+        "typeId": "category",
+        "id": "parent-id-001",
+        "obj": { "id": "parent-id-001", "version": 1, "key": "parent-key",
+            "name": { "en": "Parent" }, "slug": { "en": "parent" },
+            "createdAt": "1970-01-01T00:00:00.001Z", "lastModifiedAt": "1970-01-01T00:00:00.001Z" }
+    },
+    "ancestors": [],
+    "assets": [],
+    "createdAt": "1970-01-01T00:00:00.001Z",
+    "lastModifiedAt": "1970-01-01T00:00:00.001Z"
+}

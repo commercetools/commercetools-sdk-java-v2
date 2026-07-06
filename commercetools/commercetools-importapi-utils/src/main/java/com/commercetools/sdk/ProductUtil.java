@@ -1,6 +1,8 @@
 
 package com.commercetools.sdk;
 
+import static com.commercetools.sdk.CommonImportUtil.*;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.ZonedDateTime;
@@ -15,23 +17,28 @@ import com.commercetools.api.models.product.ProductPriceModeEnum;
 import com.commercetools.api.models.product.ProductProjection;
 import com.commercetools.api.models.product.ProductReferenceImpl;
 import com.commercetools.api.models.product.ProductVariant;
+import com.commercetools.api.models.product_discount.ProductDiscountReference;
 import com.commercetools.api.models.product_type.*;
 import com.commercetools.importapi.models.common.*;
 import com.commercetools.importapi.models.productdrafts.PriceDraftImport;
 import com.commercetools.importapi.models.productdrafts.ProductDraftImport;
 import com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport;
+import com.commercetools.importapi.models.products.ProductImport;
 import com.commercetools.importapi.models.productvariants.Attribute;
 
-import io.vrap.rmf.base.client.Builder;
+import jakarta.validation.constraints.NotNull;
 
 public class ProductUtil {
     private final KeyResolverService keyResolverService;
+    private final CommonImportUtil util;
     public ProductUtil() {
         keyResolverService = new ExpandObjResolverService();
+        util = new CommonImportUtil(keyResolverService);
     }
 
     public ProductUtil(final KeyResolverService resolverService) {
         keyResolverService = resolverService;
+        util = new CommonImportUtil(keyResolverService);
     }
 
     public ProductDraftImport toProductDraftImport(ProductProjection product) {
@@ -41,12 +48,12 @@ public class ProductUtil {
                 .name(l -> getLocalizedStringBuilder(product.getName()))
                 .slug(l -> getLocalizedStringBuilder(product.getSlug()))
                 .description(Optional.ofNullable(product.getDescription())
-                        .map(ProductUtil::getLocalizedStringBuilder)
+                        .map(CommonImportUtil::getLocalizedStringBuilder)
                         .map(LocalizedStringBuilder::build)
                         .orElse(null))
                 .categories(extractCategoryKeyReference(product))
                 .metaTitle(Optional.ofNullable(product.getMetaTitle())
-                        .map(ProductUtil::getLocalizedStringBuilder)
+                        .map(CommonImportUtil::getLocalizedStringBuilder)
                         .map(LocalizedStringBuilder::build)
                         .orElse(null))
                 .metaDescription(
@@ -62,8 +69,30 @@ public class ProductUtil {
         return draft.build();
     }
 
-    private static LocalizedStringBuilder getLocalizedStringBuilder(LocalizedString s) {
-        return com.commercetools.importapi.models.common.LocalizedString.builder().values(s.values());
+    public ProductImport toProductImport(ProductProjection product) {
+        var productImport = ProductImport.builder()
+                .key(product.getKey())
+                .productType(p -> p.key(keyResolverService.resolveKey(product.getProductType())))
+                .name(l -> getLocalizedStringBuilder(product.getName()))
+                .slug(l -> getLocalizedStringBuilder(product.getSlug()))
+                .description(Optional.ofNullable(product.getDescription())
+                        .map(CommonImportUtil::getLocalizedStringBuilder)
+                        .map(LocalizedStringBuilder::build)
+                        .orElse(null))
+                .categories(extractCategoryKeyReference(product))
+                .metaTitle(Optional.ofNullable(product.getMetaTitle())
+                        .map(CommonImportUtil::getLocalizedStringBuilder)
+                        .map(LocalizedStringBuilder::build)
+                        .orElse(null))
+                .metaDescription(
+                    (com.commercetools.importapi.models.common.LocalizedString) product.getMetaDescription())
+                .metaKeywords((com.commercetools.importapi.models.common.LocalizedString) product.getMetaKeywords())
+                .taxCategory(getTaxCategoryKeyReference(product))
+                .state(getStateKeyReference(product))
+                .priceMode(mapPriceModeToImportApi(product))
+                .attributes(
+                    product.getAttributes().stream().map(ProductUtil::mapAttribute).collect(Collectors.toList()));
+        return productImport.build();
     }
 
     private com.commercetools.importapi.models.common.ProductPriceModeEnum mapPriceModeToImportApi(
@@ -94,31 +123,32 @@ public class ProductUtil {
     }
 
     private List<ProductVariantDraftImport> extractProductVariantDraftImport(ProductProjection product) {
-        return product.getVariants()
-                .stream()
-                .map(ProductUtil::extractProductVariantDraftImport)
-                .collect(Collectors.toList());
+        return product.getVariants().stream().map(this::extractProductVariantDraftImport).collect(Collectors.toList());
     }
 
-    private static ProductVariantDraftImport extractProductVariantDraftImport(ProductVariant variant) {
+    private ProductVariantDraftImport extractProductVariantDraftImport(ProductVariant variant) {
         return ProductVariantDraftImport.builder()
                 .key(variant.getKey())
                 .sku(variant.getSku())
-                .images(variant.getImages()
-                        .stream()
-                        .map(i -> com.commercetools.importapi.models.common.Image.builder()
-                                .dimensions(d -> com.commercetools.importapi.models.common.AssetDimensions.builder()
-                                        .w(i.getDimensions().getW())
-                                        .h(i.getDimensions().getH()))
-                                .url(i.getUrl())
-                                .label(i.getLabel())
-                                .build())
-                        .collect(Collectors.toList()))
+                .images(toImportImages(variant.getImages()))
                 .prices(mapPricesToImportApi(variant))
                 .attributes(
                     variant.getAttributes().stream().map(ProductUtil::mapAttribute).collect(Collectors.toList()))
-                .assets(importAssets(variant.getAssets()))
+                .assets(util.importAssets(variant.getAssets()))
                 .build();
+    }
+
+    public static @NotNull List<Image> toImportImages(List<com.commercetools.api.models.common.Image> images) {
+        if (images == null)
+            return null;
+        return images.stream()
+                .map(i -> Image.builder()
+                        .dimensions(
+                            d -> AssetDimensions.builder().w(i.getDimensions().getW()).h(i.getDimensions().getH()))
+                        .url(i.getUrl())
+                        .label(i.getLabel())
+                        .build())
+                .collect(Collectors.toList());
     }
 
     private static List<PriceDraftImport> mapPricesToImportApi(ProductVariant variant) {
@@ -131,32 +161,6 @@ public class ProductUtil {
                 .collect(Collectors.toList());
     }
 
-    private static Builder<? extends TypedMoney> importApiTypedMoney(com.commercetools.api.models.common.TypedMoney p,
-            TypedMoneyBuilder v) {
-        return (p instanceof HighPrecisionMoney)
-                ? v.highPrecisionBuilder()
-                        .centAmount(p.getCentAmount())
-                        .currencyCode(p.getCurrencyCode())
-                        .preciseAmount(((com.commercetools.api.models.common.HighPrecisionMoney) p).getPreciseAmount())
-                : v.centPrecisionBuilder()
-                        .centAmount(p.getCentAmount())
-                        .currencyCode(p.getCurrencyCode())
-                        .fractionDigits(p.getFractionDigits());
-    }
-
-    private static List<com.commercetools.importapi.models.common.Asset> importAssets(
-            List<com.commercetools.api.models.common.Asset> assets) {
-        if (assets == null) {
-            return null;
-        }
-        return assets.stream()
-                .map(a -> com.commercetools.importapi.models.common.Asset.builder()
-                        .key(a.getKey())
-                        .name(getLocalizedStringBuilder(a.getName()).build())
-                        .build())
-                .collect(Collectors.toList());
-    }
-
     private List<CategoryKeyReference> extractCategoryKeyReference(ProductProjection product) {
         return product.getCategories()
                 .stream()
@@ -164,7 +168,7 @@ public class ProductUtil {
                 .collect(Collectors.toList());
     }
 
-    private static Attribute mapAttribute(com.commercetools.api.models.product.Attribute attribute) {
+    public static Attribute mapAttribute(com.commercetools.api.models.product.Attribute attribute) {
         Object value = attribute.getValue();
 
         if (value instanceof String) {
@@ -379,5 +383,10 @@ public class ProductUtil {
         }
         /* TODO: AttributeNestedType is not supported yet */
         throw new IllegalArgumentException("Unsupported type: " + value.getClass());
+    }
+
+    public static ProductDiscountKeyReference toProductDiscountKeyReference(
+            @NotNull ProductDiscountReference discount) {
+        return ProductDiscountKeyReference.builder().key(discount.getId()).build();
     }
 }

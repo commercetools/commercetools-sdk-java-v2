@@ -1,0 +1,19 @@
+{
+    "id": "cust-id-001", "version": 1, "key": "customer-key",
+    "email": "test@example.com", "password": "hashed",
+    "addresses": [
+        { "id": "addr-0", "key": "home", "country": "DE" },
+        { "id": "addr-1", "key": "work", "country": "US" }
+    ],
+    "defaultBillingAddressId": "addr-0",
+    "defaultShippingAddressId": "addr-1",
+    "billingAddressIds": ["addr-0"],
+    "shippingAddressIds": ["addr-1"],
+    "customerGroup": {
+        "typeId": "customer-group", "id": "cg-id-001",
+        "obj": { "id": "cg-id-001", "version": 1, "key": "vip-group",
+            "name": "VIP", "createdAt": "1970-01-01T00:00:00.001Z", "lastModifiedAt": "1970-01-01T00:00:00.001Z" }
+    },
+    "isEmailVerified": true, "stores": [], "authenticationMode": "Password",
+    "createdAt": "1970-01-01T00:00:00.001Z", "lastModifiedAt": "1970-01-01T00:00:00.001Z"
+}

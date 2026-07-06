@@ -107,4 +107,8 @@ public interface ProjectScopedApiRoot {
     ByProjectKeyRecurrencePoliciesRequestBuilder recurrencePolicies();
 
     <R> R with(Function<ProjectApiRoot, R> op);
+
+    ByProjectKeyVariantProjectionsRequestBuilder variantProjections();
+
+    ByProjectKeyVariantsRequestBuilder variants();
 }

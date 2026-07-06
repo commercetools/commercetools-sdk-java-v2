@@ -1,0 +1,15 @@
+{
+    "id": "price-id-002",
+    "version": 1,
+    "key": "price-key-no-discount",
+    "sku": "sku-002",
+    "value": {
+        "type": "centPrecision",
+        "currencyCode": "USD",
+        "centAmount": 2000,
+        "fractionDigits": 2
+    },
+    "active": true,
+    "createdAt": "1970-01-01T00:00:00.001Z",
+    "lastModifiedAt": "1970-01-01T00:00:00.001Z"
+}
